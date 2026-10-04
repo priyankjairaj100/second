@@ -109,7 +109,7 @@ For a fixed certified prefix and chart, compute group scalar summaries
  z_G^2=\tr S_G(a),\qquad
  \delta_G=2z_G\epsilon_G+\epsilon_G^2.
 \]
-Then the group's absolute Gram error is at most $\delta_G$. Replay replaces that group's surrogate Gram with the exact target Gram and sets its error to zero. The sum of unreplayed absolute errors decreases. Rewhitening or changing charts need not be monotone. A finite chart bank and eventual replay of a new group ensure termination.
+Then the group's absolute Gram error is at most $\delta_G$. Replay replaces that group's surrogate Gram with the exact target Gram and sets its error to zero. The sum of unreplayed absolute errors decreases. Rewhitening or changing charts need not be monotone. A finite chart bank and eventual replay ensure termination when required finite evaluations succeed and resources suffice.
 
 A global root contraction costs $O(r^2d^2)$ arithmetic; ranking $G$ groups from trace/error coefficients costs $O(Gr^2)$. Replacing a group costs an additional contraction unless cached. These counts exclude arbitrary-precision bit costs, parameter projection, provider proofs, index reads, factorization, output and all replay work.
 
@@ -305,6 +305,28 @@ Practical large-model execution & Not established. Eager scalar loading and inte
 Real-data speed and quality & Unmeasured. Research experiments remain paused.\\\bottomrule
 \end{tabularx}
 
-\note{Validation boundary.} All 129 correctness tests pass. Independent review found no unresolved defect under the declared contracts. One fixture deletes a record and changes an early QKV code from zero to $1/1024$. Its downstream features also change. Certified repair reads no retained records and matches fresh canonical state. Downstream matrices mostly start on-grid. This fixture does not establish practical coverage. The test inventory and source hashes appear in \texttt{docs/VALIDATION.md}.
+\note{Revision 4 validation.} Its 129 correctness tests passed. Independent review found no unresolved defect under the declared contracts. One fixture deletes a record and changes an early QKV code from zero to $1/1024$. Its downstream features also change. Certified repair reads no retained records and matches fresh canonical state. Downstream matrices mostly start on-grid. This fixture does not establish practical coverage. The current test inventory and source hashes appear in \texttt{docs/VALIDATION.md}.
 
-\note{Next authorized phase.} First audit exact outputs and all fallback paths on local real checkpoints. Then measure complete service cost and certificate coverage. Charge chart preparation, deleted-record extraction, metadata scans, retained reads, output writes, and storage. Compare against an equally indexed fresh solver. Keep failed requests and changed early weights in the workload. No universal or reliable measured speedup follows from this implementation alone.
+\note{After experiment authorization.} First audit exact outputs and all fallback paths on local real checkpoints. Then measure complete service cost and certificate coverage. Charge chart preparation, deleted-record extraction, metadata scans, retained reads, output writes, and storage. Compare against an equally indexed fresh solver. Keep failed requests and changed early weights in the workload. No universal or reliable measured speedup follows from this implementation alone.
+
+\newpage
+\section*{27. Preparation contracts and fair indexed comparison}
+Revision 5 selects $V_{\rm cert}$ for the implemented certified path. The target constructor fixes power-of-two grids, positive ridge, original token normalization, coordinate order, and lower ties. Its digest binds those choices and their source. Chart recipes use base weights and fixed configuration only. They never fit the deletable calibration corpus.
+
+Stage-wise rounding directions provide a reproducible low-rank chart. They do not represent general sequential quantization changes. Coordinate directions provide broader representation at potentially prohibitive storage cost. Every installed prefix undergoes an exact chart-membership check. Config-only resource checks precede eager tensor loading. Their byte estimates are planning heuristics, not measured memory or proved upper bounds.
+
+\note{Durable state.} A bounded canonical parser reloads state and checks service bindings. Deleted payloads regenerate checked contributions before subtraction. An index-only object contains retained moments and bindings, with no old model. Atomic run storage separates incomplete attempts from verified results. Completed results cannot be overwritten. The external research archive retains original artifacts; deletion guarantees cover only returned canonical live state.
+
+\note{Fair comparison.} Indexed fresh receives the same retained index as repair. Both call the same stage planner. The planner does not use old quantized codes. Therefore this implementation has no distinct deletion-specific solver advantage. Index maintenance can avoid fresh preparation, but that is a separate claim. The split indexed interface adds serialization and validation; this interface overhead is not an algorithmic speedup.
+
+\begin{tabularx}{\linewidth}{@{}p{.30\linewidth}X@{}}\toprule
+Preparation component & Implemented scope and remaining boundary\\\midrule
+Local runner & Hash-bound local inputs, complete state comparison, diagnostic held-out loss, and atomic artifacts.\\
+Timing & Warm instrumented service through artifact synchronization. Input loading, setup, verification, and final result commit have separate scopes.\\
+Failure accounting & All planned attempts remain visible. Aborts, missing runs, unchecked outputs, and observed mismatches remain distinct.\\
+Analysis & Timing repeats reduce within requests. Uncertainty resamples independent roots. Conditional ratios remain separate from completion rates.\\
+Protocol & Prospective gates and budgets exist. Source pins, selectors, resource enforcement, and final inventory remain open.\\
+Publication theory & T1--T7 connect finite response bounds, Gram enclosures, decisions, sequential state, and conditional work.\\\bottomrule
+\end{tabularx}
+
+The software suite and independent review test these interfaces. No real checkpoint, calibration corpus, or research benchmark ran. Practical chart coverage, memory, full service value, and NLP quality remain open. Research experiments remain paused. The current protocol blocks accidental confirmation before its required fields are frozen.

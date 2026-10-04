@@ -6,7 +6,8 @@ A trusted deterministic record-local evaluator returns exact rational features
 The target uses exact Grams, a fixed positive ridge, and ``exact_core`` rounding.
 
 The service composes immutable DAG prefixes, independent reference statistics,
-absolute group-error bounds, adaptive replay and an exact terminating fallback.
+absolute group-error bounds, adaptive replay and exact fallback.
+Completion requires successful feature evaluation and sufficient resources.
 The reference program MUST be corpus independent.  Transport callbacks are a
 named, explicit trusted proof boundary: their stated norm bounds must actually
 hold.  A typed witness is provenance binding, not a machine-checked proof of an

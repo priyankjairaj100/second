@@ -1,4 +1,4 @@
-# Revision 4 validation
+# Revision 5 validation
 
 Date: 4 October 2026.
 Scope: software correctness, independent source review, and document checks.
@@ -6,90 +6,118 @@ Research experiments remained paused.
 
 ## Final software result
 
-`python -m unittest discover -s tests -v`: **129 tests passed**, exit code 0.
-Python static compilation passed for every source and test module.
+`python -m unittest discover -s tests -v`: **197 tests passed**, exit code 0.
+Static compilation passed for all source, test, and script modules.
+The full log is `validation/software_tests_v5.txt`.
+The tested hashes are in `validation/tested_source_sha256_v5.json`.
+Test-run duration is verification metadata, not a repair-performance observation.
 
-The complete test output is in `validation/software_tests_v4.txt`.
-`validation/tested_source_sha256_v4.json` records the tested source and test hashes.
-Runner elapsed time is verification metadata, not repair-performance evidence.
+Revision 4's 129-test record remains in `docs/VALIDATION_V4.md`.
+Its original log and source hashes remain unchanged.
+Revision 3's 77-test record also remains available.
 
-The earlier 77-test result remains in `docs/VALIDATION_V3.md`.
-Its original log and hash manifest remain unchanged.
+## New correctness coverage
 
-## New coverage
-
-| Module or review | Tests | Main checked properties |
+| Area | New tests | Checked properties |
 | --- | ---: | --- |
-| Certified primitives | 14 | Rigorous nonlinear intervals, rounding ties, subnormals, overflow, signed zero, and failure paths |
-| Compact aggregate service | 12 | Deleted contribution checks, compact sums, signed bounds, normalization, canonical repeated state, and selected replay |
-| Local GPT-2 adapter | 12 | Four dtypes, shards, transposes, activation variants, tied heads, provenance, and invalid inputs |
-| Automatic certified decoder | 6 | Mixed response bounds, chart rejection, changed features, accepted repair, fallback, and canonical state |
-| Independent adversarial checks | 8 | Separate arithmetic oracles, mixed Hessians, cancellation, underflow, and stable softmax |
+| Target and chart construction | 13 | Fixed grids, target/source binding, independent recipes, membership, and planning limits |
+| State and baselines | 15 | Canonical bounded reload, malformed input rejection, fresh-process deletion, and indexed information parity |
+| Local runner and storage | 8 | Complete fixture pipeline, sealed results, atomic attempts, restart checks, and protocol gates |
+| Result analysis | 9 | Planned failures, paired repeats, independent-root intervals, mixed-target rejection, and lifetime accounting |
+| Config-only resource planning | 5 | Formula agreement, large-model rejection, huge dimensions, and no tensor reads |
+| Independent preparation attacks | 17 | Binding forgery, malformed state, old-model poisoning, storage corruption, locks, and failure classification |
+| Checkpoint metadata compatibility | 1 | Historical label metadata leaves language-model computation unchanged |
 
-The existing 77 correctness tests also pass.
-These include independent exact quantizer checks and legacy service integration.
+These 68 tests extend the prior 129 tests.
+They do not replace the existing mathematical and decoder checks.
 
-## Strongest integration fixture
+## Integration evidence
 
-A deleted record changes one first-stage QKV code from zero to `1/1024`.
-The finite downstream features also change.
-The network has nonzero operators and multiple code choices.
-The retained-record loader raises an error on every attempted read.
-Certified repair succeeds without calling that loader.
-Its complete canonical state equals fresh construction on retained records.
+The runner fixture uses a locally authored safetensors checkpoint and token-record manifest.
+It constructs the target, chart, original state, and three retained comparison outputs.
+Successful output requires complete canonical-state and every-stage equality.
+The result passes the analysis schema.
+This is a small software fixture, not a synthetic empirical study.
+Its timings cannot enter a paper's performance table.
 
-This verifies deletion-induced change, not merely drift from the base reference.
-Downstream matrices largely start exactly on-grid.
-The fixture does not establish dense downstream changes or realistic certificate coverage.
-Other checks cover repeated deletions, changed-reference bounds, and out-of-chart replay.
+The durable-state test starts a fresh Python process.
+That process rebuilds the declared service, loads saved canonical bytes, and performs deletion.
+Its bytes match independently constructed fresh retained state.
+A timeout bounds the correctness check.
+This checks process-independent state loading, not cold-service performance.
+
+The fair baseline test replaces old model codes with other valid codes.
+Indexed fresh still returns the same retained target.
+The solver uses the index and fixed target, not old model proposals.
+Repair and indexed fresh share this planner.
+No deletion-specific solver speedup follows.
+
+The strongest earlier changed-prefix fixture remains in the suite.
+Deletion changes an early QKV code and downstream finite features.
+Certified repair matches fresh state without retained-source reads.
+Its mostly on-grid downstream weights still limit the fixture's practical scope.
 
 ## Independent review
 
-The review is in `theory_revision/implementation_review_v4.txt`.
-The reviewer found no unresolved soundness defect under the declared contracts.
-This was manual source review, not proof-assistant verification.
+See `theory_revision/preparation_review_v5.txt`.
+The reviewer found no unresolved defect in the reviewed declared paths.
+Manual review and tests do not establish absence of all defects.
 
-Review resolved these concrete issues:
+Review corrected these concrete issues:
 
-1. Proof entry points now enforce the binary64 runtime checks.
-2. Primitive caches no longer retain data-dependent inputs.
-3. Stable max-shift softmax replaced the temporary first-score shift.
-4. The softmax sum proof now states its sequence-length bound.
-5. The acceptance fixture now checks deletion-induced old-versus-new code changes.
-6. Bare GPT2Model imports explicitly declare the added output head.
+1. Unicode canonical-state parsing.
+2. Target digests missing actual grids, ridge, and normalization.
+3. Service identity missing the generated target digest.
+4. Writes after completion and completed-result replacement.
+5. Racy lock handling and exceptional lock cleanup.
+6. Restart checks that did not read persisted artifact bytes.
+7. Unchecked failures incorrectly marked as observed mismatches.
+8. Lost nested failure subtypes and mixed analysis targets.
+9. Config preflight allocating a list before rejecting huge layer counts.
+10. Missing finite-error scalars in parameter-jet planning.
 
-The review checked signed Gram bounds, normalization, mixed curvature, finite errors, and source bindings.
-It also checked metadata costs and the absence of persistent per-record descriptor caches.
+The current protocol prevents paused research execution.
+Confirmation additionally requires a frozen protocol without blocked fields.
+Actual frozen-inventory membership requires the future scheduler and analysis workflow.
 
-## Numerical and state limits
+## Timing, numerical, and storage limits
 
-V_cert is a distinct finite numerical target.
-It is not native Hugging Face, the earlier library-math V, or historical floating quantizer E.
-Provider abstention triggers retained replay.
-Unresolved or invalid finite execution aborts the transaction without returning an approximate model.
-Completion requires the necessary finite executions to succeed.
+The runner offers instrumented warm diagnostic timing.
+Its method boundary ends after model/state artifact synchronization.
+Loading, setup, verification, quality evaluation, and final result commit have separate scopes.
+The method timer does not establish the protocol's complete-service reliable-speed claim.
+Python allocation tracing adds overhead.
+RSS is a process-lifetime high-water mark.
+Cold execution, hard worker limits, and internal callback timers remain pending.
 
-Chart directions must be independent of the deletable corpus.
-The implementation cannot prove that historical provenance condition.
-Exact chart fitting can reject valid alternative representations when it sets free coefficients to zero.
-This affects coverage, not correctness.
+V_cert remains distinct from native kernels, legacy V, and floating E.
+Proof rejection permits replay.
+Finite-evaluator failure aborts without returning an approximate model.
+The report now states completion conditions consistently.
 
-Canonical state excludes deleted logical entries and request-local caches.
-It does not prove physical erasure or authenticate hostile storage.
-Metadata still uses O(NL) entries and scans.
-Rational bit lengths, chart fitting, and deleted extraction remain costs.
+Deletion covers returned canonical live state.
+The external research archive deliberately retains original states and failed attempts.
+It lies outside that guarantee.
+Trusted hashes do not authenticate hostile storage or prove physical erasure.
+
+Config-only byte estimates are planning heuristics.
+They do not prove memory fit or useful runtime.
+Default reference limits reject ordinary candidate dimensions.
+Real checkpoint compatibility and useful chart coverage remain untested.
 
 ## Document validation
 
-The consolidated PDF has **27 pages**.
+The consolidated PDF has **28 pages**.
 LaTeX completed without overfull boxes.
-All pages were rendered for inspection.
-The new implementation pages were checked at full page size.
-The report source and output remain in the repository.
+Every page was rendered for visual inspection.
+Modified pages were inspected separately.
+The theory now has a T1–T7 publication map and an explicit claim/evidence register.
+The research checklist records 21 completed and 57 open required items.
+It separately retains 12 conditional extensions.
 
 ## Excluded evidence
 
-No pretrained checkpoint or calibration dataset was downloaded or evaluated.
-No benchmark campaign, synthetic empirical dataset, or external compute job ran.
-No practical coverage, latency, quality, memory, or lifetime result is claimed.
-Earlier missing raw experiments were not recovered or rerun.
+No model weights or calibration datasets were downloaded or evaluated.
+No research benchmark, synthetic empirical study, or external compute job ran.
+No practical speed, NLP quality, chart coverage, or lifetime value is established.
+Historical missing raw results were not recovered or rerun.

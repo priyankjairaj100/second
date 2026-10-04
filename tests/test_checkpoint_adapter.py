@@ -108,6 +108,16 @@ class CheckpointAdapterTests(unittest.TestCase):
             self.assertEqual(loaded.decoder.logits((0, 1)), expected.logits((0, 1)))
             self.assertFalse(loaded.provenance["bare_gpt2_model_extension"])
 
+    def test_distilgpt2_label_metadata_preserves_language_model(self):
+        # The official DistilGPT2 config uses this historical metadata key.
+        config, weights, expected = checkpoint_fixture()
+        config.update(_num_labels=1, id2label={"0": "LABEL_0"}, label2id={"LABEL_0": 0})
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            write_checkpoint(root, config, weights)
+            loaded = load_gpt2_checkpoint(root)
+            self.assertEqual(loaded.decoder.logits((0, 1)), expected.logits((0, 1)))
+
     def test_sharded_checkpoint_matches_single_checkpoint(self):
         config, weights, expected = checkpoint_fixture()
         with tempfile.TemporaryDirectory() as directory:

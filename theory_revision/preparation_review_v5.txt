@@ -1,0 +1,167 @@
+Revision 5 independent preparation review
+=========================================
+
+Review scope
+------------
+Review the frozen numerical target, deterministic chart, state parser,
+fair baselines, experiment runner, durable outputs, and analysis protocol.
+This review permits software correctness fixtures only.
+No model downloads or research experiments form part of this review.
+
+Claim consequences established before implementation review
+----------------------------------------------------------
+1. A deterministic chart can establish independence from calibration data.
+   Independence alone does not establish useful chart coverage.
+2. One RTN direction per stage spans only a restricted family of prefixes.
+   Generic quantized prefixes can lie outside this family.
+3. Coordinate charts can cover all grid assignments under explicit bounds.
+   Their rank and mixed derivative costs can make them impractical.
+4. Equally indexed fresh quantization can use the same response summaries.
+   Correct indexing does not imply a strict deletion-specific speed gain.
+5. Event counters do not measure callback duration or full service latency.
+   External disjoint timers need explicit preparation and commit boundaries.
+6. Canonical state hashes bind bytes under a trusted-storage contract.
+   They do not authenticate hostile storage or erase caller-held copies.
+7. Restart handling must distinguish complete, failed, and interrupted work.
+   A failed attempt cannot acquire a successful-result marker.
+8. Timing repeats share a calibration root.
+   They do not create independent research units.
+9. Failed requests must remain in the declared workload denominator.
+   Successful-pair ratios remain conditional performance summaries.
+
+Implementation findings and executed checks
+------------------------------------------
+Reviewed source:
+- src/aggregate_response_service.py
+- src/target_manifest.py
+- src/chart_construction.py
+- src/resource_preflight.py
+- src/run_store.py
+- src/experiment_runner.py
+- src/result_analysis.py
+
+Reviewed documents:
+- docs/PUBLICATION_THEORY.md
+- docs/CLAIM_EVIDENCE.md
+- docs/EMPIRICAL_PROTOCOL.md
+- configs/protocol_v1.json
+
+Corrections made during independent review
+-----------------------------------------
+1. Outer canonical state now parses UTF-8.
+   Valid Unicode identifiers previously failed the ASCII parser.
+2. Target digests now bind actual grids, ridge, and normalization.
+   The original target payload omitted these actual StageSpec fields.
+   Altered fields can no longer preserve the generated target digest.
+3. The service job now binds the generated target digest.
+   Source changes cannot silently reuse the same job identity.
+4. Run stores reserve status.json and seal completed attempts.
+   Artifact writes cannot continue after completion or writer closure.
+5. New claims cannot overwrite an existing verified completion.
+6. POSIX advisory locks replaced racy stale-lock deletion.
+   Process exit releases lock ownership without deleting another writer's lock.
+7. Writer cleanup now covers post-completion exceptions and lock metadata failures.
+8. Restart validation now reads the artifact actually written to disk.
+   Reserializing an in-memory state would not test persisted bytes.
+9. Unchecked exactness uses null, not false.
+   Evaluator failure must not be reported as an observed model mismatch.
+10. Analysis retains nested failure reasons and unverified interrupted arms.
+11. Analysis rejects mixed target or protocol hashes within one stratum.
+12. Resource preflight now uses constant-space dimension formulas.
+    An enormous layer count cannot allocate a repeated stage list before rejection.
+13. Parameter-jet planning includes the finite-error scalar.
+
+Source and chart binding
+------------------------
+The generated target reads base parameters and an explicit recipe.
+It fixes signed grids with power-of-two scales before calibration.
+It rejects grids outside the finite binary64 domain.
+The target also binds quantization source and service source.
+
+The chart constructor receives no record payloads.
+It reconstructs the target recipe before accepting a target object.
+The service reconstructs the chart before accepting a chart object.
+Direction hashes, radii, precision, provenance, and construction source remain bound.
+This establishes functional independence for the declared constructor.
+It does not prove that a researcher selected the recipe before seeing future test data.
+Protocol separation must establish that historical condition.
+
+Full coordinate charts represent every finite grid prefix inside their declared box.
+One independent software check uses simultaneous endpoint changes across all ancestors.
+The small stage-RTN chart does not provide that general representation guarantee.
+
+Fair comparator
+---------------
+prepare_index returns retained summaries without an old model.
+indexed_fresh accepts those summaries and constructs each prefix anew.
+An independent test replaces every old code with another valid grid code.
+Indexed fresh still returns the same direct-fresh model and complete state.
+
+Repair and indexed fresh share the same solver and retained information.
+The indexed path separately charges the deletion update exactly once.
+Its split interface can add validation and serialization overhead.
+Such interface overhead cannot justify a fundamental deletion-specific advantage.
+The direct fresh method rebuilds the required aggregate state from retained records.
+An artifact-only quantizer would have a different output contract.
+
+State and archive scope
+-----------------------
+The parser rejects duplicate identities, Boolean integers, nonreduced rationals,
+malformed shapes, unsupported fields, noncanonical encodings, and declared size excesses.
+The service additionally validates target and structural bindings.
+These checks require trusted aggregate construction or trusted storage.
+They do not prove the origin of a maliciously replaced aggregate with a new digest.
+
+Run artifacts preserve original models, original states, and failed attempts.
+These artifacts retain pre-deletion influence by design.
+They form an external research archive, outside the live canonical deletion guarantee.
+Neither the whole archive nor caller-held payloads become unlearned after a request.
+
+Timing and analysis scope
+-------------------------
+Current arm timing includes the service call and durable model/state artifact writes.
+Initial preparation, independent equality checks, quality evaluation, and result commit remain separate.
+Method output arrays persist across the shared-process comparison.
+Python tracing measures allocations within each scope.
+Process RSS remains a lifetime high-water mark.
+These facts require diagnostic labels and prevent production-latency claims.
+
+Missing planned attempts remain in denominators.
+Conditional ratios require verified completion of every paired repeat.
+Independent roots, not timing repeats, determine the interval sample size.
+One root produces no reported bootstrap interval.
+The prospective protocol still needs frozen inputs, enforced limits, and a complete run inventory.
+
+Executed software checks
+------------------------
+Command:
+python -m unittest tests.test_adversarial_preparation_v5 -v
+Result: 17 independent correctness tests passed in the combined check below.
+
+Command:
+python -m unittest tests.test_adversarial_preparation_v5 tests.test_state_baselines_v5 tests.test_resource_preflight -v
+Result: 36 tests passed.
+
+Independent tests cover:
+- Unicode reload followed by repeated deletion.
+- Strict group integers and reduced rational encodings.
+- Indexed reconstruction with poisoned old model codes.
+- Complete target binding under changed grids, ridge, and normalization.
+- Full coordinate representation and pre-allocation chart limits.
+- Reserved artifact names and sealed completion.
+- Corrupted saved artifacts and failed-attempt preservation.
+- Cleanup after committed exceptions and lock metadata failures.
+- A timeout with unknown exactness and preserved failure classification.
+- Interrupted unverified arms, missing planned runs, and root-level analysis.
+
+Remaining research boundaries
+-----------------------------
+No checkpoint weights, corpus data, or research benchmarks were downloaded or executed.
+Software fixture timings are not paper observations.
+Realistic chart coverage, finite-domain completion, quality, and speed remain unknown.
+Large affine charts can exceed memory and preparation limits.
+The resource estimate uses declared planning costs, not a proved memory bound.
+The current runner does not enforce worker timeouts or process memory limits.
+Its warm shared-process measurements do not implement controlled cold execution.
+Detailed callback timers and complete certificate diagnostics remain unfinished.
+These boundaries prevent a claim that the confirmatory program is ready.

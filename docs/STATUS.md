@@ -1,83 +1,89 @@
 # Current project status
 
-Updated 4 October 2026, revision 4.
+Updated 4 October 2026, revision 5 preparation.
 
-The latest request asks for a comprehensive list of remaining research tasks.
-See [RESEARCH_TODO.md](RESEARCH_TODO.md) for priorities, completion criteria, and decision gates.
-This planning update changes no implementation or empirical result.
+The user asked us to proceed with the remaining research program.
+This revision implements the next preparation package.
 Research experiments remain paused.
 Software correctness checks remain within scope.
+See RESEARCH_TODO.md for completed items and open gates.
 
-## Completed implementation
+## Implemented preparation
 
-The reference implementation now connects the theory to a concrete certified decoder.
-
-| Previous blocker | Implemented result | Remaining limit |
+| Area | Implemented result | Remaining boundary |
 | --- | --- | --- |
-| Complete service stored individual matrices | Compact group response and remainder sums | O(NL) metadata still remains |
-| Changed-prefix bounds required trusted user values | Automatic interval jets, mixed Hessians, and finite-error bounds | Fixed affine chart can reject realistic changes |
-| Nonlinear library calls lacked proved rounding bounds | Rational enclosures and certified binary64 rounding | Slow scalar program; unresolved operations abort |
-| Local checkpoint interface was absent | Strict GPT-2 safetensors adapter | No pretrained checkpoint evaluation yet |
+| Target | V_cert manifest fixes grids, ridge, normalization, order, and ties | Real tokenizer and source pins remain open |
+| Chart | Weight-only stage directions, coordinate directions, and no-chart control | Useful coverage and affordable size remain unknown |
+| Resources | Config-only count and memory planning before eager loading | Estimates do not prove memory fit; hard limits remain pending |
+| Durable state | Bounded canonical parser and fresh-process reload test | Trusted storage; no physical erasure claim |
+| Fair baseline | Index-only fresh solver shares repair's planner | No deletion-specific solver advantage |
+| Runner | Local inputs, exact state comparison, diagnostic loss, atomic artifacts | Warm instrumented execution only |
+| Analysis | Planned failures, root-cluster intervals, lifetime accounting, traceable tables | No empirical records exist |
+| Theory | Ordered T1–T7 and claim-to-evidence map | Conditional work results remain unmeasured |
+| Protocol | Prospective real-text program and explicit gates | Sources, selectors, enforced limits, and inventory remain unresolved |
 
-The aggregate service verifies deleted-record contributions before exact subtraction.
-It certifies proposals against the new ancestor prefix.
-Unknown bounds trigger selected retained replay.
-The final state matches fresh retained construction.
-Repeated deletion preserves canonical state bytes.
+Independent review resolved concrete parser, binding, result-sealing, locking, and failure-classification defects.
+See VALIDATION.md for final tests and exact source hashes.
 
-The certified provider uses a corpus-independent affine chart.
-It computes value, derivative, mixed-curvature, and numerical-error bounds automatically.
-It checks chart membership against installed finite weights.
-Its stable softmax proof separates ideal derivatives from finite branch effects.
-No caller-supplied tolerance substitutes for the numerical proof.
+## Scientific consequence of the fair baseline
 
-The local adapter supports single and sharded safetensors.
-It handles four floating storage types and both supported GELU variants.
-It records source hashes and rejects unsupported architectures.
+Repair and indexed fresh use the same stage solver.
+Indexed fresh receives the same valid retained summaries.
+It never reads the old quantized model as a proposal.
+Therefore the present implementation has no distinct deletion-specific solver gain.
 
-## Numerical scope
+Index maintenance can avoid rebuilding retained response summaries.
+That benefit must be reported separately from solver improvements.
+The split indexed API adds validation and serialization overhead.
+That interface overhead cannot justify an algorithmic speed claim.
 
-V_cert defines a new finite feature program with certified nonlinear primitives.
-It remains distinct from legacy library-math V and floating quantizer E.
-Imported checkpoint weights do not establish native Hugging Face output equality.
-Proof abstention causes replay.
-Finite-evaluator failure aborts the transaction without returning a model.
+## Open gates before research execution
 
-## Evidence and remaining work
+The experiment-ready gate G0 remains open.
+A complete real input manifest does not exist.
+Checkpoint candidates have only metadata-level selection.
+Ordinary candidate dimensions exceed default reference planning limits.
 
-Correctness tests and independent review cover the new modules.
-See docs/VALIDATION.md for final results and exact source hashes.
-These checks do not measure model quality, certificate coverage, or latency.
+Small charts can reject general quantized prefixes.
+Coordinate charts can make storage and interval jets prohibitive.
+The scalar finite evaluator may also fail to resolve a required primitive.
+No practical chart coverage, memory, latency, or NLP quality has been measured.
 
-Useful chart coverage remains unknown on real language models.
-The experiment runner and equally indexed fresh baseline remain unimplemented.
-The current empirical protocol must be reconstructed because the earlier protocol is unavailable.
-Interval bounds may become too loose across long sequences and deep networks.
-Large charts increase preparation, storage, and verification costs.
-The checkpoint adapter loads parameters eagerly into Python objects.
-Large-model memory use remains untested.
-Fast GPU kernels and scheduler integration remain future engineering work.
+Remaining preparation includes these tasks:
 
-An equally indexed fresh solver can use the same response summaries.
-No universal strict advantage over that solver follows.
-Full service measurements must charge setup, deleted extraction, metadata, replay, verification, output, and state maintenance.
-Research experiments will resume only when the user authorizes that phase.
+1. Choose a resource-feasible checkpoint route without changing the target silently.
+2. Finish source, tokenizer, record, and request-selector manifests.
+3. Add enforced process limits and the frozen inventory scheduler.
+4. Complete cold execution and internal cost/coverage diagnostics where the claim requires them.
+5. Add identity-only and matched response ablations.
+6. Obtain the user's instruction to resume research experiments.
 
-## Claim discipline
+## Numerical and storage scope
 
-The main contribution remains exact sequential calibration deletion with certified changed ancestors and canonical retained state.
-The lower-storage interval construction supplies O(r d²+r²) response entries per group.
-The stated zero-replay and speed conditions remain conditional mathematical results.
-They are not practical speedup evidence.
+V_cert is the primary implemented target.
+Legacy library-math V and historical floating quantizer E remain distinct.
+Checkpoint import does not establish native Hugging Face numerical identity.
+Proof rejection permits retained replay.
+Finite-evaluator failure aborts without committing an approximate model.
+The report now applies that condition consistently to fallback statements.
 
-The matrix shape constant follows classical geometry.
-Taylor verification, polynomial statistics, and derivative-based deletion sketches have primary precedents.
-The repository makes no exhaustive priority claim.
-It also makes no hostile-storage authentication, physical memory erasure, or proof-assistant claim.
+Canonical deletion covers returned live state.
+The experiment archive intentionally preserves original states and previous attempts.
+That archive lies outside the live-state deletion guarantee.
+Hashes detect changes under trusted storage; they do not authenticate hostile storage.
 
-Earlier raw experiment files remain missing.
-Historical metrics are reconstructed context, not recovered evidence.
+The reference implementation retains O(NL) record metadata.
+Preparation, replay, exact integer sizes, serialization, and output remain real costs.
+Production GPU kernels and integrated work scheduling remain future work.
 
-The report's unconditional fallback wording needs one documented correction.
-Every such statement must require successful finite evaluation for the partial V_cert program.
-The current implementation and numerical contract already enforce this distinction.
+## Evidence discipline
+
+No model weights or empirical datasets were downloaded.
+No research benchmark or external compute job ran.
+Software fixtures do not establish real-model speed or useful quality.
+Earlier raw experiments remain unavailable.
+Historical metrics in PROJECT_CONTEXT.md are reconstructed context only.
+
+The narrow contribution concerns certified sequential decisions and canonical calibration-deletion state.
+Derivative sketches, Taylor verification, polynomial statistics, and matrix geometry have prior work.
+No exhaustive priority or universal speedup claim is made.

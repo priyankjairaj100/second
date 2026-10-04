@@ -1,87 +1,88 @@
 # Resume this ACL 2027 calibration-unlearning project
 
-Last revision: 4 October 2026, v4 implementation blockers.
+Last revision: 4 October 2026, v5 preparation.
 Repository: https://github.com/priyankjairaj100/second
 
-Read docs/STATUS.md, docs/PROJECT_CONTEXT.md, docs/VALIDATION.md, and docs/REFERENCE_SERVICE.md first.
-Read docs/RESEARCH_TODO.md for the complete remaining program and its decision gates.
-Then read the consolidated report and AGENTS.md.
+Read AGENTS.md, docs/STATUS.md, docs/RESEARCH_TODO.md, and docs/VALIDATION.md first.
+Then read docs/PUBLICATION_THEORY.md and docs/CLAIM_EVIDENCE.md.
+Read docs/PROJECT_CONTEXT.md for historical evidence provenance.
+The consolidated PDF includes the updated preparation contract.
 The user authorized repository pushes and complete restart notes.
-Do not force-push or remove unrelated remote changes.
+Never force-push or discard unrelated remote changes.
 
-## Scientific target
+## Current phase
 
-Fix base weights W.
-Delete calibration documents F.
-Reproduce the complete retained-data sequential quantizer, including changed downstream features.
-Fixed grids, ridge, normalization, order, and feature execution define the target.
-This task does not remove knowledge learned in W.
+Latest instruction: "Please proceed on this."
+This means progress on the remaining research program.
+The current checkpoint completes substantial preparation, not the entire program.
+Research experiments remain PAUSED until the user resumes them.
+Correctness tests, mathematical work, source inspection, and implementation are allowed.
+No model/data downloads, research benchmarks, synthetic empirical datasets, cloud jobs, or unrelated hardware are authorized.
 
-Three numerical targets remain distinct.
-Legacy V uses pinned finite library-math features and exact rational statistics.
-New V_cert uses certified scalar nonlinear primitives and exact rational statistics.
-Historical E uses floating Gram reductions and factorization.
-No equality between these targets is assumed.
+## Target and theory
 
-## Current request and phase
+Fix base weights W and delete calibration documents F.
+Reproduce complete retained-data sequential quantization, including changed downstream calibration features.
+The primary implemented numerical target is V_cert.
+It uses certified scalar finite features and exact rational statistics and rounding.
+Legacy library-math V and historical floating quantizer E remain separate targets.
+Native Hugging Face numerical equality is not claimed.
 
-Latest user request: "Make a comprehensive list of to-do items left in this research paper program."
-The resulting register is docs/RESEARCH_TODO.md.
-It preserves the completed v4 implementation and separates required work from conditional extensions.
-Research experiments remain PAUSED.
-Software correctness tests are allowed.
-Do not download models, start benchmarks, launch cloud jobs, or create synthetic empirical datasets without resumed authorization.
+V_cert is partial.
+Proof abstention permits exact retained replay.
+Finite-evaluator failure aborts the transaction without an approximate model.
+All completion claims require successful required evaluations and sufficient resources.
+The report's former unconditional fallback wording is corrected.
 
-## Revision 4 implementation
+Publication T1–T7 connect finite response bounds, Gram bounds, decisions, sequential exactness, canonical state, and conditional work.
+The compact response tier stores O(r d²+r²) entries per group.
+Nonzero finite and jet errors can prevent second-order scaling.
+Useful real-model coverage and reliable latency remain unmeasured.
 
-- `aggregate_response_service.py` stores group sums instead of individual record matrices.
-- It regenerates deleted contributions, verifies digests, subtracts exact sums, and commits canonical retained state.
-- Proposal queries use aggregate statistics without retained descriptor scans.
-- Record and stage metadata still require O(NL) storage and scans.
-- `certified_intervals.py` supplies rational enclosures and certified binary64 nonlinear rounding.
-- `certified_transformer.py` supplies automatic interval jets, full mixed Hessians, and finite-error bounds.
-- A fixed affine chart constrains supported ancestor changes.
-- Unsupported chart or proof conditions cause exact retained replay.
-- A failure inside the finite evaluator aborts the request without committing a result.
-- `checkpoint_adapter.py` imports local GPT-2 safetensors, including shards and default gelu_new.
-- Checkpoint mapping does not establish native Hugging Face numerical equality.
+## Preparation now implemented
 
-Read docs/AGGREGATE_SERVICE.md, docs/CERTIFIED_PROVIDER.md, and docs/CHECKPOINT_ADAPTER.md for APIs and limits.
-Read docs/VALIDATION.md for the final test result and source hashes.
-Independent review is in theory_revision/implementation_review_v4.txt.
+- target_manifest.py fixes weight-only grids, ridge, original normalization, order, ties, and source bindings.
+- chart_construction.py builds corpus-independent stage-rtn, coordinate, or no-chart directions.
+- resource_preflight.py checks config-only counts before eager tensor loading.
+- aggregate_response_service.py reloads bounded canonical state and exposes prepare_index and indexed_fresh.
+- experiment_runner.py compares repair, indexed fresh, and direct fresh on local hash-bound inputs.
+- run_store.py provides immutable completed results and atomic attempt artifacts.
+- result_analysis.py preserves failure denominators and resamples independent calibration roots.
+- configs/protocol_v1.json and docs/EMPIRICAL_PROTOCOL.md define the prospective program.
+- configs/source_catalog_v1.json records metadata candidates, not acquired or approved run inputs.
 
-## Theory retained from v3
+Read docs/TARGET_CONTRACT.md, docs/BASELINES.md, docs/EXPERIMENT_RUNNER.md, and docs/SOURCE_SELECTION.md.
+Read theory_revision/preparation_review_v5.txt for independent review and resolved defects.
 
-Intrinsic response jets let the surrogate follow the new certified prefix.
-The complete remainder includes mixed curvature, jet approximation, residuals, and finite arithmetic.
-The compact tier stores constant/linear Gram matrices plus scalar tangent moments.
-Its per-group response storage is O(r d²+r²), with second-order uncertainty under stated conditions.
-Shifted PSD proposals preserve the ridge floor during adaptive replay.
-Local margin and error conditions imply whole-model zero retained replay.
-These conditions do not establish practical coverage.
+## Critical implications
 
-## Remaining boundaries
+Repair and indexed fresh share the same stage planner.
+The planner does not use the old model.
+No deletion-specific solver advantage exists in the current implementation.
+Report index maintenance savings separately.
+Do not count extra split-interface serialization as an algorithmic advantage.
 
-Realistic chart coverage, preparation costs, useful storage, latency, and NLP quality remain unmeasured.
-Full-dimensional charts can be prohibitively expensive.
-The scalar reference implementation is not a production GPU implementation.
-The scheduler remains a separate cooperative utility.
-The experiment runner, equally indexed fresh baseline, and current full empirical protocol still require implementation or reconstruction.
-The first empirical gate tests useful chart coverage with genuine changed ancestors.
-Report Section 16 also needs consistent finite-evaluation conditions for its fallback statement.
-An equally indexed fresh solver can use the same summaries.
-No universal deletion-exclusive speedup is claimed.
+Generic sequential prefixes need not fit stage-rtn charts.
+Coordinate charts can require prohibitive resources.
+The current scalar representation rejects ordinary candidate dimensions under default planning limits.
+Resource byte estimates are planning heuristics, not measured peaks or proved bounds.
+Do not raise limits silently to make a model appear supported.
 
-The sharp shape constant is classical matrix geometry.
-Derivative sketches, Taylor verification, and polynomial sufficient statistics have prior work.
-Claim the narrow exact sequential decision and canonical-state contribution.
-Do not claim exhaustive novelty or formal proof-assistant verification.
-Canonical state means logical serialized state under trusted storage.
-It does not mean physical Python-memory erasure.
+## Next open preparation
 
-Earlier raw experiments were pruned and remain unavailable.
-PROJECT_CONTEXT labels historical metrics as reconstructed conversation evidence.
-Never present them as recovered or rerun measurements.
+G0 remains open.
+Finish real source and tokenizer pins, record boundaries, selectors, and planned inventory.
+Resolve resource-feasible execution and enforce worker limits.
+Implement required process-cold conditions, detailed cost/coverage logging, and matched ablations.
+The current runner provides warm instrumented diagnostic timing only.
+It does not implement a full NLP task suite.
+The protocol blocks accidental research execution while paused.
 
-Continue from these files.
-Keep all substantive code, reports, tests, and restart context in the authorized repository.
+The run archive retains original states and failed attempts.
+Only returned canonical live state satisfies the deletion guarantee.
+Physical erasure and hostile-storage authentication remain outside scope.
+
+Earlier raw experiment files were pruned.
+Historical PROJECT_CONTEXT metrics are reconstructed chat evidence, not recovered measurements.
+Keep this distinction in every future paper draft.
+Save all substantive code, reports, tests, and restart context to the authorized repository.

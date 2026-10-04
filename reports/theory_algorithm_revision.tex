@@ -16,7 +16,7 @@
 {\large Response moments, certified execution, and canonical deletion state}\par
 4 October 2026\quad |\quad Research target: ACL 2027
 
-\note{Main advance.} Repair no longer requires an unchanged first layer. We generate new quantized codes, bound the resulting retained activation drift, and certify those codes against the complete sequential retained-data quantizer. Ambiguous stages trigger selected retained-group replay. Complete replay is an exact fallback.
+\note{Main advance.} Repair no longer requires an unchanged first layer. We generate new quantized codes, bound the resulting retained activation drift, and certify those codes against the complete sequential retained-data quantizer. Ambiguous stages trigger selected retained-group replay. Complete replay is exact when required finite evaluations succeed. An evaluator failure aborts the transaction.
 
 The central theorem concerns a \emph{new certified prefix}. The new response-moment extension moves the surrogate toward that prefix using deletable polynomial statistics, with a conditional second-order remainder (Sections 17--21). A sharper covariance bound ignores harmless global scaling. A corpus-independent reference index gives canonical repeated-deletion state while preserving the original sequential model target. A weighted work scheduler bounds worst-case regression without predicting fresh runtime.
 
@@ -46,6 +46,8 @@ Let $R$ be retained records and $\ell=1,\ldots,L$ quantization stages in a deter
 Original weights $W$, grids, order, tie rule, normalization $M_0$, feature program and graph are fixed. Record-local evaluation excludes unaccounted corpus-dependent packing/batching. Relative damping and other branches are treated in Sections 3 and 12.
 
 The exact statistic/rounding oracle $V$ treats finite feature-program outputs as exact dyadic values, forms exact moments, and performs deterministic rational metric rounding. Local fallback uses rational elimination and exact grid comparisons. The previously measured floating reduction/Cholesky executable $E$ is a different target. Equality to $V$ does not automatically establish bitwise equality to $E$.
+
+Revision 5 selects the certified feature program $V_{\rm cert}$ for the implemented path. It is distinct from legacy library-math $V$. All completion statements require successful necessary feature evaluations and sufficient resources. Proof abstention causes replay; finite-evaluator failure causes an atomic abort.
 
 \note{Neural evaluator obligation.} Transport must enclose the actual declared feature evaluator. Operator inequalities in Section 5 are directly valid for ideal operators. For a pinned floating program, add sound numerical-error bounds for both reference and candidate executions, or enclose that program directly. Unverified error tolerances are not certificates.
 
@@ -231,7 +233,7 @@ Step & Stage-local algorithm\\\midrule
 \end{tabularx}
 
 \begin{theorem}[Soundness and termination]
-With finite groups, a progress rule that eventually replays a new unresolved group, and a terminating exact local oracle, the algorithm returns $Q_{\rm seq}(W,R)$ and terminates even at ties. Certified ancestors stay fixed; changing a current candidate invalidates tentative descendants.
+Assume finite groups, finite resources, successful required feature evaluations, and a terminating exact local oracle. Require each replay step to resolve another group. The algorithm then returns $Q_{\rm seq}(W,R)$ and terminates even at ties. Certified ancestors stay fixed; changing a current candidate invalidates tentative descendants.
 \end{theorem}
 \begin{proof}
 Equation (9) encloses unknown contributions at each retry; acceptance follows from Theorem 2. After finitely many strict replay steps every uncertainty is zero and the exact local oracle terminates. Induct over the finite DAG. Limit precision-only retries so they cannot prevent replay progress.
@@ -248,7 +250,7 @@ For reference $b$, stage $\ell$ and stored group $G$, the persistent index keeps
 Exact subtraction of removed reference contributions updates the moments. Removed content must be available before erasure, or its intrinsic contribution must have been stored. An ID alone cannot reconstruct an absent contribution.
 
 \begin{theorem}[Canonical service with the original model target]
-Let the fresh constructor output exactly (1), using fixed reference maps and canonical index construction/serialization. Update the index on deletion, compute the target model by transported repair or exact fallback, and discard noncanonical traces. The committed result is exactly $\mathcal A(R\setminus F)$. Any deletion sequence gives fresh state for its final retained set.
+Let the fresh constructor output exactly (1), using fixed reference maps and canonical index construction/serialization. Assume required finite evaluations succeed. Update the index on deletion, compute the target model by transported repair or exact fallback, and discard noncanonical traces. The committed result is exactly $\mathcal A(R\setminus F)$. Any completed deletion sequence gives fresh state for its final retained set.
 \end{theorem}
 \begin{proof}
 Reference moments are sums of intrinsic record functions, so subtraction gives their defining retained values. Recompute extrema and map/tree metadata canonically. Theorems 2--3 or fallback supply the target model. Erasure leaves precisely (1). Induction over requests proves order independence.
@@ -473,7 +475,7 @@ Transport provider & Sound group errors for declared feature programs, including
 Metric enclosure & Certified positive spectral endpoints relative to an exact or validated surrogate.\\
 Decision engine & Fixed-grid rational oracle; accelerated interval route with exact tie fallback.\\
 Replay engine & Certified ancestor identities, complete dependencies, deterministic record-local evaluation.\\
-Scheduler & Resumable charged-work steps, packet-lag bound, always-terminating exact branch.\\
+Scheduler & Resumable charged-work steps, packet-lag bound, exact branch terminating on the declared execution domain.\\
 Commit & Complete artifact/state verification, canonical serialization and transient/deleted-data erasure.\\\bottomrule
 \end{tabularx}
 
@@ -493,7 +495,7 @@ The defensible contribution is certified calibration-data removal through a sequ
 
 \begin{tabularx}{\linewidth}{@{}p{.30\linewidth}X@{}}\toprule
 Claim & Disposition\\\midrule
-Exact changed-prefix output & Proved on certificate acceptance; exact fallback always returns the declared target.\\
+Exact changed-prefix output & Accepted certificates are sound. Replay returns the target when required finite evaluations succeed; evaluator failure aborts.\\
 Order-independent state & Proved for the reference-index constructor (1).\\
 Bounded regression & Proved in the work model, with packet and cancellation costs.\\
 Every small deletion is fast & Not implied; reference drift need not shrink with deletion size.\\

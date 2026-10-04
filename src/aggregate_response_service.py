@@ -23,12 +23,13 @@ from __future__ import annotations
 from dataclasses import dataclass
 from fractions import Fraction
 from hashlib import sha256
+import json
 from types import MappingProxyType
 from typing import Callable, Iterable, Mapping
 
 from .exact_core import certify_relative_enclosure
 from .linear_response import LinearRecordMoments, LinearResponseIndex, shifted_linear_response_bound
-from .response_moments import RecordMoments, ResponseIndex
+from .response_moments import RecordMoments, ResponseBasis, ResponseIndex
 from .response_service_adapter import ResponseQuery, ResponseStageContract
 from .repair_service import (
     CertifiedPrefix, FeatureEvaluator, GroupBinding, InvalidWitness, JobSpec,
@@ -129,6 +130,243 @@ class AggregateState:
     def digest(self) -> str:
         return _sha(self.canonical_bytes())
 
+    @classmethod
+    def from_canonical_bytes(cls, payload: bytes, *, limits: StateParseLimits | None = None) -> AggregateState:
+        """Parse bounded canonical bytes. This does not authenticate their origin."""
+        return _StateParser(StateParseLimits() if limits is None else limits).state(payload)
+
+
+@dataclass(frozen=True)
+class StateParseLimits:
+    """Explicit resource limits for canonical state loading."""
+    max_bytes: int = 64 * 1024 * 1024
+    max_records: int = 1_000_000
+    max_groups: int = 65_536
+    max_stages: int = 4_096
+    max_width: int = 65_536
+    max_terms: int = 4_096
+    max_rationals: int = 4_000_000
+    max_integer_digits: int = 4_096
+    max_text_length: int = 16_384
+    max_depth: int = 32
+
+    def __post_init__(self) -> None:
+        if any(type(value) is not int or value <= 0 for value in self.__dict__.values()):
+            raise ValueError("state parsing limits must be positive built-in integers")
+
+
+class _StateParser:
+    def __init__(self, limits: StateParseLimits) -> None:
+        if not isinstance(limits, StateParseLimits):
+            raise TypeError("limits must be StateParseLimits")
+        self.limits = limits
+        self.rationals = 0
+
+    @staticmethod
+    def _object(value: object, fields: tuple[str, ...]) -> dict:
+        if type(value) is not dict or set(value) != set(fields):
+            raise ValueError("state object has missing or unknown fields")
+        return value
+
+    @staticmethod
+    def _array(value: object, maximum: int, *, length: int | None = None) -> list:
+        if type(value) is not list or len(value) > maximum or (length is not None and len(value) != length):
+            raise ValueError("state array has an invalid length")
+        return value
+
+    def _text(self, value: object) -> str:
+        if type(value) is not str or not value or len(value) > self.limits.max_text_length:
+            raise ValueError("state text is empty, invalid, or too long")
+        return value
+
+    @staticmethod
+    def _integer(value: object, maximum: int, minimum: int = 0) -> int:
+        if type(value) is not int or not minimum <= value <= maximum:
+            raise ValueError("state integer is outside its allowed range")
+        return value
+
+    @staticmethod
+    def _digest(value: object) -> str:
+        if not _valid_digest(value):
+            raise ValueError("state digest is invalid")
+        return value
+
+    def _load(self, payload: bytes) -> object:
+        if type(payload) is not bytes:
+            raise TypeError("state payload must be bytes")
+        if len(payload) > self.limits.max_bytes:
+            raise ValueError("state payload exceeds max_bytes")
+        def integer(text: str) -> int:
+            if len(text.lstrip("-")) > self.limits.max_integer_digits:
+                raise ValueError("state integer exceeds max_integer_digits")
+            return int(text)
+        def pairs(items: list) -> dict:
+            result = {}
+            for key, value in items:
+                if key in result:
+                    raise ValueError("state object contains duplicate keys")
+                result[key] = value
+            return result
+        def no_float(value: str) -> None:
+            raise ValueError("state encoding forbids floating numbers")
+        try:
+            value = json.loads(payload.decode("utf-8"), object_pairs_hook=pairs, parse_int=integer,
+                               parse_float=no_float, parse_constant=no_float)
+        except (UnicodeDecodeError, json.JSONDecodeError, RecursionError) as exc:
+            raise ValueError("invalid state JSON") from exc
+        pending = [(value, 0)]
+        while pending:
+            node, depth = pending.pop()
+            if depth > self.limits.max_depth:
+                raise ValueError("state JSON exceeds max_depth")
+            if type(node) is dict:
+                pending.extend((child, depth + 1) for child in node.values())
+            elif type(node) is list:
+                pending.extend((child, depth + 1) for child in node)
+        return value
+
+    def _scalar(self, value: object) -> Fraction:
+        pair = self._array(value, 2, length=2)
+        if any(type(x) is not int for x in pair) or pair[1] <= 0:
+            raise ValueError("state rational requires integers and a positive denominator")
+        self.rationals += 1
+        if self.rationals > self.limits.max_rationals:
+            raise ValueError("state exceeds max_rationals")
+        exact = Fraction(pair[0], pair[1])
+        if [exact.numerator, exact.denominator] != pair:
+            raise ValueError("state rational is not canonical")
+        return exact
+
+    def _matrix(self, value: object, rows: int, columns: int) -> Matrix:
+        return tuple(tuple(self._scalar(x) for x in self._array(row, self.limits.max_width, length=columns))
+                     for row in self._array(value, self.limits.max_width, length=rows))
+
+    def _basis(self, value: object) -> ResponseBasis:
+        data = self._object(value, ("manifest_id", "rows", "terms", "corpus_independent_by_caller_attestation"))
+        if data["corpus_independent_by_caller_attestation"] is not True:
+            raise ValueError("state basis requires its fixed independence attestation")
+        return ResponseBasis(self._text(data["manifest_id"]),
+                             self._integer(data["rows"], self.limits.max_width, 1),
+                             self._integer(data["terms"], self.limits.max_terms, 1), True)
+
+    def _index(self, encoded: object, *, linear: bool) -> LinearResponseIndex | ResponseIndex:
+        if type(encoded) is not str:
+            raise ValueError("aggregate index requires an encoded canonical string")
+        try:
+            payload = encoded.encode("ascii")
+        except UnicodeEncodeError as exc:
+            raise ValueError("aggregate index encoding must be ASCII") from exc
+        fields = ("schema", "basis", "records", "stored_rational_count", "constant_gram", "first_response",
+                  "tangent_scalar_gram") if linear else ("schema", "basis", "records", "cross_moments")
+        data = self._object(self._load(payload), fields)
+        schema = "linear-response-index-v1" if linear else "response-index-v1"
+        if data["schema"] != schema or data["records"] != []:
+            raise ValueError("aggregate index schema differs or contains per-record bindings")
+        basis = self._basis(data["basis"])
+        d, r = basis.rows, basis.terms - 1
+        if linear:
+            constant = self._matrix(data["constant_gram"], d, d)
+            first = tuple(self._matrix(x, d, d) for x in self._array(data["first_response"], r, length=r))
+            tangent = self._matrix(data["tangent_scalar_gram"], r, r)
+            result = LinearResponseIndex(basis, constant, first, tangent, ())
+            if self._integer(data["stored_rational_count"], self.limits.max_rationals) != result.stored_rational_count:
+                raise ValueError("aggregate index has an incorrect rational count")
+        else:
+            count = basis.terms * (basis.terms + 1) // 2
+            if count * d * d > self.limits.max_rationals:
+                raise ValueError("aggregate index exceeds max_rationals")
+            matrices = tuple(self._matrix(x, d, d) for x in self._array(data["cross_moments"], count, length=count))
+            result = ResponseIndex(basis, matrices, ())
+        if result.canonical_bytes() != payload:
+            raise ValueError("aggregate index encoding is not canonical")
+        return result
+
+    def state(self, payload: bytes) -> AggregateState:
+        data = self._object(self._load(payload), ("schema", "manifest", "model", "records", "groups"))
+        if data["schema"] != "aggregate-linear-service-v1":
+            raise ValueError("unsupported aggregate state schema")
+        outputs = []
+        for value in self._array(data["model"], self.limits.max_stages):
+            item = self._object(value, ("stage_id", "codes"))
+            rows = self._array(item["codes"], self.limits.max_width)
+            if not rows:
+                raise ValueError("model codes require a nonempty matrix")
+            first = self._array(rows[0], self.limits.max_width)
+            outputs.append(StageOutput(self._text(item["stage_id"]), self._matrix(rows, len(rows), len(first))))
+        records = []
+        for value in self._array(data["records"], self.limits.max_records):
+            item = self._object(value, ("id", "content_sha256", "group", "contributions"))
+            contributions = []
+            for raw in self._array(item["contributions"], self.limits.max_stages):
+                triple = self._array(raw, 3, length=3)
+                if type(triple[1]) is not bool:
+                    raise ValueError("contribution availability requires a boolean")
+                contributions.append(ContributionBinding(self._text(triple[0]), triple[1], self._digest(triple[2])))
+            records.append(AggregateRecord(self._text(item["id"]), self._digest(item["content_sha256"]),
+                self._integer(item["group"], self.limits.max_groups - 1), tuple(contributions)))
+        groups = []
+        for value in self._array(data["groups"], self.limits.max_groups):
+            item = self._object(value, ("group", "ids", "membership_digest", "stages"))
+            stages = []
+            for raw in self._array(item["stages"], self.limits.max_stages):
+                stage = self._object(raw, ("stage", "unavailable", "response", "error"))
+                response = None if stage["response"] is None else self._index(stage["response"], linear=True)
+                error = None if stage["error"] is None else self._index(stage["error"], linear=False)
+                if (response is None) != (error is None):
+                    raise ValueError("aggregate response and error must coexist")
+                stages.append(AggregateStage(self._text(stage["stage"]), response, error,
+                    self._integer(stage["unavailable"], self.limits.max_records)))
+            groups.append(AggregateGroup(self._integer(item["group"], self.limits.max_groups - 1),
+                tuple(self._text(x) for x in self._array(item["ids"], self.limits.max_records)),
+                self._digest(item["membership_digest"]), tuple(stages)))
+        state = AggregateState(self._digest(data["manifest"]), tuple(outputs), tuple(records), tuple(groups))
+        # Canonical serialization does not sort these collections. Check identity order explicitly.
+        for keys in (state.retained_ids, tuple(g.group_id for g in groups)):
+            if keys != tuple(sorted(set(keys))):
+                raise ValueError("state IDs must be unique and sorted")
+        for keys in (tuple(o.stage_id for o in outputs),):
+            if len(keys) != len(set(keys)):
+                raise ValueError("state stages must be unique")
+        for record in records:
+            keys = tuple(c.stage_id for c in record.contributions)
+            if len(keys) != len(set(keys)):
+                raise ValueError("record contribution stages must be unique")
+        for group in groups:
+            if not group.record_ids or group.record_ids != tuple(sorted(set(group.record_ids))):
+                raise ValueError("group IDs must be nonempty, unique, and sorted")
+            keys = tuple(s.stage_id for s in group.stages)
+            if len(keys) != len(set(keys)):
+                raise ValueError("group stages must be unique")
+        if state.canonical_bytes() != payload:
+            raise ValueError("aggregate state encoding is not canonical")
+        return state
+
+
+@dataclass(frozen=True)
+class AggregateIndex:
+    """Retained summaries without a model proposal."""
+    manifest_digest: str
+    records: tuple[AggregateRecord, ...]
+    groups: tuple[AggregateGroup, ...]
+
+    @property
+    def retained_ids(self) -> tuple[str, ...]:
+        return tuple(r.record_id for r in self.records)
+
+    def canonical_bytes(self) -> bytes:
+        return _json({"schema": "aggregate-retained-index-v1", "manifest": self.manifest_digest,
+                      "records": [r._json() for r in self.records], "groups": [g._json() for g in self.groups]})
+
+    @property
+    def digest(self) -> str:
+        return _sha(self.canonical_bytes())
+
+
+@dataclass(frozen=True)
+class AggregateIndexResult:
+    index: AggregateIndex
+    ledger: WorkLedger
+
 
 @dataclass(frozen=True)
 class AggregateGroupContext:
@@ -209,6 +447,28 @@ class AggregateRepairService:
     @property
     def target_manifest_digest(self) -> str:
         return self.job.manifest_digest
+
+    def load_state(self, payload: bytes, *, limits: StateParseLimits | None = None,
+                   expected_digest: str | None = None) -> AggregateState:
+        """Load canonical state and verify this service's structural bindings.
+
+        A trusted expected digest also detects changed bytes. Neither parsing
+        nor hashing authenticates an untrusted source without a trusted digest.
+        Aggregate values still require trusted construction or trusted storage.
+        """
+        if type(payload) is not bytes:
+            raise TypeError("state payload must be bytes")
+        parse_limits = StateParseLimits() if limits is None else limits
+        if not isinstance(parse_limits, StateParseLimits):
+            raise TypeError("limits must be StateParseLimits")
+        if len(payload) > parse_limits.max_bytes:
+            raise ValueError("state payload exceeds max_bytes")
+        if expected_digest is not None:
+            if not _valid_digest(expected_digest) or _sha(payload) != expected_digest:
+                raise ValueError("state payload differs from expected digest")
+        state = AggregateState.from_canonical_bytes(payload, limits=parse_limits)
+        self._validate(state, _Work())
+        return state
 
     def _empty(self, stage: StageSpec) -> AggregateStage:
         contract = self.contracts.get(stage.stage_id)
@@ -327,25 +587,38 @@ class AggregateRepairService:
             audits.append(StageAudit(stage.stage_id, prefix.digest, "independent_fresh", 0, (), (), None))
         return self._finish(meta, groups, tuple(outputs), tuple(audits), work)
 
-    def _validate(self, state: AggregateState, work: _Work) -> None:
-        if not isinstance(state, AggregateState) or state.manifest_digest != self.manifest_digest:
+    def _validate(self, state: AggregateState | AggregateIndex, work: _Work, *, validate_model: bool = True) -> None:
+        if (not isinstance(state, (AggregateState, AggregateIndex))
+                or state.manifest_digest != self.manifest_digest):
             raise ValueError("aggregate state uses a different service manifest")
-        if (type(state.records) is not tuple or type(state.groups) is not tuple or type(state.model) is not tuple
-                or state.retained_ids != tuple(sorted(set(state.retained_ids)))):
+        if (type(state.records) is not tuple or type(state.groups) is not tuple
+                or any(not isinstance(r, AggregateRecord) for r in state.records)
+                or any(not isinstance(g, AggregateGroup) for g in state.groups)):
+            raise ValueError("aggregate state must contain canonical immutable tuples")
+        if any(type(r.record_id) is not str for r in state.records):
+            raise ValueError("aggregate record IDs must be strings")
+        if state.retained_ids != tuple(sorted(set(state.retained_ids))):
             raise ValueError("aggregate state must contain canonical immutable tuples")
         stage_ids = tuple(s.stage_id for s in self.job.stages)
-        if tuple(o.stage_id for o in state.model) != stage_ids:
-            raise ValueError("state model has different stages")
-        for output, stage in zip(state.model, self.job.stages):
-            if (len(output.codes) != len(stage.weights) or any(len(r) != stage.width for r in output.codes)
-                    or any(x not in stage.grids[j] for row in output.codes for j, x in enumerate(row))):
-                raise ValueError("state model violates target shapes or grids")
+        if validate_model:
+            if not isinstance(state, AggregateState) or type(state.model) is not tuple:
+                raise ValueError("state model must contain an immutable output tuple")
+            if any(not isinstance(o, StageOutput) for o in state.model):
+                raise ValueError("state model contains an invalid output")
+            if tuple(o.stage_id for o in state.model) != stage_ids:
+                raise ValueError("state model has different stages")
+            for output, stage in zip(state.model, self.job.stages):
+                if (len(output.codes) != len(stage.weights) or any(len(r) != stage.width for r in output.codes)
+                        or any(x not in stage.grids[j] for row in output.codes for j, x in enumerate(row))):
+                    raise ValueError("state model violates target shapes or grids")
         members: dict[int, list[AggregateRecord]] = {}
         for record in state.records:
             work.add("validated_record_entries")
             if (not isinstance(record, AggregateRecord) or type(record.record_id) is not str or not record.record_id
-                    or not _valid_digest(record.content_digest) or record.group_id != self._engine._group(record.record_id)
+                    or not _valid_digest(record.content_digest) or type(record.group_id) is not int
+                    or record.group_id != self._engine._group(record.record_id)
                     or type(record.contributions) is not tuple
+                    or any(not isinstance(x, ContributionBinding) for x in record.contributions)
                     or tuple(x.stage_id for x in record.contributions) != stage_ids):
                 raise ValueError("invalid aggregate record metadata")
             if any(not isinstance(x, ContributionBinding) or type(x.available) is not bool
@@ -359,7 +632,8 @@ class AggregateRepairService:
             work.add("validated_membership_entries", len(items))
             encoded = _json([r._json() for r in items])
             work.add("metadata_validation_hash_bytes", len(encoded))
-            if (type(group.record_ids) is not tuple or type(group.stages) is not tuple
+            if (type(group.group_id) is not int or type(group.record_ids) is not tuple or type(group.stages) is not tuple
+                    or any(not isinstance(s, AggregateStage) for s in group.stages)
                     or group.record_ids != tuple(r.record_id for r in items)
                     or group.membership_digest != _sha(encoded)
                     or tuple(s.stage_id for s in group.stages) != stage_ids):
@@ -386,7 +660,7 @@ class AggregateRepairService:
                 work.add("aggregate_psd_validation_calls", 1 + bool(response.tangent_scalar_gram))
                 work.add("validated_aggregate_rational_entries", aggregate.stored_rational_count)
 
-    def _delete(self, state: AggregateState, deleted: tuple[Record, ...], work: _Work
+    def _delete(self, state: AggregateState | AggregateIndex, deleted: tuple[Record, ...], work: _Work
                 ) -> tuple[tuple[AggregateRecord, ...], tuple[AggregateGroup, ...]]:
         metadata = {r.record_id: r for r in state.records}
         remove = set()
@@ -454,14 +728,55 @@ class AggregateRepairService:
         beta, delta = bound.omitted_psd_trace_normalized, bound.response_gram_error_normalized
         return raw, (beta + delta, delta)
 
+    def prepare_index(self, state: AggregateState | AggregateIndex,
+                      deleted_records: Iterable[Record]) -> AggregateIndexResult:
+        """Update retained summaries without reading or constructing a model.
+
+        Charge this ledger once before an indexed fresh comparison. The
+        returned index contains no old model. Extraction uses deleted inputs.
+        """
+        work = _Work()
+        self._validate(state, work, validate_model=False)
+        retained, groups = self._delete(state, tuple(deleted_records), work)
+        index = AggregateIndex(self.manifest_digest, retained, groups)
+        work.add("index_serialized_bytes", len(index.canonical_bytes()))
+        return AggregateIndexResult(index, work.freeze())
+
+    @staticmethod
+    def _mode(mode: str) -> str:
+        if mode not in ("certified", "full_replay"):
+            raise ValueError("service mode must be certified or full_replay")
+        return mode
+
     def repair(self, state: AggregateState, deleted_records: Iterable[Record],
-               retained_source: Callable[[str], Record]) -> AggregateServiceResult:
+               retained_source: Callable[[str], Record], *, mode: str = "certified") -> AggregateServiceResult:
         """Return a fresh-identical complete state or fail without a mutation."""
+        self._mode(mode)
         work = _Work()
         self._validate(state, work)
         if not callable(retained_source):
             raise TypeError("retained source must be callable")
         retained, groups = self._delete(state, tuple(deleted_records), work)
+        return self._solve(retained, groups, retained_source, work, mode)
+
+    def indexed_fresh(self, index: AggregateIndex | AggregateState,
+                      retained_source: Callable[[str], Record], *, mode: str = "certified") -> AggregateServiceResult:
+        """Construct the entire model from retained summaries and new prefixes.
+
+        This method does not access any old model. It shares the repair
+        planner, so it is an equal-information comparison, not a distinct
+        faster algorithm. Supply retained summaries from ``prepare_index``.
+        Charge that update separately and exactly once per full request.
+        """
+        self._mode(mode)
+        work = _Work()
+        self._validate(index, work, validate_model=False)
+        if not callable(retained_source):
+            raise TypeError("retained source must be callable")
+        return self._solve(index.records, index.groups, retained_source, work, mode)
+
+    def _solve(self, retained: tuple[AggregateRecord, ...], groups: tuple[AggregateGroup, ...],
+               retained_source: Callable[[str], Record], work: _Work, mode: str) -> AggregateServiceResult:
         metadata = {r.record_id: r for r in retained}
         cache: dict[str, Record] = {}
         def read(rid: str) -> Record:
@@ -482,6 +797,15 @@ class AggregateRepairService:
         for stage_index, stage in enumerate(self.job.stages):
             prefix = self._engine._prefix(stage, outputs)
             raw = _zero(stage.width)
+            if mode == "full_replay":
+                for group in groups:
+                    for rid in group.record_ids:
+                        x = self._engine._target(read(rid), stage, prefix, work, "retained_replay_evaluator_calls")
+                        raw = _combine(raw, _gram(x, work), 1, work)
+                outputs.append(self._engine._quantize(stage, raw, work))
+                audits.append(StageAudit(stage.stage_id, prefix.digest, "forced_full_replay", 0,
+                                         tuple(g.group_id for g in groups), (), None))
+                continue
             proposals, bounds = {}, {}
             for group in groups:
                 proposal, bound = self._proposal(group, group.stages[stage_index], stage, prefix, work)
@@ -526,4 +850,5 @@ class AggregateRepairService:
 
 
 __all__ = ["ContributionBinding", "AggregateRecord", "AggregateStage", "AggregateGroup",
-           "AggregateState", "AggregateGroupContext", "AggregateServiceResult", "AggregateRepairService"]
+           "AggregateState", "StateParseLimits", "AggregateIndex", "AggregateIndexResult",
+           "AggregateGroupContext", "AggregateServiceResult", "AggregateRepairService"]

@@ -16,6 +16,9 @@ The latest revision develops **deletable response moments**: stored intrinsic fe
 - [Independent derivations/review](theory_revision/)
 - [Restart prompt](docs/RESTART_PROMPT.md)
 - [Complete remaining research program](docs/RESEARCH_TODO.md), with priorities, completion criteria, and decision gates
+- [Publication theory](docs/PUBLICATION_THEORY.md) and [claim-to-evidence map](docs/CLAIM_EVIDENCE.md)
+- [Target and charts](docs/TARGET_CONTRACT.md), [fair baselines](docs/BASELINES.md), and [local runner](docs/EXPERIMENT_RUNNER.md)
+- [Prospective empirical protocol](docs/EMPIRICAL_PROTOCOL.md) and [source selection](docs/SOURCE_SELECTION.md)
 
 ## Verification
 
@@ -30,6 +33,21 @@ The PDF build additionally requires a local LaTeX installation and the packages 
 
 **Revision 4:** compact group state, automatic certified transformer response bounds, and local GPT-2 safetensors loading are implemented. The certified provider defines a separate numerical target, V_cert. It uses rational nonlinear enclosures, mixed Hessian bounds, and explicit finite-error propagation. Unsupported chart changes cause retained replay.
 
-The scalar implementation does not establish practical coverage or speed. Metadata scans, preparation, memory, and output costs remain explicit. Correctness tests are not research benchmarks. Production GPU kernels remain future work.
+**Revision 5:** fixed target/chart constructors, bounded state loading, a fair indexed solver, atomic local runner, and analysis are implemented.
+The full software suite passes 197 correctness tests.
+The prospective protocol keeps failures and missing planned requests in the workload.
+The report now conditions fallback completion on successful finite evaluation.
+
+Repair and indexed fresh use the same planner.
+The planner ignores the old model.
+The current implementation has no deletion-specific solver advantage.
+Report indexing savings separately from solver improvements.
+
+The scalar implementation does not establish practical coverage or speed.
+Ordinary model candidates exceed default resource planning limits.
+The runner provides warm instrumented diagnostic timing.
+Source pins, resource-feasible execution, enforced limits, detailed instrumentation, and matched ablations remain open.
+Correctness tests are not research benchmarks.
+Production GPU kernels remain future work.
 
 Research experiments remain paused. Synthetic empirical datasets remain deferred. Earlier experiment payloads were pruned; historical numbers are labeled as reconstructed context. No model weights, raw calibration corpus, credentials or old raw results are included.

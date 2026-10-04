@@ -182,3 +182,51 @@ The old empirical protocol remains unavailable.
 The audit found one concrete wording inconsistency in report Section 16.
 Its fallback statement must include successful finite evaluation, as the current numerical contract already requires.
 The register tracks this correction without reopening the reviewed induction proof.
+
+## Revision 5 preparation (4 October 2026)
+
+The user instructed us to proceed with the remaining research program.
+This revision implements preparation while research experiments remain paused.
+Current STATUS and RESUME supersede older unfinished-infrastructure statements above.
+
+V_cert is selected for the implemented path.
+A manifest binds weight-only grids, ridge, original normalization, fixed order, and lower ties.
+Deterministic chart recipes use base weights and fixed configuration only.
+A config-only preflight counts dense storage before eager tensor loading.
+Byte estimates are planning heuristics, not measured memory or proved bounds.
+
+Canonical state now has a strict bounded reload path.
+A fresh-process software test loads saved bytes and reproduces the next deletion.
+The service exposes retained index preparation and indexed fresh construction.
+Both repair and indexed fresh call the same planner.
+That planner ignores the old quantized model.
+Therefore current solving has no deletion-specific algorithmic advantage.
+Index maintenance savings remain a separate potential benefit.
+
+The local runner connects hash-bound checkpoint inputs, target/chart construction, preparation, deletion, three comparisons, and held-out loss.
+It requires complete model and canonical-state equality before recording successful comparisons.
+Atomic storage preserves incomplete attempts and seals completed results.
+The research archive retains original states outside the live-state deletion guarantee.
+Warm instrumented timings have explicit boundaries and do not establish production latency.
+
+Analysis retains failed and missing planned attempts.
+It reduces timing repeats within requests and resamples independent calibration roots.
+The new prospective protocol does not recover the missing earlier protocol.
+Its thresholds and sample sizes are planning decisions, not measured feasibility or power evidence.
+
+Source metadata candidates include DistilGPT2/GPT-2, WikiText-2 raw, C4 English, and English LAMBADA.
+No model or corpus was downloaded.
+The catalog leaves unavailable pins unresolved.
+Ordinary candidate dimensions exceed the default reference resource plan.
+The adapter now accepts verified historical DistilGPT2 label metadata without changing LM computation.
+Actual public checkpoint compatibility remains untested.
+
+Independent review found and corrected parsing, source binding, result sealing, locking, restart, and failure-classification defects.
+The current validation file records the final suite and hashes.
+The report consistently conditions completion on successful finite evaluation and sufficient resources.
+Publication T1–T7 and a claim-to-evidence map organize the existing theorem stack.
+
+The experiment-ready gate remains open.
+Feasible execution, complete source/token manifests, stress-selector equations, worker limits, inventory scheduling, and required diagnostics remain pending.
+Practical coverage, complete speed, lifetime value, and NLP quality remain unmeasured.
+No universal reliable speedup or final publication readiness is claimed.

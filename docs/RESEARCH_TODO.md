@@ -1,10 +1,12 @@
 # Remaining research program
 
 Updated 4 October 2026.
-Implementation baseline: commit `aa2399f3e5324aba54ab0506d14513b3b9610637`.
+Revision 5 preparation builds on implementation commit `aa2399f3e5324aba54ab0506d14513b3b9610637`.
 This register covers the path from the current reference implementation to a submitted ACL paper.
 Every unchecked item remains open.
-This planning update does not resume experiments.
+This implementation update does not resume experiments.
+Checked items meet their stated preparation scope.
+Unchecked items can contain partial work; see the progress table below.
 Synthetic empirical datasets remain deferred.
 
 The main unresolved question is practical value on real language models.
@@ -21,7 +23,11 @@ Correct replay handles rejection, but it can remove the expected speed benefit.
 - Implemented local GPT-2 safetensors loading.
 - Passed 129 correctness tests with source hashes.
 - Verified one deletion-induced early change without retained-record reads.
-- Saved the 27-page report and complete restart context.
+- Saved the v4 report and complete restart context.
+- Added the v5 target/chart constructors, bounded reload, fair indexed solver, and atomic local runner.
+- Added failure-aware analysis, a prospective protocol, and the T1–T7 publication sequence.
+- Passed 197 correctness tests, including a fresh-process reload check.
+- Updated the report to 28 pages and corrected partial-evaluator fallback wording.
 
 These results need no repetition without a concrete change or unresolved risk.
 No current real-model benchmark supports a practical speed claim.
@@ -43,40 +49,52 @@ No task authorizes external compute or hardware from another project.
 
 **A. Freeze the scientific target — P0**
 
-- [ ] **A01. Select the primary numerical target.** Recommend `V_cert` for the implemented certified path. State its deployment scope explicitly.
+- [x] **A01. Select the primary numerical target.** Recommend `V_cert` for the implemented certified path. State its deployment scope explicitly.
   Completion: one target identity governs the main theory, algorithms, and exactness experiments.
-- [ ] **A02. Freeze every quantization choice.** Specify grids, order, ties, ridge, normalization, parameter conversion, and fixed parameters.
+  Evidence: docs/TARGET_CONTRACT.md selects V_cert; legacy targets remain distinct.
+- [x] **A02. Freeze every quantization choice.** Specify grids, order, ties, ridge, normalization, parameter conversion, and fixed parameters.
   Completion: an immutable manifest resolves every branch that can affect the returned model.
+  Evidence: src/target_manifest.py constructs and binds fixed target choices.
 - [ ] **A03. Freeze the feature contract.** Specify tokenizer, record boundaries, token order, masks, positions, runtime, and operation schedule.
   Completion: deleting records cannot silently change packing or another record's input definition.
-- [ ] **A04. Freeze the deletion interface.** State whether requests contain identifiers, deleted payloads, or authenticated contributions.
+- [x] **A04. Freeze the deletion interface.** State whether requests contain identifiers, deleted payloads, or authenticated contributions.
   Completion: the service obtains required deleted content before erasure and charges its retrieval.
-- [ ] **A05. Freeze the state and output contract.** Specify full model output, retained bindings, group sums, source storage, and snapshots.
+  Evidence: The service accepts verified deleted payloads; the runner charges resident-source lookup and extraction.
+- [x] **A05. Freeze the state and output contract.** Specify full model output, retained bindings, group sums, source storage, and snapshots.
   Completion: fresh and repair return the same defined state; trust and logical-erasure limits are explicit.
+  Evidence: Bounded state loading and docs/BASELINES.md define canonical live state and trusted storage.
 - [ ] **A06. Fix the intended claim and resource budget.** Specify supported model scope, memory limits, preparation limits, and allowed execution resources.
   Completion: the proposed headline names its target, comparator, workload, and success measure.
 
 **B. Consolidate the publication theory — P0, then P3**
 
-- [ ] **B01. Correct unconditional fallback language.** Report Section 16 currently says fallback always returns the target.
+- [x] **B01. Correct unconditional fallback language.** The previous Section 16 statement omitted finite-evaluation conditions.
   Completion: every relevant statement requires successful finite evaluation; evaluator failure causes an explicit abort.
-- [ ] **B02. Build one theorem sequence.** Connect finite feature bounds, Gram bounds, discrete decisions, sequential exactness, canonical state, and conditional work.
+  Evidence: Report opening, completion theorem, state theorem, scheduler interface, and claim table now state execution conditions.
+- [x] **B02. Build one theorem sequence.** Connect finite feature bounds, Gram bounds, discrete decisions, sequential exactness, canonical state, and conditional work.
   Completion: symbols and assumptions remain consistent across the main text and supplement.
-- [ ] **B03. Map theorems to executable checks.** Identify each bound, recorded quantity, rejection reason, and fallback action.
+  Evidence: docs/PUBLICATION_THEORY.md orders T1–T7 and maps the existing report proofs.
+- [x] **B03. Map theorems to executable checks.** Identify each bound, recorded quantity, rejection reason, and fallback action.
   Completion: distinguish the stronger quadratic theorem from the implemented shifted linear acceptance rule.
-- [ ] **B04. State the finite error floor.** Include jet errors, numerical errors, and any residual errors.
+  Evidence: docs/PUBLICATION_THEORY.md and docs/CLAIM_EVIDENCE.md map checks and separate acceptance rules.
+- [x] **B04. State the finite error floor.** Include jet errors, numerical errors, and any residual errors.
   Completion: the second-order claim states when those terms prevent second-order scaling.
-- [ ] **B05. Complete the work and storage model.** Count directions, mixed derivatives, fitting, metadata, integer sizes, replay, output, and preparation.
+  Evidence: Publication T1–T3 and the finite-floor discussion distinguish local order from nonzero error terms.
+- [x] **B05. Complete the work and storage model.** Count directions, mixed derivatives, fitting, metadata, integer sizes, replay, output, and preparation.
   Completion: no complete-service bound silently treats these terms as free.
-- [ ] **B06. Fix the reliability estimand.** Define request distributions, successful requests, aborts, timeouts, and the latency statistic.
+  Evidence: The publication work model lists representation, arithmetic, metadata, replay, and complete-service costs.
+- [x] **B06. Fix the reliability estimand.** Define request distributions, successful requests, aborts, timeouts, and the latency statistic.
   Completion: deterministic guarantees and statistical claims have separate scopes.
-- [ ] **B07. Create a claim-to-evidence map.** Include exactness, storage, coverage, speed, quality, and novelty.
+  Evidence: The publication reliability definition and prospective protocol retain aborts, timeouts, and missing planned attempts.
+- [x] **B07. Create a claim-to-evidence map.** Include exactness, storage, coverage, speed, quality, and novelty.
   Completion: each claim points to a proof, software check, or new measurement.
+  Evidence: docs/CLAIM_EVIDENCE.md separates proved, tested, and unmeasured claims.
 
 **C. Make the certificate useful — P0 design, P1 feasibility**
 
-- [ ] **C01. Specify a reproducible chart constructor.** Select directions and radii independently of the deletable corpus.
+- [x] **C01. Specify a reproducible chart constructor.** Select directions and radii independently of the deletable corpus.
   Completion: a manifest records the construction, provenance, rank, direction bytes, and preparation cost.
+  Evidence: src/chart_construction.py supplies deterministic stage-rtn, coordinate, and none recipes with provenance and resource counts.
 - [ ] **C02. Establish chart coverage as the first research gate.** Measure the complete installed prefix against the fixed chart.
   Completion: quantify residuals and radius violations; small deletion size is never used as a substitute for this check.
 - [ ] **C03. Define the response when chart coverage fails.** Choose residual certificates, independent charts, another sound construction, or a narrower claim.
@@ -90,40 +108,48 @@ No task authorizes external compute or hardware from another project.
 
 **D. Build the experiment infrastructure — P0**
 
-- [ ] **D01. Add a complete experiment runner.** Connect loading, preparation, fresh quantization, deletion, repair, oracle checks, and evaluation.
+- [x] **D01. Add a complete experiment runner.** Connect loading, preparation, fresh quantization, deletion, repair, oracle checks, and evaluation.
   Completion: one command executes a manifest and records every stage outcome.
-- [ ] **D02. Add durable state loading.** Current canonical serialization must have a validated path back into the service.
+  Evidence: src/experiment_runner.py connects local inputs, three methods, equality checks, and diagnostic held-out loss.
+- [x] **D02. Add durable state loading.** Current canonical serialization must have a validated path back into the service.
   Completion: a new process loads saved state and reproduces subsequent deletion results.
-- [ ] **D03. Add atomic restart handling.** Separate incomplete requests from committed results.
+  Evidence: Bounded canonical loading passes a fresh-process deletion and retained-fresh comparison.
+- [x] **D03. Add atomic restart handling.** Separate incomplete requests from committed results.
   Completion: interruption cannot produce a successful artifact or contaminate later requests.
+  Evidence: src/run_store.py provides isolated attempts, atomic artifacts, immutable completion, and verified restart.
 - [ ] **D04. Add complete timing instrumentation.** Existing event counters do not measure callback work or elapsed time.
   Completion: disjoint timers cover loading, extraction, proof, replay, factorization, metadata, serialization, output, and cleanup.
 - [ ] **D05. Measure memory and arithmetic size.** Include fixed weights, charts, temporary jets, rational values, metadata, and output artifacts.
   Completion: logs contain peak memory, serialized bytes, precision, and integer lengths.
 - [ ] **D06. Define cold and warm execution.** Fix caches, thread counts, synchronization, and output policy.
   Completion: compared methods receive identical declared conditions.
-- [ ] **D07. Add scripts that generate tables and figures.** Read immutable run records rather than copied summary values.
+- [x] **D07. Add scripts that generate tables and figures.** Read immutable run records rather than copied summary values.
   Completion: every displayed value traces to a manifest, log, and artifact hash.
+  Evidence: scripts/summarize_results.py generates hash-traceable tables and optional plots from recorded inputs.
 
 **E. Implement fair comparisons — P0**
 
-- [ ] **E01. Retain direct fresh quantization as an oracle.** Check every stage and the complete retained state.
+- [x] **E01. Retain direct fresh quantization as an oracle.** Check every stage and the complete retained state.
   Completion: the fresh control path independently checks repair control decisions.
-- [ ] **E02. Implement equally indexed fresh quantization.** Give it the same valid summaries, caches, storage budget, and state interface.
+  Evidence: The runner compares every quantized stage and complete canonical state against direct retained fresh construction.
+- [x] **E02. Implement equally indexed fresh quantization.** Give it the same valid summaries, caches, storage budget, and state interface.
   Completion: the comparison cannot depend on withholding reusable information from fresh quantization.
+  Evidence: prepare_index and indexed_fresh share the valid retained index and repair planner.
 - [ ] **E03. Add an identity-only repair baseline.** Reuse features only when the relevant finite ancestors remain identical.
   Completion: changed dependencies cause exact replay under the same target.
 - [ ] **E04. Add fixed-reference and response baselines.** Compare constant summaries, compact linear responses, and quadratic responses where affordable.
   Completion: each method uses sound bounds and reports its full preparation and storage cost.
 - [ ] **E05. Add replay and verifier controls.** Compare full replay and the existing replay heuristic; isolate the cost of certification.
   Completion: every control returns the same target or carries an explicit diagnostic-only label.
-- [ ] **E06. Decide the claim if indexed fresh ties repair.** Separate gains from indexing from gains specific to deletion.
+- [x] **E06. Decide the claim if indexed fresh ties repair.** Separate gains from indexing from gains specific to deletion.
   Completion: the paper does not claim a strict deletion advantage that the fair comparison cannot support.
+  Evidence: The current planner ignores old codes; claim index maintenance value separately from deletion-specific solving.
 
 **F. Rebuild and freeze the empirical protocol — P0**
 
-- [ ] **F01. Reconstruct the missing protocol.** The earlier 17-page empirical protocol is unavailable.
+- [x] **F01. Reconstruct the missing protocol.** The earlier 17-page empirical protocol is unavailable.
   Completion: the repository contains the current full protocol without presenting reconstructed details as recovered evidence.
+  Evidence: docs/EMPIRICAL_PROTOCOL.md reconstructs the prospective plan without claiming recovery of the missing protocol.
 - [ ] **F02. Select supported pretrained checkpoints.** Define useful size and architecture coverage within the resource budget.
   Completion: record revisions, parameter hashes, architecture support, and model licenses.
 - [ ] **F03. Select real calibration and evaluation text.** Include source variation appropriate to the paper's claims.
@@ -136,8 +162,9 @@ No task authorizes external compute or hardware from another project.
   Completion: primary comparisons and sensitivity studies are distinct; unsupported branches remain excluded.
 - [ ] **F07. Define independent research units and analysis.** Use independent calibration roots and requests; separate them from timing repetitions.
   Completion: paired intervals respect shared roots and repeated requests; sample sizes have a stated precision goal.
-- [ ] **F08. Define failure and exclusion rules.** Include abstention, fallback, timeout, memory failure, and finite-evaluator aborts.
+- [x] **F08. Define failure and exclusion rules.** Include abstention, fallback, timeout, memory failure, and finite-evaluator aborts.
   Completion: no failed request silently disappears from headline denominators or cost summaries.
+  Evidence: The protocol and analyzer preserve failed, unverified, interrupted, and missing planned attempts.
 
 **G. Establish correctness on real checkpoints — P1**
 
@@ -250,6 +277,31 @@ No task authorizes external compute or hardware from another project.
 | CEX11 | Add hostile-storage authentication | The threat model includes hostile state. Hash matching alone does not satisfy this claim. |
 | CEX12 | Study a deletion-native quantizer | Sequential repair fails the feasibility gate. Treat the alternative as a separate target and evaluate its quality. |
 
+**Revision 5 partial work and unresolved preparation**
+
+There are 21 completed required items and 57 open required items.
+The 12 conditional extensions remain separate.
+Software completion does not close the experiment-ready gate.
+
+| Open items | Preparation now present | Work still required |
+| --- | --- | --- |
+| A03, F02–F04 | Strict token-manifest schema and source metadata catalog | Actual source/tokenizer pins, boundaries, licenses, partitions, and local validation |
+| A06, C06 | Config-only resource plan and local budget | Resource-feasible supported workload and target-preserving performance route |
+| C02–C03 | Exact membership checks and sound replay | Useful coverage evidence and a selected response to practical failure |
+| C04 | Explicit prospective continuation thresholds | Freeze executable scope and justify feasible budgets before tuning |
+| C05 | Stage routes, operation counts, and stable run failure outcomes | Full per-stage chart, bound, margin, and rejection diagnostics |
+| D04–D06 | External service timers, allocation peaks, sizes, and warm execution label | Disjoint internal costs, complete claimed boundary, independent memory peaks, controlled cold/warm arms |
+| E03–E05 | Shared compact planner and forced full-replay mode | Identity-only control, matched response tiers, and integrated ablation matrix |
+| F05–F06 | Request families and quantization recipe schema | Exact stress-score equations, final settings, and planned inventory |
+| F07 | Root-cluster paired analysis and prospective sample count | Development-based precision justification and frozen sampling inventory |
+| L01, L05 | Source hashes, commands, updated docs, and repository checkpoint | Final environment pin, submission release, and release tag after evidence |
+
+The runner measures instrumented warm diagnostic costs.
+It cannot yet validate the protocol's complete-service reliable-speed gate.
+The current protocol blocks research execution while paused.
+Ordinary candidate models exceed default reference planning limits.
+No resource limit may be raised silently to bypass that finding.
+
 **Decision gates**
 
 | Gate | Required evidence | Action if the gate fails |
@@ -261,6 +313,6 @@ No task authorizes external compute or hardware from another project.
 | G4: NLP value | Meaningful quality and task results on held-out real text | Revise the supported application or reconsider venue fit |
 | G5: Submission ready | Frozen evidence, coherent paper, clean reproduction, and current venue checks | Resolve missing evidence before submission |
 
-The immediate order is A, B01, C01, and the remaining P0 infrastructure and protocol tasks.
+The immediate order is resource-feasible execution, complete input/selector manifests, controlled instrumentation, and the remaining baseline controls.
 The first authorized study should resolve G1 and G2 before expanding the benchmark matrix.
 Do not promise a universal speedup or treat another conditional theorem as measured reliability.

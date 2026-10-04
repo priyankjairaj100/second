@@ -352,3 +352,22 @@ Its setup reads and conversions belong in complete cost accounting.
 No pretrained-model coverage, quality, or latency claim follows from the completed software tests.
 
 See `docs/CERTIFIED_PROVIDER.md`, `docs/AGGREGATE_SERVICE.md`, and `docs/CHECKPOINT_ADAPTER.md` for implementation details.
+
+## 10. Revision 5 target binding
+
+The generated target manifest selects V_cert explicitly.
+It binds the actual stage grids, ridge, normalization, weights, ordering, and proof/service sources.
+Its digest enters the service job's numerical contract.
+Deterministic chart construction reconstructs the target before accepting it.
+Service construction also reconstructs the chart.
+
+The primary grids use fixed power-of-two scales and signed integer codes.
+Nearest-grid midpoint ties select the lower code.
+The original token count remains fixed after deletion.
+The target contains no fitted calibration grid, damping rule, or activation order.
+Those branches require separate deletion semantics.
+
+Prepared token manifests preserve record-local input definitions.
+Deleting records never repacks another record.
+Source metadata candidates remain separate from approved, hash-bound run inputs.
+Read docs/TARGET_CONTRACT.md for recipes and exact binding fields.

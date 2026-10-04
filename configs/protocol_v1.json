@@ -1,0 +1,72 @@
+{
+  "schema": "calibration-protocol-v1",
+  "version": 1,
+  "created_date": "2026-10-04",
+  "status": "prospective_scaffold_experiments_paused",
+  "target": "V_cert",
+  "primary_baseline": "indexed_fresh",
+  "candidate": "repair",
+  "correctness_control": "direct_fresh",
+  "real_text_only": true,
+  "synthetic_empirical_datasets": false,
+  "external_compute_authorized": false,
+  "planning_choices_are_not_measurements": true,
+  "resources": {
+    "execution": "local_cpu_only",
+    "observed_container_memory_gib": 8,
+    "planned_process_memory_limit_gib": 6,
+    "phase_cpu_hour_caps": {"feasibility": 3, "development": 12, "confirmation": 64},
+    "preflight_arm_timeout_seconds": 900,
+    "later_arm_timeout_seconds": 3600,
+    "limits_enforced_by_this_file": false
+  },
+  "stages": {
+    "preflight": {"independent_roots": 1, "records_per_root": 2, "tokens_per_record": 16, "timing_repeats": 1},
+    "feasibility": {"independent_roots": 2, "records_per_root": 8, "tokens_per_record": 32, "timing_repeats": 1},
+    "development": {"independent_roots": 4, "records_per_root": 32, "tokens_per_record": 64, "timing_repeats": 3},
+    "confirmation": {"independent_roots": 12, "records_per_root": 64, "tokens_per_record": 128, "timing_repeats": 3}
+  },
+  "sampling": {
+    "pool_separation": "document_disjoint_development_confirmation_evaluation",
+    "root_law": "independent_subset_draws_from_fixed_phase_pool",
+    "within_root_replacement": false,
+    "cross_root_overlap_permitted": true,
+    "request_cluster": "root_id",
+    "requests": ["uniform_singleton", "uniform_1_of_16", "uniform_1_of_4", "contiguous_1_of_16", "concentrated_1_of_16", "difficult_1_of_16"],
+    "sequential_deletions_per_root": 3,
+    "source_withdrawal": "extension_requires_documented_distinct_sources"
+  },
+  "analysis": {
+    "schema": "calibration-analysis-v1",
+    "repeat_reduction": "request_median_nanoseconds",
+    "speed_estimand": "equal_root_mean_of_request_log_baseline_over_candidate",
+    "speed_population": "both_methods_exact_complete_in_every_planned_repeat",
+    "failure_reporting": "all_planned_attempts_and_requests",
+    "confirmation_requires_planned_inventory": true,
+    "bootstrap_unit": "independent_calibration_root",
+    "bootstrap_draws": 2000,
+    "bootstrap_seed": 20261004,
+    "confidence": 0.95,
+    "single_root_interval": null,
+    "primary_comparison_count": 1
+  },
+  "gates": {
+    "mismatches_allowed": 0,
+    "changed_ancestor_stage_group_acceptance_minimum": 0.25,
+    "coverage_required_on_every_feasibility_root": true,
+    "retained_fresh_to_base_perplexity_maximum": 1.2,
+    "reliable_speed_lower_interval_minimum": 1.05,
+    "reliable_speed_requires_all_planned_requests_exact": true,
+    "reliable_speed_requires_complete_committed_boundary": true
+  },
+  "blocked_fields": [
+    "pinned_model_and_dataset_revisions",
+    "tokenizer_and_document_boundary_manifest",
+    "concentrated_and_difficult_request_score_equations",
+    "chart_and_primary_quantization_manifest",
+    "external_resource_limit_enforcement",
+    "validated_service_boundary_and_claimed_process_cold_conditions",
+    "frozen_planned_run_inventory",
+    "development_based_precision_justification"
+  ]
+}

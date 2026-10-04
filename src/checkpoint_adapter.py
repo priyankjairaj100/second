@@ -169,7 +169,7 @@ _METADATA_FIELDS = {
     "return_dict", "output_hidden_states", "output_attentions", "torchscript",
     "use_bfloat16", "tf_legacy_loss", "tie_encoder_decoder", "chunk_size_feed_forward",
     "is_decoder", "is_encoder_decoder", "cross_attention_hidden_size",
-    "finetuning_task", "id2label", "label2id", "num_labels", "task_specific_params", "problem_type",
+    "finetuning_task", "id2label", "label2id", "num_labels", "_num_labels", "task_specific_params", "problem_type",
     "summary_type", "summary_use_proj", "summary_activation", "summary_proj_to_labels", "summary_first_dropout",
     "max_length", "min_length", "do_sample", "early_stopping", "num_beams", "num_beam_groups",
     "diversity_penalty", "temperature", "top_k", "top_p", "typical_p", "repetition_penalty",

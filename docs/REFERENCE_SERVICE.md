@@ -1,6 +1,7 @@
 # Executable reference service
 
-This code implements target V with explicit numerical contracts.
+The primary certified path implements V_cert with explicit numerical contracts.
+The legacy library-math V path remains available and distinct.
 It prioritizes inspectable correctness.
 It does not provide fast quantization for large checkpoints.
 Exact rational values can require large numerators and denominators.
@@ -23,6 +24,12 @@ Event counters and software tests do not measure latency.
 | `src/certified_transformer.py` | Explicit decoder with automatic response bounds | Certification requires a supported parameter chart |
 | `src/checkpoint_adapter.py` | Local GPT-2 parameter import | It does not reproduce external floating kernels |
 | `src/work_scheduler.py` | Cooperative scheduling of two exact branches | Packet and cleanup costs require separate accounting |
+| `src/target_manifest.py` | Fixed grids and complete target identity | Defines the project quantizer, not vendor GPTQ identity |
+| `src/chart_construction.py` | Deterministic independent chart recipes | Construction does not establish practical coverage |
+| `src/resource_preflight.py` | Config-only counts before eager loading | Planning bytes are not a proved memory bound |
+| `src/experiment_runner.py` | Local three-method comparison and exactness checks | Warm diagnostic timing; no downloads |
+| `src/run_store.py` | Atomic artifacts, sealed results, and verified restart | POSIX trusted-storage contract |
+| `src/result_analysis.py` | Failure-aware paired analysis and lifetime accounting | No empirical result follows without real run records |
 
 The original response adapter remains a useful correctness reference.
 It stores individual response payloads inside canonical descriptors.
@@ -34,6 +41,8 @@ The aggregate service replaces that storage layout.
 It stores response matrices only at group level.
 Its proposal contracts group totals without scanning individual descriptors.
 Read `docs/AGGREGATE_SERVICE.md` for the complete interface and ledger.
+Read `docs/BASELINES.md` for bounded loading and equally indexed construction.
+Read `docs/EXPERIMENT_RUNNER.md` for measured boundaries and unresolved infrastructure.
 
 ## Original decoder usage
 
