@@ -1,0 +1,224 @@
+INDEPENDENT ADVERSARIAL REVIEW: IMPLEMENTATION AND RESPONSE THEORY
+4 October 2026. Software correctness review; no benchmark, research dataset,
+model download, or performance measurement was conducted by this reviewer.
+
+Scope
+-----
+Read AGENTS.md, RESUME.md, project status/context, algorithm/numerical contracts,
+and the implementations exact_core.py, sparse_repair.py, work_scheduler.py,
+response_moments.py, response_certificate.py, repair_service.py, and
+transformer_backend.py. Independently checked response_moments.txt, including
+its mixed-derivative and coefficient-storage arguments. This is a mathematical
+and source review with executable contract fixtures, not a formal verification
+or an audit against arbitrary hostile Python code or storage.
+
+Concrete issue found and resolved
+--------------------------------
+RepairService initially allowed reassignment of job/evaluator/reference_evaluator
+after its manifest and ancestor closure were cached. A caller could change
+normalization, ridge, or the executable while retaining the old manifest.
+Reported this to the author. The service is now a frozen dataclass, and the
+ancestor map is a read-only MappingProxyType. An independent regression test
+checks that changing normalization via service.job, replacing the evaluator,
+or mutating the ancestor map is rejected.
+
+Also flagged the analogous decoder configuration hazard. The backend author
+had already sealed all ordinary attribute assignment and made configuration,
+weights and block maps immutable; this was checked in source and regression
+tests. These measures prevent ordinary accidental configuration drift. They
+do not make Python objects secure against arbitrary object.__setattr__, native
+memory modification, monkey-patching, or dishonest trusted callbacks.
+
+Algorithmic findings
+--------------------
+1. Exact local core: reverse LDL signs, conditional-input recurrence,
+   pre-decision energy, nearest-lower ties, saturation, zero-radius ties and
+   shape-certificate squared comparisons are consistent. The output explicitly
+   marks the supplied spectral premise as unverified by this local module.
+
+2. Sparse repair: the injection sign is positive B'_(i,h)*(q'_h-q_h), and the
+   displacement is minus (B'-B)*(w-q). Exact fallback uses the true supplied B'
+   and already repaired coordinates. The implementation allows a proved
+   interval to select a changed cell and then injects that change downstream.
+   Inclusive upper/exclusive lower cell semantics are handled correctly. By
+   default the old trace is checked; omitted trace/envelope validation remains
+   visibly conditional in result flags. Target-factor provenance is not proved.
+
+3. Service prefix correctness: stages are visited in fixed dependency order;
+   each evaluator receives only its full transitive ancestor closure. Ancestor
+   outputs are immutable. The service never installs an unaccepted candidate
+   into the ancestor prefix. Unknown bounds cause retained replay. Each replay
+   removes a previously unresolved group, so finite exact fallback exists.
+
+4. Proposal correctness: an optional prefix-dependent raw surrogate Gram must
+   be exactly symmetric PSD; the rational Schur/zero-pivot test is sound. Its
+   witness binds both the original reference context and the proposal digest.
+   Feature-error conversion uses the proposal trace, and replay subtracts that
+   proposal before adding the true Gram. Thus the ridge-based relative bound
+   remains valid after arbitrary group replacement. The source verifies binding
+   and arithmetic, not truth of an arbitrary provider's mathematical premise.
+
+5. Repeated state: service-origin reference moments are exact additive functions
+   of each record under a fixed corpus-independent reference. Deletion checks
+   membership, uniqueness and content digest, regenerates removed contributions,
+   and drops empty groups. Metadata/group order is canonical. Original state is
+   not mutated. Fresh and repair serialize the same logical retained-only state.
+   Fixed positive normalization and ridge are part of the manifest. This is not
+   an implementation of dynamic normalization, activation ordering, fitted
+   scales, relative damping, or other data-dependent quantizer branches.
+
+6. Complete decoder: embedding/position addition, pre-LayerNorm, causal multihead
+   attention, output projection, residual, second norm, GELU/up/down MLP,
+   residual, final norm and LM head are present. Stage features are the inputs
+   to the four quantized matrices per block. All earlier stages are conservative
+   dependencies. The backend binds a specific finite CPU program and exports
+   exact dyadic feature values; it does not claim pretrained-package equivalence
+   or cross-platform bitwise identity. Its actual shortcut is finite-parameter
+   identity with the independent base reference. Changed finite ancestors are
+   UNKNOWN and replay; no nontrivial finite-kernel response proof is implemented.
+
+7. Response moments: oriented cross-moment contraction and exact deletion are
+   correct. Intrinsic record-payload digests prevent accidental wrong-contribution
+   subtraction. These digests do not prove that original jets match a neural
+   derivative. The code stores full oriented cross matrices and therefore uses
+   a constant-factor larger representation than the theory's minimal symmetric
+   coefficient/triangular-entry representation.
+
+8. Response certificate: descriptor contraction includes all squared-error cross
+   terms. The dyadic square-root enclosure is outward by exact integer arithmetic.
+   The derived bound is 2*upper_sqrt(z2*e2)+e2 with correct normalization. IDs,
+   source bindings and descriptor shape are checked. Descriptor/jet/curvature/
+   finite-execution/domain fidelity remains explicitly unverified by this module.
+
+9. Scheduler: least normalized accumulated work gives the stated packet-lag
+   weighted-race bound under the declared bounded cooperative-packet contract.
+   Cancellation and commit are separate actual charged values. A step reporting
+   too-large work cannot undo already executed work, which the module discloses.
+   Exceptions do not commit a returned candidate; caller-owned failure cleanup
+   is not silently covered. This is not a GPU preemption or wall-clock theorem,
+   and the scheduler is a separate primitive, not a measured full-service race.
+
+Independent response-theory review
+----------------------------------
+Checked the affine-jet quadratic Gram expansion, additive deletion closure,
+Taylor integral remainder with FULL bilinear coefficient Hessian, out-of-chart
+residual, numerical and jet-approximation terms. The descriptor outer-product
+sum correctly preserves mixed squared-error terms. The response transport and
+shape certificate compose under the new certified prefix. The stated local
+square-root-in-margin radius follows by solving 2e+e^2 < eta_tau. It requires
+the stated residual/numerical conditions; it is not implied by few deletions.
+
+Checked affine and matrix-product mixed derivative terms; the conservative
+softmax Hessian bound 3/2; the LayerNorm Hessian bound
+6*||gamma||_infinity/(sqrt(n)*s_min^2); and the safe GELU constants. These apply
+to ideal smooth nodes with separately certified numerical errors. They may be
+too loose in real models, and the current decoder supplies no such nonzero
+transport provider.
+
+The coefficient-storage proof is valid for its exact polynomial-Gram query
+interface: independent rank-one symmetric matrices tensor independent squares
+of affine polynomials; B choices per coefficient produce B^(K*M) distinguishable
+query functions. The higher-order squares-spanning argument also checks out.
+It is not a lower bound for one model output, arbitrary transformer repair,
+unbounded-size machine words, or algorithms allowed missing record information.
+
+Independent executable checks
+-----------------------------
+Added tests/test_adversarial_sparse_v3.py (3 tests):
+- several changed target factors compared against the independent constrained
+  Gaussian-solve quantizer, with exact fallback and checked-envelope paths;
+- stale old trace rejection;
+- dishonest envelope rejection in verified mode and visible conditional status
+  in the explicit trusted-envelope mode.
+
+Added tests/test_adversarial_service_v3.py (initially 6 tests; 7 after the signed-bound extension below):
+- a two-stage fixture whose FIRST installed stage changes after deletion,
+  compared with an independently reconstructed feature formula and constrained
+  Gaussian solves, and with fresh canonical bytes;
+- repeated, combined, empty-request and empty-retained construction semantics;
+- tampering with each of all eight witness binding fields;
+- mismatched provider identity, negative/float/bool bounds and unsupported tuples;
+- duplicate/absent/wrong-content deletions, foreign manifests and wrong retained
+  source contents;
+- immutable configuration regression for the stale-manifest issue above.
+
+Final reviewer-run command at this checkpoint:
+  python -m unittest discover -s tests -v
+Result: 49 tests passed. Later author tests may increase this count; this note
+does not pre-certify code or tests added after the review. Reported runtimes are
+deliberately omitted because these are correctness fixtures, not a benchmark.
+
+Claim boundary
+--------------
+No remaining correctness defect was found within the stated trusted-program,
+trusted-provider and service-origin/authenticated-state contracts of the reviewed
+code. This statement is narrower than production readiness or formal proof.
+There is still no nontrivial certified transformer response provider, no trained
+checkpoint adapter validation, no practical coverage evidence, and no reliable
+full-model latency speedup. The direct fresh service is a correctness comparator;
+it is not asserted to be the fastest equally indexed performance baseline.
+Logical omission of deleted entries is not physical secure erasure of Python
+or caller copies. Novelty priority and empirical significance require their own
+evidence; passing these tests establishes neither.
+
+ADDENDUM: COMPACT LINEAR RESPONSE, SIGNED BOUNDS AND SERVICE ADAPTER
+----------------------------------------------------------------
+Subsequently reviewed linear_gram_response.txt, src/linear_response.py, both
+tiers in src/response_service_adapter.py and the signed-bound service extension.
+
+The linear-response theorem checks out: the omitted Q is PSD and satisfies
+Q <= tr(Q) I = beta I. Hence the shifted proposal Slin+beta I is PSD and,
+with response feature error delta, its true metric discrepancy lies in
+[-(beta+delta)I, delta I]. The negative/positive endpoint directions are correct.
+The group replay SPD invariant and monotone uncertainty endpoints hold with
+fixed prefix/chart, while candidate margins need not improve monotonically.
+The quadratic radius inequalities L17-L18 and exact 253/492 two-dimensional
+information-loss example were checked independently. The smaller representation
+does not contradict the earlier full polynomial-Gram query lower bound because
+it computes an enclosure and may abstain rather than answering that full query.
+
+The compact index computes exact constant/first matrices, scalar tangent Gram,
+beta and full-response trace. Its unshifted lower bound is
+max(Gershgorin, lambda-beta), and the shifted bound strengthens this to
+max(lambda, unshifted_lower+beta). These are sound under intrinsic moment
+provenance. Exact raw proposal reconstruction multiplies by M0 after subtracting
+ridge and adding normalized beta I, so no normalization is duplicated.
+
+SignedGramBound requires two nonnegative exact raw error radii. The service
+sums each side separately, divides by fixed normalization and ridge, and
+derives a=1-negative/(M0*lambda), b=1+positive/(M0*lambda). Each replay replaces
+the actual proposal and removes its two radii. The newly added independent
+test_signed_raw_radius_is_normalized_exactly_once uses M0=1/4: failing to
+normalize its one-sided PSD bound would falsely accept codes (0,0), whereas
+the actual target is (0,1). The current implementation correctly replays and
+matches the target. Malformed negative/floating signed radii are also rejected.
+All 10 reviewer-owned tests pass under package invocation after adding relative
+import fallbacks for compatibility with both unittest discover and package mode.
+
+Both service adapter tiers bind the composite reference, new certified prefix,
+group membership, basis identities, raw source digest, coefficient count and
+configured coefficient-ball domain. The coefficient decomposition, residual
+norm and descriptor semantic truth remain declared trusted proof obligations.
+The quadratic adapter contracts at normalization 1 and returns a raw absolute
+bound. The linear adapter also contracts at normalization 1 and returns raw
+signed radii beta+delta and delta. The engine applies the actual M0 exactly
+once. The helper's relative acceptance result is not mistakenly used as a
+certificate under that temporary normalization.
+
+An additional completeness issue was found and resolved: a legitimate
+intrinsic_moments=None response originally kept an untyped base descriptor;
+the configured provider then rejected it as malformed evidence instead of
+replaying. Both wrappers now emit a canonical unavailable-response marker
+containing its tier and base descriptor. Providers return UNKNOWN for a valid
+marker and reject malformed/noncanonical markers. The author is adding its
+regression tests; the source fix has been reviewed. This was a fallback
+completeness defect, not a false-acceptance defect.
+
+Two important implementation distinctions remain. First, the adapters retain
+per-record moment payloads and rebuild group sums, so they still read O(N)
+stored descriptors; they do not implement the aggregate-only index's online
+record-count-independent query cost. Second, the response-moments section 16
+no-replay corollary uses the sharper theoretical whitened transport route.
+The current absolute/signed-radii service may conservatively replay even when
+that theoretical inequality holds. This distinction was reported to the theory
+author and root. Neither affects exactness, but both limit performance claims.

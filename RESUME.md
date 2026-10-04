@@ -1,34 +1,41 @@
-# Calibration-data unlearning for quantized language models
+# Resume this ACL 2027 calibration-unlearning project
 
-Last checkpoint: 4 October 2026. Target venue: ACL 2027.
+Last revision: 4 October 2026, v3 response-moment / executable-reference work.
 Repository: https://github.com/priyankjairaj100/second
 
-## Instructions for the next chat
+Read docs/STATUS.md, docs/PROJECT_CONTEXT.md, docs/VALIDATION.md, docs/REFERENCE_SERVICE.md and the consolidated report first. Preserve AGENTS.md. The user has authorized pushing all substantive project work and restart context here without repeated permission requests.
 
-Read this file first, then `docs/STATUS.md`, `docs/PROJECT_CONTEXT.md`, the latest report and `docs/ALGORITHM_SPEC.md`. The theory/design revision is complete at its stated contracts; full transformer integration and empirical validation remain. Preserve distinctions between proved theorems, implemented algorithms, reported prior measurements and untested proposals. Do not infer empirical success from a conditional theorem. Experiments remain PAUSED pending the user's instruction to resume. The user authorized saving all project files and context to this repository and wants work to continue here without repeated permission requests.
+## Current scientific target
 
-The active request is: "attack the remaining points theoritically and algorithmically. when everything is closed we will resume experiments." During that work the user added: "use this repo to push all your files ... chatgpt chats may freeze run out anytime. so to be sagfe drop full context here so that we may be able to resume in another chat if we have to."
+Fix base weights W. Remove calibration documents F and reproduce Q_seq(W,C\\F), including changed downstream features after earlier weights change. Target V treats a pinned finite record-local neural program's outputs as exact dyadics, then uses exact rational statistics and fixed-grid rounding. It is not the historical floating reduction/Cholesky executable E. This does not unlearn knowledge in base weights W.
 
-## Scientific goal
+## Latest request and phase
 
-Fix a full-precision model W. A sequential quantizer Q uses calibration documents C. On withdrawal F, return exactly the result of Q(W,C\\F), including downstream changes caused by earlier quantized layers. This is calibration-source removal, not removal of knowledge learned in W. Primary aim: meaningful full-model repair savings, with precisely declared state, numerical oracle, storage, and correctness guarantees.
+User: "ok lets complete the remainig items now for max novlety" after asking to close theory/algorithms before resuming experiments. Research experiments remain PAUSED; correctness tests for authored code have been run. No new model/data downloads, benchmark campaign or synthetic empirical dataset study was run.
 
-## Most important current facts
+## Most important new result
 
-1. A prior scalar deletion-score certificate proves equality to full retained-data requantization when all quantized codes stay unchanged. An unchanged-prefix/checkpoint version also permits changed suffix weights. Conditional full-model work savings are proved; reliable wall-clock savings have NOT been established.
-2. The recorded pilot's first layer changes codes even after one-record deletion. Thus the old unchanged-prefix route cannot explain those targets. The remaining bottleneck is retained activation/statistic recomputation after changed early layers.
-3. The completed theoretical improvement is candidate-prefix transport certification: permit new codes, bound retained activation/covariance drift from independent references, and certify against the true sequential target. The 17-page report proves exactness, finite adaptive replay fallback and a conditional full-model cost bound. It is not an implemented or measured full-model service.
-4. Further results: sharp shape bound `(b-a)/(2 sqrt(ab)) K`; operator rather than trace scores; sparse coordinate repair; canonical independent-reference state; weighted fallback with explicit cancellation cost; feature-query limits; and a separate deletion-native alternative. `docs/THEOREM_LEDGER.md` records scope. `src/exact_core.py` implements the local rational oracle/verifier only, with static/manual validation and no numerical experiments.
-5. Workspace maintenance removed all earlier local artifacts before this turn. Their contents were not recovered. Historical results below are reconstructed from visible conversation context; original raw logs/source/PDFs are absent. Do not cite the new repository as containing the old experiment payloads unless those files are later recovered and verified.
+A fixed independent reference can drift too far. Intrinsic response jets let the surrogate move with the new certified prefix while maintaining exact deletable moments. A full remainder includes mixed Hessians, out-of-chart residuals, jet errors and finite arithmetic. Local quadratic error yields a larger sufficient certified region and an explicit whole-model zero-retained-replay regime under stated conditions. No small-deletion coverage or universal gain is assumed.
 
-## Restart protocol
+The newest low-storage tier retains constant/linear Gram response matrices and scalar tangent Gram, O(r d²+r²) per group. Omitted quadratic response is PSD and bounded; a deterministic scalar shift gives a PSD proposal. This still has second-order uncertainty. Read theory_revision/linear_gram_response.txt as well as response_moments.txt.
 
-- Check `docs/STATUS.md`, `docs/NUMERICAL_CONTRACT.md` and the most recent commit before doing work. The consolidated report supersedes less-qualified statements in working notes.
-- Keep theorem assumptions and numerical target explicit. Exact rational/statistical oracle V differs from pinned floating-point executable E.
-- Do not silently change the sequential quantizer to fixed-teacher calibration and still claim the original target.
-- Do not launch benchmarks, synthetic datasets, external GPU jobs, or data downloads while experiments remain paused.
-- Save meaningful progress to GitHub regularly. Preserve existing files and do not force-push.
-- If old artifacts are needed, ask the user to attach the previously downloaded ZIPs/PDFs. Library access in the originating chat was restricted and its last upload failed authentication.
-- Never place credentials, account tokens, unrelated user history, private messages, model caches, or environment secrets in this repository.
+## Implementation status
 
-This checkpoint deliberately stores scientific/project context rather than a transcript of unrelated conversations or internal reasoning.
+The repository now has an executable exact local core, sparse repair, response/remainder arithmetic, a portable complete stage service with canonical repeated-state deletion and finite replay fallback, a deterministic complete CPU decoder and service adapter, and a standalone cooperative work scheduler. Software/adversarial tests include first-layer changes and fresh/repaired canonical-state/logit equality.
+
+IMPORTANT: the decoder's built-in shortcut only proves structural input identity. General changed-prefix finite transport and automatic certified jets/curvature providers are NOT implemented. Response adapters compose user-supplied trusted intrinsic jets/bounds; never present those assumptions as automatically verified. Pretrained checkpoint adapters and fast GPU implementation also remain. See docs/VALIDATION.md for exact check results.
+
+## Novelty and evidence discipline
+
+- Matrix shape constant is classical Kantorovich/Wielandt geometry specialized to quantization.
+- Taylor response models, polynomial statistics and derivative-sketch deletion are prior techniques; Gunn 2026 is a strong adjacent source.
+- An equally indexed fresh solver can exploit the same index. Do not claim deletion-exclusive universal speedup over it.
+- Practical full-model latency/coverage/quality/storage amortization remain empirical.
+- Earlier raw logs/code/PDFs were pruned and are NOT recovered. PROJECT_CONTEXT describes historical numbers as reconstructed conversation evidence.
+- No formal proof-assistant result, hostile-storage authentication or physical Python-memory erasure is claimed.
+
+## Next work boundary
+
+The stated mathematics and executable reference paths are reviewed, not a finished paper. Instantiate a sound practical response provider/pretrained adapter, or explicitly choose a scoped supported numerical target. Only resume research experiments when the user authorizes that phase. Then validate exactness independently before evaluating real text, all fallbacks, complete service timing, equally indexed fresh comparison and lifetime/storage costs.
+
+Continue from current files rather than starting another generic survey. Save source, report, tests and context to GitHub; preserve existing remote changes, no force push. Never upload credentials, unrelated user material, environments or model caches.

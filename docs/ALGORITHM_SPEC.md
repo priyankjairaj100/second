@@ -1,7 +1,7 @@
 # Implementable specification: transported exact sequential repair
 
 Authoritative theory: `reports/theory_algorithm_revision.tex` and the corresponding PDF.
-Status: design is complete at the stated interfaces; only the exact local rational core is implemented. Research experiments remain paused.
+Revision 3 status: a complete portable stage service, deterministic decoder, response arithmetic, sparse repair and scheduler utility are implemented and software-checked. General certified transformer response/numerical providers and pretrained adapters remain absent. Research experiments remain paused. Read docs/REFERENCE_SERVICE.md and docs/VALIDATION.md for exact executable scope.
 
 ## 1. Chosen target
 
@@ -116,7 +116,7 @@ Once the true target factor B' is available, maintain sparse injections of code 
 
 `v'_i = v_i + b_i + sum_{h<i} B'_{ih}(q'_h-q_h)`.
 
-Use a proved interval for b_i. Emit the one cell containing the full interval; recompute only ambiguous target conditional inputs. Inject each actual changed code into later coordinates. Work is `O(pd+(s+r)d)` after factor/trace/envelope acquisition. This is a design theorem, not implemented by the supplied core.
+Use a proved interval for b_i. Emit the one cell containing the full interval; recompute only ambiguous target conditional inputs. Inject each actual changed code into later coordinates. Work is `O(pd+(s+r)d)` after factor/trace/envelope acquisition. This recurrence is implemented in src/sparse_repair.py. Target-factor provenance and external envelope soundness remain explicit premises; validation costs are charged separately.
 
 It is invalid to use this exact-coordinate fallback when the target factor is unknown in transported repair. There the remedy is a tighter enclosure or record replay.
 
@@ -140,3 +140,16 @@ The scheduler bounds regression; it does not prove a positive gain when every ro
 - No speed, accuracy, privacy, novelty or coverage claim is inferred from passing a conditional local inequality.
 
 The next integration must validate these invariants against an independent oracle before any research timing campaign. The user has not yet resumed experiments.
+
+
+## 9. Revision 3: response moments and smaller Gram state
+
+Read theory_revision/response_moments.txt and theory_revision/linear_gram_response.txt. Fix the reference/directions/extractor/domain independently of the removable corpus. Intrinsic jets define Z(a)=Z0+sum a_t Zt. Exact quadratic response moments yield a candidate Gram, and squared intrinsic remainder descriptors yield a bound including mixed curvature, residual drift, jet error and the actual finite evaluator. The new certified prefix determines query coefficients; no old calibrated anchor is committed.
+
+The low-storage alternative stores constant and linear Gram matrices plus the scalar tangent Gram. With beta=trace(DeltaZ DeltaZ^T)/M0, the omitted term is between zero and beta I. A shifted raw surrogate Slin+beta I is PSD. The true metric discrepancy lies between -(beta+delta)I and delta I, allowing asymmetric scales (1-(beta+delta)/lambda, 1+delta/lambda). Each replay replaces the selected shifted proposal and removes both of its signed uncertainty budgets. This retains second-order local error while reducing O(r² d²) coefficient storage to O(r d²+r²).
+
+The standalone moment modules use aggregate totals. The generic response service adapter stores per-record moment payloads in canonical descriptors and rebuilds group totals on request. That is an executable correctness bridge with O(N) descriptor reads and potentially O(N r² d²) payload storage; it does not instantiate compact aggregate service complexity. A future compact service schema must persist group moments and sufficient deleted-side bindings explicitly.
+
+The decoder adapter's built-in proof only establishes identity of the relevant finite ancestor weights. All other finite transformer transport currently returns UNKNOWN. A trusted intrinsic extractor/query callback can instantiate response proposals for a supported feature family; it is not an automatically certified neural jet provider.
+
+No universal advantage over equally indexed fresh construction is claimed. Both comparators must access the same response summaries; setup, index update, projection, factorization, proof, serialization, erasure and all replay count.

@@ -1,29 +1,32 @@
-Exact reference core — 4 October 2026
+Revision 3, 4 October 2026.
 
-Implemented in exact_core.py:
-- Exact reverse LDL decomposition H=L^T diag(t)L, bottom-right pivots.
-- The declared fixed-grid sequential rational quantizer; midpoint ties lower.
-- A conditional relative-spectral rounding certificate using the normalized
-  shape constant (b-a)^2/(4ab), with exact squared cell inequalities.
-- Explicit zero-displacement ties, saturation cells and singleton grids.
-- A per-record PSD spectral-interval sum for deletion; no square roots.
-- Numeric inputs restricted to integers/Fraction, with no float conversion.
+Implemented standard-library reference modules:
+- exact_core.py: exact reverse LDL, sequential rational rounding, shape-cell certificate.
+- sparse_repair.py: changed-code injections and exact ambiguous-coordinate fallback.
+- response_moments.py: exact affine response moment index and canonical deletion.
+- response_certificate.py: squared error descriptors and exact outward bounds.
+- linear_response.py: O(r d²+r²) Gram-response index, PSD omission, signed/shifted enclosures.
+- repair_service.py: complete fixed-DAG fresh/repair paths, canonical state, proposal provenance, adaptive replay.
+- response_service_adapter.py: trusted intrinsic response/extractor integration; per-record descriptor storage and scans explicitly charged.
+- transformer_backend.py: complete pinned scalar CPU decoder, exact dyadic features/logits, service integration, structural identity certificates.
+- work_scheduler.py: standalone cooperative bounded-work fallback scheduler.
 
-The caller MUST rigorously establish a Hbar <= Htrue <= b Hbar. The module
-does not establish this premise. accepted=True is conditional on that premise.
-The result targets this mathematical rational recurrence, not floating-point
-program E. Dense arithmetic operation counts are O(d^3+p d^2) for fixed grids;
-Fraction bit complexity and all full-service costs are additional.
+Behavioral, independent-oracle, adversarial and integration correctness tests
+were run. See docs/VALIDATION.md for the final result and test log. Static
+compilation and report visual checks also completed. These are software
+verification, not research benchmark or synthetic dataset results.
 
-Intentionally not implemented here:
-- A full-model sequential repair service or activation-transport bounds.
-- Authentication of inputs, record IDs, traces or covariance sources.
-- Canonical repeated-deletion state and storage/disposal transactions.
-- Sparse target-factor change injection (separate derivation needed).
-- A benchmark, GPU kernel, model download or empirical speedup claim.
+Not implemented/established:
+- automatic certified neural jets, curvature, residual and nontrivial finite
+  transport for realistic pretrained checkpoints;
+- compact group-aggregated response state inside the complete service (the
+  standalone index is aggregate, but the transparent adapter retains and scans
+  per-record payloads);
+- pretrained model adapters, production GPU kernels or scheduler integration;
+- equality to unrelated floating Gram/Cholesky target E;
+- useful real-model acceptance, latency or memory/amortization results;
+- physical memory erasure, hostile-store authentication, or formal verification.
 
-Validation scope: static Python compilation only. No numerical tests,
-synthetic examples, real-model experiments or timing runs were executed.
-Experiments remain paused by the user's instruction. Static/manual review
-does not establish a tested implementation; numerical verification remains
-required when experiments resume.
+Trusted callback numerical/provenance premises stay visible. UNKNOWN causes
+exact retained replay. Correctness does not imply speedup. Old raw experiment
+files remain unavailable. Research experiments remain paused.

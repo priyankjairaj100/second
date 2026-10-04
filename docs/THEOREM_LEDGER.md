@@ -1,38 +1,35 @@
-# Theorem and claim ledger
+# Theorem and claim ledger — revision 3
 
-Consolidated authority: the 17-page `theory_algorithm_revision.pdf` and its TeX source. Independent notes are working derivations; corrected scope in the consolidated report takes precedence.
+All proved entries mean mathematical derivations with independent adversarial review, not proof-assistant verification. See the consolidated report and derivations for assumptions. Software implementation and empirical evidence are separate columns.
 
-| Result | Status and exact scope |
-| --- | --- |
-| Scale-aware stability `(b-a)/(2 sqrt(ab)) K` | Derived and independently checked; sharp over the abstract SPD quadratic class. |
-| Spectral deletion intervals | Exact conditional bound; inputs must be certified, all relative to the same metric. |
-| Changed-prefix transported repair | Exact original sequential model output on acceptance; ancestor and coordinate induction. |
-| Adaptive refinement | Sound and finitely terminating with progress rule, retained-data access and exact local fallback. |
-| Canonical repeated state | Exact for new reference-index state interface while preserving original model target. Not the old true-Gram cache interface. |
-| Sparse change injection | Exact with known target factors; `O(pd+(s+r)d)` excludes acquisition/trace/envelope work. |
-| Full-model gain | Conditional complete-ledger work theorem; no measured favorable constants yet. |
-| Weighted dovetail | Forecast-free charged-work regression bound, with packet/cancellation terms explicitly included. |
-| Feature-query lower bound | Worst-case n new-feature queries in the stated oracle model; not a lower bound for every explicit transformer implementation. |
-| Rank/moment obstructions | Algebraic examples show why generic low-rank/fixed-polynomial moment closures fail. No synthetic empirical dataset. |
-| Deletion-native anchored alternative | Margin-free exact repeated repair and work regime for a different quantizer. Not equality to Q_seq. |
-| Quality/drift bounds | Deterministic operator/set-level statements; require domains and numerical-error terms, not population accuracy claims. |
-| Python local core | Authored and manually reviewed; static compilation only. No numerical tests or benchmarks run this turn. |
-| Full transformer service | Specification supplied; integration not implemented. |
-| Practical reliable speedup | NOT established. Earlier mixed pilot ratios are historical context, not new evidence. |
+| Result | Mathematical scope | Implementation / evidence |
+| --- | --- | --- |
+| Shape-aware forced-prefix stability | Sharp `(b-a)/(2sqrt(ab)) sqrt(g E)` conditional displacement | Exact rational cell checks; matrix constant is classical geometry |
+| Exact changed-prefix repair | Topological induction for the original fixed-grid sequential target V | Portable stage service with bound-to-prefix proposals and exact replay |
+| Quadratic response Gram | Intrinsic affine feature jets give exact polynomial Gram coefficients | `response_moments.py`; aggregate arithmetic and canonical subtraction |
+| Complete Taylor remainder | Mixed Hessian, out-of-chart residual, jet and finite execution errors | `response_certificate.py` contracts supplied descriptors; does not prove neural bounds |
+| Local quadratic certified region | Controlled in-chart response permits radius proportional to square root of normalized margin | Strong whitened theorem is not automatically the more conservative service acceptance rule |
+| Whole-model zero retained replay | Every stage meets its written local certificate conditions, despite possibly changed codes | Conditional; real transformer coverage unmeasured |
+| Lower-storage linear Gram tier | O(r d²+r²) moments plus PSD omission bound; uncertainty remains second order | Exact module and shifted PSD proposal; explicit signed uncertainty |
+| Shifted adaptive invariant | Raw proposals PSD, ridge floor survives replacement; summed signed budgets shrink | Service accepts signed scalar Loewner witnesses and replay |
+| Canonical repeated state | Fresh model plus intrinsic retained-only indices; logical state equality for arbitrary request order | Byte equality checked; physical memory erasure and hostile-store authentication not claimed |
+| Coefficient-information lower bound | KM log2 B bits for exact no-record-read polynomial Gram queries | Mathematical construction only; does not constrain enclosure-query tier |
+| Sparse code injection | Exact once target factor/trace premises valid; O(pd+(s+r)d) after acquisition | Implemented; default validation/envelope proof costs explicitly extra |
+| Full-model work condition | Complete charged comparator cost; strict gain if saved replay exceeds extra work | No universal or measured latency gain |
+| Weighted fallback | Bounded cooperative packets and explicit cancellation/commit costs | Standalone tested utility; not integrated GPU preemption |
+| Fixed-teacher alternative | Exact additive repair for a different quantizer | Mathematical reserve, not shortcut for Q_seq |
+| Real-model practical value | Requires useful finite providers, residual/coverage/storage/lifetime evidence | NOT established |
 
-## Review fixes incorporated
+## Key review corrections
 
-1. Unchanged-old-prefix reasoning replaced by certified-new-prefix induction.
-2. Trace bounds replaced/supplemented by operator spectral intervals and scale invariance.
-3. Actual finite feature-program errors must be enclosed; ideal Lipschitz bounds are insufficient alone.
-4. Canonical state defined through independent reference statistics; historical calibrated caches are discarded.
-5. Retained raw/tokenized data availability made explicit for fallback termination.
-6. Dovetail loser cleanup kept separate from common baseline cost unless genuinely prepaid.
-7. Retained relative-damping changes included in transported metric uncertainty.
-8. Baseline receives the same cache/index allowance.
-9. Small deletion size does not imply small reference drift or successful certification.
-10. Previous raw files were pruned: recorded numbers are tagged as reconstructed context.
-
-## Not a remaining mathematical promise
-
-No unconditional theorem can guarantee favorable hardware latency, a nontrivial acceptance rate for arbitrary models, or matching NLP quality for a changed quantizer. Those require execution and evidence. The design has a safe exact fallback when any sufficient condition fails; it does not rename fallback as a speedup.
+- The sharp matrix inequality is classical Kantorovich/Wielandt geometry specialized to our quantizer.
+- Derivative sketches for deletion, polynomial statistics, Taylor verification and calibration-state refitting have primary precedents.
+- Fixed reference drift does not shrink merely because deletion fraction is small.
+- A finite executable cannot be differentiated as a smooth real function without separate numerical/branch treatment.
+- Simultaneously changed matrices require mixed Hessian terms.
+- Squared remainder aggregation must include cross terms.
+- Lower storage comes from enclosing the omitted PSD term, not exactly recovering the full Gram polynomial.
+- Equally indexed fresh quantization can exploit the same response index; there is no generic deletion-exclusive speed theorem.
+- Current reference adapter stores/parses per-record response payloads; its storage and request cost do not equal compact group-index asymptotics.
+- The complete CPU decoder is implemented, but its built-in certificates cover structural identity only. Certified changed-prefix transformer jets and practical pretrained integration remain absent.
+- Fresh/repair code tests are not real-data empirical evidence. Historical raw logs remain missing.

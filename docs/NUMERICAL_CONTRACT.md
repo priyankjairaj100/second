@@ -1,6 +1,6 @@
 # Proof-safe numerical providers
 
-Status: mathematical and algorithmic specification, 4 October 2026. No experiment or numerical test was run to prepare this document. This document does not assert that arbitrary vendor kernels already supply certified error bounds.
+Status: numerical contract, updated 4 October 2026. Revision 3 adds a deterministic decoder and software tests; it does not assert that arbitrary vendor kernels supply certified error bounds. The built-in decoder shortcut is structural identity; nontrivial finite transport remains UNKNOWN.
 
 ## 1. The exact target
 
@@ -152,3 +152,10 @@ For each attempted shortcut:
 Record which provider mode was used, which premise failed on abstention, and which target contract was returned. Any canonical-state theorem must specify whether this audit is transient or a canonical function of the retained corpus; history-dependent transcripts cannot silently remain part of a claimed canonical state.
 
 This contract closes the soundness gap between ideal-network transport algebra and a finite-program feature target. It does not certify every vendor kernel, guarantee tight bounds, or establish that the repair path is faster on a particular workload. Those are distinct implementation and empirical obligations.
+
+
+## Revision 3 response-provider boundary
+
+Taylor jets are derivatives of the declared ideal feature map in dequantized ancestor parameters. They are not derivatives through rounding decisions or of the globally discontinuous finite executable. A usable provider must bound all mixed second derivatives on its chart, every omitted parameter direction, jet approximation error, and both reference/target numerical differences as applicable. UNKNOWN still means replay. See theory_revision/response_moments.txt for the complete decomposition.
+
+The response/remainder arithmetic modules verify exact algebra and outward square roots given supplied intrinsic inputs. Their result flags deliberately do not claim to have verified the neural descriptor premises. Service typed witnesses bind provenance; they are not proof objects in a theorem prover.

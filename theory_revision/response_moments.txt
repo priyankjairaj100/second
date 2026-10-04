@@ -1,0 +1,324 @@
+CORPUS-INDEPENDENT RESPONSE MOMENTS FOR EXACT SEQUENTIAL REPAIR
+4 October 2026. Mathematical development; no experiment, benchmark, or empirical dataset.
+Authoring scope: complements the scale-aware certificate and canonical reference-state report.
+
+1. What this changes, and what it does not
+
+A fixed-reference activation cache pays first-order error in the entire difference between a repaired quantized prefix and its independent reference. This error need not vanish with the deletion fraction. The following construction replaces a single activation anchor by a finite-dimensional, parameter-dependent activation surrogate whose Gram is recoverable exactly from additive retained statistics. Within a declared parameter subspace its truncation error is quadratic rather than linear. Arbitrary changes outside that subspace are charged explicitly; no claim that quantization changes are low-rank, low-dimensional, or smooth is needed for correctness.
+
+The central object is a deletion-maintainable index of polynomial response moments. It is used only to propose and certify the ORIGINAL sequential quantization target. It is not a Taylor approximation substituted as the output model. Failure of its certificate triggers selected retained-group replay, eventually the exact target. No measured acceptance, practical speedup, or exhaustive literature priority is claimed here.
+
+Novelty candidate: the combination of intrinsic response moments, shape-aware discrete decisions, changed-prefix induction, exact canonical repeated deletion, and a matching coefficient-storage obstruction. Taylor expansion, Jacobian features, and certified Taylor remainder propagation themselves are prior techniques.
+
+2. Fixed contract and notation
+
+At a quantization stage, let theta be the complete dequantized ancestor-parameter vector. The already certified prefix determines theta exactly. Let V_j(theta) in R^{d x t_j} be the pinned deterministic finite-program feature output of record j, interpreted as exact dyadic data by oracle V. This remains the target in docs/NUMERICAL_CONTRACT.md. The quantizer itself has fixed grids, order, normalization M0, ridge lambda>0, and tie policy.
+
+Before the removable corpus is used, fix:
+  * a reference prefix theta0;
+  * r parameter directions D_1,...,D_r;
+  * a coefficient domain A, containing the origin and each segment [0,a] used online;
+  * a residual domain U, containing segments [0,u] used online;
+  * a deterministic ideal real evaluator f_j(theta), primitive numerical contracts, and a jet-construction procedure;
+  * fixed record-local masks/tokenization and canonical grouping/index rules.
+
+A finite bank of such charts is allowed. Every chart, direction, and construction rule must be independent of the removable corpus. Base weights and weight-only rounding directions are possible sources. A direction fitted to the original removable calibration corpus is not intrinsic and cannot be left in canonical fresh-on-retained state without its own repair theorem.
+
+For any candidate prefix, choose a coefficient vector a in A and write exactly
+  theta = theta0 + D a + u,       D a = sum_t a_t D_t.
+There is no requirement that u=0. D need not be orthonormal. A fixed deterministic projection rule is convenient; a rational approximate projection is sound if its actual residual u is bounded rigorously. Query coefficients may depend on the currently certified target prefix; the stored index remains independent of them.
+
+The map being differentiated is f_j as a function of real dequantized ancestor parameters. We do not differentiate through the discontinuous quantizer. If activation quantization or other finite branches occur inside f_j, they must be fixed on the declared region, represented by a sound piecewise analysis, or handled by a nonsmooth remainder/fallback. The quantizer's discontinuity does not invalidate a Taylor expansion of its separate feature evaluator at two known parameter endpoints.
+
+3. Affine response jets and exact quadratic moments
+
+For record j store, or deterministically regenerate when required, rational matrices Z_{j0},...,Z_{jr}. Z_{j0} approximates f_j(theta0), and Z_{jt} approximates Df_j(theta0)[D_t]. Define
+  Z_j(a) = Z_{j0} + sum_{t=1}^r a_t Z_{jt}.
+Set c_0=1, c_t=a_t. For each retained group G, define exact coefficient matrices
+  T_{G,tt} = (1/M0) sum_{j in G} Z_{jt} Z_{jt}^T,
+  T_{G,tu} = (1/M0) sum_{j in G}
+               (Z_{jt} Z_{ju}^T + Z_{ju} Z_{jt}^T),   t<u.
+Only symmetric d-by-d matrices are stored. Then
+  S_G(a) = sum_{0<=t<=u<=r} c_t c_u T_{G,tu}
+         = (1/M0) sum_{j in G} Z_j(a) Z_j(a)^T.                 (R1)
+There are K_r=(r+1)(r+2)/2 coefficient matrices, not (r+1)^2 independently necessary matrices. Exact cancellation or a negative cross coefficient is harmless: the complete expression is a sum of Gram matrices and hence PSD. Arbitrary floating coefficient subtraction does not preserve this exact identity.
+
+Theorem R1 (response-moment sufficiency and deletion closure).
+For a fixed chart and deterministic intrinsic jets, its exact coefficient index evaluates the surrogate Gram at every a without reading retained records. Deleting F subtracts only their coefficient contributions. The resulting index equals fresh index construction on R\\F, for every deletion order.
+
+Proof. Expand Z_j(a)Z_j(a)^T, combine transpose-related cross terms, and interchange the finite sums. Each coefficient is a sum of a record-local function. Exact subtraction leaves precisely the defining retained sum. Apply the same argument inductively to repeated requests. Canonical normalized rational serialization and canonical membership/group metadata strengthen equality of mathematical values to equality of committed bytes. QED.
+
+No retained activation array of size N d t is required for this identity. Per-record jet regeneration for the deleted side still costs work, and enough deleted input or per-record contribution information must be supplied BEFORE erasure. An ID with no corresponding input/contribution is insufficient.
+
+4. A rigorous error theorem, including all missing terms
+
+Let h_j(a)=f_j(theta0+D a). Suppose on each segment [0,a]:
+  ||D^2 h_j(z)[v,w]||_F <= H_j ||v||_2 ||w||_2.
+This is a full bilinear mixed-derivative bound in the r coefficients. Bounds on only the r diagonal directional second derivatives are insufficient unless cross terms are additionally bounded.
+
+Suppose on the residual segment theta0+D a+s u, 0<=s<=1:
+  ||Df_j(theta0+D a+s u)[u]||_F <= L_j ||u||_Theta.
+The parameter norm ||.||_Theta is declared and consistent with the provider. This can be a bound on the full parameter derivative, or a sharper bound restricted to a declared residual subspace. No orthogonality alone makes this term disappear.
+
+Assume the intrinsic rational jets have certified errors
+  ||f_j(theta0)-Z_{j0}||_F <= e_{j0},
+  ||Df_j(theta0)[D_t]-Z_{jt}||_F <= e_{jt}.
+Finally require a bound for the actual target finite evaluator on the entire candidate tube:
+  ||V_j(theta)-f_j(theta)||_F <= nu_j.
+The constants can be conservative rational upper bounds. UNKNOWN is represented as an unusable/infinite bound and causes replay, not acceptance.
+
+Theorem R2 (quadratic response remainder with residual and finite execution).
+Under these premises,
+  ||V_j(theta)-Z_j(a)||_F
+    <= nu_j + e_{j0} + sum_t |a_t| e_{jt}
+       + (H_j/2)||a||_2^2 + L_j||u||_Theta.                 (R2)
+
+Proof. First compare V_j(theta) with f_j(theta) by nu_j. Integrate Df_j along the residual segment to compare f_j(theta) with f_j(theta0+D a), producing L_j||u||. Taylor's integral formula in coefficient space gives
+  h_j(a)-h_j(0)-Dh_j(0)a
+    = integral_0^1 (1-s) D^2h_j(sa)[a,a] ds,
+whose Frobenius norm is at most H_j||a||^2/2. Add the baseline and r directional jet-approximation errors by the triangle inequality. QED.
+
+If Z_{j0} is the exact dyadic result of the reference finite evaluation, e_{j0} must include the reference-vs-ideal numerical error. The candidate numerical error is still present separately. Differentiating a floating executable as though it were globally C^2 is invalid. Automatic differentiation values become usable jets only after their error relative to the ideal derivative is certified, or when a sound direct finite-program polynomial enclosure is supplied. An unverified autograd output is an approximation, not a certificate.
+
+5. Additive remainder moments: no retained scan to evaluate the error
+
+Define a nonnegative intrinsic descriptor vector
+  b_j = (nu_j+e_{j0}, e_{j1},...,e_{jr}, H_j, L_j)^T
+of dimension r+3, and the online nonnegative vector
+  v = (1, |a_1|,...,|a_r|, ||a||_2^2/2, ||u||_Theta)^T.
+Use rigorous upper bounds for online norms if they are not exact rationals. For every group store
+  C_G = (1/M0) sum_{j in G} b_j b_j^T.                       (R3)
+All entries are nonnegative. Thus
+  epsilon_G^2 := v^T C_G v
+       >= (1/M0) sum_{j in G} ||V_j(theta)-Z_j(a)||_F^2.     (R4)
+The square cross terms in C_G are useful: simply summing squared curvature and squared numerical-error constants would omit mixed error terms. A looser valid alternative is Minkowski aggregation of each descriptor component, but R3 retains their correlations at only O(r^2) scalars per group.
+
+The C_G matrices obey the same exact additive deletion and canonical-state theorem as the Gram coefficients. Bounds H_j,L_j,nu_j must hold uniformly on the fixed chart domain. They may depend intrinsically on record j. A corpus-dependent maximum must be maintained canonically or replaced by such record-level descriptors. A new chart or domain cannot reuse bounds from an old domain without a proof.
+
+A finite-program provider may give a parameter-dependent nu_j(a) instead of uniform nu_j; then represent it by a fixed nonnegative basis with intrinsic record coefficients and augment b_j,v accordingly. The same squared-descriptor construction applies. Do not evaluate unknown per-record nu_j online and still advertise no retained reads.
+
+6. Exact original-target repair from the response index
+
+For all retained groups, let
+  S(a)=sum_G S_G(a),        Hbar=lambda I+S(a),
+  epsilon^2=sum_G epsilon_G^2.
+The actual feature Gram H*=lambda I+(1/M0)sum_j V_j(theta)V_j(theta)^T satisfies
+  ||Hbar^{-1/2}(H*-Hbar)Hbar^{-1/2}||_2
+       <= 2 a0 e + e^2 = eta,
+  e <= epsilon/sqrt(lambda),
+  a0=||Hbar^{-1/2}Z(a)/sqrt(M0)||_2 <= 1.                  (R5)
+Here Z(a) concatenates retained surrogate features only as a mathematical object; forming it is unnecessary. This is the existing transport identity applied to the response surrogate. For the ridge metric, one may bound a0^2 <= tr(S)/(lambda+tr(S)), avoiding a surrogate feature pass; a tighter spectral bound is optional.
+
+Generate the local exact-grid candidate using Hbar. If eta<1, feed (1-eta,1+eta) to the sharp shape verifier. The verifier checks every row/coordinate cell using
+  displacement <= eta/sqrt(1-eta^2) sqrt(g_i E_i).
+Strict containment is needed for a positive radius. Zero-radius ties follow the exact target's tie rule. If all checks pass, the emitted tensor equals the true local target under the already certified prefix theta.
+
+Theorem R3 (response-index sequential exactness).
+Process stages in a topological order. At each stage use a fixed-chart response index satisfying R1-R5, or exact selected-record replay followed by the same verification, or the complete exact local fallback. Every accepted stage then equals the original sequential oracle V, and the final whole model equals Q_seq(W,R), irrespective of how many ancestor or local codes changed.
+
+Proof. The current theta is correct by ancestor induction. R2 encloses exactly its feature outputs; R1 and R4 evaluate the corresponding surrogate and error from retained sums. R5 encloses the true metric. The previously proved forced-prefix shape bound plus coordinate induction proves each emitted local code. The emitted stage extends the correct ancestor prefix. Eventually exact local fallback has zero remaining feature uncertainty and terminates even at ties. Induct over the finite DAG. QED.
+
+This theorem does not certify equality to the separate floating Gram/Cholesky executable E. That target needs a compatible numerical branch proof or replay of E.
+
+7. Adaptive replay with a cheap index-query path
+
+Maintain a global root sum and a fixed coarse partition's sums. An initial response query contracts the global K_r Gram coefficients once, O(K_r d^2) arithmetic. It need not contract all groups' full matrices. To rank groups, use traces of T_{G,tu} and C_G:
+  z_G^2 = tr S_G(a) = (1/M0)||Z_G(a)||_F^2,
+  delta_G = 2 z_G epsilon_G + epsilon_G^2.
+Then
+  ||(1/M0)(X_G X_G^T-Z_G Z_G^T)||_2 <= delta_G.              (R6)
+The trace polynomial is exactly nonnegative in a correct exact index even though individual coefficients can be negative; outward square roots or squared comparisons are used. Evaluating all group trace/error expressions costs O(G r^2), apart from rational bit complexity and reads.
+
+Replay one selected retained group under the certified true prefix. Replace S_G(a) in the current surrogate by its exact true Gram and set its uncertainty to zero. Its subtraction requires one O(K_r d^2) contraction unless that group surrogate was already materialized. Repeatedly regenerate/refactor a candidate and recertify. Ranking delta_G per estimated replay work is a heuristic, not an optimal policy theorem.
+
+The absolute remaining uncertainty sum_G delta_G decreases under replay for a fixed chart, a, prefix, and fixed group bounds. Rewhitened relative error need not decrease monotonically after the surrogate changes. The previous finite-progress rule still applies: cap precision-only retries and eventually replay a new group. Changing the current stage invalidates tentative descendants; never reuse descendants based on a replaced prefix.
+
+If a different chart is tried, retain actual replayed features under the same certified prefix. Recompute the new chart's surrogate/uncertainty for unreplayed groups; no claim of cross-chart monotonicity is necessary. Trying a finite bank and replaying all groups guarantees termination. Every extra chart contraction, factorization, certificate, group-selection pass, and duplicated forward belongs in the work ledger.
+
+8. Canonical state and storage/work ledger
+
+Define the fresh state interface to be
+  A_response(R) = (Q_seq(W,R), I_response(R), canonical_IDs(R)),
+where I_response contains ONLY fixed-chart response coefficient sums, intrinsic descriptor sums, their fixed metadata, and canonical retained grouping information. The constructor discards actual sequential Grams, old calibrated anchor networks, fitted response directions, transient candidate traces, replay activations, and proof histories unless separately included by an explicitly canonical fresh construction.
+
+Theorem R4 (repeated full-state exactness).
+On deletion, update the intrinsic index by exact deleted contributions, run R3/fallback, and erase all noncanonical transient state. The result equals A_response(R\\F), and any request sequence reaches fresh state for its final retained set.
+
+Proof. R1 and R3 supply respectively exact fresh index and exact fresh model. R3 uses target parameters only transiently; they do not alter the definitions of the stored intrinsic moments. Canonical metadata and serialization complete the state equality. Induction proves order independence. QED.
+
+Per stage/chart/group, storage is
+  K_r d(d+1)/2 rational entries + (r+3)(r+4)/2 descriptor entries,
+plus IDs/metadata and optional trace caches. A root sum plus G fixed coarse groups has O(G r^2 d^2) scalar storage. A full leaf tree can incur O(N r^2 d^2), so it is not advertised as a free indexing choice. Banks and stages add their own costs. Directions themselves, parameter projection, and their norm certificates also consume storage/work.
+
+Preparing a first-order r-direction jet requires the chosen r directional derivative computations and certified error/curvature work per record. It is not a single ordinary forward pass by definition. Deleted-side regeneration may cost r derivative passes, unless intrinsic per-record contributions are stored. The original target still uses ordinary finite features, not these derivatives. Preparation must be amortized explicitly over the service lifetime.
+
+Without replay, retained-record count N disappears from the online polynomial contraction cost, but not from the stored exact coefficients' bit lengths. The full charged cost includes deleted-side jet work, canonical updates, O(r^2 d^2) contractions, quantization/factorization/certification, all parameter-space projections, numerical proofs, authentication, state erasure, and Omega(P) model output. Both baseline and repair get the same index access. There is no lower bound requiring a baseline to deliberately scan records if it too can exploit this index.
+
+The earlier full-model cost theorem remains applicable with all this work charged to U. A claimed saving requires actual saved retained recomputation to exceed these additions. The response construction provides a mechanism for lowering replay fraction s, not a universal proof that s+u<1.
+
+An indexed fresh construction of Q_seq(W,R) can use EXACTLY the same retained-only response index, shape certificates, and replay policy. Therefore this index does not establish an intrinsic deletion-exclusive query advantage over the best equally indexed fresh algorithm. Its distinct service benefit is incremental maintenance of the retained index instead of rebuilding it from retained records, plus any separately established reuse of transient old-model proposals. Report (i) unindexed fresh, (ii) the best indexed fresh using the same index and output/state contract, and (iii) deletion repair. Include the extra preparation/storage and lifetime amortization. If indexed fresh and repair take the same post-update path, say so; the claim is no-retained-pass indexed quantization plus deletable state, not a fictitious faster-than-itself repair theorem.
+
+9. A genuine improvement theorem and its necessary limits
+
+For a local chart with u=0, exact jets, and ideal-exact feature execution, define
+  K_R = sqrt((1/M0) sum_{j in R} H_j^2).
+Then epsilon <= K_R ||a||^2/2. If the response candidate's normalized rounding margin is at least tau>0 at every positive-energy decision, sufficient acceptance is
+  eta < tau/sqrt(1+tau^2).
+Let eta_tau=tau/sqrt(1+tau^2). Using a0<=1, a sufficient radius is
+  ||a||^2 < (2 sqrt(lambda)/K_R)(sqrt(1+eta_tau)-1).         (R7)
+Zero K_R means an exactly affine response and zero truncation error for any a within the chart domain. These are conditional inequalities; the candidate margin is evaluated for the actual surrogate, not assumed from the old model.
+
+For small tau and bounded lambda,K_R, the certified response radius scales as sqrt(tau); a zeroth-order Lipschitz feature certificate with nonzero first derivative scales as tau under comparable fixed constants. This is a local asymptotic order comparison, not domination for all models: response and anchor Grams can have different conditioning/margins, and tighter first-order bounds can outperform a loose Hessian bound.
+
+With finite jets/execution and residual u, the more general sufficient error is
+  epsilon <= numerical_and_jet_error_R(a)
+             + K_R ||a||^2/2 + L_R ||u||,
+  L_R = sqrt((1/M0) sum_j L_j^2),
+by Minkowski. If ||u||=O(||a||^2) and the numerical error is of that order or smaller, the quadratic order survives. If residual drift is O(||a||), it does not. Fixed arithmetic creates a nonvanishing error floor. In particular, no acceptance claim follows merely from a small deletion count k/N, and no claim that all low-bit code changes fit a fixed low-dimensional chart has been made.
+
+The distinction matters for the existing pilot: many first-stage code changes motivate a method that permits them, but do not establish that their parameter-space residual relative to a fixed chart is small. That is a later real-model measurement, after the theory/implementation gate, not a theorem premise to conceal.
+
+10. Transformer second derivatives: mixed terms must be propagated
+
+A convenient rigorous provider works in coefficient space a, using Frobenius norms for matrix-valued activations and Euclidean norms for a. For each ideal graph node x(a) over the whole declared coefficient region, keep bounds
+  ||x||_F<=M_x,
+  ||Dx[h]||_F<=J_x||h||_2,
+  ||D^2x[h,k]||_F<=H_x||h||_2||k||_2.
+These are suprema over a full region, not just values at its center. Graph-sharing and parameter reuse do not invalidate the chain rule; use the same directions consistently.
+
+(a) Affine parameter-dependent projection.
+For y(a)=W(a)x(a)+b(a), W(a)=W0+sum a_t W_t and affine b, let M_W bound ||W(a)||_2 and J_W bound ||DW[h]||_2/||h||. Let J_b similarly bound the bias derivative (with the token replication norm included). Then
+  M_y <= M_W M_x + M_b,
+  J_y <= M_W J_x + J_W M_x + J_b,
+  H_y <= M_W H_x + 2 J_W J_x.
+The two mixed derivative terms are
+  DW[h] Dx[k] + DW[k] Dx[h].
+They are present even though W itself has zero second derivative. Omitting them incorrectly makes a two-layer linear network appear affine in simultaneous changes to both layers.
+
+(b) Matrix products, including attention scores and weighted values.
+For y(a)=x(a)z(a)^T, Frobenius-submultiplicativity gives
+  M_y<=M_x M_z,
+  J_y<=J_x M_z+M_x J_z,
+  H_y<=H_x M_z+2 J_x J_z+M_x H_z.
+Apply the 1/sqrt(d_h) factor to QK^T. Apply the same product recurrence to A V. Spectral-norm versions can tighten these safe bounds. Do not suppress the 2 J_x J_z term or treat one changed attention factor as fixed.
+
+(c) Smooth node composition.
+For y=g(x), if ||Dg||<=L and ||D^2g[h,k]||<=B||h||||k|| throughout the input region, then
+  J_y<=L J_x,
+  H_y<=L H_x+B J_x^2.
+For residual addition, add M,J,H. Concatenation admits square-sum tightening; ordinary sums are conservative. Fixed linear masks, permutations, reshapes and positional transforms have their stated linear norms. Nonempty masks and all-masked cases remain explicit target conditions.
+
+(d) A conservative dimension-free softmax second-derivative bound.
+For a row p=softmax(s), J=diag(p)-p p^T, ||J||_2<=1/2. Let d=J k. Differentiate J in direction k:
+  D J[k] = diag(d)-d p^T-p d^T.
+Consequently, for h,k,
+  ||D^2softmax(s)[h,k]||_2
+      <= (||h||_infty+2||p||_2||h||_2)||d||_2
+      <= (3/2)||h||_2||k||_2.
+For independent row softmax, summing squared row bounds gives the same 3/2 constant in Frobenius norm, using sum_i x_i^2 y_i^2 <= (sum_i x_i^2)(sum_i y_i^2). Therefore
+  J_A <= (1/2)J_S,
+  H_A <= (1/2)H_S+(3/2)J_S^2.
+This is a safe constant, not a sharpness claim. It addresses ideal softmax; the actual finite implementation needs its separate numerical provider.
+
+(e) Layer normalization with fixed gain and bias.
+For one token x in R^n, P=I-11^T/n, z=Px, s=(||z||^2/n+epsilon)^{1/2}, epsilon>0, g(x)=gamma*(z/s)+beta. Suppose s>=s_min>0 over the complete input region. With Gamma=||gamma||_infty,
+  ||Dg||_2 <= Gamma/s_min,
+  ||D^2g[h,k]||_2 <= (6 Gamma/(sqrt(n) s_min^2))||h||||k||.
+Proof for the second bound: before gain multiplication,
+ D^2(z/s)[h,k]
+   = -Ph <z,Pk>/(n s^3) -Pk <z,Ph>/(n s^3)
+     -z <Ph,Pk>/(n s^3)
+     +3 z <z,Ph><z,Pk>/(n^2 s^5).
+The norm is at most [3||z||/(n s^3)+3||z||^3/(n^2 s^5)]||h||||k|| <= 6||h||||k||/(sqrt(n)s^2), since ||z||<=sqrt(n)s. The projector norm is one. Tokenwise Frobenius aggregation uses the same constant. If gamma/beta change with a, treat them through the parameter-product recurrence, including mixed terms. A global choice s_min=sqrt(epsilon) is valid for the ideal map but can be unusably loose.
+
+(f) Exact GELU and other activations.
+For exact GELU g(x)=x Phi(x), g'=Phi+x phi and g''=(2-x^2)phi. Safe global choices are |g'|<=1+1/sqrt(2*pi*e)<1.25 and |g''|<=2. Entrywise composition therefore uses these L,B. A particular tanh GELU approximation has its own ideal formula/derivative bounds; do not substitute exact-GELU constants without a proof. ReLU, clipping, and branch changes require branch-stability proofs or a nonsmooth error bound. A crossing ReLU kink generally gives first-order remainder, so the quadratic theorem is not invoked there.
+
+These recurrences supply full mixed Hessian bounds for ideal transformer response maps, including all simultaneously changed ancestor matrices. They may be extremely loose. Stronger interval automatic differentiation or structured directional curvature bounds may replace them, provided they bound the same region. A numerically tight empirical Hessian estimate is not such a bound.
+
+For the out-of-chart residual term, propagate an ordinary full-parameter Lipschitz certificate over the residual tube, or run a second directional transport analysis for the actual residual u. It must include every changed block. The latter can depend on the online residual and still avoid retained record reads if all record dependence is represented by stored intrinsic descriptors.
+
+11. Coefficient-storage obstruction: a precise scope with an elementary proof
+
+Let K=binomial(r+2,2), M=d(d+1)/2. Consider an algorithm that preprocesses arbitrary rational affine response records, then must return their exact d-by-d surrogate Gram polynomial at every rational a, using only its stored finite-bit state and no access to original records or other side information carrying the missing coefficients.
+
+Theorem R5 (storage bits for exact affine-response Gram queries).
+For every integer B>=2 there is a finite family of such corpora requiring at least K M log2(B) bits of worst-case retained state. The family can have fixed record slots and integer jets. Thus the r^2 d^2 scalar-coefficient scale cannot in general be removed by a universally exact no-record-read representation.
+
+Proof.
+1. Choose M rank-one matrices v_m v_m^T spanning the symmetric d-by-d matrices: use v=e_i and v=e_i+e_j for i<j. These M matrices are linearly independent.
+2. Choose K squares of affine scalar polynomials spanning all scalar polynomials of degree <=2 in a: 1, a_i^2, (1+a_i)^2, and (a_i+a_j)^2 for i<j. The count is 1+r+r+r(r-1)/2=K. Constant, linear and mixed monomial coefficients show independence.
+3. Their KM tensor products P_{m,t}(a)=v_m v_m^T p_t(a)^2 are a basis of symmetric matrix-valued polynomials of degree <=2.
+4. For each pair (m,t), create B-1 fixed slots. A slot contains either the integer affine one-token jet Z(a)=v_m p_t(a) or a zero jet. Choose the first n_{m,t} slots nonzero, n_{m,t} in {0,...,B-1}. Then the resulting Gram polynomial is sum n_{m,t} P_{m,t}(a), apart from fixed M0 scaling. Linear independence gives B^{KM} distinct polynomials, with the same number of record slots.
+5. Any two distinct polynomials differ at some rational a; a nonzero real polynomial cannot vanish on all rational points (nor on all rational points of any open coefficient domain). If two corpora produced the same stored state, every such query would return the same output for both, contradicting exactness. Thus at least B^{KM} states are necessary, requiring KM log2 B bits. QED.
+
+This is a worst-case representation lower bound for the RESPONSE GRAM QUERY interface. It is not a lower bound of r^2 d^2 machine words with unlimited word sizes, not a universal lower bound for producing one quantized model, not a claim about every transformer, and not applicable when retained inputs are freely queried. Access to record IDs/metadata counts as side information if it encodes the coefficients. The construction is a mathematical example; no synthetic empirical dataset is proposed or run.
+
+12. Optional higher-order extension: state size versus approximation order
+
+For a polynomial feature surrogate of total degree p,
+  Z_j(a)=sum_{|alpha|<=p} a^alpha Z_{j,alpha},
+the Gram polynomial has total degree <=2p. Combine all pairs with the same alpha+beta. It therefore needs at most
+  binomial(r+2p,2p) symmetric coefficient matrices,
+not the square of binomial(r+p,p) independent matrices. Coefficients remain exact additive record functions. A sound (p+1)st derivative bound gives O(||a||^{p+1}) remainder plus jet, residual, and finite-program errors.
+
+The same finite-family storage lower bound extends with K_p=binomial(r+2p,2p): squares of polynomials of degree <=p span all polynomials of degree <=2p, because every monomial of degree <=2p factors into two monomials of degree <=p and xy=((x+y)^2-x^2-y^2)/2. Select K_p independent squares from this spanning family and repeat the rank-one tensor/counting argument. Integer coefficients can be used. This matches the number of independent polynomial Gram coefficients in a worst-case finite-bit family.
+
+This gives a genuine order/storage tradeoff. Increasing p can improve a local remainder but costs combinatorial state, preparation, contraction and numerical verification. There is no claim that a higher-order expansion is always a better algorithm; p=1 is the primary design. Increasing r similarly reduces some residual errors only if added directions matter, while increasing state quadratically already at p=1.
+
+13. Literature check and careful contribution wording
+
+Primary sources inspected on 4 October 2026:
+
+[1] Arthur Jacot, Franck Gabriel, Clement Hongler. Neural Tangent Kernel: Convergence and Generalization in Neural Networks. arXiv:1806.07572. https://arxiv.org/abs/1806.07572 . Parameter-response linearization and tangent features are established concepts; this project does not claim them.
+
+[2] Google Neural Tangents official repository, README, weight-space section. https://github.com/google/neural-tangents/blob/main/README.md . The public linearize/taylor_expand APIs explicitly construct first/arbitrary-order parameter Taylor expansions. These APIs by themselves do not provide our finite-program remainder certificate or deletion-state semantics.
+
+[3] Taha Entesari and Mahyar Fazlyab. Hierarchical End-to-End Taylor Bounds for Complete Neural Network Verification. L4DC/PMLR 331:1070-1087, 2026. https://proceedings.mlr.press/v331/entesari26a.html . End-to-end smoothness, curvature and higher-order certified neural Taylor bounds already have dedicated work. Generic higher-order neural certification is not our novelty claim.
+
+[4] Verification of Neural-Network Control Systems by Integrating Taylor Models and Zonotopes. arXiv:2112.09197. https://arxiv.org/abs/2112.09197 . Guaranteed Taylor-model enclosures are established verification machinery.
+
+[5] UWC: Unit-wise Calibration Towards Rapid Network Compression. arXiv:2201.06376. https://arxiv.org/abs/2201.06376 . Taylor-based feature reconstruction/calibration has quantization precedent. Attaching Taylor expansion to quantization is not a sufficient contribution statement.
+
+[6] Sam Gunn. How to sketch a learning algorithm. arXiv:2604.07328v3, 18 June 2026. https://arxiv.org/abs/2604.07328 . This directly relevant data-deletion work sketches arithmetic circuits using higher-order derivatives in random complex directions, predicting counterfactual outputs under its stability assumption. Derivative sketches for deletion are therefore not an untouched idea. Our narrower distinction must be exact discrete sequential-quantizer decisions, sound finite-evaluator/remainder certificates, and canonical intrinsic retained-state maintenance; the use of derivatives or a fast deletion query alone cannot carry novelty.
+
+Proposed narrow claim, subject to continuing prior-art verification: We use deletable response-moment indices to certify exact retained-corpus sequential quantization after changed prefixes, with a second-order local transport regime, explicit residual/numerical terms, canonical repeated state, adaptive exact replay, and a sharp worst-case polynomial-coefficient storage requirement for the stated query interface.
+
+Neither this literature pass nor the earlier agenda establishes absence of an exactly matching paper. The mathematical claims stand independently of priority. Practical significance remains contingent on real transformer chart residuals, certified curvature/numerical bound tightness, index storage/preparation cost, and saved full-service work against an equally equipped baseline.
+
+14. Implementation-facing obligations
+
+A proof-safe first implementation should expose these explicit interfaces:
+  * fixed immutable Chart(theta0, directions, coefficient domain, residual domain, provider identities);
+  * intrinsic RecordJet with rational coefficients and certified descriptor vector, or UNKNOWN;
+  * exact grouped ResponseMomentIndex with add/delete, root sums, canonical serialization and IDs;
+  * a candidate parameter decomposition with a and rigorous residual norm;
+  * exact polynomial Gram contraction and squared error-descriptor evaluation;
+  * the existing exact-core shape verifier with spectral premises externally supplied;
+  * group replay/finite fallback; and
+  * commit that removes old calibrated models/trace/history according to the declared fresh interface.
+
+The contraction/index code can be implemented independently of a full transformer provider. Labeling a manually supplied H_j or nu_j as verified would be incorrect. Unsupported derivative/numerical domains must be UNKNOWN; exact replay stays complete. No proof-safe acceptance path should depend on guessed small tolerances or unverified automatic-differentiation values.
+
+15. Independent review and implementation distinction
+
+An independent proof review checked the R2 decomposition, squared-descriptor aggregation, transport and radius algebra, transformer mixed-derivative bounds, and the coefficient-storage spanning/counting argument. The statements remain conditional on their explicitly declared provider/domain premises.
+
+The current response-moment implementation may store oriented full cross matrices sum Z_s Z_t^T and form their symmetric combination during evaluation. That is mathematically equivalent to R1, but has a larger constant-factor memory footprint than the minimal symmetric-coefficient representation used in the storage count. Do not claim the implementation stores exactly K_r d(d+1)/2 numbers unless it actually packs that representation. The storage theorem describes necessary information scale and an attainable representation, not a claim that every provided implementation is byte optimal.
+
+16. Whole-model geometric no-replay corollary
+
+Implementation scope: this corollary uses the whitened R5 transport route, including a0<=1. A service that instead divides the absolute bound delta=2 z epsilon+epsilon^2 by lambda can be more conservative and need not accept under this displayed condition alone. The condition is not claimed to describe the current implementation unless that implementation instantiates the stated whitened verifier. The signed shifted-Gram route in linear_gram_response.txt has a separate directly implementable sufficient condition.
+
+For every stage ell encountered by topological repair, suppose its already certified ancestor prefix admits a fixed-chart decomposition (a_ell,u_ell) within the proved domain. Let eps_ell be the bound obtained from the retained descriptor moments and let tau_ell>0 be a proved lower bound on the surrogate candidate's normalized positive-energy rounding margins. If
+  rho_ell := eps_ell/sqrt(lambda_ell)
+       < sqrt(1 + tau_ell/sqrt(1+tau_ell^2)) - 1
+at EVERY stage, then the service emits the entire exact sequential target with zero retained-record feature replays. The number of changed code coordinates is unrestricted.
+
+Proof. The displayed inequality implies 2 rho_ell+rho_ell^2 < tau_ell/sqrt(1+tau_ell^2). Equation R5 and the local shape bound therefore certify every local decision. Ancestor induction supplies the true prefix used at the next stage. No stage invokes retained replay. QED.
+
+The required eps_ell may be bounded by the explicit response expression in Section 9; the quadratic term, out-of-chart residual and finite-execution floor are visible premises. The theorem is stronger than an assertion that early codes stayed unchanged, but is not a guarantee that all actual transformer prefixes meet the displayed tests.
+
+Consequently online work on this event consists of deleted-side intrinsic jet/contribution acquisition, incremental index/membership updates, response Gram and descriptor contractions, parameter projection/residual bounds, local factor/decision/certification, and complete output/commit. There is no retained-record forward term. With fixed model/chart dimensions, uniformly bounded finite-precision record/jet representations, canonical metadata admitting O(k log N) updates, and no requirement to rematerialize all retained IDs, this gives O(k (J_jet + polylog N) + poly(model,chart) polylog N + output) bit work under a corresponding exact-arithmetic implementation. This is sublinear in N for appropriately sublinear k and output, against a declared scan or index-rebuild work model. If canonical output itself materializes N IDs, or authentication reads every retained record, that extra work prevents this conclusion and must be included.
+
+An equally indexed fresh algorithm can satisfy the same corollary. It establishes exact whole-model no-replay feasibility in a stated geometric regime, not a universal advantage of deletion repair over every fresh algorithm. The incremental deletion service can update the intrinsic index using k contributions; a raw retained-set rebuild pays for their complement. Report those distinct tasks rather than merging their work models.

@@ -1,30 +1,31 @@
 # Exact calibration-data unlearning for quantized language models
 
-Research project targeting ACL 2027. The task is to remove calibration documents from a quantized language model while matching the complete retained-data quantization procedure with the original full-precision weights fixed.
+Research project targeting ACL 2027: remove calibration documents while matching the complete retained-data sequential quantizer with fixed base weights.
 
-**Start/resume here:** [RESUME.md](RESUME.md), [project context](docs/PROJECT_CONTEXT.md), [current status](docs/STATUS.md).
+Start with [RESUME.md](RESUME.md), [status](docs/STATUS.md), and [project context](docs/PROJECT_CONTEXT.md).
 
-Experiments are paused while the theory and algorithms are revised. Conditional exactness/work theorems must not be presented as empirical wall-clock speedups. Earlier experiment files were removed by workspace maintenance; their reported results and missing-file inventory are documented with explicit provenance.
+The latest revision develops **deletable response moments**: stored intrinsic feature responses generate a candidate-dependent Gram, while rigorous uncertainty and discrete decision certificates preserve the original sequential target. A lower-storage tier keeps O(r d²+r²) values per group instead of O(r² d²). Exact replay handles unresolved cases. Canonical state supports repeated deletions.
 
-The latest revision permits changed early quantization decisions through certified feature/covariance transport. It specifies canonical repeated-deletion state and an exact fallback with bounded charged-work overhead.
+## Deliverables
 
-## Current deliverables
+- [Consolidated theory report](output/pdf/theory_algorithm_revision.pdf) and [LaTeX source](reports/theory_algorithm_revision.tex)
+- [Novelty audit](docs/NOVELTY_AUDIT.md) and [claim ledger](docs/THEOREM_LEDGER.md)
+- [Algorithm specification](docs/ALGORITHM_SPEC.md) and [numerical contract](docs/NUMERICAL_CONTRACT.md)
+- [Implementation guide](docs/REFERENCE_SERVICE.md), [status](src/IMPLEMENTATION_STATUS.txt) and [validation](docs/VALIDATION.md)
+- [Independent derivations/review](theory_revision/)
+- [Restart prompt](docs/RESTART_PROMPT.md)
 
-- [17-page theory and algorithm report](output/pdf/theory_algorithm_revision.pdf)
-- [LaTeX source](reports/theory_algorithm_revision.tex)
-- [Implementation specification](docs/ALGORITHM_SPEC.md)
-- [Proof-safe numerical contract](docs/NUMERICAL_CONTRACT.md)
-- [Theorem and claim ledger](docs/THEOREM_LEDGER.md)
-- [Exact rational decision core](src/exact_core.py) and [implementation status](src/IMPLEMENTATION_STATUS.txt)
-- [Independent derivations and review notes](theory_revision/)
-- [Copyable restart prompt](docs/RESTART_PROMPT.md)
+## Verification
 
-The local core uses only Python's standard library and exact `Fraction` arithmetic. It checks decision inequalities under caller-proved spectral premises; it does not certify a whole transformer by itself. Static compilation and manual review were completed. No numerical tests or experiments were run in this revision.
-
-To rebuild the PDF with a local LaTeX installation:
+The reference modules use the Python standard library. The decoder has an explicit Linux CPython/binary64 runtime contract; its manifest pins code, runtime, math library and model state.
 
 ```bash
-python3 scripts/build_report.py
+python -m unittest discover -s tests -v
+python scripts/build_report.py
 ```
 
-Required LaTeX packages include geometry, lmodern, amsmath/amssymb/amsthm, booktabs, tabularx, xcolor, fancyhdr and hyperref. Full transformer integration remains to be implemented and validated. No model weights, raw calibration corpus, old experiment payloads or credentials are included.
+The PDF build additionally requires a local LaTeX installation and the packages listed in its preamble.
+
+**Scope:** a complete reference decoder and exact repair/fallback service are implemented. The decoder's numerical shortcuts currently cover structural identity. Certified nontrivial transformer response jets, pretrained adapters, production GPU kernels and practical speedup remain unestablished. Generic response callbacks carry explicit proof obligations. Correctness tests are not research benchmarks.
+
+Research experiments remain paused. Synthetic empirical datasets remain deferred. Earlier experiment payloads were pruned; historical numbers are labeled as reconstructed context. No model weights, raw calibration corpus, credentials or old raw results are included.

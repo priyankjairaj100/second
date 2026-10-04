@@ -13,12 +13,12 @@
 \begin{document}
 {\LARGE\bfseries Exact calibration repair\\[3pt] after changed prefixes}
 
-{\large Transport certificates, canonical state, and bounded fallback}\par
+{\large Response moments, exact decisions, and canonical deletion state}\par
 4 October 2026\quad |\quad Research target: ACL 2027
 
 \note{Main advance.} Repair no longer requires an unchanged first layer. We generate new quantized codes, bound the resulting retained activation drift, and certify those codes against the complete sequential retained-data quantizer. Ambiguous stages trigger selected retained-group replay. Complete replay is an exact fallback.
 
-The central theorem now concerns a \emph{new certified prefix}, not equality to an old prefix. A sharper covariance bound ignores harmless global scaling. A corpus-independent reference index gives canonical repeated-deletion state while preserving the original sequential model target. A weighted work scheduler bounds worst-case regression without predicting fresh runtime.
+The central theorem concerns a \emph{new certified prefix}. The new response-moment extension moves the surrogate toward that prefix using deletable polynomial statistics, with a conditional second-order remainder (Sections 17--21). A sharper covariance bound ignores harmless global scaling. A corpus-independent reference index gives canonical repeated-deletion state while preserving the original sequential model target. A weighted work scheduler bounds worst-case regression without predicting fresh runtime.
 
 \begin{tabularx}{\linewidth}{@{}p{.30\linewidth}X@{}}\toprule
 Previous unresolved point & Resolution in this revision\\\midrule
@@ -28,7 +28,7 @@ Trace scores too loose & Spectral intervals and covariance shape remove trace sl
 Repeated/canonical state & Additive statistics of independent references; discard historical calibrated anchors.\\
 Unknown fallback cost & Weighted dovetail gives a deterministic charged-work bound.\\
 Universal fast repair & A specified feature-query lower bound rules it out without structural assumptions.\\
-Practical speed/quality & Remain empirical questions. No experiments were run in this revision.\\\bottomrule
+Practical speed/quality & Remain empirical questions. Software correctness checks are separate from experiments.\\\bottomrule
 \end{tabularx}
 
 \note{Scope of closure.} Correctness, finite fallback, state semantics, and conditional cost guarantees can be closed mathematically. No theorem establishes favorable certificate coverage for arbitrary language models or reliable measured latency. Calling those empirical questions closed would be unjustified.
@@ -81,7 +81,7 @@ If $0<a\leq b$ and $aH\preceq H_*\preceq bH$, then
  \boxed{|v_i^*-v_i|\leq\chi(a,b)K_i,\qquad
  \chi(a,b)=\frac{b-a}{2\sqrt{ab}}.} \tag{2}
 \]
-The coefficient is sharp for the abstract quadratic perturbation class.
+The coefficient is sharp for the abstract quadratic perturbation class. Its matrix geometry is classical; the contribution here is the forced-prefix quantization certificate, not a new universal matrix inequality.
 \end{theorem}
 \begin{proof}
 Positive scaling does not change a quadratic's constrained minimizer. Rescale $H_*$ by $2/(a+b)$ and whiten $H$. The relative perturbation $A$ has norm at most $\eta=(b-a)/(b+a)<1$. The old minimum-energy residual $u$ is perpendicular to the remaining adjustable subspace $V$, with $\norm u^2=E_i$. Put $D_0=A_{VV}$ and $C=A_{V,V^\perp}$. The new residual is $u+y$, where
@@ -95,6 +95,8 @@ The squared operator norm is bounded by
 \]
 attained at $z=-\eta^2$. The coordinate functional has squared dual norm $g_i$. Cauchy--Schwarz proves (2). A two-dimensional block with eigenvalues $\pm\eta$ attains this operator bound.
 \end{proof}
+
+\textbf{Prior geometry.} This coefficient follows from Kantorovich/Wielandt angle bounds; see source [7] and the explicit reduction in \texttt{docs/NOVELTY\_AUDIT.md}. We include a direct proof to fix the quantization conventions.
 
 This recovers $\rho/(2\sqrt{1-\rho})$ for PSD deletion with $(a,b)=(1-\rho,1)$, and gives the sharper signed bound $\eta/\sqrt{1-\eta^2}$. If $a=b$, every code is unchanged even under a large proportional covariance change.
 
@@ -295,7 +297,7 @@ Splitting $w-q'$ into $w-q-(q'-q)$ gives (10). Correct previous codes make eithe
 
 This avoids a global minimum-margin requirement for the local repair algorithm. Near-boundary decisions incur exact work instead of invalidating all reuse. Worst-case $s+r=\Theta(pd)$ recovers a dense sweep. Neither small perturbations nor few changed input records guarantee few changed codes.
 
-\note{Two distinct regimes.} In transported repair the true target factor may be unknown. An ambiguous coordinate cannot then be cheaply recomputed from it. Tighten the metric enclosure, replay records, or fall back. Formula (11) applies only after the target factor exists. Old calibrated traces are transient under (1); keeping them permanently changes the state contract. The exact core supplied here implements the shape verifier, not this sparse kernel.
+\note{Two distinct regimes.} In transported repair the true target factor may be unknown. An ambiguous coordinate cannot then be cheaply recomputed from it. Tighten the metric enclosure, replay records, or fall back. Formula (11) applies only after the target factor exists. Old calibrated traces are transient under (1); keeping them permanently changes the state contract. The exact core implements the shape verifier; \texttt{src/sparse\_repair.py} implements this sparse recurrence, with factor/trace/envelope premises explicitly labeled.
 
 \newpage
 \section*{9. Full-model cost with changed codes}
@@ -396,7 +398,7 @@ Batching/packing & Fix record-local semantics or include cross-record operations
 Autotuned kernels & Pin and enclose numerical behavior, or state that the exact-statistic oracle is a distinct target.\\\bottomrule
 \end{tabularx}
 
-\note{Reference core.} The accompanying Fraction-only implementation supplies reverse LDL, sequential rounding, conditional spectral-shape certification and deletion-interval summation. It rejects floating inputs and marks spectral enclosures as caller-proved premises. It does not certify neural transport or implement a full LM service. Static compilation and manual review were performed; numerical tests and experiments were not run.
+\note{Reference core.} The accompanying Fraction-only implementation supplies reverse LDL, sequential rounding, conditional spectral-shape certification and deletion-interval summation. It rejects floating inputs and marks spectral enclosures as caller-proved premises. This local module does not itself certify neural transport. The revision-3 service and decoder compose it with explicit providers and exact replay. Independent constrained-quadratic software tests, static compilation and manual review were performed; research experiments remain paused.
 
 The accompanying \texttt{docs/NUMERICAL\_CONTRACT.md} specifies analytic affine rounding bounds, interval primitive requirements, denominator checks and mandatory unknown/replay behavior. These are component guarantees, not machine-checked proofs of the Python implementation. Independent oracle checks must precede performance claims when execution resumes.
 
@@ -475,13 +477,13 @@ Scheduler & Resumable charged-work steps, packet-lag bound, always-terminating e
 Commit & Complete artifact/state verification, canonical serialization and transient/deleted-data erasure.\\\bottomrule
 \end{tabularx}
 
-Only the exact local core was implemented this turn. Transformer transport/index/scheduler integration has not been implemented or measured. Previous code is absent after maintenance, so this is not a tested patch to it.
+The reference implementation now includes the local core, sparse injection, affine response moments, a stage service with exact fallback and canonical state, a deterministic decoder backend, and a cooperative work scheduler. The backend supplies structural-identity certificates; general derivative/remainder and nontrivial finite transformer transport providers remain proof obligations. This is new code, not recovery of the missing previous implementation.
 
 The shape lemma, new-prefix induction, adaptive fallback, state constructor, sparse local repair, full-model cost condition and weighted fallback were derived and independently reviewed. Notes preserve the derivations and challenges. Python code remains a reference implementation, not a formal proof.
 
 When experiments are authorized again, first establish whether validated transport saves enough retained replay to exceed verification/index costs against a baseline with identical state access. Keep changed-first-layer cases, failed certificates and fallbacks in the workload. The decisive result is saved full-model work, not a rounding-only kernel gain.
 
-No benchmark, synthetic dataset, model download or external compute job ran during this revision. Static compilation and document validation do not establish model quality, certificate coverage or speed.
+No research benchmark, synthetic dataset study, model download or external compute job ran during this revision. Software correctness tests use small algebraic fixtures to check implementation behavior; they do not establish model quality, useful certificate coverage or speed.
 
 \note{Continuity.} The repository at \url{https://github.com/priyankjairaj100/second} contains restart context, historical provenance, source, specifications and independent notes. Read \texttt{RESUME.md} and \texttt{docs/STATUS.md} before continuing. Missing historical files are inventoried, not recreated as if original.
 
@@ -515,4 +517,6 @@ Anchoring itself is novel & Not claimed. Existing sources cover this ingredient.
 [6] Vaswani et al. \emph{Attention Is All You Need}. \url{https://arxiv.org/abs/1706.03762}. Dot-product/softmax attention defines the analyzed operator.
 
 This is a focused source check, not an exhaustive priority determination. The next phase tests the useful regime of the proved statements; experiments remain paused until the user instructs resumption.
+\normalsize\normalfont
+\input{reports/response_revision.tex}
 \end{document}

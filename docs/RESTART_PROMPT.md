@@ -1,13 +1,11 @@
-# Copy this into a new chat
+# Copy into a new chat
 
-Continue our ACL 2027 calibration-data unlearning research from:
+Continue our ACL 2027 calibration-data unlearning project from https://github.com/priyankjairaj100/second.
 
-https://github.com/priyankjairaj100/second
+Read RESUME.md, docs/STATUS.md, docs/PROJECT_CONTEXT.md, docs/VALIDATION.md and docs/REFERENCE_SERVICE.md, then the consolidated report and AGENTS.md.
 
-Read RESUME.md, docs/STATUS.md and docs/PROJECT_CONTEXT.md first. Then read the latest report (reports/theory_algorithm_revision.tex or output/pdf/theory_algorithm_revision.pdf), docs/THEOREM_LEDGER.md, docs/ALGORITHM_SPEC.md and docs/NUMERICAL_CONTRACT.md. Preserve AGENTS.md guidance.
+We target exact retained-data sequential quantization with fixed base weights. The latest v3 work adds deletable response moments, a lower-storage linear-Gram tier, canonical repeated state, conditional second-order zero-replay guarantees, and an executable reference stage service/CPU decoder. The decoder currently certifies structural identity only; nontrivial certified finite transformer jets/transport and pretrained adapters remain unimplemented. Safe replay is complete but is not a practical speedup. Do not silently conflate oracle V with historical finite quantizer E.
 
-The goal is exact removal of calibration documents from a sequentially quantized language model with fixed full-precision weights. The latest theory certifies changed early prefixes using feature/covariance transport and canonical independent-reference state. It does not establish practical speedup. The full transformer service is not implemented; the local rational core is in src/exact_core.py.
+Experiments are paused until I resume them. Software correctness tests are allowed and were run; do not launch benchmarks, cloud jobs, model downloads or synthetic empirical datasets to reconstruct context. Prior raw experiment files were pruned. Old numbers in PROJECT_CONTEXT are historical reconstruction only.
 
-Experiments remain paused until I explicitly resume them. Do not launch benchmarks, cloud jobs or synthetic empirical datasets merely to reconstruct context. Prior raw experiment files were pruned; old numbers in PROJECT_CONTEXT.md are historical reconstruction, not recovered logs or new evidence.
-
-Keep saving substantive work, source, reports and updated restart context to this repository. Do not force-push or claim missing files have been restored. Continue the existing objective rather than starting a new survey.
+The novelty audit identified Gunn 2026 derivative sketches, classical matrix geometry and calibration-state prior work. Claim the narrow exact sequential decision/state contribution, not broad firsts. Equally indexed fresh quantization must get the same summaries. Continue saving all substantive work and restart context to this repository without force pushes.

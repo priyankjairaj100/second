@@ -1,0 +1,230 @@
+LINEAR GRAM RESPONSE WITH QUADRATIC CERTIFICATE ERROR
+4 October 2026. Theory and algorithm design only; no empirical dataset or benchmark.
+Companion to response_moments.txt and the original exact sequential repair report.
+
+1. Main result and novelty boundary
+
+The full response index stores all quadratic matrix coefficients of an affine feature response, costing O(r^2 d^2) entries per chart/stage/group. Exact recovery of that entire surrogate Gram has the coefficient-information lower bound in response_moments.txt. Exact recovery of the surrogate Gram is stronger than what a discrete quantization certificate needs.
+
+This note reduces the persistent response state to O(r d^2+r^2) entries. It keeps the constant and linear Gram terms, and retains only the exact trace of the omitted positive semidefinite quadratic term. The missing matrix contributes a rigorously bounded O(||a||^2) uncertainty, as does the affine feature jet's Taylor remainder under its declared conditions. Thus the local quadratic certificate regime survives without storing every quadratic response matrix. Exactness of the FINAL sequential quantized model is preserved by the shape certificate and selective exact replay.
+
+The shifted version has an SPD candidate metric for every coefficient vector, requires no new eigenvalue proof for that fact, and preserves this property after every selected-group replay. This is an algorithmic state-versus-certification tradeoff, not a claim that linearization, Taylor bounds, or PSD trace inequalities are themselves new. The equally indexed fresh comparator caveat continues to apply.
+
+2. Definitions and the smaller index
+
+All sums below include the fixed normalization 1/M0. Work with a fixed corpus-independent chart from response_moments.txt, and rational record-local response jets
+  Z_j(a)=Z_{j0}+Delta Z_j(a),     Delta Z_j(a)=sum_{t=1}^r a_t Z_{jt}.
+The actual target finite feature is X_j=V_j(theta), where theta is the already certified true ancestor prefix. Its discrepancy from Z_j(a) is enclosed by the full remainder/numerical/residual theorem of that note.
+
+For retained group G, store
+  S_{G,0} = (1/M0) sum_j Z_{j0} Z_{j0}^T,
+  L_{G,t} = (1/M0) sum_j (Z_{j0} Z_{jt}^T+Z_{jt} Z_{j0}^T),
+  G_{G,tu} = (1/M0) sum_j tr(Z_{jt} Z_{ju}^T),  1<=t,u<=r.
+There are r+1 symmetric d-by-d matrices and one symmetric r-by-r matrix. The latter is a Gram matrix in the Frobenius inner product and is PSD.
+
+Compute the linear matrix part and scalar response energy:
+  Slin_G(a)=S_{G,0}+sum_t a_t L_{G,t},
+  beta_G(a)=a^T G_G a.
+For analysis, define the omitted matrix
+  Q_G(a)=(1/M0)sum_j Delta Z_j(a) Delta Z_j(a)^T.
+Then
+  S_G(a):=(1/M0)sum_j Z_j(a)Z_j(a)^T=Slin_G(a)+Q_G(a),
+  Q_G(a) PSD,       tr Q_G(a)=beta_G(a),
+  0 <= Q_G(a) <= beta_G(a) I.                              (L1)
+The last matrix inequality follows because every eigenvalue of a PSD matrix is nonnegative and no larger than its trace. beta_G is exact and nonnegative; no claim is made that it is a tight operator-norm bound.
+
+The squared normalized feature norm is available without Q_G:
+  z_G^2 := (1/M0)sum_j ||Z_j(a)||_F^2
+         = tr Slin_G(a)+beta_G(a) >= 0.                   (L2)
+Individual linear coefficients can be negative, but the complete right side is nonnegative in a correct exact index. Do not clamp a negative floating result to zero and treat that as a proof; use exact arithmetic or a sound enclosure and resolve errors.
+
+Let epsilon_G be a rigorous normalized discrepancy bound:
+  (1/M0)sum_j ||X_j-Z_j(a)||_F^2 <= epsilon_G^2.
+It can be evaluated from the existing intrinsic squared-descriptor moments C_G without retained record reads. Define
+  delta_G = 2 z_G epsilon_G+epsilon_G^2.                   (L3)
+Outward upper bounds for z_G,epsilon_G may be used. Every numerical, out-of-chart, and jet error term remains part of epsilon_G. UNKNOWN propagates to an unusable bound and triggers replay.
+
+For the true group Gram S*_G=(1/M0)sum_j X_j X_j^T,
+  ||S*_G-S_G||_2 <= delta_G,                              (L4)
+by expanding X=Z+E and using Frobenius submultiplicativity. Combining L1 and L4 gives
+  Slin_G-delta_G I <= S*_G
+      <= Slin_G+(beta_G+delta_G)I.                        (L5)
+
+3. The unshifted tier, with a safe SPD lower bound
+
+Sum all current retained groups:
+  Slin=sum_G Slin_G,   Q=sum_G Q_G,
+  beta=sum_G beta_G,   delta=sum_G delta_G,
+  Hlin=lambda I+Slin,      lambda>0.
+Equation L5 implies
+  Hlin-delta I <= H* <= Hlin+(beta+delta)I.                (L6)
+One can instead use a global epsilon,z bound to obtain delta; group sums are particularly useful for replay.
+
+Hlin need not be SPD for arbitrary a. However the identity
+  Hlin=lambda I+S(a)-Q
+proves the particularly useful sufficient lower bound
+  Hlin >= (lambda-beta)I.                                (L7)
+This bound loses only a quadratic quantity in a. Bounding the linear cross term in isolation would introduce an unnecessary first-order SPD restriction.
+
+Suppose a positive certified mu satisfies Hlin>=mu I. The simple choice mu=lambda-beta applies whenever beta<lambda. A validated exact factor bound or positive Gershgorin lower bound may give a larger mu or succeed when beta>=lambda. Merely obtaining positive LDL pivots proves SPD but does not by itself supply a numerical lower bound mu; that must be derived, for example from a rigorous inverse-norm bound.
+
+If delta<mu, multiplying Hlin>=mu I by the nonnegative scalars delta/mu and (beta+delta)/mu yields
+  a_- Hlin <= H* <= b_+ Hlin,
+  a_-=1-delta/mu>0,   b_+=1+(beta+delta)/mu.               (L8)
+Apply the existing exact shape theorem with these endpoints. Its coefficient is
+  chi=(beta+2delta)/(2 sqrt((mu-delta)(mu+beta+delta))).     (L9)
+Candidate traces are generated using Hlin. Every positive-radius interval must lie strictly within its candidate code cell; zero-radius ties use the target tie rule. All rows and coordinates are checked.
+
+If no positive mu is established, do not run a purported SPD quantizer on Hlin. Use the shifted tier, the full quadratic index if available, or actual group replay. Failure of the unshifted tier is an abstention, not evidence of a changed target.
+
+4. The shifted tier: automatic SPD and simple signed endpoints
+
+Define the per-group shifted surrogate
+  P_G=Slin_G+beta_G I
+      =S_G+(beta_G I-Q_G) PSD                            (L10)
+and the candidate metric
+  Hplus=lambda I+sum_G P_G=Hlin+beta I.
+Thus Hplus>=lambda I for every real a, regardless of whether Hlin is SPD. No factorization/eigenvalue estimate is needed to prove this property beyond the intrinsic index identity and PSD trace bound.
+
+Writing E_G=S*_G-S_G, ||E_G||<=delta_G,
+  S*_G-P_G=E_G+Q_G-beta_G I
+has endpoints
+  -(beta_G+delta_G)I <= S*_G-P_G <= delta_G I.
+Therefore
+  Hplus-(beta+delta)I <= H* <= Hplus+delta I.              (L11)
+If beta+delta<lambda, the ready-to-use relative enclosure is
+  a_+=1-(beta+delta)/lambda>0,
+  b_+=1+delta/lambda,
+  a_+ Hplus <= H* <= b_+ Hplus.                           (L12)
+Its shape coefficient is
+  chi=(beta+2delta)
+        /(2 sqrt((lambda-beta-delta)(lambda+delta))).     (L13)
+This is exactly the coefficient obtained in L9 from the unshifted guarantee mu=lambda-beta. The two tiers nevertheless produce different candidate metrics, conditional inputs, energies and margins. Neither tier is guaranteed to accept every instance accepted by the other.
+
+The shifted tier is especially convenient for a service requiring a PSD surrogate data statistic: sum_G P_G is PSD. It does not need to be realized as an explicitly materialized feature array. Its direct signed covariance enclosure L11 is the proof premise; do not incorrectly assert that the omitted Q matrix was actually computed.
+
+When beta+delta>=lambda, Hplus is STILL SPD; only this inexpensive relative certificate is unavailable. A tighter certified spectral comparison, selective replay, or the exact fallback can resolve the stage. Arbitrary factorization is not the fallback for missing true retained statistics.
+
+5. Endpoint signs: the general-shift trap and safe rules
+
+For H_s=Hlin+s I,
+  H_s-(delta+s)I <= H* <= H_s+(beta+delta-s)I.
+Suppose H_s>=mu I, mu>0. If s>=0, the lower endpoint
+  a_s=1-(delta+s)/mu
+is valid when positive. The naive upper endpoint 1+(beta+delta-s)/mu is valid ONLY when its numerator beta+delta-s is nonnegative. Dividing a negative identity bound by a lower eigenvalue bound reverses the needed Loewner comparison.
+
+A universally safe upper endpoint using only mu is
+  b_s=1+max(beta+delta-s,0)/mu.                            (L14)
+If beta+delta-s<0 and one ALSO has H_s<=M I, then the sharper upper endpoint
+  b_s=1+(beta+delta-s)/M
+is valid, because multiplication by a negative scalar reverses H_s<=M I. A positive true target ensures consistency of a valid set of premises; implementations still check a_s>0 and b_s>=a_s.
+
+The primary implementation should use s=beta, for which the upper numerator is delta>=0 and this sign trap does not occur. The unshifted tier uses s=0 and is also safe. There is no need to introduce arbitrary shifts into the first implementation.
+
+6. Adaptive replay with an SPD invariant
+
+Fix a certified target prefix, chart, and coefficient vector a at a stage. Let U be the groups not yet replayed, and T the groups already evaluated under this exact target prefix. Maintain
+  H_U=lambda I+sum_{G in T} S*_G+sum_{G in U} P_G.
+All summands are PSD, so H_U>=lambda I after every step. Define
+  B_U=sum_{G in U} beta_G,
+  D_U=sum_{G in U} delta_G.
+The exact retained target satisfies
+  H_U-(B_U+D_U)I <= H* <= H_U+D_U I.                      (L15)
+If B_U+D_U<lambda, use
+  a_U=1-(B_U+D_U)/lambda,    b_U=1+D_U/lambda.             (L16)
+Replay a selected group, replace its P_G by S*_G, and remove its beta_G and delta_G from the uncertainty sums. B_U,D_U are nonnegative and decrease, so a_U increases and b_U decreases. The certified relative endpoints therefore tighten monotonically for this fixed-prefix/chart construction, even though the candidate metric itself changes. Its rounding margins can still change adversely; monotone endpoints do not imply monotone acceptance.
+
+After all groups are replayed, B_U=D_U=0 and H_U=H* exactly. The terminating exact local quantizer therefore supplies the local target even at ties. Cap precision-only and proposal-only retries so they cannot prevent replay progress. Replaying a stage under a tentative ancestor prefix is not valid; process true certified ancestors first. Changing a current stage invalidates tentative descendants as in the original algorithm.
+
+Theorem L1 (soundness and finite termination of the low-storage tier).
+With intrinsic exact index coefficients, sound epsilon_G values, exact local rounding/fallback, and a progress rule eventually replaying a new unresolved group, the shifted response algorithm returns the exact local oracle and terminates. Applied in topological order it returns Q_seq(W,R), even if every stage changes codes.
+
+Proof. L10 makes every candidate metric SPD. L15-L16 and the existing forced-prefix shape theorem certify every accepted local output. Exact replay removes one group from finite U. When U is empty the metric is exactly the target and the exact local oracle terminates. Ancestor induction identifies the target feature evaluator used at each stage and proves whole-model equality. QED.
+
+A group-selection heuristic can prioritize (beta_G+delta_G) removed per predicted replay cost. This is not an optimality theorem. Costs include ranking, moment reads, new factorizations/traces, repeated certificates, retained feature evaluation, and exact Gram updates. Reuse replayed activations only under the identical certified prefix.
+
+7. Quadratic local acceptance survives the smaller state
+
+In the ideal-exact in-chart regime with exact response jets and u=0, suppose
+  epsilon <= (h/2)||a||^2,
+  beta <= g||a||^2,
+where h is the aggregate restricted-Hessian bound and g is a rigorous upper bound on the largest eigenvalue of the scalar response Gram G. The easy g=tr G is valid; exact/coarser spectral bounds can improve it. Let z0=||Z0||_F/sqrt(M0). Then
+  z(a)<=z0+sqrt(beta)<=z0+sqrt(g)||a||,
+  delta<=2 z(a) epsilon+epsilon^2
+       <= h(z0+sqrt(g)||a||)||a||^2+(h^2/4)||a||^4.
+For ||a||<=R define
+  d_R=h(z0+sqrt(g)R)+(h^2/4)R^2.
+Then delta<=d_R||a||^2. The shifted enclosure width is O(||a||^2), just as for the full quadratic response index, despite omitting Q as a matrix.
+
+A concrete sufficient radius follows from L13. Write A=||a||. If
+  (g+d_R)A^2 <= lambda/2,
+then
+  chi <= (g+2d_R)A^2/(sqrt(2) lambda).                    (L17)
+Indeed lambda-beta-delta>=lambda/2 and lambda+delta>=lambda, so the denominator in L13 is at least sqrt(2)lambda, while its numerator is at most (g+2d_R)A^2.
+
+If every positive-energy candidate decision has normalized margin at least tau>0, the additional strict inequality
+  A^2 < sqrt(2)lambda tau/(g+2d_R)                        (L18)
+certifies all decisions. Also require A<=R and the declared domain premises. If g+2d_R=0, the metric discrepancy is zero and this ratio is replaced by exact tie-safe decisions. Zero candidate energy has zero displacement and is treated separately as before.
+
+Thus the local radius is of order sqrt(tau) under fixed nonzero constants, rather than the order-tau radius of a generic zeroth-order Lipschitz feature bound. This is an order comparison under declared constants/margins, not universal dominance over a tighter zeroth-order method or over the full quadratic response tier.
+
+Finite evaluation/jet errors and out-of-chart motion are still charged inside epsilon. A fixed numerical floor can dominate the small-A regime; an O(A) residual destroys the pure quadratic order unless separately handled. Quantization code changes are not assumed to lie in the chart. The parameter-response dimension r does not imply that Q has rank r: a single direction Z_1 can already have full feature-channel rank. beta=tr Q may consequently be conservative by a substantial dimension factor. These affect coverage and usefulness, not soundness.
+
+8. Canonical deletion state and real cost improvements
+
+Every stored S_{G,0},L_{G,t},G_G and squared-error descriptor matrix is a sum of intrinsic record-local quantities under fixed independent charts. Exact subtraction of deleted contributions therefore equals fresh construction on the retained set. Canonical metadata, exact serialization and removal of old calibrated anchors/transient replay traces yield the same repeated full-state theorem as before. Directions/domain/providers cannot silently be adapted using the removable corpus.
+
+The smaller index stores
+  (r+1)d(d+1)/2 + r(r+1)/2
+Gram-response entries per group, plus O(r^2) descriptor entries, IDs and metadata. Its initial global contraction costs O(r d^2+r^2) arithmetic, replacing the full quadratic contraction's O(r^2 d^2). Deleted-side jet generation still requires its declared directional-derivative work. Preparation, numerical proofs, bit complexity and output remain charged.
+
+Store root sums plus a fixed coarse partition. Per-group z_G,beta_G,epsilon_G can be evaluated from scalar coefficient traces and descriptors in O(r^2) arithmetic per group, without contracting every full matrix. Only selected group P_G values need full O(r d^2) contraction during replacement, unless already materialized. The scalar beta I shift costs diagonal updates; it does not require extra retained features.
+
+The exact full quadratic response index can be an optional higher-storage tier, but storing it already pays its memory/preparation price. A low-storage-only service cannot materialize unknown off-diagonal quadratic coefficients merely by asking for them; it must obtain them from retained jets/records or use selected exact target replay. The complete exact fallback is available without any full quadratic index.
+
+No deletion-exclusive speedup follows merely from this smaller index. An equally indexed fresh computation of Q_seq(W,R) can run the same low-storage certificates and replay policy. The defensible effects are a smaller deletion-maintainable state, cheaper response contraction, and a conditional retained-replay reduction; compare with unindexed fresh, best equally indexed fresh, and full quadratic response at their actual state/preparation costs. Lifetime savings must repay preparation. Reliable wall-clock gain remains an empirical question.
+
+9. Why this does not contradict the coefficient-information lower bound
+
+The earlier lower bound concerns EXACT answers to ALL matrix-valued quadratic response-Gram queries with no record reads. This tier does not answer that query: it retains an enclosing set of possible omitted PSD matrices. It seeks an exact DISCRETE quantizer result only when every matrix in a proved enclosure gives the same candidate decisions. If the enclosure crosses a decision boundary, it abstains and obtains more information by replay.
+
+A mathematical two-dimensional example shows the information loss. Let r=1, Z0=0, lambda=1, a=1, one token and M0=1. Consider response directions
+  Z1=(1,0)^T  or  Z1=(3/5,4/5)^T.
+Both produce the same stored low-tier moments S0=0,L1=0,G11=1, but their omitted matrices are different. For a local weight row w=(1/3,5/12), grids {0,1} in order 1 then 2, nearest rounding with lower ties, both first coordinates round to 0. Under the first metric the second conditional input is 5/12<1/2. Under the second metric it is
+  5/12 + ((12/25)/(41/25))(1/3)
+       = 5/12+4/41=253/492>1/2.
+The local target codes differ. The shifted low-tier bound has beta=1,delta=0,lambda=1 and therefore rejects (a_+=0), as a sound method must without further informative access. This example compares the stored MOMENTS; any additional record payload/side information capable of recovering the omitted matrix changes that interface. It is a proof example, not an empirical dataset.
+
+Thus exact final decisions plus selective replay can need less state than universal exact surrogate reconstruction. The coefficient-information lower bound remains valid in its original scope and explains why this improvement necessarily exchanges some coverage for smaller state.
+
+10. Provider/implementation contract
+
+A low-tier provider should expose:
+  * immutable chart/record-extractor/provider identities;
+  * exact S0,L_t,G and descriptor sums, with validated membership/deletion updates;
+  * exact coefficient a and a rigorous residual norm;
+  * beta=a^T G a and z^2=tr Slin+beta computed exactly or enclosed soundly;
+  * externally proved epsilon, including finite target evaluation and every response error;
+  * P=Slin+beta I as the PSD candidate statistic, with the proof L10;
+  * endpoints L12 or group-refined L16, rejecting nonpositive lower endpoints; and
+  * finite group replay and canonical commit.
+
+This provider's returned enclosure is a direct covariance enclosure. A caller-supplied Taylor/Hessian/numerical premise is still unverified until an actual certified primitive/extractor proves it. Ordinary automatic differentiation, measured closeness and guessed tolerances do not instantiate that proof. Exact arithmetic checks alone verify the index algebra and rounding once those premises are supplied.
+
+11. A sufficient whole-model no-replay condition for the signed endpoint service
+
+Suppose the service actually implements the shifted proposal P and the signed endpoints L12; do not substitute an unrelated absolute or whitened verifier without comparing its acceptance criterion. At every stage under its already certified new ancestor prefix, compute sound beta,delta and the candidate trace's positive-energy normalized margin tau>0. If
+  beta+delta <= lambda/2,
+  beta+2delta < lambda tau,
+then that stage's signed certificate accepts every decision. Indeed the denominator in L13 is at least sqrt(2)lambda and hence at least lambda, so chi<tau. Zero-energy/tie rules remain explicit. If these inequalities hold at EVERY stage, topological induction shows that the entire exact original sequential model is produced without any retained-record feature replay. Any number of tensors or coordinates may change.
+
+This condition uses precisely the quantities available to the shifted low-storage implementation. It is a sufficient theorem, not an expectation that real models satisfy it. With h=||a||, tangent aggregate norm J, curvature aggregate norm K, exact ideal jets and zero residual,
+  beta <= J^2 h^2,
+  epsilon <= K h^2/2,
+  z <= z0+J h,
+  delta <= K(z0+J h)h^2+K^2 h^4/4.
+Substitution supplies an explicit second-order parameter neighborhood whenever the candidate margins/ridge stay positively bounded. Finite jet/execution errors and residual motion add their full terms before applying the two inequalities. No small-deletion-count condition can replace these geometric/numerical conditions without a further theorem.
+
+12. Independent proof review
+
+An independent agent reviewed L1-L18, the unshifted/shifted SPD guarantees, relative endpoint signs including the general-shift caveat, the adaptive replay invariant, the quadratic-radius algebra, and the rational counterexample. No mathematical defect was found within the stated intrinsic-jet/domain/numerical premises. This is a proof review, not implementation validation or empirical evidence. The current implementation must separately match the indicated signed-endpoint route before the service-level no-replay corollary is invoked.

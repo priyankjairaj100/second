@@ -1,0 +1,237 @@
+\newpage
+\section*{17. Moving references through deletable response moments}
+\note{Revision 3: the main algorithmic improvement.} A fixed independent reference can have large error even for an empty deletion. We replace its fixed features by a parameter-responsive surrogate whose entire Gram can be queried from exact retained sums. This improves the local error order under explicit conditions; it does not assume that all quantization changes are small or low dimensional.
+
+For a stage, let $\theta$ contain the dequantized parameters of its already certified ancestors. Before seeing the removable corpus, fix a reference $\theta_0$, directions $D_1,\ldots,D_r$, a domain and all feature/derivative providers. Decompose
+\[
+ \theta=\theta_0+Da+u,\qquad Da=\sum_{t=1}^r a_tD_t.
+\]
+The residual $u$ is explicit. Directions fitted on the deletable corpus need their own repair theorem. Differentiation concerns the real feature map in its weight parameters, not the discontinuous quantizer producing those parameters.
+
+Let record $j$ have intrinsic rational feature jets $Z_{j0},\ldots,Z_{jr}$, and define
+\[
+ Z_j(a)=Z_{j0}+\sum_{t=1}^r a_tZ_{jt},\qquad c=(1,a_1,\ldots,a_r).
+\]
+For a retained group $G$, store symmetric coefficient matrices
+\begin{align*}
+ T_{G,tt}&=M_0^{-1}\sum_{j\in G}Z_{jt}Z_{jt}^{\top},\\
+ T_{G,tu}&=M_0^{-1}\sum_{j\in G}(Z_{jt}Z_{ju}^{\top}+Z_{ju}Z_{jt}^{\top}),\quad t<u.
+\end{align*}
+\begin{theorem}[Exact response-moment closure]
+With $K_r=\binom{r+2}{2}$ coefficient matrices, the surrogate Gram is exactly
+\[
+ S_G(a)=\sum_{0\leq t\leq u\leq r}c_tc_uT_{G,tu}
+       =M_0^{-1}\sum_{j\in G}Z_j(a)Z_j(a)^{\top}. \tag{19}
+\]
+It can be evaluated without retained record reads. Deleting records subtracts their intrinsic coefficients; the index equals fresh construction on the retained set after any deletion order.
+\end{theorem}
+\begin{proof}
+Expand the finite product and combine transpose-related cross terms. Every coefficient is an exact sum of a fixed record-local function. Subtraction and induction yield the retained sum. Canonical rational serialization and retained-only metadata give equality of bytes.
+\end{proof}
+Negative cross coefficients do not invalidate positive semidefiniteness: the complete expression is a sum of Grams. The implementation stores oriented $Z_sZ_t^\top$ for $s\leq t$ and symmetrizes during queries; it is constant-factor larger than the minimal symmetric representation above.
+
+This index is a proposal mechanism for the original $Q_{\rm seq}$. The approximation is never installed merely because it is close. It must pass the exact decision certificate, or the service replays retained groups.
+
+\newpage
+\section*{18. A response remainder with no hidden error terms}
+Write $f_j(\theta)$ for the ideal real feature map and $V_j(\theta)$ for the pinned finite target. Assume uniform bounds on the declared chart and residual tube:
+\begin{align*}
+ \norm{D^2[f_j(\theta_0+D\cdot)](z)[v,w]}_F&\leq H_j\norm v_2\norm w_2,\\
+ \norm{Df_j(\theta_0+Da+su)[u]}_F&\leq L_j\norm u_\Theta,\quad 0\leq s\leq1,\\
+ \norm{f_j(\theta_0)-Z_{j0}}_F&\leq e_{j0},\\
+ \norm{Df_j(\theta_0)[D_t]-Z_{jt}}_F&\leq e_{jt},\\
+ \norm{V_j(\theta)-f_j(\theta)}_F&\leq\nu_j.
+\end{align*}
+The Hessian bound includes all mixed directional derivatives. The chosen norm on parameter residuals is part of the provider contract.
+
+\begin{theorem}[Sound second-order response enclosure]
+Under these premises,
+\[
+ \norm{V_j(\theta)-Z_j(a)}_F
+ \leq \nu_j+e_{j0}+\sum_t|a_t|e_{jt}
+       +\tfrac12H_j\norm a_2^2+L_j\norm u_\Theta. \tag{20}
+\]
+\end{theorem}
+\begin{proof}
+Insert the ideal endpoint, integrate its derivative along the residual segment, then apply Taylor's integral remainder along $sa$:
+\[
+ h_j(a)-h_j(0)-Dh_j(0)a
+ =\int_0^1(1-s)D^2h_j(sa)[a,a]\,ds.
+\]
+Add the constant and directional jet errors and the finite evaluator error.
+\end{proof}
+If $Z_{j0}$ is the exact finite reference output, $e_{j0}$ must still cover reference-versus-ideal error. Unverified automatic differentiation cannot supply certified jets. Floating programs are not globally smooth real maps; unsupported numerical providers return UNKNOWN and trigger replay.
+
+\note{Evaluate the error without scanning records.} Define nonnegative descriptors
+\[
+ b_j=(\nu_j+e_{j0},e_{j1},\ldots,e_{jr},H_j,L_j),\quad
+ v=(1,|a_1|,\ldots,|a_r|,\norm a^2/2,\norm u_\Theta).
+\]
+Store the additive matrix $C_G=M_0^{-1}\sum_{j\in G}b_jb_j^\top$. Then
+\[
+ \epsilon_G^2:=v^\top C_Gv\ \geq\ M_0^{-1}\sum_{j\in G}\norm{V_j(\theta)-Z_j(a)}_F^2. \tag{21}
+\]
+The cross terms matter: summing only squared individual errors is unsound. Uniform intrinsic bounds enable exact deletion and canonical repeated state. Online record-dependent bounds would reintroduce retained reads. Rigorous upper bounds for irrational norms suffice because $b_j,v$ are nonnegative.
+
+\newpage
+\section*{19. Exact decisions and a larger local certified region}
+Set $S=\sum_GS_G(a)$, $\bar H=\lambda I+S$ and $\epsilon^2=\sum_G\epsilon_G^2$. The existing transport theorem yields
+\[
+ \eta\geq\norm{\bar H^{-1/2}(H_*-\bar H)\bar H^{-1/2}}_2,
+ \quad \eta=2a_0e+e^2,\quad e=\epsilon/\sqrt\lambda,\quad a_0\leq1. \tag{22}
+\]
+One may tighten $a_0^2\leq\tr(S)/(\lambda+\tr(S))$. Generate a candidate using $\bar H$, and verify each cell with scales $(1-\eta,1+\eta)$ when $\eta<1$.
+
+\begin{theorem}[Response-index sequential repair]
+Assume sound response/remainder indices and the declared finite feature contract. Topological candidate generation, shape certification, and eventual exact retained replay return precisely $Q_{\rm seq}(W,R)$. Updating the intrinsic indices by subtraction and discarding transient calibrated state returns the complete fresh state
+\[
+ \mathcal A_{\rm response}(R)=(Q_{\rm seq}(W,R),I_{\rm response}(R),\mathrm{IDs}(R)).
+\]
+The result holds for repeated adaptive requests and permits changed codes at every stage.
+\end{theorem}
+\begin{proof}
+Already certified ancestors determine the true target prefix. Equations (19)--(22) enclose its actual metric. Forced-prefix coordinate induction certifies the emitted tensor; topological induction certifies the model. Complete replay resolves any remaining stage. Additive intrinsic sums and canonical serialization establish state equality independently of request order.
+\end{proof}
+
+\note{Quantitative improvement, not just a new notation.} In the ideal-exact, exact-jet, in-subspace case $u=0$, define $K_R^2=M_0^{-1}\sum_jH_j^2$. Then $\epsilon\leq K_R\norm a^2/2$. If the response candidate's positive-energy normalized margins are at least $\tau>0$, let $\eta_\tau=\tau/\sqrt{1+\tau^2}$. Sufficient acceptance is
+\[
+ \boxed{\norm a^2<\frac{2\sqrt\lambda}{K_R}
+                    (\sqrt{1+\eta_\tau}-1).} \tag{23}
+\]
+Indeed this makes $2e+e^2<\eta_\tau$, so every displacement is below its margin. If $K_R=0$, the feature response is exactly affine on the domain and has zero truncation error.
+
+For small $\tau$ and controlled constants, the radius is $O(\sqrt\tau)$; a zeroth-order nonzero-Lipschitz error gives an $O(\tau)$ sufficient radius. This is a local scaling comparison, not universal dominance: margins, conditioning and bound tightness can differ. A first-order residual or nonvanishing finite error floor removes the quadratic improvement. Small deletion fraction alone proves none of these conditions.
+
+\newpage
+\section*{20. Adaptive replay, storage, and the true work comparison}
+For a fixed certified prefix and chart, compute group scalar summaries
+\[
+ z_G^2=\tr S_G(a),\qquad
+ \delta_G=2z_G\epsilon_G+\epsilon_G^2.
+\]
+Then the group's absolute Gram error is at most $\delta_G$. Replay replaces that group's surrogate Gram with the exact target Gram and sets its error to zero. The sum of unreplayed absolute errors decreases. Rewhitening or changing charts need not be monotone. A finite chart bank and eventual replay of a new group ensure termination.
+
+A global root contraction costs $O(r^2d^2)$ arithmetic; ranking $G$ groups from trace/error coefficients costs $O(Gr^2)$. Replacing a group costs an additional contraction unless cached. These counts exclude arbitrary-precision bit costs, parameter projection, provider proofs, index reads, factorization, output and all replay work.
+
+For one chart/stage/group, the minimal coefficient representation stores
+\[
+ \binom{r+2}{2}\frac{d(d+1)}2
+ \quad\text{Gram scalars, plus}\quad \frac{(r+3)(r+4)}2
+ \quad\text{error-descriptor scalars}.
+\]
+A small coarse partition and a full leaf tree have very different memory costs. Directions and their domains are additional state. Deleted contributions require regeneration or stored per-record payloads before erasure; IDs alone are insufficient.
+
+\begin{theorem}[Coefficient-information lower bound]
+Let $K=\binom{r+2}{2}$ and $M=d(d+1)/2$. For every integer $B\geq2$, some family of integer affine-response corpora needs at least $KM\log_2B$ bits of stored state to answer every rational surrogate-Gram query exactly, with no record access or other side information.
+\end{theorem}
+\begin{proof}
+The $M$ matrices $vv^\top$ for $v=e_i$ and $v=e_i+e_j$ span symmetric matrices. The $K$ squares $1,a_i^2,(1+a_i)^2,(a_i+a_j)^2$ span all scalar quadratics. Their tensor products are independent matrix polynomials. Give each product $B-1$ fixed record slots; put its affine jet in the first $n\in\{0,\ldots,B-1\}$ slots and zero jets elsewhere. This realizes $B^{KM}$ distinct Grams. Distinct polynomials differ at a rational query, so exact query states must distinguish every member.
+\end{proof}
+This is a finite-bit bound for polynomial Gram queries, not a universal transformer/model-output lower bound. Degree-$p$ feature surrogates need at most $\binom{r+2p}{2p}$ matrix coefficients; the same construction gives the corresponding bit obstruction, since squares of degree-$p$ polynomials span degree-$2p$ polynomials.
+
+\note{Crucial comparator correction.} This index can accelerate an indexed fresh quantizer too. A deletion-exclusive advantage over the best equally indexed algorithm does not follow. The earlier cost ratio applies only when its actual comparator costs $F,G,J$ and all extra repair work are established. Require both ordinary fresh and equally indexed fresh baselines; account for index construction and lifetime amortization. No fair theorem forces the comparator to scan records it can avoid.
+
+\newpage
+\section*{21. Lower storage without losing second-order control}
+The exact quadratic Gram need not be reconstructed to certify a quantization decision. A cheaper tier keeps its constant/linear matrix response and bounds the omitted quadratic matrix using scalar moments.
+
+Put $\Delta Z_j=\sum_t a_tZ_{jt}$, and define normalized retained sums
+\begin{align*}
+ S_{\rm lin}(a)&=M_0^{-1}\sum_j[Z_{j0}Z_{j0}^{\top}+Z_{j0}\Delta Z_j^{\top}+\Delta Z_jZ_{j0}^{\top}],\\
+ Q(a)&=M_0^{-1}\sum_j\Delta Z_j\Delta Z_j^{\top},\qquad
+ G_{st}=M_0^{-1}\sum_j\langle Z_{js},Z_{jt}\rangle_F,\quad s,t\geq1.
+\end{align*}
+Then $S(a)=S_{\rm lin}(a)+Q(a)$ and $0\preceq Q\preceq\beta I$, where $\beta=a^\top Ga$. Store $r+1$ symmetric matrices for $S_{\rm lin}$ and $r(r+1)/2$ tangent scalars. Also retain the same scalar error-descriptor moments. Matrix storage is $O(rd^2+r^2)$.
+
+The surrogate feature norm is still exactly accessible:
+$z^2=\tr S_{\rm lin}+\beta$. Thus a feature-remainder bound $\epsilon$ gives
+$\delta=2z\epsilon+\epsilon^2$ and $-\delta I\preceq H_*-\lambda I-S\preceq\delta I$.
+
+\begin{theorem}[Shifted linear-response certificate]
+Define $\widetilde H=\lambda I+S_{\rm lin}+\beta I$. Then
+\[
+ \widetilde H\succeq\lambda I,\qquad
+ -(\beta+\delta)I\preceq H_*-\widetilde H\preceq\delta I.
+\]
+If $\beta+\delta<\lambda$, valid relative scales are
+\[
+ a_-=1-\frac{\beta+\delta}{\lambda},\qquad
+ a_+=1+\frac{\delta}{\lambda}. \tag{24}
+\]
+The exact cell verifier with these scales certifies the original target. In the exact in-chart jet regime, both $\beta$ and $\delta$ are $O(\norm a^2)$, so the second-order uncertainty survives.
+\end{theorem}
+\begin{proof}
+Since $\beta I-Q\succeq0$, $\widetilde H=\lambda I+S+(\beta I-Q)\succeq\lambda I$. Subtract this identity from the target and combine the PSD omission bound with the feature remainder. The ridge floor converts absolute to relative bounds. The order follows because $\Delta Z$ is linear in $a$ and the feature remainder is quadratic.
+\end{proof}
+
+An unshifted $H_{\rm lin}=\lambda I+S_{\rm lin}$ has automatic floor $\lambda-\beta$ when positive. It is another valid candidate, not a universally better one. Its own margins must be checked.
+
+\note{Replay preserves a useful invariant.} Shift each unresolved group by $\beta_G I$. Every raw group proposal is PSD. After replay replaces any proposal by its exact Gram, the global ridge floor remains $\lambda$. With $A=\sum_{\rm unresolved}(\beta_G+\delta_G)$ and $D=\sum_{\rm unresolved}\delta_G$, the scales are $(1-A/\lambda,1+D/\lambda)$. These particular conservative endpoints tighten monotonically during replay; all replay recovers the exact target.
+
+An implementation-matched zero-replay condition is available: if every stage's shifted candidate has normalized margin $\tau>0$ and
+\[
+ \beta+\delta\leq\lambda/2,\qquad \beta+2\delta<\lambda\tau,
+\]
+then $\chi\leq(\beta+2\delta)/\lambda<\tau$, so every stage accepts. This permits changed codes throughout. Finite/residual terms remain in $\delta$; no real-model coverage follows without their bounds.
+
+The earlier storage lower bound required exact polynomial-Gram queries. This tier answers an enclosure query, so it escapes that bound without contradiction. The gain is reduced stored matrices, not a proved wall-clock or certificate-coverage improvement.
+
+\newpage
+\section*{22. Transformer curvature and executable coverage}
+For an ideal graph node $x(a)$ maintain region-wide bounds $(M_x,J_x,H_x)$ on value, full coefficient Jacobian and full bilinear coefficient Hessian. These are proof bounds over a region, not derivatives sampled at its center.
+
+For affine $W(a)$ and $y=W(a)x(a)+b(a)$,
+\[
+ J_y\leq M_WJ_x+J_WM_x+J_b,\qquad
+ H_y\leq M_WH_x+2J_WJ_x.
+\]
+For a matrix product $y=xz^\top$,
+\[
+ H_y\leq H_xM_z+2J_xJ_z+M_xH_z.
+\]
+For $y=g(x)$ with derivative bounds $L,B$,
+\[
+ J_y\leq LJ_x,\qquad H_y\leq LH_x+BJ_x^2.
+\]
+The mixed terms are essential when multiple ancestors change. For ideal row softmax, valid constants are $L=1/2$, $B=3/2$: differentiate $J=\operatorname{diag}(p)-pp^\top$ to obtain $DJ[k]=\operatorname{diag}(Jk)-(Jk)p^\top-p(Jk)^\top$ and use $\norm p_2\leq1$. Frobenius row aggregation preserves the constants.
+
+For LayerNorm of width $n$, fixed gain norm $\Gamma$ and region denominator lower bound $s_{\min}>0$, valid constants are
+\[
+ L\leq\Gamma/s_{\min},\qquad B\leq6\Gamma/(\sqrt n\,s_{\min}^2).
+\]
+Exact GELU admits conservative global constants $L<1.25$, $B\leq2$. Residual merges add bounds. The independent derivation supplies full formulas. Finite kernels require the separate numerical provider; these ideal inequalities do not certify arbitrary libm/CUDA operations.
+
+\begin{tabularx}{\linewidth}{@{}p{.29\linewidth}X@{}}\toprule
+Executable component & Scope and present limitation\\\midrule
+Exact quantizer & Fraction reverse LDL and fixed-grid decisions; independently checked against constrained Gaussian solves.\\
+Sparse injection & Target factor known; interval premises explicitly labeled; exact ambiguous-coordinate fallback.\\
+Response moments & Exact quadratic/linear contractions and retained-only subtraction; supplied jet/remainder provenance remains a premise.\\
+Stage service & Complete fresh/repair paths, bound-to-prefix witnesses, selected replay and canonical commit. Trusted evaluator/provider boundary is explicit.\\
+Decoder backend & Complete scalar CPU decoder with causal attention, LayerNorm, GELU, residuals and logits. Fixed architecture and supplied weights/token IDs.\\
+Numerical shortcut & Structural finite-ancestor identity is certified. General changed-prefix floating transport and automatic certified jets are not supplied.\\
+Work scheduler & Cooperative bounded packets, cancellation and commit counted; not a GPU preemptor or latency measurement.\\\bottomrule
+\end{tabularx}
+
+\newpage
+\section*{23. Contribution discipline and publication gates}
+\note{Recommended central claim.} Exact calibration deletion for a sequential quantizer through deletable response moments, certified discrete decisions, repeated canonical state and explicit replay/storage costs. The response index's second-order local regime makes this stronger than an unchanged-model gate. Its practical usefulness is still to be measured.
+
+The new audit found material adjacent prior work. We therefore avoid broad priority claims:
+
+[7] Lin and Sinnamon. \emph{The Generalized Wielandt Inequality in Inner Product Spaces}. 2012. \url{https://arxiv.org/abs/1201.6294}. Our shape constant is a specialization of classical angle/conditioning geometry.
+
+[8] Gunn. \emph{How to sketch a learning algorithm}. April--June 2026. \url{https://arxiv.org/abs/2604.07328}. This gives derivative-based sketches for approximate deletion-output prediction under stability. Derivative sketches for deletion are already established; our proposed distinction is exact sequential discrete output and canonical intrinsic state.
+
+[9] Shen/Li. \emph{Published Unlearning Numbers Move Per Checkpoint, and Not Because the Removed Data Survives}. September 2026. \url{https://arxiv.org/abs/2609.11490}. Appendix E audits retained-only calibration-scale refitting at fixed weights in vision models. Awareness of calibration influence is not novel by itself.
+
+[10] Entesari and Fazlyab. \emph{Hierarchical End-to-End Taylor Bounds for Complete Neural Network Verification}. L4DC 2026. \url{https://proceedings.mlr.press/v331/entesari26a.html}. Certified neural Taylor bounds are prior machinery.
+
+[11] Huggins et al. \emph{PASS-GLM: Polynomial Approximate Sufficient Statistics for Scalable Bayesian GLM Inference}. NeurIPS 2017. \url{https://arxiv.org/abs/1709.09216}. Polynomial sufficient statistics are established; the sequential quantization certificate and deletion state are the proposed application-specific contribution.
+
+The full dated audit and additional primary sources are in \texttt{docs/NOVELTY\_AUDIT.md}. This is a focused audit, not proof that no matching work exists.
+
+\note{What is closed.} The stated exactness, remainder, canonical-state, coefficient-information and conditional charged-work results have derivations and independent review. A complete reference execution path now exists, including a deterministic decoder and exact fallback. Software correctness tests are recorded separately from experiments.
+
+\note{What cannot honestly be declared closed.} Useful certified derivative/finite-error providers for realistic checkpoints; low out-of-chart residuals; competitive storage/preparation; strict gain over equally indexed fresh evaluation; and reliable real-model latency/NLP evidence. UNKNOWN-to-replay makes unsupported providers safe, but does not turn them into speedups. The supplied decoder is not a pretrained-model adapter or a production GPU implementation. The generic service adapter stores per-record response payloads and scans their descriptors; it does not realize compact group-index query costs.
+
+\note{Next experiment gate, when authorized.} Validate full artifact and repeated-state equality independently, then measure complete service cost, real text quality, retained replay, storage and amortization. Include failed certificates, changed first layers, an equally indexed fresh baseline and a fixed-reference ablation. Continue deferring synthetic empirical datasets. No theory-only promise replaces those measurements.
