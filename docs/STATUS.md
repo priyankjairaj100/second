@@ -2,7 +2,9 @@
 
 Updated 4 October 2026, revision 4.
 
-The current request addresses remaining implementation blockers.
+The latest request asks for a comprehensive list of remaining research tasks.
+See [RESEARCH_TODO.md](RESEARCH_TODO.md) for priorities, completion criteria, and decision gates.
+This planning update changes no implementation or empirical result.
 Research experiments remain paused.
 Software correctness checks remain within scope.
 
@@ -48,6 +50,8 @@ See docs/VALIDATION.md for final results and exact source hashes.
 These checks do not measure model quality, certificate coverage, or latency.
 
 Useful chart coverage remains unknown on real language models.
+The experiment runner and equally indexed fresh baseline remain unimplemented.
+The current empirical protocol must be reconstructed because the earlier protocol is unavailable.
 Interval bounds may become too loose across long sequences and deep networks.
 Large charts increase preparation, storage, and verification costs.
 The checkpoint adapter loads parameters eagerly into Python objects.
@@ -73,3 +77,7 @@ It also makes no hostile-storage authentication, physical memory erasure, or pro
 
 Earlier raw experiment files remain missing.
 Historical metrics are reconstructed context, not recovered evidence.
+
+The report's unconditional fallback wording needs one documented correction.
+Every such statement must require successful finite evaluation for the partial V_cert program.
+The current implementation and numerical contract already enforce this distinction.

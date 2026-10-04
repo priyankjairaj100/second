@@ -4,6 +4,7 @@ Continue our ACL 2027 calibration-data unlearning project from https://github.co
 
 Read RESUME.md, AGENTS.md, docs/STATUS.md, docs/PROJECT_CONTEXT.md, and docs/VALIDATION.md.
 Then read docs/REFERENCE_SERVICE.md and the consolidated report.
+Read docs/RESEARCH_TODO.md for the full remaining program, completion criteria, and decision gates.
 
 We target complete retained-data sequential quantization with fixed base weights.
 Revision 4 implements compact group state, automatic certified transformer responses, and local GPT-2 safetensors loading.
@@ -23,6 +24,9 @@ Do not launch benchmarks, cloud jobs, model downloads, or synthetic empirical da
 Practical chart coverage, memory, preparation costs, latency, and NLP quality remain unmeasured.
 The implementation is scalar reference code.
 An equally indexed fresh solver must receive the same summaries.
+The experiment runner, indexed fresh baseline, and current full protocol remain to be prepared.
+First resolve useful chart coverage before expanding real-model experiments.
+Correct the report's unconditional fallback wording to match the partial finite evaluator.
 
 Earlier raw experiment files were pruned.
 Old metrics in PROJECT_CONTEXT are reconstructed conversation evidence.

@@ -4,6 +4,7 @@ Last revision: 4 October 2026, v4 implementation blockers.
 Repository: https://github.com/priyankjairaj100/second
 
 Read docs/STATUS.md, docs/PROJECT_CONTEXT.md, docs/VALIDATION.md, and docs/REFERENCE_SERVICE.md first.
+Read docs/RESEARCH_TODO.md for the complete remaining program and its decision gates.
 Then read the consolidated report and AGENTS.md.
 The user authorized repository pushes and complete restart notes.
 Do not force-push or remove unrelated remote changes.
@@ -24,7 +25,9 @@ No equality between these targets is assumed.
 
 ## Current request and phase
 
-User: "Proceed on the remaining implementation blockers."
+Latest user request: "Make a comprehensive list of to-do items left in this research paper program."
+The resulting register is docs/RESEARCH_TODO.md.
+It preserves the completed v4 implementation and separates required work from conditional extensions.
 Research experiments remain PAUSED.
 Software correctness tests are allowed.
 Do not download models, start benchmarks, launch cloud jobs, or create synthetic empirical datasets without resumed authorization.
@@ -63,6 +66,9 @@ Realistic chart coverage, preparation costs, useful storage, latency, and NLP qu
 Full-dimensional charts can be prohibitively expensive.
 The scalar reference implementation is not a production GPU implementation.
 The scheduler remains a separate cooperative utility.
+The experiment runner, equally indexed fresh baseline, and current full empirical protocol still require implementation or reconstruction.
+The first empirical gate tests useful chart coverage with genuine changed ancestors.
+Report Section 16 also needs consistent finite-evaluation conditions for its fallback statement.
 An equally indexed fresh solver can use the same summaries.
 No universal deletion-exclusive speedup is claimed.
 

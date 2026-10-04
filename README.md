@@ -15,6 +15,7 @@ The latest revision develops **deletable response moments**: stored intrinsic fe
 - [Compact service](docs/AGGREGATE_SERVICE.md), [certified provider](docs/CERTIFIED_PROVIDER.md), and [local checkpoint adapter](docs/CHECKPOINT_ADAPTER.md)
 - [Independent derivations/review](theory_revision/)
 - [Restart prompt](docs/RESTART_PROMPT.md)
+- [Complete remaining research program](docs/RESEARCH_TODO.md), with priorities, completion criteria, and decision gates
 
 ## Verification
 

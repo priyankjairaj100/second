@@ -165,3 +165,20 @@ No real-data quality, chart-coverage, latency, or memory result follows from the
 Large charts and interval bounds may be impractical.
 The eager scalar decoder can require substantial memory.
 Equally indexed fresh comparison, lifetime costs, and complete service timing remain required when experiments resume.
+
+## Research program register (4 October 2026)
+
+The user requested a comprehensive list of remaining paper tasks.
+The authoritative register is docs/RESEARCH_TODO.md.
+It includes priorities, completion criteria, dependencies, conditional extensions, and submission gates.
+No experiments resumed during this planning update.
+
+The main gate is useful chart coverage for real changed prefixes.
+The exact chart can reject general quantization changes, even after small deletions.
+The current acceptance fixture does not establish practical coverage.
+The experiment runner, equally indexed fresh baseline, and full current empirical protocol remain outstanding.
+The old empirical protocol remains unavailable.
+
+The audit found one concrete wording inconsistency in report Section 16.
+Its fallback statement must include successful finite evaluation, as the current numerical contract already requires.
+The register tracks this correction without reopening the reviewed induction proof.
