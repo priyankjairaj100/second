@@ -1,0 +1,175 @@
+\newpage
+\section*{28. Fixed boxes remove the affine-span requirement}
+Revision 6 adds a corpus-independent parameter box for every ancestor stage.
+Its endpoints contain the installed finite base parameters and frozen grid extrema.
+Thus every grid-generated prefix passes the domain inclusion test.
+This statement does not imply a successful numerical enclosure or rounding certificate.
+The target remains $V_{\rm cert}$ with exact rational quantization.
+
+\note{Intrinsic hybrid anchor.}
+For a domain fixed at finite base weights, use the exact finite feature $Z_j$ and error $b_j=0$.
+Otherwise propagate rank-zero intervals through the same neural graph.
+For each feature entry, let $[l_{jab},u_{jab}]$ enclose its ideal value.
+Let $e_{jab}$ enclose its finite execution discrepancy over the complete box.
+Choose
+\[
+ Z_{jab}=\frac{l_{jab}+u_{jab}}2,\qquad
+ c_{jab}=\frac{u_{jab}-l_{jab}}2+e_{jab},\qquad
+ b_j\ge\sqrt{\sum_{a,b}c_{jab}^2}.
+\]
+Use an outward rational square root.
+Then $\norm{X_j(\theta)-Z_j}_F\le b_j$ for every covered successful finite execution.
+The triangle inequality proves the entry bound; summing squares proves the matrix bound.
+No derivative array or affine coefficient is needed.
+The anchor and its bound depend only on that record and the fixed provider.
+
+\begin{theorem}[Intrinsic box state and exact repair]
+Fix boxes, anchor policy, precision, grouping, and original normalization $M_0$.
+For each retained group $R_g$, store
+\[
+ S_g=M_0^{-1}\sum_{j\in R_g}Z_jZ_j^\top,
+ \qquad E_g=M_0^{-1}\sum_{j\in R_g}b_j^2.
+\]
+Set $z_g\ge\sqrt{\tr S_g}$, $\epsilon_g\ge\sqrt{E_g}$, and
+$\delta_g=2z_g\epsilon_g+\epsilon_g^2$ using outward bounds.
+Then
+\[
+ -\delta_g I\preceq H_g(\theta)-S_g\preceq\delta_g I.
+\]
+Exact subtraction gives the fresh retained sums after any valid deletion sequence.
+Accepted stage certificates and exact replay produce the complete fresh retained model.
+Completion requires successful necessary finite evaluations and sufficient resources.
+\end{theorem}
+\begin{proof}
+Write $X_j=Z_j+D_j$ and expand its Gram.
+Cauchy--Schwarz bounds the cross terms by $2z_g\epsilon_g$.
+The residual Gram has norm at most $\epsilon_g^2$.
+Intrinsic rational contributions subtract exactly, including unavailable-evidence counts.
+Canonical bindings and serialization then equal fresh retained construction.
+The decision theorem certifies each accepted stage under its actual new ancestor prefix.
+Replay supplies exact Grams otherwise.
+Stage induction establishes the complete output.
+\end{proof}
+
+The compact interface stores rank-zero response moments and six scalar error slots per group.
+Only the first error slot can be nonzero.
+Aggregate storage is $\sum_\ell G_\ell(d_\ell^2+6)$ rational slots.
+The domain stores $2P_A$ rational endpoints for parameters used by later stages.
+Metadata still costs $O(NL)$.
+Bit lengths, base weights, replay, and output remain additional costs.
+
+\newpage
+\section*{29. Stronger anchor choice and explicit limits}
+\begin{theorem}[Midpoint optimality for the interval envelope]
+For a fixed interval $[l,u]$ and any scalar anchor $z$,
+\[
+ \max\{|l-z|,|u-z|\}\ge\frac{u-l}{2}.
+\]
+Equality holds at $z=(l+u)/2$.
+The midpoint therefore minimizes each interval-based entry bound, including its fixed finite discrepancy.
+Summing squared entry bounds gives no larger feature radius than another anchor under the same intervals.
+\end{theorem}
+\begin{proof}
+The triangle inequality gives $u-l\le |u-z|+|l-z|$.
+Each term is at most their maximum.
+The midpoint attains both equal distances.
+\end{proof}
+
+The implemented hybrid uses this anchor whenever the parameter domain varies.
+It removes the separate finite base evaluation for that branch.
+The fixed-base branch retains its exact zero-error anchor.
+The provider identity binds both branches.
+Changing the policy requires index reconstruction.
+This optimality concerns the rectangular interval envelope, not the smaller reachable feature set.
+
+\note{Deletion reduces the fixed error budget.}
+With original normalization fixed, deleting records cannot increase $\tr S_g$ or $E_g$.
+Monotone outward evaluation therefore cannot increase $\delta_g$.
+Unavailable counts also cannot increase.
+This does not prove monotone certificate acceptance.
+Deletion also changes proposals, codes, pivots, and margins.
+
+Let $\widetilde H\succeq\lambda I$ be the proposal after exact replayed groups are included.
+Let $\Delta$ sum unresolved error budgets.
+For $\Delta<\lambda$, use
+\[
+ \alpha=1-\Delta/\lambda,\qquad \omega=1+\Delta/\lambda.
+\]
+Let $\tau=\min_{i:E_i>0}m_i/\sqrt{g_iE_i}$ over every row and coordinate.
+The shape theorem gives a sufficient strict acceptance condition:
+\[
+ \frac{\Delta}{\lambda}<\frac{\tau}{\sqrt{1+\tau^2}}.
+\]
+Zero-energy coordinates have zero certified displacement.
+Positive-energy midpoint ties have no positive margin budget.
+When $\Delta=0$, exact rational decisions resolve ties directly.
+
+\note{Coverage is not acceptance.}
+Any fixed anchor obeys the diameter lower bound
+\[
+ \sup_\theta\norm{X(\theta)-Z}_F
+ \ge\frac12\sup_{\theta,\theta'}\norm{X(\theta)-X(\theta')}_F.
+\]
+A broad feature range therefore forces a broad uniform error.
+More interval precision cannot remove that range.
+If covered prefixes need different exact codes, one constant universal certificate cannot accept both.
+Narrow box banks can help, but their preparation and state must be charged.
+For $m$ independent binary coordinates, boxes narrower than their separation require at least $2^m$ boxes.
+
+Interval propagation and the Gram inequality are established mathematical tools.
+Their use here supplies an additional intrinsic deletion route.
+Neither midpoint optimality nor smaller derivative storage establishes full-service speed or acceptance dominance.
+
+\newpage
+\section*{30. Controlled preparation and remaining research gates}
+Parameter wrappers now materialize only the matrix required by the current stage.
+Unused later matrices are not constructed.
+This applies to the finite evaluator and both providers without changing scalar operation order.
+It reduces temporary parameter wrappers, not total model memory.
+Base arrays, activations, exact Grams, and the output head remain charged.
+
+\begin{tabularx}{\linewidth}{@{}p{.28\linewidth}X@{}}\toprule
+Revision 6 component & Implemented scope and boundary\\\midrule
+Certificate route & Full-grid parameter boxes, midpoint anchors, interval finite errors, and canonical rank-zero state.\\
+Mechanism controls & Certified response, full replay, fixed-reference, and base-reference identity-only modes.\\
+Cost diagnostics & Exclusive nested spans for extraction, bounds, replay, rounding, metadata, serialization, and artifact output.\\
+Execution worker & Memory, CPU, file, affinity, thread, and wall controls for each comparison process.\\
+Request laws & Original-state concentration, leverage/margin difficulty, random, contiguous, source, and sequence definitions.\\
+Frozen inventory & Bound configurations, root/request membership, saved method order, source hashes, and complete confirmation products.\\
+Analysis checks & Reject mixed modes, targets, charts, and service identities within a declared stratum.\\\bottomrule
+\end{tabularx}
+
+The identity-only control checks finite base ancestors.
+It is not a cache of the preceding quantized model's features.
+The full quadratic service control remains open.
+Current methods share the same state contract and quantization target.
+Repair and indexed fresh still share their solver.
+Index maintenance and solver advantages remain separate claims.
+
+Each comparison runs in a new limited process.
+Its methods still share that process and its warm state.
+Operating-system caches remain uncontrolled.
+Cumulative phase CPU caps remain unenforced.
+The method clock excludes final result commit and campaign orchestration.
+Internal diagnostics do not cover every numerical rejection subtype.
+These conditions cannot establish complete process-cold service latency.
+
+Concentrated and difficult requests use original-state evidence only.
+Their construction costs and artifact hashes remain explicit.
+The difficulty score is a stress proxy, not a prediction guarantee.
+Actual real-source pools, token artifacts, and the final empirical inventory remain absent.
+Sequence and complete-deletion laws exist, but their campaign execution remains blocked.
+Protocol version 2 retains the experiment pause and all unresolved execution gates.
+
+\note{Required next work.}
+Resolve resource-feasible checkpoint execution without changing the target silently.
+Complete real input contracts, precision justification, and the remaining comparison controls.
+Close complete-service timing, memory, rejection diagnostics, and required cold/warm conditions.
+After authorization, establish real-model exactness and useful coverage before confirmation.
+Then measure retained replay, complete costs, lifetime value, and held-out NLP quality.
+The theorem stack cannot substitute for these measurements.
+
+All revision 6 checks are software correctness checks.
+No research experiment, model download, dataset download, or external compute job ran.
+The complete test record and source hashes appear in \texttt{docs/VALIDATION.md}.
+The task register and restart notes preserve every unresolved item.

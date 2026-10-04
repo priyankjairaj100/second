@@ -1,0 +1,93 @@
+INDEPENDENT FIXED-BOX THEORY REVIEW
+Date: 4 October 2026.
+Scope: revision 6 certificate route; no research measurements.
+
+1. Accepted mathematical route
+
+Use actual installed binary64 ancestor weights as box coordinates.
+Use the actual finite base feature when all required ancestors remain fixed at base.
+That branch has exactly zero feature error.
+Otherwise, use each proved interval midpoint as its exact rational anchor.
+Propagate interval values and finite discrepancies through the pinned operation graph.
+For each midpoint entry, use half the interval width plus finite discrepancy.
+This radius minimizes the bound over every scalar anchor for that same interval.
+The midpoint branch requires no separate finite anchor evaluation.
+Take an outward Frobenius norm bound.
+Store the anchor Gram and squared feature error as additive intrinsic evidence.
+The rank-zero compact interface represents these quantities without derivative arrays.
+The existing spectral certificate then proves each accepted stage.
+Stage induction proves every successful complete model result.
+
+2. Mandatory semantic checks
+
+A. Boxes cover converted grid codes, not only unconverted rational values.
+B. Missing prefix parameters use the converted base values inside the box.
+C. The combined service identity binds decoder, box, precision, source, and target grids.
+D. The exact finite anchor uses the target schedule on fixed-base domains.
+D2. Other anchors are rational interval midpoints under the bound provider's fixed program.
+E. Uniform finite errors remain active when derivative tuples are empty.
+F. Domain failures return unavailable evidence.
+G. Necessary target failures abort; replay is not universally terminating.
+H. Query checks the new certified prefix, not the original deployed prefix.
+I. Deletion regenerates exact intrinsic contributions under the same recipe.
+J. Fresh construction and deletion use the same canonical state definition.
+K. Provider statistics and callbacks retain no hidden per-record neural state.
+
+3. Specific failure modes
+
+Broad boxes can make layer normalization enclosures cross forbidden domains.
+Repeated variables can enlarge ordinary interval products.
+Finite discrepancy bounds can exceed safe operation domains.
+Softmax bounds can become weak even when actual target values remain safe.
+The proof can therefore fail while the actual finite target succeeds.
+Such proof failure is a completeness limitation, not evidence of unsoundness.
+
+A full-grid box covers many prefixes that no calibration set produces.
+That overapproximation can force excessive uniform error.
+The finite feature diameter supplies a lower bound on any uniform anchor radius.
+The Gram diameter supplies the corresponding limit for a constant proposal.
+Distinct true stage codes inside one box prohibit a universal fixed-code certificate.
+Higher interval precision cannot remove these genuine range limits.
+
+4. Resource judgment
+
+The route removes first and second derivative arrays.
+It does not remove exact base weights or exact group Grams.
+The persistent aggregate count is sum_ell G_ell*(d_ell^2+6).
+Slot counts exclude rational bit lengths and object overhead.
+The interval graph still performs certified scalar neural computation.
+Setup and deletion must pay for the applicable branch's extraction.
+Nonconstant domains use one interval evaluation and no separate finite anchor evaluation.
+Fixed-base domains use one finite evaluation and no interval propagation.
+Repeated prefix checks can add an avoidable group factor.
+Compare indexed fresh with access to the same index.
+Do not attribute shared index benefits uniquely to deletion.
+
+5. New monotonicity statement
+
+Fixed normalization makes trace anchor sums and squared error sums decrease after deletion.
+Monotone outward contraction therefore makes the uniform uncertainty budget decrease.
+Unavailable counts also decrease.
+This statement does not imply better acceptance or lower total latency.
+Deletion can reduce a rounding margin.
+A changing normalization would invalidate the proof.
+
+6. Hybrid anchor limits
+
+The midpoint minimizes the error radius for each declared interval envelope.
+It can change the anchor Gram and rounding margins.
+Neither Gram error nor certificate acceptance has a universal dominance guarantee.
+Removing a finite evaluation removes work, but it proves no complete request speedup.
+The provider manifest must bind the hybrid rule.
+Changing that rule requires new intrinsic evidence.
+
+7. Publication judgment
+
+This is a useful implementation improvement over the dense coordinate route.
+It resolves affine representability without an exponential derivative allocation.
+It does not resolve practical certification or complete service speedup.
+It is insufficient as the paper's sole mathematical novelty.
+The theorem package must preserve its conditional cost claim.
+Real model coverage, resource feasibility, and accepted repair remain open gates.
+A narrow box bank could help, but worst-case universal coverage is exponential.
+The current route should be reported as an additional sound certificate mechanism.

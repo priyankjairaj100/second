@@ -1,0 +1,235 @@
+{
+  "schema": "calibration-protocol-v1",
+  "version": 2,
+  "created_date": "2026-10-04",
+  "status": "prospective_v6_preparation_experiments_paused",
+  "target": "V_cert",
+  "primary_baseline": "indexed_fresh",
+  "candidate": "repair",
+  "correctness_control": "direct_fresh",
+  "real_text_only": true,
+  "synthetic_empirical_datasets": false,
+  "external_compute_authorized": false,
+  "planning_choices_are_not_measurements": true,
+  "resources": {
+    "execution": "local_cpu_only",
+    "campaign_mode": "isolated_comparison_warm_arms_os_cache_uncontrolled",
+    "comparison_mode": "warm_sequential_os_cache_uncontrolled",
+    "observed_container_memory_gib": 8,
+    "planned_worker_address_space_bytes": 6442450944,
+    "address_space_is_not_physical_memory": true,
+    "phase_cpu_hour_caps": {
+      "feasibility": 3,
+      "development": 12,
+      "confirmation": 64
+    },
+    "phase_caps_enforced": false,
+    "worker_profiles": {
+      "preflight": {
+        "wall_seconds": 900,
+        "cpu_seconds": 900,
+        "address_space_bytes": 6442450944,
+        "threads": 1,
+        "affinity_cpus": null,
+        "termination_grace_seconds": 1,
+        "file_size_bytes": 536870912
+      },
+      "later": {
+        "wall_seconds": 3600,
+        "cpu_seconds": 3600,
+        "address_space_bytes": 6442450944,
+        "threads": 1,
+        "affinity_cpus": null,
+        "termination_grace_seconds": 1,
+        "file_size_bytes": 536870912
+      }
+    },
+    "profile_scope": "one_complete_comparison_process_including_preparation_and_all_warm_methods",
+    "affinity_must_be_resolved_before_inventory": true,
+    "worker_enforcement_implemented_in": "src/worker_control.py",
+    "worker_wall_scope": "parent_monitored_process_group_with_cleanup",
+    "worker_cpu_scope": "RLIMIT_CPU_per_process",
+    "worker_memory_scope": "RLIMIT_AS_per_process_virtual_address_space",
+    "independent_process_per_method_implemented": false,
+    "disk_cold_condition_established": false,
+    "limits_enforced_by_this_file": false
+  },
+  "stages": {
+    "preflight": {
+      "independent_roots": 1,
+      "records_per_root": 2,
+      "tokens_per_record": 16,
+      "timing_repeats": 1
+    },
+    "feasibility": {
+      "independent_roots": 2,
+      "records_per_root": 8,
+      "tokens_per_record": 32,
+      "timing_repeats": 1
+    },
+    "development": {
+      "independent_roots": 4,
+      "records_per_root": 32,
+      "tokens_per_record": 64,
+      "timing_repeats": 3
+    },
+    "confirmation": {
+      "independent_roots": 12,
+      "records_per_root": 64,
+      "tokens_per_record": 128,
+      "timing_repeats": 3
+    }
+  },
+  "sampling": {
+    "pool_separation": "document_ID_normalized_text_record_ID_and_token_hash_disjoint_across_phases",
+    "root_law": "separate_domain_stream_uniform_subsets_from_fixed_ordered_phase_pool",
+    "within_root_replacement": false,
+    "cross_root_overlap_permitted": true,
+    "request_cluster": "root_id",
+    "requests": [
+      "uniform_singleton",
+      "uniform_1_of_16",
+      "uniform_1_of_4",
+      "contiguous_1_of_16",
+      "concentrated_1_of_16",
+      "difficult_1_of_16"
+    ],
+    "sequential_deletions_per_root": 3,
+    "source_withdrawal": "uniform documented eligible source, sorted source IDs, delete all mapped records, retain at least one record",
+    "implementation": "src/request_workload.py",
+    "contract": "docs/WORKLOAD_CONTRACT.md",
+    "generator": "workload-sha256-counter-v1",
+    "uniformity_model": "ideal_independent_streams; implemented SHA256 streams are deterministic pseudorandom computation",
+    "root_membership_frozen_before_outcomes": true,
+    "first_workload_max_chunks_per_document": 1,
+    "request_unit": "prepared_calibration_record",
+    "positive_size_rounding": "ceiling_using_original_root_N",
+    "request_laws": {
+      "uniform_singleton": "uniform subset of size 1",
+      "uniform_1_of_16": "uniform subset of size ceil(N/16)",
+      "uniform_1_of_4": "uniform subset of size ceil(N/4)",
+      "contiguous_1_of_16": "uniform start among original-order intervals of length ceil(N/16)",
+      "concentrated_1_of_16": "largest ceil(N/16) maximum-stage original energy shares",
+      "difficult_1_of_16": "largest ceil(N/16) maximum-stage squared leverage times margin sensitivity"
+    },
+    "score_rule": "original-energy-share-and-squared-leverage-margin-v1",
+    "concentration_equation": "c_j = max_l tr(C_lj) / sum_k tr(C_lk); zero denominator contributes zero",
+    "difficulty_equation": "d_j = max_l e_lj^2 A_l; e_lj = tr(H_l^-1 C_lj); A_l = max_ai g_li E_lai / m_lai^2",
+    "score_edges": "zero sensitivity or leverage contributes zero; positive-energy zero margin gives infinity; singleton cells contribute zero",
+    "score_ties": "descending score, then ascending record ID; infinity precedes finite scores",
+    "score_inputs": "complete original-state features, exact Grams, and verified original decision traces only",
+    "uses_deletion_outcomes": false,
+    "score_cost_charge": "separate complete workload preparation",
+    "difficulty_is_guaranteed_hardness": false,
+    "sequential_law": "three disjoint consecutive ceil(N/16) batches from one separate uniform permutation",
+    "sequential_starting_state": "previous_committed_state",
+    "sequential_execution_implemented": false,
+    "controls": [
+      "empty_deletion",
+      "complete_deletion",
+      "sequential_combined"
+    ],
+    "controls_enter_primary_latency": false,
+    "complete_deletion_runner_implemented": false,
+    "source_withdrawal_requires": "complete hash-bound documented source mapping; absent metadata keeps extension blocked",
+    "method_order": "seeded permutation plus cyclic rotations; reverse orientation every three repeats",
+    "full_position_balance_repeat_block": 3
+  },
+  "analysis": {
+    "schema": "calibration-analysis-v1",
+    "repeat_reduction": "request_median_nanoseconds",
+    "speed_estimand": "equal_root_mean_of_request_log_baseline_over_candidate",
+    "speed_population": "both_methods_exact_complete_in_every_planned_repeat",
+    "failure_reporting": "all_planned_attempts_and_requests",
+    "confirmation_requires_planned_inventory": true,
+    "bootstrap_unit": "independent_calibration_root",
+    "bootstrap_draws": 2000,
+    "bootstrap_seed": 20261004,
+    "confidence": 0.95,
+    "single_root_interval": null,
+    "primary_comparison_count": 1,
+    "inventory_constructor": "src/experiment_inventory.py",
+    "campaign_executor": "src/experiment_campaign.py",
+    "confirmation_requires_explicit_configuration_ids": true,
+    "confirmation_requires_complete_configuration_root_request_repeat_product": true,
+    "source_bindings_required_before_dispatch_and_resume": true,
+    "analysis_plan_groups_controls_separately": true,
+    "mixed_service_modes_or_observed_service_bindings_rejected": true
+  },
+  "gates": {
+    "mismatches_allowed": 0,
+    "changed_ancestor_stage_group_acceptance_minimum": 0.25,
+    "coverage_required_on_every_feasibility_root": true,
+    "retained_fresh_to_base_perplexity_maximum": 1.2,
+    "reliable_speed_lower_interval_minimum": 1.05,
+    "reliable_speed_requires_all_planned_requests_exact": true,
+    "reliable_speed_requires_complete_committed_boundary": true
+  },
+  "blocked_fields": [
+    "resource_feasible_real_checkpoint_and_adapter_validation",
+    "local_checkpoint_tokenizer_and_corpus_file_hashes",
+    "tokenizer_document_boundaries_fixed_chunks_positions_and_masks",
+    "actual_disjoint_source_pools_and_saved_independent_root_draws",
+    "real_original_state_score_artifacts_and_complete_preparation_costs",
+    "selected_primary_chart_quantization_and_service_configuration",
+    "resolved_worker_affinity_and_enforced_cumulative_phase_limits",
+    "validated_complete_service_boundary_and_required_independent_arm_processes",
+    "sequential_request_execution_and_complete_deletion_controls",
+    "confirmation_configuration_ids",
+    "canonical_frozen_planned_run_inventory",
+    "development_based_precision_justification",
+    "user_instruction_to_resume_research_experiments"
+  ],
+  "supersedes": "configs/protocol_v1.json",
+  "schema_note": "Schema v1 remains compatible; version 2 records the revised prospective protocol.",
+  "confirmation_configuration_ids": null,
+  "planned_inventory_sha256": null,
+  "primary_configuration": null,
+  "sources": {
+    "catalog": "configs/source_catalog_v1.json",
+    "scope": "verified_revision_metadata_only_no_acquired_inputs",
+    "model_candidates": [
+      {
+        "repo_id": "distilbert/distilgpt2",
+        "revision": "2290a62682d06624634c1f46a6ad5be0f47f38aa"
+      },
+      {
+        "repo_id": "openai-community/gpt2",
+        "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e"
+      }
+    ],
+    "primary_corpus_candidate": {
+      "repo_id": "Salesforce/wikitext",
+      "configuration": "wikitext-2-raw-v1",
+      "revision": "b08601e04326c79dfdd32d625aee71d232d685c3"
+    },
+    "local_checkpoint_files_sha256": null,
+    "tokenizer_manifest_sha256": null,
+    "prepared_source_pool_sha256": null,
+    "document_boundary_manifest_sha256": null,
+    "actual_inputs_acquired": false
+  },
+  "mechanism_controls": {
+    "implemented_service_modes": [
+      "certified",
+      "fixed_reference",
+      "identity_only",
+      "full_replay"
+    ],
+    "identity_reference": "fixed intrinsic reference, not cached original-model Grams",
+    "quadratic_control_implemented": false,
+    "service_modes_require_distinct_configuration_ids": true,
+    "parameter_box": "sound alternative with full-grid prefix membership; empirical primary selection unresolved",
+    "parameter_box_establishes_speedup": false
+  },
+  "instrumentation": {
+    "exclusive_service_timers_implemented": true,
+    "coverage_events_implemented": true,
+    "collectors_are_diagnostic": true,
+    "clean_uninstrumented_latency_verified": false,
+    "complete_service_boundary_validated": false,
+    "method_boundary": "service_through_atomic_artifact_fsync",
+    "worker_elapsed_is_not_method_latency": true,
+    "some_extractor_proof_failures_have_unavailable_reason_only": true
+  }
+}

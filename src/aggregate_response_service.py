@@ -28,6 +28,8 @@ from types import MappingProxyType
 from typing import Callable, Iterable, Mapping
 
 from .exact_core import certify_relative_enclosure
+from .response_certificate import response_error_squared, dyadic_sqrt_upper
+from .service_telemetry import event as telemetry_event, timed, operation
 from .linear_response import LinearRecordMoments, LinearResponseIndex, shifted_linear_response_bound
 from .response_moments import RecordMoments, ResponseBasis, ResponseIndex
 from .response_service_adapter import ResponseQuery, ResponseStageContract
@@ -38,6 +40,12 @@ from .repair_service import (
     _metric, _q_json, _zero,
 )
 
+# Diagnostic wrappers keep nested costs disjoint. They never change arithmetic.
+_gram = timed("gram_accumulation")(_gram)
+_combine = timed("gram_accumulation")(_combine)
+_metric = timed("gram_accumulation")(_metric)
+_is_psd = timed("validation_metadata")(_is_psd)
+certify_relative_enclosure = timed("factor_rounding")(certify_relative_enclosure)
 ZERO = Fraction(0)
 
 
@@ -120,6 +128,7 @@ class AggregateState:
         """Matrix scalar slots; excludes model, metadata, and integer bit lengths."""
         return sum(s.stored_rational_count for g in self.groups for s in g.stages)
 
+    @timed("serialization")
     def canonical_bytes(self) -> bytes:
         return _json({"schema": "aggregate-linear-service-v1", "manifest": self.manifest_digest,
                       "model": [o._json() for o in self.model],
@@ -353,6 +362,7 @@ class AggregateIndex:
     def retained_ids(self) -> tuple[str, ...]:
         return tuple(r.record_id for r in self.records)
 
+    @timed("serialization")
     def canonical_bytes(self) -> bytes:
         return _json({"schema": "aggregate-retained-index-v1", "manifest": self.manifest_digest,
                       "records": [r._json() for r in self.records], "groups": [g._json() for g in self.groups]})
@@ -417,11 +427,13 @@ class AggregateRepairService:
     extractor_id: str
     manifest_digest: str
     _engine: RepairService
+    reference_weights: Mapping[str, Matrix] | None
 
     def __init__(self, job: JobSpec, evaluator: FeatureEvaluator,
                  intrinsic_moments: IntrinsicExtractor,
                  contracts: Mapping[str, ResponseStageContract], query: AggregateQuery,
-                 *, provider_id: str, extractor_id: str) -> None:
+                 *, provider_id: str, extractor_id: str,
+                 reference_weights: Mapping[str, Matrix] | None = None) -> None:
         if not isinstance(job, JobSpec) or not all(callable(x) for x in (evaluator, intrinsic_moments, query)):
             raise TypeError("supply JobSpec and callable evaluator/extractor/query")
         if any(type(x) is not str or not x for x in (provider_id, extractor_id)):
@@ -433,6 +445,19 @@ class AggregateRepairService:
         for key, contract in fixed.items():
             if not isinstance(contract, ResponseStageContract) or contract.response_basis.rows != known[key].width:
                 raise ValueError("response contract dimension differs from the stage")
+        reference = None
+        if reference_weights is not None:
+            reference = dict(reference_weights)
+            if set(reference) != set(known):
+                raise ValueError("reference weights must name every target stage")
+            for key, matrix in reference.items():
+                expected = known[key].weights
+                if (type(matrix) is not tuple or len(matrix) != len(expected)
+                        or any(type(row) is not tuple or len(row) != len(expected[0]) for row in matrix)
+                        or any(type(x) not in (int, Fraction) for row in matrix for x in row)):
+                    raise ValueError("reference weights require exact immutable matrices with target shapes")
+                reference[key] = tuple(tuple(Fraction(x) for x in row) for row in matrix)
+            reference = MappingProxyType(reference)
         payload = {"schema": "aggregate-linear-service-v1", "target_manifest": job.manifest_digest,
                    "extractor_id": extractor_id, "provider_id": provider_id,
                    "contracts": {key: {"response": c.response_basis._payload(), "error": c.error_basis._payload(),
@@ -440,6 +465,7 @@ class AggregateRepairService:
                                        else _q_json(c.max_squared_coefficient_norm)} for key, c in fixed.items()}}
         for key, value in {"job": job, "evaluator": evaluator, "intrinsic_moments": intrinsic_moments,
                            "contracts": MappingProxyType(fixed), "query": query, "provider_id": provider_id,
+                           "reference_weights": reference,
                            "extractor_id": extractor_id, "manifest_digest": _digest(payload),
                            "_engine": RepairService(job, evaluator, lambda r, s: None)}.items():
             object.__setattr__(self, key, value)
@@ -448,6 +474,8 @@ class AggregateRepairService:
     def target_manifest_digest(self) -> str:
         return self.job.manifest_digest
 
+    @operation
+    @timed("validation_metadata")
     def load_state(self, payload: bytes, *, limits: StateParseLimits | None = None,
                    expected_digest: str | None = None) -> AggregateState:
         """Load canonical state and verify this service's structural bindings.
@@ -477,6 +505,7 @@ class AggregateRepairService:
         return AggregateStage(stage.stage_id, LinearResponseIndex.from_records(contract.response_basis, ()),
                               ResponseIndex.from_records(contract.error_basis, ()), 0)
 
+    @timed("extraction")
     def _extract(self, record: Record, stage: StageSpec, work: _Work,
                  event: str, source_digest: str) -> tuple[ContributionBinding, tuple[LinearRecordMoments, RecordMoments] | None]:
         contract = self.contracts.get(stage.stage_id)
@@ -485,6 +514,7 @@ class AggregateRepairService:
             work.add(event)
             pair = self.intrinsic_moments(record, stage)
         if pair is None:
+            telemetry_event("extraction.unavailable")
             digest = _digest({"schema": "aggregate-contribution-unavailable-v1", "id": record.record_id,
                               "content": source_digest, "stage": stage.stage_id,
                               "extractor": self.extractor_id})
@@ -492,6 +522,7 @@ class AggregateRepairService:
         if (not isinstance(pair, tuple) or len(pair) != 2 or not isinstance(pair[0], LinearRecordMoments)
                 or not isinstance(pair[1], RecordMoments)):
             raise TypeError("extractor must return LinearRecordMoments, RecordMoments, or None")
+        telemetry_event("extraction.available")
         response, error = pair
         if response.basis != contract.response_basis or error.basis != contract.error_basis:
             raise ValueError("intrinsic contribution uses a different fixed basis")
@@ -507,6 +538,7 @@ class AggregateRepairService:
         work.add("contribution_digest_bytes", len(encoded))
         return ContributionBinding(stage.stage_id, True, _sha(encoded)), pair
 
+    @timed("gram_accumulation")
     def _add(self, aggregate: AggregateStage,
              pair: tuple[LinearRecordMoments, RecordMoments] | None,
              sign: int, work: _Work) -> AggregateStage:
@@ -525,6 +557,7 @@ class AggregateRepairService:
                               LinearResponseIndex(current.basis, constant, first, tangent, ()),
                               ResponseIndex(descriptors.basis, cross, ()), aggregate.unavailable_count)
 
+    @timed("validation_metadata")
     def _groups(self, records: tuple[AggregateRecord, ...],
                 totals: Mapping[int, Mapping[str, AggregateStage]], work: _Work) -> tuple[AggregateGroup, ...]:
         members: dict[int, list[AggregateRecord]] = {}
@@ -549,6 +582,22 @@ class AggregateRepairService:
         work.add("committed_aggregate_rational_entries", state.stored_aggregate_rational_count)
         return AggregateServiceResult(state, work.freeze(), audits)
 
+    def _target(self, record, stage, prefix, work, event):
+        telemetry_event("feature.attempt")
+        try:
+            category = "replay_feature_evaluation" if event == "retained_replay_evaluator_calls" else "fresh_feature_evaluation"
+            result = timed(category)(self._engine._target)(record, stage, prefix, work, event)
+        except BaseException as exc:
+            telemetry_event("feature.failed", reason=type(exc).__name__)
+            raise
+        telemetry_event("feature.completed")
+        return result
+
+    @timed("factor_rounding")
+    def _quantize(self, stage, raw, work):
+        return self._engine._quantize(stage, raw, work)
+
+    @operation
     def fresh(self, records: Iterable[Record]) -> AggregateServiceResult:
         """Construct canonical aggregates and independently evaluate the target."""
         work = _Work()
@@ -579,14 +628,16 @@ class AggregateRepairService:
         outputs, audits = [], []
         for stage in self.job.stages:
             prefix = self._engine._prefix(stage, outputs)
+            telemetry_event("stage.attempt")
             raw = _zero(stage.width)
             for rid in sorted(data):
-                x = self._engine._target(data[rid], stage, prefix, work, "fresh_target_evaluator_calls")
+                x = self._target(data[rid], stage, prefix, work, "fresh_target_evaluator_calls")
                 raw = _combine(raw, _gram(x, work), 1, work)
-            outputs.append(self._engine._quantize(stage, raw, work))
+            outputs.append(self._quantize(stage, raw, work))
             audits.append(StageAudit(stage.stage_id, prefix.digest, "independent_fresh", 0, (), (), None))
         return self._finish(meta, groups, tuple(outputs), tuple(audits), work)
 
+    @timed("validation_metadata")
     def _validate(self, state: AggregateState | AggregateIndex, work: _Work, *, validate_model: bool = True) -> None:
         if (not isinstance(state, (AggregateState, AggregateIndex))
                 or state.manifest_digest != self.manifest_digest):
@@ -660,6 +711,7 @@ class AggregateRepairService:
                 work.add("aggregate_psd_validation_calls", 1 + bool(response.tangent_scalar_gram))
                 work.add("validated_aggregate_rational_entries", aggregate.stored_rational_count)
 
+    @timed("validation_metadata")
     def _delete(self, state: AggregateState | AggregateIndex, deleted: tuple[Record, ...], work: _Work
                 ) -> tuple[tuple[AggregateRecord, ...], tuple[AggregateGroup, ...]]:
         metadata = {r.record_id: r for r in state.records}
@@ -687,12 +739,27 @@ class AggregateRepairService:
         work.add("logically_removed_record_entries", len(remove))
         return retained, self._groups(retained, totals, work)
 
+    @timed("bound_query")
     def _proposal(self, group: AggregateGroup, aggregate: AggregateStage, stage: StageSpec,
-                  prefix: CertifiedPrefix, work: _Work) -> tuple[Matrix, tuple[Fraction, Fraction] | None]:
+                  prefix: CertifiedPrefix, work: _Work, mode: str = "certified") -> tuple[Matrix, tuple[Fraction, Fraction] | None]:
+        telemetry_event("proposal.attempt")
         raw = _zero(stage.width) if aggregate.response is None else aggregate.response.constant_gram
         if aggregate.unavailable_count or aggregate.response is None:
             work.add("unavailable_aggregate_groups")
+            telemetry_event("proposal.unavailable_aggregate")
             return raw, None
+        if mode == "identity_only":
+            if self.reference_weights is None:
+                work.add("identity_reference_unavailable_groups")
+                telemetry_event("proposal.identity_reference_unavailable")
+                return raw, None
+            installed = prefix.as_mapping()
+            if any(installed.get(name) != self.reference_weights[name] for name in self._engine._ancestors[stage.stage_id]):
+                work.add("identity_prefix_mismatch_groups")
+                telemetry_event("proposal.identity_prefix_mismatch")
+                return raw, None
+            work.add("identity_prefix_equal_groups")
+            telemetry_event("proposal.identity_prefix_equal")
         digest = _digest(_mat_json(raw))
         # This digest reads group matrices, never a retained descriptor list.
         aggregate_payload = _json(aggregate._json())
@@ -705,6 +772,7 @@ class AggregateRepairService:
         work.add("aggregate_query_calls")
         request = self.query(context)
         if isinstance(request, UnknownBound):
+            telemetry_event("proposal.query_unknown", reason=request.reason)
             return raw, None
         if not isinstance(request, ResponseQuery) or request.binding != binding:
             raise InvalidWitness("aggregate response query has a stale group, target, or prefix")
@@ -714,11 +782,27 @@ class AggregateRepairService:
         radius = contract.max_squared_coefficient_norm
         if radius is not None and sum((a * a for a in request.coefficients), ZERO) > radius:
             work.add("out_of_chart_aggregate_groups")
+            telemetry_event("proposal.out_of_chart")
             return raw, None
         # Empty record maps avoid O(N) identity loops in the arithmetic module.
         # Source/columns/basis checks occurred at intrinsic extraction above.
         work.add("aggregate_contraction_calls")
         work.add("proposal_aggregate_rational_entries", aggregate.stored_rational_count)
+        if mode in ("identity_only", "fixed_reference"):
+            # Triangle bound retains the finite-feature and derivative errors.
+            # It changes the proposal, never the target or stored statistics.
+            a = request.coefficients
+            tangent2 = sum((a[i] * aggregate.response.tangent_scalar_gram[i][j] * a[j]
+                            for i in range(len(a)) for j in range(len(a))), ZERO)
+            residual2 = response_error_squared(aggregate.error, request.coefficients, 1,
+                                               request.unrepresented_parameter_norm)
+            error = dyadic_sqrt_upper(residual2) + dyadic_sqrt_upper(tangent2)
+            error2 = error * error
+            reference2 = sum((raw[i][i] for i in range(stage.width)), ZERO)
+            delta = 2 * dyadic_sqrt_upper(reference2 * error2) + error2
+            telemetry_event("proposal.bound_available")
+            work.add("fixed_reference_bound_calls")
+            return raw, (delta, delta)
         bound = shifted_linear_response_bound(aggregate.response, aggregate.error, request.coefficients,
                                               stage.ridge, 1, request.unrepresented_parameter_norm)
         raw = bound.raw_surrogate_gram
@@ -726,8 +810,10 @@ class AggregateRepairService:
         if not _is_psd(raw):
             raise InvalidWitness("aggregate response proposal is not PSD")
         beta, delta = bound.omitted_psd_trace_normalized, bound.response_gram_error_normalized
+        telemetry_event("proposal.bound_available")
         return raw, (beta + delta, delta)
 
+    @operation
     def prepare_index(self, state: AggregateState | AggregateIndex,
                       deleted_records: Iterable[Record]) -> AggregateIndexResult:
         """Update retained summaries without reading or constructing a model.
@@ -744,10 +830,11 @@ class AggregateRepairService:
 
     @staticmethod
     def _mode(mode: str) -> str:
-        if mode not in ("certified", "full_replay"):
-            raise ValueError("service mode must be certified or full_replay")
+        if mode not in ("certified", "full_replay", "identity_only", "fixed_reference"):
+            raise ValueError("unknown aggregate service mode")
         return mode
 
+    @operation
     def repair(self, state: AggregateState, deleted_records: Iterable[Record],
                retained_source: Callable[[str], Record], *, mode: str = "certified") -> AggregateServiceResult:
         """Return a fresh-identical complete state or fail without a mutation."""
@@ -759,6 +846,7 @@ class AggregateRepairService:
         retained, groups = self._delete(state, tuple(deleted_records), work)
         return self._solve(retained, groups, retained_source, work, mode)
 
+    @operation
     def indexed_fresh(self, index: AggregateIndex | AggregateState,
                       retained_source: Callable[[str], Record], *, mode: str = "certified") -> AggregateServiceResult:
         """Construct the entire model from retained summaries and new prefixes.
@@ -779,6 +867,7 @@ class AggregateRepairService:
                retained_source: Callable[[str], Record], work: _Work, mode: str) -> AggregateServiceResult:
         metadata = {r.record_id: r for r in retained}
         cache: dict[str, Record] = {}
+        @timed("source_access")
         def read(rid: str) -> Record:
             if rid not in metadata:
                 raise ValueError("attempted a non-retained source access")
@@ -796,27 +885,30 @@ class AggregateRepairService:
         group_map = {g.group_id: g for g in groups}
         for stage_index, stage in enumerate(self.job.stages):
             prefix = self._engine._prefix(stage, outputs)
+            telemetry_event("stage.attempt")
             raw = _zero(stage.width)
             if mode == "full_replay":
                 for group in groups:
                     for rid in group.record_ids:
-                        x = self._engine._target(read(rid), stage, prefix, work, "retained_replay_evaluator_calls")
+                        x = self._target(read(rid), stage, prefix, work, "retained_replay_evaluator_calls")
                         raw = _combine(raw, _gram(x, work), 1, work)
-                outputs.append(self._engine._quantize(stage, raw, work))
+                outputs.append(self._quantize(stage, raw, work))
                 audits.append(StageAudit(stage.stage_id, prefix.digest, "forced_full_replay", 0,
                                          tuple(g.group_id for g in groups), (), None))
+                telemetry_event("stage.forced_full_replay")
                 continue
             proposals, bounds = {}, {}
             for group in groups:
-                proposal, bound = self._proposal(group, group.stages[stage_index], stage, prefix, work)
+                proposal, bound = self._proposal(group, group.stages[stage_index], stage, prefix, work, mode)
                 proposals[group.group_id], bounds[group.group_id] = proposal, bound
                 raw = _combine(raw, proposal, 1, work)
             unknown = tuple(gid for gid, bound in bounds.items() if bound is None)
             replayed, attempts = [], 0
             while True:
                 if not bounds:
-                    outputs.append(self._engine._quantize(stage, raw, work))
+                    outputs.append(self._quantize(stage, raw, work))
                     route = "exact_replay"
+                    telemetry_event("stage.exact_replay")
                     break
                 if all(b is not None for b in bounds.values()):
                     negative = sum((b[0] for b in bounds.values()), ZERO)
@@ -830,16 +922,25 @@ class AggregateRepairService:
                         work.add("rounding_decisions", len(stage.weights) * stage.width)
                         work.add("cell_predicates", len(stage.weights) * stage.width)
                         certificate = certify_relative_enclosure(stage.weights, _metric(raw, stage, work), stage.grids, lo, hi)
+                        telemetry_event("certificate.attempt")
                         if certificate.accepted:
+                            telemetry_event("certificate.accepted")
                             outputs.append(StageOutput(stage.stage_id, certificate.candidate.codes))
                             route = "transport_certificate"
                             break
+                        telemetry_event("certificate.rejected")
+                        for check in certificate.checks:
+                            if not check.accepted:
+                                telemetry_event("certificate.cell_rejected", reason=check.reason)
+                    else:
+                        telemetry_event("certificate.nonpositive_lower_scale")
                 work.add("group_selection_entries", len(bounds))
                 missing = [gid for gid, b in bounds.items() if b is None]
                 chosen = min(missing) if missing else min(bounds, key=lambda gid: (-sum(bounds[gid]), gid))
+                telemetry_event("replay.group")
                 actual = _zero(stage.width)
                 for rid in group_map[chosen].record_ids:
-                    x = self._engine._target(read(rid), stage, prefix, work, "retained_replay_evaluator_calls")
+                    x = self._target(read(rid), stage, prefix, work, "retained_replay_evaluator_calls")
                     actual = _combine(actual, _gram(x, work), 1, work)
                 raw = _combine(_combine(raw, proposals[chosen], -1, work), actual, 1, work)
                 del bounds[chosen]

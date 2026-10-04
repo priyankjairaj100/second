@@ -1,8 +1,8 @@
 # Numerical contract
 
-Updated 4 October 2026 for revision 4.
+Updated 4 October 2026 for revision 6.
 
-The project now implements automatic response certificates for a declared scalar decoder.
+The project implements affine and parameter-box certificates for a declared scalar decoder.
 The new decoder defines `V_cert`.
 It does not certify arbitrary vendor kernels.
 
@@ -64,7 +64,7 @@ It rejects flush-to-zero behavior detected by its probes.
 The caller must preserve the floating environment throughout execution.
 
 Public decoder evaluations call this guard.
-Automatic chart fitting and jet extraction also call it.
+Affine fitting, parameter-box membership, and interval extraction also call it.
 A failed runtime guard aborts the operation.
 The implementation does not replace the guard with an assumed tolerance.
 
@@ -271,11 +271,13 @@ It also binds the finite value of `0.044715`.
 Its multiplication schedule is explicit in the source.
 It does not claim bit identity with the host-libm GELU schedule.
 
-## 7. Automatic response descriptors
+## 7. Affine response descriptors
 
 The chart has fixed rational directions and a fixed coefficient box.
 The caller must select it independently of the deletable corpus.
-The manifest records this provenance claim.
+Generated recipes accept only the decoder, fixed target, and recipe.
+They read no calibration records or deletion outcomes.
+Manually supplied charts still require a truthful provenance statement.
 The implementation cannot verify that historical selection process.
 
 The provider first converts installed codes using the target's parameter conversion.
@@ -318,7 +320,7 @@ It does not remove nonlinear primitive limits from feature execution.
 Every repair stage follows this sequence:
 
 1. Bind the evaluator, quantizer, provider, and certified ancestor prefix.
-2. Fit the prefix to the fixed chart.
+2. Check the prefix against the selected affine chart or parameter box.
 3. Contract intrinsic grouped statistics and certified error bounds.
 4. Certify all proposed rounding decisions.
 5. Replay required retained groups when a certificate remains unavailable.
@@ -353,13 +355,13 @@ No pretrained-model coverage, quality, or latency claim follows from the complet
 
 See `docs/CERTIFIED_PROVIDER.md`, `docs/AGGREGATE_SERVICE.md`, and `docs/CHECKPOINT_ADAPTER.md` for implementation details.
 
-## 10. Revision 5 target binding
+## 10. Generated target binding
 
 The generated target manifest selects V_cert explicitly.
 It binds the actual stage grids, ridge, normalization, weights, ordering, and proof/service sources.
 Its digest enters the service job's numerical contract.
-Deterministic chart construction reconstructs the target before accepting it.
-Service construction also reconstructs the chart.
+Deterministic domain construction reconstructs the target before accepting it.
+Service construction also reconstructs the affine chart or parameter box.
 
 The primary grids use fixed power-of-two scales and signed integer codes.
 Nearest-grid midpoint ties select the lower code.
@@ -371,3 +373,93 @@ Prepared token manifests preserve record-local input definitions.
 Deleting records never repacks another record.
 Source metadata candidates remain separate from approved, hash-bound run inputs.
 Read docs/TARGET_CONTRACT.md for recipes and exact binding fields.
+
+
+## 11. Parameter-box descriptors
+
+`src/box_response_provider.py` implements a fixed interval domain without response directions.
+Each coordinate interval encloses installed finite ancestor weights.
+Missing stage intervals fix those weights to their finite base values.
+The generated `grid-box` recipe encloses base values and all converted frozen grid values.
+Thus, every installed grid prefix belongs to its domain.
+Membership alone does not establish successful interval evaluation or rounding certification.
+
+Rank-zero jets follow the same scalar graph and finite error rules.
+Let an ideal feature coordinate belong to `[l_i, u_i]`.
+Let `nu_i` bound its finite discrepancy throughout the parameter box.
+For a nonconstant domain, define
+
+\[
+z_i=\frac{l_i+u_i}{2},\qquad
+b_i=\frac{u_i-l_i}{2}+\nu_i,\qquad
+\epsilon\ge\sqrt{\sum_i b_i^2}.
+\]
+
+The implementation rounds the square-root bound upward.
+It uses these exact rational midpoint anchors without a separate finite base feature evaluation.
+The resulting uniform feature bound is
+
+\[
+\|F_{\mathrm{finite}}(\theta,j)-Z_j\|_F\le\epsilon_j.
+\]
+
+If every ancestor coordinate is fixed to its finite base value, the provider uses exact finite features instead.
+It sets their error to zero.
+That shortcut follows from equality of the complete finite computation.
+It does not discard finite error from a varying domain.
+
+For retained records, define
+
+\[
+A=\sum_j Z_jZ_j^\top,\qquad
+E=\sum_j\epsilon_j^2,\qquad
+\Delta=2\sqrt{\operatorname{tr}(A)E}+E.
+\]
+
+Outward square roots give the certified Gram enclosure
+
+\[
+\left\|\sum_j F_jF_j^\top-A\right\|_2\le\Delta.
+\]
+
+Fixed normalization and positive ridge convert this into the service's relative metric enclosure.
+The provider stores one anchor Gram and six scalar error moments per group and stage.
+Its response rank is zero.
+Its anchors remain independent of retained membership.
+Exact subtraction therefore preserves the canonical retained index.
+
+Midpoints minimize maximum coordinate distance within the supplied interval.
+This does not establish universally smaller Gram bounds or higher certificate acceptance.
+Uniform errors can remain positive after small deletions.
+A complete parameter domain does not imply useful certificate coverage.
+See `docs/BOX_THEORY.md` for the conditional results.
+
+## 12. Execution controls and measurement scope
+
+Lazy parameter wrappers now serve finite, affine, and box execution.
+The executor constructs only the parameter stage that it currently accesses.
+It releases the wrapper after that stage calculation.
+The scalar arithmetic schedule remains unchanged.
+Base checkpoint loading remains eager.
+Lazy wrappers do not prove affordable total memory or runtime.
+
+The service supports `certified`, `fixed_reference`, `identity_only`, and `full_replay` modes.
+All four modes preserve the same numerical target and canonical state.
+Fixed-reference mode bounds the omitted tangent response with a triangle inequality.
+Identity-only mode additionally requires ancestors to equal the constructor's fixed reference weights.
+It does not implement an original-quantized-model cache.
+A distinct quadratic response solver also remains open.
+
+Exclusive telemetry records diagnostic intervals and proof outcomes.
+It does not change the canonical state or numerical target.
+Its totals lie inside the applicable method or setup timer.
+Final result commit and campaign bookkeeping remain outside method timers.
+Each comparison process keeps its methods warm.
+Process isolation does not create per-arm cold measurements.
+
+Workload scores depend on verified original-state information.
+Frozen inventories bind request membership, method order, source code, and protocol.
+Worker limits can terminate required finite evaluations.
+Such termination records failure rather than an approximate successful model.
+The complete target remains partial.
+No preparation result establishes reliable full-model speedup.

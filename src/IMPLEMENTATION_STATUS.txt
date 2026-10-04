@@ -1,4 +1,4 @@
-Revision 5 preparation, 4 October 2026.
+Revision 6 preparation, 4 October 2026.
 
 Implemented reference modules:
 - exact_core.py: exact reverse LDL, rational rounding, shape-cell certificate.
@@ -29,7 +29,8 @@ Their remaining execution fields are explicit blockers.
 
 V_cert is a separate finite decoder target.
 It does not silently replace legacy library-math V or floating quantizer E.
-Its automatic provider checks a fixed corpus-independent affine chart.
+The affine provider checks an independent chart.
+The box provider checks finite coordinate inclusion without derivative arrays.
 Unknown proof conditions cause retained replay.
 A finite-evaluator failure aborts the request without committing a model.
 
@@ -52,3 +53,24 @@ Still unestablished:
 Correctness does not imply speedup.
 Prior raw experiment files remain unavailable.
 Research experiments remain paused.
+
+Revision 6 modules:
+- box_response_provider.py: full-grid boxes, hybrid midpoint anchors, and rank-zero moments.
+- service_telemetry.py: exclusive nested spans outside canonical state.
+- request_workload.py: original-only scores, request laws, document expansion, and phase checks.
+- experiment_inventory.py: bound roots, requests, modes, source versions, and saved method order.
+- worker_control.py: applied process limits, durable outcomes, and cleanup.
+- experiment_campaign.py: complete confirmation product, source checks, and safe restart.
+
+The aggregate service supports certified, fixed_reference, identity_only, and full_replay modes.
+Identity_only checks fixed base-reference ancestors, not old quantized-model feature caches.
+Full quadratic control remains open.
+Lazy parameter wrappers preserve scalar operation order.
+The analyzer rejects mode, chart, and service mixing.
+The final v6 suite passes 261 correctness tests.
+
+Process isolation is per comparison, with warm shared method arms.
+Cumulative phase CPU caps remain unenforced.
+Complete committed service timing, independent method conditions, and detailed arithmetic diagnostics remain open.
+Sequence and full-deletion campaign execution remain open.
+Protocol v2 preserves the pause and actual empirical inventory blockers.

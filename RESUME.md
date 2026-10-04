@@ -1,88 +1,107 @@
 # Resume this ACL 2027 calibration-unlearning project
 
-Last revision: 4 October 2026, v5 preparation.
+Last revision: 4 October 2026, v6 preparation.
 Repository: https://github.com/priyankjairaj100/second
+Previous verified checkpoint: b662d2c7ed7f4799029ff1093e93acf0d400699c.
 
 Read AGENTS.md, docs/STATUS.md, docs/RESEARCH_TODO.md, and docs/VALIDATION.md first.
-Then read docs/PUBLICATION_THEORY.md and docs/CLAIM_EVIDENCE.md.
+Then read docs/PUBLICATION_THEORY.md, docs/BOX_THEORY.md, and docs/CLAIM_EVIDENCE.md.
 Read docs/PROJECT_CONTEXT.md for historical evidence provenance.
-The consolidated PDF includes the updated preparation contract.
+The consolidated PDF includes the latest preparation contract and box theory.
 The user authorized repository pushes and complete restart notes.
 Never force-push or discard unrelated remote changes.
 
 ## Current phase
 
-Latest instruction: "Please proceed on this."
-This means progress on the remaining research program.
-The current checkpoint completes substantial preparation, not the entire program.
+Latest instruction: "What are the remaining to-do items? Please proceed on them now."
+The checkpoint advances preparation without declaring the whole paper complete.
+There are 24 completed and 54 open required tasks, plus 12 conditional extensions.
 Research experiments remain PAUSED until the user resumes them.
-Correctness tests, mathematical work, source inspection, and implementation are allowed.
-No model/data downloads, research benchmarks, synthetic empirical datasets, cloud jobs, or unrelated hardware are authorized.
+Correctness tests, mathematical work, source metadata inspection, and implementation are allowed.
+No model/data downloads, research benchmarks, synthetic empirical studies, cloud jobs, or unrelated hardware ran.
 
 ## Target and theory
 
 Fix base weights W and delete calibration documents F.
 Reproduce complete retained-data sequential quantization, including changed downstream calibration features.
-The primary implemented numerical target is V_cert.
+The primary implemented target is V_cert.
 It uses certified scalar finite features and exact rational statistics and rounding.
 Legacy library-math V and historical floating quantizer E remain separate targets.
 Native Hugging Face numerical equality is not claimed.
 
 V_cert is partial.
 Proof abstention permits exact retained replay.
-Finite-evaluator failure aborts the transaction without an approximate model.
-All completion claims require successful required evaluations and sufficient resources.
-The report's former unconditional fallback wording is corrected.
+Necessary finite-evaluator failure aborts without an approximate committed model.
+Completion requires successful required evaluations and sufficient resources.
 
-Publication T1–T7 connect finite response bounds, Gram bounds, decisions, sequential exactness, canonical state, and conditional work.
-The compact response tier stores O(r d²+r²) entries per group.
-Nonzero finite and jet errors can prevent second-order scaling.
-Useful real-model coverage and reliable latency remain unmeasured.
+Publication T1–T7 connect finite bounds, Gram enclosures, decisions, sequential exactness, canonical state, and conditional work.
+The compact affine tier stores O(r d²+r²) entries per group.
+Finite and jet errors can prevent second-order scaling.
+Revision 6 adds B1–B8 for a corpus-independent parameter box.
+Its rank-zero group state stores d²+6 rational slots.
+Full-grid endpoint storage has 2P_A slots for ancestor parameters.
+Metadata, base weights, integer sizes, replay, and output remain costs.
 
-## Preparation now implemented
+The hybrid anchor uses finite base features only when all relevant parameters remain fixed at base.
+Otherwise it uses interval midpoints and avoids separate finite anchor evaluation.
+Midpoints minimize the rectangular interval feature envelope.
+They do not guarantee smaller Gram bounds, better acceptance, or faster repair.
+Full-grid inclusion does not establish useful numerical certificates.
 
-- target_manifest.py fixes weight-only grids, ridge, original normalization, order, ties, and source bindings.
-- chart_construction.py builds corpus-independent stage-rtn, coordinate, or no-chart directions.
-- resource_preflight.py checks config-only counts before eager tensor loading.
-- aggregate_response_service.py reloads bounded canonical state and exposes prepare_index and indexed_fresh.
-- experiment_runner.py compares repair, indexed fresh, and direct fresh on local hash-bound inputs.
-- run_store.py provides immutable completed results and atomic attempt artifacts.
-- result_analysis.py preserves failure denominators and resamples independent calibration roots.
-- configs/protocol_v1.json and docs/EMPIRICAL_PROTOCOL.md define the prospective program.
-- configs/source_catalog_v1.json records metadata candidates, not acquired or approved run inputs.
+## Implemented preparation
+
+- target_manifest.py freezes grids, ridge, original normalization, order, ties, and source bindings.
+- chart_construction.py supports stage-rtn, coordinate, none, and grid-box constructions.
+- box_response_provider.py supplies rank-zero finite enclosures with intrinsic moments.
+- certified_transformer.py constructs parameter wrappers lazily without changing scalar operation order.
+- resource_preflight.py checks symbolic counts before eager checkpoint loading.
+- aggregate_response_service.py supports bounded reload, indexed fresh, and four mechanism modes.
+- service_telemetry.py records exclusive nested diagnostic costs outside canonical state.
+- experiment_runner.py compares three methods and checks every stage and canonical output.
+- run_store.py provides atomic attempts, immutable completion, and verified restart.
+- request_workload.py defines original-only stress scores, request laws, document expansion, and phase checks.
+- experiment_inventory.py binds sources, methods, roots, requests, repetitions, and counterbalanced order.
+- worker_control.py enforces process limits and preserves durable outcomes.
+- experiment_campaign.py checks frozen inventory and complete confirmation products.
+- result_analysis.py preserves planned failures and rejects mixed targets, modes, charts, and service identities.
+
+Protocol version 2 preserves schema calibration-protocol-v1.
+It remains paused and contains explicit unresolved fields.
+The source catalog contains metadata pins only.
+No real checkpoint files, tokenizer files, token records, score artifacts, or empirical inventory exist.
 
 Read docs/TARGET_CONTRACT.md, docs/BASELINES.md, docs/EXPERIMENT_RUNNER.md, and docs/SOURCE_SELECTION.md.
-Read theory_revision/preparation_review_v5.txt for independent review and resolved defects.
+Read docs/EXECUTION_CONTROL.md, docs/WORKLOAD_CONTRACT.md, and docs/MECHANISM_CONTROLS.md.
+Read theory_revision/preparation_review_v6.txt and theory_revision/box_theory_review_v6.txt.
 
-## Critical implications
+## Critical implications and next steps
 
-Repair and indexed fresh share the same stage planner.
+Repair and indexed fresh share the same planner.
 The planner does not use the old model.
-No deletion-specific solver advantage exists in the current implementation.
+No deletion-specific solver advantage exists.
 Report index maintenance savings separately.
-Do not count extra split-interface serialization as an algorithmic advantage.
+Extra split-interface serialization cannot count as an algorithmic advantage.
 
-Generic sequential prefixes need not fit stage-rtn charts.
-Coordinate charts can require prohibitive resources.
-The current scalar representation rejects ordinary candidate dimensions under default planning limits.
-Resource byte estimates are planning heuristics, not measured peaks or proved bounds.
-Do not raise limits silently to make a model appear supported.
+The identity-only control checks base-reference ancestors.
+It does not implement the original quantized-model invariant-feature cache.
+The complete quadratic control remains open.
+Sequence and complete-deletion laws exist, but campaign execution remains blocked.
 
-## Next open preparation
+One worker isolates each comparison, not each method.
+Methods remain warm and share process history.
+Operating-system caches remain uncontrolled.
+Cumulative phase CPU caps remain unenforced.
+Method timing excludes final result commit and controller overhead.
+Detailed rejection, arithmetic-size, and complete-service diagnostics remain incomplete.
 
 G0 remains open.
-Finish real source and tokenizer pins, record boundaries, selectors, and planned inventory.
-Resolve resource-feasible execution and enforce worker limits.
-Implement required process-cold conditions, detailed cost/coverage logging, and matched ablations.
-The current runner provides warm instrumented diagnostic timing only.
-It does not implement a full NLP task suite.
-The protocol blocks accidental research execution while paused.
+Resolve feasible checkpoint execution, real input contracts, remaining controls, and actual inventory before expanding experiments.
+Do not raise resource limits silently.
+Resource estimates are planning heuristics, not memory proofs.
+Ordinary candidate models still face substantial scalar and storage limits.
 
-The run archive retains original states and failed attempts.
-Only returned canonical live state satisfies the deletion guarantee.
+The archive retains original states outside the canonical live-state deletion guarantee.
 Physical erasure and hostile-storage authentication remain outside scope.
-
-Earlier raw experiment files were pruned.
-Historical PROJECT_CONTEXT metrics are reconstructed chat evidence, not recovered measurements.
-Keep this distinction in every future paper draft.
-Save all substantive code, reports, tests, and restart context to the authorized repository.
+Earlier raw experiments were pruned and remain unavailable.
+Historical PROJECT_CONTEXT metrics are reconstructed context, not recovered measurements.
+Save all substantive progress and restart context to the authorized repository.

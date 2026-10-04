@@ -1,89 +1,93 @@
 # Current project status
 
-Updated 4 October 2026, revision 5 preparation.
+Updated 4 October 2026, revision 6 preparation.
 
-The user asked us to proceed with the remaining research program.
-This revision implements the next preparation package.
+The user requested the remaining tasks and asked us to proceed.
+This revision completes another preparation package.
+The register contains 24 completed and 54 open required items.
+It separately tracks 12 conditional extensions.
 Research experiments remain paused.
-Software correctness checks remain within scope.
-See RESEARCH_TODO.md for completed items and open gates.
+Correctness tests and theoretical work remain within scope.
 
-## Implemented preparation
+## Completed in this revision
 
-| Area | Implemented result | Remaining boundary |
+| Area | Result | Remaining boundary |
 | --- | --- | --- |
-| Target | V_cert manifest fixes grids, ridge, normalization, order, and ties | Real tokenizer and source pins remain open |
-| Chart | Weight-only stage directions, coordinate directions, and no-chart control | Useful coverage and affordable size remain unknown |
-| Resources | Config-only count and memory planning before eager loading | Estimates do not prove memory fit; hard limits remain pending |
-| Durable state | Bounded canonical parser and fresh-process reload test | Trusted storage; no physical erasure claim |
-| Fair baseline | Index-only fresh solver shares repair's planner | No deletion-specific solver advantage |
-| Runner | Local inputs, exact state comparison, diagnostic loss, atomic artifacts | Warm instrumented execution only |
-| Analysis | Planned failures, root-cluster intervals, lifetime accounting, traceable tables | No empirical records exist |
-| Theory | Ordered T1–T7 and claim-to-evidence map | Conditional work results remain unmeasured |
-| Protocol | Prospective real-text program and explicit gates | Sources, selectors, enforced limits, and inventory remain unresolved |
+| Domain coverage | Fixed boxes contain all installed frozen-grid ancestor parameters | Inclusion does not establish useful numerical certificates |
+| Algorithm | Hybrid midpoint anchors remove separate finite evaluation for varying domains | Smaller feature envelopes do not guarantee better decision acceptance |
+| Storage | Rank-zero aggregate state removes derivative-rank factors | Exact Grams, metadata, base weights, and rational sizes remain costly |
+| Execution | Parameter wrappers materialize one required stage at a time | This does not establish total memory fit |
+| Controls | Certified, full-replay, fixed-reference, and base-reference identity-only modes | Original-model cache and full quadratic control remain open |
+| Telemetry | Exclusive internal spans and stable visible rejection events | Full commit boundary and detailed numerical decomposition remain open |
+| Worker | Enforced memory, CPU, file, affinity, thread, and wall controls | Limits apply per comparison; cumulative phase CPU caps remain open |
+| Workload | Original-only scores, request laws, document expansion, and phase checks | Real records, score artifacts, and token manifests remain absent |
+| Inventory | Source binding, saved method order, matrix completeness, and restart validation | No frozen real empirical inventory exists |
+| Analysis | Reject mixed mechanism modes, charts, and service identities | Precision justification still needs development evidence |
+| Protocol | Compatible version 2 preserves all blockers and the experiment pause | It remains a prospective specification |
 
-Independent review resolved concrete parser, binding, result-sealing, locking, and failure-classification defects.
-See VALIDATION.md for final tests and exact source hashes.
+The consolidated report includes Sections 28–30.
+See BOX_THEORY.md for B1–B8 and their limitations.
+See VALIDATION.md for final tests, source hashes, and independent review.
+No research experiment or download ran.
 
-## Scientific consequence of the fair baseline
+## Scientific consequence
 
-Repair and indexed fresh use the same stage solver.
-Indexed fresh receives the same valid retained summaries.
-It never reads the old quantized model as a proposal.
-Therefore the present implementation has no distinct deletion-specific solver gain.
+Repair and indexed fresh still use the same stage planner.
+The planner ignores old quantized codes.
+This implementation has no deletion-specific solver advantage.
+Index maintenance can avoid reconstructing retained summaries.
+Report that benefit separately from solving costs.
+Extra split-interface serialization cannot justify an algorithmic advantage.
 
-Index maintenance can avoid rebuilding retained response summaries.
-That benefit must be reported separately from solver improvements.
-The split indexed API adds validation and serialization overhead.
-That interface overhead cannot justify an algorithmic speed claim.
+The box route closes the affine representation gap for frozen-grid prefixes.
+It does not close the numerical acceptance gap.
+Wide boxes can produce unavailable or weak bounds and trigger full replay.
+The midpoint minimizes the rectangular interval envelope's feature radius.
+It can still change proposal Grams and margins unfavorably.
+No certificate-acceptance dominance or full-model speed follows.
 
-## Open gates before research execution
+## Remaining preparation before research execution
 
 The experiment-ready gate G0 remains open.
-A complete real input manifest does not exist.
-Checkpoint candidates have only metadata-level selection.
-Ordinary candidate dimensions exceed default reference planning limits.
+Complete these items before confirmation:
 
-Small charts can reject general quantized prefixes.
-Coordinate charts can make storage and interval jets prohibitive.
-The scalar finite evaluator may also fail to resolve a required primitive.
-No practical chart coverage, memory, latency, or NLP quality has been measured.
+1. Establish a resource-feasible checkpoint route under the declared target.
+2. Acquire and validate real checkpoint, tokenizer, corpus, and prepared record artifacts after authorization.
+3. Freeze primary settings, source partitions, and the actual run inventory.
+4. Complete phase budgets, required independent method execution, timing boundaries, and memory/arithmetic diagnostics.
+5. Implement the original-model invariance baseline and affordable quadratic control.
+6. Support campaign sequences and complete-deletion controls.
+7. Justify confirmatory precision using development evidence.
 
-Remaining preparation includes these tasks:
-
-1. Choose a resource-feasible checkpoint route without changing the target silently.
-2. Finish source, tokenizer, record, and request-selector manifests.
-3. Add enforced process limits and the frozen inventory scheduler.
-4. Complete cold execution and internal cost/coverage diagnostics where the claim requires them.
-5. Add identity-only and matched response ablations.
-6. Obtain the user's instruction to resume research experiments.
+Some items need real execution and belong to staged feasibility after resumption.
+Do not pretend those empirical dependencies are closed by software fixtures.
+Protocol version 2 states the remaining blockers explicitly.
 
 ## Numerical and storage scope
 
-V_cert is the primary implemented target.
-Legacy library-math V and historical floating quantizer E remain distinct.
-Checkpoint import does not establish native Hugging Face numerical identity.
-Proof rejection permits retained replay.
-Finite-evaluator failure aborts without committing an approximate model.
-The report now applies that condition consistently to fallback statements.
+V_cert remains the primary partial numerical target.
+Legacy library-math V, historical floating E, and native Hugging Face kernels remain distinct.
+Proof rejection permits exact retained replay.
+Necessary finite-evaluator failure aborts without committing an approximate model.
+Every completion statement requires successful required evaluations and sufficient resources.
 
-Canonical deletion covers returned live state.
-The experiment archive intentionally preserves original states and previous attempts.
-That archive lies outside the live-state deletion guarantee.
-Hashes detect changes under trusted storage; they do not authenticate hostile storage.
+Returned canonical live state satisfies the declared deletion guarantee.
+The research archive deliberately preserves original states and failed attempts.
+It lies outside that guarantee.
+Trusted hashes do not authenticate hostile storage or prove physical erasure.
 
-The reference implementation retains O(NL) record metadata.
-Preparation, replay, exact integer sizes, serialization, and output remain real costs.
-Production GPU kernels and integrated work scheduling remain future work.
+Each comparison has one isolated limited process.
+Its methods share warm objects and process history.
+Operating-system caches remain uncontrolled.
+Final result commit and campaign orchestration lie outside method timers.
+The present timers cannot establish complete process-cold service latency.
 
 ## Evidence discipline
 
-No model weights or empirical datasets were downloaded.
-No research benchmark or external compute job ran.
-Software fixtures do not establish real-model speed or useful quality.
-Earlier raw experiments remain unavailable.
-Historical metrics in PROJECT_CONTEXT.md are reconstructed context only.
-
-The narrow contribution concerns certified sequential decisions and canonical calibration-deletion state.
-Derivative sketches, Taylor verification, polynomial statistics, and matrix geometry have prior work.
-No exhaustive priority or universal speedup claim is made.
+No pretrained model, empirical corpus, benchmark, or external compute job ran.
+Correctness fixtures establish software behavior only.
+Useful coverage, preparation costs, memory, quality, and complete latency remain unmeasured.
+Historical missing raw results remain unavailable.
+PROJECT_CONTEXT.md labels reconstructed historical claims separately.
+Classical interval bounds and Gram geometry are not new priority claims.
+The proposed contribution concerns certified sequential deletion and canonical state under explicit costs.

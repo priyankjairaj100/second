@@ -19,6 +19,7 @@ from typing import Callable
 
 from .repair_service import Record
 from .run_store import RunStore, canonical_json, digest, strict_json
+from .service_telemetry import ServiceTelemetry
 
 METHODS = ("repair", "indexed_fresh", "direct_fresh")
 CACHE_MODE = "warm_sequential_os_cache_uncontrolled"
@@ -217,10 +218,13 @@ def heldout_nll(decoder, records, state=None):
 
 
 def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunStore,
-                   metadata: dict, *, method_order=METHODS, preflight=None, overall_start_ns=None):
+                   metadata: dict, *, method_order=METHODS, preflight=None, overall_start_ns=None,
+                   service_mode="certified"):
     """Run one request. This low-level API also supports tiny software fixtures."""
     if tuple(sorted(method_order)) != tuple(sorted(METHODS)):
         raise ValueError("method order must contain each supported method exactly once")
+    if service_mode not in ("certified", "identity_only", "fixed_reference", "full_replay"):
+        raise ValueError("unsupported service mechanism control")
     records = tuple(records)
     heldout = tuple(heldout)
     deleted_ids = tuple(deleted_ids)
@@ -242,7 +246,7 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
         "records": [[r.record_id, r.content_digest] for r in records],
         "deleted_ids": list(deleted_ids),
         "heldout": [[r.record_id, r.content_digest] for r in heldout],
-        "method_order": list(method_order)}))
+        "method_order": list(method_order), "service_mode": service_mode}))
     complete = store.completed()
     if complete is not None:
         if complete.get("input_sha256") != input_sha256:
@@ -253,6 +257,7 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
     store.claim()
     result = dict(metadata, schema="calibration-experiment-v1", status="running", input_sha256=input_sha256,
                   cache_mode=CACHE_MODE, planned_methods=list(METHODS), method_order=list(method_order),
+                  service_mode=service_mode,
                   target_manifest_sha256=metadata.get("target_manifest_sha256", service.target_manifest_digest),
                   service_job_sha256=service.target_manifest_digest,
                   service_manifest_sha256=service.manifest_digest,
@@ -263,21 +268,24 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
                       "excluded_from_method": "checkpoint and input loading, original preparation, independent equality checks, heldout evaluation, final result commit",
                       "memory": "Python allocation peak during each measured scope; RSS is process lifetime high-water mark",
                       "execution": "serial shared process, warm objects, uncontrolled OS caches; method order is declared",
-                      "timing_interpretation": "instrumented reference execution; not production latency; no callback microtimers",
+                      "timing_interpretation": "instrumented reference execution; exclusive internal diagnostic spans; not production latency",
                       "storage_contract": "external research archive retains original states and failed attempts; deletion guarantee covers returned canonical live state only"})
     result["preflight"] = preflight
     active = "initial_fresh"
     try:
         store.write_artifact("run-metadata.json", canonical_json(metadata))
+        setup_telemetry = ServiceTelemetry()
         def initial():
-            fresh = service.fresh(records)
-            info = _commit_state(store, "original", fresh)
+            fresh = service.fresh(records, telemetry=setup_telemetry)
+            with setup_telemetry.span("artifact_output"):
+                info = _commit_state(store, "original", fresh)
             # Validate the actual saved canonical bytes before later requests.
             saved_bytes = (store.attempt / "original-state.json").read_bytes()
-            loaded = service.load_state(saved_bytes, expected_digest=fresh.state.digest)
+            with setup_telemetry.span("persisted_state_reload"):
+                loaded = service.load_state(saved_bytes, expected_digest=fresh.state.digest)
             return loaded, info
         (old_state, setup), setup_clock = measure(initial)
-        result["setup"] = dict(setup, **setup_clock)
+        result["setup"] = dict(setup, **setup_clock, service_telemetry=setup_telemetry.payload())
         retained_source = {r.record_id: r for r in remaining}.__getitem__
         states = {}
         for method in method_order:
@@ -286,20 +294,27 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
             store.write_status(result)
             gc.collect()  # Outside the declared method boundary, for every arm.
             preparation = {}
+            telemetry = ServiceTelemetry()
             def arm():
-                deleted = tuple(by_id[rid] for rid in deleted_ids)
+                with telemetry.span("deleted_payload_lookup"):
+                    deleted = tuple(by_id[rid] for rid in deleted_ids)
                 if method == "repair":
-                    output = service.repair(old_state, deleted, retained_source)
+                    output = service.repair(old_state, deleted, retained_source,
+                                            mode=service_mode, telemetry=telemetry)
                 elif method == "indexed_fresh":
                     stamp = time.perf_counter_ns()
-                    prepared = service.prepare_index(old_state, deleted)
+                    prepared = service.prepare_index(old_state, deleted, telemetry=telemetry)
                     preparation["index_preparation_ns"] = time.perf_counter_ns() - stamp
                     preparation["index_preparation_ledger"] = dict(prepared.ledger.as_mapping())
-                    output = service.indexed_fresh(prepared.index, retained_source)
+                    output = service.indexed_fresh(prepared.index, retained_source,
+                                                   mode=service_mode, telemetry=telemetry)
                 else:
-                    retained = tuple(r for r in records if r.record_id not in set(deleted_ids))
-                    output = service.fresh(retained)
-                info = _commit_state(store, method, output)
+                    with telemetry.span("retained_payload_selection"):
+                        deleted_set = set(deleted_ids)
+                        retained = tuple(r for r in records if r.record_id not in deleted_set)
+                    output = service.fresh(retained, telemetry=telemetry)
+                with telemetry.span("artifact_output"):
+                    info = _commit_state(store, method, output)
                 return output.state, info
             try:
                 (state, info), metrics = measure(arm)
@@ -310,6 +325,7 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
             except Exception as exc:
                 result["methods"][method] = dict(status="failed", failure=_failure(exc),
                     exact_state_equal=None, exact_model_equal=None, **getattr(exc, "runner_metrics", {}))
+            result["methods"][method]["service_telemetry"] = telemetry.payload()
             store.write_status(result)
         active = "equality_verification"
         verification_start = time.perf_counter_ns()
@@ -371,8 +387,12 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False):
     manifest, raw = _read_json(manifest_path)
     required = {"schema", "root_id", "request_id", "configuration_id", "repeat_index", "phase",
                 "checkpoint", "calibration", "heldout", "deleted_ids", "target", "chart", "method_order", "protocol"}
-    if not isinstance(manifest, dict) or set(manifest) != required or manifest["schema"] != "calibration-run-v1":
+    if (not isinstance(manifest, dict) or not required <= set(manifest)
+            or set(manifest) - required - {"service_mode"} or manifest["schema"] != "calibration-run-v1"):
         raise ValueError("invalid run manifest fields or schema")
+    service_mode = manifest.get("service_mode", "certified")
+    if service_mode not in ("certified", "identity_only", "fixed_reference", "full_replay"):
+        raise ValueError("unsupported service mechanism control")
     base = manifest_path.parent
     protocol, protocol_raw = _referenced_json(base, manifest["protocol"])
     for key in ("root_id", "request_id", "configuration_id"):
@@ -445,7 +465,7 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False):
     construction = build_chart(decoder, target, chart_recipe)
     service = make_service(decoder, target, construction)
     metadata = {key: manifest[key] for key in ("root_id", "request_id", "configuration_id", "repeat_index", "phase")}
-    metadata.update(run_manifest_sha256=digest(raw), protocol_sha256=digest(protocol_raw),
+    metadata.update(run_manifest_sha256=digest(raw), protocol_sha256=digest(protocol_raw), service_mode=service_mode,
                     target_manifest_sha256=target.digest, chart_sha256=construction.digest,
                     source_sha256={p.name: digest(p.read_bytes()) for p in sorted(Path(__file__).parent.glob('*.py'))},
                     environment={"python": sys.version, "platform": platform.platform()})
@@ -454,7 +474,8 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False):
     store = RunStore(output, {"manifest_sha256": digest(raw), "metadata": metadata,
                               "service_manifest_sha256": service.manifest_digest})
     return run_comparison(decoder, service, records, manifest["deleted_ids"], heldout, store, metadata,
-                          method_order=manifest["method_order"], preflight=preflight, overall_start_ns=overall_start_ns)
+                          method_order=manifest["method_order"], preflight=preflight, overall_start_ns=overall_start_ns,
+                          service_mode=service_mode)
 
 
 def run_manifest(path: str | Path, output: str | Path, *, validate_only=False):

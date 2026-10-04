@@ -11,7 +11,7 @@ Repository metadata does not establish adapter compatibility or practical execut
 
 | Candidate | Intended role | Observed source evidence | Remaining gate |
 | --- | --- | --- | --- |
-| `distilbert/distilgpt2` | First supported architecture candidate | GPT-2 configuration, six layers, safetensors, Apache-2.0 tag | Full revision pin, tensor inspection, resource fit |
+| `distilbert/distilgpt2` | First supported architecture candidate | GPT-2 configuration, six layers, safetensors, Apache-2.0 tag | Tensor inspection, local hashes, resource fit |
 | `openai-community/gpt2` | Larger architecture control | GPT-2 architecture, safetensors, MIT tag, full revision available | Local hashes, tensor inspection, resource fit |
 
 Official DistilGPT2 metadata includes the historical `_num_labels` field.
@@ -103,3 +103,12 @@ Those budgets are planning decisions, not measured feasibility results.
 - C4 revisions: https://huggingface.co/datasets/allenai/c4/commits/main
 - LAMBADA card: https://huggingface.co/datasets/EleutherAI/lambada_openai
 - LAMBADA revisions: https://huggingface.co/datasets/EleutherAI/lambada_openai/commits/main
+
+## Revision 6 pin audit
+
+Primary Hub pages now identify complete DistilGPT2 and WikiText repository revisions.
+The catalog records those revisions and their source URLs.
+These are repository pins, not verified local file hashes.
+Tokenizer files, token records, and actual checkpoint imports remain unverified.
+C4 and LAMBADA remain reserve sources with unresolved acquisition fields.
+No model or corpus payload was downloaded.

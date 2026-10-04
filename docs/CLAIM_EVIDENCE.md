@@ -138,3 +138,29 @@ Do not replace them with fixture pass rates or local rounding counts.
 
 The project has no recovered raw evidence from its earlier missing experiments.
 Historical narrative remains context, not a substitute for current reproducible results.
+
+
+## Revision 6 extension
+
+The fixed-box route is documented in BOX_THEORY.md and report Sections 28–30.
+It removes the affine-span condition for frozen-grid ancestor parameters.
+Rank-zero intervals still require finite error bounds and valid decision certificates.
+Hybrid midpoint anchors minimize the rectangular interval feature envelope.
+They avoid a separate finite base evaluation for varying domains.
+No acceptance dominance or practical speed follows.
+
+The provider stores d²+6 rational slots per occupied stage group.
+Its full-grid domain stores 2P_A rational endpoints.
+Metadata, exact arithmetic size, base weights, replay, and output remain costs.
+Lazy parameter wrappers reduce temporary construction without changing scalar operations.
+
+The v6 runner supports four mechanism modes and exclusive component telemetry.
+The worker isolates complete comparisons and enforces declared process limits.
+Workload scores use original-state evidence only.
+Inventories bind source hashes, configurations, roots, requests, repetitions, and method order.
+The analyzer rejects mixed mode/chart/service identities within a stratum.
+
+These changes preserve the fair indexed solver and canonical state target.
+They do not close real-model feasibility, full-service timing, or useful NLP evidence.
+See VALIDATION.md for the 261-test result and source hashes.
+See RESEARCH_TODO.md for remaining required tasks.

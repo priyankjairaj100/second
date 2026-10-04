@@ -1,6 +1,7 @@
 # State loading and equal-information baselines
 
-Revision 5 adds durable state loading and an indexed fresh comparison.
+Revision 6 retains durable state loading and the indexed fresh comparison.
+It adds matched response controls and exclusive diagnostic timing.
 These changes do not establish practical speedup.
 
 ## Canonical state loading
@@ -67,10 +68,28 @@ It never reads an old model proposal.
 It accepts an `AggregateState` for convenience but ignores that object's model.
 It still validates retained summaries and metadata.
 
-The default mode uses response certificates and selected replay.
-The `full_replay` mode skips response queries and all response certificates.
-It computes every retained feature Gram under each new prefix.
-Both modes produce the same complete canonical state when finite evaluation succeeds.
+The service supports four modes with one target and one canonical state definition.
+
+| Mode | Proposal rule | Main limitation |
+| --- | --- | --- |
+| `certified` | Use the selected response provider and selected retained replay | Proof bounds can fail |
+| `fixed_reference` | Keep the constant anchor Gram and bound the omitted tangent response | Bounds can be larger |
+| `identity_only` | Permit fixed-reference proposals only when ancestors equal the constructor reference | This tests base-reference identity |
+| `full_replay` | Skip response queries and certificates; evaluate every retained feature Gram | It provides no response saving |
+
+The fixed-reference control retains finite error and derivative approximation terms.
+It adds a triangle bound for the omitted tangent response.
+It changes the proposal without changing stored statistics.
+The identity-only control checks every transitive ancestor.
+A missing reference mapping causes replay.
+It does not compare ancestors with the previous quantized model.
+
+All modes produce the same complete canonical state when required finite evaluations succeed.
+The runner applies its selected `service_mode` to repair and indexed fresh.
+Direct fresh remains the independent correctness oracle.
+The default mode is `certified`.
+Use separate configuration identifiers for different modes.
+The analyzer rejects mode, chart, or service-manifest mixing within one configuration.
 Each call keeps a temporary replay cache.
 No cache survives the call.
 
@@ -108,6 +127,27 @@ Use the same initial files and cache conditions for each comparison.
 Software checks establish equality and transaction behavior.
 They do not measure real-model coverage or latency.
 
+## Telemetry and process boundaries
+
+Each service operation accepts an optional `telemetry=ServiceTelemetry()` argument.
+The collector records exclusive timings, operation counts, and proof outcomes.
+It subtracts child intervals from parent intervals.
+Never add its diagnostic total to the enclosing method timer.
+Telemetry does not alter the canonical model or state.
+Instrumentation overhead remains part of recorded elapsed time.
+
+The runner also times resident payload lookup and durable artifact output.
+The method boundary ends after atomic artifacts and directory synchronization.
+Final experiment-result commit and campaign bookkeeping remain outside each method timer.
+Original preparation, checkpoint loading, and equality checks have separate costs.
+
+Campaign execution starts one process per complete comparison.
+The three methods remain warm within that process.
+Operating-system caches remain uncontrolled.
+This is not per-arm process-cold service timing.
+The split indexed interface still adds validation and serialization work.
+That interface difference cannot establish an algorithmic repair advantage.
+
 ## Scope
 
 The service assumes fixed deterministic trusted callbacks.
@@ -116,6 +156,7 @@ Numerical abstention causes replay.
 Finite-evaluator failure aborts the call without a committed state.
 Logical deletion does not erase caller copies or physical memory.
 
-The implementation does not yet provide unchanged-ancestor caching as a separate baseline.
-It also does not provide a distinct full quadratic response solver.
-Those comparisons remain separate tasks.
+The implementation does not yet provide an original-model cache or its unchanged-ancestor baseline.
+The base-reference identity-only control does not close that task.
+A distinct full quadratic response solver also remains unimplemented.
+Neither control labels nor software fixtures close the practical speed gate.

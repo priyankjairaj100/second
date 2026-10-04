@@ -46,7 +46,7 @@ class PreflightResult:
                       measured=False, memory_bound_proved=False,
                       planning_scalar_bytes=128,
                       planning_jet_component_bytes=128,
-                      assumptions='dense scalar reference; all potential RTN directions retained; no record-dependent allocation counted',
+                      assumptions='dense base state; all potential RTN directions retained; one parameter-stage wrapper at a time; no record-dependent allocation counted',
                       exclusions=['record payloads', 'metadata', 'feature activations', 'serialization buffers',
                                   'temporary arithmetic integers', 'Python interpreter', 'other processes'],
                       warning='Passing this plan does not guarantee memory fit or useful runtime.')
@@ -85,14 +85,18 @@ def inspect_local_config(directory: str | Path, chart_recipe: ChartRecipe,
     elif chart_recipe.mode == 'coordinate':
         rank = parameters - f*d
         entries = blocks * (10*d**4 + 2*(f*d)**2) - (f*d)**2
+    elif chart_recipe.mode == 'grid-box':
+        rank = 0
+        entries = 2 * (parameters - f*d)
     else:
         rank = entries = 0
     error = (rank+3)*(rank+4)//2
     aggregates = target_recipe.group_count * ((rank+1)*blocks*(3*d*d+f*f)
                                                + stage_count*(rank*rank+error))
     grids = (2**target_recipe.bits) * blocks * (3*d+f)
+    # Lazy parameter wrappers retain one accessed stage matrix at a time.
     # Include the finite-error scalar beside each interval value/derivative.
-    jets = parameters * (2+rank+rank*rank)
+    jets = max(3*d*d, f*d) * (2+rank+rank*rank)
     fixed = (2*config.vocabulary_size*d + config.max_sequence_length*d
              + blocks*(9*d+f) + 2*d + config.vocabulary_size)
     planning = 128*(parameters+fixed+entries+aggregates+grids+jets)

@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Mapping
 
 from .certified_transformer import AffineChart, AutomaticResponseProvider, CertifiedDecoder
+from .box_response_provider import ParameterBox, BoxResponseProvider, grid_box
 from .target_manifest import TargetManifest, build_target, _json, _pair, _positive_integer, _rational, _read_pair
 
 Q = Fraction
@@ -33,11 +34,13 @@ class ChartRecipe:
     max_aggregate_rationals: int = 5_000_000
 
     def __post_init__(self):
-        if self.mode not in ("stage-rtn", "coordinate", "none"):
+        if self.mode not in ("stage-rtn", "coordinate", "none", "grid-box"):
             raise ValueError("unsupported chart mode")
         radius = _rational(self.radius, "radius")
         if radius < 1:
             raise ValueError("radius must be at least one")
+        if self.mode == "grid-box" and radius != 1:
+            raise ValueError("grid-box uses its complete fixed grid domain; radius must equal one")
         object.__setattr__(self, "radius", radius)
         if type(self.precision_bits) is not int or not 64 <= self.precision_bits <= 16384:
             raise ValueError("precision_bits must be an integer from 64 through 16384")
@@ -98,6 +101,7 @@ class ChartPreview:
     def payload(self):
         return {"schema": "chart-resource-preview-v1", "mode": self.mode, "rank": self.rank,
                 "direction_entries": self.direction_entries,
+                "domain_storage_kind": "box_endpoint_rationals" if self.mode == "grid-box" else "direction_rationals",
                 "aggregate_rationals_per_group": self.aggregate_rationals_per_group,
                 "aggregate_rationals_all_groups": self.aggregate_rationals_all_groups,
                 "jet_scalar_components_per_value": self.jet_scalar_components_per_value,
@@ -119,6 +123,8 @@ def preview_chart(decoder: CertifiedDecoder, target: TargetManifest, recipe: Cha
         if recipe.mode == "coordinate":
             rank += size
             entries += size * size
+        elif recipe.mode == "grid-box":
+            entries += 2 * size
         elif recipe.mode == "stage-rtn":
             if any(_nearest(value, stage.grids[j]) != value
                    for row in stage.weights for j, value in enumerate(row)):
@@ -134,7 +140,7 @@ def preview_chart(decoder: CertifiedDecoder, target: TargetManifest, recipe: Cha
     exceeded = tuple(name for name, actual, limit in (
         ("rank", rank, recipe.max_rank), ("direction_entries", entries, recipe.max_direction_entries),
         ("aggregate_rationals", all_groups, recipe.max_aggregate_rationals)) if actual > limit)
-    return ChartPreview(recipe.mode, rank, entries, per_group, all_groups, 1 + rank + rank**2,
+    return ChartPreview(recipe.mode, rank, entries, per_group, all_groups, 2 + rank + rank**2,
                         parameters, (parameters * target.recipe.bits + 7) // 8, grid_entries, exceeded)
 
 
@@ -142,11 +148,19 @@ def preview_chart(decoder: CertifiedDecoder, target: TargetManifest, recipe: Cha
 class ChartConstruction:
     target_digest: str
     recipe: ChartRecipe
-    chart: AffineChart
+    chart: AffineChart | ParameterBox
     preview: ChartPreview
     constructor_source_sha256: str
 
     def payload(self):
+        if isinstance(self.chart, ParameterBox):
+            return {"schema": "constructed-base-only-box-v1", "target_digest": self.target_digest,
+                    "recipe": self.recipe.payload(), "preview": self.preview.payload(),
+                    "constructor_source_sha256": self.constructor_source_sha256,
+                    "box_sha256": self.chart.digest, "provenance": self.chart.provenance,
+                    "precision_bits": self.chart.precision_bits,
+                    "prefix_rule": "check every installed finite ancestor against fixed coordinate bounds",
+                    "corpus_access": "none; frozen grid extrema and finite base weights only"}
         directions = [{stage: [[_pair(x) for x in row] for row in matrix]
                        for stage, matrix in direction.items()} for direction in self.chart.directions]
         return {"schema": "constructed-base-only-chart-v1", "target_digest": self.target_digest,
@@ -170,6 +184,12 @@ def build_chart(decoder: CertifiedDecoder, target: TargetManifest, recipe: Chart
     preview = preview_chart(decoder, target, recipe)
     if not preview.feasible:
         raise ChartBudgetError("chart budget exceeded: " + ", ".join(preview.over_budget))
+    if recipe.mode == "grid-box":
+        source_hash = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+        provenance = "base-only-grid-box-v1:" + hashlib.sha256(_json({"target": target.digest,
+                     "recipe": recipe.payload(), "constructor_source_sha256": source_hash})).hexdigest()
+        box = grid_box(decoder, target, provenance, recipe.precision_bits)
+        return ChartConstruction(target.digest, recipe, box, preview, source_hash)
     directions, radii = [], []
     for stage in _used_stages(target):
         if recipe.mode == "stage-rtn":
@@ -203,7 +223,8 @@ def make_service(decoder: CertifiedDecoder, target: TargetManifest, construction
     if construction.canonical_bytes() != expected.canonical_bytes():
         raise ValueError("chart does not match the deterministic construction")
     from .aggregate_response_service import AggregateRepairService
-    provider = AutomaticResponseProvider(decoder, construction.chart)
+    provider = (BoxResponseProvider(decoder, construction.chart) if isinstance(construction.chart, ParameterBox)
+                else AutomaticResponseProvider(decoder, construction.chart))
     job = target.make_job(provider.reference_id)
 
     def evaluate(record, stage, prefix):
@@ -214,4 +235,7 @@ def make_service(decoder: CertifiedDecoder, target: TargetManifest, construction
         return decoder.stage_features(stage.stage_id, decoder.decode_payload(record.payload), prefix.as_mapping())
 
     return AggregateRepairService(job, evaluate, provider.intrinsic_moments, provider.contracts, provider.query,
-                                  provider_id=provider.provider_id, extractor_id=provider.reference_id)
+                                  provider_id=provider.provider_id, extractor_id=provider.reference_id,
+                                  reference_weights={s: tuple(tuple(Q.from_float(x) for x in row)
+                                                             for row in decoder.base._float_weights[s])
+                                                     for s in decoder.stage_ids})

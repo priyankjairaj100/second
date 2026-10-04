@@ -1,6 +1,6 @@
 # Prospective empirical protocol
 
-Version: 1. Date: 4 October 2026.
+Version: 2. Date: 4 October 2026.
 
 This document reconstructs the empirical plan from the current implementation.
 It does not recover the missing earlier protocol.
@@ -8,10 +8,15 @@ No empirical observations accompany this document.
 Experiments remain paused.
 Software correctness fixtures remain separate from research evidence.
 
-`configs/protocol_v1.json` stores the numerical planning choices.
+`configs/protocol_v2.json` stores the current numerical planning choices.
+`configs/protocol_v1.json` preserves the earlier preparation plan.
+Both files retain the compatible `calibration-protocol-v1` schema.
+The version field distinguishes their content.
 These choices express project goals.
 They are not universal standards or measured power calculations.
 The final execution manifest must resolve every blocked field before confirmation.
+The current protocol keeps `confirmation_configuration_ids` and `planned_inventory_sha256` unresolved.
+Their absence prevents confirmation from becoming an executable plan.
 Commit that manifest before observing confirmation results.
 Record its hash in every run.
 
@@ -41,6 +46,11 @@ It must fix grids, order, ties, ridge, and normalization.
 It must fix parameter conversion and all unchanged parameters.
 It must identify chart directions, radii, precision, and construction rules.
 It must record all data-independent preparation costs.
+The new grid-box provider removes the affine-span membership restriction.
+Its box contains every installed finite code from the frozen grids.
+This property does not guarantee useful feature bounds or accepted certificates.
+The box is a sound alternative, not a selected empirical configuration.
+Its shared provider gives repair no inherent advantage over equally indexed fresh quantization.
 
 The token manifest must fix token identifiers, ordering, masks, and positions.
 Each record must preserve its boundaries after deletion.
@@ -57,7 +67,10 @@ Use verified conversion before evaluating any alternate deployment representatio
 Use real text only.
 Do not create synthetic empirical datasets.
 Use `configs/source_catalog_v1.json` and `docs/SOURCE_SELECTION.md` for candidate metadata.
-Metadata selection does not approve or pin execution inputs.
+Metadata selection does not approve execution inputs.
+The source catalog now pins the DistilGPT2, GPT-2, and WikiText repository revisions.
+These pins identify public metadata only.
+No local checkpoint, tokenizer, or corpus hashes are available.
 The first candidates use the implemented GPT-2 architecture.
 The first corpus candidate is WikiText-2 raw text.
 A real C4 subset is a later domain extension.
@@ -66,7 +79,8 @@ These candidates remain subject to architecture, licensing, and resource checks.
 No candidate was acquired for this protocol.
 Ordinary checkpoint dimensions exceed the current reference planning limits.
 
-Every source needs a pinned revision and content hashes.
+Every execution source needs a pinned revision and verified local content hashes.
+Reserve C4 and LAMBADA sources remain incompletely pinned.
 Record model licenses and dataset licenses separately.
 Record download sizes before authorizing a download.
 Preserve document identifiers through tokenization.
@@ -76,10 +90,16 @@ Document any unavoidable boundary limitation.
 
 Select development, confirmation, and evaluation documents before method tuning.
 Keep those three document pools disjoint.
-Check overlap by document identifiers and normalized text hashes.
+Check overlap by document identifiers, normalized text hashes, record IDs, and prepared token hashes.
 Record duplicate handling before sampling.
 Use held-out source documents for quality evaluation.
 Do not tune the chart on evaluation text.
+Use at most one fixed chunk per source document in the first workload.
+Preserve source document IDs and fixed token offsets.
+Do not combine documents or repack retained records after deletion.
+Freeze normalization, BOS, EOS, positions, and masks before selection.
+Source document withdrawal must include every associated prepared chunk.
+`docs/WORKLOAD_CONTRACT.md` gives the full record and withdrawal contract.
 
 ## 4. Research units and separation
 
@@ -87,6 +107,10 @@ A calibration root contains one independently sampled calibration corpus.
 Draw each root independently from the fixed phase pool.
 Sample without replacement inside each root.
 Independent roots may overlap because each root uses a separate draw.
+`sample_roots` uses separate domains of a versioned SHA256 stream.
+Uniformity refers to its ideal independent-stream model.
+The implemented generator is deterministic pseudorandom computation.
+Save pool hashes, seeds, and every root membership before observing method outcomes.
 Record all seeds and selected document identifiers.
 The inference scope remains conditional on the fixed source pool.
 
@@ -108,10 +132,15 @@ Keep earlier results in the release history.
 The local plan uses CPU execution only.
 It does not authorize paid jobs or another project's hardware.
 The observed environment has an 8 GiB container limit.
-The process target is at most 6 GiB.
-The remaining memory supports monitoring and output.
-These limits require enforcement before empirical execution.
-A configuration field alone does not enforce a limit.
+The proposed worker address-space limit is 6 GiB.
+`RLIMIT_AS` limits virtual address space, not physical memory.
+Record observed physical memory separately.
+The parent controller also requires resources.
+`src/worker_control.py` now enforces explicit limits before each comparison process starts.
+It applies CPU limits, address-space limits, file limits, CPU affinity, and thread environment settings.
+The parent enforces a wall deadline and stops ordinary process-group descendants.
+These limits do not enforce cumulative CPU use across a research phase.
+A configuration field alone does not enforce a phase budget.
 
 | Stage | Planned roots | Records per root | Tokens per record | Purpose |
 | --- | ---: | ---: | ---: | --- |
@@ -123,17 +152,28 @@ A configuration field alone does not enforce a limit.
 These sizes are prospective targets.
 They do not establish feasible memory or runtime.
 Use one primary checkpoint before expanding the model matrix.
-The preflight arm has a 15-minute deadline.
-Later arms have a 60-minute deadline.
+The preflight comparison has a 15-minute wall deadline.
+Later comparisons have a 60-minute wall deadline.
+These deadlines cover preparation and all methods inside one comparison process.
+They are not separate deadlines for individual methods.
+The proposed CPU limits are 900 and 3,600 seconds per comparison process.
+The proposed file limit is 512 MiB per written file.
+The proposed thread setting is one.
+Resolve supported CPU affinity identifiers before freezing the inventory.
 The feasibility stage permits at most three CPU-hours.
 Development permits at most twelve CPU-hours.
 Confirmation permits at most sixty-four CPU-hours.
 Stop when a phase reaches its declared budget.
+The current controller does not enforce those cumulative phase caps.
+That implementation remains a blocker before research execution.
 Keep every unstarted planned run in the result inventory.
 
 Use one timing repeat during preflight and feasibility.
 Use three paired repeats for development and confirmation.
-Balance method order with a saved random permutation.
+Use a saved seeded method permutation with cyclic rotations.
+Each three-repeat block places every method once in each position.
+The next block reverses orientation.
+A partial block does not guarantee exact position balance.
 Record CPU affinity, thread settings, runtime versions, and system load.
 No final matrix expansion follows automatically from passing an early gate.
 
@@ -152,10 +192,21 @@ The primary matrix contains six independently reset request types.
 | Concentrated | Select 1/16 using a fixed original-prefix feature norm score |
 | Difficult | Select 1/16 using a frozen original-state margin and contribution score |
 
-Freeze the exact score equations and tie rules in the request manifest.
-The last two selectors remain blocked until those equations are specified.
+The score equations and tie rules are now implemented in `src/request_workload.py`.
+`docs/WORKLOAD_CONTRACT.md` fixes all edge cases.
+Concentration uses the largest stage share of original feature energy.
+Difficulty uses the largest squared original leverage multiplied by stage margin sensitivity.
+The producer reconstructs exact original Grams and complete decision traces.
+It verifies those traces against the stored original model.
+A zero-energy decision contributes zero sensitivity.
+A positive-energy midpoint gives infinite sensitivity.
+Zero leverage contributes zero, including at infinite sensitivity.
+Score ties use ascending record IDs.
+These equations define a stress proxy, not guaranteed difficult repair.
 Do not choose requests by observed repair speed or acceptance.
-Charge any required score construction to preparation.
+Charge every original feature pass, factorization, verification, and score artifact write to workload preparation.
+The score artifact binds the original state, prepared records, target, and producer sources.
+No real score artifact exists yet.
 These selectors represent stress conditions.
 Do not interpret their outcomes as uniform-request probabilities.
 
@@ -163,11 +214,23 @@ Add a separate sequence of three disjoint small deletions per root.
 Each step must start from the previous committed state.
 Compare each step with fresh construction on the remaining records.
 Also compare the final sequence with the combined deletion.
+A separate uniform permutation defines three disjoint batches of the original small-request size.
+A root must contain enough records for all three batches.
+The workload marks insufficient roots blocked.
+The current runner lacks execution from each preceding committed state.
+Independent cumulative resets do not replace that required sequence.
 Run empty deletion and complete deletion as correctness controls.
 Keep those controls outside the primary latency average.
+The runner still rejects complete deletion.
+The workload retains that control with an explicit implementation blocker.
 
 Source withdrawal requires a corpus with documented distinct sources.
-It remains a planned extension until that corpus exists.
+Hash the complete record-to-source mapping before selection.
+Sort eligible source IDs and select one uniformly from its separate stream domain.
+An eligible source contains records and leaves at least one record after withdrawal.
+Delete every record assigned to the selected source.
+`source_withdrawal_request` implements this law.
+The extension remains blocked until actual documented source metadata exists.
 Do not create artificial source labels to fill this row.
 
 ## 7. Methods and information parity
@@ -178,9 +241,15 @@ Use the same target manifest and retained identifiers.
 Give equally indexed fresh the same valid summaries and storage allowance.
 Record any unavoidable information difference.
 
-Add identity-only repair as the first mechanism control.
-Compare fixed-reference and compact linear response where implemented.
-Run full quadratic response only on an affordable declared subset.
+The service now implements `certified`, `fixed_reference`, `identity_only`, and `full_replay` modes.
+All modes preserve the same numerical target and canonical state.
+The identity control uses equality with the intrinsic reference.
+It does not implement cached original-model Grams.
+The fixed-reference control retains the complete finite feature error bound.
+Give each mode a distinct configuration ID.
+The analyzer rejects mixed modes within one configuration.
+Run full quadratic response only after implementing an affordable declared subset.
+That quadratic control remains unimplemented.
 Do not pool that subset with the complete primary matrix.
 Compare replay selection only after fixing the certificate configuration.
 Each ablation must identify the changed factor.
@@ -201,6 +270,13 @@ Include required loading, extraction, proof, replay, arithmetic, metadata, seria
 Count each interval once.
 Nested timers cannot be added to their parent timer.
 Record unclassified time as an explicit remainder.
+Optional service telemetry now records exclusive categories and coverage events.
+Nested spans subtract child time from parent time.
+The categories include extraction, feature evaluation, Gram work, bounds, factors, validation, serialization, and source access.
+The collector records remaining instrumented service time separately.
+These timers add measurement overhead.
+They support diagnostic analysis, not an automatic claim about clean service latency.
+Some failed extractors expose unavailable evidence without a detailed primitive reason.
 
 An experiment's equality check can remain outside the service boundary.
 Keep that validation cost in the experiment ledger.
@@ -216,11 +292,20 @@ Confirm that durable artifact output satisfies the selected service contract.
 Complete-service claims require the same boundary for every method.
 
 Warm conditions may retain only declared reusable objects.
-Cold conditions start a new process and load the declared state.
+The campaign now starts each complete comparison in a new process.
+Its three methods still share warm objects and process history.
+The campaign mode is `isolated_comparison_warm_arms_os_cache_uncontrolled`.
+The method mode remains `warm_sequential_os_cache_uncontrolled`.
+Independent process execution for each method remains unimplemented.
+Any claimed cold method condition must start each method separately and load equivalent declared state.
 Operating-system page caches need separate control or a precise uncontrolled label.
 Never label process-cold timing as disk-cold without evidence.
 Use identical output durability for compared methods.
 Do not pool different cache conditions.
+The worker timer covers dispatch through process cleanup.
+It excludes the final controller commit and later log summaries.
+That timer is not one method's request latency.
+Do not add nested method times to the worker total.
 
 ## 9. Correctness, failure, and outcome accounting
 
@@ -252,7 +337,19 @@ Replace no confirmation request after observing its outcome.
 
 The analyzer requires a frozen inventory for confirmation.
 That inventory contains every planned root, request, repeat, and method.
-It also contains target and protocol hashes.
+It also contains target bindings and the final protocol binding.
+`build_campaign` freezes supplied membership and deterministic method orders.
+Write its output as exact canonical JSON bytes.
+The inventory clears only `protocol.sha256` inside embedded run manifests.
+The final protocol then binds the inventory hash.
+External run manifests bind the final protocol hash.
+The executor verifies this complete chain before dispatch and restart.
+It also verifies every current source module and both execution scripts.
+A changed source file prevents reuse of a previous campaign outcome.
+Confirmation requires explicit `confirmation_configuration_ids`.
+The executor checks the full configuration, root, request, and repeat product.
+The current protocol leaves those configuration IDs unresolved.
+No real confirmation inventory exists.
 Missing outcomes become explicit missing attempts.
 Reject duplicate identities, mixed targets, and unplanned observations.
 
@@ -266,6 +363,9 @@ Exponentiate the result.
 
 Report this ratio as conditional on exact completion.
 Report all request outcomes beside it.
+The analysis plan keeps primary requests separate from controls and extensions.
+It preserves service mode and checks observed service bindings.
+Do not use a shared configuration ID for different algorithm settings.
 Report eligible requests, eligible roots, and omitted roots.
 Do not present a conditional ratio as an unconditional reliability result.
 
@@ -310,7 +410,7 @@ Storage cost remains a separate budget unless a price model is declared.
 | Exactness | Zero mismatches; no invalid successful commits | Stop affected method and correct it |
 | Finite domain | All primary preflight requests evaluate successfully | Narrow the domain or revise the declared target |
 | Coverage | At least 25% of changed-ancestor stage groups certify on both feasibility roots | Improve bounds or narrow the claim |
-| Resources | At most 6 GiB peak memory; all phase limits respected | Reduce the declared workload before confirmation |
+| Resources | Enforced worker limits, measured memory, and enforced cumulative phase limits | Reduce the workload or complete enforcement |
 | Quality | Retained fresh perplexity at most 20% above base perplexity on fixed held-out text | Reconsider grids or supported use |
 | Service value | Candidate saves complete measured cost against the declared baseline on development | Redesign or use an indexing-only claim |
 | Confirmed speed | All planned requests finish exactly; lower ratio interval exceeds 1.05 | Report conditional results without a reliable-speed claim |
@@ -331,6 +431,9 @@ No empirical pass has been recorded for any gate.
 Save immutable input manifests and raw outcome files.
 Keep unfinished transactions separate from committed results.
 Record hashes for source, protocol, target, tokens, state, and output.
+Record workload scores and their preparation costs separately.
+Preserve failed worker outcomes and every unstarted inventory entry.
+A controller commit records a terminal outcome, which can still report worker failure.
 Keep resource failures and tracebacks with sensitive paths removed where necessary.
 Do not publish model weights or text against their license conditions.
 
@@ -340,16 +443,24 @@ It records hashes of every input result file.
 Its tests use labeled software fixtures.
 Those fixtures are not paper results.
 
-Before confirmation, resolve these remaining protocol blockers:
+Before research execution, resolve these remaining preparation blockers:
 
-- Pin the model and dataset revisions in the source catalog.
-- Freeze tokenizer behavior and document boundary rules.
-- Freeze concentration and difficult-request score equations.
-- Freeze chart construction and primary quantization settings.
-- Enforce resource limits outside the worker process.
-- Validate the selected service boundary and add process-cold execution where claimed.
-- Generate and hash the complete planned-run inventory.
-- Confirm the independent root sampling and expected precision.
+- Validate a resource-feasible real checkpoint and its adapter path.
+- Acquire and hash actual checkpoint, tokenizer, and corpus files within the authorized scope.
+- Freeze document boundaries, fixed chunks, normalization, positions, masks, BOS, and EOS.
+- Build disjoint source pools and save independently selected root membership.
+- Produce original-state score artifacts and charge their complete preparation costs.
+- Select and freeze the primary chart, quantization settings, and service configuration.
+- Resolve supported worker affinity and enforce cumulative phase budgets.
+- Validate the complete service boundary and implement required independent method processes.
+- Add successive committed-state execution and complete-deletion controls.
+- Declare confirmation configuration IDs and freeze the canonical complete inventory.
+- Use development variability to justify planned confirmation precision.
+- Obtain the user's instruction to resume research experiments.
 
+The request laws, worker controls, and inventory construction now have tested implementations.
+Their implementation does not create real input artifacts or establish useful performance.
+The grid-box alternative remains unselected for empirical use.
+No empirical pass has been recorded for any gate.
 The repository retains this protocol before any new empirical run.
 Its existence does not mean the program has passed the experiment-ready gate.

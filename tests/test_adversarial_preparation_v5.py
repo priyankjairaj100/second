@@ -202,7 +202,7 @@ class AdversarialRunnerTests(unittest.TestCase):
         class OneTimeout:
             def __getattr__(self, name):
                 return getattr(service, name)
-            def prepare_index(self, *args):
+            def prepare_index(self, *args, **kwargs):
                 raise TimeoutError("declared software timeout fixture")
         records = (Record("a", b"[1,1]"), Record("b", b"[0,1]"))
         metadata = dict(root_id="r1", request_id="q1", configuration_id="c1", repeat_index=0,

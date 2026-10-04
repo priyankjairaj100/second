@@ -7,7 +7,7 @@
   "models": [
     {
       "repo_id": "distilbert/distilgpt2",
-      "revision": null,
+      "revision": "2290a62682d06624634c1f46a6ad5be0f47f38aa",
       "observed_short_revision": "2290a62",
       "architecture": "GPT2LMHeadModel",
       "license_tag": "apache-2.0",
@@ -16,7 +16,8 @@
       "adapter_validated": false,
       "resource_fit_validated": false,
       "configuration_source": "https://huggingface.co/distilbert/distilgpt2/blob/main/config.json",
-      "weights_source": "https://huggingface.co/distilbert/distilgpt2/blob/main/model.safetensors"
+      "weights_source": "https://huggingface.co/distilbert/distilgpt2/blob/main/model.safetensors",
+      "revision_source": "https://huggingface.co/distilbert/distilgpt2/commit/2290a62682d06624634c1f46a6ad5be0f47f38aa"
     },
     {
       "repo_id": "openai-community/gpt2",
@@ -33,15 +34,19 @@
     {
       "repo_id": "Salesforce/wikitext",
       "configuration": "wikitext-2-raw-v1",
-      "revision": null,
+      "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
       "observed_short_revision": "b08601e",
       "role": "first_real_calibration_and_heldout_text",
-      "license_tags": ["cc-by-sa-3.0", "gfdl"],
+      "license_tags": [
+        "cc-by-sa-3.0",
+        "gfdl"
+      ],
       "license_prose": "cc-by-sa-4.0",
       "license_resolution": null,
       "article_boundary_manifest": null,
       "token_manifest": null,
-      "source": "https://huggingface.co/datasets/Salesforce/wikitext"
+      "source": "https://huggingface.co/datasets/Salesforce/wikitext",
+      "revision_source": "https://huggingface.co/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1"
     },
     {
       "repo_id": "allenai/c4",

@@ -298,6 +298,28 @@ def _attention(qkv, width, heads, constant):
     return tuple(out)
 
 
+class _StageWeights(Mapping):
+    """Create one stage matrix on access, without retaining parameter wrappers.
+
+    The executor reads each required matrix once. Its scalar operation order
+    stays unchanged. Unused later matrices are never constructed.
+    """
+    def __init__(self, stages, factory):
+        self._stages = tuple(stages)
+        self._factory = factory
+
+    def __getitem__(self, stage):
+        if stage not in self._stages:
+            raise KeyError(stage)
+        return self._factory(stage)
+
+    def __iter__(self):
+        return iter(self._stages)
+
+    def __len__(self):
+        return len(self._stages)
+
+
 def _execute(base, tokens, weights, constant, stop):
     cfg = base.config
     hidden = tuple(tuple(constant(a) + constant(b) for a, b in zip(base._token_embeddings[t], base._position_embeddings[p]))
@@ -365,8 +387,8 @@ class CertifiedDecoder:
     def _eval(self, tokens, prefix, stop):
         _check_runtime()
         installed = self.base._prefix(prefix)
-        weights = {s: tuple(tuple(_Finite(v) for v in row) for row in installed.get(s, self.base._float_weights[s]))
-                   for s in self.stage_ids}
+        weights = _StageWeights(self.stage_ids, lambda s: tuple(
+            tuple(_Finite(v) for v in row) for row in installed.get(s, self.base._float_weights[s])))
         return _execute(self.base, self.base._tokens(tokens), weights, lambda x: _Finite(float(x)), stop)
 
     def stage_features(self, stage, tokens, prefix=None):
@@ -509,8 +531,7 @@ class AutomaticResponseProvider:
         def constant(x):
             return Jet.constant(Q.from_float(float(x)), rank, bits)
         z = _interval(ZERO, bits)
-        weights = {}
-        for stage in self.decoder.stage_ids:
+        def stage_weights(stage):
             matrix = []
             for i, row in enumerate(self.decoder.base._float_weights[stage]):
                 out = []
@@ -523,7 +544,8 @@ class AutomaticResponseProvider:
                             v = v + derivative * ci.Interval(-radius, radius, bits=bits)
                     out.append(Jet(v, grad, tuple((z,) * rank for _ in range(rank))))
                 matrix.append(tuple(out))
-            weights[stage] = tuple(matrix)
+            return tuple(matrix)
+        weights = _StageWeights(self.decoder.stage_ids, stage_weights)
         rows = _execute(self.decoder.base, self.decoder.base._tokens(tokens), weights, constant, stage_id)
         return tuple(tuple(row[k] for row in rows) for k in range(len(rows[0])))
 

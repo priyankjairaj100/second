@@ -1,6 +1,6 @@
 # Fixed target and chart construction
 
-Updated 4 October 2026.
+Updated 4 October 2026, revision 6.
 This contract selects V_cert for the reference program.
 The constructor defines a project quantizer.
 It makes no numerical equality claim about Hugging Face or GPTQ.
@@ -63,7 +63,7 @@ A finite evaluator failure aborts the request before commit.
 Its digest also binds the exact quantizer and service proof modules.
 `TargetManifest.make_job` embeds this digest in the numerical contract.
 Thus, source changes also change the service manifest.
-`make_service` reconstructs the target and chart before use.
+`make_service` reconstructs the target and selected proof domain before use.
 It rejects edited parameters, grids, rules, directions, radii, precision, and source versions.
 These checks assume trusted source files and storage.
 They do not authenticate hostile program code.
@@ -72,7 +72,7 @@ They do not authenticate hostile program code.
 
 `build_chart` accepts only a decoder, generated target, and fixed recipe.
 It accepts no calibration corpus, calibration outputs, fitted factors, or deletion request.
-The chart digest binds the constructor source and exact directions.
+The domain digest binds constructor source and exact directions or interval endpoints.
 Thus, corpus independence follows from this constructor's input contract.
 It does not depend only on a supplied provenance sentence.
 
@@ -105,10 +105,43 @@ The optional `none` mode has zero rank.
 It supports only an unchanged finite ancestor prefix.
 Unsupported prefixes cause replay.
 
+## Parameter-box recipe
+
+The optional `grid-box` mode defines independent intervals for ancestor weight coordinates.
+Each interval contains the finite base value and every installed value from its frozen grid.
+Construction applies the decoder's binary64 conversion before selecting interval endpoints.
+The final quantization stage needs no interval because no calibration stage follows it.
+The recipe accepts only `radius=1`.
+It represents the complete fixed grid domain without affine directions.
+
+Every possible installed grid prefix belongs to this domain.
+Membership therefore avoids the affine representation failure described above.
+Membership does not establish a useful feature bound or an accepted decision certificate.
+
+`BoxResponseProvider` executes the same scalar graph with rank-zero interval jets.
+Each jet retains an ideal interval and a proved finite execution error.
+A nonconstant domain uses the midpoint of each feature interval as its anchor.
+Its coordinate error equals the interval half-width plus the finite execution error.
+The provider sums squared coordinate errors and rounds the square root upward.
+It stores one anchor Gram and six scalar error moments per group and stage.
+
+A domain containing only the finite base ancestors uses exact finite feature anchors.
+Their error is zero because identical ancestors execute the identical finite program.
+Other domains do not require a separate finite base feature evaluation.
+Proof failure marks the record descriptor unavailable and permits retained replay.
+Finite target failure during required replay still aborts the request.
+
+Midpoints minimize each supplied interval's maximum coordinate distance.
+They do not guarantee smaller Gram error or better decisions for every request.
+Uniform box errors need not shrink when the deletion size shrinks.
+See `docs/BOX_THEORY.md` for the proved statements and limits.
+
 ## Resource checks
 
 `preview_chart` counts resources before it allocates direction matrices.
-The preview reports rank, direction entries, aggregate entries, and scalar components per jet.
+The preview reports rank, domain entries, aggregate entries, and scalar components per jet.
+For `grid-box`, `direction_entries` counts stored interval endpoints.
+Its `domain_storage_kind` identifies these endpoint rationals.
 The preview also reports grid entries and the nominal packed size of quantized codes.
 The implementation currently stores code matrices as rationals.
 It does not produce the nominal packed artifact.
@@ -122,10 +155,12 @@ With rank `r` and stage input width `d`, each group stores:
 The final term counts the scalar remainder moments.
 The implementation uses the global chart rank at every stage.
 The preview sums all stages and multiplies by the group count.
+For `grid-box`, rank is zero and each stage stores `d**2 + 6` aggregate rationals per group.
+The domain stores two endpoints per relevant ancestor parameter.
 Coordinate mode allocates dense direction matrices.
-Its direction count is therefore the sum of squared ancestor matrix sizes.
+Its direction-entry count is the sum of squared ancestor matrix sizes.
 
-Default limits are 64 directions, one million direction entries, and five million aggregate rational entries.
+Default limits allow 64 directions, one million domain entries, and five million aggregate rational entries.
 The grid constructor also limits total grid entries to one million.
 `preview_chart` reports each exceeded chart limit.
 `build_chart` rejects the recipe before dense allocation when any chart limit fails.
@@ -136,8 +171,18 @@ Raising a limit requires an explicit resource decision.
 Counts exclude rational bit lengths, Python objects, record metadata, temporary values, and execution time.
 They are not memory guarantees.
 The service reconstructs inputs for validation and can temporarily hold duplicate structures.
-Checkpoint import already allocates parameters before this preview.
-The runner must apply separate checkpoint and process limits.
+The runner first applies a configuration-only plan before eager checkpoint import.
+That plan reads no tensor files.
+It counts the largest parameter-stage wrapper under the lazy execution schedule.
+Finite, affine, and box execution now allocate wrappers only for the currently accessed stage.
+The scalar operation order remains unchanged.
+Eager base parameters, feature activations, and temporary exact integers still require memory.
+Planning bytes are estimates, not proved bounds or measured peaks.
+
+The campaign worker separately enforces address-space, CPU, file-size, and wall-time limits.
+Address-space limits apply per process and do not measure physical memory.
+The direct single-run command does not create this worker boundary.
+Many ordinary checkpoints still exceed the default resource plan.
 
 ## API
 
@@ -148,7 +193,7 @@ from src.chart_construction import ChartRecipe, preview_chart, build_chart, make
 
 recipe = TargetRecipe(original_token_count=4096, bits=4, ridge=Fraction(1, 100))
 target = build_target(certified_decoder, recipe)
-chart_recipe = ChartRecipe(mode="stage-rtn")
+chart_recipe = ChartRecipe(mode="grid-box")
 preview = preview_chart(certified_decoder, target, chart_recipe)
 if not preview.feasible:
     raise ValueError(preview.over_budget)
@@ -166,6 +211,8 @@ Target and chart constructions provide canonical bytes and SHA-256 digests.
 
 No real checkpoint has passed this target and chart program yet.
 The first gate checks import, resource limits, and complete finite evaluation.
-The next gate checks useful chart membership and certificate coverage.
+The next gate checks useful proof bounds and certificate coverage.
+Affine recipes also require useful prefix membership.
+Grid-box membership alone does not close the coverage gate.
 Neither the constructor nor its correctness tests establish model quality or latency.
 Experiment claims must include preparation, validation, retained replay, output, and state costs.

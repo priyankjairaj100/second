@@ -1,0 +1,155 @@
+Independent adversarial preparation review, revision 6
+Date: 4 October 2026
+Reviewer role: separate implementation review agent
+
+Scope
+
+This review inspected software and mathematical contracts.
+No research experiment, model download, or empirical dataset was used.
+Software fixtures do not establish model quality, practical coverage, or latency.
+The reviewer owns tests/test_adversarial_v6.py and this review record.
+Other agents own the reviewed implementation files.
+
+Reviewed mechanisms
+
+1. Parameter boxes and finite feature error
+
+BoxResponseProvider checks every installed ancestor coordinate against fixed intervals.
+Missing stage intervals require equality with the finite base weights.
+Grid construction encloses binary64-installed values, including conversion error at rational endpoints.
+Queries use the complete dependency list supplied by the certified decoder.
+
+Nonconstant domains use the midpoint of each ideal feature interval.
+Each coordinate error includes its interval half-width and its proved finite execution error.
+The Frobenius bound squares these coordinate bounds before summation.
+The aggregate Gram bound includes both cross terms and squared feature error.
+Constant base domains use exact finite feature anchors with zero error.
+That shortcut requires every relevant ancestor interval to equal its finite base coordinate.
+
+The reviewer tested independent coordinate changes outside the prior affine chart.
+The finite feature intervals enclosed both tested changes.
+Both Loewner sides of the resulting Gram enclosure passed exact PSD checks.
+These finite examples test implementation paths; they do not replace the conditional analytic proof.
+
+Lazy stage wrappers preserve the executor's scalar operation order.
+The first feature stage constructs no later parameter wrappers.
+The implementation still retains the eager base checkpoint representation.
+
+2. Matched controls and telemetry
+
+The certified, fixed-reference, base-reference identity-only, and forced replay modes retain the same target.
+They also retain the same canonical state construction.
+The identity-only mode compares ancestors with fixed constructor reference weights.
+It is not an original-quantized-model invariance baseline.
+Its additional restriction can only remove proof attempts.
+
+The fixed-reference mode bounds the omitted tangent response with a triangle inequality.
+It retains finite evaluation and derivative approximation errors.
+It changes the proposal without changing the sequential target.
+Trusted intrinsic moments remain an explicit premise.
+
+Exclusive timing subtracts nested child intervals from each parent interval.
+Repeated category names do not duplicate elapsed time.
+Exceptions restore the active telemetry context.
+Telemetry remains instrumented diagnostic timing.
+External reads, output commits, and process setup require their declared outer ledgers.
+
+3. Original-state request selection
+
+Score construction uses only the original model and original record features.
+It verifies the reconstructed original stage codes before ranking requests.
+It never invokes a deletion repair.
+The exact inverse follows the declared triangular factorization.
+A nonzero-energy midpoint yields infinite margin sensitivity.
+A zero-leverage record retains zero difficulty under that case.
+The reviewer tested both cases together.
+
+The difficult selector defines a stress proxy.
+It does not prove that selected requests have low acceptance or high latency.
+The SHA256 stream has a declared deterministic implementation.
+Uniform sampling claims require the stated ideal independent-stream model.
+Position balance does not establish equal cache conditions.
+Phase pools reject shared normalized text even when identifiers differ.
+
+4. Worker limits and durable outcomes
+
+The worker uses a direct argument list without shell evaluation.
+Linux affinity and POSIX resource limits apply before the requested executable starts.
+RLIMIT_AS bounds virtual address space per process.
+RLIMIT_CPU bounds CPU time per process.
+The parent limits wall time and terminates ordinary process-group descendants.
+The worker controller seals failed outcomes as terminal records.
+A sealed failure remains a failure on resume.
+
+The reviewer found two integrity defects during implementation.
+Both defects were reported to the owner and corrected.
+
+Defect A: The first version accepted unverified limit acknowledgments.
+The correction verifies the request digest, actual limits, affinity, environment, PID, and process group.
+Invalid acknowledgments produce sealed failure outcomes.
+The independent test changes the acknowledgment after worker startup.
+The resulting failure remains unchanged on resume.
+
+Defect B: Campaign resume checked worker record hashes without verifying their referenced artifacts.
+The correction loads every referenced worker store through completed-state verification.
+This includes failed worker outcomes.
+An independent test corrupts a failed worker artifact and confirms campaign resume rejection.
+
+Campaign manifests bind executable source hashes.
+The protocol binds the canonical campaign inventory hash.
+The inventory clears only the protocol digest when constructing each manifest binding.
+The executor separately checks the final raw protocol and manifest hashes.
+This resolves the protocol/inventory hash cycle without omitting scientific inputs.
+
+5. Analysis contract separation
+
+The root agent identified a possible mixing of response controls.
+The reviewer confirmed that the earlier analyzer accepted different controls under one configuration identifier.
+It also accepted different chart and service manifests under that identifier.
+Five independent tests now cover rejection and missing-run preservation.
+
+The corrected analyzer checks mode, chart hash, and service hash within each observed configuration.
+It checks every supplied plan binding against its observation.
+Unknown optional hashes do not remove missing planned runs from failure denominators.
+The analysis summary records the checked mode and optional hashes.
+Each scientifically distinct control requires a separate configuration identifier.
+
+Independent checks
+
+At review time, tests/test_adversarial_v6.py contains sixteen independent tests.
+All sixteen passed.
+The box-provider, telemetry, and analysis suites also passed with these tests.
+That targeted invocation ran 43 tests in total.
+The separate worker suite passed twelve tests.
+The final repository validation record determines the final suite result and source hashes.
+
+Open limits
+
+The parameter box removes affine-span rejection for covered finite grid values.
+It does not establish useful decision certification.
+Its uniform feature error need not shrink with deletion size.
+The normalized aggregate error can remain positive as the corpus grows.
+Midpoint optimality concerns each supplied coordinate interval.
+It does not prove globally optimal Gram error or better certification for every request.
+
+The indexed-fresh solver can use the same retained statistics and proof planner.
+The present software still establishes no deletion-specific solver advantage.
+Index maintenance savings require separate measurement and cost accounting.
+
+A new process isolates each complete comparison.
+Methods inside that comparison still use warm objects and uncontrolled operating-system caches.
+This does not implement per-arm process-cold service timing.
+
+Per-process CPU limits do not enforce cumulative phase budgets.
+They also do not bound aggregate descendant CPU consumption.
+The process-group cleanup is not containment for hostile programs.
+
+Inventory validation checks supplied entries and their frozen request membership.
+Confirmation additionally requires the complete declared configurations, roots, requests, and repetition product.
+Development can use declared smaller inventories.
+Actual source acquisition, tokenization, and phase separation still require verified real inputs.
+
+Repeated deletion execution and complete-deletion campaign controls remain outside the current runner.
+The stronger original-model invariance baseline remains open.
+Large-checkpoint memory, successful finite evaluation, useful quality, and speed remain unmeasured.
+No reliable full-model speedup follows from this preparation revision.

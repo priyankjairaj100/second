@@ -230,3 +230,48 @@ The experiment-ready gate remains open.
 Feasible execution, complete source/token manifests, stress-selector equations, worker limits, inventory scheduling, and required diagnostics remain pending.
 Practical coverage, complete speed, lifetime value, and NLP quality remain unmeasured.
 No universal reliable speedup or final publication readiness is claimed.
+
+
+## Revision 6 completed preparation (4 October 2026)
+
+Latest instruction: "What are the remaining to-do items? Please proceed on them now."
+The previous verified commit is b662d2c7ed7f4799029ff1093e93acf0d400699c.
+This revision preserves every earlier evidence distinction.
+
+The fixed-box provider covers installed frozen-grid ancestor parameters without affine derivatives.
+Its hybrid anchor uses interval midpoints for varying domains and exact finite features for fixed-base domains.
+Midpoints minimize the rectangular interval feature envelope.
+They remove a separate finite anchor evaluation for varying domains.
+They do not guarantee better Gram bounds, acceptance, or speed.
+The provider retains exact intrinsic deletion state and the V_cert target.
+Lazy parameter wrappers reduce temporary construction without changing operation order.
+The new report sections contain B1–B8, storage counts, and explicit limits.
+
+Execution preparation adds worker limits, exclusive telemetry, source-bound inventories, and complete confirmation products.
+Original-only concentration and difficulty scores define prospective stress requests.
+The score producer verifies original codes and charges its complete construction.
+Mechanism controls include certified, fixed-reference, full-replay, and base-reference identity-only modes.
+The last control is not an original-model invariant-feature cache.
+The complete quadratic control remains open.
+
+All 261 correctness tests pass.
+The first integrated suite exposed an outdated timeout stub lacking the new telemetry keyword.
+The stub now accepts optional keywords; its timeout assertion remains unchanged.
+The initial failure and final pass logs are preserved separately.
+No research observation follows from software test runtimes.
+
+The report has 31 pages.
+The register closes C03, E05, and F05 at their stated preparation scope.
+It now contains 24 completed and 54 open required items, plus 12 conditional extensions.
+The preparation gate remains open.
+
+Process isolation applies to each comparison, not each method.
+Method arms remain warm and share process history.
+Operating-system caches remain uncontrolled.
+Cumulative phase CPU caps and complete committed timing remain open.
+Real inputs, useful model feasibility, token artifacts, actual partitions, and the final inventory remain absent.
+Sequence/full-deletion laws exist, but their campaign execution remains blocked.
+
+No experiment, model download, dataset download, or cloud job ran.
+No reliable speedup or practical coverage claim is established.
+The user still authorizes saving all substantive files and restart context to the repository.

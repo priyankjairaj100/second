@@ -1,7 +1,7 @@
 # Remaining research program
 
 Updated 4 October 2026.
-Revision 5 preparation builds on implementation commit `aa2399f3e5324aba54ab0506d14513b3b9610637`.
+Revision 6 preparation builds on commit `b662d2c7ed7f4799029ff1093e93acf0d400699c`.
 This register covers the path from the current reference implementation to a submitted ACL paper.
 Every unchecked item remains open.
 This implementation update does not resume experiments.
@@ -10,8 +10,9 @@ Unchecked items can contain partial work; see the progress table below.
 Synthetic empirical datasets remain deferred.
 
 The main unresolved question is practical value on real language models.
-The provider currently requires exact chart membership for installed ancestor weights.
-A small chart can reject most quantized prefixes.
+The affine provider requires exact chart membership for installed ancestor weights.
+The new fixed-box provider covers frozen-grid prefixes without derivatives.
+Coverage does not establish useful numerical bounds or certificate acceptance.
 Correct replay handles rejection, but it can remove the expected speed benefit.
 
 **Completed baseline**
@@ -27,7 +28,10 @@ Correct replay handles rejection, but it can remove the expected speed benefit.
 - Added the v5 target/chart constructors, bounded reload, fair indexed solver, and atomic local runner.
 - Added failure-aware analysis, a prospective protocol, and the T1–T7 publication sequence.
 - Passed 197 correctness tests, including a fresh-process reload check.
-- Updated the report to 28 pages and corrected partial-evaluator fallback wording.
+- Updated the v5 report to 28 pages and corrected partial-evaluator fallback wording.
+- Added fixed-box certificates, midpoint anchors, and lazy parameter wrappers in revision 6.
+- Added worker limits, exclusive telemetry, mechanism controls, request laws, and bound campaign inventories.
+- Extended the report with box proofs, storage counts, limits, and execution boundaries.
 
 These results need no repetition without a concrete change or unresolved risk.
 No current real-model benchmark supports a practical speed claim.
@@ -97,8 +101,9 @@ No task authorizes external compute or hardware from another project.
   Evidence: src/chart_construction.py supplies deterministic stage-rtn, coordinate, and none recipes with provenance and resource counts.
 - [ ] **C02. Establish chart coverage as the first research gate.** Measure the complete installed prefix against the fixed chart.
   Completion: quantify residuals and radius violations; small deletion size is never used as a substitute for this check.
-- [ ] **C03. Define the response when chart coverage fails.** Choose residual certificates, independent charts, another sound construction, or a narrower claim.
+- [x] **C03. Define the response when chart coverage fails.** Choose residual certificates, independent charts, another sound construction, or a narrower claim.
   Completion: the selected route has sound bounds and canonical deletion semantics before confirmation.
+  Evidence: Fixed parameter boxes have intrinsic additive state and reviewed finite bounds; useful acceptance remains unmeasured.
 - [ ] **C04. Set feasibility thresholds before tuning.** Include exactness, coverage, memory, quality, preparation, and full service cost.
   Completion: written thresholds determine whether to continue, redesign, or narrow the paper.
 - [ ] **C05. Record the complete coverage funnel.** Track chart fit, available descriptors, finite bounds, accepted stages, replayed groups, and model completion.
@@ -139,8 +144,9 @@ No task authorizes external compute or hardware from another project.
   Completion: changed dependencies cause exact replay under the same target.
 - [ ] **E04. Add fixed-reference and response baselines.** Compare constant summaries, compact linear responses, and quadratic responses where affordable.
   Completion: each method uses sound bounds and reports its full preparation and storage cost.
-- [ ] **E05. Add replay and verifier controls.** Compare full replay and the existing replay heuristic; isolate the cost of certification.
+- [x] **E05. Add replay and verifier controls.** Compare full replay and the existing replay heuristic; isolate the cost of certification.
   Completion: every control returns the same target or carries an explicit diagnostic-only label.
+  Evidence: Certified and full-replay modes share the target; exclusive telemetry isolates proof and replay work.
 - [x] **E06. Decide the claim if indexed fresh ties repair.** Separate gains from indexing from gains specific to deletion.
   Completion: the paper does not claim a strict deletion advantage that the fair comparison cannot support.
   Evidence: The current planner ignores old codes; claim index maintenance value separately from deletion-specific solving.
@@ -156,8 +162,9 @@ No task authorizes external compute or hardware from another project.
   Completion: record dataset versions, licenses, record identifiers, preprocessing, and token manifests.
 - [ ] **F04. Separate development and confirmation.** Keep calibration, tuning, held-out evaluation, and final request selection distinct.
   Completion: record overlap checks and freeze all data-dependent method choices before confirmation.
-- [ ] **F05. Define the deletion workload.** Include random, source-based, contiguous, concentrated, repeated, and difficult requests.
+- [x] **F05. Define the deletion workload.** Include random, source-based, contiguous, concentrated, repeated, and difficult requests.
   Completion: each request law, fraction, sequence, and selection rule is recorded before final analysis.
+  Evidence: request_workload.py defines original-only scores, random/source/contiguous laws, sequences, and controls. Execution limitations remain explicit.
 - [ ] **F06. Define the quantization grid.** Vary supported precision, calibration size, context length, ridge, grouping, and chart settings.
   Completion: primary comparisons and sensitivity studies are distinct; unsupported branches remain excluded.
 - [ ] **F07. Define independent research units and analysis.** Use independent calibration roots and requests; separate them from timing repetitions.
@@ -277,30 +284,35 @@ No task authorizes external compute or hardware from another project.
 | CEX11 | Add hostile-storage authentication | The threat model includes hostile state. Hash matching alone does not satisfy this claim. |
 | CEX12 | Study a deletion-native quantizer | Sequential repair fails the feasibility gate. Treat the alternative as a separate target and evaluate its quality. |
 
-**Revision 5 partial work and unresolved preparation**
+**Revision 6 partial work and unresolved preparation**
 
-There are 21 completed required items and 57 open required items.
+There are 24 completed required items and 54 open required items.
 The 12 conditional extensions remain separate.
+This revision closes C03, E05, and F05 at their stated preparation scope.
 Software completion does not close the experiment-ready gate.
 
 | Open items | Preparation now present | Work still required |
 | --- | --- | --- |
-| A03, F02–F04 | Strict token-manifest schema and source metadata catalog | Actual source/tokenizer pins, boundaries, licenses, partitions, and local validation |
-| A06, C06 | Config-only resource plan and local budget | Resource-feasible supported workload and target-preserving performance route |
-| C02–C03 | Exact membership checks and sound replay | Useful coverage evidence and a selected response to practical failure |
-| C04 | Explicit prospective continuation thresholds | Freeze executable scope and justify feasible budgets before tuning |
-| C05 | Stage routes, operation counts, and stable run failure outcomes | Full per-stage chart, bound, margin, and rejection diagnostics |
-| D04–D06 | External service timers, allocation peaks, sizes, and warm execution label | Disjoint internal costs, complete claimed boundary, independent memory peaks, controlled cold/warm arms |
-| E03–E05 | Shared compact planner and forced full-replay mode | Identity-only control, matched response tiers, and integrated ablation matrix |
-| F05–F06 | Request families and quantization recipe schema | Exact stress-score equations, final settings, and planned inventory |
-| F07 | Root-cluster paired analysis and prospective sample count | Development-based precision justification and frozen sampling inventory |
+| A03, F02–F04 | Source revisions, strict token schema, document rules, phase overlap checks | Actual weights, tokenizer hashes, prepared text, licenses, partitions, and local validation |
+| A06, C06 | Config planning, rank-zero boxes, lazy wrappers, limited workers | Resource-feasible supported checkpoint and target-preserving performance route |
+| C02, C04 | Domain inclusion proof and prospective thresholds | Useful numerical coverage and frozen feasible scope before tuning |
+| C05 | Stable route/rejection events and exclusive cost spans | Complete per-stage numerical reasons, margins, and bound decomposition |
+| D04–D06 | Component timers, process caps, allocation peaks, output sizes, and saved method order | Complete commit/cleanup boundary, arithmetic size, per-arm peaks, required cold/warm controls, and phase CPU caps |
+| E03 | Base-reference identity-only control | Original quantized-model invariant-feature cache with fair preparation/state accounting |
+| E04 | Fixed-reference and compact response controls | Affordable full quadratic control and matched complete preparation/storage accounting |
+| F06 | Quantization recipes and mechanism labels | Final primary settings, sensitivity matrix, and selected proof construction |
+| F07 | Root sampling, counterbalanced order, complete product validation, and analysis plans | Development-based precision justification and actual frozen empirical inventory |
+| G04, I04 | Sequence/full-deletion definitions and service-level canonical state | Campaign execution from preceding states, complete-deletion runner support, and real repeated checks |
 | L01, L05 | Source hashes, commands, updated docs, and repository checkpoint | Final environment pin, submission release, and release tag after evidence |
 
 The runner measures instrumented warm diagnostic costs.
-It cannot yet validate the protocol's complete-service reliable-speed gate.
+One comparison gets one new limited process, but its methods share warm state.
+Operating-system caches remain uncontrolled.
+Final controller/result commit remains outside the method timing boundary.
+Cumulative phase CPU caps remain unenforced.
+The present timing cannot validate complete-service reliable speed.
 The current protocol blocks research execution while paused.
-Ordinary candidate models exceed default reference planning limits.
-No resource limit may be raised silently to bypass that finding.
+No resource limit may be raised silently to bypass an unfavorable plan.
 
 **Decision gates**
 
@@ -308,11 +320,12 @@ No resource limit may be raised silently to bypass that finding.
 | --- | --- | --- |
 | G0: Experiment ready | Frozen contracts, protocol, runner, fair baselines, costs, and failure handling | Complete P0 work; keep experiments paused until authorized |
 | G1: Exactness | Correct imports, valid finite execution, fresh-identical model and canonical state | Resolve mismatches before interpreting speed |
-| G2: Coverage | Useful accepted requests with genuine changed ancestors at an affordable chart rank | Improve certificates or narrow the target |
+| G2: Coverage | Useful accepted requests with genuine changed ancestors under an affordable proof construction | Improve certificates or narrow the target |
 | G3: Full service value | Savings survive complete costs and the equally indexed comparison | Change the performance claim or redesign the method |
 | G4: NLP value | Meaningful quality and task results on held-out real text | Revise the supported application or reconsider venue fit |
 | G5: Submission ready | Frozen evidence, coherent paper, clean reproduction, and current venue checks | Resolve missing evidence before submission |
 
-The immediate order is resource-feasible execution, complete input/selector manifests, controlled instrumentation, and the remaining baseline controls.
+The immediate order is feasible checkpoint execution, real input manifests, complete measurement controls, and the remaining baselines.
+Original-only selector definitions and campaign membership checks are now implemented.
 The first authorized study should resolve G1 and G2 before expanding the benchmark matrix.
 Do not promise a universal speedup or treat another conditional theorem as measured reliability.

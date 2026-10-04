@@ -34,9 +34,21 @@ The PDF build additionally requires a local LaTeX installation and the packages 
 **Revision 4:** compact group state, automatic certified transformer response bounds, and local GPT-2 safetensors loading are implemented. The certified provider defines a separate numerical target, V_cert. It uses rational nonlinear enclosures, mixed Hessian bounds, and explicit finite-error propagation. Unsupported chart changes cause retained replay.
 
 **Revision 5:** fixed target/chart constructors, bounded state loading, a fair indexed solver, atomic local runner, and analysis are implemented.
-The full software suite passes 197 correctness tests.
+That checkpoint passed 197 correctness tests.
 The prospective protocol keeps failures and missing planned requests in the workload.
 The report now conditions fallback completion on successful finite evaluation.
+
+**Revision 6:** fixed-box certificates remove the affine-span requirement for frozen-grid prefixes.
+Hybrid midpoint anchors reduce interval feature error and avoid a separate finite evaluation when parameters vary.
+Lazy parameter wrappers reduce temporary construction.
+Workers enforce comparison-process limits.
+Original-only workload scores, inventory checks, exclusive telemetry, and four mechanism controls are implemented.
+The full software suite passes **261 correctness tests**.
+The report has **31 pages**.
+The register contains **24 completed and 54 open required items**, plus 12 conditional extensions.
+
+Read the [box theory](docs/BOX_THEORY.md), [execution controls](docs/EXECUTION_CONTROL.md), and [workload contract](docs/WORKLOAD_CONTRACT.md).
+The current prospective protocol is [version 2](configs/protocol_v2.json).
 
 Repair and indexed fresh use the same planner.
 The planner ignores the old model.
@@ -46,7 +58,7 @@ Report indexing savings separately from solver improvements.
 The scalar implementation does not establish practical coverage or speed.
 Ordinary model candidates exceed default resource planning limits.
 The runner provides warm instrumented diagnostic timing.
-Source pins, resource-feasible execution, enforced limits, detailed instrumentation, and matched ablations remain open.
+Real input artifacts, feasible checkpoint execution, complete measurement controls, and remaining baselines remain open.
 Correctness tests are not research benchmarks.
 Production GPU kernels remain future work.
 
