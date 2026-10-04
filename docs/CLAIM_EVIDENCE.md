@@ -1,9 +1,9 @@
 # Claim and evidence map
 
-Revision 8. Date: 4 October 2026.
+Revision 9. Date: 4 October 2026.
 Read this document with `PUBLICATION_THEORY.md` and the prospective experiment protocol.
-The current protocol is `configs/protocol_v4.json`; research remains paused.
-The 35-page revision 7 report PDF is unchanged. `REVISION_8.md` supplies the new implementation note.
+The current protocol is `configs/protocol_v5.json`; research remains paused.
+The 35-page revision 7 report PDF is unchanged. `REVISION_9.md` supplies the current implementation note.
 
 The map separates derivations, executable checks, and empirical evidence.
 Manual mathematical review is not proof-assistant verification.
@@ -26,12 +26,12 @@ Correctness fixtures are not benchmark observations.
 | Interval verification adds exact certificate opportunities. | R1–R4; integrated spectral-or-interval policy; nonpositive-scale fixtures. | Real-model coverage and total extra proof cost. | Sound added route under valid covariance bounds and the fixed ridge. |
 | Narrower covariance boxes preserve fixed-candidate acceptance. | R5; exact interval implementation and strict rational witness. | A complete multi-domain bank remains unimplemented. | Same candidate, target, ridge, arithmetic schedule, and completed operations only. |
 | Original-model Grams support exact identity caching. | Separate identity-cache service, transitive dependency checks, canonical refresh, and fixtures. | Real retained-pass avoidance and complete costs. | All required ancestors must match the cached model exactly. |
-| Sequential studies consume preceding committed state. | Source-bound sequence campaigns, immutable lineage, restart, full-deletion controls, and complete planned outcomes. | Real ordered workloads and complete-clock lifetime comparisons against model-only fresh. | One preparation per sequence; its step methods remain warm in one limited worker. |
-| Method workers execute in independent processes. | Isolated campaign inventory, confirmation-product checks, distinct workers, receipts, and restart tests. | Actual frozen empirical inventory, eligible complete clocks, and meaningful real timings. | Process isolation with uncontrolled operating-system caches. |
+| Sequential studies consume preceding committed state. | Measured sequences bind the preceding state-producing child receipt and artifacts; research lineage and oracle checks remain separate. | Real ordered workloads and lifetime observations. | Separate measured methods, one original preparation per system, and every ordered request. |
+| Method workers execute in independent processes. | Four-method measured inventories, complete confirmation products, distinct limited workers, sealed observers, runtime contracts, and restart checks. | Actual frozen empirical inventory and real timings. | Process isolation with uncontrolled operating-system caches. |
 | Phase budgets restrict worker admission. | Locked protocol-scoped ledger, reservations, settlement, explicit feasibility phase, and overrun tests. | Any broader project accounting or physical containment guarantee. | Trusted worker admission only; no global physical CPU ceiling. |
-| Ordinary model-only requantization has a matched target control. | `model_fresh.py` constructs all sequential codes without a chart or deletion index. | Frozen model-only confirmation inventory and matched lifetime dispatch. | Same `V_cert` model target, different output contract from canonical-state repair. |
-| Complete local transactions have an explicit clock. | External observer includes child commits, cleanup, output checks, and a disjoint outer partition. | Integrate this clock into primary campaign and lifetime execution and analysis. | Observer bootstrap and final observer receipt remain outside the boundary; comparison clocks are not method clocks. |
-| Numerical diagnostics expose certificate decisions and transient rational endpoints. | Bounded stage funnel and current-thread Fraction-allocation audit. | Opaque provider causes, hidden integer/native intermediates, lifetimes, and separately instrumented children. | Partial observability only; profiled timings are ineligible for clean speed analysis. |
+| Ordinary model-only requantization has a matched target control. | Sequential model-only construction, inventory membership, four-method scheduling, matched complete clocks, and lifetime dispatch. | Actual empirical inventory and observations. | Same `V_cert` model target, different output contract from canonical-state repair. |
+| Complete local transactions have an explicit clock. | External observers, primary campaigns, matched sequences, clean profile checks, and artifact-aware analysis use the same complete boundary. | Real timing observations and workload/hardware controls. | Observer bootstrap and final receipt remain outside the boundary; nested durations are not added again. |
+| Numerical diagnostics expose certificate decisions and transient rational endpoints. | Bounded stage funnel and current-thread Fraction-allocation audit. | Unavailable primitive causes, hidden integer/native intermediates, lifetimes, and separately instrumented arithmetic children. | Partial observability only; profiled timings are ineligible for clean speed analysis. |
 | Repair avoids retained reads. | One changed-prefix fixture; conditional stage certificate. | Coverage over fixed real workloads, including failure cases. | Some accepted requests. No universal or practical rate claim. |
 | Repair reduces complete request latency. | T7 states sufficient cost conditions. No benchmark evidence. | Paired complete timing against ordinary model-only fresh and equally indexed fresh, with full-state fresh as the state oracle. | Withhold until measured. |
 | Repair provides reliable speedup. | A defined reliability estimand; no measured success probability. | Completion, joint speed events, tails, uncertainty, and full failure counts. | Withhold until measured on the frozen request law. |
@@ -75,7 +75,8 @@ Several later matrices start on-grid.
 Do not present this fixture as dense practical model repair.
 
 `docs/VALIDATION_V7.md` preserves the completed revision 7 validation record.
-The final revision 8 log and source hashes recorded in `docs/VALIDATION.md` govern current validation once sealed.
+`docs/VALIDATION_V8.md` preserves revision 8.
+The revision 9 log and source hashes recorded in `docs/VALIDATION.md` govern the current validated source.
 Do not carry a historical test count forward as a claim about changed source.
 `theory_revision/implementation_review_v4.txt` records independent source review.
 The review found no unresolved defect under the stated contracts at that checkpoint.
@@ -106,7 +107,9 @@ Record the following diagnostic groups:
 The revision 8 bounded funnel exports available domain and descriptor outcomes, finite bounds,
 sampled cell margins, replay counts, actual feature evaluations, and model completion.
 Its retained first/last details, disposition counts, omission counts, and truncation flags have explicit caps.
-Opaque provider-internal fit, Hessian, and denominator failures and unavailable decompositions remain unknown.
+Revision 9 adds available affine-fit causes and finite/center/curvature/gradient bounds.
+Provider failure phases retain bounded exception types and reasons.
+Unavailable primitive decompositions remain unknown; upper bounds are not realized errors.
 `CERTIFICATE_DIAGNOSTICS.md` defines this partial C05 scope.
 
 The arithmetic audit records constructed Fraction endpoint bit lengths in the current thread and process.
@@ -131,7 +134,8 @@ Separate solver-only timing from the complete request.
 The complete request includes deleted evidence extraction, validation, state maintenance, and output.
 Use the external observer's declared boundary for eligible complete transactions.
 It covers child-controller commits, cleanup, and output validation; its own final receipt is excluded.
-Primary campaign and matched lifetime integration of this boundary remain unfinished (D04).
+Primary campaigns, matched lifetime dispatch, and artifact-aware analysis now use this boundary.
+Diagnostic internal attribution must pass the separate disjoint-window checks before use.
 Shared research oracle checks must be accounted separately and symmetrically.
 Never reinterpret a whole comparison clock as one method's latency.
 
@@ -243,7 +247,7 @@ The multi-domain certificate bank remains a design theorem and standalone inters
 No real checkpoint, empirical acceptance, NLP quality, lifetime benefit, or reliable speedup is established.
 Experiments remain paused.
 
-## Revision 8 current execution evidence
+## Historical revision 8 execution evidence
 
 `configs/protocol_v4.json` remains prospective and paused.
 Frozen isolated and sequence campaign dispatch are implemented, including complete planned outcomes,
@@ -273,3 +277,23 @@ preparation, and a complete three-request lifetime gain against model-only fresh
 No empirical gate has passed. C05, D04, and D05 remain partial under their original criteria.
 Real-model feasibility, final settings, independent sources, statistical precision, useful quality,
 and reliable full-model speedup remain unmeasured.
+
+
+## Revision 9 current execution evidence
+
+`configs/protocol_v5.json` remains prospective and paused.
+Four-method inventories include the ordinary model-only control and actual ordered lifetime transactions.
+Fresh preparations remain distinct across model-only and canonical-state systems.
+Repair and indexed fresh receive identical reusable information.
+
+Verified analysis rereads the bound observer, child, model, state, runtime, and input artifacts.
+Unsealed parents, reused observations, missing planned slots, and diagnostic profiles cannot become complete clean primary ratios.
+The sole registered primary configuration and comparator govern confirmation eligibility.
+Root-clustered inference does not establish that the actual roots are independent.
+
+The archive-to-feasibility bridge derives available target graphs, record groups, replay coverage, finite quality, resources, and complete lifetime costs.
+Missing provenance, accounting, or diagnostic completeness remains explicit.
+Conditional arithmetic checks and successful software fixtures do not establish empirical attainment or authorize research execution.
+
+The manuscript draft is prospective. Its evidence slots cannot be filled with fixture timings or historical unrecovered measurements.
+No practical speed, useful real-model coverage, quality, novelty priority, or submission readiness is established.

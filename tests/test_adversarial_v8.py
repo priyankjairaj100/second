@@ -227,7 +227,7 @@ class AdversarialTransactionTests(unittest.TestCase):
             store.finish({"schema": "isolated-child-result-v1", "status": "complete", "role": "quality",
                           "outcome": {"status": "complete"}})
             store.close()
-            with self.assertRaisesRegex(ValueError, "canonical-state role"):
+            with self.assertRaisesRegex(ValueError, "output contract differs"):
                 _validate_output(root, "canonical_state")
 
 

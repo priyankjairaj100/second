@@ -60,7 +60,7 @@ def _initial_state(service, records, directory, identity, *, require_complete=Fa
             def prepare():
                 original = service.fresh(records, telemetry=telemetry)
                 with telemetry.span("artifact_output"):
-                    return _commit_state(store, "original", original)
+                    return _commit_state(store, "original", original, telemetry=telemetry)
             info, metrics = measure(prepare)
             complete = store.finish(dict(schema="calibration-sequence-initial-v1", status="complete",
                 setup=dict(info, **metrics, service_telemetry=telemetry.payload())))

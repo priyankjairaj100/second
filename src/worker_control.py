@@ -239,6 +239,7 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None,
                            "interrupted" if isinstance(exc, (KeyboardInterrupt, SystemExit)) else "launch_failed",
                            "type": type(exc).__name__, "message": str(exc)}
             finally:
+                cleanup_start = time.perf_counter_ns()
                 if process is not None:
                     _cleanup(process, limits.termination_grace_seconds)
                 cleanup_end = time.perf_counter_ns()
@@ -247,7 +248,7 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None,
                 # to partition controller overhead without adding nested times.
                 record["timing_boundary"] = {
                     "clock": "time.perf_counter_ns_same_controller_process",
-                    "start_ns": started, "cleanup_end_ns": cleanup_end,
+                    "start_ns": started, "cleanup_start_ns": cleanup_start, "cleanup_end_ns": cleanup_end,
                     "excluded_tail": "CPU settlement, log summaries, acknowledgment validation, receipt commit and store close"}
                 if process is not None:
                     outcome["returncode"] = process.returncode

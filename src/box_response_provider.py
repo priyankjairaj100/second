@@ -210,20 +210,32 @@ class BoxResponseProvider:
         return self._intrinsic_moments(record, stage, quadratic=True)
 
     def _intrinsic_moments(self, record, stage, *, quadratic):
+        from .service_telemetry import provider_diagnostic
         tokens = self.decoder.decode_payload(record.payload)
+        proof_phase = 'domain_identity_check'
         try:
             if self._base_only_domain(stage.stage_id):
                 # Identical installed ancestors execute the identical finite program.
+                proof_phase = 'fixed_base_features'
                 anchor = self.decoder.stage_features(stage.stage_id, tokens)
                 epsilon = ZERO
             else:
+                proof_phase = 'box_feature_enclosure'
                 region = self.feature_enclosures(stage.stage_id, tokens)
                 anchor = tuple(tuple((bound.value.lo + bound.value.hi) / 2 for bound in row) for row in region)
+                proof_phase = 'box_error_envelope'
                 square = sum(((bound.value.hi - bound.value.lo) / 2 + bound.error) ** 2
                              for row in region for bound in row)
                 epsilon = dyadic_sqrt_upper(square, self.box.precision_bits)
-        except (ArithmeticError, ValueError, OverflowError):
+        except (ArithmeticError, ValueError, OverflowError) as exc:
+            provider_diagnostic(stage.stage_id, 'provider_extraction', build=lambda cap: {
+                'status': 'unavailable', 'proof_phase': proof_phase,
+                'failure_type': type(exc).__name__, 'reason': str(exc)})
             return None
+        provider_diagnostic(stage.stage_id, 'provider_error_components', build=lambda cap: {
+            'status': 'available', 'provider': 'parameter_box', 'proof_phase': proof_phase,
+            'uniform_feature_error': epsilon, 'record_content_sha256': record.content_digest,
+            'precision_bits': self.box.precision_bits, 'numerical_values_are_upper_bounds': True})
         contract = self.contracts[stage.stage_id]
         make_moments = record_moments if quadratic else linear_record_moments
         response = make_moments(contract.response_basis, record.record_id, record.content_digest, (anchor,))

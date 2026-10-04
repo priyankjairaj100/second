@@ -1,6 +1,6 @@
 # Prospective empirical protocol
 
-Version: 4. Date: 4 October 2026.
+Version: 5. Date: 4 October 2026.
 
 This document reconstructs the empirical plan from the current implementation.
 It does not recover the missing earlier protocol.
@@ -8,8 +8,8 @@ No empirical observations accompany this document.
 Experiments remain paused.
 Software correctness fixtures remain separate from research evidence.
 
-`configs/protocol_v4.json` stores the current numerical planning choices.
-Versions 1 through 3 preserve earlier preparation plans.
+`configs/protocol_v5.json` stores the current numerical planning choices.
+Versions 1 through 4 preserve earlier preparation plans.
 All versions retain the compatible `calibration-protocol-v1` schema.
 The version field distinguishes their content.
 These choices express project goals.
@@ -39,7 +39,8 @@ The complete-state correctness oracle remains `direct_fresh`.
 Those output contracts answer different questions.
 A gain against full-state reconstruction alone cannot establish faster ordinary requantization.
 A tie against equally indexed fresh prevents a deletion-exclusive solver claim.
-The ordinary model-only confirmation inventory remains unimplemented.
+The measured primary and ordered-sequence inventories now authorize model-only confirmation only through actual frozen membership and exact live phase admission.
+No real empirical inventory has been frozen.
 No current implementation result establishes a reliable speedup.
 
 ## 2. Frozen numerical target
@@ -167,13 +168,12 @@ Controller CPU and unrelated processes remain outside this worker ledger.
 These sizes are prospective targets.
 They do not establish feasible memory or runtime.
 Use one primary checkpoint before expanding the model matrix.
-The preflight comparison has a 15-minute wall deadline.
-Later comparisons have a 60-minute wall deadline.
-For the current campaign, these deadlines cover preparation and all methods inside one comparison process.
-The separate method-process runner applies explicit limits to each worker.
-Its preparation, method, and requested quality workers require separate reservations.
-Choose and freeze this execution mode before collecting timing data.
-The proposed CPU limits are 900 and 3,600 seconds per comparison process.
+The proposed preflight and feasibility worker deadline is 15 minutes.
+Later workers have a proposed 60-minute deadline.
+The measured primary path applies these limits separately to each preparation, method, and requested quality worker.
+Each worker requires its own reservation; the observer and campaign controller remain outside that child CPU allowance.
+The proposed CPU limits are 900 and 3,600 seconds per worker.
+These choices do not establish real-model feasibility, and final affinity and limits remain unresolved.
 The proposed file limit is 512 MiB per written file.
 The proposed thread setting is one.
 Resolve supported CPU affinity identifiers before freezing the inventory.
@@ -188,12 +188,18 @@ The new phase label creates no source pool or model-run authorization.
 Keep every unstarted planned run in the result inventory.
 
 Use one timing repeat during preflight and feasibility.
-Use three paired repeats for development and confirmation.
-Use a saved seeded method permutation with cyclic rotations.
-Each three-repeat block places every method once in each position.
+Version 5 prospectively uses four paired repeats for development and confirmation.
+This change gives the four actual timed methods one complete position block.
+It is a planning choice, not a precision or power result.
+Use the saved seeded four-method permutation with cyclic rotations.
+Each complete four-repeat block places every method once in each position.
 The next block reverses orientation.
 A partial block does not guarantee exact position balance.
 Record CPU affinity, thread settings, runtime versions, and system load.
+Measured inventories require a runtime contract from `src/runtime_contract.py`.
+It binds interpreter and selected standard-library contents, architecture, binary64, OS/kernel, selected execution flags, and numerical runtime limits.
+`configs/runtime_reference_v1.json` describes the current software environment only.
+It is not the final empirical hardware pin and proves nothing about identical physical hardware, caches, system load, or complete native dependencies.
 No final matrix expansion follows automatically from passing an early gate.
 
 ## 6. Deletion requests
@@ -236,17 +242,18 @@ Also compare the final sequence with the combined deletion.
 A separate uniform permutation defines three disjoint batches of the original small-request size.
 A root must contain enough records for all three batches.
 The workload marks insufficient roots blocked.
-`src/sequence_runner.py` now implements execution from each preceding committed repair state.
-It prepares the original state once and persists an ordered lineage.
-Restart verifies the saved original state and every completed child artifact.
-A failed step preserves its attempt and every later planned request.
-Independent cumulative resets do not replace that sequence.
-`src/sequence_campaign.py` now dispatches frozen ordered workloads in bounded sequence processes.
-It verifies request provenance, previous-state lineage, source bindings, and complete confirmation products.
-The schema is `calibration-sequence-campaign-v1`.
-Its methods remain warm inside each sequence process.
-A resumed worker clock measures that attempt, not the entire historical lifetime.
-Include earlier attempts, preparation, and original step observations in lifetime accounting.
+`src/measured_sequence.py` now implements the measured ordered path.
+Its plan fixes the original calibration input and normalization, cumulative fresh targets, incremental repair requests, and preceding committed state.
+It separately measures one original canonical preparation and one original model-only preparation.
+Repair and indexed fresh share the former observation; the ordinary comparator pays the latter.
+Four fresh processes execute the four roles at each step under matched observer boundaries.
+A dedicated optional quality worker stays outside method clocks.
+The inventory binds the configuration × root × sequence × repeat product and frozen method/preparation orders.
+Its schema is `calibration-measured-sequence-campaign-v1`.
+A failed step preserves its observations and every unstarted later step.
+Restart reuses the original sealed timings; incomplete lifetime totals remain null.
+The legacy `src/sequence_runner.py` and `src/sequence_campaign.py` retain their separately labeled warm-step contract.
+They cannot supply measured primary lifetime evidence by relabeling their worker clocks.
 Run empty deletion and complete deletion as correctness controls.
 Both controls now have working local execution paths.
 Complete deletion uses zero retained data contributions under the original fixed normalization and ridge.
@@ -319,303 +326,235 @@ Its required index construction belongs inside that cost.
 Equally indexed fresh receives the valid retained summaries.
 Model-only fresh has that separate output contract and timing row.
 Its research execution requires exact-command phase admission.
-Its standalone confirmation path remains blocked pending a frozen comparison inventory.
+Standalone confirmation without actual supported inventory evidence remains blocked.
+The measured request and ordered-sequence dispatchers now provide that evidence path.
 Amortize preparation only in the separately declared lifetime analysis.
 
-## 8. Timing boundaries and cache conditions
+## 8. Timing boundaries and instrumentation
 
-The complete request starts before required state and deleted-content reads.
-It ends after canonical output and the transaction commit.
-Include required loading, extraction, proof, replay, arithmetic, metadata, serialization, output, and cleanup.
-Count each interval once.
-Nested timers cannot be added to their parent timer.
-Record unclassified time as an explicit remainder.
-Optional service telemetry now records exclusive categories and coverage events.
-Nested spans subtract child time from parent time.
-The categories include extraction, feature evaluation, Gram work, bounds, factors, validation, serialization, and source access.
-The collector records remaining instrumented service time separately.
-These timers add measurement overhead.
-They support diagnostic analysis, not an automatic claim about clean service latency.
-Some failed extractors expose unavailable evidence without a detailed primitive reason.
+The primary path is `src/measured_comparison.py`, with inventories in `src/measured_inventory.py`.
+Each plan freezes all four timed methods: model-only fresh, repair, indexed fresh, and direct full-state fresh.
+Every method executes in a fresh limited child under the same complete observer boundary:
+`observer_source_validation_through_child_exit_controller_commits_cleanup_and_output_validation`.
+Its cache label is `measured_method_transactions_os_cache_uncontrolled`.
+The child includes required loading, extraction, proof, replay, arithmetic, validation, metadata, serialization, output, and child commit.
+The enclosing observer also includes source/input verification, admission, startup, exit, cleanup, worker accounting and receipt, and output verification.
+Disjoint accounting spans must sum exactly to the enclosing duration.
+Do not add nested service timers to that duration.
 
-An experiment's equality check can remain outside the service boundary.
-Keep that validation cost in the experiment ledger.
-Separate held-out quality evaluation from the service timing.
-Neither exclusion permits required service verification to become free.
+The observer's final tree-snapshot files and receipt writes follow the stop timestamp and are excluded.
+Parent plan validation, setup, common-model comparison copies, cross-method equality, optional quality, and the final comparison receipt are separately reported.
+These exclusions are explicit and symmetric; required online work cannot be moved into free research bookkeeping.
+The comparison's total wall time is not a method latency.
+The method clock does not claim every physical action an external service user might perform.
+Observer/controller CPU remains outside the admitted child-process CPU allowance.
+See `docs/TRANSACTION_TIMING.md` and `docs/MEASURED_COMPARISON.md` for the complete contract.
 
-The current runner records `service_through_atomic_artifact_fsync`.
-It includes the service call and durable state output.
-Its warm boundary excludes checkpoint loading and original preparation.
-It also excludes independent comparison, quality evaluation, and the final experiment-result commit.
-Keep those costs in the outer experiment ledger.
-Confirm that durable artifact output satisfies the selected service contract.
-Complete-service claims require the same boundary for every method.
+Model-only fresh constructs no deletion index and does not load charts or heldout tokens.
+Direct full-state fresh constructs its required state but does not read the original state.
+Repair and indexed fresh load the same original or preceding state.
+Non-quality canonical-state arms skip heldout loading.
+All current arms parse the original calibration input before filtering deletions; this is not an optimized retained-only reader.
+Setup failure preserves attempts by both independent fresh baselines and leaves dependent methods explicitly unstarted.
 
-Warm conditions may retain only declared reusable objects.
-The campaign now starts each complete comparison in a new process.
-Its three methods still share warm objects and process history.
-The campaign mode is `isolated_comparison_warm_arms_os_cache_uncontrolled`.
-The method mode remains `warm_sequential_os_cache_uncontrolled`.
-A separate runner now starts preparation and each method in independent worker processes.
-It loads the same saved original state for methods that need it.
-Its process receipt and timing contract require separate analysis from warm-arm timings.
-`src/isolated_comparison.py` executes a `calibration-isolated-plan-v1` plan.
-The plan binds the normalized run manifest, target, source hashes, and worker limits.
-It starts one setup worker, then one worker for each declared method.
-Its cache mode is `isolated_method_processes_os_cache_uncontrolled`.
-Its timing boundary is `limited_worker_startup_inputs_service_artifacts_child_commit_and_cleanup`.
-The boundary includes CPU admission, process startup, input loading, and service work.
-It also includes artifact writes, child receipt commit, process exit, and cleanup.
-It excludes parent verification, worker-control receipt commit, parent receipt commit, and heldout evaluation.
-The worker controller settles the phase CPU charge after stopping the elapsed timer.
-Post-cleanup log summaries and controller receipts also remain outside that clock.
-Original preparation is charged separately.
-The isolated path now supports an optional dedicated quality worker.
-Its `quality="heldout_nll"` plan policy is frozen before dispatch.
-The worker evaluates base, original, retained-direct, and repaired models on the same heldout tokens.
-It checks state membership and equal retained-direct and repaired metrics.
-Its diagnostic binary64 NLL is not native-framework equivalence or a certified language-quality bound.
-Its CPU charge and elapsed time remain outside all method clocks.
-A requested quality failure makes the overall comparison unsuccessful.
-Verified method outcomes remain visible.
+A primary measured plan freezes `execution_mode="clean"`.
+The observer and complete child both enter the clean instrumentation scope.
+Saved entry/exit facts verify supported Python profile/trace hooks and allocation tracing are absent.
+Optional service telemetry and canonical-state integer-size scans are disabled.
+Required arithmetic counters, exact checks, hashing, and durable output remain charged.
+Native profiling is unobserved, and machine load and OS page caches are uncontrolled.
+A fresh process is not proof of cold disk caches.
+Do not combine cache modes or call these observations disk-cold.
 
-`src/isolated_inventory.py` now supports `calibration-isolated-campaign-v1`.
-Confirmation requires actual validated inventory evidence at the parent and every child.
-A caller flag cannot replace that evidence.
-The inventory fixes targets, charts, service choices, limits, sources, and quality policy.
-It requires the complete declared configuration, root, request, and repeat product.
-No real confirmation inventory has been frozen.
-A durable child receipt still does not establish complete external service latency.
-Process separation does not establish cold filesystem caches.
-Any claimed disk-cold condition requires additional validated controls.
-Operating-system page caches need separate control or a precise uncontrolled label.
-Never label process-cold timing as disk-cold without evidence.
-Use identical output durability for compared methods.
-Do not pool different cache conditions.
-The worker timer covers dispatch through process cleanup.
-It excludes the final controller commit and later log summaries.
-A whole-comparison or sequence worker timer is not one method's request latency.
-Do not add nested method times to the worker total.
+Detailed certificate coverage comes from a separate `execution_mode="diagnostic"` plan and output directory.
+That replicate must bind the same target, algorithm, root, request, retained membership, ancestor codes, and actual model/state outputs.
+It has its own observer and worker identities and remains outside clean latency ratios.
+An available funnel is not automatically complete: omissions, saturation, missing predecessor codes, or missing groups leave coverage inconclusive.
+Bounded certificate diagnostics and arithmetic endpoint profiles retain their scopes in `docs/CERTIFICATE_DIAGNOSTICS.md` and `docs/ARITHMETIC_AUDIT.md`.
+They neither observe every hidden arithmetic temporary nor prove exact live rational memory.
 
-The external transaction observer is implemented and undergoing final integration review.
-`src/transaction_timing.py` declares the larger boundary in `docs/TRANSACTION_TIMING.md`.
-Its observer starts before source validation and ends after child exit, controller commits, cleanup, and output validation.
-The final external observer receipt remains excluded.
-Its output contracts distinguish model-only, canonical-state, comparison, and sequence transactions.
-A comparison transaction includes setup, all methods, and oracle work.
-That total cannot become one method's latency.
-A role wrapper verifies committed hashes but does not independently prove the model numerically correct.
-Account for necessary independent verification separately.
-Use equal boundaries and required outputs for each scientific comparison.
-Clean latency and matched complete-lifetime execution remain unvalidated.
-No new timing wrapper alone closes those empirical requirements.
+Optional `quality="heldout_nll"` adds a separate admitted quality worker.
+It evaluates base, original, retained-direct, and repaired outputs on the same heldout tokens after exact model/state agreement.
+Its binary64 NLL is a diagnostic observation, not native-framework equivalence or certified population language quality.
+Its cost and resource use remain visible outside each method clock.
+Requested quality failure makes the comparison unsuccessful while preserving completed method observations.
 
-`docs/ARITHMETIC_AUDIT.md` specifies the optional arithmetic profile.
-It observes constructed Fraction endpoints in the calling thread and process.
-It also samples available allocation and resident-memory diagnostics.
-It does not observe every hidden integer temporary or exact simultaneous live rational memory.
-Child processes are outside its automatic coverage.
-The wrapper therefore rejects isolated and campaign controllers for whole-run profiling.
-All profiled times remain diagnostic and must stay outside clean-latency confirmation inventories.
-`docs/CERTIFICATE_DIAGNOSTICS.md` specifies bounded numerical decision and replay records.
-Truncation, saturation, unavailable components, and diagnostic overhead remain explicit.
-Neither profile supplies real-model measurements while research remains paused.
+The legacy warm runner and v8 isolated runner remain available under their original boundaries.
+Warm arms share process history; v8 isolated clocks exclude later controller commits.
+Neither is silently promoted to this v9 primary transaction contract.
+Implementation and correctness fixtures establish the contract's behavior only.
+Actual clean model-scale latency, resources, and useful speed remain unmeasured.
 
-## 9. Correctness, failure, and outcome accounting
+## 9. Exactness, failures, and restart
 
-Validate every stage against direct fresh construction.
-Check the final quantized model and canonical state bytes.
-Retain the equality result and artifact hashes.
-Any mismatch stops interpretation of speed.
-Resolve it before continuing the affected method version.
+Every successful primary comparison requires the same target binding and every exact stage code across all four methods.
+Repair, indexed fresh, and direct fresh must additionally match complete canonical state, service manifest, and chart within their declared family and tier.
+State equality is inapplicable to model-only fresh and must remain null.
+Across different state families compare common model output and all required storage, not incompatible state encodings.
+Any mismatch stops performance interpretation of the affected method version.
 
-Certificate rejection is an internal event.
-Successful replay can still yield an exact completed request.
-Finite evaluator failure is a failed request.
-It must not commit a successful model.
-Timeout, memory failure, interruption, and missing planned attempts remain visible.
-Retain consumed time even when completion fails.
-Consumed time is not latency to an exact answer.
+A rejected certificate can fall back to exact replay and still finish correctly.
+An evaluator failure, mismatch, invalid output, timeout, memory failure, interruption, denied budget, or missing planned result cannot produce an exact completed latency.
+Keep consumed time visible as consumed time; it is not time to an exact answer.
+No slow or difficult request disappears from the frozen denominator.
+Only predeclared malformed-source exclusions occur before sampling, with their reasons recorded.
 
-Record the complete coverage path for each stage.
-Include chart membership, descriptor availability, finite bounds, acceptance, replay, and completion.
-Distinguish unchanged ancestors from genuinely changed ancestors.
-Report retained reads and replayed groups beside elapsed time.
+A sealed controller receipt can contain failed outcomes.
+Inspect `outcome` and every role status instead of treating top-level completion as success.
+Every planned run and all four methods remain represented after failure.
+Partial failed archives, their files, and absence of outputs are bound too.
+Terminal resume verifies source/runtime/input bindings, observer and worker receipts, CPU ledger debits, child artifacts, and exact comparison outputs.
+A saved observer retains its original duration and cannot become a new repetition.
+A committed child with a missing complete observer receipt cannot become a short cached success.
+These checks assume trusted local storage; hashes alone cannot authenticate hostile rewriting of all evidence.
 
-Do not exclude a request because it is slow or difficult.
-Only predeclared malformed-source rules can exclude source records before sampling.
-Record every exclusion with its reason.
-Replace no confirmation request after observing its outcome.
+## 10. Frozen inventories and analysis
 
-## 10. Statistical analysis
+`build_measured_campaign` freezes the independent-request inventory.
+`build_measured_sequence_campaign` separately freezes ordered sequences.
+Primary inventories bind every configuration, root, request, repetition, method order, target, runtime contract, source digest, limit, and instrumentation policy.
+Sequence inventories additionally bind ordered request provenance, cumulative membership, predecessor semantics, and preparation order.
+Actual inventory membership is verified at the controller and leaf before model loading.
+A Boolean grant or copied run ID cannot authorize confirmation.
+Every research leaf also requires exact-command live CPU admission.
 
-The analyzer requires a frozen inventory for confirmation.
-That inventory contains every planned root, request, repeat, and method.
-It also contains target bindings and the final protocol binding.
-`build_campaign` freezes supplied membership and deterministic method orders.
-Write its output as exact canonical JSON bytes.
-The inventory clears only `protocol.sha256` inside embedded run manifests.
-The final protocol then binds the inventory hash.
-External run manifests bind the final protocol hash.
-The executor verifies this complete chain before dispatch and restart.
-It also verifies every current source module and the campaign execution scripts.
-Canonical source binding covers current source modules and `scripts/run_*.py` entrypoints.
-The isolated inventory binds canonical isolated plans containing normalized manifests.
-The protocol then binds that complete inventory.
-Standalone confirmation requires membership in the verified inventory.
-The sequence inventory separately binds ordered request provenance and its complete declared product.
-An implementation of either inventory does not create a real empirical inventory.
-Model-only ordinary-speed confirmation still needs its own supported frozen inventory.
-A changed source file prevents reuse of a previous campaign outcome.
-Confirmation requires explicit `confirmation_configuration_ids`.
-The executor checks the full configuration, root, request, and repeat product.
-The current protocol leaves those configuration IDs unresolved.
-No real confirmation inventory exists.
-Missing outcomes become explicit missing attempts.
-Reject duplicate identities, mixed targets, and unplanned observations.
+Canonical embedded manifests clear only `protocol.sha256` to avoid a digest cycle.
+The final protocol binds the exact inventory bytes; actual raw manifests then bind that final protocol hash.
+All other embedded fields remain immutable.
+The measured source map includes every `src/*.py` and `scripts/*.py` file.
+Changed sources, runtime, inputs, target, order, or instrumentation invalidate reuse.
+Confirmation requires a frozen unblocked protocol and the complete declared Cartesian product.
+The prospective v5 file deliberately leaves actual configuration IDs, selected configuration, and inventory digest unresolved.
+Implementation support is not a real frozen research inventory.
 
-First take the median timing across paired repeats for each request.
-A request enters the conditional ratio only when both methods complete every repeat exactly.
-Let these medians be B and R.
-Compute log(B/R) for that request.
-Average request log ratios within each root.
-Average those root values with equal root weights.
-Exponentiate the result.
+`src/measured_analysis.py` independently verifies artifacts before issuing typed measured evidence.
+It rereads observer/child receipts, exact model/state artifacts, input bindings, phase accounting, and timing partitions.
+Assertions in convenience fields alone cannot establish equality or latency.
+It rejects reusing one underlying observer as multiple planned repetitions.
+Missing and failed slots remain explicit; malformed sealed evidence raises an error rather than contributing a ratio.
+The older `result_analysis.py` retains its separate warm/state-only contract.
+See `docs/MEASURED_ANALYSIS.md`.
 
-Report this ratio as conditional on exact completion.
-Report all request outcomes beside it.
-The analysis plan keeps primary requests separate from controls and extensions.
-It preserves service family, response tier, service mode, and verifier policy.
-It also checks observed chart and service bindings.
-Do not use a shared configuration ID for different algorithm settings.
-Report eligible requests, eligible roots, and omitted roots.
-Do not present a conditional ratio as an unconditional reliability result.
+Reduce paired timing repetitions to a median for each request.
+A conditional speed ratio admits a request only when both methods finish every planned repetition exactly with the required clean child and observer contract.
+Compute log(baseline/candidate), average request values within each root, then average roots with equal weights.
+Exponentiate that mean and report all planned success/failure counts beside it.
+Keep controls and extensions separate from primary requests.
+Do not present the conditional ratio as an unconditional reliability guarantee.
 
-Use 2,000 deterministic bootstrap draws over independent roots.
-Report the central 95% percentile interval.
-Do not bootstrap individual timing repeats.
-One observed root provides no reported interval.
-Twelve roots are a planning choice.
-They do not guarantee interval precision or coverage.
-Use development variability to document the expected precision before confirmation.
-If precision requires more roots, change the plan before confirmation.
+Use 2,000 deterministic bootstrap draws over independent calibration roots and the central 95% percentile interval.
+Timing repeats and requests do not increase the number of independent roots.
+One root provides no reported interval.
+Twelve confirmation roots and four repeats are prospective planning choices, not guaranteed precision.
+Use development variability to justify the confirmation design before freezing it.
+Any expansion or revision must precede observation of confirmation outcomes.
 
-The planned ordinary-speed comparison uses model-only fresh and the complete repair system.
-Its matched output and lifetime accounting must include the repair index.
-The equal-information indexed comparison separately assesses state maintenance.
-The existing three-method analyzer directly supports that state-oriented comparison.
-Ordinary model-only confirmation integration remains blocked.
-Declare the final primary inference before confirmation.
-Other comparisons and sensitivity grids remain secondary.
-Report their complete matrix without selecting favorable cells.
-Any multiple-comparison inference requires a separately specified correction.
-No formal significance claim follows from uncorrected exploratory comparisons.
+The sole declared primary comparison is model-only fresh versus repair.
+Indexed fresh is the equal-information maintenance comparison; direct fresh remains the full-state correctness oracle.
+Only the prospectively declared configuration/comparator under frozen confirmation and complete exact clean planned outcomes can receive primary confirmation flags.
+Other matrices remain secondary; any multiple-comparison inference needs a separately declared correction.
+Source independence, data provenance, useful language quality, complete mechanism coverage, and statistical precision remain separate obligations.
 
-## 11. Lifetime cost
+## 11. Ordered lifetime cost
 
-Let P_R and P_B denote preparation costs.
-Let R_t and B_t denote complete costs for request t.
-Net savings after m requests equal sum(B_t - R_t) - (P_R - P_B).
-Include state updates and failed attempts in their corresponding complete costs.
-Preserve request order for repeated deletion.
+`src/measured_sequence.py` provides one complete original canonical preparation shared by the repair/indexed controls and a separately measured original model-only preparation.
+Those original models must agree before requests begin.
+Method and preparation orders are frozen and counterbalanced across repetitions.
+Each request uses the predecessor's committed live state for repair and indexed fresh, and cumulative retained-data construction for both independent fresh controls.
+The leaf validates the preceding trusted lineage and required state inside its transaction.
+It does not read prior oracle/observer archives as an online dependency.
+Research archive verification checks those separately.
 
-Report the first observed nonnegative balance.
-Report the final balance as well.
-A later expensive request can reverse an earlier crossing.
-Do not infer permanent break-even from the first crossing.
+Let P_R be original model-plus-index preparation and P_F be original model-only preparation.
+For the fixed horizon H, let R_h and F_h be complete repair and ordinary fresh transaction costs.
+Then the exact accounting identity is
 
-A projected crossing assumes constant positive saving s.
-Its value is ceiling((P_R - P_B)/s), when the numerator is positive.
-Label this calculation as a projection.
-If saving is nonpositive, no finite projected crossing exists.
-Storage cost remains a separate budget unless a price model is declared.
+\[
+T_R(H)-T_F(H)=(P_R-P_F)-\sum_{h=1}^{H}(F_h-R_h).
+\]
 
-## 12. Prospective decision gates
+Strict lifetime gain holds precisely when request savings exceed preparation debt.
+Repair and indexed fresh each count their shared preparation once within their own system total.
+Ordinary fresh counts its own separate preparation once.
+Independent oracle, cross-method equality, quality, and research lineage bookkeeping remain separately reported and symmetric.
+The lifetime sum is an attributable transaction-cost estimand, not elapsed runtime of the validation harness.
 
-`configs/feasibility_gates_v1.json` freezes the detailed engineering decision policy.
-`docs/FEASIBILITY_GATES.md` specifies its exact denominators, limits, ordering, and actions.
-This closes C04 only at the written policy scope.
+Analysis independently resums saved original observations.
+Any required failed or missing preparation/request makes the complete lifetime null.
+Keep completed and failed consumed costs visible rather than replacing unknown terms with zero.
+Report the full declared horizon and final balance, including an early crossing that a later expensive request reverses.
+A projected constant-saving crossing requires its stated assumption; it is not observed permanent break-even.
+Storage remains a separate budget unless a cost model is declared.
+Neither coverage nor a source-cache hit establishes positive complete cost savings.
+
+## 12. Prospective decision policy and evaluator
+
+`configs/feasibility_gates_v1.json` remains byte-for-byte unchanged.
+Its fixed C04 engineering policy has hash `3fe1488125f86d04857a17e99bda41fe8be6e1cf900476389850bedb04c7bea1`.
 Threshold attainment remains unknown.
-The policy is not a measured power calculation or a guarantee of real-model feasibility.
+The policy promotes development only and supplies neither confirmation power nor reliable population speed.
+`src/feasibility_decision.py` implements a fail-closed deterministic decision over supplied evidence; see `docs/FEASIBILITY_DECISION.md` and `docs/FEASIBILITY_GATES.md`.
 
-
-| Gate | Planning criterion | Action after failure |
+| Gate | Fixed criterion | Failure action |
 | --- | --- | --- |
-| Exactness | Zero mismatches; no invalid successful commits | Stop affected method and correct it |
-| Finite domain | All primary preflight requests evaluate successfully | Narrow the domain or revise the declared target |
-| Coverage | Avoid retained target-feature evaluation for at least 25% of changed-ancestor groups on every feasibility root | Improve bounds or narrow the claim |
-| Resources | Verified worker limits, measured memory, and protocol-scoped CPU admission | Reduce the workload or complete enforcement |
-| Quality | Retained fresh perplexity at most 20% above base perplexity on fixed held-out text | Reconsider grids or supported use |
-| Lifetime value | Three-request repair lifetime beats model-only fresh on every feasibility root, including preparation and all required costs | Redesign or narrow the claim |
-| Confirmed speed | All planned requests finish exactly; lower ratio interval exceeds 1.05 | Report conditional results without a reliable-speed claim |
+| Exactness | Zero mismatches and no invalid successful commits | Stop the affected implementation |
+| Completeness | Every planned root/request and required artifact present | Leave the gate open |
+| Coverage | Avoid retained target-feature evaluation for at least one quarter of changed-ancestor groups on every feasibility root | Improve bounds or narrow scope |
+| Resources | Fixed worker allowances, observed memory/artifact limits, complete costs, and three worker CPU-hours | Redesign within remaining allowance or narrow scope |
+| Quality | Retained mean NLL minus base mean NLL at most log(6/5), on identical positive heldout tokens for every root/request | Revise configuration prospectively or narrow scope |
+| Lifetime value | Complete three-request repair lifetime strictly beats model-only fresh on each root, including each system's preparation | Redesign cost or narrow scope |
+| Confirmed speed | All planned requests exact and lower 95% ratio interval strictly above 1.05 | No reliable-speed claim |
 
-Coverage includes all nonempty retained groups with actually changed transitive ancestor codes across every planned request.
-A zero denominator means the changed-ancestor mechanism remains unproven empirically.
-A cache hit does not count as avoiding target-feature evaluation.
-Missing or failed requests cannot disappear from that denominator.
+The fixed feasibility workload has two roots, eight records per root, 32 tokens per record, and three sequential requests.
+Each worker has 900-second wall and CPU limits, 6 GiB address-space and observed-RSS ceilings, and 512 MiB maximum artifact size.
+Each original preparation must finish within 900 seconds; each compared complete lifetime within 3,600 seconds.
+Changing those values requires a new prospective policy version.
 
-The policy permits two roots, eight records per root, and 32 tokens per record.
-Its three-request lifetime includes original preparation once for each system.
-Workers have 900-second wall and CPU limits.
-Their address limit and separate observed-RSS threshold are each 6 GiB.
-Artifacts must stay within 512 MiB.
-Original preparation must finish within 900 seconds.
-The complete three-request lifetime must finish within 3,600 seconds.
-Changing these limits requires a prospective policy revision.
-The feasibility worker allowance remains three CPU-hours.
+Coverage includes every nonempty retained stage group under actually changed transitive ancestor codes across all planned requests.
+The evaluator reconstructs ancestor changes from complete saved stage maps.
+A cache hit alone is not feature avoidance.
+A zero denominator means the mechanism was not demonstrated.
+Missing, truncated, saturated, or mismatched diagnostic evidence is inconclusive.
+Separate diagnostic replicates must match clean target, configuration, retained membership, predecessor codes, and actual model/state artifacts.
 
-The coverage threshold is a research continuation rule.
-It is not a correctness requirement.
-The quality threshold is a planning tolerance.
-Require finite metrics and equal positive scored-token counts.
-For every root and request, retained mean NLL minus base mean NLL must not exceed `log(6/5)`.
-Use identical tokenization and evaluation text for that decision.
-Perplexity alone does not establish downstream NLP value.
-Add a task matched to the final supported application before submission.
+Quality requires identical evaluator and heldout bindings and equal positive scored-token counts.
+The finite NLL comparison uses a rational enclosure of log(6/5); an unresolved boundary is inconclusive.
+This certifies the comparison of recorded finite numbers, not the underlying loss computation or population quality.
+Perplexity alone is insufficient downstream NLP evidence; a supported application still needs an appropriate task metric.
 
-The speed gate requires the complete committed boundary.
-An arm-only timing cannot pass that gate.
-No empirical pass has been recorded for any gate.
-Passing feasibility permits development, not automatic confirmation.
+The evaluator checks complete preparation and request boundaries, resource identities, and no reused clean observations.
+The implemented `evaluate_verified_feasibility` adapter requires loader-issued `VerifiedMeasuredEvidence` and checks complete sequence timing, preparation, source, target, configuration, membership, stage-code, state, and worker projections.
+The public `src/feasibility_archive.py` bridge additionally derives supported timings, model/state agreement, diagnostic coverage, and quality from loader-issued clean and matched diagnostic archives.
+It does not accept naked caller assertions as a promotion route.
+Scientific workload provenance, a complete exported shared phase ledger, and nontransaction artifact-size coverage remain explicit blocking obligations.
+The pure conditional evaluator still requires its declared premises; it is not a substitute for that archive bridge.
+Any conditional pass leaves empirical attainment, execution authorization, confirmation, and population speedup false; independent integration review remains separate.
+No decision engine manufactures evidence, proves source independence, or completes bounded funnel omissions.
+No empirical gate pass has been recorded.
 
-## 13. Artifacts and reproducibility
+## 13. Artifacts and remaining work
 
-Save immutable input manifests and raw outcome files.
-Keep unfinished transactions separate from committed results.
-Record hashes for source, protocol, target, tokens, state, and output.
-Record workload scores and their preparation costs separately.
-Preserve failed worker outcomes and every unstarted inventory entry.
-A controller commit records a terminal outcome, which can still report worker failure.
-Keep resource failures and tracebacks with sensitive paths removed where necessary.
-Do not publish model weights or text against their license conditions.
+Store immutable input manifests and raw outcomes, separating unfinished and committed transactions.
+Preserve source, runtime, protocol, target, tokens, lineage, model, state, worker and observer identities, and every failed/unstarted slot.
+Record original workload-score preparation and storage costs separately.
+`scripts/summarize_measured.py` reads the measured artifacts without model execution.
+Older summaries keep their distinct contracts.
+Software fixtures and profile numbers are not paper observations.
 
-`scripts/summarize_results.py` creates JSON, CSV, Markdown, and optional standard plots.
-It reads recorded observations only.
-It records hashes of every input result file.
-Its tests use labeled software fixtures.
-Those fixtures are not paper results.
+Research execution still requires:
 
-Before research execution, resolve these remaining preparation blockers:
+- A resource-feasible real checkpoint and validated adapter, with actual local checkpoint, tokenizer, and corpus hashes.
+- Frozen document boundaries, chunks, normalization, positions, masks, and disjoint source pools, with saved independent root draws.
+- Real original-state scores and complete preparation costs.
+- One selected primary target/chart/family/tier/verifier configuration, plus predeclared controls.
+- Final worker affinity, limits, empirical runtime/hardware conditions, and clean real-model resource measurements.
+- Complete diagnostic coverage and quality artifacts linked to the clean outputs without counting diagnostic times as primary latency.
+- Actual frozen measured request and ordered-sequence inventories with explicit confirmation configurations.
+- Development-based justification of confirmation precision and real attainment of the fixed feasibility policy.
+- The user's instruction to resume research experiments.
 
-- Validate a resource-feasible real checkpoint and its adapter path.
-- Acquire and hash actual checkpoint, tokenizer, and corpus files within the authorized scope.
-- Freeze document boundaries, chunks, normalization, positions, masks, BOS, and EOS.
-- Build disjoint pools and save independent root membership.
-- Produce original-state score artifacts and charge their complete preparation.
-- Select and freeze target, chart, family, tier, mode, and verifier settings.
-- Resolve worker affinity and final process limits.
-- Validate matched output contracts, complete transaction boundaries, and clean measurement overhead.
-- Integrate model-only fresh into a supported frozen ordinary-speed confirmation inventory.
-- Freeze actual isolated and ordered-sequence inventories with complete configuration declarations.
-- Use development variability to justify confirmation precision.
-- Evaluate attainment of the fixed feasibility policy using real evidence.
-- Obtain the user's instruction to resume research experiments.
-
-Separate-process confirmation dispatch, sequence campaigns, feasibility admission, and optional isolated quality now have implementation paths.
-They do not supply missing real inputs, workload artifacts, or selected configurations.
-The identity-cache baseline, quadratic tier, and interval fallback remain implemented controls.
-Their practical acceptance, memory, quality, and speed remain unmeasured.
-The arithmetic and certificate profiles remain diagnostic.
-The transaction observer does not establish clean latency automatically.
-The grid-box alternative remains unselected for empirical use.
-No reliable full-model speedup or completed experiment-ready gate follows from this preparation.
+Four-method measured confirmation admission, matched sequence lifetime execution, clean child/observer scopes, and artifact-aware analysis now have implementation paths.
+They remove those infrastructure-only blockers, subject to final integration checks.
+They do not supply missing real inputs, practical acceptance, memory fit, language quality, or speed.
+The identity-cache, quadratic, interval, and parameter-box alternatives remain controls whose practical value is unmeasured.
+No reliable full-model repair speedup follows from this revision.

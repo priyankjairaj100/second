@@ -451,3 +451,143 @@ The manuscript, current literature audit, independent review, and reproducibilit
 No research experiment, model download, dataset download, cloud job, or unrelated hardware ran.
 No empirical speed or quality claim is established.
 The user continues to authorize repository checkpoints and complete restart context.
+
+
+## Revision 9 completed preparation (4 October 2026)
+
+The previous verified checkpoint is 552340bd0c1014d2b68c96439740288340938c6e.
+The latest user steering asks us not to stop prematurely and to continue known next tasks.
+Proceed autonomously within authorized preparation; do not reinterpret that steering as lifting the research-experiment pause.
+The earlier “maximum revenue” phrase remains research value within this program, without monetary guarantees.
+Current STATUS and RESUME supersede older unfinished-preparation statements without changing their historical provenance.
+
+Research remains paused.
+Revision 9 completes another implementation, algorithmic-accounting, and independent-review pass.
+No real model/data download, research benchmark, synthetic empirical study, cloud job, or unrelated hardware ran.
+Software correctness fixtures are not empirical datasets, calibration roots, or speed observations.
+
+The complete sequential V_cert target remains unchanged.
+Necessary finite-evaluator failure still aborts without an approximate model, and proof rejection still permits exact retained replay.
+The response solver ignores old codes; the identity-cache solver uses its previous quantized model and transitive-ancestor identity.
+Equally indexed fresh receives identical valid information and solver policy within each family.
+No deletion-exclusive solver advantage is established.
+
+Frozen measured single-request campaigns now contain model-only fresh, repair, equally indexed fresh, and direct full-state fresh.
+The ordinary baseline constructs no unnecessary response chart or deletion index.
+The full-state oracle retains its distinct correctness role.
+Inventories bind normalized manifests, target, source hashes, actual runtime, limits, execution profile, complete planned products, and counterbalanced order.
+Model-only confirmation membership is implemented.
+Each role uses a separate bounded child and a complete declared external observer transaction.
+Actual empirical inventories remain absent.
+
+Measured ordered sequences charge indexed original preparation once and ordinary model-only original construction separately once.
+Repair and indexed fresh share that indexed preparation observation explicitly.
+Every actual scheduled request has separate observed roles and preserves cumulative retained membership and fixed original normalization.
+The production predecessor check reads the prior state-producing setup/repair child receipt and exact model/state artifacts within the measured method.
+An external research lineage/oracle commit is not a required production service input.
+The harness separately verifies research lineage and independent oracle equality before advancing.
+Failures, interrupted attempts, later unstarted steps, original observations, and budget evidence remain retained.
+Restart does not convert archival loading into a new independent latency sample.
+
+Each observer covers source/input checks, bounded worker startup and admission, loading, required service work, output serialization, child commitments, exit, cleanup, worker accounting/commit, and output validation.
+Its contiguous timing spans sum to the enclosing clock without adding nested child durations again.
+Observer bootstrap and final observer receipt remain excluded.
+External equality, common-model conversion, quality, sequence scheduling, and research lineage are separate.
+A system's preparation-plus-requests lifetime is an attributable transaction-cost estimand, not elapsed wall time of the full validation harness.
+Operating-system caches remain uncontrolled.
+
+Clean mode disables optional Python profiling, tracing, allocation tracing, monitoring tools, and detailed telemetry in both observer and leaf.
+Required exact arithmetic ledgers and correctness work remain charged.
+Native profilers remain unobserved.
+Diagnostic execution can preserve exact model/state outputs but cannot enter clean timing ratios.
+Frozen runtime bindings reject incompatible environments rather than treating them as interchangeable repetitions.
+
+Artifact-aware analysis rehashes the archive, observer, child, actual output, source/input/runtime, and budget bindings.
+It reconstructs common model equality and within-contract state equality instead of trusting convenience flags.
+All frozen missing, failed, interrupted, and unstarted slots remain visible.
+One original observer identity/attempt cannot occupy several roles, roots, or repetitions.
+An unsealed parent cannot supply complete primary timing even when its leaves finished.
+Request medians reduce paired repeats, request log ratios average within root, and roots receive equal weight.
+Bootstrap intervals resample roots only.
+Available-pair estimates remain conditional.
+Only the frozen sole primary comparator/configuration can receive confirmation timing flags, with all planned exact clean completion and frozen inference settings.
+Secondary indexed and full-state ratios do not create extra unadjusted confirmatory claims.
+
+The unchanged feasibility policy now has an executable conditional evaluator.
+It checks exact counts, finite-quality evidence, resource limits, complete three-request lifetime costs, and missing evidence.
+Its output cannot establish empirical attainment, authorize research, permit confirmation, or prove population speedup.
+Typed measured archive evidence can bind the timing/model/state/resource projection.
+Changed-ancestor coverage needs matched diagnostic identities and complete denominators without relevant omissions.
+Quality, complete resources, real source provenance, and sampling assumptions retain independent evidence obligations.
+The frozen thresholds remain engineering decisions without observed attainment.
+
+Provider diagnostics now expose available affine inconsistency, selected-coefficient box rejection, extraction-stage failures, and finite/center/curvature/gradient proof components.
+The selected free-zero coefficient vector can violate its box even when another affine representation could fit.
+Therefore that rejection does not prove full-domain exclusion.
+Box providers expose their available envelope and anchor route.
+Clean mode skips lazy diagnostic builders; bounded numerical/text encoding and omission counters remain explicit.
+These diagnostics are proof bounds and observed causes, not realized-error measurements, exhaustive primitive traces, or hidden arithmetic-intermediate accounting.
+
+Final validation records 524 correctness tests.
+The task register contains V9_REQUIRED_COMPLETED completed and V9_REQUIRED_OPEN open required items, plus 12 conditional extensions.
+C04 remains closed at its written policy scope.
+C05 and D05 remain partial; the final register records D04's review disposition.
+G0 remains open.
+Protocol version 5 records current implementation and unresolved real-evidence fields while preserving the pause.
+The consolidated PDF remains the unchanged 35-page revision 7 report; the new current note is docs/REVISION_9.md.
+
+Actual checkpoint/tokenizer/document/corpus/token artifacts, resource-feasible model execution, primary settings, disjoint source pools, root draws, score artifacts, workloads, empirical inventories, and precision justification remain unresolved.
+Practical acceptance, complete costs, full-model speedup, quality, and feasibility are unmeasured.
+The manuscript, current literature audit, scientific review, reproducibility release, and submission checks remain ahead.
+Historical missing raw results remain unavailable.
+Research archives and the bounded cache trust registry remain outside returned live-state deletion guarantees; trusted hashes do not establish hostile-storage authentication or physical erasure.
+The user continues to authorize repository checkpoints and complete restart context.
+
+
+## Final revision 9 continuation work
+
+The user asked us to keep progressing through known next tasks rather than end at an early checkpoint.
+The existing research-experiment pause remained active throughout.
+This pass continued implementation, independent review, correctness fixtures, manuscript preparation, and a bounded citation check.
+
+The four-method measured engine, frozen campaign inventory, ordered per-method sequence runner, and artifact-aware analysis are integrated.
+Each system pays its own original preparation and every request under the same declared transaction boundary.
+Ordinary model-only fresh emits no deletion index; direct fresh remains the full-state oracle.
+Repair and indexed fresh receive the same valid reusable information.
+The charged sequence predecessor is the prior setup/repair child's own committed receipt and artifacts.
+External research lineage, oracle copies, and prior observers are not required service dependencies.
+
+Revision 9 adds diagnostic interval coordinates and explicit loading, construction, serialization, durable-output, and cleanup spans.
+The verified diagnostic adapter checks disjointness, containment, and exact sums.
+Unknown worker/controller time stays residual; named_attribution_complete remains false when such time remains.
+It does not subtract profiling overhead to estimate clean timing.
+The original exhaustive D04 criterion remains partial.
+Provider diagnostics add available fit causes and error-bound components, but C05 and physical/transient D05 observability remain partial.
+
+The public feasibility bridge accepts loader-issued clean and diagnostic sequence evidence.
+It derives actual target graphs, transitive changed-ancestor denominators, retained groups, complete replay audits, target-call counters, bound quality, preparation, and request sums.
+The bridge also reads the complete trusted protocol CPU ledger and complete supplied campaign-root file inventories.
+Reservations, overruns, prior/unselected attempts, missing workers, aliases, and nontransaction files stay visible.
+Ledger snapshots cover that protocol at read time, not global/project/controller CPU; storage covers supplied roots, not all inputs or physical disk allocation.
+Read-only analysis never instantiates writers or reconstructs missing budget files.
+Scientific real-workload provenance is still unavailable, so the public bridge cannot promote the project into empirical success.
+
+New user-facing commands include run_measured_campaign.py, run_measured_sequence.py, summarize_measured.py,
+analyze_diagnostic_breakdown.py, evaluate_feasibility.py, and check_runtime.py.
+Their argument contracts and pauses are documented in the corresponding current docs.
+No current protocol or software fixture authorizes research execution.
+
+The prospective manuscript and evidence companion now make the exactness, conditional work, fair-comparator, and empirical argument reviewable.
+They contain ten explicit unfilled result slots, five table plans, and three figure plans.
+Independent manuscript review checks the math and comparison scope.
+The ten working reference identities were checked on primary pages; the relevant calibration-scale Appendix E was inspected.
+This bounded check does not close the broader literature audit or establish priority.
+The consolidated 35-page report and existing figure remain unchanged revision 7 artifacts.
+
+The final integrated validation and source hashes are recorded in docs/VALIDATION.md and validation/*v9*.
+The original task register remains conservative: 29 completed, 49 open required items, 12 conditional extensions.
+Several implementation substeps are closed within those open research tasks; no empirical gate is closed.
+Next work depends on actual validated model/tokenizer/text artifacts, resource-feasible execution, final configurations and source pools,
+independent roots and statistical precision, and an instruction to resume research experiments.
+The main-text/supplement must then incorporate observed evidence and undergo final novelty, limitations, reproduction, and venue checks.
+Do not turn software fixture timings, old unrecovered narrative, or conditional cost lemmas into reliable speedup claims.

@@ -237,5 +237,18 @@ class TransactionTimingTests(unittest.TestCase):
                 build_role_measurement(request,self.limits())
 
 
+    def test_v9_absolute_observer_origin_must_match_worker(self):
+        from src.transaction_timing import verify_observer_receipt
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder); self.measure(root)
+            path=root/'observer'/'result.json'
+            receipt=strict_json(path.read_bytes())
+            receipt['observer_clock']['start_ns']+=1
+            receipt['observer_clock']['end_ns']+=1
+            path.write_bytes(canonical_json(receipt))
+            with self.assertRaisesRegex(ValueError,'clock origins differ'):
+                verify_observer_receipt(root/'observer')
+
+
 if __name__=='__main__':
     unittest.main()

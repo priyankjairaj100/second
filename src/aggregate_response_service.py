@@ -47,8 +47,8 @@ _gram = timed("gram_accumulation")(_gram)
 _combine = timed("gram_accumulation")(_combine)
 _metric = timed("gram_accumulation")(_metric)
 _is_psd = timed("validation_metadata")(_is_psd)
-certify_relative_enclosure = timed("factor_rounding")(certify_relative_enclosure)
-certify_gram_box = timed("factor_rounding")(certify_gram_box)
+certify_relative_enclosure = timed("proof_verification")(certify_relative_enclosure)
+certify_gram_box = timed("proof_verification")(certify_gram_box)
 ZERO = Fraction(0)
 
 

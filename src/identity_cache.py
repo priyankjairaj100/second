@@ -224,7 +224,10 @@ class IdentityCacheService:
     @timed('cache_feature_extraction')
     def _contribution(self, record, stage, prefix, work, label):
         work.add(label)
-        features = _matrix(self.evaluator(record, stage, prefix), 'target features', stage.width, True)
+        category = ('cache_replay_feature_evaluation' if label == 'retained_replay_evaluator_calls' else
+                    'cache_deleted_feature_evaluation' if label == 'deleted_target_evaluator_calls' else
+                    'cache_fresh_feature_evaluation')
+        features = _matrix(timed(category)(self.evaluator)(record, stage, prefix), 'target features', stage.width, True)
         work.add('evaluated_feature_entries', sum(len(row) for row in features))
         return self._gram(features, work)
 

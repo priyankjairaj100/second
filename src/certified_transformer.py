@@ -14,6 +14,7 @@ from fractions import Fraction
 import hashlib
 import json
 import math
+from itertools import islice
 from pathlib import Path
 from types import MappingProxyType
 from typing import Any, Mapping, Sequence
@@ -509,6 +510,7 @@ class AutomaticResponseProvider:
         self._sealed = True
 
     def coefficients(self, stage_id, prefix):
+        from .service_telemetry import provider_diagnostic
         _check_runtime()
         installed = self.decoder.base._prefix(prefix)
         rows, rhs = [], []
@@ -520,12 +522,24 @@ class AutomaticResponseProvider:
                     rows.append(tuple(direction[stage][i][j] if stage in direction else ZERO for direction in self.chart.directions))
                     rhs.append(Q.from_float(target[i][j]) - Q.from_float(x))
         solution = _solve(rows, rhs, len(self.chart.directions))
-        if solution is None or any(abs(a) > r for a, r in zip(solution, self.chart.radii)): return None
+        if solution is None:
+            provider_diagnostic(stage_id, 'provider_domain_fit', build=lambda cap: {
+                'status': 'inconsistent_affine_span', 'coefficient_count': len(self.chart.directions),
+                'equation_count': len(rows)})
+            return None
+        if any(abs(a) > r for a, r in zip(solution, self.chart.radii)):
+            provider_diagnostic(stage_id, 'provider_domain_fit', build=lambda cap: {
+                'status': 'selected_solution_outside_box', 'coefficient_count': len(solution),
+                'violations': sum(abs(a) > r for a, r in zip(solution, self.chart.radii)),
+                'samples': [{'coefficient': a, 'radius': r} for a, r in islice(zip(solution, self.chart.radii), cap)]})
+            return None
+        provider_diagnostic(stage_id, 'provider_domain_fit', build=lambda cap: {
+            'status': 'exact_fit', 'coefficient_count': len(solution), 'equation_count': len(rows)})
         return solution
 
     def query(self, context):
         coefficients = self.coefficients(context.stage.stage_id, context.prefix.as_mapping())
-        if coefficients is None: return UnknownBound('prefix lies outside the exact affine chart or its box')
+        if coefficients is None: return UnknownBound('canonical affine fit failed or its selected coefficients exceed the box')
         return ResponseQuery(context.binding, coefficients, ZERO,
                              'automatic interval jets, full mixed curvature, binary64 error, and exact ancestor chart fit')
 
@@ -563,11 +577,17 @@ class AutomaticResponseProvider:
         return self._intrinsic_moments(record, stage, quadratic=True)
 
     def _intrinsic_moments(self, record, stage, *, quadratic):
+        from .service_telemetry import provider_diagnostic
         tokens = self.decoder.decode_payload(record.payload)
+        proof_phase = 'center_jets'
         try:
             center = self.feature_jets(stage.stage_id, tokens, region=False)
+            proof_phase = 'region_jets'
             region = self.feature_jets(stage.stage_id, tokens, region=True)
-        except (ArithmeticError, ValueError, OverflowError):
+        except (ArithmeticError, ValueError, OverflowError) as exc:
+            provider_diagnostic(stage.stage_id, 'provider_extraction', build=lambda cap: {
+                'status': 'unavailable', 'proof_phase': proof_phase,
+                'failure_type': type(exc).__name__, 'reason': str(exc)})
             return None
         rank, bits = len(self.chart.directions), self.chart.precision_bits
         def midpoint(interval): return (interval.lo + interval.hi) / 2
@@ -579,6 +599,12 @@ class AutomaticResponseProvider:
         nu = norm(x.error for row in region for x in row)
         hessian = norm(h.abs_bound() for row in region for x in row for hs in x.hessian for h in hs)
         descriptors = [nu + e0] + errors + [hessian, ZERO]
+        provider_diagnostic(stage.stage_id, 'provider_error_components', build=lambda cap: {
+            'status': 'available', 'provider': 'affine_response', 'finite_error': nu,
+            'center_error': e0, 'mixed_hessian_bound': hessian,
+            'gradient_error_count': len(errors), 'gradient_error_samples': errors[:cap],
+            'record_content_sha256': record.content_digest, 'precision_bits': bits,
+            'numerical_values_are_upper_bounds': True})
         contract = self.contracts[stage.stage_id]
         make_moments = record_moments if quadratic else linear_record_moments
         response = make_moments(contract.response_basis, record.record_id, record.content_digest, features)

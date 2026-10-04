@@ -53,7 +53,20 @@ def _text(value: str, limit: int) -> str:
 
 class ServiceTelemetry:
     """Collect disjoint nanoseconds, invocation counts, and diagnostic events."""
-    def __init__(self, *, clock=perf_counter_ns, diagnostic_limits: DiagnosticLimits | None = None):
+    def __init__(self, *, clock=perf_counter_ns, diagnostic_limits: DiagnosticLimits | None = None, enabled=None):
+        from .instrumentation import detailed_diagnostics_enabled
+        allowed = detailed_diagnostics_enabled()
+        if enabled is not None and type(enabled) is not bool:
+            raise TypeError('telemetry enabled flag requires a Boolean')
+        self.enabled = allowed if enabled is None else enabled
+        if self.enabled and not allowed:
+            raise RuntimeError('detailed telemetry is forbidden inside clean execution')
+        self._active = False
+        self._timing_clock = ('time.perf_counter_ns_system_monotonic' if clock is perf_counter_ns else 'custom_unverified')
+        self._timing_windows = []
+        self._timing_windows_omitted = 0
+        if not self.enabled:
+            return
         if not callable(clock):
             raise TypeError('clock must be callable')
         self._clock = clock
@@ -74,6 +87,12 @@ class ServiceTelemetry:
 
     @contextmanager
     def span(self, category: str):
+        if not self.enabled:
+            yield
+            return
+        from .instrumentation import detailed_diagnostics_enabled
+        if not detailed_diagnostics_enabled():
+            raise RuntimeError('a diagnostic collector cannot enter clean execution')
         if type(category) is not str or not category:
             raise ValueError('timing category must be nonempty text')
         category = _text(category, self.diagnostic_limits.max_text_length)
@@ -86,7 +105,8 @@ class ServiceTelemetry:
         try:
             yield
         finally:
-            elapsed = self._clock() - frame[0]
+            ended = self._clock()
+            elapsed = ended - frame[0]
             if elapsed < frame[1]:
                 raise RuntimeError('telemetry clock must be monotone')
             popped = self._stack.pop()
@@ -96,8 +116,17 @@ class ServiceTelemetry:
             self._calls[category] += 1
             if self._stack:
                 self._stack[-1][1] += elapsed
+            elif len(self._timing_windows) < self.diagnostic_limits.max_counter_keys:
+                self._timing_windows.append({'start_ns':frame[0], 'end_ns':ended, 'wall_ns':elapsed})
+            else:
+                self._timing_windows_omitted += 1
 
     def event(self, name: str, *, reason: str | None = None, count: int = 1):
+        if not self.enabled:
+            return
+        from .instrumentation import detailed_diagnostics_enabled
+        if not detailed_diagnostics_enabled():
+            raise RuntimeError('a diagnostic collector cannot enter clean execution')
         if type(name) is not str or not name or type(count) is not int or count < 0:
             raise ValueError('events require a name and a nonnegative integer count')
         if reason is not None and type(reason) is not str:
@@ -198,6 +227,11 @@ class ServiceTelemetry:
 
     def diagnostic(self, stage_id, event_name, *, values=None, build=None):
         """Keep bounded first/last observations and counts, never full traces."""
+        if not self.enabled:
+            return False
+        from .instrumentation import detailed_diagnostics_enabled
+        if not detailed_diagnostics_enabled():
+            raise RuntimeError('a diagnostic collector cannot enter clean execution')
         if type(stage_id) is not str or type(event_name) is not str or not stage_id or not event_name:
             raise ValueError('diagnostic stage and event identifiers must be nonempty strings')
         if values is not None and build is not None:
@@ -243,6 +277,9 @@ class ServiceTelemetry:
         return True
 
     def payload(self) -> dict:
+        if not self.enabled:
+            return {'schema': 'service-telemetry-v1', 'instrumented': False,
+                    'details': None, 'reason': 'optional_detailed_telemetry_disabled'}
         if self._stack or self._active:
             raise RuntimeError('read telemetry only after the operation finishes')
         return {'schema': 'service-telemetry-v1', 'instrumented': True,
@@ -250,6 +287,9 @@ class ServiceTelemetry:
                 'timings': {name: {'exclusive_ns': self._nanoseconds[name], 'calls': self._calls[name]}
                             for name in sorted(self._calls)},
                 'total_exclusive_ns': sum(self._nanoseconds.values()),
+                'timing_clock': self._timing_clock,
+                'timing_windows': deepcopy(self._timing_windows),
+                'timing_windows_omitted': self._timing_windows_omitted,
                 'events': dict(sorted(self._events.items())),
                 'reasons': [{'event': name, 'reason': reason, 'count': count}
                             for (name, reason), count in sorted(self._reasons.items())],
@@ -294,6 +334,19 @@ def timed(category: str):
     return decorate
 
 
+def provider_diagnostic(stage_id, event_name, *, build):
+    """Expose available provider evidence only inside a diagnostic operation.
+
+    The builder receives the sample cap and stays unevaluated in clean mode.
+    No values enter canonical state, and bounded encoding errors stay diagnostic.
+    """
+    collector = _CURRENT.get()
+    if collector is None:
+        return False
+    with collector.span('provider_diagnostics'):
+        return collector.diagnostic(stage_id, event_name, build=build)
+
+
 def operation(function):
     """Add the optional telemetry keyword without changing scientific inputs."""
     @wraps(function)
@@ -303,6 +356,8 @@ def operation(function):
             return function(*args, **kwargs)
         if not isinstance(collector, ServiceTelemetry):
             raise TypeError('telemetry must be ServiceTelemetry')
+        if not collector.enabled:
+            return function(*args, **kwargs)
         if collector._active or _CURRENT.get() is not None:
             raise RuntimeError('one telemetry collector is allowed per synchronous operation')
         collector._active = True
@@ -327,4 +382,4 @@ def operation(function):
     return wrapped
 
 
-__all__ = ['ServiceTelemetry', 'DiagnosticLimits']
+__all__ = ['ServiceTelemetry', 'DiagnosticLimits', 'provider_diagnostic']

@@ -1,98 +1,96 @@
 # Current project status
 
-Updated 4 October 2026, revision 8 preparation.
-Previous verified checkpoint: e8d6f593a0311ad05fa3a7e87088d29aaa1646d3.
+Updated 4 October 2026, revision 9 preparation.
+Previous verified checkpoint: 552340bd0c1014d2b68c96439740288340938c6e.
 
-The latest user instruction requests progress on the remaining tasks.
-We interpret the earlier “maximum revenue” phrase as research value within this paper program.
-No monetary return is predicted or guaranteed.
+The latest user steering asks us to continue known next tasks and not stop prematurely.
+Authorized preparation should proceed autonomously.
+The earlier “maximum revenue” phrase means research value within this program, without monetary guarantees.
 Research experiments remain paused.
 The register contains 29 completed and 49 open required items, plus 12 conditional extensions.
-The final validation records 417 correctness tests.
-The consolidated PDF remains the unchanged 35-page revision 7 report.
-Read REVISION_8.md for the current comparison and execution changes.
+Final validation records 524 correctness tests.
+The consolidated PDF remains the unchanged 35-page revision 7 report; read REVISION_9.md for current changes.
 
-## Implemented preparation in revision 8
+## Implemented preparation in revision 9
 
-| Area | Result | Remaining boundary |
+| Area | Implemented result | Remaining boundary |
 | --- | --- | --- |
-| Ordinary fresh control | Complete model-only sequential requantization without a deletion index | Frozen model-only confirmation inventory and matched lifetime dispatch remain open |
-| Isolated campaigns | Source-bound inventory dispatch, complete confirmation products, and child membership checks | No actual real-data inventory or authorized research run exists |
-| Sequence campaigns | Ordered workload binding, predecessor verification, bulk admission, and durable failures | Sequence methods remain warm inside one worker |
-| Feasibility phase | Explicit supported phase and protocol CPU allowance | Real development-side source pools remain absent |
-| Optional quality | Dedicated budgeted worker for base, original, retained, and repaired finite NLL | No real quality measurement or task evaluation exists |
-| Complete clock | External observer includes child commitments, cleanup, and output verification | Final observer receipt is excluded; primary full-clock campaign integration remains open |
-| Budget evidence | Live exact-command admission for research model-only and direct isolated-child execution | Trusted-local worker scope is not a physical or cross-protocol global cap |
-| Arithmetic audit | Transient Fraction endpoint bits, visible initial values, available memory, and output sizes | Hidden integer intermediates, exact lifetimes, and real-model measurements remain absent |
-| Certificate funnel | Bounded descriptor/domain/bound/decision/replay diagnostics with explicit truncation | Some provider internals and complete rejection causes remain unavailable |
-| Feasibility policy | Frozen correctness, resource, coverage, quality, preparation, and lifetime decisions | Thresholds are engineering choices without empirical attainment |
+| Ordinary primary comparison | Four-method frozen inventory with model-only confirmation membership | No acquired real inputs, actual empirical inventory, or speed observation |
+| Complete method clocks | Separate external observer for each bounded method process | Observer bootstrap/final receipt excluded; OS caches uncontrolled |
+| Ordered lifetime dispatch | Separate indexed/model-only preparations and every actual request, durable failures and resumption | Sum is a declared transaction-cost estimand, not whole research-harness wall time |
+| Production predecessor | State-producing child receipt and exact predecessor artifacts checked inside the method | Research lineage/oracle verification remains a separate archive obligation |
+| Runtime and clean scope | Frozen runtime plus leaf/observer instrumentation contracts | Native profilers are unobserved; required exact ledgers remain active |
+| Artifact-aware analysis | Rehashed evidence, model/state contracts, all failures, duplicate-observation rejection, root clustering | Provenance, sampling independence, statistical power, and empirical attainment remain separate |
+| Confirmation claims | Sole registered primary comparator/configuration; all planned exact clean completion required | Conditional secondary ratios are not extra confirmatory claims |
+| Conditional feasibility | Executable unchanged policy with exact count/cost checks and explicit missing-evidence handling | Coverage, quality, resources, provenance, and actual policy attainment remain open |
+| Provider diagnostics | Available affine/box rejection causes and proof components, bounded lazy collection | No exhaustive primitive trace, realized-error decomposition, or real-model measurements |
 
-C04 closes at its written policy scope.
-C05, D04, and D05 remain partial under their complete criteria.
+C04 closes the written feasibility-policy requirement.
+C05 and D05 remain partial; the final task register records D04's review disposition.
 The experiment-ready gate G0 remains open.
-Protocol version 4 remains prospective and paused.
+Protocol version 5 remains prospective and paused.
 
 ## Scientific implications
 
-The primary numerical target remains V_cert.
-Proof rejection permits exact retained replay.
-Necessary finite-evaluator failure aborts without an approximate committed model.
-Legacy V, historical floating E, and native Hugging Face execution remain distinct.
+The numerical target remains complete sequential V_cert, including changed downstream features.
+Proof rejection permits exact retained replay; necessary finite-evaluator failure aborts without an approximate model.
+Legacy V, floating E, and native Hugging Face execution remain distinct.
+The full quadratic tier is the Gram of the same affine feature response, not a quadratic feature Taylor model.
+The ridge-aware interval verifier and box providers have conditional guarantees, not practical acceptance or cost guarantees.
 
 The response solver ignores old model codes.
-The identity-cache solver uses its previous quantized model to justify feature reuse.
-Indexed fresh receives the same valid information and solver within each family.
+The identity-cache solver uses its previous quantized model and exact transitive-ancestor identity to reuse features.
+Indexed fresh receives identical valid information and solver policy within each family.
 Neither family establishes a deletion-exclusive solver advantage.
-Canonical state equality applies within a family and tier.
-Cross-family comparisons use the common target identity and every stage code.
+Canonical state equality is within a family and tier; common target identity and every stage code permit model comparison across families.
 
-The full-state direct oracle constructs deletion state that ordinary requantization does not require.
-A gain against that oracle alone cannot establish faster ordinary fresh-model construction.
-The new model-only control supplies the appropriate output contract.
-The three-request feasibility lifetime charges original preparation and every required request, state, verification, output, commitment, and cleanup cost.
-Missing clocks or unsupported boundaries keep that decision open.
-No real-data result tests or passes it yet.
+Ordinary model-only fresh constructs no deletion index.
+Direct fresh remains a full-state oracle, and equally indexed fresh measures maintenance with shared valid information.
+Each ordered lifetime includes its actual original preparation and every request exactly once.
+Repair/indexed share one preparation observation; ordinary fresh has a distinct preparation.
+Research oracle and quality costs remain separate and cannot be charged selectively to a comparator.
+No real-data result establishes a lifetime gain or reliable speedup.
 
 ## Remaining priorities
 
-1. Connect matched complete per-method and lifetime clocks to primary frozen campaign dispatch and analysis.
-2. Complete model-only confirmation inventory support and its prospective comparison schedule.
-3. Establish feasible real checkpoint execution and validate model, tokenizer, document, corpus, and token artifacts.
-4. Freeze actual primary settings, source pools, root draws, score artifacts, workloads, inventories, and statistical precision.
-5. Measure real-data exactness, useful certificate coverage, complete service cost, lifetime savings, and NLP quality.
-6. Complete the manuscript, literature audit, independent review, reproducibility release, and submission checks.
+1. Complete independent review and fix concrete residual implementation issues while research remains paused.
+2. After resumption, establish resource-feasible real checkpoint execution and validate checkpoint, tokenizer, document, corpus, and token artifacts.
+3. Freeze primary configuration, disjoint source pools, root draws, original score artifacts, workloads, actual inventories, and precision justification.
+4. Measure exactness, useful changed-ancestor feature avoidance, complete transaction/lifetime costs, resources, and NLP quality on real data.
+5. Complete the manuscript, current literature audit, independent scientific review, reproducibility release, and submission checks.
 
-Actual acquisition and research studies require resumption after the current pause.
 Software fixtures cannot close empirical dependencies.
 Metadata pins are not acquired or validated input artifacts.
+The conditional feasibility evaluator cannot authorize an experiment or establish observed attainment from asserted JSON.
+Its public bridge reads archive-verified timing and matched diagnostic coverage/quality, plus read-time protocol ledger and storage snapshots.
+Scientific provenance, complete eligible observations, and actual policy attainment remain separate.
 
-## Measurement and evidence scope
+## Measurement and trust scope
 
-Isolated comparison campaigns separate setup, each method, and optional quality into limited processes.
-Sequence campaigns instead retain warm methods within each sequence worker.
-Operating-system caches remain uncontrolled.
-Older method clocks preserve their explicit narrower boundaries.
-The external observer provides a larger declared child-transaction boundary with disjoint accounting.
-Its own final receipt remains outside that clock.
-Model-only, canonical-state, comparison, and sequence transactions cannot be interchanged silently.
+Measured roles use fresh limited child processes under an external observer.
+Legacy warm paths retain their original narrower boundaries.
+The declared clock includes source/input checks, service work, required output commitments, cleanup, worker accounting, and output verification.
+Observer bootstrap and the final observer receipt remain outside the interval.
+Disjoint components sum to the clock; nested worker durations are not added again.
+Sequence orchestration, oracle checks, optional quality, and research lineage are separate costs.
 
-Profiled observations carry embedded diagnostic flags.
-The standard analyzer excludes them from clean timing ratios even without their audit sidecars.
-Their exact numerical outputs remain valid correctness evidence.
-Memory reports distinguish observed rational endpoints, allocation traces, RSS, and serialized artifacts.
-They do not claim hidden-intermediate or exact live-object coverage.
+Clean requires optional Python diagnostics disabled in both observer and child.
+Exact work ledgers and correctness checks remain charged.
+Native profiling is unobserved; process separation does not imply cold disk caches.
+Profiled or diagnostic timings cannot enter clean ratios, even when numerical outputs remain correct.
+Missing and failed planned slots remain explicit; unsealed parents and duplicated original observations cannot produce a primary complete ratio.
 
-CPU admission binds live allowances to exact commands under the declared frozen protocol ledger.
-Unknown attempts retain their allowances.
-Observed overruns remain charged and stop later admission.
-This does not establish absolute physical CPU containment or cross-protocol project caps.
-External observer and controller CPU remain outside child allowances.
-
-Returned canonical live state follows its declared logical deletion contract.
-Research archives preserve original states, failed attempts, and diagnostic records.
-The bounded identity trust registry also lies outside returned live state.
-No physical erasure or hostile-storage authentication claim follows.
+CPU admission binds exact commands to one protocol ledger.
+Unknown attempts retain allowances and observed overruns remain charged.
+This is not absolute physical CPU containment or a cross-protocol project cap; controller CPU remains outside child allowances.
+Returned canonical state follows its logical deletion contract, while research archives retain predecessors and failed attempts.
+Hashes verify trusted-local consistency, not hostile storage authentication or physical erasure.
 
 No research experiment, model download, corpus download, or external compute job ran.
-No empirical speed, quality, or useful coverage claim is established.
+No empirical speed, quality, useful coverage, feasibility, or publication-readiness claim is established.
 Historical missing raw results remain unavailable and explicitly labeled.
+
+Revision 9 also includes docs/MANUSCRIPT_DRAFT.md, docs/MANUSCRIPT_EVIDENCE_SLOTS.md, and docs/CITATION_CHECK_V9.md.
+The draft is prospective; ten empirical result slots remain unfilled.
+Read docs/DIAGNOSTIC_BREAKDOWN.md for verified exclusive windows and explicit residual costs.
+Read-only archive verification never creates missing budget state.

@@ -1,16 +1,14 @@
 # Resume this ACL 2027 calibration-unlearning project
 
-Last revision: 4 October 2026, v8 preparation.
+Last revision: 4 October 2026, v9 preparation.
 Repository: https://github.com/priyankjairaj100/second
-Previous verified checkpoint: e8d6f593a0311ad05fa3a7e87088d29aaa1646d3.
+Previous verified checkpoint: 552340bd0c1014d2b68c96439740288340938c6e.
 
-Read AGENTS.md, docs/STATUS.md, docs/RESEARCH_TODO.md, docs/VALIDATION.md, and docs/REVISION_8.md first.
-Then read docs/MODEL_ONLY_FRESH.md, docs/FEASIBILITY_GATES.md, and docs/TRANSACTION_TIMING.md.
-Read docs/ISOLATED_CAMPAIGN.md and docs/SEQUENCE_CAMPAIGN.md before campaign work.
-Read docs/ARITHMETIC_AUDIT.md and docs/CERTIFICATE_DIAGNOSTICS.md before interpreting diagnostics.
+Read AGENTS.md, docs/STATUS.md, docs/RESEARCH_TODO.md, docs/VALIDATION.md, and docs/REVISION_9.md first.
+Then read docs/MEASURED_COMPARISON.md, docs/MEASURED_CAMPAIGN.md, docs/MEASURED_SEQUENCE.md, and docs/MEASURED_ANALYSIS.md.
+Read docs/FEASIBILITY_DECISION.md, docs/PROVIDER_DIAGNOSTICS.md, and their linked contracts before using evidence.
 The existing PDF remains the unchanged 35-page revision 7 report.
-Revision 8 details live in the new note and linked contracts.
-The final suite contains 417 correctness tests.
+The final suite contains 524 correctness tests.
 
 The user authorized repository pushes and complete restart notes.
 Never force-push or discard unrelated remote changes.
@@ -18,14 +16,14 @@ Preserve historical evidence distinctions in docs/PROJECT_CONTEXT.md.
 
 ## Current instruction and phase
 
-The latest user instruction is “great proceed on remaining tasks.”
-An earlier instruction requested “maximum revenue.”
-Interpret that earlier phrase as research value within this ongoing paper program.
-Do not invent monetization goals or financial guarantees.
+The latest steering asks us not to stop soon and to continue known next tasks.
+Continue authorized preparation autonomously; do not repeatedly ask permission for already authorized implementation, review, documentation, or correctness tests.
+This does not override the earlier research-experiment pause.
+The earlier “maximum revenue” phrase means research value within this paper program, without invented monetization goals or financial guarantees.
 
 The register contains 29 completed and 49 open required tasks, plus 12 conditional extensions.
-C04 closes only the written feasibility-policy requirement.
-C05, D04, and D05 remain partial under their complete criteria.
+C04 closes the written feasibility-policy scope.
+C05 and D05 remain partial; consult the final register for the D04 review disposition.
 G0 remains open.
 Research experiments remain PAUSED until the user resumes them.
 Mathematics, implementation, source inspection, and software correctness tests remain allowed.
@@ -35,8 +33,7 @@ No model/data downloads, research benchmarks, synthetic empirical studies, cloud
 
 Fix base weights W and remove calibration records F.
 Reproduce complete retained-data sequential quantization, including changed downstream calibration features.
-The primary target remains V_cert.
-It combines certified scalar finite features with exact rational Grams and sequential rounding.
+The primary target remains V_cert: certified scalar finite features, exact rational Grams, and exact sequential rounding.
 Legacy V, historical floating E, and native Hugging Face execution remain distinct.
 
 V_cert is partial.
@@ -45,107 +42,107 @@ Necessary finite-evaluator failure aborts without an approximate committed model
 Completion requires successful required evaluations and sufficient resources.
 
 The response family supports compact linear and full quadratic Gram tiers.
-The quadratic tier represents the Gram of the same affine feature response.
-It is not a quadratic Taylor model of transformer features.
+The quadratic tier represents the Gram of the same affine feature response; it is not a quadratic Taylor model of transformer features.
 Fixed-box providers remove affine-span restrictions without guaranteeing useful bounds.
-The spectral-first interval policy preserves existing spectral acceptance when its required computation completes.
-Its extra arithmetic can increase cost or exhaust a finite budget.
+The spectral-first, ridge-aware interval policy preserves spectral acceptance when its required computation completes.
+Extra arithmetic can increase cost or exhaust a finite budget.
 Standalone enclosure intersection exists; a complete stored multi-domain bank does not.
 
 The response solver ignores old model codes.
-The identity-cache solver uses the previous quantized model to justify feature reuse.
-It compares all relevant transitive ancestors and refreshes exact sequential Grams after each request.
-Its returned cache is canonical for the retained records.
+The identity-cache solver uses its previous quantized model to justify feature reuse.
+It checks all relevant transitive ancestors, subtracts deleted contributions only on the identity route, and refreshes exact sequential Grams after every request.
 Indexed fresh receives identical valid information and solver policy within each family.
 Neither family establishes a deletion-exclusive solver advantage.
-Canonical state equality applies within a family and tier.
-Cross-family equality uses the common target identity and every stage code.
+Canonical state equality applies within a family and tier; cross-family comparison uses the common target identity and every stage code.
 
-## Revision 8 comparison correction
+## Revision 9 measured comparison contract
 
-The old direct_fresh oracle constructs both the retained model and deletion state.
-Ordinary requantization only requires the model.
-The new model-only fresh control builds every target stage without response extraction, charts, or a persistent deletion index.
-It keeps original normalization, grids, ridge, numerical evaluation, and sequential ancestors fixed by the target.
-Its output cannot support later deletion without extra preparation.
+Four distinct methods are frozen in each single-request slot: model_only_fresh, repair, indexed_fresh, and direct_fresh.
+Model-only fresh is ordinary complete requantization without response charts or persistent deletion state.
+Direct fresh remains the full-state oracle.
+A gain against unnecessary index reconstruction cannot establish faster ordinary requantization.
 
-Use model-only fresh for an ordinary requantization speed claim.
-Use direct_fresh for complete canonical-state correctness.
-Use equally indexed fresh for a maintenance comparison with shared valid information.
-Charge original preparation and every required request/state/output cost in lifetime analysis.
-Do not charge unnecessary index construction only to ordinary fresh.
-Do not omit repair's required index maintenance.
+Measured campaigns bind sources, actual runtime, normalized manifests, target, worker limits, protocol, configuration, roots, requests, repetitions, method order, and clean/diagnostic mode.
+Confirmation verifies inventory membership and the complete declared Cartesian product.
+Each setup, method, and optional quality evaluation uses its own bounded child and external observer.
+The ordinary model-only confirmation inventory and matched transaction analysis are now implemented.
+Actual empirical inventories are still absent.
 
-The frozen feasibility policy uses two real calibration roots and a three-request lifetime horizon.
-It specifies zero mismatches, bounded resources, changed-ancestor coverage, finite quality, and lifetime cost decisions.
-Every root must satisfy the declared engineering thresholds.
-Missing evidence keeps its gate open.
-These thresholds do not establish power, population speedup, or current feasibility.
-Read the policy before changing any value after observations.
+Measured ordered sequences freeze every actual request and cumulative retained set.
+Indexed original preparation occurs once for repair and indexed fresh.
+A distinct model-only original preparation occurs once for the ordinary fresh system.
+Each later request has separate method transactions; empty and full deletions preserve fixed normalization and ridge semantics.
+The charged predecessor check binds the previous state-producing setup/repair child receipt and its model/state artifacts.
+It does not require an external research-oracle or lineage commit to be a production service dependency.
+The research harness checks complete lineage and oracle equality separately before advancing.
+Legacy warm sequence and comparison paths retain their narrower contracts.
 
-## Campaigns and quality
+Artifact-aware loaders rehash sealed observer, child, and output evidence; verify source/input/runtime/budget bindings; reconstruct common model equality; and check state equality where applicable.
+They preserve all frozen missing, failed, interrupted, and unstarted slots.
+A parent that is not sealed cannot enter a complete primary ratio even if individual leaves finished.
+One original observation cannot occupy different repetitions or roots.
+Archive reopening preserves its original duration and does not create a new timing observation.
 
-Frozen isolated campaigns bind sources, plans, workloads, configurations, roots, requests, repetitions, and method order.
-Confirmation requires verified inventory membership and the complete declared Cartesian product.
-Setup and three methods execute in separate limited processes.
-An optional fifth quality worker evaluates base, original, retained, and repaired next-token NLL.
-Its costs remain separate from method clocks and enter the same protocol CPU ledger.
-Its diagnostic finite NLL does not establish native-framework equivalence or full task quality.
-
-Frozen sequence campaigns bind complete ordered requests and predecessor lineage.
-Each sequence runs inside one limited process and prepares its original state once.
-Its methods remain warm within that process.
-Failure, interruption, restart, and unstarted requests retain their evidence.
-A resumed attempt's elapsed time is not the entire sequence lifetime.
-
-Feasibility is now a supported execution phase with its own explicit CPU cap.
-Its real draws must use development-side sources, separate from confirmation and evaluation documents.
-No real source pools or empirical inventory exist yet.
-Protocol version 4 remains prospective and paused.
+For each request, all planned paired repeats must be exact and clean before using median method times.
+Request log ratios are averaged within roots, then roots receive equal weight.
+Bootstrap intervals resample roots only.
+Available-pair ratios are explicitly conditional.
+Confirmation requires all planned exact clean completions, an unblocked frozen protocol, frozen inference settings, and the sole declared primary comparator/configuration.
+Secondary indexed and direct-state comparisons do not silently gain additional confirmatory claims.
+Root independence remains a sampling-design premise; software cannot establish it.
 
 ## Clocks, budgets, and diagnostics
 
-The external observer measures source checks, child execution, final child commitments, cleanup, and output verification.
-Its final observer receipt and observer lock release remain outside the measured interval.
-Its disjoint spans sum to the enclosing clock without double counting nested worker elapsed values.
-Output contracts distinguish model-only, canonical-state, comparison, and sequence transactions.
-A complete comparison clock cannot substitute for a single method clock.
-Primary campaign integration of matched complete method/lifetime clocks remains open.
-Model-only confirmation inventory support also remains open.
+Each method's external observer measures source/input validation, bounded worker preparation and admission, startup/loading, required service work, output serialization, child commitments, exit, cleanup, worker accounting/commit, and output validation.
+Its disjoint spans sum to the enclosing clock; nested worker clocks are never added again.
+Observer bootstrap and final observer receipt/lock release remain excluded.
+Research equality, common-model conversion, quality, scheduling, and external lineage bookkeeping are separate.
+A per-system lifetime is attributable preparation plus every request under the declared transaction boundary, not the elapsed wall time of the entire validation harness.
 
-Research model-only and direct isolated-child commands require live exact-command CPU admission.
-Supported campaign children also verify their protocol, source, and inventory evidence.
-Unknown attempts retain their allowances; observed overruns remain charged.
-Budget scopes bind one frozen protocol and trusted local workers.
-They do not impose absolute physical CPU, hostile-process-tree, or cross-protocol project caps.
-Observer/controller CPU remains outside child CPU allowances.
-Operating-system caches remain uncontrolled.
+Clean mode disables optional Python profiling, tracing, allocation tracing, monitoring tools, and detailed telemetry in the leaf and observer.
+Required exact arithmetic ledgers and correctness checks remain charged.
+Native profilers remain unobserved; operating-system caches remain uncontrolled.
+Diagnostic mode can preserve identical model/state bytes but cannot supply clean latency ratios.
+The frozen runtime contract rejects incompatible execution environments.
 
-The arithmetic audit observes standard Fraction allocation endpoints in one process and thread.
-It separately reports initial visible values, bounded attribution, available traced memory, RSS, and artifact bytes.
-It rejects cached output reuse and unsupported child-controller audits.
-Embedded profiling flags exclude diagnostic runs from clean timing ratios even without a sidecar.
-Exact model/state checks remain valid.
-Hidden integer intermediates and exact live-rational memory remain outside its scope.
+Research commands require live exact-command CPU admission under the frozen protocol ledger.
+Unknown attempts retain their allowances; observed overruns remain charged and stop later admission.
+The scope is trusted local child processes under one protocol identity.
+Observer/controller CPU, hostile process trees, and cross-protocol physical/project caps are not covered.
+Worker address-space limits are not physical RSS limits.
 
-The bounded certificate funnel records observed descriptors, domains, bounds, decisions, replay, and completion.
-It preserves disposition counts for recorded stages and events, with explicit omission and saturation counters.
-Large exact values receive bounded summaries.
-Some provider internals remain unavailable.
-These diagnostics do not establish exhaustive rejection decomposition or real-model memory evidence.
+The arithmetic audit observes standard Fraction allocation endpoints in one process and thread, separately reporting initial visible values, bounded attribution, available memory, RSS, and artifacts.
+Hidden integer intermediates, exact object lifetimes, and physical live-rational memory remain outside its scope.
 
-## Next priorities
+Provider diagnostics now distinguish affine inconsistency, selected-coefficient box rejection, extraction stages, and available finite/center/curvature/gradient proof components.
+Selected free-zero coefficients outside a box do not prove that every possible affine representation violates it.
+Box diagnostics report their available envelope/anchor components.
+Clean mode skips lazy diagnostic builders.
+All detail is bounded, with omission and saturation counters; missing components are not zero errors.
+Complete empirical rejection decomposition and real-model arithmetic/memory evidence remain outstanding.
 
-1. Integrate matched complete per-method and lifetime clocks into the primary frozen campaign and analysis path.
-2. Add a compatible model-only confirmation inventory and prospective comparison schedule.
-3. Establish resource-feasible real checkpoint execution after research resumption.
-4. Acquire and validate model, tokenizer, document, corpus, and token artifacts after authorization.
-5. Freeze actual configurations, source pools, root draws, scores, workloads, inventories, and statistical precision.
-6. Execute staged real-data feasibility, development, confirmation, complete costs, and NLP evaluations.
-7. Complete the manuscript, literature audit, independent review, reproducibility release, and submission checks.
+## Feasibility and next priorities
+
+The unchanged feasibility policy uses two real roots and a three-request lifetime horizon.
+It requires zero mismatches, bounded resources, changed-ancestor feature avoidance, finite quality, and strict lifetime gains on every root.
+The pure evaluator validates conditional evidence and exact count/cost arithmetic.
+Its positive output is conditional promotion to development, never empirical attainment, experiment authorization, confirmation permission, or a population speedup.
+The public archive bridge derives lifetime, supported diagnostic coverage, separately bound quality, complete protocol-ledger snapshots, and archived-file sizes.
+Missing/mismatched evidence stays explicit; scientific real-workload provenance remains unmet.
+No real-data result tests or passes this policy.
+
+Continue independent review, close concrete remaining implementation defects, and maintain the task register and restart context without stopping at a proposal.
+Then, after research resumption, establish a resource-feasible real checkpoint and acquire/validate checkpoint, tokenizer, document, corpus, and token artifacts.
+Freeze actual primary settings, disjoint pools, roots, scores, workloads, inventories, and statistical precision.
+Run staged real-data feasibility, development, confirmation, full costs, and NLP evaluations only under the authorized protocol.
+Complete the manuscript, current literature audit, reproducibility release, and submission checks.
 
 Do not claim reliable full-model speedup, useful real-model coverage, measured quality, or publication readiness.
-Do not raise resource limits silently or present planning estimates as memory measurements.
-The archive and bounded identity trust registry remain outside returned live-state deletion guarantees.
+Do not raise resource limits silently or present planning estimates as measurements.
+Research archives and the bounded cache trust registry are outside returned live-state deletion guarantees.
 Historical missing raw results remain unavailable.
-Save substantive progress and complete restart context to the authorized repository.
+
+Revision 9 also includes docs/MANUSCRIPT_DRAFT.md, docs/MANUSCRIPT_EVIDENCE_SLOTS.md, and docs/CITATION_CHECK_V9.md.
+The draft is prospective; ten empirical result slots remain unfilled.
+Read docs/DIAGNOSTIC_BREAKDOWN.md for verified exclusive windows and explicit residual costs.
+Read-only archive verification never creates missing budget state.

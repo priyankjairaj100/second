@@ -1,5 +1,6 @@
-Revision 8 preparation, 4 October 2026.
-Research experiments remain paused under configs/protocol_v4.json.
+Revision 9 implementation, 4 October 2026; final integrated review pending.
+Research experiments remain paused under configs/protocol_v5.json.
+Historical revision 8 claims remain historical; use the current sealed validation log for tested sources.
 
 CURRENT REFERENCE MODULES
 - exact_core.py: exact reverse LDL, rational rounding, and shape-cell certificate.
@@ -31,7 +32,14 @@ CURRENT REFERENCE MODULES
 - sequence_campaign.py: source-bound bulk sequences and complete planned outcomes.
 - isolated_comparison.py: separate setup/method workers and optional quality worker.
 - isolated_inventory.py: frozen isolated campaigns and confirmation-product admission.
-- transaction_timing.py: external transaction observation through output verification.
+- transaction_timing.py: external transaction observation through output verification, clean observer facts, and archive checks.
+- measured_comparison.py: matched four-arm complete clocks, separate setup/quality, model/state equality, and slot-bound archive verification.
+- measured_inventory.py: measured primary inventories, runtime binding, four-arm order, and model-only confirmation admission.
+- measured_sequence.py: per-system preparation and complete per-request leaf clocks with ordered lineage.
+- measured_analysis.py: artifact-aware original-observation analysis with failure denominators.
+- instrumentation.py: explicit clean/diagnostic profiles and optional Python instrumentation guards.
+- runtime_contract.py: declared interpreter/module/runtime fingerprints.
+- feasibility_decision.py: executable predeclared gate decisions from verified evidence.
 - worker_control.py: process limits, cleanup, wait4 usage, and durable outcomes.
 - phase_budget.py: protocol-scoped CPU allowance admission and settlement.
 - experiment_campaign.py: warm independent-request campaign and safe restart.
@@ -110,8 +118,12 @@ Fresh transactions require absent outputs; resumed work and archival reuse are n
 A sealed child without durable outer timing cannot become a cached fast success.
 Operating-system caches remain uncontrolled.
 
-Complete-clock primary campaign, matched lifetime dispatch, and analysis integration remain open.
-Model-only confirmation likewise requires its compatible frozen comparator inventory.
+Complete-clock primary campaigns, matched lifetime dispatch, and artifact-aware analysis are implemented and validated in revision 9.
+All four single-request methods have matching external boundaries; model-only output and canonical state remain different contracts.
+Lifetime clocks charge each system its own preparation and every complete request.
+Optional quality and cross-method research checks remain separate.
+Clean mode disables optional Python profiling/telemetry for both observer and leaf; diagnostic replicas remain explicit.
+Model-only confirmation now verifies real compatible frozen inventory membership and is blocked without it.
 Research model-only and direct isolated-child commands require live exact-command CPU admission.
 No current protocol authorizes research execution.
 
@@ -120,7 +132,8 @@ The external certificate funnel records exposed domains, descriptors, finite bou
 sampled decisions, replay, actual feature evaluations, and model completion.
 Detail caps, omissions, disposition counts, and bounded rational encodings are explicit.
 It adds no payload, feature, or diagnostic state to canonical output.
-Opaque provider fit, Hessian, denominator causes, and some bound decompositions remain unavailable.
+Revision 9 adds bounded provider-internal fit, Hessian, denominator, and rejection details where available.
+Caps, omission counts, unavailable causes, and bounded encodings remain explicit; it is not a complete execution trace.
 
 The arithmetic audit observes standard Fraction allocation in its current thread and process.
 It records constructed endpoint counts and bit lengths without retaining rational values.
@@ -131,7 +144,7 @@ Profiler-marked observations are excluded from clean speed ratios even without t
 Exact output comparisons remain valid under profiling.
 
 RESOURCE AND DECISION BOUNDARIES
-Protocol 4 supports feasibility, development, confirmation, and software-test phases.
+Protocol 5 supports feasibility, development, confirmation, and software-test phases.
 Planned research admission caps are 3, 12, and 64 worker CPU hours respectively.
 Unknown attempts retain full allowances; observed overruns remain charged.
 Changing output directories cannot reset the same frozen protocol ledger.
@@ -143,26 +156,29 @@ C04 closes only the written policy in configs/feasibility_gates_v1.json.
 It requires exactness, resources, changed-ancestor feature avoidance, quality, preparation,
 and a strict three-request lifetime gain against ordinary model-only fresh on every feasibility root.
 No real root has been evaluated against this policy.
-C05, D04, and D05 remain partial under their original comprehensive criteria.
+D04 primary and matched lifetime complete-clock integration is implemented and validated.
+Provider and arithmetic observability have stated scope limits.
+Implementation completion does not establish real speed, resource fit, diagnostic adequacy, or gate attainment.
 
 EVIDENCE AND REMAINING GATES
 Historical revision 6 validation passed 261 correctness tests; see docs/VALIDATION_V6.md.
 Historical revision 7 validation passed 340 correctness tests; see docs/VALIDATION_V7.md.
-Use the sealed revision 8 log and tested hashes referenced by docs/VALIDATION.md for current evidence.
+Revision 8 validation is historical. Use the latest sealed log and tested hashes referenced by docs/VALIDATION.md for current evidence.
+Revision 9 passed 524 correctness tests with 118 frozen source/test/script hashes; see docs/VALIDATION.md.
 Do not carry historical counts forward as validation of changed source.
 No fixture count is a research success probability or benchmark result.
-The 35-page revision 7 report PDF remains unchanged; docs/REVISION_8.md is the new note.
+The 35-page revision 7 report PDF remains historical and unchanged. Revision notes document subsequent implementation changes.
 Historical raw experiment files remain unavailable.
 
 Still unestablished:
 - feasible real checkpoint execution and validated tokenizer/corpus artifacts;
 - actual disjoint pools, original-state scores, final configurations, and frozen empirical inventories;
-- model-only confirmation and matched complete-clock lifetime execution and analysis;
-- complete provider-internal diagnostics and comprehensive arithmetic/memory observation;
+- exercised real model-only confirmation and complete-clock lifetime evidence;
+- empirical adequacy of bounded provider diagnostics and comprehensive arithmetic/memory observation;
 - practical certificate coverage, absolute NLP quality, and statistically justified complete latency;
 - competitive memory, preparation, storage, lifetime cost, or reliable full-model speedup;
 - native Hugging Face/CUDA/E equivalence, GPU kernels, and integrated work scheduling;
 - physical erasure, hostile-store authentication, or proof-assistant verification.
 
-Protocol v4 preserves unresolved empirical gates.
+Protocol v5 preserves unresolved empirical gates.
 Research experiments remain paused.

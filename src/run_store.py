@@ -61,6 +61,47 @@ def atomic_write(path: Path, payload: bytes) -> None:
             os.unlink(temporary)
 
 
+def read_completed(root: str | Path, identity: dict) -> dict | None:
+    """Verify existing completion without creating a directory or acquiring a lock."""
+    root = Path(root).absolute()
+    if root.is_symlink() or any(p.is_symlink() for p in root.parents):
+        raise ValueError("symlink directories are not supported")
+    if not root.exists():
+        return None
+    if not root.is_dir():
+        raise ValueError("completion root is not a directory")
+    identity_digest = digest(canonical_json(identity))
+    path = root / "result.json"
+    if not path.exists():
+        return None
+    if path.is_symlink():
+        raise ValueError("symlink result")
+    result = strict_json(path.read_bytes())
+    if result.get("identity_sha256") != identity_digest:
+        raise ValueError("run identity differs from saved result")
+    if result.get("status") != "complete":
+        return None
+    attempt_name = result.get("attempt")
+    if not isinstance(attempt_name, str) or not re.fullmatch(r"attempt-[0-9]{4,}", attempt_name):
+        raise ValueError("invalid saved attempt")
+    attempt = root / attempt_name
+    if attempt.is_symlink() or not attempt.is_dir():
+        raise ValueError("invalid saved attempt directory")
+    artifacts = result.get("artifacts")
+    if not isinstance(artifacts, dict) or not artifacts:
+        raise ValueError("completed run has no artifact manifest")
+    for name, expected in artifacts.items():
+        if not isinstance(name, str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", name):
+            raise ValueError("unsafe saved artifact name")
+        p = attempt / name
+        if p.is_symlink() or not p.is_file():
+            raise ValueError("missing saved artifact")
+        data = p.read_bytes()
+        if expected != {"sha256": digest(data), "bytes": len(data)}:
+            raise ValueError("saved artifact hash mismatch")
+    return result
+
+
 class RunStore:
     """One exclusive writer, immutable attempts, and one verified completion."""
     def __init__(self, root: str | Path, identity: dict):
@@ -89,35 +130,7 @@ class RunStore:
         return path
 
     def completed(self) -> dict | None:
-        path = self.root / "result.json"
-        if not path.exists():
-            return None
-        if path.is_symlink():
-            raise ValueError("symlink result")
-        result = strict_json(path.read_bytes())
-        if result.get("identity_sha256") != self.identity_digest:
-            raise ValueError("run identity differs from saved result")
-        if result.get("status") != "complete":
-            return None
-        attempt_name = result.get("attempt")
-        if not isinstance(attempt_name, str) or not re.fullmatch(r"attempt-[0-9]{4,}", attempt_name):
-            raise ValueError("invalid saved attempt")
-        attempt = self.root / attempt_name
-        if attempt.is_symlink() or not attempt.is_dir():
-            raise ValueError("invalid saved attempt directory")
-        artifacts = result.get("artifacts")
-        if not isinstance(artifacts, dict) or not artifacts:
-            raise ValueError("completed run has no artifact manifest")
-        for name, expected in artifacts.items():
-            if not isinstance(name, str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", name):
-                raise ValueError("unsafe saved artifact name")
-            p = attempt / name
-            if p.is_symlink() or not p.is_file():
-                raise ValueError("missing saved artifact")
-            data = p.read_bytes()
-            if expected != {"sha256": digest(data), "bytes": len(data)}:
-                raise ValueError("saved artifact hash mismatch")
-        return result
+        return read_completed(self.root, self.identity)
 
     def claim(self) -> None:
         """Use a persistent POSIX advisory lock. Process exit releases the lock."""

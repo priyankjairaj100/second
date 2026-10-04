@@ -122,6 +122,22 @@ def _verify_sources(request):
     if manifest.get("phase") == "confirmation" and evidence is None:
         raise ValueError("confirmation child requires verified inventory evidence")
     if evidence is not None:
+        if isinstance(evidence, dict) and evidence.get("kind") == "measured":
+            fields = {"kind", "path", "sha256", "run_id", "plan_path"}
+            if not fields <= set(evidence) or set(evidence) - fields - {"sequence_step"}:
+                raise ValueError("invalid measured child inventory evidence")
+            from .measured_inventory import verify_model_manifest
+            authorization = verify_model_manifest(evidence["path"], evidence["run_id"], evidence["plan_path"],
+                request["manifest_path"], sequence_step=evidence.get("sequence_step"), execute=True)
+            if (authorization["inventory_sha256"] != evidence["sha256"]
+                    or authorization["plan_sha256"] != request["plan_sha256"]
+                    or authorization["manifest_sha256"] != request["manifest_sha256"]
+                    or authorization["target_manifest_sha256"] != request["target_manifest_sha256"]
+                    or authorization["execution_mode"] != request.get("execution_mode", "diagnostic")):
+                raise ValueError("measured child inventory binding differs")
+            if request["role"] == "quality" and authorization.get("quality") != "heldout_nll":
+                raise ValueError("quality worker is absent from the verified measured plan")
+            return authorization
         if not isinstance(evidence, dict) or set(evidence) != {"path", "sha256", "run_id", "plan_path"}:
             raise ValueError("invalid isolated child inventory evidence")
         from .isolated_inventory import verify_isolated_membership
@@ -136,10 +152,17 @@ def _verify_sources(request):
 
 
 def _child(request_path):
+    from .instrumentation import instrumentation_scope
+    request, _ = _read_json(Path(request_path))
+    with instrumentation_scope(request.get("execution_mode", "diagnostic")):
+        return _child_impl(request_path)
+
+
+def _child_impl(request_path):
     request, _ = _read_json(Path(request_path))
     fields = {"schema", "role", "manifest_path", "manifest_sha256", "source_sha256",
               "target_manifest_sha256", "plan_sha256", "output", "original_state"}
-    if (not isinstance(request, dict) or not fields <= set(request) or set(request) - fields - {"inventory", "quality_states"}
+    if (not isinstance(request, dict) or not fields <= set(request) or set(request) - fields - {"inventory", "quality_states", "sequence_context", "execution_mode"}
             or request["schema"] != "isolated-child-request-v1"
             or request["role"] not in ("setup", "quality", *METHODS)):
         raise ValueError("invalid isolated child request")
@@ -155,6 +178,7 @@ def _child(request_path):
     telemetry = ServiceTelemetry()
     record = {"schema": "isolated-child-result-v1", "status": "running", "role": request["role"],
               "plan_sha256": request["plan_sha256"], "manifest_sha256": request["manifest_sha256"],
+              "execution_mode": request.get("execution_mode", "diagnostic"),
               "outcome": {"status": "failed", "failure": {"kind": "not_started"}}}
     try:
         store.write_artifact("request.json", canonical_json(request))
@@ -167,7 +191,8 @@ def _child(request_path):
             verify_command_admission(digest(admission_protocol_raw), admission_manifest["phase"],
                 [sys.executable, "-m", "src.isolated_comparison", "--child",
                  str(Path(request_path).absolute())])
-        prepared = _run_manifest(request["manifest_path"], request["output"], prepare_only=True)
+        prepared = _run_manifest(request["manifest_path"], request["output"], prepare_only=True,
+                                 skip_heldout=request["role"] != "quality")
         service, records = prepared["service"], prepared["records"]
         if prepared["metadata"]["target_manifest_sha256"] != request["target_manifest_sha256"]:
             raise ValueError("isolated child target differs from the declared target")
@@ -202,27 +227,39 @@ def _child(request_path):
                 raise ValueError("setup must not receive an earlier state")
             output = service.fresh(records, telemetry=telemetry)
             with telemetry.span("artifact_output"):
-                info = _commit_state(store, "original", output)
+                info = _commit_state(store, "original", output, telemetry=telemetry)
             # Validate exactly what this worker has durably saved.
             with telemetry.span("persisted_state_reload"):
                 service.load_state((store.attempt / "original-state.json").read_bytes(),
                                    expected_digest=info["state_sha256"])
         else:
             original = request["original_state"]
-            if not isinstance(original, dict) or set(original) != {"path", "sha256"}:
-                raise ValueError("method requires the original canonical state reference")
-            _sha(original["sha256"])
+            if role != "direct_fresh":
+                if not isinstance(original, dict) or set(original) != {"path", "sha256"}:
+                    raise ValueError("method requires the original canonical state reference")
+                _sha(original["sha256"])
+            elif original is not None:
+                if not isinstance(original, dict) or set(original) != {"path", "sha256"}:
+                    raise ValueError("invalid optional direct-fresh state reference")
+                _sha(original["sha256"])
             record["original_state_used"] = role != "direct_fresh"
             if role != "direct_fresh":
                 with telemetry.span("persisted_state_reload"):
                     _, state_raw = _read_json(_local(Path(request_path).parent, original["path"]))
                     old = service.load_state(state_raw, expected_digest=original["sha256"])
-                if {r.record_id: r.content_digest for r in old.records} != {r.record_id: r.content_digest for r in records}:
-                    raise ValueError("original state records differ from the calibration manifest")
+                if request.get("sequence_context") is None:
+                    if {r.record_id: r.content_digest for r in old.records} != {r.record_id: r.content_digest for r in records}:
+                        raise ValueError("original state records differ from the calibration manifest")
+            if request.get("sequence_context") is not None:
+                from .measured_sequence import validate_sequence_context
+                incremental_ids = validate_sequence_context(request, manifest, records,
+                    None if role == "direct_fresh" else old)
+            else:
+                incremental_ids = manifest["deleted_ids"]
             deleted_set = set(manifest["deleted_ids"])
             by_id = {record.record_id: record for record in records}
             with telemetry.span("deleted_payload_lookup"):
-                deleted = tuple(by_id[rid] for rid in manifest["deleted_ids"])
+                deleted = tuple(by_id[rid] for rid in incremental_ids)
             retained = tuple(record for record in records if record.record_id not in deleted_set)
             source = {record.record_id: record for record in retained}.__getitem__
             mode = prepared["service_mode"]
@@ -235,8 +272,10 @@ def _child(request_path):
             else:
                 output = service.fresh(retained, telemetry=telemetry)
             with telemetry.span("artifact_output"):
-                info = _commit_state(store, role, output)
-        record.update(artifact=info, service_telemetry=telemetry.payload(), outcome={"status": "complete"})
+                info = _commit_state(store, role, output, telemetry=telemetry)
+        from .instrumentation import instrumentation_state
+        record.update(artifact=info, service_telemetry=telemetry.payload(), outcome={"status": "complete"},
+                      instrumentation_state=instrumentation_state())
         _verify_sources(request)
     except BaseException as exc:
         record.update(outcome={"status": "failed", "failure": _failure(exc)},

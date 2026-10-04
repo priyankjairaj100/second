@@ -179,7 +179,7 @@ The following items remain open:
 The correctness tests establish these software behaviors only.
 They do not establish useful chart coverage, model quality, or repair speed.
 
-## Revision 7 separate method executor
+## Historical revision 7 separate method executor
 
 The original campaign keeps warm methods inside each comparison worker.
 The separate executor uses independent setup, repair, indexed-fresh, and direct-fresh workers.
@@ -188,3 +188,12 @@ Parent verification, post-cleanup accounting, logs, and controller receipts rema
 Operating-system caches remain uncontrolled.
 Read `docs/ISOLATED_COMPARISON.md` for exact boundaries and restart guarantees.
 Isolated confirmation inventory and complete parent-transaction timing remain open.
+
+
+## Current measured execution
+
+Revision 9 integrates complete external method clocks into four-method campaigns and matched ordered lifetime analysis.
+Read MEASURED_COMPARISON.md, MEASURED_CAMPAIGN.md, MEASURED_SEQUENCE.md, and TRANSACTION_TIMING.md for current paths.
+Their read-only verifiers do not create missing state or CPU ledgers.
+The original whole-comparison worker retains the narrower contract documented above.
+Actual research inventories, useful resource fit, and experiment resumption remain open.

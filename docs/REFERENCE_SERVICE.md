@@ -1,6 +1,6 @@
 # Executable reference service
 
-Revision 8. Date: 4 October 2026.
+Revision 9. Date: 4 October 2026.
 
 The primary certified path implements V_cert with explicit numerical contracts.
 The legacy library-math V path remains available and distinct.
@@ -301,7 +301,7 @@ A separate feasibility-phase label and cross-protocol accounting remain unimplem
 All new paths retain the research pause.
 No current control establishes real-model feasibility, useful certificate coverage, NLP quality, or reliable full-service speedup.
 
-## Current revision 8 execution paths
+## Historical revision 8 execution paths
 
 `model_fresh.fresh_model` follows the complete sequential target with no response chart,
 deletion metadata, or persistent Gram cache. Its CLI commits `model.json`, a manifest, and a result receipt.
@@ -355,3 +355,26 @@ preparation, and a strict three-request lifetime gain over ordinary model-only f
 Its attainment and all real-model evidence remain unmeasured.
 Use the sealed revision 8 validation record for current correctness evidence;
 historical test counts and the unchanged report PDF do not validate changed source.
+
+
+## Current revision 9 execution paths
+
+Measured comparison, campaign, and sequence modules schedule model-only fresh, repair, indexed fresh, and direct fresh under matching complete transaction clocks.
+Runtime and instrumentation contracts bind each inventory; actual research inputs and resumption remain required.
+Model-only confirmation validates real inventory membership and live exact-command admission.
+Every ordered system pays its own preparation and requests.
+Charged predecessor checks use the prior state-producing child receipt and artifacts.
+
+Artifact-aware analysis reconstructs exactness, retained membership, clock eligibility, quality bindings, and frozen planned outcomes.
+It rejects duplicated observations and limits confirmation timing eligibility to the registered primary comparison.
+The public feasibility bridge consumes matched verified archives and read-only resource snapshots.
+Scientific provenance and actual empirical attainment remain separate.
+
+Explicit diagnostic windows cover the named service operations, serialization, output, and cleanup.
+Disjoint attribution retains unknown time as residual; exhaustive D04 remains partial.
+Provider phases and available proof bounds improve C05 without creating an exhaustive execution trace.
+D05 hidden intermediate/lifetime memory limits remain.
+
+See MEASURED_COMPARISON.md, MEASURED_SEQUENCE.md, MEASURED_ANALYSIS.md, DIAGNOSTIC_BREAKDOWN.md, and FEASIBILITY_DECISION.md.
+Use the latest sealed validation record; earlier counts describe historical sources only.
+No practical speed, useful real-model coverage, or quality is established.

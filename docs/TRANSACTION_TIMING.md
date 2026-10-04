@@ -1,7 +1,8 @@
 # Complete transaction timing with an external observer
 
-Revision 8 supplies an executable measurement boundary.
-It does not supply empirical timing results.
+Revision 9 integrates the revision 8 external boundary into matched four-arm comparisons, frozen campaigns, and measured lifetime sequences.
+The revision 8 observer contract remains the historical basis; the v9 additions below are subject to final integrated review.
+No empirical timing result is supplied.
 Research remains paused.
 
 ## What the clock includes
@@ -46,6 +47,10 @@ Adjacent intervals share an endpoint and never overlap.
 The worker execution span equals the existing `elapsed_wall_ns` exactly.
 Do not add that nested elapsed field to the enclosing total.
 Internal model or service timers remain nested diagnostic quantities.
+Revision 9 additionally records `timing_detail_spans`: when the worker supplies `cleanup_start_ns`, this refines the execution-plus-cleanup span without changing the historical span or elapsed value.
+Actual observer adopted-descendant cleanup windows are separately recorded. The artifact-aware `diagnostic_breakdown` adapter subtracts them from their enclosing phases before classification.
+It verifies disjoint loading, chart and service windows against the complete observer clock; all unassigned work remains an explicit residual. See `DIAGNOSTIC_BREAKDOWN.md`.
+`named_attribution_complete` remains false while a residual or unavailable component remains; exhaustive D04 attribution is not asserted.
 
 If a worker fails before publishing its boundaries, its enclosing call remains one explicitly unpartitioned span.
 Incomplete observations still retain disjoint elapsed accounting.
@@ -62,6 +67,7 @@ The receipt binds that contract and the exact command.
 | `canonical_state` | One method returns the exact model and canonical deletion state | A complete repair or full-state construction transaction |
 | `comparison` | Setup, all comparison arms, and shared research verification | Whole experimental comparison cost |
 | `sequence` | A declared sequence of transactions and its executor outputs | Sequence execution cost |
+| `quality_evaluation` | A separate heldout evaluation child | Research evaluation cost, outside method clocks |
 
 A whole comparison clock includes setup and all its method arms.
 It cannot become a per-method latency by dividing or allocating shared costs arbitrarily.
@@ -72,7 +78,7 @@ The wrapper itself computes no latency ratio.
 
 Known receipt schemas establish the expected contract.
 An isolated child supports `setup`, `repair`, `indexed_fresh`, and `direct_fresh` as canonical-state roles.
-A quality-only isolated child is rejected as a canonical-state transaction.
+A quality-only isolated child is supported only with `quality_evaluation`; labeling it as canonical state is rejected.
 An unknown, unlabeled child receipt has an unverified output contract.
 Its elapsed time remains diagnostic and cannot become an eligible fresh transaction observation.
 
@@ -115,11 +121,9 @@ The child independently checks its frozen sources and inventory requirements.
 Existing completed child outputs cannot be relabeled as a new fresh transaction.
 
 The model-only CLI uses the same observer with `output_contract="model_only"`.
-For admitted research, its exact command must have this argument order:
-
-```text
-ABSOLUTE_PYTHON ABSOLUTE_REPOSITORY/scripts/run_model_fresh.py ABSOLUTE_MANIFEST --output ABSOLUTE_OUTPUT
-```
+Use `src.model_fresh.model_fresh_command` to build the literal admitted argument list, including optional inventory, plan, sequence-step, and execution-mode flags.
+The historical revision 8 no-flags command remains a diagnostic legacy form.
+The v9 comparison and sequence controllers construct and bind the complete current command themselves.
 
 Absolute paths and literal arguments bind the admitted command.
 No shell processes or remote jobs are introduced by the observer.
@@ -163,13 +167,16 @@ It settles observed child CPU usage through the existing worker controller.
 It removes any inherited admission before launching a different worker.
 The descriptor binds a live allowance, exact command, phase, and ledger identity.
 `verify_command_admission` checks that descriptor against the trusted local ledger.
-`verify_phase_admission` additionally fixes the model-only CLI argument structure.
+`verify_phase_admission` preserves the historical no-flags model-only helper.
+The current model-only CLI uses `verify_command_admission` with the exact command returned by `model_fresh_command`, including every frozen flag.
 
 Non-software model-only and direct isolated-child paths require active exact-command admission before loading model parameters.
 The role helper derives its admission from the hash-bound protocol.
 A manual unbudgeted measured command does not bypass the child's admission check.
 The pause and frozen-inventory requirements remain independent execution gates.
-Model-only standalone confirmation remains blocked until its inventory path exists.
+Model-only confirmation is implemented through a compatible frozen measured inventory and remains blocked when that evidence is absent.
+The child independently verifies real membership, target, manifest, plan, mode, and protocol before loading parameters.
+The current research protocol still pauses empirical execution.
 
 Wrapping an already budgeted comparison with another admission can double-charge nested CPU usage.
 The receipt states this possibility explicitly.
@@ -219,23 +226,23 @@ The transaction and observer directory trees must be disjoint.
 All bound inputs, outputs, and sources must avoid symlinks.
 The observer verifies recorded output and worker trees again before returning a saved receipt.
 
-Public entry points are `measure_command`, `run_measured_manifest`, and `build_role_measurement`.
+Public entry points are `measure_command`, `run_measured_manifest`, `build_role_measurement`, and read-only `verify_observer_receipt`.
+The verifier reads existing phase-ledger evidence through `read_budget_snapshot` without creating directories or budget locks; a missing required ledger is unavailable evidence, not zero cost.
 `transaction_source_hashes` covers Python source and CLI scripts.
 `accounting_partition` verifies the exact no-overlap timing identity.
 
+## Revision 9 clean profiles and matched execution
+
+`src/measured_comparison.py` wraps every observer call in the plan's `instrumentation_scope`. The observer records entry and exit instrumentation facts. Child leaves wrap loading, work, and their commits in the same frozen `clean` or `diagnostic` mode. Clean mode rejects optional Python profile/trace hooks, allocation tracing, and monitoring, and disables detailed telemetry. Required exact work counters and output validation remain charged. Native profiling remains explicitly unobserved.
+
+A clean child does not by itself establish a clean observer: both records must satisfy the profile. `execution_mode="diagnostic"` runs use their own frozen plans and output directories; the analysis excludes them from clean timing ratios. Arithmetic audits and other profiled replicas remain separate diagnostics. The generic manual wrapper does not silently promote its default diagnostic context into clean evidence.
+
+The measured comparison executes model-only fresh, repair, indexed fresh, and full-state direct fresh as independent limited leaf processes with this same boundary. Setup and optional quality are separate. The parent compares common target codes across all four and canonical state within the three state-returning methods. `src/measured_sequence.py` reuses the same leaf observer for preparation and each ordered request; its lifetime sums use each system's own preparation plus request clocks. Research comparison and quality costs remain separately visible.
+
+See `MEASURED_COMPARISON.md` and `MEASURED_SEQUENCE.md` for complete contracts. Source/protocol/input binding, true frozen inventory admission, partial archive validation, and immutable original observation reuse are implemented. A copied observer cannot become an independent repetition. These additions are implementation evidence pending the final integrated review and source freeze, not measurements of useful speed.
+
 ## Correctness evidence and remaining scope
 
-The dedicated tests cover enclosing commits, cleanup, accounting, immutable reuse, source binding, output contracts, and interrupted transactions.
-They also cover separate-session descendant cleanup, admission consistency, and phase-budget settlement.
-Existing worker tests still pass with their original elapsed semantics.
-All tests are software fixtures rather than empirical timing studies.
-The dedicated module has 14 passing correctness tests.
-All seven existing worker-control tests also pass.
-Independent review additionally checks missing admission before model loading, changed resume inputs, and invalid quality-role labels.
-The reviewer found no further blocker under the declared trusted-local scope.
+Historical revision 8 validation included 14 timer correctness tests and seven worker-control tests. Those counts describe that source revision only. Consult the current sealed validation log for the tested v9 sources; do not carry old counts forward as current validation.
 
-This implementation closes the declared complete local transaction boundary at its stated scope.
-Real artifacts, executed schedules, resource feasibility, precision, and useful latency remain separate empirical requirements.
-D04 remains open for complete-clock integration into primary campaign and lifetime analysis.
-D05 separately covers arithmetic-size diagnostics.
-C05 separately covers unavailable numerical rejection details.
+The fixtures cover enclosing commits, descendant cleanup, disjoint accounting, output contracts, immutable reuse, source/input binding, admission, phase-budget settlement, interrupted observations, and missing original seals. They supply no empirical timing study. The v9 primary campaign and matched lifetime integrations now exist; useful latency, real resource feasibility, corpus/model artifacts, diagnostic completeness, and scientific precision remain separate requirements. Research remains paused.

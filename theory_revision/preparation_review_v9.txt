@@ -1,0 +1,227 @@
+REVISION 9 INDEPENDENT IMPLEMENTATION AND EVIDENCE REVIEW
+Date: 4 October 2026
+Reviewer role: independent adversarial review; source fixes made by owners.
+
+Scope
+-----
+Reviewed measured four-arm transactions, frozen confirmation inventories,
+matched sequential lifetime execution, artifact-derived analysis, clean timing
+instrumentation, and the conditional feasibility decision checker. This is a
+software and evidence-contract review. It is not a research experiment, a real
+checkpoint feasibility result, a practical speedup result, a novelty search, or
+a claim that the paper program is complete. No research corpus or checkpoint
+was downloaded. The research pause remains in force.
+
+Independent regressions are in tests/test_adversarial_v9.py. Thirteen independent
+tests plus the assembler owner's real combined clean/diagnostic inventory and
+CLI integration test passed together in an immutable temporary snapshot of src,
+scripts, tests and configs in 11.025 seconds in the final focused run. This is software-test elapsed time,
+not an empirical latency observation. The root's final frozen integrated suite
+is the authority for final source compatibility. No full suite was run by this
+reviewer while source owners were still editing.
+
+Concrete findings and coordinated corrections
+--------------------------------------------
+1. Checking sys.monitoring global events alone missed local-only monitoring.
+   A registered line callback ran while get_events(tool) remained zero. Root
+   now rejects allocated monitoring tool IDs in clean mode as well as active
+   Python profile, trace and allocation tracing. Independent entry/exit tests
+   also cover a profiler activated during a scope, preservation of the original
+   work exception, and disabled optional diagnostic builders/allocations.
+   These checks do not prove absence of external native instrumentation or
+   authenticate hostile code that disables and restores observers.
+
+2. The feasibility checker originally allowed a bound worker's elapsed wall
+   time to exceed the enclosing transaction term used in its lifetime sum.
+   The owner now rejects that contradiction. Timing terms bind worker identity
+   and receipt, configured and observed limits, exact output contract, retained
+   membership, and clean instrumentation. The independent regression changes
+   a linked worker to 899 seconds while keeping its millisecond enclosing term.
+
+3. A changed output at a leaf of a dependency DAG does not create a changed-
+   ancestor feature problem. The coverage denominator must derive actual
+   transitive predecessor-code changes, not merely the current stage's output
+   change. An independent a->b->c fixture changes only c and obtains a zero
+   denominator and an inconclusive mechanism result, never perfect coverage.
+
+4. Three baseline labels do not create three registered primary claims.
+   Analysis now limits confirmation eligibility to the protocol-registered
+   baseline/candidate, count, inference settings and primary configuration
+   selection. Multiple configuration/target strata without a unique prospective
+   selection cannot each claim the single primary test. Independent two-
+   configuration evidence retains descriptive ratios but no confirmation flags.
+   Statistical root clustering and complete-repeat requirements remain separate
+   from workload validity and adequate prospective precision.
+
+5. An interrupted comparison parent can contain all four sealed child clocks.
+   That does not make its own archive sealed. The analysis owner now labels
+   those methods unsealed_parent, preserves their observed durations, and
+   excludes ratios until the parent is successfully completed and verified.
+   The independent real software fixture interrupts after all leaves, verifies
+   exclusion, resumes, and confirms byte-identical observer receipts, original
+   durations, and exactly one observer attempt for every role.
+
+6. A verified same-target observation must also belong to its expected parent
+   slot. The timing owner identified and fixed this gap using verify_role_slot:
+   expected parent paths, role, frozen plan hash, actual manifest and input hash
+   are checked before accepting a row. The independent fixture rejects a
+   different parent root, plan, or manifest binding for every completed role.
+   The sequence owner also applies the equivalent expected-slot derivation to
+   original preparation, each cumulative request and separate quality output,
+   including source, limits, mode and the actual preceding state-producing child.
+
+7. Early sequence predecessor validation consumed research lineage commits,
+   common-model comparison copies, and prior comparator/observer records which
+   were produced outside production-role clocks. Merely dropping oracle receipt
+   traversal did not remove the uncharged compact-commit dependency. Root and
+   reviewer required a direct predecessor design. The service leaf now checks
+   the preceding setup/repair child receipt and its original state/model bytes,
+   all committed inside that earlier measured transaction, plus the frozen prior
+   request and live membership. Research commits, comparison copies and oracle
+   archives are reserved for full archive auditing. This is necessary for a
+   meaningful per-system lifetime sum rather than an excluded service input.
+
+8. Common predecessor model copies must be derived from the original child's
+   bound model artifact, not accepted solely because a convenient row contains
+   a matching digest. The sequence owner added that check to the full research
+   archive audit, and the leaf design above no longer requires those copies.
+   Default software fallback budgeting was also aligned with the measured
+   single-request engine; research caps remain explicit and shared.
+
+9. A cross-module plan-digest naming mismatch was flagged before integration.
+   The engine now exposes the plan_sha256 field expected by the artifact loader
+   while retaining its explicit measured-plan binding. Real campaign and
+   sequence loader tests belong to the analysis owner's validation suite.
+
+10. The added diagnostic adapter initially had only a broad attribution status.
+    Its total can telescope exactly even while a large worker interval has no
+    named cause. It now exposes named_attribution_complete separately and keeps
+    that false with residual, missing, truncated or failed evidence. Independent
+    tests check exact sum with a nonzero residual, overlapping loading/service
+    windows, omitted root windows, and a failed observer retaining diagnostic
+    measurements without a completeness claim. Root windows and exclusive
+    nested category times are reconciled before any enclosing time is split;
+    inner durations are not added a second time to the transaction total.
+
+11. The resource projection initially recomputed the sum of all prior file sizes
+    for every archived file. The owner replaced that quadratic scan with a
+    running unique-byte total and bounded-depth ancestor lookup instead of
+    comparing every archived path with every transaction root.
+    Neither change alters storage scope or the hardlink accounting contract.
+    The observer verifier previously entered the mutable PhaseBudget constructor
+    on reuse; the owner replaced this with the bounded read-only ledger reader.
+    Its regression verifies a saved observation after removing ledger.lock
+    without recreating a lock or entering the budget writer constructor.
+    The final timing review also required the observer's absolute origin and
+    offsets to match the archived worker's absolute timing boundary; shifting
+    both observer endpoints while retaining the same duration now rejects.
+
+Contracts that must remain distinct
+-----------------------------------
+The model-only fresh control constructs the complete retained model without a
+response/deletion index. Direct full-state fresh reconstructs both the model
+and canonical deletion state. Equally indexed fresh uses the same available
+information as repair. Full exact model-code equality applies to all four arms;
+canonical state equality applies only within the three state-producing arms.
+No deletion-exclusive solver advantage follows from beating state construction
+while failing to beat equally indexed fresh.
+
+Matched methods have fresh child processes and uncontrolled operating-system
+caches. The runtime fingerprint is not a physical-machine or machine-load
+certificate. Optional detailed diagnostics are absent from clean timing paths;
+required arithmetic counters, correctness checks, hashing and durable child
+output remain charged. Entry/exit markers are a trusted-source instrumentation
+contract, not native-profiler or hostile-process containment.
+
+The legitimate nonrecursive clock stops after child and worker commits, cleanup,
+and observer output verification. Its final reporting receipt is excluded.
+Preparation is separately charged once per system in the ordered lifetime.
+Oracle, quality and research comparison bookkeeping are external to all system
+sums. Those sums estimate attributable declared transaction costs, not actual
+end-to-end elapsed time of the research harness, which executes every oracle.
+Phase allowances cover admitted child CPU; enclosing controller/observer CPU is
+not silently claimed to fall within those allowances.
+
+Normalized manifests omit only protocol.sha256 from the prospective digest
+graph. The protocol binds the full frozen inventory; runtime checks final raw
+manifest, protocol, plan, source, target, runtime and membership bindings. A
+caller Boolean or an arbitrary run ID does not authorize confirmation.
+Archive hashes assume trusted local storage and cannot authenticate an attacker
+able to rewrite all files and their hashes.
+
+Feasibility and theoretical scope
+--------------------------------
+The prospective engineering policy is frozen without claiming empirical
+attainment. The evaluator uses complete per-root/request requirements, exact
+lifetime integer arithmetic, a rational enclosure for the stated quality-ratio
+threshold, changed-transitive-ancestor group coverage, and explicit failures or
+inconclusive outcomes. Finite-cost arithmetic and positive-series logarithm
+bounds are classical tools, not new mathematical results.
+
+evaluate_verified_feasibility adds a typed measured-evidence adapter for timing,
+preparation, exact stage/state artifacts, membership and worker resources.
+Its supplemental JSON interface alone does not independently establish coverage,
+quality, ledger completeness, target/group facts, or scientific provenance.
+The subsequent public archive path described below derives additional facts
+directly and preserves unresolved premises. Every result keeps empirical
+attainment and execution authorization false. There is no proof of a universal
+full-model or practical speedup here.
+
+The subsequent feasibility_archive bridge derives additional available facts
+from loader-issued clean and diagnostic sequence evidence. Target graph export
+requires the actual numerical-target payload digest. Token counts come from
+bound input artifacts. Current groups come from canonical returned state.
+Coverage uses the complete StageAudit replay membership, all expected stages,
+actual attempted/completed feature calls, role dispositions, replay totals and
+the arithmetic ledger together. Bounded first/last samples alone are not a
+complete replay list. Nonzero omissions, truncation, overflow, saturation,
+diagnostic errors, inconsistent counters, or missing code/state/prefix parity
+make coverage unavailable rather than zero-cost success.
+
+Quality metrics are read from the committed quality artifact and bound to the
+actual original, direct-fresh and repair states and heldout target count. Their
+separate worker costs never enter production lifetime ratios. Source-provenance
+metadata is explicitly a bound assertion, not independent proof of a real
+corpus or correct disjoint scientific partitions.
+
+The public archive assembler now also reads the complete trusted protocol ledger
+and every regular file under the supplied campaign output root, including worker
+and observer archives. It reconciles linked debits, retains unsettled reservations
+at their full charge, detects changed read-time snapshots, records attempts whose
+workers are outside the supplied archives, and counts hardlink aliases once with
+explicit paths. Clean and diagnostic views of the same archive are deduplicated;
+inconsistent ledger or archive snapshots reject. This is neither project/global
+completeness nor physical allocated-disk usage, and controller CPU is still
+outside the admitted worker allowance.
+
+The public assembler deliberately returns incomplete evidence and no promotion
+while scientific workload provenance is not independently established. Any
+unavailable ledger/storage/diagnostic evidence also remains explicit. The real
+combined-inventory software test establishes that both execution profiles can
+share one protocol-bound inventory, be selected by their frozen execution mode,
+and have coverage, quality and resources assembled without a digest cycle or
+changed input/output archive. It is not a real-data feasibility result. An
+independent regression rejects unmatched extra diagnostic slots rather than
+silently dropping their observations, worker costs or failures.
+
+Remaining boundaries
+--------------------
+The matched primary-clock and lifetime-analysis integration substantially
+improves the earlier D04 infrastructure gap. Its final compatibility must be
+validated on the frozen full source tree. Coarse complete child timing does not
+alone close D04's original exhaustive disjoint internal-cost attribution
+criterion. A separate diagnostic map must account for every requested category
+and any uninstrumented callback work before closing that stronger wording.
+
+Root's provider diagnostics expose selected affine-fit, finite-region and
+box-recurrence failure classes and available bounds. They do not reconstruct an
+exhaustive primitive graph, every numerical residual, or omitted/capped evidence.
+C05 therefore remains partial. Fraction allocation endpoints and worker RSS do
+not recover hidden integer/native intermediates, object lifetimes, or complete
+temporary-memory attribution; D05 remains partial.
+
+Real checkpoint/corpus feasibility, populated frozen inventories and partitions,
+useful certificate coverage, quality, prospective statistical precision,
+runtime/storage tradeoffs and reliable speedup remain unmeasured. Software
+fixtures must not be presented as synthetic research results or used to select
+paper claims. Research remains paused until its independent gates are met.

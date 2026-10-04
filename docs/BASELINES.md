@@ -1,7 +1,7 @@
 # State loading and equal-information baselines
 
-Revision 8 separates ordinary model-only requantization from full-state construction and equal-information maintenance.
-It adds source-bound isolated and sequence campaigns, a complete local transaction observer, and bounded diagnostics.
+Revision 9 separates ordinary model-only requantization from full-state construction and equal-information maintenance.
+It integrates four-method measured campaigns, matched lifetime transactions, artifact-aware analysis, and explicit diagnostic cost accounting.
 The linear and quadratic response tiers, original-model cache, and optional interval verifier remain distinct controls.
 Research remains paused; these implementations do not establish practical speedup.
 
@@ -119,7 +119,9 @@ The model-only CLI skips held-out loading and response-chart construction.
 It currently parses the original calibration manifest before selecting retained records.
 Those actual input costs belong in its timing; this is not a claim of an optimal fresh implementation.
 `docs/MODEL_ONLY_FRESH.md` states the input, output, and resource-planning limits.
-Standalone confirmation remains blocked until a frozen ordinary-speed inventory and matched lifetime schedule include this comparator.
+Confirmation now checks membership in the compatible four-method frozen inventory.
+The matched lifetime schedule separately charges original model-only preparation.
+Missing inventory evidence, incomplete research inputs, or the experiment pause blocks research execution.
 
 The direct full-state `fresh` path remains the independent correctness control.
 It extracts summaries and evaluates all retained target features independently.
@@ -229,7 +231,7 @@ Read `docs/IDENTITY_CACHE.md` for trusted digest requirements and complete cost 
 
 ## Ordered requests and complete deletion
 
-The sequence runner prepares the original state once.
+The legacy warm sequence runner prepares the original state once.
 Each successful request commits the next entering state.
 Every step checks all stage outputs and its family's canonical state against retained direct construction.
 Its request and predecessor hashes bind the order.
@@ -246,6 +248,12 @@ Resume verifies completed predecessor lineage, failed child artifacts, dispatch 
 Every planned sequence and step remains visible after failure or admission denial.
 These are implementation checks; real repeated-deletion correctness and lifetime costs remain unmeasured.
 See `docs/SEQUENCE_EXECUTION.md` and `docs/SEQUENCE_CAMPAIGN.md`.
+
+The revision 9 measured sequence instead uses separate setup and method transactions.
+Each service consumes its prior committed child state; external research lineage is verified separately.
+The ordinary model-only system has its own original preparation.
+Complete system lifetimes sum preparation and all request observations; they are not whole-harness elapsed time.
+See `docs/MEASURED_SEQUENCE.md`.
 
 ## Telemetry and process boundaries
 
@@ -280,15 +288,17 @@ Model-only fresh can use the same observer under its `model_only` output contrac
 A whole-comparison or whole-sequence observation remains that broader cost; it cannot be divided arbitrarily into per-method latencies.
 Fresh, resumed, and reused observations are distinct, and archived receipt reuse never supplies a new repetition.
 
-Primary campaign and matched lifetime integration with the complete observer clock remain open.
-The current isolated inventory covers the full-state method comparison; it does not include the pending model-only confirmation comparator.
+Primary four-method campaigns and matched lifetime analysis use the complete observer clock.
+The measured inventory includes model-only fresh, actual runtime, clean/diagnostic mode, and complete planned products.
+The older isolated full-state inventory retains its separate historical interface.
 All execution modes leave operating-system caches uncontrolled.
 A new process is not evidence of cold disk caches.
 Shared protocol CPU admission limits reserved worker allowances, not absolute physical CPU or a cross-protocol project total.
 Controller CPU remains outside that ledger.
 
 The bounded certificate funnel reports exposed domains, bounds, decisions, replay, and completion.
-Provider-internal Hessian failures, chart residuals, and other unavailable components remain explicitly opaque.
+Revision 9 exposes available fit causes, failure phases, and finite/center/curvature/gradient proof components.
+Unavailable primitive decompositions remain explicit; upper bounds are not realized errors.
 The arithmetic audit records constructed Fraction endpoint counts and bit lengths in its calling process, including transient endpoints.
 It does not measure every hidden integer intermediate, object lifetime, or temporary allocation.
 Its instrumentation changes elapsed cost; audit times are diagnostic, not clean latency observations.

@@ -1,0 +1,155 @@
+REVISION 9 MANUSCRIPT THEORY AND EVIDENCE-CONTRACT REVIEW
+Date: 4 October 2026
+Reviewer role: separate manuscript reviewer; also owner of measured sequence code.
+
+Scope and conclusion
+--------------------
+Reviewed docs/MANUSCRIPT_DRAFT.md and docs/MANUSCRIPT_EVIDENCE_SLOTS.md
+against PUBLICATION_THEORY T1-T7, the compact/quadratic response formulas,
+ALGORITHM_ADVANCE_V7, target/baseline contracts, and the implemented measured
+sequence, comparison, analysis and feasibility interfaces. The review is a
+manual mathematical and source-alignment check, not proof-assistant verification,
+external peer review, an independent audit of every module, or a novelty search.
+No research experiment, model download or empirical measurement was performed.
+
+No unresolved mathematical or evidence-scope blocker was identified within this
+review after the corrections below. The draft remains prospective and has no
+real-model results. This assessment does not close manuscript/submission tasks
+K01/K02, establish the practical theorem regime, or demonstrate useful speedup.
+Parent's final integrated validation governs compatibility of the frozen sources.
+
+Reviewed document snapshots (SHA-256)
+------------------------------------
+MANUSCRIPT_DRAFT.md:
+c026b539ee0fbb5ed0c6615817552f313d920105d0aa6990dc030d5aecb159f7
+MANUSCRIPT_EVIDENCE_SLOTS.md:
+279db0d6fdca1759f37ea1ceaf261759628992a8d33bc21878c845a6e295c722
+PUBLICATION_THEORY.md:
+a8514b0592bef0ac9fe17d537f5fcc41ef685905dbc6751d10355eef1c8d957b
+These identify the reviewed snapshots, not permission to treat later edits as
+reviewed automatically. Citation landing-page checks belong to the parent's
+CITATION_CHECK_V9.md; this review did not independently repeat them or the full
+literature audit.
+
+Editorial follow-up: the final bibliography heading/preamble now accurately
+distinguishes the narrow landing-page and R9 appendix checks from the still-open
+full attribution/novelty audit. Replacing only that final heading/preamble with
+its previous text exactly reproduces the earlier reviewed manuscript digest;
+no mathematical or main-body change occurred. The manuscript digest above has
+been refreshed after this editorial verification.
+
+Corrections incorporated
+------------------------
+1. The abstract now describes additive record summaries defined by independent
+   references. Their sums depend on the calibration records; calling the summed
+   statistics corpus-independent would have been inaccurate.
+
+2. The finite response bound now requires the proved region to contain both the
+   full chart segment and, when present, the residual segment. It specifies the
+   Hessian norm convention and residual derivative control along the entire path.
+   Automatic affine implementation still requires zero residual. This preserves
+   the distinction between ideal derivatives and certified finite-program error.
+
+3. The algorithm explicitly obtains a new unresolved group's replay after each
+   failed retry. Successful exactness and eventual completion are separate:
+   the evaluator is partial, and required successful finite calls, arithmetic
+   termination within resources, finite groups/stages and replay progress are
+   additional completion hypotheses. Abort is never an approximate commitment.
+
+4. Lifetime notation now distinguishes complete request costs F_h and R_h from
+   the earlier avoidable-work term F. Missing/failed horizons remain undefined,
+   with observed costs and unknown-cost indicators retained. Lost observations
+   cannot imply that all consumed work has been recovered.
+
+5. The draft identifies lifetime as the sum of attributable system transactions,
+   not elapsed research-harness time. Research oracle/equality/lineage and other
+   orchestration work are excluded symmetrically. Available observations remain
+   separate and unmeasured components unknown; no complete harness wall-time or
+   CPU accounting is claimed. Required next-step state validation uses actual
+   prior state-producing child receipts and model/state artifacts, not research
+   comparison copies, compact lineage records or comparator/observer archives.
+
+6. Clock exclusions now include observer bootstrap and measurement-manifest
+   preparation before the declared interval, as well as final observer reporting
+   receipt/snapshot writes afterward. Required child/controller commits and
+   cleanup inside the declared interval remain charged. This is a declared
+   nonrecursive transaction boundary, not an all-software/all-hardware clock.
+
+7. Evidence-slot partition requirements now distinguish document/record
+   disjointness from duplicate-content/token-sequence overlap checks. Ordinary
+   token vocabulary IDs need not be disjoint across corpora.
+
+8. The resource bridge description reflects completed trusted protocol-ledger
+   and supplied-root file snapshots. Scientific provenance remains independently
+   unestablished; missing resource/diagnostic evidence remains explicit. These
+   snapshots do not establish global/project CPU use or physical disk allocation.
+
+Mathematical checks and interpretation limits
+--------------------------------------------
+- Compact enclosure: the omitted P is positive semidefinite and bounded by its
+  trace beta times I; adding beta I gives a positive-semidefinite surrogate.
+  The asymmetric Gram error budgets, fixed ridge and positive alpha premise
+  support Proposition 1. Replay tightens budgets at a fixed prefix, but candidate
+  margins and successful acceptance need not improve monotonically.
+- Full quadratic stores the Gram polynomial of an affine feature response.
+  It is not a second-order Taylor transformer. Compact rational-slot savings
+  are separated from bits, bytes, temporary memory, metadata and directions.
+  Full-polynomial query lower bounds are not asserted as necessary storage for
+  every exact discrete answer.
+- The forced-prefix displacement lemma uses positive relative endpoints and
+  the same preceding code prefix. Classical matrix geometry and the sharp
+  abstract constant are attributed; no novelty is assigned to that constant
+  or to the GPTQ/nearest-plane connection.
+- Stage induction uses the newly certified ancestor prefix, followed by
+  topological induction. Intrinsic exact moments and canonical serialization
+  yield retained-state equality within a fixed tier. Trusted origin, checked
+  deleted payloads, record locality and retained replay access are substantive
+  assumptions. External copies and pretrained-weight information are excluded.
+- The no-replay corollary is implementation-matched and conditional on every
+  stage's actual repaired prefix, normalized positive-energy margins, domain,
+  finite-error and zero-energy tie premises. Small deletion size alone does not
+  imply it. The stronger ideal whitened theorem is not attributed to the actual
+  quadratic verifier without its missing premises/implementation.
+- The complete-cost ratio is an arithmetic consequence of explicitly bounded
+  excess work and demonstrated comparable work. Acceptance fractions do not
+  supply cost-weighted avoided-work fractions. Rational operation counts do
+  not imply constant-time word operations or practical speed.
+- The lifetime identity charges each system's own original output once and
+  every required request. A first break-even crossing can reverse. A finite
+  favorable identity provides neither population reliability nor universal
+  full-model improvement.
+
+Comparator and evidence checks
+------------------------------
+Ordinary model-only fresh constructs the complete retained model without the
+response index. Direct full-state fresh constructs both model and canonical
+state. Equally indexed fresh receives the same information and solver as repair.
+All four require identical target/stage codes; state equality applies only to
+matching state-producing interfaces. No deletion-exclusive solver benefit follows
+from an indexed shared solver or from beating the more expensive state builder.
+
+The ordered study has distinct original model-only preparation, fixed original
+normalization, verified entering state, and cumulative versus newly deleted IDs.
+Shared indexed preparation is counted once per system with explicit correlation.
+Oracle and quality costs cannot be added asymmetrically to a comparator. Reused
+observations cannot count as fresh repetitions; failed/unstarted slots stay in
+the planned denominator, and an incomplete lifetime stays null.
+
+Evidence slots have explicit artifacts, verifier/analysis paths, denominator and
+falsification requirements. Changed-prefix coverage concerns all nonempty groups
+with actually changed transitive ancestors and actual target-feature work;
+unknown or capped diagnostics cannot imply zero work. Absolute NLP quality is
+separate from retained-oracle equality. No software fixture, invented curve,
+planning model size or prospective manifest may populate an empirical slot.
+
+Remaining work
+--------------
+Real source/checkpoint selection, disjoint scientific partitions, feasible finite
+execution, practical certificate coverage, complete runtime/storage tradeoffs,
+absolute NLP quality, prospective precision and reliable speed remain unmeasured.
+The final supplement still needs complete proofs/assumption presentation and
+reference checking; ACL formatting, length, authorship and disclosures remain
+open. The current source supports bounded diagnostics and declared clocks, not
+exhaustive hidden integer/liveness or provider-internal profiling. A current
+primary-literature and priority audit must finalize the contribution boundary.
+The research pause remains in force.

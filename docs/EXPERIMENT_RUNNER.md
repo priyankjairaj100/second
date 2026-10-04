@@ -1,6 +1,9 @@
 # Local experiment runner
 
-Updated 4 October 2026, revision 7.
+Updated 4 October 2026, revision 9.
+The warm-runner sections below describe the historical three-arm `run_experiment` path.
+The current complete-clock path is `run_measured_comparison` / `run_measured_campaign`, with model-only fresh as a fourth arm; matched lifetimes use `run_measured_sequence`.
+These additions are implemented pending final integrated review, and supply no empirical evidence.
 The runner uses local inputs with verified hashes.
 It downloads no models, data, tokenizers, or executable source.
 It does not execute checkpoint code.
@@ -56,7 +59,7 @@ Unknown fields cause rejection.
 | `request_id` | Frozen deletion-request identifier |
 | `configuration_id` | Fixed comparison configuration |
 | `repeat_index` | Nonnegative integer |
-| `phase` | `development`, `confirmation`, or `software_test` |
+| `phase` | `feasibility`, `development`, `confirmation`, or `software_test` |
 | `checkpoint` | Local path, complete file hashes, and parameter-element limit |
 | `calibration` | Local prepared-record path and SHA256 |
 | `heldout` | Local prepared-record path and SHA256 |
@@ -177,8 +180,8 @@ The campaign validates their complete primary Cartesian product before dispatch.
 Development can use declared smaller inventories.
 Independent empty and complete-deletion controls can enter executable inventories.
 They remain outside primary speed-ratio strata.
-Ordered sequence dispatch is not yet integrated into bulk campaign inventories.
-Use the standalone sequence dispatcher for its supported local workflow.
+Frozen ordered-sequence campaign dispatch is implemented in the separate sequence inventory schema.
+The revision 9 measured sequence path additionally assigns each preparation and request method its own complete leaf clock.
 
 The analysis plan retains every planned run.
 It preserves the selected service mode, service family, response tier, and verifier policy.
@@ -355,14 +358,22 @@ Original-model caching and the full quadratic response tier are implemented.
 Their real-model utility, stronger whitened acceptance theorem, and complete cost advantages remain open.
 No reliable full-model speedup follows from this infrastructure.
 
-## Revision 8 measurement extensions
+## Current complete-clock execution (revision 9)
 
-`TRANSACTION_TIMING.md` defines complete child clocks and their final observer exclusion.
-Individual isolated roles can receive those clocks.
-The primary campaign and lifetime analyzer still need complete-clock integration.
-`MODEL_ONLY_FRESH.md` defines ordinary requantization without response-index construction.
-Its confirmation inventory remains open.
-`ARITHMETIC_AUDIT.md` defines separate profiled runs.
-The runner embeds profiling flags, and speed analysis excludes those observations.
-Scientific model/state equality remains independent of clean timing eligibility.
-`CERTIFICATE_DIAGNOSTICS.md` defines bounded numerical funnel details and explicit truncation.
+The revision 8 observer remains the foundation in `TRANSACTION_TIMING.md`. Revision 9 now integrates that boundary into the primary comparison and lifetime paths; the implementation is undergoing final integrated validation. Use these explicit entry points:
+
+```bash
+python scripts/run_measured_comparison.py measured-plan.json --output runs/measured-one --validate-only
+python scripts/run_measured_campaign.py measured-inventory.json --output runs/measured-campaign --validate-only
+python scripts/run_measured_sequence.py measured-sequence-plan.json --output runs/measured-sequence --validate-only
+```
+
+The measured comparison runs `model_only_fresh`, `repair`, `indexed_fresh`, and `direct_fresh` in their frozen four-arm order, each in a fresh limited process. Original canonical setup and optional quality have separate observations. It checks common target codes across all four methods and complete canonical state only within the three state-returning methods. A failed setup does not suppress independent fresh baselines. See `MEASURED_COMPARISON.md`.
+
+The model-only control constructs no deletion index. Measured confirmation checks real frozen inventory membership, runtime/source bindings, exact manifests, output contracts, and literal admitted commands before model loading. Confirmation without that evidence remains blocked. All research also obeys the protocol pause and phase CPU ledger. See `MODEL_ONLY_FRESH.md` and `MEASURED_CAMPAIGN.md`.
+
+The measured lifetime controller prepares the model-only and indexed systems separately, then uses complete per-request clocks under cumulative deletions and canonical predecessor lineage. Each system pays its own preparation and request costs. External research equality, quality, and analysis are separately visible. It does not substitute a full-state fresh clock for ordinary model-only requantization. See `MEASURED_SEQUENCE.md`.
+
+`execution_mode="clean"` freezes optional Python diagnostics off in both observer and child. The receipts include instrumentation facts; required exact arithmetic counters and validation remain charged. Diagnostic replicas require a separate frozen diagnostic plan and output observations. Native profiling and OS caches remain unobserved/uncontrolled. `ARITHMETIC_AUDIT.md` and `CERTIFICATE_DIAGNOSTICS.md` describe separate bounded diagnostic evidence, including exclusions and omitted detail.
+
+`MEASURED_ANALYSIS.md` describes artifact-aware loading, original-observation deduplication, exactness and profile checks, planned failure denominators, and root-level analysis. A resumed saved receipt retains its original time; it never becomes a fresh independent timing sample. None of this infrastructure establishes real checkpoint feasibility, NLP quality, useful speed, or a reliable full-model speedup. Research remains paused.

@@ -1,10 +1,10 @@
 # Exact calibration-data unlearning for quantized language models
 
 This ACL 2027 project removes calibration documents while matching complete retained-data sequential quantization with fixed base weights.
-Start with [RESUME.md](RESUME.md), [status](docs/STATUS.md), and the [revision 8 note](docs/REVISION_8.md).
+Start with [RESUME.md](RESUME.md), [status](docs/STATUS.md), and the [revision 9 note](docs/REVISION_9.md).
 
 Research experiments remain paused.
-Revision 8 improves comparison contracts, execution controls, feasibility decisions, and diagnostics.
+Revision 9 completes another preparation pass on measured comparisons, ordered lifetime costs, runtime and instrumentation contracts, conditional feasibility decisions, and provider diagnostics.
 It does not establish practical model feasibility, useful certificate coverage, language quality, or reliable full-model speedup.
 
 ## Scientific program
@@ -18,34 +18,35 @@ The compact response tier stores O(r d²+r²) rational slots per group.
 The full quadratic tier stores the complete Gram polynomial of the same affine feature response.
 Fixed parameter boxes provide another domain construction without an affine-span restriction.
 A spectral-first, ridge-aware interval verifier can certify additional decisions after spectral rejection.
-These conditional certificate improvements do not guarantee practical acceptance or lower service cost.
+These conditional improvements do not guarantee useful acceptance or lower service cost.
 
 The optional identity-cache family stores true sequential Grams under the current quantized model.
-Matching transitive ancestors permit exact deleted-contribution subtraction.
-Changed ancestors require retained replay.
+Matching transitive ancestors permit exact deleted-contribution subtraction; changed ancestors require retained replay.
 Each successful request refreshes canonical cache state.
+The response solver ignores old model codes; the cache solver uses the previous model.
+Indexed fresh receives identical valid information and solver policy within each family.
+Neither family establishes a deletion-exclusive solver advantage.
 
-Revision 8 adds ordinary model-only fresh requantization as a separate control.
-It constructs no response chart or deletion index.
-The full-state direct oracle remains necessary for canonical state equality.
-Faster full-state reconstruction alone cannot establish faster ordinary requantization.
-Indexed fresh receives the same valid information and solver as repair within each family.
-Neither family has an established deletion-exclusive solver advantage.
+Ordinary model-only fresh requantization constructs no response chart or deletion index.
+It is the primary ordinary-speed baseline.
+The direct full-state oracle supplies canonical-state correctness, and equally indexed fresh supplies a separate maintenance comparison.
+A gain against rebuilding deletion state alone cannot establish faster ordinary requantization.
 
 ## Current deliverables
 
-- [Revision 8 summary](docs/REVISION_8.md) and [complete task register](docs/RESEARCH_TODO.md)
-- [Model-only comparison](docs/MODEL_ONLY_FRESH.md), [feasibility decisions](docs/FEASIBILITY_GATES.md), and [transaction timing](docs/TRANSACTION_TIMING.md)
-- [Isolated campaigns](docs/ISOLATED_CAMPAIGN.md), [sequence campaigns](docs/SEQUENCE_CAMPAIGN.md), and [CPU admission](docs/EXECUTION_BUDGETS.md)
-- [Arithmetic endpoint audit](docs/ARITHMETIC_AUDIT.md) and [bounded certificate diagnostics](docs/CERTIFICATE_DIAGNOSTICS.md)
+- [Prospective manuscript](docs/MANUSCRIPT_DRAFT.md), [evidence slots](docs/MANUSCRIPT_EVIDENCE_SLOTS.md), and [primary-source citation check](docs/CITATION_CHECK_V9.md)
+- [Revision 9 summary](docs/REVISION_9.md) and [complete task register](docs/RESEARCH_TODO.md)
+- [Measured comparisons](docs/MEASURED_COMPARISON.md), [frozen campaigns](docs/MEASURED_CAMPAIGN.md), [ordered sequences](docs/MEASURED_SEQUENCE.md), and [artifact-verified analysis](docs/MEASURED_ANALYSIS.md)
+- [Model-only control](docs/MODEL_ONLY_FRESH.md), [feasibility policy](docs/FEASIBILITY_GATES.md), and [conditional decision evaluator](docs/FEASIBILITY_DECISION.md)
+- [Transaction timing](docs/TRANSACTION_TIMING.md), [verified diagnostic breakdown](docs/DIAGNOSTIC_BREAKDOWN.md), [CPU admission](docs/EXECUTION_BUDGETS.md), and [prospective protocol version 5](configs/protocol_v5.json)
+- [Provider diagnostics](docs/PROVIDER_DIAGNOSTICS.md), [certificate diagnostics](docs/CERTIFICATE_DIAGNOSTICS.md), and [arithmetic endpoint audit](docs/ARITHMETIC_AUDIT.md)
 - [35-page revision 7 theory report](output/pdf/theory_algorithm_revision.pdf) and [LaTeX source](reports/theory_algorithm_revision.tex)
 - [Interval theory](docs/ALGORITHM_ADVANCE_V7.md), [publication theory](docs/PUBLICATION_THEORY.md), and [claim evidence](docs/CLAIM_EVIDENCE.md)
-- [Original-model cache](docs/IDENTITY_CACHE.md), [quadratic control](docs/QUADRATIC_CONTROL.md), and [box theory](docs/BOX_THEORY.md)
-- [Target contract](docs/TARGET_CONTRACT.md), [numerical contract](docs/NUMERICAL_CONTRACT.md), and [prospective protocol version 4](configs/protocol_v4.json)
-- [Validation](docs/VALIDATION.md), [independent review](theory_revision/), [project history](docs/PROJECT_CONTEXT.md), and [restart prompt](docs/RESTART_PROMPT.md)
+- [Original-model cache](docs/IDENTITY_CACHE.md), [quadratic control](docs/QUADRATIC_CONTROL.md), and [target contract](docs/TARGET_CONTRACT.md)
+- [Validation](docs/VALIDATION.md), [project history](docs/PROJECT_CONTEXT.md), and [restart prompt](docs/RESTART_PROMPT.md)
 
 The consolidated PDF remains the unchanged 35-page revision 7 report.
-Read the revision 8 note and linked contracts for current execution and comparison details.
+Read the revision 9 note and current contracts for later implementation and measurement changes.
 
 ## Verification and status
 
@@ -53,34 +54,38 @@ Read the revision 8 note and linked contracts for current execution and comparis
 python -m unittest discover -s tests -v
 ```
 
-The final revision records **417 correctness tests**.
+The final revision records **524 correctness tests**.
 The register contains **29 completed and 49 open required tasks**, plus **12 conditional extensions**.
-C04 now closes the written feasibility-policy requirement.
-C05, D04, and D05 remain partial under their complete criteria.
-The experiment-ready gate G0 remains open.
+G0 remains open.
+C04 closes the written feasibility-policy requirement; software decision logic does not establish policy attainment.
+C05 and D05 remain partial under their full criteria; the final register records the D04 review disposition.
 
-Frozen isolated campaigns now support inventory-verified confirmation dispatch and an optional dedicated quality worker.
-Frozen sequence campaigns bind ordered requests, predecessor lineage, complete products, and durable failure evidence.
-Feasibility now has its own supported phase and explicit CPU allowance.
-No current protocol authorizes research execution.
+Frozen measured campaigns now bind all four methods, actual runtime, source and input hashes, complete planned products, clean or diagnostic execution, and model-only confirmation membership.
+Each method has a fresh limited process and an external transaction observer.
+Ordered measured sequences separately charge indexed original preparation and ordinary original model construction, then every actual request.
+Repair and indexed fresh share one preparation observation without treating it as independent evidence.
+The charged predecessor check uses the state-producing child receipt and artifacts; external research lineage and oracle checks remain separate.
 
-The external observer measures declared child transactions through final child commitments, cleanup, and output verification.
-Its own final timing receipt remains outside the clock.
-Model-only, canonical-state, comparison, and sequence output contracts remain separate.
-Primary full-clock campaign integration and model-only confirmation inventory remain open.
+Artifact-aware analysis verifies clocks and exact outputs, retains missing and failed slots, and rejects duplicated original observations across repetitions.
+It clusters inference by calibration root.
+Only the sole registered primary comparison and configuration can receive confirmation timing flags.
+Secondary indexed and full-state ratios remain separate descriptions.
+Clean mode disables optional Python diagnostics while retaining required exact ledgers and correctness work.
+Native profiling is unobserved, and operating-system caches remain uncontrolled.
 
-Arithmetic audits observe rational endpoints and available process memory without changing numerical operations.
-Embedded profiling flags exclude those runs from clean timing ratios.
-The certificate funnel reports bounded numerical detail and disposition counts for recorded stages and events.
-Omission and saturation counters expose lost detail.
-Hidden arithmetic intermediates and unavailable provider internals remain outside these diagnostics.
+The observer includes child commitments, cleanup, worker accounting, and output validation.
+Its bootstrap and final observer receipt remain excluded.
+Lifetime sums use this declared transaction boundary; they are not the elapsed wall time of the research harness.
+CPU admission covers trusted local children under one protocol ledger, excluding controller CPU and cross-protocol physical guarantees.
 
-Real inputs, feasible model execution, frozen settings, actual partitions, precision, and empirical evidence remain outstanding.
-The three-request lifetime gate compares all required preparation and request costs against model-only fresh construction.
-Its thresholds are prospective engineering choices.
-No current result passes or tests that gate on real data.
+The feasibility evaluator computes conditional decisions from the frozen policy.
+The public bridge derives available lifetime, coverage, quality, and resource facts from verified clean and diagnostic archives.
+It includes the full protocol-ledger snapshot and archived transaction/nontransaction files, with explicit read-time scope.
+Missing scientific provenance, unmatched diagnostics, failed observations, or incomplete accounting remain inconclusive.
+No current real-data result tests or passes that policy.
+Provider diagnostics expose available proof components with bounded omissions; hidden arithmetic intermediates and exhaustive primitive traces remain outside scope.
 
-The user's “maximum revenue” request is interpreted as research value within this paper program.
-No monetary return is predicted or guaranteed.
+Actual inputs, a resource-feasible model, primary configuration, source pools, workloads, empirical inventories, precision justification, experiments, and manuscript completion remain outstanding.
+The user's “maximum revenue” phrase means research value within this paper program, without monetary guarantees.
 Synthetic empirical datasets remain deferred.
 No model weights, raw corpus, credentials, or missing historical raw results are included.

@@ -1,14 +1,14 @@
 # Publication theory package
 
-Revision 8. Date: 4 October 2026.
+Revision 9. Date: 4 October 2026.
 Status: consolidated mathematical contract for the next research phase.
 
 This document orders existing results for publication.
 It adds no measured performance claim.
 The derivations appear in the report and independent theory notes.
 The implementation provides supporting correctness checks, not a formal proof.
-The 35-page revision 7 report PDF remains unchanged; `REVISION_8.md` records the new implementation work.
-The current prospective protocol is `configs/protocol_v4.json`. Research remains paused.
+The 35-page revision 7 report PDF remains unchanged; `REVISION_9.md` records the current implementation work.
+The current prospective protocol is `configs/protocol_v5.json`. Research remains paused.
 
 ## 1. Target, notation, and shared assumptions
 
@@ -590,7 +590,9 @@ It measures preflight, worker preparation, execution, finalization/cleanup, and 
 It includes the child controller's final commits and stops before its own final receipt.
 This is a declared local transaction, not physical request latency from an external user.
 An enclosing comparison includes all arms and cannot be converted into a single-method clock.
-Primary campaign, matched lifetime execution, and analysis still need this complete-clock integration (D04).
+Primary campaigns, matched lifetime execution, and artifact-aware analysis now use this complete clock.
+Diagnostic window verification rejects overlaps and retains unclassified elapsed time explicitly.
+Exhaustive named internal attribution remains partial (D04); unmeasured causes are not inferred.
 Report setup separately and include it in lifetime comparisons.
 Lifetime savings require
 
@@ -732,7 +734,7 @@ See RESEARCH_TODO.md for remaining required tasks.
 ## Historical revision 7 measurement and publication boundary
 
 This section preserves the revision 7 boundary and its then-open implementation gaps.
-The current revision 8 scope follows below.
+The historical revision 8 scope follows below; revision 9 updates appear afterward.
 
 The implemented quadratic tier, identity cache, and interval fallback close specific reference-code gaps.
 They add no empirical acceptance, NLP quality, or speed evidence.
@@ -774,7 +776,7 @@ Neither worker controls nor correctness tests prove its cost premises or their p
 Real checkpoint feasibility, frozen inputs, practical coverage, quality, and reliable complete speedup remain unresolved.
 Research experiments remain paused.
 
-## Revision 8 measurement and publication boundary
+## Historical revision 8 measurement and publication boundary
 
 Revision 8 changes comparison and observability infrastructure, not T1–T7's numerical premises.
 The quadratic control still uses its full affine-response Gram and the implemented unwhitened error bound.
@@ -819,3 +821,26 @@ Use `REVISION_8.md` and the sealed revision 8 validation record for implementati
 The report PDF's historical test counts do not describe newly changed source.
 No real-model feasibility, useful certificate coverage, quality, preparation amortization,
 competitive storage, or reliable complete-model speedup has been established.
+
+## Revision 9 execution and manuscript boundary
+
+The numerical statements T1–T7 remain unchanged.
+The new infrastructure makes their cost and evidence obligations executable within declared local boundaries.
+Four-method measured campaigns include model-only fresh and matched ordered lifetime transactions.
+Each system pays its original preparation and every actual request.
+A service validates the preceding committed child state; external research archives are checked separately.
+
+Clean transactions disable optional diagnostics in both leaf and observer.
+Required correctness checks, rational counters, state output, and cleanup remain charged.
+Diagnostic windows permit a verified disjoint breakdown; unclassified residual costs remain explicit.
+Their durations cannot replace clean latency observations.
+
+The public feasibility bridge derives available facts from loader-verified archives.
+It checks target graphs, exact stage maps, retained membership, replay counters, quality bindings, and lifetime sums.
+Missing scientific provenance, incomplete accounting, and incomplete diagnostics cannot become evidence of success.
+The frozen policy's exact arithmetic and observed finite losses do not establish population quality or speed.
+
+`MANUSCRIPT_DRAFT.md` is a prospective main-text argument with explicit empirical evidence slots.
+It must not present conditional T7 premises as attained results.
+`MANUSCRIPT_EVIDENCE_SLOTS.md` identifies the actual artifacts and claim decisions still required.
+The unchanged report and supporting derivations remain the mathematical reference until the submission supplement is assembled.

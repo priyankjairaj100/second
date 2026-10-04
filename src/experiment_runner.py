@@ -6,6 +6,7 @@ Only the warm sequential mode is supported. Operating-system caches are uncontro
 from __future__ import annotations
 
 from dataclasses import dataclass
+from contextlib import nullcontext
 import gc
 from hashlib import sha256
 import math
@@ -115,21 +116,47 @@ def _rss() -> int:
 
 def measure(call: Callable):
     """Measure one nonnested operation, including its artifact writes."""
+    from .instrumentation import detailed_diagnostics_enabled, require_clean_instrumentation
+    if not detailed_diagnostics_enabled():
+        require_clean_instrumentation()
+        wall = time.perf_counter_ns()
+        cpu = time.process_time_ns()
+        def clean_metrics():
+            return {"wall_time_ns": time.perf_counter_ns() - wall,
+                    "cpu_time_ns": time.process_time_ns() - cpu,
+                    "peak_python_bytes": None, "process_peak_rss_bytes": _rss(),
+                    "allocation_tracking": False, "execution_mode": "clean"}
+        try:
+            result = call()
+        except BaseException as exc:
+            try:
+                exc.runner_metrics = clean_metrics()
+            except (AttributeError, TypeError):
+                pass
+            raise
+        require_clean_instrumentation()
+        return result, clean_metrics()
     if tracemalloc.is_tracing():
         raise RuntimeError("nested allocation measurement is not supported")
     profiler_active = sys.getprofile() is not None
     tracemalloc.start()
     wall = time.perf_counter_ns()
     cpu = time.process_time_ns()
+    def diagnostic_metrics(peak):
+        end = time.perf_counter_ns()
+        metrics = {"wall_time_ns": end - wall,
+                   "cpu_time_ns": time.process_time_ns() - cpu,
+                   "peak_python_bytes": peak, "process_peak_rss_bytes": _rss(),
+                   "timing_window": {"clock": "time.perf_counter_ns_system_monotonic",
+                                     "start_ns": wall, "end_ns": end, "wall_ns": end - wall}}
+        if profiler_active:
+            metrics["profiler_active"] = True
+        return metrics
     try:
         result = call()
     except BaseException as exc:
         _, peak = tracemalloc.get_traced_memory()
-        metrics = {"wall_time_ns": time.perf_counter_ns() - wall,
-                   "cpu_time_ns": time.process_time_ns() - cpu,
-                   "peak_python_bytes": peak, "process_peak_rss_bytes": _rss()}
-        if profiler_active:
-            metrics["profiler_active"] = True
+        metrics = diagnostic_metrics(peak)
         try:
             exc.runner_metrics = metrics
         except (AttributeError, TypeError):
@@ -137,11 +164,7 @@ def measure(call: Callable):
         raise
     else:
         _, peak = tracemalloc.get_traced_memory()
-        metrics = {"wall_time_ns": time.perf_counter_ns() - wall,
-                   "cpu_time_ns": time.process_time_ns() - cpu,
-                   "peak_python_bytes": peak, "process_peak_rss_bytes": _rss()}
-        if profiler_active:
-            metrics["profiler_active"] = True
+        metrics = diagnostic_metrics(peak)
         return result, metrics
     finally:
         tracemalloc.stop()
@@ -181,22 +204,30 @@ def _integer_sizes(value):
     return (sum(x[0] for x in parts), max((x[1] for x in parts), default=0))
 
 
-def _commit_state(store, method, result):
+def _commit_state(store, method, result, *, telemetry=None):
+    from .instrumentation import detailed_diagnostics_enabled
+    span = telemetry.span if telemetry is not None else lambda _: nullcontext()
     state = result.state
-    raw = state.canonical_bytes()
-    model = _model_bytes(state)
-    state_meta = store.write_artifact(method + "-state.json", raw)
-    model_meta = store.write_artifact(method + "-model.json", model)
-    sizes = _integer_sizes(strict_json(raw))
+    with span("serialization"):
+        raw = state.canonical_bytes()
+        model = _model_bytes(state)
+    with span("durable_output"):
+        state_meta = store.write_artifact(method + "-state.json", raw)
+        model_meta = store.write_artifact(method + "-model.json", model)
+    diagnostics = detailed_diagnostics_enabled()
+    with span("artifact_diagnostics"):
+        sizes = _integer_sizes(strict_json(raw)) if diagnostics else (None, None)
+        aggregate_count = state.stored_aggregate_rational_count if diagnostics else None
+        stages = [{"stage_id": s.stage_id, "route": s.route,
+                   "certificate_attempts": s.certificate_attempts,
+                   "replayed_groups": list(s.replayed_groups),
+                   "unknown_groups": list(s.unknown_groups)} for s in result.stages] if diagnostics else None
     return {"state_sha256": state_meta["sha256"], "model_sha256": model_meta["sha256"],
             "state_bytes": len(raw), "model_bytes": len(model),
-            "stored_aggregate_rationals": state.stored_aggregate_rational_count,
+            "stored_aggregate_rationals": aggregate_count,
             "serialized_integer_count": sizes[0], "maximum_integer_bits": sizes[1],
             "ledger": dict(result.ledger.as_mapping()),
-            "stages": [{"stage_id": s.stage_id, "route": s.route,
-                        "certificate_attempts": s.certificate_attempts,
-                        "replayed_groups": list(s.replayed_groups),
-                        "unknown_groups": list(s.unknown_groups)} for s in result.stages]}
+            "stages": stages}
 
 
 def heldout_nll(decoder, records, state=None):
@@ -314,7 +345,7 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
                                 "original_preparation_executed": False}
             fresh = service.fresh(records, telemetry=setup_telemetry)
             with setup_telemetry.span("artifact_output"):
-                info = _commit_state(store, "original", fresh)
+                info = _commit_state(store, "original", fresh, telemetry=setup_telemetry)
             # Validate the actual saved canonical bytes before later requests.
             saved_bytes = (store.attempt / "original-state.json").read_bytes()
             with setup_telemetry.span("persisted_state_reload"):
@@ -350,7 +381,7 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
                         retained = tuple(r for r in records if r.record_id not in deleted_set)
                     output = service.fresh(retained, telemetry=telemetry)
                 with telemetry.span("artifact_output"):
-                    info = _commit_state(store, method, output)
+                    info = _commit_state(store, method, output, telemetry=telemetry)
                 return output.state, info
             try:
                 (state, info), metrics = measure(arm)
@@ -412,11 +443,13 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
 
 
 def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False, prepare_only=False,
-                  _manifest_override=None, model_only_prepare=False):
+                  _manifest_override=None, model_only_prepare=False, skip_heldout=False):
     """Load a local checkpoint and hash-bound prepared data. Never fetch data."""
     overall_start_ns = time.perf_counter_ns()
     if model_only_prepare and not prepare_only:
         raise ValueError("model-only loading requires prepare_only")
+    if type(skip_heldout) is not bool or (skip_heldout and not prepare_only):
+        raise ValueError("skipping heldout input requires a preparation-only role")
     from .checkpoint_adapter import load_gpt2_checkpoint
     from .certified_transformer import CertifiedDecoder
     from .target_manifest import TargetRecipe, build_target
@@ -494,7 +527,7 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False, 
         decoder = CertifiedDecoder(loaded.decoder)
         calibration, calibration_raw = _referenced_json(base, manifest["calibration"])
         records = prepared_records(calibration, decoder)
-        if model_only_prepare:
+        if model_only_prepare or skip_heldout:
             evaluation = ()
         else:
             heldout, heldout_raw = _referenced_json(base, manifest["heldout"])
@@ -534,22 +567,23 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False, 
         return {"decoder": decoder, "target": target, "records": records, "heldout": heldout,
                 "manifest": manifest, "manifest_raw": raw, "protocol_raw": protocol_raw,
                 "preflight": validation, "overall_start_ns": overall_start_ns}
-    if service_family == "identity_cache":
-        from .chart_construction import make_identity_service
-        service = make_identity_service(decoder, target)
-        construction_payload = {"schema": "identity-cache-construction-v1", "target_sha256": target.digest,
-                                "service_manifest_sha256": service.manifest_digest}
-        construction_digest = digest(canonical_json(construction_payload))
-    else:
+    def construct():
+        if service_family == "identity_cache":
+            from .chart_construction import make_identity_service
+            service = make_identity_service(decoder, target)
+            payload = {"schema": "identity-cache-construction-v1", "target_sha256": target.digest,
+                       "service_manifest_sha256": service.manifest_digest}
+            return service, payload, digest(canonical_json(payload))
         construction = build_chart(decoder, target, chart_recipe)
         service = make_service(decoder, target, construction, verifier_policy=verifier_policy)
-        construction_payload, construction_digest = construction.payload(), construction.digest
+        return service, construction.payload(), construction.digest
+    (service, construction_payload, construction_digest), construction_clock = measure(construct)
     metadata = {key: manifest[key] for key in ("root_id", "request_id", "configuration_id", "repeat_index", "phase")}
     metadata.update(run_manifest_sha256=digest(raw), protocol_sha256=digest(protocol_raw), service_mode=service_mode,
                     target_manifest_sha256=target.digest, chart_sha256=construction_digest,
                     source_sha256={p.name: digest(p.read_bytes()) for p in sorted(Path(__file__).parent.glob('*.py'))},
                     environment={"python": sys.version, "platform": platform.platform()})
-    preflight = dict(validation, chart=construction_payload,
+    preflight = dict(validation, chart=construction_payload, chart_construction_measurement=construction_clock,
                     preflight_wall_ns=time.perf_counter_ns() - preflight_start)
     if prepare_only:
         return {"decoder": decoder, "service": service, "records": records, "heldout": heldout,

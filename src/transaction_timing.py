@@ -14,16 +14,16 @@ import signal
 import sys
 import time
 
-from .run_store import RunStore, canonical_json, digest, strict_json
+from .run_store import RunStore, canonical_json, digest, strict_json, read_completed
 from .worker_control import WorkerLimits, run_limited
 from .phase_budget import PhaseBudget
 
 BOUNDARY = 'observer_source_validation_through_child_exit_controller_commits_cleanup_and_output_validation'
 CACHE_MODES = ('fresh_transaction_os_cache_uncontrolled', 'resumed_transaction_os_cache_uncontrolled')
-OUTPUT_CONTRACTS = ('model_only', 'canonical_state', 'comparison', 'sequence')
+OUTPUT_CONTRACTS = ('model_only', 'canonical_state', 'comparison', 'sequence', 'quality_evaluation')
 
 
-def _budget_from_config(config, limits):
+def _budget_details(config, limits):
     from .experiment_campaign import _phase_caps
     from .experiment_inventory import source_hashes
     if (type(config) is not dict or set(config) != {'protocol_path','protocol_sha256','phase'}
@@ -40,9 +40,14 @@ def _budget_from_config(config, limits):
     if phase != 'software_test' and 'experiments_paused' in str(protocol.get('status','')):
         raise ValueError('protocol keeps research experiments paused')
     caps = _phase_caps({'entries':[{'phase':phase}]},protocol,limits)
-    return PhaseBudget(path.parent/('phase-cpu-budget-'+digest(raw)),
-        identity={'protocol_sha256':digest(raw),'source_sha256':source_hashes(Path(__file__).resolve().parents[1])},
-        phase_cpu_seconds=caps)
+    return {'directory':path.parent/('phase-cpu-budget-'+digest(raw)),
+        'identity':{'protocol_sha256':digest(raw),'source_sha256':source_hashes(Path(__file__).resolve().parents[1])},
+        'phase_cpu_seconds':caps}
+
+
+def _budget_from_config(config, limits):
+    details=_budget_details(config,limits)
+    return PhaseBudget(details['directory'],identity=details['identity'],phase_cpu_seconds=details['phase_cpu_seconds'])
 
 
 def verify_command_admission(protocol_sha256, phase, expected_command):
@@ -191,7 +196,7 @@ def _validate_output(root, output_contract):
     if identity_path.is_symlink() or not identity_path.is_file():
         raise ValueError('transaction identity is missing')
     identity = strict_json(identity_path.read_bytes())
-    verified = RunStore(root, identity).completed()
+    verified = read_completed(root, identity)
     if verified is None:
         raise ValueError('transaction completion receipt is missing or incomplete')
     outcome = verified.get('outcome', verified.get('status'))
@@ -201,9 +206,11 @@ def _validate_output(root, output_contract):
         raise ValueError('transaction receipt reports unsuccessful work')
     known = {'calibration-experiment-v1':'comparison', 'calibration-sequence-v1':'sequence',
              'calibration-model-fresh-v1':'model_only', 'isolated-child-result-v1':'canonical_state'}
-    if verified.get('schema') == 'isolated-child-result-v1' and verified.get('role') not in (
-            'setup','repair','indexed_fresh','direct_fresh'):
-        raise ValueError('isolated child timing requires a supported canonical-state role')
+    if verified.get('schema') == 'isolated-child-result-v1':
+        if verified.get('role') == 'quality':
+            known['isolated-child-result-v1'] = 'quality_evaluation'
+        elif verified.get('role') not in ('setup','repair','indexed_fresh','direct_fresh'):
+            raise ValueError('isolated child timing requires a supported role')
     schema_contract = known.get(verified.get('schema'))
     declared = verified.get('output_contract', schema_contract)
     if schema_contract is not None and declared != schema_contract:
@@ -234,6 +241,28 @@ def accounting_partition(start, call_start, call_end, end, worker):
     if sum(span['wall_ns'] for span in spans) != end-start:
         raise ValueError('disjoint accounting does not equal enclosing wall time')
     return spans
+
+
+def detailed_accounting_partition(spans, worker):
+    """Refine cleanup when available; preserve the historical outer partition."""
+    boundary = worker.get('timing_boundary') if isinstance(worker,dict) else None
+    if boundary is None or 'cleanup_start_ns' not in boundary:
+        return [dict(span) for span in spans]
+    start, split, end = (boundary[key] for key in ('start_ns','cleanup_start_ns','cleanup_end_ns'))
+    if any(type(value) is not int for value in (start,split,end)) or not start <= split <= end:
+        raise ValueError('worker cleanup coordinates are not ordered')
+    result=[]
+    for span in spans:
+        if span['name']!='worker_execution_and_cleanup':
+            result.append(dict(span)); continue
+        if span['wall_ns']!=end-start:
+            raise ValueError('worker cleanup split differs from original elapsed time')
+        offset=span['start_offset_ns']; midpoint=offset+split-start
+        result.extend(({'name':'worker_execution_until_cleanup','start_offset_ns':offset,
+                        'end_offset_ns':midpoint,'wall_ns':split-start},
+                       {'name':'ordinary_process_cleanup','start_offset_ns':midpoint,
+                        'end_offset_ns':span['end_offset_ns'],'wall_ns':end-split}))
+    return result
 
 
 def measure_command(command, transaction_root, observer_root, limits:WorkerLimits, *, identity,
@@ -305,6 +334,7 @@ def measure_command(command, transaction_root, observer_root, limits:WorkerLimit
     caught_interrupt = None
     subreaper = None
     adopted_usage = []
+    adopted_cleanup_windows = []
     budget = None
     start = time.perf_counter_ns()
     call_start = start
@@ -315,6 +345,8 @@ def measure_command(command, transaction_root, observer_root, limits:WorkerLimit
               'observer_receipt_excluded':True,'outer_wrapper_cpu_not_debited_to_child_phase_budget':True,
               'execution_scope':'fresh trusted controller process; OS caches uncontrolled',
               'outcome':{'status':'incomplete'}}
+    from .instrumentation import instrumentation_state
+    record['instrumentation_state'] = instrumentation_state()
     try:
         store.write_artifact('request.json',canonical_json(binding))
         store.write_status(record)
@@ -337,7 +369,13 @@ def measure_command(command, transaction_root, observer_root, limits:WorkerLimit
                 identity={'transaction_identity_sha256':store.identity_digest},cwd=work,
                 phase_budget=budget,phase=None if budget is None else budget_config['phase'])
         finally:
-            adopted_usage.extend(_cleanup_adopted())
+            cleanup_begin=time.perf_counter_ns()
+            try:
+                adopted_usage.extend(_cleanup_adopted())
+            finally:
+                cleanup_finish=time.perf_counter_ns()
+                adopted_cleanup_windows.append({'start_ns':cleanup_begin,'end_ns':cleanup_finish,
+                    'wall_ns':cleanup_finish-cleanup_begin})
         call_end = time.perf_counter_ns()
         if worker['outcome']['status'] != 'complete':
             raise ValueError('measured worker did not finish successfully: '+worker['outcome']['kind'])
@@ -362,6 +400,7 @@ def measure_command(command, transaction_root, observer_root, limits:WorkerLimit
             caught_interrupt = exc
     finally:
         if subreaper is not None:
+            cleanup_begin=time.perf_counter_ns()
             try:
                 adopted_usage.extend(_cleanup_adopted())
             except (ValueError,OSError,RuntimeError) as exc:
@@ -371,19 +410,32 @@ def measure_command(command, transaction_root, observer_root, limits:WorkerLimit
                 if subreaper[0].prctl(36,subreaper[1],0,0,0) != 0:
                     completed = False
                     failure = {'type':'OSError','message':'cannot restore child subreaper setting'}
+                cleanup_finish=time.perf_counter_ns()
+                adopted_cleanup_windows.append({'start_ns':cleanup_begin,'end_ns':cleanup_finish,
+                    'wall_ns':cleanup_finish-cleanup_begin})
         try:
             worker_root = store.attempt / 'worker'
             worker_tree = _snapshot(worker_root) if worker_root.is_dir() else {}
         except (ValueError,OSError) as exc:
             completed = False
             failure = {'type':type(exc).__name__,'message':str(exc)}
+        record['instrumentation_state_end'] = instrumentation_state()
+        if record['instrumentation_state']['mode'] == 'clean':
+            from .instrumentation import require_clean_instrumentation
+            try:
+                require_clean_instrumentation()
+            except (ValueError,RuntimeError) as exc:
+                completed = False
+                failure = {'type':type(exc).__name__,'message':str(exc)}
         end = time.perf_counter_ns()
         try:
             spans = accounting_partition(start,call_start,call_end,end,worker)
+            detail_spans = detailed_accounting_partition(spans,worker)
         except (ValueError,KeyError,TypeError) as exc:
             completed = False
             failure = {'type':type(exc).__name__,'message':str(exc)}
             spans = accounting_partition(start,start,end,end,None)
+            detail_spans = [dict(span) for span in spans]
         fresh = cache_mode == CACHE_MODES[0]
         record.update(status='complete',outcome={'status':'complete' if completed else 'incomplete',
                       'failure':failure}, observed_wall_ns=end-start,
@@ -391,6 +443,10 @@ def measure_command(command, transaction_root, observer_root, limits:WorkerLimit
                       child_output_contract_verified=contract_verified,
                       eligible_fresh_transaction_latency=completed and fresh and contract_verified,
                       timing_spans=spans, accounting_sum_ns=sum(x['wall_ns'] for x in spans),
+                      timing_detail_spans=detail_spans,
+                      observer_clock={'clock':'time.perf_counter_ns_system_monotonic',
+                                      'start_ns':start,'end_ns':end,'wall_ns':end-start},
+                      adopted_cleanup_windows=adopted_cleanup_windows,
                       worker_outcome=None if worker is None else worker['outcome'],
                       worker_resource_usage=None if worker is None else worker.get('resource_usage'),
                       adopted_descendant_resource_usage=adopted_usage,
@@ -413,6 +469,91 @@ def measure_command(command, transaction_root, observer_root, limits:WorkerLimit
     if caught_interrupt is not None:
         raise caught_interrupt
     return {'reused_receipt':False,'new_latency_observation':completed and fresh and contract_verified,'receipt':record}
+
+
+def verify_observer_receipt(observer_root):
+    """Read-only verification; missing or unfinished observers never execute."""
+    root = _safe_path(observer_root)
+    if not root.is_dir():
+        raise ValueError('observer archive is missing')
+    identity = strict_json((root/'identity.json').read_bytes())
+    saved = read_completed(root,identity)
+    if saved is None:
+        raise ValueError('observer archive is not sealed')
+    request = strict_json((root/saved['attempt']/'request.json').read_bytes())
+    if request != identity or identity.get('measurement_boundary') != BOUNDARY:
+        raise ValueError('observer request differs from its identity')
+    # This path must not instantiate a budget writer or invoke an executor,
+    # even when the original receipt is already sealed.
+    verified=saved
+    if transaction_source_hashes()!=identity['source_sha256']:
+        raise ValueError('sources differ from the saved timing receipt')
+    _verify_inputs(identity['input_sha256'])
+    if identity['budget'] is not None:
+        from .phase_budget import read_budget_snapshot
+        details=_budget_details(identity['budget'],WorkerLimits.from_payload(identity['limits']))
+        budget=read_budget_snapshot(**details)
+        if budget.get('status')!='verified' or type(budget.get('attempts')) is not dict:
+            raise ValueError('saved measured phase ledger is unavailable')
+        attempt=verified.get('budget_attempt_id')
+        if attempt is not None and budget['attempts'].get(attempt)!=verified.get('budget_debit'):
+            raise ValueError('saved measured budget debit differs from the phase ledger')
+    for artifact,directory in (('transaction-tree.json',_safe_path(identity['transaction_root'])),
+                               ('worker-tree.json',root/verified['attempt']/'worker')):
+        recorded=strict_json((root/verified['attempt']/artifact).read_bytes())
+        current=_snapshot(directory) if directory.is_dir() else {}
+        if recorded!=current:
+            raise ValueError('saved measured output or worker artifact tree changed')
+    for key in ('source_sha256','cache_mode','output_contract','measurement_boundary'):
+        if verified[key] != identity[key]:
+            raise ValueError('observer convenience field differs from request: '+key)
+    spans = verified['timing_spans']; cursor = 0
+    for span in spans:
+        if (span['start_offset_ns'] != cursor or type(span['wall_ns']) is not int or span['wall_ns'] < 0
+                or span['end_offset_ns'] != cursor + span['wall_ns']):
+            raise ValueError('observer time partition differs')
+        cursor = span['end_offset_ns']
+    if cursor != verified['observed_wall_ns'] or cursor != verified['accounting_sum_ns']:
+        raise ValueError('observer accounting total differs')
+    worker=None
+    if 'timing_detail_spans' in verified:
+        worker_root=root/verified['attempt']/'worker'
+        worker=None
+        if (worker_root/'identity.json').is_file():
+            worker_identity=strict_json((worker_root/'identity.json').read_bytes())
+            worker=read_completed(worker_root,worker_identity)
+        if verified['timing_detail_spans']!=detailed_accounting_partition(spans,worker):
+            raise ValueError('observer cleanup detail differs from worker evidence')
+    if 'observer_clock' in verified:
+        coordinates=verified['observer_clock']
+        if (coordinates.get('clock')!='time.perf_counter_ns_system_monotonic' or
+                any(type(coordinates.get(key)) is not int for key in ('start_ns','end_ns','wall_ns')) or
+                coordinates['end_ns']-coordinates['start_ns']!=cursor or coordinates['wall_ns']!=cursor):
+            raise ValueError('observer absolute clock differs from enclosing interval')
+        boundary=worker.get('timing_boundary') if worker is not None else None
+        if boundary is not None:
+            matching=[span for span in spans if span['name']=='worker_execution_and_cleanup']
+            if (len(matching)!=1 or coordinates['start_ns']+matching[0]['start_offset_ns']!=boundary['start_ns']
+                    or coordinates['start_ns']+matching[0]['end_offset_ns']!=boundary['cleanup_end_ns']):
+                raise ValueError('observer and worker absolute clock origins differ')
+        previous_end=coordinates['start_ns']
+        for window in verified.get('adopted_cleanup_windows',[]):
+            if (any(type(window.get(key)) is not int for key in ('start_ns','end_ns','wall_ns')) or
+                    not previous_end <= window['start_ns'] <= window['end_ns'] <= coordinates['end_ns'] or
+                    window['wall_ns']!=window['end_ns']-window['start_ns']):
+                raise ValueError('observer adopted cleanup windows overlap or exceed its clock')
+            previous_end=window['end_ns']
+    complete = verified['outcome']['status'] == 'complete'
+    if verified['complete_transaction_wall_ns'] != (cursor if complete else None):
+        raise ValueError('observer complete time differs')
+    if complete:
+        _, contract = _validate_output(Path(identity['transaction_root']),identity['output_contract'])
+        if not contract or verified['child_output_contract_verified'] is not True:
+            raise ValueError('observer output contract is unverified')
+    eligible = complete and identity['cache_mode'] == CACHE_MODES[0] and verified['child_output_contract_verified']
+    if verified['eligible_fresh_transaction_latency'] != eligible:
+        raise ValueError('observer eligibility differs')
+    return verified
 
 
 def run_measured_manifest(path, observer_root):
