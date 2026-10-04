@@ -1,0 +1,13 @@
+Final adversarial pass, 2026-10-04. Reviewed consolidated report and src/exact_core.py manually. No experiments or numerical tests executed.
+
+Actionable issue 1: Scheduler cancellation accounting.
+A bounded losing-branch arena disposal cost is not automatically common fresh-baseline work. Retain J_base for common service/output and write C <= J_base + min(B/w_O,R/w_R) + D_cancel. The (1+alpha) competitiveness statement requires D_cancel to be paid inside already charged allocations, or its explicit bound included in the comparison. If using cleanup credits, B and R must be the corresponding augmented branch-work costs and the implementation must reserve sufficient destruction budget. Relabeling an extra cost as common does not remove it.
+
+Actionable issue 2: Retained replay availability.
+The promised state A(R) lists model, reference index and IDs, not raw records. Termination by full replay requires a declared retained-only source of raw/tokenized records, or equivalent sufficient original inputs. State that access assumption and charge the reads. The existing removed-contribution clause covers the deleted records but does not by itself guarantee retained replay is possible.
+
+Verified: sharp relative spectral coefficient, forced-prefix recurrence, PSD deletion endpoint transformation, transport Gram enclosure, LayerNorm bound, attention spectral/Frobenius bounds, adaptive replay's conservative monotone uncertainty, canonical reference-state argument, sparse change injection signs and counts, charged-work ratio algebra, black-box lower-bound construction, asymmetric center identity and quality/CE recurrences. No further actionable algebraic error found.
+
+Exact core review: reverse LDL Schur elimination and B signs are correct for H=L^T diag(t)L; energy is accumulated before each decision; lower-code midpoint rule yields cells (lower,upper]; positive-radius strict checks are conservative; zero-radius acceptance is sound including ties; singleton cells work; supplied spectral premise remains explicitly unverified; deletion a>0 implies b>=a>0 under the validated endpoint assumptions. Rational input rejection matches documentation. This is manual review, not machine verification.
+
+The report explicitly distinguishes finite neural programs from ideal operator bounds and requires numerical envelopes or replay. It also correctly distinguishes new auxiliary-state interface from unchanged sequential model target, charges aggregate/index storage, and grants the comparator matching reference state. Empirical coverage and latency remain unestablished, as stated.

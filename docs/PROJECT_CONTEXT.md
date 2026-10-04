@@ -110,8 +110,10 @@ Materializing a P-word model costs Omega(P). Dense code changes do not prove ret
 
 Initial agenda correctly distinguishes this problem from making training-data unlearning survive quantization. GPTQ, asymmetric reconstruction, block reconstruction, Babai geometry, low-rank inverse updates and generic dynamic computation are prior techniques, not novelty claims. The contribution must be exact calibration deletion, valid propagated certificates, state/storage/cost tradeoffs, and a meaningful empirical phenomenon. Primary sources must be checked before writing priority claims. The original agenda searched through 3 October 2026; that did not establish absence of related work.
 
-## Active theory revision
+## Theory revision at its start (historical checkpoint)
 
 Four independent analysis tracks were commissioned: changed-prefix exact repair/query limits; deletion-native teacher/anchor design; coverage and repeated state; adversarial review/cost accounting. Their notes will be saved under `theory_revision/`. Root is deriving candidate-prefix transport certification: use an anchored retained Gram as surrogate, bound actual new-prefix activation drift, certify candidate rounding against every Gram in the enclosure, and refine with selected retained-record replay if needed. Unlike the prior gate, this can allow changed codes at the first stage. It remains a derivation until the consolidated report says otherwise.
 
-Experiments remain paused. The next chat should continue the active task rather than starting a new survey or assuming the paper is finished.
+This derivation/review was subsequently completed. See `docs/STATUS.md`, the consolidated 17-page report, `docs/THEOREM_LEDGER.md`, `docs/ALGORITHM_SPEC.md` and `docs/NUMERICAL_CONTRACT.md` for the current result. The report now proves the changed-prefix transport route, sharper shape sensitivity, canonical independent-reference state, adaptive fallback and explicit cost limits. The local rational core was authored and manually/static checked; a full transformer service and practical speedup remain unestablished.
+
+Experiments remain paused. Continue this project from the current status rather than starting a new survey or assuming the paper is finished.

@@ -1,0 +1,518 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,tabularx,array,xcolor,fancyhdr,hyperref}
+\pdfmapfile{+lm.map}\pdfmapfile{+symbols.map}\pdfmapfile{+cm.map}
+\definecolor{navy}{HTML}{17324D}
+\hypersetup{colorlinks=true,urlcolor=navy,linkcolor=navy,pdftitle={Exact Calibration Repair After Changed Prefixes}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}\setlength{\headheight}{15pt}
+\pagestyle{fancy}\fancyhf{}\lhead{\small Calibration-data unlearning}\rhead{\small Theory and algorithm revision}\cfoot{\small\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}{Lemma}\newtheorem{corollary}{Corollary}
+\newcommand{\norm}[1]{\left\|#1\right\|}\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\note}[1]{\textcolor{navy}{\textbf{#1}}}
+\begin{document}
+{\LARGE\bfseries Exact calibration repair\\[3pt] after changed prefixes}
+
+{\large Transport certificates, canonical state, and bounded fallback}\par
+4 October 2026\quad |\quad Research target: ACL 2027
+
+\note{Main advance.} Repair no longer requires an unchanged first layer. We generate new quantized codes, bound the resulting retained activation drift, and certify those codes against the complete sequential retained-data quantizer. Ambiguous stages trigger selected retained-group replay. Complete replay is an exact fallback.
+
+The central theorem now concerns a \emph{new certified prefix}, not equality to an old prefix. A sharper covariance bound ignores harmless global scaling. A corpus-independent reference index gives canonical repeated-deletion state while preserving the original sequential model target. A weighted work scheduler bounds worst-case regression without predicting fresh runtime.
+
+\begin{tabularx}{\linewidth}{@{}p{.30\linewidth}X@{}}\toprule
+Previous unresolved point & Resolution in this revision\\\midrule
+Early codes change & Certify transported new-prefix decisions; replay where the enclosure is insufficient.\\
+Global minimum margin & Local cell checks; target-factor repair injects actual changed codes.\\
+Trace scores too loose & Spectral intervals and covariance shape remove trace slack and harmless scaling.\\
+Repeated/canonical state & Additive statistics of independent references; discard historical calibrated anchors.\\
+Unknown fallback cost & Weighted dovetail gives a deterministic charged-work bound.\\
+Universal fast repair & A specified feature-query lower bound rules it out without structural assumptions.\\
+Practical speed/quality & Remain empirical questions. No experiments were run in this revision.\\\bottomrule
+\end{tabularx}
+
+\note{Scope of closure.} Correctness, finite fallback, state semantics, and conditional cost guarantees can be closed mathematically. No theorem establishes favorable certificate coverage for arbitrary language models or reliable measured latency. Calling those empirical questions closed would be unjustified.
+
+\note{Evidence provenance.} Earlier source/log/PDF files were removed by workspace maintenance before this turn. Historical findings in the repository are explicitly reconstructed from conversation context. This document contains new derivations and review, not a re-execution or recovery of those experiments.
+
+\newpage
+\section*{1. Fix the target and the persistent state}
+Let $R$ be retained records and $\ell=1,\ldots,L$ quantization stages in a deterministic acyclic graph. Feature matrix $X_{\ell j}$ of record $j$ is evaluated using already quantized ancestors. The primary model target is
+\[
+ Q_{\rm seq}(W,R),\qquad
+ H_\ell(R)=\lambda_\ell I+\frac1{M_0}\sum_{j\in R}X_{\ell j}X_{\ell j}^{\top},
+ \quad \lambda_\ell>0.
+\]
+Original weights $W$, grids, order, tie rule, normalization $M_0$, feature program and graph are fixed. Record-local evaluation excludes unaccounted corpus-dependent packing/batching. Relative damping and other branches are treated in Sections 3 and 12.
+
+The exact statistic/rounding oracle $V$ treats finite feature-program outputs as exact dyadic values, forms exact moments, and performs deterministic rational metric rounding. Local fallback uses rational elimination and exact grid comparisons. The previously measured floating reduction/Cholesky executable $E$ is a different target. Equality to $V$ does not automatically establish bitwise equality to $E$.
+
+\note{Neural evaluator obligation.} Transport must enclose the actual declared feature evaluator. Operator inequalities in Section 5 are directly valid for ideal operators. For a pinned floating program, add sound numerical-error bounds for both reference and candidate executions, or enclose that program directly. Unverified error tolerances are not certificates.
+
+Fix reference networks $P_1,\ldots,P_B$ \emph{independently of the deletable corpus}. The original $W$, deterministic weight-only quantization of $W$, or independently specified proxies are allowed. Freezing a model fitted to the original calibration corpus does not make it independent.
+
+For each reference retain intrinsic per-record summaries and exact additive moments. Define the complete promised state as
+\[
+ \mathcal A(R)=\big(Q_{\rm seq}(W,R),\ I_{\rm ref}(R),\ \mathrm{IDs}(R)\big). \tag{1}
+\]
+The fresh constructor discards true sequential Grams and calibration traces after building the model. Index $I_{\rm ref}$ is a specified canonical function of retained records and fixed references. This is a \emph{new auxiliary-state interface with the same model target}. It is not equality to a historical interface persisting all true sequential activations.
+
+The service may use an old model as a transient proposal, but every old anchor, ticket, candidate trace and deleted entry must be removed or regenerated according to (1) before committing. Canonical mathematical sums need canonical serialization if byte equality is promised. The claim does not remove knowledge originally learned in the fixed base weights $W$.
+
+Retained records or sufficient tokenized inputs remain available through a declared retained-only source accessible to both baseline and repair, with reads charged. IDs and reference moments alone do not guarantee the ability to replay an uncertain nonlinear stage.
+
+\newpage
+\section*{2. A sharp bound depending on covariance shape}
+For an SPD surrogate $H$, factor
+\[
+ H=\mathcal L^{\top}D^{-1}\mathcal L,\quad
+ \mathcal L=I-B,\quad D=\operatorname{diag}(g),\quad g_i>0.
+\]
+For row $w$ and \emph{any forced preceding code prefix} $q_{<i}$, write
+\[
+ v_i=w_i-B_{i,<i}(w-q)_{<i},\quad
+ E_i=\sum_{h<i}\frac{(v_h-q_h)^2}{g_h},\quad K_i=\sqrt{g_i E_i}.
+\]
+Use the same forced prefix in both quadratics; it need not be the deployed prefix.
+
+\begin{theorem}[Scale-aware conditional stability]
+If $0<a\leq b$ and $aH\preceq H_*\preceq bH$, then
+\[
+ \boxed{|v_i^*-v_i|\leq\chi(a,b)K_i,\qquad
+ \chi(a,b)=\frac{b-a}{2\sqrt{ab}}.} \tag{2}
+\]
+The coefficient is sharp for the abstract quadratic perturbation class.
+\end{theorem}
+\begin{proof}
+Positive scaling does not change a quadratic's constrained minimizer. Rescale $H_*$ by $2/(a+b)$ and whiten $H$. The relative perturbation $A$ has norm at most $\eta=(b-a)/(b+a)<1$. The old minimum-energy residual $u$ is perpendicular to the remaining adjustable subspace $V$, with $\norm u^2=E_i$. Put $D_0=A_{VV}$ and $C=A_{V,V^\perp}$. The new residual is $u+y$, where
+\[
+ y=-(I+D_0)^{-1}Cu,\qquad CC^{\top}\preceq\eta^2I-D_0^2.
+\]
+The squared operator norm is bounded by
+\[
+ \max_{z\in[-\eta,\eta]}\frac{\eta^2-z^2}{(1+z)^2}
+ =\frac{\eta^2}{1-\eta^2},
+\]
+attained at $z=-\eta^2$. The coordinate functional has squared dual norm $g_i$. Cauchy--Schwarz proves (2). A two-dimensional block with eigenvalues $\pm\eta$ attains this operator bound.
+\end{proof}
+
+This recovers $\rho/(2\sqrt{1-\rho})$ for PSD deletion with $(a,b)=(1-\rho,1)$, and gives the sharper signed bound $\eta/\sqrt{1-\eta^2}$. If $a=b$, every code is unchanged even under a large proportional covariance change.
+
+An interval $[v_i-\chi K_i,v_i+\chi K_i]$ inside one rounding cell certifies that cell. Check coordinates inductively. Zero radius handles ties using the exact tie rule; positive-radius boundary contact abstains. Saturated cells have one finite boundary. Squared rational comparisons avoid square roots. Under scaling $H\mapsto cH$, $g_i$ scales by $1/c$ and $E_i$ by $c$, so $K_i$ is invariant.
+
+\newpage
+\section*{3. Stronger deletion scores and relative damping}
+At an input-stable stage let $H'=H-\sum_{j\in F}\Delta_j$, with $\Delta_j\succeq0$. Replace trace leverage with certified spectral intervals
+\[
+ l_j I\preceq H^{-1/2}\Delta_jH^{-1/2}\preceq u_j I.
+\]
+Sum requested endpoints: $l_F=\sum_F l_j$, $u_F=\sum_Fu_j$. If $u_F<1$, (2) applies with
+\[
+ a=1-u_F,\quad b=1-l_F,\qquad
+ \chi=\frac{u_F-l_F}{2\sqrt{(1-u_F)(1-l_F)}}. \tag{3}
+\]
+Use outward rational/dyadic endpoints. A scalar maximum-score gate remains available with $l_j=0$ and upper operator bounds $u_j$. Keeping both endpoints gives $O(kL)$ online work and $O(NL)$ interval storage. Preparation, authentication and precision are charged.
+
+\note{Why this matters.} When $\Delta_j=H/N$, trace leverage is $d/N$, whereas $l_j=u_j=1/N$. Formula (3) has zero shape error for every proper proportional deletion. The old trace gate loses a factor $d$ and misses exact scale invariance. This is an algebraic regime, not an empirical synthetic dataset. Low-rank records often have $l_j=0$, so this improvement is not universal.
+
+Fixed positive ridge does not make $\Delta_j=H/N$ automatic. The example is compatible with the following additive relative-damping contract, or another contribution family satisfying that equality.
+
+For trace-proportional damping use unnormalized statistics
+\[
+ S=\sum_j X_jX_j^{\top},\qquad H=S+\frac\zeta d\tr(S)I.
+\]
+Deleting a record removes the PSD contribution
+\[
+ \Delta_j=X_jX_j^{\top}+\frac\zeta d\norm{X_j}_F^2I. \tag{4}
+\]
+Refitting this damping rule is exactly additive. Changing total to mean normalization multiplies the whole damped metric by a positive scalar, leaving exact rounding unchanged. If a fixed ridge floor is also present, retain it explicitly; scale cancellation need not hold for a differently normalized contract.
+
+After changed ancestors, transport the retained damping term too. For $\zeta\geq0$,
+\[
+ \Delta H=\Delta S+(\zeta/d)\tr(\Delta S)I,\qquad
+ \norm{\Delta H}_2\leq(1+\zeta)\norm{\Delta S}_2.
+\]
+The group Frobenius bounds $\delta_G$ in Section 6 bound both spectral error and absolute trace error, giving the sharper bound $(1+\zeta/d)\sum_G\delta_G$ when applicable. Simple deleted-Gram subtraction is insufficient after retained inputs change.
+
+Dead-feature, zero-data, order and grid branches must be fixed or certified. Pure relative damping is not SPD on zero data: specify a floor or deterministic fallback. Floating programs need not inherit exact scale invariance.
+
+These scores refer to one specified anchor metric. Do not reuse them after earlier deletions as though they use the current inverse. The canonical reference design removes such corpus-conditioned scores from committed state, or recomputes them if the declared state interface includes them.
+
+\newpage
+\section*{4. Exact repair after the first stage changes}
+Assume repaired ancestors of stage $\ell$ are certified equal to $Q_{\rm seq}(W,R)$. Let $X_*$ concatenate that target's retained features. Let $Z$ be reference or partially replayed features, and put
+\[
+ \bar H=\lambda I+ZZ^{\top}/M_0,\quad E=X_*-Z,\quad
+ a_0=\norm{\bar H^{-1/2}Z/\sqrt{M_0}}_2\leq1.
+\]
+If $e\geq\norm{\bar H^{-1/2}E/\sqrt{M_0}}_2$, then
+\[
+ \norm{\bar H^{-1/2}(H_*-\bar H)\bar H^{-1/2}}_2
+ \leq 2a_0e+e^2=:\eta. \tag{5}
+\]
+Expand $ZE^{\top}+EZ^{\top}+EE^{\top}$ and apply submultiplicativity. One conservative choice is
+\[
+ e=\norm E_F/\sqrt{M_0\lambda},
+\]
+or a certified upper bound on this value. Tighter eigenvalue enclosures may supply $(a,b)$ directly. For $\eta<1$, use $(a,b)=(1-\eta,1+\eta)$.
+
+\begin{theorem}[Transported sequential repair]
+Process the quantization DAG topologically. At each stage form a surrogate metric and a sound relative spectral enclosure for the true retained metric under already certified new ancestors. Generate and certify every rounding decision by Theorem 1. If every stage accepts, the complete model equals $Q_{\rm seq}(W,R)$, even if the first stage or every stage changes codes.
+\end{theorem}
+\begin{proof}
+The first stage's feature target is independent of quantized ancestors. At a general stage, induction identifies true retained features with those evaluated under the certified candidate prefix. The supplied enclosure therefore contains the true metric. Coordinate induction using (2) identifies every emitted code with the local target. This certified stage establishes the premise for descendants. Fixed nonquantized parameters complete equality.
+\end{proof}
+
+\note{No circular premise.} We bound features using a prefix already proved correct. We do not assume the old prefix remains correct, or certify mutually dependent tentative stages simultaneously.
+
+For a candidate trace let $\tau=\min_{K_i>0}m_i/K_i$, where $m_i$ is its inside-cell boundary slack. A sufficient check is
+\[
+ \eta<\frac\tau{\sqrt{1+\tau^2}}. \tag{6}
+\]
+Local cell checks are preferable to abandoning all reuse at one small margin. The candidate may differ from the old model. Failure proves neither incorrectness nor unavoidable replay: another anchor, tighter enclosure, or selected group replay may resolve it.
+
+\newpage
+\section*{5. Transport for transformer primitives}
+Maintain group reference norms and certified candidate-minus-reference errors. Aggregate Frobenius bounds avoid visiting each retained record. Matrix orientations below must be adapted consistently to the implementation.
+
+\note{Affine and residual nodes.} For $Y=WX$, $Y'=W'X'$,
+\[
+ \norm{Y'-Y}_F\leq\norm{W'}_2\norm{X'-X}_F+
+ \norm{W'-W}_2\norm X_F.
+\]
+Bias changes add their broadcast Frobenius norm; residual sums add parent bounds. A $K$-Lipschitz elementwise map multiplies its input bound by $K$, on a certified domain containing both executions.
+
+\note{Layer normalization.} For width $d$, epsilon $\epsilon>0$, fixed gain $\gamma$, reference centered RMS at least $s$, and per-token perturbation at most $b$, a segment-valid Lipschitz bound is
+\[
+ L_{\rm LN}\leq\frac{\norm\gamma_\infty}
+ {\sqrt{\max\{s-b/\sqrt d,0\}^2+\epsilon}}. \tag{7}
+\]
+Centering is an orthogonal projector; differentiate the normalized centered vector and bound the denominator along the segment. A group Frobenius error bounds every token conservatively. Gain/bias changes add terms. Deleted minima/maxima require retained multiset/tree maintenance; stale extrema are not canonical state.
+
+\note{Attention.} For one head $S=QK^{\top}/\sqrt{d_h}$ with fixed mask,
+\[
+ \norm{S'-S}_F\leq
+ \frac{\norm{Q'}_2\norm{K'-K}_F+
+ \norm{Q'-Q}_F\norm K_2}{\sqrt{d_h}}.
+\]
+The row-softmax Jacobian $\operatorname{diag}(p)-pp^{\top}$ has operator norm at most $1/2$, since its absolute row sums are $2p_i(1-p_i)\leq1/2$. Integration gives
+\[
+ \norm{A'-A}_F\leq\tfrac12\norm{S'-S}_F,\qquad
+ \norm{A'V'-AV}_F\leq\norm{A'}_2\norm{V'-V}_F+
+ \norm{A'-A}_F\norm V_2. \tag{8}
+\]
+For $t$ tokens, $\norm{A'}_2\leq\norm{A'}_F\leq\sqrt t$. Tighter bounds are allowed. Include projections, head combination, rotary maps and all residual edges. Mask supports must match; fully masked rows need the declared fallback.
+
+\note{Floating execution.} If candidate/reference finite node evaluations deviate from their ideal operations by at most $\nu',\nu$ on the certified domains, add $\nu'+\nu$ to the ideal difference bound. Prove these for the actual kernels and reductions. If no sound envelope is available, replay the required records or use a verified primitive. Mathematical Lipschitz bounds alone do not certify arbitrary GPU kernels.
+
+\newpage
+\section*{6. Adaptive replay and finite fallback}
+Use a corpus-independent partition or fixed ID tree. For each reference, stage and stored group $G$, retain reference Gram $S_G^0$ and intrinsic energy/domain summaries. Under a fixed certified new prefix, bound
+\[
+ \norm{X_G^*-Z_G}_F\leq e_G,\qquad
+ \delta_G=\frac{2\norm{Z_G}_F e_G+e_G^2}{M_0}.
+\]
+An unreplayed group has $\norm{H_G^*-\bar H_G}_2\leq\delta_G$. A replayed group uses its exact target contribution and zero uncertainty. Thus
+\[
+ \norm{H_*-\bar H}_2\leq\sum_{G\ \rm unreplayed}\delta_G,
+ \qquad \eta\leq\frac{\sum_G\delta_G}{\lambda}. \tag{9}
+\]
+This conservative absolute uncertainty is monotone under replay. Sharper whitened or anisotropic enclosures may supplement it.
+
+\begin{tabularx}{\linewidth}{@{}rX@{}}\toprule
+Step & Stage-local algorithm\\\midrule
+1 & Freeze certified new ancestors. Select an available reference. Initialize the retained reference Gram.\\
+2 & Propagate group errors and build a sound metric enclosure. Factor the surrogate; generate and certify candidate decisions.\\
+3 & Accept if all decisions and auxiliary branches are certified. Otherwise tighten precision or select an unresolved group for replay.\\
+4 & Evaluate selected records under the fixed certified prefix. Replace their reference contributions with exact target contributions and remove their uncertainty. Retry the current candidate.\\
+5 & After all groups are replayed, execute the exact rational local quantizer and advance.\\\bottomrule
+\end{tabularx}
+
+\begin{theorem}[Soundness and termination]
+With finite groups, a progress rule that eventually replays a new unresolved group, and a terminating exact local oracle, the algorithm returns $Q_{\rm seq}(W,R)$ and terminates even at ties. Certified ancestors stay fixed; changing a current candidate invalidates tentative descendants.
+\end{theorem}
+\begin{proof}
+Equation (9) encloses unknown contributions at each retry; acceptance follows from Theorem 2. After finitely many strict replay steps every uncertainty is zero and the exact local oracle terminates. Induct over the finite DAG. Limit precision-only retries so they cannot prevent replay progress.
+\end{proof}
+
+Selecting groups by uncertainty removed per predicted work is a heuristic, not an optimality theorem. Ranking, heap reads, refactorization, repeated certification and duplicated forwards all count. Cache replayed intermediate activations only transiently, keyed by the exact certified prefix. Reference replay is also required when a group's reference Gram was not stored.
+
+\newpage
+\section*{7. Canonical state under repeated deletion}
+For reference $b$, stage $\ell$ and stored group $G$, the persistent index keeps
+\[
+ S^b_{\ell G}(R)=\sum_{j\in R\cap G}X^b_{\ell j}X^{b\top}_{\ell j}.
+\]
+Exact subtraction of removed reference contributions updates the moments. Removed content must be available before erasure, or its intrinsic contribution must have been stored. An ID alone cannot reconstruct an absent contribution.
+
+\begin{theorem}[Canonical service with the original model target]
+Let the fresh constructor output exactly (1), using fixed reference maps and canonical index construction/serialization. Update the index on deletion, compute the target model by transported repair or exact fallback, and discard noncanonical traces. The committed result is exactly $\mathcal A(R\setminus F)$. Any deletion sequence gives fresh state for its final retained set.
+\end{theorem}
+\begin{proof}
+Reference moments are sums of intrinsic record functions, so subtraction gives their defining retained values. Recompute extrema and map/tree metadata canonically. Theorems 2--3 or fallback supply the target model. Erasure leaves precisely (1). Induction over requests proves order independence.
+\end{proof}
+
+Use a fixed ID-key universe or a deterministically rebuilt retained-ID structure. Empty nodes encoding deleted IDs violate byte-canonical state if fresh construction omits them. Fixed hash-prefix buckets with canonical retained maps are one option. Balance/index rules must be specified; set equality alone is not serialized-state equality.
+
+With $B$ references and $G$ stored groups, Gram storage is
+\[
+ O\!\left(BG\sum_\ell d_\ell^2\right)
+\]
+arithmetic values, plus intrinsic descriptors, IDs and exact precision. Refinement without a stored group Gram must recover that contribution, possibly by reference replay. A full tree can cost $O(BN\sum d_\ell^2)$ and is not a cheap default. Select coarse groups under an explicit memory budget.
+
+\note{Bank monotonicity.} Adding an independent reference weakly enlarges the union of certificate routes: an optimal selector can still choose the old route. This does not prove latency monotonicity for an implemented selector. Extra references cost setup, storage, deleted-side updates and selection.
+
+\note{Coverage boundary.} Reference transport measures full candidate-versus-reference drift. It need not shrink as $|F|/|R|\to0$; a gate may abstain even for an empty deletion. The old small-deletion acceptance theorem cannot be transferred without a new coverage hypothesis. If the interface instead persists true sequential Grams, their refresh must be charged separately. Historical inverse-leverage tables are not intrinsic reference descriptors.
+
+\newpage
+\section*{8. Local repair once a target factor exists}
+When exact target factor $B'$ is available, avoid restarting each changed row's whole suffix. With old trace $(q_i,v_i)$ define
+\[
+ b_i=-(B'-B)_{i,<i}(w-q)_{<i},\quad |b_i|\leq\epsilon_i,
+ \qquad d_i=\sum_{h<i}B'_{ih}(q'_h-q_h).
+\]
+The true input is
+\[
+ v'_i=v_i+b_i+d_i. \tag{10}
+\]
+A spectral perturbation bound under the old forced prefix supplies $\epsilon_i$. Maintain $d_i$ explicitly as earlier code changes are discovered.
+
+At coordinate $i$, test whether $[v_i+d_i-\epsilon_i,v_i+d_i+\epsilon_i]$ lies in one cell. If so, emit that cell, which may differ from the old code. Otherwise compute the exact target input from $B'$ and the repaired prefix. If $q'_i\ne q_i$, inject
+\[
+ d_j\leftarrow d_j+B'_{ji}(q'_i-q_i)\quad(j>i).
+\]
+
+\begin{theorem}[Sparse change injection]
+Given exact target factors, the old trace and sound $\epsilon_i$, this procedure returns exact target codes. For $p$ rows of width $d$, $s$ changed decisions and $r$ ambiguous decisions, arithmetic work is
+\[
+ O\big(pd+(s+r)d\big), \tag{11}
+\]
+excluding factor acquisition, trace/envelope construction and output.
+\end{theorem}
+\begin{proof}
+Splitting $w-q'$ into $w-q-(q'-q)$ gives (10). Correct previous codes make either containment or exact recomputation sound. Injection maintains (10) for later coordinates. Induct over coordinates and rows. There are $pd$ checks, at most $d$ work per ambiguous exact dot product and $d$ updates per changed code.
+\end{proof}
+
+This avoids a global minimum-margin requirement for the local repair algorithm. Near-boundary decisions incur exact work instead of invalidating all reuse. Worst-case $s+r=\Theta(pd)$ recovers a dense sweep. Neither small perturbations nor few changed input records guarantee few changed codes.
+
+\note{Two distinct regimes.} In transported repair the true target factor may be unknown. An ambiguous coordinate cannot then be cheaply recomputed from it. Tighten the metric enclosure, replay records, or fall back. Formula (11) applies only after the target factor exists. Old calibrated traces are transient under (1); keeping them permanently changes the state contract. The exact core supplied here implements the shape verifier, not this sparse kernel.
+
+\newpage
+\section*{9. Full-model cost with changed codes}
+Compare identical output/state interfaces, numerical oracles and storage allowances. Give the fresh/indexed baseline the reference statistics and caches given to repair; it may reuse them wherever valid. A deliberately scanning fresh constructor is not a universal lower bound.
+
+Let baseline disjoint costs be retained feature/statistic work $F>0$, factor/rounding work $G$, and common service/output work $J$. Suppose repair replays at most fraction $s$ of $F$, uses one quantization schedule bounded by $G$, and adds work $U$:
+\[
+ C_{\rm base}=F+G+J,\qquad
+ C_{\rm repair}\leq sF+G+J+U. \tag{12}
+\]
+$U$ includes deleted-side reference inference, moment updates, transport, extra candidate sweeps and factorizations, numerical validation, selection, duplicate forwards, extra reads and canonical commit/purge. If verification costs more than the shared $G$ schedule, charge its excess in $U$.
+
+\begin{theorem}[Whole-model charged-work gain]
+If $s+u<1$, $U/F\leq u$ and $(G+J)/F\leq\gamma$, then
+\[
+ \boxed{\frac{C_{\rm base}}{C_{\rm repair}}
+ \geq\frac{1+\gamma}{s+u+\gamma}>1.} \tag{13}
+\]
+There is no restriction on the number of changed model codes.
+\end{theorem}
+\begin{proof}
+For $g=(G+J)/F$, (12) gives ratio at least $(1+g)/(s+u+g)$. Its derivative in $g$ is $(s+u-1)/(s+u+g)^2<0$. Substitute $g\leq\gamma$. Exactness follows separately from Theorems 2--4.
+\end{proof}
+
+This is an operational sufficient condition with a complete ledger. A class satisfying it on every request gets deterministic per-request savings. A probability claim also needs a request law and a justified probability of satisfying it. No such law is assumed for targeted withdrawal.
+
+The unchanged-prefix result is a special case. Here $s$ counts actual retained recomputation, not changed layers, so changed first-stage weights are permitted. If all retained records are replayed and $U>0$, the theorem correctly cannot show a saving.
+
+Preprocessing $P_0$ is additional lifetime work. Net lifetime savings require $\sum_r(C_{{\rm base},r}-C_{{\rm repair},r})>P_0$. Materializing a $P$-word model costs $\Omega(P)$ writes. Unit-cost rational arithmetic is not bit-runtime: precision, memory bandwidth and serialization must be charged before claiming latency. No favorable numerical constants in (13) have been measured for the new algorithm.
+
+\newpage
+\section*{10. Fallback without predicting fresh runtime}
+Replace a cap requiring unknown fresh runtime with weighted dovetail. Let $O$ be a terminating exact baseline and $R$ a certified repair service. Both implement the same complete state contract. Run isolated resumable branches with work shares
+\[
+ w_O=\frac1{1+\alpha},\qquad w_R=\frac\alpha{1+\alpha},\qquad\alpha>0.
+\]
+Stop at the first certified complete artifact/state and commit once. Branch-local verification and normal cleanup belong in branch costs; shared commit work is $J$. Additional cancellation of the losing branch costs at most $D_{\rm cancel}$.
+
+\begin{theorem}[Forecast-free bounded regression]
+In a divisible charged-work model, if baseline and repair require branch work $B$ and $R$, total work obeys
+\[
+ \boxed{C\leq J+\min\{(1+\alpha)B,\ (1+1/\alpha)R\}+D_{\rm cancel}.} \tag{14}
+\]
+Thus $C\leq(1+\alpha)(B+J)+D_{\rm cancel}$ even if repair never succeeds. The pure multiplicative bound requires cancellation to have already been paid inside the declared charged-work model.
+\end{theorem}
+\begin{proof}
+After total branch work $T$, each unfinished branch has its share. Baseline completes by $B/w_O$, repair by $R/w_R$ if successful. Stop at first completion; add common commit and cancellation work.
+\end{proof}
+
+For indivisible operations, specify a weighted-fair packet scheduler. If each branch's allocated work differs from its fluid share by at most $q$, then
+\[
+ C\leq J+\min\{(B+q)/w_O,\ (R+q)/w_R\}+D_{\rm cancel}. \tag{15}
+\]
+An uninterruptible factorization can make $q$ large. Suspension, bookkeeping and memory pressure are costs; this is not an automatic GPU latency bound.
+
+\note{Cancellation accounting.} Bounded arena disposal is still additional work, not automatically common baseline overhead. Reserve cleanup credits as part of each branch's comparable amortized work, or keep the explicit $D_{\rm cancel}$. If $D_{\rm cancel}\leq\delta(B+J)$, the fluid service is $(1+\alpha+\delta)$-competitive. Both branches must finish the same canonical state.
+
+For multiple routes with shares $w_i>0$, $\sum_iw_i=1$, the same argument bounds branch work by $\min_i C_i/w_i$ before common/cancellation costs. Keep a positive share for an exact terminating oracle. Charge duplicated index construction and output.
+
+Returned outputs are exact. With zero extra cancellation/packet cost, strict gain requires $R<\alpha B/(1+\alpha)$; otherwise include that overhead too. Scheduling cannot create a gain when every valid route does fresh work. Fix shares before evaluation or account for adaptive selection.
+
+\newpage
+\section*{11. Limits on unconditional retained-free repair}
+\note{Rank can grow through attention.} Start with $n\times n$ zero logits. For distinct positive $t_i$, take $u_i=\log t_i$, $v_j=j-1$. New logits $uv^{\top}$ have rank one, but their entrywise exponential is the nonsingular Vandermonde matrix $t_i^{j-1}$. Row normalization preserves rank, so new attention has rank $n$. Old attention has rank one; the difference has rank exactly $n-1$ since row sums vanish. Low-rank logit changes do not guarantee low-rank downstream corrections.
+
+\note{Fixed polynomial moments do not suffice.} For every $m$, equal-size finite multisets have matching moments through degree $m$ but different sums of $f(x)=\mathrm{GELU}(x)^2$. Choose a nonzero $(m+1)$st finite difference of this analytic nonpolynomial $f$. Split its alternating binomial coefficients into positive/negative multiplicities. Finite differences annihilate degree-$m$ polynomials but not this $f$. This rules out universal fixed-polynomial-moment closure, not every summary.
+
+\begin{theorem}[Feature-query obstruction]
+Suppose preprocessing supplies old features and metadata independent of new feature-oracle outputs. A changed prefix is accessible only through a per-retained-record oracle, with no structural certificates coupling new outputs. An always-exact repair algorithm needs $n$ queries in the worst case for $n$ retained records, even for a two-coordinate suffix quantizer.
+\end{theorem}
+\begin{proof}
+Old features are zero. New features are either all zero or zero except an unknown record equal to $(1,1)$. Put
+\[
+ H=\lambda I+M_0^{-1}\sum_jz_jz_j^{\top},\quad
+ r=(M_0\lambda+1)^{-1},\quad
+ w_1=c\in(0,1/2),\quad w_2=1/2-cr/2.
+\]
+On the integer grid the first code is zero. The second input $w_2+cH_{12}/H_{22}$ rounds to zero in the all-zero case and one in the single-nonzero case, with strict margins. If record $i$ is unqueried on the all-zero transcript, those cases are indistinguishable but require different artifacts. Query every record. Zero-error randomized algorithms obey this almost surely. With per-instance error $\epsilon$, coupled random bits give expected queries at least $n(1-2\epsilon)$.
+\end{proof}
+
+This is a lower bound for the stated feature-access model, not the computational complexity of an explicit transformer. Transport escapes by adding structural relations between new and reference features. These are mathematical constructions, not synthetic empirical datasets. Dense code changes alone do not imply a lower bound: linear feature maps admit exact low-order moment closure.
+
+\newpage
+\section*{12. Numerical decisions and additional branches}
+For finite neural outputs and rational/dyadic $W$, grids and ridge, $H$ is rational. Reverse unit-LDL uses rational arithmetic; conditional inputs and grid comparisons are rational. Exact fallback therefore resolves midpoint ties finitely; endless interval refinement at a tie is unnecessary.
+
+For $H=\mathcal L^{\top}\operatorname{diag}(t)\mathcal L$, eliminate pivots from the last coordinate backward. Each positive $t_i$ yields $\mathcal L_{i,<i}$ and a Schur update. Set $g_i=1/t_i$, $B_{i,<i}=-\mathcal L_{i,<i}$. This supplies our geometry without asserting a rounded Cholesky factor is exact.
+
+An accelerated floating factor defines a surrogate. Enclose its residual against the intended exact metric, compose with transport, and apply (2). Exact accumulator bins or normalized rational serialization make sums canonical. Ordinary floating subtraction is not order-independent exact state.
+
+\begin{tabularx}{\linewidth}{@{}p{.27\linewidth}X@{}}\toprule
+Target feature & Correct handling\\\midrule
+Activation-order sorting & Certify the selected comparison/permutation, or acquire exact statistics and use the target tie rule.\\
+Fitted scales/grids & Certify complete fitting decisions or recompute them. Fixed-grid proofs do not cover changed grids.\\
+Dead-column rules & Certify zero/nonzero tests and weight resets; positive ridge does not remove a separate dead-column branch.\\
+Relative damping & Update by (4), with a declared zero-data/floor policy.\\
+Batching/packing & Fix record-local semantics or include cross-record operations in the dependency graph.\\
+Autotuned kernels & Pin and enclose numerical behavior, or state that the exact-statistic oracle is a distinct target.\\\bottomrule
+\end{tabularx}
+
+\note{Reference core.} The accompanying Fraction-only implementation supplies reverse LDL, sequential rounding, conditional spectral-shape certification and deletion-interval summation. It rejects floating inputs and marks spectral enclosures as caller-proved premises. It does not certify neural transport or implement a full LM service. Static compilation and manual review were performed; numerical tests and experiments were not run.
+
+The accompanying \texttt{docs/NUMERICAL\_CONTRACT.md} specifies analytic affine rounding bounds, interval primitive requirements, denominator checks and mandatory unknown/replay behavior. These are component guarantees, not machine-checked proofs of the Python implementation. Independent oracle checks must precede performance claims when execution resumes.
+
+\newpage
+\section*{13. A separate margin-free alternative target}
+If original-target transport coverage is poor, use a separately named fixed teacher/proxy calibration quantizer. This is a different reference algorithm, not an undisclosed change to $Q_{\rm seq}$.
+
+For corpus-independent maps $(X_j,Y_j)$ set
+\[
+ H=\lambda I+\frac1{M_0}\sum_jX_jX_j^{\top},\quad
+ A=\lambda W+\frac1{M_0}\sum_jY_jX_j^{\top},\quad U=AH^{-1}.
+\]
+Its reconstruction objective completes the square:
+\[
+ \frac1{M_0}\sum_j\norm{QX_j-Y_j}_F^2+\lambda\norm{Q-W}_F^2
+ =\tr((Q-U)H(Q-U)^{\top})+\mathrm{const}.
+\]
+Apply deterministic metric rounding to $(U,H)$ independently at each module. Greedy rounding is not claimed to solve the discrete global minimum. With teacher inputs and $Y_j=WX_j$, $U=W$.
+
+\begin{theorem}[Deletion-native exact repair]
+Subtract deleted second/cross moments, recompute $U$, and rerun declared local quantizers. The entire model and canonical moment state equal fresh construction on retained data after every deletion sequence, without a margin condition. No retained neural forward passes are needed, even if every emitted tensor changes.
+\end{theorem}
+\begin{proof}
+Features are intrinsic to records and independent of emitted quantized ancestors. Exact subtraction gives retained moments; positive ridge and deterministic rounding give the retained model. Induct over requests.
+\end{proof}
+An exact center-update identity is
+\[
+ U'=U+(UX_F-Y_F)X_F^{\top}H'^{-1}/M_0. \tag{16}
+\]
+Multiply by $H'=H-X_FX_F^{\top}/M_0$ to verify it. Low-rank solves/downdates are optional; dense refactoring remains fallback.
+
+Let $f$ be per-record fixed-feature/moment work, $n$ retained and $k$ deleted. Fresh costs $nf+G+J$, repair at most $kf+G+J+D$. If $k/n\leq\eta$, $(G+J)/(nf)\leq\gamma$, $D/(nf)\leq\delta$ and $\eta+\delta<1$, the ratio is at least
+\[
+ \frac{1+\gamma}{\eta+\gamma+\delta}>1. \tag{17}
+\]
+This is margin-free but target-specific. Give fresh the same cache and index; charge precision and storage. Teacher-input and asymmetric reconstruction already exist, so the contribution cannot be anchoring alone.
+
+\newpage
+\section*{14. Quality accounting for the alternative}
+For mathematical layers $f_\ell(x)=\sigma_\ell(W_\ell x)$ assume $\sigma_\ell$ is $L_\ell$-Lipschitz on a domain containing teacher and deployed activations. On a specified set use RMS Frobenius norm $\norm Z_S=\norm Z_F/\sqrt M$. Let $T_{\ell-1}$ be teacher input, $e_{\ell-1}$ deployed-teacher RMS error, and $E_\ell=Q_\ell-W_\ell$. Define
+\[
+ R_\ell=\norm{E_\ell T_{\ell-1}}_S^2+\lambda_\ell\norm{E_\ell}_F^2.
+\]
+For $\norm D_S\leq d$, triangle inequality and Cauchy--Schwarz give
+\[
+ \norm{E_\ell(T_{\ell-1}+D)}_S
+ \leq\sqrt{(1+d^2/\lambda_\ell)R_\ell}.
+\]
+Hence
+\[
+ e_\ell\leq L_\ell\left[\norm{W_\ell}_2e_{\ell-1}
+ +\sqrt{(1+e_{\ell-1}^2/\lambda_\ell)R_\ell}\right],\quad e_0=0. \tag{18}
+\]
+Another valid bound is $L_\ell[\norm{Q_\ell}_2e_{\ell-1}+\norm{E_\ell T_{\ell-1}}_S]$; use the smaller valid bound. Numerical teacher/deployment errors add explicit terms. Residual/attention architectures need graph recurrences; arbitrary transformer operations are not globally one-Lipschitz.
+
+For final logits, mean token cross-entropy differs by at most $\sqrt2e_{\rm final}$ on this set: cross-entropy's logit gradient has norm at most $\sqrt2$. This is a deterministic set-level bound, not a population accuracy or perplexity guarantee. Large products of Lipschitz constants may make it loose.
+
+\note{Block reset alternative.} Fix teacher calibration anchors at chosen block entrances; retain sequential calibration within each block. Deployment composes all quantized blocks normally. This confines propagation to block interiors but does not eliminate retained replay inside changed nonlinear blocks. One full-model block recovers sequential calibration; one-stage blocks recover the teacher-input special case, not arbitrary asymmetric proxies.
+
+For teacher-entrance discrepancy $\epsilon_b$ and deployed block Lipschitz constant $K_b$, $e_b\leq K_be_{b-1}+\epsilon_b$. Longer blocks do not universally improve this bound. A partition fitted on deletable data must itself be repaired; otherwise fix it independently.
+
+The independent note gives an optional corpus-independent candidate-bank dynamic program optimizing a compositional quality bound under deployment budget. That is a narrower model-selection target, retained as a reserve. The primary recommendation remains original sequential repair with transported certificates.
+
+\newpage
+\section*{15. Implementation contract and next phase}
+\note{Primary algorithm: transported exact sequential repair.} Its reference state preserves $Q_{\rm seq}$ and its stage verifier uses Theorem 1. The complete service requires these interfaces:
+
+\begin{tabularx}{\linewidth}{@{}p{.31\linewidth}X@{}}\toprule
+Component & Required contract\\\midrule
+Reference index & Intrinsic summaries, exact subtraction, canonical IDs/tree/extrema, explicit memory budget.\\
+Transport provider & Sound group errors for declared feature programs, including numerical envelopes.\\
+Metric enclosure & Certified positive spectral endpoints relative to an exact or validated surrogate.\\
+Decision engine & Fixed-grid rational oracle; accelerated interval route with exact tie fallback.\\
+Replay engine & Certified ancestor identities, complete dependencies, deterministic record-local evaluation.\\
+Scheduler & Resumable charged-work steps, packet-lag bound, always-terminating exact branch.\\
+Commit & Complete artifact/state verification, canonical serialization and transient/deleted-data erasure.\\\bottomrule
+\end{tabularx}
+
+Only the exact local core was implemented this turn. Transformer transport/index/scheduler integration has not been implemented or measured. Previous code is absent after maintenance, so this is not a tested patch to it.
+
+The shape lemma, new-prefix induction, adaptive fallback, state constructor, sparse local repair, full-model cost condition and weighted fallback were derived and independently reviewed. Notes preserve the derivations and challenges. Python code remains a reference implementation, not a formal proof.
+
+When experiments are authorized again, first establish whether validated transport saves enough retained replay to exceed verification/index costs against a baseline with identical state access. Keep changed-first-layer cases, failed certificates and fallbacks in the workload. The decisive result is saved full-model work, not a rounding-only kernel gain.
+
+No benchmark, synthetic dataset, model download or external compute job ran during this revision. Static compilation and document validation do not establish model quality, certificate coverage or speed.
+
+\note{Continuity.} The repository at \url{https://github.com/priyankjairaj100/second} contains restart context, historical provenance, source, specifications and independent notes. Read \texttt{RESUME.md} and \texttt{docs/STATUS.md} before continuing. Missing historical files are inventoried, not recreated as if original.
+
+\newpage
+\section*{16. Paper claims and primary sources}
+The defensible contribution is certified calibration-data removal through a sequential quantization pipeline \emph{with changed ancestors}, canonical reference state, and an explicit cost boundary. A paper needs a measured saved-replay phenomenon. A conditional theorem or a different teacher-calibrated target does not establish that phenomenon.
+
+\begin{tabularx}{\linewidth}{@{}p{.30\linewidth}X@{}}\toprule
+Claim & Disposition\\\midrule
+Exact changed-prefix output & Proved on certificate acceptance; exact fallback always returns the declared target.\\
+Order-independent state & Proved for the reference-index constructor (1).\\
+Bounded regression & Proved in the work model, with packet and cancellation costs.\\
+Every small deletion is fast & Not implied; reference drift need not shrink with deletion size.\\
+Universal retained-free repair & Ruled out in the specified black-box model, not for all explicit transformer algorithms.\\
+Practical latency gain & Not established; requires execution and complete cost accounting.\\
+Anchoring itself is novel & Not claimed. Existing sources cover this ingredient.\\\bottomrule
+\end{tabularx}
+
+\small\raggedright\textbf{Primary sources checked on 4 October 2026.}
+
+[1] Frantar et al. \emph{GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers}. ICLR 2023. \url{https://arxiv.org/abs/2210.17323}; \url{https://github.com/IST-DASLab/gptq}. Second-order quantization is baseline work. The within-block true-sequential option does not remove inter-block propagation.
+
+[2] Chen et al. \emph{The Geometry of LLM Quantization: GPTQ as Babai's Nearest Plane Algorithm}. ICLR 2026. \url{https://github.com/IST-DASLab/GPTQ-Babai}. The geometric interpretation is prior work; the present bounds address deletion and transport.
+
+[3] Li et al. \emph{GPTAQ: Efficient Finetuning-Free Quantization for Asymmetric Calibration}, earlier GPTQv2. \url{https://arxiv.org/abs/2504.02692}. Asymmetric reconstruction and accumulated calibration mismatch are established topics.
+
+[4] Li et al. \emph{BRECQ: Pushing the Limit of Post-Training Quantization by Block Reconstruction}. ICLR 2021. \url{https://arxiv.org/abs/2102.05426}. Block reconstruction is prior work.
+
+[5] NVIDIA Model Optimizer, configuration source. \url{https://github.com/NVIDIA/Model-Optimizer/blob/main/modelopt/torch/quantization/config.py}. Setting \path{get_qdq_activations_from_prev_layer} to false supplies subsequent layers with full-precision activations. Independent-input calibration alone is not novelty.
+
+[6] Vaswani et al. \emph{Attention Is All You Need}. \url{https://arxiv.org/abs/1706.03762}. Dot-product/softmax attention defines the analyzed operator.
+
+This is a focused source check, not an exhaustive priority determination. The next phase tests the useful regime of the proved statements; experiments remain paused until the user instructs resumption.
+\end{document}
