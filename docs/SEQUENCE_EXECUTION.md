@@ -1,5 +1,9 @@
 # Ordered deletion execution
 
+Revision 8 adds frozen bulk dispatch and an explicit feasibility phase.
+Read `SEQUENCE_CAMPAIGN.md` for the current inventory and admission contract.
+The remaining sections describe the standalone sequence interface introduced in revision 7.
+
 `src/sequence_runner.py` implements incremental deletion over one fixed service target.
 `run_sequence` prepares the original canonical state once.
 Each later request consumes the preceding committed repair state.

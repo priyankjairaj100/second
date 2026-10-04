@@ -1,100 +1,98 @@
 # Current project status
 
-Updated 4 October 2026, revision 7 preparation.
-Previous verified checkpoint: 3c6905e77bca86e4d3e54be20a82f3acdcfd294d.
+Updated 4 October 2026, revision 8 preparation.
+Previous verified checkpoint: e8d6f593a0311ad05fa3a7e87088d29aaa1646d3.
 
-The user requested further work and “maximum revenue.”
-We interpret that phrase as research value within this paper program.
+The latest user instruction requests progress on the remaining tasks.
+We interpret the earlier “maximum revenue” phrase as research value within this paper program.
 No monetary return is predicted or guaranteed.
 Research experiments remain paused.
-The register contains 28 completed and 50 open required items, plus 12 conditional extensions.
-The final validation records 340 correctness tests and a 35-page report.
+The register contains 29 completed and 49 open required items, plus 12 conditional extensions.
+The final validation records 417 correctness tests.
+The consolidated PDF remains the unchanged 35-page revision 7 report.
+Read REVISION_8.md for the current comparison and execution changes.
 
-## Completed preparation in revision 7
+## Implemented preparation in revision 8
 
-| Area | Implemented result | Remaining boundary |
+| Area | Result | Remaining boundary |
 | --- | --- | --- |
-| Certificate algorithm | Spectral-first portfolio with signed intervals, ridge-safe elimination, and exact rounding cells | Strict fixture improvement does not establish real-model coverage or speed |
-| Bound refinement | Standalone common-binding enclosure intersection with conditional acceptance monotonicity | Complete canonical multi-domain bank remains unimplemented |
-| Quadratic control | Full Gram polynomial of the affine response with certified remainder and separate state schema | Larger preparation, storage, and request costs require real measurement |
-| Original-model cache | True sequential Grams, transitive ancestor identity checks, exact subtraction, and canonical refresh | Changed ancestors can require full retained replay |
-| Ordered deletion | Previous-state execution, complete deletion, empty requests, persistent lineage, and restart | Bulk campaign admission and frozen sequence inventory remain open |
-| Worker budgets | Durable protocol-scoped CPU reservations and observed settlement | Controller CPU, cross-protocol totals, and absolute physical ceilings remain outside scope |
-| Separate methods | Setup and each comparison method execute in separate limited processes | OS caches remain uncontrolled; isolated confirmation inventory and quality remain open |
-| Provenance | Family, tier, verifier policy, source, and state identities enter execution and analysis | No frozen real empirical inventory exists |
+| Ordinary fresh control | Complete model-only sequential requantization without a deletion index | Frozen model-only confirmation inventory and matched lifetime dispatch remain open |
+| Isolated campaigns | Source-bound inventory dispatch, complete confirmation products, and child membership checks | No actual real-data inventory or authorized research run exists |
+| Sequence campaigns | Ordered workload binding, predecessor verification, bulk admission, and durable failures | Sequence methods remain warm inside one worker |
+| Feasibility phase | Explicit supported phase and protocol CPU allowance | Real development-side source pools remain absent |
+| Optional quality | Dedicated budgeted worker for base, original, retained, and repaired finite NLL | No real quality measurement or task evaluation exists |
+| Complete clock | External observer includes child commitments, cleanup, and output verification | Final observer receipt is excluded; primary full-clock campaign integration remains open |
+| Budget evidence | Live exact-command admission for research model-only and direct isolated-child execution | Trusted-local worker scope is not a physical or cross-protocol global cap |
+| Arithmetic audit | Transient Fraction endpoint bits, visible initial values, available memory, and output sizes | Hidden integer intermediates, exact lifetimes, and real-model measurements remain absent |
+| Certificate funnel | Bounded descriptor/domain/bound/decision/replay diagnostics with explicit truncation | Some provider internals and complete rejection causes remain unavailable |
+| Feasibility policy | Frozen correctness, resource, coverage, quality, preparation, and lifetime decisions | Thresholds are engineering choices without empirical attainment |
 
-The primary target remains V_cert.
-Legacy V, historical floating E, and native Hugging Face execution remain distinct.
-Proof rejection allows exact replay.
-Necessary finite-evaluator failure aborts without an approximate committed model.
-Every completion claim requires successful required evaluations and sufficient resources.
+C04 closes at its written policy scope.
+C05, D04, and D05 remain partial under their complete criteria.
+The experiment-ready gate G0 remains open.
+Protocol version 4 remains prospective and paused.
 
 ## Scientific implications
 
-The response solver ignores old quantized codes.
-The identity-cache solver uses the previous quantized model to justify feature reuse.
-Indexed fresh receives the same valid information and solver in each family.
-Neither comparison establishes a deletion-exclusive solver advantage.
-Report retained-summary maintenance and cache preparation separately from solving.
-Do not convert split-interface validation overhead into an algorithmic claim.
+The primary numerical target remains V_cert.
+Proof rejection permits exact retained replay.
+Necessary finite-evaluator failure aborts without an approximate committed model.
+Legacy V, historical floating E, and native Hugging Face execution remain distinct.
 
-The interval portfolio preserves earlier spectral acceptances when the relevant computation completes.
-The new verifier can certify additional decisions under its sound covariance and ridge premises.
-Its additional arithmetic can increase cost or exhaust finite budgets.
-Certificate acceptance dominance therefore does not establish full-service runtime dominance.
+The response solver ignores old model codes.
+The identity-cache solver uses its previous quantized model to justify feature reuse.
+Indexed fresh receives the same valid information and solver within each family.
+Neither family establishes a deletion-exclusive solver advantage.
+Canonical state equality applies within a family and tier.
+Cross-family comparisons use the common target identity and every stage code.
 
-The quadratic control changes the response proposal and storage tier, not the quantization target.
-Different proposals can change margins and certificate acceptance in either direction.
-The identity cache also changes the optional state interface.
-Canonical equality applies within one declared family and tier.
-Cross-family comparisons require equal quantized model outputs.
+The full-state direct oracle constructs deletion state that ordinary requantization does not require.
+A gain against that oracle alone cannot establish faster ordinary fresh-model construction.
+The new model-only control supplies the appropriate output contract.
+The three-request feasibility lifetime charges original preparation and every required request, state, verification, output, commitment, and cleanup cost.
+Missing clocks or unsupported boundaries keep that decision open.
+No real-data result tests or passes it yet.
 
-## Remaining work
+## Remaining priorities
 
-The experiment-ready gate G0 remains open.
-The highest-priority remaining tasks are:
+1. Connect matched complete per-method and lifetime clocks to primary frozen campaign dispatch and analysis.
+2. Complete model-only confirmation inventory support and its prospective comparison schedule.
+3. Establish feasible real checkpoint execution and validate model, tokenizer, document, corpus, and token artifacts.
+4. Freeze actual primary settings, source pools, root draws, score artifacts, workloads, inventories, and statistical precision.
+5. Measure real-data exactness, useful certificate coverage, complete service cost, lifetime savings, and NLP quality.
+6. Complete the manuscript, literature audit, independent review, reproducibility release, and submission checks.
 
-1. Establish feasible real checkpoint execution and validate actual model, tokenizer, document, corpus, and token artifacts.
-2. Complete parent-transaction timing and transient arithmetic/memory diagnostics.
-3. Integrate ordered sequences with bulk campaign admission and frozen sequence inventories.
-4. Complete isolated confirmation inventory support and quality evaluation.
-5. Freeze primary settings, real source partitions, root draws, workload artifacts, run inventory, and statistical precision.
-6. Establish real-data exactness, useful certificate coverage, complete cost, lifetime savings, and NLP quality.
-7. Complete the manuscript, literature audit, independent review, reproducibility release, and submission checks.
+Actual acquisition and research studies require resumption after the current pause.
+Software fixtures cannot close empirical dependencies.
+Metadata pins are not acquired or validated input artifacts.
 
-Actual data acquisition and research studies require resumption after the current pause.
-Software fixtures cannot close those empirical dependencies.
-Protocol version 3 records unresolved fields explicitly.
-Source revisions are metadata pins only.
+## Measurement and evidence scope
 
-## Measurement and storage scope
+Isolated comparison campaigns separate setup, each method, and optional quality into limited processes.
+Sequence campaigns instead retain warm methods within each sequence worker.
+Operating-system caches remain uncontrolled.
+Older method clocks preserve their explicit narrower boundaries.
+The external observer provides a larger declared child-transaction boundary with disjoint accounting.
+Its own final receipt remains outside that clock.
+Model-only, canonical-state, comparison, and sequence transactions cannot be interchanged silently.
 
-Separate-process method clocks cover the declared limited-worker boundary.
-They include startup, inputs, the method, model/state artifacts, child receipt, exit, and cleanup.
-They exclude parent validation, equality verification, parent receipt, and post-cleanup worker accounting commitments.
-Setup has a separate charge.
-The isolated executor does not compute heldout quality yet.
-Warm comparison and sequence paths still share process history.
-Operating-system caches remain uncontrolled in every path.
+Profiled observations carry embedded diagnostic flags.
+The standard analyzer excludes them from clean timing ratios even without their audit sidecars.
+Their exact numerical outputs remain valid correctness evidence.
+Memory reports distinguish observed rational endpoints, allocation traces, RSS, and serialized artifacts.
+They do not claim hidden-intermediate or exact live-object coverage.
 
-CPU admission applies to workers sharing the same frozen protocol ledger.
-Unknown attempts retain their reserved allowance.
+CPU admission binds live allowances to exact commands under the declared frozen protocol ledger.
+Unknown attempts retain their allowances.
 Observed overruns remain charged and stop later admission.
-This does not establish absolute physical CPU containment or a cross-protocol project cap.
-Controller CPU lies outside this worker ledger.
+This does not establish absolute physical CPU containment or cross-protocol project caps.
+External observer and controller CPU remain outside child allowances.
 
-Returned canonical live state omits deleted source influence under its declared interface.
-The external research archive retains original states and failed attempts.
-The identity adapter also maintains bounded process-local trusted digest capabilities.
-Neither component is part of returned live-state erasure guarantees.
-Trusted hashes do not authenticate hostile storage or prove physical erasure.
-
-## Evidence discipline
+Returned canonical live state follows its declared logical deletion contract.
+Research archives preserve original states, failed attempts, and diagnostic records.
+The bounded identity trust registry also lies outside returned live state.
+No physical erasure or hostile-storage authentication claim follows.
 
 No research experiment, model download, corpus download, or external compute job ran.
-Correctness tests establish software behavior and mathematical fixtures only.
-Real-model feasibility, acceptance, complete latency, lifetime savings, and quality remain unmeasured.
-No reliable full-model speedup is established.
+No empirical speed, quality, or useful coverage claim is established.
 Historical missing raw results remain unavailable and explicitly labeled.
-Classical interval operations, Schur identities, and exact Gram subtraction are not claimed as new techniques.
-The proposed contribution concerns certified sequential deletion, canonical state, and explicit storage and cost tradeoffs.

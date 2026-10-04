@@ -355,3 +355,99 @@ The manuscript, current literature audit, independent review, and reproducibilit
 No research experiment, model download, dataset download, cloud job, or unrelated hardware ran.
 No reliable full-model speedup or publication-readiness claim is established.
 The user continues to authorize repository checkpoints and complete restart context.
+
+
+## Revision 8 completed preparation (4 October 2026)
+
+The previous verified checkpoint is e8d6f593a0311ad05fa3a7e87088d29aaa1646d3.
+The user continues to request progress on the remaining paper program.
+The earlier “maximum revenue” phrase is interpreted as research value, without monetization claims or financial guarantees.
+Current STATUS and RESUME supersede older unfinished-preparation statements while preserving their historical provenance.
+
+Research experiments remain paused.
+Revision 8 advances comparisons, software, execution controls, diagnostics, and prospective feasibility decisions.
+It does not acquire models or data, recover old raw results, or establish empirical observations.
+
+The model-only fresh control corrects an important comparison mismatch.
+Existing direct_fresh constructs both the retained model and canonical deletion state.
+Ordinary requantization only needs the model.
+The new control constructs every stage under its newly quantized ancestors without a response chart or persistent deletion index.
+It preserves the V_cert target, grids, ridge, order, ties, and fixed original normalization.
+Common target digests and complete stage codes permit cross-family model comparison.
+Full-state direct construction remains the separate canonical-state oracle.
+
+A gain against unnecessary index reconstruction cannot establish faster ordinary requantization.
+The equally indexed comparator still receives the same valid summaries or original-model cache as repair.
+The response solver ignores old codes; the identity-cache solver uses its previous quantized model.
+Neither family establishes a deletion-exclusive solver advantage.
+
+Frozen isolated campaigns now bind plans, sources, workloads, configurations, roots, requests, repetitions, and method order.
+Confirmation verifies real inventory membership and the complete declared Cartesian product.
+Each setup and method uses a separate limited process.
+An optional quality worker evaluates finite next-token NLL for base, original, retained, and repaired models.
+Its time and CPU remain separate from method clocks and enter the same protocol ledger.
+These are implementation capabilities, not measured language quality.
+
+Frozen sequence campaigns bind complete ordered requests and predecessor lineage.
+Each sequence prepares original state once inside a limited worker.
+Later requests consume preceding committed repair states.
+Failures, unstarted work, interrupted attempts, and resume evidence remain visible.
+Methods within a sequence still share warm process state.
+A resumed attempt's elapsed time cannot represent the entire sequence lifetime.
+
+Feasibility is now a supported phase with an explicit protocol CPU allowance.
+Its actual source draws must remain on the development side, separate from confirmation and evaluation data.
+No real source pools or empirical inventory exist yet.
+The protocol pause remains authoritative.
+
+An external observer now measures declared child transactions through source validation, final child commitments, cleanup, and output verification.
+Its disjoint component intervals sum to the enclosing wall clock.
+Its final observer receipt and observer lock release remain excluded.
+Model-only, canonical-state, comparison, and sequence output contracts remain distinct.
+A complete comparison clock cannot be relabeled as a single method clock.
+Matched primary campaign and lifetime-clock integration remains open.
+A compatible model-only confirmation inventory also remains open.
+
+Research model-only and direct isolated-child commands require live exact-command CPU admission.
+Supported campaign children verify their source, protocol, inventory, and target bindings.
+Unknown attempts retain reserved allowances, while observed overruns remain charged.
+These controls cover trusted local workers sharing one frozen protocol identity.
+They do not impose absolute physical CPU, hostile-process-tree, or cross-protocol project limits.
+External observer and controller CPU remain outside child allowances.
+Operating-system caches remain uncontrolled.
+
+The arithmetic audit observes both standard Fraction allocation paths in the current process and thread.
+It records endpoint bit lengths, a separate initial visible-value snapshot, bounded attribution, available traced memory, RSS, and artifact sizes.
+It preserves numerical model and state bytes in software tests.
+It rejects cached-run reuse and unsupported child-controller coverage.
+Interference or changed source evidence produces incomplete diagnostics.
+Embedded profiling flags prevent the standard analyzer from using these timings as clean ratios, even without sidecars.
+Hidden integer intermediates, exact object lifetimes, and physical live-rational memory remain outside its scope.
+
+The bounded certificate funnel records descriptors, domain queries, bounds, decisions, replay, and operation completion.
+It preserves disposition counts for recorded stages and events, with explicit omission, saturation, and unavailable components.
+Large exact values receive bounded magnitude summaries.
+Numerical targets and canonical state remain unchanged by the diagnostic interface.
+Provider-internal decomposition remains incomplete.
+
+The written feasibility policy fixes zero mismatches, resource limits, changed-ancestor coverage, finite quality, preparation, and lifetime decisions.
+It uses two independent real calibration roots and a three-request lifetime horizon.
+Repair must beat model-only fresh lifetime cost on every feasibility root under the same declared transaction boundary.
+Missing evidence leaves the decision open.
+These are prospective engineering thresholds, not power guarantees or attained results.
+C04 closes at this policy scope only.
+C05, D04, and D05 remain partial under their complete criteria.
+
+The final suite contains 417 correctness tests.
+The register contains 29 completed and 49 open required items, plus 12 conditional extensions.
+Protocol version 4 records the new capabilities and unresolved fields.
+G0 remains open.
+The consolidated PDF remains the unchanged 35-page revision 7 report.
+The current revision note is docs/REVISION_8.md.
+
+Real checkpoints, tokenizer artifacts, corpus records, partitions, scores, inventories, and precision justification remain unresolved.
+Practical model feasibility, useful certificate coverage, complete cost, lifetime savings, and NLP quality remain unmeasured.
+The manuscript, current literature audit, independent review, and reproducibility release remain future program tasks.
+No research experiment, model download, dataset download, cloud job, or unrelated hardware ran.
+No empirical speed or quality claim is established.
+The user continues to authorize repository checkpoints and complete restart context.

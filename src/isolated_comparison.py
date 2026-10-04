@@ -14,7 +14,7 @@ import time
 from .experiment_campaign import _phase_caps
 from .experiment_inventory import manifest_binding, manifest_payload, source_hashes
 from .experiment_runner import (METHODS, _commit_state, _failure, _integer, _local,
-    _read_json, _referenced_json, _run_manifest, _sha, _text)
+    _read_json, _referenced_json, _run_manifest, _sha, _text, heldout_nll)
 from .phase_budget import PhaseBudget
 from .result_analysis import validate_run
 from .run_store import RunStore, atomic_write, canonical_json, digest, strict_json
@@ -28,30 +28,39 @@ BOUNDARY = "limited_worker_startup_inputs_service_artifacts_child_commit_and_cle
 def isolated_source_hashes(repository=None):
     root = Path(repository or Path(__file__).resolve().parents[1])
     hashes = source_hashes(root)
-    path = root / "scripts" / "run_isolated.py"
-    if path.is_symlink() or not path.is_file():
-        raise ValueError("isolated CLI source is missing or symbolic")
-    hashes["scripts/run_isolated.py"] = digest(path.read_bytes())
+    for name in ("run_isolated.py", "run_isolated_campaign.py"):
+        path = root / "scripts" / name
+        if path.is_symlink() or not path.is_file():
+            raise ValueError("isolated CLI source is missing or symbolic")
+        hashes["scripts/" + name] = digest(path.read_bytes())
     return hashes
 
 
-def build_isolated_plan(*, manifest_path, manifest, target_manifest_sha256, worker_limits, sources):
+def build_isolated_plan(*, manifest_path, manifest, target_manifest_sha256, worker_limits, sources, quality=False):
     """Construct a protocol-cycle-free plan without loading model parameters."""
-    return {"schema": "calibration-isolated-plan-v1", "manifest_path": manifest_path,
+    if type(quality) is not bool:
+        raise ValueError("quality selection requires a Boolean")
+    result = {"schema": "calibration-isolated-plan-v1", "manifest_path": manifest_path,
             "manifest_payload": manifest_payload(manifest),
             "manifest_binding_sha256": manifest_binding(manifest),
             "target_manifest_sha256": _sha(target_manifest_sha256),
             "worker_limits": WorkerLimits.from_payload(worker_limits).payload(),
             "source_sha256": sources}
+    if quality:
+        result["quality"] = "heldout_nll"
+    return result
 
 
-def validate_isolated_plan(path, *, execute=False):
+def validate_isolated_plan(path, *, execute=False, inventory_path=None, inventory_run_id=None):
     plan_path = Path(path).absolute()
     plan, raw = _read_json(plan_path)
     fields = {"schema", "manifest_path", "manifest_payload", "manifest_binding_sha256",
               "target_manifest_sha256", "worker_limits", "source_sha256"}
-    if not isinstance(plan, dict) or set(plan) != fields or plan["schema"] != "calibration-isolated-plan-v1":
+    if (not isinstance(plan, dict) or not fields <= set(plan) or set(plan) - fields - {"quality"}
+            or plan["schema"] != "calibration-isolated-plan-v1"):
         raise ValueError("invalid isolated plan schema or fields")
+    if "quality" in plan and plan["quality"] != "heldout_nll":
+        raise ValueError("unsupported isolated quality policy")
     if raw != canonical_json(plan):
         raise ValueError("isolated plan requires canonical JSON")
     _sha(plan["target_manifest_sha256"])
@@ -67,7 +76,7 @@ def validate_isolated_plan(path, *, execute=False):
     for field in ("root_id", "request_id", "configuration_id"):
         _text(manifest.get(field), field)
     _integer(manifest.get("repeat_index"), "repeat_index")
-    if manifest.get("phase") not in ("development", "confirmation", "software_test"):
+    if manifest.get("phase") not in ("feasibility", "development", "confirmation", "software_test"):
         raise ValueError("invalid isolated execution phase")
     if not isinstance(manifest.get("method_order"), list) or sorted(manifest["method_order"]) != sorted(METHODS):
         raise ValueError("isolated plan requires all three methods exactly once")
@@ -76,15 +85,27 @@ def validate_isolated_plan(path, *, execute=False):
         raise ValueError("protocol requires an object")
     if execute and manifest["phase"] != "software_test" and "experiments_paused" in str(protocol.get("status", "")):
         raise ValueError("the protocol keeps research experiments paused")
-    if execute and manifest["phase"] == "confirmation":
+    if (inventory_path is None) != (inventory_run_id is None):
+        raise ValueError("isolated inventory evidence requires both path and run ID")
+    if execute and manifest["phase"] == "confirmation" and inventory_path is None:
         raise ValueError("isolated confirmation requires a supported frozen campaign inventory; this path remains blocked")
     limits = WorkerLimits.from_payload(plan["worker_limits"])
     limits.check_host()
-    caps = _phase_caps({"entries": [{"phase": manifest["phase"]}] * 4}, protocol, limits)
+    caps = _phase_caps({"entries": [{"phase": manifest["phase"]}] * (5 if "quality" in plan else 4)}, protocol, limits)
+    evidence = None
+    if inventory_path is not None:
+        from .isolated_inventory import verify_isolated_membership
+        verified, item = verify_isolated_membership(inventory_path, inventory_run_id, plan_path, execute=execute)
+        if item["manifest_sha256"] != digest(manifest_raw) or item["entry"]["isolated_plan_sha256"] != digest(raw):
+            raise ValueError("isolated inventory evidence differs from current plan inputs")
+        caps = verified["phase_cpu_seconds"]
+        evidence = {"path": str(verified["inventory_path"]), "sha256": verified["inventory_sha256"],
+                    "run_id": inventory_run_id, "plan_path": str(plan_path)}
     return {"plan": plan, "raw": raw, "plan_path": plan_path, "plan_sha256": digest(raw),
             "manifest": manifest, "manifest_path": manifest_path, "manifest_sha256": digest(manifest_raw),
             "protocol": protocol, "protocol_path": _local(manifest_path.parent, manifest["protocol"]["path"]),
-            "protocol_sha256": digest(protocol_raw), "limits": limits, "phase_cpu_seconds": caps}
+            "protocol_sha256": digest(protocol_raw), "limits": limits, "phase_cpu_seconds": caps,
+            "inventory_evidence": evidence}
 
 
 def _child_identity(request):
@@ -94,17 +115,33 @@ def _child_identity(request):
 def _verify_sources(request):
     if request["source_sha256"] != isolated_source_hashes():
         raise ValueError("isolated child source hashes differ")
-    if digest(_read_json(Path(request["manifest_path"]))[1]) != request["manifest_sha256"]:
+    manifest, raw = _read_json(Path(request["manifest_path"]))
+    if digest(raw) != request["manifest_sha256"]:
         raise ValueError("isolated child run manifest hash differs")
+    evidence = request.get("inventory")
+    if manifest.get("phase") == "confirmation" and evidence is None:
+        raise ValueError("confirmation child requires verified inventory evidence")
+    if evidence is not None:
+        if not isinstance(evidence, dict) or set(evidence) != {"path", "sha256", "run_id", "plan_path"}:
+            raise ValueError("invalid isolated child inventory evidence")
+        from .isolated_inventory import verify_isolated_membership
+        verified, item = verify_isolated_membership(evidence["path"], evidence["run_id"], evidence["plan_path"], execute=True)
+        if (verified["inventory_sha256"] != evidence["sha256"]
+                or item["entry"]["isolated_plan_sha256"] != request["plan_sha256"]
+                or item["manifest_sha256"] != request["manifest_sha256"]
+                or item["entry"]["target_manifest_sha256"] != request["target_manifest_sha256"]):
+            raise ValueError("isolated child inventory binding differs")
+        if request["role"] == "quality" and item["entry"]["isolated_plan_payload"].get("quality") != "heldout_nll":
+            raise ValueError("quality worker is absent from the verified plan")
 
 
 def _child(request_path):
     request, _ = _read_json(Path(request_path))
     fields = {"schema", "role", "manifest_path", "manifest_sha256", "source_sha256",
               "target_manifest_sha256", "plan_sha256", "output", "original_state"}
-    if (not isinstance(request, dict) or set(request) != fields
+    if (not isinstance(request, dict) or not fields <= set(request) or set(request) - fields - {"inventory", "quality_states"}
             or request["schema"] != "isolated-child-request-v1"
-            or request["role"] not in ("setup", *METHODS)):
+            or request["role"] not in ("setup", "quality", *METHODS)):
         raise ValueError("invalid isolated child request")
     store = RunStore(request["output"], _child_identity(request))
     previous = store.completed()
@@ -122,6 +159,14 @@ def _child(request_path):
     try:
         store.write_artifact("request.json", canonical_json(request))
         _verify_sources(request)
+        admission_manifest, _ = _read_json(Path(request["manifest_path"]))
+        if admission_manifest.get("phase") != "software_test":
+            from .transaction_timing import verify_command_admission
+            _, admission_protocol_raw = _referenced_json(
+                Path(request["manifest_path"]).parent, admission_manifest["protocol"])
+            verify_command_admission(digest(admission_protocol_raw), admission_manifest["phase"],
+                [sys.executable, "-m", "src.isolated_comparison", "--child",
+                 str(Path(request_path).absolute())])
         prepared = _run_manifest(request["manifest_path"], request["output"], prepare_only=True)
         service, records = prepared["service"], prepared["records"]
         if prepared["metadata"]["target_manifest_sha256"] != request["target_manifest_sha256"]:
@@ -133,7 +178,26 @@ def _child(request_path):
                       verifier_policy=getattr(service, "verifier_policy", "spectral"))
         manifest, _ = _read_json(Path(request["manifest_path"]))
         role = request["role"]
-        if role == "setup":
+        if role == "quality":
+            references = request.get("quality_states")
+            if not isinstance(references, dict) or set(references) != {"original", "direct_fresh", "repair"}:
+                raise ValueError("quality requires original, direct, and repaired state references")
+            metrics = {"base": heldout_nll(prepared["decoder"], prepared["heldout"])}
+            deleted = set(manifest["deleted_ids"])
+            for name, reference in references.items():
+                if not isinstance(reference, dict) or set(reference) != {"path", "sha256"}:
+                    raise ValueError("invalid quality state reference")
+                _, state_raw = _read_json(_local(Path(request_path).parent, reference["path"]))
+                state = service.load_state(state_raw, expected_digest=_sha(reference["sha256"]))
+                expected = {r.record_id: r.content_digest for r in records if name == "original" or r.record_id not in deleted}
+                if {r.record_id: r.content_digest for r in state.records} != expected:
+                    raise ValueError("quality state has different retained records")
+                metrics[name] = heldout_nll(prepared["decoder"], prepared["heldout"], state)
+            if metrics["direct_fresh"] != metrics["repair"]:
+                raise ValueError("heldout quality differs for verified equal model artifacts")
+            info = store.write_artifact("quality.json", canonical_json(metrics))
+            record["quality"] = metrics
+        elif role == "setup":
             if request["original_state"] is not None:
                 raise ValueError("setup must not receive an earlier state")
             output = service.fresh(records, telemetry=telemetry)
@@ -271,13 +335,15 @@ def _verify_completed(root, result, budget):
                     raise ValueError("isolated worker budget differs from ledger")
 
 
-def run_isolated(path, output, *, validate_only=False):
-    checked = validate_isolated_plan(path, execute=not validate_only)
+def run_isolated(path, output, *, validate_only=False, inventory_path=None, inventory_run_id=None):
+    checked = validate_isolated_plan(path, execute=not validate_only,
+                                    inventory_path=inventory_path, inventory_run_id=inventory_run_id)
     if validate_only:
         return {"schema": "isolated-plan-validation-v1", "status": "validated",
                 "plan_sha256": checked["plan_sha256"], "empirical_work_executed": False,
                 "checkpoint_parameters_loaded": False, "phase_cpu_seconds": checked["phase_cpu_seconds"],
-                "confirmation_supported": False}
+                "confirmation_supported": True,
+                "confirmation_inventory_verified": checked["inventory_evidence"] is not None}
     manifest, plan = checked["manifest"], checked["plan"]
     budget = PhaseBudget(checked["protocol_path"].parent / ("phase-cpu-budget-" + checked["protocol_sha256"]),
         identity={"protocol_sha256": checked["protocol_sha256"],
@@ -286,6 +352,8 @@ def run_isolated(path, output, *, validate_only=False):
     identity = {"schema": "isolated-comparison-identity-v1", "plan_sha256": checked["plan_sha256"],
                 "manifest_sha256": checked["manifest_sha256"], "protocol_sha256": checked["protocol_sha256"],
                 "source_sha256": plan["source_sha256"], "phase_budget_binding_sha256": budget.identity_digest}
+    if checked["inventory_evidence"] is not None:
+        identity["inventory"] = checked["inventory_evidence"]
     parent = RunStore(output, identity)
     previous = parent.completed()
     if previous is not None:
@@ -304,17 +372,19 @@ def run_isolated(path, output, *, validate_only=False):
         measurement_contract={"execution": "separate fresh process for setup and each method; OS caches uncontrolled",
             "method_boundary": "limited worker request and budget admission, process startup, input loading, one method, artifacts, child receipt commit, exit and cleanup",
             "excluded_from_method": "parent source and plan verification, parent equality verification, post-cleanup CPU settlement, worker logs/control receipt, parent receipt commit, and heldout evaluation",
-            "quality": "heldout records validated; NLP quality not measured by this executor",
+            "quality": "dedicated heldout NLL worker outside method clocks" if "quality" in plan else
+                       "heldout records validated; NLP quality not requested in this plan",
             "memory": "wait4 process peak RSS; RLIMIT_AS controls virtual address space",
             "storage_contract": "external research archive retains original state and attempts; canonical live-state guarantee only"},
         phase_cpu_budget={"directory": str(budget.root), "binding_sha256": budget.identity_digest},
-        confirmation_supported=False)
+        confirmation_supported=True, inventory_evidence=checked["inventory_evidence"])
     original = None
     started = time.perf_counter_ns()
     try:
         parent.write_artifact("plan.json", checked["raw"])
         for role in ("setup", *manifest["method_order"]):
-            current = validate_isolated_plan(path, execute=True)
+            current = validate_isolated_plan(path, execute=True,
+                inventory_path=inventory_path, inventory_run_id=inventory_run_id)
             if any(current[key] != checked[key] for key in ("plan_sha256", "manifest_sha256", "protocol_sha256")):
                 raise ValueError("isolated inputs changed before dispatch")
             if role != "setup" and original is None:
@@ -323,7 +393,8 @@ def run_isolated(path, output, *, validate_only=False):
                 "manifest_path": str(checked["manifest_path"]), "manifest_sha256": checked["manifest_sha256"],
                 "source_sha256": plan["source_sha256"], "target_manifest_sha256": plan["target_manifest_sha256"],
                 "plan_sha256": checked["plan_sha256"], "output": str(parent.root / "children" / role),
-                "original_state": None if role == "setup" else original}
+                "original_state": None if role == "setup" else original,
+                "inventory": checked["inventory_evidence"]}
             parent.write_artifact(role + "-request.json", canonical_json(request))
             request_path = _request_path(parent.root, role, request)
             worker = run_limited([sys.executable, "-m", "src.isolated_comparison", "--child",
@@ -384,10 +455,49 @@ def run_isolated(path, output, *, validate_only=False):
             if not all(equal):
                 row["failure"] = {"kind": "mismatch", "message": "complete state or model differs from direct retained oracle"}
         result["equality_verification_ns"] = time.perf_counter_ns() - verification
+        if plan.get("quality") == "heldout_nll":
+            result["quality_policy"] = "heldout_nll"
+            result["quality_evaluation"] = {"status": "not_started", "failure": {"kind": "unverified_models"}}
+            if all(row["status"] == "complete" for row in result["methods"].values()):
+                references = {"original": original}
+                for name in ("direct_fresh", "repair"):
+                    child_request = result["children"][name]["request"]
+                    child = RunStore(child_request["output"], _child_identity(child_request)).completed()
+                    references[name] = {"path": str(Path(child_request["output"]) / child["attempt"] / (name + "-state.json")),
+                                        "sha256": result["methods"][name]["state_sha256"]}
+                request = {"schema": "isolated-child-request-v1", "role": "quality",
+                    "manifest_path": str(checked["manifest_path"]), "manifest_sha256": checked["manifest_sha256"],
+                    "source_sha256": plan["source_sha256"], "target_manifest_sha256": plan["target_manifest_sha256"],
+                    "plan_sha256": checked["plan_sha256"], "output": str(parent.root / "children" / "quality"),
+                    "original_state": original, "inventory": checked["inventory_evidence"], "quality_states": references}
+                parent.write_artifact("quality-request.json", canonical_json(request))
+                request_path = _request_path(parent.root, "quality", request)
+                worker = run_limited([sys.executable, "-m", "src.isolated_comparison", "--child", str(request_path)],
+                    parent.root / "workers" / "quality", checked["limits"],
+                    identity={"isolated_request_sha256": digest(canonical_json(request))},
+                    phase_budget=budget, phase=manifest["phase"])
+                child = _saved_child(request["output"], request, worker)
+                child_path = Path(request["output"]) / "result.json"
+                result["children"]["quality"] = {"request": request,
+                    "worker_result_sha256": digest((parent.root / "workers" / "quality" / "result.json").read_bytes()),
+                    "child_result_sha256": digest(child_path.read_bytes()) if child_path.is_file() else None,
+                    "worker_outcome": worker["outcome"]}
+                success = worker["outcome"]["status"] == "complete" and child is not None and child["outcome"]["status"] == "complete"
+                result["quality_evaluation"] = {"status": "complete" if success else "failed",
+                    "wall_time_ns": worker["outcome"]["elapsed_wall_ns"], "worker_resource_usage": worker.get("resource_usage"),
+                    "worker_pid": worker.get("worker_pid"), "outside_method_clocks": True,
+                    "worker_outcome": worker["outcome"]}
+                if success:
+                    result["quality"] = child["quality"]
+                else:
+                    result["quality_evaluation"]["failure"] = (child["outcome"].get("failure")
+                        if child and child["outcome"]["status"] != "complete" else {"kind": worker["outcome"]["kind"]})
         result.update(status="complete", outcome="complete" if all(row["status"] == "complete" for row in result["methods"].values()) else "failed",
             controller_wall_ns_before_commit=time.perf_counter_ns() - started,
             controller_completion_means="all attainable outcomes are sealed; inspect outcome and method status",
             phase_cpu_budget_at_completion=budget.snapshot())
+        if plan.get("quality") == "heldout_nll" and result["quality_evaluation"]["status"] != "complete":
+            result["outcome"] = "failed"
         validate_run(result)
         parent.write_artifact("analysis.json", canonical_json(result))
         return parent.finish(result)

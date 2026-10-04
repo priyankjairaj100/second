@@ -49,8 +49,7 @@ def source_hashes(repository):
     """Hash current dispatch code. The executor must compare the same complete set."""
     root = Path(repository).resolve()
     paths = sorted((root / "src").glob("*.py"))
-    paths += [root / "scripts" / name for name in (
-        "run_experiment.py", "run_campaign.py", "run_sequence.py", "run_isolated.py")]
+    paths += sorted((root / "scripts").glob("run_*.py"))
     if not paths or any(path.is_symlink() or not path.is_file() for path in paths):
         raise ValueError("campaign source files are missing or symbolic links")
     return {str(path.relative_to(root)): digest(path.read_bytes()) for path in paths}
@@ -144,7 +143,7 @@ def validate_campaign(payload):
         for field in ("root_id", "request_id", "configuration_id"):
             _text(entry[field], field)
         _integer(entry["repeat_index"], "repeat index")
-        if entry["phase"] not in ("development", "confirmation", "software_test"):
+        if entry["phase"] not in ("feasibility", "development", "confirmation", "software_test"):
             raise ValueError("unsupported experiment phase")
         if not isinstance(entry["method_order"], list) or sorted(entry["method_order"]) != sorted(METHODS):
             raise ValueError("invalid method order")

@@ -1,7 +1,9 @@
 # Claim and evidence map
 
-Revision 7. Date: 4 October 2026.
+Revision 8. Date: 4 October 2026.
 Read this document with `PUBLICATION_THEORY.md` and the prospective experiment protocol.
+The current protocol is `configs/protocol_v4.json`; research remains paused.
+The 35-page revision 7 report PDF is unchanged. `REVISION_8.md` supplies the new implementation note.
 
 The map separates derivations, executable checks, and empirical evidence.
 Manual mathematical review is not proof-assistant verification.
@@ -24,15 +26,18 @@ Correctness fixtures are not benchmark observations.
 | Interval verification adds exact certificate opportunities. | R1–R4; integrated spectral-or-interval policy; nonpositive-scale fixtures. | Real-model coverage and total extra proof cost. | Sound added route under valid covariance bounds and the fixed ridge. |
 | Narrower covariance boxes preserve fixed-candidate acceptance. | R5; exact interval implementation and strict rational witness. | A complete multi-domain bank remains unimplemented. | Same candidate, target, ridge, arithmetic schedule, and completed operations only. |
 | Original-model Grams support exact identity caching. | Separate identity-cache service, transitive dependency checks, canonical refresh, and fixtures. | Real retained-pass avoidance and complete costs. | All required ancestors must match the cached model exactly. |
-| Sequential studies consume preceding committed state. | Local sequence runner, immutable lineage, restart and complete-deletion fixtures. | Bulk campaign dispatch and real ordered workload observations. | Original preparation occurs once per local sequence. |
-| Method workers execute in independent processes. | Isolated runner, distinct worker PID checks, receipts, and restart tests. | Frozen isolated confirmation inventory and meaningful real timings. | Process isolation with uncontrolled operating-system caches. |
-| Phase budgets restrict worker admission. | Locked protocol-scoped ledger, reservations, settlement, and overrun tests. | Explicit feasibility phase and any broader project accounting. | Trusted worker admission only; no global physical CPU ceiling. |
+| Sequential studies consume preceding committed state. | Source-bound sequence campaigns, immutable lineage, restart, full-deletion controls, and complete planned outcomes. | Real ordered workloads and complete-clock lifetime comparisons against model-only fresh. | One preparation per sequence; its step methods remain warm in one limited worker. |
+| Method workers execute in independent processes. | Isolated campaign inventory, confirmation-product checks, distinct workers, receipts, and restart tests. | Actual frozen empirical inventory, eligible complete clocks, and meaningful real timings. | Process isolation with uncontrolled operating-system caches. |
+| Phase budgets restrict worker admission. | Locked protocol-scoped ledger, reservations, settlement, explicit feasibility phase, and overrun tests. | Any broader project accounting or physical containment guarantee. | Trusted worker admission only; no global physical CPU ceiling. |
+| Ordinary model-only requantization has a matched target control. | `model_fresh.py` constructs all sequential codes without a chart or deletion index. | Frozen model-only confirmation inventory and matched lifetime dispatch. | Same `V_cert` model target, different output contract from canonical-state repair. |
+| Complete local transactions have an explicit clock. | External observer includes child commits, cleanup, output checks, and a disjoint outer partition. | Integrate this clock into primary campaign and lifetime execution and analysis. | Observer bootstrap and final observer receipt remain outside the boundary; comparison clocks are not method clocks. |
+| Numerical diagnostics expose certificate decisions and transient rational endpoints. | Bounded stage funnel and current-thread Fraction-allocation audit. | Opaque provider causes, hidden integer/native intermediates, lifetimes, and separately instrumented children. | Partial observability only; profiled timings are ineligible for clean speed analysis. |
 | Repair avoids retained reads. | One changed-prefix fixture; conditional stage certificate. | Coverage over fixed real workloads, including failure cases. | Some accepted requests. No universal or practical rate claim. |
-| Repair reduces complete request latency. | T7 states sufficient cost conditions. No benchmark evidence. | Paired complete timing against direct and equally indexed fresh baselines. | Withhold until measured. |
+| Repair reduces complete request latency. | T7 states sufficient cost conditions. No benchmark evidence. | Paired complete timing against ordinary model-only fresh and equally indexed fresh, with full-state fresh as the state oracle. | Withhold until measured. |
 | Repair provides reliable speedup. | A defined reliability estimand; no measured success probability. | Completion, joint speed events, tails, uncertainty, and full failure counts. | Withhold until measured on the frozen request law. |
 | Preparation pays for itself. | Lifetime accounting condition only. | Setup, storage, repeated requests, and crossover measurements. | Withhold until measured. |
 | Repaired models preserve retained-oracle NLP quality. | Exact model equality gives identical declared inference behavior. | Verify artifacts and held-out metrics under identical inference settings. | Equality to that oracle. It does not prove useful absolute quality. |
-| The quantization target has useful NLP quality. | No pretrained empirical evidence. | Full-precision, original-calibration, and retained-calibration quality results. | Withhold until measured. |
+| The quantization target has useful NLP quality. | Warm diagnostic NLL and an optional isolated quality worker are implemented; no pretrained empirical evidence. | Base, original-calibration, and retained-calibration quality plus selected task results. | Withhold until measured; finite NLL is not an exact quality certificate or native framework equivalence. |
 | The method outperforms equally indexed fresh solving. | No inherent solver advantage follows from current information access. | Measured savings from a concrete additional mechanism. | Withhold. Report equal solving costs if observed. |
 | The work is novel. | Focused primary-source audit with explicit adjacent precedents. | Updated audit and precise comparison near submission. | Narrow contribution claim. No universal priority assertion. |
 
@@ -54,7 +59,7 @@ Correctness fixtures are not benchmark observations.
 | Feature-query obstruction | Report Section 11. | Mathematical oracle model; no universal transformer conclusion. |
 | Cooperative regression bound | Report Section 10. | `work_scheduler.py`; not integrated with full repair. |
 
-## 3. Existing software evidence
+## 3. Historical software evidence and current validation
 
 The revision 4 baseline passed 129 correctness tests.
 The exact log is `validation/software_tests_v4.txt`.
@@ -69,7 +74,9 @@ Repair still equals the complete fresh canonical state.
 Several later matrices start on-grid.
 Do not present this fixture as dense practical model repair.
 
-`docs/VALIDATION.md` gives test categories and review corrections.
+`docs/VALIDATION_V7.md` preserves the completed revision 7 validation record.
+The final revision 8 log and source hashes recorded in `docs/VALIDATION.md` govern current validation once sealed.
+Do not carry a historical test count forward as a claim about changed source.
 `theory_revision/implementation_review_v4.txt` records independent source review.
 The review found no unresolved defect under the stated contracts at that checkpoint.
 It does not prove absence of all implementation defects.
@@ -96,13 +103,25 @@ Record the following diagnostic groups:
 | Quality | Held-out loss and selected NLP metrics under the declared evaluation protocol. |
 | Failures | Every attempted request, consumed resources, timeout, abort, mismatch, and exclusion reason. |
 
-Some quantities need runner instrumentation.
-The current stage audit does not export every numerical rejection subtype or local margin.
-Do not infer missing quantities from a successful return code.
+The revision 8 bounded funnel exports available domain and descriptor outcomes, finite bounds,
+sampled cell margins, replay counts, actual feature evaluations, and model completion.
+Its retained first/last details, disposition counts, omission counts, and truncation flags have explicit caps.
+Opaque provider-internal fit, Hessian, and denominator failures and unavailable decompositions remain unknown.
+`CERTIFICATE_DIAGNOSTICS.md` defines this partial C05 scope.
+
+The arithmetic audit records constructed Fraction endpoint bit lengths in the current thread and process.
+It does not measure every hidden intermediate, object lifetime, or child process.
+Available RSS, traced allocation peaks, and artifact sizes are distinct observations.
+Profiled records are excluded from clean timing ratios even without their external sidecar.
+`ARITHMETIC_AUDIT.md` defines this partial D05 scope.
+Do not infer unavailable quantities or zero work from a successful return code.
 
 ## 5. Comparison obligations
 
-The direct fresh oracle must use the same numerical target and full output contract.
+The full-state direct fresh oracle must use the same numerical target and canonical-state output contract.
+Ordinary fresh requantization instead uses `model_only_fresh`, which constructs no deletion state.
+Compare its common target encoding and every stage code with repair's complete model.
+A gain against unnecessary index rebuilding cannot establish a gain against ordinary requantization.
 The equally indexed fresh solver must receive the same retained indices and supported planner.
 Do not force that solver to read records when a valid certificate avoids those reads.
 
@@ -110,6 +129,11 @@ Report preparation separately for each method.
 Include the preparation difference in lifetime cost.
 Separate solver-only timing from the complete request.
 The complete request includes deleted evidence extraction, validation, state maintenance, and output.
+Use the external observer's declared boundary for eligible complete transactions.
+It covers child-controller commits, cleanup, and output validation; its own final receipt is excluded.
+Primary campaign and matched lifetime integration of this boundary remain unfinished (D04).
+Shared research oracle checks must be accounted separately and symmetrically.
+Never reinterpret a whole comparison clock as one method's latency.
 
 Compare fixed-reference and response methods under matched settings.
 Compare replay-only behavior and certificate-driven behavior.
@@ -153,7 +177,9 @@ The project has no recovered raw evidence from its earlier missing experiments.
 Historical narrative remains context, not a substitute for current reproducible results.
 
 
-## Revision 6 extension
+## Historical revision 6 extension
+
+This section records the revision 6 checkpoint; later execution capabilities appear below.
 
 The fixed-box route is documented in BOX_THEORY.md and report Sections 28–30.
 It removes the affine-span condition for frozen-grid ancestor parameters.
@@ -177,18 +203,21 @@ These changes preserve the fair indexed solver and canonical state target.
 They do not close real-model feasibility, full-service timing, or useful NLP evidence.
 The revision 6 checkpoint passed 261 correctness tests.
 `VALIDATION_V6.md` preserves that checkpoint's validation record.
-Current source requires the separate revision 7 validation record in `VALIDATION.md`.
+Revision 7 has its separate historical record in `VALIDATION_V7.md`.
 See RESEARCH_TODO.md for remaining required tasks.
 
 
-## Revision 7 current execution evidence
+## Historical revision 7 execution evidence
+
+This section preserves the revision 7 execution boundary and its then-open gaps.
+Revision 8 supersedes those implementation-status statements below.
 
 The protocol is `configs/protocol_v3.json`.
 The implementation adds quadratic moments, original-model identity caching, and interval fallback.
 Local sequences include empty and complete deletion under fixed original normalization.
 Their saved lineage verifies the preceding committed state before each step.
 These capabilities have software correctness evidence only.
-The final revision 7 validation log and hashes govern the current test count.
+The final revision 7 validation log and hashes govern that historical checkpoint's test count.
 
 The isolated runner records a complete declared worker interval.
 It includes required input loading, one method, artifact output, child receipt commit, exit, and cleanup.
@@ -213,3 +242,34 @@ Bulk sequence dispatch and isolated confirmation inventory support remain open.
 The multi-domain certificate bank remains a design theorem and standalone intersection utility.
 No real checkpoint, empirical acceptance, NLP quality, lifetime benefit, or reliable speedup is established.
 Experiments remain paused.
+
+## Revision 8 current execution evidence
+
+`configs/protocol_v4.json` remains prospective and paused.
+Frozen isolated and sequence campaign dispatch are implemented, including complete planned outcomes,
+source checks, confirmation products, failed-artifact verification, and durable restart accounting.
+No real inventory is populated or authorized by those capabilities.
+Sequence step methods remain warm inside one limited sequence worker.
+The optional isolated quality worker runs after exact model agreement and charges its own CPU and time.
+Its finite held-out NLL does not enter any method's latency clock.
+
+`MODEL_ONLY_FRESH.md` specifies the ordinary requantization control.
+Research model-only execution requires live admission for its exact command.
+Standalone model-only confirmation remains blocked until a compatible frozen inventory exists.
+`TRANSACTION_TIMING.md` specifies complete single-role, model-only, comparison, and sequence boundaries.
+Fresh, resumed, and archival observations are different; reused receipts are never new repetitions.
+Complete-clock primary campaign, analysis, and matched lifetime integration remain open.
+
+CPU admission covers one frozen protocol ledger: feasibility, development, confirmation, and software test.
+The planned research caps are 3, 12, and 64 worker CPU hours respectively.
+Unknown attempts retain their reservations; observed overruns remain charged.
+Controller CPU, separate protocol ledgers, and hostile descendant containment remain outside this guarantee.
+Changing output directories cannot reset a protocol's debit.
+Local process limits and trusted descendant cleanup do not establish a global physical resource ceiling.
+
+Only C04 closes in revision 8: the written engineering policy in `FEASIBILITY_GATES.md`.
+It requires exact outputs, declared resources, useful changed-ancestor coverage, quality,
+preparation, and a complete three-request lifetime gain against model-only fresh on every feasibility root.
+No empirical gate has passed. C05, D04, and D05 remain partial under their original criteria.
+Real-model feasibility, final settings, independent sources, statistical precision, useful quality,
+and reliable full-model speedup remain unmeasured.

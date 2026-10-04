@@ -1,6 +1,6 @@
 # Executable reference service
 
-Revision 7. Date: 4 October 2026.
+Revision 8. Date: 4 October 2026.
 
 The primary certified path implements V_cert with explicit numerical contracts.
 The legacy library-math V path remains available and distinct.
@@ -8,6 +8,8 @@ It prioritizes inspectable correctness.
 It does not provide fast quantization for large checkpoints.
 Exact rational values can require large numerators and denominators.
 Event counters and software tests do not measure latency.
+The current protocol is `configs/protocol_v4.json` and remains prospective and paused.
+The 35-page revision 7 report PDF remains unchanged; `REVISION_8.md` records the new implementation scope.
 
 ## Modules
 
@@ -23,6 +25,7 @@ Event counters and software tests do not measure latency.
 | `src/aggregate_response_service.py` | Linear or quadratic grouped state and complete exact repair | It trusts the fixed extractor and query theorem |
 | `src/domain_refinement.py` | Exact covariance boxes, intersections, and interval decisions | Caller supplies sound bounds and the true ridge floor |
 | `src/identity_cache.py` | Original-model true-Gram cache and canonical refresh | Reuse requires matching transitive ancestors and trusted cache origin |
+| `src/model_fresh.py` | Complete sequential model-only construction | No deletion index; a different output contract from canonical-state construction |
 | `src/box_response_provider.py` | Full-grid domains and rank-zero feature enclosures | Broad domains can cause proof rejection and replay |
 | `src/transformer_backend.py` | Original deterministic scalar decoder | Its built-in proof establishes input identity only |
 | `src/certified_intervals.py` | Rational intervals and certified scalar primitives | Resource limits can reject unsupported calculations |
@@ -33,11 +36,16 @@ Event counters and software tests do not measure latency.
 | `src/chart_construction.py` | Deterministic independent chart recipes | Construction does not establish practical coverage |
 | `src/resource_preflight.py` | Config-only counts before eager loading | Planning bytes are not a proved memory bound |
 | `src/experiment_runner.py` | Local three-method comparison and exactness checks | Warm diagnostic timing; no downloads |
-| `src/sequence_runner.py` | Ordered requests, committed predecessors, and verified restart | Standalone execution; bulk sequence dispatch remains open |
-| `src/isolated_comparison.py` | Separate setup and method workers | Child commit included; parent transaction remains outside timing |
+| `src/sequence_runner.py` | Ordered requests, committed predecessors, and verified restart | Step methods share a warm sequence process |
+| `src/sequence_campaign.py` | Frozen sequence dispatch and complete planned outcomes | Real schedules and matched model-only lifetime execution remain unmeasured |
+| `src/isolated_comparison.py` | Separate setup and method workers; optional quality worker | Its legacy method clock excludes parent verification and final accounting commits |
+| `src/isolated_inventory.py` | Frozen isolated campaigns and confirmation admission | Real inventories and complete-clock integration remain required |
+| `src/transaction_timing.py` | External observer through child commits, cleanup, and output verification | Its own final receipt is excluded; whole comparisons are not single methods |
+| `src/service_telemetry.py` | Exclusive spans and bounded external certificate funnel | Opaque provider causes and unsampled cell detail remain unavailable |
+| `src/arithmetic_audit.py` | Constructed Fraction endpoint counts and bit lengths | Calling thread/process only; hidden intermediates and lifetimes are unobserved |
 | `src/worker_control.py` | Applied process limits, cleanup, and durable worker outcomes | Per-process limits do not contain hostile descendants |
 | `src/phase_budget.py` | Locked CPU admission and usage settlement | Scope is one protocol ledger, not the physical machine |
-| `src/experiment_campaign.py` | Frozen independent-request dispatch and verified outcomes | Warm-arm campaign only; isolated confirmation remains blocked |
+| `src/experiment_campaign.py` | Frozen independent-request dispatch and verified outcomes | Warm-arm path; separate isolated inventory supplies method-process dispatch |
 | `src/run_store.py` | Atomic artifacts, sealed results, and verified restart | POSIX trusted-storage contract |
 | `src/result_analysis.py` | Failure-aware paired analysis and lifetime accounting | No empirical result follows without real run records |
 
@@ -52,7 +60,7 @@ It stores response matrices only at group level.
 Its proposal contracts group totals without scanning individual descriptors.
 Read `docs/AGGREGATE_SERVICE.md` for the complete interface and ledger.
 Read `docs/BASELINES.md` for bounded loading and equally indexed construction.
-Read `docs/EXPERIMENT_RUNNER.md` for measured boundaries and unresolved infrastructure.
+Read `docs/EXPERIMENT_RUNNER.md` and `docs/TRANSACTION_TIMING.md` for distinct measured boundaries.
 
 ## Original decoder usage
 
@@ -190,18 +198,23 @@ Those costs have separate ledger events.
 No sublinear complete-service claim follows from compact proposals.
 
 Engine counters describe service events.
-They do not measure callback internals, rational bit operations, or elapsed time.
+Separate telemetry times declared spans and records bounded available numerical decisions.
+It does not recover every callback cause or rational bit operation.
 Full comparisons must include setup, extraction, validation, replay, factorization, output, serialization, and cleanup.
 The scheduler does not automatically preempt this service or GPU kernels.
 
-Both direct fresh construction and equally indexed fresh construction remain required comparisons.
+Full-state direct fresh construction, ordinary model-only fresh, and equally indexed fresh remain distinct required comparisons.
+The full-state oracle checks canonical state; the model-only control avoids unnecessary deletion-index construction.
+Across families, `target_model_bytes` compares the common target and every stage code.
 An equally indexed fresh solver can use these response summaries.
 Report storage, preparation, deleted-side regeneration, all fallbacks, and lifetime costs.
 Software correctness checks do not establish practical speedup.
 Research experiments remain paused.
 
 
-## Revision 6 extension
+## Historical revision 6 extension
+
+This section records the revision 6 implementation checkpoint.
 
 The fixed-box route is documented in BOX_THEORY.md and report Sections 28–30.
 It removes the affine-span condition for frozen-grid ancestor parameters.
@@ -225,11 +238,11 @@ These changes preserve the fair indexed solver and canonical state target.
 They do not close real-model feasibility, full-service timing, or useful NLP evidence.
 The revision 6 checkpoint passed 261 correctness tests.
 `VALIDATION_V6.md` preserves that historical validation record.
-Use `VALIDATION.md` for the current revision 7 log and source hashes.
+Use `VALIDATION_V7.md` for the later historical revision 7 log and source hashes.
 See RESEARCH_TODO.md for remaining required tasks.
 
 
-## Revision 7 service choices
+## Revision 7 service choices retained in revision 8
 
 `ChartRecipe(response_tier="quadratic")` selects full affine-response Gram moments.
 The default remains the compact linear tier.
@@ -255,7 +268,10 @@ The optional cache stores no per-record matrices or source payloads.
 Its bounded trusted-origin registry remains a separate runtime cost.
 Repair and indexed fresh receive identical cache information and use the same solver.
 
-## Revision 7 execution paths
+## Historical revision 7 execution paths
+
+This section preserves the former execution boundary and its then-open gaps.
+Revision 8 supersedes the implementation-status statements below.
 
 The warm comparison runner supports independent empty and complete deletion controls.
 The local sequence runner prepares one original state and consumes successive committed repair states.
@@ -284,3 +300,58 @@ A separate feasibility-phase label and cross-protocol accounting remain unimplem
 
 All new paths retain the research pause.
 No current control establishes real-model feasibility, useful certificate coverage, NLP quality, or reliable full-service speedup.
+
+## Current revision 8 execution paths
+
+`model_fresh.fresh_model` follows the complete sequential target with no response chart,
+deletion metadata, or persistent Gram cache. Its CLI commits `model.json`, a manifest, and a result receipt.
+It uses the same certified finite evaluator and exact quantizer, with independent replay control flow.
+It is not an independent numerical library or a native framework implementation.
+The fixed normalization and ridge-only empty-retained target remain unchanged.
+The baseline skips heldout loading but parses the original calibration manifest before removing requested records.
+This parsing cost is real; the implementation is not a lower bound on all possible requantizers.
+Research execution requires exact-command CPU admission, and standalone confirmation requires future inventory support.
+See `MODEL_ONLY_FRESH.md`.
+
+Frozen isolated inventories now bind complete confirmation products and authorize membership checks in each child.
+Optional `heldout_nll` quality work uses a separate limited process after method outputs agree exactly.
+It evaluates base, original, retained fresh, and repaired models with separate timing and CPU debit.
+Those finite losses are diagnostic; they establish neither useful absolute quality nor native inference equivalence.
+Frozen sequence inventories now dispatch one limited process per ordered sequence.
+Original preparation occurs once, committed predecessor lineage is checked at every step,
+and failures retain all later planned outcomes. Each step's method arms remain warm.
+See `ISOLATED_CAMPAIGN.md` and `SEQUENCE_CAMPAIGN.md`.
+
+The external observer measures from source/input preflight through child-controller commits,
+exit, cleanup, and output/source verification. Its final receipt follows the stop timestamp.
+Observer bootstrap and receipt lookup also precede the interval.
+The disjoint outer partition sums exactly to the enclosing clock; service timers remain nested diagnostics.
+Canonical-state, model-only, comparison, and sequence contracts cannot be interchanged.
+Single-role measurement does not independently establish equality with the external research oracle.
+Fresh, resumed, and reused archival observations retain different labels and eligibility.
+Primary campaign, analysis, and matched lifetime integration of the complete clock remain open (D04).
+See `TRANSACTION_TIMING.md`.
+
+Bounded certificate records retain exposed domain, descriptor, finite-bound, decision, replay,
+and completion outcomes outside canonical state. Exact values use bounded rational pairs or magnitude summaries.
+Counts expose dropped detail. Provider internals and unavailable decompositions remain unknown (partial C05).
+The arithmetic audit observes constructed Fraction endpoints in its calling thread and process,
+alongside available memory and artifact diagnostics. Hidden integer/native intermediates,
+object lifetimes, complete memory attribution, and separate child execution remain outside that scope (partial D05).
+Profiled records are excluded from clean timing ratios even without their sidecar.
+See `CERTIFICATE_DIAGNOSTICS.md` and `ARITHMETIC_AUDIT.md`.
+
+The shared admission ledger supports feasibility, development, confirmation, and software-test phases.
+Protocol 4 plans 3, 12, and 64 worker CPU hours for the three research phases.
+Unknown attempts retain their reservation and observed overruns remain charged.
+No controller-CPU, cross-protocol, hostile-descendant, or global physical-resource ceiling follows.
+Changing output directories does not reset the same protocol's debit.
+Per-process address space is not measured RSS or a process-tree memory bound.
+Operating-system caches remain uncontrolled across every execution mode.
+
+Only the written feasibility policy C04 closes in revision 8.
+It requires exactness, resource limits, useful changed-ancestor feature avoidance, quality,
+preparation, and a strict three-request lifetime gain over ordinary model-only fresh on every feasibility root.
+Its attainment and all real-model evidence remain unmeasured.
+Use the sealed revision 8 validation record for current correctness evidence;
+historical test counts and the unchanged report PDF do not validate changed source.

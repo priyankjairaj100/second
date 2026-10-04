@@ -1,12 +1,14 @@
 # Publication theory package
 
-Revision 7. Date: 4 October 2026.
+Revision 8. Date: 4 October 2026.
 Status: consolidated mathematical contract for the next research phase.
 
 This document orders existing results for publication.
 It adds no measured performance claim.
 The derivations appear in the report and independent theory notes.
 The implementation provides supporting correctness checks, not a formal proof.
+The 35-page revision 7 report PDF remains unchanged; `REVISION_8.md` records the new implementation work.
+The current prospective protocol is `configs/protocol_v4.json`. Research remains paused.
 
 ## 1. Target, notation, and shared assumptions
 
@@ -417,6 +419,11 @@ If `F > 0` and `s + u < 1`, then
 This is an arithmetic implication of complete costs.
 It is not a latency measurement or a distributional guarantee.
 Zero retained reads alone does not establish its premises.
+For an ordinary requantization claim, `B` must be the model-only fresh control.
+It does not rebuild a response index or canonical deletion state.
+Repair's additional state-maintenance and output obligations belong in `U` where they exceed the comparator's work.
+The full-state fresh oracle supplies a different, explicitly declared comparator contract.
+Neither target equality nor the availability of a complete clock proves `s + u < 1`.
 
 ## 3. Two local acceptance results with different scopes
 
@@ -493,13 +500,17 @@ The original quantized prefix can already lie outside that chart.
 | T4b | `domain_refinement.certify_gram_box` | Ridge-clipped interval factors and exact lower-tie cells | Reject inconsistent evidence; otherwise abstain and replay. |
 | T6b | `IdentityCacheService` | Trusted true Grams and matching transitive ancestors | Replay changed stages; reject untrusted state or source. |
 | Ordered execution | `sequence_runner.run_sequence` | Committed predecessors, full oracle equality, and child hashes | Preserve failure and later unstarted requests. |
+| Frozen dispatch | `sequence_campaign`, `isolated_inventory` | Source-bound inventories, complete confirmation products, and preserved attempts | Reject inconsistent inputs; retain failed and unstarted outcomes. |
+| Model-only oracle | `model_fresh.fresh_model`, `target_model_bytes` | Every stage's target codes, with no persistent deletion index | Abort necessary finite-evaluator failure. |
 | T5 | `AggregateRepairService.repair` | Certified prefix, unresolved budgets, replay groups | Replay; abort if target execution fails. |
 | T6 | Aggregate `_extract`, `_delete`, `_finish`, `canonical_bytes` | Deleted contribution digests and exact retained sums | Reject mismatched deletion or state. |
 | T7 | Complete runner ledger and external timing | Every charged component and comparator conditions | Withhold the speed claim if conditions fail. |
 
-The source computes more quantities than the audit currently exports.
-In particular, stage audits do not record every margin or numerical rejection subtype.
-The experiment runner must preserve these diagnostics without changing the canonical state.
+The bounded certificate funnel exports observable domain, descriptor, bound, decision, replay, and completion outcomes.
+Cell margins are sampled under explicit caps; disposition counts, omissions, and truncations remain visible.
+Provider-internal fit, Hessian, and denominator causes and some bound decompositions remain unavailable.
+The diagnostic archive does not change canonical state or supply a missing mathematical premise.
+`CERTIFICATE_DIAGNOSTICS.md` specifies this partial C05 coverage.
 
 ## 5. Complete work and storage model
 
@@ -555,6 +566,11 @@ Multiplication, division, comparison, and normalization depend on operand bit le
 Hashing and serialization depend on encoded byte counts.
 Intervals also incur primitive refinement and integer-square-root work.
 Peak memory includes temporary objects, caches, and simultaneous old and new states.
+The revision 8 arithmetic audit observes successful standard Fraction constructions in its current thread and process.
+Endpoint counts and cumulative bit lengths include transient constructed rationals but are not simultaneous live memory.
+Hidden integer intermediates, native allocations, object lifetimes, and separately executing children remain outside that observation.
+Available RSS, allocation peaks, and artifact bytes must be reported separately.
+Profiling overhead excludes these observations from clean speed ratios; exact output checks remain valid.
 
 For a request, use the disjoint accounting identity
 
@@ -569,6 +585,12 @@ C_R={}&C_{\rm input}+C_{\rm validate}+C_{\rm delete}
 
 Measure inclusive elapsed time separately from this component decomposition.
 Do not add overlapping timers.
+The external observer's actual disjoint partition is coarser than the scientific categories above.
+It measures preflight, worker preparation, execution, finalization/cleanup, and postflight verification.
+It includes the child controller's final commits and stops before its own final receipt.
+This is a declared local transaction, not physical request latency from an external user.
+An enclosing comparison includes all arms and cannot be converted into a single-method clock.
+Primary campaign, matched lifetime execution, and analysis still need this complete-clock integration (D04).
 Report setup separately and include it in lifetime comparisons.
 Lifetime savings require
 
@@ -594,7 +616,12 @@ Identical retained inputs and planner choices can produce identical solver work.
 Their difference can remain in index maintenance, preparation, or the declared service interface.
 Measure these differences instead of assigning fictitious retained scans to the comparator.
 
-Use direct fresh quantization as the correctness oracle.
+Use full-state direct fresh construction as the within-family canonical-state oracle.
+Use model-only fresh construction as the ordinary requantization baseline.
+That control follows all newly constructed ancestors using the same finite evaluator and exact quantizer,
+while constructing no response chart, deletion metadata, or persistent Gram cache.
+Across output families, compare the common target digest and every stage's code.
+Same-model equality does not imply same state schema or same construction cost.
 Use equally indexed fresh solving as a separate performance baseline.
 If both solve at equal cost, report efficient indexed quantization and exact deletion maintenance separately.
 Do not report an algorithmic repair speedup over that baseline without measured extra savings.
@@ -623,7 +650,7 @@ Report all of these quantities:
 | Estimand | Definition and interpretation |
 | --- | --- |
 | Completion | `Pr(S_R = 1)` over every attempted repair request. |
-| Target completion | `Pr(S_B = 1)` for the direct fresh oracle. |
+| Target completion | `Pr(S_B = 1)` for the explicitly declared fresh comparator and output contract. |
 | Joint exact speed event | `Pr(S_B = S_R = 1 and T_R <= T_B / s)` for a fixed `s > 1`. |
 | Deadline service | `Pr(S_R = 1 and T_R <= t)` for a fixed deadline `t`. |
 | Latency quantiles | Quantiles of extended `T_R`, including infinite values from failed requests. |
@@ -632,6 +659,8 @@ Report all of these quantities:
 | Replay coverage | Retained source reads and replayed stages, with fixed denominators and failure categories. |
 
 The joint speed event avoids labeling a failed baseline as infinite speedup.
+For the primary ordinary requantization claim, `B` is model-only fresh.
+Keep full-state oracle and equally indexed comparisons in separately labeled strata.
 The conditional ratio alone cannot support a reliability claim.
 Timing repetitions do not create independent calibration roots.
 Repeated requests from one root require clustered analysis.
@@ -670,7 +699,9 @@ It does not establish competitive preparation, storage, quality, or complete lat
 These remain explicit empirical gates.
 
 
-## Revision 6 extension
+## Historical revision 6 extension
+
+This section records the revision 6 implementation checkpoint.
 
 The fixed-box route is documented in BOX_THEORY.md and report Sections 28–30.
 It removes the affine-span condition for frozen-grid ancestor parameters.
@@ -694,11 +725,14 @@ These changes preserve the fair indexed solver and canonical state target.
 They do not close real-model feasibility, full-service timing, or useful NLP evidence.
 The revision 6 checkpoint passed 261 correctness tests.
 `VALIDATION_V6.md` preserves that historical result and its source hashes.
-Use `VALIDATION.md` for the current revision 7 validation record.
+Use `VALIDATION_V7.md` for the later historical revision 7 validation record.
 See RESEARCH_TODO.md for remaining required tasks.
 
 
-## Revision 7 measurement and publication boundary
+## Historical revision 7 measurement and publication boundary
+
+This section preserves the revision 7 boundary and its then-open implementation gaps.
+The current revision 8 scope follows below.
 
 The implemented quadratic tier, identity cache, and interval fallback close specific reference-code gaps.
 They add no empirical acceptance, NLP quality, or speed evidence.
@@ -739,3 +773,49 @@ Every T7 application must charge these declared costs and respect the selected c
 Neither worker controls nor correctness tests prove its cost premises or their probability.
 Real checkpoint feasibility, frozen inputs, practical coverage, quality, and reliable complete speedup remain unresolved.
 Research experiments remain paused.
+
+## Revision 8 measurement and publication boundary
+
+Revision 8 changes comparison and observability infrastructure, not T1–T7's numerical premises.
+The quadratic control still uses its full affine-response Gram and the implemented unwhitened error bound.
+The stronger whitened acceptance theorem and complete multi-domain certificate bank remain unimplemented.
+The interval portfolio preserves successful spectral acceptance at the same proposal when operations complete;
+extra proof work can still increase latency or cause a resource failure.
+
+Source-bound isolated and sequence campaigns now implement frozen dispatch and confirmation-product checks.
+Each isolated setup and method uses a separate limited process.
+An optional quality worker computes finite held-out NLL after exact model agreement, under the shared phase budget.
+Its time is separate from method clocks and its loss is not an exact quality certificate.
+Each sequence uses one limited process, prepares the original state once, and preserves predecessor lineage.
+Its per-step methods remain warm; neither execution path establishes cold operating-system caches.
+Real source pools, scores, final configurations, and populated empirical inventories remain absent.
+
+The external observer includes required child work, controller commits, cleanup, and output/source verification.
+Its own final receipt and initial bootstrap lie outside the declared interval.
+Supported single-role and model-only commands permit complete individual transaction observations.
+Whole-comparison and sequence observations have separate output contracts.
+Fresh observations require absent outputs; resumed work and archival receipt reuse cannot become fresh repetitions.
+This boundary is implemented, but primary campaign and matched lifetime integration and analysis remain incomplete.
+The ordinary model-only control likewise still needs frozen confirmation and lifetime inventory support.
+
+Protocol version 4 supports explicit feasibility, development, confirmation, and software-test admission.
+The planned research caps are 3, 12, and 64 worker CPU hours respectively.
+Unknown attempts retain their full reservation; observed overruns remain charged.
+The admission guarantee is local to one frozen protocol ledger and does not bound controller CPU,
+separate protocol ledgers, hidden descendants, or global physical use.
+Trusted nested-worker cleanup is narrower than adversarial process-tree containment.
+Research model-only and direct isolated-child commands require live exact-command admission.
+No prospective configuration or software fixture authorizes research execution.
+
+The fixed feasibility policy closes C04 only as a written engineering decision.
+For horizon `H=3`, it compares complete repair preparation plus requests with original and retained model-only construction.
+It requires a strict lifetime gain on every feasibility root, alongside exactness, resources, changed-ancestor coverage, and quality.
+These are prospective thresholds, not a theorem or measured distributional guarantee.
+C05 remains partial because the funnel cannot expose opaque provider internals.
+D04 remains partial because the complete clock needs campaign, lifetime, and analysis integration.
+D05 remains partial because constructed endpoints do not cover all intermediates, lifetimes, memory attribution, or child execution.
+
+Use `REVISION_8.md` and the sealed revision 8 validation record for implementation evidence.
+The report PDF's historical test counts do not describe newly changed source.
+No real-model feasibility, useful certificate coverage, quality, preparation amortization,
+competitive storage, or reliable complete-model speedup has been established.

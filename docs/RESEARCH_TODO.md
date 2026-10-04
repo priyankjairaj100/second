@@ -1,7 +1,8 @@
 # Remaining research program
 
 Updated 4 October 2026.
-Revision 7 preparation builds on commit `3c6905e77bca86e4d3e54be20a82f3acdcfd294d`.
+Revision 8 preparation extends the recorded revision 7 checkpoint.
+The current validation record identifies the tested source; earlier test counts below are historical milestones.
 This register covers the path from the current reference implementation to a submitted ACL paper.
 Every unchecked item remains open.
 This implementation update does not resume experiments.
@@ -11,11 +12,11 @@ Synthetic empirical datasets remain deferred.
 
 The main unresolved question is practical value on real language models.
 The affine provider requires exact chart membership for installed ancestor weights.
-The new fixed-box provider covers frozen-grid prefixes without derivatives.
+The fixed-box provider covers frozen-grid prefixes without derivatives.
 Coverage does not establish useful numerical bounds or certificate acceptance.
 Correct replay handles rejection, but it can remove the expected speed benefit.
 
-**Completed baseline**
+**Completed preparation and historical milestones**
 
 - Reviewed changed-prefix induction and full Taylor remainder.
 - Reviewed compact Gram bounds and canonical repeated deletion.
@@ -38,6 +39,11 @@ Correct replay handles rejection, but it can remove the expected speed benefit.
 - Added ordered local deletion, complete-deletion controls, and verified predecessor restart.
 - Added protocol-scoped CPU admission and separate limited processes for individual comparison methods.
 - Added final-state integer-size diagnostics and a deterministic vector repair diagram.
+- Added source-bound frozen inventories and limited-worker dispatch for ordered sequences and isolated comparisons.
+- Added optional isolated held-out loss evaluation and explicit feasibility-phase admission.
+- Added a model-only fresh constructor for the ordinary retained-requantization comparison.
+- Added an external complete-child-transaction observer, bounded certificate diagnostics, and transient Fraction endpoint profiling.
+- Froze a written feasibility decision policy in `configs/feasibility_gates_v1.json`; no empirical gate has passed.
 
 These results need no repetition without a concrete change or unresolved risk.
 No current real-model benchmark supports a practical speed claim.
@@ -110,8 +116,10 @@ No task authorizes external compute or hardware from another project.
 - [x] **C03. Define the response when chart coverage fails.** Choose residual certificates, independent charts, another sound construction, or a narrower claim.
   Completion: the selected route has sound bounds and canonical deletion semantics before confirmation.
   Evidence: Fixed parameter boxes have intrinsic additive state and reviewed finite bounds; useful acceptance remains unmeasured.
-- [ ] **C04. Set feasibility thresholds before tuning.** Include exactness, coverage, memory, quality, preparation, and full service cost.
+- [x] **C04. Set feasibility thresholds before tuning.** Include exactness, coverage, memory, quality, preparation, and full service cost.
   Completion: written thresholds determine whether to continue, redesign, or narrow the paper.
+  Evidence: configs/feasibility_gates_v1.json and protocol_v4.json bind the engineering decision policy and its actions.
+  Scope: This closes the written policy only. Its attainment, real-model feasibility, and statistical precision remain unmeasured.
 - [ ] **C05. Record the complete coverage funnel.** Track chart fit, available descriptors, finite bounds, accepted stages, replayed groups, and model completion.
   Completion: every rejection has a stable reason and remains in the workload.
 - [ ] **C06. Select a target-preserving performance route.** Use measured bottlenecks to guide changes to arithmetic, extraction, or model loading.
@@ -145,6 +153,8 @@ No task authorizes external compute or hardware from another project.
 - [x] **E01. Retain direct fresh quantization as an oracle.** Check every stage and the complete retained state.
   Completion: the fresh control path independently checks repair control decisions.
   Evidence: The runner compares every quantized stage and complete canonical state against direct retained fresh construction.
+  Scope: This is the full-state oracle, whose summary construction costs are not ordinary model-only requantization costs.
+  Additional control: src/model_fresh.py constructs the same complete model without a deletion index or cache. Its frozen ordinary-speed confirmation inventory and matched lifetime dispatch remain open under F07, I02, and I04.
 - [x] **E02. Implement equally indexed fresh quantization.** Give it the same valid summaries, caches, storage budget, and state interface.
   Completion: the comparison cannot depend on withholding reusable information from fresh quantization.
   Evidence: prepare_index and indexed_fresh share the valid retained index and repair planner.
@@ -182,6 +192,7 @@ No task authorizes external compute or hardware from another project.
   Completion: primary comparisons and sensitivity studies are distinct; unsupported branches remain excluded.
 - [ ] **F07. Define independent research units and analysis.** Use independent calibration roots and requests; separate them from timing repetitions.
   Completion: paired intervals respect shared roots and repeated requests; sample sizes have a stated precision goal.
+  Remaining integration: Freeze actual empirical inventories, including model-only fresh in the ordinary-speed comparison and matched lifetime schedule. The existing isolated full-state and sequence inventory implementations do not supply that comparator.
 - [x] **F08. Define failure and exclusion rules.** Include abstention, fallback, timeout, memory failure, and finite-evaluator aborts.
   Completion: no failed request silently disappears from headline denominators or cost summaries.
   Evidence: The protocol and analyzer preserve failed, unverified, interrupted, and missing planned attempts.
@@ -237,8 +248,8 @@ No task authorizes external compute or hardware from another project.
 
 **J. Prepare the tables and figures — P2, then P3**
 
-- [ ] **J01. Create the main performance table.** Include exactness, complete latency, indexed comparison, fallback rate, preparation, and storage.
-  Completion: every comparison shares the same state and output requirements.
+- [ ] **J01. Create the main performance table.** Include exactness, ordinary model-only requantization, complete latency, indexed comparison, fallback rate, preparation, and storage.
+  Completion: every row shares the same numerical model target and declares its output contract. State-maintenance comparisons match canonical state requirements; ordinary-requantization comparisons disclose that model-only fresh emits no deletion state and charge repair's full state costs.
 - [ ] **J02. Create the quality table.** Show original quantization and retained fresh quality beside exact repair agreement.
   Completion: the table explains which changes come from the target itself.
 - [ ] **J03. Create the ablation table.** Include response tiers, certificate choices, grouping, and replay policy.
@@ -299,38 +310,53 @@ No task authorizes external compute or hardware from another project.
 | CEX11 | Add hostile-storage authentication | The threat model includes hostile state. Hash matching alone does not satisfy this claim. |
 | CEX12 | Study a deletion-native quantizer | Sequential repair fails the feasibility gate. Treat the alternative as a separate target and evaluate its quality. |
 
-**Revision 7 partial work and unresolved preparation**
+**Revision 8 partial work and unresolved preparation**
 
-There are 28 completed required items and 50 open required items.
+There are 29 completed required items and 49 open required items, for 78 required items in total.
 The 12 conditional extensions remain separate.
-This revision closes D06, E03, E04, and J04 at their stated preparation scope.
-D04 and D05 remain open after reviewing their complete criteria.
-Software completion does not close the experiment-ready gate.
+This revision closes C04 at its written-policy scope only.
+C05, D04, and D05 remain open under their original comprehensive criteria after independent review.
+Implemented dispatch, instrumentation, and diagnostic paths do not close empirical gates.
 
 | Open items | Preparation now present | Work still required |
 | --- | --- | --- |
 | A03, F02–F04 | Source revisions, strict token schema, document rules, phase overlap checks | Actual weights, tokenizer hashes, prepared text, licenses, partitions, and local validation |
-| A06, C06 | Config planning, rank-zero boxes, lazy wrappers, limited workers, protocol CPU admission | Resource-feasible checkpoint, frozen resource scope, and target-preserving performance route |
-| C02, C04 | Domain inclusion proof and prospective thresholds | Useful numerical coverage and frozen feasible scope before tuning |
-| C05 | Stable rejection events, spectral and interval routes, and exclusive cost spans | Complete per-stage numerical reasons, margins, and bound decomposition |
-| D04 | Exclusive service telemetry and an isolated worker boundary through child commit, exit, and cleanup | Complete disjoint controller, worker-receipt, final parent commit, and cleanup accounting for the intended service claim |
-| D05 | Independent worker RSS, allocation peaks, output sizes, final-state integer counts, and maximum bit lengths | Comprehensive transient arithmetic-size diagnostics across weights, domains, jets, factors, and temporary exact values |
+| A06, C06 | Config planning, rank-zero boxes, lazy wrappers, limited workers, protocol CPU admission including feasibility | Resource-feasible checkpoint, frozen resource scope, and target-preserving performance route |
+| C02, H05, H06 | Domain inclusion proof and frozen engineering thresholds under completed C04 | Useful numerical coverage, resource feasibility, quality, and measured attainment of the policy |
+| C05 | Bounded stage funnel, stable exposed dispositions and counters, sampled margins, replay and completion outcomes | Provider-internal chart fit, Hessian and denominator failures, exact residuals, and unavailable numerical decompositions remain opaque |
+| D04 | Exclusive service spans, isolated worker clocks, and an external observer through child controller commits, cleanup, and output verification | Integrate the declared complete clock into primary campaign and matched lifetime execution and analysis; retain disjoint internal cost attribution |
+| D05 | Worker RSS, allocation peaks, output sizes, final-state sizes, and constructed Fraction endpoint counts and bit lengths across a local runner | Hidden integer and native intermediates, object lifetimes, complete temporary-memory attribution, and separately instrumented child-process coverage |
 | F06 | Quantization recipes, full quadratic tier, identity cache, and interval policy | Final primary settings, sensitivity matrix, and selected proof construction |
-| F07 | Root sampling, counterbalanced order, complete product validation, and analysis plans | Development-based precision justification and actual frozen empirical inventory |
-| F04, F07, I01 | Standalone isolated setup and individual method workers | Frozen isolated confirmation inventory and supported campaign dispatcher before confirmation |
-| G04, I04 | Standalone ordered execution, verified predecessor lineage, restart, and independent complete-deletion controls | Bulk sequence campaign dispatch and real repeated-deletion correctness and lifetime evidence |
-| H05, I05, I06 | Diagnostic held-out loss in the warm runner and separate quality requirements | Real-model memory, language quality, task metrics, and utility under the same target |
+| F07 | Root sampling, counterbalanced order, source-bound isolated and sequence inventories, exact confirmation product checks, and analysis plans | Development-based precision justification, actual frozen empirical inventories, and model-only confirmation/lifetime inventory integration |
+| F04, F07, I01 | Limited-worker isolated confirmation dispatcher and optional separate quality worker | Actual disjoint source partitions, populated frozen inventory, eligible clock integration, and authorized empirical execution |
+| G04, I04 | Bulk sequence dispatch, original-once construction, predecessor lineage, shared admission, failed-artifact verification, and complete planned outcomes | Real repeated-deletion correctness, complete-clock lifetime evidence, and the matched ordinary model-only comparator |
+| H05, I05, I06 | Diagnostic held-out loss in the warm runner and optional isolated quality worker | Real-model memory, language quality, task metrics, and utility under the same target |
 | L01, L05 | Source hashes, commands, updated docs, diagram, and repository checkpoint | Final environment pin, submission release, and release tag after evidence |
 
-The original runner measures instrumented warm diagnostic costs.
+The warm runner records instrumented diagnostic costs.
 The isolated executor starts separate limited processes for setup and each method.
-It reloads inputs and services independently and includes child commit, exit, and cleanup in its worker timer.
-Operating-system caches remain uncontrolled in both contracts.
-The isolated worker timer excludes parent validation, parent equality checks, worker-control receipt commitment, and final parent commitment.
-Those exclusions keep D04 open for complete disjoint transaction accounting.
-Stored integer lengths do not measure transient arithmetic growth, so D05 also remains open.
+Its older worker timer includes child commit, exit, and cleanup, but excludes parent verification and final accounting commits.
+The new external observer includes those child-controller costs and verifies the output tree before stopping its clock.
+Its own final observer receipt is explicitly outside the measured boundary.
+That nonrecursive boundary is legitimate; it is not the remaining D04 blocker.
+Primary campaign and lifetime integration and analysis of the complete clock remain unfinished.
+A whole-comparison observation cannot be relabeled as a per-method latency.
+Operating-system caches remain uncontrolled.
+See `docs/TRANSACTION_TIMING.md` for exact boundaries and fresh, resumed, and archival receipt rules.
+
+The arithmetic audit observes constructed Fraction endpoints in the calling thread and process, including transient endpoints.
+It does not observe every hidden integer intermediate, native allocation, or rational object's lifetime.
+Child workers need separately bound instrumentation.
+Endpoint counts and cumulative bit lengths are not live-memory measurements.
+Profiling overhead makes audit timings diagnostic; they are not eligible clean latency observations.
+See `docs/ARITHMETIC_AUDIT.md`.
+The bounded certificate funnel likewise records exposed evidence without recovering opaque provider internals.
+See `docs/CERTIFICATE_DIAGNOSTICS.md`.
+These improvements preserve D05 and C05 as partial work, not completed empirical evidence.
 
 Protocol-scoped admission reserves CPU allowances before workers start.
+The supported phase labels include feasibility, development, confirmation, and software test.
+Feasibility draws from the development-side source pool, never confirmation or evaluation documents.
 Unknown interrupted attempts retain their allowances, and observed overruns remain charged.
 Changing output directories cannot reset that frozen protocol's ledger.
 This is not a strict physical CPU ceiling or a cross-protocol project budget.
@@ -342,12 +368,14 @@ The stronger whitened acceptance theorem remains an unimplemented potential exte
 The interval portfolio preserves spectral acceptance but does not guarantee lower total work.
 The true-model cache's equally indexed comparator receives the same valid old model and Grams.
 Neither comparison withholds reusable information to create an artificial deletion advantage.
+Model-only fresh now supplies the ordinary requantization constructor without deletion-state preparation.
+It shares the same model target but has a different output contract from repair and the full-state fresh oracle.
+Its standalone confirmation path remains blocked until the frozen comparator inventory and matched lifetime dispatch exist.
 
-Standalone sequence execution does not close bulk sequence campaign dispatch.
-Standalone isolated development execution does not close its frozen confirmation inventory.
-Confirmation remains blocked until that dispatcher and inventory are supported.
+Bulk sequence and isolated confirmation dispatch gaps are closed at implementation scope.
+Their software fixtures do not constitute a populated empirical inventory or a research observation.
+Protocol version 4 remains prospective and paused.
 Real-model feasibility, statistical precision, quality, and reliable complete-service savings remain unmeasured.
-The current protocol blocks research execution while paused.
 No resource limit may be raised silently to bypass an unfavorable plan.
 
 **Decision gates**
@@ -357,11 +385,12 @@ No resource limit may be raised silently to bypass an unfavorable plan.
 | G0: Experiment ready | Frozen contracts, protocol, runner, fair baselines, costs, and failure handling | Complete P0 work; keep experiments paused until authorized |
 | G1: Exactness | Correct imports, valid finite execution, fresh-identical model and canonical state | Resolve mismatches before interpreting speed |
 | G2: Coverage | Useful accepted requests with genuine changed ancestors under an affordable proof construction | Improve certificates or narrow the target |
-| G3: Full service value | Savings survive complete costs and the equally indexed comparison | Change the performance claim or redesign the method |
+| G3: Full service value | Ordinary-requantization savings survive comparison with model-only fresh and all repair costs; state-maintenance claims also survive the equally indexed comparison | Change the performance claim or redesign the method |
 | G4: NLP value | Meaningful quality and task results on held-out real text | Revise the supported application or reconsider venue fit |
 | G5: Submission ready | Frozen evidence, coherent paper, clean reproduction, and current venue checks | Resolve missing evidence before submission |
 
-The immediate order is feasible checkpoint execution, real input manifests, remaining measurement controls, and supported confirmation inventories.
+The preparation priorities are complete-clock integration, model-only confirmation and lifetime inventories, and the remaining measurement controls.
+After authorized resumption, validate feasible checkpoint execution and real input manifests before populating final empirical inventories.
 Original-only selector definitions and campaign membership checks are now implemented.
 The first authorized study should resolve G1 and G2 before expanding the benchmark matrix.
 Do not promise a universal speedup or treat another conditional theorem as measured reliability.

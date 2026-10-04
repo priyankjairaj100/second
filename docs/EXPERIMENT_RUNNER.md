@@ -337,8 +337,10 @@ Parent verification, post-cleanup settlement, logs, and controller receipts rema
 Direct fresh avoids reading the original index.
 The parent verifies complete model and canonical state equality.
 Protocol-scoped admission includes setup and every method.
-The executor validates heldout inputs but does not evaluate NLP quality.
-Confirmation remains blocked pending compatible frozen inventory support.
+The executor supports an optional separate NLL worker under the same CPU admission ledger.
+That worker remains outside method clocks.
+Isolated confirmation now requires verified membership in a compatible frozen inventory.
+See `docs/ISOLATED_CAMPAIGN.md`; actual research inventories remain absent.
 See `docs/ISOLATED_COMPARISON.md` for the complete contract.
 
 ## Open implementation gates
@@ -346,9 +348,21 @@ See `docs/ISOLATED_COMPARISON.md` for the complete contract.
 Real checkpoint feasibility and useful proof coverage remain unmeasured.
 Source acquisition, tokenizer validation, and concrete record manifests remain open.
 Standalone repeated deletion and independent complete-deletion controls are implemented.
-Bulk campaign sequence dispatch remains open.
+Frozen bulk sequence dispatch is implemented; see `docs/SEQUENCE_CAMPAIGN.md`.
 The warm runner does not provide per-method independent processes or cold operating-system caches.
 Durable phase admission exists, with its documented protocol scope and overrun limits.
 Original-model caching and the full quadratic response tier are implemented.
 Their real-model utility, stronger whitened acceptance theorem, and complete cost advantages remain open.
 No reliable full-model speedup follows from this infrastructure.
+
+## Revision 8 measurement extensions
+
+`TRANSACTION_TIMING.md` defines complete child clocks and their final observer exclusion.
+Individual isolated roles can receive those clocks.
+The primary campaign and lifetime analyzer still need complete-clock integration.
+`MODEL_ONLY_FRESH.md` defines ordinary requantization without response-index construction.
+Its confirmation inventory remains open.
+`ARITHMETIC_AUDIT.md` defines separate profiled runs.
+The runner embeds profiling flags, and speed analysis excludes those observations.
+Scientific model/state equality remains independent of clean timing eligibility.
+`CERTIFICATE_DIAGNOSTICS.md` defines bounded numerical funnel details and explicit truncation.

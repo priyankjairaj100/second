@@ -117,6 +117,7 @@ def measure(call: Callable):
     """Measure one nonnested operation, including its artifact writes."""
     if tracemalloc.is_tracing():
         raise RuntimeError("nested allocation measurement is not supported")
+    profiler_active = sys.getprofile() is not None
     tracemalloc.start()
     wall = time.perf_counter_ns()
     cpu = time.process_time_ns()
@@ -127,6 +128,8 @@ def measure(call: Callable):
         metrics = {"wall_time_ns": time.perf_counter_ns() - wall,
                    "cpu_time_ns": time.process_time_ns() - cpu,
                    "peak_python_bytes": peak, "process_peak_rss_bytes": _rss()}
+        if profiler_active:
+            metrics["profiler_active"] = True
         try:
             exc.runner_metrics = metrics
         except (AttributeError, TypeError):
@@ -137,6 +140,8 @@ def measure(call: Callable):
         metrics = {"wall_time_ns": time.perf_counter_ns() - wall,
                    "cpu_time_ns": time.process_time_ns() - cpu,
                    "peak_python_bytes": peak, "process_peak_rss_bytes": _rss()}
+        if profiler_active:
+            metrics["profiler_active"] = True
         return result, metrics
     finally:
         tracemalloc.stop()
@@ -249,7 +254,7 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
     for key in ("root_id", "request_id", "configuration_id"):
         _text(metadata.get(key), key)
     _integer(metadata.get("repeat_index"), "repeat index")
-    if metadata.get("phase") not in ("development", "confirmation", "software_test"):
+    if metadata.get("phase") not in ("feasibility", "development", "confirmation", "software_test"):
         raise ValueError("invalid experiment phase")
     input_binding = {
         "service_manifest_sha256": service.manifest_digest, "metadata": metadata,
@@ -257,6 +262,8 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
         "deleted_ids": list(deleted_ids),
         "heldout": [[r.record_id, r.content_digest] for r in heldout],
         "method_order": list(method_order), "service_mode": service_mode}
+    if sys.getprofile() is not None:
+        input_binding["profiler_active"] = True
     labels = {"service_family": getattr(service, "service_family", "response"),
               "response_tier": getattr(service, "response_tier", "linear"),
               "verifier_policy": getattr(service, "verifier_policy", "spectral")}
@@ -289,6 +296,8 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
                       "timing_interpretation": "instrumented reference execution; exclusive internal diagnostic spans; not production latency",
                       "storage_contract": "external research archive retains original states and failed attempts; deletion guarantee covers returned canonical live state only"})
     result["preflight"] = preflight
+    if sys.getprofile() is not None:
+        result["profiler_active"] = True
     result.update(labels)
     result["initial_model_role"] = "original_preparation" if initial_state is None else "preceding_committed_state"
     if sequence_lineage is not None:
@@ -403,9 +412,11 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
 
 
 def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False, prepare_only=False,
-                  _manifest_override=None):
+                  _manifest_override=None, model_only_prepare=False):
     """Load a local checkpoint and hash-bound prepared data. Never fetch data."""
     overall_start_ns = time.perf_counter_ns()
+    if model_only_prepare and not prepare_only:
+        raise ValueError("model-only loading requires prepare_only")
     from .checkpoint_adapter import load_gpt2_checkpoint
     from .certified_transformer import CertifiedDecoder
     from .target_manifest import TargetRecipe, build_target
@@ -435,7 +446,7 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False, 
     for key in ("root_id", "request_id", "configuration_id"):
         _text(manifest[key], key)
     _integer(manifest["repeat_index"], "repeat_index")
-    if manifest["phase"] not in ("development", "confirmation", "software_test"):
+    if manifest["phase"] not in ("feasibility", "development", "confirmation", "software_test"):
         raise ValueError("invalid experiment phase")
     if manifest["phase"] == "confirmation":
         if (not isinstance(protocol, dict) or protocol.get("schema") != "calibration-protocol-v1"
@@ -461,7 +472,14 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False, 
     if service_family == "identity_cache" and (chart_recipe.mode != "none" or chart_recipe.response_tier != "linear"
             or chart_recipe.radius != 1 or chart_recipe.precision_bits != 96):
         raise ValueError("identity cache requires the none chart, linear label, and default radius and precision")
-    resource_plan = inspect_local_config(_local(base, checkpoint["path"]), chart_recipe, recipe)
+    # Model-output construction has no response chart or response index.
+    # Keep the same declared limits with a conservative rank-zero plan.
+    if model_only_prepare:
+        from dataclasses import replace
+        planning_recipe = replace(chart_recipe, mode="none", response_tier="linear")
+    else:
+        planning_recipe = chart_recipe
+    resource_plan = inspect_local_config(_local(base, checkpoint["path"]), planning_recipe, recipe)
     if not resource_plan.allowed_by_plan:
         if validate_only:
             return {"schema": "calibration-run-validation-v1", "status": "rejected",
@@ -475,9 +493,12 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False, 
             raise ValueError("checkpoint file hashes differ from run manifest")
         decoder = CertifiedDecoder(loaded.decoder)
         calibration, calibration_raw = _referenced_json(base, manifest["calibration"])
-        heldout, heldout_raw = _referenced_json(base, manifest["heldout"])
         records = prepared_records(calibration, decoder)
-        evaluation = prepared_records(heldout, decoder, heldout=True)
+        if model_only_prepare:
+            evaluation = ()
+        else:
+            heldout, heldout_raw = _referenced_json(base, manifest["heldout"])
+            evaluation = prepared_records(heldout, decoder, heldout=True)
         if {r.record_id for r in records} & {r.record_id for r in evaluation}:
             raise ValueError("calibration and heldout record IDs overlap")
         if {r.content_digest for r in records} & {r.content_digest for r in evaluation}:
@@ -492,7 +513,10 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False, 
             raise ValueError("original normalization differs from calibration token count")
         target = build_target(decoder, recipe)
         chart_recipe = ChartRecipe.from_payload(manifest["chart"])
-        if service_family == "identity_cache":
+        if model_only_prepare:
+            preview = {"schema": "model-only-preparation-v1", "target_sha256": target.digest,
+                       "response_chart_constructed": False, "deletion_index_constructed": False}
+        elif service_family == "identity_cache":
             from .chart_construction import identity_preview
             preview = identity_preview(decoder, target)
         else:
@@ -506,6 +530,10 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False, 
                   "cache_mode": CACHE_MODE, "empirical_work_executed": False}
     if validate_only:
         return validation
+    if model_only_prepare:
+        return {"decoder": decoder, "target": target, "records": records, "heldout": heldout,
+                "manifest": manifest, "manifest_raw": raw, "protocol_raw": protocol_raw,
+                "preflight": validation, "overall_start_ns": overall_start_ns}
     if service_family == "identity_cache":
         from .chart_construction import make_identity_service
         service = make_identity_service(decoder, target)

@@ -1,8 +1,9 @@
 # State loading and equal-information baselines
 
-Revision 7 adds full quadratic response, original-model caching, and optional interval verification.
-It retains durable state loading, matched controls, and equal-information comparisons.
-These changes do not establish practical speedup.
+Revision 8 separates ordinary model-only requantization from full-state construction and equal-information maintenance.
+It adds source-bound isolated and sequence campaigns, a complete local transaction observer, and bounded diagnostics.
+The linear and quadratic response tiers, original-model cache, and optional interval verifier remain distinct controls.
+Research remains paused; these implementations do not establish practical speedup.
 
 ## Canonical state loading
 
@@ -55,7 +56,7 @@ replayed = service.indexed_fresh(
 repaired = service.repair(old_state, deleted_records, retained_source)
 ```
 
-`prepare_index` validates retained metadata and regenerates deleted contributions.
+Within the response family, `prepare_index` validates retained metadata and regenerates deleted contributions.
 It verifies contribution digests before exact subtraction.
 It returns an `AggregateIndex` with records, groups, and the service manifest.
 The index has canonical bytes and a digest.
@@ -96,37 +97,67 @@ No cache survives the call.
 
 ## Comparison meaning
 
+Three fresh routes answer different questions.
+All use the same frozen `V_cert` target, retained records, original normalization, base weights, grids, order, and ties.
+Their state obligations differ.
+
+| Route | Output contract | Question it answers |
+| --- | --- | --- |
+| Model-only fresh (`fresh_model`) | Complete target model; no deletion index or cache | Does complete repair improve on ordinary retained-data requantization? |
+| Direct fresh (`service.fresh`, runner label `direct_fresh`) | Complete target model and the selected family's canonical state | Does repair reproduce the defined retained fresh model and state? |
+| Equally indexed fresh (`indexed_fresh`) | Complete target model and the same canonical state as repair | Does repair add value beyond maintaining and solving with the same reusable information? |
+
+`src/model_fresh.py` constructs every stage under its newly constructed ancestor prefix.
+It discards temporary Grams after solving and does not construct response summaries, charts, a true-model cache, or deletion metadata.
+It therefore avoids imposing repair's future-deletion state requirements on ordinary requantization.
+An empty retained corpus has the same ridge-only target as the stateful paths.
+Required finite-evaluator failure aborts rather than returning an approximate model.
+Its control flow is independent full replay, but it shares the numerical library with the other paths.
+This is not an independent numerical implementation or a claim about arbitrary native GPTQ implementations.
+
+The model-only CLI skips held-out loading and response-chart construction.
+It currently parses the original calibration manifest before selecting retained records.
+Those actual input costs belong in its timing; this is not a claim of an optimal fresh implementation.
+`docs/MODEL_ONLY_FRESH.md` states the input, output, and resource-planning limits.
+Standalone confirmation remains blocked until a frozen ordinary-speed inventory and matched lifetime schedule include this comparator.
+
+The direct full-state `fresh` path remains the independent correctness control.
+It extracts summaries and evaluates all retained target features independently.
+Its cost includes rebuilding the selected state family.
+That cost cannot substitute for model-only fresh in an ordinary-requantization speed claim.
+The isolated direct-fresh worker does not load the old canonical state unnecessarily.
+
+For model equality across families or output contracts, use `target_model_bytes` with the common target digest and all quantized codes.
+Family-specific model serialization can also bind a service manifest; unequal such bytes do not necessarily mean unequal target models.
+For complete-state equality, compare canonical state bytes within the same service family and response tier.
+Model equality alone does not establish complete-state equality.
+
 Repair and indexed fresh share one stage planner.
 Within the response family, both use retained summaries, base weights, fixed contracts, and newly constructed prefixes.
 Response-family repair currently provides no separate advantage from the old model.
-Therefore, indexed fresh is an equal-information comparison using the same algorithm.
-It is not a strong independent competing algorithm.
+Indexed fresh is therefore an equal-information comparison using the same algorithm, rather than an independent competing solver.
 Equal results or equal solver costs are expected.
-Do not report a deletion-specific speedup against this comparison without an additional distinct mechanism.
+Do not report a deletion-specific solver advantage against it without an additional distinct mechanism.
 
-The direct `fresh` path remains the independent correctness oracle.
-It extracts summaries and evaluates all retained target features independently.
-Its total includes rebuilding summaries.
-That total is not an equally indexed timing baseline.
-
-| Route | Input state | Online work |
+| Route | Required inputs | Online work |
 | --- | --- | --- |
-| Repair | Original state and deleted inputs | Validate, subtract, solve, serialize |
-| Indexed fresh | Original state and deleted inputs | Prepare retained index, validate index, solve, serialize |
-| Indexed full replay | Original state and deleted inputs | Prepare retained index, validate index, replay, serialize |
-| Direct fresh | Retained inputs | Extract summaries, evaluate target, solve, serialize |
+| Repair | Entering state, deleted inputs, retained source | Validate, subtract, solve with certified queries or replay, serialize complete state |
+| Indexed fresh | Same valid entering information as repair | Prepare retained index, validate index, solve, serialize complete state |
+| Indexed full replay | Same valid entering information as repair | Prepare retained index, validate index, replay, serialize complete state |
+| Direct full-state fresh | Retained inputs and fixed service construction | Extract state summaries, evaluate target, solve, serialize complete state |
+| Model-only fresh | Retained inputs and fixed numerical target | Evaluate target, solve, serialize target model |
 
 Charge `prepare_index` once for each complete indexed request.
 Do not add its ledger to `repair`; repair already performs deletion.
-Report solver-only timings separately from complete request timings.
 The split interface also validates and serializes an intermediate index.
-Report that interface overhead explicitly.
-It is not an algorithmic repair advantage.
+Report that overhead explicitly; it is not an algorithmic repair advantage.
 
-Index loading, checkpoint loading, output writing, durable commits, and original preparation remain additional measured costs.
-Use the same initial files and cache conditions for each comparison.
-Software checks establish equality and transaction behavior.
-They do not measure real-model coverage or latency.
+Report solver-only diagnostics separately from complete transactions.
+Use matched declared input, cache, thread, hardware, and output conditions.
+An ordinary model-only comparison shares the model target while explicitly retaining its different state obligations.
+Charge repair's full state maintenance and output, and its preparation in lifetime analysis.
+An equal-information state-maintenance comparison must give fresh access to every reusable item valid under the target.
+Software checks establish equality and transaction behavior, not real-model coverage or latency.
 
 ## Response storage tiers
 
@@ -180,7 +211,7 @@ Repeated deletion therefore uses the current cache rather than stale original st
 The cache stores `sum_l d_l²` Gram slots, plus model, metadata, prefixes, and rational integer storage.
 Its canonical schema is `original-model-gram-cache-v1`.
 It does not share canonical bytes with either response tier.
-Cross-family comparisons check complete model equality under the same target.
+Cross-family comparisons check complete model equality using the common target encoding, not family-specific service metadata.
 Within-family comparisons additionally check complete canonical state equality.
 
 The cache's equally indexed comparator receives the same old model, cache, deleted inputs, and retained source.
@@ -208,28 +239,60 @@ An empty retained corpus remains a defined ridge-only target.
 No record can be deleted twice from the live set.
 Empty requests remain valid after complete deletion.
 Archival predecessors remain outside the returned live-state deletion guarantee.
-See `docs/SEQUENCE_EXECUTION.md` for the local dispatcher and restart contract.
+The source-bound sequence campaign now freezes workloads, ordered provenance, method order, target identity, and worker limits.
+It dispatches one limited worker per whole sequence with the shared protocol phase ledger.
+Methods within a sequence step remain warm.
+Resume verifies completed predecessor lineage, failed child artifacts, dispatch requests, and durable worker observations.
+Every planned sequence and step remains visible after failure or admission denial.
+These are implementation checks; real repeated-deletion correctness and lifetime costs remain unmeasured.
+See `docs/SEQUENCE_EXECUTION.md` and `docs/SEQUENCE_CAMPAIGN.md`.
 
 ## Telemetry and process boundaries
 
 Each service operation accepts an optional `telemetry=ServiceTelemetry()` argument.
 The collector records exclusive timings, operation counts, and proof outcomes.
 It subtracts child intervals from parent intervals.
-Never add its diagnostic total to the enclosing method timer.
-Telemetry does not alter the canonical model or state.
-Instrumentation overhead remains part of recorded elapsed time.
+Never add its diagnostic total to an enclosing method timer.
+Telemetry and its bounded certificate funnel do not alter canonical model or state bytes.
+Instrumentation overhead remains part of observed elapsed time.
 
-The runner also times resident payload lookup and durable artifact output.
-The method boundary ends after atomic artifacts and directory synchronization.
+The ordinary warm runner times resident payload lookup and durable artifact output.
+Its method boundary ends after atomic artifacts and directory synchronization.
 Final experiment-result commit and campaign bookkeeping remain outside each method timer.
 Original preparation, checkpoint loading, and equality checks have separate costs.
+A warm campaign starts one process per complete comparison; its methods share process history.
 
-Campaign execution starts one process per complete comparison.
-The three methods remain warm within that process.
-Operating-system caches remain uncontrolled.
-This is not per-arm process-cold service timing.
-The split indexed interface still adds validation and serialization work.
-That interface difference cannot establish an algorithmic repair advantage.
+The isolated campaign instead uses one setup worker and a separate worker for each method.
+It binds the frozen comparison inventory, exact method order, sources, target, and worker limits.
+Repair and indexed fresh load the same entering state.
+Direct full-state fresh constructs retained state independently.
+Its worker timer includes startup, inputs, service work, artifacts, child receipt, exit, and cleanup.
+Parent equality checks, post-cleanup worker accounting, and final parent commits remain outside that narrower field.
+An optional separate quality worker runs after exact model/state verification.
+Quality work is research evaluation, recorded separately from method latency.
+See `docs/ISOLATED_CAMPAIGN.md` and `docs/ISOLATED_COMPARISON.md`.
+
+The external observer in `docs/TRANSACTION_TIMING.md` supplies a larger declared clock.
+It measures from observer source/input validation through child controller commits, exit, cleanup, and final output verification.
+It then writes its own observer receipt outside that interval.
+A helper can measure one isolated role without running other methods or shared oracle verification in that transaction.
+Model-only fresh can use the same observer under its `model_only` output contract.
+A whole-comparison or whole-sequence observation remains that broader cost; it cannot be divided arbitrarily into per-method latencies.
+Fresh, resumed, and reused observations are distinct, and archived receipt reuse never supplies a new repetition.
+
+Primary campaign and matched lifetime integration with the complete observer clock remain open.
+The current isolated inventory covers the full-state method comparison; it does not include the pending model-only confirmation comparator.
+All execution modes leave operating-system caches uncontrolled.
+A new process is not evidence of cold disk caches.
+Shared protocol CPU admission limits reserved worker allowances, not absolute physical CPU or a cross-protocol project total.
+Controller CPU remains outside that ledger.
+
+The bounded certificate funnel reports exposed domains, bounds, decisions, replay, and completion.
+Provider-internal Hessian failures, chart residuals, and other unavailable components remain explicitly opaque.
+The arithmetic audit records constructed Fraction endpoint counts and bit lengths in its calling process, including transient endpoints.
+It does not measure every hidden integer intermediate, object lifetime, or temporary allocation.
+Its instrumentation changes elapsed cost; audit times are diagnostic, not clean latency observations.
+See `docs/CERTIFICATE_DIAGNOSTICS.md` and `docs/ARITHMETIC_AUDIT.md`.
 
 ## Scope
 
@@ -239,7 +302,7 @@ Numerical abstention causes replay.
 Finite-evaluator failure aborts the call without a committed state.
 Logical deletion does not erase caller copies or physical memory.
 
-Revision 7 implements both the original-model cache and the full quadratic response tier.
+The implementation includes both the original-model cache and the full quadratic response tier.
 Their correctness fixtures establish target preservation within their declared state families.
 The stronger whitened quadratic acceptance theorem remains unimplemented.
 Neither control labels nor software fixtures close the practical speed gate.

@@ -1,133 +1,151 @@
 # Resume this ACL 2027 calibration-unlearning project
 
-Last revision: 4 October 2026, v7 preparation.
+Last revision: 4 October 2026, v8 preparation.
 Repository: https://github.com/priyankjairaj100/second
-Previous verified checkpoint: 3c6905e77bca86e4d3e54be20a82f3acdcfd294d.
+Previous verified checkpoint: e8d6f593a0311ad05fa3a7e87088d29aaa1646d3.
 
-Read AGENTS.md, docs/STATUS.md, docs/RESEARCH_TODO.md, and docs/VALIDATION.md first.
-Then read docs/ALGORITHM_ADVANCE_V7.md, docs/IDENTITY_CACHE.md, docs/QUADRATIC_CONTROL.md, and docs/CLAIM_EVIDENCE.md.
-Read docs/PROJECT_CONTEXT.md for historical provenance.
-Read docs/SEQUENCE_EXECUTION.md, docs/ISOLATED_COMPARISON.md, and docs/EXECUTION_BUDGETS.md before execution changes.
-The consolidated report has 35 pages.
-The final suite contains 340 correctness tests.
+Read AGENTS.md, docs/STATUS.md, docs/RESEARCH_TODO.md, docs/VALIDATION.md, and docs/REVISION_8.md first.
+Then read docs/MODEL_ONLY_FRESH.md, docs/FEASIBILITY_GATES.md, and docs/TRANSACTION_TIMING.md.
+Read docs/ISOLATED_CAMPAIGN.md and docs/SEQUENCE_CAMPAIGN.md before campaign work.
+Read docs/ARITHMETIC_AUDIT.md and docs/CERTIFICATE_DIAGNOSTICS.md before interpreting diagnostics.
+The existing PDF remains the unchanged 35-page revision 7 report.
+Revision 8 details live in the new note and linked contracts.
+The final suite contains 417 correctness tests.
 
 The user authorized repository pushes and complete restart notes.
 Never force-push or discard unrelated remote changes.
-Do not duplicate repository artifacts into another storage system.
+Preserve historical evidence distinctions in docs/PROJECT_CONTEXT.md.
 
 ## Current instruction and phase
 
-Latest instruction: “Proceed on the remaining tasks. Please ensure that we have maximum revenue.”
-We interpret “maximum revenue” as research value within the ongoing paper program.
+The latest user instruction is “great proceed on remaining tasks.”
+An earlier instruction requested “maximum revenue.”
+Interpret that earlier phrase as research value within this ongoing paper program.
 Do not invent monetization goals or financial guarantees.
 
-The register contains 28 completed and 50 open required tasks, plus 12 conditional extensions.
-This checkpoint advances preparation without declaring the paper complete.
+The register contains 29 completed and 49 open required tasks, plus 12 conditional extensions.
+C04 closes only the written feasibility-policy requirement.
+C05, D04, and D05 remain partial under their complete criteria.
+G0 remains open.
 Research experiments remain PAUSED until the user resumes them.
-Mathematics, source inspection, implementation, and software correctness tests remain allowed.
+Mathematics, implementation, source inspection, and software correctness tests remain allowed.
 No model/data downloads, research benchmarks, synthetic empirical studies, cloud jobs, or unrelated hardware ran.
 
-## Target and guarantees
+## Target and inherited algorithms
 
-Fix base weights W and delete calibration records F.
+Fix base weights W and remove calibration records F.
 Reproduce complete retained-data sequential quantization, including changed downstream calibration features.
-The primary implemented target remains V_cert.
+The primary target remains V_cert.
 It combines certified scalar finite features with exact rational Grams and sequential rounding.
-Legacy library-math V, historical floating E, and native Hugging Face execution remain distinct.
+Legacy V, historical floating E, and native Hugging Face execution remain distinct.
 
 V_cert is partial.
-Proof abstention permits exact retained replay.
+Proof rejection permits exact retained replay.
 Necessary finite-evaluator failure aborts without an approximate committed model.
 Completion requires successful required evaluations and sufficient resources.
 
-Publication T1–T7 cover finite bounds, Gram enclosures, discrete decisions, sequential exactness, canonical state, and conditional work.
-Box results B1–B8 cover fixed parameter domains and hybrid midpoint anchors.
-Midpoints minimize a rectangular feature envelope, not certificate rejection or service cost.
-Full-grid membership does not establish useful numerical acceptance.
-
-Revision 7 adds signed covariance intervals and ridge-aware exact interval reverse elimination.
-Its spectral-or-interval policy runs the existing spectral certificate first.
-After rejection, the optional verifier uses the true target ridge and exact lower-tie cells.
-A fixture establishes strict certificate improvement.
-Acceptance improvement does not establish runtime or finite-budget completion dominance.
-Standalone enclosure intersection is implemented.
-A complete stored multi-domain bank remains future work.
-
-## Implemented families and controls
-
-The response family provides compact linear and full quadratic Gram tiers.
-The quadratic tier stores the complete Gram polynomial of the same affine feature response.
-It does not implement a quadratic Taylor approximation of transformer features.
-Its canonical state schema differs from the compact tier.
-Its larger storage and extraction costs remain charged.
+The response family supports compact linear and full quadratic Gram tiers.
+The quadratic tier represents the Gram of the same affine feature response.
+It is not a quadratic Taylor model of transformer features.
+Fixed-box providers remove affine-span restrictions without guaranteeing useful bounds.
+The spectral-first interval policy preserves existing spectral acceptance when its required computation completes.
+Its extra arithmetic can increase cost or exhaust a finite budget.
+Standalone enclosure intersection exists; a complete stored multi-domain bank does not.
 
 The response solver ignores old model codes.
-Its indexed fresh comparator receives the same retained summaries and solver policy.
-Index maintenance remains the potential advantage over constructing summaries again.
+The identity-cache solver uses the previous quantized model to justify feature reuse.
+It compares all relevant transitive ancestors and refreshes exact sequential Grams after each request.
+Its returned cache is canonical for the retained records.
+Indexed fresh receives identical valid information and solver policy within each family.
+Neither family establishes a deletion-exclusive solver advantage.
+Canonical state equality applies within a family and tier.
+Cross-family equality uses the common target identity and every stage code.
 
-The identity-cache family stores exact sequential Grams under its current quantized model.
-It compares every transitive ancestor against the repaired prefix.
-Matching ancestors permit deleted-contribution subtraction.
-Changed ancestors require retained replay.
-The refreshed cache equals direct retained construction, including repeated and complete deletion.
-Its indexed fresh comparator receives the same valid cache and old model.
-It therefore has no deletion-exclusive solver advantage.
+## Revision 8 comparison correction
 
-Identity-cache state is a separate optional interface, not aggregate-response state.
-Compare canonical state within a family and tier.
-Compare quantized model outputs across families.
-The runner adapter requires trusted origins and bounds its process-local digest registry.
-Its registry and the research archive lie outside returned live-state deletion guarantees.
+The old direct_fresh oracle constructs both the retained model and deletion state.
+Ordinary requantization only requires the model.
+The new model-only fresh control builds every target stage without response extraction, charts, or a persistent deletion index.
+It keeps original normalization, grids, ridge, numerical evaluation, and sequential ancestors fixed by the target.
+Its output cannot support later deletion without extra preparation.
 
-Local manifests bind service_family, response_tier, verifier_policy, and service_mode.
-Identity-cache manifests require the none chart and documented default labels.
-Those inert labels do not invoke response or spectral mechanisms in the identity-cache family.
+Use model-only fresh for an ordinary requantization speed claim.
+Use direct_fresh for complete canonical-state correctness.
+Use equally indexed fresh for a maintenance comparison with shared valid information.
+Charge original preparation and every required request/state/output cost in lifetime analysis.
+Do not charge unnecessary index construction only to ordinary fresh.
+Do not omit repair's required index maintenance.
 
-## Execution and accounting
+The frozen feasibility policy uses two real calibration roots and a three-request lifetime horizon.
+It specifies zero mismatches, bounded resources, changed-ancestor coverage, finite quality, and lifetime cost decisions.
+Every root must satisfy the declared engineering thresholds.
+Missing evidence keeps its gate open.
+These thresholds do not establish power, population speedup, or current feasibility.
+Read the policy before changing any value after observations.
 
-The local sequence runner constructs the original state once.
-Every later request consumes the previous committed repaired state.
-It validates full model/state equality against direct fresh and supports complete deletion and subsequent empty requests.
-Restart verifies the completed sequence prefix and its artifacts.
-Bulk campaign sequence dispatch remains open.
+## Campaigns and quality
 
-The isolated executor uses one setup process and three separate method processes.
-Repair and indexed fresh reload the same saved original state.
-Direct fresh does not load that state.
+Frozen isolated campaigns bind sources, plans, workloads, configurations, roots, requests, repetitions, and method order.
+Confirmation requires verified inventory membership and the complete declared Cartesian product.
+Setup and three methods execute in separate limited processes.
+An optional fifth quality worker evaluates base, original, retained, and repaired next-token NLL.
+Its costs remain separate from method clocks and enter the same protocol CPU ledger.
+Its diagnostic finite NLL does not establish native-framework equivalence or full task quality.
+
+Frozen sequence campaigns bind complete ordered requests and predecessor lineage.
+Each sequence runs inside one limited process and prepares its original state once.
+Its methods remain warm within that process.
+Failure, interruption, restart, and unstarted requests retain their evidence.
+A resumed attempt's elapsed time is not the entire sequence lifetime.
+
+Feasibility is now a supported execution phase with its own explicit CPU cap.
+Its real draws must use development-side sources, separate from confirmation and evaluation documents.
+No real source pools or empirical inventory exist yet.
+Protocol version 4 remains prospective and paused.
+
+## Clocks, budgets, and diagnostics
+
+The external observer measures source checks, child execution, final child commitments, cleanup, and output verification.
+Its final observer receipt and observer lock release remain outside the measured interval.
+Its disjoint spans sum to the enclosing clock without double counting nested worker elapsed values.
+Output contracts distinguish model-only, canonical-state, comparison, and sequence transactions.
+A complete comparison clock cannot substitute for a single method clock.
+Primary campaign integration of matched complete method/lifetime clocks remains open.
+Model-only confirmation inventory support also remains open.
+
+Research model-only and direct isolated-child commands require live exact-command CPU admission.
+Supported campaign children also verify their protocol, source, and inventory evidence.
+Unknown attempts retain their allowances; observed overruns remain charged.
+Budget scopes bind one frozen protocol and trusted local workers.
+They do not impose absolute physical CPU, hostile-process-tree, or cross-protocol project caps.
+Observer/controller CPU remains outside child CPU allowances.
 Operating-system caches remain uncontrolled.
-Confirmation execution remains blocked until supported frozen isolated inventories exist.
-The isolated executor validates heldout inputs but does not compute quality metrics.
 
-Isolated method time includes startup, local inputs, one method, artifacts, child receipt, exit, and cleanup.
-It excludes parent validation, equality verification, parent receipt, and post-cleanup worker accounting commitments.
-Setup cost remains separate and belongs in lifetime accounting.
-These clocks do not establish complete parent-transaction latency.
-Warm comparison and sequence methods still share process history.
+The arithmetic audit observes standard Fraction allocation endpoints in one process and thread.
+It separately reports initial visible values, bounded attribution, available traced memory, RSS, and artifact bytes.
+It rejects cached output reuse and unsupported child-controller audits.
+Embedded profiling flags exclude diagnostic runs from clean timing ratios even without a sidecar.
+Exact model/state checks remain valid.
+Hidden integer intermediates and exact live-rational memory remain outside its scope.
 
-Protocol-scoped phase CPU admission reserves worker allowances before launch.
-Durable settlement uses observed wait4 CPU; uncertain attempts keep their reservation.
-Observed overruns remain charged and prevent further admission.
-The cap controls admitted allowances under its stated scope.
-It is not an absolute physical CPU, hostile-descendant, or cross-protocol project cap.
-Controller CPU lies outside this ledger.
-A separate feasibility phase dispatcher remains open.
-
-Protocol version 3 remains prospective and paused.
-Metadata pins exist, but no real checkpoint, tokenizer, corpus, score artifacts, or empirical inventory exists.
+The bounded certificate funnel records observed descriptors, domains, bounds, decisions, replay, and completion.
+It preserves disposition counts for recorded stages and events, with explicit omission and saturation counters.
+Large exact values receive bounded summaries.
+Some provider internals remain unavailable.
+These diagnostics do not establish exhaustive rejection decomposition or real-model memory evidence.
 
 ## Next priorities
 
-1. Establish resource-feasible real-model execution under the declared target after research resumption.
-2. Acquire and validate checkpoint, tokenizer, document, corpus, and token artifacts after authorization.
-3. Complete parent-transaction timing and transient arithmetic/memory diagnostics.
-4. Connect ordered sequences to bulk campaign admission and frozen sequence inventories.
-5. Complete isolated confirmation inventories and their quality-evaluation program.
-6. Freeze primary configurations, actual source partitions, root draws, workloads, and statistical precision.
-7. Run staged real-data feasibility, development, confirmation, lifetime cost, and NLP quality studies.
-8. Complete the manuscript, literature audit, independent review, reproducibility release, and submission checks.
+1. Integrate matched complete per-method and lifetime clocks into the primary frozen campaign and analysis path.
+2. Add a compatible model-only confirmation inventory and prospective comparison schedule.
+3. Establish resource-feasible real checkpoint execution after research resumption.
+4. Acquire and validate model, tokenizer, document, corpus, and token artifacts after authorization.
+5. Freeze actual configurations, source pools, root draws, scores, workloads, inventories, and statistical precision.
+6. Execute staged real-data feasibility, development, confirmation, complete costs, and NLP evaluations.
+7. Complete the manuscript, literature audit, independent review, reproducibility release, and submission checks.
 
-G0 remains open.
-Do not raise resource limits silently or present planning estimates as measured memory.
-No reliable full-model speedup, useful real-model coverage, or practical publication readiness has been established.
-Earlier missing raw experiments remain unavailable.
+Do not claim reliable full-model speedup, useful real-model coverage, measured quality, or publication readiness.
+Do not raise resource limits silently or present planning estimates as memory measurements.
+The archive and bounded identity trust registry remain outside returned live-state deletion guarantees.
+Historical missing raw results remain unavailable.
 Save substantive progress and complete restart context to the authorized repository.

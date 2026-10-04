@@ -1,5 +1,10 @@
 # Separate-process comparison
 
+Revision 8 adds frozen campaign dispatch, verified confirmation evidence, feasibility admission, and optional quality evaluation.
+Read `ISOLATED_CAMPAIGN.md` for the current extension.
+The remaining sections preserve the original revision 7 worker contract.
+The external timing extension is documented in `TRANSACTION_TIMING.md`.
+
 Revision 7 provides an isolated executor for local prepared inputs.
 It does not download data or resume paused research.
 Correctness fixtures establish implementation behavior only.

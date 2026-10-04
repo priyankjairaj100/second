@@ -76,6 +76,8 @@ def _hashes(run: Mapping[str, Any]) -> None:
 def validate_run(run: Mapping[str, Any]) -> None:
     """Validate the measured fields without guessing absent outcomes."""
     _key(run)
+    if "profiler_active" in run and type(run["profiler_active"]) is not bool:
+        raise AnalysisError("profiler_active must be Boolean")
     _hashes(run)
     if run.get("schema") != RUN_SCHEMA:
         raise AnalysisError("unsupported run schema")
@@ -90,6 +92,8 @@ def validate_run(run: Mapping[str, Any]) -> None:
     for name, arm in methods.items():
         if not isinstance(arm, dict):
             raise AnalysisError(f"invalid outcome for {name}")
+        if "profiler_active" in arm and type(arm["profiler_active"]) is not bool:
+            raise AnalysisError("profiler_active must be Boolean")
         if arm.get("status") not in {"complete", "failed", "running", "not_started", "pending_verification"}:
             raise AnalysisError(f"invalid arm status for {name}")
         for field in ("wall_time_ns", "complete_wall_time_ns", "index_preparation_ns"):
@@ -100,7 +104,7 @@ def validate_run(run: Mapping[str, Any]) -> None:
                 raise AnalysisError(f"{field} must be Boolean or null")
 
 
-def outcome(arm: Mapping[str, Any] | None, run_status: str) -> str:
+def outcome(arm: Mapping[str, Any] | None, run_status: str, *, profiler_active=False, clean_timing=False) -> str:
     """Treat unverified completion and absent arms as explicit outcomes."""
     if arm is None:
         return "missing_run" if run_status == "missing" else "not_started"
@@ -114,6 +118,8 @@ def outcome(arm: Mapping[str, Any] | None, run_status: str) -> str:
         return str(reason) if reason else str(arm.get("status", "failed"))
     if arm.get("exact_state_equal") is not True or arm.get("exact_model_equal") is not True:
         return "not_verified"
+    if clean_timing and (profiler_active or arm.get("profiler_active", False)):
+        return "diagnostic_timing"
     if arm.get("complete_wall_time_ns") is None:
         return "missing_time"
     _time(arm["complete_wall_time_ns"], "complete_wall_time_ns", positive=True)
@@ -228,7 +234,7 @@ def analyze_runs(
             by_request[(run["root_id"], run["request_id"])].append(run)
             for name in _methods(run):
                 arm = run.get("methods", {}).get(name)
-                attempts[name][outcome(arm, run["status"])] += 1
+                attempts[name][outcome(arm, run["status"], profiler_active=run.get("profiler_active", False), clean_timing=True)] += 1
                 if arm and arm.get("wall_time_ns") is not None:
                     measured[name].append(arm["wall_time_ns"])
         roots = sorted({root for root, _ in by_request})
@@ -240,13 +246,13 @@ def analyze_runs(
             names = sorted({name for run in repetitions for name in _methods(run)})
             complete, medians = {}, {}
             for name in names:
-                arms = [(run.get("methods", {}).get(name), run["status"]) for run in repetitions]
+                arms = [(run.get("methods", {}).get(name), run["status"], run.get("profiler_active", False)) for run in repetitions]
                 # Different method plans across repeats are not matched repetitions.
                 planned_everywhere = all(name in _methods(run) for run in repetitions)
-                complete[name] = planned_everywhere and all(outcome(arm, status) == "exact_complete" for arm, status in arms)
+                complete[name] = planned_everywhere and all(outcome(arm, status, profiler_active=profiled, clean_timing=True) == "exact_complete" for arm, status, profiled in arms)
                 success_by_method[name][root].append(float(complete[name]))
                 if complete[name]:
-                    medians[name] = statistics.median(arm["complete_wall_time_ns"] for arm, _ in arms)
+                    medians[name] = statistics.median(arm["complete_wall_time_ns"] for arm, _, _ in arms)
             if not all(all(name in _methods(run) for name in (baseline, candidate)) for run in repetitions):
                 pair_status = "not_jointly_planned"
             elif complete[baseline] and complete[candidate]:

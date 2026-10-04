@@ -37,7 +37,7 @@ class AdversarialIsolatedComparisonTests(unittest.TestCase):
         state_path = root / "original.json"
         state_path.write_bytes(state.canonical_bytes())
         manifest_path = root / "manifest.json"
-        manifest_path.write_bytes(canonical_json({"deleted_ids": ["a"]}))
+        manifest_path.write_bytes(canonical_json({"deleted_ids": ["a"], "phase": "software_test"}))
         request = {"schema": "isolated-child-request-v1", "role": role,
             "manifest_path": str(manifest_path), "manifest_sha256": digest(manifest_path.read_bytes()),
             "source_sha256": {}, "target_manifest_sha256": "a" * 64,

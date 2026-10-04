@@ -26,11 +26,12 @@ from hashlib import sha256
 import json
 from types import MappingProxyType
 from typing import Callable, Iterable, Mapping
+from itertools import islice
 
 from .exact_core import certify_relative_enclosure
 from .domain_refinement import GramBinding, signed_loewner_box, certify_gram_box
 from .response_certificate import response_error_squared, dyadic_sqrt_upper, response_gram_enclosure
-from .service_telemetry import event as telemetry_event, timed, operation
+from .service_telemetry import event as telemetry_event, timed, operation, diagnostic, diagnostics_enabled
 from .linear_response import LinearRecordMoments, LinearResponseIndex, shifted_linear_response_bound
 from .response_moments import RecordMoments, ResponseBasis, ResponseIndex
 from .response_service_adapter import ResponseQuery, ResponseStageContract
@@ -69,6 +70,42 @@ def _state_schema(tier: str) -> str:
 def _index_schema(tier: str) -> str:
     _state_schema(tier)
     return "aggregate-retained-index-v1" if tier == "linear" else "aggregate-quadratic-retained-index-v1"
+
+
+def _diagnose(work, stage_id, name, *, values=None, build=None):
+    if diagnostics_enabled():
+        work.add("diagnostic_observations_attempted")
+        recorded = diagnostic(stage_id, name, values=values, build=build)
+        work.add("diagnostic_observations_recorded" if recorded else "diagnostic_observations_omitted")
+
+
+def _cell_diagnostics(certificate, limit, *, interval=False):
+    checks = certificate.checks
+    failed = sum(not check.accepted for check in checks)
+    selected = islice((check for check in checks if not check.accepted), limit) if failed else islice(checks, limit)
+    samples = []
+    for check in selected:
+        if interval:
+            lower, upper = check.lower_cell, check.upper_cell
+            lo, hi = check.input_interval.lo, check.input_interval.hi
+            values = {"input_lower": lo, "input_upper": hi,
+                      "lower_margin": None if lower is None else lo - lower,
+                      "upper_margin": None if upper is None else upper - hi,
+                      "reason": "cell_enclosed" if check.accepted else "cell_not_enclosed"}
+        else:
+            lower, upper = check.lower, check.upper
+            value = certificate.candidate.rows[check.row].inputs[check.coordinate]
+            values = {"candidate_input": value, "radius_squared": check.radius_squared,
+                      "lower_margin": None if lower is None else value - lower,
+                      "upper_margin": None if upper is None else upper - value,
+                      "reason": check.reason}
+        samples.append({"row": check.row, "coordinate": check.coordinate, "accepted": check.accepted,
+                        "cell_lower": lower, "cell_upper": upper,
+                        "lower_endpoint_unbounded": lower is None, "upper_endpoint_unbounded": upper is None,
+                        **values})
+    return {"accepted": certificate.accepted, "checked_cells": len(checks), "failed_cells": failed,
+            "sample_selection": "first_failed" if failed else "first_checked",
+            "sampled_cells": len(samples), "unsampled_cells": len(checks) - len(samples), "samples": samples}
 
 
 @dataclass(frozen=True)
@@ -552,9 +589,17 @@ class AggregateRepairService:
         pair = None
         if contract is not None:
             work.add(event)
-            pair = self.intrinsic_moments(record, stage)
+            try:
+                pair = self.intrinsic_moments(record, stage)
+            except BaseException as exc:
+                _diagnose(work, stage.stage_id, "descriptor_extraction_failed", values={
+                    "phase": event, "failure_type": type(exc).__name__})
+                raise
         if pair is None:
             telemetry_event("extraction.unavailable")
+            _diagnose(work, stage.stage_id, "descriptor_unavailable", values={"phase": event,
+                "reason": "no_stage_contract" if contract is None else "provider_returned_unavailable",
+                "provider_internal_cause": "not_exposed"})
             digest = _digest({"schema": "aggregate-contribution-unavailable-v1", "id": record.record_id,
                               "content": source_digest, "stage": stage.stage_id,
                               "extractor": self.extractor_id})
@@ -573,6 +618,10 @@ class AggregateRepairService:
             raise ValueError("error descriptor requires one scalar column per record")
         if any(x[0][0] < 0 for x in error.cross_moments):
             raise ValueError("intrinsic error moments must be nonnegative")
+        _diagnose(work, stage.stage_id, "descriptor_available", values={"phase": event,
+            "response_terms": response.basis.terms, "error_terms": error.basis.terms,
+            "feature_columns": response.columns, "constant_error_descriptor_squared": error.cross_moments[0][0][0],
+            "finite_vs_center_decomposition": "not_separately_exposed"})
         # Count exact moment products separately from feature/jet extraction.
         # These count formulas match the declared moment builders, not CPU time.
         d, r, n = response.basis.rows, response.basis.terms - 1, response.columns
@@ -636,13 +685,17 @@ class AggregateRepairService:
 
     def _target(self, record, stage, prefix, work, event):
         telemetry_event("feature.attempt")
+        _diagnose(work, stage.stage_id, "feature_evaluation_attempted", values={"role": event})
         try:
             category = "replay_feature_evaluation" if event == "retained_replay_evaluator_calls" else "fresh_feature_evaluation"
             result = timed(category)(self._engine._target)(record, stage, prefix, work, event)
         except BaseException as exc:
             telemetry_event("feature.failed", reason=type(exc).__name__)
+            _diagnose(work, stage.stage_id, "feature_evaluation_failed", values={
+                "role": event, "failure_type": type(exc).__name__})
             raise
         telemetry_event("feature.completed")
+        _diagnose(work, stage.stage_id, "feature_evaluation_completed", values={"role": event})
         return result
 
     @timed("factor_rounding")
@@ -681,12 +734,17 @@ class AggregateRepairService:
         for stage in self.job.stages:
             prefix = self._engine._prefix(stage, outputs)
             telemetry_event("stage.attempt")
+            _diagnose(work, stage.stage_id, "stage_started", values={"mode": "direct_fresh",
+                "response_tier": self.response_tier, "verifier_policy": "not_requested",
+                "retained_records": len(data), "domain_check": "bypassed_direct_fresh"})
             raw = _zero(stage.width)
             for rid in sorted(data):
                 x = self._target(data[rid], stage, prefix, work, "fresh_target_evaluator_calls")
                 raw = _combine(raw, _gram(x, work), 1, work)
             outputs.append(self._quantize(stage, raw, work))
             audits.append(StageAudit(stage.stage_id, prefix.digest, "independent_fresh", 0, (), (), None))
+            _diagnose(work, stage.stage_id, "stage_completed", values={"route": "independent_fresh",
+                "certificate_attempts": 0, "proof_acceptance": "not_requested"})
         return self._finish(meta, groups, tuple(outputs), tuple(audits), work)
 
     @timed("validation_metadata")
@@ -804,25 +862,36 @@ class AggregateRepairService:
     def _proposal(self, group: AggregateGroup, aggregate: AggregateStage, stage: StageSpec,
                   prefix: CertifiedPrefix, work: _Work, mode: str = "certified") -> tuple[Matrix, tuple[Fraction, Fraction] | None]:
         telemetry_event("proposal.attempt")
+        _diagnose(work, stage.stage_id, "aggregate_descriptor_status", values={"group_id": group.group_id,
+            "retained_records": len(group.record_ids), "unavailable_records": aggregate.unavailable_count,
+            "contract_available": aggregate.response is not None})
         raw = (_zero(stage.width) if aggregate.response is None else
                aggregate.response.constant_gram if isinstance(aggregate.response, LinearResponseIndex)
                else aggregate.response.cross_moments[0])
         if aggregate.unavailable_count or aggregate.response is None:
             work.add("unavailable_aggregate_groups")
             telemetry_event("proposal.unavailable_aggregate")
+            _diagnose(work, stage.stage_id, "proposal_unavailable", values={"group_id": group.group_id,
+                "reason": "unavailable_aggregate_descriptors", "domain_check": "not_run"})
             return raw, None
         if mode == "identity_only":
             if self.reference_weights is None:
                 work.add("identity_reference_unavailable_groups")
                 telemetry_event("proposal.identity_reference_unavailable")
+                _diagnose(work, stage.stage_id, "identity_gate", values={"group_id": group.group_id,
+                    "status": "reference_unavailable", "domain_check": "not_run"})
                 return raw, None
             installed = prefix.as_mapping()
             if any(installed.get(name) != self.reference_weights[name] for name in self._engine._ancestors[stage.stage_id]):
                 work.add("identity_prefix_mismatch_groups")
                 telemetry_event("proposal.identity_prefix_mismatch")
+                _diagnose(work, stage.stage_id, "identity_gate", values={"group_id": group.group_id,
+                    "status": "base_ancestor_mismatch", "domain_check": "not_run"})
                 return raw, None
             work.add("identity_prefix_equal_groups")
             telemetry_event("proposal.identity_prefix_equal")
+            _diagnose(work, stage.stage_id, "identity_gate", values={"group_id": group.group_id,
+                "status": "base_ancestors_equal"})
         digest = _digest(_mat_json(raw))
         # This digest reads group matrices, never a retained descriptor list.
         aggregate_payload = _json(aggregate._json())
@@ -833,20 +902,42 @@ class AggregateRepairService:
         context = AggregateGroupContext(binding, stage, prefix, group.group_id, len(group.record_ids),
                                         aggregate.unavailable_count, aggregate.response, aggregate.error)
         work.add("aggregate_query_calls")
-        request = self.query(context)
+        try:
+            request = self.query(context)
+        except BaseException as exc:
+            _diagnose(work, stage.stage_id, "query_failed", values={"group_id": group.group_id,
+                "failure_type": type(exc).__name__})
+            raise
         if isinstance(request, UnknownBound):
             telemetry_event("proposal.query_unknown", reason=request.reason)
+            _diagnose(work, stage.stage_id, "domain_query", values={"group_id": group.group_id,
+                "status": "provider_unknown", "reason": request.reason,
+                "fit_residual": "not_exposed", "domain_failure_not_inferred": True})
             return raw, None
         if not isinstance(request, ResponseQuery) or request.binding != binding:
+            _diagnose(work, stage.stage_id, "query_invalid", values={"group_id": group.group_id,
+                "reason": "response_type_or_binding_mismatch"})
             raise InvalidWitness("aggregate response query has a stale group, target, or prefix")
         contract = self.contracts[stage.stage_id]
         if len(request.coefficients) != contract.response_basis.terms - 1:
+            _diagnose(work, stage.stage_id, "query_invalid", values={"group_id": group.group_id,
+                "reason": "response_coefficient_count_mismatch"})
             raise InvalidWitness("aggregate response query has the wrong coefficient count")
         radius = contract.max_squared_coefficient_norm
         if radius is not None and sum((a * a for a in request.coefficients), ZERO) > radius:
             work.add("out_of_chart_aggregate_groups")
             telemetry_event("proposal.out_of_chart")
+            _diagnose(work, stage.stage_id, "domain_query", build=lambda limit: {
+                "group_id": group.group_id, "status": "coefficient_radius_exceeded",
+                "coefficient_norm_squared": sum((a*a for a in request.coefficients), ZERO),
+                "allowed_norm_squared": radius})
             return raw, None
+        _diagnose(work, stage.stage_id, "domain_query", build=lambda limit: {
+            "group_id": group.group_id, "status": "accepted_provider_query",
+            "coefficient_count": len(request.coefficients),
+            "coefficient_norm_squared": sum((a*a for a in request.coefficients), ZERO),
+            "allowed_norm_squared": radius, "unrepresented_parameter_norm": request.unrepresented_parameter_norm,
+            "fit_residual": "provider_contract_only"})
         # Empty record maps avoid O(N) identity loops in the arithmetic module.
         # Source/columns/basis checks occurred at intrinsic extraction above.
         work.add("aggregate_contraction_calls")
@@ -872,6 +963,10 @@ class AggregateRepairService:
             delta = 2 * dyadic_sqrt_upper(reference2 * error2) + error2
             telemetry_event("proposal.bound_available")
             work.add("fixed_reference_bound_calls")
+            _diagnose(work, stage.stage_id, "finite_gram_bound", values={"group_id": group.group_id,
+                "proposal": "fixed_reference", "raw_negative_error": delta, "raw_positive_error": delta,
+                "residual_feature_error_squared": residual2, "tangent_energy": tangent2,
+                "combined_feature_error_squared": error2, "anchor_energy": reference2})
             return raw, (delta, delta)
         if self.response_tier == "quadratic":
             bound = response_gram_enclosure(aggregate.response, aggregate.error, request.coefficients,
@@ -880,17 +975,31 @@ class AggregateRepairService:
             work.add("quadratic_bound_calls")
             work.add("proposal_psd_validation_calls")
             if not _is_psd(raw):
+                _diagnose(work, stage.stage_id, "proposal_invalid", values={"group_id": group.group_id,
+                    "reason": "proposal_not_positive_semidefinite"})
                 raise InvalidWitness("aggregate response proposal is not PSD")
             telemetry_event("proposal.bound_available")
+            _diagnose(work, stage.stage_id, "finite_gram_bound", values={"group_id": group.group_id,
+                "proposal": "quadratic", "raw_negative_error": bound.raw_absolute_gram_error,
+                "raw_positive_error": bound.raw_absolute_gram_error,
+                "feature_error_squared": bound.squared_feature_error_bound_normalized,
+                "surrogate_energy": bound.squared_surrogate_frobenius_norm_normalized,
+                "moment_normalization": bound.normalization})
             return raw, (bound.raw_absolute_gram_error, bound.raw_absolute_gram_error)
         bound = shifted_linear_response_bound(aggregate.response, aggregate.error, request.coefficients,
                                               stage.ridge, 1, request.unrepresented_parameter_norm)
         raw = bound.raw_surrogate_gram
         work.add("proposal_psd_validation_calls")
         if not _is_psd(raw):
+            _diagnose(work, stage.stage_id, "proposal_invalid", values={"group_id": group.group_id,
+                "reason": "proposal_not_positive_semidefinite"})
             raise InvalidWitness("aggregate response proposal is not PSD")
         beta, delta = bound.omitted_psd_trace_normalized, bound.response_gram_error_normalized
         telemetry_event("proposal.bound_available")
+        _diagnose(work, stage.stage_id, "finite_gram_bound", values={"group_id": group.group_id,
+            "proposal": "shifted_linear", "raw_negative_error": beta + delta, "raw_positive_error": delta,
+            "omitted_tangent_trace": beta, "response_gram_error": delta,
+            "feature_error_squared": "not_exposed_by_linear_bound"})
         return raw, (beta + delta, delta)
 
     @operation
@@ -967,16 +1076,29 @@ class AggregateRepairService:
         for stage_index, stage in enumerate(self.job.stages):
             prefix = self._engine._prefix(stage, outputs)
             telemetry_event("stage.attempt")
+            _diagnose(work, stage.stage_id, "stage_started", values={"mode": mode,
+                "response_tier": self.response_tier, "verifier_policy": self.verifier_policy,
+                "retained_records": len(retained), "groups": len(groups),
+                "ridge": stage.ridge, "normalization": stage.normalization})
             raw = _zero(stage.width)
             if mode == "full_replay":
+                _diagnose(work, stage.stage_id, "certificate_bypassed", values={
+                    "reason": "full_replay_control", "domain_check": "not_run", "bound_query": "not_run"})
                 for group in groups:
+                    _diagnose(work, stage.stage_id, "group_replay_started", values={
+                        "group_id": group.group_id, "records": len(group.record_ids), "reason": "full_replay_control"})
                     for rid in group.record_ids:
                         x = self._target(read(rid), stage, prefix, work, "retained_replay_evaluator_calls")
                         raw = _combine(raw, _gram(x, work), 1, work)
+                    _diagnose(work, stage.stage_id, "group_replay_completed", values={
+                        "group_id": group.group_id, "feature_evaluations": len(group.record_ids),
+                        "reason": "full_replay_control"})
                 outputs.append(self._quantize(stage, raw, work))
                 audits.append(StageAudit(stage.stage_id, prefix.digest, "forced_full_replay", 0,
                                          tuple(g.group_id for g in groups), (), None))
                 telemetry_event("stage.forced_full_replay")
+                _diagnose(work, stage.stage_id, "stage_completed", values={"route": "forced_full_replay",
+                    "replayed_groups": len(groups), "certificate_attempts": 0, "proof_acceptance": "not_requested"})
                 continue
             proposals, bounds = {}, {}
             for group in groups:
@@ -997,6 +1119,10 @@ class AggregateRepairService:
                     lo = 1 - negative / stage.normalization / stage.ridge
                     hi = 1 + positive / stage.normalization / stage.ridge
                     work.add("enclosure_scalar_divisions", 4)
+                    _diagnose(work, stage.stage_id, "relative_enclosure", values={
+                        "remaining_groups": len(bounds), "raw_negative_error": negative, "raw_positive_error": positive,
+                        "normalization": stage.normalization, "ridge": stage.ridge,
+                        "lower_scale": lo, "upper_scale": hi, "positive_lower_scale": lo > 0})
                     candidate = None
                     metric = None
                     if lo > 0:
@@ -1008,6 +1134,8 @@ class AggregateRepairService:
                         certificate = certify_relative_enclosure(stage.weights, metric, stage.grids, lo, hi)
                         candidate = certificate.candidate.codes
                         telemetry_event("certificate.attempt")
+                        _diagnose(work, stage.stage_id, "spectral_certificate", build=lambda limit:
+                            _cell_diagnostics(certificate, limit))
                         if certificate.accepted:
                             telemetry_event("certificate.accepted")
                             outputs.append(StageOutput(stage.stage_id, certificate.candidate.codes))
@@ -1019,6 +1147,7 @@ class AggregateRepairService:
                                 telemetry_event("certificate.cell_rejected", reason=check.reason)
                     else:
                         telemetry_event("certificate.nonpositive_lower_scale")
+                        _diagnose(work, stage.stage_id, "spectral_skipped", values={"reason": "nonpositive_lower_scale"})
                     if self.verifier_policy == "spectral_or_interval":
                         # The complete target still has its fixed ridge floor,
                         # even when a relative spectral lower scale is unusable.
@@ -1039,7 +1168,14 @@ class AggregateRepairService:
                         work.add("interval_certificate_factorization_calls")
                         work.add("interval_cell_predicates", len(stage.weights) * stage.width)
                         telemetry_event("interval_certificate.attempt")
-                        interval_certificate = certify_gram_box(stage.weights, candidate, stage.grids, box, stage.ridge)
+                        try:
+                            interval_certificate = certify_gram_box(stage.weights, candidate, stage.grids, box, stage.ridge)
+                        except BaseException as exc:
+                            _diagnose(work, stage.stage_id, "interval_certificate_failed", values={
+                                "failure_type": type(exc).__name__, "reason": "interval_verifier_aborted"})
+                            raise
+                        _diagnose(work, stage.stage_id, "interval_certificate", build=lambda limit:
+                            _cell_diagnostics(interval_certificate, limit, interval=True))
                         if interval_certificate.accepted:
                             outputs.append(StageOutput(stage.stage_id, interval_certificate.candidate))
                             telemetry_event("interval_certificate.accepted")
@@ -1053,6 +1189,9 @@ class AggregateRepairService:
                 missing = [gid for gid, b in bounds.items() if b is None]
                 chosen = min(missing) if missing else min(bounds, key=lambda gid: (-sum(bounds[gid]), gid))
                 telemetry_event("replay.group")
+                _diagnose(work, stage.stage_id, "group_replay_started", values={"group_id": chosen,
+                    "records": len(group_map[chosen].record_ids),
+                    "reason": "unknown_bound" if missing else "largest_remaining_bound"})
                 actual = _zero(stage.width)
                 for rid in group_map[chosen].record_ids:
                     x = self._target(read(rid), stage, prefix, work, "retained_replay_evaluator_calls")
@@ -1060,6 +1199,10 @@ class AggregateRepairService:
                 raw = _combine(_combine(raw, proposals[chosen], -1, work), actual, 1, work)
                 del bounds[chosen]
                 replayed.append(chosen)
+                _diagnose(work, stage.stage_id, "group_replay_completed", values={"group_id": chosen,
+                    "feature_evaluations": len(group_map[chosen].record_ids), "remaining_groups": len(bounds)})
+            _diagnose(work, stage.stage_id, "stage_completed", values={"route": route,
+                "replayed_groups": len(replayed), "unknown_groups": len(unknown), "certificate_attempts": attempts})
             audits.append(StageAudit(stage.stage_id, prefix.digest, route, attempts,
                                      tuple(replayed), unknown, self.provider_id))
         return self._finish(retained, groups, tuple(outputs), tuple(audits), work)

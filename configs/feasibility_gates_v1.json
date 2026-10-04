@@ -1,0 +1,70 @@
+{
+  "schema": "calibration-feasibility-policy-v1",
+  "version": 1,
+  "date": "2026-10-04",
+  "status": "frozen_decision_policy_experiments_paused",
+  "thresholds_are_engineering_choices": true,
+  "scope": "predeclared_go_no_go_policy_not_empirical_attainment_or_confirmation_power",
+  "target": "V_cert",
+  "roots": 2,
+  "calibration_records_per_root": 8,
+  "tokens_per_record": 32,
+  "sequential_requests_per_root": 3,
+  "mismatches_allowed": 0,
+  "missing_or_failed_requests_allowed_for_promotion": 0,
+  "coverage": {
+    "minimum_per_root": {"numerator": 1, "denominator": 4},
+    "denominator": "all_nonempty_retained_stage_groups_under_actually_changed_transitive_ancestor_codes_across_every_planned_request",
+    "numerator": "denominator_groups_resolved_without_retained_target_feature_evaluation",
+    "zero_denominator": "mechanism_not_demonstrated_inconclusive",
+    "retained_source_cache_hits_do_not_count_as_feature_avoidance": true
+  },
+  "quality": {
+    "maximum_retained_fresh_to_base_perplexity_ratio": {"numerator": 6, "denominator": 5},
+    "scope": "every_root_and_request_on_identical_heldout_tokens",
+    "evaluation": "finite_NLL_difference_at_most_log_6_over_5; equal_positive_token_counts",
+    "missing_nonfinite_or_mismatched_token_counts": "inconclusive"
+  },
+  "resources": {
+    "worker_wall_seconds": 900,
+    "worker_cpu_seconds": 900,
+    "worker_address_space_bytes": 6442450944,
+    "worker_peak_rss_bytes_maximum": 6442450944,
+    "artifact_file_size_bytes_maximum": 536870912,
+    "complete_original_preparation_wall_seconds_maximum": 900,
+    "complete_three_request_lifetime_wall_seconds_maximum": 3600,
+    "feasibility_worker_CPU_hour_cap": 3,
+    "development_worker_CPU_hour_cap_after_redesign": 12,
+    "changing_limits_requires_new_policy_and_prospective_version": true,
+    "phase_dispatch_implementation": "explicit_feasibility_phase_with_required_admission"
+  },
+  "cost": {
+    "ordinary_requantization_comparator": "model_only_fresh",
+    "state_oracle": "direct_fresh_with_matching_canonical_state",
+    "equal_information_comparator": "indexed_fresh",
+    "lifetime_horizon": 3,
+    "preparation_charge": "once_for_each_system; include_its_complete_original_output_contract",
+    "required_costs": ["loading", "preparation", "request_work", "required_online_verification", "canonical_state_maintenance", "serialization", "commits", "cleanup"],
+    "same_external_observer_receipt_exclusion": true,
+    "gain_rule": "repair_system_lifetime_strictly_less_than_model_only_fresh_lifetime_on_each_root",
+    "failure_missing_boundary_or_missing_timing": "inconclusive_never_drop",
+    "tie_or_loss_against_indexed_fresh": "no_deletion_exclusive_solver_claim",
+    "feasibility_gain_is_not_reliable_population_speedup": true
+  },
+  "decision_order": [
+    "mismatch_stop_and_repair_implementation",
+    "missing_required_evidence_keep_gate_open",
+    "resource_failure_redesign_under_remaining_budget_or_narrow",
+    "quality_failure_revise_quantization_configuration_prospectively_or_narrow",
+    "zero_changed_ancestor_denominator_mechanism_not_demonstrated",
+    "coverage_below_threshold_redesign_certificate_or_narrow",
+    "coverage_and_quality_pass_but_lifetime_loss_redesign_cost_or_narrow",
+    "all_gates_pass_promote_to_development_not_confirmation"
+  ],
+  "confirmation": {
+    "reliable_speed_lower_95_percent_interval_strictly_above": 1.05,
+    "requires_all_planned_requests_exact": true,
+    "sample_size_justification": null,
+    "frozen_configuration_and_inventory": null
+  }
+}

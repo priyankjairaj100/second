@@ -194,6 +194,8 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None,
                    "ack_path": str(store.attempt / "limits-ack.pending.json")}
         store.write_artifact("request.json", canonical_json(request))
         environment = os.environ.copy()
+        # Never pass an ancestor's allowance as this worker's own admission.
+        environment.pop('CALIBRATION_PHASE_CPU_ADMISSION', None)
         environment.update({name: str(limits.threads) for name in THREAD_VARIABLES})
         environment["PYTHONHASHSEED"] = "0"
         # Module discovery uses the repository root. This does not modify checkpoint execution policy.
@@ -209,6 +211,11 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None,
                     budget_attempt = proposed_attempt
                     record.update(budget_attempt_id=budget_attempt, budget_debit=debit,
                                   budget_scope="CPU admission allowance; trusted comparison worker; controller CPU excluded")
+                    environment['CALIBRATION_PHASE_CPU_ADMISSION'] = canonical_json({
+                        'phase_budget_root': str(phase_budget.root),
+                        'phase_budget_binding_sha256': phase_budget.identity_digest,
+                        'attempt_id': budget_attempt, 'phase': phase,
+                        'command': list(command), 'cwd': str(work)}).decode('ascii')
                 process = subprocess.Popen(
                     [sys.executable, "-m", "src.worker_control", "--child", str(store.attempt / "request.json")],
                     cwd=repository, env=environment, stdin=subprocess.DEVNULL,
@@ -234,7 +241,14 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None,
             finally:
                 if process is not None:
                     _cleanup(process, limits.termination_grace_seconds)
-                outcome["elapsed_wall_ns"] = time.perf_counter_ns() - started
+                cleanup_end = time.perf_counter_ns()
+                outcome["elapsed_wall_ns"] = cleanup_end - started
+                # Same-process monotonic coordinates allow an enclosing observer
+                # to partition controller overhead without adding nested times.
+                record["timing_boundary"] = {
+                    "clock": "time.perf_counter_ns_same_controller_process",
+                    "start_ns": started, "cleanup_end_ns": cleanup_end,
+                    "excluded_tail": "CPU settlement, log summaries, acknowledgment validation, receipt commit and store close"}
                 if process is not None:
                     outcome["returncode"] = process.returncode
                     record["resource_usage"] = getattr(process, "worker_rusage", None)

@@ -1,0 +1,180 @@
+REVISION 8 INDEPENDENT IMPLEMENTATION AND EVIDENCE REVIEW
+Date: 4 October 2026
+Reviewer role: independent adversarial review, coordinated fixes by source owners.
+
+Scope and evidence
+------------------
+This review covers execution provenance, archival restart, transaction timing,
+model-only baseline fairness, arithmetic instrumentation, diagnostic bounds,
+and the written feasibility policy. It is not a research experiment, a real-model
+feasibility observation, a proof of practical speedup, or an independent novelty
+search. No checkpoint or corpus was downloaded. Research remains paused.
+
+Read the v7 baseline before reviewing changed contracts. Inspected the v8
+isolated and sequence inventory validators, their child dispatch paths,
+model_fresh, transaction_timing, arithmetic_audit, telemetry hooks, archive
+verification, and feasibility policy. Independent tests are in
+tests/test_adversarial_v8.py. Their first complete targeted run passed ten
+tests in 8.672 seconds. Two subsequently added admission-bypass regressions
+passed in a targeted 0.132-second run, for twelve independent tests total.
+Those numbers are test-suite elapsed times, not scientific latency observations.
+Source-bound process tests must be rerun after final source
+freeze: editing an executable while a fixture runs intentionally invalidates it.
+
+Findings and coordinated corrections
+-----------------------------------
+1. Nested telemetry spans could admit an unbounded number of distinct timing
+   categories before any outer span returned. Category capacity was reserved
+   only at exit. The owner now reserves on entry. The original 20-nested-span,
+   one-category-limit attack remains an independent regression. One additional
+   explicit overflow bucket is allowed; totals remain observable.
+
+2. The sequence campaign's saved dispatch requests were outside the child
+   sequence archive snapshot. A completed campaign could otherwise reuse its
+   receipt after a request file changed. The owner added canonical-byte/hash
+   comparison with the saved worker request identity. An independent successful
+   sequence followed by request-whitespace tampering now rejects without launch.
+
+3. An arithmetic audit must not resume earlier unobserved arithmetic and label
+   the resulting endpoint counts as a fresh full-run audit. The owner requires
+   an absent or empty runner output and a new sidecar outside that output.
+   The independent partial-output attack rejects before reading a manifest.
+
+4. The existing direct_fresh comparator reconstructs canonical deletion state,
+   including summaries. It is a correctness oracle for that output contract,
+   not ordinary model-only requantization. Root added a separate exact
+   model-only baseline. It performs complete retained sequential feature and
+   quantization work without building a response chart/index. Cross-family
+   equality uses common target digest plus all stage codes, not family-specific
+   model artifact hashes. Independent resume attacks reject altered executable
+   bindings and used calibration bytes before recomputing or returning success.
+
+5. Model-only ModelFreshResult exposes output.model, while the generic telemetry
+   operation decorator initially recognized only state.model. The owner now
+   recognizes the complete model-only output and retains prepare_index as an
+   operation that does not produce a complete model. This corrects diagnostic
+   semantics without changing numerical decisions or canonical bytes.
+
+6. Direct measured model-only or isolated-role execution could bypass the
+   protocol ledger because these leaf children normally rely on their parent
+   dispatcher for admission. Root and the timing owner added bound
+   phase-budget configuration and exact-command live admission. The role helper
+   derives non-software admission from hash-bound manifest/protocol inputs.
+   Feasibility is an explicit supported phase with a required cap. Independent
+   model-only and isolated-child bypass regressions now both fail before
+   checkpoint loading when admission is absent. A
+   generic unbudgeted arbitrary-command observer is not research authorization.
+
+7. Root identified that an arithmetic-audit sidecar could be lost while ordinary
+   saved runner timings remained eligible for analysis. Profile activity must
+   therefore enter the saved runner/method records and exclude those timings
+   from scientific speed ratios. This review additionally flagged that sequence
+   lineage verification uses the same outcome helper: diagnostic timing
+   exclusion must not invalidate an otherwise exact sequence state chain.
+   Root resolved this with a clean_timing option: scientific callers retain
+   exact-completion semantics, while analysis requests clean timing explicitly.
+   Numerical exactness and latency eligibility are separate predicates.
+
+8. The sequence campaign now retains scientific/preflight failure metadata when
+   a worker nonzero-exit status also exists. Exit status and scientific failure
+   explain different parts of the observation; both remain available without
+   dropping any planned step.
+
+Authorization and digest graph
+------------------------------
+An isolated confirmation child verifies actual frozen inventory membership,
+complete declared comparison product, plan payload/hash, raw manifest hash,
+target digest, and executable hashes. A caller Boolean is not authorization.
+The independent child attack substitutes a different target despite otherwise
+valid inventory evidence; it fails before checkpoint preparation.
+
+Plans/inventories bind normalized manifests with only protocol.sha256 cleared.
+The final protocol binds the inventory hash, and the final raw manifest binds
+the protocol. Runtime checks both the normalized and final raw bindings. This
+removes the digest cycle without omitting other scientific settings.
+
+Configuration IDs now bind target and complete chart/service settings within
+each phase. Ordered sequence provenance includes exact request membership,
+order, predecessor, cumulative deletion membership, and frozen roots. The
+campaign product check is not evidence that the chosen number of roots has
+adequate power; that remains a prospective statistical design requirement.
+
+Trusted hash consistency is not authentication against an adversary who may
+replace every manifest, ledger, and receipt. Environment-based admission is
+also a trusted local execution contract, not a hostile-user capability system.
+
+Timing and archival semantics
+----------------------------
+Separate processes alone do not imply cold operating-system caches. Every
+clock retains the uncontrolled-cache label. Setup, method work, quality work,
+comparison validation, and the external transaction boundary remain distinct.
+The optional quality worker is separately budgeted and outside method clocks.
+
+The external observer includes child startup/input/method/output/receipt/exit,
+controller worker finalization, cleanup, and postflight output validation. Its
+final own receipt is outside its nonrecursive boundary. Disjoint spans must sum
+exactly to the enclosing duration. No nested time may be added to that duration.
+
+A reused complete receipt is archival evidence, never a new small latency.
+Existing partial output cannot satisfy a fresh-transaction request. Missing
+outer timing cannot be replaced by merely loading a completed child output.
+Failed worker/child attempts remain bound and verified on restart. Unknown
+child output semantics are ineligible for fresh scientific latency. The
+independent successful quality-child fixture cannot be mislabeled as a
+canonical-state transaction. A changed separately bound input also invalidates
+an archived timing before worker launch, even though it lies outside output.
+
+The phase ledger bounds admitted allowances under its stated trusted-worker
+scope. Pending/uncertain attempts retain reservations; observed overrun is not
+truncated. It is not an absolute physical CPU limit, a hostile descendant
+containment mechanism, or an automatic cross-protocol project cap. Controller
+CPU and nested admission overlap must remain explicitly labeled.
+
+Arithmetic and certificate diagnostics
+-------------------------------------
+The profiler counts successful standard Fraction allocator returns in the
+current thread/process. Initial GC-visible values are a separate bounded
+snapshot. The independent transient-allocation test creates and discards a
+12,346-bit numerator before a small final value; the peak endpoint remains
+reported, and nested exception unwinding restores phase attribution.
+
+This is not coverage of hidden integer intermediates, C bypasses, other threads
+or child processes, or live object lifetimes. Those exclusions are explicit.
+Profile replacement, observed thread/process work, and observer errors make
+coverage incomplete. Missing tracemalloc data is null, not zero. Profiled clocks
+are diagnostic and do not establish clean service latency.
+
+Certificate diagnostics retain bounded stage/event samples and aggregate
+dispositions/totals with omitted/saturation counters. Oversized rationals use
+sign and bit lengths without stringifying the full numerator/denominator. The
+independent 100,001-bit scalar report remains small. A diagnostic encoding
+failure does not abort a valid model. An actual model/evaluator failure remains
+failed and cannot be hidden by an earlier successful stage. Provider-internal
+information absent from the public contract remains unavailable, not inferred.
+
+Feasibility decision policy (C04)
+--------------------------------
+The thresholds can be frozen before empirical data as engineering decisions.
+They cannot be described as attained gates, optimal cutoffs, general standards,
+or power justification. configs/feasibility_gates_v1.json and
+docs/FEASIBILITY_GATES.md make that distinction explicit.
+
+The policy uses every planned request and every actually changed transitive
+ancestor stage group on each root. Feature-evaluation avoidance, not cache-hit
+counts or raw read counts, defines the numerator. A zero denominator is
+inconclusive. Missing/failed requests cannot disappear from the denominator or
+promotion decision. The group partition and target are prospectively fixed.
+
+Quality compares finite NLL on identical positive-count heldout token sets in
+log space. Complete lifetime cost charges setup once, all three requests, input
+and output work, verification, state maintenance, commits, and cleanup at the
+same boundary. Plain requantization claims use the model-only baseline; the
+full-state oracle remains separate. A tie/loss against equally indexed fresh
+cannot support a deletion-exclusive solver claim.
+
+The written stop/redesign/narrow policy can close the policy-writing item only.
+Actual real sources, a feasible complete path, automatic gate evaluation,
+all required real observations, amortized benefit, quality, root-level precision,
+and a reliable speed interval remain unestablished. No software fixture closes
+those empirical dependencies. No universal speedup or novelty of classical
+interval arithmetic, exact Gram subtraction, or profiling is claimed.

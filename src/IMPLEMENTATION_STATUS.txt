@@ -1,4 +1,5 @@
-Revision 7 preparation, 4 October 2026.
+Revision 8 preparation, 4 October 2026.
+Research experiments remain paused under configs/protocol_v4.json.
 
 CURRENT REFERENCE MODULES
 - exact_core.py: exact reverse LDL, rational rounding, and shape-cell certificate.
@@ -11,6 +12,7 @@ CURRENT REFERENCE MODULES
 - aggregate_response_service.py: linear/quadratic grouped state and complete repair.
 - domain_refinement.py: exact interval reverse-LDL, ridge clipping, and intersections.
 - identity_cache.py: original-model true-Gram caching and canonical retained refresh.
+- model_fresh.py: complete sequential target model without persistent deletion state.
 - transformer_backend.py: pinned library-math scalar decoder and input identity gate.
 - certified_intervals.py: rational enclosures and certified nonlinear rounding.
 - certified_transformer.py: automatic interval jets, finite-error proofs, lazy stage weights.
@@ -20,17 +22,21 @@ CURRENT REFERENCE MODULES
 - target_manifest.py: fixed V_cert target choices and source-bound identity.
 - chart_construction.py: independent chart recipes, tiers, and identity-cache factory.
 - resource_preflight.py: config-only counts and declared planning limits.
-- service_telemetry.py: exclusive diagnostic spans outside canonical state.
+- service_telemetry.py: exclusive spans and bounded external certificate diagnostics.
+- arithmetic_audit.py: transient constructed Fraction endpoint and memory diagnostics.
 - request_workload.py: original-state scores, request laws, boundaries, and phase checks.
 - experiment_inventory.py: frozen independent requests, source versions, labels, and order.
 - experiment_runner.py: warm comparisons, exact equality, and empty/all deletion.
 - sequence_runner.py: preceding committed state, ordered lineage, and immutable restart.
-- isolated_comparison.py: separate setup/method workers with child commit timing.
+- sequence_campaign.py: source-bound bulk sequences and complete planned outcomes.
+- isolated_comparison.py: separate setup/method workers and optional quality worker.
+- isolated_inventory.py: frozen isolated campaigns and confirmation-product admission.
+- transaction_timing.py: external transaction observation through output verification.
 - worker_control.py: process limits, cleanup, wait4 usage, and durable outcomes.
 - phase_budget.py: protocol-scoped CPU allowance admission and settlement.
-- experiment_campaign.py: independent-request confirmation product and safe restart.
+- experiment_campaign.py: warm independent-request campaign and safe restart.
 - run_store.py: atomic attempts, immutable completion, and verified artifacts.
-- result_analysis.py: failure counts, root-cluster paired summaries, and lifetime costs.
+- result_analysis.py: failure-aware paired summaries and lifetime costs; profiled-run exclusion.
 
 NUMERICAL AND STATE CONTRACTS
 V_cert remains distinct from legacy library-math V and historical floating target E.
@@ -58,7 +64,16 @@ Trusted cache origin remains a required premise.
 Its canonical state differs from response state.
 Compare full model outputs across families and same-schema state within each family.
 
-FAIRNESS AND COST
+MODEL-ONLY AND INDEXED FAIRNESS
+Model-only fresh constructs all sequential codes using the same finite target and exact quantizer.
+It creates no response chart, deletion metadata, or persistent Gram cache.
+It is the ordinary requantization control, with a distinct model-only output contract.
+Full-state direct fresh remains the independent canonical-state oracle.
+A gain against unnecessary index rebuilding cannot prove faster ordinary requantization.
+The common target encoding compares all model codes across output and state families.
+The model-only CLI still incurs original calibration-manifest parsing and target setup.
+It is an executable control, not a lower bound on every possible implementation.
+
 Response repair and indexed fresh use the same summaries and planner.
 Identity-cache repair and indexed fresh use the same old cache and solver.
 Neither interface establishes an inherent deletion-specific solver advantage.
@@ -66,46 +81,88 @@ Split-interface validation and serialization overhead do not create an algorithm
 Preparation, deleted extraction, replay, exact solves, metadata, state, and output remain costs.
 Rational slots do not bound total bytes, bit complexity, or peak resident memory.
 
-EXECUTION
-The original campaign isolates complete comparisons but retains warm shared method arms.
-The standalone sequence runner prepares the original state once.
-Each step loads the preceding committed repair state under fixed original normalization.
+EXECUTION AND TIMING
+The original campaign isolates complete comparisons with warm shared method arms.
+Frozen isolated campaigns now dispatch separate setup and method processes.
+An optional quality worker runs only after exact method-output agreement.
+Its finite heldout NLL, CPU usage, and time remain separate from method clocks.
+This is diagnostic quality evaluation, not native framework equivalence or empirical NLP evidence.
+
+Frozen sequence campaigns execute each sequence in one limited worker.
+Original state is prepared once and each step loads its committed predecessor.
 Every step checks complete model and canonical state against fresh retained construction.
+Original normalization, grids, ridge, and target remain fixed.
 Empty and complete deletion work; heldout data remain nonempty.
 Failures retain attempted and later unstarted requests.
-Bulk campaign sequence dispatch remains open.
+Step methods remain warm within the sequence worker.
+Frozen dispatch and confirmation-product checks do not supply real empirical inventories.
 
-The isolated runner uses four workers: setup and one worker per comparison method.
-Repair and indexed fresh load the original canonical state.
-Direct fresh does not load that unnecessary state.
-Its timer includes startup, inputs, one method, durable artifacts, child receipt, exit, and cleanup.
-It excludes parent verification and enclosing worker-control/parent receipt commits.
-CPU settlement occurs after the worker timer.
-Original preparation is separate; isolated execution does not compute NLP quality.
-Process separation does not establish cold operating-system caches or production latency.
-A sealed child without durable outer timing becomes a failed recovery case.
-A sealed worker resumes its original observation without a new budget reservation.
-Isolated confirmation remains blocked pending compatible campaign inventory support.
+Legacy isolated worker timing includes startup, inputs, one method, artifacts, child commit, exit, and cleanup.
+It excludes parent verification and final controller/accounting receipts.
+The new external observer includes child-controller commits, cleanup, and output/source verification.
+Its own final receipt and initial bootstrap remain outside its declared interval.
+The disjoint outer partition sums to the enclosing elapsed time.
+Nested service times must not be added to that total.
+Model-only, canonical-state, whole-comparison, and sequence clocks have distinct output contracts.
+A whole-comparison clock is not a per-method latency.
+Single-role measurement does not independently prove equality against the research oracle.
+Fresh transactions require absent outputs; resumed work and archival reuse are not new fresh observations.
+A sealed child without durable outer timing cannot become a cached fast success.
+Operating-system caches remain uncontrolled.
 
-The CPU ledger caps admission within one exact protocol hash.
-Unknown attempts keep their full allowances; observed overruns remain charged.
-It does not cap controller CPU, arbitrary descendants, separate protocols, or global hardware use.
-A distinct feasibility execution-phase label remains unimplemented.
+Complete-clock primary campaign, matched lifetime dispatch, and analysis integration remain open.
+Model-only confirmation likewise requires its compatible frozen comparator inventory.
+Research model-only and direct isolated-child commands require live exact-command CPU admission.
+No current protocol authorizes research execution.
+
+OBSERVABILITY
+The external certificate funnel records exposed domains, descriptors, finite bounds,
+sampled decisions, replay, actual feature evaluations, and model completion.
+Detail caps, omissions, disposition counts, and bounded rational encodings are explicit.
+It adds no payload, feature, or diagnostic state to canonical output.
+Opaque provider fit, Hessian, denominator causes, and some bound decompositions remain unavailable.
+
+The arithmetic audit observes standard Fraction allocation in its current thread and process.
+It records constructed endpoint counts and bit lengths without retaining rational values.
+Available RSS, traced allocation peaks, initial-value scans, and artifact sizes are distinct diagnostics.
+Hidden integer/native intermediates, object lifetimes, and separate child execution remain outside scope.
+Cumulative endpoint sizes are not simultaneously live memory.
+Profiler-marked observations are excluded from clean speed ratios even without the audit sidecar.
+Exact output comparisons remain valid under profiling.
+
+RESOURCE AND DECISION BOUNDARIES
+Protocol 4 supports feasibility, development, confirmation, and software-test phases.
+Planned research admission caps are 3, 12, and 64 worker CPU hours respectively.
+Unknown attempts retain full allowances; observed overruns remain charged.
+Changing output directories cannot reset the same frozen protocol ledger.
+The ledger does not cap controller CPU, separate protocols, hostile descendants, or global hardware use.
+Per-process address-space limits are not measured RSS or process-tree memory bounds.
+Trusted descendant cleanup does not establish adversarial process containment.
+
+C04 closes only the written policy in configs/feasibility_gates_v1.json.
+It requires exactness, resources, changed-ancestor feature avoidance, quality, preparation,
+and a strict three-request lifetime gain against ordinary model-only fresh on every feasibility root.
+No real root has been evaluated against this policy.
+C05, D04, and D05 remain partial under their original comprehensive criteria.
 
 EVIDENCE AND REMAINING GATES
-The revision 6 checkpoint passed 261 software correctness tests.
-Its preserved record is docs/VALIDATION_V6.md.
-Use docs/VALIDATION.md and its referenced logs/hashes for current revision 7 evidence.
+Historical revision 6 validation passed 261 correctness tests; see docs/VALIDATION_V6.md.
+Historical revision 7 validation passed 340 correctness tests; see docs/VALIDATION_V7.md.
+Use the sealed revision 8 log and tested hashes referenced by docs/VALIDATION.md for current evidence.
+Do not carry historical counts forward as validation of changed source.
 No fixture count is a research success probability or benchmark result.
+The 35-page revision 7 report PDF remains unchanged; docs/REVISION_8.md is the new note.
 Historical raw experiment files remain unavailable.
 
 Still unestablished:
 - feasible real checkpoint execution and validated tokenizer/corpus artifacts;
-- actual disjoint pools, original-state scores, and frozen confirmation inventories;
-- practical certificate coverage, absolute NLP quality, and complete external latency;
+- actual disjoint pools, original-state scores, final configurations, and frozen empirical inventories;
+- model-only confirmation and matched complete-clock lifetime execution and analysis;
+- complete provider-internal diagnostics and comprehensive arithmetic/memory observation;
+- practical certificate coverage, absolute NLP quality, and statistically justified complete latency;
 - competitive memory, preparation, storage, lifetime cost, or reliable full-model speedup;
 - native Hugging Face/CUDA/E equivalence, GPU kernels, and integrated work scheduling;
 - physical erasure, hostile-store authentication, or proof-assistant verification.
 
-Protocol v3 preserves unresolved empirical gates.
+Protocol v4 preserves unresolved empirical gates.
 Research experiments remain paused.
