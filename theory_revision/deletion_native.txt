@@ -1,0 +1,176 @@
+DELETION-NATIVE QUANTIZATION: AN EXPLICIT ALTERNATIVE TARGET
+Theoretical and algorithmic revision; no experiments performed.
+
+0. WHAT THIS CAN AND CANNOT CLOSE
+
+The observed first-stage code changes obstruct any global unchanged-prefix shortcut for the original sequential GPTQ target. They do NOT obstruct an additive, deletion-native quantizer whose calibration feature maps are fixed independently of the deletable corpus. The latter admits a margin-free full-model repair theorem even when every quantized tensor changes.
+
+This is a different reference algorithm. Let Q_seq(W,C) denote the existing sequential target. All equalities below are to a newly specified Q_anchor(W,C), Q_partition(W,C), or finite-bank Q_bank(W,C). No claim that Q_anchor equals Q_seq, or that its NLP quality matches GPTQ, follows. The alternatives should be separate algorithm tracks, not an undisclosed substitution in the existing experiment.
+
+The strongest practical alternative is Q_anchor with additive second and cross moments, exact deletion of those moments, and a deterministic asymmetric reconstruction quantizer. A block-anchored extension contains sequential recalibration inside each block. A finite precompiled block bank additionally gives an exact cost–quality selection theorem, but is a narrower model-selection problem and must be labeled as such.
+
+1. FIX THE REFERENCE CONTRACT BEFORE CALIBRATION
+
+For each quantized linear module l, fix:
+  * base weight W_l in R^{p_l x d_l};
+  * rational/dyadic quantization grids, elimination order, and exact tie rule;
+  * a positive rational ridge lambda_l and fixed normalization M0;
+  * corpus-independent deterministic maps x_l^r(z), y_l^r(z), r=1..R_l,
+    and nonnegative rational mixture weights omega_lr;
+  * the exact deterministic reconstruction/rounding program below.
+
+A map may be the fixed full-precision teacher, a weight-only quantized proxy, or a proxy built on a disjoint, expressly nondeletable reference corpus. A proxy originally fitted to C is NOT independent just because we freeze it afterward. Its fitting dependence would have to be included in the deletion target.
+
+The feature maps may be pinned finite-precision neural programs. Each record is evaluated deterministically in a record-local manner; batching, padding, kernels, and tokenization are specified. Their finite outputs are then treated as exact dyadic numbers. This hybrid reference is executable in principle and avoids claiming exact real-valued neural inference. It is not the distinct ordinary FP64 accumulation/Cholesky program.
+
+For record j let X_lj collect the mixture-weighted proxy input columns and Y_lj the correspondingly weighted teacher output columns. To avoid irrational square-root weights, implement weighted sums directly. Define exact moments
+  H_l(S) = lambda_l I + (1/M0) sum_{j in S,r} omega_lr X_ljr X_ljr^T,
+  A_l(S) = lambda_l W_l + (1/M0) sum_{j in S,r} omega_lr Y_ljr X_ljr^T,
+  U_l(S) = A_l(S) H_l(S)^{-1}.
+H_l is positive definite for every retained subset, including the empty subset.
+
+Q_anchor independently applies the declared deterministic GPTQ-style lattice-rounding program to center U_l(S) with metric H_l(S). Exact rational unit-LDL elimination and rational grid comparisons suffice; no floating-point square root must be taken as an exact oracle. A verified interval implementation can accelerate the same program and must resolve ambiguous cells with exact arithmetic/fallback.
+
+The objective is
+  R_l(Q;S) = (1/M0) sum_{j,r} omega_lr ||Q X_ljr - Y_ljr||_F^2
+             + lambda_l ||Q-W_l||_F^2.
+Completing the square gives
+  R_l(Q;S) = tr[(Q-U_l) H_l (Q-U_l)^T] + const(S).
+Thus the asymmetric reconstruction target is still a weighted quadratic lattice problem. We do NOT claim greedy GPTQ solves the discrete global minimum.
+
+Special case: X_lj is the teacher input and Y_lj=W_l X_lj. Then A_l=W_l H_l and U_l=W_l exactly. This gives ordinary teacher-anchored second-order quantization with no center-update cost. Multiple corpus-independent proxy views are allowed without losing additivity.
+
+2. EXACT REPEATED DELETION, WITH ALL WEIGHTS ALLOWED TO CHANGE
+
+Maintain canonical exact H_l,A_l and the retained record-ID set. For deletion F subset S:
+  H_l' = H_l - (1/M0) sum_{j in F,r} omega_lr X_ljr X_ljr^T,
+  A_l' = A_l - (1/M0) sum_{j in F,r} omega_lr Y_ljr X_ljr^T.
+Refactor H_l', solve for U_l', and run the deterministic rounding program at every module. Fixed proxy features do not change when preceding emitted quantized tensors change. There is therefore no retained-side activation recomputation.
+
+Theorem 1 (canonical full-model repair). Under the contract in Section 1, the state produced after deleting F is exactly the state constructed afresh on S\F, and the emitted model is exactly Q_anchor(W,S\F). For any deletion sequence F1,...,Fr, disjoint after ID validation, the final state and model depend only on the final retained set, not on request order or grouping.
+
+Proof. Each moment is a sum of intrinsic per-record contributions plus a fixed ridge. Exact subtraction gives the defining retained-set sums. Positive ridge guarantees all factorizations exist. Canonical factorization and deterministic tie breaking make all derived objects functions of those sums. Induct over requests. This proof makes no rounding-margin or unchanged-code assumption.
+
+If sums are stored with ordinary floating-point addition/subtraction, the canonical-state claim generally fails. Use exact dyadic superaccumulators, an exact integer representation at a common exponent, or a certified canonical summation constructor. Factor and center arithmetic may require growing precision. Scalar-arithmetic counts below are not unqualified bit-complexity or latency bounds.
+
+The deletion request must provide the removed records before erasure, or the service must retain their intrinsic features/moments. An ID alone cannot recover a vanished contribution. With raw records available, replay only removed records through the fixed teacher/proxies and erase them after updating state. With per-record moment storage, read only removed moments. A scalar total H without record contributions and without removed content is insufficient.
+
+3. EXACT LOW-RANK CENTER AND FACTOR REPAIR
+
+For one view write X_F,Y_F for deleted columns (normalization explicit):
+  H'=H-X_F X_F^T/M0, A'=A-Y_F X_F^T/M0.
+Then the exact identity
+  U' = U + (U X_F-Y_F) X_F^T H'^{-1}/M0
+holds. Multiply both sides by H' to verify it. Multiple weighted views give the same identity after concatenation or direct weighted summation.
+
+This avoids rebuilding U from scratch when the deleted token rank r is small. A solve H' V=X_F and a p-by-r times r-by-d update cost O(d^2 r+p d r), after updating the factor. Exact rank-one LDL downdates cost O(r d^2); a dense O(d^3) refactor is the bounded fallback. Because H' is positive definite, exact downdates exist; finite-precision implementations may still need a rigorous refactor fallback.
+
+The final greedy rounding sweep can cost O(p d^2), even if only r columns of calibration data were removed. Existing certified decision reuse can reduce that work opportunistically, but this alternative's full-model speedup does not depend on reuse: it removes the retained forward/moment terms. Output serialization remains Omega(number of emitted weights) when a materialized new model is required.
+
+4. MARGIN-FREE FULL-MODEL WORK SPEEDUP
+
+Let N=|S|, k=|F|, n=N-k, with equal bounded token counts for this simplified accounting. Let f be the declared per-record cost to obtain fixed features and accumulate all H/A moments; let G be the dense full-model factor/center/rounding schedule, including its verification; let J be common artifact-authentication/output work. Use the same target, grid, numerical contract, and declared computational primitives for fresh and repair.
+
+A simple repair that deliberately uses the same dense schedule G costs
+  C_repair <= k f + G + J + D,
+where D explicitly charges additional state reads, authentication, deletion-state maintenance, disposal, and bookkeeping. Fresh retained-data construction costs
+  C_fresh = n f + G + J
+in the same charged-work model. Hence
+  C_fresh/C_repair >= (n f+G+J)/(k f+G+J+D),
+which is strictly above one whenever (n-k)f>D.
+
+More interpretable: if k/n<=eta, (G+J)/(n f)<=gamma, D/(n f)<=delta, and eta+delta<1, then
+  C_fresh/C_repair >= (1+gamma)/(eta+gamma+delta)>1.
+The derivative with respect to the actual dense/common fraction is negative when eta+delta<1, so its upper bound gamma gives the stated lower bound.
+
+For fixed dimensions, a fixed number of bounded-cost feature maps, G+J+D=o(N), and k=o(N), accepted exact repair is o(N) work while fresh retained construction is Omega(N). Unlike the earlier certificate theorem, this holds for every deletion set of that size and does not assume positive rounding margins. Even changes in all quantized tensors do not invalidate it.
+
+The bound is conditional on actual work accounting. It is not a measured latency theorem. If G dominates for an enormous model and tiny calibration set, the bound approaches one. Reading large stored per-record features and exact-arithmetic bit growth are costs. A fresh constructor allowed the same immutable feature cache may replace f by feature-read-plus-moment cost; the theorem must use that stronger comparator. It is not an information-theoretic lower bound against every cache-aware algorithm.
+
+Preprocessing and lifetime: if extra preparation costs P and m requests save s_i=C_fresh,i-C_repair,i, total savings require sum_i s_i>P. State storage is O(sum_l(d_l^2+p_l d_l)) arithmetic values plus IDs/raw records, and optional per-record features or moments. Fixed proxy model storage, immutable base W, scale metadata, and exact precision are additional charged resources.
+
+For adversarial bulk deletion, choose min(removed-side update, fresh retained-side construction) using known declared-work upper bounds. A capped verified fast implementation can fall back to the same exact Q_anchor constructor. It must never fall back to a different Q_seq target.
+
+5. CALIBRATION QUALITY: A DETERMINISTIC BOUND, NOT AN ACCURACY PROMISE
+
+The simplest quality theorem concerns ideal mathematical inference operators parameterized by the emitted weights, and a layered network f_l(x)=sigma_l(W_l x). Exact matching of a finite quantization program does not itself make floating-point inference globally Lipschitz. To claim the same numerical bound for a machine inference program, add independently bounded implementation/teacher-anchor errors at the appropriate stages; for stage error zeta_l the recurrence acquires +zeta_l. These errors cannot silently be set to zero. In the following theorem, teacher anchor data are the inputs of the mathematical teacher being compared, or their approximation errors have been charged explicitly. The nonlinearity sigma_l is L_l-Lipschitz on a certified domain containing teacher and quantized intermediate values. Residual or attention architectures require a valid computational-graph extension and domain bounds; one must not assume arbitrary transformer operations globally have unit Lipschitz constants.
+
+On a retained evaluation set S with M tokens, use RMS Frobenius norm ||Z||_S=||Z||_F/sqrt(M). Let teacher and deployed inputs to layer l be T_{l-1} and V_{l-1}, and e_{l-1}=||V_{l-1}-T_{l-1}||_S. Let E_l=Q_l-W_l. With lambda_l>0 define the teacher-anchored ridge reconstruction loss
+  R_l = ||E_l T_{l-1}||_S^2 + lambda_l ||E_l||_F^2.
+This can be obtained exactly from the teacher moments, after converting the fixed M0 normalization to M where required.
+
+Lemma 2 (drift robustness). For every perturbation D with ||D||_S<=d,
+  ||E_l(T_{l-1}+D)||_S <= sqrt[(1+d^2/lambda_l) R_l].
+Proof: triangle inequality, ||E_l D||_S<=||E_l||_F d, and Cauchy-Schwarz applied to (||E_l T||_S,sqrt(lambda_l)||E_l||_F) and (1,d/sqrt(lambda_l)).
+
+Consequently the deployed-teacher discrepancy obeys
+  e_l <= L_l [ ||W_l||_2 e_{l-1}
+               + sqrt((1+e_{l-1}^2/lambda_l) R_l) ], e_0=0.
+A separate often tighter bound is
+  e_l <= L_l[||Q_l||_2 e_{l-1}+||E_l T_{l-1}||_S].
+Take the minimum of both valid upper bounds recursively. This explicitly charges accumulation caused by the teacher/deployed activation mismatch; freezing anchors does not make that mismatch vanish.
+
+For fixed proxy anchors X_l and teacher target Y_l=W_l T_{l-1}, the direct asymmetric analogue is
+  e_l <= L_l[||Q_l||_2 ||V_{l-1}-X_l||_S
+                    + ||Q_l X_l-Y_l||_S].
+The first norm can be upper bounded by e_{l-1}+||T_{l-1}-X_l||_S. Multiple proxies give multiple valid bounds; use the best certified one, or a proved covering bound. A mixture loss alone does not guarantee that any proxy is close to deployed inputs.
+
+If the final output is logits, empirical mean token cross-entropy differs from the teacher by at most sqrt(2) e_final, since log-sum-exp minus the correct logit has Euclidean gradient norm at most sqrt(2), followed by Cauchy-Schwarz. This is a deterministic guarantee on the specified retained/evaluation set, not a population generalization theorem. Loose layer Lipschitz factors may make it numerically uninformative; no claim of practical quality is closed until evaluated.
+
+For exact minimizers of A(Q)+lambda B(Q) over one fixed codebook, increasing lambda makes B nonincreasing and A nondecreasing. This follows by adding the two optimality inequalities. It is a genuine Pareto property of exact minimizers, NOT of arbitrary greedy GPTQ outputs. A finite candidate selector can realize it exactly; see Section 7.
+
+6. BLOCK-ANCHORED SEQUENTIAL TARGET
+
+Fix a partition of the computation into contiguous blocks. At every block entrance, calibration uses the fixed teacher's entrance activation. Within a block, perform the original declared sequential quantizer, feeding each later stage the earlier quantized outputs. Deployment concatenates all emitted quantized blocks normally; it does not reset live activations to teacher values.
+
+This Q_partition is independent across blocks at calibration time. A repair can update a block's first-stage additive teacher Gram from removed records. Certify unchanged internal prefixes if possible, then replay retained block-local activations only after the first changed internal stage. Changed upstream blocks cannot invalidate another block's anchor features. Canonical repeated repair is exact provided the teacher anchor cache is intrinsic per record and each block's retained internal state is refreshed to its defining target.
+
+At the endpoints: blocks of one quantization stage give the additive Q_anchor target; one full-model block recovers the sequential calibration target (assuming its model input equals the teacher input). Intermediate partitions confine propagation to a chosen block length. They can reduce retained replay, but in the worst case all block interiors need replay. The claim 'block resets guarantee retained-data-free repair' is false for blocks containing nonlinear/sequentially dependent internal stages.
+
+Let G_b be the quantized block and T_b the teacher block. For teacher entrance data t_{b-1}, define eps_b=||G_b(t_{b-1})-T_b(t_{b-1})||_S and let K_b bound the Lipschitz constant of G_b on the needed domain. Then
+  e_b <= K_b e_{b-1}+eps_b,
+  e_B <= sum_b eps_b product_{c>b} K_c.
+The local discrepancy includes all internal interactions. This gives a quality accounting for every fixed partition, but no universal monotonic claim that longer blocks improve quality or shorter blocks lower this bound. Any partition chosen on C is part of the calibration pipeline and must be reselected on retained data; alternatively choose it a priori or on independent development data.
+
+7. OPTIONAL EXACT COST–QUALITY FRONTIER VIA A FIXED BLOCK CANDIDATE GRAPH
+
+This is an additional algorithm, useful if a certified selectable family is desired; it must not be presented as deletion of calibration influence from arbitrary GPTQ weights.
+
+Fix a DAG whose nodes are layer boundaries. Edge e=(a,b,h) is a complete corpus-independent quantized block G_e replacing teacher layers a+1,...,b. Its candidate parameters, bit cost c_e, and Lipschitz bound K_e are fixed before observing C. Store per-record squared teacher-anchor discrepancy
+  v_ej = ||G_e(t_a(z_j))-T_{a:b}(t_a(z_j))||_F^2.
+Set eps_e(S)=sqrt[(1/M_S) sum_{j in S} v_ej]. M_S is retained token count. Each edge sum and token count are additive.
+
+For an integer deployment-cost budget B, dynamic programming computes
+  D[0,0]=0; all other unreachable entries=+infinity,
+  D[b,c] = min_{e=(a,b,h), c_e<=c} [K_e D[a,c-c_e]+eps_e(S)].
+Use exact/certified comparisons and a fixed tie rule. Store predecessor edges to emit the model.
+
+Theorem 3. D[L,B] (or the minimum over c<=B) is the smallest compositional output-error bound among all candidate paths within budget. The selected model's actual retained-set teacher output RMS error is at most that value. Deleting F exactly updates every edge loss sum by subtracting v_ej and reruns the DP; this yields the identical selected model and canonical state as fresh selection on S\F.
+
+Proof. Every edge transforms a valid predecessor error bound d to K_e d+eps_e, a monotone function for K_e>=0. Induct over nodes and budgets: the best predecessor error dominates every larger one, so Bellman minimization loses no feasible path. The block error recurrence proves validity of each path bound. Moment additivity proves deletion exactness.
+
+The same Bellman argument extends to several additive integer budgets (for example deployed bytes and fixed block-inference operation count), with the corresponding multidimensional, potentially expensive DP.
+
+For nested fixed candidate graphs E1 subset E2 at the same deployment budget, the optimal certificate cannot worsen: D_E2[L,B]<=D_E1[L,B]. Enlarging the bank by Delta edges adds O(N Delta) stored scores, its declared preparation evaluations, and O(k Delta+B Delta) request arithmetic. This is a proved one-sided quality-versus-repair/storage tradeoff; improvement need not be strict, so dominated banks can be discarded. It does not imply monotone quality when merely changing a sequential block partition.
+
+This realizes a mathematically precise Pareto frontier across deployment cost and certified quality bound: retaining only nondominated pairs (c,D[L,c]) loses no attainable bound/cost pair. It does not guarantee Pareto optimality for actual task accuracy, and large Lipschitz constants may make the certificate loose.
+
+With stored v_ej, a request costs O(k |E| + |E| B + output cost) scalar work and no retained neural forward passes; recomputing removed v_ej trades storage for removed-side inference. Preprocessing costs all candidate edge evaluations and stores O(N |E|) scores plus candidates. The same caveat about exact square-root comparison/bit complexity applies. Candidates that were themselves fitted to deletable C invalidate additivity of this selection-only target unless their complete fitting stage is also repaired. This is the principal reason this optional algorithm should not displace the anchor-moment proposal.
+
+8. PRIMARY-SOURCE POSITIONING (CHECKED OCTOBER 4, 2026)
+
+GPTQ (Frantar et al., 2022/ICLR 2023): https://arxiv.org/abs/2210.17323 and official https://github.com/IST-DASLab/gptq. Establishes second-order reconstruction quantization; true-sequential implementations propagate quantized inputs. Do not claim a new quantization primitive merely for using GPTQ.
+
+GPTAQ / earlier GPTQv2 (Li et al., arXiv 2504.02692): https://arxiv.org/abs/2504.02692 ; current OpenReview paper https://openreview.net/pdf?id=QdELyl0FST. Its stated asymmetric calibration matches quantized outputs to original full-precision outputs and addresses accumulated error. Thus asymmetric targets/cross-moment objectives alone are not defensible novelty.
+
+BRECQ (Li et al., ICLR 2021): https://arxiv.org/abs/2102.05426 and official https://github.com/yhhhli/BRECQ. Block reconstruction and asymmetric quantized-input-to-full-precision-output calibration already exist. Thus block calibration alone is not novelty.
+
+The potential contribution here is the deliberately specified deletion-native calibration contract, its exact retained-data-free repeated-state repair, the all-code-change full-model work theorem, and honest cost/drift accounting. This note is not an exhaustive novelty search and does not establish priority.
+
+9. RECOMMENDATION TO THE MAIN PROJECT
+
+Keep original Q_seq repair as the primary target unless evidence justifies changing the paper. Add Q_anchor as a separately named target, implementing first teacher-only H then asymmetric H/A. Its theorem addresses the observed full-model bottleneck directly by preventing calibration-dependency propagation structurally. All-weight change no longer defeats the speedup.
+
+What is closed theoretically: exactness, order-independent repeated deletions, SPD existence, low-rank center identity, a margin-free full-model charged-work speedup regime, and explicit retained-calibration drift/CE bounds.
+
+What cannot be closed by proof alone: useful numerical quality bounds on real transformers, the quality/runtime tradeoff of teacher versus proxy anchors, bit-complexity constants and stable finite implementation costs, hardware latency, and empirical novelty/competitiveness. These are the proper next experimental questions once the target choice is explicit. Do not call the current original-target speedup empirically established or claim an unconditional speedup over every method.

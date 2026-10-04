@@ -1,0 +1,114 @@
+INDEPENDENT CHECK OF CHANGED_PREFIX.TXT AND DELETION_NATIVE.TXT
+2026-10-04. No experiments performed.
+
+1. Checked and valid mathematical claims
+
+* The sharp signed perturbation coefficient eta/sqrt(1-eta^2) is correct:
+  the extremum of (eta^2-z^2)/(1+z)^2 occurs at z=-eta^2. The 2-by-2
+  construction certifies sharpness for abstract quadratic perturbations.
+* The unified relative spectral interval a Hbar <= Htrue <= b Hbar, with
+  0<a<=b, gives chi=(b-a)/(2sqrt(ab)) by first removing scalar covariance
+  changes. It contains both the old PSD and new signed bounds.
+* Candidate transport eta<=2ae+e^2 is correct; replacing a by 1 is valid
+  with Hbar=lambda I+ZZ^T/M0. The all-stage induction works even when the
+  first and all later candidate weights differ from old weights.
+* The retained covariance cancellation identity, rank-2r Gram update,
+  rank-(n-1) softmax construction, and finite-difference polynomial-moment
+  obstruction are sound at the stated real/exact arithmetic level.
+* The feature-query lower bound is properly restricted. The two-coordinate
+  GPTQ example crosses a strict rounding boundary. The randomized coupling
+  gives expected queries >=n(1-2epsilon) when error<=epsilon per instance.
+* Asymmetric moment completion of the square and
+    U'=U+(UX_F-Y_F)X_F^T H'^{-1}/M0
+  are correct. The fixed positive ridge handles empty retained sets.
+* Both teacher-error recurrences and the sqrt(2) cross-entropy bound are
+  correct on the specified set under their mathematical operator premises.
+* The fixed-bank block DP is correct because every edge error transfer
+  d -> K_e d+eps_e is monotone for K_e>=0. Exact comparisons may require
+  algebraic-number machinery or rigorous equality resolution, charged.
+
+2. Items requiring explicit wording in the consolidation
+
+FINITE FEATURE TARGET. Mathematical Lipschitz bounds for real linear,
+LayerNorm, GELU, and attention maps do not automatically enclose differences
+between pinned finite-precision neural programs. The earlier project used
+finite neural outputs treated as exact dyadics. To combine that target with
+transport certification, add sound per-node numerical-error envelopes for
+both the reference and candidate execution, or interval-evaluate the specified
+finite program. Reduction order, masks, underflow, softmax approximations,
+and LayerNorm rounding belong to those envelopes. Alternatively use real
+feature maps in the theorem and clearly distinguish the implementation.
+
+CANONICAL STATE. A(R)=(Q_seq(W,R),S_ref(R),intrinsic descriptors(R),IDs(R))
+is a legitimate fresh constructor whose model coordinate is the original
+sequential target. This closes exact full-state equality to that NEW explicit
+state interface, not to an old interface that promises historical true Grams,
+old inverse-leverage tickets, or a particular activation cache. Its invariant
+requires all reference maps to be independent of the deletable corpus and
+all noncanonical transient state to be erased before commit. A fixed tree
+must use a public/key-space universe, not retain forgotten IDs merely because
+they were present when the original tree was built. A canonical sparse hash
+trie over retained IDs with implicit empty nodes is one valid design. Group
+extrema and boundary descriptors need to be updated too. Cryptographic hash
+authentication is a computational assumption; exact arithmetic equality is
+not a proof that hash collisions are impossible.
+
+PRIVACY SCOPE. Fixed W may itself have been pretrained on the requested text.
+Exact calibration-corpus deletion only matches the retained calibration
+pipeline at fixed W. It does not promise removing pretraining knowledge,
+preventing memorization, or data privacy of W. This is a target clarification,
+not a defect in calibration-state exactness.
+
+FAIR COMPARATOR. A same-state fresh method may use the S_ref aggregate and
+its index. In the teacher-anchored quantizer these are already sufficient
+statistics: calling only a scanning constructor 'fresh' makes the O(N)
+comparison a specified-program statement, not a lower bound over cache-aware
+reconstruction. Include plain additive downdate + full dense rounding as a
+strong baseline for Q_anchor. For original Q_seq, immutable reference moments
+are generally not its true sequential moments, but the comparator must still
+be allowed any exact reuse they support. Dovetail may reserve oracle share
+for the best valid fresh/indexed path under the declared work tariff.
+
+NO MARGIN CONFLATION. A positive candidate margin only certifies acceptance
+if transport uncertainty is below it. The canonical reference may be a full
+precision or public proxy, so uncertainty includes full quantization-versus-
+reference drift, not just the small deletion drift. Dense candidate changes
+are logically allowed, but no acceptance or latency rate follows without
+further conditions or measurements.
+
+ONE-STAGE BLOCK ENDPOINT. The claim that one-quantizer blocks equal Q_anchor
+is exact for the teacher-only symmetric special case U=W. It is not generally
+the arbitrary asymmetric/multiple-proxy U=A H^{-1} target. State this endpoint
+with the corresponding choice of anchor reconstruction objective.
+
+SEQUENTIAL PARTITION MODEL. One full-model block recovers Q_seq only if
+inputs, branch conventions, quantization grids, target losses, and module
+ordering are identical. The first block's anchor input being the same as
+the ordinary model input is necessary but not the entire contract.
+
+RELATIVE DAMPING. Operator certificates extend through relative damping as
+shown in reviewer.txt, but only after handling raw dead-column interventions,
+activation-order, and dynamic scale branches. Do not silently substitute the
+mathematical active-coordinate oracle for the reference GPTQ program.
+
+3. Novelty checks impacting deletion-native framing
+
+Independent full-precision calibration inputs are already an explicit
+configuration in NVIDIA Model Optimizer:
+https://github.com/NVIDIA/Model-Optimizer/blob/main/modelopt/torch/quantization/config.py
+The field get_qdq_activations_from_prev_layer=False captures inputs before
+calibration; true feeds prior quantized outputs. Source refs turn99view3,
+turn100view2. Combined with GPTAQ/BRECQ in deletion_native.txt, this means
+neither anchoring nor asymmetric/block reconstruction alone is a new method.
+The contribution must be exact deletion state/repair guarantees, the stronger
+original-target transport certificate, or a substantive new optimizer.
+
+4. Overall recommendation
+
+The consolidation is mathematically sound after the explicit qualifications
+above. I found no algebraic error in the core transport, low-rank, nonlinear
+obstruction, fixed-anchor moment, or quality/DP results. The algorithm stack
+can be finalized at the level of contracts, proofs, and sound fallbacks.
+Original-target speedup frequency, finite-program certificate expense,
+NLP quality, and hardware latency remain empirical propositions. Claiming
+those are closed theoretically would undo the benefit of this revision.

@@ -1,0 +1,241 @@
+COVERAGE, ADAPTIVE CERTIFICATION, AND REPEATED-STATE CONTRACT
+Prepared 2026-10-04. Theory only; no numerical experiment performed.
+
+1. Contract and notation
+For one quantized matrix with p rows and d columns fix weights W, grids,
+coordinate order, and tie rule. A rational SPD covariance H has reverse LDL
+factorization H=L^T D^{-1} L, L=I-B lower unit triangular, D=diag(g)>0.
+For a forced prefix q_<i the conditional unrounded value is
+  v_ai(H;q_<i)=w_ai-B_i,<i (w_a,<i-q_a,<i).
+Define E_ai(H;q_<i)=sum_{h<i}(v_ah(H;q_<h)-q_ah)^2/g_h.
+This equals the minimum H-energy among error vectors with the specified
+prefix. The prefix need NOT have been emitted by the quantizer for H.
+The coordinate dual norm on the remaining free subspace is sqrt(g_i).
+All claims below require fixed grids/order. If activation order, grids,
+damping, clipping policy, or preprocessing are data-dependent, their own
+branch decisions must be certified or recomputed as part of the target.
+
+2. Sharp signed covariance perturbation, arbitrary forced prefix
+Let H*=H-Delta, eta=||H^{-1/2} Delta H^{-1/2}||_2<1; Delta may be indefinite.
+Then for EVERY forced prefix q,
+ |v_ai(H*;q)-v_ai(H;q)| <= kappa(eta) sqrt(g_i E_ai(H;q)),
+ kappa(eta)=eta/sqrt(1-eta^2).
+This improves the coarser eta/(1-eta) bound.
+
+Proof. Whiten H and let V be the free-coordinate subspace after fixing the
+prefix. The old minimum-energy residual u is perpendicular to V. With
+A=H^{-1/2}Delta H^{-1/2}, the new free correction is
+ y=(I-A_VV)^{-1} A_V,Vperp u (sign immaterial for its norm).
+Since A^2 <= eta^2 I,
+ A_V,Vperp A_Vperp,V <= eta^2 I-A_VV^2.
+Thus squared transfer norm is at most
+ max_{z in [-eta,eta]} (eta^2-z^2)/(1-z)^2
+ =eta^2/(1-eta^2), attained at z=eta^2.
+Multiplication by the coordinate dual norm sqrt(g_i) gives the result.
+A 2D block [[eta^2, eta sqrt(1-eta^2)],
+            [eta sqrt(1-eta^2), -eta^2]]
+has eigenvalues +/-eta and attains the transfer constant. Thus the scalar
+constant cannot be improved without more information. For PSD deletion
+Delta>=0, the earlier sharper rho/(2 sqrt(1-rho)) constant still applies.
+
+3. Sequential interval quantization with changed cells
+Given a surrogate H and a rigorously bounded unknown target H*, perform:
+  E=0 separately for every weight row.
+  For i=1,...,d:
+    c_ai=w_ai-B_i,<i(w_a,<i-q'_a,<i).
+    epsilon_ai=kappa(eta)*sqrt(g_i E_ai).
+    I_ai=[c_ai-epsilon_ai,c_ai+epsilon_ai], with outward rounding.
+    If I_ai is contained in ONE rounding cell, emit that cell's code q'_ai.
+    Otherwise refine the covariance/input enclosure, or run exact target
+       processing for the unresolved stage/row according to the contract.
+    Update E_ai+1=E_ai+(c_ai-q'_ai)^2/g_i.
+A cell can be different from the surrogate's original emitted cell.
+The interval must include every endpoint/tie according to the pinned rule;
+strict interior containment is a safe sufficient implementation.
+
+Theorem. If every emitted code is validated by the corresponding interval,
+the resulting matrix equals quantization under H*, even when many codes
+change relative to the surrogate quantization.
+Proof by coordinate induction: the emitted prefix is already the target
+prefix; Section 2 applies to that arbitrary prefix; the target conditional
+value belongs to I; its unique cell is the emitted code. Rows are independent
+under the fixed-grid matrix contract.
+
+This is strictly stronger algorithmically than checking one frozen candidate
+trace against a global minimum margin. There is no assumption that any global
+minimum margin stays bounded. It still may abstain, and small intervals can
+cross boundaries. It does not on its own prove positive speedup on a workload.
+If H* is not known, an ambiguous coordinate cannot simply be evaluated exactly
+without obtaining sufficient target information. Charge refinement/replay.
+
+4. Fast sparse change injection when a target factor is available
+Assume target B* has been computed/certified. Let q, v, K=sqrt(g E) be the old
+trace. Set delta_ai=q'_ai-q_ai. For each row the exact identity is
+ v_ai(H*;q'_<i) = v_ai(H;q_<i) + b_ai + d_ai,
+ b_ai=-(B*-B)_i,<i(w_a,<i-q_a,<i),
+ d_ai=sum_{h<i}B*_{ih} delta_ah.
+The old-prefix term obeys |b_ai|<=epsilon_ai, with the signed or PSD constant
+as appropriate. Maintain d incrementally; each true code change at h adds
+B*_{>h,h} delta_ah to later coordinates. Round the entire interval
+[v_ai+d_ai-epsilon_ai, v_ai+d_ai+epsilon_ai] into any unique grid cell.
+If ambiguous, compute the exact target conditional value using the repaired
+prefix, then emit it. This exact fallback removes false-positive uncertainty.
+
+Correctness follows from the identity and induction. With s actual changed
+codes and r ambiguous decisions, cost AFTER the target factor is available is
+ O(pd + (s+r)d) arithmetic plus output; storage is O(pd+d^2).
+One does not need to restart an entire row suffix after its first change.
+This is preferable to a frontier-only repair, especially when changes are
+scattered. Dense s or r correctly degenerates to O(pd^2).
+Target factor work, Gram acquisition, feature transport, and exact-arithmetic
+bit costs are separate and cannot be hidden. A low-rank downdate may reduce
+factor work, but does not automatically avoid changed-prefix retained passes.
+A rigorous floating implementation propagates interval d, not unchecked d.
+
+A deterministic threat bound is
+ r <= #{(a,i): m_ai <= epsilon_ai+|d_ai|},
+using the old cell margin m_ai and exact d. This sufficient superset includes
+some easy changed-cell decisions; it is therefore conservative. No independence
+or statistical regularity is required. The actual online interval test is tighter.
+
+5. Margin-free coverage for a different, deletion-designed quantizer (reserve)
+This result changes the quantization target and MUST NOT be retrofitted as a
+claim about ordinary GPTQ or the previous pilot.
+Choose independent U_i~Uniform[0,1), one per column (per stage), fixed for the
+original quantizer and its retained-data counterfactual. Row a has step Delta_a,
+with grid Delta_a(k+U_i), possibly finitely clipped k. Conditional on previous
+columns and previous stages, U_i is independent of the current unrounded input,
+its interval center, and its half-width epsilon_ai. For a fixed deletion request
+independent of the dithers, or an appropriate nonanticipating request protocol,
+  Pr(ambiguous ai | past) <= min(1,2 epsilon_ai/Delta_a).
+This is boundary length on a circle of circumference Delta_a, not a margin
+assumption. It remains valid when interval centers shift into changed cells.
+By linearity,
+  E r <= sum_ai E min(1,2 epsilon_ai/Delta_a).
+No independence among rows is needed. Markov gives a valid though loose tail
+bound; stronger concentration needs an explicit dependence analysis.
+
+With a known target B*, same-grid monotonicity and uniform dither imply
+ E[|q'_ai-q_ai| | past] <= |v'_ai-v_ai|.
+Consequently E|delta_ai| <= E epsilon_ai + sum_{h<i}|B*ih| E|delta_ah|,
+provided B* is fixed conditional on earlier-stage randomness and independent
+of the current-stage dithers. Let Gamma=(I-|B*|)^{-1}, a finite triangular sum.
+Then the vector of expected absolute changes is bounded by Gamma E epsilon.
+For constant Delta within a row,
+ E s_a <= (1/Delta_a) 1^T Gamma E epsilon_a.
+A sufficient dimension-uniform condition |||B*|||_1<=b<1 gives
+ E s_a <= sum_i E epsilon_ai / ((1-b)Delta_a).
+This yields expected sparse-injection work without a minimum-margin premise.
+If B* depends on these same dithers (e.g., adaptively changing the factor within
+a stage), condition and rederive; do not reuse this formula.
+If a deletion adversary observes all dithers and selects a request accordingly,
+the stated coverage law does NOT follow. Deterministic correctness still does.
+
+Shared column dither is deployable as a rank-one offset:
+ Q=diag(Delta)(K+1 U^T), so Qx=diag(Delta)(Kx+1(U^T x)).
+Storage and one extra dot product must be charged. The finite clipping range
+moves with U; quantization quality and packed-kernel performance require future
+experiments. This is a reserve algorithm/theorem, not essential to the main proof.
+
+6. Repeated requests: correctness and canonical state are different contracts
+Maintain an active-set ledger, target contract ID, base W, actual current model,
+and provenance/version for every cached statistic. A cached Gram/record feature
+is valid only for the prefix whose identity is recorded. Exact output equality
+for each request composes by induction if every request starts from its verified
+active set and no stale statistic is silently treated as current.
+
+After an upstream code changes, a later-stage record-feature cache must be:
+ (i) recomputed for the new prefix;
+ (ii) given a proved transport identity/enclosure sufficient for every subsequent
+     use; or (iii) invalidated and covered by fallback.
+Scores formed with an old H^{-1} are not scores for the new H^{-1}. They must be
+reanchored, or all subsequent requests must explicitly use cumulative deletion
+and perturbation relative to the original valid anchor. Never subtract a fresh
+request's scores while resetting the anchor in words only.
+
+Model-artifact contract: final deployed Q equals fresh Q(D_active). Auxiliary
+certificates may be history-dependent, subject to their declared state policy.
+This does not establish removal of deleted information from auxiliary caches.
+
+Canonical-state contract: S(D_active) equals the specified fresh constructor's
+state, including current-prefix features/Grams, scores, and metadata if promised.
+A transport certificate can prove exact Q without materializing current H; it
+therefore cannot by itself establish this stronger state equality. Rebuilding
+current H after changed prefixes may require all retained forward passes and
+must be charged. Do not claim both the avoided replay and free canonical refresh.
+
+Constructive canonical-interface closure (root's stronger construction): define
+ A(R)=(Q_seq(W,R), S_ref(R), intrinsic retained-record descriptors, active ID map),
+where each reference feature map depends only on corpus-INDEPENDENT W or another
+fixed public proxy, and S_ref is its exact additive statistic. The fresh constructor
+runs true sequential quantization, then discards its true sequential Grams/traces.
+The repair algorithm subtracts deleted intrinsic reference contributions, uses the
+candidate-prefix transport certificate to prove exact Q_seq(W,R), and discards its
+transient learned-anchor caches/proof state. The model target Q_seq is UNCHANGED;
+only the canonical state interface is designed differently. If every descriptor
+is intrinsic, active records are canonical, and all other persistent mutable state
+is discarded, equality of final model plus S_ref proves equality of the entire
+declared state. Thus no current-prefix retained Gram refresh is required by this
+interface. This closes the earlier obstruction for that explicit interface.
+
+Caveats: a fixed reference may be far from the quantized prefix, causing certificate
+abstention even when F is empty. Canonical exact sums need canonical serialization
+(e.g., normalized rationals or fixed exact integer bins); mathematical sum equality
+is not automatically floating byte equality. Audit logs or old anchor snapshots
+cannot retain deletion-dependent content while claiming equality of ALL state.
+Candidate old models can be temporary seeds but only the proved current target
+may persist. Bounds must use the stored intrinsic descriptors, or account for extra
+record reads. This construction proves correctness and composition, not coverage.
+
+7. Numerical targets and termination
+A reproducible mathematical target can use pinned finite neural-network features,
+then interpret those binary values, W, and grids as exact rationals; use reverse
+LDL/rational nearest-plane quantization with a fixed tie rule. Exact SPD LDL has
+rational B,g; no irrational square roots are needed to decide final code ties.
+An interval filter followed by exact rational fallback terminates on exact ties.
+Bit complexity can be large, and is separate from arithmetic-operation counts.
+The finite arithmetic program with ordinary floating Gram/Cholesky accumulation
+is a DIFFERENT target. Algebraic equivalence does not imply bitwise equivalence.
+
+For fixed unchanged features, exact additive retained Gram S and absolute-product
+sum A can bound a pinned conventional dot-product Gram as
+ |fl(S)_uv-S_uv| <= gamma_m A_uv, gamma_m=mu/(1-mu),
+under an explicitly specified m-operation schedule and standard no-overflow/
+underflow model. FMA, pairwise, blocked GPU reductions and mixed precision need
+their own schedule constants and error enclosures. Exact S and A subtract under
+deletions; this may certify the floating target without replay when its branches
+are insensitive. Factorization and rounding arithmetic must ALSO be enclosed.
+Bounding Gram error alone does not certify the floating quantization program.
+If any relevant execution branch/rounding decision remains ambiguous, replay
+that actual pinned program or increase exact information as the contract permits.
+
+If GPU algorithm selection, reduction schedule, or nondeterministic kernels are
+unfixed, a single bitwise target is not defined. Pin the execution, or make the
+target explicitly a distribution and prove a different guarantee.
+
+8. What is closed and what cannot be declared closed before experiments
+Closed mathematically: sharper signed perturbation factor; arbitrary-prefix
+certificate; certification of changed cells; sparse change-injection repair;
+correct repeated-request invariants; explicit canonical-state boundary; a
+margin-free expected-coverage theorem for a specified dithered variant.
+Not closed by logic alone: acceptance frequency of ordinary quantizers on the
+real target workload; whether transport bounds are tight enough; full-model
+wall-clock gains after factor, replay, storage, and output costs; practical cost
+of a declared canonical-state interface; quality cost of a dithered redesign.
+These are observable facts, not missing algebra. The future experiment should
+measure them with a predeclared contract; no positive empirical claim is implied.
+
+Primary source checks (not novelty certification):
+- Official GPTQ code and algorithm: https://github.com/ist-daslab/gptq
+- Chen et al., ICLR 2026, GPTQ/Babai geometry, official repository:
+  https://github.com/IST-DASLab/GPTQ-Babai and
+  https://openreview.net/forum?id=NFB4QGGS65
+- The official quantization README explicitly notes auto-tuned kernels can give
+  different floating rounding results even under the same random seed:
+  https://github.com/IST-DASLab/GPTQ-Babai/blob/main/quantization/README.md
+- LAPACK numerical-arithmetic discussion:
+  https://www.netlib.org/lapack/lug/node74.html
+- Standard gamma_n model and bounds, LAPACK Working Note 104:
+  https://www.netlib.org/lapack/lawnspdf/lawn104.pdf
+These sources support background/implementation cautions. The derived theorems
+above are our deductions, not claims copied from the sources.

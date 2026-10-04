@@ -1,0 +1,328 @@
+ADVERSARIAL THEORY REVIEW AND CONSTRUCTIVE CLOSURES
+4 October 2026. No experiment or numerical benchmark was run for this note.
+
+Scope. This is an independent review of the visible previous proof summary,
+not a reread of the pruned report. We retain the full sequential calibration
+counterfactual unless an explicitly named new quantizer is introduced. A
+mathematical exact quantizer and a pinned floating-point program are distinct
+targets. Each statement below declares its computational assumptions.
+
+1. MAIN CORRECTION: TRACE SCORES CAN DESTROY NONVACUITY
+
+For H positive definite and per-record PSD deletion contributions Delta_j,
+the earlier trace score ell_j=tr(H^{-1}Delta_j) upper-bounds the required
+operator perturbation. It may overestimate it by a factor as large as d.
+When sum_j Delta_j=H (for example homogeneous relative damping), sum_j ell_j=d.
+Thus the average trace score is d/N. In a model with d much larger than the
+number N of calibration documents, even a one-document gate can be extremely
+loose before accounting for the smallest rounding margin. The fact that this
+gate is O(k) at request time does not demonstrate it is useful.
+
+Fix: precompute certified operator scores
+  u_j >= lambda_max(H^{-1/2} Delta_j H^{-1/2}).
+Then rho_F <= sum_{j in F} u_j by the Loewner order. Substitute u_j for ell_j
+in the existing PSD deletion lemma and all-model induction. The online cost
+is unchanged; the preparation cost grows and must be reported. For
+Delta_j=H/N, operator scores are 1/N while trace scores are d/N.
+
+This is not yet the strongest improvement: exact quantization is invariant
+to multiplying its metric by a positive scalar. The next certificate removes
+that irrelevant direction altogether.
+
+2. SCALE-INVARIANT SPECTRAL-INTERVAL CERTIFICATE
+
+Assume the previous exact GPTQ nearest-plane contract: fixed original row w,
+fixed quantization grid, order, clipping/tie conventions, and metric H. Write
+the old sequential factor as H=L^T D^{-1}L, L=I-B, D=diag(g_i). For an old
+forced prefix q, its conditional input is
+  v_i = w_i - B_{i,<i}(w-q)_{<i}.
+Let E_i=sum_{h<i}(v_h-q_h)^2/g_h and K_i=sqrt(g_i E_i).
+The old proved PSD perturbation lemma is
+  |v'_i-v_i| <= rho/(2 sqrt(1-rho)) K_i
+when 0 <= H^{-1/2}Delta H^{-1/2} <= rho I, rho<1.
+
+New theorem. Let A=H^{-1/2}Delta H^{-1/2}. If certified scalars satisfy
+  a I <= A <= b I,     0 <= a <= b < 1,
+then the sharper bound is
+  |v'_i-v_i| <= (b-a)/(2 sqrt((1-a)(1-b))) K_i.       (1)
+
+Proof. Put Delta_*=(Delta-aH)/(1-a). It is PSD and its whitened operator
+norm is at most (b-a)/(1-a)<1. Moreover
+  H-Delta=(1-a)(H-Delta_*).
+Multiplication of the quadratic metric by a positive scalar leaves its
+conditional least-squares minimizers, feedback B, and rounding decisions
+unchanged. Applying the old PSD lemma to Delta_* yields (1). The transformed
+coefficient is algebraically
+ [(b-a)/(1-a)]/[2 sqrt((1-b)/(1-a))]
+ = (b-a)/(2 sqrt((1-a)(1-b))). QED.
+
+The theorem also applies when a is negative provided a<=b<1 and the certified
+lower Loewner bound holds: Delta_* remains PSD. Thus it can absorb a signed
+certified factor/Gram perturbation. Do not substitute a floating estimate for
+a certified enclosure. The PSD case a>=0 is the simplest paper statement.
+
+At b=a the coefficient is zero, so arbitrary proportional covariance removal
+changes no exact rounding inputs, even at ties. Otherwise require strict cell
+containment at all decisions. A zero-energy decision has exactly zero drift.
+The equality of codes follows by sequential prefix induction, as before.
+
+Offline-to-online algorithm. For every stage l and document j certify
+  l_lj I <= H_l^{-1/2}Delta_lj H_l^{-1/2} <= u_lj I.
+For a request F, sum the lower and upper endpoints separately:
+  a_l=sum_F l_lj, b_l=sum_F u_lj.
+At stage l, certify b_l<1 and that the coefficient in (1) times each K_ai
+is strictly below the corresponding cell margin. Equivalently compare it to
+the minimum positive margin/K ratio tau_l. Start at the first stage and
+induct through the exact dependency DAG. If every stage accepts, the entire
+model equals retained-data requantization. No retained forward pass is needed.
+
+Cost: O(kL) integer/rational endpoint additions and L scalar certified
+comparisons if all margins are compiled to tau_l; O(NL) interval metadata.
+An O(N) one-score compression is possible with conservative shared bounds,
+but should not be presented as equally sharp. The certificate is stronger
+than the trace gate because its upper endpoint may be capped by the trace
+bound and choosing a=0 recovers the old lemma. Operator interval quality,
+state size, and preparation cost are observable tradeoffs.
+
+Rigorous preparation options include interval Gershgorin bounds on a whitened
+matrix, or a rigorously validated spectral decomposition. A single approximate
+eigenpair and its residual do NOT certify that eigenvalue is the largest;
+an upper spectral enclosure or complete subspace/gap argument is required.
+Whitening factor error must itself be bounded, or use exact arithmetic.
+
+Nonvacuous all-request regime. Suppose at every stage
+  (1-epsilon)/N I <= H_l^{-1/2}Delta_lj H_l^{-1/2}
+                    <= (1+epsilon)/N I
+for all records, 0<=epsilon<1, and tau_l>=tau>0. For fraction f=k/N,
+the drift coefficient is at most
+  epsilon f / sqrt((1-f)^2-epsilon^2 f^2).
+Every size-k request therefore accepts when
+  f < tau/[tau+epsilon sqrt(1+tau^2)].               (2)
+This condition implies b<1. For epsilon=0 every f<1 passes, including ties
+because the drift is exactly zero. This establishes a genuine same-target
+fast regime with dimension-free request threshold. It does NOT establish
+that actual LM document covariances satisfy spectral balance. In particular,
+short low-rank records can make the balance premise implausible unless the
+damping contribution is sufficiently influential. Do not call (2) measured.
+
+3. STANDARD RELATIVE DAMPING NEED NOT BE FROZEN
+
+Under no dead-column intervention, the standard relative-damped metric can
+be written using the unnormalized Gram S=sum_j X_j X_j^T as
+  H=S+(zeta/d)tr(S)I.
+A different retained sample-count normalization multiplies this metric by
+a positive scalar and hence leaves exact GPTQ decisions unchanged.
+Deleting F subtracts the PSD matrix
+  Delta_F=sum_F [X_j X_j^T+(zeta/d)||X_j||_F^2 I].
+Therefore the preceding operator and spectral-interval certificates apply
+directly to refitted relative damping, without freezing the old ridge.
+For an inexpensive trace bound, each contribution has score
+  tr(H^{-1}X_jX_j^T)+(zeta/d)||X_j||_F^2 tr(H^{-1}),
+but operator bounds are preferable for the dimensional reason above.
+
+Scale invariance proof. A metric multiplier c>0 leaves B unchanged in the
+unit-triangular factorization and scales every g_i by 1/c. Then E_i scales
+by c, K_i=sqrt(g_i E_i) is unchanged, and all conditional inputs are unchanged.
+It also leaves activation ordering by the raw Gram diagonal unchanged.
+
+Important source-specific qualification. The original GPTQ code first marks
+zero raw-diagonal (dead) columns, sets their diagonal to one, and zeros their
+weights. Its subsequent damping uses that modified diagonal. If there are
+dead columns, the preceding homogeneous expression is not literally that
+program. Safe options are (i) certify that all relevant raw diagonals remain
+positive, (ii) define a restricted active-coordinate mathematical oracle and
+state the difference, or (iii) exactly reproduce and certify all dead-column
+branches and their damping contribution. An old positive column can become
+dead after deletion; ridge positivity alone does not rule this out.
+
+Likewise the reference activation-order permutation and dynamic group scales
+may change. To preserve an old ordering, accumulate retained diagonal values
+and check each adjacent ordering comparison including its tie rule: O(kd+d)
+from per-record diagonals, or O(d) after a retained Gram update. Otherwise
+recompute the order and quantization. Fixed/static scales determined solely
+by original W are independent of calibration; dynamically recomputed scales
+from partially updated W need their own exact branch/parameter treatment.
+Do not advertise the fixed-grid theorem as covering such variants silently.
+
+4. RELIABLE FALLBACK WITHOUT KNOWING FRESH RUNTIME
+
+The earlier capped-at-alpha*B wrapper required the fresh-work B in advance.
+That is unnecessary. Weighted dovetail gives a deterministic guarantee
+without a timing predictor or distributional assumption.
+
+Let O be a complete exact fresh algorithm costing B charged work units and
+R a repair algorithm whose successful fully certified completion costs R(x),
+or infinity if it cannot finish. Both must implement the same complete
+artifact/state contract. Let common service work J be charged once. In a
+preemptible divisible-work model, schedule O at work share 1/(1+alpha) and
+repair at share alpha/(1+alpha), alpha>0. Stop at the first certified success.
+Then
+  C(x) <= J + min{(1+alpha)B,
+                 (1+1/alpha)R(x)}.                (3)
+
+Proof. After spending (1+alpha)B noncommon work the oracle has received B,
+so it has completed. After (1+1/alpha)R work the repair has received R,
+so it has completed if finite. Stop on the earlier event. Correctness follows
+from exact oracle output or sound repair verification. QED.
+
+Consequences. Total service is at most (1+alpha)(J+B) on every request.
+If R(x) <= beta B for beta<alpha/(1+alpha), then the repair-side guarantee
+is strictly below the fresh J+B. On a workload where this occurs with
+probability at least 1-delta,
+  E[(C-J)/B] <= (1-delta)(1+1/alpha)beta
+                  +delta(1+alpha).
+This is normalized expected work, not mean latency or ratio of means.
+The conditions beta,delta still need evidence. No scheduler can create
+a strict gain if every valid repair costs as much as fresh.
+
+Implementation. Preempt at declared charged tasks (for example record-block
+forward, Gram tile, row block, certificate block), not arbitrary wall time.
+For rational shares u:v, execute repeated rounds of u oracle tokens then
+v repair tokens; if each token costs one unit, add at most u+v to (3).
+For packets with variable costs bounded by g, use a deficit scheduler and
+prove its service lag bound; expose the resulting O(g/min_share) additive
+term rather than writing an exact fluid guarantee for GPU kernels.
+Context switching, cache thrashing, queueing, memory copies, verification,
+and canceled work are real charged costs. A CPU/GPU heterogeneous scheduler
+needs a resource-vector or documented scalar tariff, not unqualified FLOPs.
+
+Portfolio extension. Assign positive shares w_i summing to one to m exact
+or certified algorithms, one of which is fresh. Then completion work is
+at most min_i C_i/w_i in the fluid model, plus scheduling/commit overhead.
+Reserve a fixed fresh share to retain a deterministic competitive bound.
+This is a standard algorithm-portfolio scheduling construction, not a
+quantization novelty claim. Its value here is closing the unsafe fallback
+budget and integrating sparse/dense, certificate, and fresh paths correctly.
+
+Shared work may be memoized using tasks keyed by all inputs and the exact
+execution contract, but don't charge shared work twice or claim both branch
+budgets received it unless their semantics truly match. Different activation
+versions, Gram reduction orders, or floating-point kernels can invalidate
+reuse. A transactional commit installs only the winning artifact and state.
+
+5. REPEATED DELETIONS AND HIDDEN PREPARATION
+
+The inverse-leverage score of a retained record computed against H_C depends
+on deleted records through H_C. Keeping old anchored tickets after deletion
+therefore certifies artifact equality only; it does not give canonical
+full-state unlearning. A score table, covariance, trace, factors, checkpoints,
+and record registry can all preserve forbidden influence.
+
+For a stronger repeated-service contract, each successful path must finish
+with state exactly produced by the declared retained-only state constructor,
+or satisfy a separately explicit state invariant that meets the advertised
+notion of unlearning. Charge factor updates, record-level auxiliary score
+refresh, removal of deleted data, and all invalidation/rebuild work. A fast
+artifact return followed by an uncharged full background rebuild is not a
+full-service speedup. Returning a model handle versus copying all P weights
+also changes the output cost from potentially small to Omega(P).
+
+For unchanged stages, intrinsic per-record features and norms computed under
+the same certified unchanged ancestors remain retained-only quantities.
+Exact deletion from their aggregate followed by current-factor reconstruction
+can maintain canonical state. Old inverse-based bounds generally cannot be
+treated the same way unless refreshed or explicitly rederived from current
+retained quantities. If a certificate is invalidated, a future request must
+not silently use it. A fallback may discard optional cache state if the
+service contract permits that, but must not call the resulting state the
+same canonical constructor output if that constructor promises nonempty
+tables. Define the actual invariant before proving repeated guarantees.
+
+Over T requests, report
+  P_repair + sum_t C_repair,t  versus
+  P_baseline + sum_t C_baseline,t
+under matched storage, provenance access, output convention, arithmetic,
+and reset policy. Precomputation is advantageous only after cumulative
+request savings exceed its excess cost. An unrestricted cache could store
+all 2^N retained-subset answers, so a meaningful storage-repair tradeoff must
+explicitly bound available state and preprocessing.
+
+6. WHAT THEORY CAN AND CANNOT CLOSE
+
+The first-stage code changes observed in prior experiments do not invalidate
+exact deletion. They invalidate the specific unchanged-whole-model and
+unchanged-prefix fast paths for those targets. Replacing trace by operator
+or scale-invariant certificates cannot turn a genuinely changed stage into
+an unchanged one: a sound gate must still abstain. Speedup there requires
+an exact changed-prefix algorithm, a later reconvergence certificate,
+efficient downstream statistics update, or an explicitly different
+deletion-friendly quantizer. The new certificates improve false abstentions,
+not the truth of equality.
+
+There is no universal strict speedup theorem without restrictions. In an
+explicit black-box record-feature model, if a changed prefix makes n retained
+downstream contributions unknown and their sum determines a rounding choice,
+an algorithm skipping any contribution cannot be always correct: two oracles
+agreeing on all queried contributions can assign the unqueried contribution
+on opposite sides of that rounding boundary. Hence n queries are required
+in that model. This is not a computational lower bound for known Transformer
+circuits or all compressed sufficient statistics. Linear propagation and
+moment closure are important exceptions. Dense activation change alone is
+not proof that every retained example must be replayed.
+
+The paper can finalize exactness theorems, conditional work theorems, sharp
+failure boundaries, and the executor. It cannot theoretically certify
+empirical runtime, gate acceptance, storage amortization, or NLP utility
+on an unmeasured workload. These are exactly what resumed experiments must
+test, not assumptions that can be declared closed by prose.
+
+7. PRIMARY-SOURCE NOVELTY AND TARGET CHECK
+
+Sources checked on 4 October 2026. This was a focused check, not proof of
+literature absence. Parent agent must independently open any cited web ref
+before citing it in a final answer.
+
+(a) Original GPTQ official repository, opt.py and llama.py:
+https://github.com/IST-DASLab/gptq/blob/main/opt.py
+https://github.com/IST-DASLab/gptq/blob/main/llama.py
+Retrieved refs turn95view0/1, turn96view2/3/4. The code quantizes a transformer
+block, reruns it, and swaps its output into the next block's input.
+--true-sequential selects groups WITHIN one block; false does not eliminate
+cross-block propagation. Avoid conflating these two meanings of sequential.
+
+(b) GPTQ metric implementation:
+https://github.com/IST-DASLab/gptq/blob/main/gptq.py
+Retrieved turn100view0. Read actual dead-column, damping, dynamic-group,
+and activation-order branches before claiming support for default GPTQ.
+
+(c) Existing GPTQ geometry:
+https://arxiv.org/abs/2507.18553
+https://github.com/IST-DASLab/GPTQ-Babai
+Retrieved turn94academia25, turn95view2/turn96view5. Chen et al., ICLR 2026,
+already prove the back-to-front GPTQ/Babai nearest-plane equivalence and
+derive unclipped error guarantees. Birnick's short equivalence proof is
+https://arxiv.org/abs/2508.01077 (turn94academia26). Attribute geometry;
+our candidate addition is deletion sensitivity/certified repair.
+
+(d) Existing independent full-precision activation calibration switch:
+https://github.com/NVIDIA/Model-Optimizer/blob/main/modelopt/torch/quantization/config.py
+Retrieved turn99view3 and turn100view2, around lines3304-3320. The
+get_qdq_activations_from_prev_layer=False option captures next-layer inputs
+before calibration and is documented as matching full-precision activations
+of a non-layerwise pass. Therefore removing sequential activation dependence
+by independent calibration is not itself novel. Deletion-maintainable
+statistics, exact state removal, cut-placement optimization, or a proved
+quality/repair tradeoff would need to carry the contribution. This source
+also already implements layer checkpointing and interrupted-run resume;
+checkpointing alone is not a novelty claim.
+
+(e) Distinct quantization/unlearning direction:
+https://arxiv.org/abs/2410.16454
+Retrieved turn99view1. Zhang et al., ICLR 2025, show quantization can restore
+apparently forgotten knowledge. Their target is post-unlearning model
+behavior, not exact deletion of the quantizer's calibration corpus.
+
+(f) A newer related audit merits checking in the full bibliography:
+https://arxiv.org/abs/2609.11490
+https://arxiv.org/html/2609.11490v1
+Retrieved turn99view0 and turn100view1. Main subject is retained-data refits
+of batch-normalization state at fixed weights; search surfaced an appendix
+mentioning retained-only static 8-bit activation-scale calibration. This
+narrows any broad claim that calibration-state refitting after unlearning
+is entirely new. I have not established it gives exact GPTQ calibration-
+document deletion or an efficient certified repair method. Do not overstate.
+
+Recommended paper contract: certify the SAME explicitly specified sequential
+quantizer; state branch support, exact arithmetic target, full-state scope,
+and comparative resource budget. Present any reset/independent-calibration
+quantizer as a second target with separate exactness and quality comparison.

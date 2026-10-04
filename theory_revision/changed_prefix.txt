@@ -1,0 +1,298 @@
+CHANGED-PREFIX REPAIR: WHAT CAN AND CANNOT BE CLOSED EXACTLY
+Independent theoretical note. 2026-10-04. No experiments were run.
+
+Scope and conclusion
+--------------------
+A changed first-stage code does not logically force full retained replay. It
+invalidates the old-prefix identity argument, not every possible certificate.
+Two exact original-target algorithms survive:
+  (A) certify a NEW candidate prefix against transported covariance bounds;
+  (B) propagate exact changes record by record, reusing outputs when an equality
+      certificate succeeds and updating statistics only on changed records.
+Neither algorithm has an unconditional full-model speedup for general nonlinear
+sequential quantization. A precise oracle lower bound explains that boundary.
+All arithmetic below is real/exact arithmetic unless explicitly qualified.
+Claims about a fixed floating-point executable need a separate contract.
+
+1. Target contract
+------------------
+Let records j be independent at inference/calibration time. A deterministic DAG
+maps each record to the input feature matrix X_lj in R^(d_l x t_j) of quantizer l.
+The map uses already selected quantized ancestor weights. With original weights
+W_l fixed, the target stage is
+ H_l = lambda_l I + M0^(-1) sum_{j retained} X_lj X_lj^T,
+ Q_l = Quantize(W_l,H_l; fixed grid, order and tie rule).
+Here M0 is fixed across deletion; lambda_l>0 is fixed. Corpus-derived ordering,
+scales, ridge, batch interactions, or shared sequence packing must be included
+as additional pipeline state if they are part of the intended target.
+
+The mathematical quantizer target is distinct from a particular FP64 reduction,
+Cholesky and rounding executable. In particular, subtracting old rounded Gram
+contributions need not reproduce the bits of a fresh retained summation. Exact
+additive state, a canonical finite summation specification, or a sound interval
+certificate to the actual finite program is needed before claiming exactness.
+
+2. Candidate transport closes the changed-prefix logical gap
+-----------------------------------------------------------
+At stage l assume the repaired ancestor prefix has already been certified equal
+to the retained-data target. Let X' concatenate the TRUE retained inputs under
+that prefix. Let Z concatenate available anchor inputs: old inputs for records
+not replayed, and new exact inputs for replayed records. Define
+ Hbar = lambda I + ZZ^T/M0, E=X'-Z,
+ a=||Hbar^(-1/2) Z/sqrt(M0)||_2 <= 1,
+ e>=||Hbar^(-1/2) E/sqrt(M0)||_2.
+Then
+ ||Hbar^(-1/2)(Htrue-Hbar)Hbar^(-1/2)||_2 <= eta=2ae+e^2.
+Proof: expand (Z+E)(Z+E)^T-ZZ^T=ZE^T+EZ^T+EE^T and use
+submultiplicativity. The inequality a<=1 follows from ZZ^T/M0<=Hbar.
+A convenient conservative bound is e<=||E||_F/sqrt(M0 lambda).
+
+Run the quantizer against Hbar and regard its output as the NEW candidate Qc.
+It need not equal the old weights, at any stage. For each conditional rounding
+decision of this candidate, let m>0 be its cell-boundary margin and K its
+conditional residual sensitivity, as defined by the triangular GPTQ geometry.
+For signed relative covariance perturbation eta<1, the sharp universal bound is
+
+     |v_true-v_anchor| <= eta/sqrt(1-eta^2) * K,                 (T1)
+
+under a shared forced preceding code prefix. Consequently, with
+ tau=min_{K>0} m/K, r=tau/sqrt(1+tau^2),
+ eta<r certifies every candidate code by coordinate induction. Then DAG
+induction certifies the complete model. Zero-energy decisions are invariant;
+nonzero-energy zero margins preclude a positive uniform budget. A failed test
+is an abstention and does not prove a changed target decision.
+
+Proof of the sharp coefficient: whiten the anchor quadratic. Let V be the
+remaining adjustable subspace and u the anchor residual, with u orthogonal V.
+Write signed relative perturbation A in blocks D=A_VV and B=A_V,Vperp.
+The optimal corrective displacement has norm at most
+ ||(I+D)^(-1)B|| ||u||. Since ||A||<=eta,
+ BB^T <= eta^2 I-D^2.
+Thus the squared operator bound is the maximum of
+ (eta^2-z^2)/(1+z)^2 for z in [-eta,eta], which is
+ eta^2/(1-eta^2), attained at z=-eta^2. The conditional coordinate functional
+has squared dual norm g_i; multiplying ||u|| by sqrt(g_i) gives K. A 2x2
+perturbation with D=-eta^2 and |B|=eta sqrt(1-eta^2) attains the operator bound.
+This establishes sharpness for the abstract quadratic problem, not necessarily
+for a particular deletion-induced nonlinear feature family.
+
+Topological adaptive algorithm:
+  for stage l in dependency order:
+    fix the already certified repaired ancestors;
+    initialize Hbar from old retained anchor contributions;
+    compute sound error summaries for X' under that fixed prefix;
+    repeat:
+      generate a candidate Qc against Hbar;
+      certify all candidate rounding cells and apply (T1);
+      if certified, commit Qc and continue to the next stage;
+      otherwise replay a selected retained group under the fixed prefix,
+        replace its anchor contributions, and remove its error allowance;
+      if every retained group is replayed, run/certify the exact local oracle.
+
+Changing Qc at stage l invalidates downstream candidate features and bounds.
+It does not invalidate earlier certified stages. A global simultaneous rewrite
+without this dependency discipline is unsound. The fully replayed fallback
+terminates only to the declared oracle: radius zero alone does not certify an
+uncertified floating-point candidate.
+
+Transport without visiting every retained record:
+Cache per-record/group old boundary energies and variances, and their aggregate
+summaries. A changed affine map has
+ Y'-Y = W' (X'-X) + (W'-W)X,
+ so ||Y'-Y||_F <= ||W'||_2 ||X'-X||_F + ||W'-W||_2 ||X||_F.
+Minkowski propagates aggregate error over records using aggregate energies.
+Deleting k stored record-energy contributions costs O(k), without retained
+forward passes. Nonlinear nodes require rigorous Lipschitz/enclosure bounds.
+
+For layer norm, let d be width and epsilon>0. If an old token's centered RMS is
+at least s, and its perturbation norm is at most b, then the whole interpolation
+segment has centered RMS at least max(s-b/sqrt(d),0). A valid local Lipschitz
+bound for fixed gain gamma is
+ ||gamma||_infinity /
+ sqrt(max(s-b/sqrt(d),0)^2+epsilon).
+This follows by differentiating normalized centered vectors; centering is an
+orthogonal projector. Gain/bias changes need additional explicit terms. Group
+minima of old RMS and group upper perturbation bounds give sound coarse bounds.
+Using the global epsilon-only bound is valid but can make the theorem useless.
+Attention bounds must include changes in Q,K,V, softmax, output projections and
+masks; no claim is made that small weight changes guarantee small global bounds.
+
+The operational speed theorem is conditional: if certification preparation,
+summary lookup, candidate generation, replayed groups and output/state work
+cost S, then S<C_fresh is exactly the condition for request-work savings. This
+algorithm permits first-stage/all-stage code changes, but no theorem here
+establishes that real LM margins and transport constants satisfy this inequality.
+
+3. Exact active-record closure
+------------------------------
+Maintain cached node output Y_uj for each record j at a chosen set of DAG nodes.
+For each node in topological order, reuse Y_uj when all parents and the node's
+parameters are unchanged. Otherwise either:
+  - supply a sound equality certificate that its new output equals Y_uj, or
+  - evaluate the node on the new parents and compare its result to Y_uj.
+Equality can reappear, so active sets need not grow monotonically. A newly
+changed quantized weight may activate records that were inactive upstream.
+
+At each quantizer l let A_l be exactly the retained records whose inputs differ.
+Then its target covariance is exactly
+ H'_l = H_l - M0^(-1) sum_{j deleted} X_lj X_lj^T
+              + M0^(-1) sum_{j in A_l}
+                    (X'_lj X'_lj^T-X_lj X_lj^T).              (T2)
+After (T2), run the declared quantizer and propagate changes onward.
+Proof: cancellation of unchanged summands, followed by DAG induction.
+
+Work consists of equality-certificate costs, actually evaluated node-record
+pairs, changed/deleted Gram terms, quantization, authentication and state/output
+maintenance. It is not merely proportional to the number of changed codes.
+Reading every cached activation is itself retained-side work and must be charged.
+
+Affine equality example (exact arithmetic): if the input is unchanged, it is
+enough that DeltaW X=0. A cached basis U for the input column span permits the
+equivalent test DeltaW U=0. If the input also changes by DeltaX, test
+ DeltaW X + W' DeltaX=0. This can be cheaper for sparse/low-rank factors, but no
+generic input-rank or weight-rank reduction is guaranteed.
+
+Attention equality example: with fixed mask support, softmax(S')=softmax(S)
+exactly iff each valid row differs by an additive constant. Hence unchanged
+attention weights plus A DeltaV=0 certify unchanged attention output. These are
+real-arithmetic identities, not automatic equalities of rounded softmax kernels.
+
+Low-rank Gram update: if X'=X+UV^T with U in R^(d x r), V in R^(t x r), set
+ Z=XV and S=V^TV. Then
+ X'X'^T-XX^T = ZU^T+UZ^T+USU^T
+             = [Z U] [[0,I],[I,S]] [Z U]^T,                 (T3)
+of rank at most 2r. Forming it costs O(dtr+tr^2+d^2r+dr^2), before bit costs,
+versus O(td^2) for a dense Gram. Woodbury then gives an inverse update in
+O(d^2r+r^3) arithmetic. This is an inverse/statistics result, not by itself a
+bound on cost of producing the quantizer's triangular factors or rounding.
+
+4. Rank growth is a genuine nonlinear obstruction
+------------------------------------------------
+Rank-one logit changes can induce rank-(n-1) attention changes. Set old logits
+S=0. Choose n distinct positive t_i, u_i=log t_i and v_j=j-1. Then S'=uv^T has
+rank one, but exp(S') has entries t_i^(j-1), a nonsingular Vandermonde matrix.
+Row normalization is invertible, so A'=softmax(S') has rank n. Old attention
+A=11^T/n has rank one. Therefore rank(A'-A)>=n-1; row sums of A'-A are zero,
+so its rank is exactly n-1. Both matrices are legitimate unmasked dot-product
+attention scores of width one. Thus an exact method cannot assume that a
+low-rank change stays low rank through softmax. This is a structural example,
+not a synthetic empirical dataset or a statement about all real workloads.
+
+5. Fixed polynomial moments do not close nonlinear replay
+--------------------------------------------------------
+For every nonnegative integer m there are equal-size finite scalar multisets
+C_plus,C_minus whose power sums of degrees 0,...,m are identical, but whose
+sum of f(x)=GELU(x)^2 differs. Proof: f is analytic and non-polynomial (it tends
+to zero at negative infinity and grows quadratically at positive infinity).
+Choose a,h for which its (m+1)-st finite difference is nonzero. Such a,h exist,
+since otherwise the (m+1)-st derivative vanishes identically. At points a+ih,
+split the signed coefficients (-1)^i binomial(m+1,i) into positive and negative
+integer multiplicities. Finite differences annihilate every polynomial of
+degree at most m, giving the equal moments and counts; they do not annihilate
+f for this choice. Consequently even storing every fixed-order input moment
+cannot, in general, reconstruct a new nonlinear second moment exactly.
+
+This does NOT rule out a specially chosen sufficient statistic for a restricted
+feature family, storing all records, a finite-domain lookup table, or a useful
+approximation. It also does not prove a lower bound on an actual transformer's
+arithmetic complexity. It rules out the proposed universal fixed polynomial
+moment closure.
+
+6. Precise retained-feature oracle lower bound
+---------------------------------------------
+Access model: preprocessing reveals all OLD feature outputs and arbitrary
+metadata independent of the NEW feature-oracle values. The changed prefix is
+accessible only through a per-record oracle returning its new feature z_j.
+An algorithm may store/inspect old outputs freely. It must output the exact
+suffix quantized artifact for every allowed new oracle. It has no additional
+structural certificate tying different oracle values together.
+
+For n retained records, let every old feature be zero. Promise that the new
+features are either all zero or have one unspecified record equal to (1,1).
+Let H=lambda I+M0^(-1) sum z_j z_j^T and r=1/(M0 lambda+1).
+Consider a two-coordinate quadratic/GPTQ row with integer grid, order 1,2,
+ w_1=c in (0,1/2), w_2=1/2-cr/2.
+The first code is zero. The second conditional input is
+ v_2=w_2+c H_12/H_22.
+It rounds to zero in the all-zero instance and one in any single-nonzero
+instance, with strict positive margin cr/2 in both cases.
+
+If a deterministic algorithm does not query record i on the all-zero instance,
+its transcript is identical on the instance with only record i nonzero, yet
+the required artifact differs. Thus it must make n queries in the worst case.
+A zero-error randomized algorithm has the same conclusion almost surely on
+the all-zero instance. For a randomized algorithm with error at most epsilon
+on EACH promised instance, coupling its random bits gives
+ P(query i on all-zero instance)>=1-2epsilon,
+and hence expected queries at least n(1-2epsilon).
+
+The model makes the lower bound deliberately narrow. It is a bound on generic
+black-box sequential repair using only old features, not a lower bound on the
+actual transformer's computation or on algorithms with new-prefix summary
+certificates. Candidate transport in Section 2 escapes exactly by supplying
+such structure. An abstention followed by fresh evaluation still pays the
+queries in the full service. An oracle that returns record groups changes the
+unit of the bound, not the need to touch every potentially decisive group.
+
+7. Finite-program and persistent-state qualifications
+----------------------------------------------------
+Exact affine/softmax identities apply directly only to exact arithmetic or to a
+declared correctly rounded primitive for which output-cell containment is
+proved. In an arbitrary fixed FP GEMM/softmax program, changed summation order,
+underflow and intermediate rounding can break real-arithmetic reuse identities.
+Safe choices are (i) exact/canonical arithmetic target, (ii) verified enclosures
+for the actual specified finite program, or (iii) actual evaluation and bitwise
+comparison. Formula (T2) also needs exact/canonical sums for repeated deletion.
+
+Caches/anchors from an old deleted corpus are auxiliary data-derived state.
+Artifact equivalence alone is weaker than reproducing the complete state that
+would be constructed on retained data. If the contract requires canonical
+retained state, update/rebuild every promised cache and purge deleted entries,
+charging this cost. Do not call an anchored certificate table canonical merely
+because the deployed weights have been certified.
+
+Canonical-reference construction (preserves original model target): fix a
+corpus-independent reference network R0, e.g. the original full-precision W.
+Define the fresh state explicitly as
+ A(R)=(Q_seq(W,R), S_ref(R), intrinsic descriptor map for R, IDs(R)),
+where S_ref is an exact/canonical additive collection of reference moments,
+not the actual sequential quantizer's historical activation Grams. Fresh
+construction erases all other calibration traces. Repair updates S_ref from
+deleted reference contributions, certifies Q_seq using reference transport or
+fresh fallback, then erases historical/candidate transient traces. Its committed
+state equals A(R) exactly. Thus canonical repeated-state closure is possible
+without changing the deployed-model counterfactual target. It is a new explicit
+auxiliary-state contract, not a theorem about the old historical-Gram contract.
+
+Reference transport now pays for full quantization-versus-reference drift, which
+can be substantially larger than deletion-induced drift; no acceptance advantage
+is implied. Hierarchical group summaries should use a fixed ID-based tree, or
+charge reconstruction of any corpus-dependent grouping. Exact sums, minima and
+maxima can then be maintained by recombining affected ancestor summaries. Group
+reference Grams require O(number_of_groups * sum_l d_l^2) storage. Without them,
+refining a group must also recover its reference contribution, possibly by an
+additional reference forward pass. Intrinsic descriptors and all deleted entries
+must be removed. Authentication and all tree/state updates remain charged.
+
+8. Research decision
+--------------------
+The changed-prefix gap is logically closed by candidate transport and exact
+active-record repair; the practical acceptance/cost gap is not a theorem to
+be wished away. The strongest honest package is:
+ (i) exact changed-prefix certification with adaptive replay fallback;
+ (ii) explicit cost threshold and bounded fallback overhead;
+ (iii) rank/moment/access-model boundaries delimiting why the threshold may
+       fail in nonlinear transformers;
+ (iv) a separate deletion-designed target only if the original target's measured
+      certificate and replay costs cannot beat fresh requantization.
+No unconditional practical speedup or automatic usefulness is established here.
+
+Primary sources checked for model definitions only
+------------------------------------------------
+Frantar et al., GPTQ: Accurate Post-Training Quantization for Generative
+Pre-trained Transformers. https://arxiv.org/abs/2210.17323 and official code
+https://github.com/ist-daslab/gptq (includes true-sequential ordering option).
+Vaswani et al., Attention Is All You Need. https://arxiv.org/abs/1706.03762
+(dot-product attention followed by row softmax and value multiplication).
+All propositions, constructions and bounds in this note are derived here;
+their novelty relative to the full literature has not been established.
