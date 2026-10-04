@@ -1,48 +1,95 @@
-# Revision 3 validation
+# Revision 4 validation
 
-Date: 4 October 2026. Scope: mathematical review, software correctness and document validation. Research experiments remained paused.
+Date: 4 October 2026.
+Scope: software correctness, independent source review, and document checks.
+Research experiments remained paused.
 
 ## Final software result
 
-`python -m unittest discover -s tests -v`: **77 tests passed**, exit code 0.
+`python -m unittest discover -s tests -v`: **129 tests passed**, exit code 0.
+Python static compilation passed for every source and test module.
 
-Full output is in `validation/software_tests_v3.txt`. `validation/tested_source_sha256.json` binds every tested source/test file to its SHA256. Python static compilation also passed for all source and test modules. The unittest runner's elapsed time is incidental verification metadata; it is not a quantization/repair benchmark result.
+The complete test output is in `validation/software_tests_v4.txt`.
+`validation/tested_source_sha256_v4.json` records the tested source and test hashes.
+Runner elapsed time is verification metadata, not repair-performance evidence.
 
-Covered properties include:
+The earlier 77-test result remains in `docs/VALIDATION_V3.md`.
+Its original log and hash manifest remain unchanged.
 
-- Exact quantizer decisions against independently written constrained quadratic solves, including ties, scaling, saturated grids and invalid inputs.
-- Sparse code injection against independent solves and full target recurrence; false/stale envelope and trace handling.
-- Direct feature-Gram vs response-polynomial agreement; oriented cross terms; canonical deletion order; identity and payload rejection.
-- Squared error descriptors including mixed terms and exact outward square roots.
-- Compact linear response storage, direct constant/linear/tangent contraction, shifted PSD enclosures and normalization.
-- Complete fresh/repair stage state, changed first-stage codes, immutable prefixes/configuration, repeated/combined/empty/all deletions, request/source identity and stale witness rejection.
-- Quadratic and low-storage response adapters with zero retained neural replay on supported algebraic correctness fixtures; chart miss and legitimately unavailable response evidence safely replay.
-- A signed-bound normalization case with M0=1/4 that would falsely certify incorrect codes if normalization were omitted.
-- Complete decoder causality, multihead/multiblock execution, exact dyadic export, finite target errors, logits/generation, changed first quantized stage after deletion, fresh/repair canonical bytes and full logits, repeated requests and provider-disabled fallback equivalence.
-- Weighted scheduling bounds for uneven cooperative packets with cancellation and commit charges, and rejection before commit on invalid packets.
+## New coverage
 
-These fixtures verify program behavior. They are not synthetic empirical datasets, model-quality studies, certificate-coverage estimates or practical-speed measurements.
+| Module or review | Tests | Main checked properties |
+| --- | ---: | --- |
+| Certified primitives | 14 | Rigorous nonlinear intervals, rounding ties, subnormals, overflow, signed zero, and failure paths |
+| Compact aggregate service | 12 | Deleted contribution checks, compact sums, signed bounds, normalization, canonical repeated state, and selected replay |
+| Local GPT-2 adapter | 12 | Four dtypes, shards, transposes, activation variants, tied heads, provenance, and invalid inputs |
+| Automatic certified decoder | 6 | Mixed response bounds, chart rejection, changed features, accepted repair, fallback, and canonical state |
+| Independent adversarial checks | 8 | Separate arithmetic oracles, mixed Hessians, cancellation, underflow, and stable softmax |
+
+The existing 77 correctness tests also pass.
+These include independent exact quantizer checks and legacy service integration.
+
+## Strongest integration fixture
+
+A deleted record changes one first-stage QKV code from zero to `1/1024`.
+The finite downstream features also change.
+The network has nonzero operators and multiple code choices.
+The retained-record loader raises an error on every attempted read.
+Certified repair succeeds without calling that loader.
+Its complete canonical state equals fresh construction on retained records.
+
+This verifies deletion-induced change, not merely drift from the base reference.
+Downstream matrices largely start exactly on-grid.
+The fixture does not establish dense downstream changes or realistic certificate coverage.
+Other checks cover repeated deletions, changed-reference bounds, and out-of-chart replay.
 
 ## Independent review
 
-The theory and code were reviewed in separate parallel tracks. See `theory_revision/implementation_review_v3.txt`, `response_moments.txt`, `linear_gram_response.txt` and `docs/NOVELTY_AUDIT.md`.
+The review is in `theory_revision/implementation_review_v4.txt`.
+The reviewer found no unresolved soundness defect under the declared contracts.
+This was manual source review, not proof-assistant verification.
 
-Two concrete defects were discovered and resolved before the final run:
+Review resolved these concrete issues:
 
-1. Reassignable service configuration could become inconsistent with a cached target manifest. Service configuration is now frozen and regression-tested.
-2. A legitimate unavailable response descriptor was treated as malformed evidence. Both adapter tiers now use a canonical unavailable marker, yielding UNKNOWN and exact replay; malformed claimed evidence still fails closed.
+1. Proof entry points now enforce the binary64 runtime checks.
+2. Primitive caches no longer retain data-dependent inputs.
+3. Stable max-shift softmax replaced the temporary first-score shift.
+4. The softmax sum proof now states its sequence-length bound.
+5. The acceptance fixture now checks deletion-induced old-versus-new code changes.
+6. Bare GPT2Model imports explicitly declare the added output head.
 
-Review checked full mixed curvature, finite/residual remainder terms, coefficient-information lower-bound scope, PSD omission, signed enclosure direction, replay invariants and all normalization factors. Mathematical proofs remain conditional on their stated domains and trusted provider assumptions; no proof assistant was used.
+The review checked signed Gram bounds, normalization, mixed curvature, finite errors, and source bindings.
+It also checked metadata costs and the absence of persistent per-record descriptor caches.
 
-## Report checks
+## Numerical and state limits
 
-The consolidated PDF builds successfully, has 24 pages, and produced no Overfull-box warning. All pages were rendered and visually inspected; updated pages were re-rendered after corrections. Benign Underfull table-layout warnings do not affect content visibility.
+V_cert is a distinct finite numerical target.
+It is not native Hugging Face, the earlier library-math V, or historical floating quantizer E.
+Provider abstention triggers retained replay.
+Unresolved or invalid finite execution aborts the transaction without returning an approximate model.
+Completion requires the necessary finite executions to succeed.
 
-## Not validated by this work
+Chart directions must be independent of the deletable corpus.
+The implementation cannot prove that historical provenance condition.
+Exact chart fitting can reject valid alternative representations when it sets free coefficients to zero.
+This affects coverage, not correctness.
 
-- Real pretrained model quality, real-data certificate coverage or saved full-model latency.
-- Automatic certified finite transformer jets/curvature providers or arbitrary vendor kernels.
-- A compact group-aggregate response state integrated into the service; the transparent adapters retain and read per-record payloads.
-- An advantage over the best equally indexed fresh algorithm, GPU scheduling, cold-service I/O or preparation amortization.
-- Physical erasure of Python/caller memory copies, hostile-store authentication or equivalence to a different finite quantizer E.
-- Recovery or re-execution of historical experiments whose raw files were pruned.
+Canonical state excludes deleted logical entries and request-local caches.
+It does not prove physical erasure or authenticate hostile storage.
+Metadata still uses O(NL) entries and scans.
+Rational bit lengths, chart fitting, and deleted extraction remain costs.
+
+## Document validation
+
+The consolidated PDF has **27 pages**.
+LaTeX completed without overfull boxes.
+All pages were rendered for inspection.
+The new implementation pages were checked at full page size.
+The report source and output remain in the repository.
+
+## Excluded evidence
+
+No pretrained checkpoint or calibration dataset was downloaded or evaluated.
+No benchmark campaign, synthetic empirical dataset, or external compute job ran.
+No practical coverage, latency, quality, memory, or lifetime result is claimed.
+Earlier missing raw experiments were not recovered or rerun.

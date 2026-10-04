@@ -13,7 +13,7 @@
 \begin{document}
 {\LARGE\bfseries Exact calibration repair\\[3pt] after changed prefixes}
 
-{\large Response moments, exact decisions, and canonical deletion state}\par
+{\large Response moments, certified execution, and canonical deletion state}\par
 4 October 2026\quad |\quad Research target: ACL 2027
 
 \note{Main advance.} Repair no longer requires an unchanged first layer. We generate new quantized codes, bound the resulting retained activation drift, and certify those codes against the complete sequential retained-data quantizer. Ambiguous stages trigger selected retained-group replay. Complete replay is an exact fallback.
@@ -477,7 +477,7 @@ Scheduler & Resumable charged-work steps, packet-lag bound, always-terminating e
 Commit & Complete artifact/state verification, canonical serialization and transient/deleted-data erasure.\\\bottomrule
 \end{tabularx}
 
-The reference implementation now includes the local core, sparse injection, affine response moments, a stage service with exact fallback and canonical state, a deterministic decoder backend, and a cooperative work scheduler. The backend supplies structural-identity certificates; general derivative/remainder and nontrivial finite transformer transport providers remain proof obligations. This is new code, not recovery of the missing previous implementation.
+The reference implementation includes the local core, sparse injection, response moments, canonical stage service, deterministic decoder, and cooperative scheduler. Revision 4 adds compact aggregate state, automatic certified transformer responses, and local GPT-2 checkpoint loading. Sections 24--26 define their scope. The certified decoder defines a separate finite program, $V_{\rm cert}$. It does not certify arbitrary library kernels. This is new code, not recovery of the missing implementation.
 
 The shape lemma, new-prefix induction, adaptive fallback, state constructor, sparse local repair, full-model cost condition and weighted fallback were derived and independently reviewed. Notes preserve the derivations and challenges. Python code remains a reference implementation, not a formal proof.
 

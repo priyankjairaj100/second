@@ -2,10 +2,30 @@
 
 Continue our ACL 2027 calibration-data unlearning project from https://github.com/priyankjairaj100/second.
 
-Read RESUME.md, docs/STATUS.md, docs/PROJECT_CONTEXT.md, docs/VALIDATION.md and docs/REFERENCE_SERVICE.md, then the consolidated report and AGENTS.md.
+Read RESUME.md, AGENTS.md, docs/STATUS.md, docs/PROJECT_CONTEXT.md, and docs/VALIDATION.md.
+Then read docs/REFERENCE_SERVICE.md and the consolidated report.
 
-We target exact retained-data sequential quantization with fixed base weights. The latest v3 work adds deletable response moments, a lower-storage linear-Gram tier, canonical repeated state, conditional second-order zero-replay guarantees, and an executable reference stage service/CPU decoder. The decoder currently certifies structural identity only; nontrivial certified finite transformer jets/transport and pretrained adapters remain unimplemented. Safe replay is complete but is not a practical speedup. Do not silently conflate oracle V with historical finite quantizer E.
+We target complete retained-data sequential quantization with fixed base weights.
+Revision 4 implements compact group state, automatic certified transformer responses, and local GPT-2 safetensors loading.
+The provider computes interval jets, mixed Hessians, and finite-error bounds within a fixed corpus-independent affine chart.
+The compact service stores group sums and record bindings.
+It regenerates deleted contributions and supports canonical repeated deletion.
+O(NL) metadata and scans remain explicit.
 
-Experiments are paused until I resume them. Software correctness tests are allowed and were run; do not launch benchmarks, cloud jobs, model downloads or synthetic empirical datasets to reconstruct context. Prior raw experiment files were pruned. Old numbers in PROJECT_CONTEXT are historical reconstruction only.
+The new certified scalar target V_cert differs from legacy library-math V and historical floating quantizer E.
+Checkpoint import does not imply native Hugging Face numerical equality.
+Unsupported proof conditions cause retained replay.
+Failures inside the finite evaluator abort without returning an approximate model.
 
-The novelty audit identified Gunn 2026 derivative sketches, classical matrix geometry and calibration-state prior work. Claim the narrow exact sequential decision/state contribution, not broad firsts. Equally indexed fresh quantization must get the same summaries. Continue saving all substantive work and restart context to this repository without force pushes.
+Research experiments remain paused until I resume them.
+Software correctness tests are allowed.
+Do not launch benchmarks, cloud jobs, model downloads, or synthetic empirical dataset studies to reconstruct context.
+Practical chart coverage, memory, preparation costs, latency, and NLP quality remain unmeasured.
+The implementation is scalar reference code.
+An equally indexed fresh solver must receive the same summaries.
+
+Earlier raw experiment files were pruned.
+Old metrics in PROJECT_CONTEXT are reconstructed conversation evidence.
+Do not claim recovery or reruns.
+Preserve the narrow contribution and the limitations in the novelty audit.
+Save all substantive work and complete restart notes to this repository without force pushes.

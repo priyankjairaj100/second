@@ -121,3 +121,15 @@ This is a mathematical algorithm suggestion made during the audit. It is not imp
 ## Closing update from implementation/review
 
 The subsequent v3 work proved the linear-Gram suggestion, including a shifted PSD proposal, signed error endpoints and adaptive replay invariant; see theory_revision/linear_gram_response.txt. It was implemented in src/linear_response.py and connected to the generic service proposal interface. This updates the earlier audit-time "suggestion" status, without changing any empirical claim. The consolidated report is now 24 pages. The decoder's nontrivial finite-response provider and pretrained adapter remain absent.
+
+## Revision 4 implementation update
+
+The implementation gaps described above have changed.
+The new complete service stores compact group moments and record bindings.
+The certified decoder computes automatic jets, mixed curvature, and finite-error bounds within a fixed affine chart.
+A local GPT-2 safetensors adapter is also implemented.
+The consolidated report now has 27 pages.
+These changes establish a concrete reference path for the stated method.
+They do not establish useful pretrained coverage or practical speed.
+Rational interval arithmetic and automatic differentiation remain established ingredients.
+This update makes no new literature-priority claim.

@@ -1,41 +1,81 @@
 # Resume this ACL 2027 calibration-unlearning project
 
-Last revision: 4 October 2026, v3 response-moment / executable-reference work.
+Last revision: 4 October 2026, v4 implementation blockers.
 Repository: https://github.com/priyankjairaj100/second
 
-Read docs/STATUS.md, docs/PROJECT_CONTEXT.md, docs/VALIDATION.md, docs/REFERENCE_SERVICE.md and the consolidated report first. Preserve AGENTS.md. The user has authorized pushing all substantive project work and restart context here without repeated permission requests.
+Read docs/STATUS.md, docs/PROJECT_CONTEXT.md, docs/VALIDATION.md, and docs/REFERENCE_SERVICE.md first.
+Then read the consolidated report and AGENTS.md.
+The user authorized repository pushes and complete restart notes.
+Do not force-push or remove unrelated remote changes.
 
-## Current scientific target
+## Scientific target
 
-Fix base weights W. Remove calibration documents F and reproduce Q_seq(W,C\\F), including changed downstream features after earlier weights change. Target V treats a pinned finite record-local neural program's outputs as exact dyadics, then uses exact rational statistics and fixed-grid rounding. It is not the historical floating reduction/Cholesky executable E. This does not unlearn knowledge in base weights W.
+Fix base weights W.
+Delete calibration documents F.
+Reproduce the complete retained-data sequential quantizer, including changed downstream features.
+Fixed grids, ridge, normalization, order, and feature execution define the target.
+This task does not remove knowledge learned in W.
 
-## Latest request and phase
+Three numerical targets remain distinct.
+Legacy V uses pinned finite library-math features and exact rational statistics.
+New V_cert uses certified scalar nonlinear primitives and exact rational statistics.
+Historical E uses floating Gram reductions and factorization.
+No equality between these targets is assumed.
 
-User: "ok lets complete the remainig items now for max novlety" after asking to close theory/algorithms before resuming experiments. Research experiments remain PAUSED; correctness tests for authored code have been run. No new model/data downloads, benchmark campaign or synthetic empirical dataset study was run.
+## Current request and phase
 
-## Most important new result
+User: "Proceed on the remaining implementation blockers."
+Research experiments remain PAUSED.
+Software correctness tests are allowed.
+Do not download models, start benchmarks, launch cloud jobs, or create synthetic empirical datasets without resumed authorization.
 
-A fixed independent reference can drift too far. Intrinsic response jets let the surrogate move with the new certified prefix while maintaining exact deletable moments. A full remainder includes mixed Hessians, out-of-chart residuals, jet errors and finite arithmetic. Local quadratic error yields a larger sufficient certified region and an explicit whole-model zero-retained-replay regime under stated conditions. No small-deletion coverage or universal gain is assumed.
+## Revision 4 implementation
 
-The newest low-storage tier retains constant/linear Gram response matrices and scalar tangent Gram, O(r d²+r²) per group. Omitted quadratic response is PSD and bounded; a deterministic scalar shift gives a PSD proposal. This still has second-order uncertainty. Read theory_revision/linear_gram_response.txt as well as response_moments.txt.
+- `aggregate_response_service.py` stores group sums instead of individual record matrices.
+- It regenerates deleted contributions, verifies digests, subtracts exact sums, and commits canonical retained state.
+- Proposal queries use aggregate statistics without retained descriptor scans.
+- Record and stage metadata still require O(NL) storage and scans.
+- `certified_intervals.py` supplies rational enclosures and certified binary64 nonlinear rounding.
+- `certified_transformer.py` supplies automatic interval jets, full mixed Hessians, and finite-error bounds.
+- A fixed affine chart constrains supported ancestor changes.
+- Unsupported chart or proof conditions cause exact retained replay.
+- A failure inside the finite evaluator aborts the request without committing a result.
+- `checkpoint_adapter.py` imports local GPT-2 safetensors, including shards and default gelu_new.
+- Checkpoint mapping does not establish native Hugging Face numerical equality.
 
-## Implementation status
+Read docs/AGGREGATE_SERVICE.md, docs/CERTIFIED_PROVIDER.md, and docs/CHECKPOINT_ADAPTER.md for APIs and limits.
+Read docs/VALIDATION.md for the final test result and source hashes.
+Independent review is in theory_revision/implementation_review_v4.txt.
 
-The repository now has an executable exact local core, sparse repair, response/remainder arithmetic, a portable complete stage service with canonical repeated-state deletion and finite replay fallback, a deterministic complete CPU decoder and service adapter, and a standalone cooperative work scheduler. Software/adversarial tests include first-layer changes and fresh/repaired canonical-state/logit equality.
+## Theory retained from v3
 
-IMPORTANT: the decoder's built-in shortcut only proves structural input identity. General changed-prefix finite transport and automatic certified jets/curvature providers are NOT implemented. Response adapters compose user-supplied trusted intrinsic jets/bounds; never present those assumptions as automatically verified. Pretrained checkpoint adapters and fast GPU implementation also remain. See docs/VALIDATION.md for exact check results.
+Intrinsic response jets let the surrogate follow the new certified prefix.
+The complete remainder includes mixed curvature, jet approximation, residuals, and finite arithmetic.
+The compact tier stores constant/linear Gram matrices plus scalar tangent moments.
+Its per-group response storage is O(r d²+r²), with second-order uncertainty under stated conditions.
+Shifted PSD proposals preserve the ridge floor during adaptive replay.
+Local margin and error conditions imply whole-model zero retained replay.
+These conditions do not establish practical coverage.
 
-## Novelty and evidence discipline
+## Remaining boundaries
 
-- Matrix shape constant is classical Kantorovich/Wielandt geometry specialized to quantization.
-- Taylor response models, polynomial statistics and derivative-sketch deletion are prior techniques; Gunn 2026 is a strong adjacent source.
-- An equally indexed fresh solver can exploit the same index. Do not claim deletion-exclusive universal speedup over it.
-- Practical full-model latency/coverage/quality/storage amortization remain empirical.
-- Earlier raw logs/code/PDFs were pruned and are NOT recovered. PROJECT_CONTEXT describes historical numbers as reconstructed conversation evidence.
-- No formal proof-assistant result, hostile-storage authentication or physical Python-memory erasure is claimed.
+Realistic chart coverage, preparation costs, useful storage, latency, and NLP quality remain unmeasured.
+Full-dimensional charts can be prohibitively expensive.
+The scalar reference implementation is not a production GPU implementation.
+The scheduler remains a separate cooperative utility.
+An equally indexed fresh solver can use the same summaries.
+No universal deletion-exclusive speedup is claimed.
 
-## Next work boundary
+The sharp shape constant is classical matrix geometry.
+Derivative sketches, Taylor verification, and polynomial sufficient statistics have prior work.
+Claim the narrow exact sequential decision and canonical-state contribution.
+Do not claim exhaustive novelty or formal proof-assistant verification.
+Canonical state means logical serialized state under trusted storage.
+It does not mean physical Python-memory erasure.
 
-The stated mathematics and executable reference paths are reviewed, not a finished paper. Instantiate a sound practical response provider/pretrained adapter, or explicitly choose a scoped supported numerical target. Only resume research experiments when the user authorizes that phase. Then validate exactness independently before evaluating real text, all fallbacks, complete service timing, equally indexed fresh comparison and lifetime/storage costs.
+Earlier raw experiments were pruned and remain unavailable.
+PROJECT_CONTEXT labels historical metrics as reconstructed conversation evidence.
+Never present them as recovered or rerun measurements.
 
-Continue from current files rather than starting another generic survey. Save source, report, tests and context to GitHub; preserve existing remote changes, no force push. Never upload credentials, unrelated user material, environments or model caches.
+Continue from these files.
+Keep all substantive code, reports, tests, and restart context in the authorized repository.

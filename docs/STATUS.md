@@ -1,42 +1,75 @@
 # Current project status
 
-Updated 4 October 2026, response-moment and executable-reference revision (v3).
+Updated 4 October 2026, revision 4.
 
-## User direction
+The current request addresses remaining implementation blockers.
+Research experiments remain paused.
+Software correctness checks remain within scope.
 
-Complete remaining theoretical/algorithmic items and strengthen novelty. Save all available project files and restart context in https://github.com/priyankjairaj100/second. Research experiments remain PAUSED. Software correctness verification is part of implementation work, not an empirical dataset/benchmark campaign.
+## Completed implementation
 
-## Main improvement
+The reference implementation now connects the theory to a concrete certified decoder.
 
-Corpus-independent response jets give deletable polynomial Gram statistics. A candidate-dependent surrogate can follow changed quantized ancestors while keeping persistent statistics intrinsic to retained records. A sound remainder includes mixed curvature, out-of-subspace residuals, jet approximation and finite-evaluator error. Under explicit local conditions the feature error is second order and all stages can certify with zero retained replay, even when codes change throughout.
+| Previous blocker | Implemented result | Remaining limit |
+| --- | --- | --- |
+| Complete service stored individual matrices | Compact group response and remainder sums | O(NL) metadata still remains |
+| Changed-prefix bounds required trusted user values | Automatic interval jets, mixed Hessians, and finite-error bounds | Fixed affine chart can reject realistic changes |
+| Nonlinear library calls lacked proved rounding bounds | Rational enclosures and certified binary64 rounding | Slow scalar program; unresolved operations abort |
+| Local checkpoint interface was absent | Strict GPT-2 safetensors adapter | No pretrained checkpoint evaluation yet |
 
-The lower-storage linear Gram tier retains only constant/linear matrix coefficients plus scalar tangent moments. It bounds the omitted positive-semidefinite quadratic term, reducing per-group matrix storage from O(r² d²) to O(r d²+r²), with second-order uncertainty. This is an interval-query construction; it does not contradict the exact polynomial-query coefficient-information lower bound.
+The aggregate service verifies deleted-record contributions before exact subtraction.
+It certifies proposals against the new ancestor prefix.
+Unknown bounds trigger selected retained replay.
+The final state matches fresh retained construction.
+Repeated deletion preserves canonical state bytes.
 
-## Implemented
+The certified provider uses a corpus-independent affine chart.
+It computes value, derivative, mixed-curvature, and numerical-error bounds automatically.
+It checks chart membership against installed finite weights.
+Its stable softmax proof separates ideal derivatives from finite branch effects.
+No caller-supplied tolerance substitutes for the numerical proof.
 
-- Exact fixed-grid rational quantization and scale-aware decision checks.
-- Sparse code-change injection with exact ambiguous-coordinate fallback and visible provenance premises.
-- Canonical affine-response moment indices, squared remainder descriptors, outward rational error contraction, and low-storage Gram-response arithmetic.
-- Complete portable fresh/repair stage service: fixed DAG, immutable certified prefix, exact reference-index deletion, prefix/surrogate-bound witnesses, adaptive group replay and complete fallback.
-- Full deterministic scalar CPU decoder with causal attention, LayerNorm, GELU, residuals, exact dyadic features, logits/generation and service adapter.
-- Structural-identity numerical certificates in that decoder; changed relevant finite ancestors return UNKNOWN and replay.
-- Cooperative weighted work scheduler with explicit packet, cancellation and commit costs. It is a standalone scheduler utility, not a preemptible GPU service.
-- Behavioral and adversarial software tests, including an independent constrained-quadratic oracle, changed-first-stage decoder deletion, repeated/fresh state byte equality, malformed/stale proof rejection and fail-closed numerical paths. Exact results are in docs/VALIDATION.md.
+The local adapter supports single and sharded safetensors.
+It handles four floating storage types and both supported GELU variants.
+It records source hashes and rejects unsupported architectures.
 
-## Still not implemented or established
+## Numerical scope
 
-- Automatic certified transformer response jets and useful curvature/finite-error providers for changed prefixes. Generic response adapters accept explicitly trusted intrinsic extractors and bounds; that is not a ready-made proof for arbitrary checkpoint kernels.
-- A pretrained architecture/checkpoint adapter or production GPU implementation.
-- Equality of oracle V to a separate floating Gram/Cholesky quantizer E.
-- Useful certificate coverage, realistic chart residuals, favorable lifetime/storage tradeoffs or reliable full-model latency savings on real NLP workloads.
-- Universal strict advantage over an equally indexed fresh solver. That solver can use these same summaries.
-- Formal proof-assistant verification, hostile-store authentication, or physical erasure of Python memory copies. The service promises canonical committed state under its declared trusted boundaries.
-- Recovery of earlier raw experiments. Those files remain missing; prior numbers are historical context only.
+V_cert defines a new finite feature program with certified nonlinear primitives.
+It remains distinct from legacy library-math V and floating quantizer E.
+Imported checkpoint weights do not establish native Hugging Face output equality.
+Proof abstention causes replay.
+Finite-evaluator failure aborts the transaction without returning a model.
 
-## Novelty audit corrections
+## Evidence and remaining work
 
-The sharp matrix constant follows classical Kantorovich/Wielandt geometry. Taylor neural approximation, polynomial sufficient statistics and derivative-sketch deletion all have primary precedents, including Gunn (2026). A September 2026 audit also studies retained-only quantization-scale recalibration at fixed weights in vision models. The proposed contribution is exact sequential calibration deletion through certified response statistics, canonical repeated state and explicit storage/replay tradeoffs. No exhaustive priority claim is made.
+Correctness tests and independent review cover the new modules.
+See docs/VALIDATION.md for final results and exact source hashes.
+These checks do not measure model quality, certificate coverage, or latency.
 
-## Resume boundary
+Useful chart coverage remains unknown on real language models.
+Interval bounds may become too loose across long sequences and deep networks.
+Large charts increase preparation, storage, and verification costs.
+The checkpoint adapter loads parameters eagerly into Python objects.
+Large-model memory use remains untested.
+Fast GPU kernels and scheduler integration remain future engineering work.
 
-The reviewed mathematical results are complete under their written assumptions. The reference service is executable and checked. The novel changed-prefix transformer fast path still needs a concrete sound provider before it can claim retained-forward savings; safe fallback alone is not that contribution. Real-data experiments remain paused until the user resumes them. Do not replace these distinctions with a blanket claim that the paper or practical speedup is finished.
+An equally indexed fresh solver can use the same response summaries.
+No universal strict advantage over that solver follows.
+Full service measurements must charge setup, deleted extraction, metadata, replay, verification, output, and state maintenance.
+Research experiments will resume only when the user authorizes that phase.
+
+## Claim discipline
+
+The main contribution remains exact sequential calibration deletion with certified changed ancestors and canonical retained state.
+The lower-storage interval construction supplies O(r d²+r²) response entries per group.
+The stated zero-replay and speed conditions remain conditional mathematical results.
+They are not practical speedup evidence.
+
+The matrix shape constant follows classical geometry.
+Taylor verification, polynomial statistics, and derivative-based deletion sketches have primary precedents.
+The repository makes no exhaustive priority claim.
+It also makes no hostile-storage authentication, physical memory erasure, or proof-assistant claim.
+
+Earlier raw experiment files remain missing.
+Historical metrics are reconstructed context, not recovered evidence.

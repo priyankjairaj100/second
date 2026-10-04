@@ -208,7 +208,7 @@ Sparse injection & Target factor known; interval premises explicitly labeled; ex
 Response moments & Exact quadratic/linear contractions and retained-only subtraction; supplied jet/remainder provenance remains a premise.\\
 Stage service & Complete fresh/repair paths, bound-to-prefix witnesses, selected replay and canonical commit. Trusted evaluator/provider boundary is explicit.\\
 Decoder backend & Complete scalar CPU decoder with causal attention, LayerNorm, GELU, residuals and logits. Fixed architecture and supplied weights/token IDs.\\
-Numerical shortcut & Structural finite-ancestor identity is certified. General changed-prefix floating transport and automatic certified jets are not supplied.\\
+Numerical shortcut & Legacy decoder certifies structural identity. Revision 4 adds automatic interval jets and finite-error proofs for a separate certified decoder.\\
 Work scheduler & Cooperative bounded packets, cancellation and commit counted; not a GPU preemptor or latency measurement.\\\bottomrule
 \end{tabularx}
 
@@ -232,6 +232,79 @@ The full dated audit and additional primary sources are in \texttt{docs/NOVELTY\
 
 \note{What is closed.} The stated exactness, remainder, canonical-state, coefficient-information and conditional charged-work results have derivations and independent review. A complete reference execution path now exists, including a deterministic decoder and exact fallback. Software correctness tests are recorded separately from experiments.
 
-\note{What cannot honestly be declared closed.} Useful certified derivative/finite-error providers for realistic checkpoints; low out-of-chart residuals; competitive storage/preparation; strict gain over equally indexed fresh evaluation; and reliable real-model latency/NLP evidence. UNKNOWN-to-replay makes unsupported providers safe, but does not turn them into speedups. The supplied decoder is not a pretrained-model adapter or a production GPU implementation. The generic service adapter stores per-record response payloads and scans their descriptors; it does not realize compact group-index query costs.
+\note{What remains open.} Useful chart coverage, competitive storage/preparation, and reliable real-model latency/NLP evidence remain unmeasured. Strict gain over equally indexed fresh evaluation is not automatic. UNKNOWN-to-replay ensures safe fallback, not speed. Revision 4 supplies compact aggregate state and a certified finite provider. It also loads local GPT-2 safetensors. These are scalar reference implementations. They are not production GPU kernels or evidence of practical speed.
 
 \note{Next experiment gate, when authorized.} Validate full artifact and repeated-state equality independently, then measure complete service cost, real text quality, retained replay, storage and amortization. Include failed certificates, changed first layers, an equally indexed fresh baseline and a fixed-reference ablation. Continue deferring synthetic empirical datasets. No theory-only promise replaces those measurements.
+
+\newpage
+\section*{24. Compact complete state is now executable}
+The transparent response adapter keeps per-record matrices. Revision 4 adds a separate complete service with group sums. Its committed state has three parts:
+\[
+ \mathcal A_{\rm agg}(R)=\bigl(Q_{\rm seq}(W,R),\ \mathrm{Bindings}(R),\
+          \{\mathrm{LinearMoments}_g(R),\mathrm{ErrorMoments}_g(R)\}_g\bigr).
+\]
+Each record binding contains its identifier, payload digest, fixed group, and stage-contribution digests. It contains no feature matrix or derivative array. Each group stores exact response sums, scalar remainder moments, and unavailable-evidence counts. Embedded aggregate indices have empty per-record payload lists.
+
+\note{Deletion update.} Recompute each deleted record's intrinsic moments from its supplied payload. Verify its binding before subtraction. Subtract those exact contributions from group totals. Missing proof evidence uses a canonical marker. Any unresolved group then uses exact retained replay.
+
+\note{Proposal query.} Read the aggregate moments and the installed certified prefix. Solve the fixed chart-membership problem. Contract the group response and error moments. Construct the shifted PSD proposal from Section 21. Bind every enclosure to the actual prefix and proposal. The existing decision verifier either certifies all decisions or requests further replay.
+
+\begin{theorem}[Compact-state equivalence]
+Assume intrinsic extraction is deterministic and independent of the deletable corpus. Assume every claimed enclosure is sound and required finite evaluations succeed. Then compact repair returns the fresh retained model and canonical compact state. This holds for repeated deletions in any order.
+\end{theorem}
+\begin{proof}
+Exact additive subtraction leaves precisely the retained intrinsic sums. Fixed group assignment and sorted bindings give the same serialization as fresh construction. Unavailable counts also subtract exactly. At each stage, accepted cells contain the true retained target. Replay instead supplies its exact Gram. Induction therefore gives the fresh stage outputs. The final state depends only on retained records and fixed configuration.
+\end{proof}
+
+\note{Honest storage and work.} Matrix storage is independent of record count for fixed groups, chart rank, and model dimensions. The response tier uses $O(G(rd^2+r^2))$ rational entries per stage. Scalar remainder moments add $O(Gr^2)$ entries. Membership and contribution digests still use $O(NL)$ metadata. Validation, membership rebuilding, and canonical serialization can scan this metadata. Deleted-record extraction and all replay reads remain charged. Arbitrary-precision integer sizes also matter.
+
+The service retains no request-local record, feature, or derivative cache after return. This is a logical committed-state guarantee. It does not promise physical erasure of Python memory or authentication against hostile storage.
+
+\newpage
+\section*{25. A concrete finite provider for changed ancestors}
+Revision 4 defines $V_{\rm cert}$ as a separate numerical target. Basic operations use declared binary64 round-to-nearest-even semantics with gradual underflow. Nonlinear primitives use rational enclosures. Refinement continues until both endpoints select the same binary64 result. An unresolved rounding decision aborts the finite execution. It never returns an uncertified approximation.
+
+Square roots use integer-square inequalities. Exponentials use range reduction and an explicitly bounded Taylor tail. Error-function bounds use series and tail inequalities. Hyperbolic tangent uses certified exponential identities. Only data-independent constants may be cached. The source and runtime manifests distinguish this program from the earlier library-math decoder and floating quantizer $E$.
+
+\note{Automatic proof construction.} Fix affine ancestor-weight directions independently of calibration records. Let $a$ lie in a fixed convex box. Interval second-order differentiation bounds values, every first derivative, and every mixed second derivative. A separate error component bounds finite execution against the ideal smooth graph. The chart is checked against the installed binary64 weights. Any unexplained residual returns UNKNOWN.
+
+For one finite basic operation, a sufficient rounding bound is
+\[
+ |\operatorname{fl}(z)-z|\leq 2^{-53}|z|+2^{-1075},
+\]
+provided overflow is excluded. Arithmetic propagation adds existing operand errors before applying this bound. Nonlinear propagation uses derivative bounds over expanded input intervals. Denominators must remain separated from zero. Possible overflow, invalid domains, or unresolved interval calculations reject the proof.
+
+\note{Stable softmax.} The finite evaluator subtracts the maximum score before exponentiation. The proof does not differentiate that discrete branch. It bounds ideal softmax derivatives directly and separately encloses the finite max-shift schedule. This distinction preserves smooth Hessian bounds and accounts for actual rounding.
+
+For record $j$, choose interval-midpoint feature jets at the chart center. Let $e_{j0}$ bound their constant error. Let $e_{jt}$ bound derivative errors. Let $H_j$ bound the full Hessian tensor. Let $\nu_j$ bound finite execution error. Then
+\[
+ \|X_j^{\rm finite}(a)-Z_{j0}-\sum_t a_tZ_{jt}\|_F
+ \leq \nu_j+e_{j0}+\sum_t |a_t|e_{jt}
+              +\tfrac12 H_j\|a\|_2^2.
+\]
+The stored squared scalar descriptors include every cross term. Their aggregate contraction feeds the signed Gram enclosure from Section 21. No user-supplied numerical tolerance replaces this derivation. Proof failure causes replay. Failure inside the finite evaluator aborts the request without an approximate result.
+
+This implementation closes the automatic-provider interface for its declared program and accepted chart domain. It does not establish wide coverage. Interval dependency, large charts, and finite-error accumulation can cause abstention. Full-dimensional charts can also make preparation and storage prohibitive.
+
+\newpage
+\section*{26. Checkpoint interface and remaining boundaries}
+The local adapter reads GPT-2 configuration and safetensors without downloads or pickle. It supports single files and shards. It decodes F16, BF16, F32, and F64 weights. Conv1D matrices are transposed into the reference decoder's convention. Configuration checks cover attention scaling, normalization, activation, and output-head handling.
+
+The adapter supports the declared sequential pre-normalization GPT-2 architecture. It rejects cross-attention, pruned heads, unsupported attention variants, and inconsistent tensors. A bare GPT2Model import explicitly declares its added output head. Source-file hashes and mapping details enter provenance. Imported weights do not establish native Hugging Face numerical equality.
+
+Wrap the imported decoder with the certified evaluator to select $V_{\rm cert}$. Supply corpus-independent chart directions, fixed grids, ridge, and normalization. These choices define the target before calibration. Unsupported chart changes replay retained data. A checkpoint-derived chart may use base weights. A chart fitted to deletable calibration data needs its own deletion semantics.
+
+\begin{tabularx}{\linewidth}{@{}p{.31\linewidth}X@{}}\toprule
+Implementation question & Revision 4 answer\\\midrule
+Compact complete service & Group sums replace persistent per-record matrix payloads. Metadata scans remain explicit.\\
+Automatic changed-prefix bounds & Interval jets and finite-error propagation supply concrete descriptors for the certified decoder.\\
+Stable finite primitives & Rational refinement supplies certified rounding or an explicit failure.\\
+Local checkpoint loading & GPT-2 safetensors mapping is implemented and checked with software fixtures.\\
+Native checkpoint equivalence & Not claimed. The certified numerical program has its own manifest.\\
+Practical large-model execution & Not established. Eager scalar loading and interval Hessians can be costly.\\
+Real-data speed and quality & Unmeasured. Research experiments remain paused.\\\bottomrule
+\end{tabularx}
+
+\note{Validation boundary.} All 129 correctness tests pass. Independent review found no unresolved defect under the declared contracts. One fixture deletes a record and changes an early QKV code from zero to $1/1024$. Its downstream features also change. Certified repair reads no retained records and matches fresh canonical state. Downstream matrices mostly start on-grid. This fixture does not establish practical coverage. The test inventory and source hashes appear in \texttt{docs/VALIDATION.md}.
+
+\note{Next authorized phase.} First audit exact outputs and all fallback paths on local real checkpoints. Then measure complete service cost and certificate coverage. Charge chart preparation, deleted-record extraction, metadata scans, retained reads, output writes, and storage. Compare against an equally indexed fresh solver. Keep failed requests and changed early weights in the workload. No universal or reliable measured speedup follows from this implementation alone.

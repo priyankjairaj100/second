@@ -67,6 +67,7 @@ class DecoderConfig:
     block_count: int
     max_sequence_length: int
     layernorm_epsilon: float = 1e-5
+    activation: str = "gelu"
 
     def __post_init__(self) -> None:
         for name in (
@@ -81,6 +82,8 @@ class DecoderConfig:
         eps = self.layernorm_epsilon
         if type(eps) is not float or not math.isfinite(eps) or eps <= 0:
             raise ValueError("layernorm_epsilon must be a positive finite float")
+        if self.activation not in ("gelu", "gelu_new"):
+            raise ValueError("activation must be gelu or gelu_new")
 
 
 def _checked(value: float, where: str) -> float:
@@ -259,7 +262,23 @@ def _layernorm(x: FloatMatrix, scale: tuple[float, ...], bias: tuple[float, ...]
     return tuple(rows)
 
 
-def _gelu(x: FloatMatrix) -> FloatMatrix:
+def _gelu(x: FloatMatrix, activation: str = "gelu") -> FloatMatrix:
+    if activation == "gelu_new":
+        coefficient = math.sqrt(2.0 / math.pi)
+        rows = []
+        for row in x:
+            out = []
+            for value in row:
+                square = _checked(value * value, "GELU square")
+                cube = _checked(square * value, "GELU cube")
+                correction = _checked(0.044715 * cube, "GELU cubic correction")
+                argument = _checked(coefficient * _checked(value + correction, "GELU inner sum"), "GELU tanh argument")
+                factor = _checked(1.0 + math.tanh(argument), "GELU tanh factor")
+                out.append(_checked(_checked(0.5 * value, "GELU half") * factor, "GELU product"))
+            rows.append(tuple(out))
+        return tuple(rows)
+    if activation != "gelu":
+        raise ValueError("unsupported activation")
     sqrt_two = math.sqrt(2.0)
     rows = []
     for row in x:
@@ -380,6 +399,7 @@ class DeterministicDecoder:
             )
         }
         config_manifest["layernorm_epsilon_hex"] = config.layernorm_epsilon.hex()
+        config_manifest["activation"] = config.activation
         self._manifest = {
             "schema": "calibration-repair-decoder-v1",
             "source_sha256": _file_hash(__file__),
@@ -388,13 +408,14 @@ class DeterministicDecoder:
             "stages": list(self.stage_ids),
             "stage_order": "block index, fused qkv, attention output, mlp up, mlp down",
             "dependencies": "all previous stages; conservative",
-            "architecture": "learned token+position; pre-LayerNorm causal attention; erf-GELU; final LayerNorm; fixed head",
+            "architecture": "learned token+position; pre-LayerNorm causal attention; configured GELU; final LayerNorm; fixed head",
             "feature_target": "V: finite feature bits interpreted as exact dyadics",
             "record_contract": "one intrinsic variable-length token sequence; no padding, batching, dropout, or cache",
             "linear_kernel": "left-to-right binary64 product then addition; bias added last; no FMA",
             "parameter_conversion": "CPython float(Fraction), before finite neural evaluation",
             "softmax": "causal inclusive mask; finite max subtraction, libm exp, sequential sum, divide",
-            "gelu": "(0.5*x)*(1+libm.erf(x/libm.sqrt(2.0)))",
+            "gelu": ("(0.5*x)*(1+libm.erf(x/libm.sqrt(2.0)))" if config.activation == "gelu"
+                     else "(0.5*x)*(1+libm.tanh(libm.sqrt(2.0/math.pi)*(x+0.044715*((x*x)*x))))"),
             "transport_provider": "structural finite-parameter identity only; otherwise UNKNOWN",
         }
         self.evaluator_id = "decoder-v1:" + hashlib.sha256(_json_bytes(self._manifest)).hexdigest()
@@ -499,7 +520,7 @@ class DeterministicDecoder:
             if stop == stage:
                 return norm2
             up = _linear(norm2, installed.get(stage, self._float_weights[stage]), self._float_biases[stage], stage)
-            activated = _gelu(up)
+            activated = _gelu(up, config.activation)
             stage = pre + "mlp_down"
             if stop == stage:
                 return activated

@@ -1,161 +1,354 @@
-# Proof-safe numerical providers
+# Numerical contract
 
-Status: numerical contract, updated 4 October 2026. Revision 3 adds a deterministic decoder and software tests; it does not assert that arbitrary vendor kernels supply certified error bounds. The built-in decoder shortcut is structural identity; nontrivial finite transport remains UNKNOWN.
+Updated 4 October 2026 for revision 4.
 
-## 1. The exact target
+The project now implements automatic response certificates for a declared scalar decoder.
+The new decoder defines `V_cert`.
+It does not certify arbitrary vendor kernels.
 
-Fix the base weights, tokenizer, record boundaries, masks, positional conventions, quantization grids and coordinate order, covariance normalization, ridge, and tie rule. Define a record-local feature evaluator `V(prefix, record)` by an executable deterministic finite program. Its inputs and all returned finite binary floating-point values are interpreted as exact dyadic rationals when constructing quantization statistics.
+## 1. Three distinct targets
 
-A concrete reproducible interface uses batch size one, a fixed padded sequence length, and a fixed implementation/device/kernel schedule. Larger fixed batches are allowed only when their composition and schedule are intrinsic to a record and independent of the current retained corpus, or when the resulting dependence is explicitly included in the target and repair proof. Deleting a record and repacking a batch is not automatically the same feature map. Disabling dropout and setting a seed do not establish deterministic numerical execution by themselves.
+| Target | Neural features | Quantization statistics and decisions |
+| --- | --- | --- |
+| `E` | A pinned historical finite evaluator | Pinned floating accumulation, factorization, and rounding |
+| `V` | The pinned host-libm decoder | Exact rational statistics and fixed-grid decisions |
+| `V_cert` | The scalar decoder with proved nonlinear primitives | Exact rational statistics and fixed-grid decisions |
 
-The quantization target uses
+`src/transformer_backend.py` implements the current `V` feature evaluator.
+Its nonlinear operations use the pinned host's mathematical library.
+Its built-in shortcut proves structural identity only.
+
+`src/certified_transformer.py` implements the `V_cert` feature evaluator.
+`src/certified_intervals.py` supplies its proved nonlinear primitives.
+This program computes correctly rounded binary64 `exp`, `sqrt`, `erf`, and `tanh` results when rounding resolves.
+It does not assume that host nonlinear routines return correctly rounded results.
+
+Equality to one target does not establish equality to another target.
+The historical `E` results cannot establish correctness or speed for either exact-statistic target.
+The checkpoint adapter does not establish identity with Hugging Face or CUDA execution.
+
+For either exact-statistic target, fix the following items before quantization:
+
+- Base weights and parameter conversion.
+- Tokenizer, records, masks, and position conventions.
+- Evaluator source, runtime, and operation schedule.
+- Quantization grids, coordinate order, and tie rule.
+- Covariance normalization and positive ridge.
+
+Let `F_l(prefix, record)` denote the selected finite feature evaluator.
+Interpret each returned binary64 value as an exact dyadic rational.
+The quantizer uses
 
 \[
 H_\ell(R)=\lambda_\ell I+M_0^{-1}\sum_{j\in R}
-V_\ell(Q_{<\ell}(R),j)V_\ell(Q_{<\ell}(R),j)^\top
+F_\ell(Q_{<\ell}(R),j)F_\ell(Q_{<\ell}(R),j)^\top.
 \]
 
-with exact arithmetic on the returned finite values. The quantizer is exact rational reverse LDL plus nearest-grid rounding with the pinned tie rule. This is an executable hybrid target: finite-program neural features, exact finite-input quantization. It is different from a target that also specifies a floating-point Gram accumulation and floating-point Cholesky quantizer.
+All sums and products in this expression use exact rational arithmetic.
+Reverse LDL and fixed-grid decisions also use exact rational arithmetic.
+Neural execution remains finite arithmetic.
 
-A complete fallback always exists: execute `V` on every retained record in the specified order and context, construct the exact retained Grams, and execute the exact quantizer sequentially. If `V` itself is nondeterministic under the declared execution contract, a unique bitwise model target has not been defined; fix the contract before claiming exact equality.
+The implemented decoders process one unpadded token sequence per record.
+Positions start at zero.
+Dropout, dynamic batching, cached attention, and custom masks are absent.
+Their causal mask always includes the current token.
+Another evaluator must declare its own record-local execution contract.
+Deleting a record and repacking batches can change that contract.
 
-Nonfinite feature outputs, an invalid mask, or an undefined primitive are explicit target errors, not successful repair results. A provider may return `UNKNOWN`; it must not silently replace an invalid operation by an arbitrary finite tolerance.
+## 2. Runtime requirements and partial execution
 
-## 2. Provider interface and soundness obligation
+Both scalar decoders require CPython with IEEE binary64 arithmetic.
+The current runtime guard supports Linux on x86-64 and AArch64.
+It checks round-to-nearest mode and gradual underflow.
+It rejects flush-to-zero behavior detected by its probes.
+The caller must preserve the floating environment throughout execution.
 
-For a node with ideal real map `f_theta` and finite implementation `E_theta`, a provider receives a proved input region `X`, parameter values, norm, arithmetic type and execution schedule. It returns either
+Public decoder evaluations call this guard.
+Automatic chart fitting and jet extraction also call it.
+A failed runtime guard aborts the operation.
+The implementation does not replace the guard with an assumed tolerance.
 
-- a rigorous outward error bound `nu` satisfying `||E_theta(x)-f_theta(x)|| <= nu` for every allowed finite input `x` in `X`; or
-- `UNKNOWN`, treated as positive infinity by the planner.
+The base manifest records source, parameters, configuration, Python, loaded libraries, and processor information.
+The certified manifest also records both certified source files and the nonlinear schedule.
+This binding defines the declared environment.
+It does not promise cross-platform bit identity without the same contract.
 
-Alternatively it returns an outward interval enclosure of each actual finite output over `X`. All parameter conversion, fused operations, intermediate precision, reassociation and exceptional-value rules are included in its proof obligation. Cached certificates bind the provider, binary/kernel version and parameter identity.
+`V_cert` is a partial finite program.
+Its nonlinear routines refine rational enclosures until both endpoints select the same binary64 result.
+The routines have explicit precision and resource limits.
+An unresolved rounding boundary raises an error.
+A nonfinite intermediate, invalid denominator, or failed primitive also raises an error.
+No approximate feature substitutes for that failure.
 
-Three sound modes are allowed:
+Provider abstention differs from evaluator failure.
+A missing certificate permits retained replay under the declared evaluator.
+A primitive failure during replay aborts the request.
+The service must not return an approximate model as a successful repair.
 
-1. **Exact finite-program execution:** actually run the pinned program for the selected record. Its returned finite bits are exact data for `V`. No claim about closeness to an ideal real network is needed to acquire this record's features.
-2. **Certified analytic floating-error bound:** apply a proved bound for the actual operation schedule and input region, such as the affine bound below.
-3. **Certified interval primitive/composition:** use outward enclosures for correctly rounded primitives, or another explicitly proved primitive contract, and compose them through the actual computation graph.
+Exactness assumes that the required fresh execution belongs to the evaluator's successful domain.
+Fallback completion also assumes that every required replay succeeds.
+The response certificate does not prove that every possible nonlinear rounding problem resolves within resource limits.
+Thus, the project does not claim unconditional totality for all finite weights and inputs.
 
-An unspecified vendor `exp`, `rsqrt`, GELU approximation, tensor-core multiply, flush-to-zero mode or autotuned fused kernel does not qualify merely because its output usually looks accurate. In the absence of a compatible bound it returns `UNKNOWN`; the repair algorithm then replays that record/stage using the target program. `UNKNOWN` is an abstention, never evidence that the target changed.
+## 3. Provider obligations
 
-## 3. Discrepancy propagation
-
-Suppose reference and candidate finite activations have discrepancy at most `D`. For a common ideal node map with Lipschitz constant `L` over the relevant input region,
+For an ideal node `f_theta`, let `E_theta` denote its declared finite implementation.
+A sound provider establishes
 
 \[
-D'\le LD+\nu_{\rm candidate}+\nu_{\rm reference}.
+\|E_\theta(x)-f_\theta(x)\|\le\nu
 \]
 
-For changed node parameters, include a proved parameter-transport term `P`:
+for every permitted finite input in the supplied region.
+It can instead provide outward output intervals.
+Its proof must cover parameter conversion, rounding, precision, exceptional values, and the actual operation schedule.
+An unavailable proof returns `UNKNOWN` or an unavailable intrinsic descriptor.
+
+Three provider modes remain valid:
+
+1. Execute the pinned finite program and use its returned bits as exact data.
+2. Apply a proved analytic bound for the actual finite schedule.
+3. Compose outward intervals with proved primitive bounds.
+
+An unspecified vendor approximation does not satisfy these obligations.
+A small observed error does not establish a uniform bound.
+A typed witness binds provenance but is not a formal proof-assistant object.
+
+For reference and candidate discrepancy `D`, ordinary node transport gives
 
 \[
 D'\le LD+P+\nu_{\rm candidate}+\nu_{\rm reference}.
 \]
 
-Proof: insert the two ideal node outputs and apply the triangle inequality. The two numerical-error terms cannot generally be canceled, even when both programs use the same precision. Their executions can follow different input-dependent paths.
-
-For the affine node, a useful Euclidean bound is
+Here `L` bounds input sensitivity.
+The term `P` bounds changed parameters.
+Both finite error terms generally remain necessary.
+For example, an affine node permits
 
 \[
-D'\le \|A'\|_2D+\|(A'-A)x\|_2+\|b'-b\|_2
-       +\nu_{A',b'}+\nu_{A,b},
+D'\le\|A'\|_2D+\|(A'-A)x\|_2+\|b'-b\|_2
++\nu_{A',b'}+\nu_{A,b}.
 \]
 
-where `x` is the reference input; replace its parameter-transport term by an outward bound over the available reference input region when `x` is not stored. Frobenius norms apply to a matrix of token activations. Residual additions, attention branches and other merges use their actual graph topology; discrepancy contributions are added with certified norm bounds.
+Residual branches use their actual graph topology.
+All norm estimates must round outward.
 
-## 4. Affine gamma bounds and aggregation
+## 4. Implemented finite error bounds
 
-Let the exact intended affine expression be `y=Ax+b`. Assume the specified binary arithmetic has unit roundoff `u`, all rounded intermediates are normal or exact zero, no overflow occurs, and every permitted operation satisfies the usual relative-error model. If a conservative schedule bound gives at most `m` accumulated rounding factors on a contribution path, define
+The automatic provider follows the same scalar graph as `V_cert`.
+Each jet stores an ideal value interval, first derivatives, mixed second derivatives, and a finite error bound.
+It preserves all mixed derivative terms.
+
+For basic binary64 operations, define
+
+\[
+u=2^{-53},\qquad t=2^{-1075}.
+\]
+
+Within the proved finite range, the provider uses
+
+\[
+|\operatorname{fl}(z)-z|\le u|z|+t.
+\]
+
+The absolute term covers gradual underflow.
+The proof rejects a region whose exact operation magnitude can exceed the largest finite binary64 value.
+Multiplication propagates both input errors and their product.
+Division requires both ideal and expanded finite denominator intervals to exclude zero.
+Nonlinear transport uses derivative bounds over the expanded input region.
+
+These bounds cover the declared scalar schedule only.
+They do not cover TF32, mixed precision, fused operations, or reassociated reductions without another proof.
+
+A separate relative-error provider can use
 
 \[
 \gamma_m=\frac{mu}{1-mu},\qquad mu<1.
 \]
 
-Then an appropriate conservative componentwise bound is
+For a sequential length-`n` dot product followed by bias addition, `m=2n+1` is conservative.
+That relative model requires normal intermediates or exact zero.
+It also requires no overflow.
+It does not silently extend to subnormal arithmetic.
+
+Under those premises, an affine bound is
 
 \[
-|E_{A,b}(x)-(Ax+b)|
-\le \gamma_m\bigl(|A||x|+|b|\bigr).
+|E_{A,b}(x)-(Ax+b)|\le\gamma_m(|A||x|+|b|).
 \]
 
-For an explicitly implemented length-`n` sequential dot product followed by a bias addition, `m=2n+1` is a safe conservative operation-count choice under these assumptions. A tighter `gamma_n`-type constant can be used only with the corresponding proved multiply/add/FMA schedule. Input casts, TF32 mantissa truncation, multiple accumulation precisions, and scaling must be covered separately; a standard FP32 bound cannot simply be assigned to them.
-
-For token matrix `X`, a convenient aggregate certificate is
+For `q` token columns, this gives
 
 \[
 \nu_F\le\gamma_m
- \bigl\||A||X|+|b|\mathbf 1^\top\bigr\|_F
-\le\gamma_m\bigl(\||A|\|_2\|X\|_F+
- \sqrt{t}\|b\|_2\bigr),
+\left(\||A|\|_2\|X\|_F+\sqrt q\|b\|_2\right).
 \]
 
-where `t` is the number of token columns. The rightmost expression can use an outward Frobenius upper bound for `|| |A| ||_2` and a stored intrinsic bound on `||X||_F`. It therefore need not inspect every retained activation at request time. Bounds on candidate activations follow from the reference norm plus the current discrepancy bound. All norm computations themselves must be outward bounded.
+The implemented automatic provider instead uses its explicit absolute-plus-relative arithmetic bound.
 
-**Underflow and overflow rule.** The displayed relative-error formula is not silently extended outside its premises. If interval range propagation cannot establish the required normal-or-exact-zero regime, return `UNKNOWN`, unless the provider separately proves an absolute-error contract for gradual underflow, subnormal operations or the specified flush-to-zero behavior. Overflow, `mu >= 1`, or a nonfinite upper bound likewise produces `UNKNOWN`. Record replay remains available and does not rely on this analytic model.
+## 5. Stable softmax
 
-## 5. Softmax: specific denominator and Lipschitz bounds
+The finite schedule computes its largest finite score first.
+It subtracts that maximum from each score.
+It then computes correctly rounded exponentials, a sequential sum, and division.
 
-Use the pinned mask and a nonempty set of unmasked entries. The ideal stable softmax subtracts the exact maximum `m`, so `z_i=x_i-m <= 0`, at least one `z_i=0`, and
+Every shifted finite score is nonpositive.
+At least one shifted score is exactly zero.
+Its exponential is exactly one.
+Each exponential lies between zero and one.
+The finite denominator therefore remains at least one.
+For `n <= 2^53`, monotonic rounding bounds each partial sum by its integer length.
+This also excludes denominator overflow.
+
+The proof uses the smooth ideal softmax.
+It does not differentiate the finite maximum branch.
+The ideal Jacobian is
 
 \[
-1\le s=\sum_i e^{z_i}\le n.
+J(p)=\operatorname{diag}(p)-pp^\top.
 \]
 
-Its Jacobian is `diag(p)-pp^T`. Its row and column absolute sums are `2p_i(1-p_i) <= 1/2`, so its induced 1-, 2- and infinity-norms are at most `1/2`. Thus the ideal softmax map is globally `1/2`-Lipschitz in any of those norms on a fixed mask.
+Its row and column absolute sums equal `2 p_i (1-p_i)`.
+Thus, its induced 1-, 2-, and infinity-norms are at most `1/2`.
+The provider uses the infinity-norm bound for finite score errors.
 
-For a finite-program error certificate, first enclose the actual max/subtraction outputs, then the actual exponential outputs under the provider's primitive contract, then their specified finite sum. Let its denominator enclosure be `[s_lo,s_hi]`. Division is certifiable only when `s_lo > 0`; use outward division intervals. The ideal fact `s >= 1` does not by itself certify a different vendor implementation's finite denominator. It can help construct a primitive error proof when that implementation is known.
+Let `D` bound every score's finite error.
+Let `S` bound the span across expanded finite score intervals.
+The provider requires `S` not to exceed the largest finite binary64 value.
+This requirement excludes possible overflow during maximum subtraction.
 
-Correctly rounded `exp` can be enclosed by outward bounds on the exact exponential followed by the declared rounding map. A vendor approximation needs its own proved approximation and arithmetic error. A mask with all entries excluded is a specified target special case or an error, not covered by the nonempty-mask proof. Exponential underflow falls under the rule in Section 4 unless explicitly certified.
+The implemented conservative bounds are
 
-For an input region, enclosing both the ideal and finite computations and taking the largest possible componentwise difference gives a conservative `nu`; tighter correlated error propagation is optional. Independent interval evaluation can overestimate substantially, which affects acceptance, not correctness.
+\[
+a=uS+t,\qquad b=a+u+t,
+\]
 
-## 6. Layer normalization: positive denominator and Lipschitz bounds
+\[
+c=nb+n^2u(1+b)+nt,
+\]
 
-For fixed dimension `n`, ideal layer normalization is
+\[
+\delta_{\rm softmax}\le\frac D2+b+c+u+t.
+\]
+
+The term `a` covers score subtraction.
+The term `b` also covers exponential rounding.
+The term `c` covers exponential errors and denominator accumulation.
+The final terms cover division.
+The implementation rounds the resulting rational bound upward.
+For one score, softmax returns exactly one.
+
+Ideal derivative enclosures use a fixed interval shift.
+The proof includes the covariance of all score gradients in the second derivatives.
+An interval denominator that includes zero makes the descriptor unavailable.
+This can happen despite the positive actual denominator.
+Such interval overestimation reduces certificate coverage without changing the accepted guarantee.
+
+## 6. LayerNorm and activation schedules
+
+Ideal LayerNorm uses
 
 \[
 f(x)=\gamma\odot\frac{Px}{\sqrt{\|Px\|_2^2/n+\epsilon}}+\beta,
-\qquad P=I-\mathbf1\mathbf1^\top/n,\quad\epsilon>0.
+\qquad P=I-\mathbf1\mathbf1^\top/n.
 \]
 
-The derivative of the normalized part has spectral norm at most `1/sqrt(epsilon)`, hence a valid global bound is
+For positive epsilon, a global ideal Lipschitz bound is
 
 \[
-L\le\|\gamma\|_\infty/\sqrt{\epsilon}.
+L\le\|\gamma\|_\infty/\sqrt\epsilon.
 \]
 
-A larger proved variance lower bound over the entire connecting input region can tighten the denominator bound. Changed scale/shift parameters require their parameter-transport terms; they do not disappear into the input Lipschitz term.
+The automatic provider follows the actual mean, centering, square, variance, square-root, division, scale, and bias schedule.
+Its square operation preserves interval nonnegativity.
+It requires a positive expanded square-root input.
+A denominator enclosure that includes zero makes the descriptor unavailable.
+The ideal epsilon alone does not certify an unrelated vendor variance formula.
 
-The finite provider encloses mean, centering, variance, epsilon addition, square root or inverse square root, multiplication, and affine scale/shift in the actual order. If the interval for the argument of the square root is `[a_lo,a_hi]` with `a_lo > 0`, the denominator is bounded below by a certified lower enclosure of `sqrt(a_lo)`. A reciprocal is safe only when this finite denominator enclosure excludes zero. If cancellation in a variance formula permits a negative lower bound, or epsilon underflows in the actual precision, return `UNKNOWN` or refine the enclosure.
+The certified decoder supports erf-GELU and the explicit tanh-GELU schedule.
+The latter binds its coefficient as binary64 hexadecimal `0x1.9884533d43651p-1`.
+It also binds the finite value of `0.044715`.
+Its multiplication schedule is explicit in the source.
+It does not claim bit identity with the host-libm GELU schedule.
 
-The positive epsilon in the ideal formula does not prove safety of an unrelated finite variance implementation. Correctly rounded `sqrt` has a standard rounding enclosure; a vendor `rsqrt` approximation needs a proved error contract. Conservative global `1/sqrt(epsilon)` bounds may be too loose to save work and carry no acceptance guarantee.
+## 7. Automatic response descriptors
 
-## 7. Exact quantization, ties, and fallback termination
+The chart has fixed rational directions and a fixed coefficient box.
+The caller must select it independently of the deletable corpus.
+The manifest records this provenance claim.
+The implementation cannot verify that historical selection process.
 
-Returned finite features, finite weights and finite grid scales are dyadic rationals. Their exact sums/products and division by a fixed integer normalization are rational. With positive rational ridge, the exact Gram is SPD. Reverse LDL uses only rational arithmetic and positive rational pivots, so the triangular conditional quantization inputs are rational as well.
+The provider first converts installed codes using the target's parameter conversion.
+It then solves an exact rational system for the finite ancestor weights.
+It rejects every nonzero residual and every coefficient outside the box.
+It sets free variables to zero.
+This choice can reject another feasible representation.
+That rejection affects coverage only.
 
-An interval filter may establish a unique rounding cell quickly. If refinement remains ambiguous, exact rational comparison against rational cell boundaries decides the code, including exact equality under the fixed tie rule. This removes a possible nontermination at ties. Exact rational operation counts do not imply bounded constant-time arithmetic; integer growth and serialization costs are charged separately.
+The provider differentiates the ideal feature map on this chart.
+It does not differentiate through quantization decisions or the discontinuous finite program.
+Center intervals supply response matrices `Z_0, ..., Z_r` and approximation errors `e_0, ..., e_r`.
+Box-wide intervals supply a mixed Hessian bound `H` and a finite error bound `nu`.
+They establish
 
-If the intended target instead specifies floating Gram accumulation, floating factorization and a blocked floating quantization recurrence, that whole program must have a compatible verified enclosure or be replayed exactly. Equality to the rational oracle is not sufficient. A small norm error or an empirical tolerance does not prove bitwise equality of such a program.
+\[
+\left\|F_{\rm finite}(a)-Z_0-\sum_t a_tZ_t\right\|_F
+\le\nu+e_0+\sum_t|a_t|e_t+\tfrac12H\|a\|_2^2.
+\]
 
-## 8. Planner behavior and audit fields
+The omitted-direction term is zero because exact chart fitting rejects unrepresented changes.
+No caller supplies an arbitrary numerical tolerance.
+The compact service stores grouped response statistics and grouped error statistics.
+It does not retain each record's jets or source payload.
 
-For each attempted shortcut:
+Useful coverage remains an empirical question.
+Large charts can make derivative extraction expensive.
+Deep graphs can produce wide intervals.
+Neither exact arithmetic nor a sound bound guarantees a speedup.
 
-1. Bind the feature/quantization contract and provider identities.
-2. Obtain intrinsic reference norms and certified parameter/input regions.
-3. Propagate discrepancy using proved node bounds, including both numerical terms.
-4. Convert finite bounds into the covariance and rounding certificates.
-5. On `UNKNOWN`, an invalid denominator, or an unresolved rounding cell, refine only using authorized certified information or replay the needed record/stage.
-6. Keep the full declared fallback progressing under the weighted scheduler, or use a separately proved work-cap policy. Missing bounds must not block this terminating route.
+## 8. Exact decisions, replay, and audit
 
-Record which provider mode was used, which premise failed on abstention, and which target contract was returned. Any canonical-state theorem must specify whether this audit is transient or a canonical function of the retained corpus; history-dependent transcripts cannot silently remain part of a claimed canonical state.
+Positive rational ridge makes each retained Gram positive definite.
+Reverse LDL uses rational arithmetic and positive rational pivots.
+Its conditional quantization inputs are rational.
+Exact comparisons decide ties under the declared tie rule.
+This avoids indefinite interval refinement at quantization boundaries.
+It does not remove nonlinear primitive limits from feature execution.
 
-This contract closes the soundness gap between ideal-network transport algebra and a finite-program feature target. It does not certify every vendor kernel, guarantee tight bounds, or establish that the repair path is faster on a particular workload. Those are distinct implementation and empirical obligations.
+Every repair stage follows this sequence:
 
+1. Bind the evaluator, quantizer, provider, and certified ancestor prefix.
+2. Fit the prefix to the fixed chart.
+3. Contract intrinsic grouped statistics and certified error bounds.
+4. Certify all proposed rounding decisions.
+5. Replay required retained groups when a certificate remains unavailable.
+6. Abort if the declared finite target cannot execute.
+7. Commit the complete canonical state only after successful repair.
 
-## Revision 3 response-provider boundary
+Replay uses the same feature target as fresh quantization.
+It does not replace `V_cert` with `V` or `E`.
+The work ledger includes proof work, source reads, replay, exact arithmetic, state maintenance, and output.
+Integer bit growth and serialization costs remain explicit.
 
-Taylor jets are derivatives of the declared ideal feature map in dequantized ancestor parameters. They are not derivatives through rounding decisions or of the globally discontinuous finite executable. A usable provider must bound all mixed second derivatives on its chart, every omitted parameter direction, jet approximation error, and both reference/target numerical differences as applicable. UNKNOWN still means replay. See theory_revision/response_moments.txt for the complete decomposition.
+Audit data must identify the selected target and provider.
+It must distinguish provider abstention from target execution failure.
+History-dependent transcripts cannot remain in a state claimed to equal canonical fresh construction.
 
-The response/remainder arithmetic modules verify exact algebra and outward square roots given supplied intrinsic inputs. Their result flags deliberately do not claim to have verified the neural descriptor premises. Service typed witnesses bind provenance; they are not proof objects in a theorem prover.
+## 9. Local checkpoint imports
+
+`src/checkpoint_adapter.py` loads local GPT-2 safetensors into `DeterministicDecoder`.
+It maps weights and architecture into `V`.
+Wrapping that decoder with `CertifiedDecoder` explicitly selects `V_cert`.
+Neither step establishes equality with the original checkpoint's vendor execution.
+
+The loader validates shapes, tensor names, attention options, activations, and tied embeddings.
+It records configuration and weight hashes.
+It downloads no models or tokenizers.
+The input manifest must separately bind the tokenizer and tokenized records.
+
+Checkpoint loading remains an eager reference implementation.
+Its Python objects can require much more memory than the stored checkpoint.
+Its setup reads and conversions belong in complete cost accounting.
+No pretrained-model coverage, quality, or latency claim follows from the completed software tests.
+
+See `docs/CERTIFIED_PROVIDER.md`, `docs/AGGREGATE_SERVICE.md`, and `docs/CHECKPOINT_ADAPTER.md` for implementation details.

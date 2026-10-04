@@ -1,7 +1,12 @@
 # Implementable specification: transported exact sequential repair
 
 Authoritative theory: `reports/theory_algorithm_revision.tex` and the corresponding PDF.
-Revision 3 status: a complete portable stage service, deterministic decoder, response arithmetic, sparse repair and scheduler utility are implemented and software-checked. General certified transformer response/numerical providers and pretrained adapters remain absent. Research experiments remain paused. Read docs/REFERENCE_SERVICE.md and docs/VALIDATION.md for exact executable scope.
+Revision 4 adds a compact aggregate service with complete fresh and repair operations.
+It stores group matrices and fixed-size record bindings.
+It preserves the exact sequential model target and canonical repeated deletion.
+The numerical provider and checkpoint adapter have separate, explicit execution contracts.
+Research experiments remain paused.
+Read docs/REFERENCE_SERVICE.md, docs/AGGREGATE_SERVICE.md, and docs/VALIDATION.md for executable scope.
 
 ## 1. Chosen target
 
@@ -142,14 +147,101 @@ The scheduler bounds regression; it does not prove a positive gain when every ro
 The next integration must validate these invariants against an independent oracle before any research timing campaign. The user has not yet resumed experiments.
 
 
-## 9. Revision 3: response moments and smaller Gram state
+## 10. Revision 3: response moments and smaller Gram state
 
 Read theory_revision/response_moments.txt and theory_revision/linear_gram_response.txt. Fix the reference/directions/extractor/domain independently of the removable corpus. Intrinsic jets define Z(a)=Z0+sum a_t Zt. Exact quadratic response moments yield a candidate Gram, and squared intrinsic remainder descriptors yield a bound including mixed curvature, residual drift, jet error and the actual finite evaluator. The new certified prefix determines query coefficients; no old calibrated anchor is committed.
 
 The low-storage alternative stores constant and linear Gram matrices plus the scalar tangent Gram. With beta=trace(DeltaZ DeltaZ^T)/M0, the omitted term is between zero and beta I. A shifted raw surrogate Slin+beta I is PSD. The true metric discrepancy lies between -(beta+delta)I and delta I, allowing asymmetric scales (1-(beta+delta)/lambda, 1+delta/lambda). Each replay replaces the selected shifted proposal and removes both of its signed uncertainty budgets. This retains second-order local error while reducing O(r² d²) coefficient storage to O(r d²+r²).
 
-The standalone moment modules use aggregate totals. The generic response service adapter stores per-record moment payloads in canonical descriptors and rebuilds group totals on request. That is an executable correctness bridge with O(N) descriptor reads and potentially O(N r² d²) payload storage; it does not instantiate compact aggregate service complexity. A future compact service schema must persist group moments and sufficient deleted-side bindings explicitly.
+The standalone moment modules use aggregate totals.
+The original response adapter stores individual moment payloads in canonical descriptors.
+It rebuilds group totals on each request.
+That historical path scans `O(N)` descriptors and can store `O(N r² d²)` matrix entries.
+Revision 4 implements a separate compact state schema.
+The original adapter remains available for correctness comparisons.
 
-The decoder adapter's built-in proof only establishes identity of the relevant finite ancestor weights. All other finite transformer transport currently returns UNKNOWN. A trusted intrinsic extractor/query callback can instantiate response proposals for a supported feature family; it is not an automatically certified neural jet provider.
+The original decoder adapter proves identity of relevant finite ancestor weights.
+Its built-in shortcut returns UNKNOWN for other prefixes.
+The separate certified decoder supplies automatic response evidence for its supported finite program and parameter chart.
+Generic response callbacks still require an explicit proof contract.
+Neither interface certifies arbitrary external floating kernels.
 
 No universal advantage over equally indexed fresh construction is claimed. Both comparators must access the same response summaries; setup, index update, projection, factorization, proof, serialization, erasure and all replay count.
+
+
+## 11. Revision 4: compact aggregate state and transaction
+
+`src/aggregate_response_service.py` implements `AggregateRepairService`.
+Its declared state is
+
+`A_agg(R) = (Q_seq(W,R), aggregate_moments(R), record_bindings(R), group_membership(R))`.
+
+The model target remains `Q_seq(W,R)`.
+The new logical state differs from the original descriptor-based service state.
+The fresh constructor builds intrinsic aggregates and independently evaluates every target stage.
+The repair constructor must reproduce every committed state component.
+
+Record bindings contain IDs, content digests, group IDs, contribution digests, and availability flags.
+No individual matrix payload or source content remains in committed state.
+Group statistics contain constant Grams, linear responses, scalar tangent Grams, and scalar error moments.
+For each stage and group, storage uses `O(r d² + r²)` rational entries.
+Record bindings use `O(N L)` metadata.
+Group membership uses `O(N)` IDs.
+Rational bit lengths and model output storage require separate accounting.
+
+The extractor and its parameter directions are fixed before the deletable corpus.
+A contribution digest binds the exact response and error payloads.
+Deleted source content must be supplied before erasure.
+The service regenerates deleted contributions under the fixed extractor.
+It checks content and contribution digests before exact subtraction.
+A changed contribution or availability marker aborts the transaction.
+
+An unavailable contribution increments a group counter.
+A group with unavailable evidence cannot certify through its response proposal.
+It must use retained replay.
+Deleting all unavailable contributions can restore certification eligibility.
+Unsupported stages follow the same replay rule.
+
+The proposal query receives group aggregates and the new certified prefix.
+It receives no retained record sequence or individual descriptor.
+Its contraction cost depends on group dimensions and response rank.
+It does not depend on the number of records within that group.
+The service checks the query binding and chart radius.
+It checks positive semidefiniteness of the shifted proposal exactly.
+
+The proposal preserves the raw signed enclosure
+
+`-(beta + delta) I <= true_raw_Gram - proposal_raw_Gram <= delta I`.
+
+The engine sums unresolved negative and positive radii separately.
+It divides them by the fixed normalization and ridge when constructing relative scales.
+Replay replaces the selected proposal with the exact target Gram.
+It removes both uncertainty radii for that group.
+The exact Gram stays in the candidate metric.
+Every failed iteration replays another group.
+Finite input therefore reaches exact fallback when certification cannot succeed.
+
+The state manifest binds the aggregate schema and fixed extraction contracts.
+Target prefixes retain the original job manifest.
+This separates a new state interface from the unchanged model target.
+Fresh construction and successful repair produce identical canonical bytes for the same retained records.
+Repeated and reordered deletions preserve that equality.
+No old calibrated anchor, individual descriptor, or proof history remains in the committed result.
+
+The input object remains immutable throughout the transaction.
+The guarantee concerns committed logical state only.
+It does not erase caller copies, old snapshots, process memory, or external source records.
+The service assumes trusted construction or authenticated state storage.
+Digest checks alone do not authenticate hostile state replacements.
+
+The implementation still validates, filters, and rebuilds record metadata.
+These steps require `O(N L)` work.
+Canonical serialization also writes the complete retained state.
+The ledger reports these costs separately from aggregate contraction and retained replay.
+Callbacks must not hide individual record payloads in persistent caches.
+Fixed model and chart caches require separate storage accounting.
+
+The compact state closes the earlier individual-payload storage limitation.
+It does not establish a complete-service speedup.
+An equally indexed fresh solver can use the same group statistics.
+Future empirical comparisons must measure full service cost and all failed certificates.

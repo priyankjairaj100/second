@@ -1,0 +1,167 @@
+Revision 4 independent implementation review
+==============================================
+
+Scope
+-----
+Review the concrete finite numerical program, automatic response descriptors,
+compact aggregate service, and checkpoint import. This review is separate
+from software test evidence. Neither establishes realistic speedup.
+
+The prior V backend uses the host math library. It has no certified analytic
+transport for changed prefixes. A new program with certified primitives must
+have a separate target identity. Imported checkpoint weights do not imply
+bitwise equivalence with the checkpoint's native implementation.
+
+Planned formulas reviewed before source arrival
+----------------------------------------------
+1. Exact rational interval endpoints and dyadic outward rounding are sound.
+2. The positive exponential Taylor tail next/(1-y/(n+2)) is valid after
+   summing through order n, for nonnegative reduced y < 1.
+3. Negative exponential values can use reciprocal positive enclosures.
+   For x <= -b, b > 0, exp(x) <= 2^-b follows from e > 2.
+4. The erf alternating series permits the next-term remainder after its
+   terms decrease. The complementary tail exp(-x*x)/(sqrt(pi)*x) requires
+   x > 0. Machin's pi formula admits exact alternating-series enclosures.
+5. A basic RN-even operation has absolute error at most
+   2^-53 * abs(exact result) + 2^-1075 under binary64 gradual underflow,
+   provided the rounded result remains finite. Possible overflow must
+   reject the bound. This formula does not certify unspecified libm calls.
+6. If each ideal output Hessian has bounded entries H_ist, then
+   sqrt(sum_ist H_ist^2) bounds the Hessian tensor's bilinear operator norm.
+   Taylor's error is at most this bound times ||a||_2^2/2 along the chart.
+   Every mixed derivative must be present.
+7. Midpoint jets require explicit interval-radius errors at the chart center.
+   The full descriptor also needs the finite target's numerical error.
+8. Chart membership must hold for installed finite weights. Exact rational
+   codes can change when converted to binary64. Unsupported residual
+   directions must return UNKNOWN or receive a separate proved bound.
+9. A nontrivial integration check needs non-singleton grids, nonzero network
+   operators, changed relevant ancestors, and changed downstream features.
+   A denied retained-record loader must remain unused on accepted repair.
+
+Source review and final findings
+--------------------------------
+Reviewed files:
+- src/certified_intervals.py
+- src/certified_transformer.py
+- src/aggregate_response_service.py
+- src/checkpoint_adapter.py
+- docs/CERTIFIED_PROVIDER.md
+- Corresponding software tests
+
+Outcome: no unresolved soundness defect found within the declared contracts.
+This is a manual source review, not proof-assistant verification.
+
+Corrections made during review
+------------------------------
+1. Proof entry points now check the binary64 runtime contract.
+   Accepted repair can bypass target evaluation, so evaluator-only checks were insufficient.
+2. Input-dependent primitive caches were removed.
+   Only public pi values indexed by precision remain cached.
+3. Stable softmax replaced the temporary first-score shift.
+   The finite target now uses a maximum shift.
+   The proof differentiates the ideal smooth softmax instead.
+4. Softmax now rejects lengths above 2^53.
+   This makes its integer bound on partial sums explicit.
+5. The original integration fixture showed drift from the fixed reference.
+   A second fixture now proves deletion changes an existing quantized code.
+6. The checkpoint adapter now records the output-head extension for bare GPT2Model imports.
+
+Primitive review
+----------------
+All scalar intervals use exact rational endpoints.
+Series remainders and dyadic outward rounding enclose their intended functions.
+Integer RN-even conversion handles ties, subnormals, and the finite overflow boundary.
+Primitive wrappers can return infinity for an overflowing exponential.
+The finite decoder rejects that result.
+Unresolved rounding and resource limits abort instead of returning an estimate.
+No host transcendental accuracy premise remains in these primitive proofs.
+
+Automatic provider review
+-------------------------
+The provider includes every mixed Hessian entry.
+Its Taylor bound uses the full tensor Frobenius bound.
+The descriptor includes center errors and the target's finite arithmetic error.
+Exact chart fitting uses the installed binary64 weights.
+Unrepresented directions and coefficients outside the box return UNKNOWN.
+The provider derives numerical bounds without a supplied error tolerance.
+The chart's historical independence remains an explicit caller obligation.
+The implementation cannot prove that someone chose directions before viewing the corpus.
+
+Stable softmax review
+---------------------
+The finite maximum shift gives nonpositive exponential arguments.
+At least one finite exponential equals one exactly.
+All finite exponentials lie between zero and one.
+For n <= 2^53, RN-even monotonicity bounds partial sum k by exact integer k.
+The finite denominator therefore remains finite and at least one.
+The probability error combines score perturbation, subtraction, exponential, sum, and division errors.
+The ideal infinity-norm Lipschitz factor is 1/2.
+The Hessian includes the covariance of score gradients.
+The one-score shortcut remains exact after upstream score checks execute.
+
+Aggregate state review
+----------------------
+Persistent record entries contain identities, hashes, and availability flags.
+They contain no matrices, jets, descriptors, or raw record payloads.
+Group entries contain the response and descriptor totals.
+The proposal receives no retained record list.
+Deletion regenerates contributions only from supplied deleted records.
+Signed Gram errors use the omitted PSD term correctly.
+Normalization occurs once when the service forms the relative enclosure.
+Selected replay replaces the proposal Gram and removes its uncertainty.
+The remaining Gram stays PSD.
+Repeated deletion preserves fresh-identical canonical state.
+The service still validates and serializes O(N L) metadata.
+Thus, zero retained reads do not imply sublinear complete service work.
+
+Checkpoint review
+-----------------
+The adapter correctly transposes the four GPT-2 Conv1D matrices.
+It maps QKV chunks, biases, normalization parameters, embeddings, and the output head.
+It checks tied output weights when both copies exist.
+It rejects unsupported configuration branches and tensor names.
+Its safetensors reader checks duplicate keys, offsets, gaps, overlaps, and shapes.
+It reads local F16, BF16, F32, and F64 values without executing checkpoint code.
+Imported parameters define the declared scalar target.
+They do not imply equality with Hugging Face or CUDA execution.
+A bare GPT2Model receives an explicitly recorded output-head extension.
+
+Software checks executed by this reviewer
+----------------------------------------
+Command: python -m unittest tests.test_adversarial_providers_v4 -v
+Result: eight tests passed.
+These tests independently check:
+- RN-even ties, subnormal transitions, and the overflow threshold.
+- Rational conversion against Python's separate implementation.
+- Exponential intervals against high-precision Decimal results.
+- Exact square-root inequalities and signed zero.
+- Mixed derivatives against an exact rational formula.
+- Finite error under cancellation and gradual underflow.
+- Mixed score curvature in the softmax Hessian.
+- Stable finite softmax for scores zero and 1000.
+
+Command: python -m unittest tests.test_aggregate_response_service tests.test_checkpoint_adapter -q
+Result: 24 tests passed.
+
+Command: python -m unittest tests.test_certified_transformer -v
+Result: six tests passed.
+One fixture changes the first QKV code from zero to 1/1024 after deletion.
+Its downstream finite features also change.
+Its retained-source callback rejects every read.
+Repair still matches the complete fresh canonical state.
+All grids have multiple choices, and the network has nonzero operators.
+Downstream matrices in this fixture largely start on-grid.
+Thus, this fixture does not establish realistic coverage or dense downstream code changes.
+
+Remaining limits
+----------------
+V_cert is distinct from the prior host-libm target and floating GPTQ target E.
+The implementation must not claim repair equivalence across those targets.
+The fixed chart can reject most changes from an arbitrary pretrained quantizer.
+Large rank can make extraction, fitting, and storage impractical.
+Deep interval propagation can produce weak bounds.
+Correct fallback does not establish useful latency savings.
+No pretrained corpus run or benchmark was performed in this review.
+Research experiments remain paused.
+

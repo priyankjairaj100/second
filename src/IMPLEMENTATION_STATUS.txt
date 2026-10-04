@@ -1,32 +1,42 @@
-Revision 3, 4 October 2026.
+Revision 4, 4 October 2026.
 
-Implemented standard-library reference modules:
-- exact_core.py: exact reverse LDL, sequential rational rounding, shape-cell certificate.
-- sparse_repair.py: changed-code injections and exact ambiguous-coordinate fallback.
-- response_moments.py: exact affine response moment index and canonical deletion.
-- response_certificate.py: squared error descriptors and exact outward bounds.
-- linear_response.py: O(r d²+r²) Gram-response index, PSD omission, signed/shifted enclosures.
-- repair_service.py: complete fixed-DAG fresh/repair paths, canonical state, proposal provenance, adaptive replay.
-- response_service_adapter.py: trusted intrinsic response/extractor integration; per-record descriptor storage and scans explicitly charged.
-- transformer_backend.py: complete pinned scalar CPU decoder, exact dyadic features/logits, service integration, structural identity certificates.
-- work_scheduler.py: standalone cooperative bounded-work fallback scheduler.
+Implemented reference modules:
+- exact_core.py: exact reverse LDL, rational rounding, shape-cell certificate.
+- sparse_repair.py: code injection and exact ambiguous-coordinate fallback.
+- response_moments.py: affine response index and canonical deletion.
+- response_certificate.py: squared error descriptors and outward bounds.
+- linear_response.py: compact Gram responses, PSD omission, signed enclosures.
+- repair_service.py: full fixed-DAG service, provenance, and exact replay.
+- response_service_adapter.py: original per-record descriptor bridge.
+- aggregate_response_service.py: complete compact group state and repair.
+- transformer_backend.py: pinned library-math scalar decoder and identity gate.
+- certified_intervals.py: rational enclosures and certified nonlinear rounding.
+- certified_transformer.py: automatic interval jets and finite-error proofs.
+- checkpoint_adapter.py: strict local GPT-2 safetensors loading.
+- work_scheduler.py: separate cooperative bounded-work fallback utility.
 
-Behavioral, independent-oracle, adversarial and integration correctness tests
-were run. See docs/VALIDATION.md for the final result and test log. Static
-compilation and report visual checks also completed. These are software
-verification, not research benchmark or synthetic dataset results.
+V_cert is a separate finite decoder target.
+It does not silently replace legacy library-math V or floating quantizer E.
+Its automatic provider checks a fixed corpus-independent affine chart.
+Unknown proof conditions cause retained replay.
+A finite-evaluator failure aborts the request without committing a model.
 
-Not implemented/established:
-- automatic certified neural jets, curvature, residual and nontrivial finite
-  transport for realistic pretrained checkpoints;
-- compact group-aggregated response state inside the complete service (the
-  standalone index is aggregate, but the transparent adapter retains and scans
-  per-record payloads);
-- pretrained model adapters, production GPU kernels or scheduler integration;
-- equality to unrelated floating Gram/Cholesky target E;
-- useful real-model acceptance, latency or memory/amortization results;
+The compact service stores group matrices and O(NL) record metadata.
+It regenerates and checks deleted-record contributions before subtraction.
+It retains no individual matrix descriptors or data-dependent primitive cache.
+Logical state equals fresh retained construction after repeated deletion.
+Metadata scans, source reads, preparation, and integer sizes remain costs.
+
+See docs/VALIDATION.md for final correctness tests and source hashes.
+These checks are not research benchmark or synthetic dataset results.
+
+Still unestablished:
+- useful chart coverage and numerical bounds on real pretrained workloads;
+- competitive preparation, memory, storage, amortization, or complete latency;
+- production GPU kernels and integrated work scheduling;
+- equality to native Hugging Face kernels or floating quantizer E;
 - physical memory erasure, hostile-store authentication, or formal verification.
 
-Trusted callback numerical/provenance premises stay visible. UNKNOWN causes
-exact retained replay. Correctness does not imply speedup. Old raw experiment
-files remain unavailable. Research experiments remain paused.
+Correctness does not imply speedup.
+Prior raw experiment files remain unavailable.
+Research experiments remain paused.

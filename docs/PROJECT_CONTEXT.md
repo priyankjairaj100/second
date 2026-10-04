@@ -126,3 +126,42 @@ The user next asked to complete remaining items for maximum novelty. We develope
 New executable modules include full stage fresh/repair/canonical state, a deterministic complete scalar decoder, sparse repair, response/remainder indices and adapters, low-storage response arithmetic, and a cooperative scheduler utility. Correctness/adversarial tests were run; no research benchmarks or synthetic empirical datasets were run. General certified finite transformer response jets and pretrained adapters remain unimplemented. The transparent adapter stores per-record response payloads and scans their descriptors, distinct from theoretical compact group-index costs.
 
 The novelty audit found Gunn 2026 derivative-sketch deletion, classical Kantorovich/Wielandt geometry for the shape constant, and calibration-scale refitting in a September 2026 audit. Claims were narrowed accordingly. An equally indexed fresh quantizer can use the same summaries: strict deletion-exclusive speedup does not follow. See current STATUS, VALIDATION, NOVELTY_AUDIT and the report; those supersede earlier implementation-status paragraphs above.
+
+## Revision 4 implementation blockers (4 October 2026)
+
+The user requested: "Proceed on the remaining implementation blockers."
+Research experiments remained paused.
+Software correctness fixtures and independent code review were permitted.
+
+Four modules now close the scoped reference implementation gaps.
+`aggregate_response_service.py` stores group response sums and scalar remainder moments.
+It retains per-record identity and contribution digests, but no individual matrix descriptors.
+Deleted payloads regenerate contributions for checked exact subtraction.
+Proposal construction reads aggregate statistics only.
+Complete state still includes O(NL) metadata and associated scans.
+
+`certified_intervals.py` supplies rigorous rational enclosures and certified binary64 nonlinear rounding.
+It caches only data-independent constants.
+`certified_transformer.py` uses these primitives in a distinct finite decoder.
+Automatic interval differentiation encloses all mixed Hessians.
+Numerical propagation bounds finite execution against the ideal smooth feature map.
+Stable softmax uses separate ideal-derivative and finite-schedule proofs.
+The provider accepts only changes inside a fixed corpus-independent affine chart.
+It returns UNKNOWN for unsupported proof conditions.
+The service then replays retained records.
+Failure inside the finite evaluator aborts the transaction.
+
+The new numerical target is V_cert.
+It is distinct from both legacy library-math V and historical floating quantizer E.
+This distinction is recorded in source and runtime manifests.
+
+`checkpoint_adapter.py` loads local GPT-2 safetensors, including shards and default gelu_new.
+It maps four floating storage formats and checks architecture assumptions.
+It does not download models or reproduce native Hugging Face kernels.
+No pretrained checkpoint was evaluated during this revision.
+
+See VALIDATION for the final software result and review record.
+No real-data quality, chart-coverage, latency, or memory result follows from these software checks.
+Large charts and interval bounds may be impractical.
+The eager scalar decoder can require substantial memory.
+Equally indexed fresh comparison, lifetime costs, and complete service timing remain required when experiments resume.
