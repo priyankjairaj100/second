@@ -1,0 +1,240 @@
+Independent adversarial preparation review, revision 7
+Date: 4 October 2026
+Reviewer role: separate implementation review agent
+
+Scope and evidence
+
+This review inspected implementation, exact arithmetic, failure handling, and saved-state contracts.
+It ran software correctness fixtures only.
+It used no empirical corpus, model download, benchmark, or external compute job.
+Fixture runtimes do not establish language-model speed, useful coverage, or quality.
+The reviewer owns tests/test_adversarial_v7.py and this record.
+Other agents own the reviewed implementation files.
+
+The independent suite currently contains eighteen tests.
+All eighteen passed.
+A focused combined invocation passed fifty tests.
+That invocation included the domain, quadratic, identity-cache, and independent suites.
+A later independent and isolated-executor invocation passed twenty-three tests.
+The final repository validation record controls the final suite result and source hashes.
+
+1. Complete quadratic response control
+
+The response tier is an explicit service and canonical-state choice.
+Linear and quadratic states use distinct schemas and manifests.
+Quadratic group totals store oriented upper-triangular cross moments.
+Their contraction adds each off-diagonal matrix and its transpose.
+Signed response coefficients retain their signs in this contraction.
+Finite error contraction uses absolute coefficients and includes all descriptor cross terms.
+
+The quadratic proposal encloses the actual unnormalized Gram around the complete surrogate Gram.
+The stage solver applies the fixed normalization once.
+The fixed-reference control includes the full tangent norm and finite remainder.
+It does not quietly drop quadratic or finite error contributions.
+
+Independent tests combine two signed response directions with a nonzero finite residual.
+They check both Loewner sides using exact rational PSD tests.
+They check certified and fixed-reference proposals.
+They also check full retained-state equality after deletion.
+
+The bounded parser rejects duplicate nested JSON keys.
+It rejects per-record payload bindings inside aggregate quadratic indices.
+Existing tier tests cover confusion, resource limits, regeneration, ordering, and complete deletion.
+These structural checks do not authenticate hostile storage or prove arbitrary extractor callbacks.
+
+2. Original-model invariant-feature cache
+
+This interface stores exact sequential Grams under the current quantized model.
+It binds every Gram to the full transitive ancestor prefix.
+The cache can reuse a Gram only when that complete prefix remains equal.
+An unchanged direct parent is insufficient when an earlier ancestor changes.
+
+Independent tests force an early code change while keeping the direct parent code unchanged.
+The later stage correctly replays retained features.
+The repaired cache equals independent retained construction byte for byte.
+A second deletion uses refreshed Grams and refreshed prefix bindings.
+It agrees with combined deletion and direct retained construction.
+
+The cache service requires a trusted expected digest before source reads.
+A caller-supplied hostile digest is not authentication.
+The optional runner adapter uses a bounded origin registry.
+It retains digests, not source payloads or per-record feature matrices.
+
+The cache is a separate canonical state interface.
+Its bytes need not equal response-index state bytes.
+The common quantized model target remains unchanged.
+Its setup, Gram validation, feature replay, serialization, and registry costs remain charged work.
+Indexed fresh receives the same cache and the same solver.
+This control supplies no deletion-exclusive solver advantage.
+
+3. Exact interval verification after spectral rejection
+
+The signed Loewner conversion preserves asymmetric diagonal uncertainty.
+Its off-diagonal radius is half the sum of the two error magnitudes.
+The implementation first normalizes the raw error magnitudes.
+The complete covariance center contains the ridge exactly once.
+
+The exact interval reverse-LDL recurrence matches the declared exact quantizer.
+Its pivot clipping uses the actual target's fixed ridge premise.
+The Schur variational identity justifies that premise at every elimination step.
+The surrounding entrywise box need not consist entirely of SPD matrices.
+Every division uses a positive pivot interval.
+Inconsistent empty pivot intervals cause failure, never vacuous acceptance.
+
+Candidate verification uses open lower and closed upper rounding boundaries.
+It checks every coordinate under the preceding candidate-code assumptions.
+The final result accepts only when every check succeeds.
+The standalone result explicitly leaves enclosure and ridge premises caller-verified.
+
+Independent tests check sixty-four exact three-dimensional boundary matrices.
+Mixed-sign Schur updates and every exact factor remain inside the computed intervals.
+This finite check supplements the induction proof; it does not replace that proof.
+
+A separate two-dimensional full-service fixture has a nonpositive spectral lower scale.
+The interval route certifies its covariance-independent zero codes without retained replay.
+The test checks raw-to-normalized uncertainty conversion exactly.
+The complete returned state equals independent retained construction.
+
+The spectral route executes first and returns immediately on acceptance.
+The interval route therefore preserves its acceptance at the same proposal.
+New proof work can increase latency, memory, integer sizes, and timeout risk.
+Acceptance inclusion does not imply service completion or runtime dominance.
+
+The intersection API checks common target, stage, prefix, retained identity, and normalization.
+A future multi-provider bank requires a provider-independent retained-source binding.
+Current aggregate membership digests contain provider-specific contribution identities.
+Those digests cannot automatically serve as common bindings across different providers.
+The current service integrates one enclosure and makes no complete bank claim.
+
+4. Sequential requests and durable lineage
+
+The sequence runner prepares the original state once.
+Every subsequent request consumes the preceding committed repair state.
+The target, original normalization, source identities, and method order remain bound.
+Each step compares against independent retained-data construction.
+Complete deletion produces the declared empty retained target.
+Only empty requests can follow complete deletion.
+
+Step identities bind both predecessor state and predecessor result hashes.
+Resume verifies completed child artifacts before reading their repair state.
+Failed steps retain their attempt records.
+Later planned steps remain visible instead of disappearing from the schedule.
+Retry starts from the last completed predecessor without rebuilding successful steps.
+
+The reviewer found a writer-lock leak before the protected sequence body.
+A failure while writing plan.json could leave the parent writer lock held.
+The owner moved the plan write inside protected exception and cleanup handling.
+An independent forced-write-failure test confirms that another writer can subsequently claim the run.
+Another independent test confirms failure, restart, predecessor binding, and attempt preservation.
+
+The sequence archive intentionally retains prior states and attempts.
+The deletion guarantee covers the committed live state, not archive erasure.
+Direct sequence execution still lacks integrated frozen-campaign admission dispatch.
+The sequence API alone must not close that campaign gate.
+
+5. Phase CPU admission accounting
+
+Each reservation is recorded before worker launch.
+A POSIX advisory lock serializes ledger reads, checks, and writes.
+The ledger atomically saves and synchronizes its state.
+Duplicate attempt identities cannot obtain another reservation.
+Unknown or interrupted attempts retain their complete allowance across restart.
+Observed terminal CPU usage settles once and rounds upward.
+An observed overrun remains charged without clipping.
+
+Independent concurrent handles admitted only the reservations fitting the declared cap.
+Interrupted attempts remained charged after reconstruction.
+A retry required a distinct identity and sufficient remaining allowance.
+
+The reviewer found a mutable snapshot alias.
+The returned phase cap dictionary could modify later in-memory admission checks.
+The owner made internal caps read-only and returned a detached snapshot dictionary.
+An independent mutation test confirms that snapshots cannot raise caps.
+
+Worker terminal resume verifies the saved debit against the ledger.
+It returns without another reservation.
+Campaign outputs under the same exact protocol share a ledger.
+Changed output directories do not reset its admission accounting.
+
+This is an admission policy for trusted workers.
+It is not absolute CPU containment for arbitrary descendant processes.
+RLIMIT_CPU applies per process.
+Observed wait4 usage has the operating system's documented descendant scope.
+Controller CPU and unobserved descendant CPU remain outside the stated debit.
+Kernel overshoot is observable and charged, not silently claimed impossible.
+
+A compatibility regression changed the private campaign-resume function's required arguments.
+The reviewer reported the existing unbudgeted fixture failure risk.
+The owner restored the legacy optional-ledger call.
+Budgeted saved workers still require a matching ledger.
+
+6. Configuration and analysis boundaries
+
+The runner records service family, response tier, and verifier policy.
+The analyzer rejects mixed values within one configuration stratum.
+It checks the frozen plan against each observation.
+Legacy absent fields receive explicit defaults.
+Independent tests cover mixing, default mismatch, and invalid unhashable values.
+
+7. Separate method-process executor
+
+The new executor starts one setup worker and one worker for each comparison method.
+Each worker uses a fresh process and the same declared limits.
+The operating system can retain its file caches.
+The implementation makes no filesystem-cold or hardware-cold claim.
+
+The isolated plan binds normalized manifest content, target identity, sources, and worker limits.
+Only the protocol digest is cleared from the normalized manifest.
+Dispatch separately verifies the final manifest and protocol bytes.
+The plan therefore avoids a circular protocol and plan hash.
+Each child checks source and manifest hashes before and after its requested operation.
+Setup and arms share the same protocol-level admission ledger.
+
+The reviewer found an unnecessary old-state read in the direct fresh arm.
+That arm initially loaded and validated the original model and response index.
+Independent retained construction needs neither artifact.
+Including this read could inflate a reported fresh-to-repair timing ratio.
+The owner removed that read and records that direct fresh did not use original state.
+Repair and indexed fresh still load their declared shared state.
+
+An independent role-isolation test prohibits every unrequested method call.
+It also prohibits state loading in direct fresh.
+All four roles pass that test.
+The separate executor suite confirms four distinct worker processes and complete output equality.
+
+The reviewer found a second writer-cleanup defect in the child executor.
+If its final receipt commit raised, its following close call was skipped.
+The owner placed close inside nested cleanup protection.
+An independent forced-commit-failure test confirms that the writer lock is released.
+
+The worker's parent-measured interval includes startup, input loading, the requested method, artifacts, and the child's final commit.
+It also includes child exit and process cleanup.
+The enclosing worker's own receipt commit and the parent's equality checks remain outside that interval.
+The final parent receipt also remains outside it.
+These exclusions remain explicit instead of being called complete end-to-end service timing.
+
+The parent compares complete canonical model and state bytes against direct retained construction.
+Failed setup leaves every planned method visible.
+Failed arms do not erase the other planned outcomes.
+Sealed terminal failures remain failures on resume.
+Resume verifies worker receipts, child receipts, artifacts, and ledger debits.
+It also verifies committed artifacts from children killed before their receipt was sealed.
+An independent corruption test covers that last case.
+
+An independent pause test proves that research execution stops before any worker starts.
+It also confirms that the paused request creates no output run.
+Confirmation is deliberately rejected until a frozen isolated campaign inventory exists.
+The executor validates held-out inputs but performs no quality evaluation.
+
+Scientific boundaries that remain open
+
+No pretrained checkpoint or real corpus was evaluated.
+Useful certificate frequency, complete latency, lifetime cost, memory, and NLP quality remain unmeasured.
+The older comparison runner retains warm method arms.
+The new isolated executor separates methods but leaves operating-system caches uncontrolled.
+Complete parent-committed timing and cumulative physical process-tree CPU containment remain separate gaps.
+The sequence CLI is not a frozen sequence campaign executor.
+The current service does not implement a canonical multi-domain bank.
+Classical interval arithmetic, Schur identities, and intersection monotonicity are not new priority claims.
+The new contribution must rest on the specific sequential deletion composition and its eventual evidence.
+No theorem or software fixture here establishes reliable full-model speedup.

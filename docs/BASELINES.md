@@ -1,7 +1,7 @@
 # State loading and equal-information baselines
 
-Revision 6 retains durable state loading and the indexed fresh comparison.
-It adds matched response controls and exclusive diagnostic timing.
+Revision 7 adds full quadratic response, original-model caching, and optional interval verification.
+It retains durable state loading, matched controls, and equal-information comparisons.
 These changes do not establish practical speedup.
 
 ## Canonical state loading
@@ -64,11 +64,12 @@ Its ledger records deletion and index preparation work.
 
 `indexed_fresh` validates the retained index and constructs every quantized stage.
 It generates each stage prefix from newly constructed outputs.
-It never reads an old model proposal.
+Within the response family, it never reads an old model proposal.
 It accepts an `AggregateState` for convenience but ignores that object's model.
 It still validates retained summaries and metadata.
 
-The service supports four modes with one target and one canonical state definition.
+The response family supports four modes within each selected storage tier.
+Every mode preserves that tier's canonical state definition and the same complete target.
 
 | Mode | Proposal rule | Main limitation |
 | --- | --- | --- |
@@ -96,8 +97,8 @@ No cache survives the call.
 ## Comparison meaning
 
 Repair and indexed fresh share one stage planner.
-Both use retained summaries, base weights, fixed contracts, and newly constructed prefixes.
-Repair currently provides no separate advantage from the old model.
+Within the response family, both use retained summaries, base weights, fixed contracts, and newly constructed prefixes.
+Response-family repair currently provides no separate advantage from the old model.
 Therefore, indexed fresh is an equal-information comparison using the same algorithm.
 It is not a strong independent competing algorithm.
 Equal results or equal solver costs are expected.
@@ -126,6 +127,88 @@ Index loading, checkpoint loading, output writing, durable commits, and original
 Use the same initial files and cache conditions for each comparison.
 Software checks establish equality and transaction behavior.
 They do not measure real-model coverage or latency.
+
+## Response storage tiers
+
+`response_tier="linear"` remains the default aggregate service tier.
+`response_tier="quadratic"` stores the full affine-response Gram polynomial.
+The latter includes oriented cross matrices and every tangent Gram term.
+It uses the same intrinsic finite-error descriptors.
+It changes the proposal and storage, not the quantization target.
+It is not a renamed compact proposal.
+
+| Tier | Response slots per group | Additional error slots |
+| --- | ---: | ---: |
+| Linear | `(r+1)d²+r²` | `(r+3)(r+4)/2` |
+| Quadratic | `(r+1)(r+2)d²/2` | `(r+3)(r+4)/2` |
+
+The state manifest and schema bind the selected tier.
+The parser rejects incompatible tiers.
+A nonzero-rank compact state generally cannot recover missing quadratic moments.
+An upgrade requires re-extraction or separately retained full moments.
+Both tiers support empty, repeated, reordered, and complete deletion.
+See `docs/QUADRATIC_CONTROL.md` for extraction, contraction, and serialization costs.
+
+## Certificate portfolio
+
+`verifier_policy="spectral_or_interval"` adds an optional second verifier.
+The default policy remains `spectral`.
+The service preserves every spectral acceptance before attempting the interval route.
+The interval route checks all proposed rounding cells under signed covariance bounds and the fixed ridge floor.
+It can operate when the relative spectral lower scale is nonpositive.
+It charges extra candidate factorization when no candidate already exists.
+Rejection resumes retained replay.
+
+The policy stays outside canonical state because it changes only execution planning.
+Run input and result bindings record it separately.
+The portfolio may avoid replay but add more total work.
+It gives no runtime dominance or real-model acceptance claim.
+
+## Original quantized-model cache
+
+`IdentityCacheService` provides the distinct original-model identity baseline.
+Its runner adapter selects `service_family="identity_cache"`.
+The cache stores true stage Grams under the current quantized model and binds every relevant ancestor prefix.
+It keeps no per-record feature matrices or source payloads.
+
+At each stage, it compares all transitive ancestors with the entering cached model.
+Equal ancestors permit exact subtraction using only deleted features.
+Changed ancestors require retained replay under the new prefix.
+The service then stores refreshed true Grams under the new model.
+Repeated deletion therefore uses the current cache rather than stale original statistics.
+
+The cache stores `sum_l d_l²` Gram slots, plus model, metadata, prefixes, and rational integer storage.
+Its canonical schema is `original-model-gram-cache-v1`.
+It does not share canonical bytes with either response tier.
+Cross-family comparisons check complete model equality under the same target.
+Within-family comparisons additionally check complete canonical state equality.
+
+The cache's equally indexed comparator receives the same old model, cache, deleted inputs, and retained source.
+It executes the same solver as repair.
+Its transient prepared object includes the original cache and deleted source payloads.
+It is not a retained-only committed index.
+The split interface's extra validation cannot establish an algorithmic advantage.
+
+The core supports `certified`, `identity_only`, and `full_replay`.
+The first two names select the same original-model identity algorithm.
+The manifest loader currently allows this family only with default mode and verifier labels.
+It also requires the `none` chart and default linear label, radius, and precision.
+Those shared labels do not activate response extraction or spectral certification.
+Read `docs/IDENTITY_CACHE.md` for trusted digest requirements and complete cost accounting.
+
+## Ordered requests and complete deletion
+
+The sequence runner prepares the original state once.
+Each successful request commits the next entering state.
+Every step checks all stage outputs and its family's canonical state against retained direct construction.
+Its request and predecessor hashes bind the order.
+A failure preserves unstarted planned steps and the earlier committed prefix.
+
+An empty retained corpus remains a defined ridge-only target.
+No record can be deleted twice from the live set.
+Empty requests remain valid after complete deletion.
+Archival predecessors remain outside the returned live-state deletion guarantee.
+See `docs/SEQUENCE_EXECUTION.md` for the local dispatcher and restart contract.
 
 ## Telemetry and process boundaries
 
@@ -156,7 +239,7 @@ Numerical abstention causes replay.
 Finite-evaluator failure aborts the call without a committed state.
 Logical deletion does not erase caller copies or physical memory.
 
-The implementation does not yet provide an original-model cache or its unchanged-ancestor baseline.
-The base-reference identity-only control does not close that task.
-A distinct full quadratic response solver also remains unimplemented.
+Revision 7 implements both the original-model cache and the full quadratic response tier.
+Their correctness fixtures establish target preservation within their declared state families.
+The stronger whitened quadratic acceptance theorem remains unimplemented.
 Neither control labels nor software fixtures close the practical speed gate.

@@ -402,7 +402,8 @@ class CertifiedDecoder:
     def exact_logits(self, tokens, prefix=None):
         return tuple(tuple(Q.from_float(x) for x in row) for row in self.logits(tokens, prefix))
 
-    def make_repair_service(self, grids_by_stage, chart, *, ridge=1, normalization=1, group_count=8):
+    def make_repair_service(self, grids_by_stage, chart, *, ridge=1, normalization=1, group_count=8,
+                            response_tier="linear"):
         """Build the compact aggregate service with automatically proved moments."""
         from .aggregate_response_service import AggregateRepairService
         provider = AutomaticResponseProvider(self, chart)
@@ -413,8 +414,12 @@ class CertifiedDecoder:
         def evaluate(record, stage, prefix):
             if prefix.manifest_digest != job.manifest_digest: raise ValueError('foreign evaluator prefix')
             return self.stage_features(stage.stage_id, self.decode_payload(record.payload), prefix.as_mapping())
-        return AggregateRepairService(job, evaluate, provider.intrinsic_moments, provider.contracts, provider.query,
-                                      provider_id=provider.provider_id, extractor_id=provider.reference_id)
+        if response_tier not in ("linear", "quadratic"):
+            raise ValueError('unsupported response tier')
+        extract = provider.intrinsic_moments if response_tier == "linear" else provider.quadratic_intrinsic_moments
+        return AggregateRepairService(job, evaluate, extract, provider.contracts, provider.query,
+                                      provider_id=provider.provider_id, extractor_id=provider.reference_id,
+                                      response_tier=response_tier)
 
 
 @dataclass(frozen=True)
@@ -551,6 +556,13 @@ class AutomaticResponseProvider:
 
     def intrinsic_moments(self, record, stage):
         """Read only this supplied record; return unavailable if proof fails."""
+        return self._intrinsic_moments(record, stage, quadratic=False)
+
+    def quadratic_intrinsic_moments(self, record, stage):
+        """Store all affine feature cross-moments for the quadratic control."""
+        return self._intrinsic_moments(record, stage, quadratic=True)
+
+    def _intrinsic_moments(self, record, stage, *, quadratic):
         tokens = self.decoder.decode_payload(record.payload)
         try:
             center = self.feature_jets(stage.stage_id, tokens, region=False)
@@ -568,7 +580,8 @@ class AutomaticResponseProvider:
         hessian = norm(h.abs_bound() for row in region for x in row for hs in x.hessian for h in hs)
         descriptors = [nu + e0] + errors + [hessian, ZERO]
         contract = self.contracts[stage.stage_id]
-        response = linear_record_moments(contract.response_basis, record.record_id, record.content_digest, features)
+        make_moments = record_moments if quadratic else linear_record_moments
+        response = make_moments(contract.response_basis, record.record_id, record.content_digest, features)
         error = record_moments(contract.error_basis, record.record_id, record.content_digest,
                                tuple(((v,),) for v in descriptors))
         return response, error

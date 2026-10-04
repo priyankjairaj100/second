@@ -1,7 +1,7 @@
 # Claim and evidence map
 
-Date: 4 October 2026.
-Read this document with `PUBLICATION_THEORY.md` and the frozen experiment protocol.
+Revision 7. Date: 4 October 2026.
+Read this document with `PUBLICATION_THEORY.md` and the prospective experiment protocol.
 
 The map separates derivations, executable checks, and empirical evidence.
 Manual mathematical review is not proof-assistant verification.
@@ -19,7 +19,14 @@ Correctness fixtures are not benchmark observations.
 | The complete state equals fresh retained construction. | T6; canonical serialization; bounded reload; repeated-deletion tests. | Real repeated request sequences and storage audit. | Logical live state under the declared trusted storage interface. |
 | Aggregate matrix storage avoids per-record matrices. | Group sums; empty embedded record lists; source review. | Serialized bytes and peak memory across real configurations. | Fixed-group matrix entry count. Metadata still grows with records. |
 | Compact moments retain second-order uncertainty. | T3 and the exact-jet, in-chart analysis. | Measure every finite, jet, residual, and contraction contribution. | Conditional local order. Nonzero error floors can dominate. |
-| Full quadratic moments give a larger local regime. | Whitened theorem and its margin condition. | Implement the same acceptance rule before empirical attribution. | Stronger theorem, separate from the compact service's rule. |
+| Full quadratic response moments are an executable control. | Exact oriented moments, quadratic aggregate tier, and repeated-state fixtures. | Real memory, acceptance, and complete-cost comparisons. | Full Gram of the affine feature surrogate. No acceptance or speed dominance follows. |
+| The whitened quadratic theorem gives a larger conditional local regime. | Whitened theorem and its margin condition. | Implement that specific acceptance rule before empirical attribution. | Stronger theorem, separate from the implemented absolute-error quadratic rule. |
+| Interval verification adds exact certificate opportunities. | R1–R4; integrated spectral-or-interval policy; nonpositive-scale fixtures. | Real-model coverage and total extra proof cost. | Sound added route under valid covariance bounds and the fixed ridge. |
+| Narrower covariance boxes preserve fixed-candidate acceptance. | R5; exact interval implementation and strict rational witness. | A complete multi-domain bank remains unimplemented. | Same candidate, target, ridge, arithmetic schedule, and completed operations only. |
+| Original-model Grams support exact identity caching. | Separate identity-cache service, transitive dependency checks, canonical refresh, and fixtures. | Real retained-pass avoidance and complete costs. | All required ancestors must match the cached model exactly. |
+| Sequential studies consume preceding committed state. | Local sequence runner, immutable lineage, restart and complete-deletion fixtures. | Bulk campaign dispatch and real ordered workload observations. | Original preparation occurs once per local sequence. |
+| Method workers execute in independent processes. | Isolated runner, distinct worker PID checks, receipts, and restart tests. | Frozen isolated confirmation inventory and meaningful real timings. | Process isolation with uncontrolled operating-system caches. |
+| Phase budgets restrict worker admission. | Locked protocol-scoped ledger, reservations, settlement, and overrun tests. | Explicit feasibility phase and any broader project accounting. | Trusted worker admission only; no global physical CPU ceiling. |
 | Repair avoids retained reads. | One changed-prefix fixture; conditional stage certificate. | Coverage over fixed real workloads, including failure cases. | Some accepted requests. No universal or practical rate claim. |
 | Repair reduces complete request latency. | T7 states sufficient cost conditions. No benchmark evidence. | Paired complete timing against direct and equally indexed fresh baselines. | Withhold until measured. |
 | Repair provides reliable speedup. | A defined reliability estimand; no measured success probability. | Completion, joint speed events, tails, uncertainty, and full failure counts. | Withhold until measured on the frozen request law. |
@@ -37,8 +44,10 @@ Correctness fixtures are not benchmark observations.
 | T2: intrinsic moments and Gram bound | Report Sections 17, 18, and 20. | `response_moments.py`, `response_certificate.py`. |
 | T3: compact signed bound | Report Section 21. | `linear_response.py`, aggregate `_proposal`. |
 | T4: discrete decision certificate | Report Section 2 and independent matrix derivation. | `exact_core.py`. |
+| T4b: ridge-aware interval certificate | `ALGORITHM_ADVANCE_V7.md`, R1–R5. | `domain_refinement.py`, aggregate interval fallback. |
 | T5: sequential exactness | Report Sections 4, 19, and 24. | `repair_service.py`, `aggregate_response_service.py`. |
 | T6: canonical state | Report Sections 1, 17, 19, and 24. | Aggregate deletion, bindings, and canonical serialization. |
+| T6b: original-model cache | `IDENTITY_CACHE.md` and the publication corollary. | `identity_cache.py` and sequential cache fixtures. |
 | T7: complete-work condition | Report Sections 9, 20, and 24. | Complete cost measurement remains separate from local counters. |
 | Conditional zero replay | Report Sections 19 and 21. | Compact rule uses signed absolute budgets. |
 | Exact-query storage limit | Report Section 20. | Mathematical construction; no benchmark requirement. |
@@ -104,8 +113,12 @@ The complete request includes deleted evidence extraction, validation, state mai
 
 Compare fixed-reference and response methods under matched settings.
 Compare replay-only behavior and certificate-driven behavior.
-Use affordable quadratic moments only under a stated memory budget.
-Distinguish the quadratic mathematical bound from any implemented experimental rule.
+The quadratic control is implemented but still requires a stated memory budget.
+Its implemented absolute-error certificate does not instantiate the stronger whitened radius theorem.
+Compare state bytes within the same family and tier.
+Across state families, compare the complete quantized model and every declared storage obligation.
+Give indexed fresh the same original cache when testing the identity-cache family.
+Do not charge direct fresh for loading an original cache it does not need.
 
 ## 6. Claim rejection rules
 
@@ -162,5 +175,41 @@ The analyzer rejects mixed mode/chart/service identities within a stratum.
 
 These changes preserve the fair indexed solver and canonical state target.
 They do not close real-model feasibility, full-service timing, or useful NLP evidence.
-See VALIDATION.md for the 261-test result and source hashes.
+The revision 6 checkpoint passed 261 correctness tests.
+`VALIDATION_V6.md` preserves that checkpoint's validation record.
+Current source requires the separate revision 7 validation record in `VALIDATION.md`.
 See RESEARCH_TODO.md for remaining required tasks.
+
+
+## Revision 7 current execution evidence
+
+The protocol is `configs/protocol_v3.json`.
+The implementation adds quadratic moments, original-model identity caching, and interval fallback.
+Local sequences include empty and complete deletion under fixed original normalization.
+Their saved lineage verifies the preceding committed state before each step.
+These capabilities have software correctness evidence only.
+The final revision 7 validation log and hashes govern the current test count.
+
+The isolated runner records a complete declared worker interval.
+It includes required input loading, one method, artifact output, child receipt commit, exit, and cleanup.
+It excludes parent verification and the enclosing worker-control and parent receipt commitments.
+CPU settlement also follows the worker timer.
+Original preparation is a separate worker cost.
+No NLP quality evaluation occurs in that isolated path.
+`ISOLATED_COMPARISON.md` defines the exact boundary.
+
+Repair and indexed fresh read the same persisted original state.
+Direct fresh reads retained records without that unnecessary state load.
+A sealed child without its enclosing durable timing cannot become a cached fast success.
+The runner records that recovery case as failure.
+A sealed outer worker resumes with its original timing and resource debit.
+
+The CPU ledger caps admitted allowances within one frozen protocol hash.
+Unknown attempts retain their allowance, and observed overruns remain fully charged.
+It excludes controller CPU and does not contain arbitrary descendant trees.
+No project-wide or physical hardware cap follows.
+
+Bulk sequence dispatch and isolated confirmation inventory support remain open.
+The multi-domain certificate bank remains a design theorem and standalone intersection utility.
+No real checkpoint, empirical acceptance, NLP quality, lifetime benefit, or reliable speedup is established.
+Experiments remain paused.

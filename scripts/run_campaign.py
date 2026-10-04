@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Execute an immutable local campaign. The protocol controls the research pause."""
+"""Execute an immutable campaign with protocol-scoped CPU admission and pause checks."""
 import argparse
 import json
 from pathlib import Path

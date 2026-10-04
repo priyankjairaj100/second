@@ -1,6 +1,6 @@
 # Local experiment runner
 
-Updated 4 October 2026, revision 6.
+Updated 4 October 2026, revision 7.
 The runner uses local inputs with verified hashes.
 It downloads no models, data, tokenizers, or executable source.
 It does not execute checkpoint code.
@@ -61,15 +61,28 @@ Unknown fields cause rejection.
 | `calibration` | Local prepared-record path and SHA256 |
 | `heldout` | Local prepared-record path and SHA256 |
 | `protocol` | Local protocol path and SHA256 |
-| `deleted_ids` | Unique calibration IDs that leave at least one retained record |
+| `deleted_ids` | Unique currently live calibration IDs; empty and complete deletion are valid |
 | `target` | Complete `TargetRecipe.payload()` |
 | `chart` | Complete `ChartRecipe.payload()` |
 | `method_order` | All three comparison methods, exactly once |
 | `service_mode` | Optional mode; default `certified` |
+| `service_family` | Optional `response` or `identity_cache`; default `response` |
+| `verifier_policy` | Optional `spectral` or `spectral_or_interval`; default `spectral` |
 
 Supported modes are `certified`, `fixed_reference`, `identity_only`, and `full_replay`.
 The selected mode applies to repair and indexed fresh.
 Direct fresh remains unchanged.
+The chart recipe also binds `response_tier`, with values `linear` or `quadratic`.
+The quadratic tier stores complete oriented response moments and uses the same finite-error descriptors.
+Its state schema and storage count differ from the compact tier.
+The optional interval policy preserves spectral acceptance and adds verification before retained replay.
+The stronger whitened quadratic certificate remains unimplemented.
+
+The identity-cache family stores true sequential Grams under the entering quantized model.
+Its loader requires the `none` chart and default tier label, radius, precision, mode, and verifier.
+Those default labels do not activate response machinery in that family.
+Its equally indexed method receives the same cache and entering model as repair.
+The response family's model-free retained index has a different contract.
 See `docs/BASELINES.md` for each control's exact meaning.
 
 JSON references contain `path` and `sha256`.
@@ -119,6 +132,33 @@ Source withdrawal requires complete documented source labels.
 The helper does not establish those labels' semantic validity.
 See `docs/WORKLOAD_CONTRACT.md` for score formulas, ordering rules, and open provenance gates.
 
+## Ordered deletion command
+
+Validate a prepared ordered sequence:
+
+```bash
+python scripts/run_sequence.py sequence.json --output runs/sequence-001 --validate-only
+```
+
+Its schema is `calibration-sequence-v1`.
+Replace the ordinary `request_id` and `deleted_ids` fields with `sequence_id` and ordered `requests`.
+Every request contains its own unique `request_id` and live `deleted_ids`.
+The loader preserves checkpoint hashes, target normalization, source bindings, and research pause guards.
+
+The sequence prepares its original state once.
+Each step executes all three comparisons against the current retained corpus.
+Only a successful complete comparison advances the committed predecessor.
+Every step binds the previous state digest and previous result digest.
+Restart verifies the saved initial state, completed prefix, and child artifacts.
+Unstarted requests remain visible after a failure.
+
+Complete deletion leaves no calibration records.
+The fixed target then uses zero data Grams and the original ridge, grids, and normalization.
+Subsequent empty requests are valid.
+Deleting a previously removed record fails validation.
+The sequence archive retains historical states outside the live-state deletion guarantee.
+Read `docs/SEQUENCE_EXECUTION.md` for the full lineage and restart contract.
+
 ## Frozen campaign inventory
 
 `src/experiment_inventory.py` binds workloads, source hashes, limits, and run manifests.
@@ -135,12 +175,15 @@ Confirmation requires a frozen protocol and no blocked fields.
 It also requires declared configurations, root count, request types, and repetitions.
 The campaign validates their complete primary Cartesian product before dispatch.
 Development can use declared smaller inventories.
-Unsupported sequential requests and complete-deletion requests cannot enter executable inventories.
+Independent empty and complete-deletion controls can enter executable inventories.
+They remain outside primary speed-ratio strata.
+Ordered sequence dispatch is not yet integrated into bulk campaign inventories.
+Use the standalone sequence dispatcher for its supported local workflow.
 
 The analysis plan retains every planned run.
-It preserves the selected service mode.
+It preserves the selected service mode, service family, response tier, and verifier policy.
 Missing runs remain in failure denominators.
-The analyzer rejects differing modes, chart hashes, or service hashes within one configuration.
+The analyzer rejects mixed control labels, chart hashes, or service hashes within one configuration.
 Unknown optional hashes do not remove missing planned runs.
 
 ## Execution and comparisons
@@ -148,7 +191,9 @@ Unknown optional hashes do not remove missing planned runs.
 The runner first builds the original complete state.
 It writes that state atomically.
 It reloads the actual saved bytes through the validated parser.
-Each comparison starts from that same original state.
+Independent requests start from that same original state.
+`run_comparison` also accepts a validated `initial_state` and `sequence_lineage`.
+Ordered requests start from the preceding committed repair state.
 
 | Method | Included operations |
 | --- | --- |
@@ -157,17 +202,22 @@ Each comparison starts from that same original state.
 | `direct_fresh` | Retained selection, direct retained construction, serialization, and durable output |
 
 Indexed fresh receives the same valid retained summaries and source access.
-It never reads the original quantized model as a proposal.
+The response family's indexed solver never reads the original quantized model as a proposal.
+The identity-cache family's indexed solver receives the old model because that model defines its valid cached Grams.
 Repair and indexed fresh share the stage solver.
 Their interface overhead cannot establish a deletion-specific algorithmic advantage.
 
 Successful methods must match the direct oracle's complete canonical state.
 They must also match every quantized stage and its target binding.
+Canonical state comparisons apply within the chosen family and response tier.
+Different families or tiers need not share auxiliary state bytes.
 The model artifact references the unchanged checkpoint through that binding.
 It is not a standalone pretrained checkpoint export.
 
 The runner measures diagnostic next-token loss on held-out records.
-It evaluates base, original quantization, retained direct, and repaired outputs.
+It evaluates base, entering quantization, retained direct, and repaired outputs.
+For sequence steps, `original_quantized` names the entering committed model in the existing quality schema.
+The result identifies this with `initial_model_role="preceding_committed_state"`.
 It never scores transitions between records.
 The metric uses stable binary64 log-sum-exp with Python library math.
 The metric is not an exact arithmetic certificate.
@@ -226,7 +276,12 @@ It checks the request digest, limits, affinity, thread environment, PID, and pro
 Address-space limits apply per process and concern virtual memory.
 They are not physical-memory measurements.
 CPU limits also apply per process.
-They do not enforce cumulative phase budgets or total descendant CPU use.
+They do not contain total descendant CPU use.
+A separate durable phase ledger reserves each worker's CPU allowance before launch.
+It settles observed `wait4` CPU charges and retains pending allowances after uncertain interruption.
+Observed overruns close further admission instead of disappearing from the ledger.
+This controls admitted allowances within one protocol scope, not an absolute physical CPU ceiling.
+Read `docs/EXECUTION_BUDGETS.md` for cap scope, restart, and accounting exclusions.
 Thread environment values request library behavior.
 Affinity separately limits available CPUs.
 The process group is not containment for hostile programs.
@@ -274,11 +329,26 @@ The guarantee does not cover archive contents or physical memory erasure.
 Hashes detect changes under trusted storage.
 They do not authenticate hostile storage.
 
+## Separate method executor
+
+`scripts/run_isolated.py` runs setup and each method in separate limited processes.
+Its declared clock includes loading, artifacts, child commitment, and process cleanup.
+Parent verification, post-cleanup settlement, logs, and controller receipts remain excluded.
+Direct fresh avoids reading the original index.
+The parent verifies complete model and canonical state equality.
+Protocol-scoped admission includes setup and every method.
+The executor validates heldout inputs but does not evaluate NLP quality.
+Confirmation remains blocked pending compatible frozen inventory support.
+See `docs/ISOLATED_COMPARISON.md` for the complete contract.
+
 ## Open implementation gates
 
 Real checkpoint feasibility and useful proof coverage remain unmeasured.
 Source acquisition, tokenizer validation, and concrete record manifests remain open.
-Repeated deletion execution and complete-deletion campaign controls remain open.
-Per-arm cold timing and cumulative phase budgets remain open.
-An original-model cache and a distinct quadratic response solver remain open.
+Standalone repeated deletion and independent complete-deletion controls are implemented.
+Bulk campaign sequence dispatch remains open.
+The warm runner does not provide per-method independent processes or cold operating-system caches.
+Durable phase admission exists, with its documented protocol scope and overrun limits.
+Original-model caching and the full quadratic response tier are implemented.
+Their real-model utility, stronger whitened acceptance theorem, and complete cost advantages remain open.
 No reliable full-model speedup follows from this infrastructure.

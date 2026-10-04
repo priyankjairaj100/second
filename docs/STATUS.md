@@ -1,93 +1,100 @@
 # Current project status
 
-Updated 4 October 2026, revision 6 preparation.
+Updated 4 October 2026, revision 7 preparation.
+Previous verified checkpoint: 3c6905e77bca86e4d3e54be20a82f3acdcfd294d.
 
-The user requested the remaining tasks and asked us to proceed.
-This revision completes another preparation package.
-The register contains 24 completed and 54 open required items.
-It separately tracks 12 conditional extensions.
+The user requested further work and “maximum revenue.”
+We interpret that phrase as research value within this paper program.
+No monetary return is predicted or guaranteed.
 Research experiments remain paused.
-Correctness tests and theoretical work remain within scope.
+The register contains 28 completed and 50 open required items, plus 12 conditional extensions.
+The final validation records 340 correctness tests and a 35-page report.
 
-## Completed in this revision
+## Completed preparation in revision 7
 
-| Area | Result | Remaining boundary |
+| Area | Implemented result | Remaining boundary |
 | --- | --- | --- |
-| Domain coverage | Fixed boxes contain all installed frozen-grid ancestor parameters | Inclusion does not establish useful numerical certificates |
-| Algorithm | Hybrid midpoint anchors remove separate finite evaluation for varying domains | Smaller feature envelopes do not guarantee better decision acceptance |
-| Storage | Rank-zero aggregate state removes derivative-rank factors | Exact Grams, metadata, base weights, and rational sizes remain costly |
-| Execution | Parameter wrappers materialize one required stage at a time | This does not establish total memory fit |
-| Controls | Certified, full-replay, fixed-reference, and base-reference identity-only modes | Original-model cache and full quadratic control remain open |
-| Telemetry | Exclusive internal spans and stable visible rejection events | Full commit boundary and detailed numerical decomposition remain open |
-| Worker | Enforced memory, CPU, file, affinity, thread, and wall controls | Limits apply per comparison; cumulative phase CPU caps remain open |
-| Workload | Original-only scores, request laws, document expansion, and phase checks | Real records, score artifacts, and token manifests remain absent |
-| Inventory | Source binding, saved method order, matrix completeness, and restart validation | No frozen real empirical inventory exists |
-| Analysis | Reject mixed mechanism modes, charts, and service identities | Precision justification still needs development evidence |
-| Protocol | Compatible version 2 preserves all blockers and the experiment pause | It remains a prospective specification |
+| Certificate algorithm | Spectral-first portfolio with signed intervals, ridge-safe elimination, and exact rounding cells | Strict fixture improvement does not establish real-model coverage or speed |
+| Bound refinement | Standalone common-binding enclosure intersection with conditional acceptance monotonicity | Complete canonical multi-domain bank remains unimplemented |
+| Quadratic control | Full Gram polynomial of the affine response with certified remainder and separate state schema | Larger preparation, storage, and request costs require real measurement |
+| Original-model cache | True sequential Grams, transitive ancestor identity checks, exact subtraction, and canonical refresh | Changed ancestors can require full retained replay |
+| Ordered deletion | Previous-state execution, complete deletion, empty requests, persistent lineage, and restart | Bulk campaign admission and frozen sequence inventory remain open |
+| Worker budgets | Durable protocol-scoped CPU reservations and observed settlement | Controller CPU, cross-protocol totals, and absolute physical ceilings remain outside scope |
+| Separate methods | Setup and each comparison method execute in separate limited processes | OS caches remain uncontrolled; isolated confirmation inventory and quality remain open |
+| Provenance | Family, tier, verifier policy, source, and state identities enter execution and analysis | No frozen real empirical inventory exists |
 
-The consolidated report includes Sections 28–30.
-See BOX_THEORY.md for B1–B8 and their limitations.
-See VALIDATION.md for final tests, source hashes, and independent review.
-No research experiment or download ran.
+The primary target remains V_cert.
+Legacy V, historical floating E, and native Hugging Face execution remain distinct.
+Proof rejection allows exact replay.
+Necessary finite-evaluator failure aborts without an approximate committed model.
+Every completion claim requires successful required evaluations and sufficient resources.
 
-## Scientific consequence
+## Scientific implications
 
-Repair and indexed fresh still use the same stage planner.
-The planner ignores old quantized codes.
-This implementation has no deletion-specific solver advantage.
-Index maintenance can avoid reconstructing retained summaries.
-Report that benefit separately from solving costs.
-Extra split-interface serialization cannot justify an algorithmic advantage.
+The response solver ignores old quantized codes.
+The identity-cache solver uses the previous quantized model to justify feature reuse.
+Indexed fresh receives the same valid information and solver in each family.
+Neither comparison establishes a deletion-exclusive solver advantage.
+Report retained-summary maintenance and cache preparation separately from solving.
+Do not convert split-interface validation overhead into an algorithmic claim.
 
-The box route closes the affine representation gap for frozen-grid prefixes.
-It does not close the numerical acceptance gap.
-Wide boxes can produce unavailable or weak bounds and trigger full replay.
-The midpoint minimizes the rectangular interval envelope's feature radius.
-It can still change proposal Grams and margins unfavorably.
-No certificate-acceptance dominance or full-model speed follows.
+The interval portfolio preserves earlier spectral acceptances when the relevant computation completes.
+The new verifier can certify additional decisions under its sound covariance and ridge premises.
+Its additional arithmetic can increase cost or exhaust finite budgets.
+Certificate acceptance dominance therefore does not establish full-service runtime dominance.
 
-## Remaining preparation before research execution
+The quadratic control changes the response proposal and storage tier, not the quantization target.
+Different proposals can change margins and certificate acceptance in either direction.
+The identity cache also changes the optional state interface.
+Canonical equality applies within one declared family and tier.
+Cross-family comparisons require equal quantized model outputs.
+
+## Remaining work
 
 The experiment-ready gate G0 remains open.
-Complete these items before confirmation:
+The highest-priority remaining tasks are:
 
-1. Establish a resource-feasible checkpoint route under the declared target.
-2. Acquire and validate real checkpoint, tokenizer, corpus, and prepared record artifacts after authorization.
-3. Freeze primary settings, source partitions, and the actual run inventory.
-4. Complete phase budgets, required independent method execution, timing boundaries, and memory/arithmetic diagnostics.
-5. Implement the original-model invariance baseline and affordable quadratic control.
-6. Support campaign sequences and complete-deletion controls.
-7. Justify confirmatory precision using development evidence.
+1. Establish feasible real checkpoint execution and validate actual model, tokenizer, document, corpus, and token artifacts.
+2. Complete parent-transaction timing and transient arithmetic/memory diagnostics.
+3. Integrate ordered sequences with bulk campaign admission and frozen sequence inventories.
+4. Complete isolated confirmation inventory support and quality evaluation.
+5. Freeze primary settings, real source partitions, root draws, workload artifacts, run inventory, and statistical precision.
+6. Establish real-data exactness, useful certificate coverage, complete cost, lifetime savings, and NLP quality.
+7. Complete the manuscript, literature audit, independent review, reproducibility release, and submission checks.
 
-Some items need real execution and belong to staged feasibility after resumption.
-Do not pretend those empirical dependencies are closed by software fixtures.
-Protocol version 2 states the remaining blockers explicitly.
+Actual data acquisition and research studies require resumption after the current pause.
+Software fixtures cannot close those empirical dependencies.
+Protocol version 3 records unresolved fields explicitly.
+Source revisions are metadata pins only.
 
-## Numerical and storage scope
+## Measurement and storage scope
 
-V_cert remains the primary partial numerical target.
-Legacy library-math V, historical floating E, and native Hugging Face kernels remain distinct.
-Proof rejection permits exact retained replay.
-Necessary finite-evaluator failure aborts without committing an approximate model.
-Every completion statement requires successful required evaluations and sufficient resources.
+Separate-process method clocks cover the declared limited-worker boundary.
+They include startup, inputs, the method, model/state artifacts, child receipt, exit, and cleanup.
+They exclude parent validation, equality verification, parent receipt, and post-cleanup worker accounting commitments.
+Setup has a separate charge.
+The isolated executor does not compute heldout quality yet.
+Warm comparison and sequence paths still share process history.
+Operating-system caches remain uncontrolled in every path.
 
-Returned canonical live state satisfies the declared deletion guarantee.
-The research archive deliberately preserves original states and failed attempts.
-It lies outside that guarantee.
+CPU admission applies to workers sharing the same frozen protocol ledger.
+Unknown attempts retain their reserved allowance.
+Observed overruns remain charged and stop later admission.
+This does not establish absolute physical CPU containment or a cross-protocol project cap.
+Controller CPU lies outside this worker ledger.
+
+Returned canonical live state omits deleted source influence under its declared interface.
+The external research archive retains original states and failed attempts.
+The identity adapter also maintains bounded process-local trusted digest capabilities.
+Neither component is part of returned live-state erasure guarantees.
 Trusted hashes do not authenticate hostile storage or prove physical erasure.
-
-Each comparison has one isolated limited process.
-Its methods share warm objects and process history.
-Operating-system caches remain uncontrolled.
-Final result commit and campaign orchestration lie outside method timers.
-The present timers cannot establish complete process-cold service latency.
 
 ## Evidence discipline
 
-No pretrained model, empirical corpus, benchmark, or external compute job ran.
-Correctness fixtures establish software behavior only.
-Useful coverage, preparation costs, memory, quality, and complete latency remain unmeasured.
-Historical missing raw results remain unavailable.
-PROJECT_CONTEXT.md labels reconstructed historical claims separately.
-Classical interval bounds and Gram geometry are not new priority claims.
-The proposed contribution concerns certified sequential deletion and canonical state under explicit costs.
+No research experiment, model download, corpus download, or external compute job ran.
+Correctness tests establish software behavior and mathematical fixtures only.
+Real-model feasibility, acceptance, complete latency, lifetime savings, and quality remain unmeasured.
+No reliable full-model speedup is established.
+Historical missing raw results remain unavailable and explicitly labeled.
+Classical interval operations, Schur identities, and exact Gram subtraction are not claimed as new techniques.
+The proposed contribution concerns certified sequential deletion, canonical state, and explicit storage and cost tradeoffs.

@@ -1,6 +1,6 @@
 # Publication theory package
 
-Date: 4 October 2026.
+Revision 7. Date: 4 October 2026.
 Status: consolidated mathematical contract for the next research phase.
 
 This document orders existing results for publication.
@@ -69,7 +69,7 @@ Represent installed ancestor parameters as
 \theta=\theta_0+Da+u,\qquad Da=\sum_{t=1}^{r}a_tD_t.
 \]
 
-The current automatic provider requires `u = 0`.
+The automatic affine provider requires `u = 0`.
 The general theorem permits a certified residual term.
 Let `f_j` denote the ideal smooth feature map.
 Let `X_j` denote the actual finite output.
@@ -250,11 +250,74 @@ T1 through T3 establish that premise for the supported automatic provider.
 Typed bindings prevent accidental reuse with another prefix or group.
 They do not provide proof-assistant verification of arbitrary callbacks.
 
+### T4b. Ridge-aware interval decisions
+
+The optional `spectral_or_interval` policy preserves T4 as its first route.
+After rejection, it can use exact entrywise covariance intervals.
+This route does not require a positive relative spectral lower scale.
+
+Suppose a sound proposal proves
+
+\[
+-aI\preceq H^*-S\preceq bI,\qquad a,b\ge0.
+\]
+
+Centering its error spectrum gives the valid entry intervals
+
+\[
+H^*_{ii}\in[S_{ii}-a,S_{ii}+b],\qquad
+H^*_{ij}\in[S_{ij}-(a+b)/2,S_{ij}+(a+b)/2]\quad(i\ne j).
+\]
+
+These errors use normalized statistics, and the proposal includes the ridge exactly once.
+The off-diagonal radius is sharp without additional information.
+Its derivation is the elementary centered operator-norm bound.
+
+The true covariance satisfies `H* >= lambda I`.
+Every Schur complement retains this ridge floor because
+
+\[
+x^\top(A-BC^{-1}B^\top)x
+=\min_y (x,y)^\top H^*(x,y)
+\ge\lambda\|x\|_2^2.
+\]
+
+Run exact rational interval reverse elimination.
+Before each division, intersect the pivot interval with `[lambda,infinity)`.
+Backward induction proves that the resulting factor intervals contain the true factors.
+This argument covers admissible true covariances, even when the containing entry box includes indefinite matrices.
+Empty pivot intersections indicate inconsistent evidence and cannot prove a code.
+
+For the fixed candidate `q`, enclose the conditional input by
+
+\[
+[v_i]=w_i+\sum_{h<i}[L_{ih}](w_h-q_h).
+\]
+
+Lower-tie rounding uses cells `(m_lower,m_upper]`.
+Strict containment above the lower endpoint and weak containment below the upper endpoint prove the code.
+Missing endpoints impose no finite bound.
+Coordinate induction proves every candidate row when all checks pass.
+A failed earlier check leaves later checks conditional, and the complete certificate rejects.
+
+Intersecting sound entry boxes for the same bound covariance preserves soundness.
+At a fixed candidate, ridge, grids, and operation schedule, inclusion-isotone arithmetic preserves acceptance under narrower boxes.
+This statement assumes completed arithmetic and valid nonempty premises.
+It does not prove acceptance dominance after changing the candidate.
+It does not prove resource completion or latency dominance.
+
+`domain_refinement.py` implements the interval verifier and exact intersection.
+The aggregate service integrates a single-enclosure interval fallback after spectral rejection.
+A complete multi-domain bank is a separate unimplemented design.
+Bank entries require a common retained-source binding and separately charged storage and extraction.
+`ALGORITHM_ADVANCE_V7.md` gives R1–R6, strict rational witnesses, and classical interval references.
+These witnesses establish mathematical possibility, not language-model coverage or measured performance.
+
 ### T5. Complete sequential repair
 
 Process stages in dependency order.
 Bind every proposal to the already certified new ancestor prefix.
-Apply T1 through T4 under that prefix.
+Apply T1 through T4, or the sound T4b alternative, under that prefix.
 If a certificate fails, replay another unresolved retained group.
 After all groups replay, use the exact retained covariance.
 
@@ -275,11 +338,14 @@ Define the complete logical state as
 \[
 \mathcal A(R)=\left(Q_{\mathrm{seq}}(W,R),
 \mathrm{Bindings}(R),
-\{\mathrm{LinearMoments}_g(R),\mathrm{ErrorMoments}_g(R)\}_g\right).
+\{\mathrm{ResponseMoments}^{\mathrm{tier}}_g(R),\mathrm{ErrorMoments}_g(R)\}_g\right).
 \tag{T6}
 \]
 
-Fixed identifier grouping and canonical serialization determine its bytes.
+Fix the response tier before defining the state interface.
+It can store compact linear moments or complete quadratic response-Gram moments.
+Fixed identifier grouping and canonical serialization then determine its bytes.
+The tiers use different schemas and do not promise cross-tier byte equality.
 Each record binding contains its identifier, payload digest, group, and contribution digests.
 It contains no retained feature matrix or derivative array.
 
@@ -296,6 +362,34 @@ Audit logs remain outside the canonical state.
 The theorem concerns logical state, not physical Python memory erasure.
 It removes calibration influence under the chosen interface.
 It does not remove information already present in fixed base weights.
+
+### T6b. Original-model Gram cache
+
+A separate state interface stores the true sequential Gram at each current quantized prefix.
+It also stores the complete model, retained identities, content digests, and stage-prefix hashes.
+
+Suppose every transitive ancestor required at a stage matches its cached predecessor model.
+A3 then makes every retained feature identical under the two prefixes.
+Subtracting recomputed deleted-feature Grams gives the exact retained Gram at that stage.
+If any required ancestor differs, replay the retained records under the new certified prefix.
+Exact target quantization determines the next stage in both cases.
+
+Topological induction therefore proves complete target model equality.
+Saving each new true Gram produces the same cache as fresh retained construction.
+Repeated, combined, empty, and complete deletion obey the same argument.
+The cache needs an independently trusted origin or expected digest.
+Structural positive-semidefinite checks cannot establish historical source provenance.
+
+The live cache uses `sum_ell d_ell²` Gram rational slots, plus model and record metadata.
+It keeps no per-record feature matrices.
+Input and output states, transient registry entries, exact arithmetic, and serialized buffers remain additional memory costs.
+Changed early ancestors can force nearly complete retained replay.
+This interface yields no universal retained-pass avoidance guarantee.
+
+Give the indexed-fresh comparator the same original cache and model.
+Its identical solver can perform the same feature reuse.
+The extra split-interface validation cost does not establish a deletion-specific algorithmic advantage.
+This cache schema differs from response state, while its complete quantized model uses the same numerical target.
 
 ### T7. Conditional complete-work gain
 
@@ -361,7 +455,11 @@ For each stage, an implementation-matched sufficient condition is
 Here `beta` and `delta` sum the unresolved group contributions.
 These conditions imply acceptance without retained replay.
 They must hold under each newly certified stage prefix.
-The implementation does not automatically obtain the stronger quadratic radius.
+The implementation does not automatically obtain the stronger whitened quadratic radius.
+Revision 7's quadratic control stores the full affine-response Gram.
+Its default acceptance rule still uses T2's absolute error and the fixed ridge.
+The optional T4b route adds a distinct interval criterion.
+Neither implementation change proves the stronger whitened radius has been attained.
 
 ### Error floors
 
@@ -392,6 +490,9 @@ The original quantized prefix can already lie outside that chart.
 | T2 contraction | `response_error_squared`, `dyadic_sqrt_upper` | Complete descriptor quadratic and outward norm | Reject malformed evidence. |
 | T3 | `shifted_linear_response_bound`, aggregate `_proposal` | `beta`, `delta`, positive semidefinite proposal | Reject invalid witness or request replay. |
 | T4 | `certify_relative_enclosure` | Squared radius, cell endpoints, prefix energy | Abstain if any cell remains unresolved. |
+| T4b | `domain_refinement.certify_gram_box` | Ridge-clipped interval factors and exact lower-tie cells | Reject inconsistent evidence; otherwise abstain and replay. |
+| T6b | `IdentityCacheService` | Trusted true Grams and matching transitive ancestors | Replay changed stages; reject untrusted state or source. |
+| Ordered execution | `sequence_runner.run_sequence` | Committed predecessors, full oracle equality, and child hashes | Preserve failure and later unstarted requests. |
 | T5 | `AggregateRepairService.repair` | Certified prefix, unresolved budgets, replay groups | Replay; abort if target execution fails. |
 | T6 | Aggregate `_extract`, `_delete`, `_finish`, `canonical_bytes` | Deleted contribution digests and exact retained sums | Reject mismatched deletion or state. |
 | T7 | Complete runner ledger and external timing | Every charged component and comparator conditions | Withhold the speed claim if conditions fail. |
@@ -430,7 +531,7 @@ They do not prohibit a smaller interval-query interface.
 | --- | --- |
 | Initial preparation | Checkpoint loading, conversion, chart construction, every intrinsic extraction, aggregation, hashing, and serialization. |
 | Response extraction | Center and region evaluation with all first and mixed second derivatives. |
-| Parameter jets | Current construction allocates jets for every stage, including stages after the requested feature location. |
+| Parameter jets | Lazy wrappers materialize requested stage weights; unused later stages are omitted and wrappers are not cached. |
 | Temporary jet memory | Each live scalar can carry `O(r²)` interval entries. Parameter jets also contribute this cost. |
 | Compact moment extraction | Per record and stage, `O(t_j[(r+1)d_ell² + r²d_ell])` rational operations. |
 | Deletion | Read deleted payloads, verify digests, regenerate intrinsic evidence, and subtract exact contributions. |
@@ -483,7 +584,10 @@ Charge equivalent state access and output obligations to each method.
 An equally indexed fresh solver can use the same retained response aggregates.
 It can also use the same chart, certificates, replay planner, and numerical target.
 Starting without old quantized codes does not prevent this route.
-The current candidate solver does not require those old codes.
+The response-family candidate solver does not require those old codes.
+Its quadratic tier and optional interval policy remain equally available to indexed fresh.
+The identity-cache family does use the cached model because it defines stored feature prefixes.
+Its indexed comparator receives that model and the same cached Grams.
 
 Therefore the index alone gives no inherent deletion-exclusive solver advantage.
 Identical retained inputs and planner choices can produce identical solver work.
@@ -588,5 +692,50 @@ The analyzer rejects mixed mode/chart/service identities within a stratum.
 
 These changes preserve the fair indexed solver and canonical state target.
 They do not close real-model feasibility, full-service timing, or useful NLP evidence.
-See VALIDATION.md for the 261-test result and source hashes.
+The revision 6 checkpoint passed 261 correctness tests.
+`VALIDATION_V6.md` preserves that historical result and its source hashes.
+Use `VALIDATION.md` for the current revision 7 validation record.
 See RESEARCH_TODO.md for remaining required tasks.
+
+
+## Revision 7 measurement and publication boundary
+
+The implemented quadratic tier, identity cache, and interval fallback close specific reference-code gaps.
+They add no empirical acceptance, NLP quality, or speed evidence.
+The complete multi-domain bank remains a prospective design.
+Classical interval inclusion, Schur complements, and exact polynomial moments remain attributed ingredients.
+The proposed contribution concerns their declared sequential deletion interface and verified state maintenance.
+No universal novelty or priority claim follows.
+
+The sequence runner prepares one original state and consumes saved committed predecessors.
+It compares every step with independent fresh retained construction under fixed original normalization.
+It supports empty requests and deletion of all calibration records.
+Bulk campaign sequence dispatch remains open.
+
+The isolated runner uses one setup process and three separate method processes.
+Repair and indexed fresh load the same committed original state.
+Direct fresh avoids that unnecessary input cost.
+Each worker interval includes startup, input loading, service work, durable artifacts, child commit, exit, and cleanup.
+It excludes parent verification and the enclosing worker-control and parent receipt commitments.
+CPU settlement follows the worker timer.
+Original preparation has a separate worker cost.
+This path does not compute heldout NLP quality.
+These intervals therefore require their own explicit comparison scope and cannot replace a complete parent transaction claim.
+
+A sealed child without a durable enclosing timing record cannot become a cached fast success on restart.
+The runner records that case as failure.
+A fully sealed worker retains its original timing and phase debit.
+Process separation leaves operating-system caches uncontrolled.
+Isolated confirmation still requires a compatible frozen campaign inventory.
+
+The CPU ledger admits only complete worker allowances that fit the current protocol-scoped debit.
+Pending attempts retain their allowance until valid usage is available.
+Observed overshoot remains charged and can stop later admission.
+This is an admission invariant, not a universal physical CPU bound.
+Controller work, arbitrary descendants, and separate protocol ledgers remain outside its guarantee.
+A distinct feasibility dispatch phase remains open.
+
+Every T7 application must charge these declared costs and respect the selected comparison boundary.
+Neither worker controls nor correctness tests prove its cost premises or their probability.
+Real checkpoint feasibility, frozen inputs, practical coverage, quality, and reliable complete speedup remain unresolved.
+Research experiments remain paused.

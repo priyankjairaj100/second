@@ -203,6 +203,13 @@ class BoxResponseProvider:
 
     def intrinsic_moments(self, record, stage):
         """Extract one record's additive proof data, or mark proof unavailable."""
+        return self._intrinsic_moments(record, stage, quadratic=False)
+
+    def quadratic_intrinsic_moments(self, record, stage):
+        """Use the full response schema; rank zero has the same single Gram."""
+        return self._intrinsic_moments(record, stage, quadratic=True)
+
+    def _intrinsic_moments(self, record, stage, *, quadratic):
         tokens = self.decoder.decode_payload(record.payload)
         try:
             if self._base_only_domain(stage.stage_id):
@@ -218,7 +225,8 @@ class BoxResponseProvider:
         except (ArithmeticError, ValueError, OverflowError):
             return None
         contract = self.contracts[stage.stage_id]
-        response = linear_record_moments(contract.response_basis, record.record_id, record.content_digest, (anchor,))
+        make_moments = record_moments if quadratic else linear_record_moments
+        response = make_moments(contract.response_basis, record.record_id, record.content_digest, (anchor,))
         error = record_moments(contract.error_basis, record.record_id, record.content_digest,
                                (((epsilon,),), ((ZERO,),), ((ZERO,),)))
         return response, error

@@ -55,7 +55,9 @@ A missing or invalid acknowledgment prevents success.
 `RLIMIT_AS` limits virtual address space.
 It does not directly limit physical memory.
 CPU limits apply separately to each process.
-They do not enforce cumulative CPU use across a campaign.
+These per-process limits alone do not enforce cumulative CPU use.
+Revision 7 adds protocol-scoped admission and observed CPU debits; see `docs/EXECUTION_BUDGETS.md`.
+This remains distinct from physical process-tree containment.
 Thread environment values request library behavior.
 CPU affinity supplies the additional execution restriction.
 Neither mechanism proves that a library creates a particular thread count.
@@ -176,3 +178,13 @@ The following items remain open:
 
 The correctness tests establish these software behaviors only.
 They do not establish useful chart coverage, model quality, or repair speed.
+
+## Revision 7 separate method executor
+
+The original campaign keeps warm methods inside each comparison worker.
+The separate executor uses independent setup, repair, indexed-fresh, and direct-fresh workers.
+It includes loading and child commitment within each declared worker clock.
+Parent verification, post-cleanup accounting, logs, and controller receipts remain outside that clock.
+Operating-system caches remain uncontrolled.
+Read `docs/ISOLATED_COMPARISON.md` for exact boundaries and restart guarantees.
+Isolated confirmation inventory and complete parent-transaction timing remain open.

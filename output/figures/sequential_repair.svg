@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050" role="img" aria-labelledby="title desc">
+<title id="title">Exact sequential repair with certified aggregate bounds and retained replay</title>
+<desc id="desc">Deletion regenerates and subtracts intrinsic moments. Each quantization stage uses its newly certified ancestor prefix. A spectral certificate runs first. An optional interval certificate runs after rejection. Unresolved groups replay retained token records under the new prefix and add exact Grams. Complete replay permits exact quantization. Certified stage codes update later prefixes. Commit occurs only after every stage and canonical retained state succeed. Any necessary finite-evaluator failure aborts without approximate output.</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#42556c"/></marker>
+  <marker id="purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#7251a5"/></marker>
+  <marker id="green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#227b62"/></marker>
+</defs>
+<rect width="1400" height="1050" fill="white"/>
+<g font-family="DejaVu Sans, sans-serif">
+
+<text x="35" y="49" font-size="32" font-weight="700" fill="#243244" text-anchor="start">Exact repair follows the new ancestor prefix</text>
+<text x="35" y="86" font-size="22" font-weight="400" fill="#243244" text-anchor="start">Fixed base weights, grids, ridge, original normalization, and finite target V_cert</text>
+<rect x="370" y="122" width="995" height="682" rx="20" fill="#f6f8fc" stroke="#b6c2d1" stroke-width="2"/>
+<text x="395" y="150" font-size="18" font-weight="700" fill="#506277" text-anchor="start">REPEAT IN DEPENDENCY ORDER</text>
+<rect x="35" y="172" width="290" height="126" rx="13" fill="#eef3f8" stroke="#8e9baa" stroke-width="2"/>
+<text x="180.0" y="208" font-size="23" font-weight="700" fill="#243244" text-anchor="middle">Verified request</text>
+<text x="180.0" y="240" font-size="20" font-weight="400" fill="#243244" text-anchor="middle">Committed state</text>
+<text x="180.0" y="269" font-size="20" font-weight="400" fill="#243244" text-anchor="middle">Deletion IDs + payloads</text>
+<rect x="35" y="350" width="290" height="151" rx="13" fill="#eef3f8" stroke="#8e9baa" stroke-width="2"/>
+<text x="180.0" y="386" font-size="20" font-weight="700" fill="#243244" text-anchor="middle">Update intrinsic index</text>
+<text x="180.0" y="418" font-size="18" font-weight="400" fill="#243244" text-anchor="middle">Regenerate deleted moments</text>
+<text x="180.0" y="447" font-size="18" font-weight="400" fill="#243244" text-anchor="middle">Subtract exact totals</text>
+<text x="180.0" y="476" font-size="18" font-weight="400" fill="#243244" text-anchor="middle">Deleted records only</text>
+<rect x="410" y="182" width="500" height="105" rx="13" fill="#eee8f7" stroke="#947ab7" stroke-width="2"/>
+<text x="660.0" y="218" font-size="23" font-weight="700" fill="#243244" text-anchor="middle">New certified prefix p_l</text>
+<text x="660.0" y="250" font-size="20" font-weight="400" fill="#243244" text-anchor="middle">Includes changed ancestor codes</text>
+<rect x="410" y="335" width="500" height="125" rx="13" fill="#e9f3fc" stroke="#79a5ce" stroke-width="2"/>
+<text x="660.0" y="371" font-size="23" font-weight="700" fill="#243244" text-anchor="middle">Query retained aggregate moments</text>
+<text x="660.0" y="403" font-size="20" font-weight="400" fill="#243244" text-anchor="middle">Use p_l and a proved domain</text>
+<text x="660.0" y="432" font-size="20" font-weight="400" fill="#243244" text-anchor="middle">No retained feature reads</text>
+<rect x="410" y="520" width="500" height="125" rx="13" fill="#e9f3fc" stroke="#79a5ce" stroke-width="2"/>
+<text x="660.0" y="556" font-size="23" font-weight="700" fill="#243244" text-anchor="middle">Certify every code</text>
+<text x="660.0" y="588" font-size="20" font-weight="400" fill="#243244" text-anchor="middle">Spectral check; then interval check*</text>
+<text x="660.0" y="617" font-size="20" font-weight="400" fill="#243244" text-anchor="middle">Exact grids and lower midpoint ties</text>
+<rect x="1000" y="495" width="315" height="126" rx="13" fill="#fff1de" stroke="#c29b5d" stroke-width="2"/>
+<text x="1157.5" y="531" font-size="23" font-weight="700" fill="#243244" text-anchor="middle">Replay retained group</text>
+<text x="1157.5" y="563" font-size="20" font-weight="400" fill="#243244" text-anchor="middle">Read retained token records</text>
+<text x="1157.5" y="592" font-size="20" font-weight="400" fill="#243244" text-anchor="middle">Evaluate features under p_l</text>
+<rect x="410" y="699" width="500" height="84" rx="13" fill="#e6f3ee" stroke="#74a693" stroke-width="2"/>
+<text x="660.0" y="735" font-size="23" font-weight="700" fill="#243244" text-anchor="middle">Install exact stage codes q_l</text>
+<text x="660.0" y="767" font-size="20" font-weight="400" fill="#243244" text-anchor="middle">Certificate or full exact Gram</text>
+<path d="M180 298 V350" fill="none" stroke="#42556c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M325 405 H410" fill="none" stroke="#42556c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M660 287 V335" fill="none" stroke="#42556c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M660 460 V520" fill="none" stroke="#42556c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="682" y="493" font-size="18" font-weight="400" fill="#243244" text-anchor="start">Complete retained covariance bound</text>
+<path d="M660 645 V699" fill="none" stroke="#227b62" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#green)"/>
+<text x="804" y="678" font-size="19" font-weight="400" fill="#227b62" text-anchor="middle">all checks pass</text>
+<path d="M910 579 H1000" fill="none" stroke="#42556c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="955" y="558" font-size="18" font-weight="400" fill="#243244" text-anchor="middle">else</text>
+<path d="M1158 495 V397 H910" fill="none" stroke="#42556c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1114" y="363" font-size="20" font-weight="400" fill="#243244" text-anchor="middle">Exact group Gram</text>
+<text x="1114" y="389" font-size="18" font-weight="400" fill="#243244" text-anchor="middle">tightens the enclosure</text>
+<path d="M1030 621 V743 H910" fill="none" stroke="#42556c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1047" y="665" font-size="20" font-weight="400" fill="#243244" text-anchor="start">All groups exact:</text>
+<text x="1047" y="692" font-size="20" font-weight="400" fill="#243244" text-anchor="start">run exact quantizer</text>
+<path d="M910 761 H1342 V234 H910" fill="none" stroke="#7251a5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#purple)"/>
+<text x="1125" y="217" font-size="21" font-weight="700" fill="#7251a5" text-anchor="middle">Next stage</text>
+<text x="1125" y="269" font-size="20" font-weight="400" fill="#7251a5" text-anchor="middle">Changed ancestors alter</text>
+<text x="1125" y="297" font-size="20" font-weight="400" fill="#7251a5" text-anchor="middle">downstream feature maps</text>
+<rect x="35" y="573" width="290" height="190" rx="13" fill="#ffffff" stroke="#9da9b5" stroke-width="2"/>
+<text x="180.0" y="609" font-size="20" font-weight="700" fill="#243244" text-anchor="middle">Charge complete costs</text>
+<text x="180.0" y="641" font-size="18" font-weight="400" fill="#243244" text-anchor="middle">Deleted extraction + state</text>
+<text x="180.0" y="670" font-size="18" font-weight="400" fill="#243244" text-anchor="middle">Bound queries + factorization</text>
+<text x="180.0" y="699" font-size="18" font-weight="400" fill="#243244" text-anchor="middle">Retained reads + replay</text>
+<text x="180.0" y="728" font-size="18" font-weight="400" fill="#243244" text-anchor="middle">Verification + output</text>
+<rect x="410" y="874" width="905" height="92" rx="13" fill="#e6f3ee" stroke="#74a693" stroke-width="2"/>
+<text x="862.5" y="910" font-size="23" font-weight="700" fill="#243244" text-anchor="middle">Commit after every stage and complete retained state succeed</text>
+<text x="862.5" y="942" font-size="20" font-weight="400" fill="#243244" text-anchor="middle">Exact model + canonical moments + retained source bindings</text>
+<path d="M660 783 V874" fill="none" stroke="#227b62" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#green)"/>
+<text x="820" y="842" font-size="20" font-weight="400" fill="#227b62" text-anchor="middle">all stages complete</text>
+<path d="M180 501 V541 H15 V920 H410" fill="none" stroke="#42556c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="7 6"/>
+<text x="180" y="816" font-size="19" font-weight="400" fill="#243244" text-anchor="middle">Retained canonical index</text>
+<text x="180" y="845" font-size="18" font-weight="400" fill="#243244" text-anchor="middle">is carried into the commit</text>
+<text x="35" y="1004" font-size="21" font-weight="700" fill="#9a3f3f" text-anchor="start">Any required finite-evaluator failure: abort the request; preserve the last committed state.</text>
+<text x="35" y="1034" font-size="18" font-weight="400" fill="#243244" text-anchor="start">*Optional policy: spectral_or_interval. Unknown proof data require replay. All arithmetic and output costs remain charged.</text>
+</g>
+</svg>

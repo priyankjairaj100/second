@@ -275,3 +275,83 @@ Sequence/full-deletion laws exist, but their campaign execution remains blocked.
 No experiment, model download, dataset download, or cloud job ran.
 No reliable speedup or practical coverage claim is established.
 The user still authorizes saving all substantive files and restart context to the repository.
+
+
+## Revision 7 completed preparation (4 October 2026)
+
+Latest instruction: “Proceed on the remaining tasks. Please ensure that we have maximum revenue.”
+We interpret “maximum revenue” as research value within the ongoing paper program.
+No monetization target or financial guarantee follows.
+The previous verified checkpoint is 3c6905e77bca86e4d3e54be20a82f3acdcfd294d.
+Current STATUS and RESUME supersede older unfinished-preparation statements without changing their historical provenance.
+
+Research experiments remain paused.
+This revision adds mathematics, implementation, software correctness fixtures, and execution controls.
+It does not recover historical raw results or establish real-model measurements.
+
+The new certificate portfolio runs the existing spectral certificate first.
+After rejection, it uses signed covariance entry intervals and the true target ridge.
+Exact interval reverse elimination and lower-tie cell checks certify the fixed candidate.
+Standalone common-binding intersection supports conditional acceptance monotonicity.
+A rational fixture establishes strict certificate improvement.
+Additional arithmetic can still increase runtime or exhaust resources.
+No acceptance result establishes full-service speed or finite-budget completion dominance.
+A complete stored multi-domain bank remains future work.
+
+The quadratic control stores the full Gram polynomial of the same affine feature response.
+Its canonical schema differs from the compact tier.
+Both retain the same exact quantization target and remainder assumptions.
+Setup, extraction, subtraction, storage, and output costs remain explicit.
+Different proposals can change margins and acceptance in either direction.
+
+The identity-cache family stores true sequential Grams under the current quantized model.
+It reuses a Gram only when all relevant old and new transitive ancestors agree.
+It then subtracts exact deleted-record contributions.
+Changed ancestors force retained replay.
+Every successful request refreshes canonical retained-only cache state.
+Repeated, reordered, empty, and complete deletion match direct retained construction in software tests.
+Its bounded runner trust registry remains outside returned live state.
+
+The response-family planner still ignores old model codes.
+The identity-cache planner uses the old quantized model as its feature-cache reference.
+Indexed fresh receives the same valid information and solver within each family.
+Neither solver has a deletion-exclusive advantage over that comparator.
+Extra split-interface preparation overhead cannot support such a claim.
+Cross-family comparisons check target model equality because their canonical state interfaces differ.
+
+Local sequence execution now consumes preceding committed states.
+It constructs the original state once and supports complete deletion with fixed original normalization.
+It verifies every method against direct fresh and preserves lineage across restart.
+Bulk sequence campaign admission and a frozen ordered inventory remain open.
+
+The isolated executor separates setup and every method into limited processes.
+Repair and indexed fresh reload the same original cache.
+Direct fresh constructs its retained result without loading that cache.
+Method clocks include startup, inputs, service work, artifact synchronization, child receipt, exit, and cleanup.
+They exclude parent validation, equality verification, parent receipt, and post-cleanup accounting commitments.
+The isolated executor does not yet compute quality metrics.
+Its confirmation gate remains closed until supported frozen isolated inventories exist.
+Operating-system caches remain uncontrolled.
+
+Durable phase CPU admission reserves worker allowances before process creation.
+Observed wait4 usage settles known outcomes; uncertain attempts keep their full reservation.
+Observed overruns remain charged and prevent later admission.
+The ledger applies to trusted workers sharing one frozen protocol identity.
+It does not bound all physical CPU, controller CPU, hostile descendants, or cross-protocol project totals.
+A separate feasibility phase dispatcher remains open.
+
+The final validation records 340 correctness tests.
+The report contains 35 pages.
+The register contains 28 completed and 50 open required items, plus 12 conditional extensions.
+Protocol version 3 preserves explicit unresolved fields and the research pause.
+The experiment-ready gate G0 remains open.
+
+Real checkpoint, tokenizer, source, document, and token artifacts remain absent.
+Ordinary model feasibility remains unresolved under the scalar reference target and resource limits.
+Remaining preparation includes complete parent timing, transient arithmetic diagnostics, campaign integration, actual partitions, inventories, and precision justification.
+Empirical exactness, useful acceptance, complete service cost, lifetime savings, and NLP quality remain unmeasured.
+The manuscript, current literature audit, independent review, and reproducibility release remain future program tasks.
+
+No research experiment, model download, dataset download, cloud job, or unrelated hardware ran.
+No reliable full-model speedup or publication-readiness claim is established.
+The user continues to authorize repository checkpoints and complete restart context.

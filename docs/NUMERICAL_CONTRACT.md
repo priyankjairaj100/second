@@ -1,6 +1,6 @@
 # Numerical contract
 
-Updated 4 October 2026 for revision 6.
+Updated 4 October 2026 for revision 7.
 
 The project implements affine and parameter-box certificates for a declared scalar decoder.
 The new decoder defines `V_cert`.
@@ -300,7 +300,7 @@ They establish
 
 The omitted-direction term is zero because exact chart fitting rejects unrepresented changes.
 No caller supplies an arbitrary numerical tolerance.
-The compact service stores grouped response statistics and grouped error statistics.
+Both response tiers store grouped response statistics and grouped error statistics.
 It does not retain each record's jets or source payload.
 
 Useful coverage remains an empirical question.
@@ -317,7 +317,7 @@ Exact comparisons decide ties under the declared tie rule.
 This avoids indefinite interval refinement at quantization boundaries.
 It does not remove nonlinear primitive limits from feature execution.
 
-Every repair stage follows this sequence:
+Every response-family repair stage follows this sequence:
 
 1. Bind the evaluator, quantizer, provider, and certified ancestor prefix.
 2. Check the prefix against the selected affine chart or parameter box.
@@ -443,12 +443,13 @@ The scalar arithmetic schedule remains unchanged.
 Base checkpoint loading remains eager.
 Lazy wrappers do not prove affordable total memory or runtime.
 
-The service supports `certified`, `fixed_reference`, `identity_only`, and `full_replay` modes.
-All four modes preserve the same numerical target and canonical state.
+The response service supports `certified`, `fixed_reference`, `identity_only`, and `full_replay` modes.
+All four modes preserve the same numerical target and the selected tier's canonical state.
 Fixed-reference mode bounds the omitted tangent response with a triangle inequality.
 Identity-only mode additionally requires ancestors to equal the constructor's fixed reference weights.
-It does not implement an original-quantized-model cache.
-A distinct quadratic response solver also remains open.
+A separate `identity_cache` family now implements current quantized-model feature caching.
+The response family also supports a separately bound full quadratic storage tier.
+Neither addition changes the declared quantization target.
 
 Exclusive telemetry records diagnostic intervals and proof outcomes.
 It does not change the canonical state or numerical target.
@@ -463,3 +464,102 @@ Worker limits can terminate required finite evaluations.
 Such termination records failure rather than an approximate successful model.
 The complete target remains partial.
 No preparation result establishes reliable full-model speedup.
+
+
+## 13. Full quadratic response and schema
+
+The quadratic tier uses the same intrinsic feature matrices and proved error descriptors as the compact tier.
+For `b=(1,a_1,...,a_r)`, its exact proposal is
+
+\[
+S_q(a)=\sum_s b_s^2 C_{ss}
++\sum_{s<t}b_sb_t(C_{st}+C_{st}^{\mathsf T}),
+\qquad C_{st}=\sum_j Z_{sj}Z_{tj}^{\mathsf T}.
+\]
+
+Oriented off-diagonal cross moments retain their full matrices.
+Coefficient signs enter the proposal exactly.
+This is the full Gram of the affine response, not a quadratic Taylor approximation of neural features.
+The service stores every required tangent Gram term.
+
+Let `E²` denote the existing descriptor bound on total squared feature error.
+The implementation uses
+
+\[
+\delta=2\operatorname{sqrt}_{\uparrow}(\operatorname{tr}(S_q)E^2)+E^2.
+\]
+
+It certifies `-delta I <= S_true-S_q <= delta I` under the existing descriptor premises.
+It applies original normalization only when forming the complete stage covariance enclosure.
+It does not remove finite errors or mixed descriptor terms.
+The stronger whitened quadratic acceptance theorem remains unimplemented.
+
+Each group stores `(r+1)(r+2)d²/2` response slots and `(r+3)(r+4)/2` error slots.
+Extraction, rational bit growth, metadata, domain storage, output, and serialization remain separate costs.
+The quadratic state uses `aggregate-quadratic-service-v1`.
+The default compact state retains `aggregate-linear-service-v1`.
+Each service manifest binds its selected state schema.
+Their complete quantized target is the same, but their auxiliary state bytes differ.
+Fresh equality applies within the selected tier.
+
+## 14. Optional interval verification
+
+The default verifier remains the existing spectral certificate.
+`verifier_policy="spectral_or_interval"` adds an optional second proof route.
+It preserves existing spectral acceptances before attempting the interval proof.
+The policy changes planning and stays outside canonical state.
+Run inputs and results bind the policy separately.
+
+Let `H_bar` be the complete proposed covariance, including the original ridge and normalization.
+Suppose the service proves
+
+\[
+-\alpha I\preceq H-H_{\mathrm{bar}}\preceq\beta I.
+\]
+
+The diagonal interval is `[H_bar,ii-alpha,H_bar,ii+beta]`.
+Each off-diagonal radius is `(alpha+beta)/2`.
+Subtracting the error's scalar midpoint proves that off-diagonal bound.
+The true target separately satisfies `H >= lambda I`.
+
+Interval reverse LDL propagates exact rational enclosures.
+It intersects each pivot with the known Schur-complement ridge floor before division.
+It then encloses every conditional quantization input for the supplied candidate.
+Lower-code midpoint ties require cells `(lower,upper]`, with infinite endpoints at saturation.
+All coordinates and rows must pass before installation.
+
+The interval route can run when a relative spectral lower scale is nonpositive.
+It reuses an available candidate or charges a new exact proposal solve.
+Empty interval evidence causes an error rather than vacuous acceptance.
+A rejected certificate returns to retained replay.
+This route can improve proof coverage while increasing complete work.
+It gives no practical speed guarantee.
+
+## 15. True-model cache and ordered deletion
+
+`IdentityCacheService` stores exact sequential Grams under the current quantized model.
+Its target remains the same `JobSpec` and finite evaluator.
+Its state uses the separate `original-model-gram-cache-v1` schema.
+It does not store response descriptors or certify approximate feature transport.
+
+Equal installed codes for every relevant transitive ancestor imply identical finite features.
+The cache then subtracts deleted features under that identical prefix.
+A changed ancestor requires retained replay under the new prefix.
+The service refreshes each Gram and its ancestor binding after quantization.
+Topological induction gives the same model and cache as direct retained construction.
+The next request therefore uses current, not stale, statistics.
+
+The equally indexed cache comparator receives the same old model and valid cache as repair.
+It executes the same solver.
+Its transient preparation object is not committed retained-only state.
+Cross-family equality concerns complete models; canonical state equality remains family-specific.
+
+The ordered runner preserves one service target throughout all requests.
+Each request consumes the preceding committed state and verifies independent retained construction.
+The original normalization, base weights, grids, ridge, and finite evaluator remain fixed.
+Complete deletion sets every data Gram to zero.
+Ridge-only quantization remains defined without feature evaluation.
+Empty later requests remain valid; deleting an absent record fails.
+Historical archive copies remain outside the live-state deletion guarantee.
+
+See `docs/QUADRATIC_CONTROL.md`, `docs/IDENTITY_CACHE.md`, and `docs/SEQUENCE_EXECUTION.md` for implementation contracts.

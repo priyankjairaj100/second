@@ -1,5 +1,7 @@
 # Executable reference service
 
+Revision 7. Date: 4 October 2026.
+
 The primary certified path implements V_cert with explicit numerical contracts.
 The legacy library-math V path remains available and distinct.
 It prioritizes inspectable correctness.
@@ -18,16 +20,24 @@ Event counters and software tests do not measure latency.
 | `src/linear_response.py` | Compact response totals and omitted-PSD bounds | It does not prove neural derivatives |
 | `src/repair_service.py` | Original complete service with reference descriptors | Its callbacks have explicit trusted contracts |
 | `src/response_service_adapter.py` | Original response bridge through individual descriptors | Proposal construction scans retained descriptors |
-| `src/aggregate_response_service.py` | Compact grouped state and complete exact repair | It trusts the fixed extractor and query theorem |
+| `src/aggregate_response_service.py` | Linear or quadratic grouped state and complete exact repair | It trusts the fixed extractor and query theorem |
+| `src/domain_refinement.py` | Exact covariance boxes, intersections, and interval decisions | Caller supplies sound bounds and the true ridge floor |
+| `src/identity_cache.py` | Original-model true-Gram cache and canonical refresh | Reuse requires matching transitive ancestors and trusted cache origin |
+| `src/box_response_provider.py` | Full-grid domains and rank-zero feature enclosures | Broad domains can cause proof rejection and replay |
 | `src/transformer_backend.py` | Original deterministic scalar decoder | Its built-in proof establishes input identity only |
 | `src/certified_intervals.py` | Rational intervals and certified scalar primitives | Resource limits can reject unsupported calculations |
-| `src/certified_transformer.py` | Explicit decoder with automatic response bounds | Certification requires a supported parameter chart |
+| `src/certified_transformer.py` | Explicit decoder with automatic response bounds | The affine provider requires a supported parameter chart |
 | `src/checkpoint_adapter.py` | Local GPT-2 parameter import | It does not reproduce external floating kernels |
 | `src/work_scheduler.py` | Cooperative scheduling of two exact branches | Packet and cleanup costs require separate accounting |
 | `src/target_manifest.py` | Fixed grids and complete target identity | Defines the project quantizer, not vendor GPTQ identity |
 | `src/chart_construction.py` | Deterministic independent chart recipes | Construction does not establish practical coverage |
 | `src/resource_preflight.py` | Config-only counts before eager loading | Planning bytes are not a proved memory bound |
 | `src/experiment_runner.py` | Local three-method comparison and exactness checks | Warm diagnostic timing; no downloads |
+| `src/sequence_runner.py` | Ordered requests, committed predecessors, and verified restart | Standalone execution; bulk sequence dispatch remains open |
+| `src/isolated_comparison.py` | Separate setup and method workers | Child commit included; parent transaction remains outside timing |
+| `src/worker_control.py` | Applied process limits, cleanup, and durable worker outcomes | Per-process limits do not contain hostile descendants |
+| `src/phase_budget.py` | Locked CPU admission and usage settlement | Scope is one protocol ledger, not the physical machine |
+| `src/experiment_campaign.py` | Frozen independent-request dispatch and verified outcomes | Warm-arm campaign only; isolated confirmation remains blocked |
 | `src/run_store.py` | Atomic artifacts, sealed results, and verified restart | POSIX trusted-storage contract |
 | `src/result_analysis.py` | Failure-aware paired analysis and lifetime accounting | No empirical result follows without real run records |
 
@@ -108,12 +118,17 @@ Both states include the complete target model.
 They do not have interchangeable schemas.
 
 Aggregate state stores record IDs, content digests, group IDs, contribution digests, and availability flags.
-It stores constant Grams, linear responses, tangent Grams, and error moments at group level.
+The linear tier stores constant Grams, linear responses, tangent scalar Grams, and error moments at group level.
+The quadratic tier stores every oriented cross-moment matrix for the affine feature surrogate.
+Both tiers retain the same complete finite-error descriptors.
+They use distinct canonical schemas.
 It stores no individual matrix payload, response jet, or source content.
 Its group membership lists contain retained IDs only.
 
 With fixed occupied groups, matrix storage does not grow with record count.
-For each stage and group, it uses `O(r d² + r²)` rational entries.
+The linear tier uses `O(r d² + r²)` rational entries for each stage and group.
+The quadratic tier uses `O(r²d² + r²)` entries.
+Exact counts include the constant response term and are documented in `QUADRATIC_CONTROL.md`.
 Record metadata uses `O(N L)` bindings.
 Group membership uses `O(N)` IDs.
 Byte cost also depends on integer bit lengths.
@@ -130,7 +145,9 @@ The service preserves signed uncertainty during selected replay.
 Replay replaces a proposal with the exact target Gram.
 A finite sequence of replay steps reaches exact fallback.
 
-Successful repair returns the same canonical bytes as fresh retained construction.
+Within its selected state family and tier, successful repair returns the same canonical bytes as fresh retained construction.
+Different state schemas need not have identical canonical bytes.
+Their complete quantized model remains the same fixed target.
 Repeated deletion has the same logical-state guarantee.
 Deletion order does not change those bytes.
 The service keeps transient proof traces outside committed state.
@@ -154,7 +171,8 @@ Other prefixes cause replay unless another sound provider supplies evidence.
 
 The certified decoder defines a separate finite program with certified primitives.
 It does not assume that host transcendental functions have correct rounding.
-Its response provider checks the supported chart and numerical domain.
+The affine response provider checks its supported chart and numerical domain.
+The box provider instead checks coordinate membership in a fixed full-grid domain.
 Unsupported prefixes or failed enclosures cause replay.
 This scope does not cover arbitrary PyTorch, CUDA, or GPTQ kernels.
 
@@ -205,5 +223,64 @@ The analyzer rejects mixed mode/chart/service identities within a stratum.
 
 These changes preserve the fair indexed solver and canonical state target.
 They do not close real-model feasibility, full-service timing, or useful NLP evidence.
-See VALIDATION.md for the 261-test result and source hashes.
+The revision 6 checkpoint passed 261 correctness tests.
+`VALIDATION_V6.md` preserves that historical validation record.
+Use `VALIDATION.md` for the current revision 7 log and source hashes.
 See RESEARCH_TODO.md for remaining required tasks.
+
+
+## Revision 7 service choices
+
+`ChartRecipe(response_tier="quadratic")` selects full affine-response Gram moments.
+The default remains the compact linear tier.
+The quadratic tier contracts all signed tangent cross terms and retains the complete feature-error bound.
+It then uses the implemented absolute-error decision certificate.
+It does not automatically implement the stronger whitened local-radius theorem.
+Its storage and extraction costs are explicit ledger entries.
+No acceptance or latency dominance follows merely from retaining more moments.
+
+`make_service(..., verifier_policy="spectral_or_interval")` adds an interval decision route after spectral rejection.
+The route preserves signed covariance endpoints and uses the true target ridge during interval elimination.
+Every coordinate must satisfy the frozen rounding cell and lower-tie rule.
+Invalid or empty evidence raises an error; unresolved valid evidence permits replay.
+The default spectral route still returns immediately when it succeeds.
+The policy remains outside canonical state and must be bound in the run configuration.
+
+`make_identity_service(decoder, target)` constructs the separate identity-cache comparison family.
+It stores one true sequential Gram per stage under the current quantized model.
+It subtracts deleted contributions only when all required transitive ancestors remain identical.
+Otherwise, it rebuilds the retained stage Gram under the new prefix.
+Each successful request refreshes the complete cache to match direct fresh construction.
+The optional cache stores no per-record matrices or source payloads.
+Its bounded trusted-origin registry remains a separate runtime cost.
+Repair and indexed fresh receive identical cache information and use the same solver.
+
+## Revision 7 execution paths
+
+The warm comparison runner supports independent empty and complete deletion controls.
+The local sequence runner prepares one original state and consumes successive committed repair states.
+It verifies model and same-schema canonical state against independent fresh retained construction at every step.
+It preserves original normalization and records all planned requests after a failure.
+Restart verifies every completed predecessor and artifact before reusing the saved prefix.
+Bulk campaign sequence dispatch remains unimplemented.
+
+The isolated runner creates one setup worker and one worker for each method.
+Repair and indexed fresh load the same saved original state.
+Direct fresh does not load that unnecessary state.
+The parent compares complete artifacts after each worker seals its child receipt.
+A missing durable outer timing record prevents cached-child success during recovery.
+A fully sealed worker retains its original timing and CPU debit on restart.
+
+The worker timer includes startup, input loading, service work, artifact output, child commit, exit, and cleanup.
+It excludes parent verification and the enclosing worker-control and parent receipt commitments.
+Original preparation is separate, and isolated execution does not compute heldout quality.
+Operating-system caches remain uncontrolled.
+Read `ISOLATED_COMPARISON.md` before comparing its timings with warm-arm records.
+
+The protocol-scoped CPU ledger reserves each worker's allowance before launch.
+It retains unknown charges and records observed overruns without clipping.
+It limits admission, not global physical CPU or arbitrary process trees.
+A separate feasibility-phase label and cross-protocol accounting remain unimplemented.
+
+All new paths retain the research pause.
+No current control establishes real-model feasibility, useful certificate coverage, NLP quality, or reliable full-service speedup.

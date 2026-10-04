@@ -1,0 +1,26 @@
+{
+  "revision": 7,
+  "date": "2026-10-04",
+  "tests": 340,
+  "source_test_script_hashes": 73,
+  "report_pages": 35,
+  "latex_overfull_boxes": false,
+  "rendered_contact_pages": 35,
+  "new_pages_inspected": [
+    32,
+    33,
+    34,
+    35
+  ],
+  "figure_pages": 1,
+  "figure_raster_images": 0,
+  "research_execution": "paused",
+  "required_items_completed": 28,
+  "required_items_open": 50,
+  "conditional_extensions": 12,
+  "artifact_sha256": {
+    "output/pdf/theory_algorithm_revision.pdf": "652945c2a8378a2533c967a536a78f8bae77c541c7ec9cb7959a82a6e55b2424",
+    "output/figures/sequential_repair.svg": "123364bd0ff1ff36ceefefa5bae1a4f667464d206332383a475f0383358ddfc5",
+    "output/figures/sequential_repair.pdf": "2795a373684df7b3076f5b8ac5499f61598863cd4582f443031e0cbe7385c571"
+  }
+}

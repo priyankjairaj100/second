@@ -21,6 +21,11 @@ RUN_SCHEMA = "calibration-experiment-v1"
 ANALYSIS_SCHEMA = "calibration-analysis-v1"
 KEY_FIELDS = ("configuration_id", "phase", "cache_mode", "root_id", "request_id", "repeat_index")
 MODES = {"certified", "identity_only", "fixed_reference", "full_replay"}
+CONFIG_CHOICES = {
+    "service_family": ("response", {"response", "identity_cache"}),
+    "response_tier": ("linear", {"linear", "quadratic"}),
+    "verifier_policy": ("spectral", {"spectral", "spectral_or_interval"}),
+}
 OPTIONAL_BINDINGS = ("chart_sha256", "service_manifest_sha256")
 
 
@@ -62,6 +67,10 @@ def _hashes(run: Mapping[str, Any]) -> None:
     mode = run.get("service_mode", "certified")
     if not isinstance(mode, str) or mode not in MODES:
         raise AnalysisError("invalid service_mode")
+    for field, (default, choices) in CONFIG_CHOICES.items():
+        value = run.get(field, default)
+        if not isinstance(value, str) or value not in choices:
+            raise AnalysisError(f"invalid {field}")
 
 
 def validate_run(run: Mapping[str, Any]) -> None:
@@ -165,6 +174,9 @@ def materialize_plan(runs: Iterable[Mapping[str, Any]], planned_runs: Iterable[M
             run = observed[key]
             if item.get("service_mode", "certified") != run.get("service_mode", "certified"):
                 raise AnalysisError("planned service_mode does not match the run")
+            for field, (default, _) in CONFIG_CHOICES.items():
+                if item.get(field, default) != run.get(field, default):
+                    raise AnalysisError(f"planned {field} does not match the run")
             for field in ("planned_methods", "service_boundary", "target_manifest_sha256", "protocol_sha256", *OPTIONAL_BINDINGS):
                 if field in item and item[field] != run.get(field):
                     raise AnalysisError(f"planned {field} does not match the run")
@@ -195,6 +207,9 @@ def analyze_runs(
                 raise AnalysisError(f"one analysis stratum mixes different {field}")
         if len({run.get("service_mode", "certified") for run in entries}) != 1:
             raise AnalysisError("one analysis stratum mixes different service_mode")
+        for field, (default, _) in CONFIG_CHOICES.items():
+            if len({run.get(field, default) for run in entries}) != 1:
+                raise AnalysisError(f"one analysis stratum mixes different {field}")
         observed = [run for run in entries if run["status"] != "missing"]
         bindings = {}
         for field in OPTIONAL_BINDINGS:
@@ -259,6 +274,8 @@ def analyze_runs(
         summary = dict(zip(("configuration_id", "phase", "cache_mode", "service_boundary"), stratum))
         summary.update({field: entries[0][field] for field in ("target_manifest_sha256", "protocol_sha256")})
         summary.update(bindings, service_mode=entries[0].get("service_mode", "certified"))
+        summary.update({field: entries[0].get(field, default)
+                        for field, (default, _) in CONFIG_CHOICES.items()})
         summary.update({"independent_root_count": len(roots), "planned_request_count": len(by_request),
                         "planned_attempt_count": len(entries), "methods": method_rows,
                         "paired_request_outcomes": dict(sorted(paired_outcomes.items())), "requests": request_rows,

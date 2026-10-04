@@ -1,4 +1,4 @@
-"""Compact canonical service for certified sequential calibration deletion.
+"""Canonical linear/quadratic service for certified sequential calibration deletion.
 
 Committed state keeps group response totals and fixed-size record digests.
 It never keeps per-record matrices, jets, error descriptors, or source bytes.
@@ -28,7 +28,8 @@ from types import MappingProxyType
 from typing import Callable, Iterable, Mapping
 
 from .exact_core import certify_relative_enclosure
-from .response_certificate import response_error_squared, dyadic_sqrt_upper
+from .domain_refinement import GramBinding, signed_loewner_box, certify_gram_box
+from .response_certificate import response_error_squared, dyadic_sqrt_upper, response_gram_enclosure
 from .service_telemetry import event as telemetry_event, timed, operation
 from .linear_response import LinearRecordMoments, LinearResponseIndex, shifted_linear_response_bound
 from .response_moments import RecordMoments, ResponseBasis, ResponseIndex
@@ -46,6 +47,7 @@ _combine = timed("gram_accumulation")(_combine)
 _metric = timed("gram_accumulation")(_metric)
 _is_psd = timed("validation_metadata")(_is_psd)
 certify_relative_enclosure = timed("factor_rounding")(certify_relative_enclosure)
+certify_gram_box = timed("factor_rounding")(certify_gram_box)
 ZERO = Fraction(0)
 
 
@@ -56,6 +58,17 @@ def _sha(payload: bytes) -> str:
 def _valid_digest(value: str) -> bool:
     return (type(value) is str and len(value) == 64
             and all(c in "0123456789abcdef" for c in value))
+
+
+def _state_schema(tier: str) -> str:
+    if type(tier) is not str or tier not in ("linear", "quadratic"):
+        raise ValueError("response tier must be linear or quadratic")
+    return "aggregate-" + tier + "-service-v1"
+
+
+def _index_schema(tier: str) -> str:
+    _state_schema(tier)
+    return "aggregate-retained-index-v1" if tier == "linear" else "aggregate-quadratic-retained-index-v1"
 
 
 @dataclass(frozen=True)
@@ -83,7 +96,7 @@ class AggregateRecord:
 @dataclass(frozen=True)
 class AggregateStage:
     stage_id: str
-    response: LinearResponseIndex | None
+    response: LinearResponseIndex | ResponseIndex | None
     error: ResponseIndex | None
     unavailable_count: int
 
@@ -91,7 +104,9 @@ class AggregateStage:
     def stored_rational_count(self) -> int:
         if self.response is None:
             return 0
-        return self.response.stored_rational_count + sum(len(x) * len(x[0]) for x in self.error.cross_moments)
+        response_slots = (self.response.stored_rational_count if isinstance(self.response, LinearResponseIndex)
+                          else sum(len(x) * len(x[0]) for x in self.response.cross_moments))
+        return response_slots + sum(len(x) * len(x[0]) for x in self.error.cross_moments)
 
     def _json(self) -> dict[str, object]:
         return {"stage": self.stage_id, "unavailable": self.unavailable_count,
@@ -118,6 +133,7 @@ class AggregateState:
     model: tuple[StageOutput, ...]
     records: tuple[AggregateRecord, ...]
     groups: tuple[AggregateGroup, ...]
+    response_tier: str = "linear"
 
     @property
     def retained_ids(self) -> tuple[str, ...]:
@@ -130,7 +146,7 @@ class AggregateState:
 
     @timed("serialization")
     def canonical_bytes(self) -> bytes:
-        return _json({"schema": "aggregate-linear-service-v1", "manifest": self.manifest_digest,
+        return _json({"schema": _state_schema(self.response_tier), "manifest": self.manifest_digest,
                       "model": [o._json() for o in self.model],
                       "records": [r._json() for r in self.records],
                       "groups": [g._json() for g in self.groups]})
@@ -292,8 +308,10 @@ class _StateParser:
 
     def state(self, payload: bytes) -> AggregateState:
         data = self._object(self._load(payload), ("schema", "manifest", "model", "records", "groups"))
-        if data["schema"] != "aggregate-linear-service-v1":
+        schemas = {"aggregate-linear-service-v1": "linear", "aggregate-quadratic-service-v1": "quadratic"}
+        if type(data["schema"]) is not str or data["schema"] not in schemas:
             raise ValueError("unsupported aggregate state schema")
+        response_tier = schemas[data["schema"]]
         outputs = []
         for value in self._array(data["model"], self.limits.max_stages):
             item = self._object(value, ("stage_id", "codes"))
@@ -319,7 +337,7 @@ class _StateParser:
             stages = []
             for raw in self._array(item["stages"], self.limits.max_stages):
                 stage = self._object(raw, ("stage", "unavailable", "response", "error"))
-                response = None if stage["response"] is None else self._index(stage["response"], linear=True)
+                response = None if stage["response"] is None else self._index(stage["response"], linear=response_tier == "linear")
                 error = None if stage["error"] is None else self._index(stage["error"], linear=False)
                 if (response is None) != (error is None):
                     raise ValueError("aggregate response and error must coexist")
@@ -328,7 +346,7 @@ class _StateParser:
             groups.append(AggregateGroup(self._integer(item["group"], self.limits.max_groups - 1),
                 tuple(self._text(x) for x in self._array(item["ids"], self.limits.max_records)),
                 self._digest(item["membership_digest"]), tuple(stages)))
-        state = AggregateState(self._digest(data["manifest"]), tuple(outputs), tuple(records), tuple(groups))
+        state = AggregateState(self._digest(data["manifest"]), tuple(outputs), tuple(records), tuple(groups), response_tier)
         # Canonical serialization does not sort these collections. Check identity order explicitly.
         for keys in (state.retained_ids, tuple(g.group_id for g in groups)):
             if keys != tuple(sorted(set(keys))):
@@ -357,6 +375,9 @@ class AggregateIndex:
     manifest_digest: str
     records: tuple[AggregateRecord, ...]
     groups: tuple[AggregateGroup, ...]
+    @property
+    def response_tier(self) -> str:
+        return "linear"
 
     @property
     def retained_ids(self) -> tuple[str, ...]:
@@ -364,12 +385,20 @@ class AggregateIndex:
 
     @timed("serialization")
     def canonical_bytes(self) -> bytes:
-        return _json({"schema": "aggregate-retained-index-v1", "manifest": self.manifest_digest,
+        return _json({"schema": _index_schema(self.response_tier), "manifest": self.manifest_digest,
                       "records": [r._json() for r in self.records], "groups": [g._json() for g in self.groups]})
 
     @property
     def digest(self) -> str:
         return _sha(self.canonical_bytes())
+
+
+@dataclass(frozen=True)
+class QuadraticAggregateIndex(AggregateIndex):
+    """Same model-free metadata shape with a distinct storage-tier schema."""
+    @property
+    def response_tier(self) -> str:
+        return "quadratic"
 
 
 @dataclass(frozen=True)
@@ -393,7 +422,7 @@ class AggregateGroupContext:
     group_id: int
     record_count: int
     unavailable_count: int
-    response: LinearResponseIndex | None
+    response: LinearResponseIndex | ResponseIndex | None
     error: ResponseIndex | None
 
 
@@ -404,13 +433,17 @@ class AggregateServiceResult:
     stages: tuple[StageAudit, ...]
 
 
-IntrinsicExtractor = Callable[[Record, StageSpec], tuple[LinearRecordMoments, RecordMoments] | None]
+IntrinsicExtractor = Callable[[Record, StageSpec], tuple[LinearRecordMoments | RecordMoments, RecordMoments] | None]
 AggregateQuery = Callable[[AggregateGroupContext], ResponseQuery | UnknownBound]
 
 
 @dataclass(frozen=True, init=False)
 class AggregateRepairService:
     """Complete exact model service with group-only response matrices.
+
+    ``response_tier`` selects compact linear or complete quadratic moments.
+    It changes the service schema, never the target job. Quadratic extraction
+    returns RecordMoments instead of LinearRecordMoments for the response.
 
     ``job.manifest_digest`` binds target prefixes. ``manifest_digest`` also
     binds this service's distinct canonical-state schema and fixed extractor.
@@ -428,16 +461,22 @@ class AggregateRepairService:
     manifest_digest: str
     _engine: RepairService
     reference_weights: Mapping[str, Matrix] | None
+    response_tier: str
+    verifier_policy: str
 
     def __init__(self, job: JobSpec, evaluator: FeatureEvaluator,
                  intrinsic_moments: IntrinsicExtractor,
                  contracts: Mapping[str, ResponseStageContract], query: AggregateQuery,
                  *, provider_id: str, extractor_id: str,
-                 reference_weights: Mapping[str, Matrix] | None = None) -> None:
+                 reference_weights: Mapping[str, Matrix] | None = None,
+                 response_tier: str = "linear", verifier_policy: str = "spectral") -> None:
         if not isinstance(job, JobSpec) or not all(callable(x) for x in (evaluator, intrinsic_moments, query)):
             raise TypeError("supply JobSpec and callable evaluator/extractor/query")
         if any(type(x) is not str or not x for x in (provider_id, extractor_id)):
             raise ValueError("provider and extractor identities must be nonempty strings")
+        _state_schema(response_tier)
+        if type(verifier_policy) is not str or verifier_policy not in ("spectral", "spectral_or_interval"):
+            raise ValueError("verifier policy must be spectral or spectral_or_interval")
         fixed = dict(contracts)
         known = {s.stage_id: s for s in job.stages}
         if not set(fixed) <= set(known):
@@ -458,14 +497,14 @@ class AggregateRepairService:
                     raise ValueError("reference weights require exact immutable matrices with target shapes")
                 reference[key] = tuple(tuple(Fraction(x) for x in row) for row in matrix)
             reference = MappingProxyType(reference)
-        payload = {"schema": "aggregate-linear-service-v1", "target_manifest": job.manifest_digest,
+        payload = {"schema": _state_schema(response_tier), "target_manifest": job.manifest_digest,
                    "extractor_id": extractor_id, "provider_id": provider_id,
                    "contracts": {key: {"response": c.response_basis._payload(), "error": c.error_basis._payload(),
                                        "max_squared_coefficient_norm": None if c.max_squared_coefficient_norm is None
                                        else _q_json(c.max_squared_coefficient_norm)} for key, c in fixed.items()}}
         for key, value in {"job": job, "evaluator": evaluator, "intrinsic_moments": intrinsic_moments,
                            "contracts": MappingProxyType(fixed), "query": query, "provider_id": provider_id,
-                           "reference_weights": reference,
+                           "reference_weights": reference, "response_tier": response_tier, "verifier_policy": verifier_policy,
                            "extractor_id": extractor_id, "manifest_digest": _digest(payload),
                            "_engine": RepairService(job, evaluator, lambda r, s: None)}.items():
             object.__setattr__(self, key, value)
@@ -502,12 +541,13 @@ class AggregateRepairService:
         contract = self.contracts.get(stage.stage_id)
         if contract is None:
             return AggregateStage(stage.stage_id, None, None, 0)
-        return AggregateStage(stage.stage_id, LinearResponseIndex.from_records(contract.response_basis, ()),
+        response_class = LinearResponseIndex if self.response_tier == "linear" else ResponseIndex
+        return AggregateStage(stage.stage_id, response_class.from_records(contract.response_basis, ()),
                               ResponseIndex.from_records(contract.error_basis, ()), 0)
 
     @timed("extraction")
     def _extract(self, record: Record, stage: StageSpec, work: _Work,
-                 event: str, source_digest: str) -> tuple[ContributionBinding, tuple[LinearRecordMoments, RecordMoments] | None]:
+                 event: str, source_digest: str) -> tuple[ContributionBinding, tuple[LinearRecordMoments | RecordMoments, RecordMoments] | None]:
         contract = self.contracts.get(stage.stage_id)
         pair = None
         if contract is not None:
@@ -519,9 +559,10 @@ class AggregateRepairService:
                               "content": source_digest, "stage": stage.stage_id,
                               "extractor": self.extractor_id})
             return ContributionBinding(stage.stage_id, False, digest), None
-        if (not isinstance(pair, tuple) or len(pair) != 2 or not isinstance(pair[0], LinearRecordMoments)
+        expected = LinearRecordMoments if self.response_tier == "linear" else RecordMoments
+        if (not isinstance(pair, tuple) or len(pair) != 2 or not isinstance(pair[0], expected)
                 or not isinstance(pair[1], RecordMoments)):
-            raise TypeError("extractor must return LinearRecordMoments, RecordMoments, or None")
+            raise TypeError("extractor must return the tier's response moments, RecordMoments, or None")
         telemetry_event("extraction.available")
         response, error = pair
         if response.basis != contract.response_basis or error.basis != contract.error_basis:
@@ -532,6 +573,13 @@ class AggregateRepairService:
             raise ValueError("error descriptor requires one scalar column per record")
         if any(x[0][0] < 0 for x in error.cross_moments):
             raise ValueError("intrinsic error moments must be nonnegative")
+        # Count exact moment products separately from feature/jet extraction.
+        # These count formulas match the declared moment builders, not CPU time.
+        d, r, n = response.basis.rows, response.basis.terms - 1, response.columns
+        products = (n * (r + 1) * (r + 2) * d * d // 2 if self.response_tier == "quadratic"
+                    else n * ((1 + 2 * r) * d * d + r * r * d))
+        work.add("response_moment_product_terms", products)
+        work.add("error_moment_product_terms", error.basis.terms * (error.basis.terms + 1) // 2)
         # A digest binds all intrinsic contribution values without storing them.
         encoded = _json({"response": response.canonical_bytes().decode("ascii"),
                          "error": error.canonical_bytes().decode("ascii")})
@@ -540,7 +588,7 @@ class AggregateRepairService:
 
     @timed("gram_accumulation")
     def _add(self, aggregate: AggregateStage,
-             pair: tuple[LinearRecordMoments, RecordMoments] | None,
+             pair: tuple[LinearRecordMoments | RecordMoments, RecordMoments] | None,
              sign: int, work: _Work) -> AggregateStage:
         if pair is None:
             return AggregateStage(aggregate.stage_id, aggregate.response, aggregate.error,
@@ -549,12 +597,16 @@ class AggregateRepairService:
         current, descriptors = aggregate.response, aggregate.error
         if current is None or descriptors is None:
             raise ValueError("available moments lack an aggregate contract")
-        constant = _combine(current.constant_gram, response.constant_gram, sign, work)
-        first = tuple(_combine(x, y, sign, work) for x, y in zip(current.first_response, response.first_response))
-        tangent = _combine(current.tangent_scalar_gram, response.tangent_scalar_gram, sign, work)
+        if self.response_tier == "quadratic":
+            moments = tuple(_combine(x, y, sign, work) for x, y in zip(current.cross_moments, response.cross_moments))
+            updated = ResponseIndex(current.basis, moments, ())
+        else:
+            constant = _combine(current.constant_gram, response.constant_gram, sign, work)
+            first = tuple(_combine(x, y, sign, work) for x, y in zip(current.first_response, response.first_response))
+            tangent = _combine(current.tangent_scalar_gram, response.tangent_scalar_gram, sign, work)
+            updated = LinearResponseIndex(current.basis, constant, first, tangent, ())
         cross = tuple(_combine(x, y, sign, work) for x, y in zip(descriptors.cross_moments, error.cross_moments))
-        return AggregateStage(aggregate.stage_id,
-                              LinearResponseIndex(current.basis, constant, first, tangent, ()),
+        return AggregateStage(aggregate.stage_id, updated,
                               ResponseIndex(descriptors.basis, cross, ()), aggregate.unavailable_count)
 
     @timed("validation_metadata")
@@ -574,7 +626,7 @@ class AggregateRepairService:
 
     def _finish(self, records: tuple[AggregateRecord, ...], groups: tuple[AggregateGroup, ...],
                 outputs: tuple[StageOutput, ...], audits: tuple[StageAudit, ...], work: _Work) -> AggregateServiceResult:
-        state = AggregateState(self.manifest_digest, outputs, records, groups)
+        state = AggregateState(self.manifest_digest, outputs, records, groups, self.response_tier)
         work.add("committed_record_entries", len(records))
         work.add("metadata_serialized_entries", len(records))
         work.add("committed_model_coordinates", sum(len(o.codes) * len(o.codes[0]) for o in outputs))
@@ -640,7 +692,7 @@ class AggregateRepairService:
     @timed("validation_metadata")
     def _validate(self, state: AggregateState | AggregateIndex, work: _Work, *, validate_model: bool = True) -> None:
         if (not isinstance(state, (AggregateState, AggregateIndex))
-                or state.manifest_digest != self.manifest_digest):
+                or state.manifest_digest != self.manifest_digest or state.response_tier != self.response_tier):
             raise ValueError("aggregate state uses a different service manifest")
         if (type(state.records) is not tuple or type(state.groups) is not tuple
                 or any(not isinstance(r, AggregateRecord) for r in state.records)
@@ -699,16 +751,25 @@ class AggregateRepairService:
                         raise ValueError("unsupported stage has claimed response evidence")
                     continue
                 response, error = aggregate.response, aggregate.error
-                if (not isinstance(response, LinearResponseIndex) or not isinstance(error, ResponseIndex)
+                expected = LinearResponseIndex if self.response_tier == "linear" else ResponseIndex
+                if (not isinstance(response, expected) or not isinstance(error, ResponseIndex)
                         or response.records or error.records
                         or response.basis != contract.response_basis or error.basis != contract.error_basis):
                     raise ValueError("aggregate basis differs or contains per-record bindings")
                 if any(x[0][0] < 0 for x in error.cross_moments):
                     raise ValueError("negative aggregate error moment")
-                if not _is_psd(response.constant_gram) or (response.tangent_scalar_gram
-                                                         and not _is_psd(response.tangent_scalar_gram)):
-                    raise ValueError("aggregate response norm matrices are not PSD")
-                work.add("aggregate_psd_validation_calls", 1 + bool(response.tangent_scalar_gram))
+                if self.response_tier == "quadratic":
+                    diagonal = [matrix for (s, t), matrix in zip(
+                        ((s, t) for s in range(response.basis.terms) for t in range(s, response.basis.terms)),
+                        response.cross_moments) if s == t]
+                    if any(not _is_psd(matrix) for matrix in diagonal):
+                        raise ValueError("aggregate response norm matrices are not PSD")
+                    work.add("aggregate_psd_validation_calls", len(diagonal))
+                else:
+                    if not _is_psd(response.constant_gram) or (response.tangent_scalar_gram
+                                                             and not _is_psd(response.tangent_scalar_gram)):
+                        raise ValueError("aggregate response norm matrices are not PSD")
+                    work.add("aggregate_psd_validation_calls", 1 + bool(response.tangent_scalar_gram))
                 work.add("validated_aggregate_rational_entries", aggregate.stored_rational_count)
 
     @timed("validation_metadata")
@@ -743,7 +804,9 @@ class AggregateRepairService:
     def _proposal(self, group: AggregateGroup, aggregate: AggregateStage, stage: StageSpec,
                   prefix: CertifiedPrefix, work: _Work, mode: str = "certified") -> tuple[Matrix, tuple[Fraction, Fraction] | None]:
         telemetry_event("proposal.attempt")
-        raw = _zero(stage.width) if aggregate.response is None else aggregate.response.constant_gram
+        raw = (_zero(stage.width) if aggregate.response is None else
+               aggregate.response.constant_gram if isinstance(aggregate.response, LinearResponseIndex)
+               else aggregate.response.cross_moments[0])
         if aggregate.unavailable_count or aggregate.response is None:
             work.add("unavailable_aggregate_groups")
             telemetry_event("proposal.unavailable_aggregate")
@@ -792,8 +855,15 @@ class AggregateRepairService:
             # Triangle bound retains the finite-feature and derivative errors.
             # It changes the proposal, never the target or stored statistics.
             a = request.coefficients
-            tangent2 = sum((a[i] * aggregate.response.tangent_scalar_gram[i][j] * a[j]
-                            for i in range(len(a)) for j in range(len(a))), ZERO)
+            if self.response_tier == "quadratic":
+                tangent2 = sum((a[s - 1] * a[t - 1] * (1 if s == t else 2)
+                               * sum((matrix[i][i] for i in range(stage.width)), ZERO)
+                               for (s, t), matrix in zip(
+                                   ((s, t) for s in range(len(a) + 1) for t in range(s, len(a) + 1)),
+                                   aggregate.response.cross_moments) if s > 0), ZERO)
+            else:
+                tangent2 = sum((a[i] * aggregate.response.tangent_scalar_gram[i][j] * a[j]
+                                for i in range(len(a)) for j in range(len(a))), ZERO)
             residual2 = response_error_squared(aggregate.error, request.coefficients, 1,
                                                request.unrepresented_parameter_norm)
             error = dyadic_sqrt_upper(residual2) + dyadic_sqrt_upper(tangent2)
@@ -803,6 +873,16 @@ class AggregateRepairService:
             telemetry_event("proposal.bound_available")
             work.add("fixed_reference_bound_calls")
             return raw, (delta, delta)
+        if self.response_tier == "quadratic":
+            bound = response_gram_enclosure(aggregate.response, aggregate.error, request.coefficients,
+                                            1, request.unrepresented_parameter_norm)
+            raw = bound.raw_surrogate_gram
+            work.add("quadratic_bound_calls")
+            work.add("proposal_psd_validation_calls")
+            if not _is_psd(raw):
+                raise InvalidWitness("aggregate response proposal is not PSD")
+            telemetry_event("proposal.bound_available")
+            return raw, (bound.raw_absolute_gram_error, bound.raw_absolute_gram_error)
         bound = shifted_linear_response_bound(aggregate.response, aggregate.error, request.coefficients,
                                               stage.ridge, 1, request.unrepresented_parameter_norm)
         raw = bound.raw_surrogate_gram
@@ -824,7 +904,8 @@ class AggregateRepairService:
         work = _Work()
         self._validate(state, work, validate_model=False)
         retained, groups = self._delete(state, tuple(deleted_records), work)
-        index = AggregateIndex(self.manifest_digest, retained, groups)
+        index_type = AggregateIndex if self.response_tier == "linear" else QuadraticAggregateIndex
+        index = index_type(self.manifest_digest, retained, groups)
         work.add("index_serialized_bytes", len(index.canonical_bytes()))
         return AggregateIndexResult(index, work.freeze())
 
@@ -916,12 +997,16 @@ class AggregateRepairService:
                     lo = 1 - negative / stage.normalization / stage.ridge
                     hi = 1 + positive / stage.normalization / stage.ridge
                     work.add("enclosure_scalar_divisions", 4)
+                    candidate = None
+                    metric = None
                     if lo > 0:
                         attempts += 1
                         work.add("certificate_factorization_calls")
                         work.add("rounding_decisions", len(stage.weights) * stage.width)
                         work.add("cell_predicates", len(stage.weights) * stage.width)
-                        certificate = certify_relative_enclosure(stage.weights, _metric(raw, stage, work), stage.grids, lo, hi)
+                        metric = _metric(raw, stage, work)
+                        certificate = certify_relative_enclosure(stage.weights, metric, stage.grids, lo, hi)
+                        candidate = certificate.candidate.codes
                         telemetry_event("certificate.attempt")
                         if certificate.accepted:
                             telemetry_event("certificate.accepted")
@@ -934,6 +1019,36 @@ class AggregateRepairService:
                                 telemetry_event("certificate.cell_rejected", reason=check.reason)
                     else:
                         telemetry_event("certificate.nonpositive_lower_scale")
+                    if self.verifier_policy == "spectral_or_interval":
+                        # The complete target still has its fixed ridge floor,
+                        # even when a relative spectral lower scale is unusable.
+                        if candidate is None:
+                            candidate = self._quantize(stage, raw, work).codes
+                            work.add("interval_candidate_factorization_calls")
+                        if metric is None:
+                            metric = _metric(raw, stage, work)
+                        binding_payload = _json([[g.group_id, g.membership_digest] for g in groups])
+                        work.add("interval_binding_hash_bytes", len(binding_payload))
+                        binding = GramBinding(self.target_manifest_digest, stage.stage_id, prefix.digest,
+                                              _sha(binding_payload), stage.normalization)
+                        box = signed_loewner_box(binding, metric, negative / stage.normalization,
+                                                 positive / stage.normalization, self.provider_id)
+                        work.add("interval_enclosure_scalar_divisions", 2)
+                        attempts += 1
+                        work.add("certificate_factorization_calls")
+                        work.add("interval_certificate_factorization_calls")
+                        work.add("interval_cell_predicates", len(stage.weights) * stage.width)
+                        telemetry_event("interval_certificate.attempt")
+                        interval_certificate = certify_gram_box(stage.weights, candidate, stage.grids, box, stage.ridge)
+                        if interval_certificate.accepted:
+                            outputs.append(StageOutput(stage.stage_id, interval_certificate.candidate))
+                            telemetry_event("interval_certificate.accepted")
+                            route = "interval_transport_certificate"
+                            break
+                        telemetry_event("interval_certificate.rejected")
+                        for check in interval_certificate.checks:
+                            if not check.accepted:
+                                telemetry_event("interval_certificate.cell_rejected", reason="rounding_cell_not_enclosed")
                 work.add("group_selection_entries", len(bounds))
                 missing = [gid for gid, b in bounds.items() if b is None]
                 chosen = min(missing) if missing else min(bounds, key=lambda gid: (-sum(bounds[gid]), gid))
@@ -951,5 +1066,5 @@ class AggregateRepairService:
 
 
 __all__ = ["ContributionBinding", "AggregateRecord", "AggregateStage", "AggregateGroup",
-           "AggregateState", "StateParseLimits", "AggregateIndex", "AggregateIndexResult",
+           "AggregateState", "StateParseLimits", "AggregateIndex", "QuadraticAggregateIndex", "AggregateIndexResult",
            "AggregateGroupContext", "AggregateServiceResult", "AggregateRepairService"]

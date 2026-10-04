@@ -1,6 +1,6 @@
 # Fixed target and chart construction
 
-Updated 4 October 2026, revision 6.
+Updated 4 October 2026, revision 7.
 This contract selects V_cert for the reference program.
 The constructor defines a project quantizer.
 It makes no numerical equality claim about Hugging Face or GPTQ.
@@ -53,7 +53,7 @@ Tokenization rules and dataset hashes belong to the separate record manifest.
 Those rules must be concrete before an experiment begins.
 
 The request supplies deleted record payloads for checked subtraction.
-The output contains every quantized stage matrix and canonical aggregate state.
+The output contains every quantized stage matrix and canonical state for the selected service family.
 Proof rejection causes retained replay.
 A finite evaluator failure aborts the request before commit.
 
@@ -136,6 +136,69 @@ They do not guarantee smaller Gram error or better decisions for every request.
 Uniform box errors need not shrink when the deletion size shrinks.
 See `docs/BOX_THEORY.md` for the proved statements and limits.
 
+## Response tiers and verifier policy
+
+`ChartRecipe.response_tier` selects `linear` or `quadratic`.
+The default remains `linear`.
+Legacy recipe payloads without this field select that default.
+The recipe and construction digest bind the selected tier.
+Both providers expose separate linear and quadratic intrinsic-moment extractors.
+Both extractors use the same finite feature descriptors and domain query.
+
+The quadratic extractor stores every oriented affine-response cross moment.
+It never reconstructs missing tangent matrices from a compact state.
+Its proposal is the exact Gram of the affine feature response.
+The error enclosure retains finite arithmetic, center error, derivative error, and mixed curvature.
+It uses the existing unwhitened Gram error bound.
+The stronger whitened acceptance theorem remains unimplemented.
+See `docs/QUADRATIC_CONTROL.md` for formulas, costs, and migration limits.
+
+Linear state retains schema `aggregate-linear-service-v1`.
+Quadratic state uses `aggregate-quadratic-service-v1`.
+Their service manifests differ, but their target quantization job is unchanged.
+Canonical equality applies within the selected storage tier.
+Comparisons across tiers check the complete model and target binding.
+Their auxiliary state bytes need not agree.
+
+`make_service` also accepts `verifier_policy="spectral_or_interval"`.
+Its default is `spectral`.
+The optional policy first preserves every existing spectral acceptance.
+After rejection, it checks signed covariance intervals with the target's fixed ridge floor.
+A failed interval certificate continues the existing replay schedule.
+The option changes planning, not canonical state or the service manifest.
+Run inputs and results bind the selected policy separately.
+Extra candidate solves and interval proof work remain charged.
+
+## Original-model cache family
+
+The optional `identity_cache` family uses `IdentityCacheService` through its runner adapter.
+It stores exact sequential Grams under the current quantized model.
+It compares new ancestors against that model before subtracting deleted contributions.
+Changed ancestors require retained replay.
+This differs from the response family's base-reference `identity_only` control.
+
+The cache uses schema `original-model-gram-cache-v1` and a separate service manifest.
+Its live Gram storage is `sum_l d_l**2` rational slots, plus model and metadata storage.
+It does not use response moments or a response certificate.
+Its state agrees with direct construction within its own family.
+Its complete quantized model preserves the same declared target.
+
+Run manifests select this family with `service_family="identity_cache"`.
+The loader requires the `none` chart, linear label, default radius, default precision, and default mode and verifier.
+Those labels satisfy shared input conventions; they do not enable response machinery.
+Read `docs/IDENTITY_CACHE.md` for trust, cost, and equal-information comparison requirements.
+
+## Ordered and complete deletion
+
+The target remains fixed throughout an ordered request sequence.
+Every step consumes the preceding committed state.
+The original normalization never becomes the current retained token count.
+Complete deletion produces zero data Grams and the fixed ridge-only quantization result.
+Subsequent empty requests remain valid.
+A repeated attempt to delete an absent record fails.
+The local sequence runner verifies each step against independent retained construction.
+See `docs/SEQUENCE_EXECUTION.md` for lineage and restart semantics.
+
 ## Resource checks
 
 `preview_chart` counts resources before it allocates direction matrices.
@@ -146,13 +209,21 @@ The preview also reports grid entries and the nominal packed size of quantized c
 The implementation currently stores code matrices as rationals.
 It does not produce the nominal packed artifact.
 
-With rank `r` and stage input width `d`, each group stores:
+With rank `r` and stage input width `d`, each compact linear group stores:
 
 \[
 (r+1)d^2+r^2+\frac{(r+3)(r+4)}{2}
 \]
 
-The final term counts the scalar remainder moments.
+The quadratic tier instead stores:
+
+\[
+\frac{(r+1)(r+2)}{2}d^2+\frac{(r+3)(r+4)}{2}.
+\]
+
+The final term in either formula counts the scalar remainder moments.
+These are separate storage tiers selected before extraction.
+The constructor and configuration-only preflight charge the selected tier's complete moment count.
 The implementation uses the global chart rank at every stage.
 The preview sums all stages and multiplies by the group count.
 For `grid-box`, rank is zero and each stage stores `d**2 + 6` aggregate rationals per group.

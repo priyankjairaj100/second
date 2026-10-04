@@ -133,3 +133,36 @@ These changes establish a concrete reference path for the stated method.
 They do not establish useful pretrained coverage or practical speed.
 Rational interval arithmetic and automatic differentiation remain established ingredients.
 This update makes no new literature-priority claim.
+
+## Revision 7 focused literature and algorithm update
+
+Checked primary sources on 4 October 2026.
+This is a focused update, not an exhaustive novelty clearance.
+
+Wang and colleagues posted [Quantization-Robust Unlearning through the Lens of Retain-Forget Loss Landscapes Interaction](https://arxiv.org/html/2609.27355v1) on 23 September 2026.
+They study training-data unlearning that remains effective after quantization.
+Their method uses sensitivity-guided regularization and selective layer updates, evaluated on MUSE and TOFU.
+Our target instead holds base weights fixed and deletes quantizer calibration documents.
+It requires exact retained sequential quantization, including changed downstream features.
+This distinction supports a narrower problem formulation; it does not prove priority.
+Broad claims that quantization and unlearning have not been jointly studied are untenable.
+
+The new optional verifier combines spectral certification with ridge-aware interval reverse-LDL.
+Entrywise bounds retain diagonal asymmetry and intersect with the target's known ridge during elimination.
+The repository proves exact-output soundness, fixed-candidate inclusion monotonicity, and a strict mathematical acceptance example.
+The service implements one enclosure after spectral rejection.
+A complete neural multi-domain bank remains an extension.
+Acceptance gains in correctness fixtures are not practical speed measurements.
+
+Interval inclusion, arithmetic, and enclosure dependency are established tools.
+See S. M. Rump, [Verification methods: Rigorous results using floating-point arithmetic](https://www.tuhh.de/ti3/rump/intlab/ActaNumerica2010.pdf), Acta Numerica 19, 2010.
+The survey also discusses dependency and wrapping limitations.
+Schur-complement identities are classical; see Jean Gallier's [author notes](https://www.cis.upenn.edu/~jean/schur-comp.pdf).
+No priority claim attaches to these ingredients or to taking intersections.
+Our candidate contribution concerns their composition with sequential quantization, canonical deletion state, and complete cost conditions.
+
+Full quadratic responses and an original-model Gram cache now provide implemented comparison controls.
+They strengthen the fairness and falsifiability of the empirical program.
+Equally indexed fresh receives the same valid information and certificate options.
+Neither control establishes a deletion-specific solving advantage.
+The manuscript still needs real-model feasibility, useful certificate coverage, quality evidence, and complete latency measurements.

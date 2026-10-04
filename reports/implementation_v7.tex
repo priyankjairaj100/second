@@ -1,0 +1,230 @@
+\newpage
+\section*{31. A ridge-aware certificate portfolio}
+Revision 7 supplements the spectral verifier with exact interval reverse-LDL.
+The optional policy runs the spectral test first.
+It returns immediately after spectral acceptance.
+Otherwise it checks the same candidate against entrywise covariance bounds before replay.
+This preserves accepted spectral decisions at the same proposal.
+It does not guarantee lower runtime or completion under finite resource limits.
+
+Fix the current certified prefix and retained records.
+Their normalized covariance satisfies
+\[
+ H^*=\lambda I+M_0^{-1}\sum_{j\in R}X_jX_j^\top\succeq\lambda I.
+\]
+Suppose intrinsic moments prove $-aI\preceq H^*-S\preceq bI$, with $a,b\ge0$.
+Shifting the error by $(b-a)I/2$ gives norm at most $(a+b)/2$.
+Therefore a sound entry enclosure is
+\[
+ H^*_{ii}\in[S_{ii}-a,S_{ii}+b],\qquad
+ H^*_{ij}\in[S_{ij}-(a+b)/2,S_{ij}+(a+b)/2]\quad(i\ne j).
+\]
+Diagonal bounds retain their asymmetry.
+The off-diagonal radius is sharp under these premises.
+Normalize raw group uncertainty exactly once and include the ridge exactly once.
+
+\begin{lemma}[A common ridge survives elimination]
+If $H\succeq\lambda I$, every Schur complement and every reverse-LDL pivot has lower bound $\lambda$.
+\end{lemma}
+\begin{proof}
+Partition $H$ into blocks $A,B,C$.
+For its Schur complement $T=A-BC^{-1}B^\top$,
+\[
+ x^\top Tx=\min_y (x,y)^\top H(x,y)
+ \ge\lambda\norm x_2^2.
+\]
+Apply this identity at every elimination step.
+\end{proof}
+
+Initialize rational entry intervals from the covariance enclosure.
+Process coordinates in reverse order:
+\[
+ [t_k]=[A_{kk}]\cap[\lambda,\infty),\qquad
+ [L_{ki}]=[A_{ki}]/[t_k],\qquad
+ [A_{ij}]\leftarrow[A_{ij}]-[A_{ki}][A_{kj}]/[t_k].
+\]
+Use exact interval squares for diagonal updates.
+An empty pivot intersection signals invalid premises; it cannot produce acceptance.
+The actual covariance satisfies the ridge even when other matrices inside the rectangular enclosure are indefinite.
+Induction through these interval operations encloses its exact factors.
+
+For each fixed candidate row $q$, enclose
+\[
+ [v_i]=w_i+\sum_{h<i}[L_{ih}](w_h-q_h).
+\]
+Lower-tie rounding cells are $(m_{\rm lower},m_{\rm upper}]$.
+Accept only when $\inf[v_i]>m_{\rm lower}$ and $\sup[v_i]\le m_{\rm upper}$ at finite endpoints.
+Coordinate induction establishes every emitted code.
+Stage induction then establishes the complete sequential target.
+Interval dependency and integer growth can still cause expensive or unsuccessful verification.
+
+\newpage
+\section*{32. Strict certificate improvement and its cost}
+\begin{theorem}[Intersection preserves fixed-candidate acceptance]
+Let $\mathcal J\subseteq\mathcal I$ be nonempty sound entry enclosures of the same covariance.
+Fix weights, candidate, ridge, grids, and interval operation order.
+Assume both calculations complete.
+Every factor and decision interval from $\mathcal J$ lies inside its counterpart from $\mathcal I$.
+Thus acceptance from $\mathcal I$ implies acceptance from $\mathcal J$.
+\end{theorem}
+\begin{proof}
+Interval addition, subtraction, multiplication, squaring, and positive division preserve inclusion.
+Intersection with the same ridge half-line also preserves inclusion.
+Induct through elimination and the fixed-candidate decision expressions.
+Containment inside the same rounding cells follows.
+\end{proof}
+
+For several valid boxes with identical target, prefix, retained-set, and normalization bindings, intersect their entries.
+Empty intersections cannot be treated as vacuous success.
+Different candidates do not inherit this theorem automatically.
+
+\note{Strict gain construction.}
+Let
+\[
+ S_\pm=\begin{pmatrix}2&\pm9/10\\\pm9/10&2\end{pmatrix},\qquad
+ \delta=91/100,\quad H^*=2I,\quad\lambda=1.
+\]
+Both spectral balls contain the target.
+Choose $w=(49/100,0)$, candidate $q=(0,0)$, and grids $\{-1,0,1\}$.
+Both separate interval tests and both original relative spectral tests abstain.
+Their entrywise intersection restricts the off-diagonal to $[-1/100,1/100]$.
+Its final pivot is at least $109/100$.
+Therefore $|v_1|\le49/10900<1/2$, and both exact codes certify.
+This is a mathematical construction and software fixture, not a language-model experiment.
+
+The integrated service currently uses one signed enclosure after spectral rejection.
+Independent checks cover a two-coordinate service with a nonpositive relative lower scale and zero retained replay.
+Successful output equals the fresh canonical state.
+Multi-domain bank storage remains an extension.
+Its intersection verifier is implemented; its complete neural bank is not.
+
+\note{Canonical bank design, when needed.}
+Fix every domain and anchor independently of deletable records.
+Store each domain's intrinsic contributions $M_b(R)=\sum_{j\in R}m_b(j)$.
+Then $M_b(C)-M_b(F)=M_b(C\setminus F)$ for every bank entry.
+Keep all entries in canonical state regardless of adaptive query choices.
+Changing a domain requires charged reconstruction.
+
+Intersecting $B$ dense bounds costs $O(Bd^2)$ rational comparisons.
+Interval elimination costs $O(d^3)$ operations; row verification costs $O(pd^2)$.
+Bit lengths and all bound construction remain additional costs.
+Independent bank preparation and storage can scale with $B$.
+The existing fixed-grid worst case can require exponentially many narrow domains.
+No distribution-free query advantage follows against a clairvoyant bank selector.
+
+The same certificates must remain available to equally indexed fresh computation.
+Classical interval arithmetic, Schur identities, and intersection are established tools.
+The contribution concerns their exact sequential deletion contract and explicit costs.
+See Rump's verification survey and Gallier's Schur-complement notes in the repository audit.
+No practical coverage rate or reliable full-model speed follows from these results.
+
+\newpage
+\section*{33. Complete baselines and repeated requests}
+\note{Full quadratic response tier.}
+The service now stores every oriented cross-moment of its affine feature response.
+For $Z(a)=Z_0+\sum_{t=1}^r a_tZ_t$, it reconstructs $Z(a)Z(a)^\top$ exactly.
+Negative coefficients retain their signs and cross-moment orientation.
+The finite feature error supplies the existing unwhitened Gram error bound.
+The stronger whitened theorem remains a separate, unimplemented acceptance rule.
+
+Per group, quadratic response and scalar error storage use
+\[
+ \frac{(r+1)(r+2)}2d^2+\frac{(r+3)(r+4)}2
+\]
+rational slots.
+The compact linear tier remains available.
+Separate schemas bind quadratic state and its index.
+Both support exact subtraction, bounded loading, indexed fresh solving, and empty retained sets.
+Preparation, extraction products, stored slots, integer sizes, and serialization remain explicit costs.
+
+\note{Original-model invariant-feature baseline.}
+A separate canonical cache stores true sequential Grams under its current quantized model.
+Its state includes the model, retained source bindings, and each stage's ancestor-prefix identity.
+For a request, process stages in dependency order.
+Compare every new transitive ancestor with its old installed code matrix.
+When they agree, evaluate deleted contributions under that prefix and subtract them from the cached Gram.
+When they differ, evaluate retained records under the new prefix and rebuild that stage's Gram.
+Then quantize and store the exact refreshed Gram.
+
+\begin{theorem}[Canonical identity-cache baseline]
+Under the declared deterministic target and successful required evaluations, this procedure returns fresh retained model and cache state.
+It remains valid after repeated, reordered, empty, and complete deletions.
+\end{theorem}
+\begin{proof}
+Identical finite ancestors give identical record-local features, so exact subtraction yields the retained Gram.
+Changed ancestors instead receive an exact retained reconstruction.
+Coordinate quantization and stage induction establish each new output and its true Gram.
+Canonical source bindings and serialization depend only on retained records and the fixed target.
+Induct over requests.
+\end{proof}
+
+This cache has a separate auxiliary-state interface from intrinsic response summaries.
+It is an honest baseline, not a claim of identical storage requirements.
+Indexed fresh receives the same valid cache and old model.
+Its solver is identical to repair's solver.
+Validation-only index preparation defers prefix-dependent deleted extraction to the solver.
+Count every such operation in its actual scope.
+
+\note{Sequence execution.}
+The runner prepares original state once.
+Each request starts from the preceding committed repaired state and retains the original normalization.
+Every step compares its full artifact and canonical state against direct retained fresh execution.
+Restart checks ordered lineage and every saved artifact binding.
+Failed attempts and unstarted future requests remain visible.
+Local sequence and complete-deletion execution are implemented.
+Bulk sequence admission through the campaign remains a separate integration task.
+
+\newpage
+\section*{34. Execution accounting and remaining evidence}
+Revision 7 separates software preparation from empirical evidence.
+The protocol remains paused.
+No model, tokenizer, calibration corpus, or research benchmark was downloaded or executed.
+Correctness fixtures do not establish practical speed, useful coverage, or NLP quality.
+
+\note{Four-process comparison.}
+One limited setup process prepares and persists original canonical state, then exits.
+Separate workers run repair, indexed fresh, and direct fresh in a declared order.
+Every worker reloads its inputs and constructs its own service.
+Repair and indexed fresh receive the same original state.
+Direct fresh constructs retained output without reading the unused original index.
+The parent compares every complete model and canonical state against direct fresh.
+Missing or failed reference output prevents a successful exactness claim.
+
+Each worker's measured boundary includes startup, input loading, service work, artifact synchronization, child receipt commitment, and process exit.
+It excludes parent validation, equality checks, final parent commitment, and the enclosing worker-control receipt commitment.
+Setup has a separate measured cost.
+These are explicit worker boundaries, not a complete parent-orchestrated transaction.
+Operating-system caches remain uncontrolled.
+Warm comparisons remain available as separately labelled diagnostic runs.
+Independent process peaks and final serialized integer sizes supplement internal telemetry.
+Comprehensive transient arithmetic growth and full parent timing remain open.
+
+\note{Durable CPU admission.}
+A locked protocol-scoped ledger reserves each worker's allowance before launch.
+Setup and method workers share that ledger across output directories.
+Unknown or interrupted attempts retain their reservation.
+Completed outcomes debit upward-rounded observed child CPU.
+An overrun remains fully charged and blocks subsequent admission when the cap is exhausted.
+Retries require a new reservation; verified completed resumes do not.
+This is an admission contract, not absolute physical CPU containment.
+Controller CPU, hostile descendant trees, and separate protocol scopes need additional accounting for a global project cap.
+
+\note{Restart integrity.}
+Restart verifies immutable worker receipts and successful or failed child artifacts.
+A child may commit before its enclosing timing receipt becomes durable.
+Such output cannot receive a new short successful timing through cached reuse.
+The executor records failure instead.
+This avoids substituting cached-restart latency for the original computation.
+No trust claim extends to hostile storage or physical erasure.
+
+\note{Open empirical gate.}
+Standalone sequences, complete deletion, full quadratic responses, and original-model caching are implemented.
+Bulk sequence admission and isolated confirmation inventory remain integration tasks.
+A feasible real checkpoint route, actual record manifests, source partitions, precision justification, and quality evaluation remain unresolved.
+The scalar reference target remains distinct from native deployment kernels.
+The stronger whitened response bound and neural multi-domain bank remain optional extensions.
+
+The next scientific decision is whether real retained calibration work can be avoided at an acceptable total cost.
+Every accepted certificate must preserve the complete target and canonical live state.
+Every comparison must charge its actual information, preparation, maintenance, and failure paths.
+Theorems characterize sufficient conditions; only authorized real experiments can establish their practical frequency and value.

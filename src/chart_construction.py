@@ -32,10 +32,13 @@ class ChartRecipe:
     max_rank: int = 64
     max_direction_entries: int = 1_000_000
     max_aggregate_rationals: int = 5_000_000
+    response_tier: str = "linear"
 
     def __post_init__(self):
         if self.mode not in ("stage-rtn", "coordinate", "none", "grid-box"):
             raise ValueError("unsupported chart mode")
+        if self.response_tier not in ("linear", "quadratic"):
+            raise ValueError("unsupported response tier")
         radius = _rational(self.radius, "radius")
         if radius < 1:
             raise ValueError("radius must be at least one")
@@ -52,15 +55,18 @@ class ChartRecipe:
         return {"schema": "base-only-chart-recipe-v1", "mode": self.mode,
                 "radius": _pair(self.radius), "precision_bits": self.precision_bits,
                 "max_rank": self.max_rank, "max_direction_entries": self.max_direction_entries,
-                "max_aggregate_rationals": self.max_aggregate_rationals}
+                "max_aggregate_rationals": self.max_aggregate_rationals,
+                "response_tier": self.response_tier}
 
     @classmethod
     def from_payload(cls, data: Mapping) -> "ChartRecipe":
         keys = {"schema", "mode", "radius", "precision_bits", "max_rank", "max_direction_entries", "max_aggregate_rationals"}
-        if not isinstance(data, Mapping) or set(data) != keys or data["schema"] != "base-only-chart-recipe-v1":
+        if (not isinstance(data, Mapping) or not keys <= set(data) or set(data) - keys - {"response_tier"}
+                or data["schema"] != "base-only-chart-recipe-v1"):
             raise ValueError("unsupported or incomplete chart recipe")
         return cls(data["mode"], _read_pair(data["radius"], "radius"), data["precision_bits"],
-                   data["max_rank"], data["max_direction_entries"], data["max_aggregate_rationals"])
+                   data["max_rank"], data["max_direction_entries"], data["max_aggregate_rationals"],
+                   data.get("response_tier", "linear"))
 
 
 def _nearest(value: Q, grid: tuple[Q, ...]) -> Q:
@@ -93,6 +99,7 @@ class ChartPreview:
     nominal_packed_code_bytes: int
     grid_entries: int
     over_budget: tuple[str, ...]
+    response_tier: str = "linear"
 
     @property
     def feasible(self) -> bool:
@@ -100,6 +107,7 @@ class ChartPreview:
 
     def payload(self):
         return {"schema": "chart-resource-preview-v1", "mode": self.mode, "rank": self.rank,
+                "response_tier": self.response_tier,
                 "direction_entries": self.direction_entries,
                 "domain_storage_kind": "box_endpoint_rationals" if self.mode == "grid-box" else "direction_rationals",
                 "aggregate_rationals_per_group": self.aggregate_rationals_per_group,
@@ -133,7 +141,11 @@ def preview_chart(decoder: CertifiedDecoder, target: TargetManifest, recipe: Cha
     # The provider uses global rank at every stage, including zero directions.
     # Error descriptors have rank+3 terms and scalar upper-triangular moments.
     error_entries = (rank + 3) * (rank + 4) // 2
-    per_group = sum((rank + 1) * stage.width**2 + rank**2 + error_entries for stage in target.stages)
+    if recipe.response_tier == "quadratic":
+        per_group = sum((rank + 1) * (rank + 2) // 2 * stage.width**2 + error_entries
+                        for stage in target.stages)
+    else:
+        per_group = sum((rank + 1) * stage.width**2 + rank**2 + error_entries for stage in target.stages)
     all_groups = per_group * target.recipe.group_count
     parameters = sum(len(stage.weights) * stage.width for stage in target.stages)
     grid_entries = sum(sum(len(grid) for grid in stage.grids) for stage in target.stages)
@@ -141,7 +153,8 @@ def preview_chart(decoder: CertifiedDecoder, target: TargetManifest, recipe: Cha
         ("rank", rank, recipe.max_rank), ("direction_entries", entries, recipe.max_direction_entries),
         ("aggregate_rationals", all_groups, recipe.max_aggregate_rationals)) if actual > limit)
     return ChartPreview(recipe.mode, rank, entries, per_group, all_groups, 2 + rank + rank**2,
-                        parameters, (parameters * target.recipe.bits + 7) // 8, grid_entries, exceeded)
+                        parameters, (parameters * target.recipe.bits + 7) // 8, grid_entries, exceeded,
+                        recipe.response_tier)
 
 
 @dataclass(frozen=True)
@@ -214,7 +227,8 @@ def build_chart(decoder: CertifiedDecoder, target: TargetManifest, recipe: Chart
     return ChartConstruction(target.digest, recipe, chart, preview, source_hash)
 
 
-def make_service(decoder: CertifiedDecoder, target: TargetManifest, construction: ChartConstruction):
+def make_service(decoder: CertifiedDecoder, target: TargetManifest, construction: ChartConstruction,
+                 *, verifier_policy: str = "spectral"):
     """Reconstruct inputs and bind the explicit V_cert contract to the service."""
     _validate_target(decoder, target)
     if not isinstance(construction, ChartConstruction):
@@ -234,8 +248,37 @@ def make_service(decoder: CertifiedDecoder, target: TargetManifest, construction
             raise ValueError("foreign evaluator stage")
         return decoder.stage_features(stage.stage_id, decoder.decode_payload(record.payload), prefix.as_mapping())
 
-    return AggregateRepairService(job, evaluate, provider.intrinsic_moments, provider.contracts, provider.query,
+    extract = (provider.quadratic_intrinsic_moments if construction.recipe.response_tier == "quadratic"
+               else provider.intrinsic_moments)
+    return AggregateRepairService(job, evaluate, extract, provider.contracts, provider.query,
                                   provider_id=provider.provider_id, extractor_id=provider.reference_id,
+                                  response_tier=construction.recipe.response_tier,
+                                  verifier_policy=verifier_policy,
                                   reference_weights={s: tuple(tuple(Q.from_float(x) for x in row)
                                                              for row in decoder.base._float_weights[s])
                                                      for s in decoder.stage_ids})
+
+
+def make_identity_service(decoder: CertifiedDecoder, target: TargetManifest):
+    """Build the separate canonical true-Gram cache baseline for this target."""
+    _validate_target(decoder, target)
+    from .identity_cache import IdentityCacheService, IdentityCacheRunnerAdapter
+    job = target.make_job("canonical-original-model-gram-cache-v1")
+
+    def evaluate(record, stage, prefix):
+        if prefix.manifest_digest != job.manifest_digest or stage not in job.stages:
+            raise ValueError("foreign identity-cache evaluator request")
+        return decoder.stage_features(stage.stage_id, decoder.decode_payload(record.payload), prefix.as_mapping())
+
+    return IdentityCacheRunnerAdapter(IdentityCacheService(job, evaluate))
+
+
+def identity_preview(decoder: CertifiedDecoder, target: TargetManifest):
+    """Exact scalar slot counts for the optional sequential cache interface."""
+    _validate_target(decoder, target)
+    return {"schema": "identity-cache-resource-preview-v1", "target_sha256": target.digest,
+            "cache_gram_rational_slots": sum(stage.width**2 for stage in target.stages),
+            "model_code_slots": sum(len(stage.weights)*stage.width for stage in target.stages),
+            "scope": "one canonical state; global raw sequential Gram per stage",
+            "cost_limits": "excludes metadata, integer sizes, Python objects, temporary states, and serialized output",
+            "memory_bound_proved": False, "measured": False}

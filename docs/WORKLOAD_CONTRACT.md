@@ -1,6 +1,6 @@
 # Frozen workload contract
 
-Revision 6. Date: 4 October 2026.
+Revision 7. Date: 4 October 2026.
 
 This contract defines prospective requests and their immutable inventory.
 It does not report empirical results.
@@ -167,16 +167,27 @@ Compare the final result against the combined deletion from the original state.
 
 Roots with \(3k_s>N\) cannot supply this sequence.
 The generated workload marks those sequences blocked.
-The current comparison runner also lacks a previous-state sequence interface.
-The workload records that separate implementation blocker.
+`src/sequence_runner.py` now executes the preceding-state contract.
+It prepares the original state once.
+Each subsequent request loads the preceding committed repair state.
+It compares every step with a complete independently fresh retained oracle.
+The fixed service keeps original normalization, ridge, grids, and the numerical target unchanged.
+The saved sequence binds all request IDs, order, predecessors, outputs, and child results.
+Restart verifies this lineage and reuses the completed prefix.
+Failed attempts and later unstarted requests remain in the saved plan.
 An independently reset cumulative deletion does not satisfy this sequence contract.
+The standalone sequence interface does not provide bulk campaign sequence dispatch.
 
 Empty deletion and complete deletion are separate correctness controls.
 They do not enter the primary latency average.
-The current runner rejects complete deletion.
-The workload records that blocker instead of dropping the request.
-The service can support an empty retained corpus under its separate target contract.
-That service capability does not complete the experiment interface.
+Both controls now have working comparison and sequence execution paths.
+Complete deletion produces the fixed target with zero retained data Gram contributions.
+The original normalization and ridge remain unchanged.
+Later empty requests remain valid after complete deletion.
+Heldout data remain nonempty throughout the sequence.
+Generated workloads clear the previous implementation blockers.
+A primary request that removes the whole root remains outside the primary ratio analysis.
+Use the separate complete-deletion correctness control for that case.
 
 ## Documented source withdrawal
 
@@ -232,14 +243,19 @@ Use this order:
 
 The executor must also verify the final raw protocol hash.
 Changing a target, deletion, path, method, or configuration changes the manifest binding.
-The inventory includes hashes for every source module and both execution scripts.
+The inventory includes hashes for every source module and the campaign execution scripts.
+A separate `calibration-isolated-plan-v1` additionally binds `scripts/run_isolated.py`.
+It binds one normalized manifest, target, source set, and worker limit profile.
+Its four workers cover setup and the three comparison methods.
+It does not replace the complete confirmation campaign inventory.
 The executor compares this complete source set before dispatch.
 These hashes provide integrity under trusted storage.
 They do not authenticate hostile storage.
 
 `validate_campaign` checks each entry and rejects duplicate identities or paths.
 It checks repeat numbering and deterministic method orders.
-It rejects unsupported sequence or complete-deletion requests as runnable entries.
+It accepts unblocked independent-reset requests, including complete-deletion correctness controls.
+It still rejects previous-committed-state requests because bulk sequence dispatch remains unimplemented.
 It binds embedded workloads to their canonical hash.
 Campaign execution separately checks the complete confirmation matrix against the frozen protocol.
 The inventory builder alone does not infer missing configurations or root counts.
@@ -247,7 +263,17 @@ The inventory builder alone does not infer missing configurations or root counts
 `analysis_plan` resolves the final protocol hash after freezing.
 Its default output contains only primary requests.
 Controls and extension groups require a separate plan.
-The plan preserves service mode to prevent mixed ablation estimates.
+The plan preserves service family, response tier, service mode, and verifier policy.
+These labels prevent mixed ablation estimates.
+Assign different configuration IDs to different family, tier, mode, or policy combinations.
+Canonical state equality applies within one state family and tier.
+Cross-family controls compare complete model outputs under the same numerical target.
+Do not require byte equality between different state schemas.
+
+The current inventory supports the warm-arm comparison campaign only.
+The standalone method-process runner needs compatible inventory dispatch before isolated confirmation.
+Do not relabel an isolated outcome as a warm-arm observation.
+Keep its cache mode and timing boundary distinct.
 
 ## Completion boundary
 
@@ -259,4 +285,9 @@ Their tests do not establish an empirical benefit.
 The real prepared source pools and score artifacts remain unavailable.
 No real calibration roots or final execution inventory have been created.
 No confirmation request was observed or selected.
-Actual source preparation, sequence execution, and complete-deletion execution remain open.
+Actual source preparation and empirical sequence observations remain open.
+Local sequence and complete-deletion execution are implemented.
+Bulk sequence dispatch and isolated-method confirmation inventories remain open.
+The worker phase ledger controls admission within one protocol hash.
+It does not establish a cross-protocol or global hardware CPU cap.
+The feasibility planning stage still lacks a distinct supported execution-phase label.

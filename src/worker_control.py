@@ -8,6 +8,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 import argparse
 import json
+import math
 import os
 from pathlib import Path
 import resource
@@ -18,6 +19,7 @@ import tempfile
 import time
 
 from .run_store import RunStore, atomic_write, canonical_json, digest, strict_json
+from .phase_budget import BudgetExhausted, PhaseBudget
 
 THREAD_VARIABLES = ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
                     "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS", "BLIS_NUM_THREADS",
@@ -94,16 +96,40 @@ def _group_signal(pid, signum):
         pass
 
 
+def _wait_worker(process, timeout=None):
+    """Reap with wait4 exactly once. Avoid Popen.wait losing rusage."""
+    if process.returncode is not None:
+        return process.returncode
+    deadline = None if timeout is None else time.monotonic() + timeout
+    while True:
+        pid, status, usage = os.wait4(process.pid, os.WNOHANG)
+        if pid:
+            process.returncode = os.waitstatus_to_exitcode(status)
+            # Round each reported component upward. This is observed accounting,
+            # not a containment guarantee for untrusted child process trees.
+            process.worker_rusage = {
+                "user_cpu_ns": math.ceil(usage.ru_utime * 1_000_000_000),
+                "system_cpu_ns": math.ceil(usage.ru_stime * 1_000_000_000),
+                "max_rss_kib": usage.ru_maxrss,
+                "scope": "wait4_reaped_worker_including_waited_for_descendants_as_reported_by_os"}
+            process.worker_rusage["total_cpu_ns"] = (process.worker_rusage["user_cpu_ns"] +
+                                                    process.worker_rusage["system_cpu_ns"])
+            return process.returncode
+        if deadline is not None and time.monotonic() >= deadline:
+            raise subprocess.TimeoutExpired(process.args, timeout)
+        time.sleep(0.01)
+
+
 def _cleanup(process, grace):
     """Stop ordinary descendants, then reap the direct child."""
-    if process.poll() is None:
+    if process.returncode is None:
         _group_signal(process.pid, signal.SIGTERM)
         try:
-            process.wait(timeout=grace)
+            _wait_worker(process, timeout=grace)
         except subprocess.TimeoutExpired:
             pass
     _group_signal(process.pid, signal.SIGKILL)
-    process.wait()
+    _wait_worker(process)
 
 
 def _log_summary(stream):
@@ -121,7 +147,8 @@ def _log_summary(stream):
             "tail_utf8": tail.decode("utf-8", errors="replace"), "tail_max_bytes": 32768}
 
 
-def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None):
+def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None,
+                phase_budget: PhaseBudget | None = None, phase=None):
     """Execute once and preserve terminal outcomes, including killed workers."""
     if not isinstance(command, (list, tuple)) or not command:
         raise ValueError("command must be a nonempty argument sequence")
@@ -135,13 +162,25 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None)
         raise ValueError("worker directory must be a regular local directory")
     binding = {"schema": "limited-worker-identity-v1", "identity": identity,
                "command": list(command), "cwd": str(work), "limits": limits.payload()}
+    if phase_budget is not None:
+        if type(phase) is not str or phase not in phase_budget.caps:
+            raise ValueError("worker requires a declared budget phase")
+        binding["phase_budget"] = {"binding_sha256": phase_budget.identity_digest, "phase": phase,
+                                   "directory": str(phase_budget.root)}
+    elif phase is not None:
+        raise ValueError("a budget phase requires a phase budget")
     store = RunStore(directory, binding)
     previous = store.completed()
     if previous is not None:
+        if phase_budget is not None and previous.get("budget_attempt_id") is not None:
+            saved = phase_budget.snapshot()["attempts"].get(previous["budget_attempt_id"])
+            if saved != previous.get("budget_debit"):
+                raise ValueError("completed worker budget debit differs from the ledger")
         return previous
     store.claim()
     process = None
     caught = None
+    budget_attempt = None
     started = time.perf_counter_ns()
     outcome = {"status": "failed", "kind": "launch_failed"}
     record = {"schema": "limited-worker-record-v1", "status": "running", "outcome": outcome,
@@ -162,6 +201,14 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None)
         environment["PYTHONPATH"] = str(repository)
         with tempfile.TemporaryFile() as stdout, tempfile.TemporaryFile() as stderr:
             try:
+                if phase_budget is not None:
+                    proposed_attempt = digest(canonical_json({"worker": binding, "attempt": str(store.attempt)}))
+                    # RLIMIT_CPU hard allowance plus one conservative second.
+                    # Kernel overshoot is observable, never silently truncated.
+                    debit = phase_budget.reserve(phase, proposed_attempt, limits.cpu_seconds + 2)
+                    budget_attempt = proposed_attempt
+                    record.update(budget_attempt_id=budget_attempt, budget_debit=debit,
+                                  budget_scope="CPU admission allowance; trusted comparison worker; controller CPU excluded")
                 process = subprocess.Popen(
                     [sys.executable, "-m", "src.worker_control", "--child", str(store.attempt / "request.json")],
                     cwd=repository, env=environment, stdin=subprocess.DEVNULL,
@@ -169,7 +216,7 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None)
                 record["worker_pid"] = process.pid
                 store.write_status(record)
                 try:
-                    returncode = process.wait(timeout=limits.wall_seconds)
+                    returncode = _wait_worker(process, timeout=limits.wall_seconds)
                     outcome = {"status": "complete" if returncode == 0 else "failed",
                                "kind": "exited" if returncode == 0 else "nonzero_exit", "returncode": returncode}
                     if returncode < 0:
@@ -181,7 +228,8 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None)
                     outcome = {"status": "failed", "kind": "wall_timeout"}
             except BaseException as exc:
                 caught = exc
-                outcome = {"status": "failed", "kind": "interrupted" if isinstance(exc, (KeyboardInterrupt, SystemExit)) else "launch_failed",
+                outcome = {"status": "failed", "kind": "phase_cpu_budget_exhausted" if isinstance(exc, BudgetExhausted) else
+                           "interrupted" if isinstance(exc, (KeyboardInterrupt, SystemExit)) else "launch_failed",
                            "type": type(exc).__name__, "message": str(exc)}
             finally:
                 if process is not None:
@@ -189,6 +237,11 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None)
                 outcome["elapsed_wall_ns"] = time.perf_counter_ns() - started
                 if process is not None:
                     outcome["returncode"] = process.returncode
+                    record["resource_usage"] = getattr(process, "worker_rusage", None)
+                    if budget_attempt is not None and record["resource_usage"] is not None:
+                        record["budget_debit"] = phase_budget.settle(budget_attempt, record["resource_usage"]["total_cpu_ns"])
+                        record["budget_reservation_overrun"] = (record["budget_debit"]["charged_cpu_seconds"] >
+                                                                record["budget_debit"]["reserved_cpu_seconds"])
                 store.write_artifact("stdout-summary.json", canonical_json(_log_summary(stdout)))
                 store.write_artifact("stderr-summary.json", canonical_json(_log_summary(stderr)))
         ack = store.attempt / "limits-ack.pending.json"
@@ -222,7 +275,7 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None)
             raise caught
         return complete
     finally:
-        if process is not None and process.poll() is None:
+        if process is not None and process.returncode is None:
             _cleanup(process, limits.termination_grace_seconds)
         store.close()
 

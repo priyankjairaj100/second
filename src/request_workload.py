@@ -368,15 +368,15 @@ def build_workload(record_ids, *, root_id: str, seed: int, scores: dict,
                          "starting_state": "original" if step == 0 else f"sequential_1_of_16_step_{step}",
                          "execution_requirement": "previous_committed_state",
                          "blocked_reason": "root_too_small_for_three_disjoint_requests" if 3*small > len(ids)
-                         else "sequential_runner_not_implemented"})
+                         else None})
     requests.append({"request_id": "sequential_combined", "analysis_group": "sequence_control",
                      "deleted_ids": [rid for rid in ids if rid in cumulative], "starting_state": "original",
                      "execution_requirement": "independent_reset", "blocked_reason":
-                     "no_retained_records" if len(cumulative) == len(ids) else None})
+                     "root_too_small_for_three_disjoint_requests" if 3*small > len(ids) else None})
     for name, selected in (("empty_deletion", []), ("complete_deletion", list(ids))):
         requests.append({"request_id": name, "analysis_group": "correctness_control", "deleted_ids": selected,
                          "starting_state": "original", "execution_requirement": "independent_reset",
-                         "blocked_reason": "complete_deletion_runner_not_implemented" if selected else None})
+                         "blocked_reason": None})
     return {"schema": "calibration-workload-v1", "root_id": root_id, "seed": seed,
             "original_record_ids": list(ids), "prepared_records_sha256": prepared_records_sha256,
             "original_state_sha256": original_state_sha256, "scores_sha256": digest(canonical_json(scores)),

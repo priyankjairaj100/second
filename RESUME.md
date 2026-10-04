@@ -1,107 +1,133 @@
 # Resume this ACL 2027 calibration-unlearning project
 
-Last revision: 4 October 2026, v6 preparation.
+Last revision: 4 October 2026, v7 preparation.
 Repository: https://github.com/priyankjairaj100/second
-Previous verified checkpoint: b662d2c7ed7f4799029ff1093e93acf0d400699c.
+Previous verified checkpoint: 3c6905e77bca86e4d3e54be20a82f3acdcfd294d.
 
 Read AGENTS.md, docs/STATUS.md, docs/RESEARCH_TODO.md, and docs/VALIDATION.md first.
-Then read docs/PUBLICATION_THEORY.md, docs/BOX_THEORY.md, and docs/CLAIM_EVIDENCE.md.
-Read docs/PROJECT_CONTEXT.md for historical evidence provenance.
-The consolidated PDF includes the latest preparation contract and box theory.
+Then read docs/ALGORITHM_ADVANCE_V7.md, docs/IDENTITY_CACHE.md, docs/QUADRATIC_CONTROL.md, and docs/CLAIM_EVIDENCE.md.
+Read docs/PROJECT_CONTEXT.md for historical provenance.
+Read docs/SEQUENCE_EXECUTION.md, docs/ISOLATED_COMPARISON.md, and docs/EXECUTION_BUDGETS.md before execution changes.
+The consolidated report has 35 pages.
+The final suite contains 340 correctness tests.
+
 The user authorized repository pushes and complete restart notes.
 Never force-push or discard unrelated remote changes.
+Do not duplicate repository artifacts into another storage system.
 
-## Current phase
+## Current instruction and phase
 
-Latest instruction: "What are the remaining to-do items? Please proceed on them now."
-The checkpoint advances preparation without declaring the whole paper complete.
-There are 24 completed and 54 open required tasks, plus 12 conditional extensions.
+Latest instruction: “Proceed on the remaining tasks. Please ensure that we have maximum revenue.”
+We interpret “maximum revenue” as research value within the ongoing paper program.
+Do not invent monetization goals or financial guarantees.
+
+The register contains 28 completed and 50 open required tasks, plus 12 conditional extensions.
+This checkpoint advances preparation without declaring the paper complete.
 Research experiments remain PAUSED until the user resumes them.
-Correctness tests, mathematical work, source metadata inspection, and implementation are allowed.
+Mathematics, source inspection, implementation, and software correctness tests remain allowed.
 No model/data downloads, research benchmarks, synthetic empirical studies, cloud jobs, or unrelated hardware ran.
 
-## Target and theory
+## Target and guarantees
 
-Fix base weights W and delete calibration documents F.
+Fix base weights W and delete calibration records F.
 Reproduce complete retained-data sequential quantization, including changed downstream calibration features.
-The primary implemented target is V_cert.
-It uses certified scalar finite features and exact rational statistics and rounding.
-Legacy library-math V and historical floating quantizer E remain separate targets.
-Native Hugging Face numerical equality is not claimed.
+The primary implemented target remains V_cert.
+It combines certified scalar finite features with exact rational Grams and sequential rounding.
+Legacy library-math V, historical floating E, and native Hugging Face execution remain distinct.
 
 V_cert is partial.
 Proof abstention permits exact retained replay.
 Necessary finite-evaluator failure aborts without an approximate committed model.
 Completion requires successful required evaluations and sufficient resources.
 
-Publication T1–T7 connect finite bounds, Gram enclosures, decisions, sequential exactness, canonical state, and conditional work.
-The compact affine tier stores O(r d²+r²) entries per group.
-Finite and jet errors can prevent second-order scaling.
-Revision 6 adds B1–B8 for a corpus-independent parameter box.
-Its rank-zero group state stores d²+6 rational slots.
-Full-grid endpoint storage has 2P_A slots for ancestor parameters.
-Metadata, base weights, integer sizes, replay, and output remain costs.
+Publication T1–T7 cover finite bounds, Gram enclosures, discrete decisions, sequential exactness, canonical state, and conditional work.
+Box results B1–B8 cover fixed parameter domains and hybrid midpoint anchors.
+Midpoints minimize a rectangular feature envelope, not certificate rejection or service cost.
+Full-grid membership does not establish useful numerical acceptance.
 
-The hybrid anchor uses finite base features only when all relevant parameters remain fixed at base.
-Otherwise it uses interval midpoints and avoids separate finite anchor evaluation.
-Midpoints minimize the rectangular interval feature envelope.
-They do not guarantee smaller Gram bounds, better acceptance, or faster repair.
-Full-grid inclusion does not establish useful numerical certificates.
+Revision 7 adds signed covariance intervals and ridge-aware exact interval reverse elimination.
+Its spectral-or-interval policy runs the existing spectral certificate first.
+After rejection, the optional verifier uses the true target ridge and exact lower-tie cells.
+A fixture establishes strict certificate improvement.
+Acceptance improvement does not establish runtime or finite-budget completion dominance.
+Standalone enclosure intersection is implemented.
+A complete stored multi-domain bank remains future work.
 
-## Implemented preparation
+## Implemented families and controls
 
-- target_manifest.py freezes grids, ridge, original normalization, order, ties, and source bindings.
-- chart_construction.py supports stage-rtn, coordinate, none, and grid-box constructions.
-- box_response_provider.py supplies rank-zero finite enclosures with intrinsic moments.
-- certified_transformer.py constructs parameter wrappers lazily without changing scalar operation order.
-- resource_preflight.py checks symbolic counts before eager checkpoint loading.
-- aggregate_response_service.py supports bounded reload, indexed fresh, and four mechanism modes.
-- service_telemetry.py records exclusive nested diagnostic costs outside canonical state.
-- experiment_runner.py compares three methods and checks every stage and canonical output.
-- run_store.py provides atomic attempts, immutable completion, and verified restart.
-- request_workload.py defines original-only stress scores, request laws, document expansion, and phase checks.
-- experiment_inventory.py binds sources, methods, roots, requests, repetitions, and counterbalanced order.
-- worker_control.py enforces process limits and preserves durable outcomes.
-- experiment_campaign.py checks frozen inventory and complete confirmation products.
-- result_analysis.py preserves planned failures and rejects mixed targets, modes, charts, and service identities.
+The response family provides compact linear and full quadratic Gram tiers.
+The quadratic tier stores the complete Gram polynomial of the same affine feature response.
+It does not implement a quadratic Taylor approximation of transformer features.
+Its canonical state schema differs from the compact tier.
+Its larger storage and extraction costs remain charged.
 
-Protocol version 2 preserves schema calibration-protocol-v1.
-It remains paused and contains explicit unresolved fields.
-The source catalog contains metadata pins only.
-No real checkpoint files, tokenizer files, token records, score artifacts, or empirical inventory exist.
+The response solver ignores old model codes.
+Its indexed fresh comparator receives the same retained summaries and solver policy.
+Index maintenance remains the potential advantage over constructing summaries again.
 
-Read docs/TARGET_CONTRACT.md, docs/BASELINES.md, docs/EXPERIMENT_RUNNER.md, and docs/SOURCE_SELECTION.md.
-Read docs/EXECUTION_CONTROL.md, docs/WORKLOAD_CONTRACT.md, and docs/MECHANISM_CONTROLS.md.
-Read theory_revision/preparation_review_v6.txt and theory_revision/box_theory_review_v6.txt.
+The identity-cache family stores exact sequential Grams under its current quantized model.
+It compares every transitive ancestor against the repaired prefix.
+Matching ancestors permit deleted-contribution subtraction.
+Changed ancestors require retained replay.
+The refreshed cache equals direct retained construction, including repeated and complete deletion.
+Its indexed fresh comparator receives the same valid cache and old model.
+It therefore has no deletion-exclusive solver advantage.
 
-## Critical implications and next steps
+Identity-cache state is a separate optional interface, not aggregate-response state.
+Compare canonical state within a family and tier.
+Compare quantized model outputs across families.
+The runner adapter requires trusted origins and bounds its process-local digest registry.
+Its registry and the research archive lie outside returned live-state deletion guarantees.
 
-Repair and indexed fresh share the same planner.
-The planner does not use the old model.
-No deletion-specific solver advantage exists.
-Report index maintenance savings separately.
-Extra split-interface serialization cannot count as an algorithmic advantage.
+Local manifests bind service_family, response_tier, verifier_policy, and service_mode.
+Identity-cache manifests require the none chart and documented default labels.
+Those inert labels do not invoke response or spectral mechanisms in the identity-cache family.
 
-The identity-only control checks base-reference ancestors.
-It does not implement the original quantized-model invariant-feature cache.
-The complete quadratic control remains open.
-Sequence and complete-deletion laws exist, but campaign execution remains blocked.
+## Execution and accounting
 
-One worker isolates each comparison, not each method.
-Methods remain warm and share process history.
+The local sequence runner constructs the original state once.
+Every later request consumes the previous committed repaired state.
+It validates full model/state equality against direct fresh and supports complete deletion and subsequent empty requests.
+Restart verifies the completed sequence prefix and its artifacts.
+Bulk campaign sequence dispatch remains open.
+
+The isolated executor uses one setup process and three separate method processes.
+Repair and indexed fresh reload the same saved original state.
+Direct fresh does not load that state.
 Operating-system caches remain uncontrolled.
-Cumulative phase CPU caps remain unenforced.
-Method timing excludes final result commit and controller overhead.
-Detailed rejection, arithmetic-size, and complete-service diagnostics remain incomplete.
+Confirmation execution remains blocked until supported frozen isolated inventories exist.
+The isolated executor validates heldout inputs but does not compute quality metrics.
+
+Isolated method time includes startup, local inputs, one method, artifacts, child receipt, exit, and cleanup.
+It excludes parent validation, equality verification, parent receipt, and post-cleanup worker accounting commitments.
+Setup cost remains separate and belongs in lifetime accounting.
+These clocks do not establish complete parent-transaction latency.
+Warm comparison and sequence methods still share process history.
+
+Protocol-scoped phase CPU admission reserves worker allowances before launch.
+Durable settlement uses observed wait4 CPU; uncertain attempts keep their reservation.
+Observed overruns remain charged and prevent further admission.
+The cap controls admitted allowances under its stated scope.
+It is not an absolute physical CPU, hostile-descendant, or cross-protocol project cap.
+Controller CPU lies outside this ledger.
+A separate feasibility phase dispatcher remains open.
+
+Protocol version 3 remains prospective and paused.
+Metadata pins exist, but no real checkpoint, tokenizer, corpus, score artifacts, or empirical inventory exists.
+
+## Next priorities
+
+1. Establish resource-feasible real-model execution under the declared target after research resumption.
+2. Acquire and validate checkpoint, tokenizer, document, corpus, and token artifacts after authorization.
+3. Complete parent-transaction timing and transient arithmetic/memory diagnostics.
+4. Connect ordered sequences to bulk campaign admission and frozen sequence inventories.
+5. Complete isolated confirmation inventories and their quality-evaluation program.
+6. Freeze primary configurations, actual source partitions, root draws, workloads, and statistical precision.
+7. Run staged real-data feasibility, development, confirmation, lifetime cost, and NLP quality studies.
+8. Complete the manuscript, literature audit, independent review, reproducibility release, and submission checks.
 
 G0 remains open.
-Resolve feasible checkpoint execution, real input contracts, remaining controls, and actual inventory before expanding experiments.
-Do not raise resource limits silently.
-Resource estimates are planning heuristics, not memory proofs.
-Ordinary candidate models still face substantial scalar and storage limits.
-
-The archive retains original states outside the canonical live-state deletion guarantee.
-Physical erasure and hostile-storage authentication remain outside scope.
-Earlier raw experiments were pruned and remain unavailable.
-Historical PROJECT_CONTEXT metrics are reconstructed context, not recovered measurements.
-Save all substantive progress and restart context to the authorized repository.
+Do not raise resource limits silently or present planning estimates as measured memory.
+No reliable full-model speedup, useful real-model coverage, or practical publication readiness has been established.
+Earlier missing raw experiments remain unavailable.
+Save substantive progress and complete restart context to the authorized repository.

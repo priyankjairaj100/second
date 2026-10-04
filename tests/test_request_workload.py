@@ -120,7 +120,7 @@ class WorkloadTests(unittest.TestCase):
         sequence = [requests[f"sequential_1_of_16_step_{i}"] for i in (1,2,3)]
         self.assertEqual(len(set(rid for row in sequence for rid in row["deleted_ids"])),3)
         self.assertEqual(sequence[-1]["cumulative_deleted_ids"],requests["sequential_combined"]["deleted_ids"])
-        self.assertIsNotNone(requests["complete_deletion"]["blocked_reason"])
+        self.assertIsNone(requests["complete_deletion"]["blocked_reason"])
         self.assertEqual(requests["empty_deletion"]["analysis_group"],"correctness_control")
 
     def test_infinite_score_and_lexicographic_ties(self):

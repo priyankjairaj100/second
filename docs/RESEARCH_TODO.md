@@ -1,7 +1,7 @@
 # Remaining research program
 
 Updated 4 October 2026.
-Revision 6 preparation builds on commit `b662d2c7ed7f4799029ff1093e93acf0d400699c`.
+Revision 7 preparation builds on commit `3c6905e77bca86e4d3e54be20a82f3acdcfd294d`.
 This register covers the path from the current reference implementation to a submitted ACL paper.
 Every unchecked item remains open.
 This implementation update does not resume experiments.
@@ -32,6 +32,12 @@ Correct replay handles rejection, but it can remove the expected speed benefit.
 - Added fixed-box certificates, midpoint anchors, and lazy parameter wrappers in revision 6.
 - Added worker limits, exclusive telemetry, mechanism controls, request laws, and bound campaign inventories.
 - Extended the report with box proofs, storage counts, limits, and execution boundaries.
+- Added full quadratic response storage with the same complete numerical target.
+- Added a separate true-model Gram cache with current-ancestor identity checks and exact replay.
+- Added an optional interval verifier after the existing spectral certificate.
+- Added ordered local deletion, complete-deletion controls, and verified predecessor restart.
+- Added protocol-scoped CPU admission and separate limited processes for individual comparison methods.
+- Added final-state integer-size diagnostics and a deterministic vector repair diagram.
 
 These results need no repetition without a concrete change or unresolved risk.
 No current real-model benchmark supports a practical speed claim.
@@ -126,8 +132,10 @@ No task authorizes external compute or hardware from another project.
   Completion: disjoint timers cover loading, extraction, proof, replay, factorization, metadata, serialization, output, and cleanup.
 - [ ] **D05. Measure memory and arithmetic size.** Include fixed weights, charts, temporary jets, rational values, metadata, and output artifacts.
   Completion: logs contain peak memory, serialized bytes, precision, and integer lengths.
-- [ ] **D06. Define cold and warm execution.** Fix caches, thread counts, synchronization, and output policy.
+- [x] **D06. Define cold and warm execution.** Fix caches, thread counts, synchronization, and output policy.
   Completion: compared methods receive identical declared conditions.
+  Evidence: Warm and isolated contracts bind sources, limits, affinity, threads, method order, and synchronized output.
+  Scope: Isolated methods use fresh processes; operating-system caches remain explicitly uncontrolled.
 - [x] **D07. Add scripts that generate tables and figures.** Read immutable run records rather than copied summary values.
   Completion: every displayed value traces to a manifest, log, and artifact hash.
   Evidence: scripts/summarize_results.py generates hash-traceable tables and optional plots from recorded inputs.
@@ -140,10 +148,15 @@ No task authorizes external compute or hardware from another project.
 - [x] **E02. Implement equally indexed fresh quantization.** Give it the same valid summaries, caches, storage budget, and state interface.
   Completion: the comparison cannot depend on withholding reusable information from fresh quantization.
   Evidence: prepare_index and indexed_fresh share the valid retained index and repair planner.
-- [ ] **E03. Add an identity-only repair baseline.** Reuse features only when the relevant finite ancestors remain identical.
+- [x] **E03. Add an identity-only repair baseline.** Reuse features only when the relevant finite ancestors remain identical.
   Completion: changed dependencies cause exact replay under the same target.
-- [ ] **E04. Add fixed-reference and response baselines.** Compare constant summaries, compact linear responses, and quadratic responses where affordable.
+  Evidence: src/identity_cache.py compares all current transitive ancestors and refreshes exact Grams after subtraction or retained replay.
+  Scope: Its separate state family includes preparation, state, source, solver, and equal-information comparison costs.
+- [x] **E04. Add fixed-reference and response baselines.** Compare constant summaries, compact linear responses, and quadratic responses where affordable.
   Completion: each method uses sound bounds and reports its full preparation and storage cost.
+  Evidence: The quadratic tier stores oriented cross moments and retains the existing proved finite-error descriptors.
+  Scope: Provider extraction, resource previews, arithmetic counts, serialization, and storage distinguish the tiers.
+  Limit: The stronger whitened acceptance theorem and real-model affordability remain unestablished.
 - [x] **E05. Add replay and verifier controls.** Compare full replay and the existing replay heuristic; isolate the cost of certification.
   Completion: every control returns the same target or carries an explicit diagnostic-only label.
   Evidence: Certified and full-replay modes share the target; exclusive telemetry isolates proof and replay work.
@@ -230,8 +243,10 @@ No task authorizes external compute or hardware from another project.
   Completion: the table explains which changes come from the target itself.
 - [ ] **J03. Create the ablation table.** Include response tiers, certificate choices, grouping, and replay policy.
   Completion: each row changes one declared factor or states the coupled factors.
-- [ ] **J04. Draw the sequential repair diagram.** Show changed ancestors, aggregate queries, decision checks, replay, and canonical commit.
+- [x] **J04. Draw the sequential repair diagram.** Show changed ancestors, aggregate queries, decision checks, replay, and canonical commit.
   Completion: the diagram makes the downstream dependence and exactness argument clear.
+  Evidence: output/figures/sequential_repair.svg and its PDF show the complete dependency and replay loop.
+  Scope: docs/REPAIR_DIAGRAM.md records interpretation, deterministic rebuilding, and visual verification.
 - [ ] **J05. Plot coverage and disjoint costs.** Include a stage heatmap and complete service breakdown.
   Completion: figures show where saved feature work survives or loses to overhead.
 - [ ] **J06. Plot storage, lifetime, and latency distributions.** Include break-even behavior and unsuccessful requests.
@@ -284,33 +299,54 @@ No task authorizes external compute or hardware from another project.
 | CEX11 | Add hostile-storage authentication | The threat model includes hostile state. Hash matching alone does not satisfy this claim. |
 | CEX12 | Study a deletion-native quantizer | Sequential repair fails the feasibility gate. Treat the alternative as a separate target and evaluate its quality. |
 
-**Revision 6 partial work and unresolved preparation**
+**Revision 7 partial work and unresolved preparation**
 
-There are 24 completed required items and 54 open required items.
+There are 28 completed required items and 50 open required items.
 The 12 conditional extensions remain separate.
-This revision closes C03, E05, and F05 at their stated preparation scope.
+This revision closes D06, E03, E04, and J04 at their stated preparation scope.
+D04 and D05 remain open after reviewing their complete criteria.
 Software completion does not close the experiment-ready gate.
 
 | Open items | Preparation now present | Work still required |
 | --- | --- | --- |
 | A03, F02–F04 | Source revisions, strict token schema, document rules, phase overlap checks | Actual weights, tokenizer hashes, prepared text, licenses, partitions, and local validation |
-| A06, C06 | Config planning, rank-zero boxes, lazy wrappers, limited workers | Resource-feasible supported checkpoint and target-preserving performance route |
+| A06, C06 | Config planning, rank-zero boxes, lazy wrappers, limited workers, protocol CPU admission | Resource-feasible checkpoint, frozen resource scope, and target-preserving performance route |
 | C02, C04 | Domain inclusion proof and prospective thresholds | Useful numerical coverage and frozen feasible scope before tuning |
-| C05 | Stable route/rejection events and exclusive cost spans | Complete per-stage numerical reasons, margins, and bound decomposition |
-| D04–D06 | Component timers, process caps, allocation peaks, output sizes, and saved method order | Complete commit/cleanup boundary, arithmetic size, per-arm peaks, required cold/warm controls, and phase CPU caps |
-| E03 | Base-reference identity-only control | Original quantized-model invariant-feature cache with fair preparation/state accounting |
-| E04 | Fixed-reference and compact response controls | Affordable full quadratic control and matched complete preparation/storage accounting |
-| F06 | Quantization recipes and mechanism labels | Final primary settings, sensitivity matrix, and selected proof construction |
+| C05 | Stable rejection events, spectral and interval routes, and exclusive cost spans | Complete per-stage numerical reasons, margins, and bound decomposition |
+| D04 | Exclusive service telemetry and an isolated worker boundary through child commit, exit, and cleanup | Complete disjoint controller, worker-receipt, final parent commit, and cleanup accounting for the intended service claim |
+| D05 | Independent worker RSS, allocation peaks, output sizes, final-state integer counts, and maximum bit lengths | Comprehensive transient arithmetic-size diagnostics across weights, domains, jets, factors, and temporary exact values |
+| F06 | Quantization recipes, full quadratic tier, identity cache, and interval policy | Final primary settings, sensitivity matrix, and selected proof construction |
 | F07 | Root sampling, counterbalanced order, complete product validation, and analysis plans | Development-based precision justification and actual frozen empirical inventory |
-| G04, I04 | Sequence/full-deletion definitions and service-level canonical state | Campaign execution from preceding states, complete-deletion runner support, and real repeated checks |
-| L01, L05 | Source hashes, commands, updated docs, and repository checkpoint | Final environment pin, submission release, and release tag after evidence |
+| F04, F07, I01 | Standalone isolated setup and individual method workers | Frozen isolated confirmation inventory and supported campaign dispatcher before confirmation |
+| G04, I04 | Standalone ordered execution, verified predecessor lineage, restart, and independent complete-deletion controls | Bulk sequence campaign dispatch and real repeated-deletion correctness and lifetime evidence |
+| H05, I05, I06 | Diagnostic held-out loss in the warm runner and separate quality requirements | Real-model memory, language quality, task metrics, and utility under the same target |
+| L01, L05 | Source hashes, commands, updated docs, diagram, and repository checkpoint | Final environment pin, submission release, and release tag after evidence |
 
-The runner measures instrumented warm diagnostic costs.
-One comparison gets one new limited process, but its methods share warm state.
-Operating-system caches remain uncontrolled.
-Final controller/result commit remains outside the method timing boundary.
-Cumulative phase CPU caps remain unenforced.
-The present timing cannot validate complete-service reliable speed.
+The original runner measures instrumented warm diagnostic costs.
+The isolated executor starts separate limited processes for setup and each method.
+It reloads inputs and services independently and includes child commit, exit, and cleanup in its worker timer.
+Operating-system caches remain uncontrolled in both contracts.
+The isolated worker timer excludes parent validation, parent equality checks, worker-control receipt commitment, and final parent commitment.
+Those exclusions keep D04 open for complete disjoint transaction accounting.
+Stored integer lengths do not measure transient arithmetic growth, so D05 also remains open.
+
+Protocol-scoped admission reserves CPU allowances before workers start.
+Unknown interrupted attempts retain their allowances, and observed overruns remain charged.
+Changing output directories cannot reset that frozen protocol's ledger.
+This is not a strict physical CPU ceiling or a cross-protocol project budget.
+Cross-protocol accounting and hostile descendant containment require additional controls if the paper claims those guarantees.
+Controller CPU remains outside the worker ledger.
+
+The quadratic control uses the implemented unwhitened finite-error enclosure.
+The stronger whitened acceptance theorem remains an unimplemented potential extension.
+The interval portfolio preserves spectral acceptance but does not guarantee lower total work.
+The true-model cache's equally indexed comparator receives the same valid old model and Grams.
+Neither comparison withholds reusable information to create an artificial deletion advantage.
+
+Standalone sequence execution does not close bulk sequence campaign dispatch.
+Standalone isolated development execution does not close its frozen confirmation inventory.
+Confirmation remains blocked until that dispatcher and inventory are supported.
+Real-model feasibility, statistical precision, quality, and reliable complete-service savings remain unmeasured.
 The current protocol blocks research execution while paused.
 No resource limit may be raised silently to bypass an unfavorable plan.
 
@@ -325,7 +361,7 @@ No resource limit may be raised silently to bypass an unfavorable plan.
 | G4: NLP value | Meaningful quality and task results on held-out real text | Revise the supported application or reconsider venue fit |
 | G5: Submission ready | Frozen evidence, coherent paper, clean reproduction, and current venue checks | Resolve missing evidence before submission |
 
-The immediate order is feasible checkpoint execution, real input manifests, complete measurement controls, and the remaining baselines.
+The immediate order is feasible checkpoint execution, real input manifests, remaining measurement controls, and supported confirmation inventories.
 Original-only selector definitions and campaign membership checks are now implemented.
 The first authorized study should resolve G1 and G2 before expanding the benchmark matrix.
 Do not promise a universal speedup or treat another conditional theorem as measured reliability.

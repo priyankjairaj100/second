@@ -1,0 +1,100 @@
+Revision 7 algorithm and theory review
+Date: 4 October 2026
+Owner: /root/algorithm_theory_v7
+
+Deliverables
+- src/domain_refinement.py
+- tests/test_domain_refinement.py
+- docs/ALGORITHM_ADVANCE_V7.md
+- This review note.
+
+Implemented
+1. Exact rational interval covariance representation with frozen common identities.
+2. Signed Loewner conversion preserving distinct diagonal endpoints.
+3. Sharp offdiagonal radius (negative + positive)/2.
+4. Exact interval reverse-LDL, using the proved Schur ridge floor.
+5. Full fixed-candidate checks with lower-tie midpoint semantics.
+6. Exact enclosure intersection and canonical evidence identities.
+7. Integration by /root/quadratic_v7 through opt-in spectral_or_interval policy.
+8. A service test where the spectral lower scale is nonpositive but interval checks succeed.
+
+Proof obligations closed at this scope
+R1: Signed covariance conversion follows by centering eigenvalue bounds.
+R2: The Schur complement ridge floor follows from quadratic minimization.
+R3: Interval factor containment follows by reverse induction.
+R4: Exact code equality follows by coordinate induction and lower-tie cells.
+R5: Inclusion-monotone arithmetic gives fixed-candidate acceptance dominance.
+R6: Fixed-bank componentwise moments give canonical exact deletion.
+R6 is a design theorem; a full multi-domain bank is not implemented.
+
+Strict improvement witnesses
+The 2x2 witness uses centers [[2,+/-0.9],[+/-0.9,2]], radius 0.91,
+true covariance 2I, ridge 1, weights (0.49, 0), and grids {-1, 0, 1}.
+Both individual v6 spectral and interval checks fail.
+Their intersection accepts the exact codes (0, 0).
+This is a finite rational correctness fixture, not an empirical study.
+
+The complete-service witness has scalar width, target feature 1, zero anchor,
+feature-error descriptor 1, and weight 1/2 with grid {0, 1}.
+A retained record gives a nonpositive relative lower scale.
+The interval route preserves the covariance-independent lower-tie code 0.
+It performs no retained replay and returns complete canonical fresh equality.
+The test charges proposal factorization and interval factorization.
+
+Independent source checks
+S. M. Rump, Verification methods, Acta Numerica 19:287-449, 2010.
+https://www.tuhh.de/ti3/rump/intlab/ActaNumerica2010.pdf
+Read via primary author-hosted PDF on 4 October 2026.
+Sections 5-6 establish classical interval inclusion/dependency principles.
+Section 10.1 documents severe interval elimination overestimation.
+Do not claim interval intersection or elimination as novel mathematical tools.
+
+Jean Gallier, The Schur Complement and Symmetric Positive Semidefinite
+(and Definite) Matrices.
+https://www.cis.upenn.edu/~jean/schur-comp.pdf
+Read via author-hosted notes on 4 October 2026.
+The Schur identities are classical, not an application priority claim.
+
+Adversarial limits
+- A true ridge floor does not prove all matrices inside the entry box are SPD.
+- The verifier cannot prove caller-supplied interval, source, or ridge premises.
+- Empty intersections and impossible pivots raise; they never vacuously accept.
+- A wrong candidate remains conditional until every coordinate passes.
+- Inclusion dominance fixes the candidate, grid, ridge, and operation schedule.
+- Dominance assumes completed arithmetic; finite caps can still abort.
+- Full-service completion and latency dominance do not follow.
+- Existing spectral checks remain first; replacing them can lose coverage.
+- Unknown/unproved provider bounds cannot be converted into usable intervals.
+- A bank must use common retained-source identities across its providers.
+- Current aggregate group digests can contain provider-specific proof hashes.
+  They must not silently define cross-provider common target identity.
+- Bank storage and deleted-record extraction can grow by the bank size.
+- Exact singleton-prefix anchors require actual finite evaluation at that prefix.
+  Ideal singleton intervals alone do not erase finite-execution discrepancy.
+- Full grid-prefix banks can have exponential size.
+- The same certificate bank is available to equally indexed fresh computation.
+- No universal practical speedup or language-model coverage claim is established.
+
+Correctness validation
+python -m unittest tests.test_domain_refinement -v
+Result: 10 tests passed.
+Tests cover strict gain, point exactness, ties, saturation, singleton grids,
+positive-ridge clipping, inclusion monotonicity, rational boundary coverage,
+identity mismatch, canonical intersection, singular/invalid inputs,
+signed contraction, and complete-service fallback.
+Test runtimes are software diagnostics, not empirical measurements.
+The final integrated suite and hash evidence belong to root's validation record.
+
+Independent review
+/root/review_v7 reports all 64 exact 3D mixed-sign boundary matrices enclosed.
+Its width-2 complete-service check has nonpositive spectral lower scale.
+The interval route accepts with zero retained reads and direct canonical equality.
+The check also verifies normalization occurs exactly once.
+The reviewer found no soundness issue under the stated bound and ridge premises.
+
+Remaining work
+- Root final integration and full correctness suite.
+- Bind verifier policy in experimental manifests, analysis, and inventory.
+- Prove or test only conditional coverage; do not convert fixtures into results.
+- Multi-provider canonical bank storage remains a future extension.
+- Real-model feasibility and benefits await authorized experiments.

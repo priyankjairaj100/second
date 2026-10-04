@@ -6,6 +6,8 @@ The campaign never downloads inputs or changes the research pause flag.
 from __future__ import annotations
 
 from pathlib import Path
+from fractions import Fraction
+import math
 import sys
 import time
 
@@ -13,9 +15,34 @@ from .experiment_inventory import manifest_binding, source_hashes, validate_camp
 from .experiment_runner import METHODS, _integer, _local, _read_json, _sha
 from .run_store import RunStore, canonical_json, digest, strict_json
 from .worker_control import WorkerLimits, run_limited
+from .phase_budget import PhaseBudget
 
 
 EXECUTION_MODE = "isolated_comparison_warm_arms_os_cache_uncontrolled"
+
+
+def _phase_caps(campaign, protocol, limits):
+    """Resolve the protocol's CPU-hour admission caps without rounding upward."""
+    resources = protocol.get("resources", {})
+    caps = resources.get("phase_cpu_hour_caps", {}) if isinstance(resources, dict) else None
+    if not isinstance(caps, dict):
+        raise ValueError("phase CPU-hour caps must form an object")
+    result = {}
+    for phase, hours in caps.items():
+        if (type(phase) is not str or not phase or type(hours) not in (int, float)
+                or not math.isfinite(hours) or hours <= 0):
+            raise ValueError("phase CPU-hour caps require finite positive numbers")
+        seconds = (Fraction(str(hours)) * 3600).__floor__()
+        if seconds < 1:
+            raise ValueError("phase CPU cap must provide at least one second")
+        result[phase] = seconds
+    for phase in {entry["phase"] for entry in campaign["entries"]}:
+        if phase not in result:
+            if phase != "software_test":
+                raise ValueError(f"research phase {phase} requires an explicit CPU-hour cap")
+            # Compatibility for bounded correctness fixtures only.
+            result[phase] = sum(entry["phase"] == phase for entry in campaign["entries"]) * (limits.cpu_seconds + 2)
+    return result
 
 
 def _validate_confirmation_product(campaign, protocol):
@@ -96,9 +123,11 @@ def validate_campaign_files(path, *, execute=False):
                 raise ValueError("confirmation requires a frozen protocol without blocked fields")
         checked.append({"entry": entry, "manifest_path": manifest_path,
                         "manifest_sha256": digest(manifest_raw)})
+    phase_caps = _phase_caps(campaign, protocol, limits)
     return {"campaign": campaign, "raw": raw, "inventory_sha256": inventory_sha256,
             "protocol_sha256": protocol_sha256, "protocol_path": protocol_path,
-            "sources": expected_sources, "limits": limits, "checked": checked}
+            "sources": expected_sources, "limits": limits, "checked": checked,
+            "phase_cpu_seconds": phase_caps}
 
 
 def _comparison_outcome(output, entry, manifest_sha256, protocol_sha256):
@@ -138,7 +167,7 @@ def _comparison_outcome(output, entry, manifest_sha256, protocol_sha256):
         return {"status": "failed", "failure": {"kind": "invalid_worker_result", "type": type(exc).__name__, "message": str(exc)}}
 
 
-def _existing_campaign(directory, identity):
+def _existing_campaign(directory, identity, budget=None):
     store = RunStore(directory, identity)
     result = store.completed()
     if result is None:
@@ -154,7 +183,11 @@ def _existing_campaign(directory, identity):
                 raise ValueError("saved campaign references changed or missing worker records")
             if prefix == "worker_record":
                 worker_identity, _ = _read_json(path.parent / "identity.json")
-                RunStore(path.parent, worker_identity).completed()
+                worker = RunStore(path.parent, worker_identity).completed()
+                attempt = worker.get("budget_attempt_id")
+                if attempt is not None:
+                    if budget is None or budget.snapshot()["attempts"].get(attempt) != worker.get("budget_debit"):
+                        raise ValueError("saved worker budget debit differs from the ledger")
         if row.get("status") == "complete":
             path = Path(row["result_path"])
             worker_identity, _ = _read_json(path.parent / "identity.json")
@@ -170,12 +203,17 @@ def run_campaign(path, output, *, validate_only=False):
         return {"schema": "calibration-campaign-validation-v1", "status": "validated",
                 "campaign_id": campaign["campaign_id"], "inventory_sha256": validated["inventory_sha256"],
                 "planned_runs": len(campaign["entries"]), "empirical_work_executed": False,
+                "phase_cpu_seconds": validated["phase_cpu_seconds"],
                 "validation_scope": "inventory, source hashes, run manifest bindings, protocol hashes, and available worker limits; no checkpoint tensors loaded"}
     root = Path(output).absolute()
+    budget_path = validated["protocol_path"].parent / ("phase-cpu-budget-" + validated["protocol_sha256"])
+    budget = PhaseBudget(budget_path, identity={"protocol_sha256": validated["protocol_sha256"],
+                         "source_sha256": validated["sources"]},
+                         phase_cpu_seconds=validated["phase_cpu_seconds"])
     identity = {"campaign_sha256": validated["inventory_sha256"],
                 "protocol_sha256": validated["protocol_sha256"], "source_sha256": validated["sources"],
-                "execution_mode": EXECUTION_MODE}
-    completed = _existing_campaign(root, identity)
+                "execution_mode": EXECUTION_MODE, "phase_budget_binding_sha256": budget.identity_digest}
+    completed = _existing_campaign(root, identity, budget)
     if completed is not None:
         return completed
     store = RunStore(root, identity)
@@ -186,6 +224,8 @@ def run_campaign(path, output, *, validate_only=False):
               "campaign_id": campaign["campaign_id"], "inventory_sha256": validated["inventory_sha256"],
               "protocol_sha256": validated["protocol_sha256"], "execution_mode": EXECUTION_MODE,
               "cache_contract": "new process for each comparison; warm methods within each process; OS caches uncontrolled",
+              "phase_cpu_budget": {"directory": str(budget.root), "binding_sha256": budget.identity_digest,
+                                   "scope": "trusted worker admission; controller CPU excluded; OS CPU overshoot charged; no hostile descendant containment"},
               "planned_runs": len(rows), "runs": rows}
     started = time.perf_counter_ns()
     try:
@@ -212,7 +252,8 @@ def run_campaign(path, output, *, validate_only=False):
                        str(item["manifest_path"]), "--output", str(comparison_root)]
             worker = run_limited(command, run_root, validated["limits"], identity={
                 "campaign_sha256": validated["inventory_sha256"], "run_id": entry["run_id"],
-                "manifest_sha256": item["manifest_sha256"], "source_sha256": validated["sources"]})
+                "manifest_sha256": item["manifest_sha256"], "source_sha256": validated["sources"]},
+                phase_budget=budget, phase=entry["phase"])
             record_path = run_root / "result.json"
             rows[index].update(worker_record_path=str(record_path), worker_record_sha256=digest(record_path.read_bytes()),
                                worker_outcome=worker["outcome"])
@@ -226,7 +267,8 @@ def run_campaign(path, output, *, validate_only=False):
                       failed_runs=sum(row["status"] != "complete" for row in rows),
                       outcome="complete" if all(row["status"] == "complete" for row in rows) else "failed",
                       controller_wall_ns_before_commit=time.perf_counter_ns() - started,
-                      controller_completion_means="all frozen entries have terminal records; outcome reports campaign success")
+                      controller_completion_means="all frozen entries have terminal records; outcome reports campaign success",
+                      phase_cpu_budget_at_completion=budget.snapshot())
         return store.finish(result)
     except BaseException as exc:
         result.update(status="failed", failure={"kind": "campaign_interrupted" if isinstance(exc, (KeyboardInterrupt, SystemExit)) else "campaign_exception",

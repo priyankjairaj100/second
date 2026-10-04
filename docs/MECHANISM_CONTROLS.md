@@ -71,9 +71,11 @@ It does not replace the sequential target with a fixed-teacher target.
 Both the proposal and bound use retained aggregate statistics.
 The control removes the linear proposal update while retaining the same evidence.
 
-The full quadratic response control remains unimplemented.
-Its larger matrices require a separate state recipe and complete cost accounting.
-Do not present the fixed reference control as that quadratic comparison.
+Revision 7 implements the full quadratic response tier with separate state and index schemas.
+It records extraction products, storage slots, and serialized state costs.
+See `docs/QUADRATIC_CONTROL.md` for its unwhitened error bound and remaining stronger-certificate extension.
+The fixed reference control remains a distinct mechanism.
+The original-model cache is also a distinct service family; see `docs/IDENTITY_CACHE.md`.
 
 ## Diagnostic telemetry
 

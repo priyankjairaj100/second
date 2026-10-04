@@ -49,7 +49,8 @@ def source_hashes(repository):
     """Hash current dispatch code. The executor must compare the same complete set."""
     root = Path(repository).resolve()
     paths = sorted((root / "src").glob("*.py"))
-    paths += [root / "scripts" / name for name in ("run_experiment.py", "run_campaign.py")]
+    paths += [root / "scripts" / name for name in (
+        "run_experiment.py", "run_campaign.py", "run_sequence.py", "run_isolated.py")]
     if not paths or any(path.is_symlink() or not path.is_file() for path in paths):
         raise ValueError("campaign source files are missing or symbolic links")
     return {str(path.relative_to(root)): digest(path.read_bytes()) for path in paths}
@@ -224,6 +225,9 @@ def analysis_plan(payload, *, protocol_sha256: str, analysis_group="primary"):
                              | {"cache_mode": CACHE_MODE, "planned_methods": list(METHODS),
                                 "service_boundary": SERVICE_BOUNDARY,
                                 "service_mode": entry["manifest_payload"].get("service_mode", "certified"),
+                                "service_family": entry["manifest_payload"].get("service_family", "response"),
+                                "response_tier": entry["manifest_payload"].get("chart", {}).get("response_tier", "linear"),
+                                "verifier_policy": entry["manifest_payload"].get("verifier_policy", "spectral"),
                                 "protocol_sha256": protocol_sha256,
                                 "target_manifest_sha256": entry["target_manifest_sha256"]}
                              for entry in campaign["entries"] if entry["analysis_group"] == analysis_group]}

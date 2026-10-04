@@ -219,7 +219,7 @@ def heldout_nll(decoder, records, state=None):
 
 def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunStore,
                    metadata: dict, *, method_order=METHODS, preflight=None, overall_start_ns=None,
-                   service_mode="certified"):
+                   service_mode="certified", initial_state=None, sequence_lineage=None):
     """Run one request. This low-level API also supports tiny software fixtures."""
     if tuple(sorted(method_order)) != tuple(sorted(METHODS)):
         raise ValueError("method order must contain each supported method exactly once")
@@ -234,19 +234,37 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
     if not heldout:
         raise ValueError("heldout records are required")
     remaining = tuple(r for r in records if r.record_id not in set(deleted_ids))
-    if not remaining:
-        raise ValueError("this experiment protocol requires retained records")
+    if initial_state is not None:
+        # Validate persisted finite-target state before relying on its record bindings.
+        initial_state = service.load_state(initial_state.canonical_bytes(), expected_digest=initial_state.digest)
+        if {r.record_id: r.content_digest for r in initial_state.records} != {
+                r.record_id: r.content_digest for r in records}:
+            raise ValueError("initial state records differ from the live calibration records")
+    if sequence_lineage is not None:
+        if initial_state is None or not isinstance(sequence_lineage, dict):
+            raise ValueError("sequence lineage requires an initial state and an object")
+        sequence_lineage = strict_json(canonical_json(sequence_lineage))
+        if sequence_lineage.get("predecessor_state_sha256") != initial_state.digest:
+            raise ValueError("sequence predecessor state differs from lineage")
     for key in ("root_id", "request_id", "configuration_id"):
         _text(metadata.get(key), key)
     _integer(metadata.get("repeat_index"), "repeat index")
     if metadata.get("phase") not in ("development", "confirmation", "software_test"):
         raise ValueError("invalid experiment phase")
-    input_sha256 = digest(canonical_json({
+    input_binding = {
         "service_manifest_sha256": service.manifest_digest, "metadata": metadata,
         "records": [[r.record_id, r.content_digest] for r in records],
         "deleted_ids": list(deleted_ids),
         "heldout": [[r.record_id, r.content_digest] for r in heldout],
-        "method_order": list(method_order), "service_mode": service_mode}))
+        "method_order": list(method_order), "service_mode": service_mode}
+    labels = {"service_family": getattr(service, "service_family", "response"),
+              "response_tier": getattr(service, "response_tier", "linear"),
+              "verifier_policy": getattr(service, "verifier_policy", "spectral")}
+    if labels != {"service_family": "response", "response_tier": "linear", "verifier_policy": "spectral"}:
+        input_binding["service_configuration"] = labels
+    if initial_state is not None or sequence_lineage is not None:
+        input_binding.update(initial_state_sha256=initial_state.digest, sequence_lineage=sequence_lineage)
+    input_sha256 = digest(canonical_json(input_binding))
     complete = store.completed()
     if complete is not None:
         if complete.get("input_sha256") != input_sha256:
@@ -271,11 +289,20 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
                       "timing_interpretation": "instrumented reference execution; exclusive internal diagnostic spans; not production latency",
                       "storage_contract": "external research archive retains original states and failed attempts; deletion guarantee covers returned canonical live state only"})
     result["preflight"] = preflight
+    result.update(labels)
+    result["initial_model_role"] = "original_preparation" if initial_state is None else "preceding_committed_state"
+    if sequence_lineage is not None:
+        result["sequence_lineage"] = sequence_lineage
     active = "initial_fresh"
     try:
         store.write_artifact("run-metadata.json", canonical_json(metadata))
         setup_telemetry = ServiceTelemetry()
         def initial():
+            if initial_state is not None:
+                with setup_telemetry.span("persisted_state_reload"):
+                    loaded = service.load_state(initial_state.canonical_bytes(), expected_digest=initial_state.digest)
+                return loaded, {"source": "preceding_committed_state", "state_sha256": loaded.digest,
+                                "original_preparation_executed": False}
             fresh = service.fresh(records, telemetry=setup_telemetry)
             with setup_telemetry.span("artifact_output"):
                 info = _commit_state(store, "original", fresh)
@@ -375,7 +402,8 @@ def run_comparison(decoder, service, records, deleted_ids, heldout, store: RunSt
         store.close()
 
 
-def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False):
+def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False, prepare_only=False,
+                  _manifest_override=None):
     """Load a local checkpoint and hash-bound prepared data. Never fetch data."""
     overall_start_ns = time.perf_counter_ns()
     from .checkpoint_adapter import load_gpt2_checkpoint
@@ -384,15 +412,24 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False):
     from .chart_construction import ChartRecipe, preview_chart, build_chart, make_service
     from .resource_preflight import inspect_local_config
     manifest_path = Path(path).absolute()
-    manifest, raw = _read_json(manifest_path)
+    manifest, raw = _read_json(manifest_path) if _manifest_override is None else _manifest_override
     required = {"schema", "root_id", "request_id", "configuration_id", "repeat_index", "phase",
                 "checkpoint", "calibration", "heldout", "deleted_ids", "target", "chart", "method_order", "protocol"}
     if (not isinstance(manifest, dict) or not required <= set(manifest)
-            or set(manifest) - required - {"service_mode"} or manifest["schema"] != "calibration-run-v1"):
+            or set(manifest) - required - {"service_mode", "verifier_policy", "service_family"}
+            or manifest["schema"] != "calibration-run-v1"):
         raise ValueError("invalid run manifest fields or schema")
     service_mode = manifest.get("service_mode", "certified")
     if service_mode not in ("certified", "identity_only", "fixed_reference", "full_replay"):
         raise ValueError("unsupported service mechanism control")
+    service_family = manifest.get("service_family", "response")
+    if service_family not in ("response", "identity_cache"):
+        raise ValueError("unsupported service family")
+    verifier_policy = manifest.get("verifier_policy", "spectral")
+    if verifier_policy not in ("spectral", "spectral_or_interval"):
+        raise ValueError("unsupported verifier policy")
+    if service_family == "identity_cache" and (verifier_policy != "spectral" or service_mode != "certified"):
+        raise ValueError("identity cache requires its default verifier and certified mode")
     base = manifest_path.parent
     protocol, protocol_raw = _referenced_json(base, manifest["protocol"])
     for key in ("root_id", "request_id", "configuration_id"):
@@ -421,6 +458,9 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False):
     preflight_start = overall_start_ns
     recipe = TargetRecipe.from_payload(manifest["target"])
     chart_recipe = ChartRecipe.from_payload(manifest["chart"])
+    if service_family == "identity_cache" and (chart_recipe.mode != "none" or chart_recipe.response_tier != "linear"
+            or chart_recipe.radius != 1 or chart_recipe.precision_bits != 96):
+        raise ValueError("identity cache requires the none chart, linear label, and default radius and precision")
     resource_plan = inspect_local_config(_local(base, checkpoint["path"]), chart_recipe, recipe)
     if not resource_plan.allowed_by_plan:
         if validate_only:
@@ -444,33 +484,49 @@ def _run_manifest(path: str | Path, output: str | Path, *, validate_only=False):
             raise ValueError("calibration and heldout token records overlap")
         if not isinstance(manifest["deleted_ids"], list) or len(set(manifest["deleted_ids"])) != len(manifest["deleted_ids"]):
             raise ValueError("deletion IDs must be a unique list")
-        if not set(manifest["deleted_ids"]) < {r.record_id for r in records}:
-            raise ValueError("delete only calibration IDs and retain at least one record")
+        if not set(manifest["deleted_ids"]) <= {r.record_id for r in records}:
+            raise ValueError("delete only calibration IDs")
         recipe = TargetRecipe.from_payload(manifest["target"])
         token_count = sum(len(decoder.decode_payload(r.payload)) for r in records)
         if recipe.original_token_count != token_count:
             raise ValueError("original normalization differs from calibration token count")
         target = build_target(decoder, recipe)
         chart_recipe = ChartRecipe.from_payload(manifest["chart"])
-        preview = preview_chart(decoder, target, chart_recipe)
+        if service_family == "identity_cache":
+            from .chart_construction import identity_preview
+            preview = identity_preview(decoder, target)
+        else:
+            preview = preview_chart(decoder, target, chart_recipe).payload()
         return decoder, records, evaluation, target, chart_recipe, preview, loaded.provenance
     (decoder, records, heldout, target, chart_recipe, preview, provenance), clock = measure(load)
     validation = {"schema": "calibration-run-validation-v1", "status": "validated",
-                  "manifest_sha256": digest(raw), "target": target.payload(), "chart_preview": preview.payload(),
+                  "manifest_sha256": digest(raw), "target": target.payload(), "chart_preview": preview,
                   "checkpoint": provenance, "loading_measurement": clock, "resource_plan": resource_plan.payload(),
                   "calibration_records": len(records), "heldout_records": len(heldout),
                   "cache_mode": CACHE_MODE, "empirical_work_executed": False}
     if validate_only:
         return validation
-    construction = build_chart(decoder, target, chart_recipe)
-    service = make_service(decoder, target, construction)
+    if service_family == "identity_cache":
+        from .chart_construction import make_identity_service
+        service = make_identity_service(decoder, target)
+        construction_payload = {"schema": "identity-cache-construction-v1", "target_sha256": target.digest,
+                                "service_manifest_sha256": service.manifest_digest}
+        construction_digest = digest(canonical_json(construction_payload))
+    else:
+        construction = build_chart(decoder, target, chart_recipe)
+        service = make_service(decoder, target, construction, verifier_policy=verifier_policy)
+        construction_payload, construction_digest = construction.payload(), construction.digest
     metadata = {key: manifest[key] for key in ("root_id", "request_id", "configuration_id", "repeat_index", "phase")}
     metadata.update(run_manifest_sha256=digest(raw), protocol_sha256=digest(protocol_raw), service_mode=service_mode,
-                    target_manifest_sha256=target.digest, chart_sha256=construction.digest,
+                    target_manifest_sha256=target.digest, chart_sha256=construction_digest,
                     source_sha256={p.name: digest(p.read_bytes()) for p in sorted(Path(__file__).parent.glob('*.py'))},
                     environment={"python": sys.version, "platform": platform.platform()})
-    preflight = dict(validation, chart=construction.payload(),
+    preflight = dict(validation, chart=construction_payload,
                     preflight_wall_ns=time.perf_counter_ns() - preflight_start)
+    if prepare_only:
+        return {"decoder": decoder, "service": service, "records": records, "heldout": heldout,
+                "metadata": metadata, "preflight": preflight, "service_mode": service_mode,
+                "method_order": manifest["method_order"], "overall_start_ns": overall_start_ns}
     store = RunStore(output, {"manifest_sha256": digest(raw), "metadata": metadata,
                               "service_manifest_sha256": service.manifest_digest})
     return run_comparison(decoder, service, records, manifest["deleted_ids"], heldout, store, metadata,

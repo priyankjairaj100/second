@@ -34,6 +34,7 @@ class PreflightResult:
     planning_bytes: int
     memory_budget_bytes: int
     rejected_limits: tuple[str, ...]
+    response_tier: str = "linear"
 
     @property
     def allowed_by_plan(self) -> bool:
@@ -91,8 +92,12 @@ def inspect_local_config(directory: str | Path, chart_recipe: ChartRecipe,
     else:
         rank = entries = 0
     error = (rank+3)*(rank+4)//2
-    aggregates = target_recipe.group_count * ((rank+1)*blocks*(3*d*d+f*f)
-                                               + stage_count*(rank*rank+error))
+    if chart_recipe.response_tier == 'quadratic':
+        aggregates = target_recipe.group_count * ((rank+1)*(rank+2)//2*blocks*(3*d*d+f*f)
+                                                   + stage_count*error)
+    else:
+        aggregates = target_recipe.group_count * ((rank+1)*blocks*(3*d*d+f*f)
+                                                   + stage_count*(rank*rank+error))
     grids = (2**target_recipe.bits) * blocks * (3*d+f)
     # Lazy parameter wrappers retain one accessed stage matrix at a time.
     # Include the finite-error scalar beside each interval value/derivative.
@@ -107,4 +112,5 @@ def inspect_local_config(directory: str | Path, chart_recipe: ChartRecipe,
         ('grid_entries', grids, target_recipe.max_grid_entries),
         ('planning_bytes', planning, memory_budget_bytes)) if actual > limit)
     return PreflightResult(hashlib.sha256(raw).hexdigest(), parameters, fixed, stage_count,
-                           rank, entries, aggregates, grids, jets, planning, memory_budget_bytes, limits)
+                           rank, entries, aggregates, grids, jets, planning, memory_budget_bytes, limits,
+                           chart_recipe.response_tier)

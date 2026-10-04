@@ -1,111 +1,122 @@
-# Revision 6 validation
+# Revision 7 validation
 
 Date: 4 October 2026.
-Scope: software correctness, independent review, mathematical review, and document checks.
+Scope: mathematical derivation, software correctness, independent review, and document checks.
 Research experiments remained paused.
 
 ## Final software result
 
-`python -m unittest discover -s tests -v`: **261 tests passed**, exit code 0.
+`python -m unittest discover -s tests -v`: **340 tests passed**, exit code 0.
 Static compilation passed for all source, test, and script modules.
-The final log is `validation/software_tests_v6.txt`.
-The tested hashes are in `validation/tested_source_sha256_v6.json`.
-Test duration is verification metadata, not a repair-performance observation.
+The final log is `validation/software_tests_v7.txt`.
+The tested hashes are in `validation/tested_source_sha256_v7.json`.
+Source, test, and script hashes matched before and after the final run.
+Test durations are verification metadata, not repair-performance observations.
 
-Revision 5's 197-test record remains in `docs/VALIDATION_V5.md`.
-Its original log and source hashes remain unchanged.
-Earlier revision records also remain available.
+Revision 6's 261-test record remains in `docs/VALIDATION_V6.md`.
+Its original log and hashes remain unchanged.
+Earlier validation records also remain available.
 
 ## New correctness coverage
 
 | Area | New tests | Checked properties |
 | --- | ---: | --- |
-| Fixed-box provider | 8 | Grid coverage, midpoint error, exact bounds, intrinsic state, domain checks, and lazy wrappers |
-| Controls and telemetry | 10 | Target parity, reference identity, fixed-reference bounds, exclusive clocks, and failed-operation cleanup |
-| Workload and inventory | 14 | Exact original-only scores, source withdrawal, phase separation, sampling, method order, and immutable inventory |
-| Worker and campaign | 12 | Process caps, acknowledgment verification, cleanup, durable failures, confirmation products, and artifact checks |
-| Independent adversarial review | 16 | Off-chart changes, Gram bounds, identity misuse, score edges, analysis mixing, and restart attacks |
-| Root integration | 4 | Constructor bindings, resource counts, endpoint membership, and runner control parity |
+| Quadratic service | 9 | Oriented cross-moments, negative coefficients, finite error, modes, tiers, serialization, and repeated deletion |
+| Original-model cache | 17 | Transitive prefix dependencies, exact subtraction/replay, canonical refresh, bounded trusted state, and indexed fairness |
+| Sequences | 7 | Previous-state lineage, original-once construction, full deletion, failures, future requests, and restart |
+| CPU admission | 9 | Reservation, settlement, unknown attempts, retry charges, caps, overruns, and ledger integrity |
+| Isolated executor | 6 | Separate workers, exact outputs, pauses, denial, failed artifacts, interruption, and timing integrity |
+| Interval verifier | 10 | Signed bounds, ridge pivots, factors, ties, inclusion, strict intersection gain, and binding failures |
+| Independent adversarial review | 18 | Cross-tier mathematics, cache dependencies, lineage, budgets, analyzer mixing, isolation, and failure cleanup |
+| Root integration | 3 | Quadratic planning counts, schema compatibility, target identity, identity factory, and complete deletion |
 
-These 64 tests extend the prior 197 tests.
-They do not replace previous oracle, decoder, state, and changed-prefix checks.
+These 79 tests extend the previous 261 tests.
+Existing runner and workload tests were also adapted to their expanded supported contracts.
+No empirical dataset study ran.
 
-The first full integrated run found one outdated timeout test stub.
-The stub rejected the new optional telemetry keyword before raising its intended timeout.
-Its signature now accepts optional keywords.
-The timeout assertion remains unchanged and passes.
-The initial log is `validation/software_tests_v6_initial.txt`.
-The targeted check and complete final suite both pass.
+## Initial integration findings
 
-## Independent review
+The initial integrated run had two errors.
+An adversarial fixture lacked the newly required stable worker request file.
+The fixture now supplies that binding before exercising its original corruption attack.
+A final source-description edit during the initial run triggered an immutable source-hash rejection.
+The source guard correctly refused the changed plan.
+All code then froze before the final complete rerun.
+The initial log remains in `validation/software_tests_v7_initial.txt`.
 
-See `theory_revision/preparation_review_v6.txt` and `theory_revision/box_theory_review_v6.txt`.
-The review corrected these defects:
+Independent review also corrected these defects before final integration:
 
-1. Unverified worker limit acknowledgments.
-2. Missing failed-worker artifact verification on restart.
-3. Incomplete confirmation configuration/root/request/repetition product checks.
-4. Analysis mixing across mechanism modes, chart hashes, and service identities.
+1. A phase-budget snapshot exposed mutable ledger state.
+2. Sequence plan-writing failure could retain a writer lock.
+3. Direct fresh unnecessarily loaded the original canonical index.
+4. Child receipt failure could skip writer-lock cleanup.
+5. Missing outer timing could permit reused child output to receive misleading short latency.
 
-The reviewer found no remaining numerical defect in the inspected box and control paths.
-This finding is not formal verification or proof that every defect is absent.
-The box results remain conditional on sound intervals and successful required finite evaluations.
+The last case now records failure instead of manufacturing a successful replacement timing.
+Read `theory_revision/preparation_review_v7.txt` for the review's actual scope.
+The review is not formal verification or proof that all defects are absent.
 
 ## Mathematical and algorithmic scope
 
-The box route removes affine-span rejection for installed frozen-grid parameters.
-It does not establish useful numerical bounds or rounding acceptance.
-Midpoints minimize each rectangular interval feature envelope.
-They remove separate finite anchor evaluation for varying parameter domains.
-They do not guarantee better final Gram bounds, acceptance, or complete latency.
+R1–R6 derive signed entry bounds, ridge-safe elimination, exact candidate verification, intersection monotonicity, and canonical bank conditions.
+The optional service policy keeps the spectral verifier first and adds one interval enclosure after rejection.
+It preserves accepted spectral decisions at the same proposal when calculations complete.
+It does not establish runtime or completion dominance under finite resource caps.
+Software examples establish strictly additional certified cases with exact fresh-state equality.
+They do not establish useful neural coverage.
+The complete neural multi-domain bank remains unimplemented.
+Classical interval arithmetic and Schur identities receive explicit attribution.
 
-Rank-zero aggregate state uses d²+6 rational slots per occupied stage group.
-The full-grid box stores 2P_A endpoint slots.
-Metadata, bit lengths, base arrays, output, and replay remain costs.
-Lazy parameter wrappers avoid constructing unused later matrices.
-They do not prove whole-model memory fit.
+The full quadratic tier uses the existing unwhitened error bound.
+Its stronger whitened acceptance rule remains unimplemented.
+The original-model cache stores true current-prefix Grams and refreshes them canonically after every request.
+Equally indexed fresh receives the same valid cache and old model.
+Both families retain solver parity with their equally indexed comparator.
+No deletion-specific solving advantage follows.
 
 V_cert remains a partial finite target distinct from legacy V, floating E, and native kernels.
-Proof rejection permits retained replay.
-Necessary finite-evaluator failure aborts without committing an approximate model.
+Proof rejection permits exact retained replay.
+Required finite-evaluator failure aborts without an approximate committed model.
 Canonical deletion concerns returned live state under trusted storage.
-The external research archive retains original states and failed attempts.
-Physical erasure and hostile-storage authentication remain outside scope.
+External archives, physical erasure, and hostile-storage authentication remain outside scope.
 
-## Timing and comparison limits
+## Execution boundaries
 
-The runner supplies instrumented warm diagnostic timing.
-Nested component spans exclude their child durations.
-One limited process isolates each comparison, not each method.
-The methods share warm objects and process history.
+The warm runner and separate-process executor have distinct labels.
+The isolated executor uses one setup process and one process per method.
+Its clock includes startup, inputs, requested work, artifacts, child commitment, and process cleanup.
+Parent validation/equality, post-cleanup settlement, logs, and controller receipts remain outside that clock.
 Operating-system caches remain uncontrolled.
-Final result commit and campaign orchestration lie outside method timers.
-Cumulative phase CPU caps remain unenforced.
-RSS remains a process high-water mark.
-Detailed arithmetic size and every numerical rejection subtype remain unrecorded.
+Setup cost remains separate and must enter lifetime accounting.
+Each worker exposes peak RSS and observed child CPU.
+Final serialized rational integer counts and maximum bit lengths are recorded.
+Comprehensive transient arithmetic-size diagnostics remain open.
 
-Repair and indexed fresh share the same planner.
-The planner ignores old model codes.
-No deletion-specific solver advantage follows.
-The identity-only mode checks fixed base-reference ancestors.
-It does not implement original quantized-model invariant-feature caching.
-The full quadratic control remains open.
-Sequence and complete-deletion campaign execution remain open.
+A durable ledger governs admitted worker allowances within one frozen protocol scope.
+Observed overruns remain charged; unknown attempts retain reservations.
+This does not establish absolute physical CPU containment or a global budget across protocol variants.
+Controller CPU is excluded.
+Bulk sequence dispatch and isolated confirmation inventory remain open.
+The isolated executor does not yet compute NLP quality.
 
-## Document validation
+## Document checks
 
-The consolidated PDF has **31 pages**.
+The consolidated report has **35 pages**.
 LaTeX completed without overfull boxes.
-Every page was rendered and inspected in contact sheets.
-The three new pages were also inspected at readable resolution.
-The new sections cover fixed boxes, midpoint optimality, explicit limits, and preparation controls.
-The research checklist contains 24 completed and 54 open required items.
-It separately retains 12 conditional extensions.
-Protocol version 2 preserves the pause and all unresolved execution fields.
+Every page was inspected in rendered contact sheets.
+The four new pages were also inspected at readable resolution.
+The deterministic method figure is available as editable SVG and vector PDF.
+Repeated figure builds produced identical hashes.
+Its one-page PDF contains no embedded raster images.
+
+The register contains **28 completed and 50 open required items**, plus 12 conditional extensions.
+Newly closed items are D06, E03, E04, and J04, at their stated scopes.
+Protocol version 3 preserves the pause and unresolved empirical gates.
 
 ## Excluded evidence
 
-No pretrained model, calibration corpus, tokenizer, or research benchmark was acquired or executed.
-No synthetic empirical study or external compute job ran.
-No practical speed, useful coverage, NLP quality, memory fit, or lifetime value is established.
-Historical missing raw results were not recovered or rerun.
+No pretrained model, tokenizer, calibration corpus, or research benchmark was acquired or executed.
+No synthetic empirical study, cloud job, or unrelated hardware ran.
+Useful coverage, practical latency, real memory fit, NLP quality, and lifetime value remain unmeasured.
+Earlier missing raw results were not recovered or rerun.
+No reliable full-model speedup or publication readiness is established.

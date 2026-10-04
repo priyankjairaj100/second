@@ -1,76 +1,111 @@
-Revision 6 preparation, 4 October 2026.
+Revision 7 preparation, 4 October 2026.
 
-Implemented reference modules:
-- exact_core.py: exact reverse LDL, rational rounding, shape-cell certificate.
+CURRENT REFERENCE MODULES
+- exact_core.py: exact reverse LDL, rational rounding, and shape-cell certificate.
 - sparse_repair.py: code injection and exact ambiguous-coordinate fallback.
-- response_moments.py: affine response index and canonical deletion.
-- response_certificate.py: squared error descriptors and outward bounds.
-- linear_response.py: compact Gram responses, PSD omission, signed enclosures.
+- response_moments.py: full affine-response Gram index and exact deletion.
+- response_certificate.py: complete squared error descriptors and outward bounds.
+- linear_response.py: compact responses, omitted PSD terms, and signed enclosures.
 - repair_service.py: full fixed-DAG service, provenance, and exact replay.
-- response_service_adapter.py: original per-record descriptor bridge.
-- aggregate_response_service.py: complete compact group state and repair.
-- transformer_backend.py: pinned library-math scalar decoder and identity gate.
+- response_service_adapter.py: historical per-record descriptor bridge.
+- aggregate_response_service.py: linear/quadratic grouped state and complete repair.
+- domain_refinement.py: exact interval reverse-LDL, ridge clipping, and intersections.
+- identity_cache.py: original-model true-Gram caching and canonical retained refresh.
+- transformer_backend.py: pinned library-math scalar decoder and input identity gate.
 - certified_intervals.py: rational enclosures and certified nonlinear rounding.
-- certified_transformer.py: automatic interval jets and finite-error proofs.
+- certified_transformer.py: automatic interval jets, finite-error proofs, lazy stage weights.
+- box_response_provider.py: full-grid boxes, midpoint anchors, and rank-zero moments.
 - checkpoint_adapter.py: strict local GPT-2 safetensors loading.
 - work_scheduler.py: separate cooperative bounded-work fallback utility.
 - target_manifest.py: fixed V_cert target choices and source-bound identity.
-- chart_construction.py: deterministic corpus-independent chart recipes.
-- resource_preflight.py: constant-space config counts and planning limits.
-- experiment_runner.py: local warm diagnostic comparisons and exact output checks.
-- run_store.py: atomic attempts, immutable completion, and verified restart.
-- result_analysis.py: failure denominators, root-cluster paired summaries, and lifetime costs.
+- chart_construction.py: independent chart recipes, tiers, and identity-cache factory.
+- resource_preflight.py: config-only counts and declared planning limits.
+- service_telemetry.py: exclusive diagnostic spans outside canonical state.
+- request_workload.py: original-state scores, request laws, boundaries, and phase checks.
+- experiment_inventory.py: frozen independent requests, source versions, labels, and order.
+- experiment_runner.py: warm comparisons, exact equality, and empty/all deletion.
+- sequence_runner.py: preceding committed state, ordered lineage, and immutable restart.
+- isolated_comparison.py: separate setup/method workers with child commit timing.
+- worker_control.py: process limits, cleanup, wait4 usage, and durable outcomes.
+- phase_budget.py: protocol-scoped CPU allowance admission and settlement.
+- experiment_campaign.py: independent-request confirmation product and safe restart.
+- run_store.py: atomic attempts, immutable completion, and verified artifacts.
+- result_analysis.py: failure counts, root-cluster paired summaries, and lifetime costs.
 
-aggregate_response_service.py now adds bounded reload and indexed fresh construction.
-Its repair and indexed solver share one planner and ignore old model codes.
-No deletion-specific solver advantage follows from this implementation.
-The prospective protocol and metadata source catalog exist.
-Their remaining execution fields are explicit blockers.
+NUMERICAL AND STATE CONTRACTS
+V_cert remains distinct from legacy library-math V and historical floating target E.
+Its finite feature program can abort outside its supported completion domain.
+Unknown proof conditions permit retained replay.
+A necessary finite-evaluator failure prevents a successful approximate model commit.
 
-V_cert is a separate finite decoder target.
-It does not silently replace legacy library-math V or floating quantizer E.
-The affine provider checks an independent chart.
-The box provider checks finite coordinate inclusion without derivative arrays.
-Unknown proof conditions cause retained replay.
-A finite-evaluator failure aborts the request without committing a model.
+The affine provider checks its fixed independent chart.
+The box provider checks coordinate inclusion without derivative arrays.
+The linear response tier stores compact grouped matrices and scalar tangent Grams.
+The quadratic tier stores the full Gram polynomial of the affine feature response.
+It does not implement a quadratic feature Taylor model or the stronger whitened theorem.
+Both tiers retain complete error descriptors and exact deleted-contribution verification.
+They use distinct canonical state schemas under the same numerical model target.
+The spectral_or_interval policy leaves canonical state unchanged.
+It retains the original spectral route and adds an exact interval fallback.
+Its extra work can increase total cost or exhaust a finite resource budget.
+The complete multi-domain certificate bank remains unimplemented.
 
-The compact service stores group matrices and O(NL) record metadata.
-It regenerates and checks deleted-record contributions before subtraction.
-It retains no individual matrix descriptors or data-dependent primitive cache.
-Logical state equals fresh retained construction after repeated deletion.
-Metadata scans, source reads, preparation, and integer sizes remain costs.
+The separate identity-cache family stores exact stage Grams under its current model.
+Matching all transitive ancestors permits deleted-feature subtraction.
+Changed dependencies require retained replay.
+Successful output refreshes its cache to direct retained construction.
+Trusted cache origin remains a required premise.
+Its canonical state differs from response state.
+Compare full model outputs across families and same-schema state within each family.
 
-See docs/VALIDATION.md for final correctness tests and source hashes.
-These checks are not research benchmark or synthetic dataset results.
+FAIRNESS AND COST
+Response repair and indexed fresh use the same summaries and planner.
+Identity-cache repair and indexed fresh use the same old cache and solver.
+Neither interface establishes an inherent deletion-specific solver advantage.
+Split-interface validation and serialization overhead do not create an algorithmic claim.
+Preparation, deleted extraction, replay, exact solves, metadata, state, and output remain costs.
+Rational slots do not bound total bytes, bit complexity, or peak resident memory.
+
+EXECUTION
+The original campaign isolates complete comparisons but retains warm shared method arms.
+The standalone sequence runner prepares the original state once.
+Each step loads the preceding committed repair state under fixed original normalization.
+Every step checks complete model and canonical state against fresh retained construction.
+Empty and complete deletion work; heldout data remain nonempty.
+Failures retain attempted and later unstarted requests.
+Bulk campaign sequence dispatch remains open.
+
+The isolated runner uses four workers: setup and one worker per comparison method.
+Repair and indexed fresh load the original canonical state.
+Direct fresh does not load that unnecessary state.
+Its timer includes startup, inputs, one method, durable artifacts, child receipt, exit, and cleanup.
+It excludes parent verification and enclosing worker-control/parent receipt commits.
+CPU settlement occurs after the worker timer.
+Original preparation is separate; isolated execution does not compute NLP quality.
+Process separation does not establish cold operating-system caches or production latency.
+A sealed child without durable outer timing becomes a failed recovery case.
+A sealed worker resumes its original observation without a new budget reservation.
+Isolated confirmation remains blocked pending compatible campaign inventory support.
+
+The CPU ledger caps admission within one exact protocol hash.
+Unknown attempts keep their full allowances; observed overruns remain charged.
+It does not cap controller CPU, arbitrary descendants, separate protocols, or global hardware use.
+A distinct feasibility execution-phase label remains unimplemented.
+
+EVIDENCE AND REMAINING GATES
+The revision 6 checkpoint passed 261 software correctness tests.
+Its preserved record is docs/VALIDATION_V6.md.
+Use docs/VALIDATION.md and its referenced logs/hashes for current revision 7 evidence.
+No fixture count is a research success probability or benchmark result.
+Historical raw experiment files remain unavailable.
 
 Still unestablished:
-- useful chart coverage and numerical bounds on real pretrained workloads;
-- competitive preparation, memory, storage, amortization, or complete latency;
-- production GPU kernels and integrated work scheduling;
-- equality to native Hugging Face kernels or floating quantizer E;
-- physical memory erasure, hostile-store authentication, or formal verification.
+- feasible real checkpoint execution and validated tokenizer/corpus artifacts;
+- actual disjoint pools, original-state scores, and frozen confirmation inventories;
+- practical certificate coverage, absolute NLP quality, and complete external latency;
+- competitive memory, preparation, storage, lifetime cost, or reliable full-model speedup;
+- native Hugging Face/CUDA/E equivalence, GPU kernels, and integrated work scheduling;
+- physical erasure, hostile-store authentication, or proof-assistant verification.
 
-Correctness does not imply speedup.
-Prior raw experiment files remain unavailable.
+Protocol v3 preserves unresolved empirical gates.
 Research experiments remain paused.
-
-Revision 6 modules:
-- box_response_provider.py: full-grid boxes, hybrid midpoint anchors, and rank-zero moments.
-- service_telemetry.py: exclusive nested spans outside canonical state.
-- request_workload.py: original-only scores, request laws, document expansion, and phase checks.
-- experiment_inventory.py: bound roots, requests, modes, source versions, and saved method order.
-- worker_control.py: applied process limits, durable outcomes, and cleanup.
-- experiment_campaign.py: complete confirmation product, source checks, and safe restart.
-
-The aggregate service supports certified, fixed_reference, identity_only, and full_replay modes.
-Identity_only checks fixed base-reference ancestors, not old quantized-model feature caches.
-Full quadratic control remains open.
-Lazy parameter wrappers preserve scalar operation order.
-The analyzer rejects mode, chart, and service mixing.
-The final v6 suite passes 261 correctness tests.
-
-Process isolation is per comparison, with warm shared method arms.
-Cumulative phase CPU caps remain unenforced.
-Complete committed service timing, independent method conditions, and detailed arithmetic diagnostics remain open.
-Sequence and full-deletion campaign execution remain open.
-Protocol v2 preserves the pause and actual empirical inventory blockers.

@@ -1,6 +1,6 @@
 # Prospective empirical protocol
 
-Version: 2. Date: 4 October 2026.
+Version: 3. Date: 4 October 2026.
 
 This document reconstructs the empirical plan from the current implementation.
 It does not recover the missing earlier protocol.
@@ -8,9 +8,9 @@ No empirical observations accompany this document.
 Experiments remain paused.
 Software correctness fixtures remain separate from research evidence.
 
-`configs/protocol_v2.json` stores the current numerical planning choices.
-`configs/protocol_v1.json` preserves the earlier preparation plan.
-Both files retain the compatible `calibration-protocol-v1` schema.
+`configs/protocol_v3.json` stores the current numerical planning choices.
+The version 1 and version 2 files preserve earlier preparation plans.
+All three files retain the compatible `calibration-protocol-v1` schema.
 The version field distinguishes their content.
 These choices express project goals.
 They are not universal standards or measured power calculations.
@@ -139,8 +139,17 @@ The parent controller also requires resources.
 `src/worker_control.py` now enforces explicit limits before each comparison process starts.
 It applies CPU limits, address-space limits, file limits, CPU affinity, and thread environment settings.
 The parent enforces a wall deadline and stops ordinary process-group descendants.
-These limits do not enforce cumulative CPU use across a research phase.
-A configuration field alone does not enforce a phase budget.
+`src/phase_budget.py` now provides a durable CPU admission ledger.
+The campaign binds one ledger to the protocol hash.
+Workers reserve their CPU limit plus two seconds before launch.
+Admission fails when the complete allowance exceeds the remaining phase allowance.
+Settled charges use rounded-up CPU usage reported by `wait4`, with a one-second minimum.
+Unknown or interrupted reservations keep their complete charge.
+Observed overruns remain charged and prevent later admission when the ledger exceeds its cap.
+This mechanism controls trusted worker admission within one protocol ledger.
+It does not contain all descendant CPU use or cap the physical machine.
+Separate protocol ledgers do not provide a shared global cap.
+Controller CPU and unrelated processes remain outside this worker ledger.
 
 | Stage | Planned roots | Records per root | Tokens per record | Purpose |
 | --- | ---: | ---: | ---: | --- |
@@ -154,8 +163,10 @@ They do not establish feasible memory or runtime.
 Use one primary checkpoint before expanding the model matrix.
 The preflight comparison has a 15-minute wall deadline.
 Later comparisons have a 60-minute wall deadline.
-These deadlines cover preparation and all methods inside one comparison process.
-They are not separate deadlines for individual methods.
+For the current campaign, these deadlines cover preparation and all methods inside one comparison process.
+The separate method-process runner applies explicit limits to each worker.
+Its preparation worker and method workers require separate reservations.
+Choose and freeze this execution mode before collecting timing data.
 The proposed CPU limits are 900 and 3,600 seconds per comparison process.
 The proposed file limit is 512 MiB per written file.
 The proposed thread setting is one.
@@ -163,9 +174,12 @@ Resolve supported CPU affinity identifiers before freezing the inventory.
 The feasibility stage permits at most three CPU-hours.
 Development permits at most twelve CPU-hours.
 Confirmation permits at most sixty-four CPU-hours.
-Stop when a phase reaches its declared budget.
-The current controller does not enforce those cumulative phase caps.
-That implementation remains a blocker before research execution.
+Stop admission when the next complete worker allowance does not fit.
+The campaign now applies this rule for its supported phase labels.
+Those labels are development, confirmation, and software test.
+Feasibility remains a planning stage without a distinct supported inventory phase.
+Its separate three-hour cap therefore needs explicit dispatch support before use.
+The protocol retains that limitation as a preparation blocker.
 Keep every unstarted planned run in the result inventory.
 
 Use one timing repeat during preflight and feasibility.
@@ -217,12 +231,18 @@ Also compare the final sequence with the combined deletion.
 A separate uniform permutation defines three disjoint batches of the original small-request size.
 A root must contain enough records for all three batches.
 The workload marks insufficient roots blocked.
-The current runner lacks execution from each preceding committed state.
-Independent cumulative resets do not replace that required sequence.
+`src/sequence_runner.py` now implements execution from each preceding committed repair state.
+It prepares the original state once and persists an ordered lineage.
+Restart verifies the saved original state and every completed child artifact.
+A failed step preserves its attempt and every later planned request.
+Independent cumulative resets do not replace that sequence.
+Bulk campaign sequence dispatch remains open.
 Run empty deletion and complete deletion as correctness controls.
-Keep those controls outside the primary latency average.
-The runner still rejects complete deletion.
-The workload retains that control with an explicit implementation blocker.
+Both controls now have working local execution paths.
+Complete deletion uses zero retained data contributions under the original fixed normalization and ridge.
+Later empty requests remain valid, while heldout data must remain nonempty.
+Keep these controls outside the primary latency average.
+Primary requests that remove the entire root remain excluded from primary ratio analysis.
 
 Source withdrawal requires a corpus with documented distinct sources.
 Hash the complete record-to-source mapping before selection.
@@ -243,14 +263,32 @@ Record any unavoidable information difference.
 
 The service now implements `certified`, `fixed_reference`, `identity_only`, and `full_replay` modes.
 All modes preserve the same numerical target and canonical state.
-The identity control uses equality with the intrinsic reference.
-It does not implement cached original-model Grams.
+The response-family identity control uses equality with the intrinsic reference.
+The separate identity-cache family now stores exact original-model sequential Grams.
+It reuses them only when the required original quantized ancestors remain identical.
+Changed dependencies require retained replay.
+Its indexed-fresh arm receives the same original cache and solver information.
+Its returned state uses a separate canonical schema.
+
+The response family now provides linear and full quadratic response-Gram tiers.
+The quadratic tier retains the complete Gram of the affine feature surrogate.
+Its certified remainder still covers feature approximation and finite arithmetic.
+The tier changes storage and certificate tightness without changing the numerical target.
+The two tiers use distinct canonical state schemas.
+Practical memory and runtime remain unmeasured.
+Do not pool a restricted quadratic subset with the complete primary matrix.
+
 The fixed-reference control retains the complete finite feature error bound.
-Give each mode a distinct configuration ID.
-The analyzer rejects mixed modes within one configuration.
-Run full quadratic response only after implementing an affordable declared subset.
-That quadratic control remains unimplemented.
-Do not pool that subset with the complete primary matrix.
+The verifier policy can use the spectral certificate alone.
+The alternative tries exact interval triangular solves after spectral rejection.
+This policy preserves the numerical target and canonical state.
+Interval rejection still permits replay.
+Neither policy guarantees useful acceptance.
+
+Give every family, tier, mode, and verifier combination a distinct configuration ID.
+The analyzer rejects mixed labels within one configuration.
+Require byte equality of canonical state within one family and tier.
+Across different state schemas, compare full quantized model output and account for all stored state.
 Compare replay selection only after fixing the certificate configuration.
 Each ablation must identify the changed factor.
 
@@ -296,8 +334,24 @@ The campaign now starts each complete comparison in a new process.
 Its three methods still share warm objects and process history.
 The campaign mode is `isolated_comparison_warm_arms_os_cache_uncontrolled`.
 The method mode remains `warm_sequential_os_cache_uncontrolled`.
-Independent process execution for each method remains unimplemented.
-Any claimed cold method condition must start each method separately and load equivalent declared state.
+A separate runner now starts preparation and each method in independent worker processes.
+It loads the same saved original state for methods that need it.
+Its process receipt and timing contract require separate analysis from warm-arm timings.
+`src/isolated_comparison.py` executes a `calibration-isolated-plan-v1` plan.
+The plan binds the normalized run manifest, target, source hashes, and worker limits.
+It starts one setup worker, then one worker for each declared method.
+Its cache mode is `isolated_method_processes_os_cache_uncontrolled`.
+Its timing boundary is `limited_worker_startup_inputs_service_artifacts_child_commit_and_cleanup`.
+The boundary includes CPU admission, process startup, input loading, and service work.
+It also includes artifact writes, child receipt commit, process exit, and cleanup.
+It excludes parent verification, worker-control receipt commit, parent receipt commit, and heldout evaluation.
+The worker controller settles the phase CPU charge after stopping the elapsed timer.
+Original preparation is charged separately.
+The isolated path does not yet execute heldout quality evaluation.
+Its durable child receipt does not establish complete external service latency.
+Its confirmation route remains blocked until compatible inventory dispatch exists.
+Process separation does not establish cold filesystem caches.
+Any claimed disk-cold condition requires additional validated controls.
 Operating-system page caches need separate control or a precise uncontrolled label.
 Never label process-cold timing as disk-cold without evidence.
 Use identical output durability for compared methods.
@@ -344,7 +398,9 @@ The inventory clears only `protocol.sha256` inside embedded run manifests.
 The final protocol then binds the inventory hash.
 External run manifests bind the final protocol hash.
 The executor verifies this complete chain before dispatch and restart.
-It also verifies every current source module and both execution scripts.
+It also verifies every current source module and the campaign execution scripts.
+The separate isolated plan additionally binds `scripts/run_isolated.py`.
+Its standalone plan does not replace the complete confirmation inventory.
 A changed source file prevents reuse of a previous campaign outcome.
 Confirmation requires explicit `confirmation_configuration_ids`.
 The executor checks the full configuration, root, request, and repeat product.
@@ -364,7 +420,8 @@ Exponentiate the result.
 Report this ratio as conditional on exact completion.
 Report all request outcomes beside it.
 The analysis plan keeps primary requests separate from controls and extensions.
-It preserves service mode and checks observed service bindings.
+It preserves service family, response tier, service mode, and verifier policy.
+It also checks observed chart and service bindings.
 Do not use a shared configuration ID for different algorithm settings.
 Report eligible requests, eligible roots, and omitted roots.
 Do not present a conditional ratio as an unconditional reliability result.
@@ -410,7 +467,7 @@ Storage cost remains a separate budget unless a price model is declared.
 | Exactness | Zero mismatches; no invalid successful commits | Stop affected method and correct it |
 | Finite domain | All primary preflight requests evaluate successfully | Narrow the domain or revise the declared target |
 | Coverage | At least 25% of changed-ancestor stage groups certify on both feasibility roots | Improve bounds or narrow the claim |
-| Resources | Enforced worker limits, measured memory, and enforced cumulative phase limits | Reduce the workload or complete enforcement |
+| Resources | Verified worker limits, measured memory, and protocol-scoped CPU admission | Reduce the workload or complete enforcement |
 | Quality | Retained fresh perplexity at most 20% above base perplexity on fixed held-out text | Reconsider grids or supported use |
 | Service value | Candidate saves complete measured cost against the declared baseline on development | Redesign or use an indexing-only claim |
 | Confirmed speed | All planned requests finish exactly; lower ratio interval exceeds 1.05 | Report conditional results without a reliable-speed claim |
@@ -451,14 +508,17 @@ Before research execution, resolve these remaining preparation blockers:
 - Build disjoint source pools and save independently selected root membership.
 - Produce original-state score artifacts and charge their complete preparation costs.
 - Select and freeze the primary chart, quantization settings, and service configuration.
-- Resolve supported worker affinity and enforce cumulative phase budgets.
-- Validate the complete service boundary and implement required independent method processes.
-- Add successive committed-state execution and complete-deletion controls.
+- Resolve worker affinity and add explicit feasibility-phase dispatch.
+- Validate complete committed timing and clean measurement overhead.
+- Integrate ordered sequences with bulk campaign scheduling.
+- Integrate isolated method execution with frozen campaign inventories and confirmation.
 - Declare confirmation configuration IDs and freeze the canonical complete inventory.
 - Use development variability to justify planned confirmation precision.
 - Obtain the user's instruction to resume research experiments.
 
-The request laws, worker controls, and inventory construction now have tested implementations.
+The request laws, worker admission ledger, independent request inventory, and local sequence runner now have correctness tests.
+Independent method processes provide another execution path, subject to their declared receipt boundary.
+The identity-cache baseline, quadratic tier, and interval fallback are implemented controls.
 Their implementation does not create real input artifacts or establish useful performance.
 The grid-box alternative remains unselected for empirical use.
 No empirical pass has been recorded for any gate.
