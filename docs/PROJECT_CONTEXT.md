@@ -1,3 +1,19 @@
+## Revision 10 result
+
+The user resumed empirical pilots on 5 October 2026.
+The current reference representation failed full-model resource admission for DistilGPT2 and GPT-2.
+Real first-block diagnostics used two WikiText articles and two C4 records.
+A NumPy prototype preserves the scalar multiply-then-add schedule.
+It produced identical feature bytes with 4.471x and 4.509x diagnostic worker ratios.
+No quantization or repair occurred in these diagnostics.
+LAMBADA input preparation and whole-word scoring checks are now present.
+The full-model task matrix remains blocked.
+See EMPIRICAL_PILOT_V10.md, pilots/v10/program.json, and RESUME.md.
+
+> Current instruction, 5 October 2026: The user resumed local empirical pilots.
+> Use protocol v6. Keep prior results and failures. Confirmation remains blocked.
+> The earlier experiment pause below is historical.
+
 # Project context and evidence provenance
 
 ## User objective and constraints

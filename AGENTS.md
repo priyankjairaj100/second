@@ -1,3 +1,7 @@
+> Current instruction, 5 October 2026: The user resumed local empirical pilots.
+> Use protocol v6. Keep prior results and failures. Confirmation remains blocked.
+> The earlier experiment pause below is historical.
+
 # Project working guidance
 
 Read RESUME.md, docs/PROJECT_CONTEXT.md, and docs/STATUS.md before continuing.

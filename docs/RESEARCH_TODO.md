@@ -1,3 +1,9 @@
+> Revision 10 update, 5 October 2026: Research pilots are authorized.
+> Actual pinned inputs and bounded feature diagnostics now exist.
+> Full-model resource admission failed. No empirical paper gate closed.
+> The 29 completed required items and 49 open items therefore remain unchanged.
+> See EMPIRICAL_PILOT_V10.md and pilots/v10/program.json.
+
 # Remaining research program
 
 Updated 4 October 2026.

@@ -1,3 +1,23 @@
+# Current status: revision 10 empirical pilots
+
+The user resumed experiments on 5 October 2026.
+Read EMPIRICAL_PILOT_V10.md for the measured results.
+The full-model resource gate failed for both planned model configurations.
+First-block feature diagnostics improved by 4.471x on WikiText and 4.509x on C4.
+Every paired feature byte matched.
+These results establish no full-model repair speedup or language quality.
+LAMBADA input checks exposed multi-token answers; the scoring prototype handles complete words.
+All full-model experiment cells remain blocked in pilots/v10/program.json.
+The next task is compact exact execution within the existing resource policy.
+
+The following revision 9 record is historical.
+
+---
+
+> Current instruction, 5 October 2026: The user resumed local empirical pilots.
+> Use protocol v6. Keep prior results and failures. Confirmation remains blocked.
+> The earlier experiment pause below is historical.
+
 # Current project status
 
 Updated 4 October 2026, revision 9 preparation.

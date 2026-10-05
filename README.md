@@ -1,3 +1,8 @@
+> Latest checkpoint: revision 10 empirical pilots, 5 October 2026.
+> Read [the pilot report](docs/EMPIRICAL_PILOT_V10.md) and [restart context](RESUME.md).
+> Real first-block diagnostics improved; full-model repair remains blocked by resource planning.
+> No full-model speedup or NLP quality claim is established.
+
 # Exact calibration-data unlearning for quantized language models
 
 This ACL 2027 project removes calibration documents while matching complete retained-data sequential quantization with fixed base weights.

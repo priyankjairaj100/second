@@ -1,0 +1,12 @@
+{
+  "repo": "allenai/c4",
+  "revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+  "filename": "en/c4-train.00000-of-01024.json.gz",
+  "http_status": 206,
+  "content_range": "bytes 0-2097151/319308785",
+  "prefix_bytes": 2097152,
+  "prefix_sha256": "57860fc6417c605d92606dd2ad1490bab9f619cc0f5cbf49117dc520e8f65403",
+  "sampling_frame": "first two MiB compressed bytes of English train shard zero; not corpus uniform",
+  "complete_gzip": false,
+  "complete_records": 2278
+}

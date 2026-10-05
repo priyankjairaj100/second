@@ -1,0 +1,194 @@
+{
+  "schema": "pilot-program-v1",
+  "date": "2026-10-05",
+  "protocol": "configs/protocol_v6.json",
+  "phase": "feasibility",
+  "research_resumed": true,
+  "confirmation_authorized": false,
+  "worker_cpu_cap_seconds": 10800,
+  "minimum_per_cell": {
+    "root_count": 1,
+    "records": 2,
+    "tokens": 16,
+    "repeats": 1
+  },
+  "limitations": [
+    "Single pilots provide no reliable population speedup.",
+    "Model config estimates are not measured memory.",
+    "Do not run dependent cells after a common prerequisite fails."
+  ],
+  "experiments": [
+    {
+      "dataset": "wikitext2",
+      "experiment": "input_provenance",
+      "status": "partial_source_pinned_license_and_final_partition_gaps",
+      "winning": null
+    },
+    {
+      "dataset": "wikitext2",
+      "experiment": "tokenization",
+      "status": "pilot_passed",
+      "winning": null,
+      "evidence": "wikitext2/input-audit.json"
+    },
+    {
+      "dataset": "wikitext2",
+      "experiment": "exactness_single_deletion",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "wikitext2",
+      "experiment": "changed_prefix_coverage",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "wikitext2",
+      "experiment": "four_method_cost",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "wikitext2",
+      "experiment": "three_request_lifetime",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "wikitext2",
+      "experiment": "heldout_quality",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "wikitext2",
+      "experiment": "mechanism_ablation",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "wikitext2",
+      "experiment": "robustness",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "c4_bounded_english",
+      "experiment": "input_provenance",
+      "status": "partial_source_pinned_license_and_final_partition_gaps",
+      "winning": null
+    },
+    {
+      "dataset": "c4_bounded_english",
+      "experiment": "tokenization",
+      "status": "pilot_passed",
+      "winning": null,
+      "evidence": "c4/input-audit.json"
+    },
+    {
+      "dataset": "c4_bounded_english",
+      "experiment": "exactness_single_deletion",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "c4_bounded_english",
+      "experiment": "changed_prefix_coverage",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "c4_bounded_english",
+      "experiment": "four_method_cost",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "c4_bounded_english",
+      "experiment": "three_request_lifetime",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "c4_bounded_english",
+      "experiment": "heldout_quality",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "c4_bounded_english",
+      "experiment": "mechanism_ablation",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "c4_bounded_english",
+      "experiment": "robustness",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    },
+    {
+      "dataset": "lambada_openai_en",
+      "experiment": "input_provenance",
+      "status": "partial_source_pinned_license_and_final_partition_gaps",
+      "winning": null
+    },
+    {
+      "dataset": "lambada_openai_en",
+      "experiment": "tokenization",
+      "status": "pilot_passed",
+      "winning": null,
+      "evidence": "lambada/input-audit.json"
+    },
+    {
+      "dataset": "lambada_openai_en",
+      "experiment": "last_word_scoring",
+      "status": "software_contract_tested_model_execution_blocked",
+      "winning": null,
+      "evidence": "../../validation/software_tests_v10.txt"
+    },
+    {
+      "dataset": "lambada_openai_en",
+      "experiment": "repair_fresh_task_agreement",
+      "status": "blocked_shared_full_model_resource_plan",
+      "winning": null,
+      "reason": "DistilGPT2 and GPT-2 fail current dense planning guards. No successful full-model repair observation exists."
+    }
+  ],
+  "diagnostic_extensions": [
+    {
+      "dataset": "wikitext2",
+      "experiment": "first_block_exact_order_kernel",
+      "status": "complete",
+      "scope": "eight prefix feature evaluations; no quantization",
+      "winning": "diagnostic_worker_only"
+    },
+    {
+      "dataset": "c4_bounded_english",
+      "experiment": "first_block_exact_order_kernel",
+      "status": "complete",
+      "scope": "eight prefix feature evaluations; no quantization",
+      "winning": "diagnostic_worker_only"
+    }
+  ],
+  "retained_failures": [
+    "distilgpt2-preflight.json",
+    "gpt2-preflight.json"
+  ],
+  "promotion_to_full_runs": false
+}

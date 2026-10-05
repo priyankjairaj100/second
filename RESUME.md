@@ -1,3 +1,41 @@
+# Resume checkpoint: empirical pilots started
+
+Date: 5 October 2026. Revision 10.
+
+The user resumed local empirical experiments with a pilot before each expansion.
+The earlier pause is superseded.
+Confirmation remains blocked.
+Read docs/EMPIRICAL_PILOT_V10.md and pilots/v10/program.json first.
+
+Actual results:
+- DistilGPT2 and GPT-2 fail the current full-model resource plans.
+- WikiText and C4 first-block diagnostics completed with real pretrained weights.
+- The exact-order NumPy prototype gave 4.471x and 4.509x diagnostic worker ratios.
+- All 344,064 paired feature values matched bit for bit.
+- These runs include no quantization, repair, quality, certificate, or lifetime result.
+- All four workers used 614 charged CPU seconds from the 10,800-second allowance.
+- Ten new software tests passed. The production implementation remains unchanged.
+- LAMBADA token alignment passed for sixteen examples. Five answers use multiple tokens.
+
+Next: make the complete exact target fit the resource policy.
+Prioritize compact exact storage, streamed hashing, and bounded Gram/factor costs.
+Integrate the linear improvement equally into repair and fresh controls.
+Then run full-model deletion pilots and the unchanged feasibility gates.
+Do not expand blocked cells or claim full-model speedup.
+Keep every failure, loss, and missing outcome.
+
+Pinned inputs, acquisition commands, source hashes, worker receipts, and feature bytes are preserved.
+See pilots/v10/README.md for reproduction.
+The downloaded corpus and checkpoint remain excluded from git.
+The earlier revision 9 checkpoint was 859514bc6dcb5c6d34820478c1f2bfb5c7edabc1.
+The sections below preserve its implementation and theory context.
+
+---
+
+> Current instruction, 5 October 2026: The user resumed local empirical pilots.
+> Use protocol v6. Keep prior results and failures. Confirmation remains blocked.
+> The earlier experiment pause below is historical.
+
 # Resume this ACL 2027 calibration-unlearning project
 
 Last revision: 4 October 2026, v9 preparation.

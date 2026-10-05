@@ -1,0 +1,15 @@
+test_boundary_crossing_rejected (tests.test_pilot_inputs_v10.LastWordTests.test_boundary_crossing_rejected) ... ok
+test_context_truncation_keeps_complete_target (tests.test_pilot_inputs_v10.LastWordTests.test_context_truncation_keeps_complete_target) ... ok
+test_every_target_token_affects_accuracy (tests.test_pilot_inputs_v10.LastWordTests.test_every_target_token_affects_accuracy) ... ok
+test_lower_token_breaks_exact_tie (tests.test_pilot_inputs_v10.LastWordTests.test_lower_token_breaks_exact_tie) ... ok
+test_cancellation_and_fma_sensitive_values (tests.test_pilot_inputs_v10.OrderedKernelTests.test_cancellation_and_fma_sensitive_values) ... ok
+test_overflow_fails_instead_of_cancelling (tests.test_pilot_inputs_v10.OrderedKernelTests.test_overflow_fails_instead_of_cancelling) ... ok
+test_shapes_and_nonfinite_rejected (tests.test_pilot_inputs_v10.OrderedKernelTests.test_shapes_and_nonfinite_rejected) ... ok
+test_underflow_subnormals_and_signed_zero (tests.test_pilot_inputs_v10.OrderedKernelTests.test_underflow_subnormals_and_signed_zero) ... ok
+test_article_boundaries_keep_sections (tests.test_pilot_inputs_v10.PilotInputTests.test_article_boundaries_keep_sections) ... ok
+test_leading_body_rejected (tests.test_pilot_inputs_v10.PilotInputTests.test_leading_body_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.077s
+
+OK
