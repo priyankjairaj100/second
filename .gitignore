@@ -6,3 +6,6 @@ output/pdf/*.aux
 output/pdf/*.log
 output/pdf/*.out
 *.zip
+
+# User-local empirical workspaces; publish selected evidence explicitly.
+local_runs/

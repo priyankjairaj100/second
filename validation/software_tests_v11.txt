@@ -1,0 +1,12 @@
+test_default_bundle_hashes (test_local_handoff_v11.LocalHandoffTests.test_default_bundle_hashes) ... ok
+test_extra_evidence_and_size_cap (test_local_handoff_v11.LocalHandoffTests.test_extra_evidence_and_size_cap) ... ok
+test_missing_planned_cell_rejected (test_local_handoff_v11.LocalHandoffTests.test_missing_planned_cell_rejected) ... ok
+test_preserves_budget_and_does_not_authorize (test_local_handoff_v11.LocalHandoffTests.test_preserves_budget_and_does_not_authorize) ... ok
+test_refuses_existing_workspace (test_local_handoff_v11.LocalHandoffTests.test_refuses_existing_workspace) ... ok
+test_rejects_external_and_symlink_files (test_local_handoff_v11.LocalHandoffTests.test_rejects_external_and_symlink_files) ... ok
+test_rejects_input_filenames (test_local_handoff_v11.LocalHandoffTests.test_rejects_input_filenames) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.692s
+
+OK

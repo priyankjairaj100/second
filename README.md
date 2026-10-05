@@ -1,3 +1,8 @@
+> Current handoff: [LOCAL_LLM_START.md](LOCAL_LLM_START.md).
+> Follow [the precise local empirical program](docs/LOCAL_EMPIRICAL_PROGRAM.md).
+> Use [the machine-readable checklist](handoff/program.json) and `scripts/local_handoff.py` for reporting.
+> Full-model execution remains blocked. Archived diagnostics do not establish repair speedup.
+
 > Latest checkpoint: revision 10 empirical pilots, 5 October 2026.
 > Read [the pilot report](docs/EMPIRICAL_PILOT_V10.md) and [restart context](RESUME.md).
 > Real first-block diagnostics improved; full-model repair remains blocked by resource planning.
@@ -8,7 +13,7 @@
 This ACL 2027 project removes calibration documents while matching complete retained-data sequential quantization with fixed base weights.
 Start with [RESUME.md](RESUME.md), [status](docs/STATUS.md), and the [revision 9 note](docs/REVISION_9.md).
 
-Research experiments remain paused.
+Future empirical execution belongs on the user’s local machine. Read the revision 11 handoff first.
 Revision 9 completes another preparation pass on measured comparisons, ordered lifetime costs, runtime and instrumentation contracts, conditional feasibility decisions, and provider diagnostics.
 It does not establish practical model feasibility, useful certificate coverage, language quality, or reliable full-model speedup.
 

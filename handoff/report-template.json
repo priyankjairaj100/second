@@ -1,0 +1,77 @@
+{
+  "schema": "local-empirical-report-v1",
+  "git_commit": null,
+  "source_dirty": null,
+  "phase": "setup",
+  "runtime_sha256": null,
+  "protocol_sha256": null,
+  "inventory_sha256": null,
+  "resource_policy": null,
+  "inherited_cpu_seconds": 614,
+  "new_worker_cpu_seconds": null,
+  "planned_cells": 40,
+  "cell_results": [],
+  "summary": {
+    "correctness": "unmeasured",
+    "mechanism": "unmeasured",
+    "quality": "unmeasured",
+    "full_model_speedup": "unmeasured",
+    "promotion": "blocked"
+  },
+  "blockers": [
+    "compact_exact_backend",
+    "complete_model_admission",
+    "real_source_inventory_builder",
+    "provenance_bound_feasibility_bridge",
+    "local_runtime_and_resource_policy",
+    "final_primary_selection",
+    "confirmation_precision_and_freeze"
+  ],
+  "next_action": "Close backend admission and freeze a real-source local protocol.",
+  "evidence": [],
+  "measurement_row_template": {
+    "cell_id": null,
+    "phase": null,
+    "configuration_id": null,
+    "root_id": null,
+    "request_id": null,
+    "repeat_index": null,
+    "status": "not_started",
+    "reason": null,
+    "source_commit": null,
+    "target_sha256": null,
+    "input_sha256": null,
+    "runtime_sha256": null,
+    "protocol_sha256": null,
+    "inventory_sha256": null,
+    "original_observation_ids": [],
+    "exact_codes": null,
+    "exact_state": null,
+    "coverage_numerator": null,
+    "coverage_denominator": null,
+    "quality_token_count": null,
+    "base_nll": null,
+    "retained_fresh_nll": null,
+    "repair_nll": null,
+    "method_wall_ns": {
+      "model_only_fresh": null,
+      "repair": null,
+      "indexed_fresh": null,
+      "direct_fresh": null
+    },
+    "preparation_wall_ns": {
+      "repair": null,
+      "model_only_fresh": null
+    },
+    "lifetime_wall_ns": {
+      "repair": null,
+      "model_only_fresh": null,
+      "indexed_fresh": null
+    },
+    "peak_rss_bytes": null,
+    "state_bytes": null,
+    "worker_cpu_seconds": null,
+    "winning": null,
+    "evidence": []
+  }
+}

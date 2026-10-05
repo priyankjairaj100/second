@@ -1,3 +1,21 @@
+# Current instruction: local empirical execution
+
+Updated 5 October 2026. Revision 11 handoff.
+The user will run future research experiments on their local machine.
+This chat prepares code and reviews returned evidence. Do not launch new research experiments here.
+Local coding agents should execute docs/LOCAL_EMPIRICAL_PROGRAM.md under its staged gates.
+Software checks remain allowed here.
+Read LOCAL_LLM_START.md, docs/LOCAL_EMPIRICAL_PROGRAM.md, and handoff/program.json first.
+Preserve all prior evidence. Generate new runtime bindings, budgets, paths, and inventories locally.
+The original feasibility allowance has 614 charged CPU seconds. Never silently reset it.
+Full-model repair, quality, and reliable speedup remain unmeasured.
+The archived 4.471x/4.509x ratios describe first-block diagnostic workers only.
+The previous research checkpoint is 4fb4f8a6137fa37e3130af94e7d31ecaa188bdcb.
+
+---
+
+The following sections preserve historical checkpoints.
+
 ## Revision 10 result
 
 The user resumed empirical pilots on 5 October 2026.

@@ -1,0 +1,7 @@
+# Versions observed during revision 10. Use CPython 3.12 on Linux or WSL2.
+# Capture the resolved environment. This file is not a transitive dependency lock.
+numpy==2.3.5
+tokenizers==0.23.2
+huggingface_hub==1.33.0
+pyarrow==25.0.1
+socksio==1.0.0

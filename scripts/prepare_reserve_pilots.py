@@ -1,4 +1,5 @@
 """Prepare bounded C4 and LAMBADA input pilots without model evaluation."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -9,8 +10,18 @@ from src.run_store import canonical_json, digest, atomic_write
 
 
 def main():
-    from tokenizers import Tokenizer
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, required=True,
+                        help='New output directory outside archived pilots')
+    args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
+    destination = args.output.resolve()
+    archive = (root / 'pilots').resolve()
+    if destination == archive or archive in destination.parents:
+        raise ValueError('Do not write new inputs into archived pilot directories')
+    if destination.exists() or args.output.is_symlink():
+        raise ValueError('Refusing an existing input output directory')
+    from tokenizers import Tokenizer
     tokfile = root/'tmp/models/distilgpt2/tokenizer.json'
     tok = Tokenizer.from_file(str(tokfile))
     meta = json.loads((root/'pilots/v10/reserve-source-metadata.json').read_bytes())
@@ -38,7 +49,7 @@ def main():
         selected_pool_sha256=digest(canonical_json(rows)),model_evaluated=False,
         sampling_frame='bounded compressed prefix of one train shard; no corpus-uniform or independent-domain claim',
         source_redistributed=False,final_confirmation_pool_frozen=False)
-    out=root/'pilots/v10/c4';out.mkdir(parents=True,exist_ok=True)
+    out=destination/'c4';out.mkdir(parents=True,exist_ok=True)
     atomic_write(out/'preflight-records.json',canonical_json(prepared))
     atomic_write(out/'input-audit.json',canonical_json(audit))
     rawfile=root/'tmp/data/lambada/data/lambada_test_en.jsonl'
@@ -64,7 +75,7 @@ def main():
         future_greedy_rule='generate target subtoken count; compare the complete continuation; fixed EOS policy required',
         pilot_ids_excluded_from_final_evaluation=True,source_redistributed=False,
         remaining=['underlying book-text permissions','verified task evaluator','finite model execution','full-model exactness'])
-    out=root/'pilots/v10/lambada';out.mkdir(parents=True,exist_ok=True)
+    out=destination/'lambada';out.mkdir(parents=True,exist_ok=True)
     atomic_write(out/'input-audit.json',canonical_json(audit))
     print(json.dumps({'c4_eligible':len(rows),'lambada_examples':len(examples),
         'lambada_pilot':len(details),'lambada_aligned':sum(x['prefix_aligned'] for x in details)}))
