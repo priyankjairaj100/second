@@ -1,3 +1,15 @@
+# Current instruction: resume bounded execution here
+
+Updated 7 October 2026. Revision 12.
+The user resumed empirical execution here and requested maximum progress with limited credits.
+Restore pinned sources and use the existing feasibility thresholds.
+Run bounded pilots first. Preserve every result, failure, source snapshot, and CPU debit.
+Do not claim complete-model repair or speed without measured evidence.
+The current developer enables focused parallel work. Avoid redundant reviews and repeated tests.
+The revision 11 local-only instruction below is historical and superseded.
+
+---
+
 # Current instruction: local empirical execution
 
 Updated 5 October 2026. Revision 11 handoff.

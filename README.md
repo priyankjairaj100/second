@@ -1,4 +1,8 @@
 > Current handoff: [LOCAL_LLM_START.md](LOCAL_LLM_START.md).
+
+Revision 12 resumes bounded empirical execution here. Read [current status](docs/STATUS.md).
+Complete-model finite execution now passes. Full-model repair and reliable speedup remain unproved.
+
 > Follow [the precise local empirical program](docs/LOCAL_EMPIRICAL_PROGRAM.md).
 > Use [the machine-readable checklist](handoff/program.json) and `scripts/local_handoff.py` for reporting.
 > Full-model execution remains blocked. Archived diagnostics do not establish repair speedup.

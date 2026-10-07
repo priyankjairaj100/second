@@ -1,3 +1,21 @@
+# Current execution: revision 12
+
+Updated 7 October 2026. The user authorized continued empirical execution here.
+The revision 11 local-only instruction below is superseded.
+Read docs/COMPACT_EXECUTION_V12.md and docs/V12_REPAIR_INTEGRATION_AUDIT.md for the new implementation boundaries.
+Read pilots/v12/program.json and each immutable attempt receipt for actual outcomes.
+
+Compact checkpoint storage and exact-order finite execution now work on complete DistilGPT2 forward passes.
+The optional MPFR enclosure backend has an explicit, different evaluator binding.
+Token-space quantization preserves the exact rational code target under its documented arithmetic premises.
+Model-code pilots do not produce canonical repair state or establish repair speed.
+Dense committed response state, scalar proof jets, and transport verification remain integration blockers.
+Confirmation remains blocked. Preserve failures, CPU debits, and all unstarted experiment cells.
+
+---
+
+The following sections preserve historical checkpoints.
+
 # Start the local empirical program
 
 Updated 5 October 2026. This handoff supersedes earlier execution-location instructions.

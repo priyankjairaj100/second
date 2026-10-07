@@ -1,0 +1,51 @@
+{
+  "initial_suite": {
+    "tests": 574,
+    "failures": 28,
+    "errors": 3,
+    "log_sha256": "b7aaf869d1e3549143936e2925867f8feb95cebcdd77c702127bcba04f0b66e6",
+    "failed_tests": [
+      "test_artifact_and_convenience_tamper_rejected (test_measured_comparison_v9.MeasuredComparisonTests.test_artifact_and_convenience_tamper_rejected)",
+      "test_reused_receipt_is_not_new_latency_and_checks_outputs (test_transaction_timing_v8.TransactionTimingTests.test_reused_receipt_is_not_new_latency_and_checks_outputs)",
+      "test_timeout_cleans_descendant_in_another_session (test_transaction_timing_v8.TransactionTimingTests.test_timeout_cleans_descendant_in_another_session)",
+      "test_reused_timing_requires_unchanged_bound_inputs_outside_output_tree (test_adversarial_v8.AdversarialTransactionTests.test_reused_timing_requires_unchanged_bound_inputs_outside_output_tree)",
+      "test_interrupted_parent_preserves_leaf_costs_without_promoting_them_before_seal (test_adversarial_v9.AdversarialMeasuredAnalysisTests.test_interrupted_parent_preserves_leaf_costs_without_promoting_them_before_seal)",
+      "test_actual_diagnostic_artifacts_decompose_without_double_count (test_diagnostic_breakdown_v9.DiagnosticBreakdownTests.test_actual_diagnostic_artifacts_decompose_without_double_count)",
+      "test_actual_measured_archive_yields_facts_and_precise_missing_premises (test_feasibility_archive_v9.FeasibilityArchiveTests.test_actual_measured_archive_yields_facts_and_precise_missing_premises)",
+      "test_combined_actual_profiles_pair_coverage_and_cli_keeps_archives_immutable (test_feasibility_archive_v9.FeasibilityArchiveTests.test_combined_actual_profiles_pair_coverage_and_cli_keeps_archives_immutable)",
+      "test_diagnostic_sequence_exports_stage_audit_groups_without_clean_ratio (test_measured_analysis_v9.MeasuredArtifactAnalysisTests.test_diagnostic_sequence_exports_stage_audit_groups_without_clean_ratio)",
+      "test_real_sealed_campaign_exact_models_duplicate_and_tampering (test_measured_analysis_v9.MeasuredArtifactAnalysisTests.test_real_sealed_campaign_exact_models_duplicate_and_tampering)",
+      "test_real_sequence_lifetime_distinct_setup_and_single_charge (test_measured_analysis_v9.MeasuredArtifactAnalysisTests.test_real_sequence_lifetime_distinct_setup_and_single_charge)",
+      "test_unsealed_parent_with_all_finished_leaves_cannot_enter_ratios (test_measured_analysis_v9.MeasuredArtifactAnalysisTests.test_unsealed_parent_with_all_finished_leaves_cannot_enter_ratios)",
+      "test_complete_campaign_resume_and_mutation_rejection (test_measured_campaign_v9.MeasuredCampaignTests.test_complete_campaign_resume_and_mutation_rejection)",
+      "test_diagnostic_and_quality_are_explicit_separate (test_measured_comparison_v9.MeasuredComparisonTests.test_diagnostic_and_quality_are_explicit_separate)",
+      "test_exact_four_contracts_clean_and_resume (test_measured_comparison_v9.MeasuredComparisonTests.test_exact_four_contracts_clean_and_resume)",
+      "test_inconsistent_target_preserves_all_planned_outcomes (test_measured_comparison_v9.MeasuredComparisonTests.test_inconsistent_target_preserves_all_planned_outcomes)",
+      "test_missing_original_observer_cannot_become_fast_success (test_measured_comparison_v9.MeasuredComparisonTests.test_missing_original_observer_cannot_become_fast_success)",
+      "test_parent_interrupt_reuses_original_observer (test_measured_comparison_v9.MeasuredComparisonTests.test_parent_interrupt_reuses_original_observer)",
+      "test_complete_all_delete_and_empty_after_all_restart (test_measured_sequence_v9.MeasuredSequenceTests.test_complete_all_delete_and_empty_after_all_restart)",
+      "test_interruption_after_sealed_role_reuses_original_observation (test_measured_sequence_v9.MeasuredSequenceTests.test_interruption_after_sealed_role_reuses_original_observation)",
+      "test_quality_is_separate_from_matched_lifetime (test_measured_sequence_v9.MeasuredSequenceTests.test_quality_is_separate_from_matched_lifetime)",
+      "test_service_predecessor_does_not_require_research_or_timing_archives (test_measured_sequence_v9.MeasuredSequenceTests.test_service_predecessor_does_not_require_research_or_timing_archives)",
+      "test_wrong_predecessor_fails_at_leaf_and_preserves_future_slots (test_measured_sequence_v9.MeasuredSequenceTests.test_wrong_predecessor_fails_at_leaf_and_preserves_future_slots)",
+      "test_measured_feasibility_requires_and_charges_live_admission (test_model_fresh_v8.ModelFreshTests.test_measured_feasibility_requires_and_charges_live_admission)",
+      "test_complete_boundary_and_disjoint_accounting (test_transaction_timing_v8.TransactionTimingTests.test_complete_boundary_and_disjoint_accounting)",
+      "test_fresh_rejects_partial_and_resume_labels_remaining_work (test_transaction_timing_v8.TransactionTimingTests.test_fresh_rejects_partial_and_resume_labels_remaining_work)",
+      "test_interruption_seals_incomplete_receipt (test_transaction_timing_v8.TransactionTimingTests.test_interruption_seals_incomplete_receipt)",
+      "test_manifest_and_disjoint_tree_validation (test_transaction_timing_v8.TransactionTimingTests.test_manifest_and_disjoint_tree_validation)",
+      "test_measured_worker_is_debited_to_bound_phase_budget (test_transaction_timing_v8.TransactionTimingTests.test_measured_worker_is_debited_to_bound_phase_budget)",
+      "test_output_contracts_cannot_be_silently_mixed (test_transaction_timing_v8.TransactionTimingTests.test_output_contracts_cannot_be_silently_mixed)",
+      "test_v9_absolute_observer_origin_must_match_worker (test_transaction_timing_v8.TransactionTimingTests.test_v9_absolute_observer_origin_must_match_worker)"
+    ],
+    "diagnosis": "NumPy import started additional threads; strict measurement observer rejected this runtime. Guards were retained."
+  },
+  "corrected_suite": {
+    "tests": 590,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 866.87,
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 taskset -c 1 python -m unittest discover -s tests -v",
+    "log_sha256": "6d35a9d90efecf716d3c591eb43e2e0ab4ce3280add2aa3ad11ddcc7486b9e52"
+  },
+  "later_edits": "Pilot orchestration adds deletion/feature comparison and heldout diagnostic modes after this suite. Core sources remain unchanged; scripts received compilation checks."
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "real-calibration-deletion-diagnostic-v12",
+  "original_attempt": "attempt-005",
+  "retained_attempt": "attempt-006",
+  "deleted_ids": [
+    "wikitext2:train:article-row-27113"
+  ],
+  "retained_ids": [
+    "wikitext2:train:article-row-5326"
+  ],
+  "fixed_normalization": 32,
+  "total_model_codes": 42467328,
+  "changed_model_codes": 2393753,
+  "changed_stages": 24,
+  "feature_values": 516096,
+  "changed_feature_values": 503773,
+  "exact_fallback_decisions": 0,
+  "full_requantization": true,
+  "repair": false,
+  "feature_avoidance": false,
+  "timing_comparison_is_repair_speed": false,
+  "records_before": 2,
+  "records_after": 1,
+  "tokens_per_record": 16,
+  "scope": "Single deterministic development deletion; no population inference."
+}

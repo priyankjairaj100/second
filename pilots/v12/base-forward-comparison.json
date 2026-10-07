@@ -1,0 +1,13 @@
+{
+  "schema": "paired-base-forward-diagnostic-v12",
+  "reference": "attempt-002",
+  "candidate": "attempt-003",
+  "paired_logit_count": 1608224,
+  "all_logit_hashes_equal": true,
+  "reference_internal_seconds": 707.751659072,
+  "candidate_internal_seconds": 126.405398113,
+  "diagnostic_single_pair_ratio": 5.599061983407592,
+  "repair_speed_claim": false,
+  "replicates": 1,
+  "scope": "Different source snapshots and explicit parameter/target encodings; same correctly rounded base logits on these two real records."
+}

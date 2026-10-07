@@ -1,3 +1,28 @@
+# Revision 12 evidence update
+
+Updated 7 October 2026. Read EMPIRICAL_PILOT_V12.md first.
+Completed: compact checkpoint storage, exact-order finite kernels, optional certified MPFR enclosures, and full-model code quantization.
+The core suite passes 590 tests under the declared single-thread environment.
+The first full quantization pilot uses only two sixteen-token WikiText records.
+It is not the registered scientific feasibility workload.
+
+Remaining required work:
+
+1. Define and validate bounded complete repair-state representation and serialization.
+2. Implement compact certified transport of features after ancestor codes change.
+3. Integrate common optimizations into all four complete measured methods.
+4. Compare repaired models and canonical states with independently reconstructed retained outputs.
+5. Pass the two-root correctness, feature-avoidance, quality, resource, and lifetime feasibility gates.
+6. Freeze actual real-source inventories, disjoint pools, primary configuration, and justified confirmation size.
+7. Execute the forty-cell program, preserving failures, missing runs, and negative results.
+8. Complete ablations, second-corpus/model replication, complete-word LAMBADA evaluation, and release checks.
+9. Update the literature audit and manuscript with measured claims only.
+
+The integration audit gives twelve concrete implementation steps.
+The historical register below is retained; its earlier totals do not describe revision 12.
+
+---
+
 > Revision 10 update, 5 October 2026: Research pilots are authorized.
 > Actual pinned inputs and bounded feature diagnostics now exist.
 > Full-model resource admission failed. No empirical paper gate closed.

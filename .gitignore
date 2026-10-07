@@ -9,3 +9,8 @@ output/pdf/*.out
 
 # User-local empirical workspaces; publish selected evidence explicitly.
 local_runs/
+
+# Revision 12 derived full-model code arrays; hashes and receipts are published.
+/pilots/v12/**/outputs/*.codes.bin
+/pilots/v12/**/writer.lock
+/pilots/v12/**/phase-cpu-budget/ledger.lock

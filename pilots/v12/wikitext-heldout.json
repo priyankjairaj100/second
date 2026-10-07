@@ -1,0 +1,65 @@
+{
+  "excluded_from_future_confirmation_ids": [
+    "wikitext2:validation:article-row-1606",
+    "wikitext2:validation:article-row-955"
+  ],
+  "pool_sha256": "772debb14b58b5611a93de939f7ad9d515611c62ed6fa30d16d97cf8bfe88dba",
+  "records": [
+    {
+      "id": "wikitext2:validation:article-row-1606",
+      "tokens": [
+        37956,
+        8865,
+        7212,
+        500,
+        373,
+        262,
+        24395,
+        19690,
+        6388,
+        286,
+        262,
+        3648,
+        10596,
+        23964,
+        1622,
+        764
+      ]
+    },
+    {
+      "id": "wikitext2:validation:article-row-955",
+      "tokens": [
+        35949,
+        33576,
+        843,
+        398,
+        276,
+        3609,
+        275,
+        357,
+        37640,
+        515,
+        18074,
+        227,
+        843,
+        398,
+        276,
+        3609
+      ]
+    }
+  ],
+  "schema": "v12-two-record-heldout-diagnostic",
+  "scope": "30 next-token predictions only; not a scientific quality-gate result",
+  "selection": "first eligible evaluation records in existing pilot-order-v1; no model-dependent selection",
+  "source_files": {
+    "tmp/data/wikitext2/wikitext-2-raw-v1/train-00000-of-00001.parquet": {
+      "bytes": 6357543,
+      "sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7"
+    },
+    "tmp/data/wikitext2/wikitext-2-raw-v1/validation-00000-of-00001.parquet": {
+      "bytes": 657209,
+      "sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c"
+    }
+  },
+  "tokenizer_sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6"
+}

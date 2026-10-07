@@ -72,6 +72,22 @@ def write_checkpoint(root, config, weights, **kwargs):
     write_safe(root / "model.safetensors", weights, **kwargs)
 
 
+def append_buffer(path, name, shape, values, dtype="F32"):
+    """Add an explicit test buffer without altering parameter tensors."""
+    stored = path.read_bytes()
+    length = struct.unpack("<Q", stored[:8])[0]
+    header = json.loads(stored[8:8 + length])
+    payload = stored[8 + length:]
+    code = {"F16": "e", "BF16": "H", "F32": "f", "F64": "d"}[dtype]
+    if dtype == "BF16":
+        values = [struct.unpack("<I", struct.pack("<f", value))[0] >> 16 for value in values]
+    extra = b"".join(struct.pack("<" + code, value) for value in values)
+    header[name] = {"shape": shape, "dtype": dtype, "data_offsets": [len(payload), len(payload) + len(extra)]}
+    raw = json.dumps(header, separators=(",", ":")).encode()
+    raw += b" " * (-len(raw) % 8)
+    path.write_bytes(struct.pack("<Q", len(raw)) + raw + payload + extra)
+
+
 class CheckpointAdapterTests(unittest.TestCase):
     def test_all_supported_dtypes_map_architecture_and_values(self):
         config, weights, expected = checkpoint_fixture()
@@ -86,6 +102,52 @@ class CheckpointAdapterTests(unittest.TestCase):
                                      expected.stage_features(stage, (0, 1, 2)))
                 self.assertEqual(loaded.decoder.logits((0, 1, 2)), expected.logits((0, 1, 2)))
                 self.assertEqual(loaded.provenance["source_dtype_counts"][dtype], len(weights))
+
+    def test_stored_causal_buffers_require_exact_configured_triangle(self):
+        config, weights, expected = checkpoint_fixture()
+        values = [float(column <= row) for row in range(4) for column in range(4)]
+        for dtype in ("F16", "BF16", "F32", "F64"):
+            with self.subTest(dtype=dtype), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                write_checkpoint(root, config, weights)
+                append_buffer(root / "model.safetensors", "transformer.h.0.attn.bias", [1, 1, 4, 4], values, dtype)
+                loaded = load_gpt2_checkpoint(root)
+                self.assertEqual(loaded.decoder.evaluator_id, expected.evaluator_id)
+                self.assertEqual(loaded.decoder.logits((0, 1)), expected.logits((0, 1)))
+                proof = loaded.provenance["validated_causal_buffers"]["transformer.h.0.attn.bias"]
+                self.assertEqual(proof["dtype"], dtype)
+                self.assertEqual(proof["shape"], [1, 1, 4, 4])
+                self.assertEqual(len(proof["sha256"]), 64)
+                self.assertEqual(loaded.provenance["stored_causal_buffer_elements"], 16)
+                self.assertEqual(loaded.provenance["stored_tensor_elements"],
+                                 loaded.provenance["stored_parameter_elements"] + 16)
+
+    def test_corrupted_causal_buffers_fail_closed(self):
+        config, weights, _ = checkpoint_fixture()
+        original = [float(column <= row) for row in range(4) for column in range(4)]
+        for index, replacement in ((0, 0.0), (1, 1.0), (4, .5), (1, -0.0), (7, float("nan"))):
+            with self.subTest(index=index, replacement=replacement), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                write_checkpoint(root, config, weights)
+                altered = original.copy()
+                altered[index] = replacement
+                append_buffer(root / "model.safetensors", "transformer.h.0.attn.bias", [1, 1, 4, 4], altered)
+                with self.assertRaisesRegex(CheckpointError, "causal mask differs"):
+                    load_gpt2_checkpoint(root)
+
+    def test_wrong_causal_buffer_shapes_and_other_extras_fail_closed(self):
+        config, weights, _ = checkpoint_fixture()
+        cases = (("transformer.h.0.attn.bias", [4, 4], [0.0] * 16, "causal mask shape"),
+                 ("transformer.h.0.attn.bias", [1, 1, 3, 3], [0.0] * 9, "causal mask shape"),
+                 ("transformer.h.1.attn.bias", [1, 1, 4, 4], [0.0] * 16, "unexpected"),
+                 ("transformer.h.0.attn.masked_bias", [], [-10000.0], "unexpected"))
+        for name, shape, values, error in cases:
+            with self.subTest(name=name, shape=shape), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                write_checkpoint(root, config, weights)
+                append_buffer(root / "model.safetensors", name, shape, values)
+                with self.assertRaisesRegex(CheckpointError, error):
+                    load_gpt2_checkpoint(root)
 
     def test_default_activation_is_gelu_new_and_not_erf(self):
         config, weights, tanh_decoder = checkpoint_fixture()
