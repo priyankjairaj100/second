@@ -1,0 +1,128 @@
+{
+  "schema": "v13-to-v12-exact-model-comparison",
+  "same_target": true,
+  "all_codes_match": true,
+  "stages": [
+    {
+      "stage_id": "block.0000.qkv",
+      "matches_v12": true,
+      "values": 1769472
+    },
+    {
+      "stage_id": "block.0000.attn_out",
+      "matches_v12": true,
+      "values": 589824
+    },
+    {
+      "stage_id": "block.0000.mlp_up",
+      "matches_v12": true,
+      "values": 2359296
+    },
+    {
+      "stage_id": "block.0000.mlp_down",
+      "matches_v12": true,
+      "values": 2359296
+    },
+    {
+      "stage_id": "block.0001.qkv",
+      "matches_v12": true,
+      "values": 1769472
+    },
+    {
+      "stage_id": "block.0001.attn_out",
+      "matches_v12": true,
+      "values": 589824
+    },
+    {
+      "stage_id": "block.0001.mlp_up",
+      "matches_v12": true,
+      "values": 2359296
+    },
+    {
+      "stage_id": "block.0001.mlp_down",
+      "matches_v12": true,
+      "values": 2359296
+    },
+    {
+      "stage_id": "block.0002.qkv",
+      "matches_v12": true,
+      "values": 1769472
+    },
+    {
+      "stage_id": "block.0002.attn_out",
+      "matches_v12": true,
+      "values": 589824
+    },
+    {
+      "stage_id": "block.0002.mlp_up",
+      "matches_v12": true,
+      "values": 2359296
+    },
+    {
+      "stage_id": "block.0002.mlp_down",
+      "matches_v12": true,
+      "values": 2359296
+    },
+    {
+      "stage_id": "block.0003.qkv",
+      "matches_v12": true,
+      "values": 1769472
+    },
+    {
+      "stage_id": "block.0003.attn_out",
+      "matches_v12": true,
+      "values": 589824
+    },
+    {
+      "stage_id": "block.0003.mlp_up",
+      "matches_v12": true,
+      "values": 2359296
+    },
+    {
+      "stage_id": "block.0003.mlp_down",
+      "matches_v12": true,
+      "values": 2359296
+    },
+    {
+      "stage_id": "block.0004.qkv",
+      "matches_v12": true,
+      "values": 1769472
+    },
+    {
+      "stage_id": "block.0004.attn_out",
+      "matches_v12": true,
+      "values": 589824
+    },
+    {
+      "stage_id": "block.0004.mlp_up",
+      "matches_v12": true,
+      "values": 2359296
+    },
+    {
+      "stage_id": "block.0004.mlp_down",
+      "matches_v12": true,
+      "values": 2359296
+    },
+    {
+      "stage_id": "block.0005.qkv",
+      "matches_v12": true,
+      "values": 1769472
+    },
+    {
+      "stage_id": "block.0005.attn_out",
+      "matches_v12": true,
+      "values": 589824
+    },
+    {
+      "stage_id": "block.0005.mlp_up",
+      "matches_v12": true,
+      "values": 2359296
+    },
+    {
+      "stage_id": "block.0005.mlp_down",
+      "matches_v12": true,
+      "values": 2359296
+    }
+  ],
+  "independent_neural_implementation": false
+}

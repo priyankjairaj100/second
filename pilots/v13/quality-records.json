@@ -1,0 +1,126 @@
+{
+  "schema": "fixed-v13-development-quality-control",
+  "records": [
+    {
+      "id": "wikitext2:validation:article-row-2694",
+      "tokens": [
+        366,
+        45924,
+        44764,
+        366,
+        318,
+        262,
+        717,
+        10618,
+        286,
+        262,
+        1248,
+        400,
+        4471,
+        286,
+        262,
+        1218
+      ]
+    },
+    {
+      "id": "wikitext2:validation:article-row-2154",
+      "tokens": [
+        347,
+        286,
+        262,
+        9801,
+        373,
+        257,
+        26924,
+        416,
+        5658,
+        24253,
+        16239,
+        1306,
+        284,
+        262,
+        2254,
+        286
+      ]
+    },
+    {
+      "id": "wikitext2:validation:article-row-1657",
+      "tokens": [
+        383,
+        4564,
+        286,
+        24990,
+        468,
+        587,
+        1944,
+        287,
+        4486,
+        1201,
+        8069,
+        764,
+        2679,
+        4773,
+        8636,
+        326
+      ]
+    },
+    {
+      "id": "wikitext2:validation:article-row-1877",
+      "tokens": [
+        383,
+        49584,
+        784,
+        9919,
+        968,
+        8936,
+        12547,
+        4346,
+        1074,
+        373,
+        257,
+        968,
+        8936,
+        22948,
+        6441,
+        1074
+      ]
+    }
+  ],
+  "selection": "next four eligible articles in existing pilot-order-v1 after excluding both revision12 quality articles",
+  "pool_sha256": "20f6dcf2893b157d4064f43c8b4c92ff96b370d350e53affaa8075b989178c5b",
+  "prior_exclusions": [
+    "wikitext2:validation:article-row-1606",
+    "wikitext2:validation:article-row-955"
+  ],
+  "excluded_from_future_confirmation_ids": [
+    "wikitext2:validation:article-row-1606",
+    "wikitext2:validation:article-row-1657",
+    "wikitext2:validation:article-row-1877",
+    "wikitext2:validation:article-row-2154",
+    "wikitext2:validation:article-row-2694",
+    "wikitext2:validation:article-row-955"
+  ],
+  "models": [
+    "base",
+    "retained_calibrated",
+    "nearest_rounding"
+  ],
+  "model_order": [
+    "retained_calibrated",
+    "nearest_rounding",
+    "base"
+  ],
+  "quantizer": "fixed output-row power2 four-bit; no selection based on these outcomes",
+  "scope": "60 development next-token predictions; registered feasibility remains separate",
+  "source_files": {
+    "tmp/data/wikitext2/wikitext-2-raw-v1/train-00000-of-00001.parquet": {
+      "bytes": 6357543,
+      "sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7"
+    },
+    "tmp/data/wikitext2/wikitext-2-raw-v1/validation-00000-of-00001.parquet": {
+      "bytes": 657209,
+      "sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c"
+    }
+  },
+  "tokenizer_sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6"
+}

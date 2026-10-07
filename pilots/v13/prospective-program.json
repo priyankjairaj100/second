@@ -1,0 +1,33 @@
+{
+  "schema": "v13-bounded-diagnostic-program",
+  "scope": "Resolve complete-state execution and compare all four service roles on the existing real pilot",
+  "primary_promotion": false,
+  "original_quality_screen": 1.20,
+  "original_changed_ancestor_avoidance_threshold": 0.25,
+  "original_worker_cpu_cap": 10800,
+  "inherited_spending_before_v13": 4283,
+  "worker_limit_seconds": 900,
+  "state_family": "factor_identity_v1",
+  "quantizer": "fixed output-row four-bit sequential exact target; original normalization 32",
+  "attempts": [
+    {"id": "attempt-001", "role": "preparation", "status_at_registration": "failed_logging_collision_preserved"},
+    {"id": "attempt-002", "role": "preparation", "status_at_registration": "running"},
+    {"id": "attempt-003", "role": "repair", "delete_indices": [0], "prior": "attempt-002"},
+    {"id": "attempt-004", "role": "model_only_fresh", "delete_indices": [0]},
+    {"id": "attempt-005", "role": "indexed_fresh", "delete_indices": [0], "prior": "attempt-002"},
+    {"id": "attempt-006", "role": "direct_fresh", "delete_indices": [0]},
+    {"id": "attempt-007", "role": "sequential_delete_to_empty", "delete_indices": [0,1], "prior": "attempt-003"},
+    {"id": "attempt-008", "role": "combined_delete_to_empty", "delete_indices": [0,1], "prior": "attempt-002"},
+    {"id": "attempt-009", "role": "prospective_quality_control", "prior": "attempt-003", "records": "quality-records.json"}
+  ],
+  "conditions": [
+    "Require preparation success before complete repair comparisons.",
+    "Require exact model and state agreement before quality evaluation.",
+    "Require sequence and combined state equality.",
+    "Preserve failures and unstarted slots.",
+    "Do not promote to larger workloads from this diagnostic.",
+    "Repair and indexed_fresh share the same algorithm.",
+    "Source box evaluation does not count as changed-ancestor avoidance.",
+    "The inherited CPU allowance never resets."
+  ]
+}

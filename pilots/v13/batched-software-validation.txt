@@ -1,0 +1,16 @@
+test_batched_solver_preserves_complete_state (tests.test_compact_service_v13.CompactServiceTests.test_batched_solver_preserves_complete_state) ... ok
+test_four_methods_and_canonical_sequence (tests.test_compact_service_v13.CompactServiceTests.test_four_methods_and_canonical_sequence) ... ok
+test_membership_and_token_changes_rejected (tests.test_compact_service_v13.CompactServiceTests.test_membership_and_token_changes_rejected) ... ok
+test_coefficient_bounds_and_cell_masks_match_reference (tests.test_batched_token_solver_v13.BatchedTokenTests.test_coefficient_bounds_and_cell_masks_match_reference) ... ok
+test_directed_bounds_and_accumulator_match_bitwise (tests.test_batched_token_solver_v13.BatchedTokenTests.test_directed_bounds_and_accumulator_match_bitwise) ... ok
+test_exact_fallback_and_refinement_preserve_decisions_and_counts (tests.test_batched_token_solver_v13.BatchedTokenTests.test_exact_fallback_and_refinement_preserve_decisions_and_counts) ... ok
+test_fail_closed_on_overflow_invalid_values_and_runtime (tests.test_batched_token_solver_v13.BatchedTokenTests.test_fail_closed_on_overflow_invalid_values_and_runtime) ... ok
+test_grid_cache_preserves_exact_nonuniform_boundaries (tests.test_batched_token_solver_v13.BatchedTokenTests.test_grid_cache_preserves_exact_nonuniform_boundaries) ... ok
+test_random_empty_rank_deficient_and_strided_inputs (tests.test_batched_token_solver_v13.BatchedTokenTests.test_random_empty_rank_deficient_and_strided_inputs) ... ok
+test_row_wrapper_preserves_target_and_diagnostics (tests.test_batched_token_solver_v13.BatchedTokenTests.test_row_wrapper_preserves_target_and_diagnostics) ... ok
+test_ties_saturation_singleton_and_subnormal_boundaries (tests.test_batched_token_solver_v13.BatchedTokenTests.test_ties_saturation_singleton_and_subnormal_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.117s
+
+OK

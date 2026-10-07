@@ -1,0 +1,18 @@
+{
+  "schema": "v13-common-batching-pilot",
+  "registration_condition": "before either batched real-model transaction",
+  "target_change": false,
+  "scientific_promotion": false,
+  "runs": [
+    {"id": "attempt-010", "method": "repair", "solver_backend": "batched", "delete_indices": [0], "prior": "attempt-002"},
+    {"id": "attempt-011", "method": "model_only_fresh", "solver_backend": "batched", "delete_indices": [0]}
+  ],
+  "checks": [
+    "Both runs must use the same batched solver.",
+    "Both models must equal the reference four-method models exactly.",
+    "The repaired state must equal direct fresh state exactly.",
+    "All failed runs and charged CPU remain visible.",
+    "Compare only complete transaction times, with cache and co-load limits disclosed.",
+    "Do not claim a confidence interval or a deletion-specific advantage from common batching."
+  ]
+}

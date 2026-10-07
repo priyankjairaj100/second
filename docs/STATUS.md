@@ -1,3 +1,45 @@
+# Current execution: revision 13 complete-state pilots running
+
+Updated 7 October 2026. The user requested continued implementation and empirical execution here.
+Read docs/COMPACT_SERVICE_V13.md and pilots/v13/prospective-program.json first.
+
+The factor_identity_v1 family replaces dense Grams with exact retained factors and packed codes.
+A complete 24-stage DistilGPT2 state transaction passed.
+Its saved state is 29,638,144 bytes, below the 512 MiB limit.
+A complete one-record deletion repair also passed.
+All 42,467,328 repaired values match the revision 12 retained row-grid model.
+The remaining four-method controls and prospective quality control are running serially.
+
+Read current worker receipts and settled budget ledgers before reporting outcomes.
+A running worker can have a provisional launch_failed receipt with a reserved debit.
+Do not classify that placeholder as a finished failure.
+Never launch another empirical worker while any inherited debit remains reserved.
+The original cap remains 10,800 CPU seconds, with all revision 10/12/13 charges carried forward.
+
+The box modules prove feature containment and constant codes over supplied boxes.
+The current box evaluator still evaluates retained tokens.
+It does not establish changed-ancestor feature avoidance.
+The identity service correctly reports zero such avoidance.
+Repair and indexed_fresh share the same algorithm.
+No reliable repair-speed or paper-readiness claim is established.
+
+A common batched token solver passed exact code and directed-bound comparisons.
+It is available to every compatible method through --solver-backend batched.
+The registered reference quartet retains the reference solver.
+Further matched batching pilots are prospectively listed in pilots/v13/prospective-batching.json.
+
+The first revision 13 worker failed after a logging-key collision.
+The failure remains archived. The fixed worker completed.
+An initial driver misread a reserved receipt; its erroneous derivative report remains separately archived.
+A regression check now requires both settled ledgers and settled receipts.
+
+Large state/model arrays remain local and reproducible, with published hashes.
+All source snapshots, plans, receipts, software checks, and limitations must be pushed before ending.
+
+---
+
+The following sections preserve historical checkpoints.
+
 # Current execution: revision 12 completed diagnostics
 
 Updated 7 October 2026. The user authorized empirical execution here; the earlier local-only instruction is historical.
