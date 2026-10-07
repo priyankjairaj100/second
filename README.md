@@ -8,6 +8,12 @@ It does not claim native GPTQ or CUDA equivalence.
 
 ## Current state
 
+Revision 19 adds [finite affine bounds from anchor summaries](docs/ANCHOR_AFFINE_V19.md).
+The bound avoids retained token dot products after preparation.
+Fifteen focused tests passed.
+A complete transformer provider and useful empirical acceptance remain open.
+
+
 Revision 18 adds [direct dyadic box certification and bounded record refinement](docs/BOX_REFINEMENT_V18.md).
 The focused suite passed 29 tests.
 These components still require valid transformer bounds and complete transport integration.

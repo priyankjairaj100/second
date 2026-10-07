@@ -1,3 +1,28 @@
+# Current checkpoint: revision 19 affine anchor bounds
+
+Updated 8 October 2026, Asia/Calcutta.
+Read docs/ANCHOR_AFFINE_V19.md and pilots/v19/summary.json first.
+
+The affine provider now bounds changed projections without retained token dot products.
+It uses stored anchor summaries, one shared matrix scan, and a proved input error bound.
+Output-box construction reads stored outputs only.
+The focused suite passed 15 tests, including 45 perturbed affine cases.
+This does not provide a complete transformer bound provider.
+
+Remaining: normalization, attention, activation, and residual bound integration.
+Also remaining: canonical anchor preparation, persistent state, complete service, and useful real-data acceptance.
+Revision 18 supplies direct dyadic box certification and bounded record refinement.
+All component premises and costs must survive service integration.
+
+No empirical worker ran. The inherited allowance remains 291 CPU seconds.
+Revision 17 remains the latest full-model timing evidence.
+Reliable repair superiority and the complete empirical program remain unresolved.
+Do not infer practical speed from component operation counts or fixture tests.
+
+---
+
+Historical checkpoints follow.
+
 # Current checkpoint: revision 18 transport prerequisites
 
 Updated 7 October 2026. Work here and GitHub pushes remain authorized.
