@@ -35,3 +35,6 @@ local_runs/
 /pilots/v16/attempt-*/outputs/*.bin
 /pilots/v16/attempt-*/writer.lock
 /pilots/v16/attempt-*/phase-cpu-budget/ledger.lock
+/pilots/v17/attempt-*/outputs/*.bin
+/pilots/v17/attempt-*/writer.lock
+/pilots/v17/attempt-*/phase-cpu-budget/ledger.lock

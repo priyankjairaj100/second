@@ -1,3 +1,37 @@
+# Revision 17 disposition and remaining work
+
+Read EMPIRICAL_PILOT_V17.md and pilots/v17/summary.json first.
+The shared arithmetic bottleneck improved substantially.
+Native certificate proofs, implementation, integration, and tiny complete-model exactness checks are complete.
+The final focused regression passed 32 tests.
+This does not close the repair-specific speed objective.
+
+Remaining dependencies:
+
+1. Develop useful changed-prefix transport or another deletion-specific work reduction.
+   Repair currently repeats all retained neural stages.
+   Candidate agreement alone saves no accumulator work.
+   A resumable frontier alone cannot help the observed first-stage change.
+2. Preserve exact model and complete canonical state under that new mechanism.
+3. Pass prospective two-root feasibility against equally optimized cold and warm controls.
+   Include indexed reconstruction and complete-state reconstruction.
+   Preserve the current negative result and use a new registered protocol.
+4. Measure repeated deletion and preparation-inclusive lifetime cost.
+5. Establish quality on larger, unused inputs, with all prior exclusions intact.
+6. Acquire GPT-2 weights and the declared C4 frame; freeze disjoint inventories.
+7. Freeze the supported primary claim, estimator, and justified confirmation size.
+8. Run the forty scientific cells, with a pilot before each expansion.
+9. Complete ablations, independent confirmation, paper writing, and reproducibility review.
+
+The inherited allowance has 291 CPU seconds remaining.
+All workers are settled.
+Do not reset the allowance or spend it repeating losing variants without an algorithmic change.
+The practical theory and empirical superiority claim remain open.
+
+---
+
+Historical registers follow.
+
 # Revision 16 disposition and remaining work
 
 Updated 7 October 2026. Read EMPIRICAL_PILOT_V16.md before the historical task register below.

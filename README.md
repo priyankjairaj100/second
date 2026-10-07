@@ -8,26 +8,26 @@ It does not claim native GPTQ or CUDA equivalence.
 
 ## Current state
 
-Revision 16 implements and reviews two exact speculative quantizers.
-Twenty completed real-data stage comparisons matched their sequential reference.
-Every completed speculative variant was slower on this CPU.
-Eight further registered cells remained unstarted after a worker timeout.
-The block successor completed both WikiText and bounded C4 pilots.
-Reference quantization remains the default.
+Revision 17 adds an exact native ball certificate.
+Twelve stage comparisons and six complete transactions matched their exact references.
+Original and retained canonical states matched byte-for-byte.
+The final focused regression passed 32 tests.
 
-Revision 15 still provides complete finer-grid model and canonical-state repair evidence.
-All 42,467,328 retained codes matched the earlier quality model.
-That quality pilot used four new articles and sixty predictions.
-Its positive signal remains exploratory.
+The shared kernel improved complete cold reconstruction from 194.774 seconds to 71.860 seconds in one matched pilot.
+Repair took 84.225 seconds.
+A separate native complete-state reconstruction took 65.853 seconds.
+Repair therefore has no demonstrated advantage over optimized reconstruction.
+It still recalculates all retained features.
 
-Reliable full-model repair speed, useful factor transport, and confirmation remain unresolved.
-The forty scientific cells remain unpromoted.
-The novelty audit attributes fixed-point and parallel quantization principles to prior work.
+The earlier positive quality pilot used four articles and sixty predictions.
+No new quality or confirmation data were evaluated.
+Useful transport, reliable repair speed, and all forty scientific cells remain open.
 
-Start with [RESUME.md](RESUME.md), [current results](docs/EMPIRICAL_PILOT_V16.md), and [remaining tasks](docs/RESEARCH_TODO.md).
-Read [the proof](docs/SPECULATIVE_QUANTIZER_PROOF_V16.md) and [the novelty audit](docs/NOVELTY_AUDIT_V16.md).
-All workers are settled. The inherited remaining allowance is 977 CPU seconds.
-The final focused regression passed 58 tests.
+Start with [RESUME.md](RESUME.md), [current results](docs/EMPIRICAL_PILOT_V17.md), and [remaining tasks](docs/RESEARCH_TODO.md).
+Read [the native proof](docs/NATIVE_BALL_PROOF_V17.md) and [its review](docs/NATIVE_BALL_REVIEW_V17.md).
+The [work theorem](docs/BLOCK_LOW_RANK_DESIGN_V17.md) explains the current replay obstruction.
+The [novelty audit](docs/NOVELTY_AUDIT_V16.md) separates established quantization principles from proposed contributions.
+All workers are settled. The inherited allowance has 291 CPU seconds remaining.
 
 ## Current implementations
 

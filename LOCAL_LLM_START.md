@@ -1,3 +1,53 @@
+# Current checkpoint: revision 17 native certificate verified
+
+Updated 7 October 2026. Work here and GitHub pushes remain authorized.
+Read docs/EMPIRICAL_PILOT_V17.md, pilots/v17/summary.json, and docs/RESEARCH_TODO.md first.
+
+A native ball certificate preserves the exact dyadic target.
+Twelve real-data stage comparisons matched their references.
+Six complete transactions matched the corresponding revision 15 models.
+Original and retained canonical states matched byte-for-byte.
+The final focused regression passed 32 tests; this was not a full-suite rerun.
+
+Native cold stage medians improved by 7.39x on WikiText and 8.25x on bounded C4.
+Matched complete reconstruction improved from 194.774 seconds to 71.860 seconds.
+These are development observations, with single complete-model measurements.
+Both fresh and repair receive the shared kernel improvement.
+
+Repair took 84.225 seconds, versus 71.860 seconds for cold model-only reconstruction.
+A separate native complete-state reconstruction took 65.853 seconds.
+Warm model-only reconstruction took 86.100 seconds.
+Its near-tie with repair is not reliable speed evidence.
+Repair still executes every retained neural stage and avoids zero changed-ancestor pairs.
+The implementation-specific work theorem appears in docs/BLOCK_LOW_RANK_DESIGN_V17.md, section 7.
+Useful changed-prefix transport and reliable repair superiority remain open.
+
+Read docs/NATIVE_BALL_PROOF_V17.md and docs/NATIVE_BALL_REVIEW_V17.md for numerical guarantees and premises.
+Read docs/NOVELTY_AUDIT_V16.md before making novelty claims.
+Reference remains the default; native_ball is explicitly selectable.
+No new quality records or confirmation experiments ran.
+All earlier quality exclusions remain active.
+
+All workers are settled. No research worker remains running.
+The inherited debit is 10,509 CPU seconds, leaving 291 under the unchanged 10,800-second cap.
+Never reset the allowance or repeat losing methods merely for favorable timing.
+Controller work and software checks remain separate overhead.
+
+The read-only analyzer is scripts/analyze_native_complete_v17.py.
+Use a new output path; existing results cannot be overwritten.
+It validates archived source, plan, protocol, program, and result bindings.
+Large ignored model/state arrays must be regenerated after a fresh clone.
+The analyzer distinguishes actual byte verification from archived digest comparison.
+
+Next scientific work needs useful exact transport or another deletion-specific mechanism.
+Then repeat prospective feasibility with cold, warm, indexed, and complete-state controls.
+Broader quality, complete source acquisition, lifetime evidence, and forty scientific cells remain outstanding.
+Do not call the theory stack practically finalized or the paper empirically complete.
+
+---
+
+Historical checkpoints follow.
+
 # Current checkpoint: revision 16 speculative CPU routes rejected
 
 Updated 7 October 2026. Work here and GitHub pushes remain authorized.
