@@ -1,3 +1,38 @@
+# Current checkpoint: revision 18 transport prerequisites
+
+Updated 7 October 2026. Work here and GitHub pushes remain authorized.
+Read docs/BOX_REFINEMENT_V18.md and pilots/v18/summary.json first.
+
+The fine dyadic target now has direct-grid certification over uncertain feature boxes.
+A deterministic refinement engine evaluates uncertain records under an explicit record budget.
+It aborts if an exact callback contradicts its supplied box.
+The final focused run passed 29 tests, including independent rational oracle comparisons.
+These are software fixtures, not empirical datasets.
+
+The saved-state audit found 503,767 changed values among 503,808 values after changed ancestor prefixes.
+None of those 23 complete factors remained exactly reusable.
+This rules out whole-factor identity reuse for that pilot only.
+It does not rule out other exact transport algorithms.
+
+No new research worker ran. The inherited allowance remains 291 CPU seconds.
+Revision 17 still provides the latest complete-model timing evidence.
+Repair took 84.225 seconds, versus 71.860 seconds for optimized cold reconstruction.
+A separate complete-state reconstruction took 65.853 seconds.
+Reliable repair superiority remains unproved.
+
+Next: implement useful calibration-independent anchor bounds and integrate their canonical state.
+The new box certificate needs a separate proof of its supplied feature bounds.
+Its refinement callback checks do not validate accepted, unevaluated boxes.
+Neither new module is a complete transport service.
+Do not claim the paper or empirical program is complete.
+The forty scientific cells and broader quality remain blocked by the practical feasibility conditions.
+Preserve all historical evidence, exclusions, and the original CPU cap.
+Follow current developer instructions for agent delegation.
+
+---
+
+Historical checkpoints follow.
+
 # Current checkpoint: revision 17 native certificate verified
 
 Updated 7 October 2026. Work here and GitHub pushes remain authorized.

@@ -1,0 +1,13 @@
+.......F.....................
+======================================================================
+FAIL: test_order_and_final_oracle (tests.test_box_refinement_v18.RefinementTests.test_order_and_final_oracle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/50cc2e342461/second/tests/test_box_refinement_v18.py", line 23, in test_order_and_final_oracle
+    self.assertTrue(np.all(self.boxes[0][0]==-100.))
+AssertionError: np.False_ is not true
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.305s
+
+FAILED (failures=1)

@@ -8,6 +8,13 @@ It does not claim native GPTQ or CUDA equivalence.
 
 ## Current state
 
+Revision 18 adds [direct dyadic box certification and bounded record refinement](docs/BOX_REFINEMENT_V18.md).
+The focused suite passed 29 tests.
+These components still require valid transformer bounds and complete transport integration.
+An archive audit found no reusable complete factor after an ancestor changed in the measured pilot.
+No new model run occurred.
+
+
 Revision 17 adds an exact native ball certificate.
 Twelve stage comparisons and six complete transactions matched their exact references.
 Original and retained canonical states matched byte-for-byte.

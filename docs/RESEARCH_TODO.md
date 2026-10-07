@@ -1,3 +1,21 @@
+# Revision 18 dependencies
+
+Read BOX_REFINEMENT_V18.md first.
+Direct dyadic box certification and deterministic record refinement are implemented.
+The focused suite passed 29 tests.
+The complete transport service is not implemented.
+
+1. Implement and validate calibration-independent anchor summaries and finite transformer bounds.
+2. Integrate the alternative canonical state with exact model certification and bounded fallback.
+3. Screen bound widths before timing or expanding experiments.
+4. Preserve equally optimized reconstruction controls and include all preparation and state costs.
+5. Complete the feasibility, quality, lifetime, and forty-cell program only after the practical gates pass.
+
+No new research worker ran; 291 CPU seconds remain under the original cap.
+The earlier implementation and empirical dependencies below remain active where not explicitly closed.
+
+---
+
 # Revision 17 disposition and remaining work
 
 Read EMPIRICAL_PILOT_V17.md and pilots/v17/summary.json first.
