@@ -83,3 +83,17 @@ Those conditions appear in TRANSPORT_BOUNDARY_V14.md.
 Do not expand the forty-cell campaign while its feasibility requirements remain unmet.
 The inherited worker debit is 8041 CPU seconds, leaving 2759 seconds.
 Controller analysis and software checks remain separate overhead.
+
+## Descriptive checks on the same observations
+
+Fine calibration beats fine nearest rounding on each of the four articles.
+It beats the power-of-two calibrated control on three articles.
+The power-of-two control wins on article 3164.
+All four fine-calibrated article ratios to base are below one.
+These are descriptive checks, not an independent test or statistical significance claim.
+See pilots/v14/paired-articles.json for every article.
+
+The fine grids have smaller spacing on 41,472 of 41,472 output rows.
+Their median spacing ratio to power-of-two grids is 0.747443.
+This supports the proposed spacing mechanism but does not prove quality dominance.
+See pilots/v14/grid-spacing.json for bound source hashes.

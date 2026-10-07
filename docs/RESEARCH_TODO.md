@@ -1,6 +1,6 @@
-# Current research tasks after revisions 13 and 14
+# Current research tasks after revisions 13, 14, and 15
 
-Updated 7 October 2026. See EMPIRICAL_PILOT_V13.md and the revision 14 archive.
+Updated 7 October 2026. See EMPIRICAL_PILOT_V15.md and pilots/v15/program.json.
 Historical preparation totals below are not current scientific completion counts.
 
 Completed implementation work:
@@ -12,6 +12,7 @@ Completed implementation work:
 - Common batched solver, with exact reference-model and state agreement.
 - Finite transformer boxes and a token-space constant-code certificate.
 - A separate exact dyadic row-grid target with direct original-unit arithmetic.
+- Complete dyadic four-method model/state agreement and an exact bridge to the evaluated model.
 - Generation provenance, exclusion checks, worker locks, and inherited budget accounting.
 
 Remaining tasks, in dependency order:
@@ -20,9 +21,9 @@ Remaining tasks, in dependency order:
    The identity cache avoids zero changed-ancestor pairs.
    Current feature-box traversal still performs retained-source work.
    Read TRANSPORT_BOUNDARY_V14.md before proposing a certificate-only shortcut.
-2. **Select one complete target and state family.** The finer dyadic target currently outputs model codes only.
-   If selected, integrate compact state and every comparison method under its explicit target identity.
-   A quality improvement cannot substitute for complete-state correctness.
+2. **Freeze the primary target after sufficient evidence.** Both grid targets now have complete identity-state integration.
+   The finer target has a positive tiny quality signal and complete repaired-code agreement.
+   Broader quality and useful transport must guide final selection.
 3. **Establish adequate quality on fresh, larger evaluation data.** Preserve all earlier adverse results and article exclusions.
    Current controls contain only sixty predictions each.
    Do not select another variant using the same evaluated articles.

@@ -1,37 +1,55 @@
-# Current execution: revision 15 complete dyadic state controls running
+# Current checkpoint: revision 15 complete dyadic repair verified
 
-Updated 7 October 2026. The user authorized implementation, experiments here, and GitHub pushes.
-Read pilots/v15/prospective-program.json and the settled revision 13/14 reports first.
+Updated 7 October 2026. Implementation, experiments here, and GitHub pushes are authorized.
+Read docs/EMPIRICAL_PILOT_V15.md, pilots/v15/program.json, and docs/RESEARCH_TODO.md first.
 
-Revision 14 quality improved on four new articles: fine calibration/base perplexity was 0.927995.
-The matched power-of-two ratio was 1.222516; fine nearest rounding was 1.024938.
-These are sixty development predictions, not corpus-level confirmation.
+The finer dyadic target now supports complete model and canonical factor-state repair.
+All five registered real-model transactions completed.
+All four retained models agree exactly; all three retained states agree byte-for-byte.
+The original state occupies 30,467,831 bytes; the retained state occupies 26,330,225 bytes.
+Every retained code matches the earlier quality model: 42,467,328 values, zero mismatches.
+The numerical target hashes differ because the cumulative grid guard changed source bindings.
+The explicit decoded-code bridge is in pilots/v15/v14-code-bridge.json.
+
+The quality control used four new articles and sixty predictions.
+Fine calibration/base perplexity was 0.927995.
+Matched coarse calibration/base was 1.222516; fine nearest/base was 1.024938.
+Fine calibration beat fine nearest on all four articles, and coarse calibration on three.
+These are promising development observations, not corpus-level confirmation.
 All ten evaluated validation article IDs remain excluded from confirmation.
 
-The finer target now has complete canonical factor-state integration.
-All four methods share its original-unit solver.
-The focused regression run passed 72 tests; this was not a new full-suite run.
-The old original and retained power-of-two states still roundtrip byte-for-byte.
-The five revision 15 real-model transactions are running serially.
-Their purpose is complete model/state agreement and an explicit decoded-code bridge to revision 14.
-Their source-bound target hashes differ because the cumulative grid validation was corrected.
+The identity service avoided 0 of 23 changed-ancestor factor pairs.
+Repair and indexed fresh still execute the same algorithm.
+Useful changed-prefix factor transport and reliable full-model repair speed remain unproven.
+Read docs/TRANSPORT_BOUNDARY_V14.md before claiming a speed theorem.
+Constant-code boxes cannot alone reconstruct nonsingleton exact factor state.
+Calibration-independent anchors are one sufficient design, not a universal necessity.
 
-Do not report running or reserved receipts as settled failures.
-Never launch another empirical worker while any inherited debit remains reserved.
-The global inherited cap remains 10,800 CPU seconds.
-Before revision 15, 8,041 seconds were charged and 2,759 remained.
-Read current ledgers for subsequent costs.
-Controller and software-test CPU remain separate overhead.
+The focused regression run passed 72 tests; it was not a new full-suite run.
+The legacy original and retained power-of-two states still roundtrip byte-for-byte.
+Quality inputs bind receipts, plans, artifacts, exclusions, and retained membership.
+Cumulative row-grid limits now apply across all stages.
+Archived workers retain their original sources and target identities.
+Regenerate preparation and comparison models under one source version for fresh runs.
 
-The identity service still avoids zero changed-ancestor pairs by construction.
-The new grid and state support do not establish useful factor transport or reliable repair speed.
-Read docs/TRANSPORT_BOUNDARY_V14.md for exact-state and lifetime cost requirements.
+Every empirical worker is settled. No background empirical worker remains.
+The inherited debit is 9140 CPU seconds, leaving 1660 seconds under the unchanged 10,800-second cap.
+Controller analysis and software-test CPU remain separate overhead.
+Use fresh attempt IDs, preserve failures, and obey the shared admission lock.
+A reserved placeholder receipt is not a settled failure.
+Do not reset costs through new folders, variants, or revisions.
+
 The registered two-root feasibility workload and forty scientific cells remain unpromoted.
+The identity cache cannot pass the changed-ancestor avoidance gate by construction.
+Further timing repetitions cannot correct that algorithmic limitation.
+Next work requires useful exact factor transport or a different complete canonical state, then registered feasibility.
+Broader quality confirmation, GPT-2 weights, the declared C4 frame, and final inventories remain outstanding.
 
-Large model/state arrays and checkpoint/corpus bytes remain local and reproducible.
-Plans, source snapshots, hashes, receipts, software checks, and failures must be published.
-Finish the five admitted controls, analyze them, update current context, and push the final evidence.
-Use scripts/analyze_v15.py only after all workers settle.
+Plans, snapshots, receipts, hashes, failures, reports, and restart context are in the repository.
+Large checkpoint, corpus, model, and state arrays remain local and reproducible.
+A fresh clone must regenerate those arrays.
+The project has a working exact prototype and a positive tiny quality signal.
+It does not yet have an ACL-ready empirical result.
 
 ---
 

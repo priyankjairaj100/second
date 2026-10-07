@@ -11,12 +11,14 @@ from src.run_store import atomic_write, canonical_json, digest
 def main():
     root = Path(__file__).resolve().parents[1]
     archive = root / 'pilots/v15'
-    attempts = []; results = {}
+    attempts = []; results = {}; source_hashes = set()
     for directory in sorted(archive.glob('attempt-*')):
         receipt_path = directory / 'worker/result.json'
         if not receipt_path.exists():
             continue
         receipt = json.loads(receipt_path.read_bytes())
+        plan = json.loads((directory / 'plan.json').read_bytes())
+        source_hashes.add(digest(canonical_json(plan['source_sha256'])))
         ledger = json.loads((directory / 'phase-cpu-budget/ledger.json').read_bytes())
         if (receipt.get('budget_debit', {}).get('state') != 'settled'
                 or any(row['state'] != 'settled' for row in ledger['attempts'].values())):
@@ -27,6 +29,17 @@ def main():
         if status == 'complete':
             if progress.get('status') != 'complete':
                 raise ValueError('receipt/progress mismatch')
+            for key in ('model_artifact', 'state_artifact'):
+                if key not in progress:
+                    continue
+                artifact = progress[key]
+                if artifact['file'] not in ('model.bin', 'state.bin'):
+                    raise ValueError('unexpected complete artifact path')
+                path = directory / 'outputs' / artifact['file']
+                with path.open('rb') as stream:
+                    observed = hashlib.file_digest(stream, 'sha256').hexdigest()
+                if path.stat().st_size != artifact['bytes'] or observed != artifact['sha256']:
+                    raise ValueError('complete artifact differs from its receipt')
             results[directory.name] = progress
         attempts.append(dict(id=directory.name, method=progress.get('method'), status=status,
             receipt_sha256=digest(receipt_path.read_bytes()),
@@ -56,6 +69,12 @@ def main():
         oldroot = root/'pilots/v14/attempt-001/outputs'
         oldindex = json.loads((oldroot/'model-index.json').read_bytes())
         oldprogress = json.loads((oldroot/'progress.json').read_bytes())
+        oldplan = json.loads((oldroot.parent/'plan.json').read_bytes())
+        newplan = json.loads((archive/'attempt-002/plan.json').read_bytes())
+        if (oldplan['records_sha256'] != newplan['records_sha256']
+                or oldplan['deleted_record_ids'] != newplan['deleted_record_ids']
+                or oldplan['checkpoint_sha256'] != newplan['checkpoint_sha256']):
+            raise ValueError('code bridge calibration membership or checkpoint differs')
         if oldindex['stages'] != oldprogress['stages']:
             raise ValueError('old model index differs from completed generation')
         if len(model.stages) != len(oldindex['stages']):
@@ -79,6 +98,7 @@ def main():
         atomic_write(archive/'v14-code-bridge.json',canonical_json(bridge))
     charged,remaining=inherited_allowance(root)
     summary=dict(schema='v15-dyadic-complete-state-evidence',attempts=attempts,comparison=comparison,
+        all_worker_sources_equal=len(source_hashes)==1,
         v14_code_bridge=bridge,inherited_charged_cpu_seconds=charged,remaining_cpu_seconds=remaining,
         scientific_promotion=False,reliable_repair_speedup_established=False,
         preparation_inclusive_lifetime_evaluated=False,

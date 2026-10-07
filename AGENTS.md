@@ -1,10 +1,14 @@
 # Current instruction: resume bounded execution here
 
-Updated 7 October 2026. Revision 12.
+Updated 7 October 2026. Revision 15.
 The user resumed empirical execution here and requested maximum progress with limited credits.
+Read RESUME.md and pilots/v15/program.json first.
 Restore pinned sources and use the existing feasibility thresholds.
 Run bounded pilots first. Preserve every result, failure, source snapshot, and CPU debit.
-Do not claim complete-model repair or speed without measured evidence.
+Complete tiny-root model and state repair is measured for both row-grid targets.
+The finer-grid quality signal contains only sixty new predictions.
+Useful changed-prefix transport and reliable full-model speed remain unproven.
+Do not expand confirmation while the registered feasibility conditions remain unmet.
 The current developer enables focused parallel work. Avoid redundant reviews and repeated tests.
 The revision 11 local-only instruction below is historical and superseded.
 

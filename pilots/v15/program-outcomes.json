@@ -1,1 +1,1 @@
-{"program_sha256":"cd88a8082a085459dce4f60d6be9120a7e2203d96d99eb31b0aae4bb92a40172","schema":"v15-program-outcomes","slots":[],"status":"running"}
+{"program_sha256":"cd88a8082a085459dce4f60d6be9120a7e2203d96d99eb31b0aae4bb92a40172","schema":"v15-program-outcomes","slots":[{"id":"attempt-001","status":"complete"},{"id":"attempt-002","status":"complete"},{"id":"attempt-003","status":"complete"},{"id":"attempt-004","status":"complete"},{"id":"attempt-005","status":"complete"}],"status":"settled"}

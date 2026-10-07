@@ -1,3 +1,15 @@
+# Current execution note: revision 15
+
+Updated 7 October 2026. The user authorized execution here after the earlier local handoff.
+Read RESUME.md and pilots/v15/program.json for current implementation and measurements.
+Complete compact model/state repair now works for both row-grid targets on one tiny real root.
+The finer-grid pilot is promising, but useful changed-prefix transport remains absent.
+The original feasibility and confirmation gates below remain unmet.
+Older statements about missing compact state or local-only execution are historical.
+The workload definitions below remain the scientific plan; diagnostic controls do not replace them.
+
+---
+
 # Local empirical program: revision 11 handoff
 
 Date: 5 October 2026.
