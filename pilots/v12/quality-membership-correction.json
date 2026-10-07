@@ -1,0 +1,16 @@
+{
+  "schema": "v12-quality-membership-correction",
+  "affected_attempt": "attempt-007",
+  "original_observation_unchanged": true,
+  "diagnosis": "The quality worker described input-file membership rather than the loaded model calibration membership. Numerical inputs and NLL calculations are unaffected.",
+  "verified_quality_plan_sha256": "6251ff63a69b02ac9071f0e11105f998b99100046f74d7944e25ecbac9c610d0",
+  "verified_model_plan_sha256": "513052fb298730c2f48dc727dccb6c1e2ba2711fc7cc4db7e37d5fc4c1fc577f",
+  "model_index_sha256": "de8864c208466a7e046ff5a440fa0b58045a28e2d3790523ac4afa3068c95577",
+  "correct_model_deleted_ids": [
+    "wikitext2:train:article-row-27113"
+  ],
+  "correct_model_retained_ids": [
+    "wikitext2:train:article-row-5326"
+  ],
+  "fix": "Future quality workers hash-bind and read the actual model generation plan."
+}

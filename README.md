@@ -1,7 +1,8 @@
 > Current handoff: [LOCAL_LLM_START.md](LOCAL_LLM_START.md).
 
 Revision 12 resumes bounded empirical execution here. Read [current status](docs/STATUS.md).
-Complete-model finite execution now passes. Full-model repair and reliable speedup remain unproved.
+Complete model-code quantization now runs. Row scaling improved a tiny quality diagnostic from 8.10x to 1.32x base perplexity.
+Full-model repair and reliable speedup remain unproved; the scientific program remains blocked.
 
 > Follow [the precise local empirical program](docs/LOCAL_EMPIRICAL_PROGRAM.md).
 > Use [the machine-readable checklist](handoff/program.json) and `scripts/local_handoff.py` for reporting.

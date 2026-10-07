@@ -102,3 +102,20 @@ The heldout file binds two validation articles chosen using the existing fixed i
 Their thirty next-token predictions cannot close a statistical quality gate.
 Both IDs are excluded from future confirmation evaluation.
 Ordinary floating NLL is explicitly distinguished from certified arithmetic.
+
+## Explicit row-grid variant
+
+`--grid-axis row` selects the new fixed output-row target.
+The default remains the historical column target.
+Use the same flag for quantization and its subsequent quality worker.
+
+```bash
+python scripts/launch_compact_pilot.py --id attempt-FRESH --dataset wikitext2 --mode full_quantization --delete-index 0 --grid-axis row
+python scripts/launch_compact_pilot.py --id attempt-QUALITY --dataset wikitext2 --mode model_quality --compare-attempt attempt-FRESH --grid-axis row
+```
+
+The row variant has no declared complete repair-state contract.
+Its scales depend only on fixed base weights.
+ROW_SCALED_TARGET_V12.md explains exact normalization, restoration, ties, and rejection conditions.
+Quality workers bind the actual model-generation plan and capture immutable prefixes once.
+The original complete evaluation cost remains inside the worker clock.

@@ -47,5 +47,23 @@
     "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 taskset -c 1 python -m unittest discover -s tests -v",
     "log_sha256": "6d35a9d90efecf716d3c591eb43e2e0ab4ce3280add2aa3ad11ddcc7486b9e52"
   },
-  "later_edits": "Pilot orchestration adds deletion/feature comparison and heldout diagnostic modes after this suite. Core sources remain unchanged; scripts received compilation checks."
+  "later_edits": "Row-target and prepared-prefix modules were added after the 590-test full-suite run. Nine new tests passed in focused runs. Pilot orchestration and analysis scripts received compilation checks; updated execution paths ran in bounded real attempts.",
+  "later_focused_runs": [
+    {
+      "log": "row-target-software-validation.txt",
+      "log_sha256": "481fa988cfec7c9a85834aa9f8f37f4e8b21873b070a1c56066cba17c9ba4976",
+      "tests": 17,
+      "new_tests": 6,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "log": "prepared-prefix-software-validation.txt",
+      "log_sha256": "6a1cd7df2e198793c785c1fd85d2d080483787baac9838630fcb6da9b22f72ad",
+      "tests": 3,
+      "new_tests": 3,
+      "failures": 0,
+      "errors": 0
+    }
+  ]
 }

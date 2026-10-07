@@ -1,0 +1,208 @@
+{
+  "schema": "v12-code-distribution-diagnostic",
+  "attempt": "attempt-005",
+  "model_index_sha256": "d38a3c2688d73b50df9ba6ee8f014d16767bb520180c7f81d4a1893f544e3b71",
+  "rows": [
+    {
+      "stage_id": "block.0000.qkv",
+      "values": 1769472,
+      "zeros": 1047821,
+      "zero_fraction": 0.5921659116391782,
+      "codes_sha256": "e2c2fea037b29b4cf73992666814c46339b316aa8f68af5461016a9cde1b0103",
+      "qkv_zero_fractions": {
+        "query": 0.4219716389973958,
+        "key": 0.4352400037977431,
+        "value": 0.9192860921223959
+      }
+    },
+    {
+      "stage_id": "block.0000.attn_out",
+      "values": 589824,
+      "zeros": 472791,
+      "zero_fraction": 0.8015797932942709,
+      "codes_sha256": "338c489fcbca25db3d87cf4c0c6989d55a194eba85faa7162052412c2e310812"
+    },
+    {
+      "stage_id": "block.0000.mlp_up",
+      "values": 2359296,
+      "zeros": 1053331,
+      "zero_fraction": 0.44645987616644967,
+      "codes_sha256": "fbfaee1483a7ff4e13bf7cfc263d1f4c5b08965e45d77ea4b257038998de4df7"
+    },
+    {
+      "stage_id": "block.0000.mlp_down",
+      "values": 2359296,
+      "zeros": 881046,
+      "zero_fraction": 0.37343597412109375,
+      "codes_sha256": "49406d08a3cad72f285e0646a4eb77efb3e57cb872c25fa88ed8bc3839672544"
+    },
+    {
+      "stage_id": "block.0001.qkv",
+      "values": 1769472,
+      "zeros": 771346,
+      "zero_fraction": 0.43591873734085645,
+      "codes_sha256": "bab376b8376fb9b4e232e3cb42abe6215fe3fcf07f727dbf006b50703fa99187",
+      "qkv_zero_fractions": {
+        "query": 0.3663482666015625,
+        "key": 0.4061465793185764,
+        "value": 0.5352613661024306
+      }
+    },
+    {
+      "stage_id": "block.0001.attn_out",
+      "values": 589824,
+      "zeros": 253128,
+      "zero_fraction": 0.4291585286458333,
+      "codes_sha256": "4bea265f3f8a1a738e5839134411ea4a400c60fabe023ef7af1cdb23b776c33c"
+    },
+    {
+      "stage_id": "block.0001.mlp_up",
+      "values": 2359296,
+      "zeros": 1249644,
+      "zero_fraction": 0.5296681722005209,
+      "codes_sha256": "607e022960500a3096c26f9c5d57c1c674b489c6f2e3773e1e23f7fefcd86cc3"
+    },
+    {
+      "stage_id": "block.0001.mlp_down",
+      "values": 2359296,
+      "zeros": 886062,
+      "zero_fraction": 0.37556203206380206,
+      "codes_sha256": "1a7eb30eda91c328af9befac1700277b2e65128fa823db2572dff4f75ceaa811"
+    },
+    {
+      "stage_id": "block.0002.qkv",
+      "values": 1769472,
+      "zeros": 797032,
+      "zero_fraction": 0.4504349320023148,
+      "codes_sha256": "eab100370bbca48d2daa485fb64e7f5c29e59c8950339f1aaa3927f842136547",
+      "qkv_zero_fractions": {
+        "query": 0.3830600314670139,
+        "key": 0.4027370876736111,
+        "value": 0.5655076768663194
+      }
+    },
+    {
+      "stage_id": "block.0002.attn_out",
+      "values": 589824,
+      "zeros": 228437,
+      "zero_fraction": 0.3872968885633681,
+      "codes_sha256": "ec8f7cc3d81651c595862d9284a84609864c21419bfd58b6cfc2c4f0e16ef5ca"
+    },
+    {
+      "stage_id": "block.0002.mlp_up",
+      "values": 2359296,
+      "zeros": 905853,
+      "zero_fraction": 0.38395055135091144,
+      "codes_sha256": "3470bd0d6ee91e583b10bd1477a0d0f672dbfabfcbbc511dfa564a17531b60c8"
+    },
+    {
+      "stage_id": "block.0002.mlp_down",
+      "values": 2359296,
+      "zeros": 927802,
+      "zero_fraction": 0.39325375027126735,
+      "codes_sha256": "84b05c615c6595cd041df1797eb95afb40d1c506b80911fa1c3f2cbe76d96f5a"
+    },
+    {
+      "stage_id": "block.0003.qkv",
+      "values": 1769472,
+      "zeros": 657486,
+      "zero_fraction": 0.3715718587239583,
+      "codes_sha256": "0499cd3f2301def99316c832bee4fdc18dee28b6ab4e26278105abc0fc16db75",
+      "qkv_zero_fractions": {
+        "query": 0.3496805826822917,
+        "key": 0.3646172417534722,
+        "value": 0.4004177517361111
+      }
+    },
+    {
+      "stage_id": "block.0003.attn_out",
+      "values": 589824,
+      "zeros": 217926,
+      "zero_fraction": 0.369476318359375,
+      "codes_sha256": "127fce974b71eaa4ea8473f5b7c9333676c957a756880b7995edfc9743dc614d"
+    },
+    {
+      "stage_id": "block.0003.mlp_up",
+      "values": 2359296,
+      "zeros": 863787,
+      "zero_fraction": 0.3661206563313802,
+      "codes_sha256": "dab2a3e8cc0c66987f6136d6461d9e653f9e75005cf6cfa6038dd4a39f7b4e56"
+    },
+    {
+      "stage_id": "block.0003.mlp_down",
+      "values": 2359296,
+      "zeros": 748834,
+      "zero_fraction": 0.31739722357855904,
+      "codes_sha256": "4aeb0b15e38f19a836fd56c2a512c41a3c5ba5c50bc314a18dc8fb7c6579b306"
+    },
+    {
+      "stage_id": "block.0004.qkv",
+      "values": 1769472,
+      "zeros": 614839,
+      "zero_fraction": 0.34747031882957174,
+      "codes_sha256": "42dc902779808aa6115bcac1da1fd40d974bb828cbebc321eaed9202b1916ba4",
+      "qkv_zero_fractions": {
+        "query": 0.3572828504774306,
+        "key": 0.3671993679470486,
+        "value": 0.3179287380642361
+      }
+    },
+    {
+      "stage_id": "block.0004.attn_out",
+      "values": 589824,
+      "zeros": 220474,
+      "zero_fraction": 0.3737962510850694,
+      "codes_sha256": "23e1be05f1e9e2f8a93148d7b29984cef418bbf5397cdbf84d6107461f38f777"
+    },
+    {
+      "stage_id": "block.0004.mlp_up",
+      "values": 2359296,
+      "zeros": 855519,
+      "zero_fraction": 0.36261622111002606,
+      "codes_sha256": "91fbabf695d8fdef6b11b3096d79ba3e2203823fdd85323e36c5a959d8a71ee3"
+    },
+    {
+      "stage_id": "block.0004.mlp_down",
+      "values": 2359296,
+      "zeros": 755761,
+      "zero_fraction": 0.32033326890733504,
+      "codes_sha256": "ae69a3f707a29de466116c34bf798fac221f3ec81949147de34c056c042c35bd"
+    },
+    {
+      "stage_id": "block.0005.qkv",
+      "values": 1769472,
+      "zeros": 719239,
+      "zero_fraction": 0.40647096987123843,
+      "codes_sha256": "b725e9cd1e2bf86ebe776ba7fc13cba187e427dc68fb832dd0abbea0b74282e4",
+      "qkv_zero_fractions": {
+        "query": 0.4456227620442708,
+        "key": 0.4603559705946181,
+        "value": 0.3134341769748264
+      }
+    },
+    {
+      "stage_id": "block.0005.attn_out",
+      "values": 589824,
+      "zeros": 310255,
+      "zero_fraction": 0.5260128445095487,
+      "codes_sha256": "d962a677250a44fcade4a2b404356e6ad03ab38ac735dbadd08465c3bc3511fa"
+    },
+    {
+      "stage_id": "block.0005.mlp_up",
+      "values": 2359296,
+      "zeros": 930699,
+      "zero_fraction": 0.3944816589355469,
+      "codes_sha256": "7031e240fd08ffedd26029397c9820ebff86761c98a01fc6987e7bb05c552872"
+    },
+    {
+      "stage_id": "block.0005.mlp_down",
+      "values": 2359296,
+      "zeros": 813165,
+      "zero_fraction": 0.3446642557779948,
+      "codes_sha256": "8dd729de065792964bcfe55b7e8e5ac6710c6bf34dc077c3bf68108a7115c1db"
+    }
+  ],
+  "values": 42467328,
+  "zeros": 17182277,
+  "scope": "Descriptive output-code sparsity only. No attribution, quality, or speed conclusion follows."
+}

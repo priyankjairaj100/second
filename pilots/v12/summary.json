@@ -1,0 +1,28 @@
+{
+  "attempts": 12,
+  "completed": 11,
+  "failed": 1,
+  "certified_rounding_decisions": 130940928,
+  "exact_fallback_decisions": 0,
+  "inherited_charged_cpu_seconds": 4283,
+  "remaining_cpu_seconds": 6517,
+  "full_repair_observations": 0,
+  "quality": {
+    "schema": "v12-controlled-quality-diagnostic",
+    "predictions_per_model": 30,
+    "evaluation_records_sha256": "7dc2b60d2015535742094674b8fd3e272c1c7cad18383d3bb7dba58b025ff7d8",
+    "base_perplexity": 198.6070696844848,
+    "column_original_perplexity": 959.1921992258788,
+    "column_retained_perplexity": 1609.1842962219966,
+    "row_retained_perplexity": 261.197107131986,
+    "column_retained_to_base": 8.102351536520882,
+    "row_retained_to_base": 1.3151450627962749,
+    "prepared_evaluator_reproduces_every_record_nll": true,
+    "same_retained_calibration_record": true,
+    "bits": 4,
+    "row_grid_is_new_target": true,
+    "scientific_quality_gate_closed": false,
+    "population_inference": false,
+    "primary_promotion": false
+  }
+}

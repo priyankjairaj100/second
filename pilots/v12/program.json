@@ -8,9 +8,10 @@
   "inherited_commit": "4fb4f8a6137fa37e3130af94e7d31ecaa188bdcb",
   "inherited_budget": {
     "cap_cpu_seconds": 10800,
+    "charged_cpu_seconds": 4283,
+    "remaining_cpu_seconds": 6517,
     "automatic_reset_allowed": false,
-    "charged_or_reserved_cpu_seconds": 3499,
-    "remaining_unreserved_cpu_seconds": 7301
+    "scope": "bounded research workers; controller and software-test CPU are separate"
   },
   "stages": {
     "pilot": {
@@ -80,10 +81,10 @@
       "model": "distilgpt2",
       "calibration_corpus": "wikitext2",
       "evaluation_dataset": "wikitext2",
-      "status": "blocked_complete_repair_integration",
+      "status": "partial_inputs_checked_inventory_unfrozen",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Pinned diagnostic input files were checked; the complete scientific inventory and sampling frame are not frozen.",
       "evidence": []
     },
     {
@@ -140,11 +141,13 @@
       "model": "distilgpt2",
       "calibration_corpus": "wikitext2",
       "evaluation_dataset": "wikitext2",
-      "status": "blocked_complete_repair_integration",
+      "status": "negative_development_diagnostic_registered_gate_unevaluated",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
-      "evidence": []
+      "reason": "The improved row-grid pilot has 1.315x base perplexity on 30 predictions; no complete quality gate passed.",
+      "evidence": [
+        "pilots/v12/quality-comparison.json"
+      ]
     },
     {
       "cell_id": "distilgpt2.wikitext2.E07",
@@ -200,10 +203,10 @@
       "model": "distilgpt2",
       "calibration_corpus": "c4_four_shard_frame",
       "evaluation_dataset": "c4_four_shard_frame",
-      "status": "blocked_complete_repair_integration",
+      "status": "partial_inputs_checked_inventory_unfrozen",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Pinned diagnostic input files were checked; the complete scientific inventory and sampling frame are not frozen.",
       "evidence": []
     },
     {
@@ -320,10 +323,10 @@
       "model": "gpt2",
       "calibration_corpus": "wikitext2",
       "evaluation_dataset": "wikitext2",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -332,10 +335,10 @@
       "model": "gpt2",
       "calibration_corpus": "wikitext2",
       "evaluation_dataset": "wikitext2",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -344,10 +347,10 @@
       "model": "gpt2",
       "calibration_corpus": "wikitext2",
       "evaluation_dataset": "wikitext2",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -356,10 +359,10 @@
       "model": "gpt2",
       "calibration_corpus": "wikitext2",
       "evaluation_dataset": "wikitext2",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -368,10 +371,10 @@
       "model": "gpt2",
       "calibration_corpus": "wikitext2",
       "evaluation_dataset": "wikitext2",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -380,10 +383,10 @@
       "model": "gpt2",
       "calibration_corpus": "wikitext2",
       "evaluation_dataset": "wikitext2",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -392,10 +395,10 @@
       "model": "gpt2",
       "calibration_corpus": "wikitext2",
       "evaluation_dataset": "wikitext2",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -404,10 +407,10 @@
       "model": "gpt2",
       "calibration_corpus": "wikitext2",
       "evaluation_dataset": "wikitext2",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -416,10 +419,10 @@
       "model": "gpt2",
       "calibration_corpus": "wikitext2",
       "evaluation_dataset": "wikitext2",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -428,10 +431,10 @@
       "model": "gpt2",
       "calibration_corpus": "wikitext2",
       "evaluation_dataset": "lambada_openai_en",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -440,10 +443,10 @@
       "model": "gpt2",
       "calibration_corpus": "c4_four_shard_frame",
       "evaluation_dataset": "c4_four_shard_frame",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -452,10 +455,10 @@
       "model": "gpt2",
       "calibration_corpus": "c4_four_shard_frame",
       "evaluation_dataset": "c4_four_shard_frame",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -464,10 +467,10 @@
       "model": "gpt2",
       "calibration_corpus": "c4_four_shard_frame",
       "evaluation_dataset": "c4_four_shard_frame",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -476,10 +479,10 @@
       "model": "gpt2",
       "calibration_corpus": "c4_four_shard_frame",
       "evaluation_dataset": "c4_four_shard_frame",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -488,10 +491,10 @@
       "model": "gpt2",
       "calibration_corpus": "c4_four_shard_frame",
       "evaluation_dataset": "c4_four_shard_frame",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -500,10 +503,10 @@
       "model": "gpt2",
       "calibration_corpus": "c4_four_shard_frame",
       "evaluation_dataset": "c4_four_shard_frame",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -512,10 +515,10 @@
       "model": "gpt2",
       "calibration_corpus": "c4_four_shard_frame",
       "evaluation_dataset": "c4_four_shard_frame",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -524,10 +527,10 @@
       "model": "gpt2",
       "calibration_corpus": "c4_four_shard_frame",
       "evaluation_dataset": "c4_four_shard_frame",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -536,10 +539,10 @@
       "model": "gpt2",
       "calibration_corpus": "c4_four_shard_frame",
       "evaluation_dataset": "c4_four_shard_frame",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     },
     {
@@ -548,80 +551,201 @@
       "model": "gpt2",
       "calibration_corpus": "c4_four_shard_frame",
       "evaluation_dataset": "lambada_openai_en",
-      "status": "blocked_complete_repair_integration",
+      "status": "blocked_second_checkpoint_and_shared_feasibility",
       "pilot_required": true,
       "winning": null,
-      "reason": "Compact complete model codes now run on a tiny WikiText pilot. Canonical repair state and feature-transport integration remain missing.",
+      "reason": "Only GPT-2 configuration was acquired; shared complete-repair feasibility remains unmet.",
       "evidence": []
     }
   ],
-  "status": "bounded_feasibility_resumed",
+  "status": "diagnostic_round_completed_primary_program_blocked",
   "confirmation_authorized": false,
   "diagnostic_attempts": [
     {
       "id": "attempt-001",
-      "status": "failed",
+      "dataset": "wikitext2",
       "mode": "load_forward",
-      "charged_or_reserved_cpu_seconds": 2,
+      "grid_axis": "column",
+      "status": "failed",
+      "internal_seconds": 0.855659068,
+      "charged_cpu_seconds": 2,
+      "peak_rss_bytes": 21676032,
       "completed_stages": 0,
+      "exact_fallback_decisions": 0,
       "evidence": "pilots/v12/attempt-001/outputs/progress.json"
     },
     {
       "id": "attempt-002",
-      "status": "complete",
+      "dataset": "wikitext2",
       "mode": "load_forward",
-      "charged_or_reserved_cpu_seconds": 622,
+      "grid_axis": "column",
+      "status": "complete",
+      "internal_seconds": 707.751659072,
+      "charged_cpu_seconds": 622,
+      "peak_rss_bytes": 870440960,
       "completed_stages": 0,
+      "exact_fallback_decisions": 0,
       "evidence": "pilots/v12/attempt-002/outputs/progress.json"
     },
     {
       "id": "attempt-003",
-      "status": "complete",
+      "dataset": "wikitext2",
       "mode": "load_forward",
-      "charged_or_reserved_cpu_seconds": 127,
+      "grid_axis": "column",
+      "status": "complete",
+      "internal_seconds": 126.405398113,
+      "charged_cpu_seconds": 127,
+      "peak_rss_bytes": 867119104,
       "completed_stages": 0,
+      "exact_fallback_decisions": 0,
       "evidence": "pilots/v12/attempt-003/outputs/progress.json"
     },
     {
       "id": "attempt-004",
-      "status": "complete",
+      "dataset": "wikitext2",
       "mode": "first_stage_quantization",
-      "charged_or_reserved_cpu_seconds": 47,
+      "grid_axis": "column",
+      "status": "complete",
+      "internal_seconds": 45.537389982,
+      "charged_cpu_seconds": 47,
+      "peak_rss_bytes": 767700992,
       "completed_stages": 1,
+      "exact_fallback_decisions": 0,
       "evidence": "pilots/v12/attempt-004/outputs/progress.json"
     },
     {
       "id": "attempt-005",
-      "status": "complete",
+      "dataset": "wikitext2",
       "mode": "full_quantization",
-      "charged_or_reserved_cpu_seconds": 781,
+      "grid_axis": "column",
+      "status": "complete",
+      "internal_seconds": 813.039074748,
+      "charged_cpu_seconds": 781,
+      "peak_rss_bytes": 767705088,
       "completed_stages": 24,
+      "exact_fallback_decisions": 0,
       "evidence": "pilots/v12/attempt-005/outputs/progress.json"
     },
     {
       "id": "attempt-006",
-      "status": "complete",
+      "dataset": "wikitext2",
       "mode": "full_quantization",
-      "charged_or_reserved_cpu_seconds": 404,
+      "grid_axis": "column",
+      "status": "complete",
+      "internal_seconds": 437.996480411,
+      "charged_cpu_seconds": 404,
+      "peak_rss_bytes": 768061440,
       "completed_stages": 24,
+      "exact_fallback_decisions": 0,
       "evidence": "pilots/v12/attempt-006/outputs/progress.json"
     },
     {
       "id": "attempt-007",
-      "status": "running",
+      "dataset": "wikitext2",
       "mode": "model_quality",
-      "charged_or_reserved_cpu_seconds": 902,
+      "grid_axis": "column",
+      "status": "complete",
+      "internal_seconds": 468.171739605,
+      "charged_cpu_seconds": 428,
+      "peak_rss_bytes": 1206255616,
       "completed_stages": 0,
-      "evidence": "pilots/v12/attempt-007/outputs/progress.json"
+      "exact_fallback_decisions": 0,
+      "evidence": "pilots/v12/attempt-007/outputs/progress.json",
+      "quality_ratio": 8.102351536520882
+    },
+    {
+      "id": "attempt-008",
+      "dataset": "c4",
+      "mode": "first_stage_quantization",
+      "grid_axis": "column",
+      "status": "complete",
+      "internal_seconds": 47.23519691,
+      "charged_cpu_seconds": 44,
+      "peak_rss_bytes": 768061440,
+      "completed_stages": 1,
+      "exact_fallback_decisions": 0,
+      "evidence": "pilots/v12/attempt-008/outputs/progress.json"
+    },
+    {
+      "id": "attempt-009",
+      "dataset": "wikitext2",
+      "mode": "model_quality",
+      "grid_axis": "column",
+      "status": "complete",
+      "internal_seconds": 506.644472633,
+      "charged_cpu_seconds": 452,
+      "peak_rss_bytes": 1208176640,
+      "completed_stages": 0,
+      "exact_fallback_decisions": 0,
+      "evidence": "pilots/v12/attempt-009/outputs/progress.json",
+      "quality_ratio": 4.82959745969612
+    },
+    {
+      "id": "attempt-010",
+      "dataset": "wikitext2",
+      "mode": "full_quantization",
+      "grid_axis": "row",
+      "status": "complete",
+      "internal_seconds": 361.29663553,
+      "charged_cpu_seconds": 355,
+      "peak_rss_bytes": 768143360,
+      "completed_stages": 24,
+      "exact_fallback_decisions": 0,
+      "evidence": "pilots/v12/attempt-010/outputs/progress.json"
+    },
+    {
+      "id": "attempt-011",
+      "dataset": "wikitext2",
+      "mode": "model_quality",
+      "grid_axis": "row",
+      "status": "complete",
+      "internal_seconds": 198.236886347,
+      "charged_cpu_seconds": 199,
+      "peak_rss_bytes": 1178279936,
+      "completed_stages": 0,
+      "exact_fallback_decisions": 0,
+      "evidence": "pilots/v12/attempt-011/outputs/progress.json",
+      "quality_ratio": 1.3151450627962749
+    },
+    {
+      "id": "attempt-012",
+      "dataset": "wikitext2",
+      "mode": "model_quality",
+      "grid_axis": "column",
+      "status": "complete",
+      "internal_seconds": 208.327315093,
+      "charged_cpu_seconds": 208,
+      "peak_rss_bytes": 1206312960,
+      "completed_stages": 0,
+      "exact_fallback_decisions": 0,
+      "evidence": "pilots/v12/attempt-012/outputs/progress.json",
+      "quality_ratio": 8.102351536520882
     }
   ],
   "implementation_progress": {
     "compact_parameter_storage": "implemented_and_real_forward_observed",
     "ordered_finite_kernel": "integrated; all paired full-model base logits match",
     "optional_mpfr_primitives": "explicitly bound; common-domain value equivalence",
-    "token_space_exact_quantizer": "first stage completed; full-model pilot running",
+    "token_space_exact_quantizer": "three complete 24-stage model-code constructions plus two first-stage diagnostics completed; no complete repair-state integration",
     "complete_repair_state": "not implemented in compact path"
   },
   "codebase_start_commit": "ec681a2fa6e380c69acc4e0507e5ab434394654d",
-  "current_phase": "real full-model code and deletion diagnostics; complete repair-state integration blocked"
+  "current_phase": "development diagnostics completed; primary empirical program blocked",
+  "prospective_variants": [
+    {
+      "name": "fixed_output_row_power2_4bit",
+      "target": "fixed-v-cert-row-grid-diagnostic-target-v1",
+      "attempts": [
+        "attempt-010",
+        "attempt-011"
+      ],
+      "quality_ratio": 1.3151450627962749,
+      "promoted_to_primary": false
+    }
+  ],
+  "stop_reasons": [
+    "Complete canonical repair-state encoding and certified feature transport remain unimplemented in the compact path.",
+    "The fully represented dense state exceeds the existing 512MiB single-file cap.",
+    "The improved two-record quality diagnostic remains above the 1.20 screen; the registered larger feasibility gate is not evaluated."
+  ]
 }

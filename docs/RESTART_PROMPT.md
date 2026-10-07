@@ -1,16 +1,33 @@
-# Current execution: revision 12
+# Current execution: revision 12 completed diagnostics
 
-Updated 7 October 2026. The user authorized continued empirical execution here.
-The revision 11 local-only instruction below is superseded.
-Read docs/COMPACT_EXECUTION_V12.md and docs/V12_REPAIR_INTEGRATION_AUDIT.md for the new implementation boundaries.
-Read pilots/v12/program.json and each immutable attempt receipt for actual outcomes.
+Updated 7 October 2026. The user authorized empirical execution here; the earlier local-only instruction is historical.
+Read docs/EMPIRICAL_PILOT_V12.md and pilots/v12/summary.json first.
 
-Compact checkpoint storage and exact-order finite execution now work on complete DistilGPT2 forward passes.
-The optional MPFR enclosure backend has an explicit, different evaluator binding.
-Token-space quantization preserves the exact rational code target under its documented arithmetic premises.
-Model-code pilots do not produce canonical repair state or establish repair speed.
-Dense committed response state, scalar proof jets, and transport verification remain integration blockers.
-Confirmation remains blocked. Preserve failures, CPU debits, and all unstarted experiment cells.
+Twelve bounded attempts are preserved: eleven completed, one failed and subsequently fixed.
+Complete column-grid original/retained models and a prospective row-grid retained model were constructed.
+Each contains 24 quantized projection stages and 42,467,328 certified code decisions.
+The old-target deletion changed 5.637 percent of codes across every stage.
+
+Heldout diagnostics contain only 30 predictions from two validation articles.
+Column-grid perplexity was 4.830x base before deletion and 8.102x afterward.
+Fixed output-row scaling improved the retained ratio to 1.315x.
+An evaluator control reproduced every old-model NLL exactly.
+This is a new quantizer target and an exploratory improvement, not a confirmed paper result.
+The two evaluation IDs are excluded from future confirmation.
+
+The core suite passed 590 tests; nine additional tests passed for later modules.
+The inherited worker budget has 4283 charged CPU seconds and 6517 remaining.
+Do not reset it through a new directory, source version, or target variant.
+
+The complete empirical program remains blocked.
+The compact path lacks canonical repair state, certified feature transport, and four-method integration.
+The specified fully represented dense state needs at least 523.125 MiB, above the 512 MiB single-file cap.
+The improved quality diagnostic also remains above the 1.20 screen.
+No reliable full-model repair speedup is established.
+
+Read docs/V12_REPAIR_INTEGRATION_AUDIT.md and docs/NEXT_ALGORITHMIC_STEPS_V12.md for next work.
+Read docs/COMPACT_EXECUTION_V12.md for bounded commands and explicit target choices.
+All attempt sources and receipts are preserved. Large code arrays remain reproducible local artifacts, bound by published hashes.
 
 ---
 
