@@ -1,0 +1,24 @@
+{
+  "schema": "v14-prospective-finer-dyadic-grid-control",
+  "date": "2026-10-07",
+  "registration_condition": "before either v14 worker",
+  "hypothesis": "Removing power-of-two spacing slack may improve four-bit language-model quality.",
+  "target_change": true,
+  "target_scope": "complete model codes only; no compact repair-state contract",
+  "variant": "base-only smallest covering dyadic row scales with at most 24 significant bits",
+  "runs": [
+    {"id": "attempt-001", "mode": "full_quantization", "dataset": "wikitext2", "delete_index": 0, "grid_axis": "dyadic_row"},
+    {"id": "attempt-002", "mode": "quality", "requires": "attempt-001 complete", "evaluation": "quality-records.json"}
+  ],
+  "checks": [
+    "All 24 stages and 42467328 code decisions must complete.",
+    "Four quality models use the same new articles and evaluator.",
+    "Both calibrated models use the same retained article, ridge, and original normalization.",
+    "Report every outcome, including timeout and negative quality results.",
+    "Do not tune another variant on these four articles.",
+    "Do not infer corpus-level quality, reliable speed, or scientific promotion."
+  ],
+  "inherited_budget": {"cap_cpu_seconds": 10800, "charged_before_v14": 7019, "remaining_before_v14": 3781},
+  "worker_caps": {"wall_seconds": 900, "cpu_seconds": 900, "address_space_bytes": 6442450944, "threads": 1},
+  "scientific_promotion": false
+}

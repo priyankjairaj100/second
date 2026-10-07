@@ -1,0 +1,29 @@
+{
+  "schema": "v15-dyadic-complete-state-prospective-control",
+  "date": "2026-10-07",
+  "registration_condition": "before any revision 15 empirical worker",
+  "motivation": "The fixed finer-grid quality control passed a tiny development screen; now verify its complete repair-state implementation.",
+  "target": "live fixed dyadic24 output-row target, with cumulative grid validation",
+  "target_hash_note": "Constructor source hashes differ from v14; compare all decoded retained code values as an explicit arithmetic bridge.",
+  "grid_axis": "dyadic_row",
+  "solver_backend": "batched",
+  "runs": [
+    {"id": "attempt-001", "method": "direct_fresh", "delete_indices": [], "prior": null},
+    {"id": "attempt-002", "method": "repair", "delete_indices": [0], "prior": "attempt-001"},
+    {"id": "attempt-003", "method": "model_only_fresh", "delete_indices": [0], "prior": null},
+    {"id": "attempt-004", "method": "indexed_fresh", "delete_indices": [0], "prior": "attempt-001"},
+    {"id": "attempt-005", "method": "direct_fresh", "delete_indices": [0], "prior": null}
+  ],
+  "checks": [
+    "All four retained models must agree exactly.",
+    "All three retained canonical states must agree exactly.",
+    "Compare every retained decoded code with v14 attempt-001; do not equate different target hashes.",
+    "Count changed-ancestor avoidance honestly; this remains an identity cache.",
+    "Preserve failures, source snapshots, bounded worker receipts, and inherited debits.",
+    "Do not use new quality records or retune grids.",
+    "Do not promote an isolated timing difference into a reliable speed or lifetime claim."
+  ],
+  "budget_before": {"cap_cpu_seconds": 10800, "charged_cpu_seconds": 8041, "remaining_cpu_seconds": 2759},
+  "worker_caps": {"wall_seconds": 900, "cpu_seconds": 900, "address_space_bytes": 6442450944, "threads": 1},
+  "scientific_promotion": false
+}

@@ -1,25 +1,52 @@
-# Revision 12 evidence update
+# Current research tasks after revisions 13 and 14
 
-Updated 7 October 2026. Read EMPIRICAL_PILOT_V12.md first.
-Completed: compact checkpoint storage, exact-order finite kernels, optional certified MPFR enclosures, and full-model code quantization.
-The core suite passes 590 tests under the declared single-thread environment.
-The first full quantization pilot uses only two sixteen-token WikiText records.
-It is not the registered scientific feasibility workload.
+Updated 7 October 2026. See EMPIRICAL_PILOT_V13.md and the revision 14 archive.
+Historical preparation totals below are not current scientific completion counts.
 
-Remaining required work:
+Completed implementation work:
 
-1. Define and validate bounded complete repair-state representation and serialization.
-2. Implement compact certified transport of features after ancestor codes change.
-3. Integrate common optimizations into all four complete measured methods.
-4. Compare repaired models and canonical states with independently reconstructed retained outputs.
-5. Pass the two-root correctness, feature-avoidance, quality, resource, and lifetime feasibility gates.
-6. Freeze actual real-source inventories, disjoint pools, primary configuration, and justified confirmation size.
-7. Execute the forty-cell program, preserving failures, missing runs, and negative results.
-8. Complete ablations, second-corpus/model replication, complete-word LAMBADA evaluation, and release checks.
-9. Update the literature audit and manuscript with measured claims only.
+- Complete compact current-factor state, canonical serialization, reload, and membership verification.
+- Four complete comparison methods on one tiny real DistilGPT2 root.
+- Exact retained model agreement and canonical retained state agreement.
+- Sequential versus combined deletion agreement when the retained set becomes empty.
+- Common batched solver, with exact reference-model and state agreement.
+- Finite transformer boxes and a token-space constant-code certificate.
+- A separate exact dyadic row-grid target with direct original-unit arithmetic.
+- Generation provenance, exclusion checks, worker locks, and inherited budget accounting.
 
-The integration audit gives twelve concrete implementation steps.
-The historical register below is retained; its earlier totals do not describe revision 12.
+Remaining tasks, in dependency order:
+
+1. **Produce useful changed-prefix transport.** Compute exact current factors cheaply, or define a useful alternative canonical state.
+   The identity cache avoids zero changed-ancestor pairs.
+   Current feature-box traversal still performs retained-source work.
+   Read TRANSPORT_BOUNDARY_V14.md before proposing a certificate-only shortcut.
+2. **Select one complete target and state family.** The finer dyadic target currently outputs model codes only.
+   If selected, integrate compact state and every comparison method under its explicit target identity.
+   A quality improvement cannot substitute for complete-state correctness.
+3. **Establish adequate quality on fresh, larger evaluation data.** Preserve all earlier adverse results and article exclusions.
+   Current controls contain only sixty predictions each.
+   Do not select another variant using the same evaluated articles.
+4. **Pass the registered two-root feasibility workload.** Use eight records per root and thirty-two tokens per record.
+   Complete three disjoint sequential requests per root.
+   Check exact models and states, quality, avoidance, resource caps, and preparation-inclusive lifetime cost.
+   The tiny two-record root does not replace this workload.
+5. **Complete real-source acquisition and frozen inventories.** Restore GPT-2 weights and the declared C4 sampling frame.
+   Only a bounded C4 prefix is currently available.
+   Freeze disjoint calibration, pilot, development, confirmation, and evaluation pools.
+6. **Freeze the method and confirmation analysis.** Select the primary request law, target, comparator, and lifetime estimand prospectively.
+   Justify confirmation size and retain failed or missing roots.
+   Common solver improvements must reach all compatible baselines.
+7. **Execute the forty scientific cells after feasibility passes.** Run pilots for each dataset and experiment.
+   Explain each negative or positive mechanism before expanding it.
+   No cell is promoted from an isolated timing win.
+8. **Complete ablations and external validation.** Include changed-prefix rejection, storage, replay, scale, and request-law controls.
+   Replicate across model and corpus, then evaluate complete-word LAMBADA as planned.
+9. **Write the supported paper and release.** Update the primary-source literature audit and distinguish conditional from practical results.
+   Publish reproducible scripts, hashes, exclusions, all outcomes, limitations, and actual resource use.
+
+The theory stack is conditional on useful transport and its complete cost.
+A reliable full-model repair-speed claim is not locked.
+The source snapshots and results preserve evidence needed to decide the project's future.
 
 ---
 

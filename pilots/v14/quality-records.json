@@ -1,0 +1,133 @@
+{
+  "schema": "v14-prospective-finer-grid-quality",
+  "records": [
+    {
+      "id": "wikitext2:validation:article-row-3164",
+      "tokens": [
+        6401,
+        4746,
+        2351,
+        30426,
+        14413,
+        318,
+        257,
+        6754,
+        1989,
+        739,
+        262,
+        1630,
+        286,
+        262,
+        1578,
+        1829
+      ]
+    },
+    {
+      "id": "wikitext2:validation:article-row-979",
+      "tokens": [
+        7806,
+        12806,
+        5325,
+        33783,
+        357,
+        4642,
+        2242,
+        2901,
+        11104,
+        1267,
+        318,
+        281,
+        3594,
+        8674,
+        508,
+        8278
+      ]
+    },
+    {
+      "id": "wikitext2:validation:article-row-850",
+      "tokens": [
+        4476,
+        417,
+        406,
+        4604,
+        21768,
+        357,
+        3360,
+        6412,
+        284,
+        355,
+        6752,
+        33899,
+        417,
+        406,
+        4604,
+        21768
+      ]
+    },
+    {
+      "id": "wikitext2:validation:article-row-571",
+      "tokens": [
+        366,
+        383,
+        347,
+        18924,
+        15261,
+        366,
+        318,
+        257,
+        25570,
+        3496,
+        416,
+        1605,
+        15504,
+        290,
+        25570,
+        21623
+      ]
+    }
+  ],
+  "selection": "next four eligible articles in fixed pilot-order-v1 after all earlier quality exclusions",
+  "pool_sha256": "20f6dcf2893b157d4064f43c8b4c92ff96b370d350e53affaa8075b989178c5b",
+  "prior_exclusions": [
+    "wikitext2:validation:article-row-1606",
+    "wikitext2:validation:article-row-1657",
+    "wikitext2:validation:article-row-1877",
+    "wikitext2:validation:article-row-2154",
+    "wikitext2:validation:article-row-2694",
+    "wikitext2:validation:article-row-955"
+  ],
+  "excluded_from_future_confirmation_ids": [
+    "wikitext2:validation:article-row-1606",
+    "wikitext2:validation:article-row-1657",
+    "wikitext2:validation:article-row-1877",
+    "wikitext2:validation:article-row-2154",
+    "wikitext2:validation:article-row-2694",
+    "wikitext2:validation:article-row-3164",
+    "wikitext2:validation:article-row-571",
+    "wikitext2:validation:article-row-850",
+    "wikitext2:validation:article-row-955",
+    "wikitext2:validation:article-row-979"
+  ],
+  "source_files": {
+    "tmp/data/wikitext2/wikitext-2-raw-v1/train-00000-of-00001.parquet": {
+      "bytes": 6357543,
+      "sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7"
+    },
+    "tmp/data/wikitext2/wikitext-2-raw-v1/validation-00000-of-00001.parquet": {
+      "bytes": 657209,
+      "sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c"
+    }
+  },
+  "tokenizer_sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6",
+  "model_order": [
+    "dyadic_calibrated",
+    "power2_calibrated",
+    "dyadic_nearest",
+    "base"
+  ],
+  "scope": "60 new development predictions; not a registered scientific gate; no corpus-level inference",
+  "hypothesis": "Removing power-of-two spacing slack may improve fixed four-bit quality.",
+  "calibration": "same single retained 16-token article, original normalization32, ridge0.01",
+  "change": "new target with base-only24-significant-bit dyadic row scales; original weights remain exact",
+  "stop_rule": "one prospective variant; preserve all outcomes; no threshold-driven retuning on these articles"
+}

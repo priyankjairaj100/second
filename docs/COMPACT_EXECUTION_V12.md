@@ -63,7 +63,7 @@ Each worker receives live CPU admission before loading model weights.
 The launcher carries the 614 prior charged seconds and every new reservation or debit.
 The combined inherited feasibility allowance remains 10,800 worker CPU seconds.
 Changing source snapshots or output directories does not reset that project allowance.
-Launch attempts serially; the launcher does not provide concurrent cross-protocol admission.
+Launch attempts serially. Revision 13 adds a shared admission lock across compact revision launchers.
 
 These workers measure implementation feasibility.
 Their clocks are diagnostic clocks, not complete four-method comparison clocks.

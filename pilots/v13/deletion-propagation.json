@@ -1,0 +1,327 @@
+{
+  "schema": "v13-exact-deletion-propagation",
+  "original_state_sha256": "f1065b1583194c3a93a1b8033e762e80bdf9f4a57287b9d2c74a4f3dbf29514d",
+  "retained_state_sha256": "85e91a893b978b3a5cde6cd0cc59cd3e534f6286b9dd7e884a0c76b71ed96e05",
+  "retained_ids": [
+    "wikitext2:train:article-row-5326"
+  ],
+  "changed_codes": 1970198,
+  "code_values": 42467328,
+  "retained_factor_values": 516096,
+  "changed_retained_factor_values": 503769,
+  "stages": [
+    {
+      "stage_id": "block.0000.qkv",
+      "values": 1769472,
+      "changed_codes": 82386,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 0,
+          "prefix_changed": false
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0000.attn_out",
+      "values": 589824,
+      "changed_codes": 29602,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0000.mlp_up",
+      "values": 2359296,
+      "changed_codes": 114997,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0000.mlp_down",
+      "values": 2359296,
+      "changed_codes": 67516,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 49152,
+          "changed_values": 49142,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0001.qkv",
+      "values": 1769472,
+      "changed_codes": 95402,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0001.attn_out",
+      "values": 589824,
+      "changed_codes": 37397,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0001.mlp_up",
+      "values": 2359296,
+      "changed_codes": 134061,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0001.mlp_down",
+      "values": 2359296,
+      "changed_codes": 67852,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 49152,
+          "changed_values": 49128,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0002.qkv",
+      "values": 1769472,
+      "changed_codes": 105135,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0002.attn_out",
+      "values": 589824,
+      "changed_codes": 24771,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0002.mlp_up",
+      "values": 2359296,
+      "changed_codes": 137343,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0002.mlp_down",
+      "values": 2359296,
+      "changed_codes": 63359,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 49152,
+          "changed_values": 49152,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0003.qkv",
+      "values": 1769472,
+      "changed_codes": 109693,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0003.attn_out",
+      "values": 589824,
+      "changed_codes": 32107,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0003.mlp_up",
+      "values": 2359296,
+      "changed_codes": 134748,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0003.mlp_down",
+      "values": 2359296,
+      "changed_codes": 65362,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 49152,
+          "changed_values": 49152,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0004.qkv",
+      "values": 1769472,
+      "changed_codes": 107884,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0004.attn_out",
+      "values": 589824,
+      "changed_codes": 30568,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0004.mlp_up",
+      "values": 2359296,
+      "changed_codes": 129278,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0004.mlp_down",
+      "values": 2359296,
+      "changed_codes": 63460,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 49152,
+          "changed_values": 49152,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0005.qkv",
+      "values": 1769472,
+      "changed_codes": 106866,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0005.attn_out",
+      "values": 589824,
+      "changed_codes": 36687,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0005.mlp_up",
+      "values": 2359296,
+      "changed_codes": 125259,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 12288,
+          "changed_values": 12288,
+          "prefix_changed": true
+        }
+      ]
+    },
+    {
+      "stage_id": "block.0005.mlp_down",
+      "values": 2359296,
+      "changed_codes": 68465,
+      "retained_factors": [
+        {
+          "record_id": "wikitext2:train:article-row-5326",
+          "values": 49152,
+          "changed_values": 49147,
+          "prefix_changed": true
+        }
+      ]
+    }
+  ],
+  "scope": "one tiny real deletion; canonical factors normalize signed zero; no population inference"
+}

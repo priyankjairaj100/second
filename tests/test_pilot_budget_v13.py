@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from src.pilot_budget import inherited_allowance
+from src.pilot_budget import inherited_allowance,research_worker_lock
 
 
 class InheritedBudgetTests(unittest.TestCase):
@@ -14,3 +14,10 @@ class InheritedBudgetTests(unittest.TestCase):
             self.assertEqual(inherited_allowance(root),(1214,9586))
             p=root/'pilots/v14/a/phase-cpu-budget/ledger.json';p.write_text(json.dumps({'attempts':{'a':dict(charged_cpu_seconds=902,state='reserved')}}))
             with self.assertRaises(ValueError):inherited_allowance(root)
+
+    def test_shared_lock_rejects_second_admission_and_releases(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with research_worker_lock(directory):
+                with self.assertRaises(ValueError):
+                    with research_worker_lock(directory):pass
+            with research_worker_lock(directory):pass

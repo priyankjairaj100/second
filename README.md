@@ -1,106 +1,72 @@
-> Current handoff: [LOCAL_LLM_START.md](LOCAL_LLM_START.md).
-
-Revision 12 resumes bounded empirical execution here. Read [current status](docs/STATUS.md).
-Complete model-code quantization now runs. Row scaling improved a tiny quality diagnostic from 8.10x to 1.32x base perplexity.
-Full-model repair and reliable speedup remain unproved; the scientific program remains blocked.
-
-> Follow [the precise local empirical program](docs/LOCAL_EMPIRICAL_PROGRAM.md).
-> Use [the machine-readable checklist](handoff/program.json) and `scripts/local_handoff.py` for reporting.
-> Full-model execution remains blocked. Archived diagnostics do not establish repair speedup.
-
-> Latest checkpoint: revision 10 empirical pilots, 5 October 2026.
-> Read [the pilot report](docs/EMPIRICAL_PILOT_V10.md) and [restart context](RESUME.md).
-> Real first-block diagnostics improved; full-model repair remains blocked by resource planning.
-> No full-model speedup or NLP quality claim is established.
-
 # Exact calibration-data unlearning for quantized language models
 
-This ACL 2027 project removes calibration documents while matching complete retained-data sequential quantization with fixed base weights.
-Start with [RESUME.md](RESUME.md), [status](docs/STATUS.md), and the [revision 9 note](docs/REVISION_9.md).
+This project targets an ACL 2027 paper.
+It removes calibration records while keeping the base model weights fixed.
+The counterfactual target reruns the complete declared sequential quantizer on retained records.
+The implementation defines a certified numerical target.
+It does not claim native GPTQ or CUDA equivalence.
 
-Future empirical execution belongs on the user’s local machine. Read the revision 11 handoff first.
-Revision 9 completes another preparation pass on measured comparisons, ordered lifetime costs, runtime and instrumentation contracts, conditional feasibility decisions, and provider diagnostics.
-It does not establish practical model feasibility, useful certificate coverage, language quality, or reliable full-model speedup.
+## Current state
 
-## Scientific program
+Revision 13 completed full compact state transactions for DistilGPT2.
+Four methods agreed on every retained model code.
+Three state-producing methods agreed on canonical state bytes.
+The original state occupied 29,638,144 bytes.
+Common batching reproduced the reference exactly.
 
-Fixed intrinsic response moments generate candidate-dependent Gram matrices without changing the sequential target.
-Sound uncertainty bounds and exact decision certificates justify accepted stages.
-Unresolved stages use exact retained replay.
-Canonical state supports repeated deletion.
+The identity cache avoided zero of 23 changed-ancestor pairs.
+No reliable full-model repair speedup is established.
+Finer dyadic calibration produced 0.927995x base perplexity on sixty new predictions.
+The matched power-of-two control produced 1.222516x; finer nearest rounding produced 1.024938x.
+Complete finer-grid state is now implemented.
+Its five real-model comparison transactions are running serially.
+These tiny controls do not establish corpus-level quality or paper readiness.
 
-The compact response tier stores O(r d²+r²) rational slots per group.
-The full quadratic tier stores the complete Gram polynomial of the same affine feature response.
-Fixed parameter boxes provide another domain construction without an affine-span restriction.
-A spectral-first, ridge-aware interval verifier can certify additional decisions after spectral rejection.
-These conditional improvements do not guarantee useful acceptance or lower service cost.
+Start with [RESUME.md](RESUME.md), [the current program](pilots/v14/program.json), and [remaining tasks](docs/RESEARCH_TODO.md).
+Read the [complete-state results](docs/EMPIRICAL_PILOT_V13.md), [finer-grid results](docs/EMPIRICAL_PILOT_V14.md), and [transport boundary](docs/TRANSPORT_BOUNDARY_V14.md).
+Before revision 15, the inherited remaining allowance was 2,759 CPU seconds.
+Read current ledgers while its workers run.
+The focused regression run passed 72 tests; it was not a new full-suite run.
 
-The optional identity-cache family stores true sequential Grams under the current quantized model.
-Matching transitive ancestors permit exact deleted-contribution subtraction; changed ancestors require retained replay.
-Each successful request refreshes canonical cache state.
-The response solver ignores old model codes; the cache solver uses the previous model.
-Indexed fresh receives identical valid information and solver policy within each family.
-Neither family establishes a deletion-exclusive solver advantage.
+## Current implementations
 
-Ordinary model-only fresh requantization constructs no response chart or deletion index.
-It is the primary ordinary-speed baseline.
-The direct full-state oracle supplies canonical-state correctness, and equally indexed fresh supplies a separate maintenance comparison.
-A gain against rebuilding deletion state alone cannot establish faster ordinary requantization.
+- [Canonical compact state](docs/COMPACT_STATE_V13.md)
+- [Exact dyadic state encoding](docs/COMPACT_DYADIC_STATE_V15.md)
+- [Complete dyadic identity service](docs/DYADIC_COMPACT_SERVICE_V15.md)
+- [Complete repair and four comparison methods](docs/COMPACT_SERVICE_V13.md)
+- [Finite transformer boxes](docs/FINITE_FEATURE_BOXES_V13.md)
+- [Exact codes over feature boxes](docs/TOKEN_BOX_CERTIFICATE_V13.md)
+- [Common solver batching](docs/BATCHED_TOKEN_SOLVER_V13.md)
+- [Original token-space solver](docs/TOKEN_SPACE_SOLVER_V12.md)
+- [Fixed output-row grids](docs/ROW_SCALED_TARGET_V12.md)
+- [Fine dyadic row grids](docs/DYADIC_ROW_TARGET_V14.md)
+- [Revision 12 diagnostic report](docs/EMPIRICAL_PILOT_V12.md)
 
-## Current deliverables
+## Reproduction
 
-- [Prospective manuscript](docs/MANUSCRIPT_DRAFT.md), [evidence slots](docs/MANUSCRIPT_EVIDENCE_SLOTS.md), and [primary-source citation check](docs/CITATION_CHECK_V9.md)
-- [Revision 9 summary](docs/REVISION_9.md) and [complete task register](docs/RESEARCH_TODO.md)
-- [Measured comparisons](docs/MEASURED_COMPARISON.md), [frozen campaigns](docs/MEASURED_CAMPAIGN.md), [ordered sequences](docs/MEASURED_SEQUENCE.md), and [artifact-verified analysis](docs/MEASURED_ANALYSIS.md)
-- [Model-only control](docs/MODEL_ONLY_FRESH.md), [feasibility policy](docs/FEASIBILITY_GATES.md), and [conditional decision evaluator](docs/FEASIBILITY_DECISION.md)
-- [Transaction timing](docs/TRANSACTION_TIMING.md), [verified diagnostic breakdown](docs/DIAGNOSTIC_BREAKDOWN.md), [CPU admission](docs/EXECUTION_BUDGETS.md), and [prospective protocol version 5](configs/protocol_v5.json)
-- [Provider diagnostics](docs/PROVIDER_DIAGNOSTICS.md), [certificate diagnostics](docs/CERTIFICATE_DIAGNOSTICS.md), and [arithmetic endpoint audit](docs/ARITHMETIC_AUDIT.md)
-- [35-page revision 7 theory report](output/pdf/theory_algorithm_revision.pdf) and [LaTeX source](reports/theory_algorithm_revision.tex)
-- [Interval theory](docs/ALGORITHM_ADVANCE_V7.md), [publication theory](docs/PUBLICATION_THEORY.md), and [claim evidence](docs/CLAIM_EVIDENCE.md)
-- [Original-model cache](docs/IDENTITY_CACHE.md), [quadratic control](docs/QUADRATIC_CONTROL.md), and [target contract](docs/TARGET_CONTRACT.md)
-- [Validation](docs/VALIDATION.md), [project history](docs/PROJECT_CONTEXT.md), and [restart prompt](docs/RESTART_PROMPT.md)
-
-The consolidated PDF remains the unchanged 35-page revision 7 report.
-Read the revision 9 note and current contracts for later implementation and measurement changes.
-
-## Verification and status
+Install `requirements-local.txt` and restore pinned inputs with `scripts/acquire_pilot_inputs.py`.
+These certified workers currently use CPU execution.
+Use fresh attempt IDs.
+Never overwrite published attempts or reuse their clocks as new observations.
+Later validation guards changed source-bound target hashes.
+Regenerate preparation and comparators under one source version, or use the exact archived snapshots.
 
 ```bash
-python -m unittest discover -s tests -v
+python scripts/launch_compact_service_pilot.py --id replica-001 --method direct_fresh
+python scripts/launch_compact_service_pilot.py --id replica-002 --method repair --delete-index 0 --prior-attempt replica-001
+python scripts/launch_compact_service_pilot.py --id replica-003 --method model_only_fresh --delete-index 0
+python scripts/launch_compact_service_pilot.py --id replica-004 --method indexed_fresh --delete-index 0 --prior-attempt replica-001
+python scripts/launch_compact_service_pilot.py --id replica-005 --method direct_fresh --delete-index 0
 ```
 
-The final revision records **524 correctness tests**.
-The register contains **29 completed and 49 open required tasks**, plus **12 conditional extensions**.
-G0 remains open.
-C04 closes the written feasibility-policy requirement; software decision logic does not establish policy attainment.
-C05 and D05 remain partial under their full criteria; the final register records the D04 review disposition.
+Use `--solver-backend batched` equally for every compatible method when comparing that implementation.
+The inherited CPU allowance applies across later revision directories.
+The launcher rejects overlapping workers and unsettled prior reservations.
+Model arrays and complete state arrays remain local.
+Published hashes bind those reproducible artifacts.
+A fresh clone must regenerate them before using a previous state.
 
-Frozen measured campaigns now bind all four methods, actual runtime, source and input hashes, complete planned products, clean or diagnostic execution, and model-only confirmation membership.
-Each method has a fresh limited process and an external transaction observer.
-Ordered measured sequences separately charge indexed original preparation and ordinary original model construction, then every actual request.
-Repair and indexed fresh share one preparation observation without treating it as independent evidence.
-The charged predecessor check uses the state-producing child receipt and artifacts; external research lineage and oracle checks remain separate.
-
-Artifact-aware analysis verifies clocks and exact outputs, retains missing and failed slots, and rejects duplicated original observations across repetitions.
-It clusters inference by calibration root.
-Only the sole registered primary comparison and configuration can receive confirmation timing flags.
-Secondary indexed and full-state ratios remain separate descriptions.
-Clean mode disables optional Python diagnostics while retaining required exact ledgers and correctness work.
-Native profiling is unobserved, and operating-system caches remain uncontrolled.
-
-The observer includes child commitments, cleanup, worker accounting, and output validation.
-Its bootstrap and final observer receipt remain excluded.
-Lifetime sums use this declared transaction boundary; they are not the elapsed wall time of the research harness.
-CPU admission covers trusted local children under one protocol ledger, excluding controller CPU and cross-protocol physical guarantees.
-
-The feasibility evaluator computes conditional decisions from the frozen policy.
-The public bridge derives available lifetime, coverage, quality, and resource facts from verified clean and diagnostic archives.
-It includes the full protocol-ledger snapshot and archived transaction/nontransaction files, with explicit read-time scope.
-Missing scientific provenance, unmatched diagnostics, failed observations, or incomplete accounting remain inconclusive.
-No current real-data result tests or passes that policy.
-Provider diagnostics expose available proof components with bounded omissions; hidden arithmetic intermediates and exhaustive primitive traces remain outside scope.
-
-Actual inputs, a resource-feasible model, primary configuration, source pools, workloads, empirical inventories, precision justification, experiments, and manuscript completion remain outstanding.
-The user's “maximum revenue” phrase means research value within this paper program, without monetary guarantees.
-Synthetic empirical datasets remain deferred.
-No model weights, raw corpus, credentials, or missing historical raw results are included.
+The forty-cell scientific program and its original gates remain in [the empirical plan](docs/LOCAL_EMPIRICAL_PROGRAM.md).
+The user authorized execution here after that older local handoff.
+Large campaigns require the remaining scientific conditions.
+The current identity cache cannot satisfy the changed-ancestor avoidance condition.

@@ -1,5 +1,7 @@
 # Canonical factor identity state
 
+Revision 15 adds exact dyadic row grids through the compatible extension in `COMPACT_DYADIC_STATE_V15.md`.
+
 This document defines the new `factor_identity_v1` state family.
 It does not change the aggregate state family or either quantization target.
 The state stores exact current-prefix factors and packed grid indices.

@@ -1,0 +1,14 @@
+{
+  "schema": "v14-post-snapshot-validation-correction",
+  "timing": "after attempt-001 completed and attempt-002 source was frozen",
+  "defect": "Row-grid limits were not enforced against the sum of output-row grids across all stages.",
+  "fix": "Both row target constructors now check sum(output_rows)*2**bits against max_grid_entries.",
+  "observed_distilgpt2_entries": 663552,
+  "registered_limit": 1000000,
+  "current_attempts_satisfy_corrected_limit": true,
+  "arithmetic_change": false,
+  "source_digest_change": true,
+  "evidence_rule": "Existing source snapshots, target hashes, and results remain unchanged. Regenerate both comparators under one source version for new runs.",
+  "quality_validation": "Eight rejection tests cover plan and receipt provenance, artifact swaps, control omission, exclusions, and retained membership.",
+  "quality_launcher_change": "Future launches require an explicit power2-attempt, avoiding a silently hardcoded old-target comparator."
+}

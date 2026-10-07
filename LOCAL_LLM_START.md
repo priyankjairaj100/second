@@ -1,40 +1,37 @@
-# Current execution: revision 13 complete-state pilots running
+# Current execution: revision 15 complete dyadic state controls running
 
-Updated 7 October 2026. The user requested continued implementation and empirical execution here.
-Read docs/COMPACT_SERVICE_V13.md and pilots/v13/prospective-program.json first.
+Updated 7 October 2026. The user authorized implementation, experiments here, and GitHub pushes.
+Read pilots/v15/prospective-program.json and the settled revision 13/14 reports first.
 
-The factor_identity_v1 family replaces dense Grams with exact retained factors and packed codes.
-A complete 24-stage DistilGPT2 state transaction passed.
-Its saved state is 29,638,144 bytes, below the 512 MiB limit.
-A complete one-record deletion repair also passed.
-All 42,467,328 repaired values match the revision 12 retained row-grid model.
-The remaining four-method controls and prospective quality control are running serially.
+Revision 14 quality improved on four new articles: fine calibration/base perplexity was 0.927995.
+The matched power-of-two ratio was 1.222516; fine nearest rounding was 1.024938.
+These are sixty development predictions, not corpus-level confirmation.
+All ten evaluated validation article IDs remain excluded from confirmation.
 
-Read current worker receipts and settled budget ledgers before reporting outcomes.
-A running worker can have a provisional launch_failed receipt with a reserved debit.
-Do not classify that placeholder as a finished failure.
+The finer target now has complete canonical factor-state integration.
+All four methods share its original-unit solver.
+The focused regression run passed 72 tests; this was not a new full-suite run.
+The old original and retained power-of-two states still roundtrip byte-for-byte.
+The five revision 15 real-model transactions are running serially.
+Their purpose is complete model/state agreement and an explicit decoded-code bridge to revision 14.
+Their source-bound target hashes differ because the cumulative grid validation was corrected.
+
+Do not report running or reserved receipts as settled failures.
 Never launch another empirical worker while any inherited debit remains reserved.
-The original cap remains 10,800 CPU seconds, with all revision 10/12/13 charges carried forward.
+The global inherited cap remains 10,800 CPU seconds.
+Before revision 15, 8,041 seconds were charged and 2,759 remained.
+Read current ledgers for subsequent costs.
+Controller and software-test CPU remain separate overhead.
 
-The box modules prove feature containment and constant codes over supplied boxes.
-The current box evaluator still evaluates retained tokens.
-It does not establish changed-ancestor feature avoidance.
-The identity service correctly reports zero such avoidance.
-Repair and indexed_fresh share the same algorithm.
-No reliable repair-speed or paper-readiness claim is established.
+The identity service still avoids zero changed-ancestor pairs by construction.
+The new grid and state support do not establish useful factor transport or reliable repair speed.
+Read docs/TRANSPORT_BOUNDARY_V14.md for exact-state and lifetime cost requirements.
+The registered two-root feasibility workload and forty scientific cells remain unpromoted.
 
-A common batched token solver passed exact code and directed-bound comparisons.
-It is available to every compatible method through --solver-backend batched.
-The registered reference quartet retains the reference solver.
-Further matched batching pilots are prospectively listed in pilots/v13/prospective-batching.json.
-
-The first revision 13 worker failed after a logging-key collision.
-The failure remains archived. The fixed worker completed.
-An initial driver misread a reserved receipt; its erroneous derivative report remains separately archived.
-A regression check now requires both settled ledgers and settled receipts.
-
-Large state/model arrays remain local and reproducible, with published hashes.
-All source snapshots, plans, receipts, software checks, and limitations must be pushed before ending.
+Large model/state arrays and checkpoint/corpus bytes remain local and reproducible.
+Plans, source snapshots, hashes, receipts, software checks, and failures must be published.
+Finish the five admitted controls, analyze them, update current context, and push the final evidence.
+Use scripts/analyze_v15.py only after all workers settle.
 
 ---
 

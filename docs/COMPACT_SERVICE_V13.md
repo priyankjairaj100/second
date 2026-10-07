@@ -83,3 +83,11 @@ A code certificate also does not reconstruct exact current feature factors.
 It therefore cannot replace factor reconstruction in this service family.
 A calibration-independent anchor family can change that state requirement.
 Its complete costs and useful acceptance rates still need evidence.
+
+## Measured pilot and later validation
+
+EMPIRICAL_PILOT_V13.md records the completed eleven-attempt program.
+TRANSPORT_BOUNDARY_V14.md states the complete-state information and cost requirements.
+The later row-grid budget guard changes source-bound target digests.
+Archived attempts keep their original source snapshots and target hashes.
+Regenerate both preparation and query comparators under one source version for fresh runs.

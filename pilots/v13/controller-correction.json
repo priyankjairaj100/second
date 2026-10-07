@@ -1,0 +1,13 @@
+{
+  "schema": "v13-controller-status-correction",
+  "affected_derivative_report": "program-outcomes-initial-controller-error.json",
+  "error": "The initial driver treated the existence of a provisional worker receipt as settlement.",
+  "effect": "It incorrectly labeled a still-running preparation as failed and marked later slots unstarted.",
+  "raw_worker_results_modified": false,
+  "charged_budget_modified": false,
+  "fix": "Require settled budget entries and a settled receipt before classifying completion.",
+  "regression_test": "tests/test_registered_v13.py",
+  "authoritative_derivative_report": "program-outcomes.json",
+  "second_controller_event": "A restarted driver encountered the original active driver. The existing-slot guard rejected the duplicate. No duplicate research worker ran.",
+  "further_hardening": "Shared file locks now prevent duplicate program controllers and simultaneous revision launchers."
+}

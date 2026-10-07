@@ -17,3 +17,16 @@ local_runs/
 /pilots/v13/**/outputs/*.bin
 /pilots/v13/**/writer.lock
 /pilots/v13/**/phase-cpu-budget/ledger.lock
+
+/pilots/*.lock
+/pilots/v15/attempt-*/outputs/*.bin
+/pilots/v15/attempt-*/writer.lock
+/pilots/v15/attempt-*/phase-cpu-budget/ledger.lock
+/pilots/v15/*.lock
+/pilots/v*/attempt-*/outputs/.*
+/pilots/v13/*-controller.lock
+/pilots/v14/**/outputs/*.bin
+/pilots/v14/**/outputs/*.codes.bin
+/pilots/v14/**/writer.lock
+/pilots/v14/**/phase-cpu-budget/ledger.lock
+/pilots/v14/*-controller.lock
