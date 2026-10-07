@@ -1,3 +1,49 @@
+# Revision 16 disposition and remaining work
+
+Updated 7 October 2026. Read EMPIRICAL_PILOT_V16.md before the historical task register below.
+
+Completed this revision:
+
+- Implemented whole-row and block speculative exact quantizers.
+- Proved directed scans, prefix continuation, and corrected block transitions.
+- Integrated common service backends and a factor-free warm model-only control.
+- Ran real WikiText and bounded C4 stage pilots with inherited budget accounting.
+- Preserved twenty exact but slower cells and eight unstarted timeout cells.
+- Audited primary literature and corrected fixed-point novelty claims.
+- Documented a canonical anchor-state design and its unresolved practical bounds.
+
+The following scientific dependencies remain open:
+
+1. Find a useful repair mechanism whose full cost beats compatible ordinary reconstruction.
+   The two tested speculative CPU implementations failed their small screen.
+   Faster candidate verification or cheap anchor bounds need a new registered pilot.
+   Fixed-point iteration alone is neither a new result nor evidence of speed.
+2. Preserve exact complete models and canonical state under that useful mechanism.
+   New service backends have fixture-level integration, without new complete real-model measurements.
+   Revision 15 supplies the latest full-model identity-state equality.
+3. Obtain complete repeated-request and preparation-inclusive lifetime evidence.
+   Include cold and warm model-only baselines, indexed fresh, and complete fresh state.
+   Do not equate certified decision prefixes with avoided features or total computation.
+4. Establish quality on larger, unused evaluation inputs.
+   The current positive result contains only sixty predictions.
+   Keep every earlier adverse result and all ten evaluated article exclusions.
+5. Complete GPT-2 weights, the declared C4 frame, and disjoint frozen inventories.
+6. Pass the registered two-root feasibility sequence before development or confirmation.
+   A quantizer mechanism requires an explicitly prospective gate revision.
+   It cannot retroactively satisfy the existing feature-avoidance condition.
+7. Freeze the final primary claim, estimator, comparator, and justified confirmation size.
+8. Complete all forty scientific cells, ablations, robustness, and external evaluation after their pilots pass.
+9. Write the paper around supported results and publish the full reproducibility record.
+
+The original CPU allowance has 977 seconds remaining.
+Do not spend it repeating the losing backends without a concrete algorithmic change.
+Correctness is substantially implemented; the practical speed claim remains unresolved.
+The theory and empirical program cannot honestly be called finalized.
+
+---
+
+Historical register follows. Its completion counts are not current empirical totals.
+
 # Current research tasks after revisions 13, 14, and 15
 
 Updated 7 October 2026. See EMPIRICAL_PILOT_V15.md and pilots/v15/program.json.

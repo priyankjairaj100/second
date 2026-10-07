@@ -30,3 +30,8 @@ local_runs/
 /pilots/v14/**/writer.lock
 /pilots/v14/**/phase-cpu-budget/ledger.lock
 /pilots/v14/*-controller.lock
+
+# Revision 16 publishes receipts and hashes, not reproducible code arrays.
+/pilots/v16/attempt-*/outputs/*.bin
+/pilots/v16/attempt-*/writer.lock
+/pilots/v16/attempt-*/phase-cpu-budget/ledger.lock

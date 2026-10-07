@@ -1,3 +1,67 @@
+# Current checkpoint: revision 16 speculative CPU routes rejected
+
+Updated 7 October 2026. Work here and GitHub pushes remain authorized.
+Read docs/EMPIRICAL_PILOT_V16.md, pilots/v16/summary.json, and docs/RESEARCH_TODO.md first.
+
+Two exact speculative quantizers are implemented and independently reviewed.
+The whole-row solver verifies candidates through directed prefix scans.
+The block solver preserves later correct spans after earlier code changes.
+Both have common fresh, repair, and indexed service integration.
+A warm model-only control accepts prior codes without calibration factors.
+The numerical target and canonical factor-state contract remain unchanged.
+Reference quantization remains the default.
+The final focused regression passed 58 tests; this was not a full-suite rerun.
+
+The real-data pilot tested the first DistilGPT2 projection on frozen WikiText and bounded C4 inputs.
+Twenty completed candidate cells matched their exact sequential reference.
+Every completed candidate cell was slower than that reference.
+The best observed block variants were approximately 2.19x and 2.10x slower on WikiText and C4.
+These are selected single-run stage measurements, not complete-service or population estimates.
+
+Attempt 001 reached its 450-second wall cap after eight exact WikiText comparisons.
+Its eight C4 comparison cells remained unstarted during interrupted reference preparation.
+Attempt 002 completed all twelve block comparisons across both corpora.
+All missing cells, adverse results, sources, limits, and receipts remain archived.
+Do not expand these losing CPU variants or repeat them merely for favorable timings.
+
+The literature audit found that fixed-point rounding and parallel dependency schedules are established background.
+Read docs/NOVELTY_AUDIT_V16.md before making novelty claims.
+The proposed contribution concerns finite-arithmetic deletion certification and complete state guarantees.
+Its practical value and literature priority remain unsettled.
+
+Revision 15 remains the latest complete real-model repair evidence.
+Its four retained models and three canonical states agreed exactly.
+All 42,467,328 retained codes matched the earlier quality model.
+The quality pilot still contains only four new articles and sixty predictions.
+No new quality articles were evaluated in revision 16.
+All ten prior evaluation article exclusions remain in force.
+
+Useful factor transport and reliable full-model speed remain unresolved.
+The factor-identity route still avoids zero changed-ancestor pairs.
+An independent anchor-state design is documented, but not implemented or empirically supported.
+The original feature-avoidance gate has not passed.
+Quantizer work savings are a separate proposed mechanism and cannot silently pass that gate.
+
+Every empirical worker is settled. No research process remains running.
+The inherited debit is 9,823 CPU seconds, leaving 977 under the unchanged 10,800-second cap.
+Controller work and software tests are separate overhead.
+Never reset this allowance through new revisions or folders.
+
+Next work requires a cheaper, useful repair mechanism before larger experiments.
+Then run the registered two-root sequence with complete costs and a warm model-only comparator.
+Larger independent quality, full source acquisition, frozen inventories, and all forty scientific cells remain outstanding.
+The project has exact implementation evidence and negative speed diagnostics.
+It does not have an ACL-ready empirical speedup result.
+
+Large checkpoint, corpus, model, and state arrays remain reproducible local artifacts.
+Prior full-model arrays were lost when the earlier scratch workspace was pruned.
+Pinned checkpoint and tiny input files were restored for this revision.
+A fresh clone must regenerate binaries from the archived recipes.
+
+---
+
+The following sections preserve historical checkpoints.
+
 # Current checkpoint: revision 15 complete dyadic repair verified
 
 Updated 7 October 2026. Implementation, experiments here, and GitHub pushes are authorized.

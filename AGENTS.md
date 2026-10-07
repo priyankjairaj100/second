@@ -1,16 +1,19 @@
-# Current instruction: resume bounded execution here
+# Current instruction: revision 16 empirical stop for losing variants
 
-Updated 7 October 2026. Revision 15.
-The user resumed empirical execution here and requested maximum progress with limited credits.
-Read RESUME.md and pilots/v15/program.json first.
-Restore pinned sources and use the existing feasibility thresholds.
-Run bounded pilots first. Preserve every result, failure, source snapshot, and CPU debit.
-Complete tiny-root model and state repair is measured for both row-grid targets.
-The finer-grid quality signal contains only sixty new predictions.
-Useful changed-prefix transport and reliable full-model speed remain unproven.
-Do not expand confirmation while the registered feasibility conditions remain unmet.
-The current developer enables focused parallel work. Avoid redundant reviews and repeated tests.
-The revision 11 local-only instruction below is historical and superseded.
+Updated 7 October 2026. Work here and repository pushes remain authorized.
+Read RESUME.md, docs/EMPIRICAL_PILOT_V16.md, and pilots/v16/summary.json first.
+Both speculative CPU routes lost their stage pilots despite exact outputs.
+Do not expand them into full-model timing or confirmation.
+Reference quantization remains the default.
+A new repair mechanism needs a prospective, bounded real-data screen.
+Prior codes must also reach a compatible warm model-only comparator.
+Fixed-point quantization and parallel scheduling are established prior work.
+Read docs/NOVELTY_AUDIT_V16.md before claiming novelty.
+The worker ledger has 9,823 charged CPU seconds and 977 remaining.
+Never reset the original 10,800-second cap.
+Preserve every failed, interrupted, and unstarted registered cell.
+The current developer permits focused parallel work.
+Historical local-only and no-agents instructions below are superseded.
 
 ---
 

@@ -1,3 +1,26 @@
+# Revision 16 focused validation
+
+Updated 7 October 2026.
+The final focused regression passed 58 tests in 2.716 seconds.
+This is software validation, not empirical performance evidence.
+It is not a rerun of the full historical suite.
+
+The run covers directed scans, both speculative solvers, canonical state, service integration, grids, and inherited admission.
+Independent dense rational oracles test the solver outputs.
+Cases include ties, subnormals, partial prefixes, incoming accumulators, global limits, and factor-free warm model seeds.
+
+See validation/software_tests_v16.txt and validation/tested_source_sha256_v16.json.
+The latter identifies the tested sources and selected test modules.
+Separate proof review also checked 2,808 rational scan prefixes.
+This is not proof-assistant verification or a guarantee of defect absence.
+
+Two empirical workers were also executed under separate CPU accounting.
+Their outcomes and missing cells appear in docs/EMPIRICAL_PILOT_V16.md.
+
+---
+
+Historical validation follows.
+
 # Revision 9 validation
 
 Date: 4 October 2026.

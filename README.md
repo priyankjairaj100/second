@@ -8,24 +8,26 @@ It does not claim native GPTQ or CUDA equivalence.
 
 ## Current state
 
-Revision 15 verifies complete finer-grid repair on DistilGPT2.
-All four retained models agree exactly.
-All three retained canonical states agree byte-for-byte.
-The original state occupies 30,467,831 bytes.
-All 42,467,328 retained values match the earlier quality model.
+Revision 16 implements and reviews two exact speculative quantizers.
+Twenty completed real-data stage comparisons matched their sequential reference.
+Every completed speculative variant was slower on this CPU.
+Eight further registered cells remained unstarted after a worker timeout.
+The block successor completed both WikiText and bounded C4 pilots.
+Reference quantization remains the default.
 
+Revision 15 still provides complete finer-grid model and canonical-state repair evidence.
+All 42,467,328 retained codes matched the earlier quality model.
 That quality pilot used four new articles and sixty predictions.
-Fine calibration/base perplexity was 0.928, versus 1.223 for coarse calibration and 1.025 for fine nearest rounding.
-These are promising development observations, not corpus-level confirmation.
+Its positive signal remains exploratory.
 
-The identity cache still avoids zero changed-ancestor pairs.
-Useful factor transport and reliable full-model repair speed remain unproven.
+Reliable full-model repair speed, useful factor transport, and confirmation remain unresolved.
 The forty scientific cells remain unpromoted.
+The novelty audit attributes fixed-point and parallel quantization principles to prior work.
 
-Start with [RESUME.md](RESUME.md), [the current program](pilots/v15/program.json), and [remaining tasks](docs/RESEARCH_TODO.md).
-Read [complete finer-grid results](docs/EMPIRICAL_PILOT_V15.md), [quality results](docs/EMPIRICAL_PILOT_V14.md), and [the transport boundary](docs/TRANSPORT_BOUNDARY_V14.md).
-All workers are settled. The inherited remaining allowance is 1660 CPU seconds.
-The focused regression run passed 72 tests; it was not a new full-suite run.
+Start with [RESUME.md](RESUME.md), [current results](docs/EMPIRICAL_PILOT_V16.md), and [remaining tasks](docs/RESEARCH_TODO.md).
+Read [the proof](docs/SPECULATIVE_QUANTIZER_PROOF_V16.md) and [the novelty audit](docs/NOVELTY_AUDIT_V16.md).
+All workers are settled. The inherited remaining allowance is 977 CPU seconds.
+The final focused regression passed 58 tests.
 
 ## Current implementations
 
