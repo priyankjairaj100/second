@@ -1,3 +1,79 @@
+# Active tasks after revisions 23–24
+
+Updated 8 October 2026, UTC. This list supersedes historical blockers below.
+
+Completed in this checkpoint:
+
+- Reviewed seven conditional cost/correctness results and narrowed novelty against primary literature.
+- Ran original preparation, cold/warm replay, repair, indexed reconstruction, and complete fresh controls.
+- Verified three complete cold/repair pairs, with 1.298–1.331× speedups on one tiny real request.
+- Verified exact retained models/states and 1,906,485 changed codes.
+- Preserved two evidence incidents and charged unavailable usage conservatively.
+- Strengthened worker receipts against settlement failures.
+- Implemented a packed source-local enclosure codec and passed 36 focused software tests.
+
+Remaining, in dependency order:
+
+1. Integrate compressed source descriptors with a sound universal code certificate.
+   Check trusted preparation, target identity, codec identity, and all source/stage bindings.
+   The parser alone cannot verify containment of an unavailable original factor.
+   Separate candidate construction from the certificate's all-factors implication.
+   Do not claim generic caching, fixed features, or ordinary stability as the central novelty.
+2. Design useful refinement and exact fallback.
+   Account for full ancestor closure when recovering exact factors.
+   Preserve canonical compressed state across deletion histories.
+   Either make temporary refinement ephemeral or define a deterministic final state policy.
+   Expose insufficient margins, exact ties, and rejected certificates.
+3. Run a registered real-data certificate pilot before full compressed-service timing.
+   Compare packed precision, storage, acceptance, fallback work, and complete cost.
+   Include exact cached factors and lossless compression as baselines.
+   A smaller descriptor does not imply a smaller complete state or faster repair.
+   Abandon or redesign a certificate whose verification/fallback consumes the saved neural work.
+4. Pass larger quality screens with fresh inputs.
+   Compare fixed calibration, sequential calibration, nearest rounding, and full precision.
+   Match grids, bit budgets, calibration sources, tokenization, and evaluation procedures.
+   Report article-level losses and aggregate uncertainty under a declared sampling law.
+   Preserve the twelve existing article exclusions; thirty predictions cannot close this gate.
+5. Measure lifetime benefit.
+   Add original model-only preparation as a baseline.
+   Run actual changing-state request sequences with no-op, combined, sequential, and full deletions.
+   Include construction, loading, verification, model/state output, retained factor reads, and storage.
+   Three repetitions of one deletion are not a deletion sequence.
+6. Replicate with new registered pilots.
+   Expand calibration size and token length before claiming realistic workloads.
+   Add second corpus, second model, quantization precision, and varied deletion mechanisms.
+   Pin GPT-2 weights and the intended C4 inventory where still absent.
+   Revise the historical forty-cell program for the explicit changed target and fair indexed comparator.
+7. Lock supported claims and independent confirmation.
+   Choose the primary contribution after certificate and quality evidence exists.
+   Freeze estimators, sample sizes, uncertainty method, and untouched confirmation frame.
+   Complete paper figures, limitations, reproducibility review, and manuscript.
+
+Execution constraints:
+
+- No live empirical worker remains.
+- The old allowance has 25 CPU seconds left and is unchanged.
+- The separate phase has 261 seconds left, after 517 recorded plus 122 unknown reserved seconds.
+- The unknown warm reservation stays reserved forever; do not fabricate a settlement.
+- Original registrations and attempts remain immutable.
+- A new experiment needs a prospective, bounded registration; leftover allowance is not a protocol.
+- Existing launchers intentionally refuse duplicate attempt paths and unregistered source changes.
+- Source snapshots and absolute-path bindings document historical runs; rebind new runs explicitly.
+- GitHub pushes remain authorized; never force-push.
+
+Deferred original-target route:
+
+Investigate shifted/correlated corrections only with valid finite containment and a useful cost ceiling.
+The witnessed anchor-centered constant-output certificate cannot be repaired by merely tightening symmetric radii.
+Original sequential-target repair still has no demonstrated complete-model speed advantage.
+
+No theorem proves broad reliable wall-clock superiority.
+The paper and empirical program remain unfinished.
+
+---
+
+Historical task registers follow.
+
 # Active tasks after revision 22
 
 Updated 8 October 2026. This list supersedes historical blockers closed by revisions 20–22.

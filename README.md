@@ -2,45 +2,52 @@
 
 This project targets an ACL 2027 paper.
 It removes calibration records while keeping the base model weights fixed.
-The counterfactual target reruns the complete declared sequential quantizer on retained records.
+Each target reruns its complete declared quantizer on retained records.
+The original sequential target and the later fixed-feature target are distinct.
 The implementation defines a certified numerical target.
 It does not claim native GPTQ or CUDA equivalence.
 
 ## Current state
 
-Revisions 20–22 reassess the remaining speed losses and implement a separate fixed-feature calibration target.
+Revisions 23–24 demonstrate a repeated development speedup for the explicit fixed-feature target.
+They do not turn the original sequential-target losses into wins.
+
+| Pair | Complete repair | Cold replay | Speedup |
+| --- | ---: | ---: | ---: |
+| 1 | 37.16 s | 49.45 s | 1.331× |
+| 2 | 37.64 s | 48.87 s | 1.298× |
+| 3 | 37.09 s | 49.26 s | 1.328× |
+
+All completed retained model and state artifacts match exactly.
+Deletion changes 1,906,485 model codes.
+Repair avoids all twenty-four retained neural stage-record traversals.
+Equally indexed reconstruction ties repair, as expected.
+Warm replay takes 52.44 seconds; complete fresh takes 50.97 seconds.
+
+This is one DistilGPT2 request with two sixteen-token calibration articles and one deletion.
+It establishes pilot repeatability, not broad reliable speedup or lifetime superiority.
+The [complete report](docs/EMPIRICAL_TIMING_V23_V24.md) preserves controls, exclusions, and evidence incidents.
+The [verified summary](campaigns/fixed_feature_v23/summary.json) includes every registered outcome.
+
+The [theory stack](docs/FIXED_COST_THEORY_V23.md) now states exactness, information, state-output, and lifetime bounds.
+The [novelty audit](docs/NOVELTY_AUDIT_V23.md) rules out claiming fixed features or caching alone as new.
+A [compressed factor codec](docs/FIXED_FACTOR_CODEC_V24.md) provides a tested prerequisite for a stronger contribution.
+Exact output certification and complete compressed-repair speed remain unimplemented and unmeasured.
+Its real-factor audit projects 11.19% less complete retained state at sixteen bits, including model and metadata.
+
+The earlier quality screen still contains only two articles and thirty predictions.
+Its fixed/sequential perplexity ratio was 0.98167, with one improving article and one worsening article.
+Broader quality, preparation-inclusive lifetime cost, replication, and confirmation remain open.
 The original sequential target still lacks a demonstrated full-model repair advantage.
-The [reassessment report](docs/EMPIRICAL_REEVALUATION_V20_V21.md) separates implementation defects from structural limits.
 
-The new target makes retained feature reuse exact.
-It changes the original sequential calibration rule explicitly.
-A complete DistilGPT2 model passed a tiny, prospectively registered quality screen.
-Its aggregate perplexity ratio to the archived sequential model was **0.98167**.
-That screen contains only two articles and thirty predictions.
-The individual ratios were **0.88282** and **1.09159**.
-It does not establish broad quality.
+No empirical worker is running.
+The old allowance remains 10,775 / 10,800 CPU seconds.
+The separate phase holds 517 recorded plus 122 unknown reserved seconds, leaving 261 / 900.
+The incomplete warm attempt stays disclosed; its unavailable timing is excluded.
+Thirty-six focused software tests passed.
 
-The optional [minimal factor state](docs/FIXED_FACTOR_V22.md) reduced archived storage by **51.34%**.
-State size fell from 54,107,392 to 26,326,066 bytes.
-All model codes and feature bytes remained equal.
-Fresh preparation avoids unused transformer-bound summaries.
-The [common evaluator optimization](docs/EVALUATOR_SETUP_V22.md) removes redundant exact-value scans.
-The final focused suite passed **49 tests**.
-
-The original route received a complete anchor provider and service.
-A real-data witness rejects its current anchor-centered constant-output certificate at the checked stage.
-Tightening those radii cannot remove the witnessed contradiction.
-This does not reject every target-preserving repair algorithm.
-
-Reliable repair speed, larger quality validation, lifetime cost, and a defensible novel contribution remain open.
-Equally indexed reconstruction shares the fixed-feature optimization.
-Its expected tie remains visible.
-The earlier native kernel improvement also remains available to all compatible comparators.
-
-Start with [RESUME.md](RESUME.md), [verified results](pilots/v21/summary.json), and [remaining tasks](docs/RESEARCH_TODO.md).
-All workers are settled.
-The original allowance has **25 CPU seconds remaining**.
-No complete empirical program or confirmation success is claimed.
+Start with [RESUME.md](RESUME.md) and [remaining tasks](docs/RESEARCH_TODO.md).
+The paper and empirical program are not complete.
 
 ## Current implementations
 

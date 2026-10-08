@@ -1,0 +1,32 @@
+{
+  "analysis_cpu_cap_seconds": 30,
+  "analysis_cpu_ns": 815873,
+  "analysis_source_hashes": {
+    "scripts/analyze_fixed_codec_v24.py": "5f8c7e5b2a67bfc3e090e329f1a8982029837af33d548c93643abccfcbe6bb76",
+    "src/fixed_factor_codec.py": "5ada37e2ea9b2f6c5d2eded030d9fee68d5d8ecd83a0b39d9152fe90631b0794",
+    "src/fixed_factor_state.py": "e71477de4e0bb048c7c068e0a087587b37cb59d766e18d0d87cff5c3dc23c71f"
+  },
+  "analysis_wall_ns_from_script_imports": 108529560,
+  "binding_scope": "trusted source state hashes and verified generation plans; parsed descriptor alone does not prove containment",
+  "bits": [
+    16,
+    24
+  ],
+  "block_size": 256,
+  "cells": [],
+  "codec_sha256": "5ada37e2ea9b2f6c5d2eded030d9fee68d5d8ecd83a0b39d9152fe90631b0794",
+  "containment_check": "all finite binary64 entries use exact order comparisons; three positions per block also use exact rational comparisons",
+  "cost_account": "controller analysis process; separate from every empirical worker ledger",
+  "empirical_worker_budget_charged": false,
+  "error": "[Errno 2] No such file or directory: '/workspace/scratch/50cc2e342461/second/campaigns/fixed_feature_v23/attempts/prepare-001/program.json'",
+  "error_type": "FileNotFoundError",
+  "generations": {},
+  "lossless_comparator": "zlib level6 compresses the same exact source-stage bytes and retains more information than lossy enclosures",
+  "process_cpu_ns_including_imports": 135476851,
+  "projection_scope": "descriptor files and model file are real; complete compressed service envelope is projected accounting only",
+  "schema": "saved-factor-codec-audit-v24",
+  "scope": "archive factor compression only; no model loading, model evaluation, or repair transaction",
+  "speed_inference": false,
+  "status": "incomplete",
+  "zlib_version": "1.3.2"
+}

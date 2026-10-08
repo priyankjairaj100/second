@@ -1,0 +1,1 @@
+{"legacy":{"cap_cpu_seconds":10800,"charged_cpu_seconds":10775,"remaining_cpu_seconds":25,"reset":false},"phase_cpu_seconds":{"feasibility":900},"program_sha256":"11387a622d1a664894b15b422022cffd312a52978e23340b5392b7690212b41f","schema":"fixed-timing-policy-v23"}

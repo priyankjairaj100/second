@@ -1,3 +1,71 @@
+# Current checkpoint: revisions 23–24, repeated fixed-feature repair speedup
+
+Updated 8 October 2026, UTC. This checkpoint supersedes historical status below.
+Read docs/EMPIRICAL_TIMING_V23_V24.md and campaigns/fixed_feature_v23/summary.json first.
+Then read docs/FIXED_COST_THEORY_V23.md, docs/NOVELTY_AUDIT_V23.md, and docs/FIXED_FACTOR_CODEC_V24.md.
+
+Three complete repair/cold pairs show speedups of 1.330757×, 1.298191×, and 1.328236×.
+Their geometric mean is 1.318978×; the minimum observed value is 1.298191×.
+This is one tiny WikiText deletion on DistilGPT2, not broad reliable speed evidence.
+The numerical target explicitly uses fixed nearest-grid ancestor features, not sequential calibration.
+Original sequential-target losses remain preserved and unresolved.
+
+Repair takes 37.16–37.64 seconds; cold replay takes 48.87–49.45 seconds.
+Warm replay takes 52.44 seconds; complete retained fresh takes 50.97 seconds.
+Equally indexed reconstruction takes 37.11 seconds and correctly ties repair.
+Original preparation takes 76.24 seconds.
+Ten retained models and six retained states match byte-for-byte.
+Deletion changes 1,906,485 of 42,467,328 calibrated model codes.
+Repair performs zero neural stage-record traversals; replay performs twenty-four.
+Retained complete state is 26,326,066 bytes; exported calibrated model is 22,192,646 bytes.
+Base checkpoint parameters outside calibrated stages remain required.
+
+Eleven transactions are sealed; one original warm transaction remains controller-incomplete.
+Cold-001 terminal metadata has an explicit, reviewed recovery sidecar.
+Warm-cold-001 lost settlement evidence; its outer timing and observed CPU remain unavailable.
+Its original 122-second reservation stays permanently charged with observed_cpu_ns=null.
+Never mark that unknown reservation settled or infer timing from its worker-body diagnostic.
+A prospectively registered continuation replaced that comparator and completed the remaining trials.
+No empirical worker is currently running.
+
+The original 10,800-second ledger remains 10,775 charged, with 25 remaining.
+The separate 900-second phase has 517 recorded plus 122 unknown reserved seconds.
+It retains 261 seconds; combined charged or reserved usage is 11,414 seconds.
+No budget reset or paid cloud execution occurred.
+Software tests and archive analysis have separately reported costs outside worker accounting.
+
+The amended worker controller saves reservation, logs, and exit observations before settlement.
+The final focused software suite passed 36 tests.
+The numerical source snapshot used by all timing workers remains unchanged.
+Do not rewrite campaign registrations, old attempts, or frozen snapshots.
+
+Seven conditional cost/correctness results received an independent algebraic review.
+No wall-time, broad quality, or publication-novelty theorem follows.
+The novelty audit finds close prior art for fixed features, cached factors, and quantization stability.
+The strongest next contribution is compressed factor evidence with exact output certification and bounded fallback.
+A packed 16/24-bit dyadic enclosure codec now exists and passes numerical edge tests.
+It is not yet a compressed repair service or a demonstrated speed improvement.
+Trusted preparation establishes containment; parser hashes alone cannot authenticate unavailable source factors.
+
+The saved-factor audit verified 144 compressed descriptors and 48 retained-descriptor byte equalities.
+Projected complete retained-state savings are 11.19% at sixteen bits and 9.23% at twenty-four bits.
+Those totals include model bytes, descriptors, index, and framing; no compressed service format exists yet.
+See campaigns/fixed_feature_v23/codec-audit-v24.json for actual payload sizes and projection assumptions.
+
+The tiny quality gate still has two articles and thirty predictions.
+All twelve evaluated articles remain excluded from future confirmation.
+Larger quality, compressed-certificate acceptance, lifetime cost, cross-corpus/model replication, and confirmation remain open.
+The forty-cell program requires a revised target/comparator protocol before expansion.
+The ACL paper and empirical program are not complete.
+
+Repository pushes remain authorized. Never force-push.
+Preserve negative findings, failed attempts, exclusions, runtime identities, and complete state costs.
+Follow current developer instructions for delegation.
+
+---
+
+Historical checkpoints follow.
+
 # Current checkpoint: revision 22 reassessment and fixed-feature redesign
 
 Updated 8 October 2026, Asia/Calcutta.

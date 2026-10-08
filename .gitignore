@@ -49,3 +49,9 @@ local_runs/
 
 # Revision 22 derived state conversion artifacts are reconstructible.
 /pilots/v22/**/*.bin
+
+# Revision 23 publishes protocols and receipts, not derived model arrays.
+/campaigns/fixed_feature_v23/attempts/*/outputs/*.bin
+/campaigns/fixed_feature_v23/attempts/*/worker/writer.lock
+/campaigns/fixed_feature_v23/phase-cpu-budget/ledger.lock
+/campaigns/fixed_feature_v23/attempts/*/outputs/.*

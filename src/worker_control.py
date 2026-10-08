@@ -211,6 +211,9 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None,
                     budget_attempt = proposed_attempt
                     record.update(budget_attempt_id=budget_attempt, budget_debit=debit,
                                   budget_scope="CPU admission allowance; trusted comparison worker; controller CPU excluded")
+                    store.write_artifact("budget-reservation.json", canonical_json({
+                        "budget_attempt_id": budget_attempt, "budget_debit": debit,
+                        "binding_sha256": phase_budget.identity_digest}))
                     environment['CALIBRATION_PHASE_CPU_ADMISSION'] = canonical_json({
                         'phase_budget_root': str(phase_budget.root),
                         'phase_budget_binding_sha256': phase_budget.identity_digest,
@@ -253,12 +256,19 @@ def run_limited(command, directory, limits: WorkerLimits, *, identity, cwd=None,
                 if process is not None:
                     outcome["returncode"] = process.returncode
                     record["resource_usage"] = getattr(process, "worker_rusage", None)
-                    if budget_attempt is not None and record["resource_usage"] is not None:
-                        record["budget_debit"] = phase_budget.settle(budget_attempt, record["resource_usage"]["total_cpu_ns"])
-                        record["budget_reservation_overrun"] = (record["budget_debit"]["charged_cpu_seconds"] >
-                                                                record["budget_debit"]["reserved_cpu_seconds"])
                 store.write_artifact("stdout-summary.json", canonical_json(_log_summary(stdout)))
                 store.write_artifact("stderr-summary.json", canonical_json(_log_summary(stderr)))
+                # Preserve observations before a ledger failure can interrupt sealing.
+                # This is evidence, not a completed receipt or a replacement clock.
+                store.write_artifact("pre-settlement-observation.json", canonical_json({
+                    "outcome": outcome, "timing_boundary": record["timing_boundary"],
+                    "resource_usage": record.get("resource_usage"),
+                    "budget_attempt_id": budget_attempt,
+                    "scope": "observed worker exit before CPU settlement and receipt sealing"}))
+                if budget_attempt is not None and record.get("resource_usage") is not None:
+                    record["budget_debit"] = phase_budget.settle(budget_attempt, record["resource_usage"]["total_cpu_ns"])
+                    record["budget_reservation_overrun"] = (record["budget_debit"]["charged_cpu_seconds"] >
+                                                            record["budget_debit"]["reserved_cpu_seconds"])
         ack = store.attempt / "limits-ack.pending.json"
         record["limits_applied"] = None
         try:
