@@ -1,0 +1,229 @@
+{
+  "acl_ready": false,
+  "artifact_binaries_reverified": true,
+  "budget": {
+    "additional_trials_registered": false,
+    "archive_analysis_and_software_costs_reported_separately": true,
+    "budgets_reset_or_pooled": false,
+    "combined_charged_or_reserved_cpu_seconds": 11821,
+    "historical_ledgers_unchanged": true,
+    "historical_phase_cap_cpu_seconds": 900,
+    "historical_phase_held_cpu_seconds": 898,
+    "historical_unknown_reserved_cpu_seconds": 122,
+    "legacy_cap_cpu_seconds": 10800,
+    "legacy_charged_cpu_seconds": 10775,
+    "phase_charged_cpu_seconds": 148,
+    "phase_remaining_cpu_seconds": 92,
+    "registered_trials_complete": true,
+    "separate_phase_cap_cpu_seconds": 240
+  },
+  "comparison_limits": [
+    "One request and one observation per method.",
+    "Repair and indexed reconstruction write complete model plus state; cold writes model only.",
+    "OS caches and other machine activity are uncontrolled.",
+    "Historical V28 latency is not a newly matched comparison.",
+    "Archive conversion is measured separately; lifetime preparation remains open."
+  ],
+  "empirical_program_complete": false,
+  "evidence_sha256": {
+    "campaigns/calibration_admission_plans_v29.json": "be461dadc4dfa4f0335c1bf21fefb636eb5caa80e271ed96fca48eb60e11dc5c",
+    "campaigns/compressed_summary_v25_v28.json": "cc1352640d1d59f4b7e48beff1c5df07a2669e3c2749d75f17e8ece5dd355953",
+    "campaigns/compressed_timing_v27/phase-cpu-budget/ledger.json": "36fc2a2dbc7174f5bfdf204d94827e3afc9ba430e1024f94cd30a8024a252fea",
+    "campaigns/compressed_timing_v28/phase-cpu-budget/ledger.json": "75bb29191cdfbff6b6787f61e803aab327cfd5501ea6c5d6614e626439c952b8",
+    "campaigns/compressed_v25b/phase-cpu-budget/ledger.json": "bb4828857fb93b77ed834ace545a84b0986f9f1069bcec240a3b89f272c61cfd",
+    "campaigns/compressed_v25c/phase-cpu-budget/ledger.json": "1718bf09120dfc772f87c3c51d9f8e8d7a97da8f6fb6fd119afd774328bcf7a7",
+    "campaigns/compressed_v25d/phase-cpu-budget/ledger.json": "e1706ad7592424d7c222158b4b0b16611c7ae77eb10b753cc71e8c6d9e8491d4",
+    "campaigns/compressed_v26b/phase-cpu-budget/ledger.json": "b36358f3ad033d1d0d6a71b5c9caa5c181106c0065c74f93919b193b6506acce",
+    "campaigns/compressed_v27/phase-cpu-budget/ledger.json": "cc80ce11d3c0bde04d2f70e915e583df97e402c82d4250fd0872be9566a62f84",
+    "campaigns/compressed_v28/phase-cpu-budget/ledger.json": "fc2440a842080ef6ae8e8c1adfd7fe40fec43bc5d6b06bbff7b22998d987114d",
+    "campaigns/fixed_feature_v23/phase-cpu-budget/ledger.json": "63f0b83378857156a4661564e11828618f78b5e8085354ddfb67fd2c000913c9",
+    "campaigns/lossless_probe_v29/summary.json": "e6996d53627d2bd94047f818a76fbc52502d2754b6b39928fc0187053c82d28a",
+    "campaigns/lossless_software_check_v29.json": "808dd55bcb89405fd7c14acd673203d5013d409106672d6dd194d11a84cdc637",
+    "campaigns/lossless_state_audit_v29/summary.json": "8497b3a89196badbf9c807d6748dd56072676b07f0c9d03e3f410e76c41a5a0a",
+    "campaigns/lossless_state_audit_v29b/plan.json": "d1b3479c801169d85d34f284adc2aa0bff3f777ad74a200cd264b68ce55541a8",
+    "campaigns/lossless_state_audit_v29b/summary.json": "d49d297a89e3bc17c37b54801994eef46683bafc6bbce6b1addbe5099d21f0ac",
+    "campaigns/lossless_timing_v29/attempts/cold-001/outputs/completion.json": "1f759015d26270e3e97727b2e6ff44b8a34d90e4b6559301df1bf80fd0963aac",
+    "campaigns/lossless_timing_v29/attempts/cold-001/outputs/progress.json": "1f759015d26270e3e97727b2e6ff44b8a34d90e4b6559301df1bf80fd0963aac",
+    "campaigns/lossless_timing_v29/attempts/cold-001/plan.json": "1e1c5a8e17f84deefcfd151d7d64f271c24ecb4159e8b309254e8eccaadd0ee7",
+    "campaigns/lossless_timing_v29/attempts/cold-001/sealed-progress.json": "1f759015d26270e3e97727b2e6ff44b8a34d90e4b6559301df1bf80fd0963aac",
+    "campaigns/lossless_timing_v29/attempts/cold-001/transaction.json": "7f4cfa309f36b3dc84dbcd2e0136a738bbd8f0ef6f8dccbceccbf4d540d186b0",
+    "campaigns/lossless_timing_v29/attempts/cold-001/worker/attempt-0001/budget-reservation.json": "63a18d9a56e70e2695cdd1cc007464c93e9560f133d6bf797bd400e1e55d84fa",
+    "campaigns/lossless_timing_v29/attempts/cold-001/worker/attempt-0001/limits-applied.json": "d70dad40acc0c3880b184ffe77fb156350671a9c261395f9a7f97a4b58d3de85",
+    "campaigns/lossless_timing_v29/attempts/cold-001/worker/attempt-0001/pre-settlement-observation.json": "f4edd421175ed6860c17e495653873ceb2f307693c65a5420f73fd71cf60cc14",
+    "campaigns/lossless_timing_v29/attempts/cold-001/worker/attempt-0001/request.json": "d4362cc21e949a7951edebf68edb11c72bb5df56e30ce07a91a321f3c7ace5f3",
+    "campaigns/lossless_timing_v29/attempts/cold-001/worker/attempt-0001/stderr-summary.json": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c",
+    "campaigns/lossless_timing_v29/attempts/cold-001/worker/attempt-0001/stdout-summary.json": "8b464bad5b503037652ab2d4ce440a7eb4c2c851579c1f4925de3cb1d778594c",
+    "campaigns/lossless_timing_v29/attempts/cold-001/worker/result.json": "5d3f5bcbe0db52070ec0b85272c1eabae5ffdedaa93c1c25af1ddd1026416fd6",
+    "campaigns/lossless_timing_v29/attempts/indexed-001/outputs/completion.json": "8dabd2921116097b3eb535d4490ced90a48853cde633fad8c93ef023b7b69758",
+    "campaigns/lossless_timing_v29/attempts/indexed-001/outputs/progress.json": "8dabd2921116097b3eb535d4490ced90a48853cde633fad8c93ef023b7b69758",
+    "campaigns/lossless_timing_v29/attempts/indexed-001/plan.json": "6f5515c82f0419dc3f1cc6fdcc717a236a01bff85b32230a31a3bf078fcb96a1",
+    "campaigns/lossless_timing_v29/attempts/indexed-001/sealed-progress.json": "8dabd2921116097b3eb535d4490ced90a48853cde633fad8c93ef023b7b69758",
+    "campaigns/lossless_timing_v29/attempts/indexed-001/transaction.json": "24888a5ee9b968ecd4d8d71e164454eee06eb1c729bad0a48a07f6917aca62c5",
+    "campaigns/lossless_timing_v29/attempts/indexed-001/worker/attempt-0001/budget-reservation.json": "64b0f9a547fff79a244a73e683c17f1d2bba3b37e0bbdd97bad4ebbf29cbbf79",
+    "campaigns/lossless_timing_v29/attempts/indexed-001/worker/attempt-0001/limits-applied.json": "9432e53ad93c02f670c66e958a839e811ecb98a0359af5b2d6acc2b3f30b0d5a",
+    "campaigns/lossless_timing_v29/attempts/indexed-001/worker/attempt-0001/pre-settlement-observation.json": "7da166033676239c4344bb98a8b0f3916523580786e258f197d12f4c7a2f9d29",
+    "campaigns/lossless_timing_v29/attempts/indexed-001/worker/attempt-0001/request.json": "6fa74f92d26b27e43957c26cf0a03265ba76ce21af5aeb94a3fc862d37746549",
+    "campaigns/lossless_timing_v29/attempts/indexed-001/worker/attempt-0001/stderr-summary.json": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c",
+    "campaigns/lossless_timing_v29/attempts/indexed-001/worker/attempt-0001/stdout-summary.json": "3554bfd0b89837c43accc80e2906a73d262694d57ac946ee38ef7b4e40edce20",
+    "campaigns/lossless_timing_v29/attempts/indexed-001/worker/result.json": "d8a86aa9cefc004c642522b7d7b106510b6cbd58bae80fbeb1f1ec585069d50f",
+    "campaigns/lossless_timing_v29/attempts/repair-001/outputs/completion.json": "08af4dc372a3bbf033dc1e80314dca07f02b74b35d571a53c6612871df50f74e",
+    "campaigns/lossless_timing_v29/attempts/repair-001/outputs/progress.json": "08af4dc372a3bbf033dc1e80314dca07f02b74b35d571a53c6612871df50f74e",
+    "campaigns/lossless_timing_v29/attempts/repair-001/plan.json": "c7332698c444c51a591415d65b4800edb56e5f4fb144c22098b07d8f72821c61",
+    "campaigns/lossless_timing_v29/attempts/repair-001/sealed-progress.json": "08af4dc372a3bbf033dc1e80314dca07f02b74b35d571a53c6612871df50f74e",
+    "campaigns/lossless_timing_v29/attempts/repair-001/transaction.json": "5cb201c9c9a036fec651f6eb6ec7a2fdbb354f16b9d0af34d36fc97a2f3a0900",
+    "campaigns/lossless_timing_v29/attempts/repair-001/worker/attempt-0001/budget-reservation.json": "488b4164b5c3e57cd9be0f58e47b3e122df228cc8bc274a2e6b610eeec1ef46d",
+    "campaigns/lossless_timing_v29/attempts/repair-001/worker/attempt-0001/limits-applied.json": "dba46bf94e024d674e17366647712536b844a07b6fb3a57707fd82871617968d",
+    "campaigns/lossless_timing_v29/attempts/repair-001/worker/attempt-0001/pre-settlement-observation.json": "26787cb346a4ddecdc802aef39242bb308a0138cf363656a439a6afc514b8a89",
+    "campaigns/lossless_timing_v29/attempts/repair-001/worker/attempt-0001/request.json": "0a4ec655da5c3c896909731446849252b731f7c9208e058baf6c337848b53c23",
+    "campaigns/lossless_timing_v29/attempts/repair-001/worker/attempt-0001/stderr-summary.json": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c",
+    "campaigns/lossless_timing_v29/attempts/repair-001/worker/attempt-0001/stdout-summary.json": "10b93ecbed1e9954630451b3cceb57d7a09fdcf25334576b3676b1ec2bfc2660",
+    "campaigns/lossless_timing_v29/attempts/repair-001/worker/result.json": "45f6110f16273fcd277f339609030631b5272748a1d8ff18d6c9c468129708bc",
+    "campaigns/lossless_timing_v29/phase-cpu-budget/ledger.json": "15d1d0b93234cadb52da04d261faeed53ebf555fca3b3ff97a0812584cd9dd67",
+    "campaigns/lossless_timing_v29/program.json": "a8a36be738361721b89e00b23bd250dbde3d962083371c6f4586b6f8f861bbae",
+    "campaigns/lossless_timing_v29/protocol.json": "cca4591a3ede4d4e10e030c03e7197e7530c54d1913a8071055cfbd193c9878f",
+    "campaigns/lossless_timing_v29/registration.json": "4ec3d830337067aaaf854775d23d87d2fba41cd07e115c7b3461dda43f6f227e"
+  },
+  "indexed_interpretation": "Repair and indexed reconstruction share the algorithm. Their single timings differ; no statistical equality is claimed.",
+  "interpretation": "Lossless repair beat matched cold reconstruction in this pilot. Reliable or broad speedup remains unproved.",
+  "new_theory": "Canonical four-bit model-response separation, positive margins, uniformly conditioned metrics, and explicit archive/probe bounds.",
+  "open_gates": [
+    "Scalable certified solver",
+    "Stronger lossless controls",
+    "Broader untouched quality",
+    "Independent requests, models, and corpora",
+    "Lifetime cost",
+    "Prospective confirmation"
+  ],
+  "order_seed": 29,
+  "primary_comparison": "repair-001 versus cold-001; do not substitute the faster indexed control as repair.",
+  "prospective_order": [
+    "indexed-001",
+    "repair-001",
+    "cold-001"
+  ],
+  "ratios": {
+    "cold_over_indexed": 1.2354445520345925,
+    "cold_over_repair": 1.109665393304069
+  },
+  "scaling": "Current token-space path retains quadratic memory; primal certificate path is not implemented.",
+  "schema": "lossless-summary-v29",
+  "scope": "One adaptive DistilGPT2/WikiText deletion; one timing per method; no confirmation or quality evaluation.",
+  "software": {
+    "child_cpu_seconds": 1.689073,
+    "count": 35,
+    "suite_seconds": 0.983
+  },
+  "status": "complete",
+  "storage": {
+    "enclosure_reduction_from_lossless_percent": 3.493621545991199,
+    "lossless_complete_state_bytes": 25832592,
+    "lossless_reduction_from_raw_percent": 1.8744692047797828,
+    "raw_exact_complete_state_bytes": 26326066,
+    "shared_base_checkpoint_excluded": true,
+    "shared_base_checkpoint_required": true,
+    "v28_enclosure_complete_state_bytes": 24930099
+  },
+  "target": "Fixed nearest-grid ancestor features; not sequential GPTQ calibration.",
+  "trials": {
+    "cold-001": {
+      "artifacts": {
+        "model": {
+          "bytes": 22192646,
+          "file": "model.bin",
+          "sha256": "d27c824322d0399f99a78c2b9d7e369e6b9a547085fa1cc25f92703536962927"
+        }
+      },
+      "avoided_neural_stage_record_pairs": 0,
+      "charged_cpu_seconds": 55,
+      "controller_elapsed_ns": 54443484033,
+      "controller_seconds": 54.443484033,
+      "method": "model_only_fresh",
+      "model_code_elements": 42467328,
+      "neural_stage_record_pairs": 24,
+      "observed_cpu_ns": 54425695000,
+      "service_metrics": {
+        "decoded_deleted_descriptors": null,
+        "decoded_descriptors": null,
+        "encoded_descriptors": null,
+        "exact_service_elapsed_ns": null,
+        "lossless_decode_elapsed_ns": null,
+        "reused_descriptors": null,
+        "service_elapsed_ns": 41127655597
+      },
+      "stage_count": 24,
+      "terminal_hash_bound_in_receipt_logs": true,
+      "terminal_sha256": "1f759015d26270e3e97727b2e6ff44b8a34d90e4b6559301df1bf80fd0963aac",
+      "three_terminal_records_equal": true
+    },
+    "indexed-001": {
+      "artifacts": {
+        "model": {
+          "bytes": 22192646,
+          "file": "model.bin",
+          "sha256": "d27c824322d0399f99a78c2b9d7e369e6b9a547085fa1cc25f92703536962927"
+        },
+        "state": {
+          "bytes": 25832592,
+          "file": "state.bin",
+          "sha256": "55a131c625861ad278eb13144bad319da02b07bb9e9017fa15d026199dec31e7"
+        }
+      },
+      "avoided_neural_stage_record_pairs": 24,
+      "charged_cpu_seconds": 44,
+      "controller_elapsed_ns": 44067929996,
+      "controller_seconds": 44.067929996,
+      "method": "indexed_fresh",
+      "model_code_elements": 42467328,
+      "neural_stage_record_pairs": 0,
+      "observed_cpu_ns": 43996910000,
+      "service_metrics": {
+        "decoded_deleted_descriptors": 0,
+        "decoded_descriptors": 24,
+        "encoded_descriptors": 0,
+        "exact_service_elapsed_ns": 25255536985,
+        "lossless_decode_elapsed_ns": 12422226,
+        "reused_descriptors": 24,
+        "service_elapsed_ns": 25557084388
+      },
+      "stage_count": 24,
+      "terminal_hash_bound_in_receipt_logs": true,
+      "terminal_sha256": "8dabd2921116097b3eb535d4490ced90a48853cde633fad8c93ef023b7b69758",
+      "three_terminal_records_equal": true
+    },
+    "repair-001": {
+      "artifacts": {
+        "model": {
+          "bytes": 22192646,
+          "file": "model.bin",
+          "sha256": "d27c824322d0399f99a78c2b9d7e369e6b9a547085fa1cc25f92703536962927"
+        },
+        "state": {
+          "bytes": 25832592,
+          "file": "state.bin",
+          "sha256": "55a131c625861ad278eb13144bad319da02b07bb9e9017fa15d026199dec31e7"
+        }
+      },
+      "avoided_neural_stage_record_pairs": 24,
+      "charged_cpu_seconds": 49,
+      "controller_elapsed_ns": 49062973723,
+      "controller_seconds": 49.062973723,
+      "method": "repair",
+      "model_code_elements": 42467328,
+      "neural_stage_record_pairs": 0,
+      "observed_cpu_ns": 48966586000,
+      "service_metrics": {
+        "decoded_deleted_descriptors": 0,
+        "decoded_descriptors": 24,
+        "encoded_descriptors": 0,
+        "exact_service_elapsed_ns": 28712326024,
+        "lossless_decode_elapsed_ns": 13573536,
+        "reused_descriptors": 24,
+        "service_elapsed_ns": 29050124771
+      },
+      "stage_count": 24,
+      "terminal_hash_bound_in_receipt_logs": true,
+      "terminal_sha256": "08af4dc372a3bbf033dc1e80314dca07f02b74b35d571a53c6612871df50f74e",
+      "three_terminal_records_equal": true
+    }
+  }
+}

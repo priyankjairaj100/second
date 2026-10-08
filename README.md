@@ -9,6 +9,58 @@ It does not claim native GPTQ or CUDA equivalence.
 
 ## Current state
 
+Revision 29 adds a complete lossless storage control using the unchanged exact point solver.
+All three registered transactions completed with agreeing live progress, sealed receipts, and immutable artifacts.
+
+| Complete transaction | Time | Neural stage-record traversals |
+| --- | ---: | ---: |
+| Lossless indexed reconstruction | 44.067929996 s | 0 |
+| Lossless repair | 49.062973723 s | 0 |
+| Cold model reconstruction | 54.443484033 s | 24 |
+
+The observed speedup over cold reconstruction is 1.1096653933× on one adaptive development request.
+It does not establish reliable superiority.
+Repair and indexed reconstruction share the same algorithm; their observed timings differ, so this is not an empirical tie.
+All 24 stages and 42,467,328 model codes match exactly.
+The shared model hash starts `d27c8243`, and the successor lossless state hash starts `55a131c6`.
+Read the [V29 report](docs/EMPIRICAL_LOSSLESS_V29.md) and [bound summary](campaigns/lossless_summary_v29.json) for complete hashes and receipts.
+
+| Complete retained state | Bytes | Comparison |
+| --- | ---: | --- |
+| Exact factors | 26,326,066 | Uncompressed reference |
+| Lossless factors | 25,832,592 | 1.874469% below exact factors |
+| V28 forty-bit enclosures | 24,930,099 | 3.493622% below lossless factors |
+
+Base checkpoint parameters remain required.
+V28's earlier 51.232-second timing lies outside this new comparison and supports no causal cross-version speed claim.
+V23 retains its earlier repeated 1.298–1.331× exact-factor speedups on the tiny request.
+The fixed nearest-grid feature target remains distinct from the original sequential calibration target.
+
+The [model-response lower bound](docs/RESPONSE_LOWER_BOUND_V29.md) separates actual canonical four-bit outputs with positive margins and conditioning at most three.
+It proves \(b\ge\lceil\log_2\binom N{N/2}\rceil\) under its declared access contract and also bounds cumulative probes.
+It establishes no NLP speed guarantee.
+The [scaling audit](docs/SCALING_AUDIT_V29.md) exposes quadratic token storage and potentially cubic preconditioning.
+The admission helper rejects a 262,144-token plan requiring a single 512-GiB array.
+All eight helper tests pass.
+Passing admission does not prove memory fit; the primal certificate is unimplemented.
+
+Thirty-five new V29 fixtures passed.
+Next steps include scaling backends, stronger FPC/ALP/Zstandard controls, untouched quality, additional models/corpora, independent requests, and lifetime costs.
+The [novelty audit](docs/NOVELTY_AUDIT_V29.md) and [remaining tasks](docs/RESEARCH_TODO.md) define the outstanding research work.
+Quality remains two articles and thirty predictions; all twelve evaluated articles remain excluded from confirmation.
+The paper is not ACL-ready, and the empirical program remains incomplete.
+
+The latest continuation permitted a separate 240-second phase: 148 used and 92 remaining.
+Three registered trials finished; no further trials are registered or active.
+Older ledgers remain 10,775 / 10,800 and 898 / 900, including 122 unknown reserved seconds.
+Combined charged or reserved usage is 11,821 seconds; no old ledger was reset or pooled.
+Older progress discrepancies remain preserved and disclosed.
+This checkpoint supersedes older execution and budget language below.
+Start with [RESUME.md](RESUME.md).
+
+<details>
+<summary>Preserved revision 28 checkpoint</summary>
+
 Revision 28 implements exact complete repair from compressed source-local evidence.
 It uses the explicit fixed nearest-grid feature target.
 It does not establish faster repair of the original sequential target.
@@ -54,7 +106,13 @@ The allowances are not pooled or reset.
 The final focused suite passed all [140 software tests](campaigns/compressed_software_check_v28.json).
 Start with [RESUME.md](RESUME.md) and [remaining tasks](docs/RESEARCH_TODO.md).
 
+</details>
+
 ## Current implementations
+
+- [Exact lossless state and repair control](docs/FIXED_LOSSLESS_SERVICE_V29.md)
+- [Model-response information bound](docs/RESPONSE_LOWER_BOUND_V29.md)
+- [Scaling audit and admission limits](docs/SCALING_AUDIT_V29.md)
 
 - [Compressed complete repair with sparse verification](docs/FIXED_COMPRESSED_SERVICE_V28.md)
 - [Canonical compressed state](docs/FIXED_COMPRESSED_STATE_V26.md)

@@ -1,0 +1,65 @@
+{
+  "artifacts": [
+    "original.bin",
+    "retained.bin"
+  ],
+  "attempts": [
+    "prepare-001",
+    "repair-001"
+  ],
+  "codec_manifest": {
+    "canonical_scope": "this bound encoder and compressor runtime",
+    "parameters": {
+      "level": 6,
+      "mem_level": 8,
+      "strategy": 0,
+      "wbits": 15
+    },
+    "source_sha256": {
+      "compact_state.py": "af4bb17f90f497b22da1fdaf6bc5fe0656ba86c27def9f4dd80d9e785c88e829",
+      "fixed_lossless_codec_v29.py": "6d0c5c3d13506091bd88310b93b5b0931f1c09b1f6e902fe0e2c40b35c441c0c",
+      "run_store.py": "369345e6342763262f7e894c18d82b544c81f9c6da1b5f76c979107c144d7e10"
+    },
+    "zlib_compile_version": "1.3.2",
+    "zlib_module_kind": "builtin",
+    "zlib_runtime_binary_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+    "zlib_runtime_version": "1.3.2"
+  },
+  "codec_sha256": "6d78fad11192b756f40935d250e095c2cbf912afb3f92ad2d971f1bdfc4d8a94",
+  "command": "python scripts/analyze_lossless_state_v29.py --output-dir <fresh-directory>",
+  "cpu_soft_cap_seconds": 60,
+  "model_execution": false,
+  "outputs_fresh_only": true,
+  "predecessor_archive": {
+    "path": "campaigns/lossless_state_audit_v29",
+    "plan_sha256": "05bef3498c3095d5a4879c0730b38b825e7417ac36a60741457b3ec88f417cb5",
+    "preserved_source_hashes": {
+      "scripts/analyze_fixed_codec_v24.py": "7b6138231a13057cc8d1332be81e4f73657603b1e4a91ba28ec60b985fd7f680",
+      "scripts/analyze_lossless_state_v29.py": "ecb1105be7b0f5bf34a0d99eebdd769ece2068a8bacadcec40964d6c2086849a",
+      "src/anchor_state.py": "d0138b6cb45c6aeedb6ac5502ddb14136adddea266ec2647da02a198eb00ae7c",
+      "src/compact_state.py": "af4bb17f90f497b22da1fdaf6bc5fe0656ba86c27def9f4dd80d9e785c88e829",
+      "src/fixed_anchor_service.py": "3aa12be78b03b6be1887e5cc3b5ecbe12ca0a1f61584d1b299ca3d429e6a7278",
+      "src/fixed_factor_state.py": "e71477de4e0bb048c7c068e0a087587b37cb59d766e18d0d87cff5c3dc23c71f",
+      "src/fixed_lossless_codec_v29.py": "02dfd5dc76ce63cdf8ffd5855bab8cddf4a2be09b8a22c7197cc4393e9e407b9",
+      "src/fixed_lossless_state_v29.py": "e2dce88db222dd3b8d26504ddd19f8f2d3b56bd9b2300c7ad3e9233d4d2f4298",
+      "src/run_store.py": "369345e6342763262f7e894c18d82b544c81f9c6da1b5f76c979107c144d7e10",
+      "src/sequential_finite.py": "6fdf00162ce28c78505abaee0ba1344f8a3baede06a90c1e0e5b92a8b8dd38f3"
+    },
+    "summary_sha256": "8497b3a89196badbf9c807d6748dd56072676b07f0c9d03e3f410e76c41a5a0a"
+  },
+  "quantization_execution": false,
+  "schema": "lossless-state-archive-audit-plan-v29",
+  "service_timing": false,
+  "source_hashes": {
+    "scripts/analyze_fixed_codec_v24.py": "7b6138231a13057cc8d1332be81e4f73657603b1e4a91ba28ec60b985fd7f680",
+    "scripts/analyze_lossless_state_v29.py": "c1441fbb47f42e444d5b537ef3d69530b6e6863ca1f1896fca45f2edb1a3577e",
+    "src/anchor_state.py": "d0138b6cb45c6aeedb6ac5502ddb14136adddea266ec2647da02a198eb00ae7c",
+    "src/compact_state.py": "af4bb17f90f497b22da1fdaf6bc5fe0656ba86c27def9f4dd80d9e785c88e829",
+    "src/fixed_anchor_service.py": "3aa12be78b03b6be1887e5cc3b5ecbe12ca0a1f61584d1b299ca3d429e6a7278",
+    "src/fixed_factor_state.py": "e71477de4e0bb048c7c068e0a087587b37cb59d766e18d0d87cff5c3dc23c71f",
+    "src/fixed_lossless_codec_v29.py": "6d0c5c3d13506091bd88310b93b5b0931f1c09b1f6e902fe0e2c40b35c441c0c",
+    "src/fixed_lossless_state_v29.py": "e2dce88db222dd3b8d26504ddd19f8f2d3b56bd9b2300c7ad3e9233d4d2f4298",
+    "src/run_store.py": "369345e6342763262f7e894c18d82b544c81f9c6da1b5f76c979107c144d7e10",
+    "src/sequential_finite.py": "6fdf00162ce28c78505abaee0ba1344f8a3baede06a90c1e0e5b92a8b8dd38f3"
+  }
+}

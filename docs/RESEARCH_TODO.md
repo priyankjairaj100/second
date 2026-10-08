@@ -1,3 +1,64 @@
+# Active tasks after revision 29
+
+Updated 8 October 2026, UTC. This register supersedes historical task and execution restrictions below.
+Read EMPIRICAL_LOSSLESS_V29.md, NOVELTY_AUDIT_V29.md, SCALING_AUDIT_V29.md, and ../campaigns/lossless_summary_v29.json.
+
+Completed:
+
+- Added a complete lossless control; the new V29 software suite passes thirty-five fixtures.
+- Verified all 24 stages and 42,467,328 model codes across indexed reconstruction, repair, and cold replay.
+- Measured indexed 44.067929996 seconds, repair 49.062973723 seconds, and cold 54.443484033 seconds.
+- Observed 1.1096653933× repair/cold speedup on one adaptive development request; reliability remains unproved.
+- Verified zero neural traversals for indexed/repair, versus twenty-four for cold.
+- Verified 25,832,592 complete lossless bytes, 1.874469% below the 26,326,066-byte exact-factor state.
+- Added an actual-model response lower bound using canonical four-bit outputs, positive margins, and conditioning at most three.
+- Added cumulative probe accounting under the theorem's declared access contract; it provides no NLP speed guarantee.
+- Added eight memory-admission tests; a 262,144-token, 512-GiB token matrix is ruled out.
+
+Repair and indexed reconstruction share an algorithm, but these single timings differ; do not report an empirical tie.
+V28's 24,930,099-byte state saves 3.493622% relative to lossless state.
+Its earlier 51.232-second timing cannot establish a causal comparison with these new runs.
+Passing memory admission does not prove fit, speed, completion, or certificate acceptance.
+The primal certificate backend remains unimplemented.
+
+Remaining tasks, in dependency order:
+
+1. Implement realistic-token scaling before broad workload expansion.
+   Add independent coefficient-work limits and verified primal/dual backend selection.
+   Validate arithmetic, target equivalence, and fallback against exact small oracles.
+   Sparse row retries do not remove quadratic token matrices or eager cubic preconditioning.
+2. Strengthen lossless controls with FPC, ALP, and Zstandard.
+   Compare complete canonical storage and matched transaction costs, including parse validation and output.
+   Preserve exact binary64 source bytes and give compatible optimizations to every comparator.
+3. Expand quality using untouched inputs and matched target variants.
+   Current evidence covers two articles and thirty predictions; preserve all twelve confirmation exclusions.
+   Fixed nearest-grid calibration remains distinct from the original sequential target.
+4. Register independent deletion requests, larger calibration workloads, additional models, and additional corpora.
+   Randomize comparator ordering and quantify uncertainty across requests, not only repeated timings.
+   Include equally indexed, cold, warm, exact-factor, lossless, and enclosure controls.
+5. Measure complete lifetime costs and genuine changing-state request sequences.
+   Include original preparation, retained information, parsing, verification, fallback, output, and base checkpoint requirements.
+6. Reassess novelty using the updated audit and inspect unavailable close-work theorems before submission.
+   The storage lower bound uses actual model responses but does not establish practical repair superiority.
+   Freeze estimators, samples, untouched confirmation, and the revised scientific program prospectively.
+7. Complete the manuscript, limitations, independent reproducibility review, and submission claim audit.
+   The paper is not ACL-ready, and the empirical program remains incomplete.
+
+Execution and evidence:
+
+The latest continuation permitted a new 240-second local phase: 148 used, 92 remaining.
+Its three registered trials are complete; no additional trials are registered or active.
+The original ledger stays 10,775 / 10,800; the previous phase stays 898 / 900, including 122 unknown reserved seconds.
+Combined charged or reserved usage is 11,821 seconds.
+These are separate internal phase plans; never reset old ledgers or invent unknown settlement.
+V29 live progress, sealed receipts, and immutable artifacts agree.
+Preserve all older evidence discrepancies, source snapshots, exclusions, and failed attempts.
+Repository pushes remain authorized; never force-push.
+
+---
+
+Historical task registers follow unchanged.
+
 # Active tasks after revision 28
 
 Updated 8 October 2026, UTC. This list supersedes historical task registers below.

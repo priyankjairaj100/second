@@ -1,3 +1,47 @@
+# Current checkpoint: revision 29, complete lossless control
+
+Updated 8 October 2026, UTC. This checkpoint supersedes historical status and execution restrictions below.
+Read docs/EMPIRICAL_LOSSLESS_V29.md and campaigns/lossless_summary_v29.json first.
+Also read docs/NOVELTY_AUDIT_V29.md and docs/SCALING_AUDIT_V29.md.
+
+Complete times: indexed 44.067929996 seconds; repair 49.062973723 seconds; cold 54.443484033 seconds.
+The observed speedup over cold reconstruction is 1.1096653933× on one adaptive development request.
+This single comparison does not establish reliable superiority.
+Repair and indexed reconstruction share the same algorithm, but their observed timings differ; do not describe an empirical tie.
+All 24 stages and 42,467,328 codes match exactly; repair/indexed execute zero neural traversals, versus twenty-four for cold.
+The shared model hash starts d27c8243; successor lossless state hash starts 55a131c6.
+Complete lossless state occupies 25,832,592 bytes, 1.874469% below the 26,326,066-byte exact-factor state.
+V28's 24,930,099-byte state is 3.493622% smaller than this lossless state.
+V28's earlier 51.232-second timing is outside the new comparison; do not infer a causal cross-version speed difference.
+Base checkpoint parameters remain required, and fixed nearest-grid features remain distinct from the original sequential target.
+V23's repeated 1.298–1.331× exact-factor speedups remain narrow historical evidence.
+
+Thirty-five new V29 software fixtures pass.
+The model-response theorem uses canonical four-bit outputs, positive margins, and condition numbers at most three.
+Its no-probe bound is \(b\ge\lceil\log_2\binom N{N/2}\rceil\), under the declared finite access model.
+The cumulative-probe extension bounds \(b+k\); neither theorem establishes NLP speed.
+The admission helper rejects 262,144-token plans requiring a single 512-GiB token matrix.
+All eight helper tests pass.
+Passing admission does not establish memory fit or completion; the primal certificate remains unimplemented.
+
+The latest user continuation permitted a separate 240-second local phase; 148 seconds are used and 92 remain.
+Its three registered trials finished; no further trials are registered or active.
+The original ledger remains 10,775 / 10,800 seconds; the earlier phase remains 898 / 900.
+That earlier phase still holds 122 seconds with unknown settlement; never invent observed usage or reset old ledgers.
+Combined charged or reserved usage is 11,821 seconds; phase allowances are separate internal execution plans.
+V29 live progress, sealed receipts, and immutable artifacts agree; older discrepancies remain preserved and disclosed.
+
+Next: fix realistic-token scaling, add stronger FPC/ALP/Zstandard lossless controls, and evaluate untouched quality and independent requests.
+Then cover additional models/corpora, lifetime cost, randomized replication, and prospective confirmation.
+Quality remains two articles and thirty predictions; all twelve evaluated articles remain excluded from confirmation.
+The paper is not ACL-ready, and the empirical program remains incomplete.
+New experiments require prospective registration and resource admission; repository pushes remain authorized, without force-pushes.
+Preserve adverse findings, source snapshots, exclusions, and complete cost receipts.
+
+---
+
+Historical checkpoints follow unchanged.
+
 # Current checkpoint: revision 28, exact compressed repair at cold-replay parity
 
 Updated 8 October 2026, UTC. This checkpoint supersedes all historical status and task claims below.

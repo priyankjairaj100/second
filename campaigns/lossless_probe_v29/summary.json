@@ -1,0 +1,4127 @@
+{
+  "all_roundtrips_exact": true,
+  "analysis_cpu_ns_since_script_imports": 5010364675,
+  "analysis_wall_ns_since_script_imports": 4185443765,
+  "compression_cells": [
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 48,
+        "conservative_signed_width_histogram": {
+          "59": 2,
+          "60": 23,
+          "61": 17,
+          "62": 3,
+          "63": 2,
+          "64": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "40": 1,
+          "41": 2,
+          "42": 8,
+          "43": 12,
+          "44": 24,
+          "45": 45,
+          "46": 99,
+          "47": 175,
+          "48": 322,
+          "49": 552,
+          "50": 1029,
+          "51": 2001,
+          "52": 3550,
+          "53": 4467
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87269,
+        "shuffled_zlib6": 87269,
+        "zlib6": 94097
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "77515ce5527632f48d4c49987ecbbf462e5fc6c73c3c4ad28b66b85b9984b24f",
+        "zlib6": "7fa4fcbe18edd30bfb0f742e0d04a305ac03e421c12190a47bd3cd40ad3fba8b"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "71f437449d3a19b92635c203daaf46b2509ed75a2b6efb7e5fc0794e9e925c3b",
+      "stage_id": "block.0000.qkv"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "60": 3,
+          "61": 10,
+          "62": 14,
+          "63": 15,
+          "64": 4,
+          "65": 1,
+          "67": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "36": 1,
+          "39": 2,
+          "40": 3,
+          "41": 1,
+          "42": 2,
+          "43": 14,
+          "44": 12,
+          "45": 39,
+          "46": 75,
+          "47": 134,
+          "48": 245,
+          "49": 554,
+          "50": 978,
+          "51": 1886,
+          "52": 3416,
+          "53": 4926
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87456,
+        "shuffled_zlib6": 87456,
+        "zlib6": 94164
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "516435988774ca2fec6414dfd8cb4d76620a0777b6c83d8598f4abc7a4859ed4",
+        "zlib6": "90d66175c88c2b0a0658876d749c257b9d377f36a147bf39e7f6cd11c9ff1e2c"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "b1eecf49431d6555cdcdaff90a0c9f20897951f29ab92576a7760f28ca0d59c8",
+      "stage_id": "block.0000.attn_out"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "60": 12,
+          "61": 16,
+          "62": 12,
+          "63": 5,
+          "64": 2,
+          "65": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 2,
+          "40": 2,
+          "41": 4,
+          "42": 11,
+          "43": 15,
+          "44": 28,
+          "45": 48,
+          "46": 81,
+          "47": 182,
+          "48": 320,
+          "49": 548,
+          "50": 1053,
+          "51": 2031,
+          "52": 3635,
+          "53": 4328
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87397,
+        "shuffled_zlib6": 87397,
+        "zlib6": 94114
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "8e4e857f6c0af967b81f096e1f4238328a533c425f07406a6999e6224aef2d0e",
+        "zlib6": "55e68a72dd585d1bc86ba8a674720bcf2ddfa1d91ccdf2ac10cdf8cfff0d7ab6"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "4aa8060f590ad288f6ac0fef4e139b4940ea7fcd3ed73c6747e59e5e5fb7d512",
+      "stage_id": "block.0000.mlp_up"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 50,
+        "conservative_signed_width_histogram": {
+          "100": 1,
+          "103": 2,
+          "104": 1,
+          "59": 1,
+          "60": 2,
+          "61": 1,
+          "62": 13,
+          "63": 18,
+          "64": 15,
+          "65": 32,
+          "66": 13,
+          "67": 14,
+          "68": 8,
+          "69": 14,
+          "70": 6,
+          "71": 3,
+          "72": 4,
+          "73": 5,
+          "74": 8,
+          "75": 3,
+          "76": 3,
+          "77": 5,
+          "78": 3,
+          "79": 2,
+          "80": 2,
+          "81": 5,
+          "82": 1,
+          "86": 1,
+          "87": 1,
+          "90": 2,
+          "93": 1,
+          "95": 1,
+          "99": 1
+        },
+        "negative_zero_count": 10,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 2,
+          "39": 3,
+          "40": 5,
+          "41": 8,
+          "42": 4,
+          "43": 27,
+          "44": 35,
+          "45": 94,
+          "46": 170,
+          "47": 375,
+          "48": 738,
+          "49": 1555,
+          "50": 3074,
+          "51": 6071,
+          "52": 12280,
+          "53": 24701
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 339517,
+        "shuffled_zlib6": 339517,
+        "zlib6": 372630
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "7fd266e597de81f774c7705b5cf9ce8ad9e4b639f5b99a7a04057766da2c7204",
+        "zlib6": "7bb3ca47fda3a770f2067e47c29f2a1d594ab2b82edce286773d92b41809fe4e"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "1a9ebe32295e83165153d06ffaebd7bc02d7f02b3ecd821c7bbd6c668d62a83e",
+      "stage_id": "block.0000.mlp_down"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 43,
+        "conservative_signed_width_histogram": {
+          "61": 3,
+          "62": 15,
+          "63": 16,
+          "64": 9,
+          "65": 3,
+          "66": 2
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "38": 1,
+          "41": 2,
+          "42": 5,
+          "43": 12,
+          "44": 27,
+          "45": 28,
+          "46": 67,
+          "47": 136,
+          "48": 279,
+          "49": 527,
+          "50": 1034,
+          "51": 1882,
+          "52": 3491,
+          "53": 4796
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87553,
+        "shuffled_zlib6": 87553,
+        "zlib6": 94171
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "1d9834a1c71fb0111b09fe22b7c022ae592816d49928ec7116a53cf0615d5855",
+        "zlib6": "1a366b42ae350a09149454bc22f85715e2dc9f541f89412a6f367223d4d88346"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "a96604e32db629b912282d5ed1b9e1a6641f11355922ea914f09a86b739dfc94",
+      "stage_id": "block.0001.qkv"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 48,
+        "conservative_signed_width_histogram": {
+          "60": 9,
+          "61": 18,
+          "62": 14,
+          "63": 5,
+          "64": 2
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "38": 1,
+          "39": 1,
+          "41": 4,
+          "42": 7,
+          "43": 6,
+          "44": 17,
+          "45": 34,
+          "46": 72,
+          "47": 153,
+          "48": 282,
+          "49": 565,
+          "50": 1016,
+          "51": 1806,
+          "52": 3487,
+          "53": 4836
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87473,
+        "shuffled_zlib6": 87473,
+        "zlib6": 94139
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "9fc27f917e9d704eed54dd8eb976d15e472511b3851bb41b533ae5d8a1a55618",
+        "zlib6": "5ce9774a097babbc5c651d3892a793f0a2016afe68264627be489bbb9193fe55"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "926d9659d2d52500780e8ad97adbff5b424d724b5bfe2f7772a00c454d388b93",
+      "stage_id": "block.0001.attn_out"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "60": 6,
+          "61": 15,
+          "62": 12,
+          "63": 10,
+          "64": 3,
+          "65": 1,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "40": 4,
+          "41": 5,
+          "42": 5,
+          "43": 12,
+          "44": 16,
+          "45": 47,
+          "46": 83,
+          "47": 185,
+          "48": 308,
+          "49": 615,
+          "50": 1148,
+          "51": 2018,
+          "52": 3542,
+          "53": 4299
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87516,
+        "shuffled_zlib6": 87516,
+        "zlib6": 94126
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "9e6e7ae4ab34667f5902211b3e5a18a686f3c9159e89a42a24ee3876df7d036c",
+        "zlib6": "8cfd22af542c66bbae18c96ad680b034dea9b5735e9e976b1bb41dd4a45713bd"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "b17eeb26eea0a87c2255ac6b42432433830ee42b9492fb7c47196e3144ca5754",
+      "stage_id": "block.0001.mlp_up"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 63,
+        "conservative_signed_width_histogram": {
+          "102": 1,
+          "103": 1,
+          "60": 1,
+          "61": 2,
+          "62": 16,
+          "63": 16,
+          "64": 28,
+          "65": 20,
+          "66": 17,
+          "67": 16,
+          "68": 15,
+          "69": 5,
+          "70": 6,
+          "71": 5,
+          "72": 3,
+          "73": 4,
+          "74": 3,
+          "75": 1,
+          "76": 2,
+          "77": 3,
+          "78": 1,
+          "80": 1,
+          "81": 1,
+          "82": 1,
+          "83": 3,
+          "84": 6,
+          "85": 3,
+          "86": 1,
+          "87": 1,
+          "88": 1,
+          "89": 1,
+          "90": 1,
+          "91": 3,
+          "93": 2,
+          "99": 1
+        },
+        "negative_zero_count": 19,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 4,
+          "40": 2,
+          "41": 2,
+          "42": 13,
+          "43": 20,
+          "44": 52,
+          "45": 101,
+          "46": 182,
+          "47": 399,
+          "48": 778,
+          "49": 1556,
+          "50": 3045,
+          "51": 6135,
+          "52": 12235,
+          "53": 24609
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 343247,
+        "shuffled_zlib6": 343247,
+        "zlib6": 374352
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "3a935760a715ac3942743ebc6ac344cf2e403867c21c7b7dba6513cf027e6969",
+        "zlib6": "a559bc09d870102551cf1aa2e2e7da3ccc942b83cf4351d248fca43578f5fb9f"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "b3fffbcc8edd3d5633cf1a2b94c2d3b16db6f05bb68d0c59310fb717fac7eed6",
+      "stage_id": "block.0001.mlp_down"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 44,
+        "conservative_signed_width_histogram": {
+          "60": 8,
+          "61": 7,
+          "62": 9,
+          "63": 14,
+          "64": 6,
+          "65": 4
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 1,
+          "40": 2,
+          "41": 1,
+          "42": 3,
+          "43": 9,
+          "44": 18,
+          "45": 47,
+          "46": 78,
+          "47": 153,
+          "48": 262,
+          "49": 510,
+          "50": 1007,
+          "51": 1867,
+          "52": 3498,
+          "53": 4832
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87582,
+        "shuffled_zlib6": 87582,
+        "zlib6": 94181
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "00f049e820412fee04dd920aedd11f38d4a8b1245b5fdc882d1ebcec5980beb1",
+        "zlib6": "eb557ebac48e014ae72fe858164402745c887f1ca0e346accca00b3e2f769639"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "bcde1aadae5caf8d387f9d49b4d022c850f49e53f34549f043c6ddc7cd7d7bab",
+      "stage_id": "block.0002.qkv"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 48,
+        "conservative_signed_width_histogram": {
+          "60": 4,
+          "61": 19,
+          "62": 14,
+          "63": 7,
+          "64": 4
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 1,
+          "40": 1,
+          "41": 4,
+          "42": 8,
+          "43": 8,
+          "44": 17,
+          "45": 48,
+          "46": 81,
+          "47": 176,
+          "48": 290,
+          "49": 536,
+          "50": 1074,
+          "51": 1891,
+          "52": 3581,
+          "53": 4572
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87562,
+        "shuffled_zlib6": 87562,
+        "zlib6": 94145
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "1b04937754364fd9d8ac976f06a3bb5fe6028d7228d0d766b2ea7d0f482773ce",
+        "zlib6": "cf63bfb613fe77c5ec5766a9397f160c561e14d1b26005f7a4ec3dfdda4291ec"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "8714a34bb709696f1a71cabdb08743b8cfdaca7b751fa03e47aef648d2fbfec3",
+      "stage_id": "block.0002.attn_out"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "60": 5,
+          "61": 14,
+          "62": 16,
+          "63": 11,
+          "64": 1,
+          "65": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "38": 1,
+          "39": 1,
+          "40": 1,
+          "41": 6,
+          "42": 6,
+          "43": 14,
+          "44": 30,
+          "45": 49,
+          "46": 92,
+          "47": 156,
+          "48": 311,
+          "49": 592,
+          "50": 1057,
+          "51": 1960,
+          "52": 3651,
+          "53": 4360
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87508,
+        "shuffled_zlib6": 87508,
+        "zlib6": 94129
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "b2eb00f78761fb7813b64144820fd119afb6ddec0eba5e08c4e80fd7c780cd23",
+        "zlib6": "c1ca9979d0326f0cec426e4696eefaddb5ecd2d7f3b35ffab2266ee3190a4d7e"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "548f9f75bcee8d16fc3e69f7012b651972c2c61ed81f43746f2b39328a48619e",
+      "stage_id": "block.0002.mlp_up"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 130,
+        "conservative_signed_width_histogram": {
+          "60": 6,
+          "61": 15,
+          "62": 26,
+          "63": 43,
+          "64": 40,
+          "65": 21,
+          "66": 15,
+          "67": 8,
+          "68": 9,
+          "69": 3,
+          "70": 2,
+          "73": 2,
+          "74": 2
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "40": 4,
+          "41": 7,
+          "42": 10,
+          "43": 16,
+          "44": 48,
+          "45": 112,
+          "46": 174,
+          "47": 405,
+          "48": 748,
+          "49": 1544,
+          "50": 3107,
+          "51": 6152,
+          "52": 12378,
+          "53": 24446
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 339859,
+        "shuffled_zlib6": 339859,
+        "zlib6": 373130
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "9f3a8310776bfbcebc6824faec84a57e71cd22c2f987a3614de7e80bdfeb3dab",
+        "zlib6": "fdb2a4b4718b986d847320992dd0272649a07798ecbce6c4b217f91d7716daa5"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "27f5f11bbb6fb082abeb0452a880389e3c5b738911206f83c85e2603ff1ebed0",
+      "stage_id": "block.0002.mlp_down"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "60": 4,
+          "61": 5,
+          "62": 13,
+          "63": 16,
+          "64": 9,
+          "65": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "39": 1,
+          "40": 1,
+          "41": 1,
+          "42": 9,
+          "43": 10,
+          "44": 22,
+          "45": 31,
+          "46": 69,
+          "47": 138,
+          "48": 284,
+          "49": 558,
+          "50": 971,
+          "51": 1942,
+          "52": 3462,
+          "53": 4788
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87602,
+        "shuffled_zlib6": 87602,
+        "zlib6": 94191
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "1ef2bbe525fdd0a1db7bb652b704e82d3966cc825ea76363f0569abb8efce3c7",
+        "zlib6": "0aee1cf2df700550baef3d95b4296b9312e45f9dacb3e861fe8ca6eaef2a9037"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "81dc1a051e242dccdbb37efbe6027e1af815bc77235d3d18fe6ac6b8e285c8f7",
+      "stage_id": "block.0003.qkv"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 44,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 8,
+          "61": 13,
+          "62": 12,
+          "63": 7,
+          "64": 3,
+          "65": 4
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "38": 1,
+          "41": 3,
+          "42": 5,
+          "43": 9,
+          "44": 31,
+          "45": 41,
+          "46": 78,
+          "47": 147,
+          "48": 286,
+          "49": 490,
+          "50": 1031,
+          "51": 1901,
+          "52": 3734,
+          "53": 4530
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87671,
+        "shuffled_zlib6": 87671,
+        "zlib6": 94152
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "33867903e52aeb0d498f1c629dd9cdf53c9df74f5cb22920750ae7c40643289c",
+        "zlib6": "c8aa0d2a5883cf5d23cc8dfc21c54ab80408bd8806e25fe43b3598030b428072"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "c4843fcf0bea3a7194a62332c1aca408f22bf3a404fcd875c2ff7274ea67aac8",
+      "stage_id": "block.0003.attn_out"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 11,
+          "61": 11,
+          "62": 16,
+          "63": 6,
+          "64": 2,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "38": 1,
+          "39": 2,
+          "41": 6,
+          "42": 7,
+          "43": 11,
+          "44": 22,
+          "45": 59,
+          "46": 99,
+          "47": 204,
+          "48": 331,
+          "49": 572,
+          "50": 1074,
+          "51": 2050,
+          "52": 3636,
+          "53": 4213
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87489,
+        "shuffled_zlib6": 87489,
+        "zlib6": 94110
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "282e80d15f376647ccefd68e80c5604322d47072f21245132a96575b8adf8e68",
+        "zlib6": "1c478232957a2993f1c61a1e8e6193e5b6e4f9a7e255c30708d75ec276e57cdd"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "1bf96fd76d1f53b084a275a907fe816aadc5e8acda30dcf841ff4ef03d5b9f39",
+      "stage_id": "block.0003.mlp_up"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 123,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 2,
+          "61": 12,
+          "62": 41,
+          "63": 39,
+          "64": 28,
+          "65": 20,
+          "66": 18,
+          "67": 11,
+          "68": 8,
+          "69": 4,
+          "70": 1,
+          "71": 2,
+          "72": 1,
+          "73": 2,
+          "74": 1,
+          "92": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "39": 1,
+          "40": 4,
+          "41": 3,
+          "42": 11,
+          "43": 22,
+          "44": 38,
+          "45": 95,
+          "46": 187,
+          "47": 376,
+          "48": 763,
+          "49": 1584,
+          "50": 3011,
+          "51": 6125,
+          "52": 12335,
+          "53": 24596
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 338134,
+        "shuffled_zlib6": 338134,
+        "zlib6": 372349
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "43c0fedb3b635e716415e14b5ce3a80a238699f960e49adf0c509b33f7a160a7",
+        "zlib6": "5ed175a8478fb6eac7ff9c73beced1e01030a17d54519749bfad89fb7715edd5"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "29137bd3fa590c8c28fcf6b71cf2c228a1f6fa459b0d2fb3b175e13c202ef506",
+      "stage_id": "block.0003.mlp_down"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 5,
+          "61": 8,
+          "62": 18,
+          "63": 11,
+          "64": 4,
+          "65": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "38": 1,
+          "40": 2,
+          "41": 2,
+          "42": 7,
+          "43": 13,
+          "44": 29,
+          "45": 42,
+          "46": 83,
+          "47": 156,
+          "48": 279,
+          "49": 566,
+          "50": 1022,
+          "51": 1902,
+          "52": 3539,
+          "53": 4644
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87585,
+        "shuffled_zlib6": 87585,
+        "zlib6": 94159
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "01d559f172afcce2ba5402e447fc152a2805001aaf857c20b985197713a8fd57",
+        "zlib6": "4a886051b3edc16a5fd4a4b80cbdadc10d6004b0b4a21c6310a99b20ec0b434f"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "04d638b9b6749ae5e9fe0a1b6d0a7b22106737f9a22e8834e2822512da625b92",
+      "stage_id": "block.0004.qkv"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "58": 1,
+          "59": 1,
+          "60": 9,
+          "61": 14,
+          "62": 13,
+          "63": 5,
+          "64": 3,
+          "65": 2
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 2,
+          "40": 2,
+          "41": 4,
+          "42": 4,
+          "43": 14,
+          "44": 21,
+          "45": 33,
+          "46": 71,
+          "47": 153,
+          "48": 303,
+          "49": 529,
+          "50": 980,
+          "51": 1900,
+          "52": 3545,
+          "53": 4727
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87553,
+        "shuffled_zlib6": 87553,
+        "zlib6": 94172
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "7dda313ad761237db2dc2844a666f025947f7eebf94422c792d1773ad1e4511d",
+        "zlib6": "97ec2ca7578c803da74f486ae865e345fd694944c3b8fbb4a84375dca55dde63"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "e7504ff1cbc27704da54bb753117375680e08a76543624f8082ff7c34402da54",
+      "stage_id": "block.0004.attn_out"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 6,
+          "61": 16,
+          "62": 16,
+          "63": 6,
+          "64": 1,
+          "65": 1,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "38": 2,
+          "40": 4,
+          "41": 3,
+          "42": 10,
+          "43": 11,
+          "44": 28,
+          "45": 55,
+          "46": 82,
+          "47": 182,
+          "48": 315,
+          "49": 582,
+          "50": 1115,
+          "51": 2053,
+          "52": 3667,
+          "53": 4178
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87451,
+        "shuffled_zlib6": 87451,
+        "zlib6": 94074
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "9dbe086b853e44a789307a02cb42d7ec27e473a4d75c9d425554f6f0682a8f86",
+        "zlib6": "65dc6a91794c6a9f72a36d91ef201565e781f7148bc6f49d013b23f1f558cc16"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "41e92db3b8711900ae9224344c98698a9427fd0394eaf378a539d2e28d92b772",
+      "stage_id": "block.0004.mlp_up"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 141,
+        "conservative_signed_width_histogram": {
+          "60": 8,
+          "61": 25,
+          "62": 39,
+          "63": 42,
+          "64": 27,
+          "65": 23,
+          "66": 12,
+          "67": 9,
+          "68": 3,
+          "69": 2,
+          "70": 1,
+          "71": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "33": 1,
+          "38": 1,
+          "39": 2,
+          "40": 2,
+          "41": 5,
+          "42": 9,
+          "43": 32,
+          "44": 46,
+          "45": 93,
+          "46": 201,
+          "47": 389,
+          "48": 791,
+          "49": 1574,
+          "50": 3057,
+          "51": 6139,
+          "52": 12015,
+          "53": 24795
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 335960,
+        "shuffled_zlib6": 335960,
+        "zlib6": 371061
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "eda1f7f14e95dba2bfe6072b5e52b83c69d23a9c951e271b338bdfdd3cfd03a0",
+        "zlib6": "8736cd0967b394af5c7e888de2e94c8a86dadda3a0dd14d74809458705852173"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "f38ce307c08c24d3f874b8311b322cca7f47e654b7c292dc50665823d7fca169",
+      "stage_id": "block.0004.mlp_down"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "59": 3,
+          "60": 3,
+          "61": 16,
+          "62": 12,
+          "63": 5,
+          "64": 8,
+          "65": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "34": 1,
+          "39": 1,
+          "40": 1,
+          "41": 2,
+          "42": 4,
+          "43": 23,
+          "44": 29,
+          "45": 38,
+          "46": 96,
+          "47": 143,
+          "48": 316,
+          "49": 581,
+          "50": 1131,
+          "51": 2000,
+          "52": 3641,
+          "53": 4281
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87528,
+        "shuffled_zlib6": 87528,
+        "zlib6": 94137
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "47cf5dc27dd98557f463d1c717941c854151084fc627cbaca2aae21696bcc2c6",
+        "zlib6": "d8c7da9fdc7cd3ec1aa9924f63524ed991d01c9cb0876df537467d171b199999"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "1a4a28a16b57629e7e58483fb1a003bae9490bdca4b6e9af035f64a5defe5d55",
+      "stage_id": "block.0005.qkv"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 44,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 5,
+          "61": 3,
+          "62": 18,
+          "63": 10,
+          "64": 7,
+          "65": 3,
+          "67": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "40": 1,
+          "41": 4,
+          "42": 5,
+          "43": 12,
+          "44": 14,
+          "45": 38,
+          "46": 62,
+          "47": 179,
+          "48": 274,
+          "49": 541,
+          "50": 1007,
+          "51": 1903,
+          "52": 3402,
+          "53": 4845
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87775,
+        "shuffled_zlib6": 87775,
+        "zlib6": 94202
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "0e83237c2e9810212965c16f175b5b2c1cb1659a444e113e4f98514e14dbcb74",
+        "zlib6": "f12793ca1eb404237e0b45778d28100ffc417351e89efe1692a8921dff38f328"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "d21b91ccdd6e27fe2d1b4737ebc12edbab41212c4e1a7443c75f541d277ccb28",
+      "stage_id": "block.0005.attn_out"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "58": 1,
+          "60": 7,
+          "61": 16,
+          "62": 16,
+          "63": 5,
+          "64": 2,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 1,
+          "40": 5,
+          "41": 2,
+          "42": 4,
+          "43": 16,
+          "44": 19,
+          "45": 37,
+          "46": 82,
+          "47": 147,
+          "48": 303,
+          "49": 615,
+          "50": 1081,
+          "51": 1985,
+          "52": 3535,
+          "53": 4456
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87378,
+        "shuffled_zlib6": 87378,
+        "zlib6": 94123
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "4b33e64b3d43782aafdbd29e7015964dbfdd1e1bb333159d808b6cdf6438574d",
+        "zlib6": "b954cf81fcc1e6d6bcc6b7e17aef987bf0ee06f85da812727da59d3b4daa5482"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "b32777d906933c7e76bf0d6a064943df9116012ff3815b8dd84aa1ae585be118",
+      "stage_id": "block.0005.mlp_up"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 99,
+        "conservative_signed_width_histogram": {
+          "60": 3,
+          "61": 9,
+          "62": 23,
+          "63": 38,
+          "64": 26,
+          "65": 21,
+          "66": 11,
+          "67": 15,
+          "68": 12,
+          "69": 6,
+          "70": 3,
+          "71": 1,
+          "72": 2,
+          "73": 2,
+          "74": 2,
+          "75": 1,
+          "76": 1,
+          "78": 3,
+          "79": 2,
+          "80": 1,
+          "81": 1,
+          "85": 1,
+          "87": 2,
+          "91": 3,
+          "92": 1,
+          "94": 2
+        },
+        "negative_zero_count": 5,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "40": 2,
+          "41": 7,
+          "42": 11,
+          "43": 33,
+          "44": 54,
+          "45": 116,
+          "46": 200,
+          "47": 409,
+          "48": 749,
+          "49": 1542,
+          "50": 3076,
+          "51": 6207,
+          "52": 12287,
+          "53": 24454
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 337070,
+        "shuffled_zlib6": 337070,
+        "zlib6": 371935
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "54e02794f8b145c8fa6145056032d20317897e112fd9c53f1c67c15b13ea3b39",
+        "zlib6": "f5c1f9cea337eac48c9413891e5a8eacf2e4ee6981affe889088938c9dd81e1a"
+      },
+      "record_id": "wikitext2:train:article-row-27113",
+      "source_sha256": "b82be854d2bc4a3db6a28df988b3ee1e7c851793cb1bf23cbb9b2b90daa47cb5",
+      "stage_id": "block.0005.mlp_down"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 48,
+        "conservative_signed_width_histogram": {
+          "59": 3,
+          "60": 11,
+          "61": 20,
+          "62": 7,
+          "63": 6,
+          "64": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "38": 3,
+          "39": 2,
+          "40": 3,
+          "41": 2,
+          "42": 5,
+          "43": 12,
+          "44": 36,
+          "45": 37,
+          "46": 94,
+          "47": 123,
+          "48": 283,
+          "49": 543,
+          "50": 1021,
+          "51": 1902,
+          "52": 3573,
+          "53": 4648
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87275,
+        "shuffled_zlib6": 87275,
+        "zlib6": 94087
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "aa8ceb547d8246fdb783174a6380bd902240631ae6a95db1167216972611cd35",
+        "zlib6": "a1a546ed7e58a0552fb0f0e48b1a942f49bc48bf3721c6c1700bcd58855c0128"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "e4aa1bde1aff9f0a6052da6f8465e73c60b653037573de82151fb1119fa84d69",
+      "stage_id": "block.0000.qkv"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 44,
+        "conservative_signed_width_histogram": {
+          "59": 3,
+          "60": 2,
+          "61": 11,
+          "62": 18,
+          "63": 7,
+          "64": 3,
+          "65": 3,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 2,
+          "41": 2,
+          "42": 7,
+          "43": 3,
+          "44": 16,
+          "45": 31,
+          "46": 65,
+          "47": 119,
+          "48": 251,
+          "49": 557,
+          "50": 954,
+          "51": 1856,
+          "52": 3554,
+          "53": 4871
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87407,
+        "shuffled_zlib6": 87407,
+        "zlib6": 94168
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "c68430695f0583e55d25b42fe0c6c1daf6ed21fe1752f619472367eba6690eb4",
+        "zlib6": "3a8f73ed42ee0328fc489bbff17a265bc5e8e3958bafaa30ba42af8d1404eae3"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "b10744fe8391c489939be16fc7afef6f5b55d65af09f45d3a2d530a26e294c07",
+      "stage_id": "block.0000.attn_out"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 11,
+          "61": 12,
+          "62": 12,
+          "63": 8,
+          "64": 2,
+          "65": 1,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 2,
+          "40": 4,
+          "42": 3,
+          "43": 4,
+          "44": 23,
+          "45": 59,
+          "46": 96,
+          "47": 165,
+          "48": 307,
+          "49": 597,
+          "50": 1060,
+          "51": 2001,
+          "52": 3636,
+          "53": 4331
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87369,
+        "shuffled_zlib6": 87369,
+        "zlib6": 94105
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "d6753bb51c4819eb75e00d9cc54fff83010274a6dadd273aaa1f0a7ae0bbf88b",
+        "zlib6": "b337b14c5a23011fd61a1cfb75dd97e975f7486422919158a5fbdab20ecd38b3"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "a6f6299527893941da25469af335d15138f3fceace1cdd9f07a4afc290da0ded",
+      "stage_id": "block.0000.mlp_up"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 64,
+        "conservative_signed_width_histogram": {
+          "104": 1,
+          "61": 10,
+          "62": 12,
+          "63": 20,
+          "64": 22,
+          "65": 25,
+          "66": 20,
+          "67": 15,
+          "68": 10,
+          "69": 10,
+          "70": 3,
+          "71": 4,
+          "72": 2,
+          "73": 2,
+          "74": 4,
+          "75": 4,
+          "76": 4,
+          "77": 8,
+          "78": 3,
+          "79": 5,
+          "80": 1,
+          "83": 1,
+          "84": 1,
+          "86": 1,
+          "87": 1,
+          "92": 2,
+          "99": 1
+        },
+        "negative_zero_count": 13,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 2,
+          "40": 2,
+          "41": 6,
+          "42": 7,
+          "43": 26,
+          "44": 44,
+          "45": 101,
+          "46": 202,
+          "47": 363,
+          "48": 768,
+          "49": 1547,
+          "50": 3089,
+          "51": 6140,
+          "52": 12190,
+          "53": 24652
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 340966,
+        "shuffled_zlib6": 340966,
+        "zlib6": 373278
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "1e3addef245e74828bbfae9a5aef6bb605d78a9c43dba7c30b635d1797680062",
+        "zlib6": "8e7b8c76aaa949af4e6c98dbb2388ce3e3dacf26f7d3fb93b2341029b966e003"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "2722e809e55923f9af600680673be84f72104c29ce5e27324c99d64e68223d74",
+      "stage_id": "block.0000.mlp_down"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 42,
+        "conservative_signed_width_histogram": {
+          "61": 6,
+          "62": 11,
+          "63": 14,
+          "64": 11,
+          "65": 4,
+          "66": 2
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "39": 2,
+          "40": 2,
+          "41": 3,
+          "42": 1,
+          "43": 10,
+          "44": 23,
+          "45": 44,
+          "46": 82,
+          "47": 157,
+          "48": 299,
+          "49": 489,
+          "50": 1004,
+          "51": 1868,
+          "52": 3454,
+          "53": 4849
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87555,
+        "shuffled_zlib6": 87555,
+        "zlib6": 94121
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "42e1db0f669687902734e537f18a3b70e717a05af6c9d2142baa47b46141537b",
+        "zlib6": "6bfac1139b5c79acd76c819005899602aa5782586c7d91b640f9316bcbc5deed"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "07c207cfaea8ba6e005ad3ec2ef1327e5598a19ce965259f21d5a243a7c30af9",
+      "stage_id": "block.0001.qkv"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "60": 3,
+          "61": 7,
+          "62": 23,
+          "63": 9,
+          "64": 4,
+          "66": 1,
+          "67": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "39": 2,
+          "41": 4,
+          "42": 9,
+          "43": 10,
+          "44": 19,
+          "45": 37,
+          "46": 76,
+          "47": 146,
+          "48": 263,
+          "49": 547,
+          "50": 1057,
+          "51": 1939,
+          "52": 3515,
+          "53": 4663
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87512,
+        "shuffled_zlib6": 87512,
+        "zlib6": 94153
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "38c583e5f42af167dc998f6f062f5f54ab3b2fd09861d0d118477772e0bebfc3",
+        "zlib6": "77a93f9ed6c204018fde51869b999efcac157bfef82e2e877bc33c1b48988c98"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "8426cdfe27bcacfcb6d875b87535a84705f98e8a215f610c78a513499a1e7e66",
+      "stage_id": "block.0001.attn_out"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 6,
+          "61": 14,
+          "62": 12,
+          "63": 10,
+          "64": 4,
+          "69": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "39": 1,
+          "40": 2,
+          "41": 7,
+          "42": 7,
+          "43": 8,
+          "44": 26,
+          "45": 43,
+          "46": 107,
+          "47": 180,
+          "48": 319,
+          "49": 594,
+          "50": 1136,
+          "51": 2029,
+          "52": 3521,
+          "53": 4307
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87465,
+        "shuffled_zlib6": 87465,
+        "zlib6": 94130
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "96fcd3dfe2667e3bdd298fae40ffee3ab9a9d16f6f65f141b0458f91982a3912",
+        "zlib6": "d086370b0f1ad1fa7532b9e1f33ff6928a4b5cb4d689ef7e56356e9ac3682f77"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "bf45fc309db8d6ab04e52cd4fe1efd614fc225da67ef7fa85d9d7eb6377beac9",
+      "stage_id": "block.0001.mlp_up"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 59,
+        "conservative_signed_width_histogram": {
+          "101": 1,
+          "104": 1,
+          "61": 6,
+          "62": 11,
+          "63": 23,
+          "64": 19,
+          "65": 19,
+          "66": 19,
+          "67": 14,
+          "68": 14,
+          "69": 7,
+          "70": 7,
+          "71": 6,
+          "72": 6,
+          "73": 4,
+          "74": 3,
+          "75": 4,
+          "76": 3,
+          "77": 3,
+          "79": 3,
+          "80": 2,
+          "81": 1,
+          "84": 2,
+          "87": 2,
+          "88": 2,
+          "89": 3,
+          "91": 1,
+          "93": 1,
+          "94": 1,
+          "95": 3,
+          "98": 1
+        },
+        "negative_zero_count": 19,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "39": 1,
+          "40": 6,
+          "41": 7,
+          "42": 13,
+          "43": 25,
+          "44": 50,
+          "45": 78,
+          "46": 201,
+          "47": 366,
+          "48": 765,
+          "49": 1562,
+          "50": 3123,
+          "51": 6147,
+          "52": 12318,
+          "53": 24470
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 343375,
+        "shuffled_zlib6": 343375,
+        "zlib6": 374483
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "b610b60bfc43083eaefd3197dea77c95c321c486a1bc5adf8826a2d054016877",
+        "zlib6": "d7c14d2a30f973fd861d67b414b809d9bea3cfd571aceee0e43f6f4d79c1c4f3"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "972e6e6b17fad12552eaf69e4ac16632a270db248f5753cb157f868f0262ee03",
+      "stage_id": "block.0001.mlp_down"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "60": 5,
+          "61": 7,
+          "62": 11,
+          "63": 15,
+          "64": 9,
+          "65": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "39": 1,
+          "40": 1,
+          "41": 5,
+          "42": 2,
+          "43": 7,
+          "44": 18,
+          "45": 47,
+          "46": 77,
+          "47": 164,
+          "48": 299,
+          "49": 507,
+          "50": 990,
+          "51": 1869,
+          "52": 3324,
+          "53": 4976
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87561,
+        "shuffled_zlib6": 87561,
+        "zlib6": 94164
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "d153ff2d0d35ad9bb20f463bcd9280e0a9ca64c3ea247802f611e5c09d1ed037",
+        "zlib6": "686e5f2896a78f47175a6478eb47a9d1705aa219d21abe7ffbf76e5a174b6e88"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "d67f19b831179c8512c1ea0b037ff87efef4c4bda55fa7161959f034aec6687f",
+      "stage_id": "block.0002.qkv"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "60": 9,
+          "61": 16,
+          "62": 9,
+          "63": 10,
+          "64": 2,
+          "65": 1,
+          "67": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "36": 1,
+          "38": 2,
+          "39": 2,
+          "40": 1,
+          "42": 4,
+          "43": 14,
+          "44": 31,
+          "45": 54,
+          "46": 84,
+          "47": 151,
+          "48": 301,
+          "49": 583,
+          "50": 1045,
+          "51": 1927,
+          "52": 3545,
+          "53": 4543
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87571,
+        "shuffled_zlib6": 87571,
+        "zlib6": 94161
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "b0ebc114c6dc93bd691d45378ca149479c72320f564501ef388a48ee872d219d",
+        "zlib6": "3e06a9d45b43744f09e60f34a702c6805fed9c2f2b0f07be1ea9003c2a3cab0a"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "6a2e6432af957f13c7d5a0e397d8de4b4ccec81cdabd558cca699f027c29bbb9",
+      "stage_id": "block.0002.attn_out"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 2,
+          "61": 16,
+          "62": 14,
+          "63": 9,
+          "64": 4,
+          "65": 2
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "40": 1,
+          "41": 6,
+          "42": 6,
+          "43": 16,
+          "44": 27,
+          "45": 38,
+          "46": 77,
+          "47": 165,
+          "48": 279,
+          "49": 583,
+          "50": 1070,
+          "51": 1979,
+          "52": 3545,
+          "53": 4496
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87456,
+        "shuffled_zlib6": 87456,
+        "zlib6": 94118
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "73a880ca3155b17c382c3f2851cab7cd5da3a5601eb04bb53ea87c94509a75a0",
+        "zlib6": "2fdd0c9eb6be21753334318ae7115e0d6ea38bac6709471b8b3445e89cfabe4f"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "9dad4507d167df338b0b9f9cc44594998b61b7c7c326bb69427b0a07eb59f966",
+      "stage_id": "block.0002.mlp_up"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 116,
+        "conservative_signed_width_histogram": {
+          "60": 2,
+          "61": 12,
+          "62": 23,
+          "63": 35,
+          "64": 44,
+          "65": 23,
+          "66": 20,
+          "67": 11,
+          "68": 7,
+          "69": 5,
+          "70": 6,
+          "71": 2,
+          "72": 1,
+          "78": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 2,
+          "40": 5,
+          "41": 7,
+          "42": 4,
+          "43": 20,
+          "44": 43,
+          "45": 89,
+          "46": 206,
+          "47": 388,
+          "48": 725,
+          "49": 1519,
+          "50": 3031,
+          "51": 6192,
+          "52": 12394,
+          "53": 24527
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 341103,
+        "shuffled_zlib6": 341103,
+        "zlib6": 373773
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "373ba097c38bb5703dc7809d5b2054b6bc8598aa69d43a562b29c86d7b8888bd",
+        "zlib6": "d6bc25430e53ad3919f0352bcd428a73d237d846164906a4ceb1cb8c3fc9dd45"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "61123d213e85773fbea9cd2816b39927df8fdabe0736b5124359690aa22870ad",
+      "stage_id": "block.0002.mlp_down"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 3,
+          "61": 6,
+          "62": 16,
+          "63": 10,
+          "64": 10,
+          "65": 1,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "40": 1,
+          "41": 6,
+          "42": 6,
+          "43": 16,
+          "44": 23,
+          "45": 49,
+          "46": 80,
+          "47": 151,
+          "48": 281,
+          "49": 544,
+          "50": 1028,
+          "51": 1824,
+          "52": 3410,
+          "53": 4868
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87562,
+        "shuffled_zlib6": 87562,
+        "zlib6": 94184
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "696fcdf461e9a2b654c2561c02878845161150baee57ed3989d10f69d409bf78",
+        "zlib6": "e012387223051417ede426ce0e27d37fb449cb2b2329885e3bd27b15c89477e2"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "80269098ffddc20d845226ad0fa4c18c1896c6d1c411f1a51b634d4d5ae5610c",
+      "stage_id": "block.0003.qkv"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 45,
+        "conservative_signed_width_histogram": {
+          "59": 2,
+          "60": 3,
+          "61": 6,
+          "62": 25,
+          "63": 7,
+          "64": 2,
+          "65": 3
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "36": 1,
+          "40": 2,
+          "41": 2,
+          "42": 9,
+          "43": 12,
+          "44": 20,
+          "45": 44,
+          "46": 95,
+          "47": 156,
+          "48": 317,
+          "49": 587,
+          "50": 1042,
+          "51": 1891,
+          "52": 3567,
+          "53": 4543
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87701,
+        "shuffled_zlib6": 87701,
+        "zlib6": 94204
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "a388379a67be8ec3505009d73e09a53c9b1f3b61c1a68ee89a5c737ef5727674",
+        "zlib6": "492729034dbb1d0bf99e1f19ecf0a90f4e4bfea2cfd5bbcfcdfa7af199a61222"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "205b21acd8d95cf983d11f943a435a5a31774e1477d060113fef9a31a3853e88",
+      "stage_id": "block.0003.attn_out"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 7,
+          "61": 18,
+          "62": 12,
+          "63": 4,
+          "64": 5,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 2,
+          "40": 1,
+          "41": 4,
+          "42": 4,
+          "43": 13,
+          "44": 17,
+          "45": 32,
+          "46": 87,
+          "47": 168,
+          "48": 346,
+          "49": 549,
+          "50": 1113,
+          "51": 2021,
+          "52": 3676,
+          "53": 4255
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87484,
+        "shuffled_zlib6": 87484,
+        "zlib6": 94123
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "8df5e9fc03cdbf6def08e9381c37401db78f3bac0be99201ab187df46b45f2df",
+        "zlib6": "99568ed6442e7124e769ee5dd52a70275a5733679ecc94505ae9eceaa6a2b4e5"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "743fc468e3ed2a6cbbb9a9a50a2ac2f4fad84970930d8f336e549c3c7d6e54f7",
+      "stage_id": "block.0003.mlp_up"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 119,
+        "conservative_signed_width_histogram": {
+          "60": 4,
+          "61": 15,
+          "62": 37,
+          "63": 40,
+          "64": 23,
+          "65": 17,
+          "66": 13,
+          "67": 11,
+          "68": 13,
+          "69": 7,
+          "70": 5,
+          "71": 1,
+          "72": 1,
+          "73": 1,
+          "75": 1,
+          "76": 1,
+          "80": 1,
+          "86": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "38": 1,
+          "40": 6,
+          "41": 6,
+          "42": 8,
+          "43": 36,
+          "44": 50,
+          "45": 107,
+          "46": 203,
+          "47": 379,
+          "48": 773,
+          "49": 1578,
+          "50": 3115,
+          "51": 6132,
+          "52": 12188,
+          "53": 24569
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 339681,
+        "shuffled_zlib6": 339681,
+        "zlib6": 373055
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "9b52e09daf56d95f964b085a968de42a59b4be61e8221ca0eadece0485a3ae2e",
+        "zlib6": "127a5d9758062a08e3fe979dd7a0825dd1cd5f317209ead11282ed53e441df8b"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "76fc81768e4eaf393542f1df8155606a953d7d26fe9c9e48e864fb39d617f7bc",
+      "stage_id": "block.0003.mlp_down"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "60": 1,
+          "61": 13,
+          "62": 16,
+          "63": 13,
+          "64": 4,
+          "65": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 1,
+          "40": 2,
+          "42": 5,
+          "43": 15,
+          "44": 25,
+          "45": 39,
+          "46": 79,
+          "47": 158,
+          "48": 288,
+          "49": 559,
+          "50": 953,
+          "51": 1871,
+          "52": 3534,
+          "53": 4759
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87571,
+        "shuffled_zlib6": 87571,
+        "zlib6": 94152
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "7425def35ac007902070219898b946285bdb469f171abd899c88d9d274ae4aef",
+        "zlib6": "45676e9ab7bbdec22235ca0a3e1978584f2311fd8c0b8264afdf66325017b808"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "7384c78bea367cfb1a63fb19585b1ed37d791768358d33bd44ae5c41462d5607",
+      "stage_id": "block.0004.qkv"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "59": 2,
+          "60": 8,
+          "61": 13,
+          "62": 12,
+          "63": 8,
+          "64": 4,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "41": 3,
+          "42": 4,
+          "43": 7,
+          "44": 18,
+          "45": 39,
+          "46": 93,
+          "47": 182,
+          "48": 305,
+          "49": 556,
+          "50": 985,
+          "51": 1921,
+          "52": 3543,
+          "53": 4631
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87689,
+        "shuffled_zlib6": 87689,
+        "zlib6": 94193
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "b090f4e4f44c5340a8bfe134567ed2bd1dae6f355101068603ecc1862d7e5d41",
+        "zlib6": "0041c3f557cb4f052b39eddc559a572185b6dd2ec810bc99c4cfdeb286faeff6"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "2a504544864c8e944433c076aedf8338774b6f2562b2ad527b4a36345afbd947",
+      "stage_id": "block.0004.attn_out"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "60": 6,
+          "61": 20,
+          "62": 12,
+          "63": 8,
+          "64": 1,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "40": 2,
+          "42": 3,
+          "43": 19,
+          "44": 24,
+          "45": 49,
+          "46": 97,
+          "47": 154,
+          "48": 342,
+          "49": 589,
+          "50": 1060,
+          "51": 2037,
+          "52": 3603,
+          "53": 4308
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87424,
+        "shuffled_zlib6": 87424,
+        "zlib6": 94130
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "e2357c90aa877ef1547cca61be3957c147c9a40db35cd12a899568e1e83bcf94",
+        "zlib6": "bf56037cc0b3b33859daf36df9eca22e6799f7aeea889d2677abd87036196921"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "e68ac07cf4464b6d98d9beaf8143933b6ae9886ad4bae949f8ff30bc78fbc582",
+      "stage_id": "block.0004.mlp_up"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 128,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 6,
+          "61": 14,
+          "62": 32,
+          "63": 39,
+          "64": 36,
+          "65": 18,
+          "66": 24,
+          "67": 12,
+          "68": 5,
+          "69": 1,
+          "70": 2,
+          "71": 1,
+          "73": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 4,
+          "39": 3,
+          "40": 4,
+          "41": 6,
+          "42": 10,
+          "43": 29,
+          "44": 46,
+          "45": 110,
+          "46": 195,
+          "47": 378,
+          "48": 739,
+          "49": 1533,
+          "50": 3006,
+          "51": 6146,
+          "52": 12340,
+          "53": 24603
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 337638,
+        "shuffled_zlib6": 337638,
+        "zlib6": 372198
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "142466b64440b06afeabf1b0501fdadcdf6d4026636cc13df61f14b125858629",
+        "zlib6": "454f9b311e9c07f7cca38e89e90a44330dae22163e31935f6280048e1b692740"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "361c0c354523fbfd775a11c345c21d6265ecc62caf0503ffe640f15251ec3fa6",
+      "stage_id": "block.0004.mlp_down"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 5,
+          "61": 18,
+          "62": 13,
+          "63": 7,
+          "64": 2,
+          "65": 2
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "36": 1,
+          "40": 4,
+          "42": 5,
+          "43": 14,
+          "44": 25,
+          "45": 51,
+          "46": 79,
+          "47": 182,
+          "48": 328,
+          "49": 594,
+          "50": 1016,
+          "51": 1939,
+          "52": 3589,
+          "53": 4461
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87523,
+        "shuffled_zlib6": 87523,
+        "zlib6": 94195
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "d53838fa0b0d303b95db610dc1f9bfba9bc3df65e0bf60fbd08d4d4b6612e9aa",
+        "zlib6": "27e920441a1451c0b261c572aa90e84b6e8dff1fd267001277bba390ab122355"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "709be23261c870e4af2cd1e229140c992c136d12fce61c3be96c9e63ca412ef2",
+      "stage_id": "block.0005.qkv"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 3,
+          "61": 7,
+          "62": 24,
+          "63": 12,
+          "65": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 1,
+          "40": 3,
+          "41": 5,
+          "42": 8,
+          "43": 14,
+          "44": 34,
+          "45": 34,
+          "46": 88,
+          "47": 126,
+          "48": 289,
+          "49": 541,
+          "50": 1055,
+          "51": 1910,
+          "52": 3606,
+          "53": 4574
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87755,
+        "shuffled_zlib6": 87755,
+        "zlib6": 94199
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "b76779b7d286db9986df177dfe66b15f3801a6b2c908ea90993cae2112a9b6ff",
+        "zlib6": "1e7fcb9d5e73d4c33e4867b147abdbb308a4a468d98b0ef3d2c52b8ac53196b6"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "d5479cd7707443a14d21e83b4632eea73d487a92f9cab108711b60027099b4f6",
+      "stage_id": "block.0005.attn_out"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 48,
+        "conservative_signed_width_histogram": {
+          "59": 3,
+          "60": 6,
+          "61": 22,
+          "62": 12,
+          "63": 3,
+          "64": 2
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "35": 1,
+          "38": 2,
+          "40": 4,
+          "41": 2,
+          "42": 5,
+          "43": 13,
+          "44": 18,
+          "45": 48,
+          "46": 100,
+          "47": 141,
+          "48": 322,
+          "49": 559,
+          "50": 1018,
+          "51": 1902,
+          "52": 3552,
+          "53": 4601
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87414,
+        "shuffled_zlib6": 87414,
+        "zlib6": 94124
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "66327425036d5c46bf2759661ba41d47bdf1d7dcd289715ca04fc2f09edd5fa7",
+        "zlib6": "6aaa8ea62f13d3138b586630b66f197434e797f4ce028594e9c6cd597e14e629"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "947c0b3659e13eb1697af55030e96647e3769e30b72057c1c0384d88c3a803b5",
+      "stage_id": "block.0005.mlp_up"
+    },
+    {
+      "attempt": "prepare-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 54,
+        "conservative_signed_width_histogram": {
+          "100": 1,
+          "101": 1,
+          "102": 1,
+          "62": 9,
+          "63": 21,
+          "64": 24,
+          "65": 19,
+          "66": 21,
+          "67": 13,
+          "68": 17,
+          "69": 7,
+          "70": 10,
+          "71": 6,
+          "73": 3,
+          "74": 2,
+          "75": 5,
+          "76": 7,
+          "77": 1,
+          "78": 3,
+          "79": 2,
+          "80": 2,
+          "81": 3,
+          "82": 2,
+          "83": 2,
+          "86": 1,
+          "88": 1,
+          "89": 1,
+          "90": 1,
+          "91": 1,
+          "93": 1,
+          "94": 1,
+          "95": 1,
+          "96": 1,
+          "97": 1
+        },
+        "negative_zero_count": 7,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 2,
+          "39": 2,
+          "40": 3,
+          "41": 5,
+          "42": 19,
+          "43": 19,
+          "44": 53,
+          "45": 80,
+          "46": 171,
+          "47": 384,
+          "48": 773,
+          "49": 1549,
+          "50": 3122,
+          "51": 6063,
+          "52": 12211,
+          "53": 24689
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 340419,
+        "shuffled_zlib6": 340419,
+        "zlib6": 372996
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "d23d292149cde6aeb1187e660e43e33945396ffb3f41abe9c0d6b2f955c27c97",
+        "zlib6": "c629ad6f8c350e2eedc471fc00edef55b09bf5bad61db6c4033b7b4edbaf7545"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "8617c1f2a47e08e1d76dd28b9256328b3e4b8e9178d15b10fbda1870ea0ceb17",
+      "stage_id": "block.0005.mlp_down"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 48,
+        "conservative_signed_width_histogram": {
+          "59": 3,
+          "60": 11,
+          "61": 20,
+          "62": 7,
+          "63": 6,
+          "64": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "38": 3,
+          "39": 2,
+          "40": 3,
+          "41": 2,
+          "42": 5,
+          "43": 12,
+          "44": 36,
+          "45": 37,
+          "46": 94,
+          "47": 123,
+          "48": 283,
+          "49": 543,
+          "50": 1021,
+          "51": 1902,
+          "52": 3573,
+          "53": 4648
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87275,
+        "shuffled_zlib6": 87275,
+        "zlib6": 94087
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "aa8ceb547d8246fdb783174a6380bd902240631ae6a95db1167216972611cd35",
+        "zlib6": "a1a546ed7e58a0552fb0f0e48b1a942f49bc48bf3721c6c1700bcd58855c0128"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "e4aa1bde1aff9f0a6052da6f8465e73c60b653037573de82151fb1119fa84d69",
+      "stage_id": "block.0000.qkv"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 44,
+        "conservative_signed_width_histogram": {
+          "59": 3,
+          "60": 2,
+          "61": 11,
+          "62": 18,
+          "63": 7,
+          "64": 3,
+          "65": 3,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 2,
+          "41": 2,
+          "42": 7,
+          "43": 3,
+          "44": 16,
+          "45": 31,
+          "46": 65,
+          "47": 119,
+          "48": 251,
+          "49": 557,
+          "50": 954,
+          "51": 1856,
+          "52": 3554,
+          "53": 4871
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87407,
+        "shuffled_zlib6": 87407,
+        "zlib6": 94168
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "c68430695f0583e55d25b42fe0c6c1daf6ed21fe1752f619472367eba6690eb4",
+        "zlib6": "3a8f73ed42ee0328fc489bbff17a265bc5e8e3958bafaa30ba42af8d1404eae3"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "b10744fe8391c489939be16fc7afef6f5b55d65af09f45d3a2d530a26e294c07",
+      "stage_id": "block.0000.attn_out"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 11,
+          "61": 12,
+          "62": 12,
+          "63": 8,
+          "64": 2,
+          "65": 1,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 2,
+          "40": 4,
+          "42": 3,
+          "43": 4,
+          "44": 23,
+          "45": 59,
+          "46": 96,
+          "47": 165,
+          "48": 307,
+          "49": 597,
+          "50": 1060,
+          "51": 2001,
+          "52": 3636,
+          "53": 4331
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87369,
+        "shuffled_zlib6": 87369,
+        "zlib6": 94105
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "d6753bb51c4819eb75e00d9cc54fff83010274a6dadd273aaa1f0a7ae0bbf88b",
+        "zlib6": "b337b14c5a23011fd61a1cfb75dd97e975f7486422919158a5fbdab20ecd38b3"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "a6f6299527893941da25469af335d15138f3fceace1cdd9f07a4afc290da0ded",
+      "stage_id": "block.0000.mlp_up"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 64,
+        "conservative_signed_width_histogram": {
+          "104": 1,
+          "61": 10,
+          "62": 12,
+          "63": 20,
+          "64": 22,
+          "65": 25,
+          "66": 20,
+          "67": 15,
+          "68": 10,
+          "69": 10,
+          "70": 3,
+          "71": 4,
+          "72": 2,
+          "73": 2,
+          "74": 4,
+          "75": 4,
+          "76": 4,
+          "77": 8,
+          "78": 3,
+          "79": 5,
+          "80": 1,
+          "83": 1,
+          "84": 1,
+          "86": 1,
+          "87": 1,
+          "92": 2,
+          "99": 1
+        },
+        "negative_zero_count": 13,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 2,
+          "40": 2,
+          "41": 6,
+          "42": 7,
+          "43": 26,
+          "44": 44,
+          "45": 101,
+          "46": 202,
+          "47": 363,
+          "48": 768,
+          "49": 1547,
+          "50": 3089,
+          "51": 6140,
+          "52": 12190,
+          "53": 24652
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 340966,
+        "shuffled_zlib6": 340966,
+        "zlib6": 373278
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "1e3addef245e74828bbfae9a5aef6bb605d78a9c43dba7c30b635d1797680062",
+        "zlib6": "8e7b8c76aaa949af4e6c98dbb2388ce3e3dacf26f7d3fb93b2341029b966e003"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "2722e809e55923f9af600680673be84f72104c29ce5e27324c99d64e68223d74",
+      "stage_id": "block.0000.mlp_down"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 42,
+        "conservative_signed_width_histogram": {
+          "61": 6,
+          "62": 11,
+          "63": 14,
+          "64": 11,
+          "65": 4,
+          "66": 2
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "39": 2,
+          "40": 2,
+          "41": 3,
+          "42": 1,
+          "43": 10,
+          "44": 23,
+          "45": 44,
+          "46": 82,
+          "47": 157,
+          "48": 299,
+          "49": 489,
+          "50": 1004,
+          "51": 1868,
+          "52": 3454,
+          "53": 4849
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87555,
+        "shuffled_zlib6": 87555,
+        "zlib6": 94121
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "42e1db0f669687902734e537f18a3b70e717a05af6c9d2142baa47b46141537b",
+        "zlib6": "6bfac1139b5c79acd76c819005899602aa5782586c7d91b640f9316bcbc5deed"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "07c207cfaea8ba6e005ad3ec2ef1327e5598a19ce965259f21d5a243a7c30af9",
+      "stage_id": "block.0001.qkv"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "60": 3,
+          "61": 7,
+          "62": 23,
+          "63": 9,
+          "64": 4,
+          "66": 1,
+          "67": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "39": 2,
+          "41": 4,
+          "42": 9,
+          "43": 10,
+          "44": 19,
+          "45": 37,
+          "46": 76,
+          "47": 146,
+          "48": 263,
+          "49": 547,
+          "50": 1057,
+          "51": 1939,
+          "52": 3515,
+          "53": 4663
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87512,
+        "shuffled_zlib6": 87512,
+        "zlib6": 94153
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "38c583e5f42af167dc998f6f062f5f54ab3b2fd09861d0d118477772e0bebfc3",
+        "zlib6": "77a93f9ed6c204018fde51869b999efcac157bfef82e2e877bc33c1b48988c98"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "8426cdfe27bcacfcb6d875b87535a84705f98e8a215f610c78a513499a1e7e66",
+      "stage_id": "block.0001.attn_out"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 6,
+          "61": 14,
+          "62": 12,
+          "63": 10,
+          "64": 4,
+          "69": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "39": 1,
+          "40": 2,
+          "41": 7,
+          "42": 7,
+          "43": 8,
+          "44": 26,
+          "45": 43,
+          "46": 107,
+          "47": 180,
+          "48": 319,
+          "49": 594,
+          "50": 1136,
+          "51": 2029,
+          "52": 3521,
+          "53": 4307
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87465,
+        "shuffled_zlib6": 87465,
+        "zlib6": 94130
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "96fcd3dfe2667e3bdd298fae40ffee3ab9a9d16f6f65f141b0458f91982a3912",
+        "zlib6": "d086370b0f1ad1fa7532b9e1f33ff6928a4b5cb4d689ef7e56356e9ac3682f77"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "bf45fc309db8d6ab04e52cd4fe1efd614fc225da67ef7fa85d9d7eb6377beac9",
+      "stage_id": "block.0001.mlp_up"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 59,
+        "conservative_signed_width_histogram": {
+          "101": 1,
+          "104": 1,
+          "61": 6,
+          "62": 11,
+          "63": 23,
+          "64": 19,
+          "65": 19,
+          "66": 19,
+          "67": 14,
+          "68": 14,
+          "69": 7,
+          "70": 7,
+          "71": 6,
+          "72": 6,
+          "73": 4,
+          "74": 3,
+          "75": 4,
+          "76": 3,
+          "77": 3,
+          "79": 3,
+          "80": 2,
+          "81": 1,
+          "84": 2,
+          "87": 2,
+          "88": 2,
+          "89": 3,
+          "91": 1,
+          "93": 1,
+          "94": 1,
+          "95": 3,
+          "98": 1
+        },
+        "negative_zero_count": 19,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "39": 1,
+          "40": 6,
+          "41": 7,
+          "42": 13,
+          "43": 25,
+          "44": 50,
+          "45": 78,
+          "46": 201,
+          "47": 366,
+          "48": 765,
+          "49": 1562,
+          "50": 3123,
+          "51": 6147,
+          "52": 12318,
+          "53": 24470
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 343375,
+        "shuffled_zlib6": 343375,
+        "zlib6": 374483
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "b610b60bfc43083eaefd3197dea77c95c321c486a1bc5adf8826a2d054016877",
+        "zlib6": "d7c14d2a30f973fd861d67b414b809d9bea3cfd571aceee0e43f6f4d79c1c4f3"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "972e6e6b17fad12552eaf69e4ac16632a270db248f5753cb157f868f0262ee03",
+      "stage_id": "block.0001.mlp_down"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "60": 5,
+          "61": 7,
+          "62": 11,
+          "63": 15,
+          "64": 9,
+          "65": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "39": 1,
+          "40": 1,
+          "41": 5,
+          "42": 2,
+          "43": 7,
+          "44": 18,
+          "45": 47,
+          "46": 77,
+          "47": 164,
+          "48": 299,
+          "49": 507,
+          "50": 990,
+          "51": 1869,
+          "52": 3324,
+          "53": 4976
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87561,
+        "shuffled_zlib6": 87561,
+        "zlib6": 94164
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "d153ff2d0d35ad9bb20f463bcd9280e0a9ca64c3ea247802f611e5c09d1ed037",
+        "zlib6": "686e5f2896a78f47175a6478eb47a9d1705aa219d21abe7ffbf76e5a174b6e88"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "d67f19b831179c8512c1ea0b037ff87efef4c4bda55fa7161959f034aec6687f",
+      "stage_id": "block.0002.qkv"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "60": 9,
+          "61": 16,
+          "62": 9,
+          "63": 10,
+          "64": 2,
+          "65": 1,
+          "67": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "36": 1,
+          "38": 2,
+          "39": 2,
+          "40": 1,
+          "42": 4,
+          "43": 14,
+          "44": 31,
+          "45": 54,
+          "46": 84,
+          "47": 151,
+          "48": 301,
+          "49": 583,
+          "50": 1045,
+          "51": 1927,
+          "52": 3545,
+          "53": 4543
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87571,
+        "shuffled_zlib6": 87571,
+        "zlib6": 94161
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "b0ebc114c6dc93bd691d45378ca149479c72320f564501ef388a48ee872d219d",
+        "zlib6": "3e06a9d45b43744f09e60f34a702c6805fed9c2f2b0f07be1ea9003c2a3cab0a"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "6a2e6432af957f13c7d5a0e397d8de4b4ccec81cdabd558cca699f027c29bbb9",
+      "stage_id": "block.0002.attn_out"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 2,
+          "61": 16,
+          "62": 14,
+          "63": 9,
+          "64": 4,
+          "65": 2
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "40": 1,
+          "41": 6,
+          "42": 6,
+          "43": 16,
+          "44": 27,
+          "45": 38,
+          "46": 77,
+          "47": 165,
+          "48": 279,
+          "49": 583,
+          "50": 1070,
+          "51": 1979,
+          "52": 3545,
+          "53": 4496
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87456,
+        "shuffled_zlib6": 87456,
+        "zlib6": 94118
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "73a880ca3155b17c382c3f2851cab7cd5da3a5601eb04bb53ea87c94509a75a0",
+        "zlib6": "2fdd0c9eb6be21753334318ae7115e0d6ea38bac6709471b8b3445e89cfabe4f"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "9dad4507d167df338b0b9f9cc44594998b61b7c7c326bb69427b0a07eb59f966",
+      "stage_id": "block.0002.mlp_up"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 116,
+        "conservative_signed_width_histogram": {
+          "60": 2,
+          "61": 12,
+          "62": 23,
+          "63": 35,
+          "64": 44,
+          "65": 23,
+          "66": 20,
+          "67": 11,
+          "68": 7,
+          "69": 5,
+          "70": 6,
+          "71": 2,
+          "72": 1,
+          "78": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 2,
+          "40": 5,
+          "41": 7,
+          "42": 4,
+          "43": 20,
+          "44": 43,
+          "45": 89,
+          "46": 206,
+          "47": 388,
+          "48": 725,
+          "49": 1519,
+          "50": 3031,
+          "51": 6192,
+          "52": 12394,
+          "53": 24527
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 341103,
+        "shuffled_zlib6": 341103,
+        "zlib6": 373773
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "373ba097c38bb5703dc7809d5b2054b6bc8598aa69d43a562b29c86d7b8888bd",
+        "zlib6": "d6bc25430e53ad3919f0352bcd428a73d237d846164906a4ceb1cb8c3fc9dd45"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "61123d213e85773fbea9cd2816b39927df8fdabe0736b5124359690aa22870ad",
+      "stage_id": "block.0002.mlp_down"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 3,
+          "61": 6,
+          "62": 16,
+          "63": 10,
+          "64": 10,
+          "65": 1,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "40": 1,
+          "41": 6,
+          "42": 6,
+          "43": 16,
+          "44": 23,
+          "45": 49,
+          "46": 80,
+          "47": 151,
+          "48": 281,
+          "49": 544,
+          "50": 1028,
+          "51": 1824,
+          "52": 3410,
+          "53": 4868
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87562,
+        "shuffled_zlib6": 87562,
+        "zlib6": 94184
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "696fcdf461e9a2b654c2561c02878845161150baee57ed3989d10f69d409bf78",
+        "zlib6": "e012387223051417ede426ce0e27d37fb449cb2b2329885e3bd27b15c89477e2"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "80269098ffddc20d845226ad0fa4c18c1896c6d1c411f1a51b634d4d5ae5610c",
+      "stage_id": "block.0003.qkv"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 45,
+        "conservative_signed_width_histogram": {
+          "59": 2,
+          "60": 3,
+          "61": 6,
+          "62": 25,
+          "63": 7,
+          "64": 2,
+          "65": 3
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "36": 1,
+          "40": 2,
+          "41": 2,
+          "42": 9,
+          "43": 12,
+          "44": 20,
+          "45": 44,
+          "46": 95,
+          "47": 156,
+          "48": 317,
+          "49": 587,
+          "50": 1042,
+          "51": 1891,
+          "52": 3567,
+          "53": 4543
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87701,
+        "shuffled_zlib6": 87701,
+        "zlib6": 94204
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "a388379a67be8ec3505009d73e09a53c9b1f3b61c1a68ee89a5c737ef5727674",
+        "zlib6": "492729034dbb1d0bf99e1f19ecf0a90f4e4bfea2cfd5bbcfcdfa7af199a61222"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "205b21acd8d95cf983d11f943a435a5a31774e1477d060113fef9a31a3853e88",
+      "stage_id": "block.0003.attn_out"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 7,
+          "61": 18,
+          "62": 12,
+          "63": 4,
+          "64": 5,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 2,
+          "40": 1,
+          "41": 4,
+          "42": 4,
+          "43": 13,
+          "44": 17,
+          "45": 32,
+          "46": 87,
+          "47": 168,
+          "48": 346,
+          "49": 549,
+          "50": 1113,
+          "51": 2021,
+          "52": 3676,
+          "53": 4255
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87484,
+        "shuffled_zlib6": 87484,
+        "zlib6": 94123
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "8df5e9fc03cdbf6def08e9381c37401db78f3bac0be99201ab187df46b45f2df",
+        "zlib6": "99568ed6442e7124e769ee5dd52a70275a5733679ecc94505ae9eceaa6a2b4e5"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "743fc468e3ed2a6cbbb9a9a50a2ac2f4fad84970930d8f336e549c3c7d6e54f7",
+      "stage_id": "block.0003.mlp_up"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 119,
+        "conservative_signed_width_histogram": {
+          "60": 4,
+          "61": 15,
+          "62": 37,
+          "63": 40,
+          "64": 23,
+          "65": 17,
+          "66": 13,
+          "67": 11,
+          "68": 13,
+          "69": 7,
+          "70": 5,
+          "71": 1,
+          "72": 1,
+          "73": 1,
+          "75": 1,
+          "76": 1,
+          "80": 1,
+          "86": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "37": 1,
+          "38": 1,
+          "40": 6,
+          "41": 6,
+          "42": 8,
+          "43": 36,
+          "44": 50,
+          "45": 107,
+          "46": 203,
+          "47": 379,
+          "48": 773,
+          "49": 1578,
+          "50": 3115,
+          "51": 6132,
+          "52": 12188,
+          "53": 24569
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 339681,
+        "shuffled_zlib6": 339681,
+        "zlib6": 373055
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "9b52e09daf56d95f964b085a968de42a59b4be61e8221ca0eadece0485a3ae2e",
+        "zlib6": "127a5d9758062a08e3fe979dd7a0825dd1cd5f317209ead11282ed53e441df8b"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "76fc81768e4eaf393542f1df8155606a953d7d26fe9c9e48e864fb39d617f7bc",
+      "stage_id": "block.0003.mlp_down"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "60": 1,
+          "61": 13,
+          "62": 16,
+          "63": 13,
+          "64": 4,
+          "65": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 1,
+          "40": 2,
+          "42": 5,
+          "43": 15,
+          "44": 25,
+          "45": 39,
+          "46": 79,
+          "47": 158,
+          "48": 288,
+          "49": 559,
+          "50": 953,
+          "51": 1871,
+          "52": 3534,
+          "53": 4759
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87571,
+        "shuffled_zlib6": 87571,
+        "zlib6": 94152
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "7425def35ac007902070219898b946285bdb469f171abd899c88d9d274ae4aef",
+        "zlib6": "45676e9ab7bbdec22235ca0a3e1978584f2311fd8c0b8264afdf66325017b808"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "7384c78bea367cfb1a63fb19585b1ed37d791768358d33bd44ae5c41462d5607",
+      "stage_id": "block.0004.qkv"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "59": 2,
+          "60": 8,
+          "61": 13,
+          "62": 12,
+          "63": 8,
+          "64": 4,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "41": 3,
+          "42": 4,
+          "43": 7,
+          "44": 18,
+          "45": 39,
+          "46": 93,
+          "47": 182,
+          "48": 305,
+          "49": 556,
+          "50": 985,
+          "51": 1921,
+          "52": 3543,
+          "53": 4631
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87689,
+        "shuffled_zlib6": 87689,
+        "zlib6": 94193
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "b090f4e4f44c5340a8bfe134567ed2bd1dae6f355101068603ecc1862d7e5d41",
+        "zlib6": "0041c3f557cb4f052b39eddc559a572185b6dd2ec810bc99c4cfdeb286faeff6"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "2a504544864c8e944433c076aedf8338774b6f2562b2ad527b4a36345afbd947",
+      "stage_id": "block.0004.attn_out"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "60": 6,
+          "61": 20,
+          "62": 12,
+          "63": 8,
+          "64": 1,
+          "66": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 1,
+          "40": 2,
+          "42": 3,
+          "43": 19,
+          "44": 24,
+          "45": 49,
+          "46": 97,
+          "47": 154,
+          "48": 342,
+          "49": 589,
+          "50": 1060,
+          "51": 2037,
+          "52": 3603,
+          "53": 4308
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87424,
+        "shuffled_zlib6": 87424,
+        "zlib6": 94130
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "e2357c90aa877ef1547cca61be3957c147c9a40db35cd12a899568e1e83bcf94",
+        "zlib6": "bf56037cc0b3b33859daf36df9eca22e6799f7aeea889d2677abd87036196921"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "e68ac07cf4464b6d98d9beaf8143933b6ae9886ad4bae949f8ff30bc78fbc582",
+      "stage_id": "block.0004.mlp_up"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 128,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 6,
+          "61": 14,
+          "62": 32,
+          "63": 39,
+          "64": 36,
+          "65": 18,
+          "66": 24,
+          "67": 12,
+          "68": 5,
+          "69": 1,
+          "70": 2,
+          "71": 1,
+          "73": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 4,
+          "39": 3,
+          "40": 4,
+          "41": 6,
+          "42": 10,
+          "43": 29,
+          "44": 46,
+          "45": 110,
+          "46": 195,
+          "47": 378,
+          "48": 739,
+          "49": 1533,
+          "50": 3006,
+          "51": 6146,
+          "52": 12340,
+          "53": 24603
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 337638,
+        "shuffled_zlib6": 337638,
+        "zlib6": 372198
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "142466b64440b06afeabf1b0501fdadcdf6d4026636cc13df61f14b125858629",
+        "zlib6": "454f9b311e9c07f7cca38e89e90a44330dae22163e31935f6280048e1b692740"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "361c0c354523fbfd775a11c345c21d6265ecc62caf0503ffe640f15251ec3fa6",
+      "stage_id": "block.0004.mlp_down"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 46,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 5,
+          "61": 18,
+          "62": 13,
+          "63": 7,
+          "64": 2,
+          "65": 2
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "36": 1,
+          "40": 4,
+          "42": 5,
+          "43": 14,
+          "44": 25,
+          "45": 51,
+          "46": 79,
+          "47": 182,
+          "48": 328,
+          "49": 594,
+          "50": 1016,
+          "51": 1939,
+          "52": 3589,
+          "53": 4461
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87523,
+        "shuffled_zlib6": 87523,
+        "zlib6": 94195
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "d53838fa0b0d303b95db610dc1f9bfba9bc3df65e0bf60fbd08d4d4b6612e9aa",
+        "zlib6": "27e920441a1451c0b261c572aa90e84b6e8dff1fd267001277bba390ab122355"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "709be23261c870e4af2cd1e229140c992c136d12fce61c3be96c9e63ca412ef2",
+      "stage_id": "block.0005.qkv"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 47,
+        "conservative_signed_width_histogram": {
+          "59": 1,
+          "60": 3,
+          "61": 7,
+          "62": 24,
+          "63": 12,
+          "65": 1
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "39": 1,
+          "40": 3,
+          "41": 5,
+          "42": 8,
+          "43": 14,
+          "44": 34,
+          "45": 34,
+          "46": 88,
+          "47": 126,
+          "48": 289,
+          "49": 541,
+          "50": 1055,
+          "51": 1910,
+          "52": 3606,
+          "53": 4574
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87755,
+        "shuffled_zlib6": 87755,
+        "zlib6": 94199
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "b76779b7d286db9986df177dfe66b15f3801a6b2c908ea90993cae2112a9b6ff",
+        "zlib6": "1e7fcb9d5e73d4c33e4867b147abdbb308a4a468d98b0ef3d2c52b8ac53196b6"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "d5479cd7707443a14d21e83b4632eea73d487a92f9cab108711b60027099b4f6",
+      "stage_id": "block.0005.attn_out"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 48,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 48,
+        "conservative_signed_width_histogram": {
+          "59": 3,
+          "60": 6,
+          "61": 22,
+          "62": 12,
+          "63": 3,
+          "64": 2
+        },
+        "negative_zero_count": 0,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "35": 1,
+          "38": 2,
+          "40": 4,
+          "41": 2,
+          "42": 5,
+          "43": 13,
+          "44": 18,
+          "45": 48,
+          "46": 100,
+          "47": 141,
+          "48": 322,
+          "49": 559,
+          "50": 1018,
+          "51": 1902,
+          "52": 3552,
+          "53": 4601
+        }
+      },
+      "payload_bytes": {
+        "raw": 98304,
+        "raw_zlib_best": 87414,
+        "shuffled_zlib6": 87414,
+        "zlib6": 94124
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "66327425036d5c46bf2759661ba41d47bdf1d7dcd289715ca04fc2f09edd5fa7",
+        "zlib6": "6aaa8ea62f13d3138b586630b66f197434e797f4ce028594e9c6cd597e14e629"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "947c0b3659e13eb1697af55030e96647e3769e30b72057c1c0384d88c3a803b5",
+      "stage_id": "block.0005.mlp_up"
+    },
+    {
+      "attempt": "repair-001",
+      "exact_roundtrips": true,
+      "lattice": {
+        "block_size": 256,
+        "blocks": 192,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 54,
+        "conservative_signed_width_histogram": {
+          "100": 1,
+          "101": 1,
+          "102": 1,
+          "62": 9,
+          "63": 21,
+          "64": 24,
+          "65": 19,
+          "66": 21,
+          "67": 13,
+          "68": 17,
+          "69": 7,
+          "70": 10,
+          "71": 6,
+          "73": 3,
+          "74": 2,
+          "75": 5,
+          "76": 7,
+          "77": 1,
+          "78": 3,
+          "79": 2,
+          "80": 2,
+          "81": 3,
+          "82": 2,
+          "83": 2,
+          "86": 1,
+          "88": 1,
+          "89": 1,
+          "90": 1,
+          "91": 1,
+          "93": 1,
+          "94": 1,
+          "95": 1,
+          "96": 1,
+          "97": 1
+        },
+        "negative_zero_count": 7,
+        "note": "signed block width uses the largest exponent and smallest intrinsic dyadic power; metadata and zero signs cost extra",
+        "value_significand_width_histogram": {
+          "38": 2,
+          "39": 2,
+          "40": 3,
+          "41": 5,
+          "42": 19,
+          "43": 19,
+          "44": 53,
+          "45": 80,
+          "46": 171,
+          "47": 384,
+          "48": 773,
+          "49": 1549,
+          "50": 3122,
+          "51": 6063,
+          "52": 12211,
+          "53": 24689
+        }
+      },
+      "payload_bytes": {
+        "raw": 393216,
+        "raw_zlib_best": 340419,
+        "shuffled_zlib6": 340419,
+        "zlib6": 372996
+      },
+      "payload_sha256": {
+        "shuffled_zlib6": "d23d292149cde6aeb1187e660e43e33945396ffb3f41abe9c0d6b2f955c27c97",
+        "zlib6": "c629ad6f8c350e2eedc471fc00edef55b09bf5bad61db6c4033b7b4edbaf7545"
+      },
+      "record_id": "wikitext2:train:article-row-5326",
+      "source_sha256": "8617c1f2a47e08e1d76dd28b9256328b3e4b8e9178d15b10fbda1870ea0ceb17",
+      "stage_id": "block.0005.mlp_down"
+    }
+  ],
+  "cost_account": "archive analysis process outside empirical worker ledger",
+  "cost_scope": "through archive checks; excludes final report serialization and write",
+  "cpu_soft_cap_seconds": 60,
+  "empirical_worker_budget_charged": false,
+  "generations": {
+    "prepare-001": {
+      "attempt": "campaigns/fixed_feature_v23/attempts/prepare-001",
+      "descriptor_and_state_overhead_excluded": true,
+      "exact_state_bytes": 30458753,
+      "frozen_source_files_verified": 103,
+      "lattice_totals": {
+        "blocks": 4032,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 2810
+      },
+      "model_bytes": 22192646,
+      "model_sha256": "38a4110d02b4750fc5ab53a3dc3eda57020b20d271a3c9f68d9d6352dd688f80",
+      "payload_bytes": {
+        "raw": 8257536,
+        "raw_zlib_best": 7227611,
+        "shuffled_zlib6": 7227611,
+        "zlib6": 7864537
+      },
+      "plan_sha256": "85f965883c7a300245286cff7068cfac97b2e1689eda9fd8b785f6107f726b6e",
+      "progress_sha256": "b8a8ab34be4d6a0c49cb50c171e3fc38abf0d8beb9eb2c9a94215a419c2eec23",
+      "ratios_to_raw": {
+        "raw": 1.0,
+        "raw_zlib_best": 0.8752745371016245,
+        "shuffled_zlib6": 0.8752745371016245,
+        "zlib6": 0.95240723140656
+      },
+      "receipt_sha256": "1e2d526ab3b91812f5a4f6b8aa8335d5d11abf0675d2eafee1fd37f299d6e8aa",
+      "state_sha256": "508c36848902bddc407ff84c660b48b5704451729ae5151ad18b4f5ff1b113dc"
+    },
+    "repair-001": {
+      "attempt": "campaigns/fixed_feature_v23/attempts/repair-001",
+      "descriptor_and_state_overhead_excluded": true,
+      "exact_state_bytes": 26326066,
+      "frozen_source_files_verified": 103,
+      "lattice_totals": {
+        "blocks": 2016,
+        "blocks_width_at_most_48": 0,
+        "blocks_width_at_most_56": 0,
+        "blocks_width_at_most_64": 1372
+      },
+      "model_bytes": 22192646,
+      "model_sha256": "d27c824322d0399f99a78c2b9d7e369e6b9a547085fa1cc25f92703536962927",
+      "payload_bytes": {
+        "raw": 4128768,
+        "raw_zlib_best": 3618476,
+        "shuffled_zlib6": 3618476,
+        "zlib6": 3934494
+      },
+      "plan_sha256": "83dedbbfbe412449c1c2b26d8bfee8b0e11f7d007a97e64b8c589f1b8935d0ab",
+      "progress_sha256": "a4e07ffd55d34b05a1fb99c27b66cbe29fb7f5d71208a6aeee1504fbb775f503",
+      "ratios_to_raw": {
+        "raw": 1.0,
+        "raw_zlib_best": 0.8764057462177579,
+        "shuffled_zlib6": 0.8764057462177579,
+        "zlib6": 0.9529462541852679
+      },
+      "receipt_sha256": "02783262cb24342ffe4600e91f9535b2d737ce50e2e12ace393abd0000f5dac3",
+      "state_sha256": "01fa90da490a29a1199c3c7ce22727248d79fd8584af28c1ac1ff4acb33ac640"
+    }
+  },
+  "retained_factor_payload_pairs_equal": 24,
+  "schema": "lossless-factor-archive-probe-v29",
+  "scope": "archive byte analysis only; no neural inference, quantization, or service timing",
+  "settings": {
+    "byte_shuffle": "eight little-endian byte planes",
+    "dyadic_block_size": 256,
+    "zlib_level": 6
+  },
+  "source_sha256": {
+    "scripts/analyze_fixed_codec_v24.py": "7b6138231a13057cc8d1332be81e4f73657603b1e4a91ba28ec60b985fd7f680",
+    "scripts/analyze_lossless_probe_v29.py": "14d05434e094217b35dce497e44177139193683430fd7efcece909833dcffe30",
+    "src/compact_state.py": "af4bb17f90f497b22da1fdaf6bc5fe0656ba86c27def9f4dd80d9e785c88e829",
+    "src/fixed_factor_state.py": "e71477de4e0bb048c7c068e0a087587b37cb59d766e18d0d87cff5c3dc23c71f"
+  },
+  "speed_claim": false,
+  "status": "complete",
+  "stored_format_implemented": false,
+  "zlib_compile_version": "1.3.2",
+  "zlib_runtime_version": "1.3.2"
+}

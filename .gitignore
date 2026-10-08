@@ -62,3 +62,11 @@ local_runs/
 /campaigns/compressed*/**/phase-cpu-budget/ledger.lock
 /campaigns/compressed*/**/outputs/.*
 /campaigns/compressed_state_audit_v26/*.bin
+
+# Revision 29 retains source snapshots, receipts, and hashes for derived states.
+/campaigns/lossless_state_audit_v29/*.bin
+/campaigns/lossless_state_audit_v29b/*.bin
+/campaigns/lossless_timing_v29/attempts/*/outputs/*.bin
+/campaigns/lossless_timing_v29/attempts/*/outputs/.*
+/campaigns/lossless_timing_v29/attempts/*/worker/writer.lock
+/campaigns/lossless_timing_v29/phase-cpu-budget/ledger.lock

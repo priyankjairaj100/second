@@ -1,0 +1,298 @@
+{
+  "assumption": "One representative stage with input width3072 and output rows768; pooled retained tokens vary.",
+  "empirical_budget_charge_seconds": 0,
+  "plans": [
+    {
+      "actual_arrays_allocated": false,
+      "alternative_primal_certificate_implemented": false,
+      "backend": "current_token_space_v28",
+      "completion_guaranteed": false,
+      "fit_guaranteed": false,
+      "guarantee": "Rejection follows from a necessary single-array size. A passing result means only not ruled out by this lower bound; all other arrays, runtime, state, and work remain unbounded.",
+      "lower_bound_witnesses": [],
+      "process_cap_bytes": 6442450944,
+      "raw_full_factor_storage_bytes": 393216,
+      "raw_full_factor_values": 49152,
+      "retained_tokens": 16,
+      "ruled_out": false,
+      "single_array_lower_bound_bytes": 18874368,
+      "speed_guaranteed": false,
+      "stages": [
+        {
+          "alternative_primal_certificate_implemented": false,
+          "alternative_primal_matrix_bytes": 75497472,
+          "alternative_primal_matrix_shape": [
+            3072,
+            3072
+          ],
+          "coefficient_table_bytes": 393216,
+          "coefficient_table_shape": [
+            3072,
+            16
+          ],
+          "exceeds_process_cap": false,
+          "feature_matrix_bytes": 393216,
+          "feature_matrix_shape": [
+            3072,
+            16
+          ],
+          "logical_box_endpoint_bytes": 786432,
+          "retained_tokens": 16,
+          "rows": 768,
+          "single_array_lower_bound_bytes": 18874368,
+          "stage_id": "representative.mlp_down",
+          "token_matrix_bytes": 2048,
+          "token_matrix_shape": [
+            16,
+            16
+          ],
+          "weight_matrix_bytes": 18874368,
+          "weight_matrix_shape": [
+            768,
+            3072
+          ],
+          "width": 3072
+        }
+      ],
+      "status": "not_ruled_out_by_lower_bound",
+      "storage_scope": "Raw binary64 retained factors across all listed stages, excluding model codes, tokens, headers, metadata, temporary arrays, and deleted-source state. This is not compressed storage and is not added to the process lower bound."
+    },
+    {
+      "actual_arrays_allocated": false,
+      "alternative_primal_certificate_implemented": false,
+      "backend": "current_token_space_v28",
+      "completion_guaranteed": false,
+      "fit_guaranteed": false,
+      "guarantee": "Rejection follows from a necessary single-array size. A passing result means only not ruled out by this lower bound; all other arrays, runtime, state, and work remain unbounded.",
+      "lower_bound_witnesses": [],
+      "process_cap_bytes": 6442450944,
+      "raw_full_factor_storage_bytes": 3145728,
+      "raw_full_factor_values": 393216,
+      "retained_tokens": 128,
+      "ruled_out": false,
+      "single_array_lower_bound_bytes": 18874368,
+      "speed_guaranteed": false,
+      "stages": [
+        {
+          "alternative_primal_certificate_implemented": false,
+          "alternative_primal_matrix_bytes": 75497472,
+          "alternative_primal_matrix_shape": [
+            3072,
+            3072
+          ],
+          "coefficient_table_bytes": 3145728,
+          "coefficient_table_shape": [
+            3072,
+            128
+          ],
+          "exceeds_process_cap": false,
+          "feature_matrix_bytes": 3145728,
+          "feature_matrix_shape": [
+            3072,
+            128
+          ],
+          "logical_box_endpoint_bytes": 6291456,
+          "retained_tokens": 128,
+          "rows": 768,
+          "single_array_lower_bound_bytes": 18874368,
+          "stage_id": "representative.mlp_down",
+          "token_matrix_bytes": 131072,
+          "token_matrix_shape": [
+            128,
+            128
+          ],
+          "weight_matrix_bytes": 18874368,
+          "weight_matrix_shape": [
+            768,
+            3072
+          ],
+          "width": 3072
+        }
+      ],
+      "status": "not_ruled_out_by_lower_bound",
+      "storage_scope": "Raw binary64 retained factors across all listed stages, excluding model codes, tokens, headers, metadata, temporary arrays, and deleted-source state. This is not compressed storage and is not added to the process lower bound."
+    },
+    {
+      "actual_arrays_allocated": false,
+      "alternative_primal_certificate_implemented": false,
+      "backend": "current_token_space_v28",
+      "completion_guaranteed": false,
+      "fit_guaranteed": false,
+      "guarantee": "Rejection follows from a necessary single-array size. A passing result means only not ruled out by this lower bound; all other arrays, runtime, state, and work remain unbounded.",
+      "lower_bound_witnesses": [],
+      "process_cap_bytes": 6442450944,
+      "raw_full_factor_storage_bytes": 12582912,
+      "raw_full_factor_values": 1572864,
+      "retained_tokens": 512,
+      "ruled_out": false,
+      "single_array_lower_bound_bytes": 18874368,
+      "speed_guaranteed": false,
+      "stages": [
+        {
+          "alternative_primal_certificate_implemented": false,
+          "alternative_primal_matrix_bytes": 75497472,
+          "alternative_primal_matrix_shape": [
+            3072,
+            3072
+          ],
+          "coefficient_table_bytes": 12582912,
+          "coefficient_table_shape": [
+            3072,
+            512
+          ],
+          "exceeds_process_cap": false,
+          "feature_matrix_bytes": 12582912,
+          "feature_matrix_shape": [
+            3072,
+            512
+          ],
+          "logical_box_endpoint_bytes": 25165824,
+          "retained_tokens": 512,
+          "rows": 768,
+          "single_array_lower_bound_bytes": 18874368,
+          "stage_id": "representative.mlp_down",
+          "token_matrix_bytes": 2097152,
+          "token_matrix_shape": [
+            512,
+            512
+          ],
+          "weight_matrix_bytes": 18874368,
+          "weight_matrix_shape": [
+            768,
+            3072
+          ],
+          "width": 3072
+        }
+      ],
+      "status": "not_ruled_out_by_lower_bound",
+      "storage_scope": "Raw binary64 retained factors across all listed stages, excluding model codes, tokens, headers, metadata, temporary arrays, and deleted-source state. This is not compressed storage and is not added to the process lower bound."
+    },
+    {
+      "actual_arrays_allocated": false,
+      "alternative_primal_certificate_implemented": false,
+      "backend": "current_token_space_v28",
+      "completion_guaranteed": false,
+      "fit_guaranteed": false,
+      "guarantee": "Rejection follows from a necessary single-array size. A passing result means only not ruled out by this lower bound; all other arrays, runtime, state, and work remain unbounded.",
+      "lower_bound_witnesses": [],
+      "process_cap_bytes": 6442450944,
+      "raw_full_factor_storage_bytes": 50331648,
+      "raw_full_factor_values": 6291456,
+      "retained_tokens": 2048,
+      "ruled_out": false,
+      "single_array_lower_bound_bytes": 50331648,
+      "speed_guaranteed": false,
+      "stages": [
+        {
+          "alternative_primal_certificate_implemented": false,
+          "alternative_primal_matrix_bytes": 75497472,
+          "alternative_primal_matrix_shape": [
+            3072,
+            3072
+          ],
+          "coefficient_table_bytes": 50331648,
+          "coefficient_table_shape": [
+            3072,
+            2048
+          ],
+          "exceeds_process_cap": false,
+          "feature_matrix_bytes": 50331648,
+          "feature_matrix_shape": [
+            3072,
+            2048
+          ],
+          "logical_box_endpoint_bytes": 100663296,
+          "retained_tokens": 2048,
+          "rows": 768,
+          "single_array_lower_bound_bytes": 50331648,
+          "stage_id": "representative.mlp_down",
+          "token_matrix_bytes": 33554432,
+          "token_matrix_shape": [
+            2048,
+            2048
+          ],
+          "weight_matrix_bytes": 18874368,
+          "weight_matrix_shape": [
+            768,
+            3072
+          ],
+          "width": 3072
+        }
+      ],
+      "status": "not_ruled_out_by_lower_bound",
+      "storage_scope": "Raw binary64 retained factors across all listed stages, excluding model codes, tokens, headers, metadata, temporary arrays, and deleted-source state. This is not compressed storage and is not added to the process lower bound."
+    },
+    {
+      "actual_arrays_allocated": false,
+      "alternative_primal_certificate_implemented": false,
+      "backend": "current_token_space_v28",
+      "completion_guaranteed": false,
+      "fit_guaranteed": false,
+      "guarantee": "Rejection follows from a necessary single-array size. A passing result means only not ruled out by this lower bound; all other arrays, runtime, state, and work remain unbounded.",
+      "lower_bound_witnesses": [
+        [
+          "representative.mlp_down",
+          "dense_token_matrix",
+          549755813888
+        ]
+      ],
+      "process_cap_bytes": 6442450944,
+      "raw_full_factor_storage_bytes": 6442450944,
+      "raw_full_factor_values": 805306368,
+      "retained_tokens": 262144,
+      "ruled_out": true,
+      "single_array_lower_bound_bytes": 549755813888,
+      "speed_guaranteed": false,
+      "stages": [
+        {
+          "alternative_primal_certificate_implemented": false,
+          "alternative_primal_matrix_bytes": 75497472,
+          "alternative_primal_matrix_shape": [
+            3072,
+            3072
+          ],
+          "coefficient_table_bytes": 6442450944,
+          "coefficient_table_shape": [
+            3072,
+            262144
+          ],
+          "exceeds_process_cap": true,
+          "feature_matrix_bytes": 6442450944,
+          "feature_matrix_shape": [
+            3072,
+            262144
+          ],
+          "logical_box_endpoint_bytes": 12884901888,
+          "retained_tokens": 262144,
+          "rows": 768,
+          "single_array_lower_bound_bytes": 549755813888,
+          "stage_id": "representative.mlp_down",
+          "token_matrix_bytes": 549755813888,
+          "token_matrix_shape": [
+            262144,
+            262144
+          ],
+          "weight_matrix_bytes": 18874368,
+          "weight_matrix_shape": [
+            768,
+            3072
+          ],
+          "width": 3072
+        }
+      ],
+      "status": "ruled_out_by_lower_bound",
+      "storage_scope": "Raw binary64 retained factors across all listed stages, excluding model codes, tokens, headers, metadata, temporary arrays, and deleted-source state. This is not compressed storage and is not added to the process lower bound."
+    }
+  ],
+  "schema": "static_calibration_admission_plans_v1",
+  "scope": "Exact integer dimension analysis only; no numerical arrays, models, or empirical workers.",
+  "software_validation": {
+    "command": "python -m unittest tests.test_calibration_admission_v29 -v",
+    "count": 8,
+    "reported_elapsed_seconds": 0.001,
+    "scope": "Software fixtures, separate from empirical accounting.",
+    "status": "passed"
+  },
+  "source_sha256": "52a633de0b97150a3cbee55ee6f03f310eec4157da87294abe8786432615a692",
+  "test_sha256": "1c1b0f4836e34c7bb39ab686fae26e2ec4c612785f97508e1b8910a0f7c3505d"
+}
