@@ -1,0 +1,13 @@
+test_compact_immutable_prefix_matches_reference (tests.test_prepared_finite_v12.PreparedFiniteTests.test_compact_immutable_prefix_matches_reference) ... ok
+test_external_mutation_cannot_change_captured_codes (tests.test_prepared_finite_v12.PreparedFiniteTests.test_external_mutation_cannot_change_captured_codes) ... ok
+test_repeated_records_match_complete_original_path (tests.test_prepared_finite_v12.PreparedFiniteTests.test_repeated_records_match_complete_original_path) ... ok
+test_all_storage_types_and_strides_match_original_bits (tests.test_prepared_finite_v22.PreparedCompactTests.test_all_storage_types_and_strides_match_original_bits) ... ok
+test_compact_setup_does_not_iterate_exact_values (tests.test_prepared_finite_v22.PreparedCompactTests.test_compact_setup_does_not_iterate_exact_values) ... ok
+test_compact_subclass_cannot_bypass_value_validation (tests.test_prepared_finite_v22.PreparedCompactTests.test_compact_subclass_cannot_bypass_value_validation) ... ok
+test_mixed_representations_retain_original_validation (tests.test_prepared_finite_v22.PreparedCompactTests.test_mixed_representations_retain_original_validation) ... ok
+test_stage_shape_and_immutable_capture (tests.test_prepared_finite_v22.PreparedCompactTests.test_stage_shape_and_immutable_capture) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.295s
+
+OK

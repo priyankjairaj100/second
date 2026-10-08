@@ -38,3 +38,14 @@ local_runs/
 /pilots/v17/attempt-*/outputs/*.bin
 /pilots/v17/attempt-*/writer.lock
 /pilots/v17/attempt-*/phase-cpu-budget/ledger.lock
+
+# Revisions 20 and 21 publish code, protocols, receipts, and artifact hashes.
+/pilots/v20/attempt-*/outputs/*.bin
+/pilots/v20/attempt-*/writer.lock
+/pilots/v20/attempt-*/phase-cpu-budget/ledger.lock
+/pilots/v21/attempt-*/outputs/*.bin
+/pilots/v21/attempt-*/writer.lock
+/pilots/v21/attempt-*/phase-cpu-budget/ledger.lock
+
+# Revision 22 derived state conversion artifacts are reconstructible.
+/pilots/v22/**/*.bin

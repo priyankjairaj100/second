@@ -1,3 +1,14 @@
+# Latest project decision: 8 October 2026
+
+Read RESUME.md and docs/EMPIRICAL_REEVALUATION_V20_V21.md for the active checkpoint.
+Revision 22 adds minimal fixed-factor state and a common evaluator setup optimization.
+The fixed-feature target differs explicitly from the original sequential quantizer.
+Its two-article quality screen passed, while reliable complete repair speed remains unmeasured.
+Forty-nine focused tests pass; the empirical allowance has 25 CPU seconds remaining.
+The historical context below preserves earlier decisions and failures.
+
+---
+
 # Current checkpoint: revision 15 complete dyadic repair verified
 
 Updated 7 October 2026. Implementation, experiments here, and GitHub pushes are authorized.

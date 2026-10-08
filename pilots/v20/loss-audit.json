@@ -1,0 +1,59 @@
+{
+  "schema": "negative-result-audit-v20",
+  "v17_complete_runs": [
+    {
+      "id": "attempt-002",
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "runtime_sha256": "51af8d7f6901c220fd3e9c0222a60d67b7e12006c81d19fb714adcb906bac553",
+      "backend": "native_ball",
+      "method": "direct_fresh"
+    },
+    {
+      "id": "attempt-003",
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "runtime_sha256": "51af8d7f6901c220fd3e9c0222a60d67b7e12006c81d19fb714adcb906bac553",
+      "backend": "native_ball",
+      "method": "repair"
+    },
+    {
+      "id": "attempt-004",
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "runtime_sha256": "51af8d7f6901c220fd3e9c0222a60d67b7e12006c81d19fb714adcb906bac553",
+      "backend": "native_ball",
+      "method": "model_only_fresh"
+    },
+    {
+      "id": "attempt-005",
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "runtime_sha256": "51af8d7f6901c220fd3e9c0222a60d67b7e12006c81d19fb714adcb906bac553",
+      "backend": "reference",
+      "method": "model_only_fresh"
+    },
+    {
+      "id": "attempt-006",
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "runtime_sha256": "51af8d7f6901c220fd3e9c0222a60d67b7e12006c81d19fb714adcb906bac553",
+      "backend": "native_ball",
+      "method": "model_only_fresh"
+    },
+    {
+      "id": "attempt-007",
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "runtime_sha256": "51af8d7f6901c220fd3e9c0222a60d67b7e12006c81d19fb714adcb906bac553",
+      "backend": "native_ball",
+      "method": "direct_fresh"
+    }
+  ],
+  "all_v17_runtime_same": true,
+  "code_source_equal": "verified in pilots/v17/verified-complete-analysis.json",
+  "main_findings": [
+    "v17 old comparative workers share one runtime; later processor change does not explain their loss",
+    "Common native acceleration reached cold and warm reconstruction controls",
+    "Prior candidate agreement does not remove accumulator work",
+    "Current-factor identity state repeats every retained neural stage after first changed ancestor",
+    "Single complete-model observations cannot establish population superiority or infer negative cost from faster state construction",
+    "New v20 dependency and accounting fixes do not alter archived v17 results"
+  ],
+  "potential_redesign": "Shifted centers or an explicit new fixed-anchor calibration target require separate proof, matched controls, and quality validation",
+  "hidden_or_discarded_failures": false
+}

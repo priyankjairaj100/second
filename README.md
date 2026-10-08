@@ -8,41 +8,47 @@ It does not claim native GPTQ or CUDA equivalence.
 
 ## Current state
 
-Revision 19 adds [finite affine bounds from anchor summaries](docs/ANCHOR_AFFINE_V19.md).
-The bound avoids retained token dot products after preparation.
-Fifteen focused tests passed.
-A complete transformer provider and useful empirical acceptance remain open.
+Revisions 20–22 reassess the remaining speed losses and implement a separate fixed-feature calibration target.
+The original sequential target still lacks a demonstrated full-model repair advantage.
+The [reassessment report](docs/EMPIRICAL_REEVALUATION_V20_V21.md) separates implementation defects from structural limits.
 
+The new target makes retained feature reuse exact.
+It changes the original sequential calibration rule explicitly.
+A complete DistilGPT2 model passed a tiny, prospectively registered quality screen.
+Its aggregate perplexity ratio to the archived sequential model was **0.98167**.
+That screen contains only two articles and thirty predictions.
+The individual ratios were **0.88282** and **1.09159**.
+It does not establish broad quality.
 
-Revision 18 adds [direct dyadic box certification and bounded record refinement](docs/BOX_REFINEMENT_V18.md).
-The focused suite passed 29 tests.
-These components still require valid transformer bounds and complete transport integration.
-An archive audit found no reusable complete factor after an ancestor changed in the measured pilot.
-No new model run occurred.
+The optional [minimal factor state](docs/FIXED_FACTOR_V22.md) reduced archived storage by **51.34%**.
+State size fell from 54,107,392 to 26,326,066 bytes.
+All model codes and feature bytes remained equal.
+Fresh preparation avoids unused transformer-bound summaries.
+The [common evaluator optimization](docs/EVALUATOR_SETUP_V22.md) removes redundant exact-value scans.
+The final focused suite passed **49 tests**.
 
+The original route received a complete anchor provider and service.
+A real-data witness rejects its current anchor-centered constant-output certificate at the checked stage.
+Tightening those radii cannot remove the witnessed contradiction.
+This does not reject every target-preserving repair algorithm.
 
-Revision 17 adds an exact native ball certificate.
-Twelve stage comparisons and six complete transactions matched their exact references.
-Original and retained canonical states matched byte-for-byte.
-The final focused regression passed 32 tests.
+Reliable repair speed, larger quality validation, lifetime cost, and a defensible novel contribution remain open.
+Equally indexed reconstruction shares the fixed-feature optimization.
+Its expected tie remains visible.
+The earlier native kernel improvement also remains available to all compatible comparators.
 
-The shared kernel improved complete cold reconstruction from 194.774 seconds to 71.860 seconds in one matched pilot.
-Repair took 84.225 seconds.
-A separate native complete-state reconstruction took 65.853 seconds.
-Repair therefore has no demonstrated advantage over optimized reconstruction.
-It still recalculates all retained features.
-
-The earlier positive quality pilot used four articles and sixty predictions.
-No new quality or confirmation data were evaluated.
-Useful transport, reliable repair speed, and all forty scientific cells remain open.
-
-Start with [RESUME.md](RESUME.md), [current results](docs/EMPIRICAL_PILOT_V17.md), and [remaining tasks](docs/RESEARCH_TODO.md).
-Read [the native proof](docs/NATIVE_BALL_PROOF_V17.md) and [its review](docs/NATIVE_BALL_REVIEW_V17.md).
-The [work theorem](docs/BLOCK_LOW_RANK_DESIGN_V17.md) explains the current replay obstruction.
-The [novelty audit](docs/NOVELTY_AUDIT_V16.md) separates established quantization principles from proposed contributions.
-All workers are settled. The inherited allowance has 291 CPU seconds remaining.
+Start with [RESUME.md](RESUME.md), [verified results](pilots/v21/summary.json), and [remaining tasks](docs/RESEARCH_TODO.md).
+All workers are settled.
+The original allowance has **25 CPU seconds remaining**.
+No complete empirical program or confirmation success is claimed.
 
 ## Current implementations
+
+- [Complete sequential anchor provider](docs/ANCHOR_TRANSFORMER_V20.md)
+- [Canonical sequential anchor service](docs/ANCHOR_SERVICE_V20.md)
+- [Explicit fixed-feature target and service](docs/FIXED_ANCHOR_V21.md)
+- [Minimal fixed-factor state](docs/FIXED_FACTOR_V22.md)
+- [Shared evaluator setup](docs/EVALUATOR_SETUP_V22.md)
 
 - [Canonical compact state](docs/COMPACT_STATE_V13.md)
 - [Exact dyadic state encoding](docs/COMPACT_DYADIC_STATE_V15.md)

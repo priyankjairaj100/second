@@ -1,0 +1,29 @@
+{
+  "all_code_bytes_equal": true,
+  "all_factor_bytes_equal": true,
+  "archived_state_bytes_after": 26326066,
+  "archived_state_bytes_before": 54107392,
+  "archived_state_fraction_saved": 0.5134478852723118,
+  "canonical_roundtrip": true,
+  "charged_cpu_seconds": 10775,
+  "empirical_model_runs": 0,
+  "evaluator_scope": "exact-type compact prefixes skip redundant element scans; other types retain original validation",
+  "model_repair_speedup_measured": false,
+  "novelty_established": false,
+  "remaining_cpu_seconds": 25,
+  "review": "docs/FIXED_FACTOR_REVIEW_V22.md",
+  "schema": "fixed-factor-and-evaluator-summary-v22",
+  "scientific_program_complete": false,
+  "software_test_log": "pilots/v22/software-tests.txt",
+  "software_tests": 49,
+  "source_sha256": {
+    "src/fixed_anchor_service.py": "3aa12be78b03b6be1887e5cc3b5ecbe12ca0a1f61584d1b299ca3d429e6a7278",
+    "src/fixed_anchor_target.py": "09cb327fcbb91fc3a747d4891a1358043356d293927719e586e4344b0146acea",
+    "src/fixed_factor_state.py": "e71477de4e0bb048c7c068e0a087587b37cb59d766e18d0d87cff5c3dc23c71f",
+    "src/prepared_finite.py": "638ce87d51c49c682e02ea3e11891f3bc1d922cce55c0501ab1b5ddfc92e22e4",
+    "tests/test_fixed_factor_v22.py": "af0d4bcacbbe9e2516d0d822f8801a394020fc28e23d5d4d4f4bf76bf8b20b2a",
+    "tests/test_prepared_finite_v22.py": "b5c3872819cb37e6d8debee2ff52d117370b6ac0fd73df95d83a88c83b592a3e"
+  },
+  "storage_audit": "pilots/v22/factor-storage-audit.json",
+  "target_changed_from_v21": false
+}

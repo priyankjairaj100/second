@@ -1,3 +1,69 @@
+# Active tasks after revision 22
+
+Updated 8 October 2026. This list supersedes historical blockers closed by revisions 20–22.
+Read EMPIRICAL_REEVALUATION_V20_V21.md before interpreting previous pilot results.
+
+Completed:
+
+- Complete finite transformer anchor provider, canonical state, and bounded fallback service.
+- Adversarial integration review and target-isolation fix.
+- Real-data rejection witness for the checked anchor-centered certificate.
+- Separate fixed-feature target, exact fresh/repair/indexed services, and canonical repeated deletion.
+- A complete changed-target model and its registered tiny quality screen.
+- A minimal factor state with exact archival byte equivalence and 51.34% lower storage.
+- A shared evaluator setup optimization with bitwise equivalence tests.
+- Forty-nine focused tests and preserved source/receipt evidence.
+
+Remaining, in dependency order:
+
+1. Select and justify the final research contribution.
+   The fixed-feature track currently has the clearest executable work-saving mechanism.
+   Fixed features, caching, and matrix subtraction alone are established ingredients.
+   A current primary-literature comparison and a useful quality–storage–repair result remain necessary.
+2. Freeze a new prospective protocol for that explicit target.
+   Preserve the twelve article exclusions and existing adverse evidence.
+   Do not reinterpret old sequential-target results as changed-target wins.
+   Specify a new funded execution envelope before larger experiments.
+   The existing feasibility allowance has only 25 CPU seconds remaining.
+3. Measure complete matched transactions with the minimal factor backend.
+   Include original preparation, real nonempty deletion, complete model/state output, parsing, validation, and fallback.
+   Include cold replay, warm replay, equally indexed reconstruction, and complete fresh state.
+   Give compatible optimizations to every comparator.
+   An equally indexed tie is expected; reliable advantage over optimized replay remains unproved.
+4. Pass larger quality screens using previously unused inputs.
+   Match bit budgets, grids, calibration records, and evaluation procedures.
+   Compare fixed calibration, sequential calibration, nearest rounding, and full precision.
+   Include both article-level outcomes and aggregate estimates with justified uncertainty.
+   Thirty predictions do not close this gate.
+5. Establish repeated-request and preparation-inclusive lifetime cost.
+   Include state size, retained feature reads, deletion size, deletion count, and storage amortization.
+   Verify canonical states after sequential, combined, no-op, and complete deletion on real models.
+6. Complete the declared second-model and second-corpus inventories.
+   Acquire GPT-2 weights and the intended C4 frame with pinned provenance.
+   Freeze disjoint development and confirmation records.
+7. Pilot every scientific cell before expansion.
+   The historical forty-cell plan requires an explicit target/comparator update before reuse.
+   No broad cell or confirmation has yet been promoted.
+   Include model scale, precision, calibration size, request size, repeated deletion, ablations, and shifted distributions.
+8. Freeze the supported primary claim and final confirmation design.
+   Specify the sampling law, estimator, uncertainty method, and justified sample size prospectively.
+   Complete independent confirmation, paper figures, limitations, and reproducibility review.
+
+Deferred target-preserving route:
+
+Use signed shifted or correlated feature corrections that exclude the witnessed anchor endpoint.
+First prove finite-arithmetic containment and a useful full-model cost ceiling.
+Reject a predictor whose dense correction already repeats the entire retained traversal.
+Do not resume symmetric anchor-centered tuning for the already witnessed stage.
+
+No theorem currently proves reliable complete-model wall-time superiority.
+The paper and empirical program are not finished.
+GitHub pushes remain authorized; never force-push.
+
+---
+
+Historical task registers follow.
+
 # Current checkpoint: revision 19 affine anchor bounds
 
 Updated 8 October 2026, Asia/Calcutta.

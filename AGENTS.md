@@ -1,3 +1,55 @@
+# Current checkpoint: revision 22 reassessment and fixed-feature redesign
+
+Updated 8 October 2026, Asia/Calcutta.
+Read docs/EMPIRICAL_REEVALUATION_V20_V21.md and pilots/v21/summary.json first.
+Then read docs/FIXED_FACTOR_V22.md and docs/FIXED_FACTOR_REVIEW_V22.md.
+
+The original sequential target remains correct but has no demonstrated full-model repair advantage.
+Revision 20 completed its transformer anchor provider and canonical repair service.
+Its real-data endpoint witness found 252 unequal codes among 12,288 checked values.
+That witness rejects any constant-output certificate containing both checked feature matrices.
+Tighter anchor-centered radii cannot resolve this specific obstruction.
+Shifted transport remains a distinct, unproved efficiency route.
+
+Revision 21 implements an explicitly different fixed-feature calibration target.
+Surviving source features remain unchanged after other sources are removed.
+A complete DistilGPT2 model passed its registered tiny quality gate.
+Its fixed/sequential perplexity ratio was 0.9816692689537777 across thirty predictions.
+The article ratios were 0.8828194453522271 and 1.091587366682615.
+One article improved and one worsened.
+This is development evidence, not population quality or confirmation.
+
+Revision 22 removes unnecessary scalar summaries from an optional fixed-factor state.
+The archived state shrank from 54,107,392 to 26,326,066 bytes.
+All model-code and feature bytes remained equal.
+Fresh preparation now avoids constructing the unused scalar tape.
+A common evaluator shortcut also removes redundant exact-value scans.
+The final focused suite passed 49 tests.
+Neither optimization has new full-model repair timing evidence.
+
+Repair and equally indexed reconstruction share the same feature access and numerical path.
+Their expected tie must not become a strict superiority requirement.
+A useful indexed-service benefit still needs complete comparison against optimized replay.
+Charge preparation, storage, loading, verification, output, fallback, and repeated requests.
+Fixed features and cached factors alone do not establish novelty.
+
+All empirical workers are settled.
+The original 10,800-second allowance has 10,775 seconds charged and 25 seconds remaining.
+No budget was reset.
+All twelve evaluated articles remain excluded from future confirmation.
+No broader scientific cell or confirmation was promoted.
+The forty-cell program, reliable speed, larger quality, and a strong novelty claim remain open.
+
+Sources, protocols, receipts, interrupted/failed attempts, and exact hashes are preserved.
+Binary model and state artifacts remain ignored; their code and reconstruction instructions are committed.
+The user authorized repository pushes. Never force-push.
+Historical status and location restrictions below yield to this checkpoint and current user instructions.
+Follow current developer instructions for delegation.
+
+---
+
+Historical checkpoints follow.
+
 # Current checkpoint: revision 19 affine anchor bounds
 
 Updated 8 October 2026, Asia/Calcutta.

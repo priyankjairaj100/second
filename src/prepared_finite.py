@@ -7,6 +7,7 @@ This is common evaluation infrastructure, not a repair-speed certificate.
 """
 from types import MappingProxyType
 from .certified_transformer import CertifiedDecoder,_StageWeights,_Finite,_execute
+from .compact_exact import CompactDyadicMatrix
 from .ordered_finite import FiniteWeights
 from .finite_primitives import primitive_scope
 from .transformer_backend import _check_runtime
@@ -21,7 +22,25 @@ class PreparedFinitePrefix:
         if type(decoder) is not CertifiedDecoder:raise TypeError('requires the declared certified decoder')
         _check_runtime()
         self.decoder=decoder
-        self.installed=MappingProxyType(decoder.base._prefix(prefix))
+        # Exact-type compact matrices already validate immutable finite storage.
+        # Their iterator creates Fractions, but scanning every value adds no
+        # validation beyond that storage invariant. Keep the original path for
+        # other representations and preserve stage/shape checks here.
+        if prefix is None:
+            installed={}
+        else:
+            unknown=set(prefix)-set(decoder.stage_ids)
+            if unknown:raise ValueError(f"unknown installed stages: {sorted(unknown)}")
+            compact={stage:value for stage,value in prefix.items()
+                     if type(value) is CompactDyadicMatrix}
+            installed=decoder.base._prefix({stage:value for stage,value in prefix.items()
+                                          if type(value) is not CompactDyadicMatrix})
+            for stage,value in compact.items():
+                base=decoder.base._weights[stage]
+                if value.shape!=(len(base),len(base[0])):
+                    raise ValueError(f"installed {stage} must have shape {len(base)} by {len(base[0])}")
+                installed[stage]=value.floats()
+        self.installed=MappingProxyType(installed)
         self._sealed=True
 
     def logits(self,tokens):
