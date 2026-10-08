@@ -1,0 +1,86 @@
+{
+  "alp": {
+    "checked_commit": "31ca0ed11c93c99d3f5b5c30e01a3e1c3832d3ce",
+    "clang_plus_plus_path": null,
+    "cmake_sha256": "f16ef04f985a95e13ec01c2ae8217b210377b4c7f96db994e59aa7a1b27d3ec7",
+    "measured": false,
+    "observed_commit": "31ca0ed11c93c99d3f5b5c30e01a3e1c3832d3ce",
+    "official_repository": "https://github.com/cwida/ALP",
+    "reason": "official CMake requires Clang; clang++ is absent from PATH; no substitute or emulation measured",
+    "remaining": "build the pinned official implementation with supported Clang, then add source-local bitwise checks",
+    "status": "unavailable_supported_compiler"
+  },
+  "complete_service_timing": false,
+  "cost_account": "archive analysis outside empirical worker ledgers; includes child codec CPU",
+  "cpu_soft_cap_seconds": 60,
+  "empirical_worker_budget_charged": false,
+  "generations": [
+    "prepare-001",
+    "repair-001"
+  ],
+  "methods": [
+    "raw",
+    "zlib6",
+    "shuffle_zlib6",
+    "zstd3",
+    "shuffle_zstd3",
+    "zstd9",
+    "shuffle_zstd9",
+    "fpc8",
+    "fpc20"
+  ],
+  "per_factor_selection": "minimize actual descriptor bytes; ties follow the registered method order",
+  "runtime": {
+    "canonical_scope": "this encoder and the hash-bound trusted runtime",
+    "fpc_binary_sha256": "2a77402b2e52e1ad51adaa29e608a390c838bb5cf0e282034249cbd553145d9d",
+    "fpc_official_source_sha256": "f826ebc3d5aeece2b86bf5062a4ed4122f6605a66c5bfec813ddb44d2fc5843b",
+    "fpc_settings": {
+      "address_limit_bytes": 268435456,
+      "cpu_limit_seconds": 2,
+      "levels": [
+        8,
+        20
+      ],
+      "wall_timeout_seconds": 5
+    },
+    "schema": "archive-lossless-controls-runtime-v30",
+    "source_sha256": {
+      "compact_state.py": "af4bb17f90f497b22da1fdaf6bc5fe0656ba86c27def9f4dd80d9e785c88e829",
+      "lossless_controls_v30.py": "e62dee3ef628b7bef926f24e366fe6b78df4b6d96c355a25dc7b5ae7bcd0c527",
+      "run_store.py": "369345e6342763262f7e894c18d82b544c81f9c6da1b5f76c979107c144d7e10"
+    },
+    "zlib_binary_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+    "zlib_version": "1.3.2",
+    "zstandard_backend": "cext",
+    "zstandard_binary_sha256": "7eb41c8b36cd99ed6c67e39f8574e42472687a14c6038c512bb3a90b7082616d",
+    "zstandard_package_version": "0.25.0",
+    "zstandard_settings": {
+      "checksum": true,
+      "content_size": true,
+      "dict_id": false,
+      "levels": [
+        3,
+        9
+      ],
+      "threads": 0
+    },
+    "zstandard_version": [
+      1,
+      5,
+      7
+    ]
+  },
+  "runtime_sha256": "e51acc57a94deaa7bbc6fbd9d12cc4db03222aedf4f24e4235cae6908d1e1ba2",
+  "schema": "lossless-archive-controls-plan-v30",
+  "scope": "saved real factor bytes only; no model inference, quantization, service, or quality evaluation",
+  "setup_sha256": "9d83c5d246d4d3ff4174e4a059d8449e899508d4461bfea5a66fa698c8c8348b",
+  "source_sha256": {
+    "scripts/analyze_fixed_codec_v24.py": "7b6138231a13057cc8d1332be81e4f73657603b1e4a91ba28ec60b985fd7f680",
+    "scripts/analyze_lossless_controls_v30.py": "daefbb5840c250b77954a50b63057d7646ffb7cf156ad7891ddb806c014990b4",
+    "src/compact_state.py": "af4bb17f90f497b22da1fdaf6bc5fe0656ba86c27def9f4dd80d9e785c88e829",
+    "src/fixed_factor_state.py": "e71477de4e0bb048c7c068e0a087587b37cb59d766e18d0d87cff5c3dc23c71f",
+    "src/lossless_controls_v30.py": "e62dee3ef628b7bef926f24e366fe6b78df4b6d96c355a25dc7b5ae7bcd0c527",
+    "src/run_store.py": "369345e6342763262f7e894c18d82b544c81f9c6da1b5f76c979107c144d7e10",
+    "tests/test_lossless_controls_v30.py": "0da1da254d58a410250e4b2df6fadb23b3bff960107b1e22a05f0cf85f1dff27"
+  }
+}

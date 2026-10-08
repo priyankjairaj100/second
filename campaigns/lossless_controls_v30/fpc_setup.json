@@ -1,0 +1,42 @@
+{
+  "algorithm_changes": false,
+  "combined_cpu_ns_since_imports": 883839389,
+  "compiler_binary_sha256": "6117c52522997d2aaccb2b52b3c6bf42c0a6c5edb1d718431fed6b2fc5fec234",
+  "compiler_command": [
+    "/usr/bin/gcc",
+    "-O3",
+    "/tmp/v30_fpc_measured_setup/fpc.c",
+    "-o",
+    "/tmp/v30_fpc_measured_setup/fpc"
+  ],
+  "compiler_stderr": "",
+  "compiler_stdout": "",
+  "compiler_version": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "cost_scope": "setup through source verification and compilation; excludes final receipt write",
+  "files": {
+    "FPClicense.pdf": {
+      "bytes": 19633,
+      "sha256": "88cc4b914c62f76dd46d8dfe7fc10681293e07b77b49c0e43434b4c92b5db780",
+      "url": "https://userweb.cs.txstate.edu/~burtscher/research/FPC/FPClicense.pdf"
+    },
+    "fpc": {
+      "bytes": 16552,
+      "sha256": "2a77402b2e52e1ad51adaa29e608a390c838bb5cf0e282034249cbd553145d9d"
+    },
+    "fpc.c": {
+      "bytes": 12078,
+      "sha256": "431f921e37c44d473551388791853afa4224b94305b4a499db55af00b692ffe8"
+    },
+    "fpc.original.c": {
+      "bytes": 12021,
+      "sha256": "f826ebc3d5aeece2b86bf5062a4ed4122f6605a66c5bfec813ddb44d2fc5843b",
+      "url": "https://userweb.cs.txstate.edu/~burtscher/research/FPC/fpc.c"
+    }
+  },
+  "license": "official noncommercial research and teaching terms; notice remains in compiled source",
+  "redistributed_vendor_source": false,
+  "schema": "official-fpc-setup-v30",
+  "source_change": "remove email Subject header; add dated change notice",
+  "status": "complete",
+  "wall_ns_since_imports": 19687686660
+}

@@ -70,3 +70,23 @@ local_runs/
 /campaigns/lossless_timing_v29/attempts/*/outputs/.*
 /campaigns/lossless_timing_v29/attempts/*/worker/writer.lock
 /campaigns/lossless_timing_v29/phase-cpu-budget/ledger.lock
+
+# Revision 30 preserves scientific receipts and reconstruction code.
+/campaigns/research_v30/**/outputs/*.bin
+/campaigns/research_v30/**/worker/writer.lock
+/campaigns/research_v30/**/phase-cpu-budget/ledger.lock
+/campaigns/full_service_v30/**/outputs/*.bin
+/campaigns/full_service_v30/**/worker/writer.lock
+/campaigns/full_service_v30/**/phase-cpu-budget/ledger.lock
+/campaigns/quality_followup_v30/**/outputs/*.bin
+/campaigns/ordered_service_v30/**/outputs/*.bin
+/campaigns/ordered_service_v30/**/worker-writer.lock
+/campaigns/ordered_service_v30/**/phase-ledger.lock
+/campaigns/quality_extensions_v30/**/outputs/*.bin
+/campaigns/quality_extensions_v30/**/worker-writer.lock
+/campaigns/quality_extensions_v30/**/phase-ledger.lock
+/campaigns/compressed_service_v30/**/outputs/*.bin
+/campaigns/compressed_service_v30/**/worker-writer.lock
+/campaigns/compressed_service_v30/**/phase-ledger.lock
+/campaigns/quality_followup_v30/**/worker/writer.lock
+/campaigns/quality_followup_v30/**/phase-cpu-budget/ledger.lock

@@ -1,0 +1,27 @@
+{
+  "child_cpu_ns": 787990000,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_lossless_controls_v30.py",
+    "-v"
+  ],
+  "empirical_worker_budget_charged": false,
+  "fpc_binary_sha256": "2a77402b2e52e1ad51adaa29e608a390c838bb5cf0e282034249cbd553145d9d",
+  "returncode": 0,
+  "schema": "lossless-controls-software-check-v30",
+  "scope": "software fixtures; excludes test-controller overhead",
+  "source_sha256": {
+    "src/lossless_controls_v30.py": "e62dee3ef628b7bef926f24e366fe6b78df4b6d96c355a25dc7b5ae7bcd0c527",
+    "tests/test_lossless_controls_v30.py": "0da1da254d58a410250e4b2df6fadb23b3bff960107b1e22a05f0cf85f1dff27"
+  },
+  "sources_unchanged": true,
+  "stderr": "test_duplicate_keys_and_noncanonical_json_rejected (test_lossless_controls_v30.LosslessControlsTests.test_duplicate_keys_and_noncanonical_json_rejected) ... ok\ntest_every_available_method_preserves_all_finite_edge_bits (test_lossless_controls_v30.LosslessControlsTests.test_every_available_method_preserves_all_finite_edge_bits) ... ok\ntest_missing_fpc_is_explicit (test_lossless_controls_v30.LosslessControlsTests.test_missing_fpc_is_explicit) ... ok\ntest_runtime_binding_and_source_hash_rejected (test_lossless_controls_v30.LosslessControlsTests.test_runtime_binding_and_source_hash_rejected) ... ok\ntest_size_limits_and_nonfinite_source_rejected (test_lossless_controls_v30.LosslessControlsTests.test_size_limits_and_nonfinite_source_rejected) ... ok\ntest_source_local_determinism (test_lossless_controls_v30.LosslessControlsTests.test_source_local_determinism) ... ok\ntest_tampering_requires_matching_trusted_digest (test_lossless_controls_v30.LosslessControlsTests.test_tampering_requires_matching_trusted_digest) ... ok\ntest_truncated_and_extra_streams_rejected (test_lossless_controls_v30.LosslessControlsTests.test_truncated_and_extra_streams_rejected) ... ok\ntest_zstd_content_size_checksum_and_canonical_settings (test_lossless_controls_v30.LosslessControlsTests.test_zstd_content_size_checksum_and_canonical_settings) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.104s\n\nOK\n",
+  "stdout": "",
+  "wall_ns": 275120759
+}

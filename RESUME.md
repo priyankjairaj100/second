@@ -1,3 +1,31 @@
+# Active checkpoint: revision 30 development continuation
+
+Updated 8 October 2026, UTC. This checkpoint supersedes the historical status below.
+Read docs/IN_PROGRESS_V30.md and the actual campaign ledgers before running anything.
+V30 code, reviews, and completed quality/scaling/service evidence are now present.
+The primal certificate and bounded sparse backends are implemented.
+The new eight-article quality screen passed its registered relative gate.
+It covers 1,016 predictions per model and establishes no superiority over sequential calibration.
+All twenty evaluated article exclusions remain reserved from confirmation.
+The stronger token baseline reduces the 1,024-token component advantage to 1.556×.
+The first 128-token retained complete repair took 71.552751104 seconds.
+Cold reconstruction took 277.094795749 seconds; indexed reconstruction took 76.694055626 seconds.
+Complete models agree across all 24 stages and 42,467,328 codes.
+This single 3.872595× observation uses the old scalar attention implementation.
+Remaining repetitions were explicitly superseded before they started.
+A reviewed exact ordered neural implementation is being integrated for stronger matched comparisons.
+Do not promote old scalar timing as the final baseline comparison.
+The research_v30 phase is complete at 211 CPU seconds.
+The full_service_v30 phase is closed at 1114 CPU seconds, with no unsettled work.
+Historical ledgers remain unchanged, including the unknown 122-second reservation.
+Read-only archive analysis is accounted separately.
+No empirical worker is active at this checkpoint.
+New ordered, compressed, and matched quality phases remain unregistered until their reviews finish.
+The paper and full empirical program remain incomplete.
+Repository pushes and bounded local development remain authorized; no paid compute or force-pushes.
+
+---
+
 # Current checkpoint: revision 29, complete lossless control
 
 Updated 8 October 2026, UTC. This checkpoint supersedes historical status and execution restrictions below.
