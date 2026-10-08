@@ -1,0 +1,30 @@
+{
+  "attempts": [
+    "prepare-001",
+    "repair-001"
+  ],
+  "bits": [
+    16,
+    24
+  ],
+  "block_size": 256,
+  "campaign": "campaigns/fixed_feature_v23",
+  "command": "python scripts/analyze_compressed_state_v25.py --output-dir <fresh-directory>",
+  "cpu_cap_seconds": 60,
+  "model_execution": false,
+  "output_dir": "campaigns/compressed_state_audit_v25",
+  "outputs_fresh_only": true,
+  "quantization_execution": false,
+  "schema": "compressed-state-archive-audit-plan-v25",
+  "source_hashes": {
+    "scripts/analyze_compressed_state_v25.py": "b35c6e7ffb75a34b010538c579725036cc5e73a72fb6c2724faa61ad53e8ddaa",
+    "scripts/analyze_fixed_codec_v24.py": "7b6138231a13057cc8d1332be81e4f73657603b1e4a91ba28ec60b985fd7f680",
+    "src/anchor_state.py": "d0138b6cb45c6aeedb6ac5502ddb14136adddea266ec2647da02a198eb00ae7c",
+    "src/compact_state.py": "af4bb17f90f497b22da1fdaf6bc5fe0656ba86c27def9f4dd80d9e785c88e829",
+    "src/fixed_anchor_service.py": "3aa12be78b03b6be1887e5cc3b5ecbe12ca0a1f61584d1b299ca3d429e6a7278",
+    "src/fixed_compressed_state.py": "99f9ddd9ea7f3e351a6622ea9b1de8341b0f61efc035b9c9cc57d49805e8e0a5",
+    "src/fixed_factor_codec.py": "5ada37e2ea9b2f6c5d2eded030d9fee68d5d8ecd83a0b39d9152fe90631b0794",
+    "src/fixed_factor_state.py": "e71477de4e0bb048c7c068e0a087587b37cb59d766e18d0d87cff5c3dc23c71f",
+    "src/sequential_finite.py": "6fdf00162ce28c78505abaee0ba1344f8a3baede06a90c1e0e5b92a8b8dd38f3"
+  }
+}

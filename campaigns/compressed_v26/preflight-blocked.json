@@ -1,0 +1,9 @@
+{
+  "cpu_charge": 0,
+  "program_sha256": "48490f657003b05b26a725c1959ad08c21072af490961a41c54487e58c30a0de",
+  "reason": "Independent source review found unaligned contiguous NumPy arrays could reach C double pointers. Fix both singleton and uncertain-box paths before any launch.",
+  "replacement": "campaigns/compressed_v26b",
+  "schema": "unstarted-registration-v26",
+  "status": "unstarted_review_blocked",
+  "worker_launched": false
+}

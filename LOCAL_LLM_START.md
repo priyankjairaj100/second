@@ -1,3 +1,59 @@
+# Current checkpoint: revision 28, exact compressed repair at cold-replay parity
+
+Updated 8 October 2026, UTC. This checkpoint supersedes all historical status and task claims below.
+Read docs/EMPIRICAL_COMPRESSION_V25_V28.md and campaigns/compressed_summary_v25_v28.json first.
+Then read docs/FIXED_COMPRESSED_SERVICE_V28.md and docs/EMPIRICAL_TIMING_V23_V24.md.
+
+Revision 28 verified all 24 calibrated stages and all 42,467,328 model codes exactly.
+It executed zero retained neural stage-record traversals.
+Complete compressed repair improved from 90.496015787 seconds in revision 27 to 51.231991286 seconds in revision 28.
+The same-session revision 27 cold reconstruction took 51.180300526 seconds.
+This is timing parity, not a reliable compressed-repair speedup.
+Revision 28 has one adaptive retiming against an earlier cold run, without randomized replication.
+
+Retained complete compressed state occupies 24,930,099 bytes, versus 26,326,066 bytes for exact-factor state.
+That is a 5.302603890759827% complete-state reduction.
+Base checkpoint parameters outside the calibrated stages remain required.
+Six unresolved rows across four stages caused revision 27's repeated full-matrix verification work.
+Revision 28 resolved them through selective row retries using cached ridge coefficient bounds.
+The complete run used no preconditioned or Python universal fallback.
+Measured revision 27 sources and adverse results remain preserved.
+
+Revision 23 exact-factor repair still has repeated 1.298–1.331× cold-reconstruction speedups on one tiny deletion request.
+Equally indexed reconstruction ties that method.
+These earlier timings do not establish a compressed-service win or broad reliable superiority.
+The numerical target uses fixed nearest-grid ancestor features.
+It differs from the original sequential calibration target; that original target still lacks a demonstrated complete-model repair advantage.
+
+The revision 27 cold run has contradictory live progress metadata.
+Its sealed receipt and verified model establish completion, but the discrepancy's cause remains unknown.
+Preserve campaigns/compressed_timing_v27/attempts/cold-001/progress-discrepancy.json and disclose the incident.
+Do not rewrite original progress, receipts, registrations, failed attempts, or frozen source snapshots.
+
+No empirical worker remains. Do not launch further empirical runs.
+The separate 900-second phase has 898 seconds charged or held: 776 recorded plus 122 with unknown settlement.
+Two seconds remain in that phase.
+The original 10,800-second ledger remains at 10,775 charged, with 25 seconds remaining.
+These allowances are separate; do not pool or reset them.
+Combined charged or reserved usage is 11,673 seconds.
+The unknown 122-second reservation remains held; never invent its observed CPU use or settlement.
+
+The quality gate still contains only two articles and thirty predictions.
+All twelve evaluated articles remain excluded from future confirmation.
+Remaining work includes broader quality, realistic calibration workloads, additional models and corpora, and independent deletion requests.
+It also includes complete lifetime costs, prospective confirmation, and a renewed primary-literature novelty review.
+Fixed features, caching, and quantization stability alone do not establish a new methods contribution.
+Trusted preparation establishes compressed containment; parser hashes alone cannot establish that premise.
+The paper is not ACL-ready, and the empirical program is not complete.
+
+Repository pushes remain authorized. Never force-push.
+Preserve negative findings, article exclusions, runtime identities, exact output evidence, and complete state costs.
+Follow current developer instructions for delegation.
+
+---
+
+Historical checkpoints follow unchanged.
+
 # Current checkpoint: revisions 23–24, repeated fixed-feature repair speedup
 
 Updated 8 October 2026, UTC. This checkpoint supersedes historical status below.

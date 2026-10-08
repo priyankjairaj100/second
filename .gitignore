@@ -55,3 +55,10 @@ local_runs/
 /campaigns/fixed_feature_v23/attempts/*/worker/writer.lock
 /campaigns/fixed_feature_v23/phase-cpu-budget/ledger.lock
 /campaigns/fixed_feature_v23/attempts/*/outputs/.*
+
+# Revisions 25–28 publish reproducible sources and receipts, not derived binaries.
+/campaigns/compressed*/**/outputs/*.bin
+/campaigns/compressed*/**/worker/writer.lock
+/campaigns/compressed*/**/phase-cpu-budget/ledger.lock
+/campaigns/compressed*/**/outputs/.*
+/campaigns/compressed_state_audit_v26/*.bin

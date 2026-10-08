@@ -1,0 +1,47 @@
+{
+  "cause": "unknown",
+  "charged_cpu_seconds": 52,
+  "completion_basis": "sealed progress, successful settled receipt with verified artifacts, and currently matching model bytes",
+  "external_transaction_seconds": 51.180300526,
+  "model_sha256": "d27c824322d0399f99a78c2b9d7e369e6b9a547085fa1cc25f92703536962927",
+  "observation": "Live progress shows model_write_started; separately sealed terminal progress and bound controller receipt report verified completion.",
+  "observed_cpu_ns": 51148560000,
+  "observed_live_last_phase": {
+    "elapsed_ns": 50283633733,
+    "phase": "model_write_started"
+  },
+  "observed_live_progress_sha256": "4da7b089d4fe086fde568af223cea2c80cf6aab7892e32fd8cb6149c6de4eb04",
+  "observed_live_status": "running",
+  "raw_progress_preserved": true,
+  "receipt_artifacts_verified": {
+    "budget-reservation.json": {
+      "bytes": 304,
+      "sha256": "95beee470a85ccee31214a534af7ae144e4bdffe1b443bc6052eb57b52cca6b2"
+    },
+    "limits-applied.json": {
+      "bytes": 423,
+      "sha256": "27c93823f5e5d84ee3d5fa29fb1c15d98448beb2be69ffbd4bd11d9a882d3722"
+    },
+    "pre-settlement-observation.json": {
+      "bytes": 728,
+      "sha256": "f0ba041199f9483902bf8923c3c86eeaff6c1b8d6276bf77fb331f14a5c19040"
+    },
+    "request.json": {
+      "bytes": 708,
+      "sha256": "712599fbf22f01122ae27fcbbddedee1c5b0f4de192135f504f1e26e431d5b91"
+    },
+    "stderr-summary.json": {
+      "bytes": 125,
+      "sha256": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c"
+    },
+    "stdout-summary.json": {
+      "bytes": 31402,
+      "sha256": "0c9107b232e3c709e4f00e2137ea8ec8efba5ff8a7697e6e996308e7e845d8b7"
+    }
+  },
+  "receipt_sha256": "be2781a2498dcaca27f9d86874e82d29c8931ed0008115484f70a028b283d772",
+  "schema": "sealed-terminal-progress-discrepancy-v27",
+  "scope": "No missing timings reconstructed. No raw file overwritten. No full-model scientific conclusion upgraded.",
+  "sealed_progress_sha256": "7b68b3386f516afe93a71b727d76d450cfbd43870b941dbe6a97694d5e2cc5e1",
+  "sealed_status": "complete"
+}

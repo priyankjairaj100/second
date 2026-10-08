@@ -1,0 +1,283 @@
+{
+  "acl_submission_ready": false,
+  "artifact_binaries_reverified": true,
+  "base_checkpoint_required": true,
+  "budget": {
+    "archive_analysis_and_software_checks_separately_reported": true,
+    "campaigns": [
+      {
+        "campaign": "fixed_feature_v23",
+        "charged_or_reserved_cpu_seconds": 639,
+        "recorded_cpu_seconds": 517,
+        "unknown_reserved_cpu_seconds": 122
+      },
+      {
+        "campaign": "compressed_v25b",
+        "charged_or_reserved_cpu_seconds": 7,
+        "recorded_cpu_seconds": 7,
+        "unknown_reserved_cpu_seconds": 0
+      },
+      {
+        "campaign": "compressed_v25c",
+        "charged_or_reserved_cpu_seconds": 8,
+        "recorded_cpu_seconds": 8,
+        "unknown_reserved_cpu_seconds": 0
+      },
+      {
+        "campaign": "compressed_v25d",
+        "charged_or_reserved_cpu_seconds": 4,
+        "recorded_cpu_seconds": 4,
+        "unknown_reserved_cpu_seconds": 0
+      },
+      {
+        "campaign": "compressed_v26b",
+        "charged_or_reserved_cpu_seconds": 32,
+        "recorded_cpu_seconds": 32,
+        "unknown_reserved_cpu_seconds": 0
+      },
+      {
+        "campaign": "compressed_v27",
+        "charged_or_reserved_cpu_seconds": 8,
+        "recorded_cpu_seconds": 8,
+        "unknown_reserved_cpu_seconds": 0
+      },
+      {
+        "campaign": "compressed_timing_v27",
+        "charged_or_reserved_cpu_seconds": 143,
+        "recorded_cpu_seconds": 143,
+        "unknown_reserved_cpu_seconds": 0
+      },
+      {
+        "campaign": "compressed_v28",
+        "charged_or_reserved_cpu_seconds": 5,
+        "recorded_cpu_seconds": 5,
+        "unknown_reserved_cpu_seconds": 0
+      },
+      {
+        "campaign": "compressed_timing_v28",
+        "charged_or_reserved_cpu_seconds": 52,
+        "recorded_cpu_seconds": 52,
+        "unknown_reserved_cpu_seconds": 0
+      }
+    ],
+    "combined_charged_or_reserved_cpu_seconds": 11673,
+    "independent_allowances_not_pooled": true,
+    "legacy_cap_cpu_seconds": 10800,
+    "legacy_charged_cpu_seconds": 10775,
+    "legacy_remaining_cpu_seconds": 25,
+    "phase_cap_cpu_seconds": 900,
+    "phase_charged_or_reserved_cpu_seconds": 898,
+    "phase_remaining_cpu_seconds": 2,
+    "recorded_cpu_seconds": 776,
+    "unknown_reserved_cpu_seconds": 122
+  },
+  "comparison_limits": [
+    "Single V28 retiming against the earlier same-session V27 cold comparator.",
+    "Repair writes model and complete state; cold writes model only.",
+    "No randomized repetitions, confidence interval, independent request, or lifetime claim.",
+    "Equally indexed reconstruction shares the algorithm; no strict advantage follows."
+  ],
+  "date_utc": "2026-10-08",
+  "empirical_program_complete": false,
+  "evidence_discrepancy": {
+    "cause": "unknown",
+    "completion_basis": "sealed progress, successful settled receipt with verified artifacts, and currently matching model bytes",
+    "path": "campaigns/compressed_timing_v27/attempts/cold-001/progress-discrepancy.json",
+    "raw_preserved": true
+  },
+  "evidence_sha256": {
+    "campaigns/compressed_state_audit_v25/plan.json": "91813f19294789e12d1d6422ad7ecea2ef6fe9bd32105c40e6ee4b467b93f19b",
+    "campaigns/compressed_state_audit_v25/summary.json": "e791ca58c2853147a43b414c8ffb6a609d00125777fd416a2043282bfae0ab02",
+    "campaigns/compressed_state_audit_v26/plan.json": "58e918776685dc6a842c4e879f8ac4f74b9be0b30ffdfdc4c5b330744bfda567",
+    "campaigns/compressed_state_audit_v26/summary.json": "d4664aed90a4483405811e968533e39783bff234220474b4f3b272484f9f5c67",
+    "campaigns/compressed_timing_v27/attempts/cold-001/outputs/progress.json": "4da7b089d4fe086fde568af223cea2c80cf6aab7892e32fd8cb6149c6de4eb04",
+    "campaigns/compressed_timing_v27/attempts/cold-001/progress-discrepancy.json": "9ffb9f2cc2cf571891248b6b59549cdb22db26f6555afb48e77387788ab6d564",
+    "campaigns/compressed_timing_v27/attempts/cold-001/sealed-progress.json": "7b68b3386f516afe93a71b727d76d450cfbd43870b941dbe6a97694d5e2cc5e1",
+    "campaigns/compressed_timing_v27/attempts/cold-001/transaction.json": "f1ca40197ea4fdf4a63f872d349b91f0d34ef0d0003a34553f47d07b1ea7170e",
+    "campaigns/compressed_timing_v27/attempts/cold-001/worker/result.json": "be2781a2498dcaca27f9d86874e82d29c8931ed0008115484f70a028b283d772",
+    "campaigns/compressed_timing_v27/attempts/repair-001/outputs/progress.json": "53913b916765567e9b12c400949a1635a30c62c9eb4e118a5e3003fb2569871b",
+    "campaigns/compressed_timing_v27/attempts/repair-001/sealed-progress.json": "53913b916765567e9b12c400949a1635a30c62c9eb4e118a5e3003fb2569871b",
+    "campaigns/compressed_timing_v27/attempts/repair-001/transaction.json": "9e9804f998f4d8799e73e3f8a9982245cdf8b9a81b812f6e44359496eacbaccc",
+    "campaigns/compressed_timing_v27/attempts/repair-001/worker/result.json": "d078861fde54727e6c61f2bca815c833f3e60c45adfb14b242dbac1727e2e980",
+    "campaigns/compressed_timing_v27/phase-cpu-budget/ledger.json": "36fc2a2dbc7174f5bfdf204d94827e3afc9ba430e1024f94cd30a8024a252fea",
+    "campaigns/compressed_timing_v27/program.json": "cbb4bf06ab87eed7c089fdea932f4b45b45e8db55b6406685c095a020e10c761",
+    "campaigns/compressed_timing_v27/registration.json": "b82975e363495ca918f8fba7ba052d3273e5477e0e46b276d944a5f6e37ec505",
+    "campaigns/compressed_timing_v28/attempts/repair-001/outputs/progress.json": "b2ede01cd55b27c7b7124dca2bf9606ac416789f8f865349e1115d8b64aa0f06",
+    "campaigns/compressed_timing_v28/attempts/repair-001/sealed-progress.json": "b2ede01cd55b27c7b7124dca2bf9606ac416789f8f865349e1115d8b64aa0f06",
+    "campaigns/compressed_timing_v28/attempts/repair-001/transaction.json": "35d15ba12c14e3dbffb80ba1dd0b412cb5aee5e86d1ca3d8b0cbbb1a51aada5f",
+    "campaigns/compressed_timing_v28/attempts/repair-001/worker/result.json": "f067ff2d0c16239447031888396e7cc12e215810e3ff6a245b60b405e5fdaeef",
+    "campaigns/compressed_timing_v28/phase-cpu-budget/ledger.json": "75bb29191cdfbff6b6787f61e803aab327cfd5501ea6c5d6614e626439c952b8",
+    "campaigns/compressed_timing_v28/program.json": "b8052dc83402f9e90bfa96def8f9f717a811709aab4d1e2493c619264416cdef",
+    "campaigns/compressed_timing_v28/registration.json": "1282e8839021bbae8eb67a65d60a2e0f12d0b86fe7ea1d24ca88d9c8d97f4ef4",
+    "campaigns/compressed_v25/program.json": "49bc987654ab9d5bd795ed246c2d83039d255764ac299f5eab9ed978dbd5d550",
+    "campaigns/compressed_v25/registration.json": "630ab8e6cdd7f89601b777d87343c9c28b3aa2f043c643d2611c333cd3353217",
+    "campaigns/compressed_v25b/attempts/stage-screen-001/sealed-progress.json": "415a42b80a04ac9f336b89c54def2c2173efd0e9681342bab3ba6ef25747dc48",
+    "campaigns/compressed_v25b/attempts/stage-screen-001/transaction.json": "f71f51f715595ebe487d5ce105da8333afa4d591abd8c4b2c2d2be8aca07f5c3",
+    "campaigns/compressed_v25b/phase-cpu-budget/ledger.json": "bb4828857fb93b77ed834ace545a84b0986f9f1069bcec240a3b89f272c61cfd",
+    "campaigns/compressed_v25b/program.json": "924531ecf7dadabf600c7f8a1167809df5c23c983e08e6365deb74a791ee76d3",
+    "campaigns/compressed_v25b/registration.json": "b73611f92926fce98adbff425d6648d9ca24f56959be37687ce30243785f3c0e",
+    "campaigns/compressed_v25c/attempts/preconditioned-screen-001/sealed-progress.json": "d03cdee8483fa90fc5ad3e921ce287d75019fe567f9ef373174f7cde0760c767",
+    "campaigns/compressed_v25c/attempts/preconditioned-screen-001/transaction.json": "784c18419b8b376bb39c28425c2e3d9f45e318f400b617cba144da4ed4e2cc9e",
+    "campaigns/compressed_v25c/phase-cpu-budget/ledger.json": "1718bf09120dfc772f87c3c51d9f8e8d7a97da8f6fb6fd119afd774328bcf7a7",
+    "campaigns/compressed_v25c/program.json": "ffbc5c6c4d2f57d62c527227a3a7675fe40dde60fe7895cf683d94b782d1c5a4",
+    "campaigns/compressed_v25c/registration.json": "eafde8e326b7214cb3bb7e80bd62fc7949330f02a27570e332126ea23fb9a7b6",
+    "campaigns/compressed_v25d/attempts/corner-witness-001/sealed-progress.json": "04bb0b5feed08d74f909af2ddc458efd675870c1dcf25722bffff6b66544dfdf",
+    "campaigns/compressed_v25d/attempts/corner-witness-001/transaction.json": "0c8905f53d44c7a394917b0f27a5f54c9e8a6b2b7e69113587305a88cbb76ee7",
+    "campaigns/compressed_v25d/phase-cpu-budget/ledger.json": "e1706ad7592424d7c222158b4b0b16611c7ae77eb10b753cc71e8c6d9e8491d4",
+    "campaigns/compressed_v25d/program.json": "36ee0ffeb4606a8a6d8d98a24639246581c5760c230761fa6f4fdbfdaf1c68bf",
+    "campaigns/compressed_v25d/registration.json": "701df05e39cc0b226c09b2dc25d2e99472dd21ca6ddb00ae0904a57d964b67b9",
+    "campaigns/compressed_v26/program.json": "48490f657003b05b26a725c1959ad08c21072af490961a41c54487e58c30a0de",
+    "campaigns/compressed_v26/registration.json": "4e086ec42761676661d8bad99dbcb03e82d716973a6b8dd1de4cefb524e1b73e",
+    "campaigns/compressed_v26b/attempts/precision-screen-001/sealed-progress.json": "c300dd0b0c4531207a1000024f88bccde47bc2523327b4b07347cc90438dfd58",
+    "campaigns/compressed_v26b/attempts/precision-screen-001/transaction.json": "3a07a23c8cb3b88f7fa912509f7014c07088771541b288632db800cec95547cb",
+    "campaigns/compressed_v26b/phase-cpu-budget/ledger.json": "b36358f3ad033d1d0d6a71b5c9caa5c181106c0065c74f93919b193b6506acce",
+    "campaigns/compressed_v26b/program.json": "6959d035b522ace9b20e14dafe1aa7238e02f4f4c47aaa22e28e82fea95e982c",
+    "campaigns/compressed_v26b/registration.json": "5fa5b5f91238c3e147746dc3a457cf1c9ca84fdc90c9c5c9636b2c5601490aca",
+    "campaigns/compressed_v27/attempts/ball-screen-001/sealed-progress.json": "acd6967fc56ff8eb906eec9cbe6265fe1984cc2173aa2dea1d19cb14c7cb1eab",
+    "campaigns/compressed_v27/attempts/ball-screen-001/transaction.json": "0c0ed986aa51464bbbaad4fdf556a4d69bede3ffab2914439c71872484c4ca80",
+    "campaigns/compressed_v27/phase-cpu-budget/ledger.json": "cc80ce11d3c0bde04d2f70e915e583df97e402c82d4250fd0872be9566a62f84",
+    "campaigns/compressed_v27/program.json": "25dab2eb51c20677289b645c863bd078128eb75291cba3ae6b07872080be3cee",
+    "campaigns/compressed_v27/registration.json": "8ad152cb5bb39cbfe86fa8dd05eb8982082b225565f5d818abceae168e6547b9",
+    "campaigns/compressed_v28/attempts/sparse-screen-001/sealed-progress.json": "61311db26637927d6b3e409f7fccb387a492c83616c0db270d3a7cb970e48ed4",
+    "campaigns/compressed_v28/attempts/sparse-screen-001/transaction.json": "eb72622f71999caf44764a918070a0a3e25b96af5940d2186a5b23ef873183c9",
+    "campaigns/compressed_v28/phase-cpu-budget/ledger.json": "fc2440a842080ef6ae8e8c1adfd7fe40fec43bc5d6b06bbff7b22998d987114d",
+    "campaigns/compressed_v28/program.json": "b300eca6e7a1c87fa33033b07d10c9afdfdd994989c9ea5954f71b275fe1439c",
+    "campaigns/compressed_v28/registration.json": "5c647f56ef1ad4ae4c84354a2d659d5c04345507cb551f6cd044f0bc20b8ef99",
+    "campaigns/fixed_feature_v23/phase-cpu-budget/ledger.json": "63f0b83378857156a4661564e11828618f78b5e8085354ddfb67fd2c000913c9"
+  },
+  "full_model_results": {
+    "v27_cold_model_only": {
+      "artifacts": {
+        "model": {
+          "bytes": 22192646,
+          "file": "model.bin",
+          "sha256": "d27c824322d0399f99a78c2b9d7e369e6b9a547085fa1cc25f92703536962927"
+        }
+      },
+      "attempt": "campaigns/compressed_timing_v27/attempts/cold-001",
+      "complete_model": true,
+      "complete_state": false,
+      "controller_elapsed_ns": 51180300526,
+      "controller_elapsed_seconds": 51.180300526,
+      "live_progress_matches_sealed": false,
+      "metrics": {
+        "avoided_neural_stage_record_pairs": null,
+        "certificate_accepted_stages": null,
+        "certificate_elapsed_ns": null,
+        "certificate_rejected_stages": null,
+        "neural_stage_record_pairs": 24,
+        "service_elapsed_ns": 38399589779
+      },
+      "model_code_elements": 42467328,
+      "receipt_wall_ns": 51177227050,
+      "sparse_rows": null,
+      "stage_count": 24
+    },
+    "v27_repair": {
+      "artifacts": {
+        "model": {
+          "bytes": 22192646,
+          "file": "model.bin",
+          "sha256": "d27c824322d0399f99a78c2b9d7e369e6b9a547085fa1cc25f92703536962927"
+        },
+        "state": {
+          "bytes": 24930099,
+          "file": "state.bin",
+          "sha256": "6504eb947c23de439f6fd96f2f6b496e606f00032a124cd92bd744a1d8d2ac36"
+        }
+      },
+      "attempt": "campaigns/compressed_timing_v27/attempts/repair-001",
+      "complete_model": true,
+      "complete_state": true,
+      "controller_elapsed_ns": 90496015787,
+      "controller_elapsed_seconds": 90.496015787,
+      "live_progress_matches_sealed": true,
+      "metrics": {
+        "avoided_neural_stage_record_pairs": 24,
+        "certificate_accepted_stages": 24,
+        "certificate_elapsed_ns": 65592502334,
+        "certificate_rejected_stages": 0,
+        "neural_stage_record_pairs": 0,
+        "service_elapsed_ns": 72596159963
+      },
+      "model_code_elements": 42467328,
+      "receipt_wall_ns": 90492843231,
+      "sparse_rows": null,
+      "stage_count": 24
+    },
+    "v28_repair": {
+      "artifacts": {
+        "model": {
+          "bytes": 22192646,
+          "file": "model.bin",
+          "sha256": "d27c824322d0399f99a78c2b9d7e369e6b9a547085fa1cc25f92703536962927"
+        },
+        "state": {
+          "bytes": 24930099,
+          "file": "state.bin",
+          "sha256": "6504eb947c23de439f6fd96f2f6b496e606f00032a124cd92bd744a1d8d2ac36"
+        }
+      },
+      "attempt": "campaigns/compressed_timing_v28/attempts/repair-001",
+      "complete_model": true,
+      "complete_state": true,
+      "controller_elapsed_ns": 51231991286,
+      "controller_elapsed_seconds": 51.231991286,
+      "live_progress_matches_sealed": true,
+      "metrics": {
+        "avoided_neural_stage_record_pairs": 24,
+        "certificate_accepted_stages": 24,
+        "certificate_elapsed_ns": 25922828312,
+        "certificate_rejected_stages": 0,
+        "neural_stage_record_pairs": 0,
+        "service_elapsed_ns": 33294713848
+      },
+      "model_code_elements": 42467328,
+      "receipt_wall_ns": 51228777939,
+      "sparse_rows": {
+        "first_ball_certified_rows": 41466,
+        "preconditioned_interval_certified_rows": 0,
+        "python_universal_rows": 0,
+        "ridge_interval_certified_rows": 6
+      },
+      "stage_count": 24
+    }
+  },
+  "open_gates": [
+    "Broader quality",
+    "Realistic calibration size",
+    "Independent deletion requests",
+    "Additional models and corpora",
+    "Preparation and lifetime costs",
+    "Prospective confirmation",
+    "Updated publication novelty assessment"
+  ],
+  "ratios": {
+    "cold_over_v28_repair": 0.9989910452687377,
+    "v27_repair_over_v28_repair": 1.7663966110903355,
+    "v28_slower_than_cold_percent": 0.1009973749054982
+  },
+  "retained_complete_state_reduction_percent": 5.302603890759827,
+  "schema": "compressed-evidence-summary-v28",
+  "scope": "Adaptive development on one DistilGPT2/WikiText deletion; no confirmation.",
+  "state_generations": {
+    "prepare-001": {
+      "complete_state_bytes": 27666729,
+      "complete_state_reduction_bytes": 2792024,
+      "complete_state_reduction_fraction": 0.09166573562614333,
+      "complete_state_sha256": "6590ee5d21954939651404f18ed252338973ee70adeec518a9e7d863b8a97ff1",
+      "exact_state_bytes": 30458753
+    },
+    "repair-001": {
+      "complete_state_bytes": 24930099,
+      "complete_state_reduction_bytes": 1395967,
+      "complete_state_reduction_fraction": 0.05302603890759827,
+      "complete_state_sha256": "6504eb947c23de439f6fd96f2f6b496e606f00032a124cd92bd744a1d8d2ac36",
+      "exact_state_bytes": 26326066
+    }
+  },
+  "storage_claim_scope": "Complete calibrated model plus repair state; excludes common base checkpoint.",
+  "target": "Fixed nearest-grid ancestor features; not original sequential calibration.",
+  "timing_conclusion": "Practically close: V28 is 0.101% slower in one comparison; no statistical equivalence or speed advantage established.",
+  "trusted_preparation_required": true
+}

@@ -1,0 +1,31 @@
+{
+  "blocking_findings": [],
+  "checked": [
+    "V28 receipt and six bound receipt artifacts",
+    "Complete model and state SHA256 and byte sizes",
+    "State equality with archived retained40",
+    "Common inputs, target, evaluator, and model equality with cold",
+    "24 stages and 42467328 codes from binary header",
+    "41466 first-ball rows and six ridge interval rows",
+    "Zero preconditioned or Python fallback rows",
+    "Zero neural traversals",
+    "All 58 derived-report evidence hashes",
+    "Phase ledger chain including unresolved 122-second reservation",
+    "140-test software receipt"
+  ],
+  "cold_discrepancy": "Raw progress preserved; cause unknown; receipt-bound completion logs and model bytes support completion",
+  "date_utc": "2026-10-08",
+  "research_limitations": [
+    "Fixed-feature target differs from original sequential target",
+    "One tiny adaptive development request",
+    "No statistical equivalence claim",
+    "Broader quality and empirical program incomplete",
+    "No ACL readiness or publication novelty established"
+  ],
+  "review_type": "Separate-agent internal review, not external peer review",
+  "reviewer_executed_empirical_workers": false,
+  "reviewer_task": "anchor_review_v20",
+  "schema": "compressed-final-internal-review-v28",
+  "storage_scope": "5.302603890759827 percent less complete retained state, excluding common base checkpoint",
+  "timing_conclusion": "V28 is 0.051690760 seconds (about 0.101%) slower than cold; no demonstrated speed advantage."
+}

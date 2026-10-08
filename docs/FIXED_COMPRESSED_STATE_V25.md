@@ -1,0 +1,147 @@
+# Compressed fixed-feature state
+
+Revision 25 adds a canonical state format for compressed factor evidence.
+It stores every calibrated model code and every retained source descriptor.
+It preserves the existing fixed-feature numerical target.
+This component does not implement model repair or prove a speed improvement.
+
+## Interface
+
+`src/fixed_compressed_state.py` provides these objects:
+
+| Object | Purpose |
+|---|---|
+| `CompressedFactorLeaf(record_id, tokens, descriptors)` | Stores one source and its ordered factor descriptors. |
+| `CompressedFactorState(..., stages, anchors)` | Stores provenance, codec settings, complete calibrated codes, and retained leaves. |
+| `from_factor_state(state, bits=16, block_size=256)` | Converts trusted exact factors into intrinsic descriptors. |
+| `serialize(state)` | Produces canonical immutable bytes. |
+| `parse(data, limits=LoadLimits(), expected_sha256=None)` | Loads bounded canonical bytes and checks their bindings. |
+
+The state exposes `record_ids`, `digest`, and `canonical_bytes()`.
+These names match the exact factor state interface.
+The `anchors` field contains leaves, ordered by source identifier.
+Each leaf contains one descriptor for every model stage.
+Descriptor order follows the model stage order.
+
+The state fields are:
+
+```python
+CompressedFactorState(
+    target_sha256,
+    anchor_target_sha256,
+    decoder_sha256,
+    provider_sha256,
+    anchor_sha256,
+    preparer_sha256,
+    codec_sha256,
+    bits,
+    block_size,
+    stages,
+    anchors,
+)
+```
+
+`preparer_sha256` preserves the exact factor preparation binding.
+`codec_sha256` identifies the source that encoded the descriptors.
+The parser preserves archived bindings.
+The repair service must check the bindings against its actual runtime.
+
+## Numerical semantics
+
+Conversion encodes each exact factor separately with the revision 24 codec.
+It uses only that factor and its source metadata.
+It does not inspect any other source during encoding.
+Every descriptor keeps the original factor hash.
+Its box contains the original factor under the codec's trusted preparation premise.
+Conversion preserves each `StageCodes` object without numerical changes.
+
+For a trusted exact state \(S\), let \(C_p(S)\) denote conversion at fixed codec settings \(p\).
+Then its complete calibrated code sequence satisfies
+
+\[
+\operatorname{codes}(C_p(S))=\operatorname{codes}(S).
+\]
+
+For a retained source set \(R\), source-local conversion also satisfies
+
+\[
+\operatorname{leaves}(C_p(S)|_R)
+=\operatorname{leaves}(C_p(S|_R)).
+\]
+
+This equality concerns descriptor bytes and source metadata.
+It does not certify the new model after deletion.
+The service must compute or certify that model separately.
+
+Temporary refinement must not alter stored intrinsic descriptors.
+Otherwise, deletion history could change the canonical state.
+The format contains no persistent refinement field.
+
+An empty retained set has no leaves.
+Its state still stores the complete calibrated model supplied by the caller.
+Conversion does not verify that supplied codes solve the empty calibration problem.
+The numerical service has that responsibility.
+
+## Format and validation
+
+The format uses magic `VCFS`, version one.
+Its storage schema is `source_local_compressed_factors_v1`.
+The numerical family remains `fixed_anchor_calibration_v1`.
+This format differs from exact factor state bytes.
+
+The file contains:
+
+1. Eight magic bytes and an unsigned 64-bit header length.
+2. A canonical JSON header.
+3. One complete calibrated model payload.
+4. One complete codec payload per source and stage.
+
+The header binds all payload sizes and hashes.
+It also binds target, anchor, decoder, provider, preparer, and codec provenance.
+Each source index binds its identifier, ordered tokens, token hash, and descriptor shapes.
+Each descriptor independently binds its target, source, tokens, stage, codec, and original factor hash.
+
+Constructors reject duplicate source identifiers and duplicate stage identifiers.
+They reject missing stages, reordered stages, and incompatible widths.
+They reject descriptor bindings that disagree with the enclosing state.
+They normalize mutable sequence arguments into tuples.
+Descriptor payloads and packed model codes remain immutable bytes.
+
+Parsing checks resource bounds before descriptor decoding.
+The bounds cover file bytes, header bytes, records, stages, codes, and tokens.
+Each leaf also has bounds on encoded descriptor bytes and decoded factor values.
+The parser checks all descriptor dimensions before decoding that leaf.
+Nested codec bounds also restrict tokens, width, values, block size, and payload size.
+The parser rejects trailing bytes and noncanonical ordering.
+
+`max_leaf_bytes` bounds the combined encoded descriptors for one leaf.
+`max_leaf_values` bounds the combined decoded values for one leaf.
+The containing header has a separate byte bound.
+These settings do not estimate process memory or runtime.
+
+## Trust boundary
+
+Hashes detect content changes against a trusted expected digest.
+They do not prove how any factor was prepared.
+They do not prove containment for unavailable source factors.
+A self-consistent artifact can contain false provenance claims.
+
+The trusted caller must establish exact factor preparation before conversion.
+An artifact digest must come from that trusted preparation when sources are unavailable.
+The service must also reject stale runtime bindings.
+Exact fallback must check reconstructed factors against their stored source hashes.
+These checks preserve evidence binding; they do not replace the initial trust premise.
+
+## Software checks
+
+`tests/test_fixed_compressed_state_v25.py` uses small software fixtures only.
+It checks complete model preservation and source containment after conversion.
+It checks canonical parsing, empty states, and unchanged descriptors after source deletion.
+It checks sequential and direct source subsets for identical bytes.
+It checks bounds before descriptor decoding.
+It checks corrupted payloads, inconsistent bindings, and invalid codec settings.
+It explicitly checks the limit of self-consistent source hashes.
+
+These checks provide software evidence.
+They provide no model quality, certificate acceptance, storage benchmark, or repair timing evidence.
+Full compressed repair measurements remain a separate task.

@@ -1,3 +1,70 @@
+# Active tasks after revision 28
+
+Updated 8 October 2026, UTC. This list supersedes historical task registers below.
+Read EMPIRICAL_COMPRESSION_V25_V28.md and ../campaigns/compressed_summary_v25_v28.json first.
+
+Completed:
+
+- Implemented complete compressed states, universal certificates, exact fallback, and canonical deletion histories.
+- Verified revision 28's complete 24-stage model: 42,467,328 exact codes and zero retained neural traversals.
+- Reduced the measured complete compressed repair from 90.496015787 to 51.231991286 seconds.
+- Resolved six difficult rows using cached ridge bounds and selective interval retries.
+- Used no preconditioned or Python universal fallback in that complete run.
+- Verified 24,930,099 retained compressed bytes versus 26,326,066 exact-factor bytes: 5.302603890759827% smaller.
+- Preserved the slower revision 27 implementation, source snapshots, receipts, and adverse findings.
+
+The earlier same-session cold run took 51.180300526 seconds.
+The compressed result therefore ties cold reconstruction; it does not establish a reliable speedup.
+It is one adaptive retiming without randomized replication.
+Revision 23's repeated 1.298–1.331× exact-factor speedups remain valid for that tiny request.
+Equally indexed reconstruction ties the exact-factor method.
+The fixed nearest-grid feature target remains distinct from the original sequential calibration target.
+
+Remaining research tasks, in dependency order:
+
+1. Reassess novelty and supported claims against current primary literature.
+   Separate exactness, state savings, request speed, and lifetime benefit.
+   Do not claim generic caching, fixed features, or ordinary quantization stability as new.
+2. Expand quality evidence using previously untouched evaluation inputs.
+   Compare fixed nearest-grid calibration, sequential calibration, nearest rounding, and full precision under matched conditions.
+   The existing two articles and thirty predictions cannot establish broad quality preservation.
+   Keep all twelve evaluated articles excluded from confirmation.
+3. Test realistic calibration sizes and context lengths under a new prospective protocol.
+   Include additional models, corpora, quantization settings, and deletion mechanisms.
+   Record precision, rounding margins, certificate acceptance, exact fallback, and complete ancestor replay.
+4. Replicate independent requests with randomized comparator ordering and uncertainty estimates.
+   Include optimized cold, warm, equally indexed, exact-factor, lossless-storage, and compressed-state controls.
+   Give compatible optimizations equally to all methods.
+   Repeated timings of one request do not replace independent deletion requests.
+5. Measure complete lifetime cost and changing-state request sequences.
+   Charge original preparation, retained information, loading, verification, fallback, model/state output, and storage.
+   Include no-op, combined, sequential, and complete deletion requests.
+   Base checkpoint parameters remain required beyond the reported complete calibration-state bytes.
+6. Register untouched confirmation after the target, method, comparators, and quality gates are settled.
+   Revise the historical forty-cell program for the explicit fixed-feature target.
+   Freeze estimators, sample sizes, uncertainty procedures, and the confirmation frame prospectively.
+7. Complete the manuscript, limitations, reproducibility review, and submission-facing claim audit.
+   The current prototype is not ACL-ready; the empirical program remains incomplete.
+
+Execution and evidence constraints:
+
+- No empirical worker remains. Do not launch further empirical runs.
+- The separate phase has 898 of 900 seconds charged or held: 776 recorded plus 122 unknown reserved seconds.
+- Its two remaining seconds cannot be pooled with the original ledger's 25 remaining seconds.
+- The original ledger remains 10,775 of 10,800 seconds; combined charged or reserved usage is 11,673 seconds.
+- Never reset either allowance or invent settlement for the unknown reservation.
+- Revision 27 cold progress conflicts with its sealed receipt; the verified model and receipt establish completion.
+- The cause remains unknown. Preserve and disclose campaigns/compressed_timing_v27/attempts/cold-001/progress-discrepancy.json.
+- Preserve original registrations, progress, failed attempts, source snapshots, exclusions, and complete cost receipts.
+- Repository pushes remain authorized; never force-push.
+
+The original sequential-target route still lacks a demonstrated complete-model repair advantage.
+Its negative results and boundary examples remain part of the research record.
+
+---
+
+Historical task registers follow unchanged.
+
 # Active tasks after revisions 23–24
 
 Updated 8 October 2026, UTC. This list supersedes historical blockers below.

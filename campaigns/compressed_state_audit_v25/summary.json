@@ -1,0 +1,1308 @@
+{
+  "all_complete_models_preserved": true,
+  "all_retained_descriptors_unchanged": true,
+  "all_state_roundtrips_canonical": true,
+  "analysis_cpu_ns": 31919790828,
+  "bits": [
+    16,
+    24
+  ],
+  "block_size": 256,
+  "certificate_acceptance_measured": false,
+  "comparisons": {
+    "16": {
+      "compared_complete_state_sha256": "a9f1704f372f868784dc7fd461f634f3293605f3c20815a66d56f283da7f7de3",
+      "filtered_original_with_retained_model_matches_fresh_retained_bytes": true,
+      "surviving_descriptor_byte_matches": 24
+    },
+    "24": {
+      "compared_complete_state_sha256": "f6e78c1aeb3c477520dbd559f9c56ef540e71ca183760e010afbfaf523a8bfbe",
+      "filtered_original_with_retained_model_matches_fresh_retained_bytes": true,
+      "surviving_descriptor_byte_matches": 24
+    }
+  },
+  "cost_account": "archive analysis process; separate from empirical worker ledgers",
+  "cost_scope": "through checks; excludes final report serialization and filesystem write",
+  "cpu_cap_seconds": 60,
+  "descriptor_count": 144,
+  "empirical_worker_budget_charged": false,
+  "generations": {
+    "prepare-001": {
+      "attempt": "campaigns/fixed_feature_v23/attempts/prepare-001",
+      "exact_state_bytes": 30458753,
+      "frozen_source_files_verified": 103,
+      "model_bytes": 22192646,
+      "model_sha256": "38a4110d02b4750fc5ab53a3dc3eda57020b20d271a3c9f68d9d6352dd688f80",
+      "plan_sha256": "85f965883c7a300245286cff7068cfac97b2e1689eda9fd8b785f6107f726b6e",
+      "precisions": {
+        "16": {
+          "all_source_containment_checks_passed": true,
+          "canonical_roundtrip": true,
+          "complete_model_bytes": 22192646,
+          "complete_model_bytes_equal": true,
+          "complete_state_bytes": 24570153,
+          "complete_state_reduction_bytes": 5888600,
+          "complete_state_reduction_fraction": 0.19333030475673119,
+          "complete_state_sha256": "641c9d03ae56c24b717e2ba8903c627ef677f40c9498089ebf8dddbce9030fb7",
+          "conversion_and_checks_cpu_ns": 8317103291,
+          "conversion_and_checks_wall_ns": 8319980790,
+          "descriptor_bytes": 2369388,
+          "descriptors": [
+            {
+              "descriptor_bytes": 28551,
+              "descriptor_sha256": "02bc05d01a446f211eadb732cb9cce7b5d949ad9261df9d666477146bf8ee2c8",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "71f437449d3a19b92635c203daaf46b2509ed75a2b6efb7e5fc0794e9e925c3b",
+              "stage_id": "block.0000.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28556,
+              "descriptor_sha256": "2d0c9f5218250c927d18df518c43ee62e7bb66d35b412b51d1a8d5a88e3a908b",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "b1eecf49431d6555cdcdaff90a0c9f20897951f29ab92576a7760f28ca0d59c8",
+              "stage_id": "block.0000.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28554,
+              "descriptor_sha256": "3425ee1e533cc47254ca2b10d34f9120ab09a009f92b304c3ace96c717e95da4",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "4aa8060f590ad288f6ac0fef4e139b4940ea7fcd3ed73c6747e59e5e5fb7d512",
+              "stage_id": "block.0000.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111790,
+              "descriptor_sha256": "cf98be6c5b7c3d8dc55fe9e00c90792dfe5ee121324d75319861101bca75ebde",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "1a9ebe32295e83165153d06ffaebd7bc02d7f02b3ecd821c7bbd6c668d62a83e",
+              "stage_id": "block.0000.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28551,
+              "descriptor_sha256": "7570e473df1c120d0169fb1951d5f7d4d1634c9d32421cf3ac66a680f5c86bac",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "a96604e32db629b912282d5ed1b9e1a6641f11355922ea914f09a86b739dfc94",
+              "stage_id": "block.0001.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28556,
+              "descriptor_sha256": "dafe8ca11acd09a2c94cc4180f612efade8537d740a6f66f1e0d59a023a723c4",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "926d9659d2d52500780e8ad97adbff5b424d724b5bfe2f7772a00c454d388b93",
+              "stage_id": "block.0001.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28554,
+              "descriptor_sha256": "cfebf5b21366221dc39e92fc684eb28243a411cb52ea9a5d1612a0e51770b028",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "b17eeb26eea0a87c2255ac6b42432433830ee42b9492fb7c47196e3144ca5754",
+              "stage_id": "block.0001.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111790,
+              "descriptor_sha256": "19404289304561282b2983591e24a133cc08c191220fddae179dff740b5ea7b4",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "b3fffbcc8edd3d5633cf1a2b94c2d3b16db6f05bb68d0c59310fb717fac7eed6",
+              "stage_id": "block.0001.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28551,
+              "descriptor_sha256": "5e4bd4bba4d2a812bea59b039c449a3f0c1b42f1b135e77824963a45395fcf10",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "bcde1aadae5caf8d387f9d49b4d022c850f49e53f34549f043c6ddc7cd7d7bab",
+              "stage_id": "block.0002.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28556,
+              "descriptor_sha256": "6ed5521afb9f1ae28f3d8b7046b20b9b6146f9082dcd02ff59a844549a9b09e2",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "8714a34bb709696f1a71cabdb08743b8cfdaca7b751fa03e47aef648d2fbfec3",
+              "stage_id": "block.0002.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28554,
+              "descriptor_sha256": "b69bbce7294809242233c06f95bf050d465757c318c2e4f07ac9cc18b13bccb1",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "548f9f75bcee8d16fc3e69f7012b651972c2c61ed81f43746f2b39328a48619e",
+              "stage_id": "block.0002.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111790,
+              "descriptor_sha256": "adcc2d8a4901ed4c7553092a45ae099417fda6676b3e86254c3170b0b2c56167",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "27f5f11bbb6fb082abeb0452a880389e3c5b738911206f83c85e2603ff1ebed0",
+              "stage_id": "block.0002.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28551,
+              "descriptor_sha256": "92048112d2675ec1ea084e63d3a5043ae5868a04f8cc3aa4d1184ec0795b64c4",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "81dc1a051e242dccdbb37efbe6027e1af815bc77235d3d18fe6ac6b8e285c8f7",
+              "stage_id": "block.0003.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28556,
+              "descriptor_sha256": "116a1c33761cf920bef3f99eb4402f56243fdd97d75d22d8af022217ccadccbe",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "c4843fcf0bea3a7194a62332c1aca408f22bf3a404fcd875c2ff7274ea67aac8",
+              "stage_id": "block.0003.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28554,
+              "descriptor_sha256": "8b1808d070e9bd286895fcea7e27fc3569ca1f83024b822a1fdf665b9b1db9f1",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "1bf96fd76d1f53b084a275a907fe816aadc5e8acda30dcf841ff4ef03d5b9f39",
+              "stage_id": "block.0003.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111790,
+              "descriptor_sha256": "02db3a79d60713fc1c3473f3fd05e90a26d6f75998016ff2a3bb07c47121a97e",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "29137bd3fa590c8c28fcf6b71cf2c228a1f6fa459b0d2fb3b175e13c202ef506",
+              "stage_id": "block.0003.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28551,
+              "descriptor_sha256": "966d67158f2e13df12eab9a6df3c362e58da6e6a9ca2eeb469efe63eca92a923",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "04d638b9b6749ae5e9fe0a1b6d0a7b22106737f9a22e8834e2822512da625b92",
+              "stage_id": "block.0004.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28556,
+              "descriptor_sha256": "9c0605b422e615a85efd80d4c7f6fe113b0c56e4e62bdd225d781fe1a7034cec",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "e7504ff1cbc27704da54bb753117375680e08a76543624f8082ff7c34402da54",
+              "stage_id": "block.0004.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28554,
+              "descriptor_sha256": "8b3694e004ea727849c413d58b8efbe8558587498cb47d00d2d9c6e45bf2cc3a",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "41e92db3b8711900ae9224344c98698a9427fd0394eaf378a539d2e28d92b772",
+              "stage_id": "block.0004.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111790,
+              "descriptor_sha256": "115340f8fe8f289520b43c654e96fda4aa476404930707dab4be3d9f4373bc86",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "f38ce307c08c24d3f874b8311b322cca7f47e654b7c292dc50665823d7fca169",
+              "stage_id": "block.0004.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28551,
+              "descriptor_sha256": "42e3a15989e6fca835e6f8e965b936cd29a8114f5f5d2b7ecf57f5bf39feaa66",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "1a4a28a16b57629e7e58483fb1a003bae9490bdca4b6e9af035f64a5defe5d55",
+              "stage_id": "block.0005.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28556,
+              "descriptor_sha256": "6e665c98675473f72f3ef18683a6b2b4cbe083cdf3745daca09bc0d738b16035",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "d21b91ccdd6e27fe2d1b4737ebc12edbab41212c4e1a7443c75f541d277ccb28",
+              "stage_id": "block.0005.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28554,
+              "descriptor_sha256": "1027d88311cef2bb8b64b64be547e9adfdd707a64ac5210e37b8b84843973e41",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "b32777d906933c7e76bf0d6a064943df9116012ff3815b8dd84aa1ae585be118",
+              "stage_id": "block.0005.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111790,
+              "descriptor_sha256": "0c72d9ae0b333d61bc891f07ef1e74d305ebecac61f62d02698afd995f1cfde5",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "b82be854d2bc4a3db6a28df988b3ee1e7c851793cb1bf23cbb9b2b90daa47cb5",
+              "stage_id": "block.0005.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28550,
+              "descriptor_sha256": "cc17f2844b64a1c4b7f5ce5623bd23d361e8648aff5e361a1f1e642dc1cb5a91",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "e4aa1bde1aff9f0a6052da6f8465e73c60b653037573de82151fb1119fa84d69",
+              "stage_id": "block.0000.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28555,
+              "descriptor_sha256": "5c7fe3328e6a59b5926abc0c85fc7870ba929cbcb1044abacb75fd4080aa0000",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "b10744fe8391c489939be16fc7afef6f5b55d65af09f45d3a2d530a26e294c07",
+              "stage_id": "block.0000.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28553,
+              "descriptor_sha256": "a182e5f0ccbed5363cb94d00c5e6ee8ba3dfc6d25e49c47d874894bc92dbc434",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "a6f6299527893941da25469af335d15138f3fceace1cdd9f07a4afc290da0ded",
+              "stage_id": "block.0000.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111789,
+              "descriptor_sha256": "af9759a678495364d2dc24b68538ff33c640977dafdb9492cd8a4dd8dff8e933",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "2722e809e55923f9af600680673be84f72104c29ce5e27324c99d64e68223d74",
+              "stage_id": "block.0000.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28550,
+              "descriptor_sha256": "d63406597170dd50593ed05acb7eb3595ac19a7cb3b68da2e4078bd46de7c893",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "07c207cfaea8ba6e005ad3ec2ef1327e5598a19ce965259f21d5a243a7c30af9",
+              "stage_id": "block.0001.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28555,
+              "descriptor_sha256": "0c8e836f726edbc1ca47ff9efb532424b2ec8e87aecc5794f677373480863a1c",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "8426cdfe27bcacfcb6d875b87535a84705f98e8a215f610c78a513499a1e7e66",
+              "stage_id": "block.0001.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28553,
+              "descriptor_sha256": "701710a45873ef7d8428c38712e94518d876f6682891fc18095fd8261fdfce0d",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "bf45fc309db8d6ab04e52cd4fe1efd614fc225da67ef7fa85d9d7eb6377beac9",
+              "stage_id": "block.0001.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111789,
+              "descriptor_sha256": "c8798bac84f95c7afcef31c973c608060bcb870209c24090196c0e2d87b332b9",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "972e6e6b17fad12552eaf69e4ac16632a270db248f5753cb157f868f0262ee03",
+              "stage_id": "block.0001.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28550,
+              "descriptor_sha256": "adde8aa7fadb850c6c77d63edf7dca99c033d066fac8632a138c6429ef0d6aba",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "d67f19b831179c8512c1ea0b037ff87efef4c4bda55fa7161959f034aec6687f",
+              "stage_id": "block.0002.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28555,
+              "descriptor_sha256": "1024a8a875e4471ff9e792fa428e93ea3e1dbef558d0a885ab0cce9b51b0636c",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "6a2e6432af957f13c7d5a0e397d8de4b4ccec81cdabd558cca699f027c29bbb9",
+              "stage_id": "block.0002.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28553,
+              "descriptor_sha256": "5416fdfc1b2e25a683965ba2107537320637ae7ffe691de29d2fa0105b19695e",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "9dad4507d167df338b0b9f9cc44594998b61b7c7c326bb69427b0a07eb59f966",
+              "stage_id": "block.0002.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111789,
+              "descriptor_sha256": "734068e4da17d003ca2b11af08f65e67284b3514482b5056f7a542cfe5f41861",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "61123d213e85773fbea9cd2816b39927df8fdabe0736b5124359690aa22870ad",
+              "stage_id": "block.0002.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28550,
+              "descriptor_sha256": "9222bb4b06229b74ed390d56e6595fe69e0fef9b9868d954743c7ad4098a652e",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "80269098ffddc20d845226ad0fa4c18c1896c6d1c411f1a51b634d4d5ae5610c",
+              "stage_id": "block.0003.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28555,
+              "descriptor_sha256": "e46da877d8288b27819dd3b744cd3fa40b7f4dd62b215e8f049e89b6884317c4",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "205b21acd8d95cf983d11f943a435a5a31774e1477d060113fef9a31a3853e88",
+              "stage_id": "block.0003.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28553,
+              "descriptor_sha256": "0f4d66e4a4ccc5606b8426d5cee6dc7e6a6d050120a2640794d461cee0c57839",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "743fc468e3ed2a6cbbb9a9a50a2ac2f4fad84970930d8f336e549c3c7d6e54f7",
+              "stage_id": "block.0003.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111789,
+              "descriptor_sha256": "183fa0f4bbf2702ee9ab94113302247fce48a5e988d63b6e7009c100a6e6b90a",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "76fc81768e4eaf393542f1df8155606a953d7d26fe9c9e48e864fb39d617f7bc",
+              "stage_id": "block.0003.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28550,
+              "descriptor_sha256": "49347b2cbbd6b9c2459aa52c774d09ccf9c7e8220c739c234ef3b154021ae0d2",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "7384c78bea367cfb1a63fb19585b1ed37d791768358d33bd44ae5c41462d5607",
+              "stage_id": "block.0004.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28555,
+              "descriptor_sha256": "2cfb35b3d870b7849c1ba92b46526583c5d9a5e0f8491406fbd40b62d854acf4",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "2a504544864c8e944433c076aedf8338774b6f2562b2ad527b4a36345afbd947",
+              "stage_id": "block.0004.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28553,
+              "descriptor_sha256": "977abe1edd623f2904c95c3df07a77cc4e6c90f472e46c795eb29ca9cfbc627b",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "e68ac07cf4464b6d98d9beaf8143933b6ae9886ad4bae949f8ff30bc78fbc582",
+              "stage_id": "block.0004.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111789,
+              "descriptor_sha256": "afc68b0e013ae63d941c3d6ef5b255ef8caefece00024be87c9f12b77bf3b266",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "361c0c354523fbfd775a11c345c21d6265ecc62caf0503ffe640f15251ec3fa6",
+              "stage_id": "block.0004.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28550,
+              "descriptor_sha256": "670a05d622d9736320d0146e774eeb73ee04d0519fb2457d2533a1441e6bf7cf",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "709be23261c870e4af2cd1e229140c992c136d12fce61c3be96c9e63ca412ef2",
+              "stage_id": "block.0005.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28555,
+              "descriptor_sha256": "3af60a28ed564417cf7fc0fd944e435f9c2a8426b06e0ef0a30349945a322e60",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "d5479cd7707443a14d21e83b4632eea73d487a92f9cab108711b60027099b4f6",
+              "stage_id": "block.0005.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28553,
+              "descriptor_sha256": "2a79117840a1c40acd8f7f35869d93b221283a5e01bb23e5619cfc29d16ceea6",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "947c0b3659e13eb1697af55030e96647e3769e30b72057c1c0384d88c3a803b5",
+              "stage_id": "block.0005.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111789,
+              "descriptor_sha256": "e78b91bcc7cb3533e220bdf7f4e696636cbf7c288b3483f911b9bed57d6ba8e5",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "8617c1f2a47e08e1d76dd28b9256328b3e4b8e9178d15b10fbda1870ea0ceb17",
+              "stage_id": "block.0005.mlp_down",
+              "values": 49152
+            }
+          ],
+          "exact_state_bytes": 30458753,
+          "framing_bytes": 16,
+          "header_bytes": 8103,
+          "source_count": 2
+        },
+        "24": {
+          "all_source_containment_checks_passed": true,
+          "canonical_roundtrip": true,
+          "complete_model_bytes": 22192646,
+          "complete_model_bytes_equal": true,
+          "complete_state_bytes": 25602345,
+          "complete_state_reduction_bytes": 4856408,
+          "complete_state_reduction_fraction": 0.15944211504653527,
+          "complete_state_sha256": "963afe49ae3fcc563b21e86bd9366f55b4d94deb8c1abb43d78ebb1f53f6ee26",
+          "conversion_and_checks_cpu_ns": 8043477718,
+          "conversion_and_checks_wall_ns": 8045079103,
+          "descriptor_bytes": 3401580,
+          "descriptors": [
+            {
+              "descriptor_bytes": 40839,
+              "descriptor_sha256": "8f2bb7ccb17ea12100ace10ec8bac7e31d302b15b7e3eea3af8158610f36b54d",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "71f437449d3a19b92635c203daaf46b2509ed75a2b6efb7e5fc0794e9e925c3b",
+              "stage_id": "block.0000.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40844,
+              "descriptor_sha256": "987e4e0792dfeba5a2bd08d4483aa5f4e77cf9f2e33e0857d7f56128c3241eb3",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "b1eecf49431d6555cdcdaff90a0c9f20897951f29ab92576a7760f28ca0d59c8",
+              "stage_id": "block.0000.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40842,
+              "descriptor_sha256": "7675d3f1ec41eec827b8e8cef52f09f2a35d7e7e3571f5ea32c17e2bdd19f31d",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "4aa8060f590ad288f6ac0fef4e139b4940ea7fcd3ed73c6747e59e5e5fb7d512",
+              "stage_id": "block.0000.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160942,
+              "descriptor_sha256": "e92c52ff3eb4eabef73b236f0ec05c82c25bdaa91ddc5dc318232bf9b273b083",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "1a9ebe32295e83165153d06ffaebd7bc02d7f02b3ecd821c7bbd6c668d62a83e",
+              "stage_id": "block.0000.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40839,
+              "descriptor_sha256": "2f60b0570b0044d841f16aa4326420822f14671c905cdff3cfe3179d740e8d1e",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "a96604e32db629b912282d5ed1b9e1a6641f11355922ea914f09a86b739dfc94",
+              "stage_id": "block.0001.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40844,
+              "descriptor_sha256": "a1fed488738b4b442b6e12338f0c1a019974b8ba65d1271c0240763762a3f912",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "926d9659d2d52500780e8ad97adbff5b424d724b5bfe2f7772a00c454d388b93",
+              "stage_id": "block.0001.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40842,
+              "descriptor_sha256": "8714bc9c68b7ff3f62ccc1742f42b10076895f8a62db098be15e29697352ccaf",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "b17eeb26eea0a87c2255ac6b42432433830ee42b9492fb7c47196e3144ca5754",
+              "stage_id": "block.0001.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160942,
+              "descriptor_sha256": "5ae6db0f8a81e10476e4515dfd13aa3c0dcaabcd3534af11630a4c0366565556",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "b3fffbcc8edd3d5633cf1a2b94c2d3b16db6f05bb68d0c59310fb717fac7eed6",
+              "stage_id": "block.0001.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40839,
+              "descriptor_sha256": "47a966b825e85953d8b6efd11cf79cad1f4d96aab5d8099e28464eea7f66e9aa",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "bcde1aadae5caf8d387f9d49b4d022c850f49e53f34549f043c6ddc7cd7d7bab",
+              "stage_id": "block.0002.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40844,
+              "descriptor_sha256": "c41c32a964854610192b0d4783e5540d34da760f2f479932ede074dbda4f5c09",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "8714a34bb709696f1a71cabdb08743b8cfdaca7b751fa03e47aef648d2fbfec3",
+              "stage_id": "block.0002.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40842,
+              "descriptor_sha256": "8a33cae00a45eff58c561e56115dcd1ad84836e5fd3f54d34fadc2bbff01e996",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "548f9f75bcee8d16fc3e69f7012b651972c2c61ed81f43746f2b39328a48619e",
+              "stage_id": "block.0002.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160942,
+              "descriptor_sha256": "fcb06eaea600efc6b97fcf3bae749f455627c0e54f3134a998fecf24a81067fb",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "27f5f11bbb6fb082abeb0452a880389e3c5b738911206f83c85e2603ff1ebed0",
+              "stage_id": "block.0002.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40839,
+              "descriptor_sha256": "fb4054ab80461e018dbf51aaa5a9b11d6d8d3cc5e51ba7f02521f6ff20f74128",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "81dc1a051e242dccdbb37efbe6027e1af815bc77235d3d18fe6ac6b8e285c8f7",
+              "stage_id": "block.0003.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40844,
+              "descriptor_sha256": "44c7f4f97d5d8745142a835240dda119ba54b91544bf713c377349252e5e24c7",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "c4843fcf0bea3a7194a62332c1aca408f22bf3a404fcd875c2ff7274ea67aac8",
+              "stage_id": "block.0003.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40842,
+              "descriptor_sha256": "c8fb2e9d3609c7baf64c9f6e3a61a72d5d1d0153bf576ffc7f6f0fa6cf1131a2",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "1bf96fd76d1f53b084a275a907fe816aadc5e8acda30dcf841ff4ef03d5b9f39",
+              "stage_id": "block.0003.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160942,
+              "descriptor_sha256": "c6f9a4184d62e762920bc86519bb7595dcb403039fcfd5d407f334faac78e236",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "29137bd3fa590c8c28fcf6b71cf2c228a1f6fa459b0d2fb3b175e13c202ef506",
+              "stage_id": "block.0003.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40839,
+              "descriptor_sha256": "f919a30865e237dc72785d7e0eabaa32d480fd050b7c8c6e9258e0234aa9a15f",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "04d638b9b6749ae5e9fe0a1b6d0a7b22106737f9a22e8834e2822512da625b92",
+              "stage_id": "block.0004.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40844,
+              "descriptor_sha256": "8e24714268c0f94520a9b26a551a716aa240656a26d3672cdad60a74dcd0b074",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "e7504ff1cbc27704da54bb753117375680e08a76543624f8082ff7c34402da54",
+              "stage_id": "block.0004.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40842,
+              "descriptor_sha256": "509d4e025b7f067da2a80fe681dadde8f69abd045e61298e24f0ef680d776bab",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "41e92db3b8711900ae9224344c98698a9427fd0394eaf378a539d2e28d92b772",
+              "stage_id": "block.0004.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160942,
+              "descriptor_sha256": "52461c5115c5dc8fbb4a52198f508f6ba87eedd505fbf7e23e22ca151190796b",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "f38ce307c08c24d3f874b8311b322cca7f47e654b7c292dc50665823d7fca169",
+              "stage_id": "block.0004.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40839,
+              "descriptor_sha256": "f572cd64ffc741cb6efe2f7df4e8423f71b3c86f2aa597d4c29302cf02223787",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "1a4a28a16b57629e7e58483fb1a003bae9490bdca4b6e9af035f64a5defe5d55",
+              "stage_id": "block.0005.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40844,
+              "descriptor_sha256": "1b75c4c74852ca11d96005827cee9b0cf563d05695bd25b4c380063707ed7ec8",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "d21b91ccdd6e27fe2d1b4737ebc12edbab41212c4e1a7443c75f541d277ccb28",
+              "stage_id": "block.0005.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40842,
+              "descriptor_sha256": "c82038b882e107a61b20ad5b4c5e084e23f92d8cf752c9101159f81cc08d5512",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "b32777d906933c7e76bf0d6a064943df9116012ff3815b8dd84aa1ae585be118",
+              "stage_id": "block.0005.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160942,
+              "descriptor_sha256": "3d88b883735092fc118e5ca8435e46080967f5269683e5b18787411b46752277",
+              "record_id": "wikitext2:train:article-row-27113",
+              "source_sha256": "b82be854d2bc4a3db6a28df988b3ee1e7c851793cb1bf23cbb9b2b90daa47cb5",
+              "stage_id": "block.0005.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40838,
+              "descriptor_sha256": "922bd29011d1fa36d6b4a3ef58d4fb01b485ea1de7fa37a02d8e156d622217d3",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "e4aa1bde1aff9f0a6052da6f8465e73c60b653037573de82151fb1119fa84d69",
+              "stage_id": "block.0000.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40843,
+              "descriptor_sha256": "508ecca494087066da7b6a54b7f6469e4b2260e4ab6fdc03812679bdf9128bd5",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "b10744fe8391c489939be16fc7afef6f5b55d65af09f45d3a2d530a26e294c07",
+              "stage_id": "block.0000.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40841,
+              "descriptor_sha256": "a8f2937395f57d1a8eb53dbf46fbee9457473a30ff83b7f901e41ad66c558bec",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "a6f6299527893941da25469af335d15138f3fceace1cdd9f07a4afc290da0ded",
+              "stage_id": "block.0000.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160941,
+              "descriptor_sha256": "4a4507fcd4f7ebe6f38da14e1fd662dcf155a374b103554b5279fb5e227d9c93",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "2722e809e55923f9af600680673be84f72104c29ce5e27324c99d64e68223d74",
+              "stage_id": "block.0000.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40838,
+              "descriptor_sha256": "39bb432d23579db8fea8218899706b70c2772a6ea82b04ecc1e0f976f337fdaf",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "07c207cfaea8ba6e005ad3ec2ef1327e5598a19ce965259f21d5a243a7c30af9",
+              "stage_id": "block.0001.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40843,
+              "descriptor_sha256": "d04d144073ae046a70092b436e7cf05f8762f147eb01bf07e912b1ad5a2317fb",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "8426cdfe27bcacfcb6d875b87535a84705f98e8a215f610c78a513499a1e7e66",
+              "stage_id": "block.0001.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40841,
+              "descriptor_sha256": "fa559e25e3aa66d6aeb815a84e788cccc8fb54e705feef1756f28221577e4304",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "bf45fc309db8d6ab04e52cd4fe1efd614fc225da67ef7fa85d9d7eb6377beac9",
+              "stage_id": "block.0001.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160941,
+              "descriptor_sha256": "58f4d9fed703d3bf0eb450f77ec6aa337f58469fd9d6df62e06803cdd6e910ef",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "972e6e6b17fad12552eaf69e4ac16632a270db248f5753cb157f868f0262ee03",
+              "stage_id": "block.0001.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40838,
+              "descriptor_sha256": "1ee4cadd04743710ed241fae064b186578a38fee2a50d0cc7f0463ccede7e926",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "d67f19b831179c8512c1ea0b037ff87efef4c4bda55fa7161959f034aec6687f",
+              "stage_id": "block.0002.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40843,
+              "descriptor_sha256": "cbe094047e7fd23b08f47b38f4ba0742abba646a933964de27be17efbd6bd007",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "6a2e6432af957f13c7d5a0e397d8de4b4ccec81cdabd558cca699f027c29bbb9",
+              "stage_id": "block.0002.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40841,
+              "descriptor_sha256": "c341713374acab39f2dac6d5f53d140d763e463b7559160cddefd469e38c9b32",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "9dad4507d167df338b0b9f9cc44594998b61b7c7c326bb69427b0a07eb59f966",
+              "stage_id": "block.0002.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160941,
+              "descriptor_sha256": "e098d75a002f03e4e6b7abdfcf60c3957d95a8b91b549bb4cd616bdc3cbb552a",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "61123d213e85773fbea9cd2816b39927df8fdabe0736b5124359690aa22870ad",
+              "stage_id": "block.0002.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40838,
+              "descriptor_sha256": "8c8e97c5f3b15e7b725f26d8eb01cb21bfe2cfe0c9354eb2601c0c5afe92cba8",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "80269098ffddc20d845226ad0fa4c18c1896c6d1c411f1a51b634d4d5ae5610c",
+              "stage_id": "block.0003.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40843,
+              "descriptor_sha256": "1811d337a9cc69c47a03dd59e7554ad02cccd34e6d39b6fe4bed3504c556f50f",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "205b21acd8d95cf983d11f943a435a5a31774e1477d060113fef9a31a3853e88",
+              "stage_id": "block.0003.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40841,
+              "descriptor_sha256": "aac89838def0e4a4d00634b0ebf54490d8961c7626b4b41a6516055054b063f9",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "743fc468e3ed2a6cbbb9a9a50a2ac2f4fad84970930d8f336e549c3c7d6e54f7",
+              "stage_id": "block.0003.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160941,
+              "descriptor_sha256": "4fcb686e6e55eb0894a3b6361af98fd319f981f47b8ba3a637dba077e2a21014",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "76fc81768e4eaf393542f1df8155606a953d7d26fe9c9e48e864fb39d617f7bc",
+              "stage_id": "block.0003.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40838,
+              "descriptor_sha256": "912d3c6166e65eb131bda4aaf1408a43920471fbb68850cfe0ad308fea4cb136",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "7384c78bea367cfb1a63fb19585b1ed37d791768358d33bd44ae5c41462d5607",
+              "stage_id": "block.0004.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40843,
+              "descriptor_sha256": "2f39a35b6c8d7a1d94470a7ed4c3c623bba57e0070aff7a72da783ed14cc4c7b",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "2a504544864c8e944433c076aedf8338774b6f2562b2ad527b4a36345afbd947",
+              "stage_id": "block.0004.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40841,
+              "descriptor_sha256": "44bea06c01bbc64b33ac397b270782353e367df362b8d1ee36bc235c82cf9367",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "e68ac07cf4464b6d98d9beaf8143933b6ae9886ad4bae949f8ff30bc78fbc582",
+              "stage_id": "block.0004.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160941,
+              "descriptor_sha256": "bd28a71ac783875678ce9168cd0ea88d3f3bf612d251489721f36b02072a721b",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "361c0c354523fbfd775a11c345c21d6265ecc62caf0503ffe640f15251ec3fa6",
+              "stage_id": "block.0004.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40838,
+              "descriptor_sha256": "983f54dda504e566f2d0bc41e98cc00e22bef914cd77ccec63332c27654cd7a3",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "709be23261c870e4af2cd1e229140c992c136d12fce61c3be96c9e63ca412ef2",
+              "stage_id": "block.0005.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40843,
+              "descriptor_sha256": "016d88126f9ef823d6357a900a74fa85f79f2faee4daa5cd0e544a9bdca7e6e5",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "d5479cd7707443a14d21e83b4632eea73d487a92f9cab108711b60027099b4f6",
+              "stage_id": "block.0005.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40841,
+              "descriptor_sha256": "463688105b750205cb2622a894e9c6ef17f011d014c27b00c9be43f2630f723b",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "947c0b3659e13eb1697af55030e96647e3769e30b72057c1c0384d88c3a803b5",
+              "stage_id": "block.0005.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160941,
+              "descriptor_sha256": "6eaa721abd64db4c8bcb2e9f2a8c066c57a8835419fd7d2f64e10e0d4ed144b2",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "8617c1f2a47e08e1d76dd28b9256328b3e4b8e9178d15b10fbda1870ea0ceb17",
+              "stage_id": "block.0005.mlp_down",
+              "values": 49152
+            }
+          ],
+          "exact_state_bytes": 30458753,
+          "framing_bytes": 16,
+          "header_bytes": 8103,
+          "source_count": 2
+        }
+      },
+      "progress_sha256": "b8a8ab34be4d6a0c49cb50c171e3fc38abf0d8beb9eb2c9a94215a419c2eec23",
+      "receipt_sha256": "1e2d526ab3b91812f5a4f6b8aa8335d5d11abf0675d2eafee1fd37f299d6e8aa",
+      "state_sha256": "508c36848902bddc407ff84c660b48b5704451729ae5151ad18b4f5ff1b113dc"
+    },
+    "repair-001": {
+      "attempt": "campaigns/fixed_feature_v23/attempts/repair-001",
+      "exact_state_bytes": 26326066,
+      "frozen_source_files_verified": 103,
+      "model_bytes": 22192646,
+      "model_sha256": "d27c824322d0399f99a78c2b9d7e369e6b9a547085fa1cc25f92703536962927",
+      "plan_sha256": "83dedbbfbe412449c1c2b26d8bfee8b0e11f7d007a97e64b8c589f1b8935d0ab",
+      "precisions": {
+        "16": {
+          "all_source_containment_checks_passed": true,
+          "canonical_roundtrip": true,
+          "complete_model_bytes": 22192646,
+          "complete_model_bytes_equal": true,
+          "complete_state_bytes": 23381811,
+          "complete_state_reduction_bytes": 2944255,
+          "complete_state_reduction_fraction": 0.11183801635990731,
+          "complete_state_sha256": "a9f1704f372f868784dc7fd461f634f3293605f3c20815a66d56f283da7f7de3",
+          "conversion_and_checks_cpu_ns": 5715553584,
+          "conversion_and_checks_wall_ns": 5718487344,
+          "descriptor_bytes": 1184682,
+          "descriptors": [
+            {
+              "descriptor_bytes": 28550,
+              "descriptor_sha256": "cc17f2844b64a1c4b7f5ce5623bd23d361e8648aff5e361a1f1e642dc1cb5a91",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "e4aa1bde1aff9f0a6052da6f8465e73c60b653037573de82151fb1119fa84d69",
+              "stage_id": "block.0000.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28555,
+              "descriptor_sha256": "5c7fe3328e6a59b5926abc0c85fc7870ba929cbcb1044abacb75fd4080aa0000",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "b10744fe8391c489939be16fc7afef6f5b55d65af09f45d3a2d530a26e294c07",
+              "stage_id": "block.0000.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28553,
+              "descriptor_sha256": "a182e5f0ccbed5363cb94d00c5e6ee8ba3dfc6d25e49c47d874894bc92dbc434",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "a6f6299527893941da25469af335d15138f3fceace1cdd9f07a4afc290da0ded",
+              "stage_id": "block.0000.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111789,
+              "descriptor_sha256": "af9759a678495364d2dc24b68538ff33c640977dafdb9492cd8a4dd8dff8e933",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "2722e809e55923f9af600680673be84f72104c29ce5e27324c99d64e68223d74",
+              "stage_id": "block.0000.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28550,
+              "descriptor_sha256": "d63406597170dd50593ed05acb7eb3595ac19a7cb3b68da2e4078bd46de7c893",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "07c207cfaea8ba6e005ad3ec2ef1327e5598a19ce965259f21d5a243a7c30af9",
+              "stage_id": "block.0001.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28555,
+              "descriptor_sha256": "0c8e836f726edbc1ca47ff9efb532424b2ec8e87aecc5794f677373480863a1c",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "8426cdfe27bcacfcb6d875b87535a84705f98e8a215f610c78a513499a1e7e66",
+              "stage_id": "block.0001.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28553,
+              "descriptor_sha256": "701710a45873ef7d8428c38712e94518d876f6682891fc18095fd8261fdfce0d",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "bf45fc309db8d6ab04e52cd4fe1efd614fc225da67ef7fa85d9d7eb6377beac9",
+              "stage_id": "block.0001.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111789,
+              "descriptor_sha256": "c8798bac84f95c7afcef31c973c608060bcb870209c24090196c0e2d87b332b9",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "972e6e6b17fad12552eaf69e4ac16632a270db248f5753cb157f868f0262ee03",
+              "stage_id": "block.0001.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28550,
+              "descriptor_sha256": "adde8aa7fadb850c6c77d63edf7dca99c033d066fac8632a138c6429ef0d6aba",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "d67f19b831179c8512c1ea0b037ff87efef4c4bda55fa7161959f034aec6687f",
+              "stage_id": "block.0002.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28555,
+              "descriptor_sha256": "1024a8a875e4471ff9e792fa428e93ea3e1dbef558d0a885ab0cce9b51b0636c",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "6a2e6432af957f13c7d5a0e397d8de4b4ccec81cdabd558cca699f027c29bbb9",
+              "stage_id": "block.0002.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28553,
+              "descriptor_sha256": "5416fdfc1b2e25a683965ba2107537320637ae7ffe691de29d2fa0105b19695e",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "9dad4507d167df338b0b9f9cc44594998b61b7c7c326bb69427b0a07eb59f966",
+              "stage_id": "block.0002.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111789,
+              "descriptor_sha256": "734068e4da17d003ca2b11af08f65e67284b3514482b5056f7a542cfe5f41861",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "61123d213e85773fbea9cd2816b39927df8fdabe0736b5124359690aa22870ad",
+              "stage_id": "block.0002.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28550,
+              "descriptor_sha256": "9222bb4b06229b74ed390d56e6595fe69e0fef9b9868d954743c7ad4098a652e",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "80269098ffddc20d845226ad0fa4c18c1896c6d1c411f1a51b634d4d5ae5610c",
+              "stage_id": "block.0003.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28555,
+              "descriptor_sha256": "e46da877d8288b27819dd3b744cd3fa40b7f4dd62b215e8f049e89b6884317c4",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "205b21acd8d95cf983d11f943a435a5a31774e1477d060113fef9a31a3853e88",
+              "stage_id": "block.0003.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28553,
+              "descriptor_sha256": "0f4d66e4a4ccc5606b8426d5cee6dc7e6a6d050120a2640794d461cee0c57839",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "743fc468e3ed2a6cbbb9a9a50a2ac2f4fad84970930d8f336e549c3c7d6e54f7",
+              "stage_id": "block.0003.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111789,
+              "descriptor_sha256": "183fa0f4bbf2702ee9ab94113302247fce48a5e988d63b6e7009c100a6e6b90a",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "76fc81768e4eaf393542f1df8155606a953d7d26fe9c9e48e864fb39d617f7bc",
+              "stage_id": "block.0003.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28550,
+              "descriptor_sha256": "49347b2cbbd6b9c2459aa52c774d09ccf9c7e8220c739c234ef3b154021ae0d2",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "7384c78bea367cfb1a63fb19585b1ed37d791768358d33bd44ae5c41462d5607",
+              "stage_id": "block.0004.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28555,
+              "descriptor_sha256": "2cfb35b3d870b7849c1ba92b46526583c5d9a5e0f8491406fbd40b62d854acf4",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "2a504544864c8e944433c076aedf8338774b6f2562b2ad527b4a36345afbd947",
+              "stage_id": "block.0004.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28553,
+              "descriptor_sha256": "977abe1edd623f2904c95c3df07a77cc4e6c90f472e46c795eb29ca9cfbc627b",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "e68ac07cf4464b6d98d9beaf8143933b6ae9886ad4bae949f8ff30bc78fbc582",
+              "stage_id": "block.0004.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111789,
+              "descriptor_sha256": "afc68b0e013ae63d941c3d6ef5b255ef8caefece00024be87c9f12b77bf3b266",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "361c0c354523fbfd775a11c345c21d6265ecc62caf0503ffe640f15251ec3fa6",
+              "stage_id": "block.0004.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 28550,
+              "descriptor_sha256": "670a05d622d9736320d0146e774eeb73ee04d0519fb2457d2533a1441e6bf7cf",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "709be23261c870e4af2cd1e229140c992c136d12fce61c3be96c9e63ca412ef2",
+              "stage_id": "block.0005.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28555,
+              "descriptor_sha256": "3af60a28ed564417cf7fc0fd944e435f9c2a8426b06e0ef0a30349945a322e60",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "d5479cd7707443a14d21e83b4632eea73d487a92f9cab108711b60027099b4f6",
+              "stage_id": "block.0005.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 28553,
+              "descriptor_sha256": "2a79117840a1c40acd8f7f35869d93b221283a5e01bb23e5619cfc29d16ceea6",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "947c0b3659e13eb1697af55030e96647e3769e30b72057c1c0384d88c3a803b5",
+              "stage_id": "block.0005.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 111789,
+              "descriptor_sha256": "e78b91bcc7cb3533e220bdf7f4e696636cbf7c288b3483f911b9bed57d6ba8e5",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "8617c1f2a47e08e1d76dd28b9256328b3e4b8e9178d15b10fbda1870ea0ceb17",
+              "stage_id": "block.0005.mlp_down",
+              "values": 49152
+            }
+          ],
+          "exact_state_bytes": 26326066,
+          "framing_bytes": 16,
+          "header_bytes": 4467,
+          "source_count": 1
+        },
+        "24": {
+          "all_source_containment_checks_passed": true,
+          "canonical_roundtrip": true,
+          "complete_model_bytes": 22192646,
+          "complete_model_bytes_equal": true,
+          "complete_state_bytes": 23897907,
+          "complete_state_reduction_bytes": 2428159,
+          "complete_state_reduction_fraction": 0.09223402387580426,
+          "complete_state_sha256": "f6e78c1aeb3c477520dbd559f9c56ef540e71ca183760e010afbfaf523a8bfbe",
+          "conversion_and_checks_cpu_ns": 5223608123,
+          "conversion_and_checks_wall_ns": 5224243254,
+          "descriptor_bytes": 1700778,
+          "descriptors": [
+            {
+              "descriptor_bytes": 40838,
+              "descriptor_sha256": "922bd29011d1fa36d6b4a3ef58d4fb01b485ea1de7fa37a02d8e156d622217d3",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "e4aa1bde1aff9f0a6052da6f8465e73c60b653037573de82151fb1119fa84d69",
+              "stage_id": "block.0000.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40843,
+              "descriptor_sha256": "508ecca494087066da7b6a54b7f6469e4b2260e4ab6fdc03812679bdf9128bd5",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "b10744fe8391c489939be16fc7afef6f5b55d65af09f45d3a2d530a26e294c07",
+              "stage_id": "block.0000.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40841,
+              "descriptor_sha256": "a8f2937395f57d1a8eb53dbf46fbee9457473a30ff83b7f901e41ad66c558bec",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "a6f6299527893941da25469af335d15138f3fceace1cdd9f07a4afc290da0ded",
+              "stage_id": "block.0000.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160941,
+              "descriptor_sha256": "4a4507fcd4f7ebe6f38da14e1fd662dcf155a374b103554b5279fb5e227d9c93",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "2722e809e55923f9af600680673be84f72104c29ce5e27324c99d64e68223d74",
+              "stage_id": "block.0000.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40838,
+              "descriptor_sha256": "39bb432d23579db8fea8218899706b70c2772a6ea82b04ecc1e0f976f337fdaf",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "07c207cfaea8ba6e005ad3ec2ef1327e5598a19ce965259f21d5a243a7c30af9",
+              "stage_id": "block.0001.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40843,
+              "descriptor_sha256": "d04d144073ae046a70092b436e7cf05f8762f147eb01bf07e912b1ad5a2317fb",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "8426cdfe27bcacfcb6d875b87535a84705f98e8a215f610c78a513499a1e7e66",
+              "stage_id": "block.0001.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40841,
+              "descriptor_sha256": "fa559e25e3aa66d6aeb815a84e788cccc8fb54e705feef1756f28221577e4304",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "bf45fc309db8d6ab04e52cd4fe1efd614fc225da67ef7fa85d9d7eb6377beac9",
+              "stage_id": "block.0001.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160941,
+              "descriptor_sha256": "58f4d9fed703d3bf0eb450f77ec6aa337f58469fd9d6df62e06803cdd6e910ef",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "972e6e6b17fad12552eaf69e4ac16632a270db248f5753cb157f868f0262ee03",
+              "stage_id": "block.0001.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40838,
+              "descriptor_sha256": "1ee4cadd04743710ed241fae064b186578a38fee2a50d0cc7f0463ccede7e926",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "d67f19b831179c8512c1ea0b037ff87efef4c4bda55fa7161959f034aec6687f",
+              "stage_id": "block.0002.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40843,
+              "descriptor_sha256": "cbe094047e7fd23b08f47b38f4ba0742abba646a933964de27be17efbd6bd007",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "6a2e6432af957f13c7d5a0e397d8de4b4ccec81cdabd558cca699f027c29bbb9",
+              "stage_id": "block.0002.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40841,
+              "descriptor_sha256": "c341713374acab39f2dac6d5f53d140d763e463b7559160cddefd469e38c9b32",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "9dad4507d167df338b0b9f9cc44594998b61b7c7c326bb69427b0a07eb59f966",
+              "stage_id": "block.0002.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160941,
+              "descriptor_sha256": "e098d75a002f03e4e6b7abdfcf60c3957d95a8b91b549bb4cd616bdc3cbb552a",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "61123d213e85773fbea9cd2816b39927df8fdabe0736b5124359690aa22870ad",
+              "stage_id": "block.0002.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40838,
+              "descriptor_sha256": "8c8e97c5f3b15e7b725f26d8eb01cb21bfe2cfe0c9354eb2601c0c5afe92cba8",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "80269098ffddc20d845226ad0fa4c18c1896c6d1c411f1a51b634d4d5ae5610c",
+              "stage_id": "block.0003.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40843,
+              "descriptor_sha256": "1811d337a9cc69c47a03dd59e7554ad02cccd34e6d39b6fe4bed3504c556f50f",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "205b21acd8d95cf983d11f943a435a5a31774e1477d060113fef9a31a3853e88",
+              "stage_id": "block.0003.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40841,
+              "descriptor_sha256": "aac89838def0e4a4d00634b0ebf54490d8961c7626b4b41a6516055054b063f9",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "743fc468e3ed2a6cbbb9a9a50a2ac2f4fad84970930d8f336e549c3c7d6e54f7",
+              "stage_id": "block.0003.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160941,
+              "descriptor_sha256": "4fcb686e6e55eb0894a3b6361af98fd319f981f47b8ba3a637dba077e2a21014",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "76fc81768e4eaf393542f1df8155606a953d7d26fe9c9e48e864fb39d617f7bc",
+              "stage_id": "block.0003.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40838,
+              "descriptor_sha256": "912d3c6166e65eb131bda4aaf1408a43920471fbb68850cfe0ad308fea4cb136",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "7384c78bea367cfb1a63fb19585b1ed37d791768358d33bd44ae5c41462d5607",
+              "stage_id": "block.0004.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40843,
+              "descriptor_sha256": "2f39a35b6c8d7a1d94470a7ed4c3c623bba57e0070aff7a72da783ed14cc4c7b",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "2a504544864c8e944433c076aedf8338774b6f2562b2ad527b4a36345afbd947",
+              "stage_id": "block.0004.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40841,
+              "descriptor_sha256": "44bea06c01bbc64b33ac397b270782353e367df362b8d1ee36bc235c82cf9367",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "e68ac07cf4464b6d98d9beaf8143933b6ae9886ad4bae949f8ff30bc78fbc582",
+              "stage_id": "block.0004.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160941,
+              "descriptor_sha256": "bd28a71ac783875678ce9168cd0ea88d3f3bf612d251489721f36b02072a721b",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "361c0c354523fbfd775a11c345c21d6265ecc62caf0503ffe640f15251ec3fa6",
+              "stage_id": "block.0004.mlp_down",
+              "values": 49152
+            },
+            {
+              "descriptor_bytes": 40838,
+              "descriptor_sha256": "983f54dda504e566f2d0bc41e98cc00e22bef914cd77ccec63332c27654cd7a3",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "709be23261c870e4af2cd1e229140c992c136d12fce61c3be96c9e63ca412ef2",
+              "stage_id": "block.0005.qkv",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40843,
+              "descriptor_sha256": "016d88126f9ef823d6357a900a74fa85f79f2faee4daa5cd0e544a9bdca7e6e5",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "d5479cd7707443a14d21e83b4632eea73d487a92f9cab108711b60027099b4f6",
+              "stage_id": "block.0005.attn_out",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 40841,
+              "descriptor_sha256": "463688105b750205cb2622a894e9c6ef17f011d014c27b00c9be43f2630f723b",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "947c0b3659e13eb1697af55030e96647e3769e30b72057c1c0384d88c3a803b5",
+              "stage_id": "block.0005.mlp_up",
+              "values": 12288
+            },
+            {
+              "descriptor_bytes": 160941,
+              "descriptor_sha256": "6eaa721abd64db4c8bcb2e9f2a8c066c57a8835419fd7d2f64e10e0d4ed144b2",
+              "record_id": "wikitext2:train:article-row-5326",
+              "source_sha256": "8617c1f2a47e08e1d76dd28b9256328b3e4b8e9178d15b10fbda1870ea0ceb17",
+              "stage_id": "block.0005.mlp_down",
+              "values": 49152
+            }
+          ],
+          "exact_state_bytes": 26326066,
+          "framing_bytes": 16,
+          "header_bytes": 4467,
+          "source_count": 1
+        }
+      },
+      "progress_sha256": "a4e07ffd55d34b05a1fb99c27b66cbe29fb7f5d71208a6aeee1504fbb775f503",
+      "receipt_sha256": "02783262cb24342ffe4600e91f9535b2d737ce50e2e12ace393abd0000f5dac3",
+      "state_sha256": "01fa90da490a29a1199c3c7ce22727248d79fd8584af28c1ac1ff4acb33ac640"
+    }
+  },
+  "plan_sha256": "91813f19294789e12d1d6422ad7ecea2ef6fe9bd32105c40e6ee4b467b93f19b",
+  "process_cpu_ns_since_script_imports": 32716055338,
+  "process_wall_ns_since_script_imports": 31893840422,
+  "quality_claim": false,
+  "schema": "compressed-state-archive-audit-v25",
+  "scope": "archive conversion and serialization only; no neural or quantization execution",
+  "source_hashes": {
+    "scripts/analyze_compressed_state_v25.py": "b35c6e7ffb75a34b010538c579725036cc5e73a72fb6c2724faa61ad53e8ddaa",
+    "scripts/analyze_fixed_codec_v24.py": "7b6138231a13057cc8d1332be81e4f73657603b1e4a91ba28ec60b985fd7f680",
+    "src/anchor_state.py": "d0138b6cb45c6aeedb6ac5502ddb14136adddea266ec2647da02a198eb00ae7c",
+    "src/compact_state.py": "af4bb17f90f497b22da1fdaf6bc5fe0656ba86c27def9f4dd80d9e785c88e829",
+    "src/fixed_anchor_service.py": "3aa12be78b03b6be1887e5cc3b5ecbe12ca0a1f61584d1b299ca3d429e6a7278",
+    "src/fixed_compressed_state.py": "99f9ddd9ea7f3e351a6622ea9b1de8341b0f61efc035b9c9cc57d49805e8e0a5",
+    "src/fixed_factor_codec.py": "5ada37e2ea9b2f6c5d2eded030d9fee68d5d8ecd83a0b39d9152fe90631b0794",
+    "src/fixed_factor_state.py": "e71477de4e0bb048c7c068e0a087587b37cb59d766e18d0d87cff5c3dc23c71f",
+    "src/sequential_finite.py": "6fdf00162ce28c78505abaee0ba1344f8a3baede06a90c1e0e5b92a8b8dd38f3"
+  },
+  "speed_claim": false,
+  "state_format_implemented": true,
+  "state_sizes_projected": false,
+  "status": "complete",
+  "surviving_descriptor_matches": 48,
+  "trust_premise": "validated trusted exact archives establish descriptor containment; hashes alone do not establish it"
+}

@@ -9,47 +9,57 @@ It does not claim native GPTQ or CUDA equivalence.
 
 ## Current state
 
-Revisions 23–24 demonstrate a repeated development speedup for the explicit fixed-feature target.
-They do not turn the original sequential-target losses into wins.
+Revision 28 implements exact complete repair from compressed source-local evidence.
+It uses the explicit fixed nearest-grid feature target.
+It does not establish faster repair of the original sequential target.
 
-| Pair | Complete repair | Cold replay | Speedup |
-| --- | ---: | ---: | ---: |
-| 1 | 37.16 s | 49.45 s | 1.331× |
-| 2 | 37.64 s | 48.87 s | 1.298× |
-| 3 | 37.09 s | 49.26 s | 1.328× |
+| Complete transaction | Time | Result |
+| --- | ---: | --- |
+| V27 compressed repair | 90.496 s | Exact model and complete state |
+| V28 compressed repair | 51.232 s | Exact model and complete state |
+| Matched cold reconstruction | 51.180 s | Exact model only |
 
-All completed retained model and state artifacts match exactly.
-Deletion changes 1,906,485 model codes.
-Repair avoids all twenty-four retained neural stage-record traversals.
-Equally indexed reconstruction ties repair, as expected.
-Warm replay takes 52.44 seconds; complete fresh takes 50.97 seconds.
+Selective verification retries six unresolved rows instead of repeating whole-stage work.
+All 24 stages and 42,467,328 model codes match the retained reference.
+Repair executes zero neural stage-record traversals.
+The retained complete state is 24,930,099 bytes, 5.3026% smaller than exact-factor state.
+The common base checkpoint remains required for uncalibrated parameters.
 
-This is one DistilGPT2 request with two sixteen-token calibration articles and one deletion.
-It establishes pilot repeatability, not broad reliable speedup or lifetime superiority.
-The [complete report](docs/EMPIRICAL_TIMING_V23_V24.md) preserves controls, exclusions, and evidence incidents.
-The [verified summary](campaigns/fixed_feature_v23/summary.json) includes every registered outcome.
+This is a latency tie, not a demonstrated compressed-repair speed advantage.
+It is one adaptive development retiming against an earlier same-session cold comparator.
+The cold run has contradictory live progress metadata.
+Its sealed receipt, completion logs, and verified model support completion; the discrepancy remains disclosed.
+Read the [complete report](docs/EMPIRICAL_COMPRESSION_V25_V28.md) and [bound summary](campaigns/compressed_summary_v25_v28.json).
 
-The [theory stack](docs/FIXED_COST_THEORY_V23.md) now states exactness, information, state-output, and lifetime bounds.
+The exact-factor V23 route retains its three observed 1.298–1.331× cold-reconstruction speedups.
+Equally indexed reconstruction ties repair because it shares the same information and algorithm.
+Those results use a larger saved state and the same tiny DistilGPT2/WikiText request.
+They do not establish broad superiority, lifetime benefit, or a compressed-service win.
+See the [earlier timing report](docs/EMPIRICAL_TIMING_V23_V24.md).
+
+The [theory stack](docs/FIXED_COST_THEORY_V23.md) states conditional correctness, information, state-output, and lifetime bounds.
 The [novelty audit](docs/NOVELTY_AUDIT_V23.md) rules out claiming fixed features or caching alone as new.
-A [compressed factor codec](docs/FIXED_FACTOR_CODEC_V24.md) provides a tested prerequisite for a stronger contribution.
-Exact output certification and complete compressed-repair speed remain unimplemented and unmeasured.
-Its real-factor audit projects 11.19% less complete retained state at sixteen bits, including model and metadata.
+The compressed service now supplies universal output certificates and bounded replay fallback.
+The [sparse verification argument](docs/BALL_BOX_V28.md) preserves exactness when combining complete certified rows.
 
-The earlier quality screen still contains only two articles and thirty predictions.
-Its fixed/sequential perplexity ratio was 0.98167, with one improving article and one worsening article.
-Broader quality, preparation-inclusive lifetime cost, replication, and confirmation remain open.
-The original sequential target still lacks a demonstrated full-model repair advantage.
-
-No empirical worker is running.
-The old allowance remains 10,775 / 10,800 CPU seconds.
-The separate phase holds 517 recorded plus 122 unknown reserved seconds, leaving 261 / 900.
-The incomplete warm attempt stays disclosed; its unavailable timing is excluded.
-Thirty-six focused software tests passed.
-
-Start with [RESUME.md](RESUME.md) and [remaining tasks](docs/RESEARCH_TODO.md).
+Quality evidence still contains only two articles and thirty predictions.
+Broader quality, realistic calibration sizes, additional models, independent requests, lifetime costs, and confirmation remain open.
+All twelve evaluated articles remain excluded from future confirmation.
 The paper and empirical program are not complete.
 
+No empirical worker is running. No further empirical run fits the remaining phase allowance.
+The original ledger remains 10,775 / 10,800 CPU seconds.
+The separate phase holds 898 / 900 seconds: 776 recorded and 122 unknown reserved.
+The allowances are not pooled or reset.
+The final focused suite passed all [140 software tests](campaigns/compressed_software_check_v28.json).
+Start with [RESUME.md](RESUME.md) and [remaining tasks](docs/RESEARCH_TODO.md).
+
 ## Current implementations
+
+- [Compressed complete repair with sparse verification](docs/FIXED_COMPRESSED_SERVICE_V28.md)
+- [Canonical compressed state](docs/FIXED_COMPRESSED_STATE_V26.md)
+- [Wider dyadic enclosure codec](docs/FIXED_FACTOR_CODEC_V26.md)
+- [Sparse row certificate and proof](docs/BALL_BOX_V28.md)
 
 - [Complete sequential anchor provider](docs/ANCHOR_TRANSFORMER_V20.md)
 - [Canonical sequential anchor service](docs/ANCHOR_SERVICE_V20.md)
