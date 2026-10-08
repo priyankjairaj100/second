@@ -36,6 +36,29 @@ class FullServiceAnalysisTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 audit.verify_plan(campaign,trial,bad,program,'b'*64,'c'*64,results)
 
+    def test_controller_continuation_requires_exact_bound_preserved_premises(self):
+        with tempfile.TemporaryDirectory() as directory:
+            campaign = Path(directory)
+            trial = dict(id='repair',plan=dict(method='repair',inputs={}))
+            program = dict(source_sha256={'source':'a'*64})
+            sidecar = dict(schema='service-controller-continuation-v30',
+                original_program_sha256='b'*64,original_protocol_sha256='c'*64,
+                remaining_trials=['repair'],budget_reset=False,evidence_changed=False,
+                numerical_source_changed=False,preparation_repeated=False,
+                samples_changed=False,thresholds_changed=False)
+            path = campaign/'continuation-v1.json';path.write_bytes(canonical_json(sidecar))
+            plan = dict(method='repair',inputs={},source_sha256=program['source_sha256'],
+                program_sha256='b'*64,protocol_sha256='c'*64,phase='feasibility',
+                output=str(campaign/'attempts/repair/outputs'),controller_continuation_sha256=audit.hashed(path))
+            audit.verify_plan(campaign,trial,plan,program,'b'*64,'c'*64,{})
+            bad = dict(plan,controller_continuation_sha256='0'*64)
+            with self.assertRaisesRegex(ValueError,'continuation binding'):
+                audit.verify_plan(campaign,trial,bad,program,'b'*64,'c'*64,{})
+            sidecar['samples_changed'] = True;path.write_bytes(canonical_json(sidecar))
+            plan['controller_continuation_sha256'] = audit.hashed(path)
+            with self.assertRaisesRegex(ValueError,'preserved premise'):
+                audit.verify_plan(campaign,trial,plan,program,'b'*64,'c'*64,{})
+
     def test_schedule_checks_command_limits_and_positive_nested_clocks(self):
         campaign = Path('/absolute/campaign')
         trial = dict(id='repair',script='run_fixture.py',cpu_seconds=4,wall_seconds=6)

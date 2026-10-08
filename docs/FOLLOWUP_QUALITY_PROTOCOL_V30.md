@@ -44,6 +44,11 @@ The default mode has five models and uses fixed16 as its primary control.
 The matched mode has six models and uses sequential128 as its primary control.
 The matched comparison uses identical tokens, grids, normalization, and checkpoint.
 It requires a completed sequential128 artifact with verified generation evidence.
+The prospective matched mode requires the explicit ordered finite decoder.
+Its mathematical target identity must equal the scalar reference identity.
+Its separate implementation manifest must bind the actual decoder and primitive sources.
+The worker verifies that manifest against the frozen generation snapshot.
+The completion must expose both model and implementation artifacts directly.
 The same 1.05 aggregate and 1.20 article thresholds apply to that matched comparison.
 The fixed16 safety gate remains separate and unchanged.
 The worker cannot switch modes after results appear.
@@ -59,7 +64,7 @@ Each article contributes its first 128 tokens and 127 predictions.
 The follow-up contains 1,016 predictions per model.
 The default mode runs forty model-article evaluations.
 The matched mode runs forty-eight model-article evaluations.
-The model order rotates through the five labels for each successive article.
+The model order rotates through all registered labels for each successive article.
 These timings do not measure repair speed.
 
 The four archived controls must reproduce all thirty-two previous article losses.
@@ -128,28 +133,43 @@ No wider quality or submission-readiness claim follows from this adaptive follow
 
 `prepare_quality_extensions_v30.py` writes an unregistered specification.
 It does not freeze sources, create a phase ledger, or launch a worker.
-The draft schedules three transactions:
+The draft schedules two transactions:
 
-1. Sequential calibration with 128 retained tokens and normalization 256.
-2. Original fixed-feature model-only preparation with two 128-token records.
-3. Matched six-model quality evaluation on the existing eight articles.
+1. Ordered sequential calibration with 128 retained tokens and normalization 256.
+2. Matched six-model quality evaluation on the existing eight articles.
 
-The draft phase ceiling is 2,100 CPU seconds.
-Its individual ceilings are 900, 900, and 180 CPU seconds.
-The largest complete reservations total 1,986 seconds.
+The draft phase ceiling is 1,200 CPU seconds.
+Its individual ceilings are 900 and 180 CPU seconds.
+The largest complete reservations total 1,084 seconds.
 These are separate prospective allowances, without resetting any historical ledger.
 
-The original model-only baseline must match the existing original prepared model exactly.
-Its comparison estimates preparation overhead under a model-only output contract.
-It does not estimate retained repair speed.
+The ordered service campaign contains the original model-only preparation baseline.
+Its model must equal that campaign's original prepared model exactly.
+Preparation overhead requires both timings to use the ordered implementation.
+Subtracting ordered model-only time from earlier scalar preparation time would mix implementations.
+The quality extension therefore contains no preparation-overhead comparison.
 The sequential comparator serves quality evaluation only.
 Its different target prevents its time from serving as a fixed-feature repair baseline.
 
-The draft references completed preparation and repair attempts from the existing service campaign.
+The draft references four completed service attempts:
+
+| Role | Attempt |
+|---|---|
+| Scalar original | `campaigns/full_service_v30/attempts/prepare-128` |
+| Scalar retained | `campaigns/full_service_v30/attempts/repair-001` |
+| Ordered original | `campaigns/ordered_service_v30/attempts/prepare-256` |
+| Ordered retained | `campaigns/ordered_service_v30/attempts/repair-001` |
+
+Registration requires complete original models to match across both implementations.
+It separately requires complete retained models to match.
+These gates compare canonical model hashes and byte counts.
+State hashes may differ because preparation implementation identities differ.
 Registration verifies those attempts and freezes their evidence hashes.
-It resolves the new fixed-model inputs from those verified records.
+It resolves the new fixed-model inputs from the verified scalar repair.
 It binds the sequential model through a registered dependency within the new phase.
 It refuses input or plan-field replacement during external resolution.
+Every dependency read recomputes local and external artifact comparisons.
+A missing or affirmative sidecar cannot substitute for verified comparison evidence.
 
 Finish external campaign work before registering this extension.
 The launcher freezes all historical ledgers and rejects subsequent changes.
@@ -161,6 +181,9 @@ Preparation command, without inference or registration:
 ```bash
 python scripts/prepare_quality_extensions_v30.py
 ```
+
+An existing unregistered draft can be updated with `--revise-draft`.
+That option refuses changes after the campaign directory exists.
 
 After review and external completion, the root controller can register the draft:
 

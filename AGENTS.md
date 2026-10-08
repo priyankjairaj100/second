@@ -1,3 +1,10 @@
+# Latest continuation
+
+Read `docs/ACTIVE_SESSION_V31.md` first. It supersedes the older execution status below.
+Inspect actual registrations, receipts, and ledgers before resuming any run.
+
+---
+
 # Active checkpoint: revision 30 development continuation
 
 Updated 8 October 2026, UTC. This checkpoint supersedes the historical status below.

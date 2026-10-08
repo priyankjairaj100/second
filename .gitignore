@@ -90,3 +90,21 @@ local_runs/
 /campaigns/compressed_service_v30/**/phase-ledger.lock
 /campaigns/quality_followup_v30/**/worker/writer.lock
 /campaigns/quality_followup_v30/**/phase-cpu-budget/ledger.lock
+
+# V31 evidence metadata is tracked; binary artifacts are regenerated.
+campaigns/compressed_service_v31/**/outputs/*.bin
+campaigns/compressed_service_v31/**/*.lock
+
+# Active registered phases publish receipts, not process lockfiles.
+/campaigns/ordered_service_v30/**/*.lock
+/campaigns/quality_extensions_v30/**/*.lock
+/campaigns/heldout_quality_v30/**/*.lock
+/campaigns/independent_requests_v30/**/*.lock
+/campaigns/independent_requests_v31/**/*.lock
+/campaigns/independent_requests_v30/**/outputs/*.bin
+/campaigns/independent_requests_v31/**/outputs/*.bin
+
+/campaigns/independent_*_v30/**/*.lock
+/campaigns/independent_*_v31/**/*.lock
+/campaigns/independent_*_v30/**/outputs/*.bin
+/campaigns/independent_*_v31/**/outputs/*.bin

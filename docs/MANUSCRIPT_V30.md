@@ -13,11 +13,14 @@ We study exact removal of this influence under an explicitly specified calibrati
 Sequential calibration creates a difficult dependency: changed early weights invalidate later cached activations.
 Our implemented method instead uses calibration-independent ancestor weights to generate source-local features.
 It stores compressed feature enclosures and certifies the resulting discrete weight codes.
-Successful requests reproduce retained-only calibration and canonical retained auxiliary state.
+Under trusted containment, successful requests reproduce retained-only calibration.
+With fixed preparation and serialization policies, they also reproduce canonical retained auxiliary state.
 Ambiguous certificates invoke bounded refinement or exact feature replay; exhausted budgets cause explicit refusal.
 A feature-space verifier avoids quadratic dependence on calibration length in its matrix storage.
 An information bound separates exact model recovery from recovery using the deployed weights alone.
 Real-data development experiments verify complete models and evaluate quality against matched calibration controls.
+The lossless-factor control shows a 2.039× geometric mean repair speedup across three timing pairs on one request.
+This observation does not establish the compressed method's storage–latency advantage.
 Current evidence does not establish broad speed, quality superiority, or faster repair of ordinary sequential GPTQ.
 
 ## 1. Scope and motivation
@@ -62,10 +65,13 @@ It also differs from an ideal real-arithmetic transformer.
 
 The feature evaluator is partial.
 Unsupported or unresolved finite operations cause refusal.
-The theorem conditions on successful required feature evaluations and sufficient declared resources.
+The target is defined where its required feature evaluations succeed.
+The repair theorem guarantees correctness when the bounded service returns successfully.
+It does not guarantee completion within any resource budget.
 No approximate model is committed after an unresolved certificate.
 
 For each record, let \(D_j\) denote its canonical source-local compressed descriptors.
+Fix the codec, preparation implementation, provenance policy, record order, and serialization format.
 The promised state is the canonical serialization of:
 
 \[
@@ -103,19 +109,24 @@ The same policy applies after direct, combined, and successive deletions.
 ### Conditional exactness
 
 Assume trusted descriptor containment and matching mathematical target identities.
+Assume the required retained features are defined by the declared partial evaluator.
 Assume every accepted certificate is universal over its supplied feature box.
-Assume exact replay uses the same declared feature program.
+Assume replay reproduces the same finite feature values and subsequent point solving certifies the target's codes.
 Then every successful repair returns \(Q_{\mathrm{fix}}(R)\).
-If surviving descriptors remain canonical, its state also equals \(\mathcal S(R)\).
+For state equality, also fix the preparation, descriptor, provenance, and serialization policies across all compared executions.
+Under these policies, unchanged canonical descriptors give the state \(\mathcal S(R)\).
 
 Proof.
 Source locality makes each surviving feature identical to its retained-only feature.
 Descriptor containment places those features inside every verified box.
 Universal certification therefore implies equality of each accepted discrete decision.
 Within a stage, coordinate induction handles the adaptive rounding recurrence.
-An exact replay replaces uncertain evidence with the same retained-only feature values.
+Replay replaces uncertain evidence with the same retained-only finite feature values.
+The point certificate then establishes each accepted code.
 Finally, canonical descriptor retention and serialization establish state equality.
 Applying this argument to each successful request gives equality across deletion histories.
+Changing the preparation implementation can change provenance bytes despite identical model codes.
+The theorem therefore does not assert state equality across different preparation versions.
 
 This statement is conditional correctness, not universal completion or speed.
 Its detailed premises and implementation review appear in `FIXED_COST_THEORY_V23.md` and the V30 service reviews.
@@ -147,13 +158,25 @@ A spectral inequality supplies another:
 \|K_{h,S_i}B_i^{-1}\|_2^2\le K_{hh}/(4\beta).
 \]
 
-Indeed, each singular value contributes \(s/(\beta+s^2)\le1/(2\sqrt\beta)\).
-Hence the residual contribution to squared coefficient error is at most \(K_{hh}E_i/(4\beta)\).
-Directed product error is added separately.
-Intersecting independently sound bounds can tighten the resulting certificate.
+Indeed, each singular value \(s\) of \(X_{S_i}\) contributes \(s/(\beta+s^2)\le1/(2\sqrt\beta)\).
+Let \(\overline K_{hh}\) bound \(K_{hh}\) uniformly over the feature box.
+Then
+
+\[
+|a_{hi}-K_{h,S_i}\widehat y_i|^2
+\le \frac{\overline K_{hh}E_i}{4\beta}.
+\]
+
+Directed arithmetic separately encloses the dot product \(K_{h,S_i}\widehat y_i\).
+The coefficient interval adds the verified square root of this error bound to that enclosure.
+This argument uses the Gram structure of each realized feature matrix.
+It does not apply to arbitrary unrelated interval matrices.
+Intersecting independent enclosures of the same coefficient can tighten the certificate.
 
 The implementation avoids token-by-token square matrices.
 Its structural work is \(O(d^2T+d^3+md^2)\), where \(m\) counts output rows.
+This count assumes a fixed grid size and shared reverse updates across suffixes.
+Input features still occupy \(O(dT)\) space; coefficient and Gram arrays use \(O(d^2)\) space.
 This asymptotic description does not establish the fastest backend for every finite shape.
 The adaptive dispatcher chooses between admitted feature-space and token-space routes using a declared work proxy.
 Both routes require exact certificate acceptance.
@@ -163,14 +186,16 @@ Full derivation, implementation assumptions, and rational-oracle fixtures appear
 
 The deployed quantized weights alone need not determine a deletion response.
 The response lower bound constructs canonical four-bit models with positive rounding margins.
-Under its finite information-access model:
+For a fixed-length archive of \(b\) bits, identity-only requests, and no retained-record access, its bound is:
 
 \[
 b\ge\left\lceil\log_2 {N\choose N/2}\right\rceil.
 \]
 
 The construction has condition numbers at most three.
-Its cumulative extension bounds stored bits plus response probes.
+Its cumulative extension bounds stored bits plus one-bit record probes.
+That extension covers all specified singleton responses from the same original snapshot.
+It is neither a per-request probe bound nor an evolving-state theorem.
 It does not prove transformer realizability or practical NLP speed.
 Its positive margins shrink with the construction size.
 The complete statement appears in `RESPONSE_LOWER_BOUND_V29.md`.
@@ -188,6 +213,11 @@ All terms must use compatible optimized implementations and explicit service bou
 Repeated execution of one request is not a changing-state sequence.
 An equally indexed constructor receives every item available to repair.
 Since it can share repair's algorithm, strict superiority over that constructor is not required.
+
+Fixed features also permit maintained exact pooled Grams and deleted-record replay.
+With deleted contributions available, this alternative computes retained metrics without retained neural replay.
+It uses a different canonical state contract and requires exact accumulation or a sound equivalent certificate.
+This control remains unmeasured and must inform broad efficiency claims, particularly when calibration length exceeds feature width.
 
 ## 6. Empirical design and current evidence
 
@@ -214,9 +244,27 @@ At 128 tokens, token space was faster.
 These measurements cover four complete rows from one stage, not complete-model scaling.
 
 The larger service pilot retains 128 tokens from an original 256-token corpus.
-Its first repair and cold model agreed across all 24 stages and 42,467,328 codes.
-An exact common neural optimization was then selected for stronger matched comparisons.
-The final report must present those optimized results before making a performance claim.
+All nine ordered-service transactions completed with matched common neural and point-solver implementations.
+Complete retained models agree across all 24 stages and 42,467,328 codes.
+The original and retained models also match their scalar references exactly.
+Both original records have identical saved feature words across all 48 stage descriptors.
+
+Lossless repair takes 70.638, 72.441, and 71.414 seconds across three timing pairs.
+Matched model-only cold reconstruction takes 156.312, 140.954, and 140.549 seconds.
+The geometric mean cold/repair ratio is 2.038752, with individual ratios from 1.945778 to 2.212851.
+Indexed reconstruction takes 73.290 seconds and matches the retained model and state.
+These complete controller clocks include output verification and commits.
+Repair writes retained state; the cold comparator has the lighter model-only output obligation.
+
+Preparation takes 309.591 seconds, versus 286.896 seconds for original model-only construction.
+Their observed difference is 22.695 seconds.
+Fixed observed mean request costs amortize that difference within one repeated request.
+This calculation does not establish changing-state lifetime performance.
+The retained lossless state occupies 50,888,817 bytes, excluding the shared required checkpoint.
+
+These results establish repeated timing superiority on one development request only.
+They measure the lossless control, not the proposed lossy-enclosure storage–latency contribution.
+Larger-calibration matched quality and the new compressed-service outcome remain pending in this draft.
 
 Detailed tables belong to the verified V30 summaries.
 This draft intentionally does not substitute component gains for complete service gains.
@@ -243,6 +291,7 @@ The current model and corpus coverage remain narrow.
 Repeated timing cannot replace independent deletion requests.
 Small calibration workloads cannot establish large-model deployment performance.
 Lossless alternatives remain strong controls for compressed evidence.
+Maintained exact pooled Grams remain an unmeasured sufficient-statistic control.
 ALP has not been measured.
 Confirmation, task-level generalization, and changing-state lifetime measurements remain separate requirements.
 

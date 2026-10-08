@@ -45,6 +45,13 @@ class WorkerContractTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             worker.required_inputs('other')
 
+    def test_model_only_rejects_an_impossible_registered_state_gate(self):
+        plan = dict(policy('model_only_fresh'),expected_state_sha256='a'*64)
+        with self.assertRaisesRegex(ValueError,'expected state hash'):
+            worker.validate_policy(plan)
+        worker.validate_policy(dict(plan,expected_state_sha256=None))
+        worker.validate_policy(dict(policy('repair'),expected_state_sha256='a'*64))
+
     def test_bad_membership_tokens_and_policy_are_rejected(self):
         cases = [dict(policy(),record_ids=[]),dict(policy(),deleted_ids=['z']),
             dict(policy(),record_ids=['b','b']),dict(policy(),use_candidates=True),

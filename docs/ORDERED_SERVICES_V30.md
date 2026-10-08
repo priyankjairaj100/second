@@ -125,6 +125,10 @@ Selected point routes use the shared bounded adaptive dispatcher.
 Numerical uncertainty raises `LowRankUnresolved` without a partial model result.
 Failure receipts retain the request allowance, completed stages, nested diagnostics, and observed elapsed time.
 The lossless wrapper also retains performed decoding and receipt work.
+An attempted point stage records completed feature, weight, and candidate work separately from its attempted solver clock.
+Aggregate stage clocks cover completed stages only.
+Preparation exceptions can lack inner service receipts; unavailable details remain unknown.
+The complete outer transaction clock remains authoritative for every failure.
 
 Structural work units are engineering allowances, not measured operations or CPU time.
 The workspace assessment does not certify whole-process resident memory.

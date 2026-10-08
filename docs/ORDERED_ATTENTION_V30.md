@@ -141,5 +141,6 @@ No empirical worker ran during implementation.
 No historical decoder source changed.
 
 The original attention review covered its first implementation hash.
-The generic primitive extension and explicit decoder require their own final source review.
+The final extension passed the separate review in `ORDERED_DECODER_REVIEW_V30.md`.
+That review binds attention source `cd27378a1814b7407ae61ed99a1e69b34b382659795df56c39da666292fd71f8`.
 See `ORDERED_FINITE_DECODER_V30.md` for the integration contract.

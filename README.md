@@ -1,5 +1,46 @@
 # Exact calibration-data unlearning for quantized language models
 
+This project studies exact calibration removal for a declared fixed-feature quantizer.
+The base weights stay fixed. Its target differs from ordinary sequential GPTQ.
+The intended venue is ACL 2027; the paper is not submission-ready.
+
+## Current evidence: revisions 30–31
+
+| Result | Verified observation | Scope |
+|---|---|---|
+| Optimized lossless repair | 1.946–2.213× faster than cold; geometric mean 2.039× | Three timing pairs on one deletion request |
+| 48-bit compressed compressed repair | 90.62s versus fastest cold 140.55s; 1.551× | One adaptive pilot; all 24 stages certify without replay |
+| 48-bit compressed state | 48,054,240 bytes versus 50,888,817 lossless bytes | 5.570% smaller; shared base checkpoint still required |
+| Matched development quality | Perplexity 51.50 versus sequential 52.46 | Eight previously exposed development articles |
+| Held-out quality | Perplexity 65.69 versus sequential 66.44 | Forty previously unexposed articles; 5,080 predictions/model |
+
+Complete retained models match across 24 stages and 42,467,328 codes.
+The held-out fixed/sequential ratio is 0.9886702.
+Its registered one-sided bootstrap guard is 1.0018592, below the 1.05 threshold.
+All registered quality guards pass, but quality superiority is not established.
+The full-precision held-out perplexity is 57.08; that remaining quality gap stays visible.
+All 60 evaluation articles are now excluded from future confirmation.
+
+The smaller compressed state has a cost: lossless repair remains faster at 70.64s.
+Fresh 48-bit conversion adds 73.20s to original preparation.
+An earlier 40-bit pilot took 312.33s despite a 13.68% state reduction.
+Two failed certificates caused full retained replay; its negative result is preserved.
+The 48-bit follow-up changes both precision and coefficient execution, so it does not isolate either causal effect.
+
+Read the [restart note](docs/ACTIVE_SESSION_V31.md), [claim audit](docs/CLAIM_AUDIT_V30.md),
+[manuscript](docs/MANUSCRIPT_V30.md), and [novelty audit](docs/NOVELTY_AUDIT_V30.md).
+Independent WikiText/C4 request programs are prepared and await their final controller review.
+Broader models, realistic full-model token scales, changing-state lifetime experiments,
+and the pooled exact-Gram baseline remain open.
+
+These results support a narrow storage–latency tradeoff under a fixed-feature target.
+They do not establish general sequential unlearning speed or dominance over every baseline.
+
+<details>
+<summary>Historical checkpoint text, preserved unchanged</summary>
+
+# Exact calibration-data unlearning for quantized language models
+
 This project targets an ACL 2027 paper.
 It removes calibration records while keeping the base model weights fixed.
 Each target reruns its complete declared quantizer on retained records.
@@ -166,3 +207,5 @@ The forty-cell scientific program and its original gates remain in [the empirica
 The user authorized execution here after that older local handoff.
 Large campaigns require the remaining scientific conditions.
 The current identity cache cannot satisfy the changed-ancestor avoidance condition.
+
+</details>

@@ -7,7 +7,7 @@ import unittest
 
 from scripts.run_followup_quality_v30 import (LABELS, ORIGINAL_IDS, POLICY, bound,
     summarize, validate_new_generation, validate_reused_articles, policy_for_mode,
-    validate_sequential_generation, verify_terminal_payload)
+    validate_sequential_generation, validate_sequential_implementation, verify_terminal_payload)
 from src.run_store import canonical_json, digest
 
 
@@ -194,6 +194,27 @@ class FollowupQualityV30Tests(unittest.TestCase):
             artifact_manifest_source="verified named model_artifact/state_artifact fields; original bytes unchanged")
         self.assertEqual(verify_terminal_payload(canonical_json(original), verified), original)
         self.assertEqual(verify_terminal_payload(canonical_json(original), original), original)
+
+    def test_ordered_implementation_requires_artifact_identity_and_source_bindings(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            names = ('ordered_finite_decoder_v30.py', 'ordered_attention_v30.py')
+            for name in names:
+                (root/name).write_bytes(b'software fixture source')
+            manifest = dict(schema='ordered-equivalent-finite-decoder-v30', global_mutation=False,
+                source_sha256={name:digest((root/name).read_bytes()) for name in names})
+            raw = canonical_json(manifest)
+            result = dict(implementation='ordered-finite-decoder-v30', target_identity_matches_scalar_reference=True,
+                implementation_manifest=manifest, implementation_manifest_sha256=digest(raw),
+                artifacts=dict(implementation=dict(file='implementation.json', bytes=len(raw), sha256=digest(raw))))
+            self.assertEqual(validate_sequential_implementation(result, policy_for_mode(True), raw, root), digest(raw))
+            for change in (dict(target_identity_matches_scalar_reference=False), dict(artifacts={}),
+                           dict(implementation='scalar-decoder'), dict(implementation_manifest_sha256='f'*64)):
+                with self.assertRaises(ValueError):
+                    validate_sequential_implementation(dict(result, **change), policy_for_mode(True), raw, root)
+            (root/names[0]).write_bytes(b'changed source')
+            with self.assertRaisesRegex(ValueError, 'source differs'):
+                validate_sequential_implementation(result, policy_for_mode(True), raw, root)
 
     def test_adapter_cannot_change_original_fields_or_inject_other_fields(self):
         original = dict(schema="adaptive-complete-service-transaction-v30", status="complete", complete_state=False,

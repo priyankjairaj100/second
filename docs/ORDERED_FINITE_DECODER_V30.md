@@ -124,4 +124,9 @@ They do not establish model-scale speed or complete-program superiority.
 The registered empirical identity pilot must precede a new speed claim.
 
 The original attention review remains bound to its earlier source hash.
-The extended primitive helper and decoder need review at their final hashes.
+The extended helper and decoder passed the separate review in `ORDERED_DECODER_REVIEW_V30.md`.
+That review adds six fixtures covering boundary rounding, hostile contexts, exception cleanup, prefix traversal, and identity separation.
+It binds these source hashes:
+
+- Attention: `cd27378a1814b7407ae61ed99a1e69b34b382659795df56c39da666292fd71f8`.
+- Decoder: `ab490c42759297709f36ae5b8e94485d0e3d80370ced061e21ce9a11764d043a`.

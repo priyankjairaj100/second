@@ -1,13 +1,15 @@
 # Claim audit, revision 30
 
 Audit date: 8 October 2026.
-Evidence cutoff: 10:51 UTC, equivalent to 16:21 India time.
-Later attempts require a separate evidence update.
+Initial evidence cutoff: 10:51 UTC, equivalent to 16:21 India time.
+The current update also includes the completed nine-trial `ordered_service_v30` audit.
+Later compressed-service and larger-calibration quality outcomes remain outside this update.
 This audit starts no empirical worker and changes no numerical source.
 
 The project now has a stronger verified implementation and broader development evidence.
 It still lacks the evidence required for its intended general efficiency claim.
-It is not ready to support an ACL submission claiming reliable full-model superiority.
+It now supports repeated full-model speed observations on one request, but not general efficiency superiority.
+The full intended ACL submission remains incomplete.
 This assessment concerns the proposed claims, not a formal venue checklist.
 
 ## Evidence levels
@@ -59,7 +61,7 @@ Read [NOVELTY_AUDIT_V29.md](NOVELTY_AUDIT_V29.md) before stating novelty.
 | Claim | Current evidence | Permitted scope | Remaining gap |
 |---|---|---|---|
 | Successful repair equals the fixed-feature target. | Proved conditionally; reviewed; implemented; historical complete models agree. | Exact codes after successful execution and trusted feature containment. | Larger requests and bounded completion rates need measurement. |
-| Retained compressed state is canonical. | Proved conditionally; implemented; tested across deletion histories. | Original source-local descriptors and exact retained codes determine state. | Broad history costs remain unmeasured. |
+| Retained compressed state is canonical. | Proved conditionally; implemented; tested across deletion histories. | Fixed preparation, codec, provenance, and serialization policies determine canonical state. | Cross-version state identity is not asserted; broad history costs remain unmeasured. |
 | Sparse stronger checks avoid eager cubic work at every coordinate. | Proved structural bound; reviewed; implemented. | Requested checks cost \(O(\sum_j s_jT^2+KT^3)\). | Real complete-service savings from V30 sparse checks remain unmeasured. |
 | Primal verification avoids token-quadratic arrays. | Proved; reviewed; implemented; real component tests completed. | Work \(O(d^2T+d^3+md^2)\), with width-based coefficient arrays. | Wide stages and complete-model crossover require measurement. |
 | Native token verification preserves exact coefficient bounds. | Proved conditional arithmetic; reviewed; implemented; component tests completed. | Faster execution of the same \(O(dT^2)\) coefficient structure. | Broad stage and request replication remains absent. |
@@ -67,7 +69,8 @@ Read [NOVELTY_AUDIT_V29.md](NOVELTY_AUDIT_V29.md) before stating novelty.
 | Resource admission guarantees completion or memory fit. | False as stated. | It bounds declared schedules and explicit array allowances. | External process limits remain necessary. |
 | Smaller stored evidence can still determine exact codes. | Proved sufficient conditions; implemented; historical complete compressed example. | Positive margins and verified containment can permit lossy feature evidence. | Useful precision–fallback prediction across requests remains unmeasured. |
 | Calibration deletion needs response information. | Quantizer-specific counting proof and exact fixtures. | Fixed-length archive and explicitly limited record access. | It is not a general practical storage lower bound. |
-| Reliable full-model speedup is established. | Not established. | Narrow historical complete observations remain valid within their protocols. | Current optimized complete comparisons and independent requests remain open. |
+| Optimized lossless repair is faster on the measured request. | Nine-trial archive reviewed; three pairs favor repair. | 1.946–2.213× complete latency ratios; 2.039× geometric mean on one request. | Independent requests, other corpora/models, and confirmation remain open. |
+| General full-model superiority is established. | Not established. | Repeated same-request observations establish a narrow development result. | Compressed evidence and stronger sufficient-statistic controls need separate comparisons. |
 | Fixed-feature calibration preserves language quality generally. | Not established. | One new eight-article development gate passed. | Larger calibration, other requests, corpora, models, and confirmation remain open. |
 
 ## What the mathematical results establish
@@ -77,6 +80,10 @@ Each accepted universal certificate then covers the true retained features.
 Exact fallback reproduces the defining target when that fallback completes.
 The implemented bounded service may refuse without returning a model.
 Its theorem must not promise unconditional completion.
+The partial evaluator must define the required retained features.
+Replay must reproduce those finite values, and subsequent point solving must certify the declared codes.
+Canonical state equality additionally fixes preparation, codec, provenance, and serialization policies.
+Equal model bytes across preparation versions do not imply equal state bytes.
 
 The precision condition connects feature error, ridge, and rounding margins.
 It remains a sufficient condition, rather than a necessary acceptance threshold.
@@ -154,7 +161,7 @@ Primal verification removes that token dimension but retains cubic width work.
 An MLP down-projection can therefore reject the primal route while admitting token verification.
 The source-level crossover cannot be reduced to one global token threshold.
 
-## Completed larger preparation
+## Historical larger preparation
 
 `full_service_v30/prepare-128` completed before this audit cutoff.
 It prepared two real WikiText records, each with 128 tokens.
@@ -173,15 +180,56 @@ The read-only service adapter verifies those fields without changing original re
 That adapter passed for preparation during this audit.
 This schema mismatch is an evidence-tool compatibility issue, not a numerical model failure.
 
-At the cutoff, no completed larger repair, cold reconstruction, or indexed reconstruction entered this audit.
+At the initial cutoff, no completed larger repair, cold reconstruction, or indexed reconstruction entered this audit.
 A registered attempt or running worker remains unmeasured until its receipt and outputs verify.
 Later results must retain their own source snapshot and complete clock.
 
 Ordered finite attention is implemented and has program-equivalence fixtures.
 It preserves reduction order and certifies batched exponential values under declared runtime premises.
-No completed empirical attention comparison entered this audit.
+No completed empirical attention comparison entered the initial audit.
 Do not attribute the preparation time above to that later optimization.
 Both repair and reconstruction must receive any adopted common decoder optimization.
+
+## Completed ordered lossless service
+
+The updated archive contains all nine registered ordered-service transactions.
+Independent reconstruction reproduced its audit except for analysis clocks.
+The phase charged 1,323 CPU seconds and has no unresolved reservation.
+All methods use the same ordered finite decoder and bounded adaptive point solver.
+
+The original corpus has two WikiText records with 128 tokens each.
+The deletion retains one record and preserves original normalization 256.
+Every complete retained model matches across all 24 stages and 42,467,328 codes.
+Original and retained models also match their scalar implementation references exactly.
+All 48 original factor descriptors and their binary64 feature words match across the two preparers.
+Their state identities differ truthfully because preparation provenance changed.
+
+| Timing pair | Repair | Model-only cold | Cold / repair |
+|---|---:|---:|---:|
+| 1 | 70.638262 s | 156.311932 s | 2.212851× |
+| 2 | 72.440766 s | 140.953663 s | 1.945778× |
+| 3 | 71.413658 s | 140.549491 s | 1.968104× |
+
+The geometric mean ratio is 2.038752×.
+These clocks include complete controller transactions and verified output commits.
+Repair also writes retained state; model-only cold writes only the model.
+Repair evaluates zero retained neural stage-record pairs, while cold evaluates 24.
+Indexed reconstruction takes 73.289870 seconds and produces the same retained model and state.
+It shares repair's indexed algorithm, so no general superiority over indexed reconstruction follows.
+
+Ordered preparation takes 309.591227 seconds; original model-only construction takes 286.895961 seconds.
+The observed preparation increment is 22.695267 seconds.
+Using fixed observed mean request costs, the illustrative strict break-even count is one repeated request.
+This arithmetic does not measure an evolving deletion history or storage carrying cost.
+
+The retained lossless state occupies 50,888,817 bytes; the original state occupies 79,592,059 bytes.
+The common pretrained checkpoint remains separately required.
+These are exact lossless-factor results, not new lossy-enclosure repair results.
+They do not establish larger-calibration quality or the compressed method's storage–latency contribution.
+Three timing pairs still cover only one original corpus and one deletion request.
+The fixed alternating development order leaves operating-system caches and unrelated activity uncontrolled.
+
+See `ORDERED_ANALYSIS_REVIEW_V30.md` and `campaigns/ordered_service_v30/audit.json` for the verified scope.
 
 ## Completed quality evidence
 
@@ -220,6 +268,34 @@ A sequential128 artifact is required for a matched claim about the larger fixed-
 An unmatched sequential16 comparison cannot substitute for that control.
 
 ## Completed storage evidence
+
+### Unmeasured exact pooled-Gram control
+
+Fixed source-local features permit a maintained exact pooled Gram at each stage.
+Write \(G_D=\sum_{j\in D}X_jX_j^\top\).
+Deleting \(F\) gives \(G_R=G_D-\sum_{j\in F}X_jX_j^\top\), with the original normalization unchanged.
+The metric-sufficiency theorem in `FIXED_COST_THEORY_V23.md` already covers this model target.
+Its canonical moment-state corollary also covers deletion histories under exact accumulation and canonical encoding.
+The current complete-service comparisons do not implement or measure this maintained pooled-Gram baseline.
+
+With deleted records available, this baseline replays only their fixed ancestor features before erasure.
+Otherwise, it needs stored exact deleted contributions or another sufficient access mechanism.
+An identity-only request cannot recover those contributions from the pooled Gram alone.
+Access assumptions and all retained information must therefore enter the comparison.
+
+At one stage, ordinary structural arithmetic costs are \(O(d^2T_F+d^3+md^2)\), plus deleted-feature replay.
+Here \(T_F\) counts deleted tokens and \(m\) counts output rows.
+Preparation costs \(O(d^2T_D)\) for the original Gram, apart from feature evaluation and quantization.
+The pooled matrix stores \(O(d^2)\) exact entries, rather than \(O(dT_D)\) feature values.
+Exact accumulator bit widths depend on feature exponents and token counts; entry counts are not byte counts.
+Ordinary floating-point Gram subtraction does not preserve the declared exact target automatically.
+
+This control can become attractive when \(T_D\gg d\) and deletion batches remain small.
+Our 128-token retained setting has \(T_R<d\), which favors factor storage by entry count alone.
+Neither observation establishes its measured storage or latency ranking.
+Pooled moments cannot recreate the current canonical factor descriptors, so they require a distinct declared state contract.
+Model comparisons must still include this valid alternative without requiring our implementation's descriptor format.
+Current evidence cannot support generic superiority over sufficient-statistic maintenance.
 
 The stronger archive audit tests raw bytes, zlib, shuffled zlib, Zstandard, shuffled Zstandard, and official FPC.
 All 648 descriptor checks pass.
@@ -264,16 +340,13 @@ The existing registrations determine execution order and resource limits.
 This audit does not authorize automatic expansion or replacement of failed attempts.
 Each new source version needs its own recorded gate.
 
-1. Complete the already registered larger repair, cold, and indexed comparisons after verifying preparation evidence.
-   Require all 24 stages and complete model agreement before any speed interpretation.
-   Include parsing, decoding, compilation, solving, verification, state output, and model output.
-   Report all registered pairs, including slower repairs and bounded refusals.
-   Repeated timings still cover one request.
+1. The registered larger lossless comparison is complete and independently audited.
+   Preserve all nine transactions and the three complete timing pairs.
+   Extend only through separately registered requests; repeated timings still cover one request.
 
-2. Verify ordered attention on one complete exposed development record before using it for new timing claims.
-   Check every stage feature and final model artifact against the original finite path.
-   Then give the same implementation to every compatible comparator.
-   A component speedup alone cannot repair an unfair cold baseline.
+2. The complete ordered feature and model identity gate is complete.
+   Both original records, all stage factors, and complete original/retained models match their references.
+   Continue giving compatible common optimizations to every comparator.
 
 3. Evaluate the completed larger fixed-feature model on the existing eight development articles.
    Use the fixed16 safety gate without relabeling it as matched sequential quality.
@@ -312,8 +385,9 @@ Compressed evidence must show a useful complete storage–latency tradeoff again
 The current 3.49% saving alone does not establish that tradeoff.
 
 The second blocker is reliable complete execution at useful calibration scale.
-The new component results and original preparation are progress.
-They do not yet establish complete retained repair superiority with optimized common kernels.
+Optimized complete lossless repair now wins all three observed timing pairs on one request.
+That closes the previous missing-complete-comparison blocker for this operating point.
+Broader request coverage and larger calibration scales remain necessary for broader claims.
 
 The third blocker is independent scientific coverage.
 One model, one corpus, one tiny quality calibration, and repeated timing of one request cannot support broad claims.
@@ -341,6 +415,7 @@ The audit verified the three completed `research_v30` terminal records with `ter
 It verified both completed optimized component records with that same helper.
 It verified larger preparation with `service_terminal_evidence_v30.verify_completed`.
 The adapter preserved the original named artifact fields and original terminal bytes.
+The update also independently reconstructed the completed ordered-service audit from all nine archived receipts.
 
 The following records define the empirical cutoff.
 
@@ -353,6 +428,7 @@ The following records define the empirical cutoff.
 | `campaigns/full_service_v30/attempts/fast-1024/outputs/completion.json` | `c7ce25e2529978078fbcbde27a639e9b4ba39724ece4ea4ddc60ea1cb735d6d9` |
 | `campaigns/full_service_v30/attempts/prepare-128/outputs/completion.json` | `8068161b81adea38581035f691e09a3b026d62795f932be962fb082b1631eb12` |
 | `campaigns/lossless_controls_v30/summary.json` | `6ff0a10230e4788f25d43c92e75c0f6cd540e512630b477917f0d313980beea9` |
+| `campaigns/ordered_service_v30/audit.json` | `56318bd9458043c716a7379dc8166cb84b40d80499e6e23eb7c90a97c84ca4c1` |
 
 Mathematical details remain in these source documents.
 
@@ -366,5 +442,7 @@ Mathematical details remain in these source documents.
 - [QUALITY_RESULTS_V30.md](QUALITY_RESULTS_V30.md)
 - [LOSSLESS_CONTROLS_V30.md](LOSSLESS_CONTROLS_V30.md)
 - [ORDERED_ATTENTION_V30.md](ORDERED_ATTENTION_V30.md)
+- [ORDERED_ANALYSIS_REVIEW_V30.md](ORDERED_ANALYSIS_REVIEW_V30.md)
+- [POOLED_GRAM_CONTROL_V30.md](POOLED_GRAM_CONTROL_V30.md)
 
 No later registered result is assumed by this audit.

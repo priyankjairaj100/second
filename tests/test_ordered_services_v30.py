@@ -181,6 +181,13 @@ class OrderedServiceTests(unittest.TestCase):
         self.assertGreater(metrics['exact_service_elapsed_ns'], 0)
         self.assertTrue(metrics['exact_service_diagnostics']['aborted'])
         self.assertGreater(metrics['exact_service_diagnostics']['point_admission']['reserved_work_units'], 0)
+        failed = metrics['exact_service_diagnostics']['failed_stage_diagnostics']
+        self.assertEqual(failed['stage_id'], self.base.stages[0].stage_id)
+        for name in ('feature_elapsed_ns', 'weights_elapsed_ns', 'candidate_elapsed_ns',
+                     'attempted_solver_elapsed_ns', 'elapsed_ns'):
+            self.assertGreater(failed[name], 0)
+        self.assertEqual(metrics['exact_service_diagnostics']['feature_elapsed_ns'], 0)
+        self.assertIn('completed stages only', metrics['exact_service_diagnostics']['aggregate_stage_timing_scope'])
         self.assertEqual(metrics['exact_service_rejection'], 'fixture refusal')
 
     def test_full_deletion_preserves_decoder_provider_and_anchor_checks(self):
