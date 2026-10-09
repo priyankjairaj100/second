@@ -1,0 +1,1 @@
+{"all_equal":true,"comparisons":[{"actual_sha256":"0308c07235c8b0131aa61a72df78f5e065afa0210edc17be91ee1774c409e144","artifact":"model","equal":true,"reference_sha256":"0308c07235c8b0131aa61a72df78f5e065afa0210edc17be91ee1774c409e144","reference_trial":"wikitext-delete-0-cold"}]}
