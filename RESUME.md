@@ -1,5 +1,5 @@
 Current work: read `docs/ACTIVE_SESSION_V37.md` first.
-The accelerated complete-stage Gram control is reviewed, registered, and unstarted.
+The accelerated complete-stage Gram control is complete; all 1,769,472 codes agree.
 Fresh local stage commands: `docs/LOCAL_GRAM_BALL_STAGE_V37.md`. Full C4 remains blocked.
 
 ---

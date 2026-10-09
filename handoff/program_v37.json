@@ -47,9 +47,9 @@
     },
     {
       "id": "pooled_exact_gram_control",
-      "status": "complete_first_stage_measured_optimization_required",
-      "reference": "docs/GRAM_STAGE_RESULTS_V36.md",
-      "gate": "All complete first-stage codes agree. Remove avoidable generic interval row work before stronger ranking claims. Larger-token complete-model service remains unmeasured."
+      "status": "shared_kernel_complete_first_stage_measured",
+      "reference": "docs/RESEARCH_DECISION_V37.md",
+      "gate": "Full-stage exactness passed after kernel strengthening. Larger-token complete-model service remains unmeasured; no universal Gram ranking follows."
     },
     {
       "id": "additional_model",
@@ -88,7 +88,7 @@
       "gate": "Bind final claims and tables to audited evidence; disclose all scope and cost limits."
     }
   ],
-  "research_decision": "docs/RESEARCH_DECISION_V34.md",
+  "research_decision": "docs/RESEARCH_DECISION_V37.md",
   "current_receipts": {
     "wikitext": {
       "settled_trials": 7,
@@ -126,7 +126,7 @@
     "real_data_capsule": "data/gram_v35/wikitext-firststage.json",
     "local_guide": "docs/LOCAL_GRAM_PILOT_V35.md"
   },
-  "next_component": "Execute separately registered V37 shared-kernel full-stage comparison after its protocol is pushed.",
+  "next_component": "No unstarted stage trial remains. Next priorities: supported neural runtime and fresh C4, then larger-token complete-service controls; see research decision.",
   "component_stage_program": {
     "path": "campaigns/pooled_gram_stage_v36",
     "status": "complete",
@@ -146,11 +146,19 @@
   "component_ball_program": {
     "path": "campaigns/pooled_gram_ball_stage_v37",
     "program_sha256": "7c4fd95b6645a20adc7b4c1b84f20cc7d354348c4b4061f7ac8e76e887ec29da",
-    "status": "registered_unstarted",
+    "status": "complete_independently_audited",
     "rows": 2304,
     "code_decisions": 1769472,
     "complete_model": false,
     "confirmation": false,
-    "local_guide": "docs/LOCAL_GRAM_BALL_STAGE_V37.md"
-  }
+    "local_guide": "docs/LOCAL_GRAM_BALL_STAGE_V37.md",
+    "charged_cpu_seconds": 46,
+    "scientific_gate_passed": true,
+    "analysis": "campaigns/pooled_gram_ball_stage_v37/analysis.json",
+    "terminal_sha256": "270481550a53cf2eb3963b2623443f6403c9caaedda22952c075f39c53d87447",
+    "fallback_rows_each_arm": 0,
+    "descriptive_gram_delete_over_cache": 14.568735067456746,
+    "independent_audit": "docs/GRAM_BALL_RESULTS_V37.md"
+  },
+  "runtime_portability_plan": "docs/RUNTIME_PORTABILITY_PLAN_V37.md"
 }
