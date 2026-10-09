@@ -1,0 +1,22 @@
+{
+  "action_pins_unchanged": true,
+  "claim_order_verified": true,
+  "complete_yaml_parsed": true,
+  "job_count": 1,
+  "limitation": "Local YAML and declared-field checks. GitHub validates workflow-specific contexts.",
+  "numerical_workers_invoked": false,
+  "one_use_public_guard_verified": true,
+  "parsed_install_command": "python -m pip install --disable-pip-version-check --no-cache-dir --only-binary=:all: --require-hashes -r requirements-ci-v38.txt",
+  "parser": "PyYAML BaseLoader",
+  "parser_method": "yaml.load(workflow_bytes, Loader=yaml.BaseLoader); explicit assertions inspect the parsed mapping and exact install command.",
+  "parser_version": "6.0.3",
+  "permissions_unchanged": true,
+  "runner_and_limits_unchanged": true,
+  "schema": "ci-workflow-yaml-validation-v38",
+  "status": "passed",
+  "step_count": 7,
+  "workflow_trigger_pattern_unchanged": true,
+  "workflow": ".github/workflows/c4-v38.yml",
+  "workflow_sha256": "d1b9cf1e35cd3a90d0ea02f36e85b45aea1f31e3213ae3986ccd24a1be84ff48",
+  "workflow_triggered": false
+}

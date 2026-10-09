@@ -253,3 +253,37 @@ Final reviewed hashes:
 
 Changes to these sources require a new review before execution.
 Actual workflow observations must determine whether each remaining gate closes.
+
+## Pre-runner syntax amendment review
+
+GitHub rejected run `37948393273` before it created any jobs.
+The source commit was `1cf45ff1861b7e347bcef6308b3eddbb1e5e6534`.
+The saved incident reports empty job and check-run lists.
+No claim, registration, or model worker started.
+Read `validation/workflow_yaml_rejection_v38.json` for the preserved evidence.
+
+The initial review missed a YAML parsing defect.
+The plain dependency command contained a colon followed by a space.
+The corrected workflow uses a block scalar.
+The parsed command remains exactly unchanged.
+
+The reviewer independently parsed the complete workflow with PyYAML 6.0.3 using `BaseLoader`.
+The reviewer checked the trigger pattern and exact dependency command.
+All 22 CI fixtures passed in 0.394 seconds.
+This validates YAML syntax and the declared fields.
+GitHub still validates its own workflow contexts.
+
+Approve publication of this narrow amendment for the first actual runner execution.
+The trigger records the rejected run and source commit.
+The one-use revision, campaign guard, limits, workers, and numerical policy remain unchanged.
+This is not a retry of any registered trial.
+No automatic rerun button is authorized.
+All earlier empirical and runtime gates remain required.
+
+Amended source hashes:
+
+| File | SHA-256 |
+|---|---|
+| `.github/workflows/c4-v38.yml` | `d1b9cf1e35cd3a90d0ea02f36e85b45aea1f31e3213ae3986ccd24a1be84ff48` |
+| `.github/ci/c4-v38-trigger.json` | `7ec775ff5044eec0e5a5454f86635cc09b81b2b75eabf2c9d2e503f7dd31402b` |
+| `scripts/execute_ci_c4_v38.py` | `a8f867b2af8c693bf00e985a21c1e4f330e8b7e9d6d26fcd81b39ccba11fcddd` |

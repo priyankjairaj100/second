@@ -120,3 +120,28 @@ These runs provide development replication on one shared runner.
 They do not provide prospective confirmation or a population interval.
 The target still uses fixed nearest-anchor calibration.
 It remains distinct from original sequential quantization.
+
+## Syntax amendment before the first runner
+
+GitHub rejected run `37948393273` before it created a job.
+The rejected source commit was `1cf45ff1861b7e347bcef6308b3eddbb1e5e6534`.
+The dependency command used a plain YAML scalar.
+Its `--only-binary=:all:` option contained a colon followed by a space.
+The YAML parser rejected that sequence at line 44, column 97.
+
+The amendment uses a YAML block scalar for the same command.
+The parsed command remains exactly unchanged.
+The trigger records this amendment and the rejected run identity.
+Its one-use revision and campaign path remain unchanged.
+All guards, limits, dependencies, workers, and numerical rules remain unchanged.
+No claim, registration, or model worker started in the rejected run.
+This amendment does not retry a registered trial.
+
+Read `validation/workflow_yaml_rejection_v38.json` for the preserved failure evidence.
+Read `validation/workflow_yaml_validation_v38.json` for the complete parser check.
+The validator uses PyYAML 6.0.3.
+It checks the complete workflow and the exact parsed dependency command.
+It also checks runner, limits, actions, permissions, trigger, and claim order.
+GitHub still validates its own workflow contexts.
+
+The hosted workflow does not add a parser dependency.

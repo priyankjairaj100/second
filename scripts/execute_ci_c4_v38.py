@@ -44,6 +44,11 @@ TRIGGER_PAYLOAD = {
     'revision': REVISION, 'campaign': str(CAMPAIGN),
     'phase_cpu_cap_seconds': 1900, 'bootstrap_cpu_allowance_seconds': 122, 'workflow_wall_minutes': 60,
     'paid_compute_allowed': False, 'automatic_retry_allowed': False,
+    'syntax_amendment': {
+        'kind': 'yaml-command-syntax-before-first-runner',
+        'rejected_run_id': 37948393273,
+        'rejected_source_commit': '1cf45ff1861b7e347bcef6308b3eddbb1e5e6534',
+    },
 }
 PUBLISH_BROKEN = False
 

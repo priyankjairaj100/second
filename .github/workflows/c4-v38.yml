@@ -41,7 +41,9 @@ jobs:
         with:
           python-version: '3.12.14'
       - name: Install pinned numerical dependencies without cache
-        run: python -m pip install --disable-pip-version-check --no-cache-dir --only-binary=:all: --require-hashes -r requirements-ci-v38.txt
+        run: >-
+          python -m pip install --disable-pip-version-check --no-cache-dir
+          --only-binary=:all: --require-hashes -r requirements-ci-v38.txt
       - name: Verify bounded software fixtures on the actual host
         run: python scripts/execute_ci_c4_v38.py fixtures
       - name: Register, publish, run, and audit the C4 campaign

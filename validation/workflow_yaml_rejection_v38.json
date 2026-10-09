@@ -1,0 +1,23 @@
+{
+  "schema": "pre-run-workflow-yaml-rejection-v38",
+  "run_id": 37948393273,
+  "url": "https://github.com/priyankjairaj100/second/actions/runs/37948393273",
+  "head_sha": "1cf45ff1861b7e347bcef6308b3eddbb1e5e6534",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-10-09T15:00:03Z",
+  "updated_at": "2026-10-09T15:00:03Z",
+  "run_attempt": 1,
+  "jobs": [],
+  "check_runs": [],
+  "annotation": {
+    "title": "Invalid workflow file",
+    "message": "You have an error in your yaml syntax on line 44",
+    "source": "public GitHub workflow page"
+  },
+  "cause": "Plain YAML run scalar contains colon-space in --only-binary=:all: --require-hashes.",
+  "claim_published": false,
+  "model_worker_started": false,
+  "registered_trial_retry": false,
+  "runner_cpu_measurement_available": false
+}

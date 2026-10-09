@@ -5,5 +5,10 @@
   "workflow_wall_minutes": 60,
   "paid_compute_allowed": false,
   "automatic_retry_allowed": false,
-  "bootstrap_cpu_allowance_seconds": 122
+  "bootstrap_cpu_allowance_seconds": 122,
+  "syntax_amendment": {
+    "kind": "yaml-command-syntax-before-first-runner",
+    "rejected_run_id": 37948393273,
+    "rejected_source_commit": "1cf45ff1861b7e347bcef6308b3eddbb1e5e6534"
+  }
 }
