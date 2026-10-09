@@ -1,0 +1,39 @@
+{
+  "actual_artifacts": {
+    "model": {
+      "bytes": 22192646,
+      "file": "model.bin",
+      "full_file_hash_recomputed": true,
+      "sha256": "10b84d12abf67ee1b0ca27e076e0573e26e7ab09b9bca3382a124f094b9b8ce7"
+    },
+    "state": {
+      "bytes": 73914323,
+      "file": "state.bin",
+      "full_file_hash_recomputed": true,
+      "sha256": "bd8ad91645299602cda2847c3158dbc5f5976b277b70d3055cae1e9b09560422"
+    }
+  },
+  "actual_byte_comparisons": [
+    {
+      "actual_bytes_equal": true,
+      "artifact": "model",
+      "reference": "c4-root-prepare"
+    }
+  ],
+  "analysis_cost_outside_worker_ledger": true,
+  "analysis_cpu_ns": 1874606380,
+  "controller_seconds": 68.670525147,
+  "deletion_code_changes": null,
+  "historical_binary_outputs_reverified": false,
+  "model_code_count": 42467328,
+  "model_stage_count": 24,
+  "native_evidence": null,
+  "retained_state_independent_oracle": false,
+  "schema": "actual-c4-trial-binary-audit-v38",
+  "scientific_gates": {
+    "all_passed": true,
+    "checks": {}
+  },
+  "status": "complete_verified",
+  "trial": "c4-root-convert"
+}
