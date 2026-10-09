@@ -123,3 +123,8 @@ campaigns/compressed_service_v31/**/*.lock
 /campaigns/ci_v38/**/outputs/*.bin
 /campaigns/ci_v38/**/outputs/.*
 /campaigns/ci_v38/**/*.lock
+
+# Separate corrected setup run preserves the original failed claim.
+/campaigns/ci_v38_setup_fix/**/outputs/*.bin
+/campaigns/ci_v38_setup_fix/**/outputs/.*
+/campaigns/ci_v38_setup_fix/**/*.lock

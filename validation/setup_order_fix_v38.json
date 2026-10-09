@@ -1,0 +1,27 @@
+{
+  "schema": "setup-order-fix-review-v38",
+  "prior_run_id": 37950658443,
+  "prior_outcome": "Software fixture failed before bootstrap or model workers. Rerun attempt2 was skipped.",
+  "prior_fixture_child_cpu_seconds": 0.9778859999999999,
+  "prior_model_ledger_exists": false,
+  "prior_bootstrap_ledger_exists": false,
+  "prior_evidence_unchanged": true,
+  "new_prefix": "campaigns/ci_v38_setup_fix",
+  "review": "Primary agent reviewed ordering, namespace binding, guards, and complete diff.",
+  "tests_run": 39,
+  "passed": 38,
+  "skipped": 1,
+  "skip_reason": "Local runtime lacks genuine procfs. Hosted constructor check must pass.",
+  "test_wall_seconds": 0.445,
+  "actual_checkpoint_restored_and_hash_verified": true,
+  "numerical_sources_changed": false,
+  "resource_limits_changed": false,
+  "source_sha256": {
+    "scripts/execute_ci_c4_v38.py": "a2d3492b4da481d169e42b5ae45d7df01e2980aaedb826545e3f6e0afba322ed",
+    "research_v38/c4_controller.py": "22cad538eea84357c7ef0e86d9efbd326a627f1390d594c94363652541ebbf34",
+    ".github/workflows/c4-v38.yml": "12df840be0f823fafa5e53c35a18f94cb63d752b9525509bba7d3c009424c1f5",
+    ".github/ci/c4-v38-trigger.json": "a2da4f5183010d410a3faa898d7bd746a87bc4313167b412d6c1013d30889207",
+    "tests/test_ci_setup_order_v38.py": "591e44331f78b4ece97600f246705fea307fc866f3f6c29fc9f5ab5df7b2a1ea",
+    "tests/test_ci_c4_v38.py": "3c179cad3f158f5f05ac4fa5a29053bb629a617f6ed3c7b5eca89cdf4024f88b"
+  }
+}

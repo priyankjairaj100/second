@@ -21,12 +21,12 @@ import time
 import traceback
 
 ROOT = Path(__file__).resolve().parents[1]
-PREFIX = Path('campaigns/ci_v38')
+PREFIX = Path('campaigns/ci_v38_setup_fix')
 WORKSPACE = str(PREFIX)
 CAMPAIGN = PREFIX / 'independent_c4_v32'
 CLAIM = PREFIX / 'execution-claim.json'
 TRIGGER = Path('.github/ci/c4-v38-trigger.json')
-REVISION = 'c4-v38-one-use-2026-10-09'
+REVISION = 'c4-v38-setup-fix-2026-10-09'
 REPOSITORY = 'priyankjairaj100/second'
 WIKI_ANALYSIS = Path('campaigns/independent_wikitext_v32/analysis-v33.json')
 WIKI_SHA256 = 'f290104a56edf865a5b0b91a4758d439f08c0b93f217bc22510e510d83450b2b'
@@ -38,12 +38,13 @@ CONTROL_FILES = (
     'scripts/check_runtime_portability_v38.py', 'research_v38/live_runtime.py', 'research_v38/runtime_probe.c',
     'scripts/audit_published_results_v32.py', 'scripts/analyze_independent_requests_v32.py',
     'scripts/analyze_compressed_service_v31.py',
-    'tests/test_ci_c4_v38.py', 'tests/test_bootstrap_target_v38.py', 'tests/test_transformer_backend.py',
+    'tests/test_ci_setup_order_v38.py', 'tests/test_ci_c4_v38.py', 'tests/test_bootstrap_target_v38.py', 'tests/test_transformer_backend.py',
 )
 TRIGGER_PAYLOAD = {
     'revision': REVISION, 'campaign': str(CAMPAIGN),
     'phase_cpu_cap_seconds': 1900, 'bootstrap_cpu_allowance_seconds': 122, 'workflow_wall_minutes': 60,
     'paid_compute_allowed': False, 'automatic_retry_allowed': False,
+    'setup_order_amendment': {'failed_run_id': 37950658443, 'historical_evidence': 'campaigns/ci_v38', 'checkpoint_before_fixtures': True},
     'syntax_amendment': {
         'kind': 'yaml-command-syntax-before-first-runner',
         'rejected_run_id': 37948393273,
@@ -184,13 +185,34 @@ def verify_claim():
     return claim
 
 
+def prepare_checkpoint():
+    """Restore and verify pinned bytes before any dependent software check."""
+    verify_claim()
+    require(not (ROOT / PREFIX / 'checkpoint-audit.json').exists(), 'Checkpoint preparation already ran')
+    _, _, _, assets, _ = modules()
+    downloads = assets.restore_checkpoint()
+    checkpoint = assets.checkpoint_inventory()
+    save_new(PREFIX / 'checkpoint-audit.json', dict(checkpoint, downloads=downloads))
+    publish('Preserve pinned checkpoint verification before software fixtures')
+    require(checkpoint['checkpoint_verified'], 'Checkpoint identity failed')
+
+
+def verify_checkpoint_ready():
+    audit = read(ROOT / PREFIX / 'checkpoint-audit.json')
+    require(audit['checkpoint_verified'] is True, 'Checkpoint audit did not pass')
+    _, _, _, assets, _ = modules()
+    require(assets.checkpoint_inventory()['checkpoint_verified'] is True,
+            'Checkpoint bytes are missing or changed after preparation')
+
+
 def software_fixtures():
     """Run bounded software fixtures. Preserve their result before model work."""
     verify_claim()
+    verify_checkpoint_ready()
     require(not (ROOT / PREFIX / 'software-fixtures.json').exists(), 'Software fixtures already ran')
     (ROOT / 'tmp').mkdir(exist_ok=True)
     command = [sys.executable, '-m', 'unittest', 'tests.test_ci_c4_v38',
-               'tests.test_bootstrap_target_v38', '-v']
+               'tests.test_bootstrap_target_v38', 'tests.test_ci_setup_order_v38', '-v']
     start = time.perf_counter_ns()
     before = resource.getrusage(resource.RUSAGE_CHILDREN)
     try:
@@ -415,10 +437,7 @@ def execute():
     save_new(PREFIX / 'published-metadata-audit.json', published.audit(ROOT))
     prerequisite = published_wiki_prerequisite()
     save_new(PREFIX / 'wikitext-prerequisite.json', prerequisite)
-    downloads = assets.restore_checkpoint()
-    checkpoint = assets.checkpoint_inventory()
-    save_new(PREFIX / 'checkpoint-audit.json', dict(checkpoint, downloads=downloads))
-    require(checkpoint['checkpoint_verified'], 'Checkpoint identity failed')
+    verify_checkpoint_ready()
     portability = subprocess.run([sys.executable, str(ROOT / 'scripts/check_runtime_portability_v38.py'),
         '--output', str(ROOT / PREFIX / 'runtime-portability.json'), '--cpu', str(min(os.sched_getaffinity(0)))],
         cwd=ROOT, capture_output=True, text=True, timeout=30)
@@ -495,10 +514,10 @@ def finalize():
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action', choices=('claim', 'fixtures', 'execute', 'finalize'))
+    parser.add_argument('action', choices=('claim', 'assets', 'fixtures', 'execute', 'finalize'))
     args = parser.parse_args()
     try:
-        {'claim': claim_once, 'fixtures': software_fixtures, 'execute': execute, 'finalize': finalize}[args.action]()
+        {'claim': claim_once, 'assets': prepare_checkpoint, 'fixtures': software_fixtures, 'execute': execute, 'finalize': finalize}[args.action]()
     except BaseException as exc:
         error = dict(schema='free-c4-workflow-error-v38', action=args.action,
             error_type=type(exc).__name__, reason=str(exc)[:8000], traceback=traceback.format_exc()[-16000:],

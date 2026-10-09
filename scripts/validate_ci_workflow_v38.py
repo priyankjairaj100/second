@@ -30,7 +30,7 @@ def validate():
     require(set(workflow['jobs']) == {'c4'}, 'Unexpected jobs')
     job = workflow['jobs']['c4']
     steps = job['steps']
-    require(len(steps) == 7, 'Unexpected step count')
+    require(len(steps) == 8, 'Unexpected step count')
     install = next(step['run'] for step in steps if step['name'] == 'Install pinned numerical dependencies without cache')
     require(install == INSTALL, 'Parsed dependency command differs')
     require(workflow['on'] == {'push': {'branches': ['main'], 'paths': ['.github/ci/c4-v38-trigger.json']}},
@@ -45,6 +45,8 @@ def validate():
     }
     require({step['uses'] for step in steps if 'uses' in step} == expected_actions, 'Action pins changed')
     require(steps[1]['run'] == 'python3 scripts/execute_ci_c4_v38.py claim', 'Durable claim order changed')
+    commands = [step.get('run', '') for step in steps]
+    require(commands.index('python scripts/execute_ci_c4_v38.py assets') < commands.index('python scripts/execute_ci_c4_v38.py fixtures'), 'Checkpoint must precede fixtures')
     return dict(schema='ci-workflow-yaml-validation-v38', status='passed',
         parser='PyYAML BaseLoader', parser_version=yaml.__version__, workflow=str(WORKFLOW),
         workflow_sha256=hashlib.sha256(raw).hexdigest(), validator_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

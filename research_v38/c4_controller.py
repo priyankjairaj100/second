@@ -178,8 +178,8 @@ def build_spec(corpus):
     old_root=str(Path(original['campaign']).parents[1]);moved=relocate(original,old_root,ROOT)
     require(corpus == 'c4', 'V38 only authorizes C4')
     from research_v38.bootstrap_target import verify_bootstrap
-    verify_bootstrap(ROOT/'campaigns/ci_v38/bootstrap')
-    target_path = ROOT/'campaigns/ci_v38/bootstrap/outputs/fixed-target.json'
+    verify_bootstrap(ROOT/WORKSPACE/'bootstrap')
+    target_path = ROOT/WORKSPACE/'bootstrap/outputs/fixed-target.json'
     target = read_json(target_path)
     require(target.get('schema') == 'fixed-nearest-anchor-calibration-target-v1', 'Bootstrap target schema differs')
     expected_target = hashed(target_path)

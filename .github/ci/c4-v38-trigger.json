@@ -1,11 +1,16 @@
 {
-  "revision": "c4-v38-one-use-2026-10-09",
-  "campaign": "campaigns/ci_v38/independent_c4_v32",
+  "revision": "c4-v38-setup-fix-2026-10-09",
+  "campaign": "campaigns/ci_v38_setup_fix/independent_c4_v32",
   "phase_cpu_cap_seconds": 1900,
+  "bootstrap_cpu_allowance_seconds": 122,
   "workflow_wall_minutes": 60,
   "paid_compute_allowed": false,
   "automatic_retry_allowed": false,
-  "bootstrap_cpu_allowance_seconds": 122,
+  "setup_order_amendment": {
+    "failed_run_id": 37950658443,
+    "historical_evidence": "campaigns/ci_v38",
+    "checkpoint_before_fixtures": true
+  },
   "syntax_amendment": {
     "kind": "yaml-command-syntax-before-first-runner",
     "rejected_run_id": 37948393273,

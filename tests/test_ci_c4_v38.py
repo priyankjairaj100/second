@@ -165,7 +165,7 @@ class ControllerPreservationTests(unittest.TestCase):
     def test_only_host_target_changes_in_seven_trial_plans(self):
         from research_v38 import bootstrap_target
         original_read = current.read_json
-        target_path = current.ROOT / 'campaigns/ci_v38/bootstrap/outputs/fixed-target.json'
+        target_path = current.ROOT / current.WORKSPACE / 'bootstrap/outputs/fixed-target.json'
         target_hash = hashlib.sha256(b'fixture target only').hexdigest()
         def read_fixture(path):
             if Path(path) == target_path:

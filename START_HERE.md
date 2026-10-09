@@ -1,3 +1,9 @@
+Current fix: read `docs/SETUP_ORDER_FIX_V38.md` first.
+The corrected workflow uses `campaigns/ci_v38_setup_fix`.
+The original failed run remains preserved. Check GitHub before claiming completion.
+
+---
+
 Current work: read `docs/ACTIVE_SESSION_V38.md` first.
 The user reports the GitHub account restriction is resolved. A recovery push now requests the first runner.
 No model worker started. Read `docs/CI_RECOVERY_V38.md` before any recovery action.
