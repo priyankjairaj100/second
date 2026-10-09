@@ -21,9 +21,18 @@ Read `GRAM_STAGE_REVIEW_V36.md` for independent review and `LOCAL_GRAM_STAGE_V36
 for fresh local reproduction. Source hashes and complete input dependencies
 are frozen in the program before any numerical experiment.
 
-Current state: reviewed, registered, and unstarted.
+Current state: complete and independently audited; do not rerun.
 Program SHA-256: `28fad1a3e18cad1895eebe54ae7b57b93431d49f644d26b1fd566e5838b05bd2`.
-The next action is publication followed by the one registered execution.
+The protocol was published at `bdc17d263cc60b29e05d2e7743592112e4f765fe` before execution.
+All three arms certified all 1,769,472 codes. Exact retained Gram bytes also match.
+The phase charged 139 CPU seconds, with one settled transaction.
+Pooled deletion took 65.995601 seconds; fresh Gram reconstruction took 61.257673 seconds.
+The cached-feature arm took 1.299832 seconds. Read `GRAM_STAGE_RESULTS_V36.md`.
+
+The source audit identified avoidable generic interval-kernel work in the Gram row verifier.
+Do not present the roughly 51-fold ratio as a comparison against the best possible Gram method.
+A new V37 adapter will give the Gram path the existing certified ball-kernel acceleration.
+It needs its own review, registration, and publication before any new experiment.
 The separate phase permits 900 CPU seconds, with one 880-second CPU worker.
 The process uses one CPU and a 3 GiB address-space limit.
 No allowance is transferred from or reset in an earlier ledger.

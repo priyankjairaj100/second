@@ -47,9 +47,9 @@
     },
     {
       "id": "pooled_exact_gram_control",
-      "status": "four_row_component_complete_full_stage_prepared",
-      "reference": "docs/GRAM_RESULTS_V35.md",
-      "gate": "V35 exact equality passed. Complete-stage registration and execution next; larger-token complete-model service remains unmeasured."
+      "status": "complete_first_stage_measured_optimization_required",
+      "reference": "docs/GRAM_STAGE_RESULTS_V36.md",
+      "gate": "All complete first-stage codes agree. Remove avoidable generic interval row work before stronger ranking claims. Larger-token complete-model service remains unmeasured."
     },
     {
       "id": "additional_model",
@@ -126,16 +126,21 @@
     "real_data_capsule": "data/gram_v35/wikitext-firststage.json",
     "local_guide": "docs/LOCAL_GRAM_PILOT_V35.md"
   },
-  "next_component": "Execute the separately registered complete first-stage comparison after its protocol is pushed.",
+  "next_component": "Review, register, and publish a new V37 direct-Gram ball-kernel adaptation before execution.",
   "component_stage_program": {
     "path": "campaigns/pooled_gram_stage_v36",
-    "status": "registered_unstarted",
+    "status": "complete",
     "rows": 2304,
     "code_decisions": 1769472,
     "complete_model": false,
     "confirmation": false,
     "real_data_capsule": "data/gram_v36/wikitext-firststage/manifest.json",
     "local_guide": "docs/LOCAL_GRAM_STAGE_V36.md",
-    "program_sha256": "28fad1a3e18cad1895eebe54ae7b57b93431d49f644d26b1fd566e5838b05bd2"
+    "program_sha256": "28fad1a3e18cad1895eebe54ae7b57b93431d49f644d26b1fd566e5838b05bd2",
+    "charged_cpu_seconds": 139,
+    "scientific_gate_passed": true,
+    "analysis": "campaigns/pooled_gram_stage_v36/analysis.json",
+    "independent_audit": "docs/GRAM_STAGE_RESULTS_V36.md",
+    "terminal_sha256": "6b28544e10eb06c5aa6081d6a9fe1841e8bc2574cc7aaf1e70ed28e32f0f1c59"
   }
 }

@@ -1,5 +1,5 @@
 Current work: read `docs/ACTIVE_SESSION_V36.md` first.
-The four-row Gram pilot is complete; the complete-stage comparison is registered and unstarted.
+The complete-stage Gram comparison is audited; a fairer accelerated Gram control is being prepared.
 Fresh local stage commands: `docs/LOCAL_GRAM_STAGE_V36.md`. Full C4 remains blocked.
 
 ---
