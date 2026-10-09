@@ -1,0 +1,11 @@
+{
+  "controller_seconds": 287.326504874,
+  "corpus": "c4",
+  "phase_charge": 287,
+  "scientific_gates": {
+    "all_passed": true,
+    "checks": {}
+  },
+  "status": "complete",
+  "trial": "c4-root-prepare"
+}
