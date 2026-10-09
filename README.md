@@ -1,3 +1,15 @@
+Current results: [C4 completed successfully](docs/C4_RESULTS_V38.md).
+All seven registered trials passed, with exact agreement across 24 stages and 42,467,328 codes.
+Lossless repair showed 2.16–2.18× observed speedups over cold reconstruction.
+Compressed repair showed 1.53×, with 5.56% less state and slower repair than the lossless cache.
+These are small development pilots for fixed nearest-anchor features.
+Read [START_HERE.md](START_HERE.md) and [the current research decision](docs/RESEARCH_DECISION_V38.md).
+The workflow is settled. No worker remains active. The paper remains incomplete.
+
+Historical snapshots follow with their original cutoffs.
+
+---
+
 Current work: read `docs/ACTIVE_SESSION_V37.md` first.
 The accelerated complete-stage Gram control is complete; all 1,769,472 codes agree.
 Fresh local stage commands: `docs/LOCAL_GRAM_BALL_STAGE_V37.md`. Full C4 remains blocked.

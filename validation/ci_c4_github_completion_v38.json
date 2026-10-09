@@ -1,0 +1,113 @@
+{
+  "schema": "github-c4-completion-record-v38",
+  "api_url": "https://api.github.com/repos/priyankjairaj100/second/actions/runs/37956045572/jobs",
+  "run_id": 37956045572,
+  "job_id": 113906696278,
+  "run_attempt": 1,
+  "conclusion": "success",
+  "status": "completed",
+  "started_at": "2026-10-09T16:01:23Z",
+  "completed_at": "2026-10-09T16:18:42Z",
+  "head_sha": "d33626834aa830604b261b8e196dff9d3b0ca5f4",
+  "runner_name": "GitHub Actions 1000000003",
+  "runner_group_name": "GitHub Actions",
+  "html_url": "https://github.com/priyankjairaj100/second/actions/runs/37956045572/job/113906696278",
+  "steps": [
+    {
+      "name": "Set up job",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 1,
+      "started_at": "2026-10-09T16:01:24Z",
+      "completed_at": "2026-10-09T16:01:24Z"
+    },
+    {
+      "name": "Read full published history",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 2,
+      "started_at": "2026-10-09T16:01:24Z",
+      "completed_at": "2026-10-09T16:01:30Z"
+    },
+    {
+      "name": "Publish durable one-use claim",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 3,
+      "started_at": "2026-10-09T16:01:30Z",
+      "completed_at": "2026-10-09T16:01:34Z"
+    },
+    {
+      "name": "Select CPython",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 4,
+      "started_at": "2026-10-09T16:01:34Z",
+      "completed_at": "2026-10-09T16:01:40Z"
+    },
+    {
+      "name": "Install pinned numerical dependencies without cache",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 5,
+      "started_at": "2026-10-09T16:01:40Z",
+      "completed_at": "2026-10-09T16:01:43Z"
+    },
+    {
+      "name": "Restore and verify the pinned checkpoint",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 6,
+      "started_at": "2026-10-09T16:01:43Z",
+      "completed_at": "2026-10-09T16:01:51Z"
+    },
+    {
+      "name": "Verify bounded software fixtures on the actual host",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 7,
+      "started_at": "2026-10-09T16:01:51Z",
+      "completed_at": "2026-10-09T16:01:55Z"
+    },
+    {
+      "name": "Register, publish, run, and audit the C4 campaign",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 8,
+      "started_at": "2026-10-09T16:01:55Z",
+      "completed_at": "2026-10-09T16:18:36Z"
+    },
+    {
+      "name": "Preserve final state after success or failure",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 9,
+      "started_at": "2026-10-09T16:18:36Z",
+      "completed_at": "2026-10-09T16:18:39Z"
+    },
+    {
+      "name": "Post Select CPython",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 17,
+      "started_at": "2026-10-09T16:18:39Z",
+      "completed_at": "2026-10-09T16:18:39Z"
+    },
+    {
+      "name": "Post Read full published history",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 18,
+      "started_at": "2026-10-09T16:18:39Z",
+      "completed_at": "2026-10-09T16:18:39Z"
+    },
+    {
+      "name": "Complete job",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 19,
+      "started_at": "2026-10-09T16:18:39Z",
+      "completed_at": "2026-10-09T16:18:39Z"
+    }
+  ]
+}

@@ -4,11 +4,11 @@
   "repository": "https://github.com/priyankjairaj100/second",
   "restored_parent": "42d842f758e7bc6935215cf88c9235ea14cc9987",
   "entrypoint": "START_HERE.md",
-  "status": "setup_order_fixed_ready_for_fresh_run",
+  "status": "fresh_c4_complete_metadata_audited",
   "initial_publication": "1cf45ff1861b7e347bcef6308b3eddbb1e5e6534",
   "initial_workflow_rejection": "validation/workflow_yaml_rejection_v38.json",
   "status_authority": "Read actual GitHub workflow, claim, registrations, transactions, receipts, ledgers, and analyses before acting.",
-  "current_context": "docs/SETUP_ORDER_FIX_V38.md",
+  "current_context": "docs/ACTIVE_SESSION_V38.md",
   "previous_science": "docs/RESEARCH_DECISION_V37.md",
   "theory_map": "docs/METHOD_AND_THEORY_MAP_V32.md",
   "checkpoint_recovery": "validation/checkpoint_recovery_v38.json",
@@ -45,17 +45,84 @@
     "do_not": [
       "rerun the job",
       "retry failed historical attempts",
-      "push while CI publishes",
-      "infer usage from missing receipts"
+      "reset or pool old budgets",
+      "infer usage from missing receipts",
+      "claim missing binaries were reverified locally",
+      "call alternative requests a successive deletion sequence"
     ],
-    "claim_exists": false,
-    "runner_started": false,
-    "new_ledger_exists": false,
+    "claim_exists": true,
+    "runner_started": true,
+    "new_ledger_exists": true,
     "new_reservation_exists": false,
     "abrupt_loss_hold_applies": false,
-    "status": "fresh_corrected_workflow_pending",
+    "status": "all_seven_complete_verified",
     "prior_failed_run_id": 37950658443,
-    "prior_evidence": "campaigns/ci_v38"
+    "prior_evidence": "campaigns/ci_v38",
+    "workflow_run_id": 37956045572,
+    "workflow_job_id": 113906696278,
+    "workflow_attempt": 1,
+    "workflow_conclusion": "success",
+    "workflow_url": "https://github.com/priyankjairaj100/second/actions/runs/37956045572",
+    "program_sha256": "4f8ab502d119d0fd42a92ab0470ddec5e201c96e2d41800744500a0d431dc564",
+    "protocol_sha256": "763a62cb8086b9f16d03dca8020cde6f9e7db6b371ea662249cbfa5e25503218",
+    "registration_commit": "d712eeaa5bd35e028f26f018203adc9459ae780c",
+    "bootstrap_charged_cpu_seconds": 12,
+    "campaign_charged_cpu_seconds": 836,
+    "campaign_observed_cpu_ns": 831751420002,
+    "unresolved_reservations": 0,
+    "analysis": "campaigns/ci_v38_setup_fix/independent_c4_v32/analysis-v38.json",
+    "report": "docs/C4_RESULTS_V38.md",
+    "metadata_audit": "validation/ci_c4_metadata_audit_v38.json",
+    "metadata_audit_command": "python -B scripts/audit_ci_evidence_v38.py",
+    "checkpoint_recovery_command": "python -B scripts/recover_assets_v32.py --fetch-checkpoint --checkpoint-only",
+    "binary_outputs_in_git": false,
+    "actual_binary_audits_performed_on_ci": true,
+    "local_binary_reverification": false,
+    "terminal_copies_agree": true,
+    "retained_tokens_per_request": 128,
+    "original_tokens": 256,
+    "requests": 2,
+    "request_relationship": "alternative deletions sharing one original state; not a successive sequence",
+    "timings_per_method_and_request": 1,
+    "confirmation": false,
+    "target_sha256": "9862b34f861f6155b204d57ea8219d8c8b8ccfe1a06f8053f052afb20f74b496",
+    "primary_clock": "controller after prerequisite/bootstrap checks through worker receipt and receipt hash",
+    "clock_exclusions": "Prerequisite/bootstrap checks and post-receipt agreement, gates, and archive analysis; not whole CLI latency.",
+    "new_quality_evaluation": false,
+    "independent_retained_state_oracle": false,
+    "results": {
+      "pairs": [
+        {
+          "changed_codes": 3678383,
+          "cold_over_repair": 2.179783010872553,
+          "cold_seconds": 135.8174104,
+          "repair_seconds": 62.307766288,
+          "request": "c4-delete-0"
+        },
+        {
+          "changed_codes": 3623777,
+          "cold_over_repair": 2.1628826851638028,
+          "cold_seconds": 134.774330628,
+          "repair_seconds": 62.312362826,
+          "request": "c4-delete-1"
+        }
+      ],
+      "descriptive_geometric_mean_cold_over_lossless_repair": 2.171316405232196,
+      "compressed_seconds": 88.974007232,
+      "cold_over_compressed": 1.5264841342467095,
+      "compressed_state_bytes": 48053888,
+      "matched_lossless_state_bytes": 50882823,
+      "state_reduction_percent": 5.559705286005845,
+      "state_plus_base_reduction_percent": 0.7007379130497204,
+      "certificate_accepted_stages": 24,
+      "point_solver_stages": 0,
+      "neural_stage_record_pairs": 0,
+      "preparation_seconds": 287.326504874,
+      "conversion_seconds": 68.670525147,
+      "compression_dominates_lossless_latency": false,
+      "lifetime_benefit_established": false
+    },
+    "closed_campaign_no_rerun": true
   },
   "portable_backend": {
     "directory": "research_v38",
@@ -63,10 +130,11 @@
     "host_check": "scripts/check_runtime_portability_v38.py",
     "used_for_c4": false,
     "historical_state_compatible": false,
-    "empirical_validation_complete": false
+    "empirical_validation_complete": false,
+    "hosted_metadata_gate_7_passed": true,
+    "hosted_metadata_scope": "One genuine process on the successful GitHub host; no general portability or empirical replacement claim."
   },
   "remaining_research": [
-    "fresh full-model C4 results",
     "larger real calibration workloads spanning feature width",
     "complete-model matched Gram and factor controls",
     "compressed versus lossless complete-state frontier",
@@ -77,7 +145,7 @@
     "closest-work comparison and final novelty audit",
     "claim-bound submission package"
   ],
-  "latest_execution_source": "f174f072419a6fa954379bb36544ead9d926c103",
+  "latest_execution_source": "d33626834aa830604b261b8e196dff9d3b0ca5f4",
   "provider_block": "validation/workflow_provider_block_v38.json",
   "recovery_instructions": "docs/CI_RECOVERY_V38.md",
   "empirical_worker_running": false,
@@ -87,6 +155,31 @@
     "blocked_run_id": 37949249514,
     "blocked_source_commit": "f174f072419a6fa954379bb36544ead9d926c103",
     "unlock_basis": "User reports payment issue resolved on 2026-10-09",
-    "runner_admission_verified": false
+    "runner_admission_verified": true
+  },
+  "current_science": "docs/RESEARCH_DECISION_V38.md",
+  "latest_evidence_commit": "6f3ccfd987f105366c548bf1d0294a81217b4422",
+  "next_gate": {
+    "task": "larger real calibration workloads with dimension-appropriate matched controls",
+    "stage": "complete-stage bounded pilot before full-model expansion",
+    "registration_exists": false,
+    "worker_running": false,
+    "paid_compute_allowed": false,
+    "required_before_execution": [
+      "new immutable paths and runtime identities",
+      "reviewed source and resource limits",
+      "prospective source selection and comparison protocol",
+      "matched feature access and shared kernel optimization",
+      "exact output and storage verification",
+      "explicit failure and stop rules"
+    ],
+    "planning_status": "not an execution authorization for a specific unregistered campaign"
+  },
+  "recorded_analysis_costs": {
+    "ci_trial_binary_audit_cpu_ns": 15094086707,
+    "ci_final_analysis_cpu_ns": 9825241481,
+    "local_metadata_audit_cpu_ns": 360269652,
+    "outside_worker_ledgers": true,
+    "exhaustive_infrastructure_cost": false
   }
 }

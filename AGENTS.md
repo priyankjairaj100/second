@@ -1,3 +1,17 @@
+Current checkpoint: read `START_HERE.md`, `docs/ACTIVE_SESSION_V38.md`, and `handoff/program_v38.json` first.
+The fresh C4 workflow completed all seven trials successfully.
+Read `docs/C4_RESULTS_V38.md` and `docs/RESEARCH_DECISION_V38.md` for supported claims and remaining tasks.
+All new ledgers are settled. No worker remains active.
+Never rerun the one-use workflow or historical attempts.
+New experiments require new registrations, runtime bindings, paths, and bounded resource plans.
+Do not modify `src/*.py`, `scripts/run_*.py`, frozen snapshots, or historical ledgers.
+Put new implementation in a new research directory.
+Preserve adverse results, historical holds, and all 60 quality exclusions.
+No paid compute or force-push. Follow current delegation policy.
+Historical checkpoints below retain their original cutoffs.
+
+---
+
 Current work: read `docs/ACTIVE_SESSION_V37.md` first.
 The accelerated complete-stage Gram control is complete; all 1,769,472 codes agree.
 Fresh local stage commands: `docs/LOCAL_GRAM_BALL_STAGE_V37.md`. Full C4 remains blocked.

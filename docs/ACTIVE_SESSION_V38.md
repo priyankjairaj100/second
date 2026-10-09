@@ -1,4 +1,87 @@
-# V38 execution checkpoint
+# Completed C4 checkpoint
+
+Updated 9 October 2026, after workflow completion.
+This section supersedes the historical checkpoints below.
+
+The workflow succeeded: https://github.com/priyankjairaj100/second/actions/runs/37956045572.
+All seven fresh C4 trials completed.
+Their final evidence commit is `6f3ccfd987f105366c548bf1d0294a81217b4422`.
+No worker remains active.
+Read `C4_RESULTS_V38.md` and `RESEARCH_DECISION_V38.md` before planning new work.
+
+The evidence directory is `campaigns/ci_v38_setup_fix`.
+The campaign is its `independent_c4_v32` subdirectory.
+Its final report is `analysis-v38.json`.
+The original failed setup remains under `campaigns/ci_v38`.
+Older C4 runtime failures remain under their original paths.
+No old receipt, numerical file, registration, or ledger was rewritten.
+
+Both lossless repairs matched every code across 24 stages.
+Their cold/repair ratios were 2.179783 and 2.162883.
+Compressed repair took 88.974007 seconds, versus 135.817410 seconds for cold reconstruction.
+All 24 compressed certificates accepted, with zero retained neural replay.
+Retained compressed state used 48,053,888 bytes, versus 50,882,823 lossless bytes.
+The saving is 5.559705%, or 0.700738% including the common base checkpoint.
+Compressed repair still took 42.80% longer than lossless repair.
+
+The model phase charged 836 CPU seconds under its separate 1,900-second allowance.
+Static bootstrap charged 12 CPU seconds under its separate 122-second allowance.
+Both ledgers are settled, with no new unresolved reservation.
+CI binary audits and final analysis have separately recorded costs outside those ledgers.
+No total infrastructure cost is claimed.
+All historical unresolved holds remain unchanged.
+Do not reuse unused allowances to rerun this closed campaign.
+
+The metadata audit checks 980 files and recomputes every reported contrast.
+It verifies matching terminal copies, settled charges, source bindings, and recorded actual binary comparisons.
+CI compared the binaries before the temporary runner ended.
+Git does not contain the twelve derived binaries.
+Local metadata verification does not repeat those binary comparisons or run inference.
+
+## Read-only resumption commands
+
+Run these commands from a full clone with Python 3.12.
+The checkpoint helper verifies exact hashes and never replaces an existing conflicting file.
+
+```bash
+git status --short
+python -B scripts/recover_assets_v32.py --fetch-checkpoint --checkpoint-only
+python -B scripts/audit_ci_evidence_v38.py
+```
+
+The audit requires published commit `6f3ccfd987f105366c548bf1d0294a81217b4422` in local history.
+Its expected status is `metadata_checks_passed`.
+The stored output is `validation/ci_c4_metadata_audit_v38.json`.
+No new worker starts through these commands.
+
+## Next work
+
+The next gate is larger real calibration workloads with matched Gram and factor controls.
+Start with a complete-stage pilot before committing to full-model costs.
+Then test successive-state correctness, complete lifetime costs, compression tradeoffs, another model, and independent roots.
+Freeze methods before prospective confirmation.
+All 60 exposed quality articles remain excluded.
+
+No new empirical registration exists for those next tasks.
+Create new paths, runtime bindings, a reviewed protocol, and a bounded resource plan before execution.
+Do not mutate `src/*.py`, `scripts/run_*.py`, or frozen snapshots.
+Use a new research directory for new implementation.
+No paid compute, force-push, or automatic retry is authorized.
+Never use the rerun button for the closed C4 workflow.
+
+The portable runtime cross-check passed on the hosted process.
+That result covers this host's common metadata only.
+All C4 numerical work used the original backend.
+It does not validate the portable backend for empirical replacement or historical-state continuation.
+
+The target uses fixed nearest-anchor features and original normalization.
+Ordinary sequential calibration repair still lacks a demonstrated speed advantage.
+The direction merits bounded continuation; the paper remains incomplete.
+Read `handoff/program_v38.json` for machine-readable restart context.
+
+---
+
+# Historical V38 checkpoint before execution
 
 Updated 9 October 2026.
 This file supersedes earlier execution-status notes.

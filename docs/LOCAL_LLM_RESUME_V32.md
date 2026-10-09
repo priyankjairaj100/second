@@ -1,3 +1,13 @@
+Current update after C4 completion: read `START_HERE.md` and `docs/ACTIVE_SESSION_V38.md` first.
+The fresh C4 campaign completed seven trials successfully under `campaigns/ci_v38_setup_fix`.
+The current handoff is `handoff/program_v38.json`.
+The metadata audit command is `python -B scripts/audit_ci_evidence_v38.py`.
+Read the current checkpoint for checkpoint recovery and its evidence limits.
+Never rerun the closed workflow or earlier failed attempts.
+The commands below describe historical recovery and fresh reproductions; their status statements retain their original cutoffs.
+
+---
+
 Current update, 9 October 2026: read `docs/ACTIVE_SESSION_V34.md` first.
 The chat C4 campaign is stopped after a missing `/proc/self/maps` failure.
 Fresh local execution must pass the deeper environment preflight below before any registration or worker.

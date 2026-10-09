@@ -1,37 +1,37 @@
-Current fix: read `docs/SETUP_ORDER_FIX_V38.md` first.
-The corrected workflow uses `campaigns/ci_v38_setup_fix`.
-The original failed run remains preserved. Check GitHub before claiming completion.
-
----
-
-Current work: read `docs/ACTIVE_SESSION_V38.md` first.
-The user reports the GitHub account restriction is resolved. A recovery push now requests the first runner.
-No model worker started. Read `docs/CI_RECOVERY_V38.md` before any recovery action.
-Never rerun the one-use job or alter historical attempts.
-The complete-stage Gram control remains complete; all 1,769,472 codes agree.
-
----
-
 # Start or resume this research program
 
-Read [the current execution checkpoint](docs/ACTIVE_SESSION_V38.md) first.
-Read [the research decision](docs/RESEARCH_DECISION_V37.md) for what the results justify.
-Use [the local LLM handoff](docs/LOCAL_LLM_RESUME_V32.md) for a fresh local reproduction.
-Use [the theory map](docs/METHOD_AND_THEORY_MAP_V32.md) to locate proofs and implementations.
-These current notes supersede historical execution-status sections.
+Updated 9 October 2026, after the successful C4 workflow.
 
-The independent WikiText root is complete and audited under the declared V33 recovery.
-The C4 root has two successful numerical transactions and a second preserved terminal-copy discrepancy.
-The V34 continuation started one repair, which failed before model computation because `/proc/self/maps` is unavailable.
-Its receipt is preserved; four later trials remain unstarted. No automatic retry is allowed.
-Check actual registrations and receipts before executing any command.
-Never copy completion over an inconsistent live progress file.
-Never reset a ledger, repeat a completed trial, or silently drop a loss.
+Read these current files first:
+
+1. [Execution checkpoint](docs/ACTIVE_SESSION_V38.md): current state, commands, and preserved incidents.
+2. [C4 results](docs/C4_RESULTS_V38.md): exact comparisons, costs, and limitations.
+3. [Research decision](docs/RESEARCH_DECISION_V38.md): positioning and remaining scientific gates.
+4. [Machine-readable handoff](handoff/program_v38.json): paths, identities, budgets, and next tasks.
+5. [Theory map](docs/METHOD_AND_THEORY_MAP_V32.md): proofs and implementations.
+
+All seven fresh C4 trials completed and passed their registered checks.
+Both lossless repairs matched all 42,467,328 codes and were 2.16–2.18× faster than cold reconstruction.
+Compressed repair was 1.53× faster than cold reconstruction, with all 24 certificates accepted and zero replay.
+Its retained state was 5.56% smaller than lossless state, but repair took 42.80% longer than lossless repair.
+These are small development observations, not population speed guarantees.
+
+The workflow and all new ledgers are settled.
+No worker remains active.
+Do not rerun the one-use workflow or historical attempts.
+New experiments require fresh registrations and bounded resource plans.
+The next scientific gate is larger real calibration workloads with matched Gram and factor controls.
+Then measure successive deletion states, complete lifetime costs, another model, and prospective confirmation.
+
+WikiText remains complete under its disclosed V33 recovery.
+Earlier C4 runtime failures remain preserved as separate historical attempts.
+The new successful evidence is under `campaigns/ci_v38_setup_fix`.
+Never overwrite terminal discrepancies, reset ledgers, or omit adverse findings.
 
 Git preserves code, exact selected token inputs, protocols, receipts, and artifact hashes.
 Large base weights and derived model/state binaries are excluded.
-A fresh clone needs the documented checkpoint download and new local registration.
-Published metadata alone cannot continue a historical stateful campaign without its binaries.
+The current checkpoint gives a read-only metadata audit command for a fresh clone.
+Historical model binaries cannot be reconstructed from hashes alone.
 
 Current positive results concern fixed nearest-anchor features.
 The original sequential target still has no demonstrated repair speed advantage.

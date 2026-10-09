@@ -1,3 +1,27 @@
+Current checkpoint: read `ACTIVE_SESSION_V38.md` and `RESEARCH_DECISION_V38.md` first.
+The fresh C4 root is complete; all seven trials and both new ledgers are settled.
+Exact complete-model repair and narrow timing wins now have WikiText and C4 development evidence.
+The full research program remains incomplete.
+
+Remaining tasks, in dependency order:
+
+1. Register a real-data scale pilot spanning token counts below, near, and above feature width.
+2. Add dimension-appropriate, matched Gram and factor controls before complete-model scaling claims.
+3. Test the compression frontier against strong lossless controls, charging conversion and fallback.
+4. Verify successive retained states against independent canonical reconstruction.
+5. Measure preparation-inclusive lifetime costs for both repair and reconstruction services.
+6. Add another model, independent calibration roots, and matched mechanism ablations.
+7. Evaluate untouched quality data and freeze the method before prospective confirmation.
+8. Keep all 60 exposed quality articles excluded from that confirmation.
+9. Complete the closest-work comparison and final conditional-theory review.
+10. Bind final claims, tables, reproducibility instructions, and the ACL manuscript to audited evidence.
+
+No new empirical registration exists for these tasks.
+No worker is active. Never retry a closed or failed historical attempt.
+The old task registers below remain historical.
+
+---
+
 Current checkpoint: read `ACTIVE_SESSION_V34.md` and `RESEARCH_DECISION_V34.md` first.
 WikiText is complete; C4 execution is blocked by a missing required `/proc` runtime interface. Historical status below retains its original cutoff.
 

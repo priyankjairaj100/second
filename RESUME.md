@@ -1,3 +1,12 @@
+Current checkpoint: read `START_HERE.md` and `docs/ACTIVE_SESSION_V38.md` first.
+The fresh C4 campaign completed all seven trials successfully.
+Read `docs/C4_RESULTS_V38.md`, `docs/RESEARCH_DECISION_V38.md`, and `handoff/program_v38.json`.
+All new ledgers are settled. No worker remains active. Do not rerun the one-use workflow.
+The next scientific gate is larger real calibration workloads with matched controls.
+Historical checkpoints below retain their original cutoffs.
+
+---
+
 Current work: read `docs/ACTIVE_SESSION_V37.md` first.
 The accelerated complete-stage Gram control is complete; all 1,769,472 codes agree.
 Fresh local stage commands: `docs/LOCAL_GRAM_BALL_STAGE_V37.md`. Full C4 remains blocked.
