@@ -1,0 +1,44 @@
+{
+  "affinity": {
+    "original": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "selected": 0
+  },
+  "c4_original_backend_admitted": false,
+  "checks": {},
+  "cost": {
+    "child_cpu_seconds": 0.0,
+    "process_cpu_seconds": 0.073330851,
+    "wall_seconds": 0.07336555799702182
+  },
+  "dataset_loaded": false,
+  "error": {
+    "reason": "[Errno 2] No such file or directory: '/proc/cpuinfo'",
+    "type": "FileNotFoundError"
+  },
+  "historical_identity_compatibility_claimed": false,
+  "ledger_written": false,
+  "model_inference_performed": false,
+  "model_loaded": false,
+  "portable_gate_7_passed": false,
+  "proc": {},
+  "raw_manifests": {},
+  "schema": "runtime-portability-crosscheck-v38",
+  "source_sha256": {
+    "research_v38/live_runtime.py": "b50f90921d4d56e392e4fbe00543316e352632356ae59a7ee13e5054176fa2aa",
+    "research_v38/runtime_probe.c": "e8dc0167fa06bee1eab1f88725c54180ac3e967e2f1011b2e8a32cef5e502aad",
+    "scripts/check_runtime_portability_v38.py": "e9b24408be88ef3bb6c67a89a9ad1d3735dd185227c0cd7fba536fd50780d07e",
+    "src/finite_primitives.py": "240e6966b39de1b52332fccc931b7a48253dd22f9cd20f5748ffa56ab6111efa",
+    "src/transformer_backend.py": "873e384b2e94983e323fe4dda51d87e1898bd9cfa1e3348038bacc2ebf7d2615"
+  },
+  "status": "unexpected_error"
+}

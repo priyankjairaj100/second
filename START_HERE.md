@@ -1,13 +1,14 @@
-Current work: read `docs/ACTIVE_SESSION_V37.md` first.
-The accelerated complete-stage Gram control is complete; all 1,769,472 codes agree.
-Fresh local stage commands: `docs/LOCAL_GRAM_BALL_STAGE_V37.md`. Full C4 remains blocked.
+Current work: read `docs/ACTIVE_SESSION_V38.md` first.
+V38 prepares a fresh C4 campaign on a standard public GitHub runner.
+Read actual workflow receipts before starting anything. Never rerun the one-use job.
+The complete-stage Gram control remains complete; all 1,769,472 codes agree.
 
 ---
 
 # Start or resume this research program
 
-Read [the current execution checkpoint](docs/ACTIVE_SESSION_V34.md) first.
-Read [the research decision](docs/RESEARCH_DECISION_V34.md) for what the results justify.
+Read [the current execution checkpoint](docs/ACTIVE_SESSION_V38.md) first.
+Read [the research decision](docs/RESEARCH_DECISION_V37.md) for what the results justify.
 Use [the local LLM handoff](docs/LOCAL_LLM_RESUME_V32.md) for a fresh local reproduction.
 Use [the theory map](docs/METHOD_AND_THEORY_MAP_V32.md) to locate proofs and implementations.
 These current notes supersede historical execution-status sections.

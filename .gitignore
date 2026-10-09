@@ -118,3 +118,8 @@ campaigns/compressed_service_v31/**/*.lock
 # Pooled-Gram component evidence is tracked; reproducible binary outputs stay local.
 /campaigns/pooled_gram*/**/outputs/*.bin
 /campaigns/pooled_gram*/**/*.lock
+
+# V38 publishes text evidence. Model outputs remain on the temporary runner.
+/campaigns/ci_v38/**/outputs/*.bin
+/campaigns/ci_v38/**/outputs/.*
+/campaigns/ci_v38/**/*.lock

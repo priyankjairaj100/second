@@ -1,0 +1,38 @@
+{
+  "complete_single_invocation_pass_claimed": false,
+  "distinct_cases_with_passing_results": 14,
+  "empirical_ledger_changed": false,
+  "empirical_ready": false,
+  "failure_injection_scope": "New collector functions only; successful fixture paths use genuine live evidence",
+  "initial_command": ".venv/bin/python -m unittest tests.test_portable_backend_v38 -v",
+  "initial_result": {
+    "concurrent_change": "Collector agent reported a source edit during this test",
+    "error_boundary": "post-evaluation check",
+    "error_message": "live runtime no longer matches the bound identity",
+    "error_test": "test_all_features_and_logits_match_scalar_operations",
+    "error_type": "research_v38.live_runtime.RuntimeEvidenceError",
+    "errors": 1,
+    "exit_code": 1,
+    "passed": 13,
+    "tests": 14,
+    "unittest_wall_seconds": 65.566
+  },
+  "live_successful_construction": true,
+  "observed_cpu_seconds": null,
+  "open_gate": "Compare old and new live observations on a compatible host; complete independent collector review",
+  "schema": "portable-backend-software-validation-v38",
+  "scope": "Small software fixtures; no empirical dataset or model-scale inference",
+  "source_sha256": {
+    "research_v38/portable_backend.py": "02f4fbba67b72622dda8d71437d6c6b43f1287d716b9ab9d9d8f655d8e4b45b0",
+    "research_v38/portable_checkpoint.py": "22679847d592ba7451f9194f168311962ca8dfbc70bae2743d7251629ccb2d00",
+    "tests/test_portable_backend_v38.py": "bda290df655c0a1cca5e1534d2b253e2ec812c3fd18e5a02caa9d21729b4b16a"
+  },
+  "targeted_rerun": {
+    "command": ".venv/bin/python -m unittest tests.test_portable_backend_v38.PortableBackendTests.test_all_features_and_logits_match_scalar_operations -v",
+    "exit_code": 0,
+    "passed": 1,
+    "reason": "Resolve the fixture refusal after the collector source freeze",
+    "tests": 1,
+    "unittest_wall_seconds": 41.033
+  }
+}

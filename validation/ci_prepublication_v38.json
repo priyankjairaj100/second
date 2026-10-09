@@ -1,0 +1,32 @@
+{
+  "cases_run": 46,
+  "command": ".venv/bin/python -m unittest tests.test_ci_c4_v38 tests.test_bootstrap_target_v38 tests.test_runtime_crosscheck_v38 -v",
+  "date": "2026-10-09",
+  "empirical_worker_run": false,
+  "errors": 0,
+  "failures": 0,
+  "historical_manifest_verification": "All entries passed except the intentionally updated .gitignore. START_HERE was updated after this check.",
+  "historical_numerical_source_changes": false,
+  "passed": 45,
+  "published_checkpoint_before_restore": "42d842f758e7bc6935215cf88c9235ea14cc9987",
+  "schema": "root-prepublication-validation-v38",
+  "separate_review": "docs/RUNTIME_REVIEW_V38.md",
+  "skip_reason": "Original decoder requires genuine procfs, which is unavailable locally. Hosted fixture step requires this case to pass.",
+  "skipped": 1,
+  "skipped_case": "test_tiny_decoded_fixture_produces_manifest_without_neural_work",
+  "source_sha256": {
+    ".github/ci/c4-v38-trigger.json": "22ed2f55def5d6554e84e2016498c2364e3fdd54122407e6055b99be7fb4b22a",
+    ".github/workflows/c4-v38.yml": "b9a5b317eb7f6791ff5096854b3e466a8bdab4a865b340b0546af1b3d537091c",
+    "requirements-ci-v38.txt": "aaf12af73eea818e7e83ca3afb91cbc0ce1b7f7e66b99412558848d33c905050",
+    "research_v38/bootstrap_target.py": "e5da4bb5ef9eead25d7299cf132015d28ff60ff1c978dcf7f7fbfc107b8597a5",
+    "research_v38/c4_analysis.py": "32c95bcbe76f34d3c2a5ad9bf2b487ab4f6607465a5a16d20cd7ff27d2533615",
+    "research_v38/c4_controller.py": "13ced369c022a009f520150465e875523517b25e5a28e2191f34ef379e6a0f2f",
+    "scripts/check_runtime_portability_v38.py": "6427d39a29ebfe7e2acaf348f431d82af624a21990d4b32f539729a947af7d30",
+    "scripts/execute_ci_c4_v38.py": "9c756e71a0231cf2aac207f0bf037d093d964fa1c408c292e77970f4689be1e2",
+    "tests/test_bootstrap_target_v38.py": "836893db52441085c0d5e4b2f47c62d55fc46c24f65e5daeabab6086c89ae947",
+    "tests/test_ci_c4_v38.py": "054cd64df0454cec16521a7c9164735aa71edc885cb768604485c41e4bc5cc22",
+    "tests/test_runtime_crosscheck_v38.py": "bcc63758eaacf5d772a217870e0284fcd6529d58c8da3449f68ab477e8586888"
+  },
+  "status": "local_checks_passed_with_required_host_check_pending",
+  "unittest_wall_seconds": 0.447
+}

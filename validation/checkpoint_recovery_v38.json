@@ -1,0 +1,41 @@
+{
+  "checkpoint_assets": [
+    {
+      "actual_bytes": 762,
+      "actual_sha256": "4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a",
+      "expected_bytes": 762,
+      "expected_sha256": "4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a",
+      "path": "tmp/models/distilgpt2/config.json",
+      "status": "verified"
+    },
+    {
+      "actual_bytes": 352824413,
+      "actual_sha256": "e1ff18884359fe8beb795a5f414feb85a6ce3d929ad019c0d958c039d2b94a1b",
+      "expected_bytes": 352824413,
+      "expected_sha256": "e1ff18884359fe8beb795a5f414feb85a6ce3d929ad019c0d958c039d2b94a1b",
+      "path": "tmp/models/distilgpt2/model.safetensors",
+      "status": "verified"
+    }
+  ],
+  "checkpoint_verified": true,
+  "controller_ready": false,
+  "downloads": [
+    {
+      "bytes": 762,
+      "file": "config.json",
+      "sha256": "4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a",
+      "status": "recovered_verified"
+    },
+    {
+      "bytes": 352824413,
+      "file": "model.safetensors",
+      "sha256": "e1ff18884359fe8beb795a5f414feb85a6ce3d929ad019c0d958c039d2b94a1b",
+      "status": "recovered_verified"
+    }
+  ],
+  "historical_assets_audited": false,
+  "neural_execution": false,
+  "root": "/workspace/scratch/50cc2e342461/second",
+  "schema": "checkpoint-recovery-audit-v32",
+  "scope": "Only direct checkpoint inputs were checked; historical artifacts and controller gates were not checked."
+}
