@@ -1,0 +1,159 @@
+{
+  "actual_artifacts": {
+    "model": {
+      "bytes": 22192646,
+      "file": "model.bin",
+      "full_file_hash_recomputed": true,
+      "sha256": "6f61d744f4a6ddddfca4a97c58c5ae9581c4997ccae737212036cee33e9defc8"
+    },
+    "state": {
+      "bytes": 50866783,
+      "file": "state.bin",
+      "full_file_hash_recomputed": true,
+      "sha256": "c3e53c8920398f7a9f19f0dd104be5e00587160246f4af2a4682550947c65b0b"
+    }
+  },
+  "actual_byte_comparisons": [],
+  "analysis_cost_outside_worker_ledger": true,
+  "analysis_cpu_ns": 1784819649,
+  "controller_seconds": 62.312362826,
+  "deletion_code_changes": {
+    "changed_code_count": 3623777,
+    "scope": "Exact integer code differences from original calibration; no behavioral or privacy-erasure claim.",
+    "stages": [
+      {
+        "changed_code_count": 127067,
+        "code_count": 1769472,
+        "stage_id": "block.0000.qkv"
+      },
+      {
+        "changed_code_count": 37591,
+        "code_count": 589824,
+        "stage_id": "block.0000.attn_out"
+      },
+      {
+        "changed_code_count": 161607,
+        "code_count": 2359296,
+        "stage_id": "block.0000.mlp_up"
+      },
+      {
+        "changed_code_count": 155214,
+        "code_count": 2359296,
+        "stage_id": "block.0000.mlp_down"
+      },
+      {
+        "changed_code_count": 152827,
+        "code_count": 1769472,
+        "stage_id": "block.0001.qkv"
+      },
+      {
+        "changed_code_count": 52160,
+        "code_count": 589824,
+        "stage_id": "block.0001.attn_out"
+      },
+      {
+        "changed_code_count": 201375,
+        "code_count": 2359296,
+        "stage_id": "block.0001.mlp_up"
+      },
+      {
+        "changed_code_count": 145324,
+        "code_count": 2359296,
+        "stage_id": "block.0001.mlp_down"
+      },
+      {
+        "changed_code_count": 183020,
+        "code_count": 1769472,
+        "stage_id": "block.0002.qkv"
+      },
+      {
+        "changed_code_count": 45167,
+        "code_count": 589824,
+        "stage_id": "block.0002.attn_out"
+      },
+      {
+        "changed_code_count": 209559,
+        "code_count": 2359296,
+        "stage_id": "block.0002.mlp_up"
+      },
+      {
+        "changed_code_count": 144869,
+        "code_count": 2359296,
+        "stage_id": "block.0002.mlp_down"
+      },
+      {
+        "changed_code_count": 240066,
+        "code_count": 1769472,
+        "stage_id": "block.0003.qkv"
+      },
+      {
+        "changed_code_count": 64008,
+        "code_count": 589824,
+        "stage_id": "block.0003.attn_out"
+      },
+      {
+        "changed_code_count": 226798,
+        "code_count": 2359296,
+        "stage_id": "block.0003.mlp_up"
+      },
+      {
+        "changed_code_count": 173503,
+        "code_count": 2359296,
+        "stage_id": "block.0003.mlp_down"
+      },
+      {
+        "changed_code_count": 234036,
+        "code_count": 1769472,
+        "stage_id": "block.0004.qkv"
+      },
+      {
+        "changed_code_count": 50540,
+        "code_count": 589824,
+        "stage_id": "block.0004.attn_out"
+      },
+      {
+        "changed_code_count": 213458,
+        "code_count": 2359296,
+        "stage_id": "block.0004.mlp_up"
+      },
+      {
+        "changed_code_count": 171020,
+        "code_count": 2359296,
+        "stage_id": "block.0004.mlp_down"
+      },
+      {
+        "changed_code_count": 227588,
+        "code_count": 1769472,
+        "stage_id": "block.0005.qkv"
+      },
+      {
+        "changed_code_count": 52927,
+        "code_count": 589824,
+        "stage_id": "block.0005.attn_out"
+      },
+      {
+        "changed_code_count": 189965,
+        "code_count": 2359296,
+        "stage_id": "block.0005.mlp_up"
+      },
+      {
+        "changed_code_count": 164088,
+        "code_count": 2359296,
+        "stage_id": "block.0005.mlp_down"
+      }
+    ],
+    "total_code_count": 42467328
+  },
+  "historical_binary_outputs_reverified": false,
+  "model_code_count": 42467328,
+  "model_stage_count": 24,
+  "native_evidence": null,
+  "retained_state_independent_oracle": false,
+  "schema": "actual-c4-trial-binary-audit-v38",
+  "scientific_gates": {
+    "all_passed": true,
+    "checks": {}
+  },
+  "status": "complete_verified",
+  "trial": "c4-delete-1-repair"
+}
