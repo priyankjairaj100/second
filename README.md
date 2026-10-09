@@ -30,9 +30,10 @@ An earlier 40-bit pilot took 312.33s despite a 13.68% state reduction.
 Two failed certificates caused full retained replay; its negative result is preserved.
 The 48-bit follow-up changes both precision and coefficient execution, so it does not isolate either causal effect.
 
-Read the [restart note](docs/ACTIVE_SESSION_V31.md), [claim audit](docs/CLAIM_AUDIT_V30.md),
+Read the [current restart guide](docs/LOCAL_LLM_RESUME_V32.md), [evidence status](docs/EMPIRICAL_STATUS_V32.md),
 [manuscript](docs/MANUSCRIPT_V30.md), and [novelty audit](docs/NOVELTY_AUDIT_V30.md).
-Independent WikiText/C4 request programs are prepared and await their final controller review.
+The reviewed V32 recovery controller runs the preserved independent WikiText and C4 programs.
+Their actual receipts determine completion; the current status report records the evidence boundary.
 Broader models, realistic full-model token scales, changing-state lifetime experiments,
 and the pooled exact-Gram baseline remain open.
 

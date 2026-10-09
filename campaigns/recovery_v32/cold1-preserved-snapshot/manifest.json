@@ -1,0 +1,62 @@
+{
+  "cause": "unknown",
+  "files": {
+    "outputs/completion.json": {
+      "bytes": 168939,
+      "sha256": "61a38e8555c0a6cb618a679ffce0c28cd19ccc37b782e68c4ef82747d1bddcbd"
+    },
+    "outputs/progress.json": {
+      "bytes": 168368,
+      "sha256": "e1bcbd434a3021f96b4970557bcc14220bd380dc7a34cf60bc588bf61b7db14e"
+    },
+    "plan.json": {
+      "bytes": 16914,
+      "sha256": "20661e6221805b2a6f21f0534498669832415d4c9184d4d9b8b612b7fc37d454"
+    },
+    "sealed-progress.json": {
+      "bytes": 168939,
+      "sha256": "61a38e8555c0a6cb618a679ffce0c28cd19ccc37b782e68c4ef82747d1bddcbd"
+    },
+    "transaction.json": {
+      "bytes": 1358,
+      "sha256": "ba1b1da85f7408d3902f085247f5fe85cd745ddb48dedfa7ae28c681444f7246"
+    },
+    "worker/attempt-0001/budget-reservation.json": {
+      "bytes": 306,
+      "sha256": "8a73acc46db11cb74c559cf14378a32ae0dc4da8a1e7369977645943a11e2cc4"
+    },
+    "worker/attempt-0001/limits-applied.json": {
+      "bytes": 429,
+      "sha256": "786b65326ab0f4a1391de3cf029009a9baadb60b71c9cb7c0ee0fb4a50e713c9"
+    },
+    "worker/attempt-0001/pre-settlement-observation.json": {
+      "bytes": 732,
+      "sha256": "642882cdfaf6a105568a58002e69c7c1afd89048c3f77ad40f34b352336ee0a4"
+    },
+    "worker/attempt-0001/request.json": {
+      "bytes": 730,
+      "sha256": "d8805eb2604892f350dddc4ef8c518373ab1abcc732b6ab4ca6defb3c5b84401"
+    },
+    "worker/attempt-0001/stderr-summary.json": {
+      "bytes": 125,
+      "sha256": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c"
+    },
+    "worker/attempt-0001/stdout-summary.json": {
+      "bytes": 35157,
+      "sha256": "1db840f1f2996b9c74dfb8e28d7265eb600c58369e0de8cb9207230adafc02c9"
+    },
+    "worker/identity.json": {
+      "bytes": 965,
+      "sha256": "afe26444dc5336c30934ef8d398c428c93d316d8d9333378d007dc1024128d16"
+    },
+    "worker/result.json": {
+      "bytes": 2998,
+      "sha256": "4cbd6f7185fcc51e814c1fbb99e843de1e4068d68ed61da5f5dcda243c6303c0"
+    }
+  },
+  "model_bytes_not_duplicated": true,
+  "model_sha256": "e3cc6f2e2597875f7a2c7fd08c9adc86ddd543125fb8e6fad89f56fda3e7d7b0",
+  "original_files_modified": false,
+  "schema": "preserved-incident-metadata-snapshot-v32",
+  "source": "campaigns/independent_wikitext_v32/attempts/wikitext-delete-1-cold"
+}

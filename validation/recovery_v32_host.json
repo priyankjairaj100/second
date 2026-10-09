@@ -1,0 +1,37 @@
+{
+  "architecture": "x86_64",
+  "available_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "cgroup": {
+    "cpu.max": "800000 100000",
+    "memory.max": "8589934592"
+  },
+  "collected_utc": "2026-10-09T07:49:14.519597+00:00",
+  "compiler": "cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "cpu": {
+    "cache size": "1024 KB",
+    "cpu family": "25",
+    "flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx512_bf16 clzero xsaveerptr arat npt nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload avx512vbmi umip avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm arch_capabilities",
+    "microcode": "0x1000065",
+    "model": "17",
+    "model name": "AMD EPYC 9V74 80-Core Processor",
+    "stepping": "1",
+    "vendor_id": "AuthenticAMD"
+  },
+  "kernel": "6.18.44",
+  "registered_worker_affinity": [
+    0
+  ],
+  "registered_worker_threads": 1,
+  "schema": "recovery-host-description-v32",
+  "scope": "Descriptive host snapshot collected during the V32 run; not a pre-registered guarantee of hardware isolation or stable load."
+}

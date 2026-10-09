@@ -1,5 +1,9 @@
 # Exact Calibration Removal from Compressed Feature Evidence
 
+This draft has an older empirical cutoff.
+Read `EMPIRICAL_STATUS_V32.md` before updating tables or claims.
+The paper remains incomplete; do not treat this draft as submission-ready.
+
 Working manuscript, 8 October 2026.
 This draft supersedes the sequential-target positioning in `MANUSCRIPT_DRAFT.md` for the implemented fixed-feature method.
 The historical draft remains unchanged.

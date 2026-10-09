@@ -2,6 +2,7 @@
 
 Read [the local LLM handoff](docs/LOCAL_LLM_RESUME_V32.md) first.
 Read [the current evidence and remaining work](docs/EMPIRICAL_STATUS_V32.md) next.
+Use [the method and theory map](docs/METHOD_AND_THEORY_MAP_V32.md) to locate the current proofs and implementations.
 These files supersede older execution-status notes.
 
 The earlier runtime disappeared after the last published V31 checkpoint.

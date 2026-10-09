@@ -1,5 +1,9 @@
 # Claim audit, revision 30
 
+Historical cutoff: later V31 and V32 evidence is described in `EMPIRICAL_STATUS_V32.md`.
+Use `METHOD_AND_THEORY_MAP_V32.md` for the current method boundaries.
+The older claim ledger below does not describe current execution status.
+
 Audit date: 8 October 2026.
 Initial evidence cutoff: 10:51 UTC, equivalent to 16:21 India time.
 The current update also includes the completed nine-trial `ordered_service_v30` audit.

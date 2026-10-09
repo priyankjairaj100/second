@@ -4,9 +4,44 @@ Updated 9 October 2026. This report separates recovered evidence from missing wo
 Read `docs/RECOVERY_EVENT_V32.md` before resuming a worker.
 Use `docs/LOCAL_LLM_RESUME_V32.md` for restart commands.
 
+## Current execution checkpoint: blocked metadata check
+
+The latest verified Git publication before this update is `36dfb39656333506fde0d01a0f98d620824d92db`.
+Four WikiText worker transactions have settled; their combined charge is 656 CPU seconds.
+The fourth transaction has inconsistent live progress metadata.
+The original guard stops dependent execution, and no bypass is authorized by this note.
+The cause remains unknown.
+
+| Trial | Recorded controller seconds | Charged CPU seconds | Current interpretation |
+|---|---:|---:|---|
+| `wikitext-root-prepare` | 287.716525921 | 288 | Complete prepared state available locally |
+| `wikitext-delete-0-repair` | 76.827683858 | 77 | First request repair complete |
+| `wikitext-delete-0-cold` | 143.550496271 | 144 | Exact first-pair model agreement |
+| `wikitext-delete-1-cold` | 146.184272791 | 147 | Worker complete; live progress mismatch blocks acceptance |
+
+The first pair gives an observed cold/repair ratio of 1.8684735639866905.
+Both outputs agree across all 24 calibrated stages and 42,467,328 codes.
+The shared model hash is `0308c07235c8b0131aa61a72df78f5e065afa0210edc17be91ee1774c409e144`.
+This is one independent development request, not a complete root or reliability claim.
+
+For `wikitext-delete-1-cold`, completion, sealed progress, and worker stdout describe the completed result consistently.
+Completion and sealed progress share SHA-256 `61a38e8555c0a6cb618a679ffce0c28cd19ccc37b782e68c4ef82747d1bddcbd`.
+The live `outputs/progress.json` still reports `running`.
+Its SHA-256 is `e1bcbd434a3021f96b4970557bcc14220bd380dc7a34cf60bc588bf61b7db14e`.
+Preserve both versions and the worker's complete evidence chain.
+Do not copy completion over live progress or rewrite an original receipt.
+
+Diagnosis and review of a possible append-only continuation are in progress.
+No continuation has been accepted by this status note.
+Second-direction repair, conversion, and compressed repair remain unstarted.
+The C4 root remains unregistered.
+The WikiText allowance has 1,244 CPU seconds remaining; do not reset or transfer it.
+The separate lost V31 allowance remains an unresolved 1,900-second hold.
+Archived and new recorded or reserved totals are 15,974 seconds, excluding that separate recovery hold.
+
 ## Evidence recovered from GitHub
 
-The durable checkpoint is `604de5b830bd1386055b394df13275ef7e55475a`.
+The checkpoint recovered after runtime loss was `604de5b830bd1386055b394df13275ef7e55475a`.
 Raw receipts, plans, source snapshots, quality rows, and several completed analyses survived there.
 Large model and state binaries were excluded from Git.
 Later unpushed results and reviews did not survive the runtime loss.
@@ -26,6 +61,8 @@ The V31 raw completion, scientific gates, worker receipt, and transaction are av
 
 All speed results below concern DistilGPT2 and fixed nearest-anchor calibration features.
 They do not solve the original sequential calibration target.
+The recorded primary clock excludes archive/bootstrap checks and post-receipt agreement, gate, and analysis work.
+It is not the entire command's elapsed time.
 The main retained model has 24 calibrated stages and 42,467,328 codes.
 Its recorded SHA-256 is `25068a9373bb477123401124f07d5e02e09939f890fa16670d04d57e052bfce8`.
 
@@ -94,8 +131,8 @@ This is development replication after infrastructure loss, not untouched confirm
 
 | Root | Preserved selected sources | Current evidence boundary |
 |---|---|---|
-| WikiText | Training article rows 17380 and 22925 | V32 execution and audit pending |
-| C4 | Shard-zero lines 2172 and 683 | V32 execution and audit pending |
+| WikiText | Training article rows 17380 and 22925 | Four worker receipts settled; first pair exact; fourth progress mismatch blocks continuation |
+| C4 | Shard-zero lines 2172 and 683 | Unregistered; follows completed WikiText root |
 
 Each source contributes 128 tokens; original normalization remains 256.
 Both deletion directions are alternative requests from the same original state.
