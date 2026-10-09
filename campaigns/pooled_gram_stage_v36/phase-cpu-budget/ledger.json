@@ -1,0 +1,1 @@
+{"attempts":{},"binding":{"identity":{"program_sha256":"28fad1a3e18cad1895eebe54ae7b57b93431d49f644d26b1fd566e5838b05bd2"},"phase_cpu_seconds":{"gram_stage":900},"scope":"trusted_worker_cpu_admission_not_process_tree_containment"},"schema":"phase-cpu-ledger-v1"}

@@ -1,0 +1,141 @@
+{
+  "schema": "research-continuation-map-v36",
+  "updated_utc": "2026-10-09",
+  "repository": "https://github.com/priyankjairaj100/second",
+  "entrypoint": "START_HERE.md",
+  "local_instructions": "docs/LOCAL_LLM_RESUME_V32.md",
+  "evidence_status": "docs/ACTIVE_SESSION_V36.md",
+  "theory_map": "docs/METHOD_AND_THEORY_MAP_V32.md",
+  "numerical_target": "fixed nearest-anchor features; original normalization retained",
+  "sequential_target_speedup_established": false,
+  "all_experiments_complete": false,
+  "submission_ready": false,
+  "paid_compute_authorized": false,
+  "force_push_allowed": false,
+  "synthetic_empirical_datasets_allowed": false,
+  "small_software_fixtures_allowed": true,
+  "status_authority": "Actual program, registration, transaction, receipt, completion, agreement, and ledger files take precedence over this map.",
+  "registered_development": {
+    "controller": "scripts/launch_independent_requests_v32.py",
+    "batch_wrapper": "scripts/continue_empirical_v32.py",
+    "analyzer": "scripts/analyze_independent_requests_v32.py",
+    "corpora": [
+      "wikitext",
+      "c4"
+    ],
+    "trials_per_corpus": 7,
+    "cpu_cap_per_corpus_seconds": 1900,
+    "original_sources": 2,
+    "tokens_per_source": 128,
+    "request_design": "Two alternative deletions from the original state; one preselected compressed request.",
+    "scientific_losses": "Preserve and continue the fixed second root when numerical execution is complete.",
+    "execution_failure": "Stop dependent work; preserve receipts and reservations; no automatic retry.",
+    "local_reproduction": "Use a new --workspace below local_runs; never rewrite published registrations."
+  },
+  "recovery_accounting": {
+    "archived_charged_or_reserved_cpu_seconds": 15318,
+    "older_unknown_hold_included_seconds": 122,
+    "lost_unpublished_phase_separate_hold_seconds": 1900,
+    "lost_hold_is_observed_usage": false,
+    "new_usage": "Read each actual V32 ledger; do not pool allowances."
+  },
+  "remaining_after_registered_roots": [
+    {
+      "id": "complete_model_token_scaling",
+      "status": "not_measured",
+      "gate": "Admit a larger real-token complete workload and register matched exact controls before execution."
+    },
+    {
+      "id": "pooled_exact_gram_control",
+      "status": "four_row_component_complete_full_stage_prepared",
+      "reference": "docs/GRAM_RESULTS_V35.md",
+      "gate": "V35 exact equality passed. Complete-stage registration and execution next; larger-token complete-model service remains unmeasured."
+    },
+    {
+      "id": "additional_model",
+      "status": "not_measured",
+      "gate": "Validate checkpoint adapter and exact target before a bounded real-data pilot."
+    },
+    {
+      "id": "changing_state_lifetime",
+      "status": "not_measured",
+      "gate": "Use real successor states, matched counterfactuals, preparation, conversion, and full state costs."
+    },
+    {
+      "id": "request_scale_and_structure",
+      "status": "not_measured",
+      "gate": "Freeze source counts, deletion fractions, selection laws, and comparator order before outcomes."
+    },
+    {
+      "id": "matched_algorithm_ablations",
+      "status": "not_measured",
+      "gate": "Separate precision and native coefficient effects; retain failures and charge fallback."
+    },
+    {
+      "id": "prospective_confirmation",
+      "status": "not_registered",
+      "gate": "Freeze method after development and exclude all60 previously evaluated quality articles."
+    },
+    {
+      "id": "closest_work_comparison",
+      "status": "incomplete",
+      "reference": "docs/NOVELTY_AUDIT_V30.md",
+      "gate": "Resolve detailed ExecCert comparison; do not infer novelty from retrieval failure."
+    },
+    {
+      "id": "submission_package",
+      "status": "incomplete",
+      "gate": "Bind final claims and tables to audited evidence; disclose all scope and cost limits."
+    }
+  ],
+  "research_decision": "docs/RESEARCH_DECISION_V34.md",
+  "current_receipts": {
+    "wikitext": {
+      "settled_trials": 7,
+      "charged_cpu_seconds": 927,
+      "analysis": "campaigns/independent_wikitext_v32/analysis-v33.json",
+      "declared_recovered_trials": [
+        "wikitext-delete-1-cold"
+      ]
+    },
+    "c4": {
+      "settled_trials": 3,
+      "charged_cpu_seconds": 429,
+      "remaining_trials": 4,
+      "blocked_incident": "c4-delete-0-cold",
+      "continuation_status": "stopped_on_infrastructure_failure",
+      "continuation_sha256": "ce08a60402ec3ea9deba95ed2acfd19966307b0c93140ec409d5e144c6e42a27",
+      "successful_numerical_trials": 2,
+      "failed_trials": [
+        "c4-delete-0-repair"
+      ],
+      "blocker": "checkpoint runtime manifest requires missing /proc/self/maps and /proc/cpuinfo",
+      "automatic_retry": false
+    }
+  },
+  "empirical_worker_running": false,
+  "environment_preflight": "scripts/preflight_environment_v34.py",
+  "safe_local_action": "Use a compatible Linux environment and new V32 --workspace registration. Never overwrite failed historic attempts.",
+  "component_program": {
+    "path": "campaigns/pooled_gram_component_v35",
+    "program_sha256": "a676d214813f1bd47d55f5bf3629a768826a85b3368a7169309f07e0173fd5fa",
+    "status": "complete",
+    "charged_cpu_seconds": 38,
+    "code_decisions": 3072,
+    "complete_model": false,
+    "real_data_capsule": "data/gram_v35/wikitext-firststage.json",
+    "local_guide": "docs/LOCAL_GRAM_PILOT_V35.md"
+  },
+  "next_component": "Execute the separately registered complete first-stage comparison after its protocol is pushed.",
+  "component_stage_program": {
+    "path": "campaigns/pooled_gram_stage_v36",
+    "status": "registered_unstarted",
+    "rows": 2304,
+    "code_decisions": 1769472,
+    "complete_model": false,
+    "confirmation": false,
+    "real_data_capsule": "data/gram_v36/wikitext-firststage/manifest.json",
+    "local_guide": "docs/LOCAL_GRAM_STAGE_V36.md",
+    "program_sha256": "28fad1a3e18cad1895eebe54ae7b57b93431d49f644d26b1fd566e5838b05bd2"
+  }
+}

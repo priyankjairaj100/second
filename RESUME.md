@@ -1,6 +1,6 @@
-Current work: read `docs/ACTIVE_SESSION_V35.md` first.
-The exact pooled-Gram component completed; full C4 remains blocked.
-Fresh local component commands: `docs/LOCAL_GRAM_PILOT_V35.md`.
+Current work: read `docs/ACTIVE_SESSION_V36.md` first.
+The four-row Gram pilot is complete; the complete-stage comparison is registered and unstarted.
+Fresh local stage commands: `docs/LOCAL_GRAM_STAGE_V36.md`. Full C4 remains blocked.
 
 ---
 
