@@ -114,3 +114,7 @@ campaigns/compressed_service_v31/**/*.lock
 /campaigns/independent_*_v31/**/*.lock
 /campaigns/independent_*_v30/**/outputs/*.bin
 /campaigns/independent_*_v31/**/outputs/*.bin
+
+# Pooled-Gram component evidence is tracked; reproducible binary outputs stay local.
+/campaigns/pooled_gram*/**/outputs/*.bin
+/campaigns/pooled_gram*/**/*.lock

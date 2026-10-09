@@ -1,0 +1,32 @@
+{
+  "schema": "real-feature-capsule-extraction-audit-v35",
+  "capsule": {
+    "path": "data/gram_v35/wikitext-firststage.json",
+    "sha256": "59bf847f2765fc788a93fe53374aa91e7853d2981a18d46b1084d0807cf6c775",
+    "bytes": 1873584
+  },
+  "source_sha256": "bbbe6f512b5558c3ba6512d7fbbb6c735221463f300b293ea785e51bbbee3de9",
+  "original_inputs": {
+    "original_state": {
+      "bytes": 79545088,
+      "path": "campaigns/independent_wikitext_v32/attempts/wikitext-root-prepare/outputs/state.bin",
+      "sha256": "24bd6278cc5ee98d1a562b0f260d341e763fd9d09d68ab7b9944c68893db4d8a"
+    },
+    "retained_state": {
+      "bytes": 50892156,
+      "path": "campaigns/independent_wikitext_v32/attempts/wikitext-delete-0-repair/outputs/state.bin",
+      "sha256": "e8b6a4515b0ff7f25fa78d48355613ff0ae1e034fa082342dea7e7a8001c9043"
+    },
+    "weights": {
+      "bytes": 352824413,
+      "path": "tmp/models/distilgpt2/model.safetensors",
+      "sha256": "e1ff18884359fe8beb795a5f414feb85a6ce3d929ad019c0d958c039d2b94a1b"
+    }
+  },
+  "exact_original_feature_words_verified": true,
+  "exact_weight_and_reference_roundtrip_verified": true,
+  "feature_generation_reexecuted": false,
+  "gram_formed": false,
+  "new_quantization_performed": false,
+  "scope": "Archival extraction and word equality only; no empirical performance observation."
+}

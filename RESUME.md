@@ -1,3 +1,9 @@
+Current work: read `docs/ACTIVE_SESSION_V35.md` first.
+The exact pooled-Gram component is registered; full C4 remains blocked.
+Fresh local component commands: `docs/LOCAL_GRAM_PILOT_V35.md`.
+
+---
+
 Current checkpoint: read `docs/ACTIVE_SESSION_V34.md` and `docs/RESEARCH_DECISION_V34.md` first.
 WikiText is complete; C4 execution is blocked by a missing required `/proc` runtime interface. Historical status below retains its original cutoff.
 

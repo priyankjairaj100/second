@@ -1,3 +1,9 @@
+Current work: read `docs/ACTIVE_SESSION_V35.md` first.
+The exact pooled-Gram component is registered; full C4 remains blocked.
+Fresh local component commands: `docs/LOCAL_GRAM_PILOT_V35.md`.
+
+---
+
 # Start or resume this research program
 
 Read [the current execution checkpoint](docs/ACTIVE_SESSION_V34.md) first.
