@@ -4,6 +4,14 @@ Updated 9 October 2026.
 This file supersedes earlier execution-status notes.
 Actual registrations, receipts, ledgers, and published analyses remain authoritative.
 
+Current state: GitHub blocked the runner before execution because of an account billing restriction.
+No V38 model worker ran.
+No V38 claim, registration, ledger, reservation, or CPU debit exists.
+No new abrupt-loss hold applies.
+All historical holds and ledgers remain unchanged.
+The paper and empirical program remain incomplete.
+Read `CI_RECOVERY_V38.md` for the exact recovery conditions.
+
 The local workspace was removed during maintenance.
 We restored the full repository from published commit `42d842f758e7bc6935215cf88c9235ea14cc9987`.
 We also restored and verified the pinned DistilGPT2 checkpoint.
@@ -30,11 +38,20 @@ GitHub rejected its YAML before allocating any job.
 The dependency command contained an unquoted colon followed by a space.
 Read `validation/workflow_yaml_rejection_v38.json` for the preserved platform evidence.
 The syntax amendment uses a block scalar without changing the command.
-The amended trigger requests the first actual runner execution.
+The amended publication was `f174f072419a6fa954379bb36544ead9d926c103`.
+GitHub accepted the YAML and created run `37949249514`.
+Its job `113883433045` failed before allocation.
+The platform stated: "The job was not started because your account is locked due to a billing issue."
+The API reports an empty step list, runner ID zero, and an empty runner name.
+No job log exists.
+Read `validation/workflow_provider_block_v38.json` for the preserved evidence.
+The account owner must resolve this restriction before another reviewed trigger amendment.
+Do not change account settings or use the rerun button.
 No claim, bootstrap, ledger, or model worker existed in the rejected run.
 This correction repeats no registered empirical attempt.
-Check GitHub Actions and the evidence prefix for subsequent activity.
-Do not interpret this preregistration note as evidence of success.
+Both published workflow outcomes remain visible on GitHub.
+No background worker remains active.
+Do not interpret reviewed code or a queued job as empirical success.
 
 The job publishes a durable claim before downloading dependencies.
 It constructs a fresh target identity using the actual Linux runtime.
@@ -69,7 +86,7 @@ Read `RUNTIME_REVIEW_V38.md` for the independent review and remaining gate.
 
 Local software fixtures passed for the collector and backend.
 An earlier concurrent source-change refusal remains disclosed.
-The hosted job can compare both collectors against genuine Linux interfaces.
+The hosted job can compare both collectors after the account restriction is resolved.
 A successful metadata comparison alone does not prove empirical speed or model compatibility.
 C4 continues to use the original backend.
 
@@ -77,7 +94,7 @@ C4 continues to use the original backend.
 
 The direction remains worth bounded investigation.
 The full paper remains incomplete.
-No V38 empirical result exists at this amended preregistration checkpoint.
+No V38 empirical result exists at this provider-block checkpoint.
 
 The complete WikiText model matched all 42,467,328 codes across 24 stages.
 Two lossless repair ratios were 1.8685 and 1.7883 versus cold reconstruction.

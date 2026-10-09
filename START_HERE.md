@@ -1,6 +1,7 @@
 Current work: read `docs/ACTIVE_SESSION_V38.md` first.
-V38 prepares a fresh C4 campaign on a standard public GitHub runner.
-Read actual workflow receipts before starting anything. Never rerun the one-use job.
+V38 is ready, but GitHub blocked its runner because of an account billing restriction.
+No model worker started. Read `docs/CI_RECOVERY_V38.md` before any recovery action.
+Never rerun the one-use job or alter historical attempts.
 The complete-stage Gram control remains complete; all 1,769,472 codes agree.
 
 ---

@@ -2,7 +2,8 @@
 
 Date: 9 October 2026.
 
-Status: local review complete. One bounded C4 workflow is approved with the gates below.
+Status: local review complete. GitHub blocked the corrected workflow before runner execution.
+Further execution is paused.
 The external runtime comparison and empirical results remain pending.
 
 The historical C4 campaign remains blocked.
@@ -287,3 +288,38 @@ Amended source hashes:
 | `.github/workflows/c4-v38.yml` | `d1b9cf1e35cd3a90d0ea02f36e85b45aea1f31e3213ae3986ccd24a1be84ff48` |
 | `.github/ci/c4-v38-trigger.json` | `7ec775ff5044eec0e5a5454f86635cc09b81b2b75eabf2c9d2e503f7dd31402b` |
 | `scripts/execute_ci_c4_v38.py` | `a8f867b2af8c693bf00e985a21c1e4f330e8b7e9d6d26fcd81b39ccba11fcddd` |
+
+## Provider block and accounting audit
+
+GitHub blocked corrected run `37949249514` at source commit `f174f072419a6fa954379bb36544ead9d926c103`.
+Its job identifier is `113883433045`.
+The provider reports that the account is locked because of a billing issue.
+Read `validation/workflow_provider_block_v38.json` for the saved observation.
+
+The job record has runner identifier zero, an empty runner name, and no steps.
+No job logs were available.
+These fields support the provider's statement that the job never started.
+Job start and completion timestamps do not establish runner CPU use.
+This is an infrastructure block, not a scientific loss or numerical mismatch.
+
+The reviewer checked all 66 tracked ledgers against published HEAD.
+All ledger bytes matched.
+No ledger changed between the first V38 publication and the corrected source commit.
+The complete `campaigns/ci_v38` namespace is absent.
+No execution claim, bootstrap protocol, campaign registration, worker attempt, reservation, or debit exists.
+
+No new V38 CPU debit or abrupt-loss hold applies.
+The proposed 122-second and 1,900-second allowances never became active worker reservations.
+Do not infer measured CPU use from those planned limits.
+Preserve all historical debits, unresolved reservations, and existing holds unchanged.
+
+The saved local cross-check also refused execution because `/proc/cpuinfo` was absent.
+That observation loaded no model or dataset and wrote no ledger.
+Its saved source hashes identify the exact development version used.
+It supplies no external comparison between the old and new collectors.
+
+Gate 7 therefore remains open.
+The full C4 campaign remains incomplete.
+The broader empirical program remains incomplete.
+No further run, provider change, or billing change is approved by this review.
+Preserve the incident and follow the saved recovery instructions after the account restriction is resolved.

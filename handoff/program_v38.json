@@ -4,7 +4,7 @@
   "repository": "https://github.com/priyankjairaj100/second",
   "restored_parent": "42d842f758e7bc6935215cf88c9235ea14cc9987",
   "entrypoint": "START_HERE.md",
-  "status": "yaml_syntax_amendment_before_first_actual_runner_execution",
+  "status": "blocked_before_runner_by_github_account_billing_restriction",
   "initial_publication": "1cf45ff1861b7e347bcef6308b3eddbb1e5e6534",
   "initial_workflow_rejection": "validation/workflow_yaml_rejection_v38.json",
   "status_authority": "Read actual GitHub workflow, claim, registrations, transactions, receipts, ledgers, and analyses before acting.",
@@ -20,7 +20,12 @@
   "automatic_retry_allowed": false,
   "synthetic_empirical_datasets_allowed": false,
   "small_software_fixtures_allowed": true,
-  "immutable_paths": ["src/*.py", "scripts/run_*.py", "historical numerical versions", "historical ledgers"],
+  "immutable_paths": [
+    "src/*.py",
+    "scripts/run_*.py",
+    "historical numerical versions",
+    "historical ledgers"
+  ],
   "fresh_c4": {
     "workflow": ".github/workflows/c4-v38.yml",
     "trigger": ".github/ci/c4-v38-trigger.json",
@@ -37,7 +42,20 @@
     "target_identity": "fresh static construction on actual runner before campaign registration",
     "prerequisite": "published audited WikiText metadata; no historical binary re-audit",
     "publication": "claim, bootstrap registration, target, campaign registration, each settled trial, final analysis",
-    "do_not": ["rerun the job", "retry failed historical attempts", "push while CI publishes", "infer usage from missing receipts"]
+    "do_not": [
+      "rerun the job",
+      "retry failed historical attempts",
+      "push while CI publishes",
+      "infer usage from missing receipts"
+    ],
+    "workflow_run_id": 37949249514,
+    "job_id": 113883433045,
+    "claim_exists": false,
+    "runner_started": false,
+    "new_ledger_exists": false,
+    "new_reservation_exists": false,
+    "abrupt_loss_hold_applies": false,
+    "status": "provider_block_before_execution"
   },
   "portable_backend": {
     "directory": "research_v38",
@@ -58,5 +76,10 @@
     "prospective confirmation excluding 60 exposed quality articles",
     "closest-work comparison and final novelty audit",
     "claim-bound submission package"
-  ]
+  ],
+  "latest_execution_source": "f174f072419a6fa954379bb36544ead9d926c103",
+  "provider_block": "validation/workflow_provider_block_v38.json",
+  "recovery_instructions": "docs/CI_RECOVERY_V38.md",
+  "empirical_worker_running": false,
+  "required_user_action": "Resolve the GitHub account restriction before a reviewed fresh push. Do not use the rerun button."
 }
