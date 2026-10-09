@@ -1,0 +1,22 @@
+{
+  "abrupt_loss_policy": "If settlement is unavailable, hold 1900 campaign CPU seconds and 122 bootstrap CPU seconds. These are not observed usage.",
+  "artifact_storage_used": false,
+  "automatic_retry": false,
+  "bootstrap_audit_exists": false,
+  "bootstrap_cpu_allowance_seconds": 122,
+  "bootstrap_ledger_exists": false,
+  "bootstrap_ledger_sha256": null,
+  "cache_storage_used": false,
+  "campaign_cpu_allowance_seconds": 1900,
+  "current_text_sha256": {
+    "campaigns/ci_v38/execution-claim.json": "3e3f936f22b0906bdd9bec7d093bee6651030a3d131f56a41d7cf0ab0e754fa0",
+    "campaigns/ci_v38/software-fixtures.json": "8008f453d1970270d9e9905208f7f3e97d038c8f0e7479acc701ccfdf2138150"
+  },
+  "final_analysis_exists": false,
+  "job_status": "failure",
+  "ledger_exists": false,
+  "ledger_sha256": null,
+  "schema": "free-c4-workflow-finalization-v38",
+  "text_file_count": 2,
+  "total_separate_cpu_allowances_seconds": 2022
+}
