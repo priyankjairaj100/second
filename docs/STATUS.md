@@ -1,3 +1,10 @@
+# Current status
+
+Read `EMPIRICAL_STATUS_V32.md` and `LOCAL_LLM_RESUME_V32.md`.
+They supersede the execution status below.
+
+---
+
 # Current checkpoint: revision 29, complete lossless control
 
 Updated 8 October 2026, UTC. This checkpoint supersedes historical status and execution restrictions below.

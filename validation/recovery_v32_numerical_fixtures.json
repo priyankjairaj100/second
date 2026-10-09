@@ -1,0 +1,15 @@
+{
+  "schema": "recovery-software-validation-v32",
+  "date_utc": "2026-10-09",
+  "source_checkpoint": "604de5b830bd1386055b394df13275ef7e55475a",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "gmpy2": "2.3.2",
+  "command": ".venv/bin/python -m unittest tests.test_native_box_coefficients_v31 tests.test_native_box_review_v31 tests.test_sparse_box_certificate_v31 tests.test_native_box_service_v31",
+  "tests_run": 23,
+  "result": "OK",
+  "reported_test_seconds": 1.196,
+  "scope": "Software fixtures after environment restoration; no empirical dataset or new performance evidence.",
+  "initial_attempt": "One missing-gmpy2 dependency error occurred before installing the pinned dependency. No numerical test failure was observed.",
+  "research_worker": false
+}

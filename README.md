@@ -1,5 +1,8 @@
 # Exact calibration-data unlearning for quantized language models
 
+**Resume here:** [START_HERE.md](START_HERE.md).
+The V32 recovery handoff contains the current commands, evidence boundary, and remaining work.
+
 This project studies exact calibration removal for a declared fixed-feature quantizer.
 The base weights stay fixed. Its target differs from ordinary sequential GPTQ.
 The intended venue is ACL 2027; the paper is not submission-ready.
@@ -9,7 +12,7 @@ The intended venue is ACL 2027; the paper is not submission-ready.
 | Result | Verified observation | Scope |
 |---|---|---|
 | Optimized lossless repair | 1.946–2.213× faster than cold; geometric mean 2.039× | Three timing pairs on one deletion request |
-| 48-bit compressed compressed repair | 90.62s versus fastest cold 140.55s; 1.551× | One adaptive pilot; all 24 stages certify without replay |
+| 48-bit compressed repair | 90.62s versus fastest cold 140.55s; 1.551× | One adaptive pilot; all 24 stages certify without replay |
 | 48-bit compressed state | 48,054,240 bytes versus 50,888,817 lossless bytes | 5.570% smaller; shared base checkpoint still required |
 | Matched development quality | Perplexity 51.50 versus sequential 52.46 | Eight previously exposed development articles |
 | Held-out quality | Perplexity 65.69 versus sequential 66.44 | Forty previously unexposed articles; 5,080 predictions/model |

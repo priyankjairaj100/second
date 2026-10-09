@@ -1,3 +1,11 @@
+# Current task register
+
+Read `EMPIRICAL_STATUS_V32.md` for completed work and remaining paper requirements.
+Read `LOCAL_LLM_RESUME_V32.md` for executable continuation steps.
+The older task register below is preserved as history.
+
+---
+
 # Active tasks after revision 29
 
 Updated 8 October 2026, UTC. This register supersedes historical task and execution restrictions below.

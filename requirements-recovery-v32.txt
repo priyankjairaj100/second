@@ -1,0 +1,4 @@
+# Minimal worker dependencies for the already-tokenized independent requests.
+# Use CPython 3.12 on Linux, with GCC available.
+numpy==2.3.5
+gmpy2==2.3.2

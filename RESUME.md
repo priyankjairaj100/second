@@ -1,3 +1,11 @@
+# Current recovery: revision 32
+
+Read `START_HERE.md` and `docs/LOCAL_LLM_RESUME_V32.md` before executing anything.
+The current status is `docs/EMPIRICAL_STATUS_V32.md`.
+Historical notes below remain evidence of earlier states, not current commands.
+
+---
+
 # Active checkpoint: revision 30 development continuation
 
 Updated 8 October 2026, UTC. This checkpoint supersedes the historical status below.

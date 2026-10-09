@@ -1,3 +1,11 @@
+# Current local handoff: revision 32
+
+Read `docs/LOCAL_LLM_RESUME_V32.md` and `docs/EMPIRICAL_STATUS_V32.md` first.
+Use `START_HERE.md` as the repository entry point.
+The older commands and status below are historical.
+
+---
+
 # Current checkpoint: revision 29, complete lossless control
 
 Updated 8 October 2026, UTC. This checkpoint supersedes historical status and execution restrictions below.

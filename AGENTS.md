@@ -1,3 +1,12 @@
+# Current continuation: V32 recovery
+
+Read `START_HERE.md`, `docs/LOCAL_LLM_RESUME_V32.md`, and `docs/EMPIRICAL_STATUS_V32.md` first.
+They supersede older execution-status notes below.
+Preserve the recovery hold and all historical evidence.
+New machine runs require new registrations, never rewritten historical paths or receipts.
+
+---
+
 # Latest continuation
 
 Read `docs/ACTIVE_SESSION_V31.md` first. It supersedes the older execution status below.

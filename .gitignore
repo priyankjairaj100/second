@@ -10,6 +10,12 @@ output/pdf/*.out
 # User-local empirical workspaces; publish selected evidence explicitly.
 local_runs/
 
+# Recovery replications publish evidence and hashes, never large state binaries.
+/campaigns/independent_*_v32/**/outputs/*.bin
+/campaigns/independent_*_v32/**/outputs/.*
+/campaigns/independent_*_v32/**/worker/writer.lock
+/campaigns/independent_*_v32/**/phase-cpu-budget/ledger.lock
+
 # Revision 12 derived full-model code arrays; hashes and receipts are published.
 /pilots/v12/**/outputs/*.codes.bin
 /pilots/v12/**/writer.lock
