@@ -1,0 +1,9 @@
+{
+  "numerical_backend": "unchanged original backend",
+  "original_c4_admitted": true,
+  "portable_gate_7_passed": true,
+  "portable_refusal": null,
+  "schema": "runtime-backend-admission-v38",
+  "scope": "A portable interface refusal does not establish portable runtime equivalence.",
+  "status": "passed"
+}

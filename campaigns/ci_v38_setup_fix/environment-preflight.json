@@ -1,0 +1,169 @@
+{
+  "blocked_checks": [],
+  "campaign": null,
+  "checks": [
+    {
+      "check": "proc_self_maps_readable",
+      "evidence": {
+        "bytes": 37867,
+        "path": "/proc/self/maps",
+        "readable": true
+      },
+      "status": "passed"
+    },
+    {
+      "check": "proc_cpuinfo_readable",
+      "evidence": {
+        "bytes": 5832,
+        "path": "/proc/cpuinfo",
+        "readable": true
+      },
+      "status": "passed"
+    },
+    {
+      "check": "actual_transformer_backend_runtime_manifest",
+      "evidence": {
+        "cpu_dispatch_field_count": 6,
+        "loaded_libm_count": 1,
+        "manifest_sha256": "b164d8adf7bae794c82d624faca40cd09202ab1bafda3064c1218b744a94cb1d"
+      },
+      "status": "passed"
+    },
+    {
+      "check": "actual_finite_primitive_manifest_rational",
+      "evidence": {
+        "backend": "rational",
+        "bound_binary_count": 0,
+        "manifest_sha256": "c403438bbee8bfe7fb6f9270158e927a6c60a5266bfafd1b459a3e6d843798de"
+      },
+      "status": "passed"
+    },
+    {
+      "check": "actual_finite_primitive_manifest_mpfr_enclosure",
+      "evidence": {
+        "backend": "mpfr_enclosure",
+        "bound_binary_count": 4,
+        "manifest_sha256": "7c60ecbbe65c562d277a8338b615fe64b616c30ee93cf59b94183b7ab707d877"
+      },
+      "status": "passed"
+    },
+    {
+      "check": "portable_software_runtime_contract",
+      "evidence": {
+        "build": [
+          "main",
+          "Aug 13 2026 02:47:42"
+        ],
+        "byteorder": "little",
+        "cache_tag": "cpython-312",
+        "compiler": "GCC 13.3.0",
+        "execution_flags": {
+          "dev_mode": 0,
+          "dont_write_bytecode": 1,
+          "ignore_environment": 0,
+          "integer_string_digit_limit": 4300,
+          "isolated": 0,
+          "no_site": 0,
+          "no_user_site": 0,
+          "optimize": 0,
+          "recursion_limit": 1000,
+          "safe_path": 0,
+          "utf8_mode": 0,
+          "warn_default_encoding": 0
+        },
+        "float_model": {
+          "mant_dig": 53,
+          "max_exp": 1024,
+          "min_exp": -1021,
+          "radix": 2,
+          "rounds": 1
+        },
+        "implementation": "cpython",
+        "interpreter": {
+          "bytes": 17752,
+          "kind": "file",
+          "sha256": "bef88f140b625959f8af25c7b75cce2cd5d4b29cc2f2b079befd7f68eda4dba0"
+        },
+        "kernel": "6.17.0-1022-azure",
+        "libc": [
+          "glibc",
+          "2.39"
+        ],
+        "machine": "x86_64",
+        "modules": {
+          "_decimal": {
+            "bytes": 1749552,
+            "kind": "file",
+            "sha256": "a9d112492ae6506ab7174717c876b329fa1c13ed462f24a79a2f8e12e47e617b"
+          },
+          "_hashlib": {
+            "bytes": 209560,
+            "kind": "file",
+            "sha256": "95e651efb1e196c1ccbc0211a4d35cbf6088fd64f2276a98afafb287cb31421e"
+          },
+          "_struct": {
+            "bytes": 235080,
+            "kind": "file",
+            "sha256": "f179d24bf777100caa0aa48a41f512906825d0f8161d0053a2f9fb0c91c0becb"
+          },
+          "decimal": {
+            "bytes": 2805,
+            "kind": "file",
+            "sha256": "c3e37c55ef72b3dd6cb7b466a907b966467b6a9c58d85302193e64cbb5fd53d0"
+          },
+          "fcntl": {
+            "bytes": 52744,
+            "kind": "file",
+            "sha256": "5697d04186dd2436a30904eea25b51c98507840acc0c2a1a49d1f37c909f2e49"
+          },
+          "fractions": {
+            "bytes": 38147,
+            "kind": "file",
+            "sha256": "d52d1ab9d5be26924e4914a5e40069c992bbfa68f773694c2e5ee8452d0766a0"
+          },
+          "hashlib": {
+            "bytes": 9349,
+            "kind": "file",
+            "sha256": "6dbdebf270868b391080e21dc9687eddfaf321c965ad979f68d3f5c423c613ab"
+          },
+          "json": {
+            "bytes": 14020,
+            "kind": "file",
+            "sha256": "d5d41e2c29049515d295d81a6d40b4890fbec8d8482cfb401630f8ef2f77e4d5"
+          },
+          "math": {
+            "bytes": 420752,
+            "kind": "file",
+            "sha256": "5db1ba1f31d8766d3979b5d7804320a0b660df7e42d6e49fdb2bcb0341c6dbae"
+          },
+          "resource": {
+            "bytes": 52000,
+            "kind": "file",
+            "sha256": "7c690f773b2a23d9e83b68b22eb0c9e80e521a6f98ef3874f231ddb3c6f39449"
+          },
+          "struct": {
+            "bytes": 257,
+            "kind": "file",
+            "sha256": "9c231f9497caf513a22dee8f790b07f969b0e45854a0bdd6dd84b492e08c2856"
+          }
+        },
+        "pointer_bits": 64,
+        "python_version": "3.12.14",
+        "schema": "calibration-runtime-v1",
+        "system": "Linux"
+      },
+      "status": "passed"
+    }
+  ],
+  "ledger_written": false,
+  "limit": "Environment checks only. Original controller, registration, source, artifact, and failed-attempt guards still apply. A changed execution surface requires this screen again.",
+  "missing_runtime_data_substituted": false,
+  "model_inference_performed": false,
+  "model_loaded": false,
+  "next_action": "Use the original controller guards; never retry an already failed trial automatically.",
+  "passing_preflight_authorizes_retry": false,
+  "runtime_contract_relaxed": false,
+  "schema": "finite-environment-preflight-v34",
+  "status": "passed",
+  "worker_launched": false
+}
