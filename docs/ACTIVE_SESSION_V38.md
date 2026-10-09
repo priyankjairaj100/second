@@ -4,7 +4,11 @@ Updated 9 October 2026.
 This file supersedes earlier execution-status notes.
 Actual registrations, receipts, ledgers, and published analyses remain authoritative.
 
-Current state: GitHub blocked the runner before execution because of an account billing restriction.
+Current state: the user reports the account restriction is resolved.
+A reviewed recovery amendment requests the first actual runner execution.
+Runner admission remains unverified until GitHub starts the new job.
+Read `docs/ACCOUNT_UNLOCK_REVIEW_V38.md` for this amendment.
+The following accounting describes the state before that push.
 No V38 model worker ran.
 No V38 claim, registration, ledger, reservation, or CPU debit exists.
 No new abrupt-loss hold applies.

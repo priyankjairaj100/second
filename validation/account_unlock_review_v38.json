@@ -1,0 +1,27 @@
+{
+  "schema": "account-unlock-review-v38",
+  "date": "2026-10-09",
+  "reviewer": "primary agent",
+  "basis": "Explicit user report that payment issue is resolved. Actual runner admission remains pending.",
+  "previous_head": "174bfea54ed7f80b2639253ebe036ab25a6972d5",
+  "blocked_run_id": 37949249514,
+  "campaign_namespace_absent": true,
+  "trigger_matches_wrapper": true,
+  "numerical_sources_changed": false,
+  "limits_changed": false,
+  "automatic_retry": false,
+  "workflow_yaml_validation": "passed; exact parsed dependency command unchanged",
+  "tests": {
+    "run": 32,
+    "passed": 31,
+    "skipped": 1,
+    "seconds": 1.101,
+    "skip": "Original constructor requires actual procfs. Hosted workflow requires this check to pass."
+  },
+  "source_sha256": {
+    ".github/ci/c4-v38-trigger.json": "7c8491a198af0b822e800fbf22ba46bab480ca4c39bab6fc447573bfd74b7ca5",
+    "scripts/execute_ci_c4_v38.py": "d88949b33b4e222fc2cc20fefb043fc588790f11421679bb8de2a48048f4d84a",
+    ".github/workflows/c4-v38.yml": "d1b9cf1e35cd3a90d0ea02f36e85b45aea1f31e3213ae3986ccd24a1be84ff48"
+  },
+  "scope": "New push before first runner execution. No registered trial is repeated."
+}

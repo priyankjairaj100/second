@@ -1,5 +1,5 @@
 Current work: read `docs/ACTIVE_SESSION_V38.md` first.
-V38 is ready, but GitHub blocked its runner because of an account billing restriction.
+The user reports the GitHub account restriction is resolved. A recovery push now requests the first runner.
 No model worker started. Read `docs/CI_RECOVERY_V38.md` before any recovery action.
 Never rerun the one-use job or alter historical attempts.
 The complete-stage Gram control remains complete; all 1,769,472 codes agree.
