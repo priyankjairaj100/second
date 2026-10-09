@@ -1,0 +1,16 @@
+{
+  "abrupt_loss_policy": "Hold 1900 campaign CPU seconds and 122 bootstrap CPU seconds if settlement cannot be recovered.",
+  "allowance_is_not_observed_usage": true,
+  "automatic_retry": false,
+  "bootstrap_cpu_allowance_seconds": 122,
+  "event_commit": "80c04b7dc01a7139fdfcbb60fa1d013c8b82edfd",
+  "model_worker_started": false,
+  "phase_cpu_cap_seconds": 1900,
+  "repository": "priyankjairaj100/second",
+  "repository_public_at_start": true,
+  "revision": "c4-v38-one-use-2026-10-09",
+  "run_attempt": 1,
+  "run_id": "37950658443",
+  "schema": "one-use-free-c4-claim-v38",
+  "total_separate_cpu_allowances_seconds": 2022
+}
