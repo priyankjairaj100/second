@@ -7,8 +7,9 @@ Use [the theory map](docs/METHOD_AND_THEORY_MAP_V32.md) to locate proofs and imp
 These current notes supersede historical execution-status sections.
 
 The independent WikiText root is complete and audited under the declared V33 recovery.
-The C4 root has two settled transactions and a second preserved terminal-copy discrepancy.
-Its five remaining trials now have a reviewed, registered V34 continuation.
+The C4 root has two successful numerical transactions and a second preserved terminal-copy discrepancy.
+The V34 continuation started one repair, which failed before model computation because `/proc/self/maps` is unavailable.
+Its receipt is preserved; four later trials remain unstarted. No automatic retry is allowed.
 Check actual registrations and receipts before executing any command.
 Never copy completion over an inconsistent live progress file.
 Never reset a ledger, repeat a completed trial, or silently drop a loss.

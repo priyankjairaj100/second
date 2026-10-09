@@ -1,3 +1,18 @@
+Current update, 9 October 2026: read `docs/ACTIVE_SESSION_V34.md` first.
+The chat C4 campaign is stopped after a missing `/proc/self/maps` failure.
+Fresh local execution must pass the deeper environment preflight below before any registration or worker.
+After installing the dependencies described in this guide, run from the repository root:
+
+```bash
+.venv/bin/python scripts/preflight_environment_v34.py
+```
+
+A nonzero exit blocks empirical execution. Do not fake proc files or copy old runtime identities.
+Use a Linux host with the required runtime interfaces, then follow the original fresh-workspace commands below.
+The same numerical algorithm is preserved; this new preflight detects infrastructure incompatibility earlier.
+
+---
+
 # Local LLM restart guide
 
 Updated 9 October 2026. Start here after cloning this repository.

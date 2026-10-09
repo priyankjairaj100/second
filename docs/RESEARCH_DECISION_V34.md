@@ -82,8 +82,15 @@ Keep the negative cases: they identify the boundary that the theory and algorith
 
 ## Current completion boundary
 
-WikiText has seven settled transactions, charging 927 CPU seconds.
-C4 currently has two settled transactions, charging 422 CPU seconds.
-A new C4 terminal-copy discrepancy is being audited before its five remaining trials can continue.
-The model, receipt, and completion evidence remain unchanged.
+WikiText has seven settled successful transactions, charging 927 CPU seconds.
+C4 has two successful numerical transactions and one infrastructure failure, charging 429 CPU seconds in total.
+The resumed first repair stopped before model computation because `/proc/self/maps` is unavailable.
+Its four later trials remain unstarted; no C4 repair speed result exists.
+The preceding terminal-copy discrepancy and its reviewed recovery remain disclosed separately.
+The runtime failure does not count as scientific evidence against the algorithm.
+It also does not permit claiming that C4 experiments completed.
+
+The current execution surface cannot provide the required deep runtime manifest.
+Continue numerical work in a correctly preflighted Linux environment with a fresh registration.
+Preserve all earlier failed and successful attempts.
 The full research program and ACL submission are incomplete.

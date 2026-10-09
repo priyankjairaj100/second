@@ -1,5 +1,5 @@
 Current checkpoint: read `docs/ACTIVE_SESSION_V34.md` and `docs/RESEARCH_DECISION_V34.md` first.
-WikiText is complete; The C4 continuation is reviewed and registered. Historical status below retains its original cutoff.
+WikiText is complete; C4 execution is blocked by a missing required `/proc` runtime interface. Historical status below retains its original cutoff.
 
 ---
 
