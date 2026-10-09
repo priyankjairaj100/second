@@ -1,0 +1,11 @@
+{
+  "controller_seconds": 62.307766288,
+  "corpus": "c4",
+  "phase_charge": 485,
+  "scientific_gates": {
+    "all_passed": true,
+    "checks": {}
+  },
+  "status": "complete",
+  "trial": "c4-delete-0-repair"
+}

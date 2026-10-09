@@ -1,0 +1,165 @@
+{
+  "actual_artifacts": {
+    "model": {
+      "bytes": 22192646,
+      "file": "model.bin",
+      "full_file_hash_recomputed": true,
+      "sha256": "80ddeebaef59109ae2b8a4bea4655987e1ea364d6213dd49254812bd379a73a9"
+    },
+    "state": {
+      "bytes": 50882823,
+      "file": "state.bin",
+      "full_file_hash_recomputed": true,
+      "sha256": "c5add997d6ae4ad41cd4b986032ea696f5b5d92a04f20ba739f769f06e9838b3"
+    }
+  },
+  "actual_byte_comparisons": [
+    {
+      "actual_bytes_equal": true,
+      "artifact": "model",
+      "reference": "c4-delete-0-cold"
+    }
+  ],
+  "analysis_cost_outside_worker_ledger": true,
+  "analysis_cpu_ns": 2590536325,
+  "controller_seconds": 62.307766288,
+  "deletion_code_changes": {
+    "changed_code_count": 3678383,
+    "scope": "Exact integer code differences from original calibration; no behavioral or privacy-erasure claim.",
+    "stages": [
+      {
+        "changed_code_count": 131327,
+        "code_count": 1769472,
+        "stage_id": "block.0000.qkv"
+      },
+      {
+        "changed_code_count": 39068,
+        "code_count": 589824,
+        "stage_id": "block.0000.attn_out"
+      },
+      {
+        "changed_code_count": 167637,
+        "code_count": 2359296,
+        "stage_id": "block.0000.mlp_up"
+      },
+      {
+        "changed_code_count": 158721,
+        "code_count": 2359296,
+        "stage_id": "block.0000.mlp_down"
+      },
+      {
+        "changed_code_count": 156682,
+        "code_count": 1769472,
+        "stage_id": "block.0001.qkv"
+      },
+      {
+        "changed_code_count": 52491,
+        "code_count": 589824,
+        "stage_id": "block.0001.attn_out"
+      },
+      {
+        "changed_code_count": 206009,
+        "code_count": 2359296,
+        "stage_id": "block.0001.mlp_up"
+      },
+      {
+        "changed_code_count": 145910,
+        "code_count": 2359296,
+        "stage_id": "block.0001.mlp_down"
+      },
+      {
+        "changed_code_count": 184098,
+        "code_count": 1769472,
+        "stage_id": "block.0002.qkv"
+      },
+      {
+        "changed_code_count": 45400,
+        "code_count": 589824,
+        "stage_id": "block.0002.attn_out"
+      },
+      {
+        "changed_code_count": 214517,
+        "code_count": 2359296,
+        "stage_id": "block.0002.mlp_up"
+      },
+      {
+        "changed_code_count": 147397,
+        "code_count": 2359296,
+        "stage_id": "block.0002.mlp_down"
+      },
+      {
+        "changed_code_count": 240094,
+        "code_count": 1769472,
+        "stage_id": "block.0003.qkv"
+      },
+      {
+        "changed_code_count": 64405,
+        "code_count": 589824,
+        "stage_id": "block.0003.attn_out"
+      },
+      {
+        "changed_code_count": 230649,
+        "code_count": 2359296,
+        "stage_id": "block.0003.mlp_up"
+      },
+      {
+        "changed_code_count": 174168,
+        "code_count": 2359296,
+        "stage_id": "block.0003.mlp_down"
+      },
+      {
+        "changed_code_count": 234563,
+        "code_count": 1769472,
+        "stage_id": "block.0004.qkv"
+      },
+      {
+        "changed_code_count": 50251,
+        "code_count": 589824,
+        "stage_id": "block.0004.attn_out"
+      },
+      {
+        "changed_code_count": 218847,
+        "code_count": 2359296,
+        "stage_id": "block.0004.mlp_up"
+      },
+      {
+        "changed_code_count": 174016,
+        "code_count": 2359296,
+        "stage_id": "block.0004.mlp_down"
+      },
+      {
+        "changed_code_count": 228159,
+        "code_count": 1769472,
+        "stage_id": "block.0005.qkv"
+      },
+      {
+        "changed_code_count": 52913,
+        "code_count": 589824,
+        "stage_id": "block.0005.attn_out"
+      },
+      {
+        "changed_code_count": 194511,
+        "code_count": 2359296,
+        "stage_id": "block.0005.mlp_up"
+      },
+      {
+        "changed_code_count": 166550,
+        "code_count": 2359296,
+        "stage_id": "block.0005.mlp_down"
+      }
+    ],
+    "total_code_count": 42467328
+  },
+  "historical_binary_outputs_reverified": false,
+  "model_code_count": 42467328,
+  "model_stage_count": 24,
+  "native_evidence": null,
+  "retained_state_independent_oracle": false,
+  "schema": "actual-c4-trial-binary-audit-v38",
+  "scientific_gates": {
+    "all_passed": true,
+    "checks": {}
+  },
+  "status": "complete_verified",
+  "trial": "c4-delete-0-repair"
+}
