@@ -1,0 +1,8 @@
+{
+  "automatic_retry": false,
+  "loss_policy": "Preserve this intent if runner failure prevents a settled receipt. Do not infer CPU usage.",
+  "planned_cpu_limit_seconds": 300,
+  "planned_reservation_seconds": 302,
+  "state": "intent_only_not_observed_usage",
+  "trial": "c4-delete-0-compressed"
+}
