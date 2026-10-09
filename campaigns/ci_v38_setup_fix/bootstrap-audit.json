@@ -1,0 +1,24 @@
+{
+  "actual_runtime_verified": true,
+  "base_target_sha256": "df62386347772d07b5394ecd47c440282674e67bbf304d275e13fd00a03ddd39",
+  "charged_cpu_seconds": 12,
+  "completion_sha256": "2e1040a62ef154b1e33cab095ee25c2e67702187ea45cf547bc40bcba3e02930",
+  "fixed_target_sha256": "9862b34f861f6155b204d57ea8219d8c8b8ccfe1a06f8053f052afb20f74b496",
+  "ledger_sha256": "88d536bd3787d135d1886636bc4168c82399d934cd8b2b8067e0dd9200728a8b",
+  "phase_cpu_cap_seconds": 122,
+  "plan_sha256": "c0fbccd3ff4c4aa6e5fbf563bab300b6efb37b6d200bd0ba36d44d5a490f7cf7",
+  "protocol_sha256": "5188db600c69a6bc506a79cf6a949d5fcb3c72e421e1e36a3d7136ee747f651e",
+  "receipt_sha256": "b65e81ea0100dc474ec2aae4c92eee3a7b67ffd35b22d110ddd6813d9619b45b",
+  "schema": "static-fixed-target-bootstrap-v38-audit",
+  "scope": "Static target only; not a prepared service, quantized model, or empirical result",
+  "stage_count": 24,
+  "status": "verified",
+  "terminal_sha256": "43600a98fe0fe788bbf9ce7fd0dee5d86b3985525f8885ee47a0ac166bcdc879",
+  "work_counts": {
+    "calibration_records_read": 0,
+    "gram_products": 0,
+    "neural_stage_record_pairs": 0,
+    "quantized_code_decisions": 0,
+    "service_preparations": 0
+  }
+}
