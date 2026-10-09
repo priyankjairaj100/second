@@ -1,6 +1,6 @@
-Current work: read `docs/ACTIVE_SESSION_V36.md` first.
-The complete-stage Gram comparison is audited; a fairer accelerated Gram control is being prepared.
-Fresh local stage commands: `docs/LOCAL_GRAM_STAGE_V36.md`. Full C4 remains blocked.
+Current work: read `docs/ACTIVE_SESSION_V37.md` first.
+The accelerated complete-stage Gram control is reviewed, registered, and unstarted.
+Fresh local stage commands: `docs/LOCAL_GRAM_BALL_STAGE_V37.md`. Full C4 remains blocked.
 
 ---
 
