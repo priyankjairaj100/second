@@ -1,5 +1,8 @@
 # Start or resume this research program
 
+For the known chat campaign, read [the V33 continuation note](docs/ACTIVE_SESSION_V33.md) first.
+It preserves a specific evidence discrepancy and requires a reviewed, separately registered continuation.
+
 Read [the local LLM handoff](docs/LOCAL_LLM_RESUME_V32.md) first.
 Read [the current evidence and remaining work](docs/EMPIRICAL_STATUS_V32.md) next.
 Use [the method and theory map](docs/METHOD_AND_THEORY_MAP_V32.md) to locate the current proofs and implementations.

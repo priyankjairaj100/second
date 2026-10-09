@@ -1,5 +1,9 @@
 # Current continuation: V32 recovery
 
+The known chat campaign now also requires `docs/ACTIVE_SESSION_V33.md`.
+Its original strict controller remains blocked by the preserved incident.
+Do not apply an incident-specific exception to a fresh local reproduction.
+
 Read `START_HERE.md`, `docs/LOCAL_LLM_RESUME_V32.md`, and `docs/EMPIRICAL_STATUS_V32.md` first.
 They supersede older execution-status notes below.
 Preserve the recovery hold and all historical evidence.
