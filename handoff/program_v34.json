@@ -1,0 +1,110 @@
+{
+  "schema": "research-continuation-map-v34",
+  "updated_utc": "2026-10-09",
+  "repository": "https://github.com/priyankjairaj100/second",
+  "entrypoint": "START_HERE.md",
+  "local_instructions": "docs/LOCAL_LLM_RESUME_V32.md",
+  "evidence_status": "docs/ACTIVE_SESSION_V34.md",
+  "theory_map": "docs/METHOD_AND_THEORY_MAP_V32.md",
+  "numerical_target": "fixed nearest-anchor features; original normalization retained",
+  "sequential_target_speedup_established": false,
+  "all_experiments_complete": false,
+  "submission_ready": false,
+  "paid_compute_authorized": false,
+  "force_push_allowed": false,
+  "synthetic_empirical_datasets_allowed": false,
+  "small_software_fixtures_allowed": true,
+  "status_authority": "Actual program, registration, transaction, receipt, completion, agreement, and ledger files take precedence over this map.",
+  "registered_development": {
+    "controller": "scripts/launch_independent_requests_v32.py",
+    "batch_wrapper": "scripts/continue_empirical_v32.py",
+    "analyzer": "scripts/analyze_independent_requests_v32.py",
+    "corpora": [
+      "wikitext",
+      "c4"
+    ],
+    "trials_per_corpus": 7,
+    "cpu_cap_per_corpus_seconds": 1900,
+    "original_sources": 2,
+    "tokens_per_source": 128,
+    "request_design": "Two alternative deletions from the original state; one preselected compressed request.",
+    "scientific_losses": "Preserve and continue the fixed second root when numerical execution is complete.",
+    "execution_failure": "Stop dependent work; preserve receipts and reservations; no automatic retry.",
+    "local_reproduction": "Use a new --workspace below local_runs; never rewrite published registrations."
+  },
+  "recovery_accounting": {
+    "archived_charged_or_reserved_cpu_seconds": 15318,
+    "older_unknown_hold_included_seconds": 122,
+    "lost_unpublished_phase_separate_hold_seconds": 1900,
+    "lost_hold_is_observed_usage": false,
+    "new_usage": "Read each actual V32 ledger; do not pool allowances."
+  },
+  "remaining_after_registered_roots": [
+    {
+      "id": "complete_model_token_scaling",
+      "status": "not_measured",
+      "gate": "Admit a larger real-token complete workload and register matched exact controls before execution."
+    },
+    {
+      "id": "pooled_exact_gram_control",
+      "status": "implementation_required",
+      "reference": "docs/POOLED_GRAM_CONTROL_V30.md",
+      "gate": "Review exact accumulator semantics, access contract, storage, and direct Gram solver; then pilot."
+    },
+    {
+      "id": "additional_model",
+      "status": "not_measured",
+      "gate": "Validate checkpoint adapter and exact target before a bounded real-data pilot."
+    },
+    {
+      "id": "changing_state_lifetime",
+      "status": "not_measured",
+      "gate": "Use real successor states, matched counterfactuals, preparation, conversion, and full state costs."
+    },
+    {
+      "id": "request_scale_and_structure",
+      "status": "not_measured",
+      "gate": "Freeze source counts, deletion fractions, selection laws, and comparator order before outcomes."
+    },
+    {
+      "id": "matched_algorithm_ablations",
+      "status": "not_measured",
+      "gate": "Separate precision and native coefficient effects; retain failures and charge fallback."
+    },
+    {
+      "id": "prospective_confirmation",
+      "status": "not_registered",
+      "gate": "Freeze method after development and exclude all60 previously evaluated quality articles."
+    },
+    {
+      "id": "closest_work_comparison",
+      "status": "incomplete",
+      "reference": "docs/NOVELTY_AUDIT_V30.md",
+      "gate": "Resolve detailed ExecCert comparison; do not infer novelty from retrieval failure."
+    },
+    {
+      "id": "submission_package",
+      "status": "incomplete",
+      "gate": "Bind final claims and tables to audited evidence; disclose all scope and cost limits."
+    }
+  ],
+  "research_decision": "docs/RESEARCH_DECISION_V34.md",
+  "current_receipts": {
+    "wikitext": {
+      "settled_trials": 7,
+      "charged_cpu_seconds": 927,
+      "analysis": "campaigns/independent_wikitext_v32/analysis-v33.json",
+      "declared_recovered_trials": [
+        "wikitext-delete-1-cold"
+      ]
+    },
+    "c4": {
+      "settled_trials": 2,
+      "charged_cpu_seconds": 422,
+      "remaining_trials": 5,
+      "blocked_incident": "c4-delete-0-cold",
+      "continuation_status": "registered",
+      "continuation_sha256": "ce08a60402ec3ea9deba95ed2acfd19966307b0c93140ec409d5e144c6e42a27"
+    }
+  }
+}

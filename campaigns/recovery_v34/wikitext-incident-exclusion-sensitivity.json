@@ -1,0 +1,16 @@
+{
+  "schema": "incident-exclusion-sensitivity-v34",
+  "analysis_sha256": "f290104a56edf865a5b0b91a4758d439f08c0b93f217bc22510e510d83450b2b",
+  "excluded_pair": "wikitext-delete-1",
+  "reason": "cold trial uses declared terminal-copy recovery",
+  "remaining_pairs": [
+    {
+      "request": "wikitext-delete-0",
+      "cold_over_repair": 1.8684735639866905,
+      "exact_model_bytes_reverified": true
+    }
+  ],
+  "compressed_comparison_uses_recovered_trial": false,
+  "population_confidence_interval": null,
+  "interpretation": "First lossless and selected compressed observations remain. No reliability or population inference."
+}

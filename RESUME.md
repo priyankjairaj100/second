@@ -1,3 +1,8 @@
+Current checkpoint: read `docs/ACTIVE_SESSION_V34.md` and `docs/RESEARCH_DECISION_V34.md` first.
+WikiText is complete; The C4 continuation is reviewed and registered. Historical status below retains its original cutoff.
+
+---
+
 # Current recovery: revision 32
 
 Read `START_HERE.md` and `docs/LOCAL_LLM_RESUME_V32.md` before executing anything.

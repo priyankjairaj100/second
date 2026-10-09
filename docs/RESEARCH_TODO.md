@@ -1,3 +1,8 @@
+Current checkpoint: read `ACTIVE_SESSION_V34.md` and `RESEARCH_DECISION_V34.md` first.
+WikiText is complete; The C4 continuation is reviewed and registered. Historical status below retains its original cutoff.
+
+---
+
 # Current task register
 
 Read `EMPIRICAL_STATUS_V32.md` for completed work and remaining paper requirements.

@@ -1,23 +1,23 @@
 # Start or resume this research program
 
-For the known chat campaign, read [the V33 continuation note](docs/ACTIVE_SESSION_V33.md) first.
-It preserves a specific evidence discrepancy and requires a reviewed, separately registered continuation.
+Read [the current execution checkpoint](docs/ACTIVE_SESSION_V34.md) first.
+Read [the research decision](docs/RESEARCH_DECISION_V34.md) for what the results justify.
+Use [the local LLM handoff](docs/LOCAL_LLM_RESUME_V32.md) for a fresh local reproduction.
+Use [the theory map](docs/METHOD_AND_THEORY_MAP_V32.md) to locate proofs and implementations.
+These current notes supersede historical execution-status sections.
 
-Read [the local LLM handoff](docs/LOCAL_LLM_RESUME_V32.md) first.
-Read [the current evidence and remaining work](docs/EMPIRICAL_STATUS_V32.md) next.
-Use [the method and theory map](docs/METHOD_AND_THEORY_MAP_V32.md) to locate the current proofs and implementations.
-These files supersede older execution-status notes.
+The independent WikiText root is complete and audited under the declared V33 recovery.
+The C4 root has two settled transactions and a second preserved terminal-copy discrepancy.
+Its five remaining trials now have a reviewed, registered V34 continuation.
+Check actual registrations and receipts before executing any command.
+Never copy completion over an inconsistent live progress file.
+Never reset a ledger, repeat a completed trial, or silently drop a loss.
 
-The earlier runtime disappeared after the last published V31 checkpoint.
-[The recovery record](docs/RECOVERY_EVENT_V32.md) explains the evidence boundary.
-Never infer completed experiments from conversation summaries or planned commands.
+Git preserves code, exact selected token inputs, protocols, receipts, and artifact hashes.
+Large base weights and derived model/state binaries are excluded.
+A fresh clone needs the documented checkpoint download and new local registration.
+Published metadata alone cannot continue a historical stateful campaign without its binaries.
 
-The recovery program preserves two selected corpora and seven transactions per corpus.
-Its controller provides preflight, registration, status, and one-step continuation commands.
-The handoff gives exact commands and explains missing binary artifacts.
-Use a new local workspace when reproducing published results on another machine.
-Do not edit old registrations, receipts, ledgers, or confirmation exclusions.
-
-The original sequential target has no demonstrated repair speed advantage.
-Current positive results concern the explicitly different fixed nearest-anchor target.
-The larger empirical program and ACL submission remain incomplete.
+Current positive results concern fixed nearest-anchor features.
+The original sequential target still has no demonstrated repair speed advantage.
+The full empirical program and ACL submission remain incomplete.
