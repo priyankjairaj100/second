@@ -1,3 +1,15 @@
+Current checkpoint: read `docs/ACTIVE_SESSION_V40.md` and `handoff/program_v40.json` first.
+V39 is complete; all seventeen stage outputs match. Read `docs/SCALE_RESULTS_V39.md`.
+Gram deletion defeats the proposed cached solver at the largest retained size.
+V40 prepares a stronger native Gram control and streamed solver comparison.
+Publishing its one-use trigger can start the workflow; inspect actual evidence before resuming.
+Never rerun historical attempts or push unrelated changes during workflow publication.
+No paid compute, force-push, or subagent delegation is authorized.
+Historical sources, ledgers, adverse findings, and sixty quality exclusions remain preserved.
+The complete empirical program and ACL manuscript remain incomplete.
+
+---
+
 Current checkpoint: read `docs/ACTIVE_SESSION_V39.md` and `handoff/program_v39.json` first.
 V39 has passed software review and prepares a one-use real-data scale pilot.
 The trigger publication can start its workflow. Inspect actual workflow evidence before resuming.

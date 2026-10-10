@@ -1,0 +1,96 @@
+{
+  "schema": "calibration-program-handoff-v40",
+  "updated_utc": "2026-10-10",
+  "repository": "https://github.com/priyankjairaj100/second",
+  "status_at_write": "V39_complete_verified; V40_software_review_complete_before_one_use_trigger",
+  "program_complete": false,
+  "acl_submission_ready": false,
+  "previous_evidence_commit": "2881ca95793a0d0a97d76134633ae7a8f28c600d",
+  "previous_workflow": "https://github.com/priyankjairaj100/second/actions/runs/38023401448",
+  "read_first": [
+    "docs/ACTIVE_SESSION_V40.md",
+    "docs/SCALE_RESULTS_V39.md",
+    "docs/SCALE_PROTOCOL_V40.md",
+    "docs/NATIVE_EXACT_GRAM_V40.md",
+    "docs/STREAMED_PRIMAL_V40.md",
+    "docs/CLOSEST_WORK_UPDATE_V39.md"
+  ],
+  "software_tests": {
+    "passed": 26,
+    "empirical_data_used": false
+  },
+  "v39": {
+    "observations": 17,
+    "all_codes_exact": true,
+    "model_cpu_charge": 877,
+    "data_cpu_charge": 5,
+    "all_new_ledgers_settled": true,
+    "local_metadata_audit": "validation/scale_metadata_audit_v40.json",
+    "missing_derived_binaries": 77,
+    "largest_case_primal_over_token_speedup": 2.759908356,
+    "strongest_baseline": "Gram deletion at 1536 retained tokens; faster and smaller than cached primal and compressed 48-bit",
+    "compressed_40_middle_case": "20.2372% payload reduction with 9.5632% higher latency versus cached primal; one development observation",
+    "compressed_32_middle_case": "Certificate refused; exact fresh fallback succeeded; all cost included"
+  },
+  "workflow": ".github/workflows/native-scale-v40.yml",
+  "trigger": ".github/ci/native-scale-v40-trigger.json",
+  "evidence_prefix": "campaigns/ci_native_scale_v40",
+  "workers": [
+    "data",
+    "prepare",
+    "retain-06",
+    "retain-12"
+  ],
+  "retained_tokens": [
+    768,
+    1536
+  ],
+  "original_tokens": 1664,
+  "fixed_normalization": 1664,
+  "stage": "block.0000.qkv",
+  "stage_codes": 1769472,
+  "observations": 12,
+  "confirmation": false,
+  "full_model": false,
+  "arms": [
+    "gram_delete_python",
+    "gram_delete_native",
+    "gram_fresh_native",
+    "cached_primal",
+    "streamed_primal",
+    "streamed_compressed_40"
+  ],
+  "scope": "Real WikiText development pilot; same exposed articles; one complete stage; one observation per arm and size",
+  "phase_cpu_allowances_seconds": {
+    "data": 122,
+    "model": 1700
+  },
+  "automatic_retry": false,
+  "paid_compute": false,
+  "force_push": false,
+  "subagents_authorized": false,
+  "abrupt_loss": "Hold full affected phase allowance without recovered settlements. Never report holds as observed usage.",
+  "resume_policy": "Inspect actual workflow and evidence first. No unrelated push during publication. Never rerun old attempts.",
+  "preserve": [
+    "src/*.py",
+    "scripts/run_*.py",
+    "historical sources and ledgers",
+    "all failures and losses",
+    "sixty exposed quality exclusions"
+  ],
+  "binary_policy": "Audit actual files on CI. Preserve text records and commitments. Metadata checks do not recover absent binaries.",
+  "remaining": [
+    "audit V40",
+    "select representation and solver",
+    "full-model strong controls",
+    "successive independent canonical states",
+    "complete lifetime costs",
+    "useful compression frontier",
+    "second model and independent roots",
+    "untouched quality",
+    "mechanism ablations",
+    "prospective confirmation",
+    "closest work and theorem-to-code claim audit",
+    "manuscript and reproduction package"
+  ]
+}

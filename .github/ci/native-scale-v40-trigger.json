@@ -1,0 +1,8 @@
+{
+  "automatic_retry_allowed": false,
+  "campaign": "campaigns/ci_native_scale_v40",
+  "data_cpu_seconds": 122,
+  "paid_compute_allowed": false,
+  "phase_cpu_seconds": 1700,
+  "revision": "native-scale-v40-2026-10-10"
+}

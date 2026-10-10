@@ -132,3 +132,7 @@ campaigns/compressed_service_v31/**/*.lock
 # V39 keeps complete text evidence, with derived binaries on the temporary runner.
 /campaigns/ci_scale_v39/**/*.bin
 /campaigns/ci_scale_v39/**/*.lock
+
+# V40 preserves all text evidence and excludes derived stage binaries.
+/campaigns/ci_native_scale_v40/**/*.bin
+/campaigns/ci_native_scale_v40/**/*.lock
