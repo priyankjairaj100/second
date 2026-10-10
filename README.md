@@ -1,3 +1,13 @@
+# Current continuation: V44, 10 October 2026
+
+Read [the current handoff](docs/ACTIVE_SESSION_V44.md), [complete-service results](docs/COMPLETE_SERVICE_RESULTS_V43.md), and [the current quality diagnostic](docs/EXPOSED_QUALITY_RESULTS_V44.md) first.
+Local and institutional Slurm environments are operational. The complete V43 two-deletion pilot and both actual-payload audits passed across all 24 calibrated stages.
+Compression saves state but loses request latency against the lossless cache; deployment savings are below 1% in this tiny run. The current paper is a working draft, not an ACL-ready submission.
+Frozen historical sources, failed attempts, ledgers, and all sixty quality exclusions are preserved. Large derived binaries remain in the fresh local and cluster archives; GitHub contains text receipts and hashes.
+The sections below are historical snapshots with their original cutoffs, including historical restrictions and unresolved tasks. Current execution status and scope are recorded in V44.
+
+---
+
 Current checkpoint: read `docs/ACTIVE_SESSION_V41.md` and `handoff/program_v41.json` first.
 V39 and V40 are complete: all seventeen and twelve stage outputs match, respectively.
 Read `docs/NATIVE_SCALE_RESULTS_V40.md` and `docs/RESEARCH_DECISION_V41.md` for all results and limits.

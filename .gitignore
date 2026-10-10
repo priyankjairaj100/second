@@ -137,3 +137,9 @@ campaigns/compressed_service_v31/**/*.lock
 # V40 preserves all text evidence and excludes derived stage binaries.
 /campaigns/ci_native_scale_v40/**/*.bin
 /campaigns/ci_native_scale_v40/**/*.lock
+
+# V43/V44 publish text receipts; actual derived payloads remain in local archives.
+/campaigns/csis_full_model_v43/**/*.bin
+/campaigns/csis_full_model_v43/**/*.lock
+/campaigns/csis_exposed_quality_v44/**/*.bin
+/campaigns/csis_exposed_quality_v44/**/*.lock

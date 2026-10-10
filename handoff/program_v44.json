@@ -1,0 +1,101 @@
+{
+  "schema": "calibration-program-handoff-v44",
+  "updated": "2026-10-10",
+  "repository": "https://github.com/priyankjairaj100/second",
+  "branch": "codex/second-cluster-v42",
+  "baseline": "fbcc98c6559de4b88ffc9c8b960cf680d89e29d3",
+  "status": "local_cluster_setup_and_v43_v44_development_complete",
+  "setup_complete": true,
+  "program_complete": false,
+  "acl_submission_ready": false,
+  "active_worker": false,
+  "next_empirical_campaign_registered": false,
+  "read_first": [
+    "docs/ACTIVE_SESSION_V44.md",
+    "docs/COMPLETE_SERVICE_RESULTS_V43.md",
+    "docs/EXPOSED_QUALITY_RESULTS_V44.md",
+    "docs/LITERATURE_UPDATE_V43.md",
+    "docs/NEXT_SCIENTIFIC_GATES_V43.md"
+  ],
+  "local_checkout": "/Users/priyankjairaj/Downloads/ACL/Second",
+  "cluster_checkout": "/nfs_home/users/poonam/second-20261010",
+  "v43": {
+    "source_commit": "304a9cc73b3c263032f3ef6a02487b4d2df40fbe",
+    "program_sha256": "e350109ae0771afcd9bb94abf6bf40a8082110a76c33bcaaf7e23922a107ce4d",
+    "all_8_actual_comparisons_pass": true,
+    "full_calibrated_stages": 24,
+    "code_count": 42467328,
+    "retained_tokens": [
+      64,
+      32
+    ],
+    "original_normalization": 96,
+    "all_48_compressed_certificates_accept": true,
+    "compressed_fallbacks": 0,
+    "charged_cpu_seconds_including_failed_preparation": 1744,
+    "all_reservations_settled": true,
+    "primary_audit_sha256": "54cc9d3d82327d2f5cd4317b78156639bb5d80a1a6fc0920949f0ec592b27625",
+    "supplemental_audit_sha256": "cd03e4c347464f13c39b528ea022313f2b3858c1ad8ca0bbff665cd5623aa99b",
+    "actual_binary_bytes": 1269053685
+  },
+  "v44": {
+    "source_commit": "db95069b2c3484ac615052fb1c1a711c8c773c2d",
+    "program_sha256": "e3d7b6dfd1ad9199a180aac2e706ef8b2334c709947b2b8b6e90e4a81dc3e02c",
+    "completion_sha256": "98870a817e1e7183424158cb392929b7a971e9c89b876ad878f0ecf787fdab4c",
+    "development_guards_pass": true,
+    "fixed_over_sequential_ppl": 1.017055599717572,
+    "worst_article_ratio": 1.0532113858601153,
+    "perplexities": {
+      "fixed_feature": 53.71593973013478,
+      "full_precision": 45.60008113332969,
+      "nearest_rounding": 64.87023395588822,
+      "sequential": 52.8151457452781
+    },
+    "articles": 8,
+    "predictions_per_model": 1016,
+    "already_exposed": true,
+    "new_quality_inputs": false,
+    "confirmation": false,
+    "charged_cpu_seconds": 94,
+    "all_reservations_settled": true,
+    "parity_checks_passed": 16,
+    "max_parity_mean_nll_deviation": 5.3710317033834344e-15,
+    "sequential_binary_bytes": 21233664
+  },
+  "runtime": {
+    "container_sha256": "10ffb205f553197e110472e208522d0c73bcaf62e1a0571b860bf7bae49933b1",
+    "cpu_node": "csis.mn1",
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "gmpy2": "2.3.2",
+    "threads": 1,
+    "worker_memory_bytes": 17179869184,
+    "gpu_smoke": "passed: A100 80GB PCIe, PyTorch 2.10.0+cu128; synthetic only",
+    "gpu_used_for_empirical_target": false
+  },
+  "literature": {
+    "exact_fun_primary_proof_read": true,
+    "exact_fun_proof_distributional_assumptions": true,
+    "exec_cert_finite_codebook_overlap_acknowledged": true
+  },
+  "next_required": [
+    "review and register an independent full-model 1664 -> 1536 -> 768 token sequence",
+    "execute actual second-checkpoint repair with complete byte audits",
+    "strong lossless codec controls and certificate/replay ablations",
+    "randomized repeated roots and longer deletion sequences",
+    "prospective untouched quality on frozen useful models",
+    "independent proof/novelty review and submission-format manuscript revision"
+  ],
+  "automatic_retry": false,
+  "paid_compute": false,
+  "force_push": false,
+  "quality_exclusions": 60,
+  "preserve": [
+    "historical sources and ledgers",
+    "all failed and cancelled attempts",
+    "all adverse performance and quality results",
+    "all sixty historical quality exclusions"
+  ],
+  "binary_policy": "Text receipts and hashes are published; actual V43 and V44 binaries are retained in fresh local and cluster local_runs directories. Do not describe a fresh metadata clone as numerical reproduction.",
+  "resume_policy": "Read current handoff, inspect clean branch and source pins, verify actual cluster status. Never rerun completed one-use campaigns. Any new empirical work needs a fresh reviewed program and resource ledger."
+}

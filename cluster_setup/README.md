@@ -1,3 +1,25 @@
+# Current local and cluster environment: V44
+
+Use `docs/ACTIVE_SESSION_V44.md` and `handoff/program_v44.json` for current results and restart instructions. The original V42 setup notes below retain their historical cutoff; the complete V43 service now exists and its tiny two-deletion pilot passed.
+
+The fresh Mac checkout is `/Users/priyankjairaj/Downloads/ACL/Second`. The cluster checkout is `/nfs_home/users/poonam/second-20261010`, reached as `poonam` at `172.24.16.132`. Passwords are entered interactively and are never stored in this repository. Do not use either old `Two` or `acl2027-second` checkout as the continuation source.
+
+Exact CPU experiments use the verified Bookworm Singularity image, CPython 3.12.14, NumPy 2.3.5, and gmpy2 2.3.2. The pinned `gelu_new` quality evaluator uses NumPy tanh; SciPy is absent and this fact is bound in V44 runtime registration. Job 13149 verified one A100 80GB PCIe through PyTorch 2.10.0+cu128 with a synthetic batch. Exact quantization remains on CPU; GPU quality needs a prospective CPU/GPU parity check before use.
+
+Submit through Slurm on `csis.mn1`; the earlier `cn1` user-resolution failure remains recorded. Confirm current account resources before a new allocation. A bounded software-check example (no model inference):
+
+```bash
+sbatch --no-requeue --nodelist=csis.mn1 --mem=16G --time=00:10:00 \
+  --output=local_runs/cluster-setup-20261010/software-%j.log \
+  cluster_setup/run_cpu.sbatch \
+  local_runs/cluster-setup-20261010/container-13155.sha256 \
+  -m unittest research_v43_postrun.test_audit research_v44.test_diagnostic
+```
+
+The wrapper defaults to 8 GiB and ten minutes; those defaults are not an empirical admission. Every new empirical campaign needs its own reviewed target, runtime binding, CPU/memory ceilings, fresh path, and one-use ledger. Do not rerun completed V43 or V44 registrations. An SSH authentication failure/refusal requires attention rather than repeated retries.
+
+## Historical setup-only notes
+
 # Local and Slurm setup
 
 Continue from `docs/ACTIVE_SESSION_V41.md` and `handoff/program_v41.json`.

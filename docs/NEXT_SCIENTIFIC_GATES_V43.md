@@ -1,3 +1,5 @@
+Current-status addendum (10 October 2026): V43 completed, both actual-payload audits passed, and V44 evaluates the actual final model on the eight already exposed articles. See `ACTIVE_SESSION_V44.md` and `EXPOSED_QUALITY_RESULTS_V44.md` for terminal status. The following prospective review retains its pre-outcome cutoff. Larger-root, second-model, codec/ablation, repeated-sequence, and untouched-quality gates remain open.
+
 # Proposed scientific gates after the complete-service integration pilot
 
 Second: scientific decisions after the V43 engineering gate

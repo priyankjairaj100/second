@@ -1,0 +1,1 @@
+{"binding_sha256":"d368f35ff5ce3801e42dcf4a0824bcfdcf26a19f4596a0dbf7d1843c34f4c3bf","budget_attempt_id":"fcf85db18c1ee0a1413185e910c7b98d7a2b3ef2bd5dcca8acab6a5c5319ad11","budget_debit":{"charged_cpu_seconds":1802,"observed_cpu_ns":null,"phase":"feasibility","reserved_cpu_seconds":1802,"state":"reserved"}}
