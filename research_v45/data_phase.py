@@ -9,6 +9,7 @@ from research_v43.campaign import ROOT, read, new, sha, require
 from research_v44.campaign import runtime
 from research_v45.data import POLICY, inventory, prepare
 from src.phase_budget import PhaseBudget
+from src.experiment_inventory import source_hashes
 from src.worker_control import WorkerLimits, run_limited
 from src.run_store import canonical_json
 from src.transaction_timing import verify_command_admission
@@ -21,7 +22,7 @@ FILES=('research_v45/data.py','research_v45/data_phase.py','research_v45/DATA_PR
 def sources():return {name:sha(ROOT/name) for name in FILES}
 
 def budget(p):
-    return PhaseBudget(Path(p['directory'])/'budget',identity=dict(protocol_sha256=sha(Path(p['directory'])/'program.json'),sources=p['sources']),phase_cpu_seconds={'data':CAP})
+    return PhaseBudget(Path(p['directory'])/'budget',identity=dict(protocol_sha256=sha(Path(p['directory'])/'program.json'),source_sha256=source_hashes(ROOT)),phase_cpu_seconds={'data':CAP})
 
 def verify(directory):
     p=read(Path(directory)/'program.json')
