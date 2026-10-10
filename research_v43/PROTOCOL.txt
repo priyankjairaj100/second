@@ -1,0 +1,198 @@
+V43 prospective complete-model development gate
+
+Purpose and scope
+
+This new campaign tests complete fixed-anchor calibration membership repair on
+DistilGPT2, with actual successive deletions and independent canonical successor
+reconstruction. It is an engineering development gate, not confirmation, useful
+calibration-scale evidence, a language-quality evaluation, or an ACL-readiness
+claim. Its three articles have already been exposed in development. No future
+quality or confirmation data may be selected or evaluated in this campaign.
+Historical source files, attempts, numerical targets, failures, and ledgers remain
+unchanged. No earlier unused CPU allowance is transferred into this campaign.
+
+Inputs and immutable target
+
+The checkpoint is DistilGPT2 revision
+2290a62682d06624634c1f46a6ad5be0f47f38aa, with config and safetensors hashes checked
+against research_v38.bootstrap_target.CHECKPOINT_HASHES. The source frame is the
+published V39 WikiText-2 training selection. Select the first three IDs in that
+selection's sampling_order_ids, take the first 32 existing tokens of each record,
+and sort records by ID for canonical storage. Bind the original records and
+selection files, tokenizer and dataset identities, and each article body's
+provenance before any new model work. These are real, exposed development tokens;
+there is no synthetic empirical data or independent-root claim.
+
+The original calibration has 96 tokens. Normalization remains 96 when 64 and 32
+tokens survive. This is a newly registered calibration target, not a reproduction
+of V39/V40's original normalization 1664. Bind the complete base and fixed-target
+manifests, 24 stage IDs, parameter identities, four-bit dyadic24 row grids, ridge,
+coordinate order, lower midpoint ties, evaluator and ordered-preparer identity.
+The six blocks each contain qkv, attn_out, mlp_up, and mlp_down in that order.
+All 42,467,328 calibrated codes must be present before a model is committed.
+
+Use OrderedFiniteDecoder with mpfr_enclosure primitives and the unchanged ordered
+CPU arithmetic. Construct the fixed nearest-grid context once per worker and
+share that immutable context across its registered sequence; report its load cost.
+Prepare each source's complete 24-stage feature traversal once; every advancement
+uses the fixed anchor matrix, never a repaired matrix. Binary64 features are then
+interpreted as exact dyadics. No CUDA extraction, alternate floating reduction,
+ordinary sequential GPTQ equivalence, or pretraining-unlearning claim is allowed.
+
+Representations and matched controls
+
+1. lossless: canonical V29 source-local factor descriptors at every stage.
+2. compressed40: canonical V26 forty-bit, block-size-256 descriptors at every
+   stage, with containment checked during trusted preparation. A refused box
+   certificate may invoke the prospectively reserved exact retained-source
+   replay and point solver. Failure of that solver commits no complete model.
+3. hybrid_gram: native exact pooled Grams for the eighteen stages of width 768,
+   and canonical lossless factors for the six mlp_down stages of width 3072.
+   This is explicitly a hybrid native control, not a measured pure-Gram service.
+
+Every feature comparator receives the same point dispatcher: prefer token space
+when four times the retained-token count is at most input width, otherwise prefer
+streamed primal; choose only admitted routes. At 96, 64, and 32 tokens the point
+and box paths prefer token space at all stages. Trusted Grams use the shared
+certified direct-Gram solver. The hybrid representation rule is fixed before
+measurement and is available to both repair and fresh reconstruction. Comparing
+only a slow cold constructor would not establish a benefit over the cached and
+hybrid controls; all losses against those controls must be reported.
+
+Original preparation decomposes common source extraction and the original exact
+point model from representation-specific encoding and native Gram construction.
+One common extraction may be reused for preparation only when its cost is fully
+assigned to each standalone representation's initial lifetime cost. Encoding,
+containment/roundtrip verification, canonical state serialization, and required
+trust metadata are additional costs. The shared checkpoint/context load is
+reported separately and counted once for each standalone deployment lifecycle;
+shared preparation must not turn that cost into an invented zero.
+
+The cached, compressed, and hybrid trials each start from their own registered
+original representation. Delete the first sorted original ID, commit the state
+with two records, then delete the next ID from that actual successor and commit
+the final one-record state. Do not execute two alternative deletions from the
+original root and describe them as a sequence. Duplicate/unknown deletion,
+missing source access, mismatched normalization, or inconsistent state identity
+must refuse. Empty retention is outside this empirical registration.
+
+The cold lossless control receives the retained records, immutable checkpoint and
+target contract; it reconstructs the complete model and complete lossless state
+for each retained membership using one complete traversal per source. It receives
+the same optimized point solver as cached and exact replay. It must not receive
+retained factor descriptors, predecessor model codes, or pooled Gram payloads.
+Its cost includes source extraction, source encoding, serialization, and validation.
+The cold arm is a complete-state control rather than a model-only constructor.
+
+The separate oracle worker independently traverses retained source tokens and
+constructs a fresh exact point model, fresh lossless and compressed descriptors,
+and fresh native Grams for both retained memberships. No predecessor descriptors
+or predecessor Gram values may be numerical inputs. Compare actual complete model
+bytes across successful arms, and actual complete canonical state bytes within
+each of the three representations. Reusing the same immutable target, checkpoint,
+and reviewed extraction/encoding implementation is disclosed; this is independent
+reconstruction from retained inputs, not an independently implemented proof engine.
+Hash matches or serialization roundtrips alone do not satisfy this oracle gate.
+
+Access, deletion, and storage
+
+Compressed exact fallback has retained-token access. Hybrid Gram subtraction
+requires the deleted record's exact source contribution; charge its regeneration
+from predecessor tokens/checkpoint or explicitly account for any stored source
+contributions. A pooled Gram and membership commitments alone do not provide
+arbitrary deleted contributions. Extract a source's entire anchor trajectory at
+most once per request and charge all traversed ancestors, including stages whose
+certificates already accepted. Preserve the failed certificate and replay cost.
+
+Complete live-state bytes include packed model codes, both target manifests,
+retained record tokens and provenance, and every required representation payload
+and service trust sidecar. The common checkpoint and config require 352,825,175
+additional bytes and are reported separately and in total deployment storage.
+Count indexes or source retrieval obligations, runtime dependencies, and any other
+required side information; do not label a selected payload subtotal total storage.
+Preparation snapshots, comparison artifacts, logs, and historical corpora are
+retained as audit evidence and reported separately. Successor-state exclusion is
+logical calibration membership deletion. No physical erasure of the filesystem,
+process memory, checkpoint, external corpus, audit history, or pretraining data is
+claimed. Serialized states already contain model codes; do not double-count a
+separately exported identical model in the deployment state.
+
+New bounded resource plan
+
+Use one institutional Slurm CPU, one-CPU affinity, and numerical library thread
+settings of one. Exact target computation uses no GPU. Slurm memory is 16 GiB;
+each empirical worker additionally enforces RLIMIT_AS of 16 GiB and an individual
+file-size ceiling of 2 GiB. An RSS allocation and a virtual-address limit constrain
+different quantities; neither component's analytical array bound proves complete
+process fit. Record actual worker peak RSS and failed resource outcomes.
+
+The new feasibility phase admits at most 13,000 CPU seconds. The six one-use
+worker allowances in campaign.py are:
+  prepare:    CPU 2400 seconds, wall 3000 seconds
+  cached:     CPU 1800 seconds, wall 2400 seconds
+  compressed: CPU 1800 seconds, wall 2400 seconds
+  hybrid:     CPU 2400 seconds, wall 3000 seconds
+  cold:       CPU 1800 seconds, wall 2400 seconds
+  oracle:     CPU 2400 seconds, wall 3000 seconds
+The CPU soft ceilings sum to 12,600 seconds. The existing controller reserves two
+additional seconds per worker, for a maximum combined reservation of 12,612.
+Fresh phase ledgers reserve before launch, settle observed rounded CPU after exit,
+and retain unknown reservations in full. No automatic retries or reuse of an
+attempt directory is allowed. Setup, registration, controller and post-receipt
+analysis costs outside the worker ledger must be disclosed separately.
+
+Structural admission uses the new V43 policy: 8 GiB explicit numerical arrays,
+64 billion units per stage, and one trillion units per request. Reserve the box
+attempt and its full exact point fallback before extraction or solver work. These
+are work proxies, not FLOP counts, timing predictions, or permission to exceed CPU
+limits. Record per-stage route decisions and cumulative reservations. Native Gram
+construction also uses its own bounded integer/serialization admission, with
+maximum width 768, three original sources, 96 tokens and two GiB component memory.
+The four-GiB caller-residency reservation covers one checkpoint/decoder/context,
+held source features, accumulated packed codes, current representation bytes,
+predecessor and successor serialization, and stage-local Gram objects. Grams must
+be parsed/solved/discarded stage by stage; do not hold all parsed matrices or all
+three predecessor representations in one request. The external cap remains the
+final bound on allocator, compiler, Python and library overhead.
+
+At 96 original tokens the complete raw feature payload is 24,772,608 bytes. Fixed
+anchor matrices contain 339,738,624 binary64 bytes; complete packed four-bit codes
+contain 21,233,664 bytes before metadata. Under the current dispatcher the complete
+point work reservations for 96/64/32 tokens are respectively 13,888,143,360 /
+7,958,446,080 / 3,368,828,928 units. The corresponding maximum dispatcher-plus-solver
+array envelopes are 279,191,552 / 262,152,192 / 245,637,120 bytes. Compressed box plus
+full point-fallback reservations are 65,914,380,288 / 42,611,367,936 /
+21,129,732,096 units; the box array maxima are 756,302,336 / 731,611,648 /
+707,969,536 bytes. Hybrid solve reservations are 57,548,095,488 / 54,883,663,872 /
+52,936,458,240 units, with maximum solver-plus-dispatch arrays 556,916,736 bytes.
+Gram accumulation, replay, parsing, output, and Python overhead remain separately
+charged and constrained; they are not represented as free by these solver totals.
+
+Measurement, release, and interpretation
+
+Bind this protocol, every new source file, all imported numerical sources, actual
+runtime, asset identities, and historical ledger digests before empirical work.
+Run fresh numerical/software checks before registration. Numerical changes after
+registration require a new reviewed campaign rather than modifying this one.
+Each request clock includes its full state loading and validation, deletion,
+replay, accumulation, certificate attempts and fallback, model packing, canonical
+state serialization and validation, output, and measured disposal of in-memory
+predecessor objects. Context and checkpoint load, shared native compilation,
+controller launch/receipt work, and cross-arm/oracle checks must have explicit
+clock placement so complete costs can be reconstructed without double counting.
+Timers for nested components cannot be added as if disjoint. A bounded refusal
+retains its elapsed work and error evidence and contributes no speedup or success.
+Atomic publication of a complete model/state follows all extent and target checks;
+partial stage files, if preserved diagnostically, are never usable model releases.
+
+Report original preparation, both state-transition costs, complete live storage,
+maximum observed RSS, source traversals, fallback counts and every refusal. Sum
+preparation plus the actual sequence for each representation and compare with the
+matched cold sequence under the declared initial-model convention. Report measured
+lifetime totals even if there is no break-even. With one exposed root and one run
+per arm there is no population uncertainty or reliable superiority claim. The
+64/32 retained-token pilot checks integration and state transitions only; it does
+not resolve realistic-scale, second-model, untouched-quality, or confirmation
+gates. Preserve all sixty IDs in campaigns/heldout_quality_v30_exclusions.json and
+the separate training confirmation reserve. Proceeding to larger calibration,
+new roots or quality evaluation requires a fresh registration and resource plan.
