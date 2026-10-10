@@ -1,3 +1,7 @@
+Current continuation: [V39 scale pilot](docs/ACTIVE_SESSION_V39.md).
+Sixteen software fixtures pass. Empirical status must be read from the one-use workflow and campaign evidence.
+The last complete full-model results remain [C4 V38](docs/C4_RESULTS_V38.md).
+
 Current results: [C4 completed successfully](docs/C4_RESULTS_V38.md).
 All seven registered trials passed, with exact agreement across 24 stages and 42,467,328 codes.
 Lossless repair showed 2.16–2.18× observed speedups over cold reconstruction.

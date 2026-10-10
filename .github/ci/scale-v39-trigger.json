@@ -1,0 +1,8 @@
+{
+  "automatic_retry_allowed": false,
+  "campaign": "campaigns/ci_scale_v39",
+  "data_cpu_seconds": 122,
+  "paid_compute_allowed": false,
+  "phase_cpu_seconds": 2400,
+  "revision": "scale-v39-2026-10-10"
+}

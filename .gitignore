@@ -128,3 +128,7 @@ campaigns/compressed_service_v31/**/*.lock
 /campaigns/ci_v38_setup_fix/**/outputs/*.bin
 /campaigns/ci_v38_setup_fix/**/outputs/.*
 /campaigns/ci_v38_setup_fix/**/*.lock
+
+# V39 keeps complete text evidence, with derived binaries on the temporary runner.
+/campaigns/ci_scale_v39/**/*.bin
+/campaigns/ci_scale_v39/**/*.lock

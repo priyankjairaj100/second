@@ -1,3 +1,14 @@
+Current checkpoint: read `docs/ACTIVE_SESSION_V39.md` and `handoff/program_v39.json` first.
+V39 has passed software review and prepares a one-use real-data scale pilot.
+The trigger publication can start its workflow. Inspect actual workflow evidence before resuming.
+Do not push unrelated files while that workflow publishes.
+Never rerun historical workflows or registered attempts.
+No paid compute, force-push, or subagent delegation is authorized.
+Historical numerical sources and ledgers remain unchanged.
+The complete empirical program and ACL manuscript remain incomplete.
+
+---
+
 Current checkpoint: read `START_HERE.md`, `docs/ACTIVE_SESSION_V38.md`, and `handoff/program_v38.json` first.
 The fresh C4 workflow completed all seven trials successfully.
 Read `docs/C4_RESULTS_V38.md` and `docs/RESEARCH_DECISION_V38.md` for supported claims and remaining tasks.
