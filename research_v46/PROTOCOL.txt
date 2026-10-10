@@ -34,3 +34,11 @@ All prior ledgers remain unchanged. This independent phase cannot rewrite V45.
 Passing validates only these32 observed likelihoods on this source/runtime/device.
 No distribution-wide equivalence, exact calibration, new heldout evidence,
 certified inference, population interval, or ACL readiness claim follows.
+
+Pre-inference compatibility correction: registration13240 stopped because the
+GPU Python3.10 lacks hashlib.file_digest used by a frozen CPU helper. Its dependent
+13241 was cancelled; no campaign directory, budget reservation or likelihood was
+created. The V46-only validator now uses its existing streamed SHA256 routine and
+the unchanged pure audit checks. Add an actual archive-read software check, then
+use a new B directory. Preserve both terminal records. No numeric kernel, threshold
+or model changes; no empirical attempt is retried.

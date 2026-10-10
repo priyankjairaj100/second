@@ -90,9 +90,23 @@ def validate(inputs):
     p=read(paths['v44_program']);c=read(paths['v44_completion'])
     require(c['status']=='complete' and c['valid_diagnostic'] and c['development_guards_pass']
         and c['program_sha256']==V44_PROGRAM,'A completed V44 diagnostic is required')
-    from research_v44.campaign import validate_inputs
-    _,records,_=validate_inputs(p['inputs'])
+    # The GPU module uses Python3.10. Keep its streamed hashlib interface local;
+    # never alter the frozen Python3.12 CPU campaign or monkey-patch hashlib.
+    from research_v44.campaign import check_audits
+    from research_v44.diagnostic import validate_exposed
+    old_paths={key:bound(entry) for key,entry in p['inputs'].items()}
+    old=read(old_paths['v43_program'])
+    require(read(old_paths['v43_registration'])['program_sha256']==p['inputs']['v43_program']['sha256'],
+        'V43 registration differs')
+    for name,expected in old['sources'].items():
+        require(sha(ROOT/name)==expected,'Frozen V43 source differs')
+    check_audits(old,p['inputs']['v43_program']['sha256'],read(old_paths['first_audit']),
+        read(old_paths['second_audit']),p['inputs']['first_audit']['sha256'],
+        p['inputs']['fixed_model']['sha256'],p['inputs']['fixed_state']['sha256'])
+    records=validate_exposed(read(old_paths['historical_registration']),read(old_paths['historical_losses']))
     require(records==p['records'],'Exposed articles changed')
+    require(len(set(read(old_paths['all_exclusions'])['excluded_from_future_confirmation_ids']))==60,
+        'Preserve all historical quality exclusions')
     for key in ('base_target','fixed_target','sequential_model','sequential_metadata'):
         a=c['artifacts'][paths[key].name]
         require(all(a[k]==inputs[key][k] for k in ('sha256','bytes')),'V44 artifact binding differs')

@@ -88,5 +88,12 @@ class DecoderParity(unittest.TestCase):
         from research_v46.campaign import validate
         self.assertTrue(callable(reconstruct_fixed) and callable(validate))
 
+    @unittest.skipUnless(os.environ.get('SLURM_JOB_ID'),'Archive paths belong to the Slurm checkout')
+    def test_registered_cpu_evidence_readable_on_gpu_python(self):
+        from research_v46.campaign import dependencies,validate
+        program,result=validate(dependencies())
+        self.assertEqual(len(program['records']),8)
+        self.assertEqual(result['status'],'complete')
+
 
 if __name__=='__main__':unittest.main()
