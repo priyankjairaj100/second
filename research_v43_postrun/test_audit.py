@@ -4,16 +4,17 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from research_v42.test_resource_plan import bind, fixture
 from research_v43.service import trust_json
 from research_v43.state import validate_state
 from research_v43.test_state import BUDGET, codes, record, state
 from research_v43_postrun.audit import (Inputs, REPRESENTATIONS, TRIAL_REPRESENTATIONS,
-    ROOT, audit_states, execution_matches_target, expected_artifacts, model_matches_state,
+    ROOT, audit_states, bind_ledger_snapshot, execution_matches_target, expected_artifacts, model_matches_state,
     verify_worker_receipts)
 from src.phase_budget import PhaseBudget, read_budget_snapshot
-from src.run_store import RunStore, canonical_json, digest, strict_json
+from src.run_store import RunStore, canonical_json, digest, read_completed, strict_json
 
 
 def write(path, value):
@@ -266,6 +267,40 @@ class SupplementalAuditTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'duplicate'):
             Inputs().json(path)
 
+    def test_final_rehash_detects_same_size_changes_with_unchanged_nfs_metadata(self):
+        path = self.case.directory/'coarse-metadata.bin'
+        write(path, b'original')
+        inventory = Inputs()
+        inventory.read(path, retain=False)
+        signature = inventory.signatures[str(path)]
+        before = deepcopy(inventory.files)
+        # Simulate a filesystem whose metadata cache reports identical stats
+        # before and after a same-size rewrite. Hashing must still reject it.
+        with patch.object(Inputs, 'signature', return_value=signature):
+            inventory.unchanged()
+            write(path, b'modified')
+            with self.assertRaisesRegex(ValueError, 'changed before receipt'):
+                inventory.unchanged()
+        self.assertEqual(inventory.files, before)
+
+    def test_streaming_byte_bound_survives_stale_metadata(self):
+        path = self.case.directory/'growing.bin'
+        write(path, b'abcd')
+        signature = list(Inputs.signature(path)); signature[2] = 2
+        with patch.object(Inputs, 'signature', return_value=tuple(signature)):
+            with self.assertRaisesRegex(ValueError, 'exceeds byte bound while reading'):
+                Inputs().read(path, maximum=3)
+
+    def test_ledger_snapshot_cannot_drift_before_inventory_read(self):
+        snapshot = self.case.seal()
+        bind_ledger_snapshot(self.case.directory, snapshot, Inputs())
+        path = self.case.directory/'budget/ledger.json'
+        changed = strict_json(path.read_bytes())
+        changed['attempts'][next(iter(changed['attempts']))]['observed_cpu_ns'] += 1
+        write(path, changed)
+        with self.assertRaisesRegex(ValueError, 'Ledger changed between snapshot'):
+            bind_ledger_snapshot(self.case.directory, snapshot, Inputs())
+
     def test_real_sealed_receipts_and_settled_snapshot_feed_full_state_audit_read_only(self):
         snapshot = self.case.seal()
         self.assertEqual(snapshot['status'], 'verified')
@@ -292,6 +327,17 @@ class SupplementalAuditTests(unittest.TestCase):
         write(path, {'different': 'request'})
         with self.assertRaisesRegex(ValueError, 'saved artifact hash mismatch'):
             verify_worker_receipts(self.case.directory, self.case.program, Inputs(), snapshot)
+
+    def test_sealed_artifact_cannot_drift_after_run_store_validation(self):
+        snapshot = self.case.seal()
+        def drift_after_validation(root, identity):
+            result = read_completed(root, identity)
+            if root.parent.name == 'cached':
+                write(root/result['attempt']/'request.json', {'changed': 'after validation'})
+            return result
+        with patch('research_v43_postrun.audit.read_completed', side_effect=drift_after_validation):
+            with self.assertRaisesRegex(ValueError, 'Sealed artifact changed before input inventory'):
+                verify_worker_receipts(self.case.directory, self.case.program, Inputs(), snapshot)
 
     def test_actual_output_tamper_rejected_despite_sealed_success(self):
         snapshot = self.case.seal()

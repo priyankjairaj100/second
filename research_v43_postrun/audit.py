@@ -52,6 +52,7 @@ class Inputs:
             while chunk := stream.read(1024*1024):
                 hashed.update(chunk)
                 count += len(chunk)
+                require(count <= maximum, 'Input exceeds byte bound while reading: '+str(path))
                 if retain:
                     chunks.append(chunk)
         require(before == self.signature(path), 'Input changed during reading: '+str(path))
@@ -69,8 +70,28 @@ class Inputs:
         return value
 
     def unchanged(self):
-        for path, signature in self.signatures.items():
-            require(self.signature(Path(path)) == signature, 'Input changed before receipt: '+path)
+        """Rehash final bytes: unchanged NFS metadata does not imply unchanged content."""
+        for name, original_signature in self.signatures.items():
+            path, expected = Path(name), self.files[name]
+            message = 'Input changed before receipt: '+name
+            before = self.signature(path)
+            require(before == original_signature, message)
+            hashed, count = hashlib.sha256(), 0
+            with path.open('rb') as stream:
+                while chunk := stream.read(1024*1024):
+                    count += len(chunk)
+                    # Bound reads even if a growing file's metadata is stale.
+                    require(count <= expected['bytes'], message)
+                    hashed.update(chunk)
+            require(before == self.signature(path), message)
+            require(dict(bytes=count, sha256=hashed.hexdigest()) == expected, message)
+
+
+def bind_ledger_snapshot(directory, snapshot, inputs):
+    """Bind the bytes parsed by the ledger reader to this audit's inventory."""
+    actual = inputs.read(Path(directory)/'budget/ledger.json', retain=False)
+    require(actual == dict(bytes=snapshot['ledger_bytes'], sha256=snapshot['ledger_sha256']),
+            'Ledger changed between snapshot and input inventory')
 
 
 def registered_records(program):
@@ -277,7 +298,9 @@ def verify_worker_receipts(directory, program, inputs, snapshot):
                 inputs.json(root/'worker'/sealed['attempt']/'status.json') == sealed,
                 'Sealed result and terminal status differ')
         for name in sealed['artifacts']:
-            inputs.read(root/'worker'/sealed['attempt']/name, retain=False)
+            observed = inputs.read(root/'worker'/sealed['attempt']/name, retain=False)
+            require(observed == sealed['artifacts'][name],
+                    'Sealed artifact changed before input inventory: '+trial+'/'+name)
         debit = sealed['budget_attempt_id']
         require(debit not in debit_ids and snapshot['attempts'].get(debit) == sealed['budget_debit'],
                 'Sealed worker CPU debit differs from ledger')
@@ -310,7 +333,9 @@ def audit(directory, frozen_receipt, output):
     program = inputs.json(directory/'program.json')
     # Frozen verification reads source/runtime/historical identities only.
     require(verify(directory) == program, 'Frozen program verification differs')
-    inputs.json(directory/'registration.json')
+    registration = inputs.json(directory/'registration.json')
+    require(registration['program_sha256'] == digest(canonical_json(program)),
+            'Registration changed before input inventory')
     frozen = inputs.json(frozen_receipt)
     require(frozen['schema'] == 'complete-service-artifact-audit-v43' and frozen['status'] == 'verified' and
             frozen['campaign'] == str(directory) and frozen['program_sha256'] == digest(canonical_json(program)) and
@@ -324,7 +349,7 @@ def audit(directory, frozen_receipt, output):
         phase_cpu_seconds={'feasibility': program['phase_cpu_seconds']})
     require(snapshot['status'] == 'verified' and not snapshot['reserved_unknown_attempts'] and
             not any(snapshot['over_cap'].values()), 'Campaign budget is unsettled or over cap')
-    inputs.read(directory/'budget/ledger.json', retain=False)
+    bind_ledger_snapshot(directory, snapshot, inputs)
     require(all(frozen['budget'][key] == snapshot[key] for key in frozen['budget']),
             'Frozen audit budget differs from actual settled ledger')
     require(frozen['prior_failed_cpu_seconds'] == program['prior_failed_charge'] and
