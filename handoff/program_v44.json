@@ -97,5 +97,12 @@
     "all sixty historical quality exclusions"
   ],
   "binary_policy": "Text receipts and hashes are published; actual V43 and V44 binaries are retained in fresh local and cluster local_runs directories. Do not describe a fresh metadata clone as numerical reproduction.",
-  "resume_policy": "Read current handoff, inspect clean branch and source pins, verify actual cluster status. Never rerun completed one-use campaigns. Any new empirical work needs a fresh reviewed program and resource ledger."
+  "resume_policy": "Read current handoff, inspect clean branch and source pins, verify actual cluster status. Never rerun completed one-use campaigns. Any new empirical work needs a fresh reviewed program and resource ledger.",
+  "manuscript": {
+    "source": "reports/manuscript_v44.tex",
+    "working_draft": true,
+    "compilation": "blocked_by_package_download_network_DNS_failure",
+    "visual_layout_verified": false,
+    "pdf_exported": false
+  }
 }

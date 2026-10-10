@@ -42,3 +42,7 @@ Do not rerun completed one-use campaign commands. New numerical work must use a 
 6. independent proof/novelty review and submission-format manuscript revision.
 
 The candidate contribution is exact adaptive code recovery from uncertain compressed evidence with canonical successor-state accounting. Fixed features, cached statistics, stability, and certificate-gated decisions alone are not new. The Exact-Fun primary proof gap is closed, and ExecCert's finite-codebook overlap is acknowledged. No useful-scale or ACL-readiness claim follows from the current tiny development run.
+
+## Manuscript preview status
+
+The saved standalone source was submitted to the built-in Codex LaTeX compiler. Compilation timed out while fetching `amsbsy.sty`: the package relay had network/DNS failures. The source is preserved; successful compilation, rendered layout inspection, and PDF export are unverified. This infrastructure failure does not change empirical results. See `../validation/manuscript_compile_v44.json`.
