@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 .venv/
+.venv-container/
 tmp/
 output/pdf/*.aux
 output/pdf/*.log
