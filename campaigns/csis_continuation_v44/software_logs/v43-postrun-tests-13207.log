@@ -1,0 +1,14 @@
+......F.........
+======================================================================
+FAIL: test_input_inventory_detects_changes_and_rejects_noncanonical_json (research_v43_postrun.test_audit.SupplementalAuditTests.test_input_inventory_detects_changes_and_rejects_noncanonical_json)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/research_v43_postrun/test_audit.py", line 263, in test_input_inventory_detects_changes_and_rejects_noncanonical_json
+    with self.assertRaisesRegex(ValueError, 'changed before receipt'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.426s
+
+FAILED (failures=1)

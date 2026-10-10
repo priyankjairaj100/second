@@ -1,0 +1,23 @@
+13239|second_v46_gpu|COMPLETED|0:0|00:00:05|00:03.577||csis.cn3
+13239.batch|batch|COMPLETED|0:0|00:00:05|00:03.577|1092K|csis.cn3
+13240|second_v46_gpu|FAILED|1:0|00:00:01|00:00.325||csis.cn3
+13240.batch|batch|FAILED|1:0|00:00:01|00:00.325|1092K|csis.cn3
+13241|second_v46_gpu|CANCELLED|0:0|00:00:00|00:00:00||None assigned
+13242|second_v46_gpu|COMPLETED|0:0|00:00:07|00:04.124||csis.cn3
+13242.batch|batch|COMPLETED|0:0|00:00:07|00:04.124|1092K|csis.cn3
+13243|second_v46_gpu|COMPLETED|0:0|00:00:06|00:04.226||csis.cn3
+13243.batch|batch|COMPLETED|0:0|00:00:06|00:04.226|1092K|csis.cn3
+13244|second_v46_gpu|FAILED|1:0|00:00:27|00:25.013||csis.cn3
+13244.batch|batch|FAILED|1:0|00:00:27|00:25.013|1092K|csis.cn3
+13245|second_cpu|COMPLETED|0:0|00:00:02|00:01.364||csis.mn1
+13245.batch|batch|COMPLETED|0:0|00:00:02|00:01.364|3288K|csis.mn1
+13246|second_cpu|COMPLETED|0:0|00:00:02|00:02.424||csis.mn1
+13246.batch|batch|COMPLETED|0:0|00:00:02|00:02.424|3272K|csis.mn1
+13247|second_cpu|COMPLETED|0:0|00:00:22|00:20.797||csis.mn1
+13247.batch|batch|COMPLETED|0:0|00:00:22|00:20.797|3288K|csis.mn1
+13248|second_v47_gpu|COMPLETED|0:0|00:00:11|00:08.608||csis.cn3
+13248.batch|batch|COMPLETED|0:0|00:00:11|00:08.608|1096K|csis.cn3
+13249|second_v47_gpu|COMPLETED|0:0|00:00:05|00:04.996||csis.cn3
+13249.batch|batch|COMPLETED|0:0|00:00:05|00:04.996|1092K|csis.cn3
+13250|second_v47_gpu|COMPLETED|0:0|00:00:27|00:25.510||csis.cn3
+13250.batch|batch|COMPLETED|0:0|00:00:27|00:25.510|1096K|csis.cn3

@@ -1,0 +1,11 @@
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+[33mWARNING:[0m Could not lookup the current user's information: user: unknown userid 1007
+yp_bind_client_create_v3: RPC: Program not registered
+[31mFATAL:  [0m Couldn't determine user account information: user: unknown userid 1007
