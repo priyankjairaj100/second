@@ -47,8 +47,10 @@ def main(plan_path):
 
     def mark(phase,**details):
         # Full solver receipts live in the final result; compact progress only.
-        row=dict(phase=phase,elapsed_ns=time.perf_counter_ns()-start,
-            **{k:v for k,v in details.items() if k not in ('admission','solver')})
+        details={k:v for k,v in details.items() if k not in ('admission','solver')}
+        if 'elapsed_ns' in details:
+            details['component_elapsed_ns']=details.pop('elapsed_ns')
+        row=dict(phase=phase,elapsed_ns=time.perf_counter_ns()-start,**details)
         print(canonical_json(row).decode(),flush=True)
         new(out/f'progress-{mark.count:04d}.json',row)
         mark.count+=1

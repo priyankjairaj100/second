@@ -126,7 +126,12 @@ file-size ceiling of 2 GiB. An RSS allocation and a virtual-address limit constr
 different quantities; neither component's analytical array bound proves complete
 process fit. Record actual worker peak RSS and failed resource outcomes.
 
-The new feasibility phase admits at most 13,000 CPU seconds. The six one-use
+The overall continuation admits at most 13,000 CPU seconds. Attempt A, registered
+at source 604445dce1922f2a7d430e6d3471f8221ef20f80, failed during context-ready
+progress logging before any calibration feature extraction. Its 24 charged CPU
+seconds remain in its settled historical ledger. The corrected fresh campaign B
+therefore admits at most 12,976 CPU seconds; no attempt directory is reused.
+The six one-use
 worker allowances in campaign.py are:
   prepare:    CPU 2400 seconds, wall 3000 seconds
   cached:     CPU 1800 seconds, wall 2400 seconds

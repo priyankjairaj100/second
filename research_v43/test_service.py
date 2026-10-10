@@ -35,6 +35,8 @@ class FixtureService:
         self.provenance = canonical_json({'fixture': True})
         self.load_ns = 0
         self.gram_budget = BUDGET
+        self.mark = mark
+        mark('context_ready', elapsed_ns=123, target_sha256='0'*64)
 
     def records(self, rows):
         return tuple(record(row['id'], row['tokens']) for row in rows)
@@ -51,6 +53,7 @@ class FixtureService:
 
     def solve(self, rows, representation, payloads, grams, trust, telemetry, **kwargs):
         self.events.append(('solve', tuple(r['id'] for r in rows), representation))
+        self.mark('stage_certified', elapsed_ns=456, stage_id='fixture-stage')
         return codes(self.bound), {'admitted': True}
 
     def prepare_payloads(self, rows, values, representation, telemetry):
@@ -64,6 +67,17 @@ class FixtureService:
 
 
 class ServiceIntegrationTests(unittest.TestCase):
+    def test_component_clocks_do_not_collide_with_worker_progress_clock(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self._run(root, self._program(root), 'cold')
+            rows = [json.loads(p.read_bytes()) for p in (root/'cold/outputs').glob('progress-*.json')]
+            context = next(r for r in rows if r['phase']=='context_ready')
+            stage = next(r for r in rows if r['phase']=='stage_certified')
+            self.assertEqual(context['component_elapsed_ns'], 123)
+            self.assertEqual(stage['component_elapsed_ns'], 456)
+            self.assertGreaterEqual(stage['elapsed_ns'], context['elapsed_ns'])
+
     def test_controller_ledger_binds_program_sources_and_literal_worker_command(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory).resolve()

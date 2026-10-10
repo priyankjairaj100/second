@@ -14,7 +14,9 @@ from src.worker_control import WorkerLimits, run_limited
 from src.runtime_contract import capture_runtime_contract
 
 ROOT = Path(__file__).resolve().parents[1]
-CAP = 13000
+OVERALL_CAP = 13000
+PRIOR_FAILED_CHARGE = 24
+CAP = OVERALL_CAP - PRIOR_FAILED_CHARGE
 TRIALS = {
     'prepare': dict(cpu_seconds=2400, wall_seconds=3000),
     'cached': dict(cpu_seconds=1800, wall_seconds=2400),
@@ -62,6 +64,10 @@ def register(directory):
     require(os.environ.get('SLURM_JOB_ID'), 'Registration must bind the actual Slurm runtime')
     directory = Path(directory).resolve()
     require(ROOT in directory.parents and not directory.exists(), 'Campaign must be a fresh repository path')
+    prior=read(ROOT/'local_runs/full-model-v43-20261010-a/budget/ledger.json')['attempts']
+    require(prior and all(r['state']=='settled' for r in prior.values()) and
+        sum(r['charged_cpu_seconds'] for r in prior.values())==PRIOR_FAILED_CHARGE,
+        'The preserved failed attempt debit must match the remaining allowance')
     historical = {str(p.relative_to(ROOT)):sha(p) for folder in ('campaigns','pilots','local_runs')
                   for p in (ROOT/folder).rglob('ledger.json')}
     source_path = ROOT/'campaigns/ci_scale_v39/attempts/data/outputs/records.json'
@@ -86,6 +92,8 @@ def register(directory):
             selection_sha256=sha(selection_path)) for rid in selected},
         normalization=96, tokens_per_record=32, record_count=3, retained_counts=[2,1],
         deletion_order=sorted(selected), trials=TRIALS, phase_cpu_seconds=CAP,
+        continuation_overall_cap=OVERALL_CAP, prior_failed_charge=PRIOR_FAILED_CHARGE,
+        prior_failure='full-model-v43-20261010-a: progress logger keyword collision; 24 CPU seconds settled; no calibration feature extraction reached',
         process_address_space_bytes=16*2**30, file_size_bytes=2*2**30,
         state_scope='Complete packed model, fixed/base targets, retained tokens/provenance and representation payloads; common checkpoint separately counted.',
         statistical_scope='One engineering development root; exposed train articles; no population or confirmation inference.',

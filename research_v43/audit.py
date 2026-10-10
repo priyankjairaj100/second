@@ -92,6 +92,8 @@ def audit(directory, output):
         preparation_worker_ns=results['prepare']['worker_elapsed_ns'],
         preparation_transaction_ns=read(directory/'prepare/transaction.json')['elapsed_ns'],
         oracle_worker_ns=results['oracle']['worker_elapsed_ns'],budget=snapshot,
+        prior_failed_cpu_seconds=program['prior_failed_charge'],
+        total_continuation_cpu_seconds=program['prior_failed_charge']+snapshot['charged_cpu_seconds']['feasibility'],
         shared_checkpoint_bytes=program['shared_checkpoint_bytes'],
         audit_history_bytes=sum(p.stat().st_size for p in directory.rglob('*') if p.is_file()),
         complete_model=True,successive_deletions=2,original_tokens=96,retained_tokens=[64,32],
