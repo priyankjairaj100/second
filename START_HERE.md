@@ -1,3 +1,15 @@
+Current checkpoint: read `docs/ACTIVE_SESSION_V41.md` and `handoff/program_v41.json` first.
+V39 and V40 are complete: all seventeen and twelve stage outputs match, respectively.
+Read `docs/NATIVE_SCALE_RESULTS_V40.md` and `docs/RESEARCH_DECISION_V41.md` for all results and limits.
+Native Gram wins the large-retention case; compression offers a narrower payload/latency tradeoff.
+All new ledgers are settled. No worker is active and no further empirical trial is registered.
+Full-model integration needs stage-specific solvers and reviewed wide-stage admission.
+The complete empirical program and ACL manuscript remain incomplete.
+Preserve historical sources, ledgers, losses, and all sixty quality exclusions.
+Never rerun old workflows. No paid compute, force-push, or subagent delegation is authorized.
+
+---
+
 Current checkpoint: read `docs/ACTIVE_SESSION_V40.md` and `handoff/program_v40.json` first.
 V39 is complete; all seventeen stage outputs match. Read `docs/SCALE_RESULTS_V39.md`.
 Gram deletion defeats the proposed cached solver at the largest retained size.

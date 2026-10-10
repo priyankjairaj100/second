@@ -1,0 +1,198 @@
+{
+  "schema": "calibration-program-handoff-v41",
+  "updated_utc": "2026-10-10",
+  "repository": "https://github.com/priyankjairaj100/second",
+  "status": "V39_and_V40_complete_verified; no_active_or_registered_next_worker",
+  "program_complete": false,
+  "acl_submission_ready": false,
+  "read_first": [
+    "docs/ACTIVE_SESSION_V41.md",
+    "docs/NATIVE_SCALE_RESULTS_V40.md",
+    "docs/RESEARCH_DECISION_V41.md",
+    "docs/FULL_MODEL_ADMISSION_V41.md",
+    "docs/CLAIM_BOUNDARIES_V41.md",
+    "docs/EXACT_FUN_RETRIEVAL_V41.md"
+  ],
+  "latest_empirical_workflow": "https://github.com/priyankjairaj100/second/actions/runs/38025361543",
+  "latest_empirical_source_commit": "2ba58fcb4e7c8f9e81441f4d2b445bd92e6db717",
+  "registration_publication": "43dad849eb61b53b43a6f0c47d58b1babd27ad93",
+  "final_workflow_evidence_commit": "6a7ba25e1a2c11f39377b7a60e492834475ffcd7",
+  "latest_evidence_prefix": "campaigns/ci_native_scale_v40",
+  "v39": {
+    "observations": 17,
+    "all_codes_exact": true,
+    "model_cpu_charge": 877,
+    "data_cpu_charge": 5,
+    "all_new_ledgers_settled": true,
+    "local_metadata_audit": "validation/scale_metadata_audit_v40.json",
+    "missing_derived_binaries": 77,
+    "largest_case_primal_over_token_speedup": 2.759908356,
+    "strongest_baseline": "Gram deletion at 1536 retained tokens; faster and smaller than cached primal and compressed 48-bit",
+    "compressed_40_middle_case": "20.2372% payload reduction with 9.5632% higher latency versus cached primal; one development observation",
+    "compressed_32_middle_case": "Certificate refused; exact fresh fallback succeeded; all cost included"
+  },
+  "v40": {
+    "observations": 12,
+    "all_codes_exact": true,
+    "all_source_grams_match_python": true,
+    "all_retained_grams_equal": true,
+    "compressed_40_acceptances": 2,
+    "compressed_40_fallbacks": 0,
+    "retained_tokens": [
+      768,
+      1536
+    ],
+    "original_tokens": 1664,
+    "normalization": 1664,
+    "stage": "block.0000.qkv",
+    "stage_code_count": 1769472,
+    "paired_repetitions": 1,
+    "confirmation": false,
+    "full_model": false,
+    "successive_sequence": false,
+    "native_preparation_accumulation_speedup": 5.833634174497593,
+    "cases": {
+      "1536": {
+        "cached_primal": {
+          "status": "certified",
+          "component_elapsed_ns": 34310553484,
+          "component_state_bytes": 9205544,
+          "fallback": false,
+          "code_sha256": "c5aa9c3c0d5c01569192c17ec8d52a7287394b6e840000e2f542878b79eb6058"
+        },
+        "gram_delete_native": {
+          "status": "certified",
+          "component_elapsed_ns": 18835432439,
+          "component_state_bytes": 6256852,
+          "fallback": false,
+          "code_sha256": "c5aa9c3c0d5c01569192c17ec8d52a7287394b6e840000e2f542878b79eb6058"
+        },
+        "gram_delete_python": {
+          "status": "certified",
+          "component_elapsed_ns": 22515107369,
+          "component_state_bytes": 6256852,
+          "fallback": false,
+          "code_sha256": "c5aa9c3c0d5c01569192c17ec8d52a7287394b6e840000e2f542878b79eb6058"
+        },
+        "gram_fresh_native": {
+          "status": "certified",
+          "component_elapsed_ns": 40863567348,
+          "component_state_bytes": 6256851,
+          "fallback": false,
+          "code_sha256": "c5aa9c3c0d5c01569192c17ec8d52a7287394b6e840000e2f542878b79eb6058"
+        },
+        "streamed_compressed_40": {
+          "status": "certified",
+          "component_elapsed_ns": 36965633851,
+          "component_state_bytes": 7152668,
+          "fallback": false,
+          "code_sha256": "c5aa9c3c0d5c01569192c17ec8d52a7287394b6e840000e2f542878b79eb6058"
+        },
+        "streamed_primal": {
+          "status": "certified",
+          "component_elapsed_ns": 34576271418,
+          "component_state_bytes": 9205544,
+          "fallback": false,
+          "code_sha256": "c5aa9c3c0d5c01569192c17ec8d52a7287394b6e840000e2f542878b79eb6058"
+        }
+      },
+      "768": {
+        "cached_primal": {
+          "status": "certified",
+          "component_elapsed_ns": 23020063557,
+          "component_state_bytes": 5071731,
+          "fallback": false,
+          "code_sha256": "4d5e19d771478b73c6e9fb19c7ff81076f152d2d9f83855526deceeb56e87ef3"
+        },
+        "gram_delete_native": {
+          "status": "certified",
+          "component_elapsed_ns": 30136403415,
+          "component_state_bytes": 6255273,
+          "fallback": false,
+          "code_sha256": "4d5e19d771478b73c6e9fb19c7ff81076f152d2d9f83855526deceeb56e87ef3"
+        },
+        "gram_delete_python": {
+          "status": "certified",
+          "component_elapsed_ns": 54093522542,
+          "component_state_bytes": 6255273,
+          "fallback": false,
+          "code_sha256": "4d5e19d771478b73c6e9fb19c7ff81076f152d2d9f83855526deceeb56e87ef3"
+        },
+        "gram_fresh_native": {
+          "status": "certified",
+          "component_elapsed_ns": 28041307590,
+          "component_state_bytes": 6255272,
+          "fallback": false,
+          "code_sha256": "4d5e19d771478b73c6e9fb19c7ff81076f152d2d9f83855526deceeb56e87ef3"
+        },
+        "streamed_compressed_40": {
+          "status": "certified",
+          "component_elapsed_ns": 25387995231,
+          "component_state_bytes": 4045355,
+          "fallback": false,
+          "code_sha256": "4d5e19d771478b73c6e9fb19c7ff81076f152d2d9f83855526deceeb56e87ef3"
+        },
+        "streamed_primal": {
+          "status": "certified",
+          "component_elapsed_ns": 23571554824,
+          "component_state_bytes": 5071731,
+          "fallback": false,
+          "code_sha256": "4d5e19d771478b73c6e9fb19c7ff81076f152d2d9f83855526deceeb56e87ef3"
+        }
+      }
+    },
+    "cpu_charges_seconds": {
+      "data": 4,
+      "model": 506
+    },
+    "phase_caps_seconds": {
+      "data": 122,
+      "model": 1700
+    },
+    "all_new_ledgers_settled": true,
+    "missing_derived_binaries": 46,
+    "local_binary_reverification_complete": false,
+    "metadata_audit": "validation/native_scale_metadata_audit_v41.json"
+  },
+  "software_fixtures": {
+    "v40_passed": 26,
+    "empirical_data_used": false
+  },
+  "next_empirical_campaign_registered": false,
+  "active_worker": false,
+  "next_required": [
+    "stage-specific solver and representation integration",
+    "review wide-stage resource admission",
+    "independent canonical state oracle",
+    "fresh bounded full-model pilot with strong controls",
+    "successive deletions and lifetime accounting",
+    "second model and independent roots",
+    "untouched quality",
+    "mechanism ablations",
+    "prospective frozen confirmation",
+    "closest-theorem audit",
+    "manuscript and reproducibility package"
+  ],
+  "theory": "Conditional exactness and work results. No unconditional wall-time or language-quality theorem.",
+  "novelty": "Candidate exact discrete-code recovery from uncertain calibration evidence; useful full-service tradeoff remains unresolved.",
+  "literature": {
+    "exec_cert_full_text_read": true,
+    "exec_cert_implementation_reproduced": false,
+    "exact_fun_indexed_algorithm_passage_read": true,
+    "exact_fun_complete_primary_proof_read": false
+  },
+  "automatic_retry": false,
+  "paid_compute": false,
+  "force_push": false,
+  "subagents_authorized": false,
+  "preserve": [
+    "src/*.py",
+    "scripts/run_*.py",
+    "historical sources and ledgers",
+    "unresolved historical holds",
+    "all failures and losses",
+    "sixty quality exclusions"
+  ],
+  "binary_policy": "Actual files audited on CI before shutdown. Published hashes and text receipts do not reconstruct absent binaries.",
+  "resume_policy": "Fetch latest main. Inspect status. Use fresh registrations, runtime identities, paths, and ledgers for new work. Never rerun historical attempts."
+}
