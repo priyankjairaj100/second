@@ -93,3 +93,12 @@ canonical successor-state verification, and a fresh empirical registration are r
 
 Preserve all sixty historical quality exclusions. Reacquiring the same evaluation articles does not make them untouched.
 Keep full logs on disk and use compact summaries in chat. No credentials belong in code or evidence publications.
+
+
+## Validated GPU likelihood path, V47
+
+The A100 evaluator now passes all 32 already exposed V44 likelihood comparisons at a frozen absolute mean-NLL tolerance of 1e-8. Exact calibration remains in the pinned CPU container. See `../docs/GPU_LIKELIHOOD_VALIDATION_V47.md`.
+
+The CPU snapshot export avoids constructing the certified CPU decoder in the incompatible shared GPU runtime. Its 964.5 MB parameter archive remains under `local_runs/cpu-parameters-v47-20261010-a/outputs/` on the cluster. Both the export and successful GPU parity ledgers are settled; do not rerun those one-use directories. Future evaluations require a fresh registration and preserved exclusions.
+
+The larger V45 CPU experiment is independently active. See `../docs/ACTIVE_SESSION_V47.md` for job IDs and frozen source boundaries.

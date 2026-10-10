@@ -1,3 +1,5 @@
+Current continuation (10 October 2026): **V47 GPU likelihood parity passed; V45 larger-model experiment is running.** Read [the active handoff](docs/ACTIVE_SESSION_V47.md) and [GPU validation](docs/GPU_LIKELIHOOD_VALIDATION_V47.md). V43/V44 and earlier status statements below retain their historical cutoffs. No larger-scale or ACL-readiness result is claimed yet.
+
 # Current continuation: V44, 10 October 2026
 
 Read [the current handoff](docs/ACTIVE_SESSION_V44.md), [complete-service results](docs/COMPLETE_SERVICE_RESULTS_V43.md), and [the current quality diagnostic](docs/EXPOSED_QUALITY_RESULTS_V44.md) first.
