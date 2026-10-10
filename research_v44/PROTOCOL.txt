@@ -32,6 +32,14 @@ full_precision, nearest_rounding, fixed_feature, sequential. Likelihoods use
 ordinary NumPy binary64 BLAS/nonlinear arithmetic and are not certified finite
 inference. No GPU equivalence is assumed. Full precision retains the original
 checkpoint matrices; nearest rounding uses the same base-only four-bit grids.
+The pinned checkpoint uses gelu_new, implemented by NumPy tanh. SciPy is only
+needed by the evaluator's unused gelu branch; its absence is recorded explicitly
+in the runtime identity, while missing required or broken packages still refuse.
+Registration checks the pinned gelu_new activation. Registration software job
+13211 failed on an unconditional SciPy import before any quality worker or ledger
+was created; dependent job 13212 never ran. Preserve those logs and source 38ff2ae.
+The correction changes dependency fingerprinting, not evaluation or thresholds;
+use a fresh registration directory after its software check passes.
 
 Evaluate full precision and nearest on all eight exposed articles first, with
 alternating two-model order. Compare all sixteen losses with the old V30 receipt

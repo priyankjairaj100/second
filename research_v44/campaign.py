@@ -52,7 +52,16 @@ def runtime():
     """Pin the declared Python runtime, numerical binaries, and compiler."""
     result = dict(python=capture_runtime_contract(), packages={})
     for name in ('numpy', 'scipy', 'gmpy2'):
-        module = importlib.import_module(name)
+        try:
+            module = importlib.import_module(name)
+        except ModuleNotFoundError as error:
+            # The pinned gelu_new evaluator uses NumPy tanh, not scipy.erf.
+            # Record absence explicitly; required or broken packages still fail.
+            if name != 'scipy' or error.name != 'scipy':
+                raise
+            result['packages'][name] = dict(installed=False,
+                required_for_pinned_gelu_new_route=False)
+            continue
         origin = Path(module.__file__).resolve()
         folder = origin.parent
         files = {origin}
@@ -153,6 +162,8 @@ def validate_inputs(inputs):
     from research_v38.bootstrap_target import CHECKPOINT_HASHES
     require(inputs['checkpoint_config']['sha256'] == CHECKPOINT_HASHES['config.json']
         and inputs['checkpoint_weights']['sha256'] == CHECKPOINT_HASHES['model.safetensors'], 'Common checkpoint changed')
+    require(read(paths['checkpoint_config'])['activation_function'] == 'gelu_new',
+        'This diagnostic requires the pinned NumPy gelu_new activation route')
     return p, records, history
 
 

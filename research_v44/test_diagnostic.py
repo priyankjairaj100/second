@@ -5,6 +5,7 @@ import math
 import os
 from pathlib import Path
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -161,6 +162,39 @@ class DiagnosticTests(unittest.TestCase):
                 result=json.loads((root/'quality/transaction.json').read_bytes())
                 self.assertEqual(result['budget']['charged_cpu_seconds']['development'],2)
                 with self.assertRaisesRegex(ValueError,'already attempted'):campaign.run(root)
+
+
+class RuntimeDependencyTests(unittest.TestCase):
+    def test_absent_optional_scipy_is_recorded_but_required_or_broken_packages_refuse(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            modules={}
+            for name in ('numpy','gmpy2'):
+                path=root/name/'__init__.py';path.parent.mkdir();path.write_text('# fixture\n')
+                modules[name]=SimpleNamespace(__file__=str(path),__version__='fixture')
+            compiler=root/'cc';compiler.write_text('fixture compiler')
+            def imported(name):
+                if name=='scipy':
+                    raise ModuleNotFoundError("No module named 'scipy'",name='scipy')
+                return modules[name]
+            with patch.object(campaign,'capture_runtime_contract',return_value={'fixture':True}), \
+                    patch.object(campaign.importlib,'import_module',side_effect=imported), \
+                    patch.object(campaign.shutil,'which',return_value=str(compiler)), \
+                    patch.object(campaign.subprocess,'check_output',return_value='fixture compiler'), \
+                    patch.object(np,'show_config',side_effect=lambda:print('fixture')):
+                runtime=campaign.runtime()
+                self.assertEqual(runtime['packages']['scipy'],dict(installed=False,
+                    required_for_pinned_gelu_new_route=False))
+                self.assertEqual(runtime['packages']['numpy']['version'],'fixture')
+                with patch.object(campaign.importlib,'import_module',
+                        side_effect=ModuleNotFoundError('numpy missing',name='numpy')):
+                    with self.assertRaises(ModuleNotFoundError):campaign.runtime()
+                def broken(name):
+                    if name=='scipy':
+                        raise ModuleNotFoundError('broken dependency',name='broken_dependency')
+                    return modules[name]
+                with patch.object(campaign.importlib,'import_module',side_effect=broken):
+                    with self.assertRaises(ModuleNotFoundError):campaign.runtime()
 
 
 if __name__=='__main__':
