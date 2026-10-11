@@ -1,3 +1,11 @@
+# Current environment status: V50, 11 October 2026
+
+Access is restored. Fresh Slurm job 13271 passed on an A100 80GB PCIe with PyTorch 2.10.0+cu128. V45 preparation is terminally failed at its original CPU limit; jobs 13229–13235 were cancelled. V49/V50 synthetic software profiles completed and are settled. Exact calibration remains on the pinned CPU runtime; the new normal-neighbor kernel has software validation but no full-model admission. Read [the current handoff](../docs/ACTIVE_SESSION_V50.md).
+
+The full V47 parameter NPZ now has a locally verified copy. Do not rerun completed one-use campaigns or the failed V45 program. The snapshots below are historical; current availability and next gates are stated above.
+
+---
+
 # Current environment status: V48, 11 October 2026
 
 The cluster is currently unreachable and the user confirmed access is unavailable. Stop connection attempts until access returns. V45 jobs 13228–13235 have an unknown terminal outcome; do not duplicate or cancel them. Read [the active handoff](../docs/ACTIVE_SESSION_V48.md) and [read-only recovery instructions](../research_v48/README.md).

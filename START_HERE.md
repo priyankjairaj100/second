@@ -1,3 +1,7 @@
+Current continuation (11 October 2026): **Cluster/GPU access restored; V45 preparation failed at its frozen CPU limit.** The failure is preserved. V49 diagnosed a coefficient-certification bottleneck; V50 passed exact-operation tests and improved fixed synthetic case times with matching codes. No full-model recovery is admitted or active. Read [the current handoff](docs/ACTIVE_SESSION_V50.md) and [machine-readable status](handoff/program_v50.json). The GPU parameter archive now has a verified local copy. All statements below retain their historical cutoffs.
+
+---
+
 Current continuation (11 October 2026): **Cluster unavailable; V45 terminal outcome unknown.** The completed V43 archive passed an additional offline integrity audit; V47 GPU likelihood parity remains verified. Read [the active handoff](docs/ACTIVE_SESSION_V48.md) and [offline reporting instructions](research_v48/README.md). No larger-model result or ACL readiness is claimed. V48 changes are published locally/GitHub only; the cluster was last confirmed at `996eec3`. All status statements below retain their historical cutoffs.
 
 ---
