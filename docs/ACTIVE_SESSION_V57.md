@@ -1,3 +1,22 @@
+# Connection update and next-checkpoint preparation
+
+At 17:06 UTC on 11 October 2026, a bounded SSH reconnect timed out before login.
+Current scheduler state is therefore unverified. The last successful observation,
+at 16:38:53 UTC, showed hybrid 13313 running with 19 certified stages for its
+first request and no scheduler failure. Preparation, cached repair, and cold
+reconstruction were complete. The remaining comparisons and final audits were
+pending, as were V55 quality and V56 GPU parity. Do not infer their present status
+from this older snapshot, or resubmit the existing dependency chain.
+
+`docs/NEXT_CHECKPOINT_ADMISSION_DRAFT.md` records the implementation and admission
+work needed for a possible second checkpoint. It is a planning checklist, not
+a registration or launch. Expansion remains conditional on the useful-tradeoff
+gate in `docs/RESEARCH_DECISION_V41.md`. No numerical source, threshold, input,
+ledger, or experiment was changed. This documentation update must be synchronized
+to the cluster when access returns; it does not change frozen worker sources.
+
+---
+
 # Cold reconstruction completed; hybrid comparison running
 
 Snapshot: 2026-10-11T16:10:07.368558+00:00. Preparation 13310, cached repair 13311 and cold
