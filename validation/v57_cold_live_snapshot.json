@@ -1,0 +1,262 @@
+{
+  "schema": "campaign-live-progress-v57",
+  "captured_at_utc": "2026-10-11T16:10:07.368558+00:00",
+  "status": "campaign_in_progress",
+  "published_cluster_commit": "d7192d7881e839db30101652669d497db1f764cc",
+  "remote_worktree_clean": true,
+  "trials": {
+    "prepare": {
+      "completion_present": true,
+      "observed_phases": {
+        "context_ready": 1,
+        "source_replayed": 13,
+        "stage_certified": 24,
+        "payload_stage": 72
+      },
+      "latest_progress": {
+        "elapsed_ns": 6637547965048,
+        "phase": "payload_stage",
+        "representation": "hybrid_gram",
+        "stage_id": "block.0005.mlp_down"
+      },
+      "unreadable_progress": [],
+      "completion_status": "complete",
+      "worker_elapsed_ns": 6668719487722
+    },
+    "cached": {
+      "completion_present": true,
+      "observed_phases": {
+        "context_ready": 1,
+        "stage_certified": 48,
+        "request_complete": 2
+      },
+      "latest_progress": {
+        "elapsed_ns": 4913954414500,
+        "phase": "request_complete",
+        "request_elapsed_ns": 899972086670,
+        "step": 2
+      },
+      "unreadable_progress": [],
+      "completion_status": "complete",
+      "worker_elapsed_ns": 4913955099450
+    },
+    "cold": {
+      "completion_present": true,
+      "observed_phases": {
+        "context_ready": 1,
+        "source_replayed": 18,
+        "payload_stage": 48,
+        "stage_certified": 48,
+        "request_complete": 2
+      },
+      "latest_progress": {
+        "elapsed_ns": 6930549825781,
+        "phase": "request_complete",
+        "request_elapsed_ns": 1547697139420,
+        "step": 2
+      },
+      "unreadable_progress": [],
+      "completion_status": "complete",
+      "worker_elapsed_ns": 6930550522433
+    },
+    "hybrid": {
+      "completion_present": false,
+      "observed_phases": {
+        "context_ready": 1,
+        "source_replayed": 1,
+        "stage_certified": 7
+      },
+      "latest_progress": {
+        "certificate_refusal": null,
+        "code_sha256": "63482ef12d23c04c53cdc84a0149b5e38cbea1416531d3ed624de3e4e6a9d7d4",
+        "component_elapsed_ns": 13674929427,
+        "elapsed_ns": 861812468201,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "direct_gram",
+        "stage_id": "block.0001.mlp_up"
+      },
+      "unreadable_progress": []
+    },
+    "compressed": {
+      "completion_present": false,
+      "observed_phases": {},
+      "latest_progress": null,
+      "unreadable_progress": []
+    },
+    "oracle": {
+      "completion_present": false,
+      "observed_phases": {},
+      "latest_progress": null,
+      "unreadable_progress": []
+    }
+  },
+  "terminal_audits_present": {
+    "artifact-audit.json": false,
+    "postrun-audit.json": false
+  },
+  "v57_prefix_audit_present": true,
+  "conditional_v55_registration_exists": false,
+  "conditional_v56_registration_exists": false,
+  "frozen_source_bindings": {
+    "v54": {
+      "files": 386,
+      "changed": []
+    },
+    "v55": {
+      "files": 399,
+      "changed": []
+    },
+    "v56": {
+      "files": 409,
+      "changed": []
+    }
+  },
+  "accounting": "JobID|State|ExitCode|Elapsed|TotalCPU|MaxRSS\n13310|COMPLETED|0:0|01:51:13|01:50:50|\n13310.batch|COMPLETED|0:0|01:51:13|01:50:50|2043524K\n13311|COMPLETED|0:0|01:21:59|01:21:40|\n13311.batch|COMPLETED|0:0|01:21:59|01:21:40|2246004K\n13312|COMPLETED|0:0|01:55:36|01:55:09|\n13312.batch|COMPLETED|0:0|01:55:36|01:55:09|2325700K\n13313|RUNNING|0:0|00:22:19|00:00:00|\n13313.batch|RUNNING|0:0|00:22:19|00:00:00|\n13314|PENDING|0:0|00:00:00|00:00:00|\n13315|PENDING|0:0|00:00:00|00:00:00|\n13316|PENDING|0:0|00:00:00|00:00:00|\n13317|PENDING|0:0|00:00:00|00:00:00|\n13325|PENDING|0:0|00:00:00|00:00:00|\n13326|PENDING|0:0|00:00:00|00:00:00|\n13327|PENDING|0:0|00:00:00|00:00:00|\n13329|PENDING|0:0|00:00:00|00:00:00|\n13352|COMPLETED|0:0|00:04:46|04:42.624|\n13352.batch|COMPLETED|0:0|00:04:46|04:42.624|1220480K\n",
+  "scheduler_jobs": {
+    "13310": {
+      "JobID": "13310",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "01:51:13",
+      "TotalCPU": "01:50:50",
+      "MaxRSS": ""
+    },
+    "13311": {
+      "JobID": "13311",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "01:21:59",
+      "TotalCPU": "01:21:40",
+      "MaxRSS": ""
+    },
+    "13312": {
+      "JobID": "13312",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "01:55:36",
+      "TotalCPU": "01:55:09",
+      "MaxRSS": ""
+    },
+    "13313": {
+      "JobID": "13313",
+      "State": "RUNNING",
+      "ExitCode": "0:0",
+      "Elapsed": "00:22:19",
+      "TotalCPU": "00:00:00",
+      "MaxRSS": ""
+    },
+    "13314": {
+      "JobID": "13314",
+      "State": "PENDING",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:00",
+      "TotalCPU": "00:00:00",
+      "MaxRSS": ""
+    },
+    "13315": {
+      "JobID": "13315",
+      "State": "PENDING",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:00",
+      "TotalCPU": "00:00:00",
+      "MaxRSS": ""
+    },
+    "13316": {
+      "JobID": "13316",
+      "State": "PENDING",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:00",
+      "TotalCPU": "00:00:00",
+      "MaxRSS": ""
+    },
+    "13317": {
+      "JobID": "13317",
+      "State": "PENDING",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:00",
+      "TotalCPU": "00:00:00",
+      "MaxRSS": ""
+    },
+    "13325": {
+      "JobID": "13325",
+      "State": "PENDING",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:00",
+      "TotalCPU": "00:00:00",
+      "MaxRSS": ""
+    },
+    "13326": {
+      "JobID": "13326",
+      "State": "PENDING",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:00",
+      "TotalCPU": "00:00:00",
+      "MaxRSS": ""
+    },
+    "13327": {
+      "JobID": "13327",
+      "State": "PENDING",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:00",
+      "TotalCPU": "00:00:00",
+      "MaxRSS": ""
+    },
+    "13329": {
+      "JobID": "13329",
+      "State": "PENDING",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:00",
+      "TotalCPU": "00:00:00",
+      "MaxRSS": ""
+    },
+    "13352": {
+      "JobID": "13352",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:04:46",
+      "TotalCPU": "04:42.624",
+      "MaxRSS": ""
+    }
+  },
+  "active_jobs": [
+    "13313"
+  ],
+  "pending_jobs": [
+    "13314",
+    "13315",
+    "13316",
+    "13317",
+    "13325",
+    "13326",
+    "13327",
+    "13329"
+  ],
+  "scheduler_failure_jobs": [],
+  "terminal_receipts": {
+    "v54_primary_audit": {
+      "present": false
+    },
+    "v54_supplemental_audit": {
+      "present": false
+    },
+    "v55_completion": {
+      "present": false
+    },
+    "v55_audit": {
+      "present": false
+    },
+    "v56_completion": {
+      "present": false
+    },
+    "v56_audit": {
+      "present": false
+    }
+  },
+  "verification_scope": "Read-only progress and receipt inspection. This snapshot does not execute final artifact audits or infer favorable scientific outcomes from scheduler success.",
+  "complete_campaign_verified": null,
+  "quality_for_new_model_verified": null,
+  "gpu_parity_for_new_model_verified": null,
+  "confirmation": false,
+  "acl_ready": false
+}

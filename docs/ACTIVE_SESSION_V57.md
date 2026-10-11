@@ -1,3 +1,46 @@
+# Cold reconstruction completed; hybrid comparison running
+
+Snapshot: 2026-10-11T16:10:07.368558+00:00. Preparation 13310, cached repair 13311 and cold
+reconstruction 13312 are complete. Hybrid 13313 is running; compressed 13314,
+fresh oracle 13315, final audits 13316--13317, CPU quality 13325--13327 and GPU
+parity 13329 remain queued. Do not resubmit the one-use chain.
+
+Cold finished both requests with scheduler exit 0:0 and wall time 1:55:36.
+`validation/v57_cold_metadata_check.json` verifies 136 copied metadata files,
+386 source commitments, sealed controller artifacts, declared/applied limits,
+request and budget bindings, and the selected settled 6,898-CPU-second debit.
+The three completed numerical worker charges total 18,430 CPU seconds.
+The existing 11,532-CPU-second V57 prefix audit still covers preparation/cache
+only; its scope is not extended to cold artifacts by this bookkeeping check.
+
+Cold completion metadata reports 24 stages per request, 1,536/768 retained
+tokens, 288/144 neural stage-record pairs and request times 5,355.650652324 /
+1,547.697139420 seconds. These are two different requests, not replications.
+The controller seal does not bind the completion JSON or reported model hashes.
+No output binary was copied, rehashed or parsed here, and no fresh-oracle
+comparison or full-campaign success is claimed. Both final V54 audits remain
+mandatory before interpreting complete model/state or speed/storage results.
+
+The immutable metadata-only archive is
+`campaigns/csis_cold_v54_metadata_20261011.tar.gz` (SHA-256
+`a62863548c6007c8b2be99788bdf1bb05d95f1d60ecb6281300467cde5710c8d`). Extract it into a fresh temporary directory and
+run `python3 -B validation/check_v54_cold_metadata.py EXTRACTED_DIRECTORY` from
+this checkout to repeat the offline metadata checks. This performs no inference
+or calibration. Its copied ledger is a historical snapshot with a later active
+reservation, not the current live ledger. The collection manifest preserves
+its original scheduler snapshot, including then-unavailable aggregate CPU time.
+`validation/v57_cold_live_snapshot.json` records the later scheduler observation.
+
+All 386/399/409 frozen V54/V55/V56 source commitments still match. Frozen sources,
+registrations, ledgers and thresholds were not edited, and no empirical job was
+added. CPU quality and GPU audits can verify valid adverse outcomes; inspect
+`development_guards_pass` and `parity_passed` separately from scheduler/audit
+success. The manuscript keeps its earlier evidence cutoff while final results
+are pending. It is not submission-ready. Earlier negative evidence and all 60
+quality exclusions remain intact.
+
+---
+
 # Active session: completed preparation/cache prefix, remaining comparisons running
 
 Updated 11 October 2026, snapshot 2026-10-11T14:53:48.314278+00:00. Read `handoff/program_v57.json`

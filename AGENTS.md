@@ -1,3 +1,7 @@
+Current checkpoint (11 October 2026): **cold reconstruction 13312 completed; hybrid 13313 is running.** Read `docs/ACTIVE_SESSION_V57.md` and `handoff/program_v57.json`. The cold receipt check verifies metadata and CPU accounting only; both final model/state audits remain pending. Never resubmit or alter frozen sources/ledgers. Earlier cutoffs follow.
+
+---
+
 Current continuation (11 October 2026): **V54 preparation 13310 and cached repair 13311 completed and passed a read-only partial artifact/debit audit. Cold reconstruction 13312 is running; remaining arms, oracle, final audits, quality and GPU checks remain queued.** Read [the current handoff](docs/ACTIVE_SESSION_V57.md) and [status](handoff/program_v57.json). Partial verification does not establish fresh-oracle equality, speedup, quality or final campaign success. Never rerun one-use launchers or alter frozen sources/ledgers. Historical cutoffs follow.
 
 ---

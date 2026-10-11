@@ -37,7 +37,7 @@
   "last_connection_result": "single_password_reconnection_succeeded",
   "authentication_attempted": true,
   "remote_commands_executed_this_continuation": true,
-  "next_action": "Read-only check existing V54 cold13312 and later jobs. Preparation and cached outputs passed V57 partial artifact/debit audit; this does not replace either final V54 audit or prove fresh-oracle equality. Never relaunch existing jobs. Verify all completed arms and final audits before interpreting speed/storage. V55 and V56 remain conditional. Preserve failures, unexecuted guards and live reservations; update the existing manuscript only from actual evidence.",
+  "next_action": "Read-only inspect existing hybrid13313 and later jobs. Cold13312 completed; its copied metadata and sealed CPU accounting are checked, not actual output binaries or oracle equality. Preserve the existing chain. Require both final V54 audits before full-model comparisons; V55/V56 admit valid adverse outcomes. Do not resubmit or rewrite frozen sources, registrations or ledgers.",
   "offline_reporting": "research_v48/README.md",
   "offline_historical_validation": "validation/v48_v43_full_archive.json",
   "v43_copied_inputs_rehashed": 138,
@@ -120,7 +120,7 @@
   "v53_status": "registration_failed_before_numerical_execution",
   "v53_registration_job": "13299",
   "v53_tests_passed": 70,
-  "v54_status": "prepare_and_cached_completed_cold_running",
+  "v54_status": "prepare_cached_cold_completed_hybrid_running",
   "v54_software_job": "13308",
   "v54_tests_passed": 76,
   "v54_registration_job": "13309",
@@ -165,7 +165,7 @@
       "wall_seconds": 18000
     }
   },
-  "current_status_capture_utc": "2026-10-11T14:53:48.314278+00:00",
+  "current_status_capture_utc": "2026-10-11T16:10:07.368558+00:00",
   "v54_complete_model_verified": false,
   "v55_status": "conditionally_queued_not_yet_registered",
   "v55_source_commit": "792400b5518442baf57c1890f9ec01fd443b9382",
@@ -199,5 +199,10 @@
   "v54_prepare_charged_cpu_seconds": 6640,
   "v54_cached_charged_cpu_seconds": 4892,
   "v54_completed_prefix_cpu_seconds": 11532,
-  "v54_original_and_cached_artifacts_verified": true
+  "v54_original_and_cached_artifacts_verified": true,
+  "v54_cold_charged_cpu_seconds": 6898,
+  "v54_three_completed_workers_cpu_seconds": 18430,
+  "v54_cold_metadata_check": "validation/v57_cold_metadata_check.json",
+  "v54_cold_output_binaries_verified": false,
+  "v54_cold_archive": "campaigns/csis_cold_v54_metadata_20261011.tar.gz"
 }
