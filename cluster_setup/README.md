@@ -1,3 +1,13 @@
+# Current environment status: V48, 11 October 2026
+
+The cluster is currently unreachable and the user confirmed access is unavailable. Stop connection attempts until access returns. V45 jobs 13228–13235 have an unknown terminal outcome; do not duplicate or cancel them. Read [the active handoff](../docs/ACTIVE_SESSION_V48.md) and [read-only recovery instructions](../research_v48/README.md).
+
+The last confirmed remote commit is `996eec3e9c5fff3f2a1367e1dc88f7ea35bdf58b`; V48 additions have not been synchronized remotely. The pinned CPU environment and A100 float64 likelihood parity were verified previously. Exact calibration remains on the CPU. Existing one-use registrations and numerical sources remain frozen.
+
+The notes below are historical snapshots; their statements that jobs are running or GPU parity is pending are superseded by this paragraph.
+
+---
+
 # Current local and cluster environment: V44
 
 Use `docs/ACTIVE_SESSION_V44.md` and `handoff/program_v44.json` for current results and restart instructions. The original V42 setup notes below retain their historical cutoff; the complete V43 service now exists and its tiny two-deletion pilot passed.

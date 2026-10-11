@@ -1,3 +1,7 @@
+Current continuation (11 October 2026): **Cluster unavailable; V45 terminal outcome unknown.** The completed V43 archive passed an additional offline integrity audit; V47 GPU likelihood parity remains verified. Read [the active handoff](docs/ACTIVE_SESSION_V48.md) and [offline reporting instructions](research_v48/README.md). No larger-model result or ACL readiness is claimed. V48 changes are published locally/GitHub only; the cluster was last confirmed at `996eec3`. All status statements below retain their historical cutoffs.
+
+---
+
 Current continuation (10 October 2026): **V47 GPU likelihood parity passed; V45 larger-model experiment is running.** Read [the active handoff](docs/ACTIVE_SESSION_V47.md) and [GPU validation](docs/GPU_LIKELIHOOD_VALIDATION_V47.md). V43/V44 and earlier status statements below retain their historical cutoffs. No larger-scale or ACL-readiness result is claimed yet.
 
 # Current continuation: V44, 10 October 2026
