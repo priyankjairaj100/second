@@ -1,3 +1,7 @@
+Current continuation (11 October 2026): **V54 full-model preparation13310 is running; CPU quality13325--13327 and GPU parity13329 are conditionally queued after the full-model audits.** All18 new CPU checks and12 CUDA checks passed with zero skips. Read [the current handoff](docs/ACTIVE_SESSION_V56.md) and [machine-readable status](handoff/program_v56.json). No larger-model quality/GPU result is verified yet. Never rerun one-use launchers or change frozen sources/ledgers. Historical checkpoints below retain their cutoffs.
+
+---
+
 Current continuation (11 October 2026): **V54 full-model preparation is running as Slurm 13310; controls, fresh oracle and both audits are queued through 13317.** All 76 Linux checks and data-archive admission passed. Read [the current handoff](docs/ACTIVE_SESSION_V54.md) and [machine-readable status](handoff/program_v54.json). Never rerun the one-use launchers. V53's pre-numerical registration failure and all earlier negative results are preserved. Numerical completion, actual-model quality and ACL readiness remain unverified. Statements below retain their historical cutoffs.
 
 ---
