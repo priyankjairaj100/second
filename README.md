@@ -1,3 +1,7 @@
+Current continuation (11 October 2026): **V51 point codes match exactly, but its 40-bit compressed gate failed. V52's 48-bit diagnostic is terminal: complete stage certified.** Read [the current handoff](docs/ACTIVE_SESSION_V52.md) and [verified evidence](validation/v52_terminal_audit.json). No full-model recovery is registered or active. These are adaptive development results; no ACL-readiness claim follows. All statements below retain their historical cutoffs.
+
+---
+
 Current continuation (11 October 2026): **The real width-3,072 stage gate is running as Slurm job13276.** All10 Linux software checks passed. The first real source matched a complete traversal by actual bytes; no full stage or gate result is verified yet. Read [the current handoff](docs/ACTIVE_SESSION_V51.md) and [machine-readable status](handoff/program_v51.json). Do not duplicate the active run. V45 remains failed; no full-model recovery is registered. All statements below retain their historical cutoffs.
 
 ---

@@ -1,0 +1,10 @@
+{
+  "status": "verified_launch_not_result",
+  "program_sha256": "f22f6667500b4205107929bd4607c00730ed4df61db1ac13f7f87137a5838ec0",
+  "source_hashes_verified": 358,
+  "bound_inputs_rehashed": 101,
+  "software_tests": 4,
+  "software_skips": 0,
+  "pending_auditor_refusal_checked": true,
+  "numerical_outcome_verified": false
+}
