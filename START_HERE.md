@@ -1,3 +1,7 @@
+Current continuation (11 October 2026): **The real width-3,072 stage gate is running as Slurm job13276.** All10 Linux software checks passed. The first real source matched a complete traversal by actual bytes; no full stage or gate result is verified yet. Read [the current handoff](docs/ACTIVE_SESSION_V51.md) and [machine-readable status](handoff/program_v51.json). Do not duplicate the active run. V45 remains failed; no full-model recovery is registered. All statements below retain their historical cutoffs.
+
+---
+
 Current continuation (11 October 2026): **Cluster/GPU access restored; V45 preparation failed at its frozen CPU limit.** The failure is preserved. V49 diagnosed a coefficient-certification bottleneck; V50 passed exact-operation tests and improved fixed synthetic case times with matching codes. No full-model recovery is admitted or active. Read [the current handoff](docs/ACTIVE_SESSION_V50.md) and [machine-readable status](handoff/program_v50.json). The GPU parameter archive now has a verified local copy. All statements below retain their historical cutoffs.
 
 ---

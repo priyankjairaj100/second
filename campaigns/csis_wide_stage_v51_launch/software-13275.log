@@ -1,0 +1,15 @@
+test_bad_feature_shape_type_and_nonfinite_values_refused (research_v51.test_stage.AdmissionTests.test_bad_feature_shape_type_and_nonfinite_values_refused) ... ok
+test_durable_command_admission_rejects_other_trial (research_v51.test_stage.AdmissionTests.test_durable_command_admission_rejects_other_trial) ... ok
+test_wide_gram_not_silently_admitted_and_all_workers_fit_new_caps (research_v51.test_stage.AdmissionTests.test_wide_gram_not_silently_admitted_and_all_workers_fit_new_caps) ... ok
+test_every_prefix_matches_complete_leaf_words (research_v51.test_stage.PrefixTests.test_every_prefix_matches_complete_leaf_words) ... ok
+test_foreign_context_and_unknown_stage_refused_before_source (research_v51.test_stage.PrefixTests.test_foreign_context_and_unknown_stage_refused_before_source) ... ok
+test_prefix_stops_at_requested_yield_and_closes_generator (research_v51.test_stage.PrefixTests.test_prefix_stops_at_requested_yield_and_closes_generator) ... ok
+test_complete_codes_against_exact_rational_oracle (research_v50.test_neighbors.NeighborTests.test_complete_codes_against_exact_rational_oracle) ... ok
+test_point_and_box_gram_and_coefficient_words (research_v50.test_neighbors.NeighborTests.test_point_and_box_gram_and_coefficient_words) ... ok
+test_reference_values_and_exception_flags (research_v50.test_neighbors.NeighborTests.test_reference_values_and_exception_flags) ... ok
+test_restore_on_failure_and_refuse_nested_selection (research_v50.test_neighbors.NeighborTests.test_restore_on_failure_and_refuse_nested_selection) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.990s
+
+OK
