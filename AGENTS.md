@@ -1,3 +1,7 @@
+Current continuation (11 October 2026): **V54 preparation 13310 and cached repair 13311 completed and passed a read-only partial artifact/debit audit. Cold reconstruction 13312 is running; remaining arms, oracle, final audits, quality and GPU checks remain queued.** Read [the current handoff](docs/ACTIVE_SESSION_V57.md) and [status](handoff/program_v57.json). Partial verification does not establish fresh-oracle equality, speedup, quality or final campaign success. Never rerun one-use launchers or alter frozen sources/ledgers. Historical cutoffs follow.
+
+---
+
 Current continuation (11 October 2026): **V54 full-model preparation13310 is running; CPU quality13325--13327 and GPU parity13329 are conditionally queued after the full-model audits.** All18 new CPU checks and12 CUDA checks passed with zero skips. Read [the current handoff](docs/ACTIVE_SESSION_V56.md) and [machine-readable status](handoff/program_v56.json). No larger-model quality/GPU result is verified yet. Never rerun one-use launchers or change frozen sources/ledgers. Historical checkpoints below retain their cutoffs.
 
 ---
