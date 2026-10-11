@@ -1,3 +1,7 @@
+Current continuation (11 October 2026): **V54 full-model preparation is running as Slurm 13310; controls, fresh oracle and both audits are queued through 13317.** All 76 Linux checks and data-archive admission passed. Read [the current handoff](docs/ACTIVE_SESSION_V54.md) and [machine-readable status](handoff/program_v54.json). Never rerun the one-use launchers. V53's pre-numerical registration failure and all earlier negative results are preserved. Numerical completion, actual-model quality and ACL readiness remain unverified. Statements below retain their historical cutoffs.
+
+---
+
 Current continuation (11 October 2026): **V51 point codes match exactly, but its 40-bit compressed gate failed. V52's 48-bit diagnostic is terminal: complete stage certified.** Read [the current handoff](docs/ACTIVE_SESSION_V52.md) and [verified evidence](validation/v52_terminal_audit.json). No full-model recovery is registered or active. These are adaptive development results; no ACL-readiness claim follows. All statements below retain their historical cutoffs.
 
 ---

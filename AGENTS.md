@@ -1,3 +1,7 @@
+Current continuation (11 October 2026): **V54 full-model preparation is running as Slurm 13310; controls, fresh oracle and both audits are queued through 13317.** All 76 Linux checks and data-archive admission passed. Read [the current handoff](docs/ACTIVE_SESSION_V54.md) and [machine-readable status](handoff/program_v54.json). Never rerun the one-use launchers. V53's pre-numerical registration failure and all earlier negative results are preserved. Numerical completion, actual-model quality and ACL readiness remain unverified. Statements below retain their historical cutoffs.
+
+---
+
 Current checkpoint: read `docs/ACTIVE_SESSION_V41.md` and `handoff/program_v41.json` first.
 V39 and V40 are complete: all seventeen and twelve stage outputs match, respectively.
 Read `docs/NATIVE_SCALE_RESULTS_V40.md` and `docs/RESEARCH_DECISION_V41.md` for all results and limits.
