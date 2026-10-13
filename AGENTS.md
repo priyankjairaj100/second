@@ -1,3 +1,7 @@
+Current checkpoint (13 October 2026): **the V54/V55/V56 chain is complete. Complete-model/state audits and GPU likelihood parity pass; the frozen pooled CPU quality guard FAILS (1.059221 > 1.05).** Read `docs/ACTIVE_SESSION_V58.md`, `docs/RESEARCH_DECISION_V58.md`, and `handoff/program_v58.json`. No jobs in this chain remain pending. Do not resubmit, relax thresholds, or expand to another checkpoint automatically. Preserve all frozen sources, ledgers, exclusions and adverse findings. Historical checkpoints follow.
+
+---
+
 Current checkpoint (11 October 2026): **cold reconstruction 13312 completed; hybrid 13313 is running.** Read `docs/ACTIVE_SESSION_V57.md` and `handoff/program_v57.json`. The cold receipt check verifies metadata and CPU accounting only; both final model/state audits remain pending. Never resubmit or alter frozen sources/ledgers. Earlier cutoffs follow.
 
 ---
