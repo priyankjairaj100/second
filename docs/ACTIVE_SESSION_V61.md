@@ -1,3 +1,37 @@
+# Continuation at 2026-10-14T06:17:58.952725+00:00
+
+Preparation13563 remains RUNNING after1:05:50 on csis.mn1. All13 source
+traversals and15/24 calibration stages are recorded; the latest is
+block.0003.mlp_up, without fallback or certificate refusal. No completed model
+or state exists yet. Jobs13564–13570 remain dependency-pending. The clean cluster
+checkout remains f900999fcb200509dfad4fc081ce9c87fd172a16 and the registered
+program hash is unchanged. No job was submitted or repeated in this continuation.
+The full snapshot is validation/v61_progress_20261014_061758.json.
+
+Reporting-only terminal collection and metadata-checking helpers are ready in
+validation/. Nineteen standard-library boundary fixtures pass; peer/source reviews
+found no material blocker. Their full terminal integration is still unexecuted.
+Read docs/TERMINAL_EVIDENCE_V61.txt for the success/failure collection boundary.
+Numerical binaries stay on the cluster; a copied metadata check cannot independently
+revalidate their contents. Never run the terminal collector on ordinary active jobs.
+
+The existing editor source was shortened in place and compiled successfully.
+reports/manuscript_v61.tex is the identical repository snapshot. Historical
+narration fell by1,109 source whitespace tokens (13.92% overall); theory,
+V54/V55 adverse results, V59 distinctions and limitations remain unchanged.
+No V61 result was inserted. validation/v61_manuscript_trim.json records scope.
+
+docs/NEXT_SCIENTIFIC_GATE_V61.txt defines conditional decisions after terminal
+audits, strongest-control comparison, ordinary lossless-compression control,
+and staged independent-root/untouched-quality planning. It is not a new
+registration. docs/RELATED_WORK_CHECK_V61.txt is a limited primary-source
+abstract/bibliographic check, not an exhaustive novelty or implementation review.
+
+The earlier launch checkpoint below remains a historical snapshot. Reporting
+changes must not be synchronized to the active numerical cluster checkout.
+
+---
+
 # V61: Linux gate passed; full-precision-teacher repair comparison running
 
 Updated 14 October 2026 after the terminal V59/V60 handoff. At05:12:52 UTC,
@@ -101,8 +135,10 @@ software test, registration, running job or V59 quality result is not V61
 complete-state or performance evidence. Collect actual terminal artifacts and
 independently review them before updating scientific claims.
 
-The existing open manuscript and V60 evidence package remain a research draft
-and handoff. No V61 results are yet incorporated. An ACL submission still needs
+The open manuscript is now shortened in place and compiles successfully; its
+repository snapshot is reports/manuscript_v61.tex. The V60 evidence ZIP remains
+an unchanged historical package. Both are research artifacts. No V61 empirical
+results are yet incorporated. An ACL submission still needs
 a useful validated service result and separately planned untouched quality,
 independent roots/checkpoints and prospective timing replication. The pasted
 SANW2 reviews concern another manuscript and remain separate.

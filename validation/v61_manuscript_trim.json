@@ -1,0 +1,61 @@
+{
+  "after_lines": 971,
+  "after_words": 6858,
+  "applied_in_existing_editor": true,
+  "base_sha256": "cc200183d75b40cca4a3ea5c1624ff1fcc4f9b9ce66ad1ef3ef7b294d7fae923",
+  "before_lines": 1108,
+  "before_words": 7967,
+  "changed_sections": [
+    {
+      "after_words": 267,
+      "before_words": 546,
+      "removed_words": 279,
+      "section": "\\section{Historical development evidence}"
+    },
+    {
+      "after_words": 190,
+      "before_words": 406,
+      "removed_words": 216,
+      "section": "Preparation used 22.783 seconds for context loading,"
+    },
+    {
+      "after_words": 257,
+      "before_words": 488,
+      "removed_words": 231,
+      "section": "\\paragraph{Exposed quality diagnostic (V44).}"
+    },
+    {
+      "after_words": 359,
+      "before_words": 632,
+      "removed_words": 273,
+      "section": "\\paragraph{Scale and transfer.}"
+    },
+    {
+      "after_words": 175,
+      "before_words": 285,
+      "removed_words": 110,
+      "section": "\\section{Reproducibility and evidence status}"
+    }
+  ],
+  "changed_sections_after_words": 1248,
+  "changed_sections_before_words": 2357,
+  "changed_sections_reduction_percent": 47.05,
+  "checks": [
+    "base hash exact",
+    "all text before historical section unchanged, including all theory/proof assumptions",
+    "complete V54 results and V55/V59 quality plus limitations unchanged",
+    "bibliography unchanged and all citation keys retained",
+    "no V61 result inserted",
+    "all references resolve",
+    "LaTeX environments balanced",
+    "patch --dry-run -p1 passed; base hash verified unchanged afterwards"
+  ],
+  "compile_result": "success",
+  "compiled_with_native_editor": true,
+  "count_method": "Whitespace-delimited tokens in LaTeX source; includes commands, tables and bibliography, not a typeset prose word count",
+  "current_manuscript": "reports/manuscript_v61.tex",
+  "no_v61_empirical_results_added": true,
+  "proposed_sha256": "f2ee0552436b16db2b4e3551f4bbb502ef7002426cdf6b4741fc284b9d8f4841",
+  "reduction_percent": 13.92,
+  "removed_words": 1109
+}

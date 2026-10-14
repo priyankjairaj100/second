@@ -1,3 +1,7 @@
+Current checkpoint (14 October 2026, 06:17:58 UTC): **V61 preparation is running, with all 13 source traversals and 15 of 24 stages certified.** Seven controls/oracle/audit jobs remain dependency-pending. All 205 pinned Linux tests passed earlier. Read [the current handoff](docs/ACTIVE_SESSION_V61.md), [status](handoff/program_v61.json), and [the conditional next scientific gate](docs/NEXT_SCIENTIFIC_GATE_V61.txt). The terminal metadata tools passed 19 local boundary fixtures; they have not checked a completed V61 campaign. The existing manuscript is shortened and compiled, with no V61 result added. Keep the cluster at numerical commit `f900999`; never relaunch or modify registered sources. No complete V61 service or ACL-readiness result is claimed. Historical checkpoints follow.
+
+---
+
 Current checkpoint (14 October 2026): **V59 completed and audited; the fixed full-precision teacher passes both unchanged exposed quality guards (pooled ratio 0.995902; maximum article ratio 1.065598).** Read `docs/ACTIVE_SESSION_V60.md` and `handoff/program_v60.json`. All four jobs13548–13551 completed; no V59 work remains pending. This distinct target has no repair-state service yet. Preserve the historical nearest-anchor quality failure, all frozen sources/receipts and sixty exclusions. Do not rerun V59 or transfer old service costs to the new target. V60 is an evidence/reporting checkpoint, not a new experiment or ACL-readiness claim. Historical checkpoints follow.
 
 ---
