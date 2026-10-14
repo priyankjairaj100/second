@@ -1,3 +1,7 @@
+Current checkpoint (14 October 2026): **V59 fixed-full-precision-anchor quality screen is prepared; Linux checks, registration and execution are pending after SSH refusal.** Read `docs/ACTIVE_SESSION_V59.md`, `research_v59/PROTOCOL.txt`, and `handoff/program_v59.json`. The completed V54/V55/V56 results remain frozen, including the failed quality guard. Do not resubmit old work or treat prepared source as numerical evidence. Preserve all exclusions and strong controls. Historical checkpoints follow.
+
+---
+
 Current checkpoint (13 October 2026): **the V54/V55/V56 chain is complete. Complete-model/state audits and GPU likelihood parity pass; the frozen pooled CPU quality guard FAILS (1.059221 > 1.05).** Read `docs/ACTIVE_SESSION_V58.md`, `docs/RESEARCH_DECISION_V58.md`, and `handoff/program_v58.json`. No jobs in this chain remain pending. Do not resubmit, relax thresholds, or expand to another checkpoint automatically. Preserve all frozen sources, ledgers, exclusions and adverse findings. Historical checkpoints follow.
 
 ---
