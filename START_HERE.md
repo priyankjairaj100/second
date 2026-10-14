@@ -1,3 +1,7 @@
+Current checkpoint (14 October 2026): **V59 completed and audited; the fixed full-precision teacher passes both unchanged exposed quality guards (pooled ratio 0.995902; maximum article ratio 1.065598).** Read `docs/ACTIVE_SESSION_V60.md` and `handoff/program_v60.json`. All four jobs13548–13551 completed; no V59 work remains pending. This distinct target has no repair-state service yet. Preserve the historical nearest-anchor quality failure, all frozen sources/receipts and sixty exclusions. Do not rerun V59 or transfer old service costs to the new target. V60 is an evidence/reporting checkpoint, not a new experiment or ACL-readiness claim. Historical checkpoints follow.
+
+---
+
 Current continuation (11 October 2026): **V54 preparation 13310 and cached repair 13311 completed and passed a read-only partial artifact/debit audit. Cold reconstruction 13312 is running; remaining arms, oracle, final audits, quality and GPU checks remain queued.** Read [the current handoff](docs/ACTIVE_SESSION_V57.md) and [status](handoff/program_v57.json). Partial verification does not establish fresh-oracle equality, speedup, quality or final campaign success. Never rerun one-use launchers or alter frozen sources/ledgers. Historical cutoffs follow.
 
 ---

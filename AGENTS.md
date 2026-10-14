@@ -1,3 +1,7 @@
+Current checkpoint (14 October 2026): **V59 completed and audited; the fixed full-precision teacher passes both unchanged exposed quality guards (pooled ratio 0.995902; maximum article ratio 1.065598).** Read `docs/ACTIVE_SESSION_V60.md` and `handoff/program_v60.json`. All four jobs13548–13551 completed; no V59 work remains pending. This distinct target has no repair-state service yet. Preserve the historical nearest-anchor quality failure, all frozen sources/receipts and sixty exclusions. Do not rerun V59 or transfer old service costs to the new target. V60 is an evidence/reporting checkpoint, not a new experiment or ACL-readiness claim. Historical checkpoints follow.
+
+---
+
 Current checkpoint (14 October 2026): **V59 fixed-full-precision-anchor quality screen is prepared; Linux checks, registration and execution are pending after SSH refusal.** Read `docs/ACTIVE_SESSION_V59.md`, `research_v59/PROTOCOL.txt`, and `handoff/program_v59.json`. The completed V54/V55/V56 results remain frozen, including the failed quality guard. Do not resubmit old work or treat prepared source as numerical evidence. Preserve all exclusions and strong controls. Historical checkpoints follow.
 
 ---
