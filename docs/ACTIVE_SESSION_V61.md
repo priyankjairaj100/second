@@ -1,32 +1,42 @@
-# Continuation at 2026-10-14T06:17:58.952725+00:00
+# Continuation at 2026-10-14T06:47:58.806532+00:00
 
-Preparation13563 remains RUNNING after1:05:50 on csis.mn1. All13 source
-traversals and15/24 calibration stages are recorded; the latest is
-block.0003.mlp_up, without fallback or certificate refusal. No completed model
-or state exists yet. Jobs13564–13570 remain dependency-pending. The clean cluster
-checkout remains f900999fcb200509dfad4fc081ce9c87fd172a16 and the registered
-program hash is unchanged. No job was submitted or repeated in this continuation.
-The full snapshot is validation/v61_progress_20261014_061758.json.
+Preparation 13563 remains RUNNING after 1:35:49 on csis.mn1. All 13 source
+traversals and all 24 calibration-stage certificates are recorded, with no
+fallback or certificate refusal. State packaging has recorded all 24 lossless
+payload stages and 7 compressed48 payload stages. No preparation completion
+receipt exists yet; stage certificates do not establish complete successor-state
+correctness or measured service performance. Jobs 13564–13570 remain pending
+on dependencies. The clean cluster checkout remains f900999fcb200509dfad4fc081ce9c87fd172a16.
+The program and 432 registered numerical sources remain unchanged. No job was
+submitted, cancelled or repeated in this continuation. Full metadata snapshot:
+validation/v61_progress_20261014_064758.json.
+
+The current lossless cache already selects raw, zlib and byte-shuffled zlib
+payloads. docs/LOSSLESS_CONTROL_PREPARATION_V61.txt specifies a conditional
+Zstandard comparison with independent source/stage frames, exact word preservation,
+bounded decoding, unchanged canonical validation and complete state/service costs.
+This is a design only: no new codec is installed, implemented, registered or run.
+validation/v61_lossless_control_design.json records static geometry/source checks.
+The historical Exact-Fun full-text retrieval gap was closed in V43; the current
+manuscript already contains that prior-work comparison.
 
 Reporting-only terminal collection and metadata-checking helpers are ready in
-validation/. Nineteen standard-library boundary fixtures pass; peer/source reviews
-found no material blocker. Their full terminal integration is still unexecuted.
-Read docs/TERMINAL_EVIDENCE_V61.txt for the success/failure collection boundary.
-Numerical binaries stay on the cluster; a copied metadata check cannot independently
+validation/. Their 19 standard-library boundary fixtures passed in the prior
+continuation; full terminal integration is still unexecuted. Read
+docs/TERMINAL_EVIDENCE_V61.txt for the success/failure collection boundary.
+Numerical binaries stay on the cluster; copied metadata cannot independently
 revalidate their contents. Never run the terminal collector on ordinary active jobs.
 
-The existing editor source was shortened in place and compiled successfully.
-reports/manuscript_v61.tex is the identical repository snapshot. Historical
-narration fell by1,109 source whitespace tokens (13.92% overall); theory,
-V54/V55 adverse results, V59 distinctions and limitations remain unchanged.
-No V61 result was inserted. validation/v61_manuscript_trim.json records scope.
+The existing editor source was previously shortened in place and compiled
+successfully. reports/manuscript_v61.tex is its identical repository snapshot.
+Historical narration fell by 1,109 source whitespace tokens (13.92% overall),
+preserving theory, V54/V55 adverse results, V59 distinctions and limitations.
+No manuscript edit or new compile was needed in this continuation; no V61 result
+has been inserted. validation/v61_manuscript_trim.json records the earlier change.
 
 docs/NEXT_SCIENTIFIC_GATE_V61.txt defines conditional decisions after terminal
-audits, strongest-control comparison, ordinary lossless-compression control,
-and staged independent-root/untouched-quality planning. It is not a new
-registration. docs/RELATED_WORK_CHECK_V61.txt is a limited primary-source
-abstract/bibliographic check, not an exhaustive novelty or implementation review.
-
+audits, strongest-control comparison, the modern lossless-compression control,
+and staged independent-root/untouched-quality planning. It is not a registration.
 The earlier launch checkpoint below remains a historical snapshot. Reporting
 changes must not be synchronized to the active numerical cluster checkout.
 
