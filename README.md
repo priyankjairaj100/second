@@ -1,3 +1,7 @@
+Current checkpoint (14 October 2026,05:12:52 UTC): **V61 repair comparison is running after all205 Linux tests passed and registration completed.** Preparation13563 is active; cached/cold/hybrid/compressed, fresh oracle and two audits13564–13570 are dependency-pending. Read [the current handoff](docs/ACTIVE_SESSION_V61.md) and [status](handoff/program_v61.json). The distinct original-checkpoint teacher retains V59's passed exposed quality screen. No V61 full-model correctness, cost or ACL-readiness result is claimed. The cluster stays at numerical commitf900999; this reporting update does not change frozen execution sources. Never relaunch or alter the active program. Historical checkpoints follow.
+
+---
+
 Current continuation (11 October 2026): **V54 preparation 13310 and cached repair 13311 completed and passed a read-only partial artifact/debit audit. Cold reconstruction 13312 is running; remaining arms, oracle, final audits, quality and GPU checks remain queued.** Read [the current handoff](docs/ACTIVE_SESSION_V57.md) and [status](handoff/program_v57.json). Partial verification does not establish fresh-oracle equality, speedup, quality or final campaign success. Never rerun one-use launchers or alter frozen sources/ledgers. Historical cutoffs follow.
 
 ---

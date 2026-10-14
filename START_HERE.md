@@ -1,3 +1,7 @@
+Current checkpoint (14 October 2026,05:12:52 UTC): **V61 repair comparison is running after all205 Linux tests passed and registration completed.** Preparation13563 is active; cached/cold/hybrid/compressed, fresh oracle and two audits13564–13570 are dependency-pending. Read [the current handoff](docs/ACTIVE_SESSION_V61.md) and [status](handoff/program_v61.json). The distinct original-checkpoint teacher retains V59's passed exposed quality screen. No V61 full-model correctness, cost or ACL-readiness result is claimed. The cluster stays at numerical commitf900999; this reporting update does not change frozen execution sources. Never relaunch or alter the active program. Historical checkpoints follow.
+
+---
+
 Current checkpoint (14 October 2026): **V59 completed and audited; the fixed full-precision teacher passes both unchanged exposed quality guards (pooled ratio 0.995902; maximum article ratio 1.065598).** Read `docs/ACTIVE_SESSION_V60.md` and `handoff/program_v60.json`. All four jobs13548–13551 completed; no V59 work remains pending. This distinct target has no repair-state service yet. Preserve the historical nearest-anchor quality failure, all frozen sources/receipts and sixty exclusions. Do not rerun V59 or transfer old service costs to the new target. V60 is an evidence/reporting checkpoint, not a new experiment or ACL-readiness claim. Historical checkpoints follow.
 
 ---

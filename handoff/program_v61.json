@@ -1,7 +1,7 @@
 {
   "schema": "second-development-handoff-v61",
   "date": "2026-10-14",
-  "status": "service_source_prepared_pending_pinned_linux_gate",
+  "status": "registered_preparation_running_no_terminal_result",
   "repository": "https://github.com/priyankjairaj100/second",
   "branch": "codex/second-cluster-v42",
   "current_handoff": "docs/ACTIVE_SESSION_V61.md",
@@ -19,27 +19,52 @@
     "module_count": 22,
     "expected_tests": 205,
     "required_skips": 0,
-    "pinned_linux_execution": "pending",
-    "receipt": "local_runs/v61-software-a.json"
+    "pinned_linux_execution": "passed",
+    "receipt": "local_runs/v61-software-a.json",
+    "tests": 205,
+    "skipped": 0,
+    "receipt_sha256": "71c1f573e977a66f244e85bf2229744d3077bd1d3ccf860c266cc9d94d629ae7",
+    "slurm_job_id": "13561"
   },
   "campaign": "local_runs/full-precision-service-v61-20261014-a",
   "launcher": "cluster_setup/v61_pipeline.sh",
   "launch_receipts": "local_runs/continuation-v61-20261014-a",
-  "jobs": {},
-  "registration": "pending",
+  "jobs": {
+    "checks": "13561",
+    "register": "13562",
+    "prepare": "13563",
+    "cached": "13564",
+    "cold": "13565",
+    "hybrid": "13566",
+    "compressed": "13567",
+    "oracle": "13568",
+    "audit": "13569",
+    "postrun": "13570"
+  },
+  "registration": "completed_exit_zero",
   "target_schema": "fixed-full-precision-anchor-service-target-v61",
   "state_schema": "complete-full-precision-anchor-successor-v61",
   "original_records": 13,
   "tokens_per_record": 128,
   "original_normalization": 1664,
-  "retained_counts": [12, 6],
-  "trial_order": ["prepare", "cached", "cold", "hybrid", "compressed", "oracle"],
+  "retained_counts": [
+    12,
+    6
+  ],
+  "trial_order": [
+    "prepare",
+    "cached",
+    "cold",
+    "hybrid",
+    "compressed",
+    "oracle"
+  ],
   "fresh_phase_cpu_seconds": 81012,
   "process_address_space_bytes": 17179869184,
   "file_size_limit_bytes": 2147483648,
   "historical_budget_reused": false,
   "automatic_retry": false,
-  "real_model_execution": "pending",
+  "real_model_execution": "preparation_running",
   "actual_successor_state_audits": "pending",
   "new_quality_evaluation": false,
   "gpu_numeric_execution": false,
@@ -47,5 +72,17 @@
   "confirmation": false,
   "acl_ready": false,
   "manuscript_unchanged_from_v60": true,
-  "scope": "Source preparation and prospective resource admission; no complete service result, performance benefit or submission-ready claim. Inspect current cluster receipts before any continuation."
+  "scope": "Linux gate and registration verified; preparation running and seven dependent jobs pending at snapshot. No terminal model/state equality or performance result.",
+  "captured_at_utc": "2026-10-14T05:12:52.660698+00:00",
+  "numerical_source_commit": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "registered_program_sha256": "6632712f7b79b49734790fa6fc173ec7e5ee70f542fe8f8a0c3ef3ff2171ea2d",
+  "registered_source_count": 432,
+  "complete_service_result": false,
+  "launch_capture": {
+    "path": "campaigns/csis_v61_launch_metadata_20261014.tar.gz",
+    "bytes": 93023,
+    "sha256": "c44a472aa596034b69697df994f67775614f4efbf1047e800352f5805c859012"
+  },
+  "scheduler_accounting": "13561|second61-checks|COMPLETED|0:0|00:00:25|00:24.151|\n13561.batch|batch|COMPLETED|0:0|00:00:25|00:24.151|3336K\n13562|second61-register|COMPLETED|0:0|00:00:08|00:05.324|\n13562.batch|batch|COMPLETED|0:0|00:00:08|00:05.324|3300K\n13563|second61-prepare|RUNNING|0:0|00:00:43|00:00:00|\n13563.batch|batch|RUNNING|0:0|00:00:43|00:00:00|\n13564|second61-cached|PENDING|0:0|00:00:00|00:00:00|\n13565|second61-cold|PENDING|0:0|00:00:00|00:00:00|\n13566|second61-hybrid|PENDING|0:0|00:00:00|00:00:00|\n13567|second61-compressed|PENDING|0:0|00:00:00|00:00:00|\n13568|second61-oracle|PENDING|0:0|00:00:00|00:00:00|\n13569|second61-audit|PENDING|0:0|00:00:00|00:00:00|\n13570|second61-postrun|PENDING|0:0|00:00:00|00:00:00|\n",
+  "cluster_commit_frozen_while_active": true
 }

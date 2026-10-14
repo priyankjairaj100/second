@@ -1,8 +1,43 @@
-# V61: full-precision-teacher repair service, pending Linux execution gates
+# V61: Linux gate passed; full-precision-teacher repair comparison running
 
-Prepared 14 October 2026 after the terminal V59/V60 handoff. This checkpoint adds
-a new service implementation around the exact V59 numerical target. It does not
-report a completed service comparison or replace any historical evidence.
+Updated 14 October 2026 after the terminal V59/V60 handoff. At05:12:52 UTC,
+preparation13563 was running; all seven following jobs were pending on successful
+dependencies. This is a timestamped launch checkpoint, not a completed service
+comparison. Refresh scheduler/receipts before any continuation; never relaunch.
+
+## Executed gates and active chain
+
+The reviewed source commit is `f900999fcb200509dfad4fc081ce9c87fd172a16`.
+The cluster stays on that clean numerical commit while the jobs execute; later
+local/GitHub reporting changes do not change registered numerical sources.
+All432 source files, including all412 historical V59 files, matched locally and
+remotely. Independent source reviews found no material blocker.
+
+- Software13561: all205 tests passed, zero skips, across22 modules. Slurm wall25s,
+  CPU24.151s; the test runner reported22.526s. The receipt binds the exact source
+  inventory and pinned runtime.
+- Registration13562: completed0:0, Slurm wall8s/CPU5.324s. All nine full-model
+  shape/representation cases admitted, including reserved compressed fallback.
+- Preparation13563: running; immutable context/target constructed. No completed
+  preparation, model, or successor-state result is claimed.
+- Cached13564, cold13565, hybrid13566, compressed13567, oracle13568,
+  primary audit13569 and supplemental audit13570: dependency-pending.
+
+Program SHA256:
+`6632712f7b79b49734790fa6fc173ec7e5ee70f542fe8f8a0c3ef3ff2171ea2d`.
+Software receipt SHA256:
+`71c1f573e977a66f244e85bf2229744d3077bd1d3ccf860c266cc9d94d629ae7`.
+The new service target identity observed in context construction is
+`ded01d9b27816eb32a8ddc241f0c014a05b43a5ffe7ce6f2f0a8853aefb3d0ad`;
+the embedded V59 calibration identity remains unchanged. These are identity
+bindings, not numerical or complete-state success evidence.
+
+`campaigns/csis_v61_launch_metadata_20261014.tar.gz` captures13 files,93,023 bytes,
+SHA256 `c44a472aa596034b69697df994f67775614f4efbf1047e800352f5805c859012`.
+It contains software/program/registration/launch receipts and a partial progress
+snapshot. The collection check is `validation/v61_launch_capture_check.json`.
+No large model/state binaries or terminal V61 audits are included or locally
+revalidated. Support-job CPU is separate from the fresh numerical phase ledger.
 
 ## Current scientific evidence
 
@@ -31,9 +66,9 @@ must equal the actual V59 candidate binary. Both terminal audits check actual
 complete model/state bytes and cost receipts. No new likelihood evaluation or
 quality sampling is part of V61.
 
-Software tests must pass in the pinned Linux Slurm environment with their
+Software tests passed in the pinned Linux Slurm environment with their
 reviewed exact count and zero skips before invoking the launcher. The source
-and runtime in that receipt must equal registration. Structural admission of
+and runtime in that receipt equal registration. Structural admission of
 all nine shape/representation cases includes full compressed fallback; it is
 not a measured fit or completion guarantee. The fresh six-worker allowance is
 81012 integer CPU seconds, separate from all older ledgers. Per-worker OS caps,
@@ -46,7 +81,7 @@ Cluster checkout: `/nfs_home/users/poonam/second-20261010`.
 Local checkout: `/Users/priyankjairaj/Downloads/ACL/Second`.
 Existing draft PR: https://github.com/priyankjairaj100/second/pull/1.
 
-One successful bounded SSH session on14 October found no active Second jobs,
+Before launch, one successful bounded SSH session on14 October found no active Second jobs,
 the clean V60 reporting commit6936011454ae6b1e18cc8b728ac1b54ae7b0b8e3,
 unchanged V54/V59 receipts and original binaries. Another project's job13557 was
 running and is unrelated. Scheduler state is only a snapshot; refresh it before
@@ -59,8 +94,8 @@ Inspect these one-use paths before action:
 - `local_runs/full-precision-service-v61-20261014-a/program.json`, ledger and
   every existing transaction/completion before submitting anything further.
 
-`cluster_setup/v61_pipeline.sh` is exclusively one-use and requires an existing
-software receipt. Registration, six workers and two audits have sequential
+`cluster_setup/v61_pipeline.sh` has already been used. Do not invoke it again.
+Registration, six workers and two audits have sequential
 afterok dependencies; a failure must preserve all partial evidence. A passing
 software test, registration, running job or V59 quality result is not V61
 complete-state or performance evidence. Collect actual terminal artifacts and
