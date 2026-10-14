@@ -1,0 +1,89 @@
+V61: complete repair service under the unchanged V59 full-precision teacher
+
+Question and scope
+The passed V59 screen establishes a model-only result on exposed development
+data. It does not establish a repair service, speed benefit, or confirmatory
+quality. V61 tests a distinct complete service target that embeds the exact V59
+calibration manifest. It preserves V59 arithmetic, output grids, original
+normalization1664, original checkpoint teacher and all historical exclusions.
+No new quality evaluation, source selection, threshold fitting, representation
+selection, repeated timing, or tuning is admitted by this phase.
+
+Inputs and independent identities
+The exact passed V59 program, completion, audit, ledger, target and actual packed
+candidate model are required. The model SHA256 is
+904d2dc59a22b28d74db20b388bc1acc5d7566150441d65a7318a5d896271192.
+The calibration target SHA256 is
+3853008973e0a89db5c80d73d30cb4304bc5d9c89fafa80e6f7f15de232a1245.
+All412 frozen V59 numerical sources remain unchanged. V61 source files and the
+one-use launcher are separately frozen. The V61 target/state family cannot be
+parsed as a nearest-anchor target or be inferred from V59's model-only manifest.
+The actual original teacher matrices drive every source-local traversal, with
+positions reset and no cross-source state. Calibrated codes never become inputs
+to feature extraction, including compressed fallback and fresh oracle replay.
+
+Frozen empirical root and order
+Use the exact V54 thirteen sorted C4 records of128 tokens each, their tokens,
+source provenance, original selection receipts and deletion order. Retain12 and
+then6 records. Original normalization stays1664 at both steps. Preserve all60
+known quality exclusions. Same old hash-fixed arm order: preparation, cached,
+cold, hybrid, compressed, then fresh oracle. Registration and each worker must
+validate current source/runtime/input bindings. No historical budgets are pooled.
+
+Representations, repair and complete successor evidence
+Lossless descriptors retain actual binary64 feature words. Compressed descriptors
+use the unchanged48-bit/block256 codec, verify actual feature containment, and
+reserve complete fresh point fallback before any feature work. Hybrid uses native
+exact Grams for the eighteen width768 stages and lossless descriptors for the six
+width3072 stages. Gram state requires independent preparation trust, membership,
+contribution lineage and exact subtraction; a state's own digest is not trust.
+Repair retains unchanged retained-source descriptors and original provenance.
+State includes both target payloads, complete ordered stage codes, retained token
+records, provenance and representation payloads. Trust sidecars and shared pinned
+checkpoint dependencies must be disclosed in deployment storage.
+
+The fresh oracle traverses retained original tokens again at both steps, rebuilds
+all representations and never imports a service arm's descriptors or prior state.
+Every repaired model must match the oracle's actual packed bytes; within each
+representation, complete canonical successor bytes must also match. Each arm and
+oracle at six records must equal the actual V59 candidate-model.bin bytes. Hash
+equality alone is insufficient. This fresh reconstruction shares the numerical
+implementation and is not an independently implemented arithmetic oracle.
+
+Software and resource gate
+All declared pinned Linux fixtures must pass with the reviewed exact count and
+zero skips, binding unchanged sources and runtime. Registration follows only
+after inspecting this receipt. Structural admission checks all24 stages at1664,
+1536 and768 tokens for lossless, compressed48 including point fallback, and hybrid.
+The actual service target is admitted again before feature work. Shape admission
+is not evidence of measured fit or successful certification; values, integer
+width, process fit, CPU limits or certificate refusal can still abort the phase.
+
+Use pinned Python3.12.14 SIF and the existing CPU Slurm wrapper, one CPU/thread per
+worker,16 GiB address space and2 GiB per-file limit. Fresh V61 feasibility budget
+is81012 integer CPU seconds, including six two-second reservation margins.
+Per-worker CPU/wall seconds: prepare10800/14400, cached10800/14400,
+cold12600/16200, hybrid14400/18000, compressed18000/21600,
+oracle14400/18000. These are abort ceilings, not duration predictions.
+Software checks and registration use separate bounded scheduler allocations;
+primary and supplemental artifact audits each have30 minutes and16 GiB.
+Archive their scheduler charges separately from numerical worker charges.
+
+One-use execution and interpretation
+Use local_runs/full-precision-service-v61-20261014-a, a fresh V61 phase ledger and
+exclusive attempt directories. Launch sequential afterok dependencies with no
+requeue, no retries and invalid-dependency cancellation. Preserve partial launches,
+failures and receipts; do not relaunch or silently extend allowances. Never touch
+unrelated jobs. All complete-service timings include request parsing, validation,
+extraction/fallback, solve, serialization and disposal as recorded by the worker;
+report component timings, preparation and wrapper/audit overhead separately.
+Check complete actual artifacts and CPU receipts in both terminal audits.
+
+One observation per arm and request on one adaptively reused C4 root supports
+case-specific engineering comparisons only. Fixed order and shared node/cache
+conditions do not support confidence intervals or population speed claims.
+A software pass, registration, queued job or quality pass is not a service pass.
+V54's nearest-teacher service outcomes remain historical and cannot be relabeled
+as V61. V59's exposed quality guard remains development evidence. No ACL-ready,
+fresh confirmation, broad efficiency or state-equality claim precedes actual
+completed audits and separate scientific review.
