@@ -1,3 +1,7 @@
+Current checkpoint (16 October 2026, 13:31 IST): **V63 Linux checks passed; the modern lossless artifact measurement is running.** Jobs 15244/15245/15246 are checks/measurement/audit. Read [current handoff](docs/ACTIVE_SESSION_V63.md), [status](handoff/program_v63.json), and [frozen protocol](research_v63/PROTOCOL.txt). No new size or speed result is verified yet. The phase reuses audited artifacts, copies existing model codes and performs no neural/calibration/quality execution. Preserve all frozen sources and original failures; never repeat the launcher or change caps. V62 remains the latest completed scientific checkpoint. Historical checkpoints follow.
+
+---
+
 Current checkpoint (16 October 2026): **V61 numerical work is complete; separate V62 recovery audits passed.** All eight complete model/state comparisons match fresh reconstruction; final-six models equal the V59 candidate. Original audit timeout/cancellation remain preserved. Compression saves about 9% live state but is 39–42% slower than cached lossless. No chain job remains active. Read [current handoff](docs/ACTIVE_SESSION_V62.md), [costs/status](handoff/program_v62.json), and [evidence guide](docs/TERMINAL_EVIDENCE_V62.txt). Next is a newly registered modern lossless-control comparison, then fresh-root/untouched-quality/timing work if useful. No new phase is launched. Preserve all frozen sources, failures and exclusions; never repeat old launchers. The manuscript compiles but is not submission-ready. Historical checkpoints follow.
 
 ---

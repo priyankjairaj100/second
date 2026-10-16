@@ -1,0 +1,20 @@
+{
+  "acl_ready": false,
+  "cutoff_utc": "2026-10-16T08:01:47.945886+00:00",
+  "jobs": {
+    "audit": "15246",
+    "checks": "15244",
+    "measure": "15245"
+  },
+  "next_action": "Wait for quiescent terminal chain, capture metadata, verify actual-byte audit and portable consistency, then decide whether a separate complete-service trial is justified",
+  "numerical_checkpoint_commit": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "phase_allowance_cpu_seconds": 5706,
+  "protocol": "research_v63/PROTOCOL.txt",
+  "registration": "handoff/registration_v63.json",
+  "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6",
+  "schema": "v63-lossless-control-handoff",
+  "scientific_result_verified": false,
+  "scope": "artifact-only source-local lossless archive comparison; no repair latency or new model/quality evaluation",
+  "source_files_preserved": 432,
+  "status": "linux_gate_passed_measurement_running_audit_dependency_pending"
+}
