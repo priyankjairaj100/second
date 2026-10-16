@@ -394,11 +394,11 @@
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 248306,
-      "sha256": "5ac6c303343976eb81d6f75195f78fa46c9894acf76b938cca844a3739bc0cf2"
+      "bytes": 248731,
+      "sha256": "a58e1f5f4d2ab218fbddb97b3b2053d3ab4effec92fe4429c28517cbc243b64a"
     },
-    "captured_at_utc": "2026-10-16T13:42:31.750313+00:00",
-    "copied_files": 270,
+    "captured_at_utc": "2026-10-16T14:01:47.275176+00:00",
+    "copied_files": 274,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -432,7 +432,7 @@
         "total_cpu": "01:22:10"
       },
       "15264": {
-        "elapsed": "00:36:43",
+        "elapsed": "00:55:59",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-compressed-1",
@@ -577,15 +577,15 @@
       },
       "compressed-1": {
         "completion_receipt_present": false,
-        "events": 12,
+        "events": 16,
         "last": {
           "certificate_refusal": null,
-          "code_sha256": "2c19cc69ac72b74a95811ed7fd00025584e19f074ba661fb390dca73ef81c0c6",
-          "elapsed_ns": 1897411016904,
+          "code_sha256": "c824dc4f51f13bc8f398704df16959079058823869f96a7d8dfc9fba7802f6e6",
+          "elapsed_ns": 2702164857411,
           "fallback": false,
           "phase": "stage_certified",
           "route": "streamed",
-          "stage_id": "block.0002.mlp_up"
+          "stage_id": "block.0003.mlp_up"
         }
       },
       "compressed-2": {
@@ -637,7 +637,7 @@
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|RUNNING|36:43|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|RUNNING|55:59|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
@@ -645,29 +645,196 @@
   },
   "manuscript": {
     "abstract_source_whitespace_tokens": 197,
-    "after_source_whitespace_tokens": 5420,
+    "after_source_whitespace_tokens": 4950,
     "ai_assistance_disclosed": true,
     "before_source_whitespace_tokens": 6884,
+    "companion_records": 15,
+    "complete_reproduction_bundle": false,
+    "external_bibliography_entries": 7,
     "full_anonymity_verified": false,
+    "identifying_project_links": 0,
     "limitations_added": true,
     "math_spans_unchanged": true,
     "missing_citations": [],
     "new_results_added": false,
     "official_review_style": true,
     "page_count_verified": false,
+    "project_bibliography_entries": 0,
     "proof_blocks_unchanged": true,
     "related_work_update": "validation/v69_manuscript_literature.json",
-    "removed_tokens": 1464,
-    "sha256": "24d739d1bc839cd04e4d6065a7be9d46aefed029977e9361cabc17c9f4158602",
+    "removed_tokens": 1934,
+    "sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60",
     "source_snapshot": "reports/manuscript_v69.tex",
     "submission_ready": false,
     "token_count_excludes_embedded_official_style": true
   },
-  "manuscript_native_compile": "success_after_official_acl_style_and_author_year_citations",
+  "manuscript_evidence_reference_trim": {
+    "after_sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60",
+    "all_fifteen_companion_records_referenced": true,
+    "before_sha256": "24d739d1bc839cd04e4d6065a7be9d46aefed029977e9361cabc17c9f4158602",
+    "captured_at_utc": "2026-10-16T14:08:12.591843+00:00",
+    "citation_replacements": [
+      {
+        "citation_keys": [
+          "boundaries",
+          "v58terminal",
+          "v59terminal",
+          "v62terminal"
+        ],
+        "evidence_records": [
+          "E03",
+          "E12",
+          "E13",
+          "E14"
+        ]
+      },
+      {
+        "citation_keys": [
+          "v39",
+          "v40",
+          "v43",
+          "v44",
+          "v47"
+        ],
+        "evidence_records": [
+          "E01",
+          "E02",
+          "E04",
+          "E05",
+          "E06"
+        ]
+      },
+      {
+        "citation_keys": [
+          "v49failure"
+        ],
+        "evidence_records": [
+          "E07"
+        ]
+      },
+      {
+        "citation_keys": [
+          "v51",
+          "v52"
+        ],
+        "evidence_records": [
+          "E08",
+          "E09"
+        ]
+      },
+      {
+        "citation_keys": [
+          "v54",
+          "v58terminal"
+        ],
+        "evidence_records": [
+          "E10",
+          "E12"
+        ]
+      },
+      {
+        "citation_keys": [
+          "v58terminal"
+        ],
+        "evidence_records": [
+          "E12"
+        ]
+      },
+      {
+        "citation_keys": [
+          "v56plan",
+          "v58terminal"
+        ],
+        "evidence_records": [
+          "E11",
+          "E12"
+        ]
+      },
+      {
+        "citation_keys": [
+          "v59terminal"
+        ],
+        "evidence_records": [
+          "E13"
+        ]
+      },
+      {
+        "citation_keys": [
+          "v62terminal"
+        ],
+        "evidence_records": [
+          "E14"
+        ]
+      },
+      {
+        "citation_keys": [
+          "v63terminal"
+        ],
+        "evidence_records": [
+          "E15"
+        ]
+      },
+      {
+        "citation_keys": [
+          "v43",
+          "v47"
+        ],
+        "evidence_records": [
+          "E04",
+          "E06"
+        ]
+      },
+      {
+        "citation_keys": [
+          "v58terminal",
+          "v59terminal"
+        ],
+        "evidence_records": [
+          "E12",
+          "E13"
+        ]
+      },
+      {
+        "citation_keys": [
+          "v62terminal",
+          "v63terminal"
+        ],
+        "evidence_records": [
+          "E14",
+          "E15"
+        ]
+      }
+    ],
+    "companion": {
+      "bytes": 87257,
+      "path": "reports/development-evidence-v69b.zip",
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "external_citations_resolve": true,
+    "full_anonymity_verified": false,
+    "full_reproduction_verified": false,
+    "identifying_project_links_removed": 17,
+    "missing_citations": [],
+    "native_compile_pending": false,
+    "native_compile_status": "success",
+    "old_original_citations_preserved": "docs/EVIDENCE_INDEX_MAP_V69.json",
+    "original_project_bibliography_entries": 15,
+    "page_count_verified": false,
+    "prior_static_scan_failure": "Initial regex included the official style macro definition as a citation; restrict reference scan to the document body. No source or numerical failure.",
+    "proofs_equations_abstract_unchanged": true,
+    "remaining_external_bibliography_entries": 7,
+    "rendered_layout_verified": false,
+    "schema": "manuscript-evidence-reference-trim-v69",
+    "selected_number_checks": 71,
+    "source_tokens_after_excluding_embedded_style": 4950,
+    "source_tokens_before_excluding_embedded_style": 5420,
+    "submission_ready": false
+  },
+  "manuscript_native_compile": "success_after_project_evidence_reference_trim",
   "manuscript_numbers_check": {
     "actual_empirical_jobs_launched": false,
     "archived_metadata_audits_rerun": false,
-    "captured_at_utc": "2026-10-16T13:55:32.612999+00:00",
+    "captured_at_utc": "2026-10-16T14:08:14.469342+00:00",
     "check_count": 71,
     "checks": [
       {
@@ -1309,8 +1476,8 @@
     },
     "local_inference_calibration_or_binary_audit": false,
     "manuscript": {
-      "bytes": 59068,
-      "sha256": "24d739d1bc839cd04e4d6065a7be9d46aefed029977e9361cabc17c9f4158602"
+      "bytes": 51407,
+      "sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60"
     },
     "schema": "manuscript-number-check-v69",
     "scope": "Selected empirical table, quality figures, percentages and resource totals against previously verified report bytes; not every number in the manuscript or a new scientific result.",
@@ -1468,11 +1635,16 @@
     "Close V67 remaining comparisons, fresh oracle and both actual-model/state/cost audits; preserve current jobs and live reservations",
     "Only after both V67 audits succeed register/run V68 data and reconcile all three terminal scheduler costs",
     "Only after actual V68 success freeze/register V69 with actual runtime/held-job admission,98 Linux checks, separate CUDA qualification, all quality phases and post-exit closure",
-    "Finish claim-required source/receipt allowlist and anonymous derivative validation; review companion currently covers five result groups only",
+    "Curate remaining claim-required source/protocol/original-receipt dependencies and review anonymous derivatives; the15-record summary ZIP is available but is not a full reproduction package",
     "Visually verify the existing ACL preview and main-text page budget when preview inspection is available; no replacement document or separate PDF",
     "Make evidence-based timing/claim decision and finish licenses, authorship facts and final bundle"
   ],
   "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "observed_stage_certificates": {
+    "compressed-1": 15,
+    "hybrid-1": 24,
+    "scope": "Counted stage_certified events in saved metadata; not terminal model/state equality."
+  },
   "preparation_receipt_metadata": {
     "actual_model_state_bytes_checked": false,
     "archive": {
@@ -1562,7 +1734,7 @@
     "worker_maximum_rss_kib": 1732228,
     "worker_process_and_waited_descendant_cpu_ns": 6857956044000
   },
-  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_j.tar.gz",
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_k.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,
@@ -1755,6 +1927,83 @@
     },
     "schema": "review-summary-preparation-check-v1",
     "status": "passed_projection_checks"
+  },
+  "review_history_companion_extraction": {
+    "archive": {
+      "bytes": 87257,
+      "path": "reports/development-evidence-v69b.zip",
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "files": 5,
+    "full_anonymity_verified": false,
+    "known_identity_strings_found": false,
+    "numerical_reproduction": false,
+    "originals_modified": false,
+    "record_count": 15,
+    "schema": "review-companion-extraction-v69b",
+    "source_execution": false,
+    "status": "passed_clean_extraction_and_scope_checks",
+    "unique_quality_article_labels": 8
+  },
+  "review_history_companion_preparation": {
+    "archive": {
+      "bytes": 87257,
+      "path": "reports/development-evidence-v69b.zip",
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "archive_byte_readback": true,
+    "archive_members_verified": 5,
+    "copied_field_groups": 1054,
+    "earlier_exposed_articles": 8,
+    "filesystem_extraction_verified": false,
+    "full_anonymity_verified": false,
+    "full_reproduction_verified": false,
+    "input_source_count": 21,
+    "later_exposed_articles": 8,
+    "manuscript_changed": false,
+    "mutation_probes_detected": {
+      "alter_service_clock": true,
+      "erase_adaptive_scope": true,
+      "erase_feasibility_failure": true,
+      "hide_stage_refusal": true
+    },
+    "numerical_execution": false,
+    "original_receipts_modified": false,
+    "output_directory": "reports/review-evidence-v69b",
+    "output_files": {
+      "CHECKS.json": {
+        "bytes": 681,
+        "sha256": "191ecde30061cf6cb426fbc2690491ccf399d66d4ddf915537b574292a853d8d"
+      },
+      "EVIDENCE_INDEX.txt": {
+        "bytes": 4439,
+        "sha256": "c8114e39c90c0d34f52638c8a08b9dabf8c405b3dbfde91d6082f664bf0556ab"
+      },
+      "MANIFEST.sha256": {
+        "bytes": 319,
+        "sha256": "635e2a4057c8a9320b2f6f8d27d678de8ddb8bcbf6b280ff4128e33b450ffad3"
+      },
+      "README.txt": {
+        "bytes": 2206,
+        "sha256": "4ec3bdd863b578d38373a252f2dd934e7f0dc74b1340ae36e6c3d856b1a4f6cb"
+      },
+      "results.json": {
+        "bytes": 78868,
+        "sha256": "5260e9bfd65f5562103d16e1edbb3e1fd2cc22cc1f5bf0e7d298dd2d57799fe5"
+      }
+    },
+    "private_mapping": {
+      "bytes": 335261,
+      "path": "docs/REVIEW_HISTORY_DERIVATION_V69.json",
+      "sha256": "76bb2d7f1544a57c33ae1efa2e852185c852b4f687f8074896d8387e7055b315"
+    },
+    "record_count": 15,
+    "schema": "historical-review-companion-check-v69b",
+    "shared_article_identity_verified": true,
+    "source_reproduction": false,
+    "stage_arm_observations": 29,
+    "status": "passed_projection_and_census_checks",
+    "unique_exposed_articles": 8
   },
   "schema": "second-progress-v69-preparation",
   "status": "v67_hybrid1_complete_compressed1_running_v69_preparation_92_tests",

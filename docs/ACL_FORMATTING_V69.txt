@@ -12,8 +12,11 @@ manual bibliography entries retain their text and links with natbib-compatible
 author-year labels, alphabetical ordering and disambiguating corporate-author
 year suffixes. No external BibTeX project dependency is required.
 
-All22 entries, source destinations, scientific paragraphs, abstract and proof
-blocks are preserved. The197-token abstract is unchanged. The5420 whitespace-token
+The initial conversion preserved all22 entries and source destinations. The
+later evidence-reference trim retains seven external entries and replaces the
+15 project records with E01--E15 pointers to an actual checked companion.
+Scientific paragraphs, abstract and proof blocks are preserved except for a short
+clarification of the companion scope. The197-token abstract is unchanged. The5420 whitespace-token
 count excludes the embedded style; comparison with5347 before formatting includes
 added citation/preamble commands and is not a prose-growth or page-count measure.
 All71 selected empirical transcription/arithmetic checks pass on final bytes.
@@ -26,8 +29,9 @@ The source includes an end-of-main-text page label for later inspection. Preserv
 that limitation: compilation does not establish pagination, absence of overfull
 lines, table placement, reference appearance or final template compliance.
 
-The working-draft label and17 identifying project links are still present. Review
-mode hides author fields but does not anonymize these destinations. Full anonymity
+The working-draft label is still present. The later evidence-reference trim
+removes all17 identifying project links; it does not establish full anonymity.
+Review mode hides author fields but is not a complete content review. Full anonymity
 and final source packaging remain open. Keep the current draft visibly provisional
 until the actual scientific decision and accompanying evidence bundle are ready.
 
@@ -35,3 +39,7 @@ Official guidance: https://acl-org.github.io/ACLPUB/formatting.html
 Current short/long main-text limits are four/eight pages; limitations and references
 are outside that main-text budget. Final paper type/cycle and author-controlled
 submission information still require the user's facts. No external submission.
+
+Current manuscript after the reference trim:4,950 source whitespace tokens excluding
+embedded style. The native compiler succeeded and all71 selected number checks pass.
+See validation/v69_manuscript_evidence_trim.json and its native compile record.

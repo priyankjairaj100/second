@@ -329,6 +329,7 @@
 \newcommand{\calD}{\mathcal{D}}
 \newcommand{\calS}{\mathcal{S}}
 \newcommand{\Qfix}{Q_{\mathrm{fix}}}
+\newcommand{\evidence}[1]{(supplementary evidence #1)}
 \title{Certified Calibration Repair from Compressed Fixed-Anchor Features}
 \author{Author and affiliation details pending}
 \date{}
@@ -399,7 +400,7 @@ we do not claim them as new. This draft separates the conditional correctness
 argument from the still-incomplete evidence for practical and scientific value.
 The evidence record preserves the target boundaries, earlier pilots and failed
 quality guard, followed by the distinct original-checkpoint teacher and its
-audited service~\cite{boundaries,v58terminal,v59terminal,v62terminal}.
+audited service~\evidence{E03, E12, E13, E14}.
 \section{An explicit reconstruction target}
 \label{sec:target}
 Let $W$ be a fixed pretrained checkpoint and let $\calD_0$ be an original set of
@@ -663,7 +664,7 @@ Earlier stage-scale and tiny complete-model pilots established integration and
 actual successor equality, while exposing strong cache and Gram controls.
 They used development inputs and do not supply independent confirmation.
 The reproduction record retains their complete tables, runtime identities,
-certificate refusals, replay costs and failed attempts~\cite{v39,v40,v43,v44,v47}.
+certificate refusals, replay costs and failed attempts~\evidence{E01, E02, E04, E05, E06}.
 All sixty historical quality-article exclusions remain protected. Same-model
 GPU likelihood agreement validates that evaluator comparison; it does not
 establish exact GPU calibration or a speed benefit.
@@ -733,17 +734,17 @@ it is not a separate implementation replication.
 \paragraph{Preserved failures and adaptive choices.}
 The first larger-root preparation exceeded its 4,800-CPU-second cap after
 11 of 24 certified stages, charging 4,801 seconds and cancelling seven
-dependents~\cite{v49failure}. No complete model resulted. A later wide-stage
+dependents~\evidence{E07}. No complete model resulted. A later wide-stage
 gate verified optimized and historical point-solver byte equality, but its
 40-bit compressed arm refused after 79 rows. A separately registered 48-bit
 follow-up certified the same stage; subsequent service experiments use that
-adaptively selected precision~\cite{v51,v52}. These are engineering decisions,
+adaptively selected precision~\evidence{E08, E09}. These are engineering decisions,
 not prospective confirmation. The failed registration, every refusal and their
-costs remain in the record~\cite{v54,v58terminal}.
+costs remain in the record~\evidence{E10, E12}.
 
 \paragraph{Nearest-anchor service and failed quality guard.}
 The nearest-rounded teacher's complete service matches fresh model/state bytes
-at all eight arm--endpoint comparisons~\cite{v58terminal}. Compression saves
+at all eight arm--endpoint comparisons~\evidence{E12}. Compression saves
 9.26\% and 8.71\% of live state but takes 19.29\% and 41.43\% longer than the
 lossless cache. Hybrid is faster and smaller at the first endpoint. The
 numerical workers charge 38,652 CPU seconds; including the failed earlier
@@ -754,7 +755,7 @@ cache and shared-node effects preclude a causal timing claim.
 Quality evaluation compares the actual final model with a freshly constructed
 sequential reference using the same retained tokens, normalization, ridge, row
 grids and checkpoint. Eight previously exposed articles supply 1,016 predictions
-per model~\cite{v56plan,v58terminal}. The nearest-anchor model's PPL is 55.14666,
+per model~\evidence{E11, E12}. The nearest-anchor model's PPL is 55.14666,
 versus 52.06342 for sequential calibration: ratio 1.059221 exceeds the unchanged
 1.05 guard. Loss is higher on all eight articles. The maximum article ratio,
 1.174280, passes the separate 1.20 guard, but the overall gate fails. Full
@@ -770,7 +771,7 @@ prove exact GPU features or establish acceleration.
 
 \paragraph{Adaptive full-precision-anchor screen (V59).}
 Following V55's adverse result, one separately registered candidate replaced the
-nearest-rounded feature teacher with the original checkpoint weights~\cite{v59terminal}.
+nearest-rounded feature teacher with the original checkpoint weights~\evidence{E13}.
 The deployed candidate still uses four-bit codes. The six retained sources,
 768 tokens, original normalization 1664, ridge, row grids, evaluator and eight
 exposed articles remained unchanged. All 32 V55 control losses reproduced with
@@ -792,7 +793,7 @@ specific to the nearest-anchor target.
 \paragraph{Original-checkpoint service (V61; recovered audits V62).}
 On the same $1664\to1536\to768$ sequence, all eight arm--request comparisons
 match fresh retained-input reconstruction in actual model bytes and each
-representation's canonical state bytes~\cite{v62terminal}. Each covers 24 stages
+representation's canonical state bytes~\evidence{E14}. Each covers 24 stages
 and 42,467,328 codes. All final-six models equal the actual V59 candidate, linking
 that endpoint to its exposed quality result without another likelihood run.
 No stage-level source replay fallback or certificate refusal is recorded; the
@@ -848,7 +849,7 @@ choices with plain and shuffled Zstandard3 (python-zstandard 0.25.0, Zstandard
 1.5.7). It selects the smallest complete source descriptor with fixed ties and
 charges every candidate encoder and canonical validation. Saved archives for all
 three memberships restore the actual original state bytes and preserve every
-binary64 feature word, model code and retained descriptor~\cite{v63terminal}.
+binary64 feature word, model code and retained descriptor~\evidence{E15}.
 At 12 and 6 retained records, live state falls from 368,132,885 and 195,673,382
 bytes to 367,603,575 and 195,408,617 bytes, reductions of 0.144\% and 0.135\%.
 Uncertain compression remains 9.28\% and 8.74\% smaller than this stronger
@@ -906,18 +907,25 @@ Actual model/state comparisons were executed on the cluster. Portable metadata
 checks verify copied receipts, commitments and descriptive arithmetic; they do
 not reexecute missing binaries or inference. V43 additionally has local model/
 state checks, and V47 preserves all 78 exported parameter-array commitments
-~\cite{v43,v47}. The V54--V56 and V59 records preserve the adverse quality guard
-and the later adaptive screen~\cite{v58terminal,v59terminal}.
+~\evidence{E04, E06}. The V54--V56 and V59 records preserve the adverse quality guard
+and the later adaptive screen~\evidence{E12, E13}.
 
 The V61/V62 archives retain the numerical outputs' actual-byte audit and the
 original audit timeout. Their portable check covers 1,285 metadata/source files
 and all eight comparisons; 33 numerical binaries remain on the cluster. V63's
 portable archive checks 28 metadata/source files, while its three archives and
 two retained-descriptor transitions were compared on the cluster
-~\cite{v62terminal,v63terminal}. Neither audit repeats calibration or establishes
+~\evidence{E14, E15}. Neither audit repeats calibration or establishes
 untouched confirmation. Detailed inventories and all earlier costs remain in
 the reproduction record. Independent reproduction requires the bound binaries
 or a separately registered regeneration, with licensing and distribution checked.
+
+The accompanying development-evidence companion contains selected results and
+scope notes for records E01--E15. It preserves adverse outcomes and consistently
+labels the same eight exposed quality articles across historical screens. These
+are derived summaries with checked source mappings, not original execution
+receipts or a complete code/runtime reproduction package. That package and its
+final anonymity and licensing checks remain unfinished.
 
 \label{page:main-end}
 \section*{Limitations}
@@ -938,7 +946,7 @@ Generative AI assisted experiment planning, software development, analysis,
 literature checking, and manuscript drafting. Human authors remain responsible
 for the final methods, results, references, and text.
 
-\begin{thebibliography}{22}
+\begin{thebibliography}{7}
 \bibitem[Frantar et~al.(2023)Frantar, Ashkboos, Hoefler, and Alistarh]{gptq}
 Elias Frantar, Saleh Ashkboos, Torsten Hoefler, and Dan Alistarh.
 2023. \emph{GPTQ: Accurate Post-Training Quantization for Generative Pre-trained
@@ -955,137 +963,6 @@ Advances in Neural Information Processing Systems 32.
 Natalie Lang, Alon Helvitz, and Nir Shlezinger.
 2025. \emph{Memory-Efficient Distributed Unlearning}.
 \href{https://arxiv.org/abs/2505.03388v1}{arXiv:2505.03388, version 1}.
-
-\bibitem[Project second(2026a)]{v39}
-Project \emph{second}. 2026a. \emph{Real-data scale results and research decision:
-V39}. Immutable project report at commit
-\texttt{fbcc98c} (full identity in link):
-\href{https://github.com/priyankjairaj100/second/blob/fbcc98c6559de4b88ffc9c8b960cf680d89e29d3/docs/SCALE_RESULTS_V39.md}{report and evidence pointers}.
-Original completed workflow:
-\href{https://github.com/priyankjairaj100/second/actions/runs/38023401448}{run 38023401448}.
-
-\bibitem[Project second(2026b)]{v40}
-Project \emph{second}. 2026b. \emph{Native Gram and streamed scale results: V40}.
-Immutable project report at commit
-\texttt{fbcc98c} (full identity in link):
-\href{https://github.com/priyankjairaj100/second/blob/fbcc98c6559de4b88ffc9c8b960cf680d89e29d3/docs/NATIVE_SCALE_RESULTS_V40.md}{report and evidence pointers}.
-Original completed workflow:
-\href{https://github.com/priyankjairaj100/second/actions/runs/38025361543}{run 38025361543}.
-
-\bibitem[Project second(2026c)]{boundaries}
-Project \emph{second}. 2026c. \emph{Paper claim boundaries and evidence obligations}.
-V41 handoff, immutable commit
-\texttt{fbcc98c} (full identity in link):
-\href{https://github.com/priyankjairaj100/second/blob/fbcc98c6559de4b88ffc9c8b960cf680d89e29d3/docs/CLAIM_BOUNDARIES_V41.md}{target, claims, and remaining obligations}.
-
-\bibitem[Project second(2026d)]{v43}
-Project \emph{second}. 2026d. \emph{Complete fixed-anchor service development
-pilot: V43}. Frozen source \texttt{304a9cc}:
-\href{https://github.com/priyankjairaj100/second/blob/304a9cc73b3c263032f3ef6a02487b4d2df40fbe/research_v43/PROTOCOL.txt}{prospective protocol}.
-Full program and main byte audit identities are in
-\path{local_runs/full-model-v43-20261010-b/program.json} and
-\path{local_runs/full-model-v43-20261010-b/artifact-audit.json};
-the supplemental receipt is
-\path{local_runs/full-model-v43-20261010-b/postrun-audit.json}
-(\texttt{cd03e4c3}), and the retained-payload check is
-\path{validation/v43_local_archive.json}.
-
-\bibitem[Project second(2026e)]{v44}
-Project \emph{second}. 2026e. \emph{Bounded exposed-quality diagnostic: V44}.
-Registered source \texttt{db95069}:
-\href{https://github.com/priyankjairaj100/second/blob/db95069b2c3484ac615052fb1c1a711c8c773c2d/research_v44/PROTOCOL.txt}{prospective protocol}.
-Full program identity is retained in
-\path{local_runs/exposed-quality-v44-20261010-b/program.json}; results and
-per-article losses are in
-\path{local_runs/exposed-quality-v44-20261010-b/quality/outputs/completion.json}
-(\texttt{98870a81}).
-\bibitem[Project second(2026f)]{v47}
-Project \emph{second}. 2026f. \emph{CPU parameter export and CUDA likelihood parity: V47}.
-Frozen source \texttt{c811dec}:
-\href{https://github.com/priyankjairaj100/second/blob/c811dec/research_v47/PROTOCOL.txt}{prospective protocol}.
-GPU program \texttt{620076c6}; CPU export program \texttt{1803adfd}.
-Results: \path{campaigns/csis_cuda_parity_v47/parity/outputs/completion.json};
-local copied-evidence audit: \path{validation/v47_local_archive.json}.
-
-\bibitem[Project second(2026g)]{v49failure}
-Project \emph{second}. 2026g. \emph{Larger C4 preparation: terminal failure and
-bounded software diagnosis, V49}.
-Program \texttt{02c7f6cf}; Slurm preparation job 13228; dependency cancellations
-13229--13235. Archived sealed receipts and partial progress:
-\path{campaigns/csis_full_model_v45_failure}; local integrity check:
-\path{validation/v49_v45_failure_audit.json}. No complete larger-model result.
-
-\bibitem[Project second(2026h)]{v51}
-Project \emph{second}. 2026h. \emph{Real wide-stage feasibility gate: V51}.
-Frozen source \texttt{2c1a2bc}:
-\href{https://github.com/priyankjairaj100/second/blob/2c1a2bc699e4633bdab7243bb9e042be2f884c83/research_v51/PROTOCOL.txt}{prospective protocol}.
-Program \texttt{af83f983}; Slurm job 13276.
-Terminal metadata: \path{campaigns/csis_wide_stage_v51_terminal}.
-Full-archive and point-pair integrity checks:
-\path{validation/v51_terminal_audit.json} and
-\path{validation/v52_v51_point_pair_audit.json}.
-The compressed-input arm refused certification; the complete gate failed.
-
-\bibitem[Project second(2026i)]{v52}
-Project \emph{second}. 2026i. \emph{Adaptive 48-bit wide-stage diagnostic: V52}.
-Frozen source \texttt{6b70d70}:
-\href{https://github.com/priyankjairaj100/second/blob/6b70d703a716cef744f49ba1c55add3a691c3267/research_v52/PROTOCOL.txt}{prospective diagnostic protocol}.
-Program \texttt{f22f6667}; Slurm job 13291.
-Terminal metadata: \path{campaigns/csis_precision48_v52};
-actual-artifact integrity check: \path{validation/v52_terminal_audit.json}.
-The same known development root was reused; no untouched quality evaluation.
-
-\bibitem[Project second(2026j)]{v54}
-Project \emph{second}. 2026j. \emph{Explicit compressed48 full-model integration and archive admission: V53--V54}.
-\href{https://github.com/priyankjairaj100/second/blob/9826a95/research_v54/PROTOCOL.txt}{Prospective protocol};
-\href{https://github.com/priyankjairaj100/second/blob/7f3b10d/research_v53/PROTOCOL.txt}{numerical and resource policy}.
-Program: \path{03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b}.
-Launch metadata: \path{campaigns/csis_full_model48_v54_launch}.
-Terminal results and both completed audits are preserved in the V58 metadata archive below.
-
-
-\bibitem[Project second(2026k)]{v56plan}
-Project \emph{second}. 2026k. \emph{Conditional full-model quality and GPU parity: V55--V56}.
-\href{https://github.com/priyankjairaj100/second/blob/792400b/research_v55/PROTOCOL.txt}{CPU quality protocol};
-\href{https://github.com/priyankjairaj100/second/blob/5dcd24c/research_v56/PROTOCOL.txt}{GPU parity protocol}.
-Software jobs13324 and13328 passed18 and12 tests respectively, with zero skips.
-Jobs13325--13327 and13329 completed. CPU pooled quality failed; GPU likelihood parity passed.
-Launch evidence: \path{validation/v56_launch_audit.json}.
-
-
-\bibitem[Project second(2026l)]{v58terminal}
-Project \emph{second}. 2026l. \emph{Terminal complete-model, quality and GPU evidence: V58 archive}.
-Completed V54 program \texttt{03a6181b}; V55 \texttt{4de04c4a}; V56 \texttt{8c3f4653}.
-Metadata: \path{campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz}.
-Local integrity and arithmetic: \path{validation/v58_terminal_metadata_check.json}.
-The archive preserves the failed CPU quality guard. No new numerical execution
-or independent local inference replay was performed for this archival check.
-
-\bibitem[Project second(2026m)]{v59terminal}
-Project \emph{second}. 2026m. \emph{Adaptive full-precision-anchor quality screen: V59}.
-\href{https://github.com/priyankjairaj100/second/blob/60a514098511526924cb5746a2a61851b5f6bd23/research_v59/PROTOCOL.txt}{Frozen protocol and numerical source}.
-Program \texttt{4a22292c}; jobs13548--13551 completed; all49 software checks passed.
-Completion \texttt{2c807129} and actual-artifact audit \texttt{286a2c74} preserve
-passing exposed quality guards without a repair-service or confirmation claim.
-Metadata: \path{campaigns/csis_terminal_v59_metadata_20261014.tar.gz}.
-Portable check: \path{validation/v59_terminal_metadata_check.json}.
-
-\bibitem[Project second(2026n)]{v62terminal}
-Project \emph{second}. 2026n. \emph{Original-checkpoint repair service and separate
-audit recovery: V61--V62}.
-\href{https://github.com/priyankjairaj100/second/blob/codex/second-cluster-v42/research_v62/PROTOCOL.txt}{Recovery protocol}.
-Original failed gate: \path{campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz}.
-Recovered audits: \path{campaigns/csis_terminal_v62_recovery_metadata_20261016.tar.gz}.
-Portable check: \path{validation/v62_recovery_metadata_check.json}.
-Jobs15150--15151 verify existing artifacts; no numerical or quality rerun.
-
-
-\bibitem[Second research project(2026)]{v63terminal}
-Second research project. 2026.
-\emph{Audited source-local modern lossless archive comparison (V63).}
-Frozen registration, source/runtime bindings, actual-byte audit and terminal
-metadata archive, 16 October.
-\href{https://github.com/priyankjairaj100/second/blob/codex/second-cluster-v42/docs/TERMINAL_EVIDENCE_V63.txt}{Evidence and scope}.
 
 \bibitem[Tavory et~al.(2026)Tavory, Gade, Sarig, Touitou, and Guy]{qss}
 Ami Tavory, Shripad Gade, Tal Sarig, Noam Touitou, and Ido Guy.

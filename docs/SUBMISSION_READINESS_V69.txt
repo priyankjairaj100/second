@@ -28,10 +28,10 @@ Required formatting/anonymity work
 The source now uses the unmodified official ACL review style,11pt Times and
 author-year citations, with successful native compilation. The style is embedded
 for the standalone editor. Actual venue page count remains unverified: preview
-inspection could not start. See ACL_FORMATTING_V69.txt. It still has
-15 project-record bibliography entries and17 identifying repository links. Replace
-these with a concise anonymous evidence index in the eventual reproduction
-package while preserving their exact provenance outside the anonymous paper.
+inspection could not start. See ACL_FORMATTING_V69.txt. The15 project-record
+bibliography entries and17 identifying repository links have now been replaced
+by concise E01--E15 references to the available development-evidence companion.
+Their exact original provenance is preserved outside that review companion.
 Do not relabel the current public repository as anonymous. Remove working-draft
 meta-text and finish the abstract, bibliography style and final story after the
 evidence decision. The current abstract is below200 source whitespace tokens;
@@ -113,3 +113,15 @@ article IDs are consistently renamed and all adverse guards/costs retained.
 Source receipts remain immutable and the identifying derivation map stays outside
 anonymous packaging. This companion is not a full reproduction archive or final
 anonymity clearance. See REVIEW_COMPANION_V69.txt.
+
+Historical companion revision B and paper-reference trim
+The five-file development-evidence-v69b.zip contains selected summaries or scope
+notes for all15 records, with1,054 copied field groups checked against21 sources.
+Clean extraction verifies file hashes, shared eight-article identities and adverse
+outcomes. It is not the full code/runtime/protocol/receipt reproduction archive.
+The same paper now has seven external bibliography entries, with project records
+referenced by E01--E15. This removes470 source whitespace tokens and17 identifying
+project links without changing the proofs, equations, abstract or reported numbers.
+Native compilation and all71 number checks pass; source count is4,950 excluding
+embedded style. Rendered pagination/layout and full anonymity remain unverified.
+See REVIEW_HISTORY_COMPANION_V69.txt and validation/v69_manuscript_evidence_trim.json.

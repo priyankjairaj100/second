@@ -6,12 +6,12 @@ GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
 ## Actual cluster observation
 
-At13:42:31UTC (19:12:31IST), hybrid-control job15263 remained COMPLETED0:0 after
-1h22m46s. Compression15264 was RUNNING36m43s on csis.mn1 with11of24 stages certified;
+At14:01:47UTC (19:31:47IST), hybrid-control job15263 remained COMPLETED0:0 after
+1h22m46s. Compression15264 was RUNNING55m59s on csis.mn1 with15of24 stages certified;
 15265--15275 remained dependency-pending. Both terminal audits remain absent.
-The270-file snapshot campaigns/csis_v67_progress_metadata_20261016_j.tar.gz is248306
-bytes, SHA2565ac6c303343976eb81d6f75195f78fa46c9894acf76b938cca844a3739bc0cf2.
-validation/v67_progress_metadata_check_j.json verifies metadata/source bindings.
+The274-file snapshot campaigns/csis_v67_progress_metadata_20261016_k.tar.gz is248731
+bytes, SHA256a58e1f5f4d2ab218fbddb97b3b2053d3ab4effec92fe4429c28517cbc243b64a.
+validation/v67_progress_metadata_check_k.json verifies metadata/source bindings.
 All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
 No new job was submitted. The numerical checkout remains
 f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull reporting changes there.
@@ -105,8 +105,8 @@ source-file commitments, checked against the saved reporting commit and manifest
 The map is identifying provenance and must stay outside an anonymous archive.
 The index has no known author/repository/host strings; this is not a full anonymity
 audit. No underlying receipt was rewritten or numerical audit repeated. Anonymous
-derivatives, dependency closure and clean reproduction remain; paper citations
-are unchanged until their accompanying artifact is actually ready. See
+derivatives, dependency closure and clean source reproduction remain. The later
+summary companion below now supports concise supplementary-record pointers. See
 validation/v69_evidence_index.json.
 
 ## Manuscript and anonymous-package checks
@@ -114,8 +114,9 @@ validation/v69_evidence_index.json.
 All71 selected number checks passed, including all24 numeric cells in the eight
 service-table rows. Derived ratios, quality directions and separate support costs
 agree with preserved reporting records. Three in-memory tamper probes were
-rejected. No paper correction, inference or binary audit was performed; unchanged
-source was unchanged at that checkpoint; the subsequent ACL layout also passes all71 checks. Read docs/MANUSCRIPT_NUMBER_AUDIT_V69.txt.
+rejected. This is a transcription/arithmetic check, not inference or a binary
+audit. The subsequent ACL layout and evidence-reference trim also pass all71
+checks. Read docs/MANUSCRIPT_NUMBER_AUDIT_V69.txt.
 
 The532-source inventory and direct evidence references cover577 unique files.
 All commitments matched;572 text files were scanned, while five archives remain
@@ -159,25 +160,37 @@ member is a regular file with a relative non-traversing path. No member was
 extracted or its payload inspected; content review, selection and anonymous
 derivatives remain pending. See validation/v69_archive_member_inventory.json.
 
-## Checked review companion and official layout
+## Checked historical companion and shorter bibliography
 
-reports/review-evidence-v69 now contains an actual five-file draft companion,
-including selected result data and its manifest. All306 copied field groups agree
-with eight preserved source reports. Eight exposed article IDs are renamed
-consistently; failed quality, capped preparation and audit costs remain visible.
-The source/receipt reproduction archive is still incomplete. Do not put its
-identifying derivation map into anonymous packaging or call these derived summaries
-original execution bytes. Read docs/REVIEW_COMPANION_V69.txt.
+reports/development-evidence-v69b.zip is an actual87,257-byte draft companion
+with five files. All15 historical groups have selected summaries or scope notes;
+1,054 copied field groups match21 manifest-bound sources. It includes all29
+stage-scale arm observations, old service/quality/parity, refusals, adaptive
+follow-up, admission failure and the later service/quality/storage results.
+All four quality screens reuse the SAME eight exposed articles, consistently
+labelled Q01--Q08. They are not independent samples.
 
-The same open manuscript now uses the unmodified official ACL style embedded
-for the standalone editor,11pt Times and author-year citations. All22 bibliography
-entries and destinations remain; only year suffixes and ordering changed. Native
-compilation succeeded. Scientific body,197-token abstract and proofs are unchanged;
-all71 selected number checks still pass. Source is5420 whitespace tokens excluding
-embedded style bytes; this includes added formatting/citation commands, not more
-scientific prose. Current SHA256:
-24d739d1bc839cd04e4d6065a7be9d46aefed029977e9361cabc17c9f4158602.
-Preview inspection failed because the Computer Use service could not start. No
-page count or visual layout has been verified. The17 identifying project links
-and working-draft label remain; neither anonymity nor submission readiness is
-claimed. Keep this editor open. See docs/ACL_FORMATTING_V69.txt.
+Four in-memory tamper probes pass. Clean filesystem extraction checks all five
+files, manifests, record/article censuses and adverse scope flags. No known
+account/host/repository/article-ID strings were found in the summary files.
+This is not whole-package anonymity clearance, original execution bytes, source
+reproduction or an empirical rerun. Private derivation maps remain outside the
+ZIP. Two local artifact-preparation errors are preserved, including a rejected
+assumption of disjoint historical article frames. No registered attempt changed.
+Read docs/REVIEW_HISTORY_COMPANION_V69.txt. Earlier companion remains preserved.
+
+The same open manuscript uses the byte-exact official ACL review style and now
+replaces15 project bibliography entries/17 identifying project links with concise
+E01--E15 pointers to this available companion. Seven external references remain
+unchanged. A short paragraph states the companion's derived-summary scope and
+uncompleted code/runtime package. Native compilation succeeded and all71 number
+checks pass. Proofs, equations and the197-token abstract are unchanged.
+Source count is4,950 excluding the embedded style,470 fewer than the previous
+formatted source and1,934 fewer than the original6,884-token source. This is not
+a rendered page count. Current SHA256:
+4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60.
+
+Preview inspection remains unavailable, so visual layout and main-text pages
+are unverified. The working-draft label remains. Full anonymity, licensing,
+code/runtime reproduction and claim-required new evidence are still open.
+Keep this editor open. See validation/v69_manuscript_evidence_trim.json.
