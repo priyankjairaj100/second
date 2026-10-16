@@ -68,7 +68,7 @@ or parallel execution loop. No subagent delegation is currently authorized.
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
    Preparation15262 is running, with comparisons/oracle/audits dependency-pending.
-   Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V68.md`, `docs/ACTIVE_SESSION_V67.md` and
+   Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V69.md`, `docs/ACTIVE_SESSION_V68.md`, `docs/ACTIVE_SESSION_V67.md` and
    `research_v67/PROTOCOL.txt`. Reuse the frozen mathematical target and matched point
    solver, with full parsing, canonical validation, startup/cache policy, state
    reconstruction, disposal and preparation accounted. Preserve compatible cached,
@@ -103,6 +103,9 @@ or parallel execution loop. No subagent delegation is currently authorized.
    selections. Actual data registration/Linux execution and six-model quality
    construction/export/parity/terminal gates remain. Wait for both V67 terminal
    audits before registering the data-only phase; do not disturb active timings.
+   V69 adds complete-code/parameter and six-model parity helpers with9 passing
+   local boundary fixtures; the sequential constructor is mocked in these tests.
+   Full construction/export/CPU/GPU/loss-audit workers remain to be implemented.
    Check article identity and overlap against every historical exclusion (currently
    sixty) and calibration source. Predeclare paired pooled NLL/PPL, tail guard,
    uncertainty method and sample-size justification before reading results. Old

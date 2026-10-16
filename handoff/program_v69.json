@@ -1,0 +1,381 @@
+{
+  "active_experiment_version": 67,
+  "heartbeat_active": true,
+  "latest_metadata_snapshot": {
+    "actual_model_state_audit_repeated_locally": false,
+    "archive": {
+      "bytes": 147441,
+      "sha256": "ed41a9e86ea89ccdf36967a8f2628184dc3a77c15df94121d8db61061b795df2"
+    },
+    "captured_at_utc": "2026-10-16T10:29:11.958365+00:00",
+    "copied_files": 85,
+    "frozen_sources_verified": 469,
+    "jobs": {
+      "15261": {
+        "elapsed": "00:00:11",
+        "end": "2026-10-16T15:16:55",
+        "exit_code": "0:0",
+        "name": "second67-checks",
+        "node": "csis.mn1",
+        "start": "2026-10-16T15:16:44",
+        "state": "COMPLETED",
+        "total_cpu": "00:09.977"
+      },
+      "15262": {
+        "elapsed": "00:41:19",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-prepare",
+        "node": "csis.mn1",
+        "start": "2026-10-16T15:17:52",
+        "state": "RUNNING",
+        "total_cpu": "00:00:00"
+      },
+      "15263": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-hybrid-1",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      },
+      "15264": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-compressed-1",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      },
+      "15265": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-cold-1",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      },
+      "15266": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-cached-1",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      },
+      "15267": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-modern-1",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      },
+      "15268": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-modern-2",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      },
+      "15269": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-cached-2",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      },
+      "15270": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-cold-2",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      },
+      "15271": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-compressed-2",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      },
+      "15272": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-hybrid-2",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      },
+      "15273": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-oracle",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      },
+      "15274": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-primary",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      },
+      "15275": {
+        "elapsed": "00:00:00",
+        "end": "Unknown",
+        "exit_code": "0:0",
+        "name": "second67-supplemental",
+        "node": "None assigned",
+        "start": "Unknown",
+        "state": "PENDING",
+        "total_cpu": "00:00:00"
+      }
+    },
+    "numerical_result_verified": false,
+    "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+    "progress": {
+      "cached-1": {
+        "completion_receipt_present": false,
+        "events": 0,
+        "last": null
+      },
+      "cached-2": {
+        "completion_receipt_present": false,
+        "events": 0,
+        "last": null
+      },
+      "cold-1": {
+        "completion_receipt_present": false,
+        "events": 0,
+        "last": null
+      },
+      "cold-2": {
+        "completion_receipt_present": false,
+        "events": 0,
+        "last": null
+      },
+      "compressed-1": {
+        "completion_receipt_present": false,
+        "events": 0,
+        "last": null
+      },
+      "compressed-2": {
+        "completion_receipt_present": false,
+        "events": 0,
+        "last": null
+      },
+      "hybrid-1": {
+        "completion_receipt_present": false,
+        "events": 0,
+        "last": null
+      },
+      "hybrid-2": {
+        "completion_receipt_present": false,
+        "events": 0,
+        "last": null
+      },
+      "modern-1": {
+        "completion_receipt_present": false,
+        "events": 0,
+        "last": null
+      },
+      "modern-2": {
+        "completion_receipt_present": false,
+        "events": 0,
+        "last": null
+      },
+      "oracle": {
+        "completion_receipt_present": false,
+        "events": 0,
+        "last": null
+      },
+      "prepare": {
+        "completion_receipt_present": false,
+        "events": 21,
+        "last": {
+          "certificate_refusal": null,
+          "code_sha256": "be1736f95b5fe0eeb1b5080abeee89d9a6cc8f06665bfec8f466d8569b65297d",
+          "elapsed_ns": 2212869845148,
+          "fallback": false,
+          "phase": "stage_certified",
+          "route": "streamed",
+          "stage_id": "block.0001.mlp_up"
+        }
+      }
+    },
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|PENDING|0:00|(Dependency)\n15263|second67-hybrid-1|PENDING|0:00|(Dependency)\n15262|second67-prepare|RUNNING|41:19|csis.mn1",
+    "scientific_decision_requires_terminal_binary_and_cost_audits": true,
+    "status": "verified_snapshot_metadata_only",
+    "terminal_receipts_present": false,
+    "volatile_files_omitted": []
+  },
+  "manuscript": {
+    "after_source_whitespace_tokens": 5175,
+    "before_source_whitespace_tokens": 6884,
+    "missing_citations": [],
+    "new_results_added": false,
+    "removed_tokens": 1709,
+    "sha256": "908b2ab335147d9c34c19e0e6fd0e68792d35c2ed7d1fd2f14f58ae8c2284fa4",
+    "source_snapshot": "reports/manuscript_v67.tex"
+  },
+  "manuscript_native_compile": "success_at_v67_edit_no_new_edit",
+  "model_admission_preparation": {
+    "captured_at_utc": "2026-10-16T10:40:06.217535+00:00",
+    "constructor_mocked": true,
+    "earlier_local_discovery_failures": [
+      {
+        "reason": "dataclass slots unsupported",
+        "runtime": "system Python3.9.6"
+      },
+      {
+        "reason": "NumPy absent",
+        "runtime": "Homebrew Python3.11"
+      },
+      {
+        "reason": "NumPy macOS14 Accelerate symbols unavailable on macOS13",
+        "runtime": "bundled Python3.12"
+      }
+    ],
+    "elapsed_ns": 171812041,
+    "empirical_data_acquired": false,
+    "environment": ".venv",
+    "errors": 0,
+    "failures": 0,
+    "gpu_execution": false,
+    "linux_gate_run": false,
+    "model_inference": false,
+    "numerical_constructor_executed": false,
+    "platform": "macOS-13.0-arm64-arm-64bit",
+    "process_cpu_ns": 125279000,
+    "python": "3.12.7",
+    "registration_exists": false,
+    "skips": 0,
+    "sources": {
+      "research_v69/README.txt": {
+        "bytes": 3989,
+        "sha256": "083c117f9692801bb75db86880cf3c21b4064bda1b194f031e9e96d2ee27c7e7"
+      },
+      "research_v69/__init__.py": {
+        "bytes": 72,
+        "sha256": "7d1bf09a8069db1ba9468710364696a67bafefb70086d7b20944773f03752a23"
+      },
+      "research_v69/model_gate.py": {
+        "bytes": 5303,
+        "sha256": "1471d6017c4dca7bcf4e13621b531ae0568999f8721374c94bb00dd37e1b0002"
+      },
+      "research_v69/parity.py": {
+        "bytes": 1924,
+        "sha256": "db16636e271a1b4d84de798436d4a8f471f8aaeed119dbf1099ff4f8883b00c7"
+      },
+      "research_v69/test_model_gate.py": {
+        "bytes": 6107,
+        "sha256": "d36c61836d4565d01ac53969e012d1b491d23084f1f15ee8a529a8c2682256f6"
+      },
+      "research_v69/test_parity.py": {
+        "bytes": 1753,
+        "sha256": "695eca27eca65fa21dbe0a72366336adc9b14b101a493d023039f9b4dd7a9729"
+      }
+    },
+    "sources_frozen": false,
+    "status": "passed_local_boundary_fixtures",
+    "tests": 9
+  },
+  "next_actions": [
+    "Finish V67 and require both terminal model/state/cost audits",
+    "Review and freeze V68 actual data/runtime/source registration only after V67 terminal success",
+    "Run checks, data and saved-data audit once under fresh separate admission",
+    "Prepare two matched sequential controls and six-model export/parity/likelihood registration",
+    "Use verified evidence to decide timing scope and finish the existing manuscript/bundle"
+  ],
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "quality_data_preparation": {
+    "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
+    "elapsed_ns": 362670500,
+    "empirical_data_acquired": false,
+    "errors": 0,
+    "failures": 0,
+    "linux_gate_run": false,
+    "model_inference": false,
+    "platform": "macOS-13.0-arm64-arm-64bit",
+    "process_cpu_ns": 2149675000,
+    "python": "3.9.6",
+    "registration_exists": false,
+    "skips": 0,
+    "source_files": {
+      "research_v68/PROTOCOL.txt": {
+        "bytes": 6601,
+        "sha256": "41da0a2218b6ada4d6e103410ef12cde9c9a0cec52f0ca3d86fa79df629809cd"
+      },
+      "research_v68/README.txt": {
+        "bytes": 3084,
+        "sha256": "f4511ac093c498355bea2bd98c0036e6ab364dae7cef0d39255e835f755dfdd7"
+      },
+      "research_v68/__init__.py": {
+        "bytes": 86,
+        "sha256": "5e6de3b714a5fbbbe9254a7a810ad4f0c56b46ae7713fb6ce697b338579d6f25"
+      },
+      "research_v68/data_runner.py": {
+        "bytes": 11060,
+        "sha256": "c858fbe1a475cf0bfae187c5fdfe7abe04afefcefce41d67ecb11718743d2b58"
+      },
+      "research_v68/quality_data.py": {
+        "bytes": 14572,
+        "sha256": "9fffe09481953b31729ab5bf7c2f07e3bc1abd903383630b703359c565b2c8d9"
+      },
+      "research_v68/quality_statistics.py": {
+        "bytes": 5811,
+        "sha256": "aa4f85679f3b85360c6e096bfa2ec8de4635a421e68a8fcbaafa0ce0784e30a0"
+      },
+      "research_v68/test_data_runner.py": {
+        "bytes": 4642,
+        "sha256": "da458c508210be8f021cb7ba51eb14dd0990c46d0991264c6e46590c732e9707"
+      },
+      "research_v68/test_quality_data.py": {
+        "bytes": 8778,
+        "sha256": "c827507d56cdce1c77d012b50b67d676585f18b8bcda24818df7330b48edccd8"
+      },
+      "research_v68/test_quality_statistics.py": {
+        "bytes": 3711,
+        "sha256": "1cbd25c0a967b065626492b8644d887636aded4c804685c0a20aa38c6b26bc12"
+      }
+    },
+    "sources_frozen": false,
+    "status": "passed_local_generated_fixtures",
+    "tests": 22
+  },
+  "quality_evaluation_registered": false,
+  "schema": "second-progress-v69-preparation",
+  "status": "v67_running_quality_data_and_model_gates_prepared_unregistered",
+  "submission_ready": false
+}

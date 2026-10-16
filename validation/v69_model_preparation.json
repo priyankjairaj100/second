@@ -1,0 +1,61 @@
+{
+  "captured_at_utc": "2026-10-16T10:40:06.217535+00:00",
+  "constructor_mocked": true,
+  "earlier_local_discovery_failures": [
+    {
+      "reason": "dataclass slots unsupported",
+      "runtime": "system Python3.9.6"
+    },
+    {
+      "reason": "NumPy absent",
+      "runtime": "Homebrew Python3.11"
+    },
+    {
+      "reason": "NumPy macOS14 Accelerate symbols unavailable on macOS13",
+      "runtime": "bundled Python3.12"
+    }
+  ],
+  "elapsed_ns": 171812041,
+  "empirical_data_acquired": false,
+  "environment": ".venv",
+  "errors": 0,
+  "failures": 0,
+  "gpu_execution": false,
+  "linux_gate_run": false,
+  "model_inference": false,
+  "numerical_constructor_executed": false,
+  "platform": "macOS-13.0-arm64-arm-64bit",
+  "process_cpu_ns": 125279000,
+  "python": "3.12.7",
+  "registration_exists": false,
+  "skips": 0,
+  "sources": {
+    "research_v69/README.txt": {
+      "bytes": 3989,
+      "sha256": "083c117f9692801bb75db86880cf3c21b4064bda1b194f031e9e96d2ee27c7e7"
+    },
+    "research_v69/__init__.py": {
+      "bytes": 72,
+      "sha256": "7d1bf09a8069db1ba9468710364696a67bafefb70086d7b20944773f03752a23"
+    },
+    "research_v69/model_gate.py": {
+      "bytes": 5303,
+      "sha256": "1471d6017c4dca7bcf4e13621b531ae0568999f8721374c94bb00dd37e1b0002"
+    },
+    "research_v69/parity.py": {
+      "bytes": 1924,
+      "sha256": "db16636e271a1b4d84de798436d4a8f471f8aaeed119dbf1099ff4f8883b00c7"
+    },
+    "research_v69/test_model_gate.py": {
+      "bytes": 6107,
+      "sha256": "d36c61836d4565d01ac53969e012d1b491d23084f1f15ee8a529a8c2682256f6"
+    },
+    "research_v69/test_parity.py": {
+      "bytes": 1753,
+      "sha256": "695eca27eca65fa21dbe0a72366336adc9b14b101a493d023039f9b4dd7a9729"
+    }
+  },
+  "sources_frozen": false,
+  "status": "passed_local_boundary_fixtures",
+  "tests": 9
+}

@@ -1,4 +1,4 @@
-Current work (16 October 2026): **V67 preparation is running; V68 quality-data preparation passes22 local fixtures.** At15:59IST all13 sources and7of24 stages were recorded; no terminal result is verified. Read [latest handoff](docs/ACTIVE_SESSION_V68.md), [data-only draft protocol](research_v68/PROTOCOL.txt), and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). All469 executed sources remain frozen. Nine V68 files are UNREGISTERED and unfrozen; no new article or model loss was read. Historical checkpoints follow.
+Current work (16 October 2026): **V67 preparation is running; V68 data preparation passes22 local fixtures and V69 model/parity helpers pass9 boundary fixtures.** At15:59IST all13 sources and7of24 stages were recorded; no terminal result is verified. Read [latest handoff](docs/ACTIVE_SESSION_V69.md), [data-only draft protocol](research_v68/PROTOCOL.txt), and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). All469 executed sources remain frozen. Nine V68 and six V69 files are UNREGISTERED and unfrozen; no new article or model loss was read. Historical checkpoints follow.
 
 ---
 
