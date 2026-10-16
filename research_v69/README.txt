@@ -1,6 +1,7 @@
 V69 construction, evaluator and actual-artifact helpers
 UNREGISTERED and UNFROZEN preparation, 16 October 2026.
-No launchable Slurm worker, empirical registration or data acquisition.
+Bounded worker/controller/closure entries are prepared; no registration or data acquisition.
+The held-job launcher and container/GPU wrappers are still required before any launch.
 Read PROTOCOL.txt for the proposed sequence and remaining admission requirements.
 
 model_gate.py restores actual packed bytes on frozen row grids, checks original
@@ -64,22 +65,24 @@ the469 files in the V67 CPU inventory. No historical source is changed.
 cost_accounting.py verifies actual persisted worker seals and debits, includes
 controller helpers without double-counting worker CPU, and checks scheduler
 allocation clocks and GPU allocator receipts. Failed executions stay failed.
-These components still need once-only production worker/controller wiring and
-post-exit closure, plus real Linux/CUDA qualification and actual data admission.
+campaign.py, phase_flow.py, entry.py and worker.py now connect the production
+gates to all eight bounded phases. closure.py adds separate post-exit accounting.
+Actual registration, scheduler wrappers/launcher and Linux/CUDA qualification remain.
 
 cuda_qualification.py prepares a fresh-process24-pair generated CUDA check using
 all six model factories,128-token sequences, signed zero and subnormal parameters.
 Only its CPU fixture and pre-CUDA refusal paths have executed locally; actual
 CUDA qualification remains pending in its separate admitted worker.
 
-Local generated-fixture suite:64 tests in the existing project .venv Python3.12.7.
+Local generated-fixture suite:81 tests in the existing project .venv Python3.12.7.
 The sequential constructor and checkpoint import are mocked in boundary/context
 tests; host/runtime/limit APIs are mocked without changing local limits. Tiny CPU
 likelihood fixtures now run; these are generated software data, not checkpoint or
 corpus evidence. No MPFR feature construction, real checkpoint, GPU execution,
 untouched article or empirical likelihood was accessed. Frozen V55 numerical
 fixtures and actual CUDA parity fixtures must pass in separately admitted Linux
-environments. Exact tested bytes and outcomes are in validation/v69_execution_preparation.json.
+environments. Exact tested bytes and outcomes are in validation/v69_worker_preparation.json.
+The64-test gate checkpoint remains in validation/v69_execution_preparation.json.
 The previous40-test checkpoint remains in validation/v69_input_preparation.json.
 The earlier33-test checkpoint remains in validation/v69_quality_preparation.json.
 
@@ -88,7 +91,34 @@ system Python3.9 lacks dataclass slots; Homebrew3.11 lacks NumPy; bundled3.12 Nu
 expects macOS14 Accelerate symbols unavailable on this macOS13 host. The existing
 .venv works without installation. These were not registered empirical attempts.
 
-All twenty-seven V69 files remain editable and unregistered. V68's nine files are
+All thirty-six V69 files remain editable and unregistered. V68's nine files are
 also unregistered, with22 separate local fixtures. All469 executed sources through
 V67 remain unchanged. No new workload may disturb active V67 timing. Source tests,
 structural resource admission and this README do not authorize a launch.
+
+Production execution wiring
+The campaign requires both actual V67 terminal audits, all V68 data and scheduler
+receipts, immutable checkpoint/export/target bytes, inherited dependencies and
+full source inventories. CPU and CUDA interpreter schemas remain distinct.
+A completed predecessor is admitted only through its actual worker seal, settled
+debit, completed controller and exact saved output census. The current admitted
+worker may be the single live reservation; it is never counted as completed.
+Exclusive entry intents preserve failures and prohibit repeated dispatch.
+Sequential endpoints run separately through the unchanged V55/V50 constructor.
+Parameter reuse requires a completed checkpoint-derived all78-array comparison.
+The terminal worker repeats that comparison and reparses actual sequential codes,
+losses, parity and statistics. A negative quality guard is complete evidence.
+A separate bounded closure job reads all eight final worker/controller/Slurm
+costs; the external observer must then check the closure's own terminal Slurm
+row. Its302-second allowance is separate from the44424-second eight-phase design,
+44726 CPU seconds total. External reporting/transport is explicitly outside this
+registered compute scope. No measured timing or cost is inferred from these caps.
+
+The17 added local tests cover real generated seals/files, live reservation
+isolation, prerequisite cost failures, interpreter schema differences, failed
+preflight persistence, exact endpoint dispatch, post-device transfer receipts and
+post-exit accounting. Numerical production calls and process/Slurm boundaries are
+mocked; no actual worker or CUDA process runs locally. The future Linux suite is
+87 tests including the six unchanged V55 numerical fixtures. One initial local
+test used the symbolic macOS /var temporary path and correctly hit the output
+safety guard; the fixture now resolves the path. The safety guard was preserved.

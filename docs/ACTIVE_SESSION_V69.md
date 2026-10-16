@@ -1,104 +1,92 @@
-# V69 execution-gate preparation; V67 comparison running
+# V69 production workers prepared; V67 hybrid comparison running
 
-16 October 2026. Latest reporting handoff, not a registration. Read the continuous
-queue, frozen V67 protocol, and unregistered V68/V69 protocols. All469 V67 execution
-sources and the14 separately inherited historical GPU/export sources are unchanged.
-V68 and V69 remain UNREGISTERED and UNFROZEN. Never repeat an existing launcher/job.
+16 October 2026. Latest reporting handoff, not a registration. V68 and V69 remain
+UNREGISTERED and UNFROZEN. Preserve all469 V67 sources and14 inherited historical
+GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
 ## Actual cluster observation
 
-At11:56:24UTC (17:26:24IST), preparation15262 was COMPLETED0:0 after1h55m09s.
-It finished at17:13:01IST. All13 sources and24 stages were recorded, with all five
-state representations packaged. Its worker sealed6857.956044 observed CPU seconds,
-charged6858 seconds, with maximum RSS1732228KiB. Controller own CPU was9.590220307s;
-Slurm reports1h54m28s total CPU. These clocks have different scopes and precision.
-The preparation receipt, seal/artifact metadata and debit agree. Actual numerical
-binaries were not reaudited in this continuation. This does not establish fresh
-oracle equality, complete campaign costs, quality or a new scientific conclusion.
+At12:27:29UTC (17:57:29IST), hybrid-control job15263 was RUNNING44m28s on csis.mn1.
+It had15of24 certified stages, last block.0003.mlp_up, with no recorded refusal or
+fallback. Preparation15262 remains COMPLETED0:0. Jobs15264--15275 are dependency-
+pending; both terminal audits remain absent. No new empirical job was submitted.
+The232-file snapshot campaigns/csis_v67_progress_metadata_20261016_f.tar.gz is203310
+bytes, SHA25606b0915e7be00abdeafa2c2f38a55088c39ca8aa2147972ea68c5acc4452d7d0.
+validation/v67_progress_metadata_check_f.json verifies its metadata/source bindings.
+All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
+This is progress metadata, not an actual model/state equality or scientific result.
+The numerical checkout remains f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull
+reporting commits there. Previous snapshots and failures remain preserved.
 
-Hybrid-control job15263 was RUNNING13m23s, with three certified stages and no
-recorded refusal/fallback. Jobs15264--15275 remain dependency-pending. Both terminal
-audits are absent. No new empirical job was submitted.
+Preparation15262 ended17:13:01IST after1h55m09s with13 sources,24 stages and all five
+state representations packaged. The earlier actual receipt/debit check remains in
+validation/v67_preparation_metadata.json:6857.956044 worker CPU seconds,6858 charged,
+1732228KiB peak RSS,9.590220307 controller own CPU seconds and1h54m28 Slurm CPU.
+Numerical binaries were not reaudited by this continuation. Preserve the reserved
+hybrid debit; do not settle it or treat it as unused before actual terminal usage.
 
-The220-file snapshot campaigns/csis_v67_progress_metadata_20261016_e.tar.gz is201630
-bytes, SHA256097936432912408244ca07ffee172d60b5ed7eae57f19c8875faecfa6057e98f.
-validation/v67_progress_metadata_check_e.json checks metadata/source/dependencies;
-validation/v67_preparation_metadata.json checks the completed preparation receipts.
-The next worker's reserved debit is preserved, not settled or treated as unused.
-All469 frozen files, eleven dependencies and102 historical ledgers were checked
-remotely. Numerical checkout remains f900999fcb200509dfad4fc081ce9c87fd172a16.
-Never pull reporting commits into it. Earlier snapshots/failures remain intact.
+## Production wiring completed locally
 
-## Independent preparation completed
+V69 now has36 editable files and81 passing generated local tests, with zero final
+failures/errors/skips. See validation/v69_worker_preparation.json and
+docs/V69_EXECUTION_WIRING_REVIEW.txt. The9/33/40/64-test checkpoints remain preserved.
+All152 imported project module origins and the complete frozen byte inventories
+were checked. All36 files parse with Python3.10 grammar. V68's nine sources and22
+fixtures are unchanged. The future CPU qualification is87 tests, including the six
+unchanged V55 sequential numerical checks; those six were not run locally.
 
-V69 now has27 editable files and64 passing generated local tests, zero failures,
-errors or skips, in the existing project Python3.12.7 environment. Exact sources,
-costs and limits are in validation/v69_execution_preparation.json. The9/33/40-test
-checkpoints remain preserved. V68's nine files and22 fixtures remain unchanged.
+campaign.py binds actual V67/V68 inputs, full source/dependency/runtime inventories,
+original parameter archive, held-job identity and exact predecessor output bytes.
+Admission requires completed controller receipts, real worker seals and settled
+debits. It now reconciles the three actual V68 terminal scheduler allocations.
+entry.py and worker.py add exclusive intents, live exact-command allowance checks,
+bounded once-only dispatch and preserved failures. phase_flow.py connects all eight
+operations, checkpoint-derived parameter reuse, separate sequential12/6 construction,
+CPU reference losses, parity-gated GPU collection and actual terminal artifact audits.
+The terminal pass repeats all78 original parameter word comparisons and reparses
+both saved sequential outputs. Calibration/inference is not independently repeated.
+The CPU interpreter path is prospectively bound separately because the inherited
+CPU runtime schema differs from CUDA's top-level executable record.
 
-The existing helpers cover complete packed-code/membership bindings, matched
-sequential construction, every original parameter word, six-model CPU/CUDA
-factories,24-pair parity before the remaining articles, exclusive per-article
-loss files, and actual saved-loss/statistics audits. Adverse quality remains valid
-completed evidence. Original and nearest controls run once; GPU subset losses are
-reused. Actual multi-runtime arithmetic agreement is still unexecuted.
+closure.py adds bounded post-exit cost accounting. After the eight phases exit it
+reads their actual seals, ledger, controller clocks and scheduler allocations. An
+external saved-receipt observer must then check the closure's own terminal Slurm
+row. The separate closure has300 soft/301 hard CPU seconds,302 admitted CPU seconds,
+900 wall seconds,4GiB address space and128MiB file bound. Total proposed allowance
+is44726 CPU seconds:44424 for eight workers/controllers plus302 closure. These are
+unregistered ceilings, not elapsed-time estimates or reserved budget. External
+reporting/transport is explicitly outside that compute-measurement scope.
+Negative quality remains completed evidence, with no retry or favorable reselection.
 
-New production admission enforces the frozen checkpoint files, exact configuration,
-original1664 normalization,24 production stages/42467328 codes, all78 parameter
-arrays, actual CPU target reconstruction and checkpoint-derived parameter auditing.
-Historical actual target/parameter-manifest metadata passed these gates locally;
-no checkpoint weights, MPFR calibration or new article was executed.
-
-New execution gates keep the inherited CPU runtime exact and CUDA runtime separate,
-check fresh device admission, install bounded controller limits, and reject imported
-project modules outside the registered source inventory. The CPU-only V67 inventory
-omits14 V46/V47 GPU/export files; their bytes were verified against the original
-V47 registration620076c67ae79ee56de784ecd4c6e49ef3b4b22f45742f72956821b1e416cf54.
-All304 source commitments in that historical registration agree with current files.
-The64-test process also checked the actual origins of141 imported project modules.
-
-Cost helpers verify actual persisted generated worker seals/debits, include helper
-processes while counting worker CPU once, parse scheduler allocations without
-adding batch/extern steps again, and check all eight unique phase costs and GPU
-allocator receipts. Fully accounted failures remain failures. A final closure must
-run after the terminal worker/controller exit to include their complete costs.
-
-A fresh-process CUDA qualification helper is prepared for24 generated comparisons
-across all six factories with128-token sequences and signed-zero/subnormal
-parameters. Only its CPU fixtures and pre-CUDA refusal paths ran locally. Actual
-CUDA execution, checkpoint import, runtime installation and numerical sequential
-construction are not qualified by these tests. Host/runtime/limit calls and the
-numerical constructor are mocked. The six unchanged V55 numerical fixtures must
-still pass on Linux. One local test initially expected40216 instead of39616 CPU
-seconds; the arithmetic assertion was corrected without changing any phase cap.
-
-Proposed eight-worker allowance is39616 CPU seconds, with4808 separate controller
-seconds,44424 combined. The separate CUDA-check phase is now explicit. These are
-unregistered design ceilings, not reserved resources or ETA. Structural point
-admission still has maximum solver arrays4519108608B at12 records,767565824B at6,
-plus4GiB other residency inside16GiB. Measured fit remains unverified.
+Production numerical calls, OS limits, runtime and Slurm boundaries are mocked in
+local wiring tests. Generated files/seals and tiny CPU inference are real fixtures.
+No actual checkpoint, MPFR calibration, CUDA process, untouched article or empirical
+likelihood ran. One initial20-test run had one error because the fixture used the
+symbolic macOS /var temporary path; resolving that fixture fixed it without changing
+the output safety guard. The failure is preserved. Root review is not independent.
 
 ## Concrete next work
 
-1. Wire prepared V69 gates into bounded once-only controller/worker/Slurm entries,
-   immutable registration and declared predecessor outputs. Include checkpoint
-   parameter reuse and final post-exit accounting closure. Review actual host,
-   partition, runtime and CUDA availability only after V67 completes. No competing
-   empirical workload may disturb its timing.
+1. Prepare/review the held-job submission adapter and CPU-container/GPU Slurm wrappers.
+   The old frozen CPU wrapper sets only four thread variables; V69 requires all seven.
+   Capture actual interpreter paths inside the inherited container and CUDA runtime;
+   bind held job IDs exclusively before release, no-requeue and one serial chain.
+   Review actual host/partition/memory/wall admission before launch, including closure.
 2. Close all V67 comparisons, fresh oracle and both actual-model/state/cost audits.
-   Make the scientific decision from those outputs and preserve adverse evidence.
-3. Only after both V67 audits succeed, register V68 with actual source/runtime,
-   input, exclusion and resource inventories. Execute checks/data/audit once. The
-   entire inspected historical2349-record frame and new frame stay excluded.
-4. After actual V68 success, freeze/register V69 with real data/model inputs and
-   numerical/CUDA qualification. Run parameter audit, sequential12/6, CPU references,
-   GPU evaluation and terminal artifact/cost closure without retries or fallback.
-5. Decide prospective timing replication, then finish the evidence-linked paper,
-   official formatting/anonymity, citations/licenses/author facts and final bundle.
+   Make the scientific decision from actual results and preserve adverse evidence.
+3. Only after both V67 audits succeed, register V68 with actual source/runtime/input/
+   exclusions/resources; execute checks/data/audit once and reconcile terminal costs.
+   Both the entire old2349-record frame and the new inspected frame stay excluded.
+4. Only after V68 success freeze/register V69 with actual data/model/runtime bindings.
+   Run87 Linux checks, separate actual CUDA qualification, parameters, sequential12/6,
+   CPU references, GPU collection, terminal audit and post-exit closure once.
+5. Decide claim-required timing replication, then finish paper formatting/anonymity,
+   citations/licenses/author facts and final bundle. No conference submission.
 
-The existing open manuscript is unchanged from the successful native V69 compile:
+The existing open manuscript is unchanged from its successful native compile:
 5269 source whitespace tokens versus6884 before trimming,197 in the abstract,
-all proofs/math preserved, with Limitations and AI disclosure. These are not venue
-page counts. See docs/SUBMISSION_READINESS_V69.txt. No submission-ready claim.
+proofs/math preserved, Limitations and AI disclosure included. Its actual SHA256
+is11e5a67c5edc102b7b11f2f5962b877f73efbc7ae0688863ca274832023bc393.
+These are not official venue page counts; submission readiness is still false.
 The same15-minute continuation remains active. No new monitor, subagent, paid
-compute, third-party message or conference submission is authorized.
+compute or third-party message is authorized.

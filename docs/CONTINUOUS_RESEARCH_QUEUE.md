@@ -67,7 +67,8 @@ or parallel execution loop. No subagent delegation is currently authorized.
    IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
-   Preparation15262 completed0:0; first hybrid comparison15263 is running,
+   Preparation15262 completed0:0; first hybrid comparison15263 is running with15of24
+   certified stages at17:57IST,
    with remaining comparisons/oracle/audits15264--15275 dependency-pending.
    Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V69.md`, `docs/ACTIVE_SESSION_V68.md`, `docs/ACTIVE_SESSION_V67.md` and
    `research_v67/PROTOCOL.txt`. Reuse the frozen mathematical target and matched point
@@ -106,11 +107,14 @@ or parallel execution loop. No subagent delegation is currently authorized.
    audits before registering the data-only phase; do not disturb active timings.
    V69 now adds sequential construction, full parameter-array auditing, six-model
    CPU/CUDA factories, parity-gated once-only loss collection and saved-loss audits.
-   All64 generated local fixtures pass; the sequential constructor remains mocked,
+   All81 generated local fixtures pass; the sequential constructor remains mocked,
    while tiny CPU likelihood fixtures execute. Production checkpoint/geometry, runtime/source/process-limit and cost-accounting
    helpers are prepared, including14 historical GPU/export sources omitted from the
-   V67 CPU inventory. Actual worker/controller/Slurm wiring, immutable registration,
-   real Linux/CUDA qualification and post-exit accounting closure remain.
+   V67 CPU inventory. Production worker/controller/phase and post-exit closure wiring is prepared, with
+   complete predecessor seals and separate accounting. Held-job submission and
+   CPU-container/GPU Slurm wrappers, actual registration and Linux/CUDA qualification
+   remain. Read docs/V69_EXECUTION_WIRING_REVIEW.txt. The separate closure adds302
+   CPU seconds to the44424 eight-phase design;44726 is a ceiling, not an ETA.
    Read research_v69/PROTOCOL.txt; proposed resources are not registered allowances.
    Check article identity and overlap against every historical exclusion (currently
    sixty) and calibration source. Predeclare paired pooled NLL/PPL, tail guard,

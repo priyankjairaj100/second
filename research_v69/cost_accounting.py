@@ -59,7 +59,7 @@ All expected jobs must be terminal. Unknown allocations or step parents refuse.
     return {phase:dict(job_id=job,**rows[job]) for phase,job in expected_jobs.items()}
 
 
-def worker(directory,expected_identity,snapshot):
+def worker(directory,expected_identity,snapshot,*,active_attempt_id=None):
     """Validate the actual persisted seal and artifacts, then its exact debit."""
     directory=Path(directory)
     require(json_read(directory/'identity.json')==expected_identity,'Actual worker identity differs')
@@ -90,7 +90,11 @@ def worker(directory,expected_identity,snapshot):
         and actual['thread_environment']=={n:'1' for n in THREAD_VARIABLES}
         and limits['threads']==1 and len(limits['affinity_cpus'])==1,
         'Actual worker command or applied resource limit differs')
-    require(snapshot['status']=='verified' and not snapshot['reserved_unknown_attempts']
+    live={k for k,v in snapshot['attempts'].items() if v['state']=='reserved'}
+    require((active_attempt_id is None and not live) or
+        (type(active_attempt_id) is str and live=={active_attempt_id}),
+        'Only the separately admitted current worker may remain reserved')
+    require(snapshot['status']=='verified' and snapshot['reserved_unknown_attempts']==len(live)
         and not snapshot['reservation_overrun_attempts'] and not any(snapshot['over_cap'].values()),
         'Settled complete within-cap ledger required')
     debit=sealed['budget_debit'];identifier=sealed['budget_attempt_id'];usage=sealed['resource_usage']
@@ -107,7 +111,7 @@ def worker(directory,expected_identity,snapshot):
         'Worker reservation differs from applied CPU allowance')
     return dict(debit_id=identifier,worker_cpu_ns=cpu,charged_cpu_seconds=debit['charged_cpu_seconds'],
         worker_outcome=sealed['outcome'],maximum_rss_kib=integer(usage['max_rss_kib'],'worker RSS'),
-        actual_seal_and_artifacts_checked=True)
+        actual_seal_and_artifacts_checked=True,active_attempt_excluded_from_completion=active_attempt_id)
 
 
 def reconcile(phase,entry,worker_row,scheduler,*,registration_sha256):

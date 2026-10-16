@@ -1,5 +1,5 @@
 Proposed V69 two-endpoint untouched-quality execution
-UNREGISTERED DESIGN, 16 October 2026. No launch entry or empirical attempt exists.
+UNREGISTERED DESIGN, 16 October 2026. Bounded entries are prepared; no empirical attempt exists.
 
 Purpose and immutable scientific choices
 Evaluate the V67 candidate after13->12 and13->12->6 deletions against a matched
@@ -22,7 +22,7 @@ Never infer actual candidate bytes from a test or a claimed matching checksum.
 Proposed execution sequence
 1. Freeze all new sources, dependencies, Linux CPU and CUDA environments, actual
    inputs and caps. Pass local checks and separately registered Linux numerical
-   fixtures, including all six unchanged V55 sequential tests. The current64 tests
+   fixtures, including all six unchanged V55 sequential tests. The current81 tests
    include mocks and tiny CPU data; they do not qualify MPFR or CUDA.
 2. Audit the existing uncompressed original-parameter snapshot against a reference
    constructed from the bound checkpoint. Compare all arrays and all words.
@@ -107,7 +107,7 @@ or MPFR execution is qualified by those tests.
 execution_gate.py binds the inherited CPU runtime exactly, keeps CUDA runtime
 admission separate and before initialization, installs one-thread/one-affinity
 controller limits, and rejects imported project code outside the registration.
-Its future source inventory must include all469 V67 files, nine admitted V68
+Its registered source inventory must include all469 V67 files, nine admitted V68
 files, all new V69 files, and14 historical V46/V47 GPU/export files from the actual
 V47 registration620076c67ae79ee56de784ecd4c6e49ef3b4b22f45742f72956821b1e416cf54.
 Those14 files are absent from the CPU-only V67 inventory; their actual current
@@ -122,12 +122,48 @@ are required. Fully accounted failures remain failures; negative quality does no
 invalidate accounting. Missing/unknown/unsettled costs refuse complete accounting.
 Final closure must run after the terminal worker and its controller exit, because
 an audit cannot seal its own final process/scheduler cost from inside itself.
-The future closure operation needs an explicit bounded accounting scope too.
+closure.py supplies that separate bounded scope:300 soft/301 hard CPU seconds,
+302 admitted CPU seconds,900 scheduler wall seconds,4GiB address space and128MiB
+file cap. Include its own terminal Slurm row in external saved-receipt validation.
+Total proposed campaign allowance is44726 CPU seconds. Transport and the external
+reporting observer are excluded explicitly; no numerical work runs there.
 
-Remaining implementation before any launch
-Wire these helpers into bounded once-only controller/worker/Slurm entries, exact
-fresh attempt paths, immutable registration, checkpoint-derived parameter reuse,
-actual artifact audits and final post-exit closure. Review actual Linux and GPU environments. Bind
-future generated sequential artifacts through their completed declared predecessor
-receipts. Keep every failed or unstarted registered phase. No concurrent empirical
-work alongside active V67 timing. This document alone authorizes no job.
+Production worker/controller wiring now prepared
+campaign.py validates actual V67/V68 gates, immutable source/input/runtime groups,
+held-job bindings, all prior phase seals, exact output census and settled debits.
+V68's three actual terminal scheduler rows must contain whole-process plus child
+CPU within its1506-second allowance. Do not rerun the old live-history glob.
+CPU interpreter paths are bound separately from the inherited runtime's binary
+identity; the CUDA capture's executable field is also checked. Each actual
+controller/worker must use its corresponding prospectively bound interpreter.
+
+entry.py writes an exclusive start intent, then executes one bounded worker and
+preserves complete process/child clocks and output commitments. Its own and helper
+CPU are checked separately from the wait4 worker cost. worker.py requires live
+exact-command budget admission before output creation or dispatch. A single live
+reservation may coexist with sealed predecessors, but cannot count as completed.
+phase_flow.py executes source/numerical checks, actual generated CUDA checks,
+checkpoint-derived parameter auditing, separate sequential12/6 construction, CPU
+parity, parity-gated full GPU losses and terminal actual-artifact checks. Terminal
+checks repeat every original parameter word against the checkpoint, reparse both
+sequential outputs, and recompute actual saved-loss statistics. Negative quality
+is completed evidence. All failures and incomplete outputs remain preserved.
+
+closure.py reads actual final costs after all eight phases have exited, with no
+double counting. Its bounded job has separate accounting. External observation
+of that job's terminal scheduler row is mandatory before complete campaign costs.
+Root implementation review and generated fixture tests are not independent review
+or empirical validation. Exact local outcomes are preserved in
+validation/v69_worker_preparation.json and docs/V69_EXECUTION_WIRING_REVIEW.txt.
+
+Remaining before any launch
+Build/review the one-use held-job submission adapter and CPU-container/GPU Slurm
+wrappers against actual admitted partitions, hosts and runtime inventories. The
+historical CPU wrapper sets only four thread variables; V69 requires all seven,
+so do not silently reuse it or modify its frozen bytes. Preserve the inherited
+container/interpreter and all469+14 historical sources. Bind actual generated
+sequential outputs through declared predecessor receipts. Freeze the completed
+source/test inventory and registration only after actual V67/V68 gates succeed.
+Run87 exact-count Linux checks including six unchanged V55 numerical fixtures,
+and separate actual CUDA qualification. No competing workload may disturb V67.
+This document and local tests authorize no launch by themselves.

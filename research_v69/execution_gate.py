@@ -41,6 +41,9 @@ def design():
         slurm_wall_overhead_seconds=600,host_memory_bytes=MEMORY,cpu_address_space_bytes=MEMORY,
         cuda_address_space_bytes=GPU_AS,gpu_allocator_bytes=GPU_ALLOCATOR,file_size_bytes=FILE,
         threads=1,automatic_retry=False,no_concurrent_second_empirical_work=True,
+        post_exit_closure=dict(cpu_soft_seconds=300,cpu_hard_seconds=301,cpu_allowance_seconds=302,
+            wall_seconds=900,address_space_bytes=4*2**30,file_size_bytes=128*2**20,
+            independent_slurm_job=True,external_reporting_observer_excluded=True),
         final_scheduler_and_closure_accounting_required=True,registered=False)
 
 
