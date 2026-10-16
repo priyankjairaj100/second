@@ -1,0 +1,19 @@
+V62 recovered validation: portable evidence instructions
+
+Keep the original failure and the separate recovery in different fresh directories.
+Verify the two archive SHA256 values in handoff/program_v62.json before safe
+extraction. Refuse absolute paths, traversal, symlinks, hardlinks and duplicate
+members. Do not merge directories or create the two original missing audit files.
+
+Run from the repository:
+python3 -B validation/check_v62_recovery_metadata.py ORIGINAL_DIR RECOVERY_DIR --repo . --output FRESH_RESULT.json
+
+This verifies metadata/provenance, claims, sources and arithmetic, not omitted
+binary contents. Actual complete model/state byte audits ran on CSIS as 15150 and
+15151. The original 13569 timeout and 13570 cancellation remain required evidence.
+The checker writes exclusively to a new output and refuses altered input inventories.
+
+The collection has already completed. The read-only collector is preserved for
+reproducibility; it launches no work. Do not rerun registration/launch scripts,
+audit wrappers, calibration or quality merely to reproduce these metadata checks.
+Local four boundary fixtures and full integration passed. Root review only.
