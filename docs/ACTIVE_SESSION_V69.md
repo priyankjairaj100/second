@@ -6,13 +6,13 @@ GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
 ## Actual cluster observation
 
-At15:01:01UTC (20:31:01IST), hybrid15263 and compression15264 were COMPLETED0:0.
+At15:22:21UTC (20:52:21IST), hybrid15263 and compression15264 were COMPLETED0:0.
 Compression completed in1h27m36s with all24 stages certified. Cold15265 was RUNNING
-27m37s with3of24 certified stages;15266--15275 remained dependency-pending.
+48m56s with7of24 certified stages;15266--15275 remained dependency-pending.
 Both terminal audits remain absent.
-The340-file snapshot campaigns/csis_v67_progress_metadata_20261016_n.tar.gz is295857
-bytes, SHA2564284c7bc62164502b580897db9eb7f21232fdcdae0e1e46a87438fb0cc632cad.
-validation/v67_progress_metadata_check_n.json verifies metadata/source bindings.
+The344-file snapshot campaigns/csis_v67_progress_metadata_20261016_o.tar.gz is296304
+bytes, SHA256fabe3d2624e9e2aaa420b98fbd0b84c44ed1c83708d38e901dd668bea8702e2b.
+validation/v67_progress_metadata_check_o.json verifies metadata/source bindings.
 All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
 No new job was submitted. The numerical checkout remains
 f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull reporting changes there.
@@ -247,3 +247,28 @@ checks. This qualifies the local fixture subset, not Linux/CUDA or full empirica
 reproduction. Two preparation failures and earlier components remain preserved.
 See docs/REVIEW_SOURCE_COMPONENT_V69.txt. External input/runtime instructions,
 notices, whole-package review and claim-required evidence remain.
+
+## External-input guide and unified package review
+
+A six-file guide now records exact external input/runtime commitments and commands
+for the qualified local fixture subset. Clean extraction and offline verification
+pass; three refusal probes reject corruption, a missing input and an extra file.
+No model/data/library was downloaded and no numerical test was rerun.
+
+Across four components,559 archive members plus the manuscript and navigation
+page pass four manifest checks and known direct-identity scanning. Fifteen evidence
+references and four protocol links resolve. A concrete nine-receipt crosswalk
+clarifies older E10/E11 filenames whose completed outcomes belong to E12.
+Read docs/REVIEW_REPRODUCTION_GUIDE_V69.txt and reports/REVIEW_PACKAGE_README_V69.txt.
+
+Full historical input/receipt closure, actual runtime reproduction, transitive
+notices, project terms, indirect anonymity and rendered pages remain incomplete.
+The guide does not close those gates. V67's actual terminal evidence and later
+untouched quality/timing decisions still control the final scientific claims.
+The manuscript is unchanged; all frozen experiment sources remain unchanged.
+
+A separate bounded installed-notice read preserves four CPU dependency license
+files (92,050 bytes), with the codec LICENSE matching its frozen hash. Tokenizer
+dist-info had no notice file. Transitive/system/GPU notices remain incomplete;
+no library was installed and no scientific result follows. See
+validation/v69_installed_dependency_notice_check.json.

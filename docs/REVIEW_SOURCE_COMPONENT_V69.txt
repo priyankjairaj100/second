@@ -59,8 +59,9 @@ resource limit, empirical attempt or job changed. The fixture's intentional inje
 immutable-input exception appears in stderr; it is an expected passing refusal test.
 
 Remaining package work
-Complete external input/runtime instructions and notices, then review all manuscript,
-summary, receipt and source components together. The534 source files include legacy
+External input/runtime instructions and a561-file cross-component review are now
+prepared; see REVIEW_REPRODUCTION_GUIDE_V69.txt. Actual input/receipt closure,
+transitive notices and whole-package anonymity remain. The534 source files include legacy
 protocols and guards; a static import graph is not external artifact/runtime closure.
 The historical summary and nine typed-preserving receipt copies remain unchanged.
 Project release terms, whole-package anonymity, native-preview pagination and actual

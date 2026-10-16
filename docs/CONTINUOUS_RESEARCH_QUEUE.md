@@ -67,8 +67,8 @@ or parallel execution loop. No subagent delegation is currently authorized.
    IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
-   Preparation15262, hybrid15263 and compression15264 completed0:0. At20:31IST
-   cold15265 was RUNNING27m37s with3of24 certified stages;15266--15275 were
+   Preparation15262, hybrid15263 and compression15264 completed0:0. At20:52IST
+   cold15265 was RUNNING48m56s with7of24 certified stages;15266--15275 were
    dependency-pending. Both completed
    comparison receipts/debits passed metadata checks; both binary audits remain.
    Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V69.md`, `docs/ACTIVE_SESSION_V68.md`, `docs/ACTIVE_SESSION_V67.md` and
@@ -156,6 +156,8 @@ or parallel execution loop. No subagent delegation is currently authorized.
    see docs/SUBMISSION_ARTIFACT_POLICY_V69.txt. Keep binaries/corpus external and
    preserve the C4 metadata-bound refusal. Project licensing remains unassigned;
    publisher declarations do not close rights, anonymity or reproduction checks.
+   Four actual CPU license files are now preserved; tokenizer dist-info lacked a
+   notice. Resolve that and remaining transitive/system/GPU notice gaps explicitly.
    The15-record evidence index maps historical project citations to54 checked
    direct files; the identifying provenance map stays outside anonymous packaging.
    An available five-file companion ZIP now contains1,054 checked field groups
@@ -176,9 +178,12 @@ or parallel execution loop. No subagent delegation is currently authorized.
    docs/MANUSCRIPT_NUMBER_AUDIT_V69.txt and docs/ANONYMITY_REVIEW_V69.txt.
    The official ACL style and author-year citations now compile in the existing file.
    Nine receipt derivatives now preserve every typed field under checked string
-   mappings and pass clean extraction. Complete source/protocol/runtime closure
-   and whole-package review; see docs/REVIEW_RECEIPT_COMPANION_V69.txt and
-   docs/REVIEW_SOURCE_COMPONENT_V69.txt.
+   mappings and pass clean extraction. The six-file external-input guide and unified navigation
+   now pass clean extraction, byte checks and a561-file known-identity review.
+   Three older receipt filenames are mapped explicitly to canonical E12 outcomes.
+   Complete actual historical input/receipt closure, transitive notices, indirect
+   anonymity and rendered layout; see docs/REVIEW_RECEIPT_COMPANION_V69.txt and
+   docs/REVIEW_SOURCE_COMPONENT_V69.txt and docs/REVIEW_REPRODUCTION_GUIDE_V69.txt.
    See docs/SOURCE_RECEIPT_PACKAGE_REVIEW_V69.txt.
    Preview inspection is unavailable, so rendered pages/layout remain unverified.
    See docs/ACL_FORMATTING_V69.txt. Deliver a reviewed source and reproducibility
@@ -191,7 +196,7 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate is qualified. At20:31IST preparation15262,
+V67's64-test exact-source Linux gate is qualified. At20:52IST preparation15262,
 hybrid15263 and compression15264 were COMPLETED0:0. Their worker debits are6858,
 4922 and5210 CPU seconds. Cold15265 is RUNNING;15266--15275 are dependency-pending.
 Both completed comparisons have24 stage certificates. Their7 and68 numerical

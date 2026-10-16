@@ -1,0 +1,105 @@
+{
+  "archive": {
+    "bytes": 15057,
+    "path": "reports/development-reproduction-guide-v69.zip",
+    "sha256": "d533f475ca5db4356210ee2e859304420d7d6e6477c651ec9115a1ee846fb712"
+  },
+  "captured_at_utc": "2026-10-16T15:19:16.629688+00:00",
+  "clean_extraction_verified": true,
+  "codec_files": 11,
+  "complete_transitive_notices": false,
+  "external_inputs_acquired": false,
+  "full_anonymity_verified": false,
+  "full_reproduction_verified": false,
+  "local_114_fixture_suite_repeated": false,
+  "model_inputs": 3,
+  "offline_verification": {
+    "components": [
+      "development-audit-receipts-v69.zip",
+      "development-evidence-v69b.zip",
+      "development-source-review-v69c.zip"
+    ],
+    "empirical_result_verified": false,
+    "full_reproduction_verified": false,
+    "guide_files": 5,
+    "model_files": [],
+    "model_loaded": false,
+    "network_used": false,
+    "runtime_qualified": false,
+    "status": "byte_checks_passed"
+  },
+  "payload": {
+    "DEPENDENCIES.txt": {
+      "bytes": 2759,
+      "sha256": "c05d1cef0933eb323e4c56e36a6ab42eb7e0da6c8c67a54369f6cd7a41c698cd"
+    },
+    "INPUTS.json": {
+      "bytes": 5319,
+      "sha256": "da91da8c05a531e4979ad373c11c6ef9068fd914307f4a4c6060473d21ec1c35"
+    },
+    "MANIFEST.json": {
+      "bytes": 634,
+      "sha256": "06f01dc52245bf11af3e27dc216bf41bec83437d08ce872019d42dcfd236c33a"
+    },
+    "README.txt": {
+      "bytes": 8222,
+      "sha256": "027cfee2d6155b999e97fa67d8dad55a9afa64f4b6598f6e744cc364d0d36a8f"
+    },
+    "RUNTIME.json": {
+      "bytes": 16356,
+      "sha256": "efae70683a9cc5255ba216270a66e745d3f70d1ceaabb04f963613ca837be1a2"
+    },
+    "verify_inputs.py": {
+      "bytes": 2501,
+      "sha256": "4aaeb560878d402ddaff4fb79080e043a1ec204bf5aad88a0a4b56c08d135b6f"
+    }
+  },
+  "project_license_assigned": false,
+  "real_model_file_verification_performed": false,
+  "refusal_probes": [
+    "same-size ZIP byte change",
+    "missing external model input",
+    "unexpected guide file"
+  ],
+  "refusal_probes_passed": 3,
+  "runtime_module_files": 28,
+  "schema": "review-reproduction-guide-build-v69",
+  "service_inputs": 15,
+  "source_bindings": {
+    "handoff/registration_v65.json": {
+      "bytes": 115729,
+      "sha256": "13d9ecb7ddb9ee37ba05498387af490a5e6f16879340c4ec301bbe2aaf5f08d2"
+    },
+    "handoff/registration_v67.json": {
+      "bytes": 1375539,
+      "sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30"
+    },
+    "research_v68/PROTOCOL.txt": {
+      "bytes": 6601,
+      "sha256": "41da0a2218b6ada4d6e103410ef12cde9c9a0cec52f0ca3d86fa79df629809cd"
+    },
+    "research_v69/execution_gate.py": {
+      "bytes": 9170,
+      "sha256": "cac212a20489df308ce66433ff5fb3546806bdaf344f230d9d5a729a6e39a5b9"
+    },
+    "research_v69/run_cpu.sbatch": {
+      "bytes": 1558,
+      "sha256": "d3775a4e6744194a6a0f533ad5a92651b3c819d0d9636e005d3faffb6a45519b"
+    },
+    "validation/v69_pinned_publisher_metadata.json": {
+      "bytes": 1542,
+      "sha256": "2d328dd6cefc4d9f578988ebea1a36e497f075ac0740663007ea6050eb3cee28"
+    },
+    "validation/v69_publisher_license_metadata.json": {
+      "bytes": 8195,
+      "sha256": "f6286c328aa2acdd3626d18d516f8cd6af8cc7c21004d12d0b4ac0bf55f23405"
+    },
+    "validation/v69_review_source_c_fixtures.json": {
+      "bytes": 11695,
+      "sha256": "782b7e278aee1f1f931d6db662ed79ae98b5f17997719cf6cdf2427abe3ae996"
+    }
+  },
+  "source_value_reconciliation_passed": true,
+  "tokenizer_runtime_files": 18,
+  "verified_at_utc": "2026-10-16T15:19:55.420330+00:00"
+}

@@ -261,6 +261,91 @@
     "worker_maximum_rss_kib": 1844652,
     "worker_process_and_waited_descendant_cpu_ns": 5209578108000
   },
+  "cross_component_review": {
+    "archive_members": 559,
+    "artifacts": {
+      "development-audit-receipts-v69.zip": {
+        "bytes": 341604,
+        "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+      },
+      "development-evidence-v69b.zip": {
+        "bytes": 87257,
+        "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+      },
+      "development-reproduction-guide-v69.zip": {
+        "bytes": 15057,
+        "sha256": "d533f475ca5db4356210ee2e859304420d7d6e6477c651ec9115a1ee846fb712"
+      },
+      "development-source-review-v69c.zip": {
+        "bytes": 1814288,
+        "sha256": "ceea2e249896e7bddf151d9956683c9b7b7cee988df25f092fb7f02440b35037"
+      },
+      "reports/REVIEW_PACKAGE_README_V69.txt": {
+        "bytes": 4948,
+        "sha256": "343996fa3a90934edc4de14fb95306d4ace703593e929ac14a47bea641722b8e"
+      },
+      "reports/manuscript_v69.tex": {
+        "bytes": 51407,
+        "sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60"
+      }
+    },
+    "captured_at_utc": "2026-10-16T15:22:04.972386+00:00",
+    "empirical_work_executed": false,
+    "evidence_references": [
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "E13",
+      "E14",
+      "E15"
+    ],
+    "full_anonymity_verified": false,
+    "full_empirical_input_closure": false,
+    "full_reproduction_verified": false,
+    "full_source_manual_review": false,
+    "full_transitive_notices": false,
+    "indirect_identity_linkability_assessed": false,
+    "internal_manifests_verified": 4,
+    "known_identity_findings": [],
+    "manuscript_edited": false,
+    "manuscript_matches_open_file": true,
+    "private_mapping_files_included": false,
+    "protocol_links_verified": 4,
+    "receipt_filename_crosswalk": {
+      "E12": [
+        "E10_primary.json",
+        "E10_additive.json",
+        "E12_exposed_quality.json",
+        "E11_cpu_cuda_parity.json"
+      ],
+      "E13": [
+        "E13_adaptive_quality.json"
+      ],
+      "E14": [
+        "E14_primary_recovery.json",
+        "E14_additive_recovery.json"
+      ],
+      "E15": [
+        "E15_lossless_measurement.json",
+        "E15_lossless_audit.json"
+      ]
+    },
+    "reviewer_prose_scope_review_completed": true,
+    "schema": "cross-component-review-v69",
+    "stale_filename_grouping_resolved_by_navigation": true,
+    "status": "inventories_hashes_known_identifiers_and_navigation_checked",
+    "submission_ready": false,
+    "text_files_checked": 561
+  },
   "evidence_index_preparation": {
     "all_current_project_bibliography_keys_mapped": true,
     "all_direct_file_bytes_match_reporting_checkpoint_and_manifest": true,
@@ -474,14 +559,110 @@
     "worker_maximum_rss_kib": 1936672,
     "worker_process_and_waited_descendant_cpu_ns": 4921704328001
   },
+  "installed_cpu_dependency_notices": {
+    "all_transitive_notices_complete": false,
+    "archive": {
+      "bytes": 29832,
+      "path": "validation/v69_installed_dependency_notices.tar.gz",
+      "sha256": "b7e099c11e25a61c22da1848cbfcf130eb8d640407d24b6bbab8378a1d37250e"
+    },
+    "captured_at_utc": "2026-10-16T15:25:12.493819+00:00",
+    "dependencies_installed": false,
+    "files": {
+      "gmpy2/licenses/COPYING": {
+        "bytes": 35147,
+        "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+      },
+      "gmpy2/licenses/COPYING.LESSER": {
+        "bytes": 7651,
+        "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+      },
+      "numpy/LICENSE.txt": {
+        "bytes": 47768,
+        "sha256": "2046a3130e50b11c01659b3a0d963e6ae0b7436ff8e89cbcfd9e87bc6112d595"
+      },
+      "zstandard/licenses/LICENSE": {
+        "bytes": 1484,
+        "sha256": "788fe85e53724a40b299051c4abc9cf74d42b27e7968325b80891c25f79adb4b"
+      }
+    },
+    "inventory": {
+      "gmpy2": {
+        "files": {
+          "gmpy2/licenses/COPYING": {
+            "bytes": 35147,
+            "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+          },
+          "gmpy2/licenses/COPYING.LESSER": {
+            "bytes": 7651,
+            "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+          }
+        },
+        "notice_files_found": 2
+      },
+      "numpy": {
+        "files": {
+          "numpy/LICENSE.txt": {
+            "bytes": 47768,
+            "sha256": "2046a3130e50b11c01659b3a0d963e6ae0b7436ff8e89cbcfd9e87bc6112d595"
+          }
+        },
+        "notice_files_found": 1
+      },
+      "tokenizers": {
+        "files": {},
+        "notice_files_found": 0
+      },
+      "zstandard": {
+        "files": {
+          "zstandard/licenses/LICENSE": {
+            "bytes": 1484,
+            "sha256": "788fe85e53724a40b299051c4abc9cf74d42b27e7968325b80891c25f79adb4b"
+          }
+        },
+        "notice_files_found": 1
+      }
+    },
+    "known_identity_scan_passed": true,
+    "model_or_data_read": false,
+    "no_notice_copied_into_four_review_components": true,
+    "numpy_bundled_notice_sections": [
+      "lapack-lite",
+      "dragon4",
+      "libdivide",
+      "Meson",
+      "spin",
+      "tempita",
+      "OpenBLAS",
+      "LAPACK",
+      "GCC runtime library",
+      "libquadmath"
+    ],
+    "other_notice_texts_newly_observed_not_historical_runtime_bindings": true,
+    "project_license_assigned": false,
+    "remaining": [
+      "Tokenizers actual release notice and Rust dependency notices",
+      "GMP/MPFR/MPC component copyright and licensing notices beyond generic GPL/LGPL texts",
+      "Python/compiler/libc/container distributions",
+      "Torch/CUDA/driver installation and bundled dependencies",
+      "Project ownership and release terms"
+    ],
+    "schema": "installed-cpu-dependency-notice-check-v69",
+    "scientific_result": false,
+    "source_location_scope": "versioned CPU dist-info license trees; no full system or GPU scan",
+    "tokenizers_notice_missing_in_inspected_dist_info": true,
+    "total_notice_bytes": 92050,
+    "verified_at_utc": "2026-10-16T15:26:34.344511+00:00",
+    "zstandard_notice_matches_frozen_binding": true
+  },
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 295857,
-      "sha256": "4284c7bc62164502b580897db9eb7f21232fdcdae0e1e46a87438fb0cc632cad"
+      "bytes": 296304,
+      "sha256": "fabe3d2624e9e2aaa420b98fbd0b84c44ed1c83708d38e901dd668bea8702e2b"
     },
-    "captured_at_utc": "2026-10-16T15:01:01.123257+00:00",
-    "copied_files": 340,
+    "captured_at_utc": "2026-10-16T15:22:21.042311+00:00",
+    "copied_files": 344,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -525,7 +706,7 @@
         "total_cpu": "01:26:58"
       },
       "15265": {
-        "elapsed": "00:27:37",
+        "elapsed": "00:48:56",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-cold-1",
@@ -650,15 +831,15 @@
       },
       "cold-1": {
         "completion_receipt_present": false,
-        "events": 40,
+        "events": 44,
         "last": {
           "certificate_refusal": null,
-          "code_sha256": "dfe5e2996ee5a4946a9b42994344096d18773574e78222389e1b68a69fe07298",
-          "elapsed_ns": 1559436136880,
+          "code_sha256": "c80511ccab0d4b89848c2ecc15f4a70bece26a36f445468f560867141d1cc118",
+          "elapsed_ns": 2342661617115,
           "fallback": false,
           "phase": "stage_certified",
           "route": "streamed",
-          "stage_id": "block.0000.mlp_up"
+          "stage_id": "block.0001.mlp_up"
         }
       },
       "cold-2": {
@@ -728,7 +909,7 @@
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|RUNNING|27:37|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|RUNNING|48:57|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
@@ -1726,16 +1907,16 @@
     "Close V67 remaining comparisons, fresh oracle and both actual-model/state/cost audits; preserve current jobs and live reservations",
     "Only after both V67 audits succeed register/run V68 data and reconcile all three terminal scheduler costs",
     "Only after actual V68 success freeze/register V69 with actual runtime/held-job admission,98 Linux checks, separate CUDA qualification, all quality phases and post-exit closure",
-    "Source component C has534 reversible copies,503 AST checks and114 passing local fixtures from clean extraction. Nine receipt derivatives are also checked. Complete external runtime/input/protocol instructions, notices, whole-package anonymity/layout and claim-dependent assembly; neither component qualifies Linux/CUDA or full empirical reproduction.",
+    "Four review components now have checked manifests, external input/runtime instructions and a nine-receipt crosswalk.561 text files pass known direct-identity checks. Complete actual historical input/receipt distribution, transitive notices, whole-package anonymity/layout and claim-dependent assembly;114 local fixtures do not qualify full reproduction.",
     "Visually verify the existing ACL preview and main-text page budget when preview inspection is available; no replacement document or separate PDF",
     "Make evidence-based timing/claim decision and finish licenses, authorship facts and final bundle"
   ],
   "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
   "observed_stage_certificates": {
-    "cold-1": 3,
+    "cold-1": 7,
     "compressed-1": 24,
     "hybrid-1": 24,
-    "scope": "Counted stage_certified events in saved metadata; not terminal model/state equality."
+    "prepare": 24
   },
   "preparation_receipt_metadata": {
     "actual_model_state_bytes_checked": false,
@@ -1826,7 +2007,7 @@
     "worker_maximum_rss_kib": 1732228,
     "worker_process_and_waited_descendant_cpu_ns": 6857956044000
   },
-  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_n.tar.gz",
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_o.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,
@@ -2187,6 +2368,111 @@
       "strings": 9256
     },
     "unchanged_numeric_and_boolean_values": true
+  },
+  "review_reproduction_guide": {
+    "archive": {
+      "bytes": 15057,
+      "path": "reports/development-reproduction-guide-v69.zip",
+      "sha256": "d533f475ca5db4356210ee2e859304420d7d6e6477c651ec9115a1ee846fb712"
+    },
+    "captured_at_utc": "2026-10-16T15:19:16.629688+00:00",
+    "clean_extraction_verified": true,
+    "codec_files": 11,
+    "complete_transitive_notices": false,
+    "external_inputs_acquired": false,
+    "full_anonymity_verified": false,
+    "full_reproduction_verified": false,
+    "local_114_fixture_suite_repeated": false,
+    "model_inputs": 3,
+    "offline_verification": {
+      "components": [
+        "development-audit-receipts-v69.zip",
+        "development-evidence-v69b.zip",
+        "development-source-review-v69c.zip"
+      ],
+      "empirical_result_verified": false,
+      "full_reproduction_verified": false,
+      "guide_files": 5,
+      "model_files": [],
+      "model_loaded": false,
+      "network_used": false,
+      "runtime_qualified": false,
+      "status": "byte_checks_passed"
+    },
+    "payload": {
+      "DEPENDENCIES.txt": {
+        "bytes": 2759,
+        "sha256": "c05d1cef0933eb323e4c56e36a6ab42eb7e0da6c8c67a54369f6cd7a41c698cd"
+      },
+      "INPUTS.json": {
+        "bytes": 5319,
+        "sha256": "da91da8c05a531e4979ad373c11c6ef9068fd914307f4a4c6060473d21ec1c35"
+      },
+      "MANIFEST.json": {
+        "bytes": 634,
+        "sha256": "06f01dc52245bf11af3e27dc216bf41bec83437d08ce872019d42dcfd236c33a"
+      },
+      "README.txt": {
+        "bytes": 8222,
+        "sha256": "027cfee2d6155b999e97fa67d8dad55a9afa64f4b6598f6e744cc364d0d36a8f"
+      },
+      "RUNTIME.json": {
+        "bytes": 16356,
+        "sha256": "efae70683a9cc5255ba216270a66e745d3f70d1ceaabb04f963613ca837be1a2"
+      },
+      "verify_inputs.py": {
+        "bytes": 2501,
+        "sha256": "4aaeb560878d402ddaff4fb79080e043a1ec204bf5aad88a0a4b56c08d135b6f"
+      }
+    },
+    "project_license_assigned": false,
+    "real_model_file_verification_performed": false,
+    "refusal_probes": [
+      "same-size ZIP byte change",
+      "missing external model input",
+      "unexpected guide file"
+    ],
+    "refusal_probes_passed": 3,
+    "runtime_module_files": 28,
+    "schema": "review-reproduction-guide-build-v69",
+    "service_inputs": 15,
+    "source_bindings": {
+      "handoff/registration_v65.json": {
+        "bytes": 115729,
+        "sha256": "13d9ecb7ddb9ee37ba05498387af490a5e6f16879340c4ec301bbe2aaf5f08d2"
+      },
+      "handoff/registration_v67.json": {
+        "bytes": 1375539,
+        "sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30"
+      },
+      "research_v68/PROTOCOL.txt": {
+        "bytes": 6601,
+        "sha256": "41da0a2218b6ada4d6e103410ef12cde9c9a0cec52f0ca3d86fa79df629809cd"
+      },
+      "research_v69/execution_gate.py": {
+        "bytes": 9170,
+        "sha256": "cac212a20489df308ce66433ff5fb3546806bdaf344f230d9d5a729a6e39a5b9"
+      },
+      "research_v69/run_cpu.sbatch": {
+        "bytes": 1558,
+        "sha256": "d3775a4e6744194a6a0f533ad5a92651b3c819d0d9636e005d3faffb6a45519b"
+      },
+      "validation/v69_pinned_publisher_metadata.json": {
+        "bytes": 1542,
+        "sha256": "2d328dd6cefc4d9f578988ebea1a36e497f075ac0740663007ea6050eb3cee28"
+      },
+      "validation/v69_publisher_license_metadata.json": {
+        "bytes": 8195,
+        "sha256": "f6286c328aa2acdd3626d18d516f8cd6af8cc7c21004d12d0b4ac0bf55f23405"
+      },
+      "validation/v69_review_source_c_fixtures.json": {
+        "bytes": 11695,
+        "sha256": "782b7e278aee1f1f931d6db662ed79ae98b5f17997719cf6cdf2427abe3ae996"
+      }
+    },
+    "source_value_reconciliation_passed": true,
+    "tokenizer_runtime_files": 18,
+    "verified_at_utc": "2026-10-16T15:19:55.420330+00:00"
   },
   "review_source_component": {
     "actual_cuda_executed": false,

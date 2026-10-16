@@ -134,3 +134,18 @@ checks. This qualifies the local fixture subset, not Linux/CUDA or full empirica
 reproduction. Two preparation failures and earlier components remain preserved.
 See docs/REVIEW_SOURCE_COMPONENT_V69.txt. External input/runtime instructions,
 notices, whole-package review and claim-required evidence remain.
+
+Installed dependency notice observation
+A bounded read of four actual CPU dist-info license trees retrieved four UTF-8
+license files totaling92,050 bytes: NumPy LICENSE, gmpy2 COPYING/COPYING.LESSER
+and zstandard LICENSE. The codec notice matches its original frozen binding.
+NumPy includes named bundled-library sections, including OpenBLAS, LAPACK, GCC
+runtime and libquadmath. No tokenizer license file was present in the inspected
+dist-info tree. This is a specific missing notice, not a claim that its software
+has no license. Generic GPL/LGPL texts alone do not complete the GMP/MPFR/MPC
+component notice inventory. Python/system/container and GPU dependencies remain.
+The read installed nothing and touched no model/data or empirical ledger. Original
+texts and inventory are preserved in validation/v69_installed_dependency_notices.tar.gz;
+validation/v69_installed_dependency_notice_check.json verifies their bytes. These
+notices are separate from the four review components. No complete transitive
+clearance or project license is asserted.
