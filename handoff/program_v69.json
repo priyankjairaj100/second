@@ -1,5 +1,20 @@
 {
   "active_experiment_version": 67,
+  "artifact_packaging_preparation": {
+    "actual_model_metadata_matches_frozen_weights_config": true,
+    "anonymity_verified": false,
+    "archive_created": false,
+    "complete_rights_clearance": false,
+    "policy": "docs/SUBMISSION_ARTIFACT_POLICY_V69.txt",
+    "project_license_assigned": false,
+    "publisher_metadata": [
+      "validation/v69_publisher_license_metadata.json",
+      "validation/v69_pinned_publisher_metadata.json"
+    ],
+    "source_count": 532,
+    "source_inventory": "validation/v69_submission_inventory.json",
+    "submission_ready": false
+  },
   "execution_gate_preparation": {
     "actual_checkpoint_loaded": false,
     "actual_cuda_executed": false,

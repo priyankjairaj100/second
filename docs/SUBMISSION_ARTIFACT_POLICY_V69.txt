@@ -1,0 +1,77 @@
+Submission artifact preparation, 16 October 2026
+This is an inventory and packaging policy, not a submission-ready archive.
+No model, corpus, wheel, container or empirical article content was downloaded.
+
+Source inventory and provenance
+validation/v69_submission_inventory.json records532 actual source commitments:
+469 frozen V67 files,14 historical GPU/export files,9 unregistered V68 files and
+40 unregistered V69 files. Every local byte was checked. This is the union needed
+for the currently prepared execution chain, not an already validated portable
+distribution. Older proofs, adverse results, registrations and terminal receipts
+also require a curated evidence index. Preserve every original source and receipt.
+
+Publisher metadata checked
+DistilGPT2's publisher declares Apache2.0. The observed publisher revision is
+2290a62682d06624634c1f46a6ad5be0f47f38aa. Its safetensors LFS hash and352824413-byte
+extent match the frozen experiment. The762-byte config was fetched at that revision;
+its SHA256 also matches. No weights were fetched. This binds the observed publisher
+metadata to the actual checkpoint identity without claiming model execution.
+https://huggingface.co/distilbert/distilgpt2/blob/2290a62682d06624634c1f46a6ad5be0f47f38aa/README.md
+
+C4's card at the frozen1588ec454efa1a09f29cd18ddd04fe05fc8653a2 revision declares
+ODC-BY and says Common Crawl's content terms also apply. Its41136-byte README was
+read and hashed. The broader dataset API response exceeded the2MiB metadata bound;
+that refusal is preserved. A separate bounded README request succeeded. Neither
+request read the reserved article shard. Database licensing is not blanket clearance
+for every underlying web page; Common Crawl explicitly notes separate owner terms.
+https://huggingface.co/datasets/allenai/c4/blob/1588ec454efa1a09f29cd18ddd04fe05fc8653a2/README.md
+https://opendatacommons.org/licenses/by/1-0/
+https://commoncrawl.org/terms-of-use
+
+Publisher package declarations were recorded for NumPy2.3.5 and2.2.6 (BSD
+classifier), gmpy2 2.3.2 (LGPL-3.0-or-later), zstandard0.25.0 (BSD-3-Clause),
+tokenizers0.23.2 (Apache classifier) and torch2.10.0 (BSD-3-Clause). These match
+the declared CPU/data or historical CUDA versions; actual future CUDA admission
+is still pending. Safetensors0.6.2 metadata was also inspected, but that library
+version was not verified as installed or required. Do not add it to runtime pins.
+The actual model loader's input is a safetensors file, not proof of that dependency.
+https://pypi.org/project/numpy/2.3.5/
+https://pypi.org/project/numpy/2.2.6/
+https://pypi.org/project/gmpy2/2.3.2/
+https://pypi.org/project/zstandard/0.25.0/
+https://pypi.org/project/tokenizers/0.23.2/
+https://pypi.org/project/torch/2.10.0/
+
+These declarations are not a complete transitive license audit. NumPy/GMP/MPFR,
+CUDA and the container include additional software with separate notices. The
+reproduction package will reference external installations and exact commitments;
+it will not copy wheels, shared libraries, containers or model/corpus binaries.
+Any later decision to vendor them requires their actual notices and permissions.
+See validation/v69_publisher_license_metadata.json and
+validation/v69_pinned_publisher_metadata.json for URLs, response hashes and limits.
+
+Project licensing and anonymous review
+No tracked LICENSE, COPYING or NOTICE file was found. No project license was
+assigned. Before a reusable public code release, the authors must choose terms
+consistent with ownership and any third-party contributions. This does not block
+ongoing experiments or preparation of a concrete review bundle.
+
+The current repository and historical logs expose author/repository/cluster paths.
+The official ACL review style must be used, without modifying its formatting.
+https://github.com/acl-org/acl-style-files
+The anonymous package needs a separately reviewed provenance mapping and a file
+allowlist. Never edit frozen originals or describe path-redacted copies as the
+exact executed bytes. Retain original byte commitments in the private provenance
+record; label every derivative and validate its reproduction instructions separately.
+
+Final package gates
+Include the final anonymous paper source and venue style, the necessary code,
+small reviewed metadata, citations/notices, a concise evidence index and explicit
+external retrieval instructions with version/hash checks. Exclude raw article/token
+content, checkpoint/derived model/state binaries, environments, credentials and
+unreviewed identifying logs. Do not zip the complete working tree or old archives.
+
+Actual V67 terminal evidence, V68/V69 results, claim-required timing decisions,
+anonymity/formatting, source ownership/notices and clean extraction/reproduction
+checks remain. Metadata availability, publisher declarations and532 source hashes
+do not establish those gates. No final archive or external submission was created.

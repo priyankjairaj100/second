@@ -77,6 +77,17 @@ The11 new state-machine fixtures pass; actual held-field formats and CUDA runtim
 host admission remain unqualified. See the submission review and actual read-only
 scheduler observation. The proposed ceilings fit the observed partition/QoS walls.
 
+## Submission artifact inventory prepared
+
+All532 source commitments in the current prepared chain were checked and saved in
+validation/v69_submission_inventory.json. Publisher metadata binds the actual
+DistilGPT2 weights/config to an observed model revision; the pinned C4 card and
+main package license declarations were checked. The bounded C4 API refusal is
+preserved. No model/corpus binary or reserved article content was downloaded.
+Read docs/SUBMISSION_ARTIFACT_POLICY_V69.txt. Project licensing is unassigned;
+complete notices, anonymous provenance mapping and clean-package checks remain.
+No final archive or external submission was created.
+
 ## Concrete next work
 
 1. Prepare the remaining bounded registration/saved-receipt workflow without

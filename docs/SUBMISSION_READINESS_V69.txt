@@ -61,3 +61,12 @@ reviewing-service contributor. Current ARR rules require complete author profile
 and appropriate disclosure of AI assistance. These facts cannot be inferred from
 repository names or generated prose. They do not block the ongoing experiments or
 package preparation. No conference submission or third-party message is authorized.
+
+Artifact inventory update
+The current prepared chain's532 source commitments have been checked. Publisher
+metadata for the exact DistilGPT2 weights/config and pinned C4 card is recorded,
+along with main package declarations. This narrows the packaging work; it does not
+establish blanket redistribution rights or a complete dependency license audit.
+No project license is assigned and no final archive exists. Use
+SUBMISSION_ARTIFACT_POLICY_V69.txt for the external-binary policy, anonymity mapping
+and remaining clean-extraction gates. Frozen sources remain unchanged.
