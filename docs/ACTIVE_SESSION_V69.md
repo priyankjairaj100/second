@@ -1,4 +1,4 @@
-# V69 held-job submission prepared; V67 hybrid comparison running
+# V67 hybrid comparison completed; compression comparison running
 
 16 October 2026. Latest reporting handoff, not a registration. V68 and V69 remain
 UNREGISTERED and UNFROZEN. Preserve all469 V67 sources and14 inherited historical
@@ -6,24 +6,33 @@ GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
 ## Actual cluster observation
 
-At12:52:04UTC (18:22:04IST), hybrid-control job15263 was RUNNING1h09m03s on
-csis.mn1. It had19of24 certified stages, last block.0004.mlp_up, with no recorded
-refusal or fallback. Preparation15262 remains COMPLETED0:0. Jobs15264--15275 are
-dependency-pending; both terminal audits remain absent. No new job was submitted.
-The236-file snapshot campaigns/csis_v67_progress_metadata_20261016_g.tar.gz is203805
-bytes, SHA25691f80d47dd08b5750ccbad364d8aae681e4fb8ae41d05a43fee78ef6d92db172.
-validation/v67_progress_metadata_check_g.json verifies metadata/source bindings.
+At13:10:27UTC (18:40:27IST), hybrid-control job15263 was COMPLETED0:0 after
+1h22m46s, ending18:35:47IST. Compression job15264 was RUNNING4m39s on csis.mn1;
+15265--15275 remained dependency-pending. Both terminal audits remain absent.
+The262-file snapshot campaigns/csis_v67_progress_metadata_20261016_h.tar.gz is247320
+bytes, SHA25675073d8641d0378d6fe5404511cf3a1e7da1a819054e5b4defdd5d24f14b8479.
+validation/v67_progress_metadata_check_h.json verifies metadata/source bindings.
 All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
-This is progress metadata, not actual model/state equality or a scientific result.
-The numerical checkout remains f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull
-reporting commits there. Previous snapshots and failures remain preserved.
+No new job was submitted. The numerical checkout remains
+f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull reporting changes there.
+
+validation/v67_hybrid1_metadata.json checks the completed receipt/sealed artifacts
+and settled4922-second debit, with4921.704328001 worker CPU seconds,8.195606645
+controller own CPU seconds and1936672KiB peak worker RSS. All24 stages certified.
+No stage-level replay fallback or refusal was recorded. Separately, the solver's
+bounded numerical fallback handled7 rows /21504 decisions, all certified; preserve
+this distinction rather than claiming no fallback of any kind. The next compression
+reservation is still live and was not settled or reset. This is a partial metadata
+check, not model/state byte equality or final campaign cost verification. Two local
+reporting invocation/schema errors were corrected and preserved without any cluster
+mutation. Read docs/V67_HYBRID1_RECEIPT_V69.txt. Previous snapshots remain intact.
 
 Preparation15262 ended17:13:01IST after1h55m09s with13 sources,24 stages and all five
 state representations packaged. The earlier actual receipt/debit check remains in
 validation/v67_preparation_metadata.json:6857.956044 worker CPU seconds,6858 charged,
 1732228KiB peak RSS,9.590220307 controller own CPU seconds and1h54m28 Slurm CPU.
-Numerical binaries were not reaudited by this continuation. Preserve the reserved
-hybrid debit; do not settle it or treat it as unused before actual terminal usage.
+Numerical binaries were not reaudited by this continuation. Preserve the live
+compression debit; do not settle it before actual terminal usage.
 
 ## Production wiring completed locally
 
@@ -105,10 +114,15 @@ No final archive or external submission was created.
 5. Decide claim-required timing replication, then finish paper formatting/anonymity,
    citations/licenses/author facts and final bundle. No conference submission.
 
-The existing open manuscript is unchanged from its successful native compile:
-5269 source whitespace tokens versus6884 before trimming,197 in the abstract,
-proofs/math preserved, Limitations and AI disclosure included. Its actual SHA256
-is11e5a67c5edc102b7b11f2f5962b877f73efbc7ae0688863ca274832023bc393.
-These are not official venue page counts; submission readiness is still false.
+The existing open manuscript now includes concise QSS, MEDU and QEBVerif
+comparisons restored from the earlier primary-source review and freshly checked.
+Related work grows only21 source whitespace tokens; total source is5347 versus6884
+before trimming. The197-token abstract, all proofs/displays and empirical sections
+are unchanged. Native compilation succeeded. SHA256 is
+7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda.
+See docs/LITERATURE_REFRESH_V69.txt and validation/v69_manuscript_literature.json.
+The Exact-Fun saved author PDF matches its earlier commitment and proof pages6--7
+were visually rechecked. Live retrieval limitations are preserved. No external
+implementation was reproduced. Official page count/anonymity remain unverified.
 The same15-minute continuation remains active. No new monitor, subagent, paid
 compute or third-party message is authorized.

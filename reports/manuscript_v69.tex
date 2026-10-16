@@ -358,13 +358,15 @@ interpretation, frozen grids, and lower midpoint ties. Agreement with this targe
 does not certify agreement with an unspecified GPTQ implementation or with a
 sequential calibration target whose downstream activations change.
 
-Exact additive sufficient statistics, ridge systems, low-rank identities,
-residual-based verification, and margin stability are established methods. The
-lemmas and conditional arguments above organize those ingredients around a
-specific archived-evidence contract; their presentation is not a priority claim.
-Any publishable contribution must identify what discrete recovery from genuinely
-uncertain compressed features adds, and demonstrate useful costs against equally
-optimized exact-cache and Gram controls.
+Exact sufficient statistics, ridge systems, low-rank identities, and margin
+stability are established methods. QSS~\cite{qss} freezes a learned schema and
+maintains additive prediction corrections over quantized regions, distinguishing
+label deletion from instance deletion and accounting for schema rebuilds. Our
+target instead reconstructs adaptive weight codes under a fixed calibration
+constructor. MEDU~\cite{medu} compresses stored distributed-training updates and
+bounds deviation from retraining. Our conditional contract concerns exact discrete
+recovery from compressed feature enclosures, not the first use of lossy storage
+for unlearning.
 
 \paragraph{Quantization-enabled exact deletion.}
 Ginart et al.~\cite{ginart} retain metadata for quantized $k$-means, check whether
@@ -392,13 +394,15 @@ adaptive weight-code contract over uncertain calibration features specializes a
 different obligation from ridge-relative or fixed-readout tolerances; this does
 not establish that the broader framework cannot express that contract.
 
-These comparisons narrow the candidate contribution to exact adaptive-code
-recovery from a lossy evidence representation, together with independently
-checked canonical successor state. The conditional theorems alone do not
-establish a new verification principle. A strong paper still needs a clearly
-identified certificate or evidence advantage and useful complete costs. The
-primary-source review is not an exhaustive priority search, and no execution or
-reproduction of these external implementations is claimed.
+QEBVerif~\cite{qebverif} combines differential reachability bounds with MILP
+fallback to verify inference-output differences between a network and its quantized
+counterpart. Our property concerns the codes produced by a calibration algorithm
+when its feature evidence is uncertain.
+
+These comparisons restrict our contribution to a specified adaptive-code recovery
+contract and canonical successor state. They do not establish a new general
+verification principle. We do not claim empirical superiority over these external
+systems or reproduce their implementations.
 
 \section{Complete-model evidence}
 We separate exact reconstruction, prediction quality and complete service cost.
@@ -640,6 +644,21 @@ Theorem 2, pages 6--7. The proof comparison uses this historical author version.
 Ziyu Zhao, Xinyu Wang, Xiao-Wen Chang, and Yixuan He.
 2026. \emph{From Mathematical to Executable Certificates for Machine Unlearning}.
 \href{https://arxiv.org/html/2610.02268v1}{arXiv:2610.02268, version 1}.
+
+\bibitem{qss}
+Ami Tavory, Shripad Gade, Tal Sarig, Noam Touitou, and Ido Guy.
+2026. \emph{Exact Unlearning via Quantized Sufficient Statistics}.
+\href{https://arxiv.org/html/2610.07197v1}{arXiv:2610.07197, version 1}.
+
+\bibitem{medu}
+Natalie Lang, Alon Helvitz, and Nir Shlezinger.
+2025. \emph{Memory-Efficient Distributed Unlearning}.
+\href{https://arxiv.org/abs/2505.03388v1}{arXiv:2505.03388, version 1}.
+
+\bibitem{qebverif}
+Yedi Zhang, Fu Song, and Jun Sun.
+2023. \emph{QEBVerif: Quantization Error Bound Verification of Neural Networks}.
+\href{https://arxiv.org/abs/2212.02781v2}{arXiv:2212.02781, version 2}.
 
 \bibitem{v39}
 Project \emph{second}. 2026. \emph{Real-data scale results and research decision:

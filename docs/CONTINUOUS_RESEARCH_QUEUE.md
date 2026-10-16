@@ -67,9 +67,9 @@ or parallel execution loop. No subagent delegation is currently authorized.
    IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
-   Preparation15262 completed0:0; first hybrid comparison15263 is running with19of24
-   certified stages at18:22IST,
-   with remaining comparisons/oracle/audits15264--15275 dependency-pending.
+   Preparation15262 and first hybrid comparison15263 completed0:0. At18:40IST
+   compression15264 was RUNNING4m39s; remaining comparisons/oracle/audits15265--15275
+   were dependency-pending. Hybrid receipt/debit metadata passed; both binary audits remain.
    Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V69.md`, `docs/ACTIVE_SESSION_V68.md`, `docs/ACTIVE_SESSION_V67.md` and
    `research_v67/PROTOCOL.txt`. Reuse the frozen mathematical target and matched point
    solver, with full parsing, canonical validation, startup/cache policy, state
@@ -163,12 +163,14 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate are qualified. At18:22IST preparation15262 is COMPLETED0:0, with all13 sources
-and24 stages recorded and its6858-second worker debit settled. Hybrid15263 is
-running with19 certified stages; jobs15264--15275 remain dependency-pending. Modern-service timings,
+V67's64-test exact-source Linux gate are qualified. At18:40IST preparation15262 and hybrid15263 are COMPLETED0:0. Their worker
+debits are6858 and4922 CPU seconds. Compression15264 is RUNNING;15265--15275
+remain dependency-pending. All24 hybrid stages certified;7 numerical fallback rows
+are preserved separately from its zero stage-level fallback flags. Modern-service timings,
 new-root model evidence, untouched quality and prospective timing remain absent.
-The same manuscript compiles after reducing6884 to5269 source whitespace tokens
-and adding Limitations and AI-assistance disclosure. All proofs/math are unchanged.
+The same manuscript compiles at5347 source whitespace tokens, down from6884,
+with Limitations and AI disclosure. Three omitted prior-work comparisons are now
+restored; all proofs/displays, the abstract and empirical sections are unchanged.
 This is not a venue page-count check or submission-ready bundle; see
 docs/SUBMISSION_READINESS_V69.txt for the verified guidance and remaining work.
 

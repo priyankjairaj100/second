@@ -70,3 +70,12 @@ establish blanket redistribution rights or a complete dependency license audit.
 No project license is assigned and no final archive exists. Use
 SUBMISSION_ARTIFACT_POLICY_V69.txt for the external-binary policy, anonymity mapping
 and remaining clean-extraction gates. Frozen sources remain unchanged.
+
+Literature update
+QSS, MEDU and QEBVerif now appear in the existing manuscript with explicit target
+and guarantee distinctions. Their primary records were checked again. Ginart's
+Section4.1 was freshly read; the saved Exact-Fun author PDF matches its commitment
+and its proof pages6--7 were visually rechecked. Live Exact-Fun downloads still
+failed, so no fresh publisher-version claim is made. Native compilation succeeded;
+proofs/displays, abstract and empirical sections are unchanged. Source5347 tokens
+is not a venue page count. Final anonymous evidence indexing remains necessary.

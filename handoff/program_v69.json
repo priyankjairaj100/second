@@ -140,14 +140,80 @@
     "v68_sources_unchanged": 9,
     "wrapper_bash_syntax_checked": true
   },
+  "hybrid1_receipt_metadata": {
+    "actual_model_state_bytes_checked": false,
+    "archive": {
+      "bytes": 247320,
+      "sha256": "75073d8641d0378d6fe5404511cf3a1e7da1a819054e5b4defdd5d24f14b8479"
+    },
+    "captured_at_utc": "2026-10-16T13:10:27.588915+00:00",
+    "complete_campaign_costs_verified": false,
+    "controller_all_waited_children_cpu_ns": 4921707197000,
+    "controller_own_cpu_ns": 8195606645,
+    "declared_artifacts": {
+      "admission.json": {
+        "bytes": 555807,
+        "file": "admission.json",
+        "sha256": "8e409e1e4b9b0faff1d37f76faf117f9115042b11beb9acb3ec89bc86250e72b"
+      },
+      "execution-provenance.json": {
+        "bytes": 12727,
+        "file": "execution-provenance.json",
+        "sha256": "22956724f4d2a9433702a3f76cc1fb76a8d447c8c60a7d668800de7da55574cc"
+      },
+      "model.bin": {
+        "bytes": 21233664,
+        "file": "model.bin",
+        "sha256": "35ea0d49671581c0f20fa9a65665acd5abec82d0a1e3edc4e75bca05bdc1f9c5"
+      },
+      "state.bin": {
+        "bytes": 318868988,
+        "file": "state.bin",
+        "sha256": "9700dcd3dec4e77890bfc036c683a7e175a9cf88a0cadd4c9b3bb53eef0c7e02"
+      },
+      "trust.json": {
+        "bytes": 48523,
+        "file": "trust.json",
+        "sha256": "a2659f409bf6ebb77a89719649542d45b29e747bf43be1d4312e319dfd555a14"
+      }
+    },
+    "fresh_oracle_comparison_verified": false,
+    "job": {
+      "elapsed": "01:22:46",
+      "end": "2026-10-16T18:35:47",
+      "exit_code": "0:0",
+      "name": "second67-hybrid-1",
+      "node": "csis.mn1",
+      "start": "2026-10-16T17:13:01",
+      "state": "COMPLETED",
+      "total_cpu": "01:22:10"
+    },
+    "job_id": "15263",
+    "later_reserved_attempts_preserved": 1,
+    "numerical_result_verified": false,
+    "numerical_solver_fallback_attempted_decisions": 21504,
+    "numerical_solver_fallback_certified_decisions": 21504,
+    "numerical_solver_fallback_rows": 7,
+    "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+    "refused_stages": 0,
+    "retained_membership_independently_rebuilt": false,
+    "stage_certificates": 24,
+    "stage_level_fallback_flags": 0,
+    "status": "verified_completed_comparison_receipt_metadata",
+    "transaction_elapsed_ns": 4962294372332,
+    "trial": "hybrid-1",
+    "worker_charged_cpu_seconds": 4922,
+    "worker_maximum_rss_kib": 1936672,
+    "worker_process_and_waited_descendant_cpu_ns": 4921704328001
+  },
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 203805,
-      "sha256": "91f80d47dd08b5750ccbad364d8aae681e4fb8ae41d05a43fee78ef6d92db172"
+      "bytes": 247320,
+      "sha256": "75073d8641d0378d6fe5404511cf3a1e7da1a819054e5b4defdd5d24f14b8479"
     },
-    "captured_at_utc": "2026-10-16T12:52:04.301396+00:00",
-    "copied_files": 236,
+    "captured_at_utc": "2026-10-16T13:10:27.588915+00:00",
+    "copied_files": 262,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -171,23 +237,23 @@
         "total_cpu": "01:54:28"
       },
       "15263": {
-        "elapsed": "01:09:03",
-        "end": "Unknown",
+        "elapsed": "01:22:46",
+        "end": "2026-10-16T18:35:47",
         "exit_code": "0:0",
         "name": "second67-hybrid-1",
         "node": "csis.mn1",
         "start": "2026-10-16T17:13:01",
-        "state": "RUNNING",
-        "total_cpu": "00:00:00"
+        "state": "COMPLETED",
+        "total_cpu": "01:22:10"
       },
       "15264": {
-        "elapsed": "00:00:00",
+        "elapsed": "00:04:39",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-compressed-1",
-        "node": "None assigned",
-        "start": "Unknown",
-        "state": "PENDING",
+        "node": "csis.mn1",
+        "start": "2026-10-16T18:35:48",
+        "state": "RUNNING",
         "total_cpu": "00:00:00"
       },
       "15265": {
@@ -326,8 +392,16 @@
       },
       "compressed-1": {
         "completion_receipt_present": false,
-        "events": 0,
-        "last": null
+        "events": 4,
+        "last": {
+          "certificate_refusal": null,
+          "code_sha256": "dfe5e2996ee5a4946a9b42994344096d18773574e78222389e1b68a69fe07298",
+          "elapsed_ns": 250308043665,
+          "fallback": false,
+          "phase": "stage_certified",
+          "route": "streamed",
+          "stage_id": "block.0000.mlp_up"
+        }
       },
       "compressed-2": {
         "completion_receipt_present": false,
@@ -335,16 +409,16 @@
         "last": null
       },
       "hybrid-1": {
-        "completion_receipt_present": false,
-        "events": 21,
+        "completion_receipt_present": true,
+        "events": 26,
         "last": {
           "certificate_refusal": null,
-          "code_sha256": "5416882cf7e54c499ecfec6091c66c7a8feeb9ecb58a2af8a0c361bf35289c9a",
-          "elapsed_ns": 3399151179039,
+          "code_sha256": "4347d2b1bcefc5a8cab2a44d4a6c31cdc904005e5ec99ca1d673f0d27b8f7853",
+          "elapsed_ns": 4927187505800,
           "fallback": false,
           "phase": "stage_certified",
-          "route": "direct_gram",
-          "stage_id": "block.0004.mlp_up"
+          "route": "streamed",
+          "stage_id": "block.0005.mlp_down"
         }
       },
       "hybrid-2": {
@@ -378,7 +452,7 @@
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|PENDING|0:00|(Dependency)\n15263|second67-hybrid-1|RUNNING|1:09:03|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|RUNNING|4:39|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
@@ -386,7 +460,7 @@
   },
   "manuscript": {
     "abstract_source_whitespace_tokens": 197,
-    "after_source_whitespace_tokens": 5269,
+    "after_source_whitespace_tokens": 5347,
     "ai_assistance_disclosed": true,
     "before_source_whitespace_tokens": 6884,
     "limitations_added": true,
@@ -394,12 +468,13 @@
     "missing_citations": [],
     "new_results_added": false,
     "proof_blocks_unchanged": true,
-    "removed_tokens": 1615,
-    "sha256": "11e5a67c5edc102b7b11f2f5962b877f73efbc7ae0688863ca274832023bc393",
+    "related_work_update": "validation/v69_manuscript_literature.json",
+    "removed_tokens": 1537,
+    "sha256": "7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda",
     "source_snapshot": "reports/manuscript_v69.tex",
     "submission_ready": false
   },
-  "manuscript_native_compile": "success_at_v69_edit",
+  "manuscript_native_compile": "success_after_v69_literature_update",
   "model_admission_preparation": {
     "captured_at_utc": "2026-10-16T12:00:36.203713+00:00",
     "constructor_mocked": true,
@@ -637,7 +712,7 @@
     "worker_maximum_rss_kib": 1732228,
     "worker_process_and_waited_descendant_cpu_ns": 6857956044000
   },
-  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_g.tar.gz",
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_h.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,
@@ -785,7 +860,7 @@
     "wall_time_estimate": false
   },
   "schema": "second-progress-v69-preparation",
-  "status": "v67_hybrid1_19_stages_v69_held_launcher_prepared_unregistered",
+  "status": "v67_hybrid1_complete_compressed1_running_v69_preparation_92_tests",
   "submission_preparation": "docs/SUBMISSION_READINESS_V69.txt",
   "submission_ready": false,
   "worker_wiring_preparation": {

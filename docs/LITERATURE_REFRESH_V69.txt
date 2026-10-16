@@ -1,0 +1,69 @@
+Focused primary-source refresh, 16 October 2026
+This is not an exhaustive novelty search or an external implementation comparison.
+
+Manuscript change
+The earlier V43 review already discussed QSS, MEDU and QEBVerif, but the current
+manuscript omitted them. All three are now cited with short contract comparisons.
+Related work grows from400 to421 source whitespace tokens; bibliography additions
+bring the whole source from5269 to5347. The abstract remains197 tokens. All proof
+and displayed-math blocks, the empirical sections and abstract are byte-identical.
+The existing editor source was edited in place and native compilation succeeded.
+No appendix material or new empirical result was added. Official venue rendering,
+page count and anonymous evidence indexing remain open.
+
+QSS: Tavory, Gade, Sarig, Touitou, Guy, 2026
+Exact Unlearning via Quantized Sufficient Statistics, v1, 5 October2026.
+https://arxiv.org/html/2610.07197v1
+Read introduction, method and guarantee-specific constructions. A frozen schema
+indexes additive prediction corrections. Label and instance deletion are distinct,
+and schema deletions trigger reconstruction. This is prior work for frozen-schema
+exact-statistic deletion; the present target instead reconstructs adaptive weight
+codes under a declared calibration constructor. No broad bitwise-novelty claim.
+
+MEDU: Lang, Helvitz, Shlezinger, 2025
+Memory-Efficient Distributed Unlearning, v1, 6 May2025.
+https://arxiv.org/abs/2505.03388v1
+Fresh primary abstract/metadata check supports lossy stored distributed updates
+and a bound on deviation from retraining. The manuscript distinguishes conditional
+exact discrete recovery. It does not claim the first compressed unlearning archive.
+This refresh did not independently rederive MEDU's proofs or reproduce results.
+
+QEBVerif: Zhang, Song, Sun, 2023 revision
+QEBVerif: Quantization Error Bound Verification of Neural Networks, v2, 23 May2023.
+https://arxiv.org/abs/2212.02781v2
+Fresh primary abstract/metadata check supports differential reachability followed
+by MILP when the fast bound cannot decide. Its property concerns inference-output
+differences. The present property concerns calibration-produced codes over uncertain
+feature evidence. Universal verification and stronger fallback are prior patterns.
+The bibliography cites the checked preprint version rather than adding unverified
+proceedings details. No independent theorem or implementation audit was performed.
+
+Ginart et al., NeurIPS2019
+https://papers.nips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf
+Fresh proceedings PDF reading of Section4.1 confirms stored quantization metadata,
+changed-centroid checks, metadata-only stable deletion, and retraining otherwise.
+Theorem4.1's expectation concerns randomized quantization and initialization.
+The existing related-work account and bibliographic authors/title remain supported.
+
+Exact-Fun: Xiong, Li, Li, Cai, historical full author version
+https://github.com/zuobinxiong/zuobinxiong.github.io/blob/300a0672be8d265ddebf20d6e69f790456a1bd81/assets/pdf/ExactFedUnlearning.pdf
+The saved790466-byte PDF matches SHA256
+ae3b7b1d6cabe8e5efda303068224493805c62204e5e235cdfa3c6b1630c54ae.
+Previously rendered proof pages6--7 were visually rechecked. Algorithm2 compares
+recomputed quantized models and retrains after an affected round. Theorem2's proof
+uses uniform within-cell positions, independent dimensions and uniform perturbation
+integrals. The manuscript retains its qualification on that probability argument.
+This does not establish every empirical or implementation claim in the paper.
+
+Current author/NSF PDF requests still failed in the web tool; the pinned raw URL
+was rejected there as application/octet-stream. No fresh publisher-version or
+current full-author-version claim follows. The checked local file is the historical
+version already recovered and recorded in docs/LITERATURE_UPDATE_V43.md. Preserve
+both that provenance and the failed refresh attempts. No external PDF is republished.
+
+Records
+validation/v69_manuscript_literature.json records the exact before/after hashes,
+scope and citation checks. validation/native_manuscript_v69_literature_compile.json
+records native success. Current source SHA256:
+7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda.
+Final formatting and evidence decisions remain separate from successful compiling.
