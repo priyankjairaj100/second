@@ -1,3 +1,7 @@
+Continuous work (16 October 2026): measurement 15245 completed; actual archive audit 15246 is running. Follow [the ordered queue](docs/CONTINUOUS_RESEARCH_QUEUE.md) and [current handoff](docs/ACTIVE_SESSION_V63.md). Recurring same-chat continuation is active every 15 minutes. No V63 result is verified yet. Historical checkpoints follow.
+
+---
+
 Current checkpoint (16 October 2026, 13:31 IST): **V63 Linux checks passed; the modern lossless artifact measurement is running.** Jobs 15244/15245/15246 are checks/measurement/audit. Read [current handoff](docs/ACTIVE_SESSION_V63.md), [status](handoff/program_v63.json), and [frozen protocol](research_v63/PROTOCOL.txt). No new size or speed result is verified yet. The phase reuses audited artifacts, copies existing model codes and performs no neural/calibration/quality execution. Preserve all frozen sources and original failures; never repeat the launcher or change caps. V62 remains the latest completed scientific checkpoint. Historical checkpoints follow.
 
 ---

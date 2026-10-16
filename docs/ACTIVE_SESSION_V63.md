@@ -1,8 +1,10 @@
 # V63: stronger lossless artifact control running
 
-Snapshot 16 October 2026, 08:01:47 UTC (13:31 IST). Linux qualification 15244
-completed 0:0 in 4 seconds: 21 tests, zero skips. Measurement 15245 is RUNNING;
-audit 15246 is dependency-pending. This is a launch checkpoint, not a result.
+Snapshot 16 October 2026, 08:16:48 UTC (13:46 IST). Linux qualification 15244
+completed 0:0 in 4 seconds: 21 tests, zero skips. Measurement 15245 completed
+0:0 in 13m40s, producing all three worker-verified archives. Audit 15246 is
+RUNNING (4m04s). Results remain gated on that separate actual-byte audit and
+terminal consistency check.
 Refresh scheduler state before continuation. Do not repeat the one-use submission.
 
 The source/registration were frozen before empirical factor reads:
@@ -69,5 +71,18 @@ advantage, preserve that finding and narrow the paper. Follow the existing
 NEXT_SCIENTIFIC_GATE_V61.txt for later disjoint roots, untouched quality and
 prospective repetitions. No expansion or cross-model claim is registered here.
 
-The existing manuscript remains the compiled V62 version. Do not insert V63
-results until actual artifact audits and terminal consistency checks pass.
+The existing manuscript has a compiled prose-only trim of early V39--V47
+history: 728 fewer whitespace-delimited source tokens (7361 to 6633). All proofs
+and larger-root tables remain unchanged; V62 remains the empirical cutoff.
+The prior detailed manuscript remains reports/manuscript_v62.tex. Do not insert
+V63 results until actual artifact audits and terminal consistency checks pass.
+
+Continuous work
+
+The user authorized recurring continuations. Read docs/CONTINUOUS_RESEARCH_QUEUE.md.
+The same-chat automation continue-second-research is ACTIVE every 15 minutes.
+Advance successive ready tasks without waiting for another proceed. The separate
+docs/MODERN_SERVICE_DESIGN_V64.txt prepares implementation and accounting choices;
+it is not registered or executable. Consider combining the justified modern
+service with the next disjoint-root development test to avoid redundant adaptive
+full runs, after the current decision and all new admission gates.
