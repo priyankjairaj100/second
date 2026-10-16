@@ -55,8 +55,10 @@ packaging. All originals remain unchanged. The existing five-file summary ZIP re
 unchanged:15 historical groups,1,054 checked field groups and eight shared exposed
 articles. It is not the full source/protocol/receipt/runtime reproduction package.
 
-The nine receipt derivatives are prepared and verified. Next select source/protocol
-files and portable instructions, and qualify that package separately. Complete runtime/
+The nine receipt derivatives are prepared and verified. Source component C now
+contains534 reversible source/protocol/wrapper copies and passes114 local fixtures
+from clean extraction. Complete external input/runtime instructions and empirical
+qualification separately. Complete runtime/
 license notices and clean extraction/reproduction before final inclusion. V67 still
 needs both terminal model/state/cost audits; V68/V69 remain unregistered. The existing
 manuscript was not edited in this checkpoint; its prior native compilation and71
@@ -74,3 +76,14 @@ The nine candidates now have typed-preserving review derivatives and an eleven-f
 ZIP with clean extraction. See REVIEW_RECEIPT_COMPANION_V69.txt. The historical
 selection map remains unchanged; runtime/source reproduction and whole-package
 anonymity review are not complete. No frozen source or original receipt changed.
+
+Source component completion update
+The actual development-source-review-v69c.zip contains534 source/protocol/wrapper
+copies plus README/checker/manifest. All originals remain unchanged;34 identifier
+adaptations reverse exactly, and503 Python ASTs differ only by those strings.
+Clean extraction passes114 local fixtures with156 project modules and three
+namespace packages loaded only from the extraction. Nine wrappers passed syntax
+checks. This qualifies the local fixture subset, not Linux/CUDA or full empirical
+reproduction. Two preparation failures and earlier components remain preserved.
+See docs/REVIEW_SOURCE_COMPONENT_V69.txt. External input/runtime instructions,
+notices, whole-package review and claim-required evidence remain.

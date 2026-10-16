@@ -67,8 +67,9 @@ or parallel execution loop. No subagent delegation is currently authorized.
    IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
-   Preparation15262, hybrid15263 and compression15264 completed0:0. At20:07IST
-   cold15265 was RUNNING4m19s;15266--15275 were dependency-pending. Both completed
+   Preparation15262, hybrid15263 and compression15264 completed0:0. At20:31IST
+   cold15265 was RUNNING27m37s with3of24 certified stages;15266--15275 were
+   dependency-pending. Both completed
    comparison receipts/debits passed metadata checks; both binary audits remain.
    Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V69.md`, `docs/ACTIVE_SESSION_V68.md`, `docs/ACTIVE_SESSION_V67.md` and
    `research_v67/PROTOCOL.txt`. Reuse the frozen mathematical target and matched point
@@ -163,9 +164,11 @@ or parallel execution loop. No subagent delegation is currently authorized.
    the same eight exposed articles. Clean extraction and summary checks passed.
    The paper now uses concise E01--E15 pointers instead of15 project bibliography
    entries and17 identifying links. See docs/REVIEW_HISTORY_COMPANION_V69.txt.
-   The broader534-file source candidate has no missing static project imports;
-   runtime/protocol/receipt closure and clean numerical reproduction remain.
-   The ZIP is explicitly a derived summary.
+   The broader534-file source candidate has no missing static project imports.
+   An actual534-file source/protocol component now has reversible identifier
+   adaptations and114 passing local fixtures from clean extraction. This does not
+   qualify Linux/CUDA, external inputs or full numerical reproduction.
+   The earlier five-file evidence ZIP remains a derived summary.
    The71 selected manuscript-number checks pass, including all24 service-table
    numeric cells. An identity scan of577 committed files found47 text files needing
    review. Archive members have now been scanned and nine receipt derivatives
@@ -174,7 +177,8 @@ or parallel execution loop. No subagent delegation is currently authorized.
    The official ACL style and author-year citations now compile in the existing file.
    Nine receipt derivatives now preserve every typed field under checked string
    mappings and pass clean extraction. Complete source/protocol/runtime closure
-   and whole-package review; see docs/REVIEW_RECEIPT_COMPANION_V69.txt.
+   and whole-package review; see docs/REVIEW_RECEIPT_COMPANION_V69.txt and
+   docs/REVIEW_SOURCE_COMPONENT_V69.txt.
    See docs/SOURCE_RECEIPT_PACKAGE_REVIEW_V69.txt.
    Preview inspection is unavailable, so rendered pages/layout remain unverified.
    See docs/ACL_FORMATTING_V69.txt. Deliver a reviewed source and reproducibility
@@ -187,7 +191,7 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate is qualified. At20:07IST preparation15262,
+V67's64-test exact-source Linux gate is qualified. At20:31IST preparation15262,
 hybrid15263 and compression15264 were COMPLETED0:0. Their worker debits are6858,
 4922 and5210 CPU seconds. Cold15265 is RUNNING;15266--15275 are dependency-pending.
 Both completed comparisons have24 stage certificates. Their7 and68 numerical

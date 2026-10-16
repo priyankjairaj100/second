@@ -6,12 +6,13 @@ GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
 ## Actual cluster observation
 
-At14:37:43UTC (20:07:43IST), hybrid15263 and compression15264 were COMPLETED0:0.
+At15:01:01UTC (20:31:01IST), hybrid15263 and compression15264 were COMPLETED0:0.
 Compression completed in1h27m36s with all24 stages certified. Cold15265 was RUNNING
-4m19s;15266--15275 remained dependency-pending. Both terminal audits remain absent.
-The302-file snapshot campaigns/csis_v67_progress_metadata_20261016_m.tar.gz is292481
-bytes, SHA2569362533ea83db3697039f40215bb28c20621000456576ff98f015cff6419dca0.
-validation/v67_progress_metadata_check_m.json verifies metadata/source bindings.
+27m37s with3of24 certified stages;15266--15275 remained dependency-pending.
+Both terminal audits remain absent.
+The340-file snapshot campaigns/csis_v67_progress_metadata_20261016_n.tar.gz is295857
+bytes, SHA2564284c7bc62164502b580897db9eb7f21232fdcdae0e1e46a87438fb0cc632cad.
+validation/v67_progress_metadata_check_n.json verifies metadata/source bindings.
 All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
 No new job was submitted. The numerical checkout remains
 f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull reporting changes there.
@@ -235,3 +236,14 @@ All costs, adverse guards and failure scope remain. Private reverse mappings sta
 outside the ZIP; original artifact hashes do not validate redacted paths. Full
 anonymity and source/runtime reproduction remain open. See
 docs/REVIEW_RECEIPT_COMPANION_V69.txt. The manuscript and summary ZIP are unchanged.
+
+Source component completion update
+The actual development-source-review-v69c.zip contains534 source/protocol/wrapper
+copies plus README/checker/manifest. All originals remain unchanged;34 identifier
+adaptations reverse exactly, and503 Python ASTs differ only by those strings.
+Clean extraction passes114 local fixtures with156 project modules and three
+namespace packages loaded only from the extraction. Nine wrappers passed syntax
+checks. This qualifies the local fixture subset, not Linux/CUDA or full empirical
+reproduction. Two preparation failures and earlier components remain preserved.
+See docs/REVIEW_SOURCE_COMPONENT_V69.txt. External input/runtime instructions,
+notices, whole-package review and claim-required evidence remain.
