@@ -1,0 +1,37 @@
+Official ACL formatting preparation, 16 October 2026
+
+The existing open second-research-draft.tex and reports/manuscript_v69.tex are
+identical. They use11pt article, Times, and the official ACL review style from:
+https://github.com/acl-org/acl-style-files/tree/d5adc823ff0f80f98c80405ca0ab66c68e684409
+The11615-byte acl.sty has SHA256
+19dfeddc2c0e448f3926a0bef048a9db3f3611b46265b760caabd7ada4f361de.
+Its bytes are embedded unchanged in filecontents for the standalone native editor.
+No official style rules were edited. Custom margins, font size and column gap were
+removed. The official template and bibliography-style file were also inspected;
+manual bibliography entries retain their text and links with natbib-compatible
+author-year labels, alphabetical ordering and disambiguating corporate-author
+year suffixes. No external BibTeX project dependency is required.
+
+All22 entries, source destinations, scientific paragraphs, abstract and proof
+blocks are preserved. The197-token abstract is unchanged. The5420 whitespace-token
+count excludes the embedded style; comparison with5347 before formatting includes
+added citation/preamble commands and is not a prose-growth or page-count measure.
+All71 selected empirical transcription/arithmetic checks pass on final bytes.
+Native compilation succeeded; the same editor remains open. No replacement
+document, separate PDF or different tab was created.
+
+The compiler tool returns success without rendered pages. Computer Use failed
+to start, so visual inspection and actual main-text page count remain unverified.
+The source includes an end-of-main-text page label for later inspection. Preserve
+that limitation: compilation does not establish pagination, absence of overfull
+lines, table placement, reference appearance or final template compliance.
+
+The working-draft label and17 identifying project links are still present. Review
+mode hides author fields but does not anonymize these destinations. Full anonymity
+and final source packaging remain open. Keep the current draft visibly provisional
+until the actual scientific decision and accompanying evidence bundle are ready.
+
+Official guidance: https://acl-org.github.io/ACLPUB/formatting.html
+Current short/long main-text limits are four/eight pages; limitations and references
+are outside that main-text budget. Final paper type/cycle and author-controlled
+submission information still require the user's facts. No external submission.

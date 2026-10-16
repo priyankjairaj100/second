@@ -25,8 +25,10 @@ lemma, proposition, proof and math spans are unchanged. No new empirical result
 was inserted. reports/manuscript_v69.tex and its validation record preserve bytes.
 
 Required formatting/anonymity work
-The source still uses custom10pt article/geometry settings, rather than the
-official ACL review template. Actual venue page count remains unverified. It has
+The source now uses the unmodified official ACL review style,11pt Times and
+author-year citations, with successful native compilation. The style is embedded
+for the standalone editor. Actual venue page count remains unverified: preview
+inspection could not start. See ACL_FORMATTING_V69.txt. It still has
 15 project-record bibliography entries and17 identifying repository links. Replace
 these with a concise anonymous evidence index in the eventual reproduction
 package while preserving their exact provenance outside the anonymous paper.
@@ -103,3 +105,11 @@ member inventories (2,269 entries;33,307,525 uncompressed member bytes). Every
 member is a regular file with a relative non-traversing path. No member was
 extracted or its payload inspected; content review, selection and anonymous
 derivatives remain pending. See validation/v69_archive_member_inventory.json.
+
+Derived companion preparation
+reports/review-evidence-v69 contains checked summaries for five historical result
+groups, with306 copied field groups matching eight original reports. Eight exposed
+article IDs are consistently renamed and all adverse guards/costs retained.
+Source receipts remain immutable and the identifying derivation map stays outside
+anonymous packaging. This companion is not a full reproduction archive or final
+anonymity clearance. See REVIEW_COMPANION_V69.txt.

@@ -1,9 +1,326 @@
-\documentclass[10pt,twocolumn,letterpaper]{article}
-\usepackage[margin=0.75in]{geometry}
-\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
-\setlength{\columnsep}{0.27in}
-\setlength{\emergencystretch}{2em}
+\documentclass[11pt]{article}
+% Unmodified official ACL style, embedded only for the standalone native editor.
+% Upstream commit d5adc823ff0f80f98c80405ca0ab66c68e684409.
+\begin{filecontents*}[overwrite]{acl.sty}
+% This is the LaTex style file for *ACL.
+% The official sources can be found at
+%
+%     https://github.com/acl-org/acl-style-files/
+%
+% This package is activated by adding
+%
+%    \usepackage{acl}
+%
+% to your LaTeX file. When submitting your paper for review, add the "review" option:
+%
+%    \usepackage[review]{acl}
+
+\newif\ifacl@finalcopy
+\newif\ifacl@anonymize
+\newif\ifacl@linenumbers
+\newif\ifacl@pagenumbers
+\DeclareOption{final}{\acl@finalcopytrue\acl@anonymizefalse\acl@linenumbersfalse\acl@pagenumbersfalse}
+\DeclareOption{review}{\acl@finalcopyfalse\acl@anonymizetrue\acl@linenumberstrue\acl@pagenumberstrue}
+\DeclareOption{preprint}{\acl@finalcopytrue\acl@anonymizefalse\acl@linenumbersfalse\acl@pagenumberstrue}
+\ExecuteOptions{final} % final copy is the default
+
+% include hyperref, unless user specifies nohyperref option like this:
+% \usepackage[nohyperref]{acl}
+\newif\ifacl@hyperref
+\DeclareOption{hyperref}{\acl@hyperreftrue}
+\DeclareOption{nohyperref}{\acl@hyperreffalse}
+\ExecuteOptions{hyperref} % default is to use hyperref
+\ProcessOptions\relax
+
+\typeout{Conference Style for ACL}
+
+\usepackage{xcolor}
+
+\ifacl@linenumbers
+  % Add draft line numbering via the lineno package
+  % https://texblog.org/2012/02/08/adding-line-numbers-to-documents/
+  \usepackage[switch,mathlines]{lineno}
+
+  % Line numbers in gray Helvetica 8pt
+  \font\aclhv = phvb at 8pt
+  \renewcommand\linenumberfont{\aclhv\color{lightgray}}
+
+  % Zero-fill line numbers
+  % NUMBER with left flushed zeros  \fillzeros[<WIDTH>]<NUMBER>
+  \newcount\cv@tmpc@ \newcount\cv@tmpc
+  \def\fillzeros[#1]#2{\cv@tmpc@=#2\relax\ifnum\cv@tmpc@<0\cv@tmpc@=-\cv@tmpc@\fi
+    \cv@tmpc=1 %
+    \loop\ifnum\cv@tmpc@<10 \else \divide\cv@tmpc@ by 10 \advance\cv@tmpc by 1 \fi
+      \ifnum\cv@tmpc@=10\relax\cv@tmpc@=11\relax\fi \ifnum\cv@tmpc@>10 \repeat
+    \ifnum#2<0\advance\cv@tmpc1\relax-\fi
+    \loop\ifnum\cv@tmpc<#1\relax0\advance\cv@tmpc1\relax\fi \ifnum\cv@tmpc<#1 \repeat
+    \cv@tmpc@=#2\relax\ifnum\cv@tmpc@<0\cv@tmpc@=-\cv@tmpc@\fi \relax\the\cv@tmpc@}%
+  \renewcommand\thelinenumber{\fillzeros[3]{\arabic{linenumber}}}
+  \AtBeginDocument{\linenumbers}
+
+  \setlength{\linenumbersep}{1.6cm}
+
+  % Bug: An equation with $$ ... $$ isn't numbered, nor is the previous line.
+
+  % Patch amsmath commands so that the previous line and the equation itself
+  % are numbered. Bug: multline has an extra line number.
+  % https://tex.stackexchange.com/questions/461186/how-to-use-lineno-with-amsmath-align
+  \usepackage{etoolbox} %% <- for \pretocmd, \apptocmd and \patchcmd
+
+  \newcommand*\linenomathpatch[1]{%
+    \expandafter\pretocmd\csname #1\endcsname {\linenomath}{}{}%
+    \expandafter\pretocmd\csname #1*\endcsname {\linenomath}{}{}%
+    \expandafter\apptocmd\csname end#1\endcsname {\endlinenomath}{}{}%
+    \expandafter\apptocmd\csname end#1*\endcsname {\endlinenomath}{}{}%
+  }
+  \newcommand*\linenomathpatchAMS[1]{%
+    \expandafter\pretocmd\csname #1\endcsname {\linenomathAMS}{}{}%
+    \expandafter\pretocmd\csname #1*\endcsname {\linenomathAMS}{}{}%
+    \expandafter\apptocmd\csname end#1\endcsname {\endlinenomath}{}{}%
+    \expandafter\apptocmd\csname end#1*\endcsname {\endlinenomath}{}{}%
+  }
+
+  %% Definition of \linenomathAMS depends on whether the mathlines option is provided
+  \expandafter\ifx\linenomath\linenomathWithnumbers
+    \let\linenomathAMS\linenomathWithnumbers
+    %% The following line gets rid of an extra line numbers at the bottom:
+    \patchcmd\linenomathAMS{\advance\postdisplaypenalty\linenopenalty}{}{}{}
+  \else
+    \let\linenomathAMS\linenomathNonumbers
+  \fi
+
+  \AtBeginDocument{%
+    \linenomathpatch{equation}%
+    \linenomathpatchAMS{gather}%
+    \linenomathpatchAMS{multline}%
+    \linenomathpatchAMS{align}%
+    \linenomathpatchAMS{alignat}%
+    \linenomathpatchAMS{flalign}%
+  }
+\else
+  % Hack to ignore these commands, which review mode puts into the .aux file.
+  \newcommand{\@LN@col}[1]{}
+  \newcommand{\@LN}[2]{}
+  \newcommand{\nolinenumbers}{}
+\fi
+
+\PassOptionsToPackage{a4paper,margin=2.5cm,heightrounded=true}{geometry}
+\RequirePackage{geometry}
+
+\setlength\columnsep{0.6cm}
+\newlength\titlebox
+\setlength\titlebox{11\baselineskip}
+% \titlebox should be a multiple of \baselineskip so that
+% column height remaining fits an exact number of lines of text
+
+\flushbottom \twocolumn \sloppy
+
+% We're never going to need a table of contents, so just flush it to
+% save space --- suggested by drstrip@sandia-2
+\def\addcontentsline#1#2#3{}
+
+\ifacl@pagenumbers
+    \pagenumbering{arabic}
+\else
+    \thispagestyle{empty}
+    \pagestyle{empty}
+\fi
+
+%% Title and Authors %%
+
+\let\Thanks\thanks % \Thanks and \thanks used to be different, but keep this for backwards compatibility.
+
+\newcommand\outauthor{%
+    \begin{tabular}[t]{c}
+    \ifacl@anonymize
+        \bfseries Anonymous ACL submission
+    \else
+        \bfseries\@author
+    \fi
+    \end{tabular}}
+
+% Mostly taken from deproc.
+\AtBeginDocument{
+\def\maketitle{\par
+ \begingroup
+   \def\thefootnote{\fnsymbol{footnote}}
+   \twocolumn[\@maketitle]
+   \@thanks
+ \endgroup
+ \setcounter{footnote}{0}
+ \let\maketitle\relax
+ \let\@maketitle\relax
+ \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
+\def\@maketitle{\vbox to \titlebox{\hsize\textwidth
+ \linewidth\hsize \vskip 0.125in minus 0.125in \centering
+ {\Large\bfseries \@title \par} \vskip 0.2in plus 1fil minus 0.1in
+ {\def\and{\unskip\enspace{\rmfamily and}\enspace}%
+  \def\And{\end{tabular}\hss \egroup \hskip 1in plus 2fil
+           \hbox to 0pt\bgroup\hss \begin{tabular}[t]{c}\bfseries}%
+  \def\AND{\end{tabular}\hss\egroup \hfil\hfil\egroup
+          \vskip 0.25in plus 1fil minus 0.125in
+           \hbox to \linewidth\bgroup\large \hfil\hfil
+             \hbox to 0pt\bgroup\hss \begin{tabular}[t]{c}\bfseries}
+  \hbox to \linewidth\bgroup\large \hfil\hfil
+    \hbox to 0pt\bgroup\hss
+  \outauthor
+   \hss\egroup
+    \hfil\hfil\egroup}
+  \vskip 0.3in plus 2fil minus 0.1in
+}}
+}
+
+% margins and font size for abstract
+\renewenvironment{abstract}%
+  {\begin{center}\large\textbf{\abstractname}\end{center}%
+    \begin{list}{}%
+      {\setlength{\rightmargin}{0.6cm}%
+        \setlength{\leftmargin}{0.6cm}}%
+      \item[]\ignorespaces%
+      \@setsize\normalsize{12pt}\xpt\@xpt
+  }%
+  {\unskip\end{list}}
+
+% Resizing figure and table captions - SL
+% Support for interacting with the caption, subfigure, and subcaption packages - SL
+\RequirePackage{caption}
+\DeclareCaptionFont{10pt}{\fontsize{10pt}{12pt}\selectfont}
+\captionsetup{font=10pt}
+
+\RequirePackage{natbib}
+% for citation commands in the .tex, authors can use:
+% \citep, \citet, and \citeyearpar for compatibility with natbib, or
+% \cite, \newcite, and \shortcite for compatibility with older ACL .sty files
+\renewcommand\cite{\citep}  % to get "(Author Year)" with natbib
+\newcommand\shortcite{\citeyearpar}% to get "(Year)" with natbib
+\newcommand\newcite{\citet} % to get "Author (Year)" with natbib
+\newcommand{\citeposs}[1]{\citeauthor{#1}'s (\citeyear{#1})} % to get "Author's (Year)"
+
+\bibliographystyle{acl_natbib}
+
+% Bibliography
+
+% Don't put a label in the bibliography at all.  Just use the unlabeled format
+% instead.
+\def\thebibliography#1{\vskip\parskip%
+\vskip\baselineskip%
+\def\baselinestretch{1}%
+\ifx\@currsize\normalsize\@normalsize\else\@currsize\fi%
+\vskip-\parskip%
+\vskip-\baselineskip%
+\section*{References\@mkboth
+ {References}{References}}\list
+ {}{\setlength{\labelwidth}{0pt}\setlength{\leftmargin}{\parindent}
+ \setlength{\itemindent}{-\parindent}}
+ \def\newblock{\hskip .11em plus .33em minus -.07em}
+ \sloppy\clubpenalty4000\widowpenalty4000
+ \sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+
+
+% Allow for a bibliography of sources of attested examples
+\def\thesourcebibliography#1{\vskip\parskip%
+\vskip\baselineskip%
+\def\baselinestretch{1}%
+\ifx\@currsize\normalsize\@normalsize\else\@currsize\fi%
+\vskip-\parskip%
+\vskip-\baselineskip%
+\section*{Sources of Attested Examples\@mkboth
+ {Sources of Attested Examples}{Sources of Attested Examples}}\list
+ {}{\setlength{\labelwidth}{0pt}\setlength{\leftmargin}{\parindent}
+ \setlength{\itemindent}{-\parindent}}
+ \def\newblock{\hskip .11em plus .33em minus -.07em}
+ \sloppy\clubpenalty4000\widowpenalty4000
+ \sfcode`\.=1000\relax}
+\let\endthesourcebibliography=\endlist
+
+% sections with less space
+\def\section{\@startsection {section}{1}{\z@}{-2.0ex plus
+    -0.5ex minus -.2ex}{1.5ex plus 0.3ex minus .2ex}{\large\bfseries\raggedright}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{-1.8ex plus
+    -0.5ex minus -.2ex}{0.8ex plus .2ex}{\normalsize\bfseries\raggedright}}
+%% changed by KO to - values to get the initial parindent right
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{-1.5ex plus
+   -0.5ex minus -.2ex}{0.5ex plus .2ex}{\normalsize\bfseries\raggedright}}
+\def\paragraph{\@startsection{paragraph}{4}{\z@}{1.5ex plus
+   0.5ex minus .2ex}{-1em}{\normalsize\bfseries}}
+\def\subparagraph{\@startsection{subparagraph}{5}{\parindent}{1.5ex plus
+   0.5ex minus .2ex}{-1em}{\normalsize\bfseries}}
+
+% Footnotes
+\footnotesep 6.65pt %
+\skip\footins 9pt plus 4pt minus 2pt
+\def\footnoterule{\kern-3pt \hrule width 5pc \kern 2.6pt }
+\setcounter{footnote}{0}
+
+% Lists and paragraphs
+\parindent 1em
+\topsep 4pt plus 1pt minus 2pt
+\partopsep 1pt plus 0.5pt minus 0.5pt
+\itemsep 2pt plus 1pt minus 0.5pt
+\parsep 2pt plus 1pt minus 0.5pt
+
+\leftmargin 2em \leftmargini\leftmargin \leftmarginii 2em
+\leftmarginiii 1.5em \leftmarginiv 1.0em \leftmarginv .5em \leftmarginvi .5em
+\labelwidth\leftmargini\advance\labelwidth-\labelsep \labelsep 5pt
+
+\def\@listi{\leftmargin\leftmargini}
+\def\@listii{\leftmargin\leftmarginii
+   \labelwidth\leftmarginii\advance\labelwidth-\labelsep
+   \topsep 2pt plus 1pt minus 0.5pt
+   \parsep 1pt plus 0.5pt minus 0.5pt
+   \itemsep \parsep}
+\def\@listiii{\leftmargin\leftmarginiii
+    \labelwidth\leftmarginiii\advance\labelwidth-\labelsep
+    \topsep 1pt plus 0.5pt minus 0.5pt
+    \parsep \z@ \partopsep 0.5pt plus 0pt minus 0.5pt
+    \itemsep \topsep}
+\def\@listiv{\leftmargin\leftmarginiv
+     \labelwidth\leftmarginiv\advance\labelwidth-\labelsep}
+\def\@listv{\leftmargin\leftmarginv
+     \labelwidth\leftmarginv\advance\labelwidth-\labelsep}
+\def\@listvi{\leftmargin\leftmarginvi
+     \labelwidth\leftmarginvi\advance\labelwidth-\labelsep}
+
+\abovedisplayskip 7pt plus2pt minus5pt%
+\belowdisplayskip \abovedisplayskip
+\abovedisplayshortskip  0pt plus3pt%
+\belowdisplayshortskip  4pt plus3pt minus3pt%
+
+% Less leading in most fonts (due to the narrow columns)
+% The choices were between 1-pt and 1.5-pt leading
+\def\@normalsize{\@setsize\normalsize{11pt}\xpt\@xpt}
+\def\small{\@setsize\small{10pt}\ixpt\@ixpt}
+\def\footnotesize{\@setsize\footnotesize{10pt}\ixpt\@ixpt}
+\def\scriptsize{\@setsize\scriptsize{8pt}\viipt\@viipt}
+\def\tiny{\@setsize\tiny{7pt}\vipt\@vipt}
+\def\large{\@setsize\large{14pt}\xiipt\@xiipt}
+\def\Large{\@setsize\Large{16pt}\xivpt\@xivpt}
+\def\LARGE{\@setsize\LARGE{20pt}\xviipt\@xviipt}
+\def\huge{\@setsize\huge{23pt}\xxpt\@xxpt}
+\def\Huge{\@setsize\Huge{28pt}\xxvpt\@xxvpt}
+
+% The hyperref manual (section 9) says hyperref should be loaded after natbib
+\ifacl@hyperref
+  \PassOptionsToPackage{breaklinks}{hyperref}
+  \RequirePackage{hyperref}
+  % make links dark blue
+  \definecolor{darkblue}{rgb}{0, 0, 0.5}
+  \hypersetup{colorlinks=true, citecolor=darkblue, linkcolor=darkblue, urlcolor=darkblue}
+\else
+  % This definition is used if the hyperref package is not loaded.
+  % It provides a backup, no-op definiton of \href.
+  % This is necessary because \href command is used in the acl_natbib.bst file.
+  \def\href#1#2{{#2}}
+  \usepackage{url}
+\fi
+\end{filecontents*}
+\usepackage[review]{acl}
+\usepackage{times,latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 \newtheorem{proposition}{Proposition}
@@ -13,10 +330,11 @@
 \newcommand{\calS}{\mathcal{S}}
 \newcommand{\Qfix}{Q_{\mathrm{fix}}}
 \title{Certified Calibration Repair from Compressed Fixed-Anchor Features}
-\author{Research working draft\\Author and affiliation details pending}
-\date{16 October 2026\\\textbf{Working draft---not submission-ready}}
+\author{Author and affiliation details pending}
+\date{}
 \begin{document}
 \maketitle
+\noindent\textit{Working draft: evidence and anonymity checks remain open.}
 
 \begin{abstract}
 Can a smaller calibration archive still recover the exact quantized model after
@@ -601,6 +919,7 @@ untouched confirmation. Detailed inventories and all earlier costs remain in
 the reproduction record. Independent reproduction requires the bound binaries
 or a separately registered regeneration, with licensing and distribution checked.
 
+\label{page:main-end}
 \section*{Limitations}
 The evidence concerns one checkpoint, short calibration records, and adaptive
 development experiments. The original-checkpoint teacher was selected after the
@@ -619,71 +938,48 @@ Generative AI assisted experiment planning, software development, analysis,
 literature checking, and manuscript drafting. Human authors remain responsible
 for the final methods, results, references, and text.
 
-\begin{thebibliography}{9}
-\bibitem{gptq}
+\begin{thebibliography}{22}
+\bibitem[Frantar et~al.(2023)Frantar, Ashkboos, Hoefler, and Alistarh]{gptq}
 Elias Frantar, Saleh Ashkboos, Torsten Hoefler, and Dan Alistarh.
 2023. \emph{GPTQ: Accurate Post-Training Quantization for Generative Pre-trained
 Transformers}. ICLR. Primary preprint:
 \href{https://arxiv.org/abs/2210.17323v2}{arXiv:2210.17323, version 2}.
 
-\bibitem{ginart}
+\bibitem[Ginart et~al.(2019)Ginart, Guan, Valiant, and Zou]{ginart}
 Antonio A. Ginart, Melody Y. Guan, Gregory Valiant, and James Zou.
 2019. \emph{Making AI Forget You: Data Deletion in Machine Learning}.
 Advances in Neural Information Processing Systems 32.
 \href{https://papers.nips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf}{Primary proceedings paper}.
 
-\bibitem{exactfun}
-Zuobin Xiong, Wei Li, Yingshu Li, and Zhipeng Cai.
-2023. \emph{Exact-Fun: An Exact and Efficient Federated Unlearning Approach}.
-IEEE International Conference on Data Mining, pages 1439--1444.
-\href{https://doi.org/10.1109/ICDM58522.2023.00188}{Conference record};
-\href{https://github.com/zuobinxiong/zuobinxiong.github.io/blob/300a0672be8d265ddebf20d6e69f790456a1bd81/assets/pdf/ExactFedUnlearning.pdf}{pinned full author version},
-Theorem 2, pages 6--7. The proof comparison uses this historical author version.
-
-\bibitem{execcert}
-Ziyu Zhao, Xinyu Wang, Xiao-Wen Chang, and Yixuan He.
-2026. \emph{From Mathematical to Executable Certificates for Machine Unlearning}.
-\href{https://arxiv.org/html/2610.02268v1}{arXiv:2610.02268, version 1}.
-
-\bibitem{qss}
-Ami Tavory, Shripad Gade, Tal Sarig, Noam Touitou, and Ido Guy.
-2026. \emph{Exact Unlearning via Quantized Sufficient Statistics}.
-\href{https://arxiv.org/html/2610.07197v1}{arXiv:2610.07197, version 1}.
-
-\bibitem{medu}
+\bibitem[Lang et~al.(2025)Lang, Helvitz, and Shlezinger]{medu}
 Natalie Lang, Alon Helvitz, and Nir Shlezinger.
 2025. \emph{Memory-Efficient Distributed Unlearning}.
 \href{https://arxiv.org/abs/2505.03388v1}{arXiv:2505.03388, version 1}.
 
-\bibitem{qebverif}
-Yedi Zhang, Fu Song, and Jun Sun.
-2023. \emph{QEBVerif: Quantization Error Bound Verification of Neural Networks}.
-\href{https://arxiv.org/abs/2212.02781v2}{arXiv:2212.02781, version 2}.
-
-\bibitem{v39}
-Project \emph{second}. 2026. \emph{Real-data scale results and research decision:
+\bibitem[Project second(2026a)]{v39}
+Project \emph{second}. 2026a. \emph{Real-data scale results and research decision:
 V39}. Immutable project report at commit
 \texttt{fbcc98c} (full identity in link):
 \href{https://github.com/priyankjairaj100/second/blob/fbcc98c6559de4b88ffc9c8b960cf680d89e29d3/docs/SCALE_RESULTS_V39.md}{report and evidence pointers}.
 Original completed workflow:
 \href{https://github.com/priyankjairaj100/second/actions/runs/38023401448}{run 38023401448}.
 
-\bibitem{v40}
-Project \emph{second}. 2026. \emph{Native Gram and streamed scale results: V40}.
+\bibitem[Project second(2026b)]{v40}
+Project \emph{second}. 2026b. \emph{Native Gram and streamed scale results: V40}.
 Immutable project report at commit
 \texttt{fbcc98c} (full identity in link):
 \href{https://github.com/priyankjairaj100/second/blob/fbcc98c6559de4b88ffc9c8b960cf680d89e29d3/docs/NATIVE_SCALE_RESULTS_V40.md}{report and evidence pointers}.
 Original completed workflow:
 \href{https://github.com/priyankjairaj100/second/actions/runs/38025361543}{run 38025361543}.
 
-\bibitem{boundaries}
-Project \emph{second}. 2026. \emph{Paper claim boundaries and evidence obligations}.
+\bibitem[Project second(2026c)]{boundaries}
+Project \emph{second}. 2026c. \emph{Paper claim boundaries and evidence obligations}.
 V41 handoff, immutable commit
 \texttt{fbcc98c} (full identity in link):
 \href{https://github.com/priyankjairaj100/second/blob/fbcc98c6559de4b88ffc9c8b960cf680d89e29d3/docs/CLAIM_BOUNDARIES_V41.md}{target, claims, and remaining obligations}.
 
-\bibitem{v43}
-Project \emph{second}. 2026. \emph{Complete fixed-anchor service development
+\bibitem[Project second(2026d)]{v43}
+Project \emph{second}. 2026d. \emph{Complete fixed-anchor service development
 pilot: V43}. Frozen source \texttt{304a9cc}:
 \href{https://github.com/priyankjairaj100/second/blob/304a9cc73b3c263032f3ef6a02487b4d2df40fbe/research_v43/PROTOCOL.txt}{prospective protocol}.
 Full program and main byte audit identities are in
@@ -694,8 +990,8 @@ the supplemental receipt is
 (\texttt{cd03e4c3}), and the retained-payload check is
 \path{validation/v43_local_archive.json}.
 
-\bibitem{v44}
-Project \emph{second}. 2026. \emph{Bounded exposed-quality diagnostic: V44}.
+\bibitem[Project second(2026e)]{v44}
+Project \emph{second}. 2026e. \emph{Bounded exposed-quality diagnostic: V44}.
 Registered source \texttt{db95069}:
 \href{https://github.com/priyankjairaj100/second/blob/db95069b2c3484ac615052fb1c1a711c8c773c2d/research_v44/PROTOCOL.txt}{prospective protocol}.
 Full program identity is retained in
@@ -703,24 +999,24 @@ Full program identity is retained in
 per-article losses are in
 \path{local_runs/exposed-quality-v44-20261010-b/quality/outputs/completion.json}
 (\texttt{98870a81}).
-\bibitem{v47}
-Project \emph{second}. 2026. \emph{CPU parameter export and CUDA likelihood parity: V47}.
+\bibitem[Project second(2026f)]{v47}
+Project \emph{second}. 2026f. \emph{CPU parameter export and CUDA likelihood parity: V47}.
 Frozen source \texttt{c811dec}:
 \href{https://github.com/priyankjairaj100/second/blob/c811dec/research_v47/PROTOCOL.txt}{prospective protocol}.
 GPU program \texttt{620076c6}; CPU export program \texttt{1803adfd}.
 Results: \path{campaigns/csis_cuda_parity_v47/parity/outputs/completion.json};
 local copied-evidence audit: \path{validation/v47_local_archive.json}.
 
-\bibitem{v49failure}
-Project \emph{second}. 2026. \emph{Larger C4 preparation: terminal failure and
+\bibitem[Project second(2026g)]{v49failure}
+Project \emph{second}. 2026g. \emph{Larger C4 preparation: terminal failure and
 bounded software diagnosis, V49}.
 Program \texttt{02c7f6cf}; Slurm preparation job 13228; dependency cancellations
 13229--13235. Archived sealed receipts and partial progress:
 \path{campaigns/csis_full_model_v45_failure}; local integrity check:
 \path{validation/v49_v45_failure_audit.json}. No complete larger-model result.
 
-\bibitem{v51}
-Project \emph{second}. 2026. \emph{Real wide-stage feasibility gate: V51}.
+\bibitem[Project second(2026h)]{v51}
+Project \emph{second}. 2026h. \emph{Real wide-stage feasibility gate: V51}.
 Frozen source \texttt{2c1a2bc}:
 \href{https://github.com/priyankjairaj100/second/blob/2c1a2bc699e4633bdab7243bb9e042be2f884c83/research_v51/PROTOCOL.txt}{prospective protocol}.
 Program \texttt{af83f983}; Slurm job 13276.
@@ -730,8 +1026,8 @@ Full-archive and point-pair integrity checks:
 \path{validation/v52_v51_point_pair_audit.json}.
 The compressed-input arm refused certification; the complete gate failed.
 
-\bibitem{v52}
-Project \emph{second}. 2026. \emph{Adaptive 48-bit wide-stage diagnostic: V52}.
+\bibitem[Project second(2026i)]{v52}
+Project \emph{second}. 2026i. \emph{Adaptive 48-bit wide-stage diagnostic: V52}.
 Frozen source \texttt{6b70d70}:
 \href{https://github.com/priyankjairaj100/second/blob/6b70d703a716cef744f49ba1c55add3a691c3267/research_v52/PROTOCOL.txt}{prospective diagnostic protocol}.
 Program \texttt{f22f6667}; Slurm job 13291.
@@ -739,8 +1035,8 @@ Terminal metadata: \path{campaigns/csis_precision48_v52};
 actual-artifact integrity check: \path{validation/v52_terminal_audit.json}.
 The same known development root was reused; no untouched quality evaluation.
 
-\bibitem{v54}
-Project \emph{second}. 2026. \emph{Explicit compressed48 full-model integration and archive admission: V53--V54}.
+\bibitem[Project second(2026j)]{v54}
+Project \emph{second}. 2026j. \emph{Explicit compressed48 full-model integration and archive admission: V53--V54}.
 \href{https://github.com/priyankjairaj100/second/blob/9826a95/research_v54/PROTOCOL.txt}{Prospective protocol};
 \href{https://github.com/priyankjairaj100/second/blob/7f3b10d/research_v53/PROTOCOL.txt}{numerical and resource policy}.
 Program: \path{03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b}.
@@ -748,8 +1044,8 @@ Launch metadata: \path{campaigns/csis_full_model48_v54_launch}.
 Terminal results and both completed audits are preserved in the V58 metadata archive below.
 
 
-\bibitem{v56plan}
-Project \emph{second}. 2026. \emph{Conditional full-model quality and GPU parity: V55--V56}.
+\bibitem[Project second(2026k)]{v56plan}
+Project \emph{second}. 2026k. \emph{Conditional full-model quality and GPU parity: V55--V56}.
 \href{https://github.com/priyankjairaj100/second/blob/792400b/research_v55/PROTOCOL.txt}{CPU quality protocol};
 \href{https://github.com/priyankjairaj100/second/blob/5dcd24c/research_v56/PROTOCOL.txt}{GPU parity protocol}.
 Software jobs13324 and13328 passed18 and12 tests respectively, with zero skips.
@@ -757,16 +1053,16 @@ Jobs13325--13327 and13329 completed. CPU pooled quality failed; GPU likelihood p
 Launch evidence: \path{validation/v56_launch_audit.json}.
 
 
-\bibitem{v58terminal}
-Project \emph{second}. 2026. \emph{Terminal complete-model, quality and GPU evidence: V58 archive}.
+\bibitem[Project second(2026l)]{v58terminal}
+Project \emph{second}. 2026l. \emph{Terminal complete-model, quality and GPU evidence: V58 archive}.
 Completed V54 program \texttt{03a6181b}; V55 \texttt{4de04c4a}; V56 \texttt{8c3f4653}.
 Metadata: \path{campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz}.
 Local integrity and arithmetic: \path{validation/v58_terminal_metadata_check.json}.
 The archive preserves the failed CPU quality guard. No new numerical execution
 or independent local inference replay was performed for this archival check.
 
-\bibitem{v59terminal}
-Project \emph{second}. 2026. \emph{Adaptive full-precision-anchor quality screen: V59}.
+\bibitem[Project second(2026m)]{v59terminal}
+Project \emph{second}. 2026m. \emph{Adaptive full-precision-anchor quality screen: V59}.
 \href{https://github.com/priyankjairaj100/second/blob/60a514098511526924cb5746a2a61851b5f6bd23/research_v59/PROTOCOL.txt}{Frozen protocol and numerical source}.
 Program \texttt{4a22292c}; jobs13548--13551 completed; all49 software checks passed.
 Completion \texttt{2c807129} and actual-artifact audit \texttt{286a2c74} preserve
@@ -774,8 +1070,8 @@ passing exposed quality guards without a repair-service or confirmation claim.
 Metadata: \path{campaigns/csis_terminal_v59_metadata_20261014.tar.gz}.
 Portable check: \path{validation/v59_terminal_metadata_check.json}.
 
-\bibitem{v62terminal}
-Project \emph{second}. 2026. \emph{Original-checkpoint repair service and separate
+\bibitem[Project second(2026n)]{v62terminal}
+Project \emph{second}. 2026n. \emph{Original-checkpoint repair service and separate
 audit recovery: V61--V62}.
 \href{https://github.com/priyankjairaj100/second/blob/codex/second-cluster-v42/research_v62/PROTOCOL.txt}{Recovery protocol}.
 Original failed gate: \path{campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz}.
@@ -784,12 +1080,36 @@ Portable check: \path{validation/v62_recovery_metadata_check.json}.
 Jobs15150--15151 verify existing artifacts; no numerical or quality rerun.
 
 
-\bibitem{v63terminal}
+\bibitem[Second research project(2026)]{v63terminal}
 Second research project. 2026.
 \emph{Audited source-local modern lossless archive comparison (V63).}
 Frozen registration, source/runtime bindings, actual-byte audit and terminal
 metadata archive, 16 October.
 \href{https://github.com/priyankjairaj100/second/blob/codex/second-cluster-v42/docs/TERMINAL_EVIDENCE_V63.txt}{Evidence and scope}.
 
+\bibitem[Tavory et~al.(2026)Tavory, Gade, Sarig, Touitou, and Guy]{qss}
+Ami Tavory, Shripad Gade, Tal Sarig, Noam Touitou, and Ido Guy.
+2026. \emph{Exact Unlearning via Quantized Sufficient Statistics}.
+\href{https://arxiv.org/html/2610.07197v1}{arXiv:2610.07197, version 1}.
+
+\bibitem[Xiong et~al.(2023)Xiong, Li, Li, and Cai]{exactfun}
+Zuobin Xiong, Wei Li, Yingshu Li, and Zhipeng Cai.
+2023. \emph{Exact-Fun: An Exact and Efficient Federated Unlearning Approach}.
+IEEE International Conference on Data Mining, pages 1439--1444.
+\href{https://doi.org/10.1109/ICDM58522.2023.00188}{Conference record};
+\href{https://github.com/zuobinxiong/zuobinxiong.github.io/blob/300a0672be8d265ddebf20d6e69f790456a1bd81/assets/pdf/ExactFedUnlearning.pdf}{pinned full author version},
+Theorem 2, pages 6--7. The proof comparison uses this historical author version.
+
+\bibitem[Zhang et~al.(2023)Zhang, Song, and Sun]{qebverif}
+Yedi Zhang, Fu Song, and Jun Sun.
+2023. \emph{QEBVerif: Quantization Error Bound Verification of Neural Networks}.
+\href{https://arxiv.org/abs/2212.02781v2}{arXiv:2212.02781, version 2}.
+
+\bibitem[Zhao et~al.(2026)Zhao, Wang, Chang, and He]{execcert}
+Ziyu Zhao, Xinyu Wang, Xiao-Wen Chang, and Yixuan He.
+2026. \emph{From Mathematical to Executable Certificates for Machine Unlearning}.
+\href{https://arxiv.org/html/2610.02268v1}{arXiv:2610.02268, version 1}.
+
 \end{thebibliography}
+\typeout{SECOND-MAIN-END-PAGE=\getpagerefnumber{page:main-end}}
 \end{document}

@@ -1,0 +1,5138 @@
+{
+  "article_renaming": {
+    "wikitext2:validation:article-row-1040": "Q01",
+    "wikitext2:validation:article-row-1299": "Q02",
+    "wikitext2:validation:article-row-132": "Q03",
+    "wikitext2:validation:article-row-2115": "Q04",
+    "wikitext2:validation:article-row-2237": "Q05",
+    "wikitext2:validation:article-row-2352": "Q06",
+    "wikitext2:validation:article-row-2525": "Q07",
+    "wikitext2:validation:article-row-3636": "Q08"
+  },
+  "changes": "Explicit projection; model labels and article IDs renamed. Copied numbers/booleans remain exact. Static descriptions disclose evidence limits.",
+  "copied_fields": [
+    {
+      "input_path": [
+        "charged_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E07",
+        "charged_cpu_seconds"
+      ],
+      "source": "failure"
+    },
+    {
+      "input_path": [
+        "worker_cpu_ns"
+      ],
+      "output_path": [
+        "records",
+        "E07",
+        "worker_cpu_ns"
+      ],
+      "source": "failure"
+    },
+    {
+      "input_path": [
+        "completed_stage_count"
+      ],
+      "output_path": [
+        "records",
+        "E07",
+        "completed_stage_count"
+      ],
+      "source": "failure"
+    },
+    {
+      "input_path": [
+        "stage_count"
+      ],
+      "output_path": [
+        "records",
+        "E07",
+        "stage_count"
+      ],
+      "source": "failure"
+    },
+    {
+      "input_path": [
+        "source_records_replayed"
+      ],
+      "output_path": [
+        "records",
+        "E07",
+        "source_records_replayed"
+      ],
+      "source": "failure"
+    },
+    {
+      "input_path": [
+        "complete_model"
+      ],
+      "output_path": [
+        "records",
+        "E07",
+        "complete_model"
+      ],
+      "source": "failure"
+    },
+    {
+      "input_path": [
+        "confirmation"
+      ],
+      "output_path": [
+        "records",
+        "E07",
+        "confirmation"
+      ],
+      "source": "failure"
+    },
+    {
+      "input_path": [
+        "quality_evaluation"
+      ],
+      "output_path": [
+        "records",
+        "E07",
+        "quality_evaluation"
+      ],
+      "source": "failure"
+    },
+    {
+      "input_path": [
+        "worker_outcome"
+      ],
+      "output_path": [
+        "records",
+        "E07",
+        "worker_outcome"
+      ],
+      "source": "failure"
+    },
+    {
+      "input_path": [
+        "original_tokens"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "original_tokens"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "original_tokens"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "original_tokens"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "retained_tokens"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "retained_tokens"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "retained_tokens"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "retained_tokens"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "codes"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "codes"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "codes"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "codes"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "stages"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "stages"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "stages"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "stages"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "historical_quality_exclusions"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "historical_quality_exclusions"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "historical_quality_exclusions"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "historical_quality_exclusions"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cached",
+        "attributed_preparation_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cached",
+        "attributed_preparation_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cached",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cached",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cached",
+        "complete_deployment_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cached",
+        "complete_deployment_bytes"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cached",
+        "live_state_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cached",
+        "live_state_bytes"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cached",
+        "request_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cached",
+        "request_elapsed_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cached",
+        "transaction_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cached",
+        "transaction_elapsed_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cached",
+        "worker_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cached",
+        "worker_elapsed_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cached",
+        "worker_outside_request_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cached",
+        "worker_outside_request_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cold",
+        "attributed_preparation_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cold",
+        "attributed_preparation_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cold",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cold",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cold",
+        "complete_deployment_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cold",
+        "complete_deployment_bytes"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cold",
+        "live_state_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cold",
+        "live_state_bytes"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cold",
+        "request_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cold",
+        "request_elapsed_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cold",
+        "transaction_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cold",
+        "transaction_elapsed_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cold",
+        "worker_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cold",
+        "worker_elapsed_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "cold",
+        "worker_outside_request_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "cold",
+        "worker_outside_request_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "hybrid",
+        "attributed_preparation_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "hybrid",
+        "attributed_preparation_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "hybrid",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "hybrid",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "hybrid",
+        "complete_deployment_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "hybrid",
+        "complete_deployment_bytes"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "hybrid",
+        "live_state_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "hybrid",
+        "live_state_bytes"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "hybrid",
+        "request_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "hybrid",
+        "request_elapsed_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "hybrid",
+        "transaction_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "hybrid",
+        "transaction_elapsed_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "hybrid",
+        "worker_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "hybrid",
+        "worker_elapsed_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "hybrid",
+        "worker_outside_request_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "hybrid",
+        "worker_outside_request_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "compressed",
+        "attributed_preparation_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "compressed",
+        "attributed_preparation_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "compressed",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "compressed",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "compressed",
+        "complete_deployment_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "compressed",
+        "complete_deployment_bytes"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "compressed",
+        "live_state_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "compressed",
+        "live_state_bytes"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "compressed",
+        "request_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "compressed",
+        "request_elapsed_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "compressed",
+        "transaction_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "compressed",
+        "transaction_elapsed_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "compressed",
+        "worker_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "compressed",
+        "worker_elapsed_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "timings",
+        "compressed",
+        "worker_outside_request_ns"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "service_arms",
+        "compressed",
+        "worker_outside_request_ns"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cached",
+        "attributed_preparation_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cached",
+        "attributed_preparation_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cached",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cached",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cached",
+        "complete_deployment_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cached",
+        "complete_deployment_bytes"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cached",
+        "live_state_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cached",
+        "live_state_bytes"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cached",
+        "request_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cached",
+        "request_elapsed_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cached",
+        "transaction_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cached",
+        "transaction_elapsed_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cached",
+        "worker_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cached",
+        "worker_elapsed_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cached",
+        "worker_outside_request_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cached",
+        "worker_outside_request_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cold",
+        "attributed_preparation_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cold",
+        "attributed_preparation_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cold",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cold",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cold",
+        "complete_deployment_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cold",
+        "complete_deployment_bytes"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cold",
+        "live_state_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cold",
+        "live_state_bytes"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cold",
+        "request_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cold",
+        "request_elapsed_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cold",
+        "transaction_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cold",
+        "transaction_elapsed_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cold",
+        "worker_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cold",
+        "worker_elapsed_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "cold",
+        "worker_outside_request_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "cold",
+        "worker_outside_request_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "hybrid",
+        "attributed_preparation_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "hybrid",
+        "attributed_preparation_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "hybrid",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "hybrid",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "hybrid",
+        "complete_deployment_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "hybrid",
+        "complete_deployment_bytes"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "hybrid",
+        "live_state_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "hybrid",
+        "live_state_bytes"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "hybrid",
+        "request_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "hybrid",
+        "request_elapsed_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "hybrid",
+        "transaction_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "hybrid",
+        "transaction_elapsed_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "hybrid",
+        "worker_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "hybrid",
+        "worker_elapsed_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "hybrid",
+        "worker_outside_request_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "hybrid",
+        "worker_outside_request_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "compressed",
+        "attributed_preparation_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "compressed",
+        "attributed_preparation_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "compressed",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "compressed",
+        "attributed_two_deletion_lifetime_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "compressed",
+        "complete_deployment_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "compressed",
+        "complete_deployment_bytes"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "compressed",
+        "live_state_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "compressed",
+        "live_state_bytes"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "compressed",
+        "request_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "compressed",
+        "request_elapsed_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "compressed",
+        "transaction_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "compressed",
+        "transaction_elapsed_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "compressed",
+        "worker_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "compressed",
+        "worker_elapsed_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "timings",
+        "compressed",
+        "worker_outside_request_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "service_arms",
+        "compressed",
+        "worker_outside_request_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "v54",
+        "comparisons"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "complete_model_state_comparison_count"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "current_worker_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "current_worker_cpu_seconds"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "prior_failed_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "prior_failed_cpu_seconds"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v54",
+        "total_continuation_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "total_continuation_cpu_seconds"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "v55_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality_worker_charged_cpu_seconds"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "v56_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "gpu_worker_charged_cpu_seconds"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "gpu_parity"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "gpu_likelihood_parity"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "untouched_quality"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "untouched_quality"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "untouched_quality"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "untouched_quality"
+      ],
+      "source": "near_cost"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "guards"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "guards"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "thresholds"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "thresholds"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "development_guards_pass"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "development_guards_pass"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "totals",
+        "fixed_feature"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "totals",
+        "nearest_anchor"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "totals",
+        "full_precision"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "totals",
+        "full_precision"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "totals",
+        "nearest_rounding"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "totals",
+        "nearest_rounding"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "totals",
+        "sequential"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "totals",
+        "sequential"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "pooled_log_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "pooled_log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "pooled_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "pooled_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "max_article_log_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "max_article_log_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "max_article_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "max_article_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "articles_fixed_equal"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "articles_fixed_equal"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "articles_fixed_higher"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "articles_fixed_higher"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "articles_fixed_lower"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "articles_fixed_lower"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "pooled_log_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "pooled_log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "pooled_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "pooled_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "max_article_log_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "max_article_log_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "max_article_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "max_article_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "articles_fixed_equal"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "articles_fixed_equal"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "articles_fixed_higher"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "articles_fixed_higher"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "articles_fixed_lower"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "articles_fixed_lower"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "pooled_log_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "sequential",
+        "pooled_log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "pooled_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "sequential",
+        "pooled_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "max_article_log_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "sequential",
+        "max_article_log_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "max_article_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "sequential",
+        "max_article_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "articles_fixed_equal"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "sequential",
+        "articles_fixed_equal"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "articles_fixed_higher"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "sequential",
+        "articles_fixed_higher"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "articles_fixed_lower"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "comparisons",
+        "sequential",
+        "articles_fixed_lower"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "cpu_quality",
+        "fixed_feature_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E12",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "near"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "guards"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "guards"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "thresholds"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "thresholds"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "development_guards_pass"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "development_guards_pass"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "totals",
+        "fixed_feature"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "totals",
+        "nearest_anchor"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "totals",
+        "full_precision"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "totals",
+        "full_precision"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "totals",
+        "full_precision_anchor"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "totals",
+        "original_checkpoint_anchor"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "totals",
+        "nearest_rounding"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "totals",
+        "nearest_rounding"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "totals",
+        "sequential"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "totals",
+        "sequential"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "pooled_log_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_anchor",
+        "pooled_log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "pooled_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_anchor",
+        "pooled_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "max_article_log_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_anchor",
+        "max_article_log_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "max_article_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_anchor",
+        "max_article_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "articles_candidate_equal"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_anchor",
+        "articles_candidate_equal"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "articles_candidate_higher"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_anchor",
+        "articles_candidate_higher"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "articles_candidate_lower"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_anchor",
+        "articles_candidate_lower"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "nearest_anchor",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "nearest_anchor",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "nearest_anchor",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "nearest_anchor",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "nearest_anchor",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "nearest_anchor",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "nearest_anchor",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "nearest_anchor",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "nearest_anchor",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "nearest_anchor",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "nearest_anchor",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "nearest_anchor",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "nearest_anchor",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "nearest_anchor",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "nearest_anchor",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "fixed_feature",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "nearest_anchor",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "pooled_log_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "pooled_log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "pooled_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "pooled_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "max_article_log_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "max_article_log_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "max_article_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "max_article_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "articles_candidate_equal"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "articles_candidate_equal"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "articles_candidate_higher"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "articles_candidate_higher"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "articles_candidate_lower"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "full_precision",
+        "articles_candidate_lower"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "full_precision",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "full_precision",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "full_precision",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "pooled_log_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "pooled_log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "pooled_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "pooled_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "max_article_log_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "max_article_log_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "max_article_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "max_article_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "articles_candidate_equal"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "articles_candidate_equal"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "articles_candidate_higher"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "articles_candidate_higher"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "articles_candidate_lower"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "nearest_rounding",
+        "articles_candidate_lower"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "nearest_rounding",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "nearest_rounding",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "nearest_rounding",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "pooled_log_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "sequential",
+        "pooled_log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "pooled_perplexity_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "sequential",
+        "pooled_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "max_article_log_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "sequential",
+        "max_article_log_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "max_article_ratio"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "sequential",
+        "max_article_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "articles_candidate_equal"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "sequential",
+        "articles_candidate_equal"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "articles_candidate_higher"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "sequential",
+        "articles_candidate_higher"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "articles_candidate_lower"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "comparisons",
+        "sequential",
+        "articles_candidate_lower"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1040"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q01",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-1299"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q02",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-132"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q03",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2115"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q04",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2237"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q05",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2352"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q06",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-2525"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q07",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_log_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "sequential",
+        "log_perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "quality",
+        "candidate_comparisons",
+        "sequential",
+        "article_perplexity_ratios",
+        "wikitext2:validation:article-row-3636"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "quality",
+        "paired_articles",
+        "Q08",
+        "sequential",
+        "perplexity_ratio"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "charged_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "charged_cpu_seconds"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "observed_cpu_ns"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "observed_cpu_ns"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "constructor_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "constructor_elapsed_ns"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "controller_transaction_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "controller_transaction_elapsed_ns"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "worker_elapsed_ns"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "worker_elapsed_ns"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "actual_quality_guard_passed"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "actual_quality_guard_passed"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "historical_control_parity",
+        "checked_losses"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "historical_control_parity",
+        "checked_losses"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "historical_control_parity",
+        "max_absolute_mean_nll_deviation"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "historical_control_parity",
+        "max_absolute_mean_nll_deviation"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "result",
+        "historical_control_parity",
+        "passed"
+      ],
+      "output_path": [
+        "records",
+        "E13",
+        "historical_control_parity",
+        "passed"
+      ],
+      "source": "candidate"
+    },
+    {
+      "input_path": [
+        "comparison_claims_checked"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "complete_model_state_comparison_count"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "charged_worker_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "numerical_worker_charged_cpu_seconds"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "observed_worker_cpu_ns"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "numerical_worker_observed_cpu_ns"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "phase_cap_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "numerical_worker_allowance_cpu_seconds"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "original_audit_timeout_preserved"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "original_audit_timeout_preserved"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "original_terminal_gate_passed"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "original_terminal_gate_passed"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "metadata_claims_link_final_six_models_to_v59"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "same_final_models_as_E13"
+      ],
+      "source": "service"
+    },
+    {
+      "input_path": [
+        "old_failed_audit_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "old_failed_audit_cpu_seconds"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "recovery_scheduler_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "recovery_scheduler_cpu_seconds"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "independent_root_replication"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "independent_root_replication"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "prospective_timing_replication"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "prospective_timing_replication"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "untouched_quality"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "untouched_quality"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "scheduler_accounting",
+        "recovery",
+        "15150",
+        "elapsed_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "recovery_allocations",
+        "primary",
+        "elapsed_seconds"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "scheduler_accounting",
+        "recovery",
+        "15150",
+        "total_cpu"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "recovery_allocations",
+        "primary",
+        "total_cpu"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "scheduler_accounting",
+        "recovery",
+        "15150",
+        "state"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "recovery_allocations",
+        "primary",
+        "state"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "scheduler_accounting",
+        "recovery",
+        "15150",
+        "exit_code"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "recovery_allocations",
+        "primary",
+        "exit_code"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "scheduler_accounting",
+        "recovery",
+        "15151",
+        "elapsed_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "recovery_allocations",
+        "supplemental",
+        "elapsed_seconds"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "scheduler_accounting",
+        "recovery",
+        "15151",
+        "total_cpu"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "recovery_allocations",
+        "supplemental",
+        "total_cpu"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "scheduler_accounting",
+        "recovery",
+        "15151",
+        "state"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "recovery_allocations",
+        "supplemental",
+        "state"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "scheduler_accounting",
+        "recovery",
+        "15151",
+        "exit_code"
+      ],
+      "output_path": [
+        "records",
+        "E14",
+        "recovery_allocations",
+        "supplemental",
+        "exit_code"
+      ],
+      "source": "service_cost"
+    },
+    {
+      "input_path": [
+        "summary"
+      ],
+      "output_path": [
+        "records",
+        "E15",
+        "memberships"
+      ],
+      "source": "codec"
+    },
+    {
+      "input_path": [
+        "added_control_source_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E15",
+        "added_control_source_bytes"
+      ],
+      "source": "codec"
+    },
+    {
+      "input_path": [
+        "added_dependency_bytes"
+      ],
+      "output_path": [
+        "records",
+        "E15",
+        "added_dependency_bytes"
+      ],
+      "source": "codec"
+    },
+    {
+      "input_path": [
+        "deletion_latency_measured"
+      ],
+      "output_path": [
+        "records",
+        "E15",
+        "deletion_latency_measured"
+      ],
+      "source": "codec"
+    },
+    {
+      "input_path": [
+        "quality_evaluation"
+      ],
+      "output_path": [
+        "records",
+        "E15",
+        "quality_evaluation"
+      ],
+      "source": "codec"
+    },
+    {
+      "input_path": [
+        "process_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E15",
+        "process_cpu_seconds"
+      ],
+      "source": "codec_cost"
+    },
+    {
+      "input_path": [
+        "scheduler_allocation_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E15",
+        "scheduler_allocation_cpu_seconds"
+      ],
+      "source": "codec_cost"
+    },
+    {
+      "input_path": [
+        "phase_allowance_cpu_seconds"
+      ],
+      "output_path": [
+        "records",
+        "E15",
+        "phase_allowance_cpu_seconds"
+      ],
+      "source": "codec_cost"
+    },
+    {
+      "input_path": [
+        "scope"
+      ],
+      "output_path": [
+        "records",
+        "E15",
+        "scope"
+      ],
+      "source": "codec_cost"
+    }
+  ],
+  "derivatives_are_not_original_receipts": true,
+  "exclude_from_anonymous_archive": true,
+  "generator": {
+    "bytes": 15075,
+    "sha256": "69042bfd6e5da0d059e187c8e5c0e8ce365fe73f635c66a2bc63f0b21bebc027"
+  },
+  "originals_unchanged": true,
+  "output_files": {
+    "CHECKS.json": {
+      "bytes": 509,
+      "sha256": "bbb4644e098132bccba5f80f372888e97ce469c105b4a666c85980b58d1c380f"
+    },
+    "EVIDENCE_INDEX.txt": {
+      "bytes": 4439,
+      "sha256": "c8114e39c90c0d34f52638c8a08b9dabf8c405b3dbfde91d6082f664bf0556ab"
+    },
+    "README.txt": {
+      "bytes": 2047,
+      "sha256": "693270f09e71936d15443760773256c7014e401aa0cd2908403b0c815504f8b0"
+    },
+    "results.json": {
+      "bytes": 26482,
+      "sha256": "1f9ce13e19b5ec509dbfe73fd8fe09bf5d56ca68d4ea694c1052a615b7b24152"
+    }
+  },
+  "output_manifest": {
+    "bytes": 319,
+    "sha256": "89db37fc27017336efb6a8d6f095e69c5406fe10f9e9ceb1a6a63c8851c6f3ed"
+  },
+  "schema": "review-summary-private-derivation-v69",
+  "sources": {
+    "candidate": {
+      "bytes": 116365,
+      "path": "validation/v59_terminal_metadata_check.json",
+      "sha256": "0843c877c78d47208ba059cae6470c6976adc0d7b61d984a341a04291a9cf3c8"
+    },
+    "codec": {
+      "bytes": 2548,
+      "path": "validation/v63_terminal_metadata_check.json",
+      "sha256": "d8a799b33990689b2bc3142f9e64062ded44690a34b2a0986a95f9fc0330faaa"
+    },
+    "codec_cost": {
+      "bytes": 5457,
+      "path": "handoff/program_v63.json",
+      "sha256": "0cbe64faa234168a7fd577c80825b2e4c54a736f0d36a6d5b56ec72116bd2b77"
+    },
+    "failure": {
+      "bytes": 9745,
+      "path": "validation/v49_v45_failure_audit.json",
+      "sha256": "94a2534d1aa11bf07c4e20c65261bf6756f78135e2ef9d7562900ecffe147359"
+    },
+    "near": {
+      "bytes": 26939,
+      "path": "validation/v58_terminal_metadata_check.json",
+      "sha256": "6fb9d5bb224822e21c94a2c4b996caede545317e290edb7f2021fff322eb4415"
+    },
+    "near_cost": {
+      "bytes": 20214,
+      "path": "handoff/program_v58.json",
+      "sha256": "5885dc1f571d56fe3e728504e8b474f959b4c4f9500a4a603a7fcce3c722f69e"
+    },
+    "service": {
+      "bytes": 18246,
+      "path": "validation/v62_recovery_metadata_check.json",
+      "sha256": "3e4c84b53967a1c3f8aaae45120d0853c704dedbb1e8ed518c6f29204c43aad1"
+    },
+    "service_cost": {
+      "bytes": 10541,
+      "path": "handoff/program_v62.json",
+      "sha256": "e52234de1fbf10f62ce0e16d4880abe1cd2016f533f95c88edfa4b4736daa969"
+    }
+  }
+}

@@ -67,8 +67,8 @@ or parallel execution loop. No subagent delegation is currently authorized.
    IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
-   Preparation15262 and first hybrid comparison15263 completed0:0. At18:57IST
-   compression15264 was RUNNING21m26s with7of24 certified stages; remaining comparisons/oracle/audits15265--15275
+   Preparation15262 and first hybrid comparison15263 completed0:0. At19:12IST
+   compression15264 was RUNNING36m43s with11of24 certified stages; remaining comparisons/oracle/audits15265--15275
    were dependency-pending. Hybrid receipt/debit metadata passed; both binary audits remain.
    Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V69.md`, `docs/ACTIVE_SESSION_V68.md`, `docs/ACTIVE_SESSION_V67.md` and
    `research_v67/PROTOCOL.txt`. Reuse the frozen mathematical target and matched point
@@ -158,11 +158,17 @@ or parallel execution loop. No subagent delegation is currently authorized.
    checked direct files. Its identifying provenance map is excluded from anonymous
    packaging. Underlying derivatives/dependency closure and clean reproduction
    remain; do not replace paper citations with an unavailable anonymous archive.
+   An actual draft companion now projects306 checked field groups from eight reports,
+   preserving failed guards, capped runs and support costs. See docs/REVIEW_COMPANION_V69.txt.
+   It is a derived summary, not the complete source/receipt reproduction archive.
    The71 selected manuscript-number checks pass, including all24 service-table
    numeric cells. An identity scan of577 committed files found47 text files needing
    review; five archives still require member inspection. Follow
    docs/MANUSCRIPT_NUMBER_AUDIT_V69.txt and docs/ANONYMITY_REVIEW_V69.txt.
-   Deliver a reviewed source and reproducibility bundle; do not submit externally.
+   The official ACL style and author-year citations now compile in the existing file.
+   Preview inspection is unavailable, so rendered pages/layout remain unverified.
+   See docs/ACL_FORMATTING_V69.txt. Deliver a reviewed source and reproducibility
+   bundle; do not submit externally.
 
 ## Current completion boundary
 
@@ -171,12 +177,13 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate are qualified. At18:57IST preparation15262 and hybrid15263 are COMPLETED0:0. Their worker
+V67's64-test exact-source Linux gate are qualified. At19:12IST preparation15262 and hybrid15263 are COMPLETED0:0. Their worker
 debits are6858 and4922 CPU seconds. Compression15264 is RUNNING;15265--15275
 remain dependency-pending. All24 hybrid stages certified;7 numerical fallback rows
 are preserved separately from its zero stage-level fallback flags. Modern-service timings,
 new-root model evidence, untouched quality and prospective timing remain absent.
-The same manuscript compiles at5347 source whitespace tokens, down from6884,
+The same manuscript now compiles in the official ACL review style at5420 source
+whitespace tokens excluding embedded style, down from6884,
 with Limitations and AI disclosure. Three omitted prior-work comparisons are now
 restored; all proofs/displays, the abstract and empirical sections are unchanged.
 This is not a venue page-count check or submission-ready bundle; see

@@ -1,4 +1,54 @@
 {
+  "acl_format_preparation": {
+    "abstract_source_whitespace_tokens": 197,
+    "after_sha256": "24d739d1bc839cd04e4d6065a7be9d46aefed029977e9361cabc17c9f4158602",
+    "all_proof_blocks_unchanged": true,
+    "before_sha256": "7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda",
+    "bibliography_entries": 22,
+    "bibliography_entry_text_unchanged_except_year_suffixes": true,
+    "captured_at_utc": "2026-10-16T13:53:39.642145+00:00",
+    "commit": "d5adc823ff0f80f98c80405ca0ab66c68e684409",
+    "commit_time": "2026-06-29T15:47:20Z",
+    "files": {
+      "README.md": {
+        "bytes": 2417,
+        "sha256": "f5e4fe5096e8bc045b586a2351409f29ce6d55e0268a434602a06011f571d882",
+        "url": "https://raw.githubusercontent.com/acl-org/acl-style-files/d5adc823ff0f80f98c80405ca0ab66c68e684409/README.md"
+      },
+      "acl.sty": {
+        "bytes": 11615,
+        "sha256": "19dfeddc2c0e448f3926a0bef048a9db3f3611b46265b760caabd7ada4f361de",
+        "url": "https://raw.githubusercontent.com/acl-org/acl-style-files/d5adc823ff0f80f98c80405ca0ab66c68e684409/acl.sty"
+      },
+      "acl_latex.tex": {
+        "bytes": 14533,
+        "sha256": "339c9ee9705c1767d44ef24b85365c0bb8619ecc3fcf66172bf1356292389614",
+        "url": "https://raw.githubusercontent.com/acl-org/acl-style-files/d5adc823ff0f80f98c80405ca0ab66c68e684409/acl_latex.tex"
+      },
+      "acl_natbib.bst": {
+        "bytes": 45442,
+        "sha256": "6fbb306202290f4b68e74ac1460a8b27398500cb6dfeb4492e74c457eae7cd1e",
+        "url": "https://raw.githubusercontent.com/acl-org/acl-style-files/d5adc823ff0f80f98c80405ca0ab66c68e684409/acl_natbib.bst"
+      }
+    },
+    "full_anonymity_verified": false,
+    "native_compile_pending": false,
+    "native_compile_record": "validation/native_manuscript_v69_acl_compile.json",
+    "native_compile_status": "success",
+    "official_review_layout_attempted": true,
+    "original_custom_layout_removed": true,
+    "page_count_verified": false,
+    "preview_inspection_failure": "Computer Use service startup request failed; native compile tool reports success but supplies no page count or rendered view.",
+    "reference_destinations_unchanged": true,
+    "rendered_layout_verified": false,
+    "repository": "acl-org/acl-style-files",
+    "schema": "acl-format-preparation-v69",
+    "scientific_body_unchanged": true,
+    "selected_number_checks": 71,
+    "source_whitespace_tokens_excluding_embedded_style": 5420,
+    "style_embedded_byte_exact": true,
+    "submission_ready": false
+  },
   "active_experiment_version": 67,
   "anonymity_inventory": {
     "anonymity_verified": false,
@@ -344,11 +394,11 @@
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 247798,
-      "sha256": "fcd5fa48f701082d5f9b16c121d0b0c1d22c9acdead79dd30dda75e07688bbd4"
+      "bytes": 248306,
+      "sha256": "5ac6c303343976eb81d6f75195f78fa46c9894acf76b938cca844a3739bc0cf2"
     },
-    "captured_at_utc": "2026-10-16T13:27:14.189040+00:00",
-    "copied_files": 266,
+    "captured_at_utc": "2026-10-16T13:42:31.750313+00:00",
+    "copied_files": 270,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -382,7 +432,7 @@
         "total_cpu": "01:22:10"
       },
       "15264": {
-        "elapsed": "00:21:26",
+        "elapsed": "00:36:43",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-compressed-1",
@@ -527,15 +577,15 @@
       },
       "compressed-1": {
         "completion_receipt_present": false,
-        "events": 8,
+        "events": 12,
         "last": {
           "certificate_refusal": null,
-          "code_sha256": "c80511ccab0d4b89848c2ecc15f4a70bece26a36f445468f560867141d1cc118",
-          "elapsed_ns": 1084400223197,
+          "code_sha256": "2c19cc69ac72b74a95811ed7fd00025584e19f074ba661fb390dca73ef81c0c6",
+          "elapsed_ns": 1897411016904,
           "fallback": false,
           "phase": "stage_certified",
           "route": "streamed",
-          "stage_id": "block.0001.mlp_up"
+          "stage_id": "block.0002.mlp_up"
         }
       },
       "compressed-2": {
@@ -587,7 +637,7 @@
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|RUNNING|21:26|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|RUNNING|36:43|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
@@ -595,26 +645,641 @@
   },
   "manuscript": {
     "abstract_source_whitespace_tokens": 197,
-    "after_source_whitespace_tokens": 5347,
+    "after_source_whitespace_tokens": 5420,
     "ai_assistance_disclosed": true,
     "before_source_whitespace_tokens": 6884,
+    "full_anonymity_verified": false,
     "limitations_added": true,
     "math_spans_unchanged": true,
     "missing_citations": [],
     "new_results_added": false,
+    "official_review_style": true,
+    "page_count_verified": false,
     "proof_blocks_unchanged": true,
     "related_work_update": "validation/v69_manuscript_literature.json",
-    "removed_tokens": 1537,
-    "sha256": "7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda",
+    "removed_tokens": 1464,
+    "sha256": "24d739d1bc839cd04e4d6065a7be9d46aefed029977e9361cabc17c9f4158602",
     "source_snapshot": "reports/manuscript_v69.tex",
-    "submission_ready": false
+    "submission_ready": false,
+    "token_count_excludes_embedded_official_style": true
   },
-  "manuscript_native_compile": "success_after_v69_literature_update",
+  "manuscript_native_compile": "success_after_official_acl_style_and_author_year_citations",
   "manuscript_numbers_check": {
     "actual_empirical_jobs_launched": false,
     "archived_metadata_audits_rerun": false,
-    "captured_at_utc": "2026-10-16T13:31:20.308058+00:00",
+    "captured_at_utc": "2026-10-16T13:55:32.612999+00:00",
     "check_count": 71,
+    "checks": [
+      {
+        "name": "eight_table_rows_exact_order_labels_units_and_rounding",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "4,083.951",
+        "name": "table_row_1_column_3",
+        "observed": "4,083.951",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "368.133",
+        "name": "table_row_1_column_4",
+        "observed": "368.133",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "720.958",
+        "name": "table_row_1_column_5",
+        "observed": "720.958",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "5,562.767",
+        "name": "table_row_2_column_3",
+        "observed": "5,562.767",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "368.133",
+        "name": "table_row_2_column_4",
+        "observed": "368.133",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "720.958",
+        "name": "table_row_2_column_5",
+        "observed": "720.958",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "4,273.765",
+        "name": "table_row_3_column_3",
+        "observed": "4,273.765",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "319.340",
+        "name": "table_row_3_column_4",
+        "observed": "319.340",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "672.165",
+        "name": "table_row_3_column_5",
+        "observed": "672.165",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "5,661.287",
+        "name": "table_row_4_column_3",
+        "observed": "5,661.287",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "333.497",
+        "name": "table_row_4_column_4",
+        "observed": "333.497",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "686.322",
+        "name": "table_row_4_column_5",
+        "observed": "686.322",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "894.162",
+        "name": "table_row_5_column_3",
+        "observed": "894.162",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "195.673",
+        "name": "table_row_5_column_4",
+        "observed": "195.673",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "548.499",
+        "name": "table_row_5_column_5",
+        "observed": "548.499",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "1,568.943",
+        "name": "table_row_6_column_3",
+        "observed": "1,568.943",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "195.673",
+        "name": "table_row_6_column_4",
+        "observed": "195.673",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "548.499",
+        "name": "table_row_6_column_5",
+        "observed": "548.499",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "1,659.112",
+        "name": "table_row_7_column_3",
+        "observed": "1,659.112",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "220.598",
+        "name": "table_row_7_column_4",
+        "observed": "220.598",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "573.423",
+        "name": "table_row_7_column_5",
+        "observed": "573.423",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "1,267.358",
+        "name": "table_row_8_column_3",
+        "observed": "1,267.358",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "178.333",
+        "name": "table_row_8_column_4",
+        "observed": "178.333",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "531.158",
+        "name": "table_row_8_column_5",
+        "observed": "531.158",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "name": "all_scoped_sections_found",
+        "passed": true,
+        "sources": [
+          "manuscript"
+        ]
+      },
+      {
+        "expected_text": "Compression saves 9.26\\% and 8.71\\% of live state but takes 19.29\\% and 41.43\\% longer than the lossless cache.",
+        "name": "nearest_anchor_storage_and_latency",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v58:v54.timings"
+        ]
+      },
+      {
+        "expected_text": "numerical workers charge 38,652 CPU seconds; including the failed earlier preparation gives 43,453 seconds.",
+        "name": "nearest_anchor_worker_and_failed_costs",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v58:v54"
+        ]
+      },
+      {
+        "name": "nearest_anchor_guard_direction",
+        "passed": true,
+        "sources": [
+          "v58:cpu_quality"
+        ]
+      },
+      {
+        "expected_text": "The nearest-anchor model's PPL is 55.14666, versus 52.06342 for sequential calibration: ratio 1.059221 exceeds the unchanged 1.05 guard.",
+        "name": "nearest_anchor_ppl_and_failed_guard",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v58:cpu_quality"
+        ]
+      },
+      {
+        "expected_text": "The maximum article ratio, 1.174280, passes the separate 1.20 guard, but the overall gate fails.",
+        "name": "nearest_anchor_tail_guard",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v58:cpu_quality"
+        ]
+      },
+      {
+        "expected_text": "Loss is higher on all eight articles.",
+        "name": "nearest_anchor_all_eight_adverse",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v58:cpu_quality.fixed_feature_comparisons.sequential"
+        ]
+      },
+      {
+        "name": "nearest_anchor_eight_and_predictions",
+        "passed": true,
+        "sources": [
+          "v58:cpu_quality"
+        ]
+      },
+      {
+        "expected_text": "Eight previously exposed articles supply 1,016 predictions per model",
+        "name": "eight_article_prediction_count",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v58:cpu_quality.totals"
+        ]
+      },
+      {
+        "expected_text": "Full precision and nearest rounding have PPL 45.60008 and 64.87023.",
+        "name": "full_precision_and_nearest_ppl",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v58:cpu_quality.totals"
+        ]
+      },
+      {
+        "expected_text": "The quality worker charges 1,595 CPU seconds.",
+        "name": "quality_cpu_charge",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "h58:v55_cpu_seconds"
+        ]
+      },
+      {
+        "expected_text": "Its 73-CPU-second charge is separate.",
+        "name": "gpu_cpu_charge",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "h58:v56_cpu_seconds"
+        ]
+      },
+      {
+        "expected_text": "reproduces all 32 same-model article losses",
+        "name": "gpu_pair_count",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v58:gpu_parity"
+        ]
+      },
+      {
+        "name": "gpu_threshold_and_pass",
+        "passed": true,
+        "sources": [
+          "v58:gpu_parity"
+        ]
+      },
+      {
+        "expected_text": "$1.21\\times10^{-14}$",
+        "name": "gpu_maximum_deviation",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v58:gpu_parity.maximum_absolute_mean_nll_deviation"
+        ]
+      },
+      {
+        "name": "quality_ratios_recomputed_from_means",
+        "passed": true,
+        "sources": [
+          "v58:cpu_quality",
+          "v59:result.quality"
+        ]
+      },
+      {
+        "expected_text": "Its pooled PPL is 51.85008 (mean NLL 3.948356), giving candidate/sequential ratio 0.995902 and maximum article ratio 1.065598.",
+        "name": "adaptive_candidate_ppl_nll_ratios",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v59:result.quality"
+        ]
+      },
+      {
+        "name": "adaptive_guard_direction",
+        "passed": true,
+        "sources": [
+          "v59:result.quality"
+        ]
+      },
+      {
+        "expected_text": "Both unchanged guards, 1.05 pooled and 1.20 per article, pass.",
+        "name": "adaptive_guard_values",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v59:result.quality"
+        ]
+      },
+      {
+        "name": "adaptive_article_directions",
+        "passed": true,
+        "sources": [
+          "v59:result.quality.candidate_comparisons"
+        ]
+      },
+      {
+        "expected_text": "Loss is lower on five articles and higher on three than sequential calibration, and lower on all eight than nearest-anchor calibration",
+        "name": "adaptive_article_directions_text",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v59:result.quality.candidate_comparisons"
+        ]
+      },
+      {
+        "expected_text": "the latter pooled PPL ratio is 0.940222.",
+        "name": "adaptive_over_nearest_anchor_ratio",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v59:result.quality"
+        ]
+      },
+      {
+        "expected_text": "Candidate PPL remains 13.71\\% above the unquantized checkpoint.",
+        "name": "adaptive_full_precision_regression",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v59:result.quality.totals"
+        ]
+      },
+      {
+        "expected_text": "its constructor took 1,484.628 seconds and its complete worker transaction 1,633.577 seconds.",
+        "name": "adaptive_constructor_and_transaction",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v59:result"
+        ]
+      },
+      {
+        "name": "adaptive_historical_parity",
+        "passed": true,
+        "sources": [
+          "v59:result.historical_control_parity"
+        ]
+      },
+      {
+        "expected_text": "All 32 V55 control losses reproduced with zero observed mean-NLL deviation",
+        "name": "adaptive_historical_parity_text",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v59:result.historical_control_parity"
+        ]
+      },
+      {
+        "expected_text": "Compression saves 9.41\\% and 8.86\\% of live state against cached lossless, but requests take 38.62\\% and 41.74\\% longer.",
+        "name": "service_live_saving_and_slowdown",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "compression saves 9.41\\% and 8.86\\% of live state but takes 38.62\\% and 41.74\\% longer than cached lossless repair.",
+        "name": "abstract_service_tradeoff",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "Including the checkpoint reduces savings to 4.80\\% and 3.16\\%.",
+        "name": "service_checkpoint_inclusive_savings",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "name": "service_hybrid_first_endpoint_dominance",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "name": "service_cached_fastest_both_endpoints",
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "name": "lifetime_sum_cached",
+        "passed": true,
+        "sources": [
+          "v62:timings.cached"
+        ]
+      },
+      {
+        "name": "lifetime_sum_cold",
+        "passed": true,
+        "sources": [
+          "v62:timings.cold"
+        ]
+      },
+      {
+        "name": "lifetime_sum_hybrid",
+        "passed": true,
+        "sources": [
+          "v62:timings.hybrid"
+        ]
+      },
+      {
+        "name": "lifetime_sum_compressed",
+        "passed": true,
+        "sources": [
+          "v62:timings.compressed"
+        ]
+      },
+      {
+        "expected_text": "totals 10,554.755 seconds for cached lossless, 12,709.266 for cold, 11,720.930 for hybrid and 13,154.788 for compression.",
+        "name": "attributed_two_request_costs",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v62:timings"
+        ]
+      },
+      {
+        "expected_text": "The six numerical workers charged 39,983 CPU seconds against their frozen 81,012-second allowance.",
+        "name": "numerical_worker_debits",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v62:charged_worker_cpu_seconds",
+          "v62:phase_cap_cpu_seconds"
+        ]
+      },
+      {
+        "name": "scheduler_support_cpu_sums",
+        "passed": true,
+        "sources": [
+          "h62:scheduler_accounting"
+        ]
+      },
+      {
+        "expected_text": "with 2,812.037 scheduler CPU seconds combined.",
+        "name": "recovery_cpu_cost",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "h62:scheduler_accounting.recovery"
+        ]
+      },
+      {
+        "expected_text": "The failed original audit consumed another 1,811.125 CPU seconds.",
+        "name": "failed_original_cpu_cost",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "h62:scheduler_accounting.original.13569"
+        ]
+      },
+      {
+        "expected_text": "both completed in 31:08 and 16:04 wall time",
+        "name": "recovery_walls",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "h62:scheduler_accounting.recovery"
+        ]
+      },
+      {
+        "expected_text": "At 12 and 6 retained records, live state falls from 368,132,885 and 195,673,382 bytes to 367,603,575 and 195,408,617 bytes, reductions of 0.144\\% and 0.135\\%.",
+        "name": "modern_exact_live_bytes",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v63:summary"
+        ]
+      },
+      {
+        "expected_text": "Uncertain compression remains 9.28\\% and 8.74\\% smaller than this stronger lossless archive.",
+        "name": "compression_vs_modern",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v62:timings.compressed.live_state_bytes",
+          "v63:summary"
+        ]
+      },
+      {
+        "expected_text": "The pinned codec installation and added control source occupy 23,925,378 bytes",
+        "name": "codec_plus_source_footprint",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v63:added_control_source_bytes",
+          "v63:added_dependency_bytes"
+        ]
+      },
+      {
+        "name": "extra_dependency_reverses_small_saving",
+        "passed": true,
+        "sources": [
+          "v63:summary"
+        ]
+      },
+      {
+        "expected_text": "a 5.92\\% perplexity regression beyond a 5\\% tolerance.",
+        "name": "abstract_nearest_anchor_adverse_percent",
+        "occurrences": 1,
+        "passed": true,
+        "sources": [
+          "v58:cpu_quality"
+        ]
+      }
+    ],
     "failed_checks": [],
     "inputs": {
       "handoff/program_v58.json": {
@@ -644,8 +1309,8 @@
     },
     "local_inference_calibration_or_binary_audit": false,
     "manuscript": {
-      "bytes": 46539,
-      "sha256": "7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda"
+      "bytes": 59068,
+      "sha256": "24d739d1bc839cd04e4d6065a7be9d46aefed029977e9361cabc17c9f4158602"
     },
     "schema": "manuscript-number-check-v69",
     "scope": "Selected empirical table, quality figures, percentages and resource totals against previously verified report bytes; not every number in the manuscript or a new scientific result.",
@@ -800,11 +1465,12 @@
     "unchanged_v68_prepared_sources": 9
   },
   "next_actions": [
-    "Prepare/review held-job submission and CPU-container/GPU Slurm wrappers with complete thread environment, while V67 runs",
-    "Close V67 remaining comparisons, fresh oracle and both actual-model/state/cost audits",
-    "Only after V67 success register/run V68 data and reconcile all three terminal scheduler costs",
-    "Only after actual V68 success freeze/register V69,87 Linux checks, separate CUDA qualification, all quality phases and post-exit closure",
-    "Make evidence-based timing/claim decision and finish anonymous official-template submission bundle"
+    "Close V67 remaining comparisons, fresh oracle and both actual-model/state/cost audits; preserve current jobs and live reservations",
+    "Only after both V67 audits succeed register/run V68 data and reconcile all three terminal scheduler costs",
+    "Only after actual V68 success freeze/register V69 with actual runtime/held-job admission,98 Linux checks, separate CUDA qualification, all quality phases and post-exit closure",
+    "Finish claim-required source/receipt allowlist and anonymous derivative validation; review companion currently covers five result groups only",
+    "Visually verify the existing ACL preview and main-text page budget when preview inspection is available; no replacement document or separate PDF",
+    "Make evidence-based timing/claim decision and finish licenses, authorship facts and final bundle"
   ],
   "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
   "preparation_receipt_metadata": {
@@ -896,7 +1562,7 @@
     "worker_maximum_rss_kib": 1732228,
     "worker_process_and_waited_descendant_cpu_ns": 6857956044000
   },
-  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_i.tar.gz",
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_j.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,
@@ -1042,6 +1708,53 @@
     "source_values_accessed": false,
     "status": "structural_admission_only",
     "wall_time_estimate": false
+  },
+  "review_companion_preparation": {
+    "anonymous_summary_only": true,
+    "archive_created": false,
+    "copied_field_groups": 306,
+    "full_anonymity_verified": false,
+    "full_reproduction_verified": false,
+    "input_source_count": 8,
+    "known_identity_scan_scope": "Four payload files in this directory",
+    "manuscript_citations_changed": false,
+    "mutation_probes_detected": {
+      "altered_article_ratio": true,
+      "changed_request": true,
+      "erased_failed_guard": true
+    },
+    "numerical_execution": false,
+    "original_receipts_modified": false,
+    "output_directory": "reports/review-evidence-v69",
+    "output_files": {
+      "CHECKS.json": {
+        "bytes": 509,
+        "sha256": "bbb4644e098132bccba5f80f372888e97ce469c105b4a666c85980b58d1c380f"
+      },
+      "EVIDENCE_INDEX.txt": {
+        "bytes": 4439,
+        "sha256": "c8114e39c90c0d34f52638c8a08b9dabf8c405b3dbfde91d6082f664bf0556ab"
+      },
+      "README.txt": {
+        "bytes": 2047,
+        "sha256": "693270f09e71936d15443760773256c7014e401aa0cd2908403b0c815504f8b0"
+      },
+      "results.json": {
+        "bytes": 26482,
+        "sha256": "1f9ce13e19b5ec509dbfe73fd8fe09bf5d56ca68d4ea694c1052a615b7b24152"
+      }
+    },
+    "output_manifest": {
+      "bytes": 319,
+      "sha256": "89db37fc27017336efb6a8d6f095e69c5406fe10f9e9ceb1a6a63c8851c6f3ed"
+    },
+    "paired_exposed_article_ids": 8,
+    "private_mapping": {
+      "bytes": 105733,
+      "sha256": "9464c3e8ea71440c08ff0a7825045e66c3fbad358891892a9ee6642293eed703"
+    },
+    "schema": "review-summary-preparation-check-v1",
+    "status": "passed_projection_checks"
   },
   "schema": "second-progress-v69-preparation",
   "status": "v67_hybrid1_complete_compressed1_running_v69_preparation_92_tests",

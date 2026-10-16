@@ -6,12 +6,12 @@ GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
 ## Actual cluster observation
 
-At13:27:14UTC (18:57:14IST), hybrid-control job15263 remained COMPLETED0:0 after
-1h22m46s. Compression15264 was RUNNING21m26s on csis.mn1 with7of24 stages certified;
+At13:42:31UTC (19:12:31IST), hybrid-control job15263 remained COMPLETED0:0 after
+1h22m46s. Compression15264 was RUNNING36m43s on csis.mn1 with11of24 stages certified;
 15265--15275 remained dependency-pending. Both terminal audits remain absent.
-The266-file snapshot campaigns/csis_v67_progress_metadata_20261016_i.tar.gz is247798
-bytes, SHA256fcd5fa48f701082d5f9b16c121d0b0c1d22c9acdead79dd30dda75e07688bbd4.
-validation/v67_progress_metadata_check_i.json verifies metadata/source bindings.
+The270-file snapshot campaigns/csis_v67_progress_metadata_20261016_j.tar.gz is248306
+bytes, SHA2565ac6c303343976eb81d6f75195f78fa46c9894acf76b938cca844a3739bc0cf2.
+validation/v67_progress_metadata_check_j.json verifies metadata/source bindings.
 All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
 No new job was submitted. The numerical checkout remains
 f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull reporting changes there.
@@ -115,7 +115,7 @@ All71 selected number checks passed, including all24 numeric cells in the eight
 service-table rows. Derived ratios, quality directions and separate support costs
 agree with preserved reporting records. Three in-memory tamper probes were
 rejected. No paper correction, inference or binary audit was performed; unchanged
-source retains its native compile. Read docs/MANUSCRIPT_NUMBER_AUDIT_V69.txt.
+source was unchanged at that checkpoint; the subsequent ACL layout also passes all71 checks. Read docs/MANUSCRIPT_NUMBER_AUDIT_V69.txt.
 
 The532-source inventory and direct evidence references cover577 unique files.
 All commitments matched;572 text files were scanned, while five archives remain
@@ -140,11 +140,11 @@ This is a review list, not anonymity clearance. Frozen originals remain unchange
 5. Decide claim-required timing replication, then finish paper formatting/anonymity,
    citations/licenses/author facts and final bundle. No conference submission.
 
-The existing open manuscript now includes concise QSS, MEDU and QEBVerif
+Before the formatting checkpoint, the existing open manuscript gained concise QSS, MEDU and QEBVerif
 comparisons restored from the earlier primary-source review and freshly checked.
-Related work grows only21 source whitespace tokens; total source is5347 versus6884
+Related work grew only21 source whitespace tokens; that source had5347 versus6884
 before trimming. The197-token abstract, all proofs/displays and empirical sections
-are unchanged. Native compilation succeeded. SHA256 is
+are unchanged. Native compilation succeeded at that checkpoint. Its SHA256 was
 7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda.
 See docs/LITERATURE_REFRESH_V69.txt and validation/v69_manuscript_literature.json.
 The Exact-Fun saved author PDF matches its earlier commitment and proof pages6--7
@@ -158,3 +158,26 @@ member inventories (2,269 entries;33,307,525 uncompressed member bytes). Every
 member is a regular file with a relative non-traversing path. No member was
 extracted or its payload inspected; content review, selection and anonymous
 derivatives remain pending. See validation/v69_archive_member_inventory.json.
+
+## Checked review companion and official layout
+
+reports/review-evidence-v69 now contains an actual five-file draft companion,
+including selected result data and its manifest. All306 copied field groups agree
+with eight preserved source reports. Eight exposed article IDs are renamed
+consistently; failed quality, capped preparation and audit costs remain visible.
+The source/receipt reproduction archive is still incomplete. Do not put its
+identifying derivation map into anonymous packaging or call these derived summaries
+original execution bytes. Read docs/REVIEW_COMPANION_V69.txt.
+
+The same open manuscript now uses the unmodified official ACL style embedded
+for the standalone editor,11pt Times and author-year citations. All22 bibliography
+entries and destinations remain; only year suffixes and ordering changed. Native
+compilation succeeded. Scientific body,197-token abstract and proofs are unchanged;
+all71 selected number checks still pass. Source is5420 whitespace tokens excluding
+embedded style bytes; this includes added formatting/citation commands, not more
+scientific prose. Current SHA256:
+24d739d1bc839cd04e4d6065a7be9d46aefed029977e9361cabc17c9f4158602.
+Preview inspection failed because the Computer Use service could not start. No
+page count or visual layout has been verified. The17 identifying project links
+and working-draft label remain; neither anonymity nor submission readiness is
+claimed. Keep this editor open. See docs/ACL_FORMATTING_V69.txt.
