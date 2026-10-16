@@ -149,3 +149,12 @@ texts and inventory are preserved in validation/v69_installed_dependency_notices
 validation/v69_installed_dependency_notice_check.json verifies their bytes. These
 notices are separate from the four review components. No complete transitive
 clearance or project license is asserted.
+
+Later notices-companion checkpoint
+The five observed texts are now supplied in a separate eight-file dependency-
+notices companion. The tokenizers license was recovered from the immutable
+publisher commit through GitHub; both LICENSE and Cargo Git blob hashes match.
+The earlier raw-download failure is preserved separately. This does not resolve
+installed-wheel/source equivalence, Rust/transitive/system/GPU notice coverage or
+project release terms. The original four review ZIPs and manuscript are unchanged.
+See docs/REVIEW_DEPENDENCY_NOTICES_V69.txt and the fresh five-component report.

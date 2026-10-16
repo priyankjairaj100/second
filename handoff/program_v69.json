@@ -194,6 +194,72 @@
     "source_inventory": "validation/v69_submission_inventory.json",
     "submission_ready": false
   },
+  "cold1_receipt_metadata": {
+    "actual_model_state_bytes_checked": false,
+    "archive": {
+      "bytes": 341558,
+      "sha256": "e95c6117fb2ffad9f94967ddee988e247b13e495275b8459dcead281014323b7"
+    },
+    "captured_at_utc": "2026-10-16T16:14:26.577216+00:00",
+    "complete_campaign_costs_verified": false,
+    "controller_all_waited_children_cpu_ns": 5973069962000,
+    "controller_own_cpu_ns": 9228352506,
+    "declared_artifacts": {
+      "admission.json": {
+        "bytes": 555807,
+        "file": "admission.json",
+        "sha256": "8e409e1e4b9b0faff1d37f76faf117f9115042b11beb9acb3ec89bc86250e72b"
+      },
+      "execution-provenance.json": {
+        "bytes": 12727,
+        "file": "execution-provenance.json",
+        "sha256": "22956724f4d2a9433702a3f76cc1fb76a8d447c8c60a7d668800de7da55574cc"
+      },
+      "model.bin": {
+        "bytes": 21233664,
+        "file": "model.bin",
+        "sha256": "35ea0d49671581c0f20fa9a65665acd5abec82d0a1e3edc4e75bca05bdc1f9c5"
+      },
+      "state.bin": {
+        "bytes": 368002893,
+        "file": "state.bin",
+        "sha256": "db346339f6a1e9665f086d6216e81c46afcde73c2d98e73bc861bd9622150bf5"
+      },
+      "trust.json": {
+        "bytes": 2,
+        "file": "trust.json",
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    "fresh_oracle_comparison_verified": false,
+    "job": {
+      "elapsed": "01:40:20",
+      "end": "2026-10-16T21:43:44",
+      "exit_code": "0:0",
+      "name": "second67-cold-1",
+      "node": "csis.mn1",
+      "start": "2026-10-16T20:03:24",
+      "state": "COMPLETED",
+      "total_cpu": "01:39:43"
+    },
+    "job_id": "15265",
+    "later_reserved_attempts_preserved": 1,
+    "numerical_result_verified": false,
+    "numerical_solver_fallback_attempted_decisions": 21504,
+    "numerical_solver_fallback_certified_decisions": 21504,
+    "numerical_solver_fallback_rows": 7,
+    "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+    "refused_stages": 0,
+    "retained_membership_independently_rebuilt": false,
+    "stage_certificates": 24,
+    "stage_level_fallback_flags": 0,
+    "status": "verified_completed_comparison_receipt_metadata",
+    "transaction_elapsed_ns": 6016783538496,
+    "trial": "cold-1",
+    "worker_charged_cpu_seconds": 5974,
+    "worker_maximum_rss_kib": 1968144,
+    "worker_process_and_waited_descendant_cpu_ns": 5973067109000
+  },
   "compressed1_receipt_metadata": {
     "actual_model_state_bytes_checked": false,
     "archive": {
@@ -262,11 +328,15 @@
     "worker_process_and_waited_descendant_cpu_ns": 5209578108000
   },
   "cross_component_review": {
-    "archive_members": 559,
+    "archive_members": 567,
     "artifacts": {
       "development-audit-receipts-v69.zip": {
         "bytes": 341604,
         "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+      },
+      "development-dependency-notices-v69.zip": {
+        "bytes": 38839,
+        "sha256": "062bc8b1944e93b2eb22d3a9592e474ee08e50d4ebeb404ea166f7beaac52e03"
       },
       "development-evidence-v69b.zip": {
         "bytes": 87257,
@@ -281,15 +351,15 @@
         "sha256": "ceea2e249896e7bddf151d9956683c9b7b7cee988df25f092fb7f02440b35037"
       },
       "reports/REVIEW_PACKAGE_README_V69.txt": {
-        "bytes": 4948,
-        "sha256": "343996fa3a90934edc4de14fb95306d4ace703593e929ac14a47bea641722b8e"
+        "bytes": 5433,
+        "sha256": "1545341a935e952a3aa6d04b61fd4bf297d6c0ba14f4c533f4729066b9b7f489"
       },
       "reports/manuscript_v69.tex": {
         "bytes": 51407,
         "sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60"
       }
     },
-    "captured_at_utc": "2026-10-16T15:22:04.972386+00:00",
+    "captured_at_utc": "2026-10-16T16:12:12.692115+00:00",
     "empirical_work_executed": false,
     "evidence_references": [
       "E01",
@@ -314,7 +384,7 @@
     "full_source_manual_review": false,
     "full_transitive_notices": false,
     "indirect_identity_linkability_assessed": false,
-    "internal_manifests_verified": 4,
+    "internal_manifests_verified": 5,
     "known_identity_findings": [],
     "manuscript_edited": false,
     "manuscript_matches_open_file": true,
@@ -344,7 +414,7 @@
     "stale_filename_grouping_resolved_by_navigation": true,
     "status": "inventories_hashes_known_identifiers_and_navigation_checked",
     "submission_ready": false,
-    "text_files_checked": 561
+    "text_files_checked": 569
   },
   "evidence_index_preparation": {
     "all_current_project_bibliography_keys_mapped": true,
@@ -666,11 +736,11 @@
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 297198,
-      "sha256": "67713b52e09a7df8141c174c043cd64df712fe6a3c981af2c8257167785c7a15"
+      "bytes": 341558,
+      "sha256": "e95c6117fb2ffad9f94967ddee988e247b13e495275b8459dcead281014323b7"
     },
-    "captured_at_utc": "2026-10-16T15:44:37.467303+00:00",
-    "copied_files": 352,
+    "captured_at_utc": "2026-10-16T16:14:26.577216+00:00",
+    "copied_files": 379,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -714,23 +784,23 @@
         "total_cpu": "01:26:58"
       },
       "15265": {
-        "elapsed": "01:11:13",
-        "end": "Unknown",
+        "elapsed": "01:40:20",
+        "end": "2026-10-16T21:43:44",
         "exit_code": "0:0",
         "name": "second67-cold-1",
         "node": "csis.mn1",
         "start": "2026-10-16T20:03:24",
-        "state": "RUNNING",
-        "total_cpu": "00:00:00"
+        "state": "COMPLETED",
+        "total_cpu": "01:39:43"
       },
       "15266": {
-        "elapsed": "00:00:00",
+        "elapsed": "00:00:42",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-cached-1",
-        "node": "None assigned",
-        "start": "Unknown",
-        "state": "PENDING",
+        "node": "csis.mn1",
+        "start": "2026-10-16T21:43:44",
+        "state": "RUNNING",
         "total_cpu": "00:00:00"
       },
       "15267": {
@@ -829,8 +899,12 @@
     "progress": {
       "cached-1": {
         "completion_receipt_present": false,
-        "events": 0,
-        "last": null
+        "events": 1,
+        "last": {
+          "elapsed_ns": 24238090692,
+          "phase": "context_ready",
+          "target_sha256": "ded01d9b27816eb32a8ddc241f0c014a05b43a5ffe7ce6f2f0a8853aefb3d0ad"
+        }
       },
       "cached-2": {
         "completion_receipt_present": false,
@@ -838,16 +912,16 @@
         "last": null
       },
       "cold-1": {
-        "completion_receipt_present": false,
-        "events": 52,
+        "completion_receipt_present": true,
+        "events": 61,
         "last": {
           "certificate_refusal": null,
-          "code_sha256": "c824dc4f51f13bc8f398704df16959079058823869f96a7d8dfc9fba7802f6e6",
-          "elapsed_ns": 3772325174082,
+          "code_sha256": "4347d2b1bcefc5a8cab2a44d4a6c31cdc904005e5ec99ca1d673f0d27b8f7853",
+          "elapsed_ns": 5971250262107,
           "fallback": false,
           "phase": "stage_certified",
           "route": "streamed",
-          "stage_id": "block.0003.mlp_up"
+          "stage_id": "block.0005.mlp_down"
         }
       },
       "cold-2": {
@@ -917,7 +991,7 @@
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|RUNNING|1:11:13|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|RUNNING|0:42|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
@@ -1915,13 +1989,14 @@
     "Reconcile existing V67 jobs, fresh oracle and both actual-model/state/cost audits with the new portable terminal checker; all actual terminal receipts remain mandatory. Synthetic25-test success is not evidence. Preserve jobs/live reservations.",
     "Only after both V67 audits succeed register/run V68 data and reconcile all three terminal scheduler costs",
     "Only after actual V68 success freeze/register V69 with actual runtime/held-job admission,98 Linux checks, separate CUDA qualification, all quality phases and post-exit closure",
-    "Four review components now have checked manifests, external input/runtime instructions and a nine-receipt crosswalk.561 text files pass known direct-identity checks. Complete actual historical input/receipt distribution, transitive notices, whole-package anonymity/layout and claim-dependent assembly;114 local fixtures do not qualify full reproduction.",
+    "Five review components now have checked manifests, external input/runtime instructions, a nine-receipt crosswalk and five observed dependency notices.569 text files pass known direct-identity checks. Complete actual historical input/receipt distribution, remaining transitive notices, whole-package anonymity/layout and claim-dependent assembly;114 local fixtures do not qualify full reproduction.",
     "Visually verify the existing ACL preview and main-text page budget when preview inspection is available; no replacement document or separate PDF",
     "Make evidence-based timing/claim decision and finish licenses, authorship facts and final bundle"
   ],
   "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
   "observed_stage_certificates": {
-    "cold-1": 15,
+    "cached-1": 0,
+    "cold-1": 24,
     "compressed-1": 24,
     "hybrid-1": 24,
     "prepare": 24
@@ -2015,7 +2090,7 @@
     "worker_maximum_rss_kib": 1732228,
     "worker_process_and_waited_descendant_cpu_ns": 6857956044000
   },
-  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_p.tar.gz",
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_r.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,
@@ -2208,6 +2283,79 @@
     },
     "schema": "review-summary-preparation-check-v1",
     "status": "passed_projection_checks"
+  },
+  "review_dependency_notices": {
+    "archive": {
+      "bytes": 38839,
+      "path": "reports/development-dependency-notices-v69.zip",
+      "sha256": "062bc8b1944e93b2eb22d3a9592e474ee08e50d4ebeb404ea166f7beaac52e03"
+    },
+    "clean_extraction_exact": true,
+    "complete_transitive_notices": false,
+    "earlier_publisher_failure_preserved": true,
+    "files": 8,
+    "installed_tokenizer_notice_missing": true,
+    "installed_wheel_source_equivalence_verified": false,
+    "known_identity_findings": [],
+    "manifest_checked": true,
+    "manuscript_edited": false,
+    "notice_bytes": 103407,
+    "notice_sources": {
+      "notices/gmpy2/licenses/COPYING": {
+        "binding_scope": "Observed distribution notice; only zstandard was already part of the frozen runtime inventory",
+        "bytes": 35147,
+        "observed_at_utc": "2026-10-16T15:25:12.493819+00:00",
+        "origin": "Installed CPU distribution license tree",
+        "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+      },
+      "notices/gmpy2/licenses/COPYING.LESSER": {
+        "binding_scope": "Observed distribution notice; only zstandard was already part of the frozen runtime inventory",
+        "bytes": 7651,
+        "observed_at_utc": "2026-10-16T15:25:12.493819+00:00",
+        "origin": "Installed CPU distribution license tree",
+        "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+      },
+      "notices/numpy/LICENSE.txt": {
+        "binding_scope": "Observed distribution notice; only zstandard was already part of the frozen runtime inventory",
+        "bytes": 47768,
+        "observed_at_utc": "2026-10-16T15:25:12.493819+00:00",
+        "origin": "Installed CPU distribution license tree",
+        "sha256": "2046a3130e50b11c01659b3a0d963e6ae0b7436ff8e89cbcfd9e87bc6112d595"
+      },
+      "notices/tokenizers/LICENSE": {
+        "binding_scope": "Publisher source notice; installed wheel/source equivalence not verified",
+        "bytes": 11357,
+        "cargo_metadata": {
+          "bytes": 2765,
+          "git_blob_sha1": "e9d6bcc3c749a7f0f674a37275aa115ba34afba9",
+          "sha256": "a7550a462a6e4da8f6ff6aa3420f25f189c5e7ec7303485e9e7e31c20aa6f3e3",
+          "url": "https://github.com/huggingface/tokenizers/blob/88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3/tokenizers/Cargo.toml"
+        },
+        "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+        "origin": "Publisher source at immutable commit",
+        "repository": "huggingface/tokenizers",
+        "revision": "88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "url": "https://github.com/huggingface/tokenizers/blob/88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3/LICENSE",
+        "version": "0.23.2"
+      },
+      "notices/zstandard/licenses/LICENSE": {
+        "binding_scope": "Observed distribution notice; only zstandard was already part of the frozen runtime inventory",
+        "bytes": 1484,
+        "observed_at_utc": "2026-10-16T15:25:12.493819+00:00",
+        "origin": "Installed CPU distribution license tree",
+        "sha256": "788fe85e53724a40b299051c4abc9cf74d42b27e7968325b80891c25f79adb4b"
+      }
+    },
+    "notice_texts": 5,
+    "notice_texts_unchanged": true,
+    "original_four_components_unchanged": true,
+    "packages_installed": false,
+    "project_license_assigned": false,
+    "schema": "review-observed-dependency-notices-v69",
+    "scientific_result": false,
+    "submission_ready": false,
+    "verified_at_utc": "2026-10-16T16:11:38.184178+00:00"
   },
   "review_history_companion_extraction": {
     "archive": {
@@ -2565,13 +2713,12 @@
     "static_report": "validation/v69_static_source_closure_extended.json",
     "supplement": "validation/v69_source_package_supplement.json"
   },
-  "status": "v67_hybrid1_compressed1_complete_cold1_running_v69_preparation_92_tests",
+  "status": "v67_hybrid1_compressed1_cold1_complete_cached1_running_v69_preparation_92_tests",
   "submission_preparation": "docs/SUBMISSION_READINESS_V69.txt",
   "submission_ready": false,
   "terminal_metadata_gate": {
     "active_jobs": {
-      "15265": "RUNNING",
-      "15266": "PENDING",
+      "15266": "RUNNING",
       "15267": "PENDING",
       "15268": "PENDING",
       "15269": "PENDING",
@@ -2584,7 +2731,7 @@
     },
     "actual_model_state_bytes_checked_locally": false,
     "automatic_launch_or_retry": false,
-    "captured_at_utc": "2026-10-16T15:44:37.467303+00:00",
+    "captured_at_utc": "2026-10-16T16:14:26.577216+00:00",
     "cluster_terminal_audit_claims_reconciled": false,
     "confirmation": false,
     "independent_solver_validation": false,
@@ -2599,8 +2746,8 @@
     "quality_evaluation": false,
     "schema": "v67-portable-terminal-metadata-review",
     "snapshot": {
-      "bytes": 297198,
-      "sha256": "67713b52e09a7df8141c174c043cd64df712fe6a3c981af2c8257167785c7a15"
+      "bytes": 341558,
+      "sha256": "e95c6117fb2ffad9f94967ddee988e247b13e495275b8459dcead281014323b7"
     },
     "status": "pending_terminal",
     "submission_ready": false
@@ -2699,6 +2846,39 @@
     "version": "0.23.2",
     "web_page_declares": "Apache License Version 2.0",
     "web_page_read": true
+  },
+  "tokenizers_publisher_notice_recovery": {
+    "actual_license_bytes_archived": true,
+    "all_rust_dependency_notices_complete": false,
+    "declared_license": "Apache-2.0",
+    "files": {
+      "validation/publisher-notices-v69/tokenizers/Cargo.toml": {
+        "bytes": 2765,
+        "git_blob_sha1": "e9d6bcc3c749a7f0f674a37275aa115ba34afba9",
+        "remote_path": "tokenizers/Cargo.toml",
+        "sha256": "a7550a462a6e4da8f6ff6aa3420f25f189c5e7ec7303485e9e7e31c20aa6f3e3",
+        "url": "https://github.com/huggingface/tokenizers/blob/88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3/tokenizers/Cargo.toml"
+      },
+      "validation/publisher-notices-v69/tokenizers/LICENSE": {
+        "bytes": 11357,
+        "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+        "remote_path": "LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "url": "https://github.com/huggingface/tokenizers/blob/88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3/LICENSE"
+      }
+    },
+    "git_blob_commitments_verified": true,
+    "installed_dist_info_notice_missing": true,
+    "installed_wheel_source_equivalence_verified": false,
+    "models_or_articles_acquired": false,
+    "packages_installed": false,
+    "prior_failed_raw_request_preserved": "validation/v69_tokenizers_publisher_notice.json",
+    "publisher": "huggingface/tokenizers",
+    "recorded_at_utc": "2026-10-16T16:13:36.646439+00:00",
+    "retrieval": "GitHub connector fetch_file at known immutable commit",
+    "revision": "88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3",
+    "schema": "tokenizers-pinned-source-notice-recovery-v69",
+    "version": "0.23.2"
   },
   "worker_wiring_preparation": {
     "actual_checkpoint_loaded": false,

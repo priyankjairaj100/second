@@ -14,13 +14,16 @@ def info(raw):
     return dict(bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest())
 
 
-def check():
+def check(*, include_notices=False, output=None):
     names=['development-source-review-v69c.zip','development-evidence-v69b.zip',
         'development-audit-receipts-v69.zip','development-reproduction-guide-v69.zip']
+    counts=[537,5,11,6]
+    if include_notices:
+        names.append('development-dependency-notices-v69.zip');counts.append(8)
     artifacts={};texts={};inventory={}
     pattern=re.compile(r'priyank|jairaj|poonam|\bcsis\b|csis_|172\.24\.16\.132|/nfs_home/|/Users/|github\.com/priyankjairaj100',re.I)
     findings=[]
-    for name,expected in zip(names,[537,5,11,6]):
+    for name,expected in zip(names,counts):
         path=R/'reports'/name;artifacts[name]=info(path.read_bytes())
         with zipfile.ZipFile(path) as z:
             entries=z.infolist();assert len(entries)==len(set(z.namelist()))==expected
@@ -75,12 +78,22 @@ def check():
         assert p in source and p in guide
     supplied=json.loads(texts['development-reproduction-guide-v69.zip/INPUTS.json'])['components']
     assert supplied=={n:artifacts[n] for n in names[:3]}
+    if include_notices:
+        notice_name=names[-1];notice_files=inventory[notice_name]
+        origins=json.loads(texts[notice_name+'/SOURCES.json'])
+        assert len(origins['files'])==5
+        assert set(origins['files'])=={n for n in notice_files if n.startswith('notices/')}
+        for name,e in origins['files'].items():
+            assert notice_files[name]=={k:e[k] for k in ['bytes','sha256']}
+        assert origins['complete_transitive_notices'] is False
+        assert origins['dependency_binaries_included'] is False
+        assert notice_name in navigation
     opened=Path('/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex')
     assert opened.read_bytes()==(R/'reports/manuscript_v69.tex').read_bytes()
     result=dict(schema='cross-component-review-v69',captured_at_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
         status='inventories_hashes_known_identifiers_and_navigation_checked',artifacts=artifacts,
         archive_members=sum(len(x) for x in inventory.values()),text_files_checked=len(texts),
-        internal_manifests_verified=4,known_identity_findings=findings,private_mapping_files_included=False,
+        internal_manifests_verified=len(names),known_identity_findings=findings,private_mapping_files_included=False,
         evidence_references=sorted(references),receipt_filename_crosswalk=crosswalk,
         stale_filename_grouping_resolved_by_navigation=True,protocol_links_verified=4,
         manuscript_matches_open_file=True,manuscript_edited=False,
@@ -88,8 +101,13 @@ def check():
         indirect_identity_linkability_assessed=False,full_anonymity_verified=False,
         full_empirical_input_closure=False,full_transitive_notices=False,
         full_reproduction_verified=False,empirical_work_executed=False,submission_ready=False)
-    (R/'validation/v69_cross_component_review.json').write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
+    output=Path(output) if output is not None else R/'validation/v69_cross_component_review.json'
+    with output.open('x') as stream:stream.write(json.dumps(result,indent=2,sort_keys=True)+'\n')
     print(json.dumps({k:result[k] for k in ['status','archive_members','text_files_checked','internal_manifests_verified','submission_ready']}))
 
 
-if __name__=='__main__':check()
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--include-notices',action='store_true')
+    parser.add_argument('--output',type=Path)
+    args=parser.parse_args();check(include_notices=args.include_notices,output=args.output)

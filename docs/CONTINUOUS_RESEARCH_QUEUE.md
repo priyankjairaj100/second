@@ -67,10 +67,10 @@ or parallel execution loop. No subagent delegation is currently authorized.
    IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
-   Preparation15262, hybrid15263 and compression15264 completed0:0. At21:14IST
-   cold15265 was RUNNING1h11m13s with15of24 certified stages;15266--15275 were
-   dependency-pending. Both completed
-   comparison receipts/debits passed metadata checks; both binary audits remain.
+   Preparation15262, hybrid15263, compression15264 and cold15265 completed0:0.
+   At21:44IST cached15266 was RUNNING42s;15267--15275 were dependency-pending.
+   All three completed comparison receipts/debits passed metadata checks;
+   both binary audits remain. Read docs/V67_COLD1_RECEIPT_V69.txt.
    The new reporting-only terminal checker passes25 generated tests and correctly
    leaves actual snapshots pending. Use docs/TERMINAL_REPORTING_PREPARATION_V69.txt;
    synthetic receipt success cannot replace both actual terminal audits.
@@ -160,8 +160,9 @@ or parallel execution loop. No subagent delegation is currently authorized.
    see docs/SUBMISSION_ARTIFACT_POLICY_V69.txt. Keep binaries/corpus external and
    preserve the C4 metadata-bound refusal. Project licensing remains unassigned;
    publisher declarations do not close rights, anonymity or reproduction checks.
-   Four actual CPU license files are now preserved; tokenizer dist-info lacked a
-   notice. Resolve that and remaining transitive/system/GPU notice gaps explicitly.
+   Five notice texts are now packaged: four actual CPU license files and a pinned
+   publisher tokenizer license. Installed tokenizer dist-info lacked a notice;
+   wheel/source equivalence and transitive/system/GPU notice gaps remain.
    The15-record evidence index maps historical project citations to54 checked
    direct files; the identifying provenance map stays outside anonymous packaging.
    An available five-file companion ZIP now contains1,054 checked field groups
@@ -200,10 +201,11 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate is qualified. At21:14IST preparation15262,
+V67's64-test exact-source Linux gate is qualified. At21:44IST preparation15262,
 hybrid15263 and compression15264 were COMPLETED0:0. Their worker debits are6858,
-4922 and5210 CPU seconds. Cold15265 is RUNNING;15266--15275 are dependency-pending.
-Both completed comparisons have24 stage certificates. Their7 and68 numerical
+4922 and5210 CPU seconds. Cold15265 also completed, charged5974; cached15266
+is RUNNING and15267--15275 are dependency-pending.
+All three completed comparisons have24 stage certificates. Their7,68 and7 numerical
 fallback rows remain distinct from zero stage-level replay/refusal flags.
 Modern-service timings,
 new-root model evidence, untouched quality and prospective timing remain absent.
@@ -234,3 +236,9 @@ The nine selected audit/measurement receipts now have labelled derivatives with
 exact typed-object checks and clean extraction. Original archives remain unchanged
 and excluded from review ZIPs. Whole-package review and reproduction remain.
 See docs/REVIEW_RECEIPT_COMPANION_V69.txt and the private selection/derivation maps.
+
+Latest packaging checkpoint: the fifth companion contains five unchanged observed
+notice texts in eight files. All five manifests and569 text files pass bounded
+checks. Read docs/REVIEW_DEPENDENCY_NOTICES_V69.txt. Preserve the older raw-download
+failure and distinguish the recovered publisher license from installed-wheel
+provenance. No additional empirical gate is satisfied by these package checks.

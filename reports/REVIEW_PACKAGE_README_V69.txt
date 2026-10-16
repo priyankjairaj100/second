@@ -1,6 +1,6 @@
 Review package navigation: development checkpoint,16 October2026
 
-This is a navigation page for four prepared components and the existing paper
+This is a navigation page for five prepared components and the existing paper
 source. It is not a final submission bundle. The paper remains a working draft;
 the active complete-service experiment, untouched quality and any claim-required
 timing replication are unfinished. No conference submission has been made.
@@ -21,6 +21,11 @@ Read in this order
 5. development-reproduction-guide-v69.zip: six files with exact external input
    commitments, runtime inventories, dependency declarations and an offline
    verifier. It includes commands for the qualified local fixture subset.
+6. development-dependency-notices-v69.zip: five unchanged observed notice texts,
+   a source inventory, README and manifest. Four texts came from installed CPU
+   distributions; the tokenizer license came from its pinned publisher source.
+   Their provenance differs. Complete transitive notices and the research
+   project's own release terms remain unresolved. No dependency binary is included.
 
 Receipt filename cross-reference
 Three filenames retain earlier record grouping. Treat the filenames as stable
@@ -71,7 +76,8 @@ complete anonymity guarantee. Do not add this project's public GitHub URL or the
 private derivation maps to a review upload. Final venue anonymity review remains.
 
 The guide identifies external runtime/input dependencies but does not provide the
-entire historical input/receipt closure or transitive notices. Project release
+entire historical input/receipt closure. The separate notices companion adds the
+five observed texts; it does not complete transitive notice coverage. Project release
 terms, author-controlled submission details, rendered page/layout verification,
 actual claim-required evidence and final clean empirical reproduction remain.
 Keep this page with the components so filename history and scope stay explicit.

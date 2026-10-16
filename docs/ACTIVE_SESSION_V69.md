@@ -1,4 +1,4 @@
-# V67 hybrid and compression completed; cold comparison running
+# V67 hybrid, compression and cold completed; cached comparison running
 
 16 October 2026. Latest reporting handoff, not a registration. V68 and V69 remain
 UNREGISTERED and UNFROZEN. Preserve all469 V67 sources and14 inherited historical
@@ -6,13 +6,13 @@ GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
 ## Actual cluster observation
 
-At15:44:37UTC (21:14:37IST), hybrid15263 and compression15264 were COMPLETED0:0.
-Compression completed in1h27m36s with all24 stages certified. Cold15265 was RUNNING
-1h11m13s with15of24 certified stages;15266--15275 remained dependency-pending.
-Both terminal audits remain absent.
-The352-file snapshot campaigns/csis_v67_progress_metadata_20261016_p.tar.gz is297198
-bytes, SHA25667713b52e09a7df8141c174c043cd64df712fe6a3c981af2c8257167785c7a15.
-validation/v67_progress_metadata_check_p.json verifies metadata/source bindings.
+At16:14:26UTC (21:44:26IST), hybrid15263, compression15264 and cold15265 were
+COMPLETED0:0, each with24 certified stages. Cold completed in1h40m20s. The existing
+afterok chain started cached15266, RUNNING42s with no stage certificate yet;
+15267--15275 remained dependency-pending. Both terminal audits remain absent.
+The379-file snapshot campaigns/csis_v67_progress_metadata_20261016_r.tar.gz is341558
+bytes, SHA256e95c6117fb2ffad9f94967ddee988e247b13e495275b8459dcead281014323b7.
+validation/v67_progress_metadata_check_r.json verifies metadata/source bindings.
 All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
 No new job was submitted. The numerical checkout remains
 f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull reporting changes there.
@@ -24,7 +24,7 @@ No stage-level replay fallback or refusal was recorded. Separately, the solver's
 bounded numerical fallback handled7 rows /21504 decisions, all certified; preserve
 this distinction rather than claiming no fallback of any kind. The compression
 reservation is now settled using its actual terminal worker usage. The cold
-reservation is still live; see the completed-compression check below. These are
+reservation has also settled; the cached reservation is now live. These are
 partial metadata checks, not model/state byte equality or final campaign cost verification. Two local
 reporting invocation/schema errors were corrected and preserved without any cluster
 mutation. Read docs/V67_HYBRID1_RECEIPT_V69.txt. Previous snapshots remain intact.
@@ -34,7 +34,7 @@ state representations packaged for five comparison arms. The earlier actual rece
 validation/v67_preparation_metadata.json:6857.956044 worker CPU seconds,6858 charged,
 1732228KiB peak RSS,9.590220307 controller own CPU seconds and1h54m28 Slurm CPU.
 Numerical binaries were not reaudited by this continuation. Preserve the live
-cold reservation; do not settle it before actual terminal usage.
+cached reservation; do not settle it before actual terminal usage.
 
 ## First compression receipt and accounting
 
@@ -47,10 +47,21 @@ wall time is5250.700698394 seconds; peak worker RSS is1844652KiB. Slurm reports
 
 There are zero stage-level replay/refusal flags. The bounded numerical solver
 fallback handles68 rows /204288 decisions, all certified. Do not describe that as
-no fallback. Cold15265 now holds a live10802-second reservation; this is not actual
-terminal usage. No new job was submitted or repeated. The check does not inspect
+no fallback. Cold15265 has now settled its5974-second debit; cached15266 has a live9002-second
+reservation, which is not actual terminal usage. No new job was submitted or repeated. The check does not inspect
 model/state binary bytes, independently rebuild membership or validate fresh-oracle
 equality and complete campaign costs. Read docs/V67_COMPRESSED1_RECEIPT_V69.txt.
+
+## First cold receipt and accounting
+
+validation/v67_cold1_metadata.json checks all24 stage certificates and the settled
+5974-second debit:5973.067109 worker CPU seconds,9.228352506 controller own CPU,
+5973.069962 all-waited-child CPU and1968144KiB peak worker RSS. Transaction wall
+is6016.783538496 seconds; Slurm reports1h39m43 CPU separately. Zero stage replay/
+refusal flags coexist with7 internal numerical fallback rows /21504 certified
+decisions. Read docs/V67_COLD1_RECEIPT_V69.txt. This metadata check establishes no
+actual model/state equality or complete campaign-cost result. Preserve cached's
+live9002-second reservation and require both actual terminal audits.
 
 ## Production wiring completed locally
 
@@ -288,3 +299,18 @@ Tokenizers' version-specific publisher license page was located, but immutable
 raw retrieval failed with a connection reset and was not retried. The missing
 installed notice and transitive notice gaps remain. The final long/short-paper
 format preference was requested; no reply is inferred and research continues.
+
+## Observed-notices companion prepared
+
+The pinned tokenizers source LICENSE and Cargo metadata were retrieved through
+GitHub and their Git blob commitments verified. The earlier raw-download failure
+remains preserved. Installed-wheel/source equivalence and Rust transitive notices
+are not verified. The missing installed dist-info notice remains an observed fact.
+
+reports/development-dependency-notices-v69.zip adds five unchanged notice texts:
+four installed CPU notices and the publisher tokenizer license, with provenance,
+README and manifest. Its eight files pass exact clean extraction. All five review
+components now pass567-member/569-text-file inventory, manifest, navigation and
+known-direct-identity checks. The original four ZIPs and manuscript are unchanged.
+Remaining system/GPU/transitive notices and project terms stay explicit. See
+docs/REVIEW_DEPENDENCY_NOTICES_V69.txt. This is no new scientific result.
