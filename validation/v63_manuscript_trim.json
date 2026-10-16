@@ -1,14 +1,18 @@
 {
-  "after_sha256": "d2e0b4b36d559b6e0ab59e6780c1b839df91e5a4de810690d704f5c0f9d14736",
-  "after_whitespace_tokens": 6633,
-  "all_theorems_lemmas_propositions_and_proofs_byte_preserved": true,
+  "at_trim_stage_all_theorems_lemmas_propositions_and_proofs_byte_preserved": true,
+  "at_trim_stage_new_empirical_results_inserted": false,
+  "at_trim_stage_related_work_and_all_larger_root_evidence_byte_preserved": true,
+  "audited_v63_result_added_after_trim": true,
   "before_sha256": "a73f0936466dbcf5146ca09b4c66273040316fd9d912a8087a644c9ae8efbd9b",
   "before_whitespace_tokens": 7361,
+  "final_native_compile": "success",
+  "final_source_whitespace_tokens": 6884,
+  "final_v63_source_sha256": "346c8def9460a36cd5302cb028def3eeb4cc2b8838d3778520eec488bc89848a",
   "native_compile": "success",
-  "new_empirical_results_inserted": false,
   "prior_snapshot": "/Users/priyankjairaj/Downloads/ACL/Second/reports/manuscript_v62.tex",
-  "related_work_and_all_larger_root_evidence_byte_preserved": true,
   "removed_whitespace_tokens": 728,
   "schema": "v63-historical-prose-trim",
-  "scope": "Earlier V39/V40/V43/V44/V47 history only; current larger-root tables and all theorem/proof text unchanged"
+  "scope": "Earlier V39/V40/V43/V44/V47 history only; current larger-root tables and all theorem/proof text unchanged",
+  "trimmed_source_sha256": "d2e0b4b36d559b6e0ab59e6780c1b839df91e5a4de810690d704f5c0f9d14736",
+  "trimmed_whitespace_tokens": 6633
 }

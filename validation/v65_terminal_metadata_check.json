@@ -1,0 +1,44 @@
+{
+  "archive": {
+    "bytes": 56863,
+    "sha256": "59aaaadbbd0d36ab0cfb224f3ed947b9ec893b84318037d28a37b32c1403641f"
+  },
+  "calibration_tokens": 1664,
+  "captured_at_utc": "2026-10-16T08:58:30.964787+00:00",
+  "cluster_actual_saved_byte_audit_receipt_verified": true,
+  "combined_observed_cpu_seconds": 14.791508042,
+  "confirmation": false,
+  "historical_metadata_files": 360,
+  "independent_implementation": false,
+  "model_inference": false,
+  "portable_check_reexecutes_data_audit": false,
+  "protected_counts": {
+    "chunks": 20596,
+    "content": 14641,
+    "ids": 5266
+  },
+  "quality_evaluation": false,
+  "records": {
+    "bytes": 8042,
+    "sha256": "3bbdefd1e2836d6797723f8426d9ad359d36da2b2e13b35df4661002a8db89b9"
+  },
+  "registration_sha256": "13d9ecb7ddb9ee37ba05498387af490a5e6f16879340c4ec301bbe2aaf5f08d2",
+  "reporting_helper_correction": "Initial collector used8MiB bound but pinned tokenizer extension is11317624B; corrected reporting-only helper to registered128MiB bound. No empirical retry.",
+  "scheduler": "15255|COMPLETED|0:0|3|00:02.517||2026-10-16T14:21:25|2026-10-16T14:21:28\n15255.batch|COMPLETED|0:0|3|00:02.517|3284K|2026-10-16T14:21:25|2026-10-16T14:21:28\n15256|COMPLETED|0:0|11|00:07.987||2026-10-16T14:21:28|2026-10-16T14:21:39\n15256.batch|COMPLETED|0:0|11|00:07.987|3340K|2026-10-16T14:21:28|2026-10-16T14:21:39\n15257|COMPLETED|0:0|9|00:07.691||2026-10-16T14:21:39|2026-10-16T14:21:48\n15257.batch|COMPLETED|0:0|9|00:07.691|3264K|2026-10-16T14:21:39|2026-10-16T14:21:48\n",
+  "scheduler_allocation_cpu_seconds": 18.195,
+  "scheduler_batch_is_duplicate_not_added": true,
+  "schema": "v65-terminal-metadata-check",
+  "selected_records": 13,
+  "selection": {
+    "bytes": 6062,
+    "sha256": "15936823286a872fd4f3996446eea5fce9a717eafad8a50d0cb918e9b40cd85b"
+  },
+  "skipped": 0,
+  "source_files_verified": 450,
+  "source_prefix": {
+    "bytes": 2097152,
+    "sha256": "2dd5205d5d2819eedbcedab9beddcefdd3be6735c0bf5c7c63b4a56b07986bfa"
+  },
+  "status": "passed",
+  "tests": 9
+}

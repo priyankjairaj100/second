@@ -1,3 +1,8 @@
+Current status, 16 October 2026: V63 terminal evidence and V64 adapter software
+qualification have passed. V65 admitted the disjoint data root. The historical
+design below is not an empirical registration. Its complete-worker, clock and
+resource requirements remain pending for V66; see docs/ACTIVE_SESSION_V65.md.
+
 Second: next modern-lossless service design
 16 October 2026. Preparation only: NOT a registration or launch authorization.
 The V63 actual-byte audit and terminal decision remain prerequisites.

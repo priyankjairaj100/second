@@ -1,22 +1,145 @@
 {
   "acl_ready": false,
+  "actual_byte_audit_receipt": {
+    "bytes": 1447,
+    "sha256": "f7a958f0d9a3ab7884a891db7cbea9b8a5f333d7f8f6e3d1d8e79c4912034ae7"
+  },
+  "added_control_source_bytes": 54803,
+  "added_dependency_bytes": 23870575,
+  "archive": {
+    "campaigns/csis_terminal_v63_lossless_metadata_20261016.tar.gz": {
+      "bytes": 163318,
+      "sha256": "ec9435ce4cfe2bfb67db2f3d2f8ab7e4b9ebdc06feaea3cf8b6daaa436757f23"
+    }
+  },
   "automation_id": "continue-second-research",
+  "captured_files_including_manifest": 28,
   "continuation_queue": "docs/CONTINUOUS_RESEARCH_QUEUE.md",
-  "cutoff_utc": "2026-10-16T08:16:48.287610+00:00",
+  "cpu_accounting_note": "Allocation and batch rows report the same CPU and must not be added together; process clock omits interpreter startup/shutdown.",
+  "cutoff_utc": "2026-10-16T08:30:23.905475+00:00",
+  "decision": "Modern lossless leaves the uncertain-compression storage difference largely intact. Retain the modest storage/latency tradeoff and hybrid counterexample; implement a complete modern point service before separately registered fresh-root development.",
   "jobs": {
     "audit": "15246",
     "checks": "15244",
     "measure": "15245"
   },
-  "next_action": "Close audit 15246, collect terminal metadata, make scientific decision; implement only justified separately registered follow-up. Continue independent manuscript work meanwhile.",
+  "local_binary_revalidation": false,
+  "measurement_receipt": {
+    "bytes": 460887,
+    "sha256": "98d8dacdee11ebddb5955cab7faa9c5640b40558b00ba1a2d3da012aeefb464e"
+  },
+  "new_source_files_verified": 7,
+  "next_action": "Complete newly registered V64 software qualification 15254; then prepare fresh-root data admission and full service protocol. No empirical V64 experiment is registered.",
   "numerical_checkpoint_commit": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "omitted_input_output_files": 13,
   "phase_allowance_cpu_seconds": 5706,
+  "process_cpu_seconds": 1466.282449351,
+  "prospective_timing_replication": false,
   "protocol": "research_v63/PROTOCOL.txt",
   "registration": "handoff/registration_v63.json",
   "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6",
+  "scheduler": [
+    {
+      "cpu_seconds": 2.398,
+      "elapsed_seconds": 4,
+      "exit_code": "0:0",
+      "job_id": "15244",
+      "state": "COMPLETED"
+    },
+    {
+      "cpu_seconds": 813.897,
+      "elapsed_seconds": 820,
+      "exit_code": "0:0",
+      "job_id": "15245",
+      "state": "COMPLETED"
+    },
+    {
+      "cpu_seconds": 653.026,
+      "elapsed_seconds": 657,
+      "exit_code": "0:0",
+      "job_id": "15246",
+      "state": "COMPLETED"
+    }
+  ],
+  "scheduler_allocation_cpu_seconds": 1469.321,
   "schema": "v63-lossless-control-handoff",
-  "scientific_result_verified": false,
-  "scope": "artifact-only source-local lossless archive comparison; no repair latency or new model/quality evaluation",
+  "scientific_result_verified": true,
+  "scope": "Actual stored-archive size and exactness; supplied existing model codes; no new repair-latency, calibration or quality measurement",
   "source_files_preserved": 432,
-  "status": "linux_gate_and_measurement_complete_audit_running"
+  "source_review": "Root review only, not an independent implementation or reviewer",
+  "status": "complete_audited_artifact_development",
+  "summary": [
+    {
+      "mode_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 234,
+        "3": 0,
+        "4": 78
+      },
+      "new_canonical_parse_seconds": 33.542846892,
+      "new_checkpoint_inclusive_bytes": 749155833,
+      "new_checkpoint_plus_added_dependency_bytes": 773081211,
+      "new_decode_only_seconds": 1.058439241,
+      "new_dependency_inclusive_saving": -0.031151770728225836,
+      "new_live_bytes": 396330658,
+      "new_live_saving": 0.001436349026161854,
+      "observed_total_endpoint_seconds": 321.720152017,
+      "old_checkpoint_inclusive_bytes": 749725921,
+      "old_live_bytes": 396900746,
+      "old_parse_and_decode_seconds": 33.412012436,
+      "retained_records": 13
+    },
+    {
+      "compressed_live_bytes": 333497053,
+      "compressed_live_saving_vs_modern": 0.09278071357167839,
+      "hybrid_live_bytes": 319340204,
+      "hybrid_live_saving_vs_modern": 0.1312918978005042,
+      "mode_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 216,
+        "3": 0,
+        "4": 72
+      },
+      "new_canonical_parse_seconds": 31.08943349,
+      "new_checkpoint_inclusive_bytes": 720428750,
+      "new_checkpoint_plus_added_dependency_bytes": 744354128,
+      "new_decode_only_seconds": 0.958750061,
+      "new_dependency_inclusive_saving": -0.0324513578501362,
+      "new_live_bytes": 367603575,
+      "new_live_saving": 0.0014378231925681328,
+      "observed_total_endpoint_seconds": 328.383237505,
+      "old_checkpoint_inclusive_bytes": 720958060,
+      "old_live_bytes": 368132885,
+      "old_parse_and_decode_seconds": 30.94759618,
+      "retained_records": 12
+    },
+    {
+      "compressed_live_bytes": 178333068,
+      "compressed_live_saving_vs_modern": 0.08738380764447051,
+      "hybrid_live_bytes": 220597651,
+      "hybrid_live_saving_vs_modern": -0.12890441776167938,
+      "mode_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 108,
+        "3": 0,
+        "4": 36
+      },
+      "new_canonical_parse_seconds": 15.358877922,
+      "new_checkpoint_inclusive_bytes": 548233792,
+      "new_checkpoint_plus_added_dependency_bytes": 572159170,
+      "new_decode_only_seconds": 0.478175151,
+      "new_dependency_inclusive_saving": -0.04313705605610196,
+      "new_live_bytes": 195408617,
+      "new_live_saving": 0.0013530966618647833,
+      "observed_total_endpoint_seconds": 164.96083906,
+      "old_checkpoint_inclusive_bytes": 548498557,
+      "old_live_bytes": 195673382,
+      "old_parse_and_decode_seconds": 15.276336041,
+      "retained_records": 6
+    }
+  ],
+  "untouched_quality": false
 }

@@ -26,8 +26,7 @@ Authoritative repository: `/Users/priyankjairaj/Downloads/ACL/Second`, GitHub
 `priyankjairaj100/second`, branch `codex/second-cluster-v42`, draft PR 1.
 Workspace: `/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2`.
 Cluster: `/nfs_home/users/poonam/second-20261010`.
-The numerical checkout remains `f900999fcb200509dfad4fc081ce9c87fd172a16` while
-V63 runs. Do not pull reporting changes into that checkout.
+The numerical checkout remains `f900999fcb200509dfad4fc081ce9c87fd172a16` for all newly staged phases. Do not pull reporting changes into that checkout.
 
 Preserve frozen sources, attempts, caps, budgets, failures, source exclusions and
 negative results. Never rerun a one-use launcher, duplicate a job, relax a guard,
@@ -44,22 +43,16 @@ or parallel execution loop. No subagent delegation is currently authorized.
 
 ## Ordered work
 
-1. **Close V63 and preserve terminal evidence. In progress.** Checks 15244 and
-   measurement 15245 completed successfully; audit 15246 started at 13:42:44 IST
-   on 16 October. Snapshot: 08:12:48 UTC. All three worker archives exist, but
-   the separate actual-byte audit and terminal consistency check remain pending.
-   Registration SHA256:
-   `479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6`.
-   Do not rerun `work/stage_launch_v63.py` or modify `research_v63/*`.
-   Once all three jobs are terminal and quiescent, use the prepared bounded
-   collector `validation/collect_v63_metadata.py`, transfer by verified SHA256,
-   safely extract, then run `validation/check_v63_metadata.py`. Diagnose any
-   reporting-helper bug without weakening empirical checks or changing registered
-   code. Preserve failures and separate process and scheduler CPU accounts.
-   Completion means actual saved-byte audit success plus verified terminal metadata,
-   not only Slurm exit 0. A failed phase closes as failed, without an automatic retry.
+1. **Close V63 and preserve terminal evidence. COMPLETE.** All three jobs
+   15244--15246 completed, actual saved-byte audit and portable check passed.
+   See `docs/TERMINAL_EVIDENCE_V63.txt` and the archived receipts. Keep all
+   seven sources, registration and one-use attempts frozen; do not rerun launchers.
+   Process and scheduler CPU are reconciled separately. No repair latency or
+   new quality result was measured by this artifact-only experiment.
 
-2. **Make the scientific decision from the strongest controls. Waiting on 1.**
+2. **Make the scientific decision from the strongest controls. COMPLETE.**
+   Stronger lossless saves only 0.14%; the uncertain-state storage difference
+   persists, but practical value and modern-service latency remain unestablished.
    Report actual complete-state and checkpoint-inclusive storage, added deployment
    dependencies, encoder/validation costs, source access and exactness. Compare the
    new ordinary lossless archive with both cached lossless and the uncertain-state
@@ -71,7 +64,9 @@ or parallel execution loop. No subagent delegation is currently authorized.
    Method selection remains adaptive development, not prospective confirmation.
 
 3. **Implement and evaluate the necessary complete modern-lossless service.
-   Conditional on 2.** Reuse the frozen mathematical target and matched point
+   IN PROGRESS.** V64 adapter passed 34 Linux tests with zero skips, including
+   actual tiny numerical agreement. Complete empirical workers and resource
+   admission remain to be prepared; keep all 6 V64 sources frozen. Reuse the frozen mathematical target and matched point
    solver, with full parsing, canonical validation, startup/cache policy, state
    reconstruction, disposal and preparation accounted. Preserve compatible cached,
    hybrid and uncertain-compression controls. Specify invariants and full resource
@@ -81,8 +76,12 @@ or parallel execution loop. No subagent delegation is currently authorized.
    Skip unnecessary service expansion if the scoped scientific decision in 2
    makes its claim irrelevant; record the reason, never imply an unexecuted result.
 
-4. **Freeze the method and test a disjoint calibration root. Waiting on the
-   decision and required implementation above.** Use the existing
+4. **Freeze the method and test a disjoint calibration root. Data admission
+   COMPLETE; numerical service work next.** V65 jobs 15255--15257 and their
+   actual saved-prefix/token audit passed. Thirteen 128-token sources were selected
+   outcome-blind from 2,349 complete shard-2 records, after all registered exposure
+   checks. Read `docs/ACTIVE_SESSION_V65.md`; keep the admitted root fixed.
+   No new model execution is registered. Use the existing
    `docs/NEXT_SCIENTIFIC_GATE_V61.txt` for the protocol requirements. One new root
    is an economical development falsification, not enough for a general reliability
    claim. Pin teacher, data selection, deletion memberships, solvers, decision rule,
@@ -128,11 +127,14 @@ or parallel execution loop. No subagent delegation is currently authorized.
 
 ## Current completion boundary
 
-V62 is the last completed scientific checkpoint. It verifies complete code/state
-agreement and final-six byte linkage to V59, with approximately 9% less live state
-but 39–42% slower requests than cached lossless. Stronger modern-lossless measurement
-has completed, with its audit running. Untouched quality, fresh-root evidence and
-prospective timing remain absent. The compiled manuscript is not submission-ready.
+V63 is the latest completed empirical checkpoint: the modern lossless archive
+passes actual-byte and portable audits but gives only 0.14% incremental storage
+savings. V61/V62 still establish approximately9% compression storage savings with
+39–42% slower requests versus cached lossless. V64 software qualification is
+complete; V65 data admission and portable audit also passed. No Second job is
+active. V66 complete-service preparation is next. Full modern-service
+timings, new-root model evidence, untouched quality and prospective timing remain
+absent. The 6,884-source-token manuscript compiles but is not submission-ready.
 
 ## When to pause or finish
 

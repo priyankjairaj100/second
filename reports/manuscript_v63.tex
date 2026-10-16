@@ -15,7 +15,7 @@
 \newcommand{\pending}[1]{\par\noindent\textbf{Pending evidence.} #1\par}
 \title{Certified Calibration Repair from Compressed Fixed-Anchor Features}
 \author{Research working draft\\Author and affiliation details pending}
-\date{14 October 2026\\\textbf{Working draft---not submission-ready}}
+\date{16 October 2026\\\textbf{Working draft---not submission-ready}}
 \begin{document}
 \maketitle
 
@@ -47,7 +47,9 @@ the nearest-anchor quality failure. A separately registered candidate using the
 original checkpoint as feature teacher attains perplexity 51.85 and passes the
 same exposed development tolerances. Its separately audited service also matches
 fresh model/state reconstruction; compression saves 9.41\% and 8.86\% of live
-state but takes 38.62\% and 41.74\% longer than the lossless cache. These bounded
+state but takes 38.62\% and 41.74\% longer than the lossless cache. A separately
+audited Zstandard-augmented lossless archive reduces cached state by only
+0.14\% at the retained endpoints; its repair latency remains unmeasured. These bounded
 observations establish complete-state correctness and a storage tradeoff, not
 general acceleration or a
 quality-preserving replacement for sequential calibration. Independent roots,
@@ -709,15 +711,31 @@ The failed original audit consumed another 1,811.125 CPU seconds. These support
 costs are outside the numerical ledger; recovery does not make the original
 capped chain a successful run. No numerical experiment or quality check was repeated.
 
+\paragraph{Stronger lossless artifact control (V63).}
+A separately registered control extends the cache's raw, zlib6 and shuffled-zlib6
+choices with plain and shuffled Zstandard3 (python-zstandard 0.25.0, Zstandard
+1.5.7). It selects the smallest complete source descriptor with fixed ties and
+charges every candidate encoder and canonical validation. Saved archives for all
+three memberships restore the actual original state bytes and preserve every
+binary64 feature word, model code and retained descriptor~\cite{v63terminal}.
+At 12 and 6 retained records, live state falls from 368,132,885 and 195,673,382
+bytes to 367,603,575 and 195,408,617 bytes, reductions of 0.144\% and 0.135\%.
+Uncertain compression remains 9.28\% and 8.74\% smaller than this stronger
+lossless archive. The pinned codec installation and added control source occupy
+23,925,378 bytes; counting this additional deployment footprint reverses the
+small lossless saving. This is the full selected installation, not a minimal
+runtime packaging claim. The control copies existing model codes: it measures
+artifact costs and exact restoration, not calibration or complete repair latency.
+
 \paragraph{Research decision.}
-The original-checkpoint target now has complete-state correctness evidence and a
-passing exposed quality screen, but uncertain compression still trades latency
-for modest storage savings against the strongest cache. Before broader trials,
-a prospectively fixed modern lossless-codec control should test whether that
-storage benefit survives ordinary compression under the same access, validation
-and full-state contract. Preserve the failed nearest-anchor quality result,
-all sixty exclusions and the unchanged thresholds. Independent roots, untouched
-quality and prospective timing repetitions remain necessary for broader claims.
+The original-checkpoint target has complete-state correctness evidence and a
+passing exposed quality screen. The measured modern lossless archive does not
+erase uncertain compression's modest storage difference, but practical value
+remains unestablished: the cache is faster and hybrid dominates the first V61
+request. A complete modern-lossless service is needed before stronger latency
+claims. Preserve the nearest-anchor quality failure, all sixty exclusions and
+unchanged thresholds. Independent roots, untouched quality and prospective
+timing repetitions remain necessary for broader claims.
 
 \paragraph{Quality.}
 Use untouched article-level evaluation units with overlap checks against exposed
@@ -779,8 +797,14 @@ the portable checker verifies 1,285 original metadata/source files, 432 frozen
 sources, eight comparison receipts and complete input/cost bindings. Thirty-three
 numerical binaries remain on the cluster and were not revalidated locally.
 
-\pending{Before advancing the broad paper claim, close the modern lossless-control
-comparison, then add independently selected roots, untouched quality and
+V63's separate audit verifies all three saved archives and both retained-descriptor
+transitions. Its portable archive contains 28 metadata/source files including the
+collection manifest; nine numerical input/output binaries and four prior metadata
+inputs remain outside that archive. Local verification checks their commitments
+and the copied receipts, without repeating binary comparisons or inference.
+
+\pending{Before advancing the broad paper claim, measure the complete modern
+lossless service, then add independently selected roots, untouched quality and
 prospective timing repetitions. Another checkpoint is needed for a transfer claim.}
 
 \begin{thebibliography}{9}
@@ -938,6 +962,14 @@ Original failed gate: \path{campaigns/csis_terminal_v61_failed_audit_metadata_20
 Recovered audits: \path{campaigns/csis_terminal_v62_recovery_metadata_20261016.tar.gz}.
 Portable check: \path{validation/v62_recovery_metadata_check.json}.
 Jobs15150--15151 verify existing artifacts; no numerical or quality rerun.
+
+
+\bibitem{v63terminal}
+Second research project. 2026.
+\emph{Audited source-local modern lossless archive comparison (V63).}
+Frozen registration, source/runtime bindings, actual-byte audit and terminal
+metadata archive, 16 October.
+\href{https://github.com/priyankjairaj100/second/blob/codex/second-cluster-v42/docs/TERMINAL_EVIDENCE_V63.txt}{Evidence and scope}.
 
 \end{thebibliography}
 \end{document}

@@ -1,0 +1,56 @@
+V64: bounded Linux software qualification of modern lossless repair
+16 October 2026. Software fixtures only; no empirical experiment is registered.
+
+Prerequisite
+V63's three jobs and separate actual-byte audit completed successfully. Its pinned
+stronger ordinary lossless representation does not erase the modest uncertain-
+compression storage advantage. A complete modern service remains unmeasured.
+This phase checks the new integration before any fresh-root campaign is designed.
+
+Scope
+Run exactly34 tests, zero skips:21 frozen research_v63 boundary fixtures,12 new
+synthetic service integration fixtures and1 new actual numerical tiny-decoder test.
+The numerical case uses only the existing generated tiny decoder and four
+artificial token IDs. It compares computed modern-repair codes with fresh original-
+teacher calibration and compares actual canonical successor bytes and restoration
+of the original format. The mathematical implementations are shared. This is not
+an independent numerical implementation, checkpoint-scale validation, a latency
+experiment, language-quality evaluation or new calibration data selection.
+
+The modern adapter imports historical sources unchanged, replaces the lossless
+point descriptor route with the fixed V63 codec, checks full numerical target
+bindings and computes new stage codes through the original point dispatcher.
+It retains descriptors exactly. It does not accept expected endpoint codes as a
+repair input. Its repair method returns an in-memory state; no complete I/O,
+startup, disposal or controller clock is claimed here. Full empirical service,
+resource admission, prospective source selection and confirmation remain pending.
+
+Source/runtime admission
+Pin every new source and this protocol, all432 historical numerical sources, all7
+V63 files, its registration, successful audit and all11 installed wheel files.
+Use the unchanged Linux CPython3.12.14 container and dependency runtime, with the
+isolated python-zstandard0.25.0/Zstandard1.5.7 installation from V63. Importing the
+codec does not open its empirical states. No empirical state/model/factor/token
+file is an allowed test input. No native evaluator or certificate executes on Mac.
+
+One-use execution
+Fresh directory:local_runs/modern-service-checks-v64-20261016-a. One Slurm CPU,
+one affinity core and thread environment limits1. Soft CPU300seconds/hard301,
+600seconds wall,16GiB address-space and Slurm memory,8MiB per output file,core0.
+Fresh allowance602 CPU seconds, separate from every prior ledger. The per-process
+CPU limit also applies to compiler children; one affinity CPU and the600second
+Slurm wall limit bound the trusted compilation/test group. Record waited-child
+CPU separately and include it in the observed total; reject observed overshoot
+rather than truncating it. This is not hostile-child containment. Bound actual
+fixture geometries and test names; do not add an empirical runner to this phase.
+Expected output is a finite test log, an exclusive start marker and completion
+receipt. The fixture allocations are tiny relative to the unchanged4GiB service
+reservation; this is not admission of a full-model modern service.
+
+Freeze before launch. Reconcile scheduler receipts first, verify the numerical
+checkout remains clean at f900999, use an exclusive submission intent and submit
+once with --no-requeue. No retry, cap increase, source replacement or change to
+old results is authorized by this registration. Preserve failure logs and actual
+process/scheduler CPU. A later correction requires a new registration and output
+path. Root review is not independent review. Passing fixtures authorizes further
+preparation only, not an unregistered empirical launch or a manuscript result.

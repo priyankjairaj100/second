@@ -1,0 +1,45 @@
+{
+  "acl_ready": false,
+  "archive": "campaigns/csis_v65_data_metadata_20261016.tar.gz",
+  "archive_commitment": {
+    "bytes": 56863,
+    "sha256": "59aaaadbbd0d36ab0cfb224f3ed947b9ec893b84318037d28a37b32c1403641f"
+  },
+  "combined_observed_cpu_seconds": 14.791508042,
+  "confirmation": false,
+  "data_selection_verified": true,
+  "evidence": "validation/v65_terminal_metadata_check.json",
+  "historical_metadata_files": 360,
+  "jobs": {
+    "audit": "15257",
+    "checks": "15255",
+    "data": "15256"
+  },
+  "linux_software_gate_verified": true,
+  "local_skips": 0,
+  "local_tests": 9,
+  "model_inference": false,
+  "new_sources": 5,
+  "next_action": "Prepare V66 complete-service workers, resource admission, checks and prospective registration on the admitted V65 root. No new numerical job registered or launched.",
+  "prior_frozen_sources": 445,
+  "protected_counts": {
+    "chunks": 20596,
+    "content": 14641,
+    "ids": 5266
+  },
+  "protocol": "research_v65/PROTOCOL.txt",
+  "quality_evaluation": false,
+  "records": {
+    "bytes": 8042,
+    "sha256": "3bbdefd1e2836d6797723f8426d9ad359d36da2b2e13b35df4661002a8db89b9"
+  },
+  "registration": "handoff/registration_v65.json",
+  "registration_sha256": "13d9ecb7ddb9ee37ba05498387af490a5e6f16879340c4ec301bbe2aaf5f08d2",
+  "scheduler_allocation_cpu_seconds": 18.195,
+  "schema": "disjoint-data-admission-v65-handoff",
+  "selection": {
+    "bytes": 6062,
+    "sha256": "15936823286a872fd4f3996446eea5fce9a717eafad8a50d0cb918e9b40cd85b"
+  },
+  "status": "data_admission_verified"
+}

@@ -1,3 +1,9 @@
+# V63 completed: actual archive audit and portable consistency passed
+
+See docs/TERMINAL_EVIDENCE_V63.txt and handoff/program_v63.json for the terminal result. All three jobs completed0:0. The following launch/continuation notes retain their historical cutoff. Current work is in docs/ACTIVE_SESSION_V65.md.
+
+---
+
 # V63: stronger lossless artifact control running
 
 Snapshot 16 October 2026, 08:16:48 UTC (13:46 IST). Linux qualification 15244
