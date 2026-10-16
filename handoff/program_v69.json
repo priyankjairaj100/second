@@ -1,5 +1,118 @@
 {
   "active_experiment_version": 67,
+  "anonymity_inventory": {
+    "anonymity_verified": false,
+    "archive_or_binary_content_not_scanned": [
+      {
+        "path": "campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz",
+        "reason": "Archive members require explicit allowlist and content review; archive was not extracted"
+      },
+      {
+        "path": "campaigns/csis_terminal_v59_metadata_20261014.tar.gz",
+        "reason": "Archive members require explicit allowlist and content review; archive was not extracted"
+      },
+      {
+        "path": "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz",
+        "reason": "Archive members require explicit allowlist and content review; archive was not extracted"
+      },
+      {
+        "path": "campaigns/csis_terminal_v62_recovery_metadata_20261016.tar.gz",
+        "reason": "Archive members require explicit allowlist and content review; archive was not extracted"
+      },
+      {
+        "path": "campaigns/csis_terminal_v63_lossless_metadata_20261016.tar.gz",
+        "reason": "Archive members require explicit allowlist and content review; archive was not extracted"
+      }
+    ],
+    "captured_at_utc": "2026-10-16T13:33:24.915822+00:00",
+    "category_file_counts": {
+      "author_or_account": 39,
+      "identifying_github": 2,
+      "local_absolute_root": 31,
+      "private_host_or_address": 15,
+      "project_checkout": 28
+    },
+    "committed_files_checked": 577,
+    "evidence_map_sha256": "b399d81fc219cbb820bb6096ae9db707e8acb0a351858508eb256dd3d2bd6ba9",
+    "files_with_known_identity": 47,
+    "frozen_originals_changed": false,
+    "input_inventory": {
+      "path": "validation/v69_submission_inventory.json",
+      "sha256": "9152a49b3964089a2f09bffe8c0231a2328470fe7642f5aea35b2160e014d02f"
+    },
+    "next_action": "Use an explicit review-copy allowlist and labelled derivatives; preserve original hashes privately and validate each changed path/import before packaging. Do not blindly replace strings or relabel original bytes as anonymous.",
+    "redacted_derivatives_created": false,
+    "schema": "submission-known-identity-inventory-v69",
+    "scope": "Known identifying strings in the source inventory plus direct evidence-index files; no full anonymity, secret, dependency-closure or legal review",
+    "status": "review_required",
+    "text_files_scanned": 572
+  },
+  "archive_member_inventory": {
+    "anonymity_verified": false,
+    "archive_summaries": {
+      "campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz": {
+        "commitment": {
+          "bytes": 1133669,
+          "sha256": "9def1cc4d01ea52930601ec0a457bc13755077ad0af77fddf9732bfc507b992e"
+        },
+        "member_content_inspected_or_extracted": false,
+        "member_count": 834,
+        "regular_nontraversing_members_only": true,
+        "uncompressed_member_bytes": 8290785
+      },
+      "campaigns/csis_terminal_v59_metadata_20261014.tar.gz": {
+        "commitment": {
+          "bytes": 538971,
+          "sha256": "aecceb538d03b798f11c914c672b6daac86eaab3eac60dc72434544d823084f3"
+        },
+        "member_content_inspected_or_extracted": false,
+        "member_count": 101,
+        "regular_nontraversing_members_only": true,
+        "uncompressed_member_bytes": 2466701
+      },
+      "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz": {
+        "commitment": {
+          "bytes": 3761981,
+          "sha256": "d0ad4f1085b5c8cb5148de2a6608f8cc1d844661e7262882da2f483f5f9e8094"
+        },
+        "member_content_inspected_or_extracted": false,
+        "member_count": 1286,
+        "regular_nontraversing_members_only": true,
+        "uncompressed_member_bytes": 19787863
+      },
+      "campaigns/csis_terminal_v62_recovery_metadata_20261016.tar.gz": {
+        "commitment": {
+          "bytes": 380397,
+          "sha256": "4b146e74e1d60b9939cffa8d077d384685d3bfa1716db3e2e15ce071f2cd3b99"
+        },
+        "member_content_inspected_or_extracted": false,
+        "member_count": 20,
+        "regular_nontraversing_members_only": true,
+        "uncompressed_member_bytes": 1710929
+      },
+      "campaigns/csis_terminal_v63_lossless_metadata_20261016.tar.gz": {
+        "commitment": {
+          "bytes": 163318,
+          "sha256": "ec9435ce4cfe2bfb67db2f3d2f8ab7e4b9ebdc06feaea3cf8b6daaa436757f23"
+        },
+        "member_content_inspected_or_extracted": false,
+        "member_count": 28,
+        "regular_nontraversing_members_only": true,
+        "uncompressed_member_bytes": 1051247
+      }
+    },
+    "article_or_model_payloads_parsed": false,
+    "captured_at_utc": "2026-10-16T13:37:33.402225+00:00",
+    "derivatives_created": false,
+    "files_extracted": false,
+    "member_content_reviewed": false,
+    "metadata_only_archives_expected": true,
+    "next_action": "Select only claim-required protocol/source/receipt/cost members. Review content and identity mappings before extraction or inclusion. Header suffixes are not proof of content safety or anonymity.",
+    "schema": "submission-archive-member-inventory-v69",
+    "status": "header_inventory_complete_content_allowlist_pending",
+    "total_member_entries": 2269,
+    "total_uncompressed_member_bytes": 33307525
+  },
   "artifact_packaging_preparation": {
     "actual_model_metadata_matches_frozen_weights_config": true,
     "anonymity_verified": false,
@@ -231,11 +344,11 @@
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 247320,
-      "sha256": "75073d8641d0378d6fe5404511cf3a1e7da1a819054e5b4defdd5d24f14b8479"
+      "bytes": 247798,
+      "sha256": "fcd5fa48f701082d5f9b16c121d0b0c1d22c9acdead79dd30dda75e07688bbd4"
     },
-    "captured_at_utc": "2026-10-16T13:10:27.588915+00:00",
-    "copied_files": 262,
+    "captured_at_utc": "2026-10-16T13:27:14.189040+00:00",
+    "copied_files": 266,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -269,7 +382,7 @@
         "total_cpu": "01:22:10"
       },
       "15264": {
-        "elapsed": "00:04:39",
+        "elapsed": "00:21:26",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-compressed-1",
@@ -414,15 +527,15 @@
       },
       "compressed-1": {
         "completion_receipt_present": false,
-        "events": 4,
+        "events": 8,
         "last": {
           "certificate_refusal": null,
-          "code_sha256": "dfe5e2996ee5a4946a9b42994344096d18773574e78222389e1b68a69fe07298",
-          "elapsed_ns": 250308043665,
+          "code_sha256": "c80511ccab0d4b89848c2ecc15f4a70bece26a36f445468f560867141d1cc118",
+          "elapsed_ns": 1084400223197,
           "fallback": false,
           "phase": "stage_certified",
           "route": "streamed",
-          "stage_id": "block.0000.mlp_up"
+          "stage_id": "block.0001.mlp_up"
         }
       },
       "compressed-2": {
@@ -474,7 +587,7 @@
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|RUNNING|4:39|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|RUNNING|21:26|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
@@ -497,6 +610,55 @@
     "submission_ready": false
   },
   "manuscript_native_compile": "success_after_v69_literature_update",
+  "manuscript_numbers_check": {
+    "actual_empirical_jobs_launched": false,
+    "archived_metadata_audits_rerun": false,
+    "captured_at_utc": "2026-10-16T13:31:20.308058+00:00",
+    "check_count": 71,
+    "failed_checks": [],
+    "inputs": {
+      "handoff/program_v58.json": {
+        "bytes": 20214,
+        "sha256": "5885dc1f571d56fe3e728504e8b474f959b4c4f9500a4a603a7fcce3c722f69e"
+      },
+      "handoff/program_v62.json": {
+        "bytes": 10541,
+        "sha256": "e52234de1fbf10f62ce0e16d4880abe1cd2016f533f95c88edfa4b4736daa969"
+      },
+      "validation/v58_terminal_metadata_check.json": {
+        "bytes": 26939,
+        "sha256": "6fb9d5bb224822e21c94a2c4b996caede545317e290edb7f2021fff322eb4415"
+      },
+      "validation/v59_terminal_metadata_check.json": {
+        "bytes": 116365,
+        "sha256": "0843c877c78d47208ba059cae6470c6976adc0d7b61d984a341a04291a9cf3c8"
+      },
+      "validation/v62_recovery_metadata_check.json": {
+        "bytes": 18246,
+        "sha256": "3e4c84b53967a1c3f8aaae45120d0853c704dedbb1e8ed518c6f29204c43aad1"
+      },
+      "validation/v63_terminal_metadata_check.json": {
+        "bytes": 2548,
+        "sha256": "d8a799b33990689b2bc3142f9e64062ded44690a34b2a0986a95f9fc0330faaa"
+      }
+    },
+    "local_inference_calibration_or_binary_audit": false,
+    "manuscript": {
+      "bytes": 46539,
+      "sha256": "7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda"
+    },
+    "schema": "manuscript-number-check-v69",
+    "scope": "Selected empirical table, quality figures, percentages and resource totals against previously verified report bytes; not every number in the manuscript or a new scientific result.",
+    "status": "passed_transcription_and_arithmetic_only",
+    "submission_ready": false,
+    "table_numeric_cells": 24,
+    "table_rows": 8,
+    "tamper_probes_detected": {
+      "alter_one_table_time": true,
+      "reverse_adverse_quality_statement": true,
+      "swap_table_size_columns": true
+    }
+  },
   "model_admission_preparation": {
     "captured_at_utc": "2026-10-16T12:00:36.203713+00:00",
     "constructor_mocked": true,
@@ -734,7 +896,7 @@
     "worker_maximum_rss_kib": 1732228,
     "worker_process_and_waited_descendant_cpu_ns": 6857956044000
   },
-  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_h.tar.gz",
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_i.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,

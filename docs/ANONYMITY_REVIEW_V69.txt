@@ -1,0 +1,41 @@
+Anonymous-package preparation inventory, 16 October 2026
+
+The532 source commitments plus direct evidence-index records form577 unique
+files. Every file's bytes matched its saved commitment. A known-identity scan read
+572 UTF-8 text files; five compressed evidence archives were not extracted.
+It found47 files requiring review:39 contain author/account strings,15 contain
+cluster host/address strings,31 contain local absolute roots,28 contain the project
+checkout name, and two contain identifying GitHub links. Categories overlap.
+validation/v69_anonymity_inventory.json records file names and exact line numbers.
+
+The scan covers selected known strings, not every possible identifier, metadata
+channel, secret or indirect association. It does not establish full anonymity.
+The identifying provenance map and this scan report belong outside the anonymous
+review artifact. No original or derivative execution source was changed.
+
+Work required before packaging
+1. Select the necessary current implementation and supporting history using an
+   explicit file allowlist. A direct evidence pointer is not its dependency closure.
+2. Prepare separately labelled copies of host-specific launch/policy files. Literal
+   path replacement can break source bindings, imports and one-use guards; check
+   the adapted workflow in a new qualification without touching frozen originals.
+3. Prepare reviewed metadata copies with consistent anonymous path/host mappings.
+   Give each derivative its own hash. Keep the original hash and mapping in private
+   provenance; do not claim a redacted receipt is the exact executed receipt.
+4. Replace identifying report/workflow links with internal evidence record IDs.
+   Preserve failed attempts, negative quality, caps, accounting and audit scope.
+5. Inspect members of each of the five archives before selecting any file. Exclude
+   raw corpus/token content, model/state binaries, environments and unreviewed logs.
+   Do not package or extract the entire historical archive by default.
+6. Check the final paper, code, metadata, archive names and clean extraction together.
+   Only then replace the paper's project citations with the accompanying artifact.
+
+The draft15-record evidence index has passed a narrower known-identity scan.
+That result is specific to its text; it does not make these577 original files
+anonymous. Required final evidence and author-controlled release choices remain.
+
+Archive header inventory update: all five committed archives now have bounded
+member inventories (2,269 entries;33,307,525 uncompressed member bytes). Every
+member is a regular file with a relative non-traversing path. No member was
+extracted or its payload inspected; content review, selection and anonymous
+derivatives remain pending. See validation/v69_archive_member_inventory.json.

@@ -88,3 +88,18 @@ The map must not enter an anonymous archive. The known-identity scan covers the
 index only; full anonymity, underlying evidence derivatives/dependency closure
 and clean reproduction remain unverified. No original evidence or manuscript
 citation was changed. See validation/v69_evidence_index.json.
+
+Selected number and identity checks
+The unchanged manuscript passes71 transcription/arithmetic checks, including all24
+numeric cells in its service table and the adverse quality/cost narrative. Three
+in-memory tamper probes were rejected; no inference or binary audit was repeated.
+An identity inventory checks577 source/evidence commitments and scans572 text
+files, finding47 with known identifying strings. Five archives remain uninspected
+internally. Anonymous derivatives and whole-package validation remain required.
+See MANUSCRIPT_NUMBER_AUDIT_V69.txt and ANONYMITY_REVIEW_V69.txt.
+
+Archive header inventory update: all five committed archives now have bounded
+member inventories (2,269 entries;33,307,525 uncompressed member bytes). Every
+member is a regular file with a relative non-traversing path. No member was
+extracted or its payload inspected; content review, selection and anonymous
+derivatives remain pending. See validation/v69_archive_member_inventory.json.

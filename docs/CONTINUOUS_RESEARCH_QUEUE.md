@@ -67,8 +67,8 @@ or parallel execution loop. No subagent delegation is currently authorized.
    IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
-   Preparation15262 and first hybrid comparison15263 completed0:0. At18:40IST
-   compression15264 was RUNNING4m39s; remaining comparisons/oracle/audits15265--15275
+   Preparation15262 and first hybrid comparison15263 completed0:0. At18:57IST
+   compression15264 was RUNNING21m26s with7of24 certified stages; remaining comparisons/oracle/audits15265--15275
    were dependency-pending. Hybrid receipt/debit metadata passed; both binary audits remain.
    Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V69.md`, `docs/ACTIVE_SESSION_V68.md`, `docs/ACTIVE_SESSION_V67.md` and
    `research_v67/PROTOCOL.txt`. Reuse the frozen mathematical target and matched point
@@ -158,6 +158,10 @@ or parallel execution loop. No subagent delegation is currently authorized.
    checked direct files. Its identifying provenance map is excluded from anonymous
    packaging. Underlying derivatives/dependency closure and clean reproduction
    remain; do not replace paper citations with an unavailable anonymous archive.
+   The71 selected manuscript-number checks pass, including all24 service-table
+   numeric cells. An identity scan of577 committed files found47 text files needing
+   review; five archives still require member inspection. Follow
+   docs/MANUSCRIPT_NUMBER_AUDIT_V69.txt and docs/ANONYMITY_REVIEW_V69.txt.
    Deliver a reviewed source and reproducibility bundle; do not submit externally.
 
 ## Current completion boundary
@@ -167,7 +171,7 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate are qualified. At18:40IST preparation15262 and hybrid15263 are COMPLETED0:0. Their worker
+V67's64-test exact-source Linux gate are qualified. At18:57IST preparation15262 and hybrid15263 are COMPLETED0:0. Their worker
 debits are6858 and4922 CPU seconds. Compression15264 is RUNNING;15265--15275
 remain dependency-pending. All24 hybrid stages certified;7 numerical fallback rows
 are preserved separately from its zero stage-level fallback flags. Modern-service timings,
@@ -187,3 +191,9 @@ not send unchanged status on every wake. If no safe authorized task remains, ret
 the queue and wait for changed conditions. Stop the recurring loop when the user
 asks, or once the actual agreed submission bundle and all claim-required evidence
 are complete and verified. Never equate a closed experiment with project completion.
+
+Archive header inventory update: all five committed archives now have bounded
+member inventories (2,269 entries;33,307,525 uncompressed member bytes). Every
+member is a regular file with a relative non-traversing path. No member was
+extracted or its payload inspected; content review, selection and anonymous
+derivatives remain pending. See validation/v69_archive_member_inventory.json.

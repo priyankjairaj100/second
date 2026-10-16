@@ -6,12 +6,12 @@ GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
 ## Actual cluster observation
 
-At13:10:27UTC (18:40:27IST), hybrid-control job15263 was COMPLETED0:0 after
-1h22m46s, ending18:35:47IST. Compression job15264 was RUNNING4m39s on csis.mn1;
+At13:27:14UTC (18:57:14IST), hybrid-control job15263 remained COMPLETED0:0 after
+1h22m46s. Compression15264 was RUNNING21m26s on csis.mn1 with7of24 stages certified;
 15265--15275 remained dependency-pending. Both terminal audits remain absent.
-The262-file snapshot campaigns/csis_v67_progress_metadata_20261016_h.tar.gz is247320
-bytes, SHA25675073d8641d0378d6fe5404511cf3a1e7da1a819054e5b4defdd5d24f14b8479.
-validation/v67_progress_metadata_check_h.json verifies metadata/source bindings.
+The266-file snapshot campaigns/csis_v67_progress_metadata_20261016_i.tar.gz is247798
+bytes, SHA256fcd5fa48f701082d5f9b16c121d0b0c1d22c9acdead79dd30dda75e07688bbd4.
+validation/v67_progress_metadata_check_i.json verifies metadata/source bindings.
 All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
 No new job was submitted. The numerical checkout remains
 f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull reporting changes there.
@@ -109,6 +109,20 @@ derivatives, dependency closure and clean reproduction remain; paper citations
 are unchanged until their accompanying artifact is actually ready. See
 validation/v69_evidence_index.json.
 
+## Manuscript and anonymous-package checks
+
+All71 selected number checks passed, including all24 numeric cells in the eight
+service-table rows. Derived ratios, quality directions and separate support costs
+agree with preserved reporting records. Three in-memory tamper probes were
+rejected. No paper correction, inference or binary audit was performed; unchanged
+source retains its native compile. Read docs/MANUSCRIPT_NUMBER_AUDIT_V69.txt.
+
+The532-source inventory and direct evidence references cover577 unique files.
+All commitments matched;572 text files were scanned, while five archives remain
+uninspected internally. Known author/account/host/path strings occur in47 files.
+Read docs/ANONYMITY_REVIEW_V69.txt for derivative-copy and archive-member work.
+This is a review list, not anonymity clearance. Frozen originals remain unchanged.
+
 ## Concrete next work
 
 1. Prepare the remaining bounded registration/saved-receipt workflow without
@@ -138,3 +152,9 @@ were visually rechecked. Live retrieval limitations are preserved. No external
 implementation was reproduced. Official page count/anonymity remain unverified.
 The same15-minute continuation remains active. No new monitor, subagent, paid
 compute or third-party message is authorized.
+
+Archive header inventory update: all five committed archives now have bounded
+member inventories (2,269 entries;33,307,525 uncompressed member bytes). Every
+member is a regular file with a relative non-traversing path. No member was
+extracted or its payload inspected; content review, selection and anonymous
+derivatives remain pending. See validation/v69_archive_member_inventory.json.
