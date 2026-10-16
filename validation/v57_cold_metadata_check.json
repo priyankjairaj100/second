@@ -1,0 +1,49 @@
+{
+  "schema": "copied-cold-receipt-check-v1",
+  "status": "verified_copied_metadata_only",
+  "checked_at_utc": "2026-10-11T16:12:22.239022+00:00",
+  "program_sha256": "03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b",
+  "collection_manifest_sha256": "cf3bc0d490b50e03098a6220122140a3d606e665dd2d46a4735222448b521b43",
+  "copied_files_rehashed": 136,
+  "source_files_rehashed": 386,
+  "sealed_worker_receipt_verified": true,
+  "declared_command_and_limits_verified": true,
+  "selected_cpu_debit_verified": true,
+  "request_and_applied_limits_link_verified": true,
+  "phase_binding_and_reservation_link_verified": true,
+  "debit": {
+    "charged_cpu_seconds": 6898,
+    "observed_cpu_ns": 6897916279000,
+    "phase": "feasibility",
+    "reserved_cpu_seconds": 12602,
+    "state": "settled"
+  },
+  "reported_worker_seconds": 6930.550522433,
+  "reported_transaction_seconds": 6932.782457835,
+  "steps": [
+    {
+      "step": 1,
+      "retained_tokens": 1536,
+      "reported_request_seconds": 5355.650652324,
+      "reported_stages": 24,
+      "reported_neural_stage_record_pairs": 288,
+      "reported_model_sha256": "e106bd066f54b5a465e51cb37cd9f98730e14ae3490b863f04bbeeffa34fa277"
+    },
+    {
+      "step": 2,
+      "retained_tokens": 768,
+      "reported_request_seconds": 1547.69713942,
+      "reported_stages": 24,
+      "reported_neural_stage_record_pairs": 144,
+      "reported_model_sha256": "3fa620349c5d94e839d5a15b6dd13898960a748678d15f9cdcab65c5775085ba"
+    }
+  ],
+  "all_campaign_reservations_settled": false,
+  "actual_output_binaries_rehashed": false,
+  "actual_model_state_parsed": false,
+  "oracle_comparison_performed": false,
+  "scope": "Copied terminal metadata, sealed controller logs and selected settled CPU debit only. Both final V54 audits remain required; this check does not establish numerical correctness, actual model/state agreement, speedup or quality.",
+  "archive": "campaigns/csis_cold_v54_metadata_20261011.tar.gz",
+  "archive_sha256": "a62863548c6007c8b2be99788bdf1bb05d95f1d60ecb6281300467cde5710c8d",
+  "archive_content": "136 metadata files plus a collection manifest; no model, state or checkpoint binaries"
+}

@@ -1,0 +1,45 @@
+Selected historical receipt companion, 16 October 2026
+
+reports/development-audit-receipts-v69.zip contains nine labelled JSON derivatives,
+a scope README and a manifest. The341604-byte ZIP has SHA256
+ a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1.
+Readable files are in reports/review-audit-receipts-v69/. This is a component for
+review, not a final anonymous or complete reproduction bundle.
+
+The generator separately binds every selected original member and archive against
+the committed selection and manifest. It changes only string values or object keys:
+885 identifying absolute paths receive stable REVIEW_PATH labels; the same eight
+exposed articles use the existing Q01--Q08 labels; thirteen other historical article
+identifiers receive distinct REVIEW_ARTICLE labels. No identifying inline prose was
+found among selected strings; unknown categories stop preparation before writing.
+
+Each derivative reverses to the exact original typed JSON object using the private
+map. All23872 numbers,1884 Booleans,64 nulls,1049 arrays,7539 objects and38066 keys
+are preserved; only selected strings/keys are mapped. Negative quality guards,
+failed costs, caps, audit scope and adaptive exposure remain. Changing an adverse
+guard, changing failed cost, dropping a budget or colliding mapped keys was rejected.
+
+Clean filesystem extraction verifies all eleven files and manifest hashes, then
+repeats the nine typed-object checks on extracted bytes. The known-identity scan
+passes for these files. Raw-token members and the five original archives remain
+excluded. This is not a complete/manual anonymity audit: retained original artifact
+hashes still bind original objects, not redacted paths. Do not run derivatives as
+registrations or present them as exact execution receipts.
+
+The selected receipts cover V54 primary/additive service audits, V55 adverse quality,
+V56 CPU/CUDA parity, V59 adaptive quality, V62 primary/additive audit recovery and
+V63 artifact-only measure/audit. Recovery does not erase the original timeout and
+cancellation. The15-record summary companion retains all broader failure history.
+Neither component reruns inference, numerical audits or the new V67 experiment.
+
+Private docs/REVIEW_RECEIPT_DERIVATION_V69.json records all original/derivative
+commitments and the reversible mapping. It must stay outside review archives.
+The earlier candidate-selection map is preserved as a historical planning record;
+its derivative_created:false fields describe that earlier checkpoint. Current
+creation/extraction status is validation/v69_review_receipts.json. The generator
+is validation/build_review_receipts_v69.py and uses exclusive output paths.
+
+Next finish necessary source/protocol files, a separately qualified portable
+workflow, runtime/license notices and whole-package review. Claim-required V67
+terminal evidence, untouched quality and timing decisions remain open. The existing
+manuscript and prior summary ZIP are unchanged. No submission was made.

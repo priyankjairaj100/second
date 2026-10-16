@@ -1,0 +1,38 @@
+First V67 cold comparison receipt,16 October2026
+
+Job15265 completed0:0 at21:43:44IST after1h40m20s. The21:44:26IST saved snapshot
+checks all24 stage certificates, worker/result/attempt seals, controller/Slurm
+and program identities, declared artifact commitments and settled budget debit.
+Worker process plus waited-descendant CPU is5973.067109 seconds, charged5974.
+Controller own CPU is9.228352506 seconds and all waited children use5973.069962.
+Transaction wall time is6016.783538496 seconds; maximum worker RSS is1968144KiB.
+Slurm total CPU is1h39m43s, kept separate from the nested process clocks.
+No reservation overrun was recorded.
+
+All24 stages have no stage-level replay fallback or certificate refusal. The
+bounded numerical solver separately falls back on7 rows and certifies all21504
+attempted decisions. These are different fallback scopes; retain both counts.
+Do not infer model/state equality or comparative scientific performance from the
+completed worker's metadata alone.
+
+The existing afterok chain started cached15266 at21:43:44IST. It was RUNNING42s
+with zero stage certificates at collection. Its9002-second reservation is live,
+not actual terminal usage.15267--15275 remain dependency-pending and both actual
+terminal audits are absent. No job was submitted, retried, released or cancelled.
+All469 frozen sources, eleven codec files and102 historical ledgers still match.
+
+The379-file archive is341558 bytes, SHA256
+e95c6117fb2ffad9f94967ddee988e247b13e495275b8459dcead281014323b7.
+Earlier snapshots and their pending status are preserved. The terminal checker
+still returns pending_terminal and produces no full comparison table.
+
+No model/state binary was retrieved, retained membership was not independently
+rebuilt, and fresh-oracle equality/complete campaign costs are not yet verified.
+Both final audits and the scientific decision remain mandatory before promoting
+claims or registering V68. Keep the original numerical checkout unchanged.
+
+Artifacts
+campaigns/csis_v67_progress_metadata_20261016_r.tar.gz
+validation/v67_progress_metadata_check_r.json
+validation/v67_cold1_metadata.json
+validation/v67_terminal_pending_check_r.json

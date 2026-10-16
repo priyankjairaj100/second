@@ -1,0 +1,9 @@
+test_missing_containment_rejected_even_with_matching_source_hash (research_v52.test_precision.PrecisionTests.test_missing_containment_rejected_even_with_matching_source_hash) ... ok
+test_next_precision_preserves_source_commitment_and_encloses_every_value (research_v52.test_precision.PrecisionTests.test_next_precision_preserves_source_commitment_and_encloses_every_value) ... ok
+test_partial_or_different_output_never_counts_as_exact_match (research_v52.test_precision.PrecisionTests.test_partial_or_different_output_never_counts_as_exact_match) ... ok
+test_wrong_source_binding_rejected_before_encoding (research_v52.test_precision.PrecisionTests.test_wrong_source_binding_rejected_before_encoding) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.007s
+
+OK

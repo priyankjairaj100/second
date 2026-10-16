@@ -1,0 +1,44 @@
+V50 normal-neighbor optimization: software equivalence and fixed synthetic profile.
+Freeze before registration. This does not retry or admit a full-model experiment.
+
+V45 remains a terminal preparation failure with4801 charged CPU seconds and no
+complete model. V49 synthetic profiling completed with124 charged CPU seconds;
+at width1536 coefficient certification used98.845 of106.613 elapsed seconds.
+That software observation is not a measured component split for V45.
+
+Only the two scalar up/down helpers in a separately compiled copy of the V30
+primal C source change. For a binary64 word whose absolute encoding lies strictly
+between minimum-normal and maximum-finite, both adjacent values are normal.
+Within each sign half, magnitude encodings are monotonically ordered. The
+successor/predecessor is one integer step, with direction reversed for negatives.
+This gives exactly nextafter(x,+/-infinity); normal-to-normal movement raises no
+underflow/overflow exception. All zeros, subnormals, boundary normals, infinities
+and NaNs call the original nextafter, preserving its boundary exception behavior.
+memcpy avoids type-aliasing violations. Runtime checks require IEEE binary64 word
+layout, nearest rounding, gradual underflow and the original numerical guards.
+No arithmetic operation order, product, sum, grid, ridge, target or interval width
+is changed. Strict compiler flags are inherited unchanged. Reference sources are
+not edited. A dedicated single-thread context temporarily selects the new library
+and restores the original pointers even on exceptions; nesting is refused.
+
+Software gates: compare both neighbor directions and floating exception flags
+against the actual reference libm for a fixed million raw words and boundary
+words around all exponent transitions of both signs; compare raw Gram endpoints
+and coefficient centers/radii for fixed point/box fixtures; check complete tiny
+codes against a rational oracle; test restoration and nested-use refusal.
+These finite tests support the explicit representation argument, not exhaustive
+testing of all2^64 words. Compiler and supported-runtime assumptions remain.
+
+After the gates pass, repeat exactly the three V49 synthetic cases, seeds, rows,
+tokens, normalization, ridge and order. Require identical fixture and final code
+hashes for every case before returning success. Record all component times and
+new C/source/binary identities. The native row-ball kernel is unchanged.
+One worker600CPU/900wall seconds,16GiB address space,1GiB file,one CPU/thread.
+Fresh software_profile phase602 CPU seconds; no retries or cap increases.
+Setup, registration and software checks are outside the limited-worker charge.
+
+The baseline runs earlier, with uncontrolled cache/time effects; this is engineering
+profiling, not a randomized speed comparison or statistical claim. No model,
+quality data, calibration-root selection or deletion request is evaluated. A
+later full-model experiment needs its own source/runtime registration, controls,
+exact-code/state checks, CPU/memory plan and all prior failures retained.

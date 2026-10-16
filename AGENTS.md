@@ -1,3 +1,63 @@
+Current work (16 October 2026): **V67 hybrid15263, compression15264 and cold15265 completed0:0; cached15266 is running. V69 held-job controls pass92 local tests.** At21:44IST cached was active42s with no stage certificate yet;15267--15275 were dependency-pending. All three completed comparison receipt/debit checks passed; fresh-oracle model/state audits remain pending. Read [latest handoff](docs/ACTIVE_SESSION_V69.md), [cold receipt scope](docs/V67_COLD1_RECEIPT_V69.txt), and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). All469 frozen V67 and14 historical GPU/export sources remain unchanged. V68/V69 remain unregistered. The4943-token manuscript now explains the existing codec and row scales, compiles and passes71 selected number checks; proofs, math, abstract and empirical sections remain unchanged. See validation/v69_manuscript_codec_clarification.json and docs/MANUSCRIPT_PLANNING_TRIM_V69.txt. The534-file adapted source component passes114 local fixtures from clean extraction, and nine typed-preserving historical receipt derivatives are prepared. A six-file external-input guide, five-notice companion and569-file component review now pass; explicit receipt filename cross-references resolve canonical evidence IDs. Actual Linux/CUDA/input reproduction, transitive notices and full anonymity remain. Read [receipt companion](docs/REVIEW_RECEIPT_COMPANION_V69.txt) and [source component](docs/REVIEW_SOURCE_COMPONENT_V69.txt). A reporting-only terminal checker now passes25 generated tests; real snapshots remain pending. Read [terminal reporting preparation](docs/TERMINAL_REPORTING_PREPARATION_V69.txt). Historical checkpoints follow.
+
+---
+
+Current work (16 October 2026): **V67 disjoint-root complete service is running.** All64 Linux gate tests passed; preparation15262 is active, with thirteen comparisons/oracle/audit dependents15263--15275 queued. Read [latest handoff](docs/ACTIVE_SESSION_V67.md), [frozen protocol](research_v67/PROTOCOL.txt) and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). All469 executed sources are frozen. No new numerical result is verified. The manuscript is25% shorter and compiles; untouched-quality design is prepared. Historical checkpoints follow.
+
+---
+
+Current work (16 October 2026): **V66 complete-service operations passed all 44 Linux tests, including five-arm tiny numerical equality.** V63 artifact evidence and V65 disjoint-root data admission are verified. No Second job is active. Read [latest handoff](docs/ACTIVE_SESSION_V66.md), [V67 execution plan](docs/COMPLETE_SERVICE_PLAN_V67.txt) and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). Full-model V67 controller/workers, resource admission and audits remain unimplemented/unregistered. All 456 executed source files are frozen. Historical checkpoints follow.
+
+---
+
+Current work (16 October 2026): **V63 artifact evidence, V64 software qualification and V65 disjoint-root data admission are verified.** No Second job is active. Prepare the complete modern-lossless service comparison on the fixed V65 root under a new V66 registration. Read [latest handoff](docs/ACTIVE_SESSION_V65.md) and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). No new numerical result or quality claim is established. Preserve all frozen sources and one-use attempts. Historical checkpoints follow.
+
+---
+
+Continuous work (16 October 2026): measurement 15245 completed; actual archive audit 15246 is running. Follow [the ordered queue](docs/CONTINUOUS_RESEARCH_QUEUE.md) and [current handoff](docs/ACTIVE_SESSION_V63.md). Recurring same-chat continuation is active every 15 minutes. No V63 result is verified yet. Historical checkpoints follow.
+
+---
+
+Current checkpoint (16 October 2026, 13:31 IST): **V63 Linux checks passed; the modern lossless artifact measurement is running.** Jobs 15244/15245/15246 are checks/measurement/audit. Read [current handoff](docs/ACTIVE_SESSION_V63.md), [status](handoff/program_v63.json), and [frozen protocol](research_v63/PROTOCOL.txt). No new size or speed result is verified yet. The phase reuses audited artifacts, copies existing model codes and performs no neural/calibration/quality execution. Preserve all frozen sources and original failures; never repeat the launcher or change caps. V62 remains the latest completed scientific checkpoint. Historical checkpoints follow.
+
+---
+
+Current checkpoint (16 October 2026): **V61 numerical work is complete; separate V62 recovery audits passed.** All eight complete model/state comparisons match fresh reconstruction; final-six models equal the V59 candidate. Original audit timeout/cancellation remain preserved. Compression saves about 9% live state but is 39–42% slower than cached lossless. No chain job remains active. Read [current handoff](docs/ACTIVE_SESSION_V62.md), [costs/status](handoff/program_v62.json), and [evidence guide](docs/TERMINAL_EVIDENCE_V62.txt). Next is a newly registered modern lossless-control comparison, then fresh-root/untouched-quality/timing work if useful. No new phase is launched. Preserve all frozen sources, failures and exclusions; never repeat old launchers. The manuscript compiles but is not submission-ready. Historical checkpoints follow.
+
+---
+
+Current checkpoint (14 October 2026, 06:47:58 UTC): **V61 preparation has recorded all 24 stage certificates and is packaging state.** All 13 sources were traversed; no stage refusal or fallback is recorded. Preparation remains RUNNING, with seven controls/oracle/audit jobs dependency-pending. Read [the current handoff](docs/ACTIVE_SESSION_V61.md), [status](handoff/program_v61.json), and [conditional lossless-control design](docs/LOSSLESS_CONTROL_PREPARATION_V61.txt). The existing lossless cache already uses zlib; the proposed Zstandard comparison is not implemented, registered or measured. Keep the cluster at numerical commit `f900999` and never relaunch or modify registered sources. Complete-service correctness, performance and ACL readiness remain unverified. Historical checkpoints follow.
+
+---
+
+Current checkpoint (14 October 2026): **V59 completed and audited; the fixed full-precision teacher passes both unchanged exposed quality guards (pooled ratio 0.995902; maximum article ratio 1.065598).** Read `docs/ACTIVE_SESSION_V60.md` and `handoff/program_v60.json`. All four jobs13548–13551 completed; no V59 work remains pending. This distinct target has no repair-state service yet. Preserve the historical nearest-anchor quality failure, all frozen sources/receipts and sixty exclusions. Do not rerun V59 or transfer old service costs to the new target. V60 is an evidence/reporting checkpoint, not a new experiment or ACL-readiness claim. Historical checkpoints follow.
+
+---
+
+Current checkpoint (14 October 2026): **V59 fixed-full-precision-anchor quality screen is prepared; Linux checks, registration and execution are pending after SSH refusal.** Read `docs/ACTIVE_SESSION_V59.md`, `research_v59/PROTOCOL.txt`, and `handoff/program_v59.json`. The completed V54/V55/V56 results remain frozen, including the failed quality guard. Do not resubmit old work or treat prepared source as numerical evidence. Preserve all exclusions and strong controls. Historical checkpoints follow.
+
+---
+
+Current checkpoint (13 October 2026): **the V54/V55/V56 chain is complete. Complete-model/state audits and GPU likelihood parity pass; the frozen pooled CPU quality guard FAILS (1.059221 > 1.05).** Read `docs/ACTIVE_SESSION_V58.md`, `docs/RESEARCH_DECISION_V58.md`, and `handoff/program_v58.json`. No jobs in this chain remain pending. Do not resubmit, relax thresholds, or expand to another checkpoint automatically. Preserve all frozen sources, ledgers, exclusions and adverse findings. Historical checkpoints follow.
+
+---
+
+Current checkpoint (11 October 2026): **cold reconstruction 13312 completed; hybrid 13313 is running.** Read `docs/ACTIVE_SESSION_V57.md` and `handoff/program_v57.json`. The cold receipt check verifies metadata and CPU accounting only; both final model/state audits remain pending. Never resubmit or alter frozen sources/ledgers. Earlier cutoffs follow.
+
+---
+
+Current continuation (11 October 2026): **V54 preparation 13310 and cached repair 13311 completed and passed a read-only partial artifact/debit audit. Cold reconstruction 13312 is running; remaining arms, oracle, final audits, quality and GPU checks remain queued.** Read [the current handoff](docs/ACTIVE_SESSION_V57.md) and [status](handoff/program_v57.json). Partial verification does not establish fresh-oracle equality, speedup, quality or final campaign success. Never rerun one-use launchers or alter frozen sources/ledgers. Historical cutoffs follow.
+
+---
+
+Current continuation (11 October 2026): **V54 full-model preparation13310 is running; CPU quality13325--13327 and GPU parity13329 are conditionally queued after the full-model audits.** All18 new CPU checks and12 CUDA checks passed with zero skips. Read [the current handoff](docs/ACTIVE_SESSION_V56.md) and [machine-readable status](handoff/program_v56.json). No larger-model quality/GPU result is verified yet. Never rerun one-use launchers or change frozen sources/ledgers. Historical checkpoints below retain their cutoffs.
+
+---
+
+Current continuation (11 October 2026): **V54 full-model preparation is running as Slurm 13310; controls, fresh oracle and both audits are queued through 13317.** All 76 Linux checks and data-archive admission passed. Read [the current handoff](docs/ACTIVE_SESSION_V54.md) and [machine-readable status](handoff/program_v54.json). Never rerun the one-use launchers. V53's pre-numerical registration failure and all earlier negative results are preserved. Numerical completion, actual-model quality and ACL readiness remain unverified. Statements below retain their historical cutoffs.
+
+---
+
 Current checkpoint: read `docs/ACTIVE_SESSION_V41.md` and `handoff/program_v41.json` first.
 V39 and V40 are complete: all seventeen and twelve stage outputs match, respectively.
 Read `docs/NATIVE_SCALE_RESULTS_V40.md` and `docs/RESEARCH_DECISION_V41.md` for all results and limits.

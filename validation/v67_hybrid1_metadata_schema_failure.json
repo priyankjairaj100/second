@@ -1,0 +1,7 @@
+{
+  "cluster_mutation": false,
+  "error": "KeyError: service_target",
+  "resolution": "Read the literal service target from hash-verified frozen research_v67/config.py; V67 registration has only base/calibration target input leaves",
+  "scientific_execution": false,
+  "status": "failed_local_reporting_schema_assumption"
+}

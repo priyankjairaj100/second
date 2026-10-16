@@ -1,0 +1,136 @@
+{
+  "components": {
+    "development-audit-receipts-v69.zip": {
+      "bytes": 341604,
+      "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+    },
+    "development-evidence-v69b.zip": {
+      "bytes": 87257,
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "development-source-review-v69c.zip": {
+      "bytes": 1814288,
+      "sha256": "ceea2e249896e7bddf151d9956683c9b7b7cee988df25f092fb7f02440b35037"
+    }
+  },
+  "data_policy": {
+    "bos_eos": false,
+    "confirmation": false,
+    "dataset": "allenai/c4",
+    "deduplication": "exact IDs, full/normalized text and URL hashes, exact token prefixes of lengths16/32/64/128; not semantic deduplication",
+    "max_decompressed_bytes": 67108864,
+    "max_records": 20000,
+    "max_text_characters": 4194304,
+    "model_inference": false,
+    "offset": 0,
+    "order_key": "second-v65-disjoint-c4-root:",
+    "prefix_bytes": 2097152,
+    "revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+    "schema": "disjoint-c4-development-root-v65",
+    "scope": "fixed bounded shard-two prefix, not corpus-uniform",
+    "shard": 2,
+    "sources": 13,
+    "tokens": 128
+  },
+  "data_prefix_commitment": {
+    "bytes": 2097152,
+    "sha256": "2dd5205d5d2819eedbcedab9beddcefdd3be6735c0bf5c7c63b4a56b07986bfa"
+  },
+  "data_url": "https://huggingface.co/datasets/allenai/c4/resolve/1588ec454efa1a09f29cd18ddd04fe05fc8653a2/en/c4-train.00002-of-01024.json.gz",
+  "decoded_frame_complete_records": 2349,
+  "full_reproduction_verified": false,
+  "historical_quality_exclusions": 60,
+  "model_config_publisher_bytes_verified": true,
+  "model_files": {
+    "config.json": {
+      "binding_scope": "Frozen installed experiment input; retrieved bytes must match before use",
+      "bytes": 762,
+      "downloaded_for_this_guide": false,
+      "retrieval_url": "https://huggingface.co/distilbert/distilgpt2/resolve/2290a62682d06624634c1f46a6ad5be0f47f38aa/config.json",
+      "sha256": "4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a"
+    },
+    "model.safetensors": {
+      "binding_scope": "Frozen installed experiment input; retrieved bytes must match before use",
+      "bytes": 352824413,
+      "downloaded_for_this_guide": false,
+      "retrieval_url": "https://huggingface.co/distilbert/distilgpt2/resolve/2290a62682d06624634c1f46a6ad5be0f47f38aa/model.safetensors",
+      "sha256": "e1ff18884359fe8beb795a5f414feb85a6ce3d929ad019c0d958c039d2b94a1b"
+    },
+    "tokenizer.json": {
+      "binding_scope": "Frozen installed experiment input; retrieved bytes must match before use",
+      "bytes": 1355256,
+      "downloaded_for_this_guide": false,
+      "retrieval_url": "https://huggingface.co/distilbert/distilgpt2/resolve/2290a62682d06624634c1f46a6ad5be0f47f38aa/tokenizer.json",
+      "sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6"
+    }
+  },
+  "model_repository": "distilbert/distilgpt2",
+  "model_revision": "2290a62682d06624634c1f46a6ad5be0f47f38aa",
+  "new_acquisition_or_launch_authorized": false,
+  "schema": "review-external-input-commitments-v69",
+  "service_input_bodies_included": false,
+  "service_input_count": 15,
+  "service_inputs": {
+    "base_target": {
+      "bytes": 968745,
+      "sha256": "ddcc41a5420a63c60f64372af1fb5e077efc9266ad12feafe6ed04be5d6248b8"
+    },
+    "calibration_target": {
+      "bytes": 4565,
+      "sha256": "3853008973e0a89db5c80d73d30cb4304bc5d9c89fafa80e6f7f15de232a1245"
+    },
+    "checkpoint_config": {
+      "bytes": 762,
+      "sha256": "4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a"
+    },
+    "checkpoint_weights": {
+      "bytes": 352824413,
+      "sha256": "e1ff18884359fe8beb795a5f414feb85a6ce3d929ad019c0d958c039d2b94a1b"
+    },
+    "data_audit": {
+      "bytes": 879,
+      "sha256": "8e7ca638f9f14aa15029d2255e8a91f84cb27593bc8a78b5bb2923ceed4f5a3d"
+    },
+    "data_receipt": {
+      "bytes": 1022,
+      "sha256": "c1a165345bd980c7f6a399ddd10a1271db9c19114b4027659d73279924042052"
+    },
+    "data_records": {
+      "bytes": 8042,
+      "sha256": "3bbdefd1e2836d6797723f8426d9ad359d36da2b2e13b35df4661002a8db89b9"
+    },
+    "data_registration": {
+      "bytes": 115729,
+      "sha256": "13d9ecb7ddb9ee37ba05498387af490a5e6f16879340c4ec301bbe2aaf5f08d2"
+    },
+    "data_selection": {
+      "bytes": 6062,
+      "sha256": "15936823286a872fd4f3996446eea5fce9a717eafad8a50d0cb918e9b40cd85b"
+    },
+    "exclusions_after": {
+      "bytes": 2499552,
+      "sha256": "3df013adfa9647b0fb5e61feb86b013fdc396689d8460082d5f78f7663de9fa2"
+    },
+    "exclusions_before": {
+      "bytes": 2493149,
+      "sha256": "8a70808d85caab403f86b460480531d98980af818fd85f342a9db7af656e57e0"
+    },
+    "quality_exclusions": {
+      "bytes": 5224,
+      "sha256": "3a620e938c40d35daed69674f703bcb16840178cc7d9527427650a6e0de28876"
+    },
+    "source_prefix": {
+      "bytes": 2097152,
+      "sha256": "2dd5205d5d2819eedbcedab9beddcefdd3be6735c0bf5c7c63b4a56b07986bfa"
+    },
+    "v66_completion": {
+      "bytes": 598,
+      "sha256": "883f2a890d3a8393dd281981c9cdcceba059631045fd46917112b1b88ce0481c"
+    },
+    "v66_registration": {
+      "bytes": 59681,
+      "sha256": "5727138fa7739700e5d14b10a015e33b42765da19dad80b6723a3bdf29e5ada3"
+    }
+  },
+  "tokenizer_publisher_bytes_verified": false
+}

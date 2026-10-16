@@ -1,0 +1,13 @@
+{
+  "url": "https://huggingface.co/datasets/allenai/c4/resolve/1588ec454efa1a09f29cd18ddd04fe05fc8653a2/en/c4-validation.00001-of-00008.json.gz",
+  "method": "HEAD",
+  "status": 302,
+  "body_bytes_read": 0,
+  "headers": {
+    "x-repo-commit": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+    "x-linked-etag": "\"db4c23d7a336032de37dfe2f3ed39653c8afd94004d4e8d9c73c03222299292c\"",
+    "x-linked-size": "40675053",
+    "content-type": "text/plain; charset=utf-8"
+  },
+  "captured_at_utc": "2026-10-16T10:10:42.897429+00:00"
+}

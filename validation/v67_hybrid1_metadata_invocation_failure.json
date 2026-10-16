@@ -1,0 +1,9 @@
+{
+  "cluster_mutation": false,
+  "command": ".venv/bin/python -B validation/check_v67_trial_metadata.py <snapshot> hybrid-1",
+  "downstream_error": "JSONDecodeError when reading the empty stdout file",
+  "error": "ModuleNotFoundError: No module named validation",
+  "resolution": "Use Python module invocation from repository root; validator logic unchanged",
+  "scientific_execution": false,
+  "status": "failed_local_reporting_invocation"
+}

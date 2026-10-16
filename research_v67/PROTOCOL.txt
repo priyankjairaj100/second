@@ -1,0 +1,109 @@
+Second V67: disjoint-root complete service development screen
+16 October 2026. One-use source-bound registration; no automatic retries.
+
+Purpose and fixed scientific scope
+Run the missing modern lossless service control and the new V65 root together.
+This is development falsification on one root with one observation per endpoint.
+It establishes neither population quality nor reliable speed. No likelihood,
+quality-article acquisition, target tuning, GPU use or larger model is permitted.
+The fixed teacher is the original DistilGPT2 checkpoint. Keep normalization1664,
+ridge1/100,4bit dyadic grids,24stages,42,467,328codes,compressed48/block256,
+normal-neighbor primal kernel and complete point fallback. Hybrid keeps exact
+Grams at width768 and lossless descriptors at width3072. Modern uses the frozen
+V63 deterministic codec rule and unchanged V64/V66 numerical operations.
+
+Immutable inputs and source gate
+Use only V65's thirteen sorted128-token records, records SHA256
+3bbdefd1e2836d6797723f8426d9ad359d36da2b2e13b35df4661002a8db89b9.
+Delete the first record, then the next six:13 ->12 ->6. Never replace the root.
+Bind actual record/selection/prefix/exclusion bytes, data and audit receipts,
+checkpoint files, base/calibration targets, V66 qualification, all456 earlier
+source files, all11 isolated dependency files, the102 prior ledger files and
+runtime identity. New source count is13, including this protocol. Actual source,
+input and runtime checks run before dispatch and again inside every worker.
+Historical ledgers stay unchanged and separate. Old V59 model bytes are not the
+expected answer for this new root. Token contents are not published in metadata.
+
+Admission first uses one CPU Slurm software job on csis.mn1. Its64 tests include
+all44 frozen V63/V64/V66 checks,18 new local protocol/disk-worker checks and two
+Linux real sealed-child receipt fixtures. Exact count, zero failures/errors/skips
+and unchanged source hashes are required. These are generated fixtures and file
+binding checks, not empirical model results. Root review is not independent review.
+
+Execution and one-use order
+Fresh preparation, ten one-request workers and a final fresh oracle use separate
+processes. Order is prepare,hybrid-1,compressed-1,cold-1,cached-1,modern-1,
+modern-2,cached-2,cold-2,compressed-2,hybrid-2,oracle. Endpoint1 order is the SHA256
+ordering of second-v67-prospective-arm-order: plus arm name; endpoint2 reverses
+it. Complementary positions across unequal workloads are not timing replication.
+Each second request reads its own arm's first actual successor. Cold reads no
+predecessor numerical state. Oracle separately traverses retained tokens at both
+endpoints and never reads preparation/request numerical output. One exclusive
+entry intent and one exclusive attempt directory prevent retries. Dependencies
+are sequential afterok, no requeue, kill-on-invalid-dependency. A failed gate
+stops dependent work; leave all partial output, exclusions and charges intact.
+
+Resource limits
+One CPU/thread, csis.mn1,16GiB address space and scheduler memory,2GiB perfile OS
+limit,1GiB actual artifact limit. No cache flush, no exclusive-node claim.
+Structural review admits all three token counts and four representations with
+8GiB resident reservation plus unchanged stage solver arrays/work, including
+full point fallback after box failure. Maximum selected solver arrays are
+4,519,108,608bytes. Reserve2GiB checkpoint/teacher and4GiB incoming/outgoing/parsed
+states. Remaining2GiB covers429,391,872B original features, model buffers, codec
+candidates, Gram temporaries and interpreter/metadata. This is conservative
+engineering admission, not a formal Python heap bound or measured-fit result.
+The OS cap and1GiB archive guards remain authoritative refusal boundaries.
+
+Worker soft CPU seconds / wall seconds, in job order:
+prepare12600/16200; hybrid-1 10800/14400; compressed-1 12600/16200;
+cold-1 10800/14400; cached-1 9000/12600; modern-1 10800/14400;
+modern-2 7200/10800; cached-2 5400/7200; cold-2 7200/10800;
+compressed-2 9000/12600; hybrid-2 9000/12600; oracle16200/21600.
+Every worker has hard CPU soft+1 and a soft+2 reservation. New numerical phase
+ceiling120624CPU seconds includes all twelve reservations. Historical budgets
+are neither pooled nor reset. These ceilings cover additional modern codec work
+and changed value-dependent certificates; they are not duration forecasts.
+
+Each controller has600soft CPU seconds,16802hard CPU seconds to allow its child
+to install the registered worker limit, and a SIGXCPU handler which stops/seals
+failure. Its observed CPU may not exceed601seconds. Separate total controller
+allowance7224seconds; waited child CPU is already in numerical ledger debits and
+must not be added again. Scheduler wall is each worker wall+600seconds, rounded
+up to whole minutes. No hidden cap increase or retry on timeout.
+Software soft/hard300/301CPU,602aggregate process+child allowance,600wallseconds.
+Primary audit7200/7201CPU,9000wall; supplemental3600/3601CPU,5400wall. These audit
+allowances are separate from numerical/controller/qualification allowances.
+Retain outer scheduler allocation accounting without summing its nested batch row.
+
+Clocks and complete storage
+Request clocks include actual predecessor load/validation, repair/cold replay,
+serialization, canonical validation, fsync writes and disposal. Outer worker and
+controller clocks retain context, admission, native compilation, input/source
+verification and sealing. Entry/scheduler clocks additionally expose shutdown,
+container start and final receipt writes. Do not add nested clocks. Preparation
+shares one extraction/model solve across representations; record each encoding,
+validation/write/disposal and unallocated common overhead. Attributed preparation
+plus two request transactions is not an independently measured lifecycle.
+Report logical state+trust, shared checkpoint and full installed codec dependency
+footprint. History remains physically retained for audit; no erasure claim.
+
+Terminal evidence gates
+Primary audit parses actual complete states at all ten successors and compares
+actual candidate/fresh model bytes, canonical state/trust bytes, ordered retained
+membership/provenance, unchanged descriptor bytes and exact Gram contribution
+lineage. Modern restoration must equal the actual fresh legacy state. Preparation
+and both fresh oracle endpoints include complete model/stage extent checks.
+Fresh oracle and candidates share numerical implementations; this is not an
+independent solver proof. Supplemental audit re-reads actual ten model pairs,
+all artifacts/inputs and sealed receipt/limit/CPU debits, rechecks controller
+accounting and costs, and binds the passing primary. It does not repeat full
+state semantic parsing. Both terminal receipts and terminal Slurm success are
+required before promotion. Tests, partial progress and hashes alone are not results.
+
+Interpretation and later work
+Retain all adverse comparisons, refusals and fallbacks. No strict superiority
+claim follows from one run. If cached/modern/hybrid dominates compression, narrow
+the contribution. Untouched paired quality at both endpoints, prospective timing
+replication, useful deployment interpretation and submission validation are
+separate future gates. Do not submit to a conference or start paid compute.

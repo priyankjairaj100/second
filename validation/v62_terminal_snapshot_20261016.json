@@ -1,0 +1,308 @@
+{
+  "captured_at_utc": "2026-10-16T07:33:16.150537+00:00",
+  "read_only": true,
+  "head": {
+    "returncode": 0,
+    "stdout": "f900999fcb200509dfad4fc081ce9c87fd172a16\n",
+    "stderr": ""
+  },
+  "git_status": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "squeue": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "sacct": {
+    "returncode": 0,
+    "stdout": "15150|second62-primary|COMPLETED|0:0|00:31:08|30:54.276||2026-10-15T16:57:16|2026-10-15T17:28:24\n15150.batch|batch|COMPLETED|0:0|00:31:08|30:54.276|2746308K|2026-10-15T16:57:16|2026-10-15T17:28:24\n15151|second62-postrun|COMPLETED|0:0|00:16:04|15:57.761||2026-10-15T17:28:24|2026-10-15T17:44:28\n15151.batch|batch|COMPLETED|0:0|00:16:04|15:57.761|3455392K|2026-10-15T17:28:24|2026-10-15T17:44:28\n",
+    "stderr": ""
+  },
+  "files": {
+    "jobs.json": {
+      "bytes": 37,
+      "sha256": "d219ea9fb1da80ebc2c91880a240e82655a89f744e1bb1374e14f2cc4647f172",
+      "contents": {
+        "postrun": "15151",
+        "primary": "15150"
+      }
+    },
+    "postrun-start.json": {
+      "bytes": 483,
+      "sha256": "d795e02a33a4201f5a2a8105f8c184e71917e2bdcd55bf1c59e847f4828af6db",
+      "contents": {
+        "affinity": [
+          3
+        ],
+        "limits": {
+          "address_space_bytes": 17179869184,
+          "cpu_hard_seconds": 3601,
+          "cpu_seconds": 3600,
+          "file_size_bytes": 67108864,
+          "slurm_wall_seconds": 3900,
+          "threads": 1
+        },
+        "registration_sha256": "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b",
+        "schema": "second-audit-recovery-attempt-v62",
+        "slurm_job_id": "15151",
+        "status": "started",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "trial": "postrun"
+      }
+    },
+    "postrun-submission.json": {
+      "bytes": 770,
+      "sha256": "d24083b6c3837ffeb96b5304ac17fddc58db48e79c49d37cd4356111276c089e",
+      "contents": {
+        "arguments": [
+          "sbatch",
+          "--parsable",
+          "--no-requeue",
+          "--nodelist=csis.mn1",
+          "--mem=16G",
+          "--time=01:05:00",
+          "--job-name=second62-postrun",
+          "--output=/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/postrun-%j.log",
+          "--dependency=afterok:15150",
+          "--kill-on-invalid-dep=yes",
+          "cluster_setup/run_cpu.sbatch",
+          "local_runs/cluster-setup-20261010/container-13155.sha256",
+          "/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py",
+          "/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/registration.json",
+          "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b",
+          "postrun"
+        ],
+        "job_id": "15151",
+        "registration_sha256": "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b"
+      }
+    },
+    "postrun-wrapper.json": {
+      "bytes": 757,
+      "sha256": "b4496a5672fc3403755bd43c064d42f6844954df2c0878879a1575e0ebe91aa9",
+      "contents": {
+        "affinity": [
+          3
+        ],
+        "audit_output": {
+          "bytes": 136522,
+          "sha256": "120a697ed6f11f055573fef8fe9812f4f0fb305e7adb8427a0d12f2ad5413d02"
+        },
+        "elapsed_ns": 961875326371,
+        "error": null,
+        "limits": {
+          "address_space_bytes": 17179869184,
+          "cpu_hard_seconds": 3601,
+          "cpu_seconds": 3600,
+          "file_size_bytes": 67108864,
+          "slurm_wall_seconds": 3900,
+          "threads": 1
+        },
+        "numerical_execution": false,
+        "old_campaign_mutated": false,
+        "original_audit_failure_preserved": true,
+        "process_cpu_ns": 956667179011,
+        "registration_sha256": "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b",
+        "schema": "second-audit-recovery-result-v62",
+        "slurm_job_id": "15151",
+        "status": "complete",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "trial": "postrun"
+      }
+    },
+    "preflight.json": {
+      "bytes": 486,
+      "sha256": "5d26b73a27b3d5826c2d5c6baf3a175b723342b86d57ec79767c845cc54625b7",
+      "contents": {
+        "frozen_sources_unchanged": 432,
+        "old_campaign_unmodified": true,
+        "old_jobs": {
+          "13561": [
+            "COMPLETED",
+            "0:0"
+          ],
+          "13562": [
+            "COMPLETED",
+            "0:0"
+          ],
+          "13563": [
+            "COMPLETED",
+            "0:0"
+          ],
+          "13564": [
+            "COMPLETED",
+            "0:0"
+          ],
+          "13565": [
+            "COMPLETED",
+            "0:0"
+          ],
+          "13566": [
+            "COMPLETED",
+            "0:0"
+          ],
+          "13567": [
+            "COMPLETED",
+            "0:0"
+          ],
+          "13568": [
+            "COMPLETED",
+            "0:0"
+          ],
+          "13569": [
+            "TIMEOUT",
+            "0:0"
+          ],
+          "13570": [
+            "CANCELLED",
+            "0:0"
+          ]
+        },
+        "queue": "",
+        "registration_sha256": "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b",
+        "status": "staged_not_submitted"
+      }
+    },
+    "primary-start.json": {
+      "bytes": 483,
+      "sha256": "827afb4ef6a4630bd8d834b72de00a89ea073aa3f98d34e79fa61e8cb478c6e5",
+      "contents": {
+        "affinity": [
+          6
+        ],
+        "limits": {
+          "address_space_bytes": 17179869184,
+          "cpu_hard_seconds": 3601,
+          "cpu_seconds": 3600,
+          "file_size_bytes": 67108864,
+          "slurm_wall_seconds": 3900,
+          "threads": 1
+        },
+        "registration_sha256": "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b",
+        "schema": "second-audit-recovery-attempt-v62",
+        "slurm_job_id": "15150",
+        "status": "started",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "trial": "primary"
+      }
+    },
+    "primary-submission.json": {
+      "bytes": 713,
+      "sha256": "58405ceef461239686dfd7ce0c3e49131fd8792ec8338917b6d8d513baca244f",
+      "contents": {
+        "arguments": [
+          "sbatch",
+          "--parsable",
+          "--no-requeue",
+          "--nodelist=csis.mn1",
+          "--mem=16G",
+          "--time=01:05:00",
+          "--job-name=second62-primary",
+          "--output=/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/primary-%j.log",
+          "cluster_setup/run_cpu.sbatch",
+          "local_runs/cluster-setup-20261010/container-13155.sha256",
+          "/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py",
+          "/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/registration.json",
+          "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b",
+          "primary"
+        ],
+        "job_id": "15150",
+        "registration_sha256": "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b"
+      }
+    },
+    "primary-wrapper.json": {
+      "bytes": 759,
+      "sha256": "6fa455125b1dd5dfde41b5d0a9624c78c17a9551372e78ea2f5e6ecfff901e66",
+      "contents": {
+        "affinity": [
+          6
+        ],
+        "audit_output": {
+          "bytes": 310473,
+          "sha256": "c0452295f2df5eb48046883c1b4f7285e6e9bde33b2d7f8c030be569beb3bf36"
+        },
+        "elapsed_ns": 1866530655582,
+        "error": null,
+        "limits": {
+          "address_space_bytes": 17179869184,
+          "cpu_hard_seconds": 3601,
+          "cpu_seconds": 3600,
+          "file_size_bytes": 67108864,
+          "slurm_wall_seconds": 3900,
+          "threads": 1
+        },
+        "numerical_execution": false,
+        "old_campaign_mutated": false,
+        "original_audit_failure_preserved": true,
+        "process_cpu_ns": 1853198960142,
+        "registration_sha256": "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b",
+        "schema": "second-audit-recovery-result-v62",
+        "slurm_job_id": "15150",
+        "status": "complete",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "trial": "primary"
+      }
+    },
+    "software.json": {
+      "bytes": 213,
+      "sha256": "0ae1d1e99451f5972d72e1a9361f76ca186619c739372a2205d35e5e805a39a7",
+      "contents": {
+        "registration_sha256": "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b",
+        "scope": "Wrapper boundary fixtures, not numerical evidence",
+        "skipped": 0,
+        "slurm_job_id": "15150",
+        "status": "passed",
+        "tests": 8
+      }
+    },
+    "submission-intent.json": {
+      "bytes": 156,
+      "sha256": "2a19dcbef664cc013333d6cd1dfc19de5b7aa4eb3ead40d89668443c41cb260b",
+      "contents": {
+        "created_at_utc": "2026-10-15T11:27:16.372069+00:00",
+        "registration_sha256": "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b",
+        "retry": false
+      }
+    },
+    "primary.json": {
+      "bytes": 310473,
+      "sha256": "c0452295f2df5eb48046883c1b4f7285e6e9bde33b2d7f8c030be569beb3bf36",
+      "status": "verified",
+      "slurm_job_id": "15150",
+      "analysis_elapsed_ns": 1864614317785
+    },
+    "postrun.json": {
+      "bytes": 136522,
+      "sha256": "120a697ed6f11f055573fef8fe9812f4f0fb305e7adb8427a0d12f2ad5413d02",
+      "status": "verified",
+      "slurm_job_id": "15151",
+      "analysis_elapsed_ns": 960648442916
+    }
+  },
+  "logs": {
+    "postrun-15151.log": "{\"status\": \"audit_entered\", \"trial\": \"postrun\", \"slurm_job_id\": \"15151\"}\nTimeout (0:03:00)!\nThread 0x00007efdf8e8cb80 (most recent call first):\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 100 in _dyadic_word\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 181 in _decode_payload\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 244 in __post_init__\n  File \"<string>\", line 14 in __init__\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 338 in parse\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 170 in _validate_descriptor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 241 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/postrun.py\", line 192 in audit_states\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/postrun.py\", line 433 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 140 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\nTimeout (0:03:00)!\nThread 0x00007efdf8e8cb80 (most recent call first):\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 166 in _decode_payload\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 244 in __post_init__\n  File \"<string>\", line 14 in __init__\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 338 in parse\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 170 in _validate_descriptor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 241 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/postrun.py\", line 230 in audit_states\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/postrun.py\", line 433 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 140 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\nTimeout (0:03:00)!\nThread 0x00007efdf8e8cb80 (most recent call first):\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 180 in _decode_payload\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 244 in __post_init__\n  File \"<string>\", line 14 in __init__\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 338 in parse\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 170 in _validate_descriptor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 241 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/postrun.py\", line 232 in audit_states\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/postrun.py\", line 433 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 140 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\nTimeout (0:03:00)!\nThread 0x00007efdf8e8cb80 (most recent call first):\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 99 in _dyadic_word\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 181 in _decode_payload\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 244 in __post_init__\n  File \"<string>\", line 14 in __init__\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 338 in parse\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 170 in _validate_descriptor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 241 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/postrun.py\", line 232 in audit_states\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/postrun.py\", line 433 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 140 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\nTimeout (0:03:00)!\nThread 0x00007efdf8e8cb80 (most recent call first):\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_lossless_codec_v29.py\", line 86 in _compress\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_lossless_codec_v29.py\", line 90 in _select\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_lossless_codec_v29.py\", line 149 in __post_init__\n  File \"<string>\", line 13 in __init__\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_lossless_codec_v29.py\", line 257 in parse\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 170 in _validate_descriptor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 241 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/postrun.py\", line 232 in audit_states\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/postrun.py\", line 433 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 140 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\n{\"comparisons\":8,\"output\":\"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/postrun.json\",\"receipt_sha256\":\"120a697ed6f11f055573fef8fe9812f4f0fb305e7adb8427a0d12f2ad5413d02\",\"status\":\"verified\"}\n{\"status\": \"complete\", \"trial\": \"postrun\", \"error\": null}\n",
+    "primary-15150.log": "in _validate_descriptor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 241 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 413 in verify_successor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/audit.py\", line 67 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 137 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\nTimeout (0:03:00)!\nThread 0x00007f654356db80 (most recent call first):\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 165 in _decode_payload\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 244 in __post_init__\n  File \"<string>\", line 14 in __init__\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 338 in parse\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 170 in _validate_descriptor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 241 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 415 in verify_successor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/audit.py\", line 67 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 137 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\nTimeout (0:03:00)!\nThread 0x00007f654356db80 (most recent call first):\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 99 in _dyadic_word\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 181 in _decode_payload\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 244 in __post_init__\n  File \"<string>\", line 14 in __init__\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 338 in parse\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 170 in _validate_descriptor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 241 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 394 in compare_fresh\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 422 in verify_successor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/audit.py\", line 67 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 137 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\nTimeout (0:03:00)!\nThread 0x00007f654356db80 (most recent call first):\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 89 in _dyadic_word\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 180 in _decode_payload\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 244 in __post_init__\n  File \"<string>\", line 14 in __init__\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 338 in parse\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 170 in _validate_descriptor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 241 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 413 in verify_successor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/audit.py\", line 67 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 137 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\nTimeout (0:03:00)!\nThread 0x00007f654356db80 (most recent call first):\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 91 in _dyadic_word\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 180 in _decode_payload\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 244 in __post_init__\n  File \"<string>\", line 14 in __init__\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_factor_codec_v26.py\", line 338 in parse\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 170 in _validate_descriptor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 241 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 394 in compare_fresh\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 422 in verify_successor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/audit.py\", line 67 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 137 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\nTimeout (0:03:00)!\nThread 0x00007f654356db80 (most recent call first):\n  File \"/usr/local/lib/python3.12/json/encoder.py\", line 258 in iterencode\n  File \"/usr/local/lib/python3.12/json/encoder.py\", line 200 in encode\n  File \"/usr/local/lib/python3.12/json/__init__.py\", line 238 in dumps\n  File \"/nfs_home/users/poonam/second-20261010/src/run_store.py\", line 20 in canonical_json\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/target.py\", line 86 in _object\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/target.py\", line 196 in _read\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/target.py\", line 275 in original_tokens\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 160 in _records\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 194 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 394 in compare_fresh\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 422 in verify_successor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/audit.py\", line 67 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 137 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\nTimeout (0:03:00)!\nThread 0x00007f654356db80 (most recent call first):\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_lossless_codec_v29.py\", line 86 in _compress\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_lossless_codec_v29.py\", line 90 in _select\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_lossless_codec_v29.py\", line 149 in __post_init__\n  File \"<string>\", line 13 in __init__\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_lossless_codec_v29.py\", line 257 in parse\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 170 in _validate_descriptor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 241 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 413 in verify_successor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/audit.py\", line 67 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 137 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\nTimeout (0:03:00)!\nThread 0x00007f654356db80 (most recent call first):\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_lossless_codec_v29.py\", line 86 in _compress\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_lossless_codec_v29.py\", line 90 in _select\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_lossless_codec_v29.py\", line 149 in __post_init__\n  File \"<string>\", line 13 in __init__\n  File \"/nfs_home/users/poonam/second-20261010/src/fixed_lossless_codec_v29.py\", line 257 in parse\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 170 in _validate_descriptor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 241 in _prepare\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 361 in validate_state\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/state.py\", line 413 in verify_successor\n  File \"/nfs_home/users/poonam/second-20261010/research_v61/audit.py\", line 67 in audit\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 137 in execute\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/audit_recovery.py\", line 159 in <module>\n{\"actual_comparisons\":8,\"output\":\"/nfs_home/users/poonam/second-20261010/local_runs/audit-recovery-v62-20261015-a/primary.json\",\"status\":\"verified\"}\n{\"status\": \"complete\", \"trial\": \"primary\", \"error\": null}\n"
+  }
+}

@@ -1,0 +1,54 @@
+V52 prospective adaptive development diagnostic,11October2026
+
+V51 failed its full gate. Both exact-input point solvers produced identical
+complete2359296-code bytes matching the preserved V45 commitment, but the
+40-bit boxes were not certified. The ball pass certified79/768 rows; the
+required interval verifier refused subset-row41 (original stage-row43),
+coordinate1591, after689 rows were selected for interval fallback. This is
+certificate insufficiency, not proof of wrong numerical outputs or impossible
+certification. Preserve V51's failure and all four settled charges.
+
+Fresh question: does the next already-supported codec precision,48bits, permit
+the unchanged verifier to certify this same development stage? Choose exactly
+one new setting,48bits/block256, before execution. No unsupported44/52-bit
+codec, root redraw, output-row subset, ridge/grid/normalization change,
+threshold relaxation, approximate point substitution or verifier change.
+This is explicitly an adaptive diagnostic prompted by a known failure, not
+untouched confirmation or a replacement successful V51 result.
+
+Bind V51's full terminal audit, all artifacts/receipts, actual point-code byte
+equality, source manifest, existing13 C4 record identities, and each exact
+lossless source. Trusted V51 preparation executed the original fixed-anchor
+decoder; use its lossless sources, not freshly approximated GPU features.
+Re-encode every source with the unchanged48-bit codec, check full containment,
+save descriptors, then solve the complete768-by3072 stage using the unchanged
+V43 streamed box dispatcher and V50 normal-neighbor kernel. Match every packed
+code byte to V51's new point result and its historical V45 SHA commitment.
+No neural access, hidden replay, numerical point retry, or partial-code success.
+
+Prospective structural admission uses unchanged ResourcePolicy,4GiB caller
+residency and one whole box solve at1664 tokens,13 blocks of128. Native Gram
+width limit remains768; no wide-Gram trial is introduced. Bound actual address
+space16GiB, one CPU/thread,1GiB per-file limit,1200CPU/1800wall seconds under
+a fresh1202CPU phase. One no-requeue Slurm allocation,35-minute limit including
+registration/controller overhead. No automatic retry or cap increase.
+Any failed containment, code mismatch, exception, timeout or certificate
+refusal is retained and stops this attempt. Software fixtures run first in a
+separate Slurm allocation and must pass4/4 with zero skips and matching sources.
+
+Save full descriptor bytes, storage totals, encoding/containment time, solve
+time, whole-worker/controller time, peak RSS, sealed outcome and CPU charge.
+Reused neural preparation's430CPU charge stays explicit and is not timed as
+new execution. Earlier V51 charges430+609+1158+637=2834CPU stay preserved.
+No prepared-solver timing is labeled cold/repair/end-to-end service latency.
+Any storage saving is stage-feature-descriptor-only, not complete state or
+deployment saving. No statistical speed claim follows from fixed run order.
+
+If48-bit boxes pass, the finding is only stage-specific feasibility after
+adaptive precision adjustment. Integration into a full-model canonical state
+requires a new representation/version review; never label48-bit data as the
+existing compressed40 representation. If they fail, keep the refusal; consider
+precision limits and explicit replay cost without repeatedly searching for a
+positive result. All60 historical quality exclusions and older failures stay.
+No complete model, deletion-state comparison, held-out quality, exact GPU
+calibration or ACL readiness is established by this diagnostic.

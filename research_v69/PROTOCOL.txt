@@ -1,0 +1,195 @@
+Proposed V69 two-endpoint untouched-quality execution
+UNREGISTERED DESIGN, 16 October 2026. Bounded entries are prepared; no empirical attempt exists.
+
+Purpose and immutable scientific choices
+Evaluate the V67 candidate after13->12 and13->12->6 deletions against a matched
+sequential constructor at each endpoint. Use original normalization1664, ridge1/100,
+the original checkpoint teacher and unchanged base-only four-bit row grids.
+Production geometry is24 stages,42467328 codes and21233664 packed bytes per model.
+Do not substitute another root, checkpoint, calibration rule, numerical runtime
+or easier endpoint after observing a result. Retain every historical negative
+finding and all failures. This is a new quality gate, not a service timing trial.
+
+Mandatory input gates, still pending
+Both V67 terminal audits must succeed and bind all actual model/state comparisons,
+membership, source and cost receipts. Then V68 must acquire its frozen bounded
+frame once and pass actual saved-byte/token/exclusion audits. No acquisition or
+likelihood evaluation precedes these gates. Bind the completed receipts and actual
+candidate files, V65 root,320 selected articles, full exclusion history, original
+checkpoint, original exported parameter archive and both target manifests.
+Never infer actual candidate bytes from a test or a claimed matching checksum.
+
+Proposed execution sequence
+1. Freeze all new sources, dependencies, Linux CPU and CUDA environments, actual
+   inputs and caps. Pass local checks and separately registered Linux numerical
+   fixtures, including all six unchanged V55 sequential tests. The current81 tests
+   include mocks and tiny CPU data; they do not qualify MPFR or CUDA.
+2. Audit the existing uncompressed original-parameter snapshot against a reference
+   constructed from the bound checkpoint. Compare all arrays and all words.
+   Preserve this audit for downstream CPU and GPU loading; do not validate an
+   archive only against itself. A fresh export needs its own admitted output.
+3. Construct sequential12 and sequential6 in separate once-only CPU jobs using
+   the unchanged V55 constructor and shared V50 exact kernel. Both use the V65
+   canonical retained suffixes, checked before any feature traversal. Candidate
+   first-stage codes serve only as an invariant, never as feature inputs. Preserve
+   every progress record, refusal and incomplete output. Audit actual saved codes.
+4. Bind all six roles: original, nearest, candidate12, sequential12, candidate6,
+   sequential6. Check complete original parameter words, target matrices, grids,
+   packed extent and retained-token commitments. The future worker must explicitly
+   enforce production geometry and original normalization in addition to helpers.
+5. On the first four sorted selected IDs, compute24 CPU reference losses. In one
+   bounded CUDA process compute the same24 pairs. Require every absolute mean-NLL
+   deviation<=1e-8 before evaluating remaining articles. Reuse the GPU subset in
+   the complete320-article results. No duplicate likelihoods, fallback or retry.
+6. Read all1920 actual GPU and24 CPU loss files. Check ordered progress and the
+   parity barrier. Recompute paired statistics and reconcile complete source,
+   model, runtime, worker/controller/child CPU, scheduler and GPU-memory receipts.
+   A negative practical/uncertainty gate is valid completed evidence. Publish it.
+
+Evaluator and statistical contract
+Use the unchanged shared ordinary NumPy/Torch binary64 likelihood semantics,
+128-token sequences and127 predictions each. This is approximate likelihood,
+not certified neural inference. CUDA uses one admitted device, no AMP or TF32,
+deterministic algorithms and CUBLAS_WORKSPACE_CONFIG=:4096:8 before initialization.
+All parameter and replacement-array transfers receive bitwise CPU round-trip
+checks. Keep the runtime/driver/device inventory and actual peak allocator bytes.
+Use V68's fixed320-article,20000-draw paired bootstrap and fixed PCG64 seed.
+Both endpoints require pooled PPL ratio<=1.05, one-sided97.5% bootstrap upper<=1.05,
+and observed maximum article ratio<=1.20. These are approximate bounded-frame
+uncertainty statements, not population-tail guarantees. Do not increase the sample
+or change guards after observing quality. Original and nearest controls run once.
+The loss audit must receive the GPU NumPy version from the frozen runtime, not
+infer it from an untrusted statistics file. Record the recomputation runtime
+separately. Every numeric statistic and gate decision must match exactly; only
+the two legitimate runtime-provenance fields are allowed to differ. An arithmetic
+disagreement is a failed audit, with no silent tolerance or repeated attempt.
+
+Resource design, not a registration or ETA
+The existing pure stage-admission formula admits both24-stage point constructors
+at16GiB process,8GiB solver arrays,4GiB other residency,64billion stage work units
+and1trillion request work units. Twelve retained records require419270639616 work
+units, at most4519108608 explicit solver bytes and8814075904 resident-plus-solver
+bytes. Six require321015398400 work units,767565824 solver bytes and5062533120
+resident-plus-solver bytes. These are structural proxies; they exclude uncertain
+Python/library overhead and do not guarantee measured fit, duration or success.
+The OS bound remains authoritative. See validation/v69_resource_design.json.
+
+Proposed CPU soft caps/wall limits for separate phases: CPU source/numerical checks
+600/900s; separate CUDA qualification600/900s; parameter audit600/900s;
+sequential12 and sequential6 each14400/18000s;
+CPU parity1800/2400s; GPU quality5400/7200s; terminal audit1800/2400s. Add explicit
+hard-limit rounding of two seconds per worker:39616 CPU seconds across eight
+workers. Each controller has600 soft CPU seconds and a14402-second inherited
+hard ceiling so its worker can install its own limit; SIGXCPU stops the controller
+at its separate soft bound. Own CPU plus nonworker waited children must stay
+within601 seconds each,4808 total. Combined proposed allowance is44424 CPU seconds.
+Each Slurm job adds600 wall seconds beyond its worker allowance. These are design
+ceilings, not ETA or reserved budget. Review actual partition limits first.
+CPU physical/address-space proposal16GiB, file cap2GiB; CUDA physical host16GiB,
+allocator8GiB and virtual-address-space128TiB, as in the historical GPU route.
+Large CUDA virtual reservations are not a physical-memory grant. One CPU thread;
+bind actual affinity and full runtime. Never silently enlarge a failed phase.
+
+Historical planning evidence only: V55's old six-record construction plus32 exposed
+CPU losses took26m46s scheduler wall. V56's32 exposed CUDA comparisons took1m37s;
+its worker used1562378240 peak reserved GPU bytes on an A10080GB. These are different
+workloads on an exposed set, not a forecast, new measurement or budget guarantee.
+Their receipts remain in campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz.
+
+Production gates and accounting preparation
+production_gate.py binds actual checkpoint files to the frozen configuration and
+safetensors hashes, enforces the24-stage production geometry/original1664 recipe,
+reconstructs the actual CPU base target and compares canonical bytes, and audits
+all78 parameter arrays against that checkpoint-derived reference. Generated
+fixtures mock checkpoint import and the numerical constructor; no real import
+or MPFR execution is qualified by those tests.
+
+execution_gate.py binds the inherited CPU runtime exactly, keeps CUDA runtime
+admission separate and before initialization, installs one-thread/one-affinity
+controller limits, and rejects imported project code outside the registration.
+Its registered source inventory must include all469 V67 files, nine admitted V68
+files, all new V69 files, and14 historical V46/V47 GPU/export files from the actual
+V47 registration620076c67ae79ee56de784ecd4c6e49ef3b4b22f45742f72956821b1e416cf54.
+Those14 files are absent from the CPU-only V67 inventory; their actual current
+bytes were checked against the earlier registration. No historical source changes.
+
+cost_accounting.py verifies persisted worker seals/artifacts/applied limits and
+actual ledger debits, parses terminal scheduler allocation rows without adding
+batch/extern steps again, and includes controller own CPU plus all waited children.
+The worker's already charged CPU is not added twice. Nonworker helper processes,
+allocator peaks, original parameter transfer census and all eight unique debits
+are required. Fully accounted failures remain failures; negative quality does not
+invalidate accounting. Missing/unknown/unsettled costs refuse complete accounting.
+Final closure must run after the terminal worker and its controller exit, because
+an audit cannot seal its own final process/scheduler cost from inside itself.
+closure.py supplies that separate bounded scope:300 soft/301 hard CPU seconds,
+302 admitted CPU seconds,900 scheduler wall seconds,4GiB address space and128MiB
+file cap. Include its own terminal Slurm row in external saved-receipt validation.
+Total proposed campaign allowance is44726 CPU seconds. Transport and the external
+reporting observer are excluded explicitly; no numerical work runs there.
+
+Production worker/controller wiring now prepared
+campaign.py validates actual V67/V68 gates, immutable source/input/runtime groups,
+held-job bindings, all prior phase seals, exact output census and settled debits.
+V68's three actual terminal scheduler rows must contain whole-process plus child
+CPU within its1506-second allowance. Do not rerun the old live-history glob.
+CPU interpreter paths are bound separately from the inherited runtime's binary
+identity; the CUDA capture's executable field is also checked. Each actual
+controller/worker must use its corresponding prospectively bound interpreter.
+
+entry.py writes an exclusive start intent, then executes one bounded worker and
+preserves complete process/child clocks and output commitments. Its own and helper
+CPU are checked separately from the wait4 worker cost. worker.py requires live
+exact-command budget admission before output creation or dispatch. A single live
+reservation may coexist with sealed predecessors, but cannot count as completed.
+phase_flow.py executes source/numerical checks, actual generated CUDA checks,
+checkpoint-derived parameter auditing, separate sequential12/6 construction, CPU
+parity, parity-gated full GPU losses and terminal actual-artifact checks. Terminal
+checks repeat every original parameter word against the checkpoint, reparse both
+sequential outputs, and recompute actual saved-loss statistics. Negative quality
+is completed evidence. All failures and incomplete outputs remain preserved.
+
+closure.py reads actual final costs after all eight phases have exited, with no
+double counting. Its bounded job has separate accounting. External observation
+of that job's terminal scheduler row is mandatory before complete campaign costs.
+Root implementation review and generated fixture tests are not independent review
+or empirical validation. Exact local outcomes are preserved in
+validation/v69_worker_preparation.json and docs/V69_EXECUTION_WIRING_REVIEW.txt.
+
+Held-job adapter and wrappers prepared, not registered
+submission.py runs only from the fixed staged Linux path. It requires unchanged
+complete phase caps, actual predecessor receipt/source bytes, clean inherited
+checkout, no active Second jobs, pinned CPU container bytes and matching live
+partition membership/limits before creating one-use intent. Numerical and full
+predecessor semantic/cost checks still execute in the first bounded CPU worker.
+The host preflight performs administrative hashing/metadata only; its CPU and
+transport remain outside the declared experiment-cost scope. Scheduler allocation
+CPU includes wrapper/container startup and is checked against each phase ceiling.
+
+Each of nine jobs is submitted held, with no requeue, one CPU, one node, exact wall
+and physical memory bounds, and a single afterok predecessor. The closure has its
+separate4GiB/900-second allocation. The CUDA phases request one typed A10080GB and
+exclude all partition nodes outside the admitted pool; they never request all pool
+nodes via --nodelist. Actual held job identity, comment/registration, memory, wall,
+CPU, typed GPU, exclusions, command, logs and dependency are checked before binding.
+After all nine bindings exist, source/registration and scheduler policy are checked
+again and all jobs re-inspected. Descendants are released first, the initial CPU
+check last. Any uncertain submit/release response stops with saved intent/history,
+no retry or automatic cancellation. Reconcile partial jobs before any future action.
+
+run_cpu.sbatch preserves the actual inherited .venv-container/bin/python and pinned
+container; run_gpu.sbatch uses the prospectively bound Python3.10 CUDA path. Both
+set all seven thread variables. No frozen wrapper changes. Generated tests cover
+successful binding/reverse release, unknown replies, resource/dependency/source
+changes, active-job exclusion, partial failure and wrapper syntax. They do not
+qualify real Slurm held-field formats, process limits, container execution or CUDA.
+The read-only scheduler observation is saved separately; no job was submitted.
+
+Remaining before any launch
+Capture actual CUDA runtime/host inventories under admitted resource conditions.
+Review actual held-job metadata at the eventual once-only admission; refuse any
+unsupported scheduler format without releasing or retrying jobs. Freeze completed
+source/test inventory and registration only after actual V67/V68 gates succeed.
+Run98 exact-count Linux checks including six unchanged V55 numerical fixtures,
+and separate actual CUDA qualification. No competing workload may disturb V67.
+This document and local tests authorize no launch by themselves.

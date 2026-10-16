@@ -1,0 +1,64 @@
+{
+  "caps": {
+    "cpu": 1800,
+    "wall": 2100
+  },
+  "elapsed_ns": 655402836700,
+  "error": null,
+  "max_rss_kib": 3044060,
+  "original_inputs_mutated": false,
+  "process_cpu_ns": 652023435879,
+  "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6",
+  "result": {
+    "comparisons": [
+      {
+        "actual_model_equal": true,
+        "actual_reference_state_restored": true,
+        "actual_retained_transition_equal": null,
+        "actual_words_equal": true,
+        "endpoint": 0,
+        "new_archive": {
+          "bytes": 396330656,
+          "sha256": "42d83bf85f3ea61ace2a727ec6740858ab5686eba04471bd14c53b0c85b220ff"
+        },
+        "source_count": 312
+      },
+      {
+        "actual_model_equal": true,
+        "actual_reference_state_restored": true,
+        "actual_retained_transition_equal": true,
+        "actual_words_equal": true,
+        "endpoint": 1,
+        "new_archive": {
+          "bytes": 367603573,
+          "sha256": "646ce977783373485be51ccfa8aff3ac81a4d70bc1cd3d0528b96c48d3e23deb"
+        },
+        "source_count": 288
+      },
+      {
+        "actual_model_equal": true,
+        "actual_reference_state_restored": true,
+        "actual_retained_transition_equal": true,
+        "actual_words_equal": true,
+        "endpoint": 2,
+        "new_archive": {
+          "bytes": 195408615,
+          "sha256": "1093081affaa4e87e7142ee495a340eec50e240838892517849b9a18c112c11d"
+        },
+        "source_count": 144
+      }
+    ],
+    "deletion_latency_measured": false,
+    "independent_numerical_implementation": false,
+    "measurement_receipt": {
+      "bytes": 460887,
+      "sha256": "98d8dacdee11ebddb5955cab7faa9c5640b40558b00ba1a2d3da012aeefb464e"
+    },
+    "neural_execution": false,
+    "schema": "source-local-lossless-artifact-audit-v63",
+    "status": "verified"
+  },
+  "slurm_job_id": "15246",
+  "status": "complete",
+  "trial": "audit"
+}

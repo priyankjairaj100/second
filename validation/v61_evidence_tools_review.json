@@ -1,0 +1,25 @@
+{
+  "checker_fixtures": 9,
+  "collector_fixtures": 10,
+  "complete_terminal_check_executed": false,
+  "failure_capture": "Explicit quiescent dependency-failure capture remains unsuccessful; no queue mutation",
+  "helper_sha256": {
+    "check_v61_terminal_metadata.py": "d6c6e4dd27ddb86f285ecd1be35ac37b413d115c931c6aa0175832a52d2ab3bd",
+    "collect_terminal_v61.py": "7f6d709a827010c4569ee71317f2cfdda2c1bf87c57696ab15dd73c1b6ad0274",
+    "test_check_v61_terminal_metadata.py": "fa600fabd75a4a305bf7bb8ecb5aa288a829d348537625e1f2df799f07149872",
+    "test_collect_terminal_v61.py": "25aa9e2b469e82c8fbba0b6f90049a3b52bef75072be173d615b79b681182f79"
+  },
+  "local_model_or_state_binary_validation": false,
+  "numerical_execution": false,
+  "numerical_source_commit": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "peer_review": "Collector/checker cross-review and root source review found no remaining material blocker",
+  "real_terminal_collection_executed": false,
+  "registered_sources_unchanged": 432,
+  "schema": "v61-reporting-tools-review",
+  "scope": "Standard-library collector/checker fixtures and source review only",
+  "skipped": 0,
+  "test_command": "python3 -B -m unittest discover -s validation -p test_*v61*.py -v",
+  "test_output": "test_absent_binary_is_explicit_but_metadata_cannot_be_omitted (test_check_v61_terminal_metadata.PortableMetadataTests) ... ok\ntest_audit_inventory_rejects_missing_or_forged_entries_despite_new_collection_hash (test_check_v61_terminal_metadata.PortableMetadataTests) ... ok\ntest_collection_rejects_missing_extra_symlink_and_failure_captures (test_check_v61_terminal_metadata.PortableMetadataTests) ... ok\ntest_expected_artifacts_include_models_states_and_every_trust_sidecar (test_check_v61_terminal_metadata.PortableMetadataTests) ... ok\ntest_ledger_exact_schema_sources_six_settled_and_ceil_charge (test_check_v61_terminal_metadata.PortableMetadataTests) ... ok\ntest_prelaunch_reservation_and_presettlement_receipts_bind_actual_attempt (test_check_v61_terminal_metadata.PortableMetadataTests) ... ok\ntest_rehashed_forged_program_cannot_replace_pinned_registration (test_check_v61_terminal_metadata.PortableMetadataTests) ... ok\ntest_scheduler_checks_every_job_and_exact_raw_receipt (test_check_v61_terminal_metadata.PortableMetadataTests) ... ok\ntest_storage_math_requires_typed_complete_deployment_extent (test_check_v61_terminal_metadata.PortableMetadataTests) ... ok\ntest_archive_is_exclusive_and_contains_exact_payloads (test_collect_terminal_v61.CollectorFixtures) ... ok\ntest_blocked_failure_capture_is_explicitly_nonterminal_and_never_success (test_collect_terminal_v61.CollectorFixtures) ... ok\ntest_blocked_failure_requires_explicit_mode_failed_ancestor_and_exact_queue (test_collect_terminal_v61.CollectorFixtures) ... ok\ntest_failure_capture_preserves_invalid_receipt_and_never_reads_binary (test_collect_terminal_v61.CollectorFixtures) ... ok\ntest_final_rehash_catches_changed_bytes_even_if_metadata_is_stale (test_collect_terminal_v61.CollectorFixtures) ... ok\ntest_frozen_source_change_refused_even_in_failure_capture (test_collect_terminal_v61.CollectorFixtures) ... ok\ntest_scheduler_refuses_active_unknown_and_ordinary_pending (test_collect_terminal_v61.CollectorFixtures) ... ok\ntest_scheduler_terminal_rows_and_exact_census (test_collect_terminal_v61.CollectorFixtures) ... ok\ntest_tree_census_includes_empty_directories_and_refuses_symlinks (test_collect_terminal_v61.CollectorFixtures) ... ok\ntest_unsafe_paths_and_input_bounds_are_refused (test_collect_terminal_v61.CollectorFixtures) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.045s\n\nOK\n",
+  "tests": 19,
+  "trust_limit": "Unsigned receipts bind controlled execution; metadata checks do not authenticate a hostile host"
+}

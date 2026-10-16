@@ -1,0 +1,91 @@
+{
+  "archive_members": 567,
+  "artifacts": {
+    "development-audit-receipts-v69.zip": {
+      "bytes": 341604,
+      "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+    },
+    "development-dependency-notices-v69.zip": {
+      "bytes": 38839,
+      "sha256": "062bc8b1944e93b2eb22d3a9592e474ee08e50d4ebeb404ea166f7beaac52e03"
+    },
+    "development-evidence-v69b.zip": {
+      "bytes": 87257,
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "development-reproduction-guide-v69.zip": {
+      "bytes": 15057,
+      "sha256": "d533f475ca5db4356210ee2e859304420d7d6e6477c651ec9115a1ee846fb712"
+    },
+    "development-source-review-v69c.zip": {
+      "bytes": 1814288,
+      "sha256": "ceea2e249896e7bddf151d9956683c9b7b7cee988df25f092fb7f02440b35037"
+    },
+    "reports/REVIEW_PACKAGE_README_V69.txt": {
+      "bytes": 5433,
+      "sha256": "1545341a935e952a3aa6d04b61fd4bf297d6c0ba14f4c533f4729066b9b7f489"
+    },
+    "reports/manuscript_v69.tex": {
+      "bytes": 51257,
+      "sha256": "0900af577ae418ee10bb33f5b64e659be147ea2014232d4e06195a83cf2f3f2d"
+    }
+  },
+  "captured_at_utc": "2026-10-16T16:45:12.744807+00:00",
+  "checker_modified_manuscript": false,
+  "empirical_work_executed": false,
+  "evidence_references": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15"
+  ],
+  "full_anonymity_verified": false,
+  "full_empirical_input_closure": false,
+  "full_reproduction_verified": false,
+  "full_source_manual_review": false,
+  "full_transitive_notices": false,
+  "indirect_identity_linkability_assessed": false,
+  "internal_manifests_verified": 5,
+  "known_identity_findings": [],
+  "manuscript_change": "Clarify existing codec and row scale; all empirical sections unchanged",
+  "manuscript_edited": true,
+  "manuscript_matches_open_file": true,
+  "private_mapping_files_included": false,
+  "protocol_links_verified": 4,
+  "receipt_filename_crosswalk": {
+    "E12": [
+      "E10_primary.json",
+      "E10_additive.json",
+      "E12_exposed_quality.json",
+      "E11_cpu_cuda_parity.json"
+    ],
+    "E13": [
+      "E13_adaptive_quality.json"
+    ],
+    "E14": [
+      "E14_primary_recovery.json",
+      "E14_additive_recovery.json"
+    ],
+    "E15": [
+      "E15_lossless_measurement.json",
+      "E15_lossless_audit.json"
+    ]
+  },
+  "reviewer_prose_scope_review_completed": true,
+  "schema": "cross-component-review-v69",
+  "stale_filename_grouping_resolved_by_navigation": true,
+  "status": "inventories_hashes_known_identifiers_and_navigation_checked",
+  "submission_ready": false,
+  "text_files_checked": 569
+}

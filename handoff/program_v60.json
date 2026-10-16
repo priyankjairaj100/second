@@ -1,0 +1,248 @@
+{
+  "schema": "second-development-handoff-v60",
+  "checkpoint_kind": "terminal_v59_reporting_not_new_experiment",
+  "date": "2026-10-14",
+  "status": "v59_complete_quality_pass_remote_audit_verified",
+  "repository": "https://github.com/priyankjairaj100/second",
+  "branch": "codex/second-cluster-v42",
+  "current_handoff": "docs/ACTIVE_SESSION_V60.md",
+  "numerical_source_commit": "60a514098511526924cb5746a2a61851b5f6bd23",
+  "jobs": {
+    "audit": "13551",
+    "checks": "13548",
+    "quality": "13550",
+    "register": "13549"
+  },
+  "active_jobs": [],
+  "all_four_jobs_completed_exit_zero": true,
+  "registered_program_sha256": "4a22292c903b4817629bd43449dcf6f22c827f7c31c9e525fcb3fdcca448e835",
+  "frozen_source_count": 412,
+  "software_tests": 49,
+  "software_skips": 0,
+  "development_quality_guards_pass": true,
+  "historical_v55_quality_guard_pass": false,
+  "exclusions_preserved": 60,
+  "new_quality_data": false,
+  "repair_service": false,
+  "gpu_execution": false,
+  "confirmation": false,
+  "acl_ready": false,
+  "automatic_retry": false,
+  "successor_experiment_registered": false,
+  "quality": {
+    "candidate_comparisons": {
+      "fixed_feature": {
+        "article_log_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": -0.09711932522622564,
+          "wikitext2:validation:article-row-1299": -0.03440020641388995,
+          "wikitext2:validation:article-row-132": -0.05307687884183229,
+          "wikitext2:validation:article-row-2115": -0.015259081278846379,
+          "wikitext2:validation:article-row-2237": -0.08365302994584015,
+          "wikitext2:validation:article-row-2352": -0.0769486359834134,
+          "wikitext2:validation:article-row-2525": -0.08584277786760246,
+          "wikitext2:validation:article-row-3636": -0.04681780425773368
+        },
+        "article_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": 0.9074477182683939,
+          "wikitext2:validation:article-row-1299": 0.9661847539170889,
+          "wikitext2:validation:article-row-132": 0.9483071049278817,
+          "wikitext2:validation:article-row-2115": 0.9848567486009765,
+          "wikitext2:validation:article-row-2237": 0.9197503265585952,
+          "wikitext2:validation:article-row-2352": 0.9259374122496844,
+          "wikitext2:validation:article-row-2525": 0.9177385086833671,
+          "wikitext2:validation:article-row-3636": 0.9542612440885271
+        },
+        "articles_candidate_equal": 0,
+        "articles_candidate_higher": 0,
+        "articles_candidate_lower": 8,
+        "max_article_log_ratio": -0.015259081278846379,
+        "max_article_ratio": 0.9848567486009765,
+        "pooled_log_perplexity_ratio": -0.06163971747692299,
+        "pooled_perplexity_ratio": 0.9402215711763078
+      },
+      "full_precision": {
+        "article_log_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": 0.1572341485599106,
+          "wikitext2:validation:article-row-1299": 0.19640803111734229,
+          "wikitext2:validation:article-row-132": 0.12736654433295266,
+          "wikitext2:validation:article-row-2115": 0.1593575217647964,
+          "wikitext2:validation:article-row-2237": 0.09593541275424064,
+          "wikitext2:validation:article-row-2352": 0.06816609567846175,
+          "wikitext2:validation:article-row-2525": 0.07618207633019645,
+          "wikitext2:validation:article-row-3636": 0.14692552609589513
+        },
+        "article_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": 1.170269598764339,
+          "wikitext2:validation:article-row-1299": 1.2170233874499647,
+          "wikitext2:validation:article-row-132": 1.135833274738546,
+          "wikitext2:validation:article-row-2115": 1.172757157946463,
+          "wikitext2:validation:article-row-2237": 1.1006879712936564,
+          "wikitext2:validation:article-row-2352": 1.0705431062962039,
+          "wikitext2:validation:article-row-2525": 1.0791590455890616,
+          "wikitext2:validation:article-row-3636": 1.1582676991001388
+        },
+        "articles_candidate_equal": 0,
+        "articles_candidate_higher": 8,
+        "articles_candidate_lower": 0,
+        "max_article_log_ratio": 0.19640803111734229,
+        "max_article_ratio": 1.2170233874499647,
+        "pooled_log_perplexity_ratio": 0.1284469195792245,
+        "pooled_perplexity_ratio": 1.1370610640096095
+      },
+      "nearest_rounding": {
+        "article_log_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": -0.1819401214705991,
+          "wikitext2:validation:article-row-1299": -0.07465489981242318,
+          "wikitext2:validation:article-row-132": -0.08157896850824223,
+          "wikitext2:validation:article-row-2115": -0.343897655432739,
+          "wikitext2:validation:article-row-2237": -0.3265652252748153,
+          "wikitext2:validation:article-row-2352": -0.3401209767602873,
+          "wikitext2:validation:article-row-2525": -0.17560860372252654,
+          "wikitext2:validation:article-row-3636": -0.2678932163401197
+        },
+        "article_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": 0.8336512567325489,
+          "wikitext2:validation:article-row-1299": 0.9280637060304696,
+          "wikitext2:validation:article-row-132": 0.9216599248706906,
+          "wikitext2:validation:article-row-2115": 0.7090014867868037,
+          "wikitext2:validation:article-row-2237": 0.7213973201755863,
+          "wikitext2:validation:article-row-2352": 0.7116842203031966,
+          "wikitext2:validation:article-row-2525": 0.8389462795367386,
+          "wikitext2:validation:article-row-3636": 0.7649894651163824
+        },
+        "articles_candidate_equal": 0,
+        "articles_candidate_higher": 0,
+        "articles_candidate_lower": 8,
+        "max_article_log_ratio": -0.07465489981242318,
+        "max_article_ratio": 0.9280637060304696,
+        "pooled_log_perplexity_ratio": -0.22403245841521904,
+        "pooled_perplexity_ratio": 0.799289190287897
+      },
+      "sequential": {
+        "article_log_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": 0.06353619101183337,
+          "wikitext2:validation:article-row-1299": -0.026617029434460416,
+          "wikitext2:validation:article-row-132": -0.028641719550536415,
+          "wikitext2:validation:article-row-2115": 0.020394591109263317,
+          "wikitext2:validation:article-row-2237": -0.019692603714969035,
+          "wikitext2:validation:article-row-2352": 0.017387859124355816,
+          "wikitext2:validation:article-row-2525": -0.05722961920515655,
+          "wikitext2:validation:article-row-3636": -0.001987094120584437
+        },
+        "article_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": 1.0655980501752642,
+          "wikitext2:validation:article-row-1299": 0.9737340816183115,
+          "wikitext2:validation:article-row-132": 0.9717645663494361,
+          "wikitext2:validation:article-row-2115": 1.0206039818394044,
+          "wikitext2:validation:article-row-2237": 0.9805000290529675,
+          "wikitext2:validation:article-row-2352": 1.0175399079361687,
+          "wikitext2:validation:article-row-2525": 0.9443771973270654,
+          "wikitext2:validation:article-row-3636": 0.9980148788438992
+        },
+        "articles_candidate_equal": 0,
+        "articles_candidate_higher": 3,
+        "articles_candidate_lower": 5,
+        "max_article_log_ratio": 0.06353619101183337,
+        "max_article_ratio": 1.0655980501752642,
+        "pooled_log_perplexity_ratio": -0.004106178097531792,
+        "pooled_perplexity_ratio": 0.9959022407247494
+      }
+    },
+    "development_guards_pass": true,
+    "guards": {
+      "every_article_pass": true,
+      "pooled_pass": true
+    },
+    "thresholds": {
+      "max_article_candidate_over_sequential": 1.2,
+      "max_pooled_candidate_over_sequential": 1.05
+    },
+    "totals": {
+      "fixed_feature": {
+        "mean_nll": 4.0099961328145906,
+        "nll_sum": 4074.1560709396244,
+        "perplexity": 55.146657300702955,
+        "predictions": 1016
+      },
+      "full_precision": {
+        "mean_nll": 3.8199094957584436,
+        "nll_sum": 3881.0280476905787,
+        "perplexity": 45.60008113332969,
+        "predictions": 1016
+      },
+      "full_precision_anchor": {
+        "mean_nll": 3.9483564153376682,
+        "nll_sum": 4011.530117983071,
+        "perplexity": 51.85007677238838,
+        "predictions": 1016
+      },
+      "nearest_rounding": {
+        "mean_nll": 4.172388873752887,
+        "nll_sum": 4239.147095732933,
+        "perplexity": 64.87023395588822,
+        "predictions": 1016
+      },
+      "sequential": {
+        "mean_nll": 3.9524625934352,
+        "nll_sum": 4015.701994930163,
+        "perplexity": 52.063420135148434,
+        "predictions": 1016
+      }
+    }
+  },
+  "candidate": {
+    "candidate_model_sha256": "904d2dc59a22b28d74db20b388bc1acc5d7566150441d65a7318a5d896271192",
+    "candidate_target_sha256": "3853008973e0a89db5c80d73d30cb4304bc5d9c89fafa80e6f7f15de232a1245",
+    "first_stage_hash_commitment": "f397e6c54c44b3143921c67d49bc16bb39d7587ff66dcd740a4edcd5363863a0",
+    "first_stage_invariant_reported_passed": true,
+    "packed_model_bytes_commitment": 21233664,
+    "progress": {
+      "candidate_losses": 8,
+      "candidate_stages": 24,
+      "events": 69,
+      "historical_losses_before_candidate": 32,
+      "parity_before_candidate": true
+    },
+    "recorded_teacher_stage_record_advances": 144,
+    "recorded_work_units": 321015398400,
+    "routes": {
+      "streamed": 18,
+      "token": 6
+    },
+    "stage_code_count_commitment": 42467328
+  },
+  "cost": {
+    "charged_cpu_seconds": 1626,
+    "observed_cpu_ns": 1625890830000,
+    "constructor_elapsed_ns": 1484628365599,
+    "worker_elapsed_ns": 1630261437620,
+    "controller_transaction_elapsed_ns": 1633577485841,
+    "cluster_audit_analysis_cpu_ns": 68131072130
+  },
+  "scheduler_accounting": "13548|second59-checks|COMPLETED|0:0|00:00:10|00:08.126|\n13548.batch|batch|COMPLETED|0:0|00:00:10|00:08.126|3256K\n13549|second59-register|COMPLETED|0:0|00:00:05|00:03.930|\n13549.batch|batch|COMPLETED|0:0|00:00:05|00:03.930|3328K\n13550|second59-quality|COMPLETED|0:0|00:27:17|27:11.434|\n13550.batch|batch|COMPLETED|0:0|00:27:17|27:11.434|2643312K\n13551|second59-audit|COMPLETED|0:0|00:01:11|01:09.653|\n13551.batch|batch|COMPLETED|0:0|00:01:11|01:09.653|457284K\n",
+  "completion_receipt": {
+    "bytes": 24045,
+    "sha256": "2c80712913d314aa88d5abede08f324e8a773b9ffb847b58a9b721e7301c731c"
+  },
+  "cluster_audit_receipt": {
+    "bytes": 173574,
+    "sha256": "286a2c74b676e55ff4d463d31545ca8138eb7dce36e515112fb697575a89f6e6"
+  },
+  "evidence_archive": {
+    "path": "campaigns/csis_terminal_v59_metadata_20261014.tar.gz",
+    "bytes": 538971,
+    "sha256": "aecceb538d03b798f11c914c672b6daac86eaab3eac60dc72434544d823084f3",
+    "copied_metadata_files": 100,
+    "large_numerical_binaries_included": false
+  },
+  "portable_check": "validation/v59_terminal_metadata_check.json",
+  "portable_status": "passed_metadata_only",
+  "available_bound_inputs_verified": 525,
+  "missing_binary_count": 5,
+  "missing_metadata_count": 0,
+  "local_binary_revalidation": false,
+  "manuscript": "reports/manuscript_v60.tex",
+  "native_compilation": "success",
+  "visual_review": false,
+  "next_gate": "Versioned full-precision-teacher canonical repair states and complete matched service comparison on the same declared root; independently reviewed resource admission and registration required."
+}

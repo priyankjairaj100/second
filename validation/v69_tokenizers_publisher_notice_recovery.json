@@ -1,0 +1,33 @@
+{
+  "actual_license_bytes_archived": true,
+  "all_rust_dependency_notices_complete": false,
+  "declared_license": "Apache-2.0",
+  "files": {
+    "validation/publisher-notices-v69/tokenizers/Cargo.toml": {
+      "bytes": 2765,
+      "git_blob_sha1": "e9d6bcc3c749a7f0f674a37275aa115ba34afba9",
+      "remote_path": "tokenizers/Cargo.toml",
+      "sha256": "a7550a462a6e4da8f6ff6aa3420f25f189c5e7ec7303485e9e7e31c20aa6f3e3",
+      "url": "https://github.com/huggingface/tokenizers/blob/88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3/tokenizers/Cargo.toml"
+    },
+    "validation/publisher-notices-v69/tokenizers/LICENSE": {
+      "bytes": 11357,
+      "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "remote_path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "url": "https://github.com/huggingface/tokenizers/blob/88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3/LICENSE"
+    }
+  },
+  "git_blob_commitments_verified": true,
+  "installed_dist_info_notice_missing": true,
+  "installed_wheel_source_equivalence_verified": false,
+  "models_or_articles_acquired": false,
+  "packages_installed": false,
+  "prior_failed_raw_request_preserved": "validation/v69_tokenizers_publisher_notice.json",
+  "publisher": "huggingface/tokenizers",
+  "recorded_at_utc": "2026-10-16T16:13:36.646439+00:00",
+  "retrieval": "GitHub connector fetch_file at known immutable commit",
+  "revision": "88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3",
+  "schema": "tokenizers-pinned-source-notice-recovery-v69",
+  "version": "0.23.2"
+}

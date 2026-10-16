@@ -1,0 +1,71 @@
+V67 terminal reporting preparation,16 October2026
+
+validation/check_v67_terminal_metadata.py is new read-only reporting code. It is
+outside all frozen experiment inventories, imports no numerical implementation,
+and cannot submit a job, acquire data or change a ledger. The original V67
+workers and both registered cluster auditors remain unchanged.
+
+Use the module entry point with a newly collected metadata archive and a new
+output path after reconciling Slurm:
+  python3 -B -m validation.check_v67_terminal_metadata ARCHIVE --output NEW_REPORT.json
+The output is exclusive; never overwrite an earlier report. A partial snapshot
+returns pending_terminal, a failed scheduler row remains terminal_failure_preserved,
+and terminal allocations with missing audit/entry receipts remain incomplete.
+Terminal-looking JSON cannot override live, failed or missing scheduler evidence.
+No comparison table is produced in those cases.
+
+For a complete snapshot, the checker reconciles all twelve worker identities,
+commands, plans, applied OS/thread-limit acknowledgements, sealed artifacts,
+observed CPU and rounded debits against the final and chronological prefix ledgers.
+It verifies the exact audit input inventories, both actual-byte audit claims,
+the ten arm/endpoint model-state comparisons, retained/fresh traversal assertions,
+modern restoration assertions, original/retained state-plus-trust sizes and
+checkpoint-inclusive arithmetic. Copied metadata is rehashed; omitted numerical
+and corpus bytes are not locally revalidated. Audit claims are evidence from the
+registered cluster auditors, not an independent numerical implementation proof.
+
+Cost fields are recomputed from the saved worker/transaction receipts. Shared
+preparation is attributed once per representation; nested request, worker,
+transaction and entry clocks stay separate. Audit/qualification/controller CPU
+remain outside the numerical ledger. Slurm allocation CPU is reported separately
+and batch rows are not added a second time. Missing/duplicate accounting rows or
+wall-cap overshoots are rejected. Five comparison arms share four stored
+representations: cached and cold both use lossless. Earlier handoff wording that
+said five stored representations was incorrect and is corrected at this checkpoint.
+
+Qualification and scope
+All25 generated local tests pass with zero errors/failures/skips. They include a
+complete synthetic twelve-worker/two-audit receipt graph with ten comparisons,
+plus refusal tests for pending/failed/missing gates, modified clocks, omitted audit
+inputs, changed limits/model commitments, unsettled debits and bad scheduler rows.
+The generated graph exists only in memory and is explicitly labelled a fixture;
+it contains no actual model/state bytes and represents no experiment result.
+The earlier13-test development log is preserved. Root review is not independent.
+
+The actual O and P snapshots return pending_terminal with no result table. P was
+captured at15:44:37UTC (21:14:37IST): cold15265 RUNNING1h11m13s with15of24 stage
+certificates;15266--15275 dependency-pending. Both terminal audits remain absent.
+The actual terminal-success path has therefore not yet been exercised. Do not
+declare V67 success or start V68 based on the synthetic fixtures. Future actual
+audit receipts, terminal scheduler success and source/input checks are mandatory.
+
+Read validation/v67_terminal_reporting_preparation.json, the25-test log and
+validation/v67_terminal_pending_check_p.json. Preserve current live reservations.
+No numerical experiment, registered source, resource cap, source exclusion or
+one-use attempt changed. Current manuscript and four review components are unchanged.
+
+Publisher-notice follow-up
+The tokenizers v0.23.2 publisher LICENSE page was read and declares Apache2.0:
+https://raw.githubusercontent.com/huggingface/tokenizers/v0.23.2/LICENSE
+GitHub's tag API returned commit88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3.
+A bounded attempt to save immutable-commit LICENSE/Cargo metadata failed with a
+connection reset; no body was archived and no retry was made. These observations
+do not bind the installed binary to that source commit or complete Rust notices.
+The missing installed dist-info notice and earlier four CPU license files remain
+unchanged. See validation/v69_tokenizers_publisher_notice.json. No package or
+model/data was installed or downloaded, and project release terms remain unassigned.
+
+Next: collect and reconcile the existing jobs through both terminal audits, then
+build the strongest-control decision from actual costs/state evidence. Only after
+both audits pass may V68 be registered. The long-versus-short final-paper format
+question is pending with the user; it does not block experiments or reporting.

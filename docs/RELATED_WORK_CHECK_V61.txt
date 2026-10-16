@@ -1,0 +1,42 @@
+Second: focused literature checks for the next manuscript revision
+Checked 14 October 2026. These are primary-source abstract/bibliographic checks,
+not a comprehensive novelty review or a completed comparison of implementations.
+No empirical result, current protocol, model, or manuscript was changed.
+
+1. Frantar, Ashkboos, Hoefler and Alistarh: GPTQ: Accurate Post-Training
+Quantization for Generative Pre-trained Transformers (2022 preprint / ICLR2023).
+https://arxiv.org/abs/2210.17323
+The authors describe one-shot weight quantization using approximate second-order
+information. Their reported efficiency concerns quantization and inference.
+Implication for Second: exact equality to Second's declared finite calibration
+target must not be described as equality to stock GPTQ or evidence of comparable
+large-model efficiency. Keep the mathematical relationship and empirical baseline
+identity explicit; the existing matched sequential model is its own bound target.
+
+2. Williams and Aletras: On the Impact of Calibration Data in Post-training
+Quantization and Pruning, ACL2024, pages10100–10118.
+https://aclanthology.org/2024.acl-long.544/
+DOI: 10.18653/v1/2024.acl-long.544
+They investigate calibration choices across methods, datasets, tasks and models,
+and report substantial downstream-performance variation.
+Implication for Second: a quality pass on one adaptive calibration root is a
+useful development check, not a root-general quality guarantee. This supports
+the planned independent-root and untouched-quality obligations; it does not set
+our sample size, acceptance margin, or tell us whether the fixed teacher works.
+
+3. Zhang et al.: Catastrophic Failure of LLM Unlearning via Quantization
+(2024 preprint).
+https://arxiv.org/abs/2410.16454
+The authors examine quantization after knowledge-unlearning updates and report
+recovery of previously suppressed information.
+Implication for Second: this concerns knowledge in trained parameters. Removing
+a record's contribution from a specified calibration reconstruction is a different
+counterfactual and supplies no pretraining-forgetting or privacy guarantee. Use
+this as a scope distinction if discussing unlearning, not as an equivalent repair
+baseline or an unsupported claim that Second solves quantization-induced recovery.
+
+Action after V61 closure: integrate only the directly relevant motivation and
+scope distinctions into the existing source, preserving the old nearest-teacher
+negative findings and keeping the original-checkpoint teacher's results separate.
+Read full methods and closest exact-recovery/interval-certification prior work
+before making any new novelty assertion. Search absence is not novelty evidence.

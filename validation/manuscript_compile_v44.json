@@ -1,0 +1,16 @@
+{
+  "schema": "native-manuscript-compilation-attempt-v44",
+  "date": "2026-10-10",
+  "source": "reports/manuscript_v44.tex",
+  "source_sha256": "30909c99d0e2438dd62afcea82b321d02a67549eae53a20ec187ce6ba92ce414",
+  "compiler": "Codex built-in standalone LaTeX compiler",
+  "result_kind": "compile-failed",
+  "message": "Compilation timed out",
+  "diagnostic": "Tectonic could not download amsbsy.sty from https://relay.fullyjustified.net/default_bundle_v33.tar; repeated network timeout and DNS lookup failures.",
+  "successful_compilation_verified": false,
+  "pdf_exported": false,
+  "visual_layout_verified": false,
+  "source_preserved": true,
+  "editor_open_request_status": "queued",
+  "native_app_visual_inspection": "unavailable: Sky Computer Use service startup request failed"
+}

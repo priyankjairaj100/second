@@ -1,0 +1,32 @@
+Manuscript transcription and arithmetic check, 16 October 2026
+
+The current editor source passes71 selected checks against unchanged, previously
+verified reporting records. All eight service-table rows and24 numeric cells match
+the saved request nanoseconds and state/deployment bytes after unit conversion and
+rounding. Endpoint labels and arm order also match.
+
+The check recomputes storage savings, request slowdowns, checkpoint-inclusive
+savings, attributed preparation-plus-transaction sums and separate scheduler CPU
+totals. It checks the nearest-anchor failure, original-checkpoint exposed-quality
+screen, article directions, GPU parity figures and modern-lossless artifact costs.
+It preserves adverse guards and distinguishes artifact costs from service clocks.
+The abstract's selected percentages agree with the detailed evidence.
+
+Three in-memory tamper probes were rejected: a changed table time, interchanged
+state/deployment columns, and reversal of the failed overall quality statement.
+The probes did not edit the manuscript. No correction was needed; its source hash
+remains7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda.
+The existing native compilation remains applicable to these unchanged bytes.
+
+Run from the repository using the existing project Python:
+.venv/bin/python -B validation/check_manuscript_numbers_v69.py \
+  --manuscript reports/manuscript_v69.tex --output NEW_REPORT_PATH.json
+The output is exclusive. Preserve previous reports and failures instead of
+overwriting them. See validation/v69_manuscript_numbers.json for every checked
+passage, exact input hashes and probe results.
+
+Scope: transcription and arithmetic against the preserved audit reports and cost
+handoffs. It does not repeat archived metadata audits, parse missing model/state
+binaries, execute likelihood/calibration, validate every manuscript number, prove
+theorems or establish new scientific evidence. Final result updates require fresh
+claim-to-artifact reconciliation. Page count, anonymity and submission remain open.

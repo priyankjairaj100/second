@@ -1,0 +1,270 @@
+{
+  "schema": "copied-gpu-parity-evidence-audit-v47",
+  "status": "verified",
+  "program_sha256": "620076c67ae79ee56de784ecd4c6e49ef3b4b22f45742f72956821b1e416cf54",
+  "completion_sha256": "873647518224bcf87a2dc6ab41841581ed756a023f21eb758fbed30ff8e33161",
+  "export_program_sha256": "1803adfd4b9548a605dc468a7c982d077abaaa43f36df6bfce8c4098a7170915",
+  "source_files_rehashed": 304,
+  "copied_bound_inputs_verified": [
+    "base_target",
+    "export_completion",
+    "export_ledger",
+    "export_program",
+    "export_registration",
+    "fixed_target",
+    "parameter_manifest",
+    "sequential_metadata",
+    "sequential_model",
+    "v44_completion",
+    "v44_ledger",
+    "v44_program",
+    "v44_registration"
+  ],
+  "remote_only_inputs_not_rehashed_locally": [
+    {
+      "bytes": 964501350,
+      "path": "/nfs_home/users/poonam/second-20261010/local_runs/cpu-parameters-v47-20261010-a/outputs/parameters.npz",
+      "sha256": "c5cc19cde2e526bb3098efaec5c7709ac3714bd781f8753c1c5b77f6c4a67f2b"
+    }
+  ],
+  "inherited_v44_inputs_rehashed": 13,
+  "sealed_worker_artifacts_verified": 18,
+  "failed_v46_charge": 22,
+  "cpu_export_charge": 19,
+  "gpu_parity_charge": 22,
+  "all_three_worker_reservations_settled": true,
+  "parity": {
+    "passed": true,
+    "checks": [
+      {
+        "model": "fixed_feature",
+        "id": "wikitext2:validation:article-row-2525",
+        "absolute_mean_nll_deviation": 7.161375604511246e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "fixed_feature",
+        "id": "wikitext2:validation:article-row-2237",
+        "absolute_mean_nll_deviation": 7.161375604511246e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "fixed_feature",
+        "id": "wikitext2:validation:article-row-132",
+        "absolute_mean_nll_deviation": 4.475859752819529e-16,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "fixed_feature",
+        "id": "wikitext2:validation:article-row-2115",
+        "absolute_mean_nll_deviation": 5.3710317033834344e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "fixed_feature",
+        "id": "wikitext2:validation:article-row-2352",
+        "absolute_mean_nll_deviation": 8.056547555075152e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "fixed_feature",
+        "id": "wikitext2:validation:article-row-1040",
+        "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "fixed_feature",
+        "id": "wikitext2:validation:article-row-3636",
+        "absolute_mean_nll_deviation": 0.0,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "fixed_feature",
+        "id": "wikitext2:validation:article-row-1299",
+        "absolute_mean_nll_deviation": 5.3710317033834344e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "full_precision",
+        "id": "wikitext2:validation:article-row-2525",
+        "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "full_precision",
+        "id": "wikitext2:validation:article-row-2237",
+        "absolute_mean_nll_deviation": 6.713789629229293e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "full_precision",
+        "id": "wikitext2:validation:article-row-132",
+        "absolute_mean_nll_deviation": 3.580687802255623e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "full_precision",
+        "id": "wikitext2:validation:article-row-2115",
+        "absolute_mean_nll_deviation": 4.475859752819529e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "full_precision",
+        "id": "wikitext2:validation:article-row-2352",
+        "absolute_mean_nll_deviation": 8.951719505639057e-16,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "full_precision",
+        "id": "wikitext2:validation:article-row-1040",
+        "absolute_mean_nll_deviation": 2.6855158516917172e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "full_precision",
+        "id": "wikitext2:validation:article-row-3636",
+        "absolute_mean_nll_deviation": 1.2084821332612728e-14,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "full_precision",
+        "id": "wikitext2:validation:article-row-1299",
+        "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "nearest_rounding",
+        "id": "wikitext2:validation:article-row-2525",
+        "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "nearest_rounding",
+        "id": "wikitext2:validation:article-row-2237",
+        "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "nearest_rounding",
+        "id": "wikitext2:validation:article-row-132",
+        "absolute_mean_nll_deviation": 0.0,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "nearest_rounding",
+        "id": "wikitext2:validation:article-row-2115",
+        "absolute_mean_nll_deviation": 2.6855158516917172e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "nearest_rounding",
+        "id": "wikitext2:validation:article-row-2352",
+        "absolute_mean_nll_deviation": 3.580687802255623e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "nearest_rounding",
+        "id": "wikitext2:validation:article-row-1040",
+        "absolute_mean_nll_deviation": 6.26620365394734e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "nearest_rounding",
+        "id": "wikitext2:validation:article-row-3636",
+        "absolute_mean_nll_deviation": 2.2379298764097643e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "nearest_rounding",
+        "id": "wikitext2:validation:article-row-1299",
+        "absolute_mean_nll_deviation": 2.6855158516917172e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "sequential",
+        "id": "wikitext2:validation:article-row-2525",
+        "absolute_mean_nll_deviation": 5.3710317033834344e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "sequential",
+        "id": "wikitext2:validation:article-row-2237",
+        "absolute_mean_nll_deviation": 8.951719505639057e-16,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "sequential",
+        "id": "wikitext2:validation:article-row-132",
+        "absolute_mean_nll_deviation": 5.818617678665387e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "sequential",
+        "id": "wikitext2:validation:article-row-2115",
+        "absolute_mean_nll_deviation": 1.0742063406766869e-14,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "sequential",
+        "id": "wikitext2:validation:article-row-2352",
+        "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "sequential",
+        "id": "wikitext2:validation:article-row-1040",
+        "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "sequential",
+        "id": "wikitext2:validation:article-row-3636",
+        "absolute_mean_nll_deviation": 1.3427579258458586e-15,
+        "threshold": 1e-08,
+        "passed": true
+      },
+      {
+        "model": "sequential",
+        "id": "wikitext2:validation:article-row-1299",
+        "absolute_mean_nll_deviation": 8.951719505639057e-15,
+        "threshold": 1e-08,
+        "passed": true
+      }
+    ],
+    "maximum_absolute_mean_nll_deviation": 1.2084821332612728e-14
+  },
+  "progress_rows_match": true,
+  "numerical_inference_repeated": false,
+  "parameter_npz_copied_locally": false,
+  "scope": "Audit of copied receipts, source/input bindings and reported arithmetic; no independent inference or hostile-host attestation"
+}

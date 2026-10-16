@@ -1,3 +1,7 @@
+Current work (16 October 2026): **V67 hybrid15263 completed0:0; compression15264 is running. V69 held-job controls pass92 local tests.** At18:57IST the compression run was active21m26s with7of24 certified stages;15265--15275 were dependency-pending. The hybrid receipt/debit check passed; fresh-oracle model/state audits remain pending. Read [latest handoff](ACTIVE_SESSION_V69.md), [partial receipt scope](V67_HYBRID1_RECEIPT_V69.txt), and [continuous queue](CONTINUOUS_RESEARCH_QUEUE.md). All469 frozen V67 and14 historical GPU/export sources remain unchanged. V68/V69 remain unregistered. The manuscript compiles and passes71 selected number checks; an identity scan identifies47 files for anonymous-copy review. Historical checkpoints follow.
+
+---
+
 Current checkpoint: read `ACTIVE_SESSION_V38.md` and `RESEARCH_DECISION_V38.md` first.
 The fresh C4 root is complete; all seven trials and both new ledgers are settled.
 Exact complete-model repair and narrow timing wins now have WikiText and C4 development evidence.
