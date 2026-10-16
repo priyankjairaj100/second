@@ -7,15 +7,16 @@ sources through V67 remain unchanged. Never rerun a V67 launcher or job.
 
 ## Current actual observation
 
-At11:06:34UTC (16:36:34IST), preparation15262 was RUNNING for1h18m42s on csis.mn1.
-All13 sources were replayed and19of24 stages certified. Last recorded stage was
-block.0004.mlp_up; no certificate refusal or fallback was recorded. Its completion
-receipt is absent. Jobs15263--15275 remain dependency-pending; terminal audits are
-absent. This is progress, not complete-model correctness, quality or timing evidence.
+At11:31:09UTC (17:01:09IST), preparation15262 was RUNNING for1h43m17s on csis.mn1.
+All13 sources were replayed and all24 stages certified. It is now serializing
+saved state:43 payload-stage events are recorded, last compressed48 block.0004.mlp_up.
+No certificate refusal or fallback was recorded. The preparation completion receipt
+is absent. Jobs15263--15275 remain dependency-pending; terminal audits are absent.
+This is progress, not complete-model correctness, quality or final timing evidence.
 
-The97-file snapshot campaigns/csis_v67_progress_metadata_20261016_c.tar.gz is149064
-bytes, SHA2567039d67d63f4e395b8b8c6ffa8c45a53b72e2dfefdf46171c54dfacbf811edf2.
-validation/v67_progress_metadata_check_c.json verifies archive/source/dependency
+The145-file snapshot campaigns/csis_v67_progress_metadata_20261016_d.tar.gz is152435
+bytes, SHA2563898ad7d1ad7659339b295cf73aa354e1183eac0ea0959646bb060e8e564bd45.
+validation/v67_progress_metadata_check_d.json verifies archive/source/dependency
 bindings and scheduler metadata. All469 executed sources, eleven dependencies and
 102 historical ledgers were checked remotely. The cluster numerical checkout stays
 f900999fcb200509dfad4fc081ce9c87fd172a16. Do not pull reporting changes into it.
@@ -23,10 +24,10 @@ Earlier launch/progress snapshots and all failures remain preserved.
 
 ## Completed independent preparation
 
-V69 now has seventeen unregistered files and33 passing generated local tests,
+V69 now has nineteen unregistered files and40 passing generated local tests,
 zero failures/errors/skips, in the existing project .venv Python3.12.7. No packages
-were installed. validation/v69_quality_preparation.json binds the exact source
-bytes and preserves the previous9-test report separately. V68's nine prepared
+were installed. validation/v69_input_preparation.json binds the exact source
+bytes; the previous9- and33-test reports remain preserved separately. V68's nine prepared
 files remain unchanged; its22 local fixtures are a separate qualification.
 
 The V69 components now cover actual packed-code reconstruction, both matched
@@ -37,6 +38,14 @@ and statistics auditing. They preserve partial failures and valid negative quali
 They reject changed parameters, wrong memberships, malformed/oversized archives,
 missing/extra/changed loss artifacts, incorrect prediction counts and a failed
 parity barrier. Four GPU subset losses per model are reused, not repeated.
+The new input gates bind actual candidate model/worker bytes to both terminal
+V67 audits and fresh-model inputs, plus exact retained memberships. They bind all
+V68 phases, actual320 token records, fixed sampling order and every inspected
+frame exclusion. They do not repeat state parsing or retokenization. The loss
+audit now explicitly accepts the registered GPU statistics NumPy version and
+records its own recomputation runtime separately. Every number and decision must
+still match exactly. The cross-runtime fixture changes version metadata only;
+no actual multi-runtime numerical execution has been performed.
 
 The numerical sequential constructor is mocked in local boundary/construction
 fixtures. Tiny generated CPU likelihoods execute, but no real checkpoint/corpus,
@@ -68,8 +77,12 @@ research_v69/PROTOCOL.txt. No resource allowance is registered or reserved.
 5. Decide prospective timing replication, then finish evidence-linked manuscript,
    exact venue formatting/anonymity, citations, licenses, checklist and archives.
 
-The existing open manuscript is unchanged and matches reports/manuscript_v67.tex;
-its last native compilation succeeded. No new numerical claim was inserted. It is
-still not submission-ready. The existing15-minute same-chat continuation stays
+The existing open manuscript now matches reports/manuscript_v69.tex and native
+compilation succeeded after adding Limitations and AI-assistance disclosure.
+All math/proof spans and numerical results remain unchanged. It has5269 source
+whitespace tokens versus6884 before trimming; the abstract has197. These are not
+venue page counts. Live ARR/ACL guidance and remaining formatting/anonymity,
+literature and author-controlled requirements are in docs/SUBMISSION_READINESS_V69.txt.
+The paper and bundle remain incomplete. The existing15-minute same-chat continuation stays
 active. No other empirical workload may disturb V67 timings. No new monitor,
 subagent, paid compute, third-party message or conference submission is authorized.

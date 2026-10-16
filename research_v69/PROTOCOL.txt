@@ -22,7 +22,7 @@ Never infer actual candidate bytes from a test or a claimed matching checksum.
 Proposed execution sequence
 1. Freeze all new sources, dependencies, Linux CPU and CUDA environments, actual
    inputs and caps. Pass local checks and separately registered Linux numerical
-   fixtures, including all six unchanged V55 sequential tests. The current33 tests
+   fixtures, including all six unchanged V55 sequential tests. The current40 tests
    include mocks and tiny CPU data; they do not qualify MPFR or CUDA.
 2. Audit the existing uncompressed original-parameter snapshot against a reference
    constructed from the bound checkpoint. Compare all arrays and all words.
@@ -58,6 +58,11 @@ Both endpoints require pooled PPL ratio<=1.05, one-sided97.5% bootstrap upper<=1
 and observed maximum article ratio<=1.20. These are approximate bounded-frame
 uncertainty statements, not population-tail guarantees. Do not increase the sample
 or change guards after observing quality. Original and nearest controls run once.
+The loss audit must receive the GPU NumPy version from the frozen runtime, not
+infer it from an untrusted statistics file. Record the recomputation runtime
+separately. Every numeric statistic and gate decision must match exactly; only
+the two legitimate runtime-provenance fields are allowed to differ. An arithmetic
+disagreement is a failed audit, with no silent tolerance or repeated attempt.
 
 Resource design, not a registration or ETA
 The existing pure stage-admission formula admits both24-stage point constructors

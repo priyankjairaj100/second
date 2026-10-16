@@ -1,0 +1,63 @@
+Submission preparation checkpoint, 16 October 2026
+Scope: current existing manuscript and future anonymous ARR/ACL package.
+This is not a submission, acceptance prediction or completed compliance review.
+
+Official guidance checked live
+ARR common submission checklist: https://aclrollingreview.org/authorchecklist
+ARR call for papers: https://aclrollingreview.org/cfp
+ACL formatting: https://acl-org.github.io/ACLPUB/formatting.html
+
+ARR permits four main-text pages for short papers and eight for long papers.
+Limitations, ethical considerations, references and appendices do not count in
+those main-text limits. The required Limitations section must contain limitations,
+not new experiments or analysis. Review submissions require anonymous materials,
+the official review style and appropriate Responsible NLP answers. These checks
+remain separate from successful compilation. [ARR checklist and ACL formatting]
+
+Completed text preparation
+The existing editor file now has a dedicated Limitations section and an
+AI-assistance-only Acknowledgements section. The current ARR checklist permits
+that disclosure in the review version, despite the general formatting page's
+instruction to omit ordinary acknowledgements. The disclosure covers planning,
+coding, analysis, literature checking and drafting; it does not claim that human
+author validation is already complete. Native compilation succeeded. All theorem,
+lemma, proposition, proof and math spans are unchanged. No new empirical result
+was inserted. reports/manuscript_v69.tex and its validation record preserve bytes.
+
+Required formatting/anonymity work
+The source still uses custom10pt article/geometry settings, rather than the
+official ACL review template. Actual venue page count remains unverified. It has
+15 project-record bibliography entries and17 identifying repository links. Replace
+these with a concise anonymous evidence index in the eventual reproduction
+package while preserving their exact provenance outside the anonymous paper.
+Do not relabel the current public repository as anonymous. Remove working-draft
+meta-text and finish the abstract, bibliography style and final story after the
+evidence decision. The current abstract is below200 source whitespace tokens;
+this is a text check, not a rendered submission validation. [ACL formatting]
+
+Scientific and artifact blockers
+V67 terminal evidence, actual untouched quality, the timing decision, and any
+claim-required replication remain open. Source/tests/receipts alone cannot replace
+actual model or loss evidence. Verify dataset/checkpoint/dependency licenses and
+redistribution before assembling the archive. Preserve negative findings, failed
+attempts, caps and all exclusions. Keep raw checkpoint/corpus binaries out unless
+distribution has been explicitly verified. Check every final table against its
+audited artifact, then validate clean extraction and reproduction instructions.
+
+Literature refresh scope
+GPTQ's authors, title, ICLR2023 listing and approximate-second-order description
+match https://arxiv.org/abs/2210.17323v2 . ExecCert's title/authors and finite-format
+discussion in Section4.4 match https://arxiv.org/html/2610.02268v1 . The Ginart
+proceedings PDF resolves, but its full bibliographic/proof check was not repeated.
+The Exact-Fun pinned author repository page resolves; DOI/Crossref access and raw
+PDF fetching failed in this refresh. Preserve the earlier primary-source review,
+but do not mark that reference freshly reverified or replace it from a secondary
+summary. Final bibliography verification remains incomplete.
+
+Author-controlled final information
+Before external submission, confirm paper type/cycle, author order, affiliations,
+OpenReview profiles/ORCIDs, conflicts, preprint/resubmission status and any required
+reviewing-service contributor. Current ARR rules require complete author profiles
+and appropriate disclosure of AI assistance. These facts cannot be inferred from
+repository names or generated prose. They do not block the ongoing experiments or
+package preparation. No conference submission or third-party message is authorized.

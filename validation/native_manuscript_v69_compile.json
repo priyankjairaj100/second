@@ -1,0 +1,21 @@
+{
+  "abstract_source_whitespace_tokens": 197,
+  "ai_assistance_disclosed": true,
+  "anonymous_version": false,
+  "compiler": "Codex desktop native compiler",
+  "dedicated_limitations_added": true,
+  "identifying_repository_links": 17,
+  "math_spans_unchanged": true,
+  "missing_citation_keys": [],
+  "new_experiment_results_added": false,
+  "original_v63_source_whitespace_tokens": 6884,
+  "page_limit_verified": false,
+  "project_bibliography_items": 15,
+  "proof_blocks_unchanged": true,
+  "source": "reports/manuscript_v69.tex",
+  "source_sha256": "11e5a67c5edc102b7b11f2f5962b877f73efbc7ae0688863ca274832023bc393",
+  "source_whitespace_tokens": 5269,
+  "status": "native_compile_success",
+  "submission_ready": false,
+  "venue_format_verified": false
+}

@@ -6,7 +6,8 @@ from research_v68 import quality_statistics as stats
 from src.run_store import canonical_json,strict_json
 
 
-def audit(directory,records,model_bindings,*,registration_sha256,cpu_directory=None):
+def audit(directory,records,model_bindings,*,registration_sha256,cpu_directory=None,
+          expected_statistics_numpy_version=None):
     directory=Path(directory);inputs={}
     def obj(name):
         raw=read(directory/name,maximum=8*2**20);value=strict_json(raw)
@@ -38,7 +39,8 @@ def audit(directory,records,model_bindings,*,registration_sha256,cpu_directory=N
     subset={m:rows[:parity.PARITY_ARTICLES] for m,rows in quality.items()}
     if mode=='cpu_parity':
         parity.compare(subset,subset,ids)
-        require(c['parity'] is None and c['summary'] is None and cpu_directory is None,'CPU parity cannot claim full quality')
+        require(c['parity'] is None and c['summary'] is None and cpu_directory is None
+            and expected_statistics_numpy_version is None,'CPU parity cannot claim full quality')
     else:
         require(cpu_directory is not None and Path(cpu_directory).absolute()!=directory.absolute(),'Separate actual CPU loss artifacts required')
         cpu_report=audit(cpu_directory,records,model_bindings,registration_sha256=registration_sha256)
@@ -51,8 +53,15 @@ def audit(directory,records,model_bindings,*,registration_sha256,cpu_directory=N
         events.append(dict(phase='all_six_models_passed_parity',comparisons=24));extend(range(parity.PARITY_ARTICLES,stats.SAMPLE))
         rows=[dict(id=r['id'],predictions=127,losses={m:dict(sum_nll=quality[m][i]['nll_sum'],mean_nll=quality[m][i]['mean_nll']) for m in stats.MODELS}) for i,r in enumerate(records)]
         require(obj('paired-losses.json')==dict(rows=rows),'Paired loss artifact differs from actual article files')
-        summary=stats.summarize(rows)
-        require(summary==c['summary']==obj('statistics.json'),'Reported quality/statistics differ from actual losses')
+        summary=stats.summarize(rows);recomputation_numpy_version=summary['bootstrap']['numpy_version']
+        observed=obj('statistics.json')
+        require(type(expected_statistics_numpy_version) is str and expected_statistics_numpy_version
+            and observed['bootstrap']['numpy_version']==expected_statistics_numpy_version,
+            'Statistics runtime must match the prospectively bound GPU NumPy version')
+        # Version provenance differs from numerical equality. Keep both versions;
+        # every recomputed number and decision must still match exactly.
+        summary['bootstrap']['numpy_version']=expected_statistics_numpy_version
+        require(summary==c['summary']==observed,'Reported quality/statistics differ from actual losses')
         expected_names|={'parity.json','paired-losses.json','statistics.json'}
     require(c['progress_events']==len(events),'Complete ordered progress census required')
     previous=0
@@ -68,5 +77,8 @@ def audit(directory,records,model_bindings,*,registration_sha256,cpu_directory=N
         actual_progress_and_parity_barrier_checked=True,statistics_recomputed=mode=='gpu_quality',
         all_endpoint_gates_pass=c['summary']['all_endpoint_gates_pass'] if mode=='gpu_quality' else None,
         actual_cpu_reference_audit=cpu_report if mode=='gpu_quality' else None,
+        statistics_numpy_version=expected_statistics_numpy_version,
+        recomputation_numpy_version=recomputation_numpy_version if mode=='gpu_quality' else None,
+        numerical_statistics_equal_across_declared_runtimes=mode=='gpu_quality',
         artifacts=inputs,actual_model_runtime_and_budget_audits_still_required=True,
         independent_likelihood_reexecution=False,shared_statistics_implementation=True)

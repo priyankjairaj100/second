@@ -105,7 +105,7 @@ or parallel execution loop. No subagent delegation is currently authorized.
    audits before registering the data-only phase; do not disturb active timings.
    V69 now adds sequential construction, full parameter-array auditing, six-model
    CPU/CUDA factories, parity-gated once-only loss collection and saved-loss audits.
-   All33 generated local fixtures pass; the sequential constructor remains mocked,
+   All40 generated local fixtures pass; the sequential constructor remains mocked,
    while tiny CPU likelihood fixtures execute. Production runtime/checkpoint/geometry
    admission, bounded controller/Slurm entries and terminal cost audits remain.
    Read research_v69/PROTOCOL.txt; proposed resources are not registered allowances.
@@ -151,11 +151,13 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate are qualified. At16:36IST preparation15262 is running with all13 sources
-and19of24 stages recorded; remaining jobs15263--15275 are dependency-pending. Modern-service timings,
+V67's64-test exact-source Linux gate are qualified. At17:01IST preparation15262 is running with all13 sources
+and all24 stages certified; saved-state serialization is in progress; remaining jobs15263--15275 are dependency-pending. Modern-service timings,
 new-root model evidence, untouched quality and prospective timing remain absent.
-The same manuscript compiles after reducing6884 to5175 source whitespace tokens;
-this is not a venue page-count check or submission-ready bundle.
+The same manuscript compiles after reducing6884 to5269 source whitespace tokens
+and adding Limitations and AI-assistance disclosure. All proofs/math are unchanged.
+This is not a venue page-count check or submission-ready bundle; see
+docs/SUBMISSION_READINESS_V69.txt for the verified guidance and remaining work.
 
 ## When to pause or finish
 

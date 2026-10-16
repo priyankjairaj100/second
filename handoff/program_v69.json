@@ -4,11 +4,11 @@
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 149064,
-      "sha256": "7039d67d63f4e395b8b8c6ffa8c45a53b72e2dfefdf46171c54dfacbf811edf2"
+      "bytes": 152435,
+      "sha256": "3898ad7d1ad7659339b295cf73aa354e1183eac0ea0959646bb060e8e564bd45"
     },
-    "captured_at_utc": "2026-10-16T11:06:34.457169+00:00",
-    "copied_files": 97,
+    "captured_at_utc": "2026-10-16T11:31:09.570876+00:00",
+    "copied_files": 145,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -22,7 +22,7 @@
         "total_cpu": "00:09.977"
       },
       "15262": {
-        "elapsed": "01:18:42",
+        "elapsed": "01:43:17",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-prepare",
@@ -222,39 +222,42 @@
       },
       "prepare": {
         "completion_receipt_present": false,
-        "events": 33,
+        "events": 81,
         "last": {
-          "certificate_refusal": null,
-          "code_sha256": "27970361bc3e15bc19dd06dc0f74ebe87dfc9e9984de584ec80245cb2f4bbe93",
-          "elapsed_ns": 4184862938170,
-          "fallback": false,
-          "phase": "stage_certified",
-          "route": "streamed",
+          "elapsed_ns": 6179801260419,
+          "phase": "payload_stage",
+          "representation": "compressed48",
           "stage_id": "block.0004.mlp_up"
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|PENDING|0:00|(Dependency)\n15263|second67-hybrid-1|PENDING|0:00|(Dependency)\n15262|second67-prepare|RUNNING|1:18:42|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|PENDING|0:00|(Dependency)\n15263|second67-hybrid-1|PENDING|0:00|(Dependency)\n15262|second67-prepare|RUNNING|1:43:17|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
     "volatile_files_omitted": []
   },
   "manuscript": {
-    "after_source_whitespace_tokens": 5175,
+    "abstract_source_whitespace_tokens": 197,
+    "after_source_whitespace_tokens": 5269,
+    "ai_assistance_disclosed": true,
     "before_source_whitespace_tokens": 6884,
+    "limitations_added": true,
+    "math_spans_unchanged": true,
     "missing_citations": [],
     "new_results_added": false,
-    "removed_tokens": 1709,
-    "sha256": "908b2ab335147d9c34c19e0e6fd0e68792d35c2ed7d1fd2f14f58ae8c2284fa4",
-    "source_snapshot": "reports/manuscript_v67.tex"
+    "proof_blocks_unchanged": true,
+    "removed_tokens": 1615,
+    "sha256": "11e5a67c5edc102b7b11f2f5962b877f73efbc7ae0688863ca274832023bc393",
+    "source_snapshot": "reports/manuscript_v69.tex",
+    "submission_ready": false
   },
-  "manuscript_native_compile": "success_at_v67_edit_no_new_edit",
+  "manuscript_native_compile": "success_at_v69_edit",
   "model_admission_preparation": {
-    "captured_at_utc": "2026-10-16T11:09:36.782268+00:00",
+    "captured_at_utc": "2026-10-16T11:30:49.301919+00:00",
     "constructor_mocked": true,
     "earlier_local_discovery_failures_preserved_in": "validation/v69_model_preparation.json",
-    "elapsed_ns": 7983474250,
+    "elapsed_ns": 10530658542,
     "empirical_data_acquired": false,
     "environment": ".venv",
     "errors": 0,
@@ -262,24 +265,25 @@
     "frozen_sources_verified": 469,
     "generated_tiny_cpu_likelihood_executed": true,
     "gpu_execution": false,
+    "input_admission_fixtures_are_generated": true,
     "linux_gate_run": false,
-    "manuscript_unchanged": true,
     "numerical_constructor_executed": false,
     "platform": "macOS-13.0-arm64-arm-64bit",
-    "process_cpu_ns": 7089906000,
+    "process_cpu_ns": 9883299000,
     "python": "3.12.7",
     "real_checkpoint_inference": false,
+    "real_multi_runtime_statistics_comparison": false,
     "registration_exists": false,
     "skips": 0,
-    "source_files": 17,
+    "source_files": 19,
     "sources": {
       "research_v69/PROTOCOL.txt": {
-        "bytes": 6656,
-        "sha256": "13759509a793cd88716b02dc94adf6f70b6b5ed31f2a74814058a75b3789e243"
+        "bytes": 7051,
+        "sha256": "64df61c98c090df7eeff40bfea79de0e21feb9e28bf0baf1b132fe037e6acfc9"
       },
       "research_v69/README.txt": {
-        "bytes": 4309,
-        "sha256": "ee7355bba362bf117a22fa8c0ffe1686c3eb824f0021f880062423430ac66aa1"
+        "bytes": 5044,
+        "sha256": "475c380ca7b72479e869b1872f18f28157cdab97b80f4a42d602a7fc03543cb3"
       },
       "research_v69/__init__.py": {
         "bytes": 72,
@@ -289,9 +293,13 @@
         "bytes": 8400,
         "sha256": "836efb24cf955da326baa76fd9d6e8d9cd1041043a205ef91a69b1a5b63289aa"
       },
+      "research_v69/input_gate.py": {
+        "bytes": 9805,
+        "sha256": "edfa22ce5a24aca38b0b9ec354e4db837741972ae4c74296fda6e07012d6ed94"
+      },
       "research_v69/loss_audit.py": {
-        "bytes": 5994,
-        "sha256": "47ac4c977f530c43a2f193c6f701a92292951803646f7908a2d332e7b655eb7f"
+        "bytes": 6955,
+        "sha256": "a2047c2ad39b5d08352ee69db0096aea1637e754a89179af6bb7140ba89f61ae"
       },
       "research_v69/model_backend.py": {
         "bytes": 8178,
@@ -317,9 +325,13 @@
         "bytes": 3948,
         "sha256": "6a9a0ac1af1e96a38bd4452391676f904faf7e72745fd160e0e89831c5b22437"
       },
+      "research_v69/test_input_gate.py": {
+        "bytes": 8320,
+        "sha256": "515152d96a48aa73172e58ed364569011184df7f9969ad44609c205ecfa9858c"
+      },
       "research_v69/test_loss_audit.py": {
-        "bytes": 3222,
-        "sha256": "ef32b050f1e3af8cb55f94686ed594dace11043a5e72343d59155560b14804a8"
+        "bytes": 4498,
+        "sha256": "bc5019201764396bfe83a457521d3d9ef52e1e676ecf1d23921edc847c197d55"
       },
       "research_v69/test_model_backend.py": {
         "bytes": 4972,
@@ -344,7 +356,7 @@
     },
     "sources_frozen": false,
     "status": "passed_local_generated_fixtures",
-    "tests": 33,
+    "tests": 40,
     "unchanged_v68_prepared_sources": 9
   },
   "next_actions": [
@@ -355,7 +367,7 @@
     "Decide prospective timing scope and complete evidence-linked manuscript/venue bundle"
   ],
   "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
-  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_c.tar.gz",
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_d.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,
@@ -504,5 +516,6 @@
   },
   "schema": "second-progress-v69-preparation",
   "status": "v67_running_quality_construction_evaluator_and_artifact_helpers_prepared_unregistered",
+  "submission_preparation": "docs/SUBMISSION_READINESS_V69.txt",
   "submission_ready": false
 }

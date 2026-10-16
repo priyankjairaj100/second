@@ -44,21 +44,31 @@ statistics. It rejects missing, extra or changed artifacts and wrong prediction
 counts, including records after the parity subset. It shares the statistics
 implementation and does not independently rerun inference. Actual model/runtime,
 ledger, scheduler, complete CPU and GPU accounting still need terminal workers.
+The audit now requires the prospectively bound statistics NumPy version. It keeps
+that version distinct from the audit runtime while requiring exact equality of
+every recomputed number and decision, including across declared runtime versions.
 
-Local generated-fixture suite:33 tests in the existing project .venv Python3.12.7.
+input_gate.py binds actual candidate bytes and worker receipts to both V67 terminal
+audits and fresh-model input commitments. It checks the exact retained memberships.
+It also binds all V68 phases, selection,320 actual token sequences, fixed sampling
+order and entire inspected-frame exclusions. It does not repeat state parsing or
+retokenization, or replace production source/runtime/checkpoint/cost admission.
+
+Local generated-fixture suite:40 tests in the existing project .venv Python3.12.7.
 The sequential constructor is mocked in boundary/construction tests. Tiny CPU
 likelihood fixtures now run; these are generated software data, not checkpoint or
 corpus evidence. No MPFR feature construction, real checkpoint, GPU execution,
 untouched article or empirical likelihood was accessed. Frozen V55 numerical
 fixtures and actual CUDA parity fixtures must pass in separately admitted Linux
-environments. Exact tested bytes and outcomes are in validation/v69_quality_preparation.json.
+environments. Exact tested bytes and outcomes are in validation/v69_input_preparation.json.
+The earlier33-test checkpoint remains in validation/v69_quality_preparation.json.
 
 Earlier environment-discovery failures remain in validation/v69_model_preparation.json:
 system Python3.9 lacks dataclass slots; Homebrew3.11 lacks NumPy; bundled3.12 NumPy
 expects macOS14 Accelerate symbols unavailable on this macOS13 host. The existing
 .venv works without installation. These were not registered empirical attempts.
 
-All seventeen V69 files remain editable and unregistered. V68's nine files are
+All nineteen V69 files remain editable and unregistered. V68's nine files are
 also unregistered, with22 separate local fixtures. All469 executed sources through
 V67 remain unchanged. No new workload may disturb active V67 timing. Source tests,
 structural resource admission and this README do not authorize a launch.

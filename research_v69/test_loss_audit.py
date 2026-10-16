@@ -13,7 +13,8 @@ class LossAuditTests(unittest.TestCase):
         self.temp=TemporaryDirectory();self.root=Path(self.temp.name).resolve();reference=cpu(self.root)
         f.collect('gpu_quality',RECORDS,factory([],adverse=True),BINDINGS,self.root/'gpu',registration_sha256='a'*64,cpu_reference=reference)
     def tearDown(self):self.temp.cleanup()
-    def audit(self):return a.audit(self.root/'gpu',RECORDS,BINDINGS,registration_sha256='a'*64,cpu_directory=self.root/'cpu')
+    def audit(self,version=None):return a.audit(self.root/'gpu',RECORDS,BINDINGS,registration_sha256='a'*64,
+        cpu_directory=self.root/'cpu',expected_statistics_numpy_version=version or a.stats.np.__version__)
 
     def test_actual_all1920_losses_and_cpu_reference_are_audited_with_negative_result(self):
         result=self.audit();self.assertEqual(result['actual_loss_files_compared'],1920)
@@ -45,6 +46,22 @@ class LossAuditTests(unittest.TestCase):
         with self.assertRaises(ValueError):self.audit()
         path.write_bytes(original);(self.root/'gpu/extra.json').write_bytes(b'{}')
         with self.assertRaisesRegex(ValueError,'Unexpected'):self.audit()
+
+    def test_declared_statistics_runtime_can_differ_but_every_number_must_match(self):
+        version='generated-different-runtime'
+        for name in ['statistics.json','completion.json']:
+            path=self.root/'gpu'/name;value=json.loads(path.read_bytes())
+            summary=value if name=='statistics.json' else value['summary']
+            summary['bootstrap']['numpy_version']=version;path.write_bytes(canonical_json(value))
+        with self.assertRaisesRegex(ValueError,'Statistics runtime'):self.audit()
+        result=self.audit(version);self.assertEqual(result['statistics_numpy_version'],version)
+        self.assertEqual(result['recomputation_numpy_version'],a.stats.np.__version__)
+        self.assertTrue(result['numerical_statistics_equal_across_declared_runtimes'])
+        for name in ['statistics.json','completion.json']:
+            path=self.root/'gpu'/name;value=json.loads(path.read_bytes())
+            summary=value if name=='statistics.json' else value['summary']
+            summary['endpoints']['6']['log_pooled_ratio']+=1e-14;path.write_bytes(canonical_json(value))
+        with self.assertRaisesRegex(ValueError,'statistics'):self.audit(version)
 
 
 if __name__=='__main__':unittest.main()
