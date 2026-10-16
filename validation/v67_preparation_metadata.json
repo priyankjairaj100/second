@@ -1,0 +1,89 @@
+{
+  "actual_model_state_bytes_checked": false,
+  "archive": {
+    "bytes": 201630,
+    "sha256": "097936432912408244ca07ffee172d60b5ed7eae57f19c8875faecfa6057e98f"
+  },
+  "captured_at_utc": "2026-10-16T11:56:24.613244+00:00",
+  "complete_campaign_costs_verified": false,
+  "controller_all_waited_children_cpu_ns": 6857958964000,
+  "controller_own_cpu_ns": 9590220307,
+  "declared_artifacts": {
+    "admission.json": {
+      "bytes": 555807,
+      "file": "admission.json",
+      "sha256": "8e409e1e4b9b0faff1d37f76faf117f9115042b11beb9acb3ec89bc86250e72b"
+    },
+    "compressed48-state.bin": {
+      "bytes": 359357797,
+      "file": "compressed48-state.bin",
+      "sha256": "6dda2d61e76d902de34c59594f184244cba057725ba5808491665a76326558b5"
+    },
+    "compressed48-trust.json": {
+      "bytes": 2,
+      "file": "compressed48-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "execution-provenance.json": {
+      "bytes": 12727,
+      "file": "execution-provenance.json",
+      "sha256": "22956724f4d2a9433702a3f76cc1fb76a8d447c8c60a7d668800de7da55574cc"
+    },
+    "hybrid_gram-state.bin": {
+      "bytes": 335455509,
+      "file": "hybrid_gram-state.bin",
+      "sha256": "016bca427a0bf652d37f97db316b4691572112fd7541ec73ee29ff822721d831"
+    },
+    "hybrid_gram-trust.json": {
+      "bytes": 52411,
+      "file": "hybrid_gram-trust.json",
+      "sha256": "e97843cf78fed2bf51d9e3a3496df6eba2f52bfb70038681fbce3382b592027b"
+    },
+    "lossless-state.bin": {
+      "bytes": 396731190,
+      "file": "lossless-state.bin",
+      "sha256": "2f30af13d23e46c70b2fda2f7a4488f3e77f80be52874d728cb5ce4f40d203c4"
+    },
+    "lossless-trust.json": {
+      "bytes": 2,
+      "file": "lossless-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "model.bin": {
+      "bytes": 21233664,
+      "file": "model.bin",
+      "sha256": "65b37f6f3388d278cea30b6a4c0a5367bb37e47f63ad3175aa913aeead127da6"
+    },
+    "modern_lossless-state.bin": {
+      "bytes": 396139036,
+      "file": "modern_lossless-state.bin",
+      "sha256": "173c6473e6b86b720ed633b7ff04e534eae83547bcd3939b4eec7b82dde63fbf"
+    },
+    "modern_lossless-trust.json": {
+      "bytes": 2,
+      "file": "modern_lossless-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    }
+  },
+  "fresh_oracle_comparison_verified": false,
+  "job": {
+    "elapsed": "01:55:09",
+    "end": "2026-10-16T17:13:01",
+    "exit_code": "0:0",
+    "name": "second67-prepare",
+    "node": "csis.mn1",
+    "start": "2026-10-16T15:17:52",
+    "state": "COMPLETED",
+    "total_cpu": "01:54:28"
+  },
+  "later_reserved_attempts_preserved": 1,
+  "numerical_result_verified": false,
+  "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+  "replayed_sources": 13,
+  "stage_certificates": 24,
+  "status": "verified_preparation_receipt_metadata",
+  "transaction_elapsed_ns": 6906557180490,
+  "worker_charged_cpu_seconds": 6858,
+  "worker_maximum_rss_kib": 1732228,
+  "worker_process_and_waited_descendant_cpu_ns": 6857956044000
+}

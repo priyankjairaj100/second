@@ -54,13 +54,33 @@ It also binds all V68 phases, selection,320 actual token sequences, fixed sampli
 order and entire inspected-frame exclusions. It does not repeat state parsing or
 retokenization, or replace production source/runtime/checkpoint/cost admission.
 
-Local generated-fixture suite:40 tests in the existing project .venv Python3.12.7.
-The sequential constructor is mocked in boundary/construction tests. Tiny CPU
+production_gate.py enforces actual checkpoint identities, the original1664 recipe,
+all24 production stages/42467328 codes, complete78-array evaluator geometry,
+checkpoint-derived CPU target reconstruction and complete parameter auditing.
+execution_gate.py prepares separate CPU/CUDA runtime and controller limit gates,
+the full inherited source union and imported-module origin checks. The14 historical
+GPU/export files are bound from their original V47 registration, in addition to
+the469 files in the V67 CPU inventory. No historical source is changed.
+cost_accounting.py verifies actual persisted worker seals and debits, includes
+controller helpers without double-counting worker CPU, and checks scheduler
+allocation clocks and GPU allocator receipts. Failed executions stay failed.
+These components still need once-only production worker/controller wiring and
+post-exit closure, plus real Linux/CUDA qualification and actual data admission.
+
+cuda_qualification.py prepares a fresh-process24-pair generated CUDA check using
+all six model factories,128-token sequences, signed zero and subnormal parameters.
+Only its CPU fixture and pre-CUDA refusal paths have executed locally; actual
+CUDA qualification remains pending in its separate admitted worker.
+
+Local generated-fixture suite:64 tests in the existing project .venv Python3.12.7.
+The sequential constructor and checkpoint import are mocked in boundary/context
+tests; host/runtime/limit APIs are mocked without changing local limits. Tiny CPU
 likelihood fixtures now run; these are generated software data, not checkpoint or
 corpus evidence. No MPFR feature construction, real checkpoint, GPU execution,
 untouched article or empirical likelihood was accessed. Frozen V55 numerical
 fixtures and actual CUDA parity fixtures must pass in separately admitted Linux
-environments. Exact tested bytes and outcomes are in validation/v69_input_preparation.json.
+environments. Exact tested bytes and outcomes are in validation/v69_execution_preparation.json.
+The previous40-test checkpoint remains in validation/v69_input_preparation.json.
 The earlier33-test checkpoint remains in validation/v69_quality_preparation.json.
 
 Earlier environment-discovery failures remain in validation/v69_model_preparation.json:
@@ -68,7 +88,7 @@ system Python3.9 lacks dataclass slots; Homebrew3.11 lacks NumPy; bundled3.12 Nu
 expects macOS14 Accelerate symbols unavailable on this macOS13 host. The existing
 .venv works without installation. These were not registered empirical attempts.
 
-All nineteen V69 files remain editable and unregistered. V68's nine files are
+All twenty-seven V69 files remain editable and unregistered. V68's nine files are
 also unregistered, with22 separate local fixtures. All469 executed sources through
 V67 remain unchanged. No new workload may disturb active V67 timing. Source tests,
 structural resource admission and this README do not authorize a launch.

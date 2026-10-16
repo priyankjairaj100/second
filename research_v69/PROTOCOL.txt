@@ -22,7 +22,7 @@ Never infer actual candidate bytes from a test or a claimed matching checksum.
 Proposed execution sequence
 1. Freeze all new sources, dependencies, Linux CPU and CUDA environments, actual
    inputs and caps. Pass local checks and separately registered Linux numerical
-   fixtures, including all six unchanged V55 sequential tests. The current40 tests
+   fixtures, including all six unchanged V55 sequential tests. The current64 tests
    include mocks and tiny CPU data; they do not qualify MPFR or CUDA.
 2. Audit the existing uncompressed original-parameter snapshot against a reference
    constructed from the bound checkpoint. Compare all arrays and all words.
@@ -74,11 +74,17 @@ resident-plus-solver bytes. These are structural proxies; they exclude uncertain
 Python/library overhead and do not guarantee measured fit, duration or success.
 The OS bound remains authoritative. See validation/v69_resource_design.json.
 
-Proposed CPU soft caps/wall limits for separate phases: source/numerical checks
-600/900s; parameter audit600/900s; sequential12 and sequential6 each14400/18000s;
+Proposed CPU soft caps/wall limits for separate phases: CPU source/numerical checks
+600/900s; separate CUDA qualification600/900s; parameter audit600/900s;
+sequential12 and sequential6 each14400/18000s;
 CPU parity1800/2400s; GPU quality5400/7200s; terminal audit1800/2400s. Add explicit
-hard-limit rounding and bounded controller/check/audit accounting in the eventual
-registration. No amount is reserved now. Review actual partition limits first.
+hard-limit rounding of two seconds per worker:39616 CPU seconds across eight
+workers. Each controller has600 soft CPU seconds and a14402-second inherited
+hard ceiling so its worker can install its own limit; SIGXCPU stops the controller
+at its separate soft bound. Own CPU plus nonworker waited children must stay
+within601 seconds each,4808 total. Combined proposed allowance is44424 CPU seconds.
+Each Slurm job adds600 wall seconds beyond its worker allowance. These are design
+ceilings, not ETA or reserved budget. Review actual partition limits first.
 CPU physical/address-space proposal16GiB, file cap2GiB; CUDA physical host16GiB,
 allocator8GiB and virtual-address-space128TiB, as in the historical GPU route.
 Large CUDA virtual reservations are not a physical-memory grant. One CPU thread;
@@ -90,10 +96,38 @@ its worker used1562378240 peak reserved GPU bytes on an A10080GB. These are diff
 workloads on an exposed set, not a forecast, new measurement or budget guarantee.
 Their receipts remain in campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz.
 
+Production gates and accounting preparation
+production_gate.py binds actual checkpoint files to the frozen configuration and
+safetensors hashes, enforces the24-stage production geometry/original1664 recipe,
+reconstructs the actual CPU base target and compares canonical bytes, and audits
+all78 parameter arrays against that checkpoint-derived reference. Generated
+fixtures mock checkpoint import and the numerical constructor; no real import
+or MPFR execution is qualified by those tests.
+
+execution_gate.py binds the inherited CPU runtime exactly, keeps CUDA runtime
+admission separate and before initialization, installs one-thread/one-affinity
+controller limits, and rejects imported project code outside the registration.
+Its future source inventory must include all469 V67 files, nine admitted V68
+files, all new V69 files, and14 historical V46/V47 GPU/export files from the actual
+V47 registration620076c67ae79ee56de784ecd4c6e49ef3b4b22f45742f72956821b1e416cf54.
+Those14 files are absent from the CPU-only V67 inventory; their actual current
+bytes were checked against the earlier registration. No historical source changes.
+
+cost_accounting.py verifies persisted worker seals/artifacts/applied limits and
+actual ledger debits, parses terminal scheduler allocation rows without adding
+batch/extern steps again, and includes controller own CPU plus all waited children.
+The worker's already charged CPU is not added twice. Nonworker helper processes,
+allocator peaks, original parameter transfer census and all eight unique debits
+are required. Fully accounted failures remain failures; negative quality does not
+invalidate accounting. Missing/unknown/unsettled costs refuse complete accounting.
+Final closure must run after the terminal worker and its controller exit, because
+an audit cannot seal its own final process/scheduler cost from inside itself.
+The future closure operation needs an explicit bounded accounting scope too.
+
 Remaining implementation before any launch
-Finish source/runtime/input registration and production geometry/admission gates,
-bounded controller/worker/Slurm entries, exact fresh attempt paths and complete
-terminal CPU/GPU/ledger auditing. Review actual Linux and GPU environments. Bind
+Wire these helpers into bounded once-only controller/worker/Slurm entries, exact
+fresh attempt paths, immutable registration, checkpoint-derived parameter reuse,
+actual artifact audits and final post-exit closure. Review actual Linux and GPU environments. Bind
 future generated sequential artifacts through their completed declared predecessor
 receipts. Keep every failed or unstarted registered phase. No concurrent empirical
 work alongside active V67 timing. This document alone authorizes no job.

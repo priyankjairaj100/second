@@ -1,14 +1,96 @@
 {
   "active_experiment_version": 67,
+  "execution_gate_preparation": {
+    "actual_checkpoint_loaded": false,
+    "actual_cuda_executed": false,
+    "captured_at_utc": "2026-10-16T12:00:36.203713+00:00",
+    "elapsed_ns": 11422027209,
+    "empirical_likelihood": false,
+    "errors": 0,
+    "failures": 0,
+    "frozen_v67_sources_unchanged": 469,
+    "historical_gpu_registration_sha256": "620076c67ae79ee56de784ecd4c6e49ef3b4b22f45742f72956821b1e416cf54",
+    "historical_gpu_sources": 14,
+    "imported_project_modules": 141,
+    "launch_authorized_by_tests": false,
+    "new_sources": 27,
+    "prior_local_failure": {
+      "failures": 1,
+      "reason": "Fixture expected40216 instead of arithmetic39616; corrected assertion; caps unchanged",
+      "test": "test_separate_cpu_cuda_qualification_and_complete_reserved_costs",
+      "tests": 7
+    },
+    "process_cpu_ns": 10921732000,
+    "registration_status": "unregistered_unfrozen",
+    "report": "validation/v69_execution_preparation.json",
+    "schema": "v69-execution-gate-local-preparation",
+    "skipped": 0,
+    "status": "passed",
+    "tests": 64,
+    "untouched_article_content_acquired": false,
+    "v68_sources_unchanged": 9
+  },
+  "execution_resource_design": {
+    "automatic_retry": false,
+    "controller_allowance_cpu_seconds": 4808,
+    "controller_cpu_hard_seconds": 14402,
+    "controller_cpu_soft_seconds": 600,
+    "cpu_address_space_bytes": 17179869184,
+    "cuda_address_space_bytes": 140737488355328,
+    "file_size_bytes": 2147483648,
+    "final_scheduler_and_closure_accounting_required": true,
+    "gpu_allocator_bytes": 8589934592,
+    "host_memory_bytes": 17179869184,
+    "no_concurrent_second_empirical_work": true,
+    "phases": {
+      "cpu_checks": {
+        "cpu_seconds": 600,
+        "wall_seconds": 900
+      },
+      "cpu_parity": {
+        "cpu_seconds": 1800,
+        "wall_seconds": 2400
+      },
+      "cuda_checks": {
+        "cpu_seconds": 600,
+        "wall_seconds": 900
+      },
+      "gpu_quality": {
+        "cpu_seconds": 5400,
+        "wall_seconds": 7200
+      },
+      "parameters": {
+        "cpu_seconds": 600,
+        "wall_seconds": 900
+      },
+      "sequential_12": {
+        "cpu_seconds": 14400,
+        "wall_seconds": 18000
+      },
+      "sequential_6": {
+        "cpu_seconds": 14400,
+        "wall_seconds": 18000
+      },
+      "terminal": {
+        "cpu_seconds": 1800,
+        "wall_seconds": 2400
+      }
+    },
+    "registered": false,
+    "schema": "quality-execution-resource-design-v69",
+    "slurm_wall_overhead_seconds": 600,
+    "threads": 1,
+    "worker_allowance_cpu_seconds": 39616
+  },
   "heartbeat_active": true,
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 152435,
-      "sha256": "3898ad7d1ad7659339b295cf73aa354e1183eac0ea0959646bb060e8e564bd45"
+      "bytes": 201630,
+      "sha256": "097936432912408244ca07ffee172d60b5ed7eae57f19c8875faecfa6057e98f"
     },
-    "captured_at_utc": "2026-10-16T11:31:09.570876+00:00",
-    "copied_files": 145,
+    "captured_at_utc": "2026-10-16T11:56:24.613244+00:00",
+    "copied_files": 220,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -22,23 +104,23 @@
         "total_cpu": "00:09.977"
       },
       "15262": {
-        "elapsed": "01:43:17",
-        "end": "Unknown",
+        "elapsed": "01:55:09",
+        "end": "2026-10-16T17:13:01",
         "exit_code": "0:0",
         "name": "second67-prepare",
         "node": "csis.mn1",
         "start": "2026-10-16T15:17:52",
-        "state": "RUNNING",
-        "total_cpu": "00:00:00"
+        "state": "COMPLETED",
+        "total_cpu": "01:54:28"
       },
       "15263": {
-        "elapsed": "00:00:00",
+        "elapsed": "00:13:23",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-hybrid-1",
-        "node": "None assigned",
-        "start": "Unknown",
-        "state": "PENDING",
+        "node": "csis.mn1",
+        "start": "2026-10-16T17:13:01",
+        "state": "RUNNING",
         "total_cpu": "00:00:00"
       },
       "15264": {
@@ -197,8 +279,16 @@
       },
       "hybrid-1": {
         "completion_receipt_present": false,
-        "events": 0,
-        "last": null
+        "events": 5,
+        "last": {
+          "certificate_refusal": null,
+          "code_sha256": "dfe5e2996ee5a4946a9b42994344096d18773574e78222389e1b68a69fe07298",
+          "elapsed_ns": 247501008885,
+          "fallback": false,
+          "phase": "stage_certified",
+          "route": "direct_gram",
+          "stage_id": "block.0000.mlp_up"
+        }
       },
       "hybrid-2": {
         "completion_receipt_present": false,
@@ -221,17 +311,17 @@
         "last": null
       },
       "prepare": {
-        "completion_receipt_present": false,
-        "events": 81,
+        "completion_receipt_present": true,
+        "events": 134,
         "last": {
-          "elapsed_ns": 6179801260419,
+          "elapsed_ns": 6866025584430,
           "phase": "payload_stage",
-          "representation": "compressed48",
-          "stage_id": "block.0004.mlp_up"
+          "representation": "modern_lossless",
+          "stage_id": "block.0005.mlp_down"
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|PENDING|0:00|(Dependency)\n15263|second67-hybrid-1|PENDING|0:00|(Dependency)\n15262|second67-prepare|RUNNING|1:43:17|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|PENDING|0:00|(Dependency)\n15263|second67-hybrid-1|RUNNING|13:23|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
@@ -254,10 +344,10 @@
   },
   "manuscript_native_compile": "success_at_v69_edit",
   "model_admission_preparation": {
-    "captured_at_utc": "2026-10-16T11:30:49.301919+00:00",
+    "captured_at_utc": "2026-10-16T12:00:36.203713+00:00",
     "constructor_mocked": true,
     "earlier_local_discovery_failures_preserved_in": "validation/v69_model_preparation.json",
-    "elapsed_ns": 10530658542,
+    "elapsed_ns": 11422027209,
     "empirical_data_acquired": false,
     "environment": ".venv",
     "errors": 0,
@@ -265,25 +355,27 @@
     "frozen_sources_verified": 469,
     "generated_tiny_cpu_likelihood_executed": true,
     "gpu_execution": false,
+    "historical_gpu_sources_verified": 14,
+    "imported_project_modules_verified": 141,
     "input_admission_fixtures_are_generated": true,
     "linux_gate_run": false,
     "numerical_constructor_executed": false,
     "platform": "macOS-13.0-arm64-arm-64bit",
-    "process_cpu_ns": 9883299000,
+    "process_cpu_ns": 10921732000,
     "python": "3.12.7",
     "real_checkpoint_inference": false,
     "real_multi_runtime_statistics_comparison": false,
     "registration_exists": false,
     "skips": 0,
-    "source_files": 19,
+    "source_files": 27,
     "sources": {
       "research_v69/PROTOCOL.txt": {
-        "bytes": 7051,
-        "sha256": "64df61c98c090df7eeff40bfea79de0e21feb9e28bf0baf1b132fe037e6acfc9"
+        "bytes": 9444,
+        "sha256": "1172be67345666b8e062659648814addd318192f26c51f0c7ae1d419cc44d503"
       },
       "research_v69/README.txt": {
-        "bytes": 5044,
-        "sha256": "475c380ca7b72479e869b1872f18f28157cdab97b80f4a42d602a7fc03543cb3"
+        "bytes": 6475,
+        "sha256": "b043b5826c768858e5a3e826922bfb6f4b67743eb9cfe200e189c47ffd7954db"
       },
       "research_v69/__init__.py": {
         "bytes": 72,
@@ -292,6 +384,18 @@
       "research_v69/construction_flow.py": {
         "bytes": 8400,
         "sha256": "836efb24cf955da326baa76fd9d6e8d9cd1041043a205ef91a69b1a5b63289aa"
+      },
+      "research_v69/cost_accounting.py": {
+        "bytes": 12996,
+        "sha256": "80ef72d8440ead021baa1dd3fe6bf2e6fc4ebf964d5f24b978b61b929a824e18"
+      },
+      "research_v69/cuda_qualification.py": {
+        "bytes": 3749,
+        "sha256": "93fe89049fbe4c159e54fef2cb20c2a1dc8af9474f3ce06f615953e36326a931"
+      },
+      "research_v69/execution_gate.py": {
+        "bytes": 8903,
+        "sha256": "8ecf4c349c4172571bf8354390f6f5dd4372ddf4c5681cab8f6bdfc75e728e71"
       },
       "research_v69/input_gate.py": {
         "bytes": 9805,
@@ -317,6 +421,10 @@
         "bytes": 1924,
         "sha256": "db16636e271a1b4d84de798436d4a8f471f8aaeed119dbf1099ff4f8883b00c7"
       },
+      "research_v69/production_gate.py": {
+        "bytes": 8790,
+        "sha256": "1080a6aa6b1d6e5825bf8650006380971ddf35c0e764047d01c4089671057411"
+      },
       "research_v69/quality_flow.py": {
         "bytes": 6037,
         "sha256": "1f7bb6b63634aff606b84f27501e0f7cf38420b6e5f6a8772b14d403a4772b68"
@@ -324,6 +432,18 @@
       "research_v69/test_construction_flow.py": {
         "bytes": 3948,
         "sha256": "6a9a0ac1af1e96a38bd4452391676f904faf7e72745fd160e0e89831c5b22437"
+      },
+      "research_v69/test_cost_accounting.py": {
+        "bytes": 8582,
+        "sha256": "216257331bb5ddb6b9aaee13f3eb1b0ed8e201d035043d674f8d4b9b4ccad0b1"
+      },
+      "research_v69/test_cuda_qualification.py": {
+        "bytes": 1609,
+        "sha256": "f03542c60353c58efdba54583c2c120e68c097a325750041a808cb74c39f3943"
+      },
+      "research_v69/test_execution_gate.py": {
+        "bytes": 6949,
+        "sha256": "d63736103e966fdfa0471053bf51d6ad7a6e05247bff6b5e8315fc90f232e8f2"
       },
       "research_v69/test_input_gate.py": {
         "bytes": 8320,
@@ -349,25 +469,118 @@
         "bytes": 1753,
         "sha256": "695eca27eca65fa21dbe0a72366336adc9b14b101a493d023039f9b4dd7a9729"
       },
+      "research_v69/test_production_gate.py": {
+        "bytes": 7609,
+        "sha256": "6d35c56f63afe20768340f968d343d8a53375afc7b7d0a12810946ac6b0c0b92"
+      },
       "research_v69/test_quality_flow.py": {
         "bytes": 4696,
         "sha256": "725edf241df7b7c32afa2974124bbaf46e09cd755242d56b630c01cd04039cab"
       }
     },
     "sources_frozen": false,
-    "status": "passed_local_generated_fixtures",
-    "tests": 40,
+    "status": "passed64_generated_local_tests",
+    "tests": 64,
     "unchanged_v68_prepared_sources": 9
   },
   "next_actions": [
-    "Finish V67 and verify both terminal actual-model/state/cost audits; never repeat old launchers",
-    "Finish V69 production source/runtime/checkpoint/geometry gates, controller and terminal accounting while V67 runs",
-    "Freeze/register V68 only after V67 terminal success, then execute checks/data/audit once",
-    "Freeze separately admitted numerical/CUDA V69 campaign after V68 actual data audit; preserve negative results",
-    "Decide prospective timing scope and complete evidence-linked manuscript/venue bundle"
+    "Wire V69 production workers/controllers, immutable registration and post-exit accounting closure while V67 runs",
+    "Close V67 remaining comparisons, fresh oracle and both actual-model/state/cost audits",
+    "Only after V67 success register/run V68 data; after V68 success freeze/register actual V69 quality",
+    "Run separately admitted Linux numerical and CUDA qualification, all quality phases and complete artifact/cost closure",
+    "Make evidence-based timing/claim decision and finish anonymous official-template submission bundle"
   ],
   "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
-  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_d.tar.gz",
+  "preparation_receipt_metadata": {
+    "actual_model_state_bytes_checked": false,
+    "archive": {
+      "bytes": 201630,
+      "sha256": "097936432912408244ca07ffee172d60b5ed7eae57f19c8875faecfa6057e98f"
+    },
+    "captured_at_utc": "2026-10-16T11:56:24.613244+00:00",
+    "complete_campaign_costs_verified": false,
+    "controller_all_waited_children_cpu_ns": 6857958964000,
+    "controller_own_cpu_ns": 9590220307,
+    "declared_artifacts": {
+      "admission.json": {
+        "bytes": 555807,
+        "file": "admission.json",
+        "sha256": "8e409e1e4b9b0faff1d37f76faf117f9115042b11beb9acb3ec89bc86250e72b"
+      },
+      "compressed48-state.bin": {
+        "bytes": 359357797,
+        "file": "compressed48-state.bin",
+        "sha256": "6dda2d61e76d902de34c59594f184244cba057725ba5808491665a76326558b5"
+      },
+      "compressed48-trust.json": {
+        "bytes": 2,
+        "file": "compressed48-trust.json",
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      "execution-provenance.json": {
+        "bytes": 12727,
+        "file": "execution-provenance.json",
+        "sha256": "22956724f4d2a9433702a3f76cc1fb76a8d447c8c60a7d668800de7da55574cc"
+      },
+      "hybrid_gram-state.bin": {
+        "bytes": 335455509,
+        "file": "hybrid_gram-state.bin",
+        "sha256": "016bca427a0bf652d37f97db316b4691572112fd7541ec73ee29ff822721d831"
+      },
+      "hybrid_gram-trust.json": {
+        "bytes": 52411,
+        "file": "hybrid_gram-trust.json",
+        "sha256": "e97843cf78fed2bf51d9e3a3496df6eba2f52bfb70038681fbce3382b592027b"
+      },
+      "lossless-state.bin": {
+        "bytes": 396731190,
+        "file": "lossless-state.bin",
+        "sha256": "2f30af13d23e46c70b2fda2f7a4488f3e77f80be52874d728cb5ce4f40d203c4"
+      },
+      "lossless-trust.json": {
+        "bytes": 2,
+        "file": "lossless-trust.json",
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      "model.bin": {
+        "bytes": 21233664,
+        "file": "model.bin",
+        "sha256": "65b37f6f3388d278cea30b6a4c0a5367bb37e47f63ad3175aa913aeead127da6"
+      },
+      "modern_lossless-state.bin": {
+        "bytes": 396139036,
+        "file": "modern_lossless-state.bin",
+        "sha256": "173c6473e6b86b720ed633b7ff04e534eae83547bcd3939b4eec7b82dde63fbf"
+      },
+      "modern_lossless-trust.json": {
+        "bytes": 2,
+        "file": "modern_lossless-trust.json",
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    "fresh_oracle_comparison_verified": false,
+    "job": {
+      "elapsed": "01:55:09",
+      "end": "2026-10-16T17:13:01",
+      "exit_code": "0:0",
+      "name": "second67-prepare",
+      "node": "csis.mn1",
+      "start": "2026-10-16T15:17:52",
+      "state": "COMPLETED",
+      "total_cpu": "01:54:28"
+    },
+    "later_reserved_attempts_preserved": 1,
+    "numerical_result_verified": false,
+    "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+    "replayed_sources": 13,
+    "stage_certificates": 24,
+    "status": "verified_preparation_receipt_metadata",
+    "transaction_elapsed_ns": 6906557180490,
+    "worker_charged_cpu_seconds": 6858,
+    "worker_maximum_rss_kib": 1732228,
+    "worker_process_and_waited_descendant_cpu_ns": 6857956044000
+  },
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_e.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,
@@ -515,7 +728,7 @@
     "wall_time_estimate": false
   },
   "schema": "second-progress-v69-preparation",
-  "status": "v67_running_quality_construction_evaluator_and_artifact_helpers_prepared_unregistered",
+  "status": "v67_preparation_complete_hybrid1_running_v69_execution_gates_prepared_unregistered",
   "submission_preparation": "docs/SUBMISSION_READINESS_V69.txt",
   "submission_ready": false
 }

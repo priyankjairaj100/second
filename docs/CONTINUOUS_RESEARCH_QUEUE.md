@@ -67,7 +67,8 @@ or parallel execution loop. No subagent delegation is currently authorized.
    IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
-   Preparation15262 is running, with comparisons/oracle/audits dependency-pending.
+   Preparation15262 completed0:0; first hybrid comparison15263 is running,
+   with remaining comparisons/oracle/audits15264--15275 dependency-pending.
    Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V69.md`, `docs/ACTIVE_SESSION_V68.md`, `docs/ACTIVE_SESSION_V67.md` and
    `research_v67/PROTOCOL.txt`. Reuse the frozen mathematical target and matched point
    solver, with full parsing, canonical validation, startup/cache policy, state
@@ -105,9 +106,11 @@ or parallel execution loop. No subagent delegation is currently authorized.
    audits before registering the data-only phase; do not disturb active timings.
    V69 now adds sequential construction, full parameter-array auditing, six-model
    CPU/CUDA factories, parity-gated once-only loss collection and saved-loss audits.
-   All40 generated local fixtures pass; the sequential constructor remains mocked,
-   while tiny CPU likelihood fixtures execute. Production runtime/checkpoint/geometry
-   admission, bounded controller/Slurm entries and terminal cost audits remain.
+   All64 generated local fixtures pass; the sequential constructor remains mocked,
+   while tiny CPU likelihood fixtures execute. Production checkpoint/geometry, runtime/source/process-limit and cost-accounting
+   helpers are prepared, including14 historical GPU/export sources omitted from the
+   V67 CPU inventory. Actual worker/controller/Slurm wiring, immutable registration,
+   real Linux/CUDA qualification and post-exit accounting closure remain.
    Read research_v69/PROTOCOL.txt; proposed resources are not registered allowances.
    Check article identity and overlap against every historical exclusion (currently
    sixty) and calibration source. Predeclare paired pooled NLL/PPL, tail guard,
@@ -151,8 +154,9 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate are qualified. At17:01IST preparation15262 is running with all13 sources
-and all24 stages certified; saved-state serialization is in progress; remaining jobs15263--15275 are dependency-pending. Modern-service timings,
+V67's64-test exact-source Linux gate are qualified. At17:26IST preparation15262 is COMPLETED0:0, with all13 sources
+and24 stages recorded and its6858-second worker debit settled. Hybrid15263 is
+running with three certified stages; jobs15264--15275 remain dependency-pending. Modern-service timings,
 new-root model evidence, untouched quality and prospective timing remain absent.
 The same manuscript compiles after reducing6884 to5269 source whitespace tokens
 and adding Limitations and AI-assistance disclosure. All proofs/math are unchanged.
