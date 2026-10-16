@@ -355,11 +355,12 @@
         "sha256": "1545341a935e952a3aa6d04b61fd4bf297d6c0ba14f4c533f4729066b9b7f489"
       },
       "reports/manuscript_v69.tex": {
-        "bytes": 50539,
-        "sha256": "dc1008aaef0d70a8adbb25b598238036b898e3ed99de23844e67fdff400b3de0"
+        "bytes": 51257,
+        "sha256": "0900af577ae418ee10bb33f5b64e659be147ea2014232d4e06195a83cf2f3f2d"
       }
     },
-    "captured_at_utc": "2026-10-16T16:27:49.766909+00:00",
+    "captured_at_utc": "2026-10-16T16:45:12.744807+00:00",
+    "checker_modified_manuscript": false,
     "empirical_work_executed": false,
     "evidence_references": [
       "E01",
@@ -386,11 +387,9 @@
     "indirect_identity_linkability_assessed": false,
     "internal_manifests_verified": 5,
     "known_identity_findings": [],
-    "manuscript_changed_since_previous_review": true,
+    "manuscript_change": "Clarify existing codec and row scale; all empirical sections unchanged",
     "manuscript_edited": true,
     "manuscript_matches_open_file": true,
-    "manuscript_revision_scope": "Planning-text trim and current companion description only; protected math, proofs, abstract, tables and bibliography unchanged",
-    "prior_manuscript_sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60",
     "private_mapping_files_included": false,
     "protocol_links_verified": 4,
     "receipt_filename_crosswalk": {
@@ -1000,11 +999,33 @@
     "terminal_receipts_present": false,
     "volatile_files_omitted": []
   },
+  "latest_queue_only_observation": {
+    "active_job": 15266,
+    "active_trial": "cached-1",
+    "captured_at_utc": "2026-10-16T16:38:59Z",
+    "elapsed": "25:15",
+    "fresh_full_metadata_snapshot": false,
+    "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+    "pending_jobs": [
+      15267,
+      15268,
+      15269,
+      15270,
+      15271,
+      15272,
+      15273,
+      15274,
+      15275
+    ],
+    "pending_reason": "Dependency",
+    "state": "RUNNING"
+  },
   "manuscript": {
     "abstract_source_whitespace_tokens": 197,
-    "after_source_whitespace_tokens": 4844,
+    "after_source_whitespace_tokens": 4943,
     "ai_assistance_disclosed": true,
     "before_source_whitespace_tokens": 6884,
+    "codec_clarification": "validation/v69_manuscript_codec_clarification.json",
     "companion_components": 5,
     "companion_records": 15,
     "complete_reproduction_bundle": false,
@@ -1021,11 +1042,100 @@
     "project_bibliography_entries": 0,
     "proof_blocks_unchanged": true,
     "related_work_update": "validation/v69_manuscript_literature.json",
-    "removed_tokens": 2040,
-    "sha256": "dc1008aaef0d70a8adbb25b598238036b898e3ed99de23844e67fdff400b3de0",
+    "removed_tokens": 1941,
+    "sha256": "0900af577ae418ee10bb33f5b64e659be147ea2014232d4e06195a83cf2f3f2d",
     "source_snapshot": "reports/manuscript_v69.tex",
     "submission_ready": false,
     "token_count_excludes_embedded_official_style": true
+  },
+  "manuscript_codec_clarification": {
+    "changes": [
+      "Define checkpoint-only dyadic24 row scale in plain language",
+      "Explain block256 signed48 cell indices, tags, exact endpoints and escapes",
+      "Distinguish archive precision from four-bit deployed model codes",
+      "Describe the implemented dispatcher without prospective wording"
+    ],
+    "complete_evidence_and_remaining_sections_byte_unchanged": true,
+    "counting_scope": "Source whitespace tokens excluding embedded style contents, retaining delimiters; not prose words or rendered pages",
+    "edited_at_utc": "2026-10-16T16:44:56.026433+00:00",
+    "execution_sources_changed": false,
+    "main_page_count_verified": false,
+    "manuscript": {
+      "bytes": 51257,
+      "sha256": "0900af577ae418ee10bb33f5b64e659be147ea2014232d4e06195a83cf2f3f2d"
+    },
+    "native_compilation_pending": false,
+    "native_compile_status": "success",
+    "new_experimental_results_inserted": false,
+    "previous": {
+      "bytes": 50539,
+      "sha256": "dc1008aaef0d70a8adbb25b598238036b898e3ed99de23844e67fdff400b3de0"
+    },
+    "protected_content": {
+      "abstract": {
+        "blocks": 1,
+        "sha256": "26edc3214ea59aca5f747a5f5c91f86a430ae1320a6ed0e0e4b35e6008857de3",
+        "unchanged": true
+      },
+      "bibliography": {
+        "blocks": 1,
+        "sha256": "6924bb7879564d59ba69808779c77e7a0a42a3ce2c580c1bcb62d8115858a345",
+        "unchanged": true
+      },
+      "display_math": {
+        "blocks": 8,
+        "sha256": "83e9bb24e136d4887291a369b06c5e3143a1dbf299987fd0df6ed31de37d321d",
+        "unchanged": true
+      },
+      "inline_math": {
+        "blocks": 53,
+        "sha256": "78c8fe004be91c4f3fe8882caf6a11a76030eea90c26f9f3dd22e29abd4b886d",
+        "unchanged": true
+      },
+      "official_style": {
+        "blocks": 1,
+        "sha256": "45338d96b78e75760ef2b7a8c2c60de2cfccbe7805b978b93f558aa4b372335a",
+        "unchanged": true
+      },
+      "tables": {
+        "blocks": 1,
+        "sha256": "7b27da0c2cc9c5ab5f92aa023e59dcd2026ebfc351273e101ea4e773c6ef20b1",
+        "unchanged": true
+      },
+      "theorems_lemmas_proofs": {
+        "blocks": 6,
+        "sha256": "2fff63054604ffde1eefa7e7c9e929ca8ce80fe4b1e829153991a977c9d47cd8",
+        "unchanged": true
+      }
+    },
+    "schema": "manuscript-codec-clarification-v69",
+    "selected_number_checks": 71,
+    "source_bindings": {
+      "research_v43/dispatcher.py": {
+        "bytes": 21003,
+        "sha256": "70c0bfd3af46bae3751497c60249333a0850a98596e04aa26c48478da8bb1756"
+      },
+      "research_v61/PROTOCOL.txt": {
+        "bytes": 5876,
+        "sha256": "6b21c851caf34079521b88a47f9c5c11986fa962bd3f4ce37e240a80d115eebe"
+      },
+      "research_v61/service.py": {
+        "bytes": 15598,
+        "sha256": "c89c021ba683f9651ac74ef1d427a496c4eb7e6ded12ea2f21fce7f234e38638"
+      },
+      "src/dyadic_row_quantizer.py": {
+        "bytes": 11039,
+        "sha256": "f2404f8520b28b700fd2c1341003fb9d922fe0f9c58eb9d27f651f2ad1bd75f9"
+      },
+      "src/fixed_factor_codec_v26.py": {
+        "bytes": 14924,
+        "sha256": "d5f8a4c5279ef759b7d58eadd85429cffdfe7bdb3fe788aaaed05d12501f8711"
+      }
+    },
+    "source_review": "Read-only inspection of existing frozen implementation and protocol; no numerical execution or new evidence",
+    "source_whitespace_tokens_after": 4943,
+    "source_whitespace_tokens_before": 4844,
+    "submission_ready": false
   },
   "manuscript_evidence_reference_trim": {
     "after_sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60",
@@ -1189,11 +1299,11 @@
     "source_tokens_before_excluding_embedded_style": 5420,
     "submission_ready": false
   },
-  "manuscript_native_compile": "success_after_planning_trim",
+  "manuscript_native_compile": "success_after_codec_clarification",
   "manuscript_numbers_check": {
     "actual_empirical_jobs_launched": false,
     "archived_metadata_audits_rerun": false,
-    "captured_at_utc": "2026-10-16T16:27:49.303244+00:00",
+    "captured_at_utc": "2026-10-16T16:45:12.283887+00:00",
     "check_count": 71,
     "checks": [
       {
@@ -1835,8 +1945,8 @@
     },
     "local_inference_calibration_or_binary_audit": false,
     "manuscript": {
-      "bytes": 50539,
-      "sha256": "dc1008aaef0d70a8adbb25b598238036b898e3ed99de23844e67fdff400b3de0"
+      "bytes": 51257,
+      "sha256": "0900af577ae418ee10bb33f5b64e659be147ea2014232d4e06195a83cf2f3f2d"
     },
     "schema": "manuscript-number-check-v69",
     "scope": "Selected empirical table, quality figures, percentages and resource totals against previously verified report bytes; not every number in the manuscript or a new scientific result.",

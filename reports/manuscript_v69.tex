@@ -449,9 +449,11 @@ base-weight row $w$, process coordinates in their frozen order:
  q_i&=\operatorname{nearest}_{G_i}(v_i).
  \label{eq:rounding}
 \end{align}
-Stage and output-row indices are suppressed in this notation. In V43, each
-output row has one base-only dyadic24 scale $s_{\ell,r}$ and grid
-$G_{\ell,r}=s_{\ell,r}\{-8,\ldots,7\}$, shared across its coordinates.
+Stage and output-row indices are suppressed in this notation. Each output row
+uses the smallest checkpoint-only dyadic scale $s_{\ell,r}$ with at most 24
+significant binary digits whose grid
+$G_{\ell,r}=s_{\ell,r}\{-8,\ldots,7\}$ covers its base weights and has exactly
+representable finite codes and midpoints. The scale is shared across coordinates.
 Each finite increasing rational grid $G_i$ is fixed before deletion. Nearest
 rounding saturates at endpoints; an exact midpoint selects the lower code. The
 collection of all stage outputs defines $\Qfix(R)$ wherever the required feature
@@ -479,6 +481,15 @@ Preparation checks this containment against the actual finite values. Descriptor
 metadata binds the source ID, token identity, stage, target, codec settings, and
 source-word commitment. A hash detects changed bytes; it does not independently
 prove containment or authenticate an untrusted execution host.
+
+\paragraph{Stored enclosures.}
+The implemented codec traverses each source-stage matrix in token-major order,
+grouping 256 values per block. Each block uses a shared power-of-two step and
+signed 48-bit integer cell indices. Two-bit tags distinguish closed cells, exact
+grid values, and exact binary64 escapes near overflow. Decoding constructs exactly
+representable dyadic endpoints, and preparation checks every original value
+against them. These 48 bits describe calibration evidence; deployed weight codes
+use four bits. Metadata and escapes also contribute to the reported state size.
 
 A request validates the predecessor, retained membership, deletion IDs, and all
 target and provenance bindings. Retained source-local descriptors remain
@@ -533,7 +544,7 @@ must hold uniformly over their box, including directed product and summation
 errors. Such bounds support coefficient enclosures and then the adaptive cell
 checks; they do not make an unverified nominal solve exact.
 
-Our prospective dispatcher admits the complete bounded solver schedule and its
+Our dispatcher admits the complete bounded solver schedule and its
 explicit arrays before feature access. It prefers token space when $4T\leq d$
 and streamed primal otherwise, subject to admission. This is a declared
 engineering rule, not a learned optimal crossover. Compatible controls receive

@@ -191,6 +191,10 @@ or parallel execution loop. No subagent delegation is currently authorized.
    anonymity and rendered layout; see docs/REVIEW_RECEIPT_COMPANION_V69.txt and
    docs/REVIEW_SOURCE_COMPONENT_V69.txt and docs/REVIEW_REPRODUCTION_GUIDE_V69.txt.
    See docs/SOURCE_RECEIPT_PACKAGE_REVIEW_V69.txt.
+   The current codec/row-scale clarification is checked against five frozen files;
+   archive precision and deployed weight precision are explicitly distinct. Proofs,
+   math, abstract and empirical sections remain unchanged; native compilation and
+   all71 selected number checks pass. See validation/v69_manuscript_codec_clarification.json.
    Preview inspection is unavailable, so rendered pages/layout remain unverified.
    See docs/ACL_FORMATTING_V69.txt. Deliver a reviewed source and reproducibility
    bundle; do not submit externally.
@@ -210,7 +214,7 @@ All three completed comparisons have24 stage certificates. Their7,68 and7 numeri
 fallback rows remain distinct from zero stage-level replay/refusal flags.
 Modern-service timings,
 new-root model evidence, untouched quality and prospective timing remain absent.
-The same manuscript now compiles in the official ACL review style at4844 source
+The same manuscript now compiles in the official ACL review style at4943 source
 whitespace tokens excluding embedded style, down from6884,
 with Limitations and AI disclosure. Three omitted prior-work comparisons are now
 restored; all proofs/displays, the abstract and empirical sections are unchanged.

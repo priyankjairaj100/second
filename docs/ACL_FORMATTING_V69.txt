@@ -49,3 +49,9 @@ with all protected proofs/math, abstract, table, bibliography and style unchange
 Native compilation and all71 number checks pass. A fresh preview startup attempt
 failed; actual pagination and layout remain unverified. The editor remains open.
 See docs/MANUSCRIPT_PLANNING_TRIM_V69.txt for the exact current source commitment.
+
+The later codec clarification raises source tokens from4844 to4943 while keeping
+all math/proofs, abstract and empirical sections unchanged. It defines the existing
+row scales and distinguishes48-bit evidence indices from four-bit model codes.
+Native compilation succeeds; actual rendered page count remains unverified.
+See validation/v69_manuscript_codec_clarification.json.

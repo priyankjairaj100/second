@@ -325,3 +325,19 @@ number checks pass. All five ZIPs remain unchanged and the current source passes
 fresh cross-component checks. No pending experiment result is added. Read
 MANUSCRIPT_PLANNING_TRIM_V69.txt. Preview inspection failed once again, so actual
 page count/layout remain unverified; final format preference remains pending.
+
+## Codec explanation checked against frozen sources
+
+The same open manuscript now defines the checkpoint-only dyadic24 scale and
+explains block256 signed48 cell indices, tags and exact-value escapes. Archive
+precision is explicitly distinguished from the four-bit deployed weight codes.
+The dispatcher is described as implemented. Source inspection binds five unchanged
+implementation/protocol files; no numerical work ran. All proofs, math, abstract,
+table, bibliography and complete empirical sections are byte-unchanged. Native
+compilation,71 selected number checks and569-file component review pass. The
+current source count is4943, still below the pre-planning-trim4950; this is not
+a rendered page count. See validation/v69_manuscript_codec_clarification.json.
+
+Light queue read at16:38:59UTC (22:08:59IST): cached15266 RUNNING25m15s, with
+15267--15275 dependency-pending. Numerical HEAD remains f900999. This is no new
+metadata archive or terminal result. The R snapshot remains the latest full read.
