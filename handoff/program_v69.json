@@ -4,11 +4,11 @@
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 147441,
-      "sha256": "ed41a9e86ea89ccdf36967a8f2628184dc3a77c15df94121d8db61061b795df2"
+      "bytes": 149064,
+      "sha256": "7039d67d63f4e395b8b8c6ffa8c45a53b72e2dfefdf46171c54dfacbf811edf2"
     },
-    "captured_at_utc": "2026-10-16T10:29:11.958365+00:00",
-    "copied_files": 85,
+    "captured_at_utc": "2026-10-16T11:06:34.457169+00:00",
+    "copied_files": 97,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -22,7 +22,7 @@
         "total_cpu": "00:09.977"
       },
       "15262": {
-        "elapsed": "00:41:19",
+        "elapsed": "01:18:42",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-prepare",
@@ -222,19 +222,19 @@
       },
       "prepare": {
         "completion_receipt_present": false,
-        "events": 21,
+        "events": 33,
         "last": {
           "certificate_refusal": null,
-          "code_sha256": "be1736f95b5fe0eeb1b5080abeee89d9a6cc8f06665bfec8f466d8569b65297d",
-          "elapsed_ns": 2212869845148,
+          "code_sha256": "27970361bc3e15bc19dd06dc0f74ebe87dfc9e9984de584ec80245cb2f4bbe93",
+          "elapsed_ns": 4184862938170,
           "fallback": false,
           "phase": "stage_certified",
           "route": "streamed",
-          "stage_id": "block.0001.mlp_up"
+          "stage_id": "block.0004.mlp_up"
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|PENDING|0:00|(Dependency)\n15263|second67-hybrid-1|PENDING|0:00|(Dependency)\n15262|second67-prepare|RUNNING|41:19|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|PENDING|0:00|(Dependency)\n15263|second67-hybrid-1|PENDING|0:00|(Dependency)\n15262|second67-prepare|RUNNING|1:18:42|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
@@ -251,74 +251,111 @@
   },
   "manuscript_native_compile": "success_at_v67_edit_no_new_edit",
   "model_admission_preparation": {
-    "captured_at_utc": "2026-10-16T10:40:06.217535+00:00",
+    "captured_at_utc": "2026-10-16T11:09:36.782268+00:00",
     "constructor_mocked": true,
-    "earlier_local_discovery_failures": [
-      {
-        "reason": "dataclass slots unsupported",
-        "runtime": "system Python3.9.6"
-      },
-      {
-        "reason": "NumPy absent",
-        "runtime": "Homebrew Python3.11"
-      },
-      {
-        "reason": "NumPy macOS14 Accelerate symbols unavailable on macOS13",
-        "runtime": "bundled Python3.12"
-      }
-    ],
-    "elapsed_ns": 171812041,
+    "earlier_local_discovery_failures_preserved_in": "validation/v69_model_preparation.json",
+    "elapsed_ns": 7983474250,
     "empirical_data_acquired": false,
     "environment": ".venv",
     "errors": 0,
     "failures": 0,
+    "frozen_sources_verified": 469,
+    "generated_tiny_cpu_likelihood_executed": true,
     "gpu_execution": false,
     "linux_gate_run": false,
-    "model_inference": false,
+    "manuscript_unchanged": true,
     "numerical_constructor_executed": false,
     "platform": "macOS-13.0-arm64-arm-64bit",
-    "process_cpu_ns": 125279000,
+    "process_cpu_ns": 7089906000,
     "python": "3.12.7",
+    "real_checkpoint_inference": false,
     "registration_exists": false,
     "skips": 0,
+    "source_files": 17,
     "sources": {
+      "research_v69/PROTOCOL.txt": {
+        "bytes": 6656,
+        "sha256": "13759509a793cd88716b02dc94adf6f70b6b5ed31f2a74814058a75b3789e243"
+      },
       "research_v69/README.txt": {
-        "bytes": 3989,
-        "sha256": "083c117f9692801bb75db86880cf3c21b4064bda1b194f031e9e96d2ee27c7e7"
+        "bytes": 4309,
+        "sha256": "ee7355bba362bf117a22fa8c0ffe1686c3eb824f0021f880062423430ac66aa1"
       },
       "research_v69/__init__.py": {
         "bytes": 72,
         "sha256": "7d1bf09a8069db1ba9468710364696a67bafefb70086d7b20944773f03752a23"
       },
+      "research_v69/construction_flow.py": {
+        "bytes": 8400,
+        "sha256": "836efb24cf955da326baa76fd9d6e8d9cd1041043a205ef91a69b1a5b63289aa"
+      },
+      "research_v69/loss_audit.py": {
+        "bytes": 5994,
+        "sha256": "47ac4c977f530c43a2f193c6f701a92292951803646f7908a2d332e7b655eb7f"
+      },
+      "research_v69/model_backend.py": {
+        "bytes": 8178,
+        "sha256": "42e2e0c8e1d1d66d373d81a9ed169372993f7833c802b173ce1267b53ea343b5"
+      },
       "research_v69/model_gate.py": {
         "bytes": 5303,
         "sha256": "1471d6017c4dca7bcf4e13621b531ae0568999f8721374c94bb00dd37e1b0002"
+      },
+      "research_v69/parameter_audit.py": {
+        "bytes": 4646,
+        "sha256": "e3b777c272742e58b47c1011ce8d811ad2fe6384d39f6f77efb12de93a13202c"
       },
       "research_v69/parity.py": {
         "bytes": 1924,
         "sha256": "db16636e271a1b4d84de798436d4a8f471f8aaeed119dbf1099ff4f8883b00c7"
       },
+      "research_v69/quality_flow.py": {
+        "bytes": 6037,
+        "sha256": "1f7bb6b63634aff606b84f27501e0f7cf38420b6e5f6a8772b14d403a4772b68"
+      },
+      "research_v69/test_construction_flow.py": {
+        "bytes": 3948,
+        "sha256": "6a9a0ac1af1e96a38bd4452391676f904faf7e72745fd160e0e89831c5b22437"
+      },
+      "research_v69/test_loss_audit.py": {
+        "bytes": 3222,
+        "sha256": "ef32b050f1e3af8cb55f94686ed594dace11043a5e72343d59155560b14804a8"
+      },
+      "research_v69/test_model_backend.py": {
+        "bytes": 4972,
+        "sha256": "5ab133f3b92cc135ef4dae99a7d4b25a269e2d07595c6e86f0d7f750975a7840"
+      },
       "research_v69/test_model_gate.py": {
         "bytes": 6107,
         "sha256": "d36c61836d4565d01ac53969e012d1b491d23084f1f15ee8a529a8c2682256f6"
       },
+      "research_v69/test_parameter_audit.py": {
+        "bytes": 4371,
+        "sha256": "13fe3cee995a7dcf4f5503fa506b1f027824acdff5328e4b4e32d7a8f4258681"
+      },
       "research_v69/test_parity.py": {
         "bytes": 1753,
         "sha256": "695eca27eca65fa21dbe0a72366336adc9b14b101a493d023039f9b4dd7a9729"
+      },
+      "research_v69/test_quality_flow.py": {
+        "bytes": 4696,
+        "sha256": "725edf241df7b7c32afa2974124bbaf46e09cd755242d56b630c01cd04039cab"
       }
     },
     "sources_frozen": false,
-    "status": "passed_local_boundary_fixtures",
-    "tests": 9
+    "status": "passed_local_generated_fixtures",
+    "tests": 33,
+    "unchanged_v68_prepared_sources": 9
   },
   "next_actions": [
-    "Finish V67 and require both terminal model/state/cost audits",
-    "Review and freeze V68 actual data/runtime/source registration only after V67 terminal success",
-    "Run checks, data and saved-data audit once under fresh separate admission",
-    "Prepare two matched sequential controls and six-model export/parity/likelihood registration",
-    "Use verified evidence to decide timing scope and finish the existing manuscript/bundle"
+    "Finish V67 and verify both terminal actual-model/state/cost audits; never repeat old launchers",
+    "Finish V69 production source/runtime/checkpoint/geometry gates, controller and terminal accounting while V67 runs",
+    "Freeze/register V68 only after V67 terminal success, then execute checks/data/audit once",
+    "Freeze separately admitted numerical/CUDA V69 campaign after V68 actual data audit; preserve negative results",
+    "Decide prospective timing scope and complete evidence-linked manuscript/venue bundle"
   ],
   "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_c.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,
@@ -375,7 +412,97 @@
     "tests": 22
   },
   "quality_evaluation_registered": false,
+  "quality_resource_design": {
+    "base_target_sha256": "ddcc41a5420a63c60f64372af1fb5e077efc9266ad12feafe6ed04be5d6248b8",
+    "captured_at_utc": "2026-10-16T11:06:17.228631+00:00",
+    "endpoints": [
+      {
+        "max_reserved_plus_solver_bytes": 8814075904,
+        "max_solver_arrays_bytes": 4519108608,
+        "retained": 12,
+        "routes": {
+          "block.0000.attn_out": "streamed",
+          "block.0000.mlp_down": "streamed",
+          "block.0000.mlp_up": "streamed",
+          "block.0000.qkv": "streamed",
+          "block.0001.attn_out": "streamed",
+          "block.0001.mlp_down": "streamed",
+          "block.0001.mlp_up": "streamed",
+          "block.0001.qkv": "streamed",
+          "block.0002.attn_out": "streamed",
+          "block.0002.mlp_down": "streamed",
+          "block.0002.mlp_up": "streamed",
+          "block.0002.qkv": "streamed",
+          "block.0003.attn_out": "streamed",
+          "block.0003.mlp_down": "streamed",
+          "block.0003.mlp_up": "streamed",
+          "block.0003.qkv": "streamed",
+          "block.0004.attn_out": "streamed",
+          "block.0004.mlp_down": "streamed",
+          "block.0004.mlp_up": "streamed",
+          "block.0004.qkv": "streamed",
+          "block.0005.attn_out": "streamed",
+          "block.0005.mlp_down": "streamed",
+          "block.0005.mlp_up": "streamed",
+          "block.0005.qkv": "streamed"
+        },
+        "stages": 24,
+        "total_work_units": 419270639616
+      },
+      {
+        "max_reserved_plus_solver_bytes": 5062533120,
+        "max_solver_arrays_bytes": 767565824,
+        "retained": 6,
+        "routes": {
+          "block.0000.attn_out": "streamed",
+          "block.0000.mlp_down": "token",
+          "block.0000.mlp_up": "streamed",
+          "block.0000.qkv": "streamed",
+          "block.0001.attn_out": "streamed",
+          "block.0001.mlp_down": "token",
+          "block.0001.mlp_up": "streamed",
+          "block.0001.qkv": "streamed",
+          "block.0002.attn_out": "streamed",
+          "block.0002.mlp_down": "token",
+          "block.0002.mlp_up": "streamed",
+          "block.0002.qkv": "streamed",
+          "block.0003.attn_out": "streamed",
+          "block.0003.mlp_down": "token",
+          "block.0003.mlp_up": "streamed",
+          "block.0003.qkv": "streamed",
+          "block.0004.attn_out": "streamed",
+          "block.0004.mlp_down": "token",
+          "block.0004.mlp_up": "streamed",
+          "block.0004.qkv": "streamed",
+          "block.0005.attn_out": "streamed",
+          "block.0005.mlp_down": "token",
+          "block.0005.mlp_up": "streamed",
+          "block.0005.qkv": "streamed"
+        },
+        "stages": 24,
+        "total_work_units": 321015398400
+      }
+    ],
+    "launch_admitted": false,
+    "measured_fit": false,
+    "policy": {
+      "max_array_bytes": 8589934592,
+      "max_box_preconditioned_coordinates": 16,
+      "max_box_rounds": 4,
+      "max_point_refinement_coordinates": 16,
+      "max_process_bytes": 17179869184,
+      "max_request_work_units": 1000000000000,
+      "max_stage_work_units": 64000000000
+    },
+    "proposed_process_memory_bytes": 17179869184,
+    "registration_exists": false,
+    "resident_bytes": 4294967296,
+    "schema": "v69-proposed-construction-resource-design",
+    "source_values_accessed": false,
+    "status": "structural_admission_only",
+    "wall_time_estimate": false
+  },
   "schema": "second-progress-v69-preparation",
-  "status": "v67_running_quality_data_and_model_gates_prepared_unregistered",
+  "status": "v67_running_quality_construction_evaluator_and_artifact_helpers_prepared_unregistered",
   "submission_ready": false
 }

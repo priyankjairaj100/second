@@ -103,9 +103,12 @@ or parallel execution loop. No subagent delegation is currently authorized.
    selections. Actual data registration/Linux execution and six-model quality
    construction/export/parity/terminal gates remain. Wait for both V67 terminal
    audits before registering the data-only phase; do not disturb active timings.
-   V69 adds complete-code/parameter and six-model parity helpers with9 passing
-   local boundary fixtures; the sequential constructor is mocked in these tests.
-   Full construction/export/CPU/GPU/loss-audit workers remain to be implemented.
+   V69 now adds sequential construction, full parameter-array auditing, six-model
+   CPU/CUDA factories, parity-gated once-only loss collection and saved-loss audits.
+   All33 generated local fixtures pass; the sequential constructor remains mocked,
+   while tiny CPU likelihood fixtures execute. Production runtime/checkpoint/geometry
+   admission, bounded controller/Slurm entries and terminal cost audits remain.
+   Read research_v69/PROTOCOL.txt; proposed resources are not registered allowances.
    Check article identity and overlap against every historical exclusion (currently
    sixty) and calibration source. Predeclare paired pooled NLL/PPL, tail guard,
    uncertainty method and sample-size justification before reading results. Old
@@ -148,8 +151,8 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate are qualified. At15:59IST preparation15262 is running with all13 sources
-and7of24 stages recorded; remaining jobs15263--15275 are dependency-pending. Modern-service timings,
+V67's64-test exact-source Linux gate are qualified. At16:36IST preparation15262 is running with all13 sources
+and19of24 stages recorded; remaining jobs15263--15275 are dependency-pending. Modern-service timings,
 new-root model evidence, untouched quality and prospective timing remain absent.
 The same manuscript compiles after reducing6884 to5175 source whitespace tokens;
 this is not a venue page-count check or submission-ready bundle.
