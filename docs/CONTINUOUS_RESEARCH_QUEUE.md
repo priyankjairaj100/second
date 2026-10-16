@@ -97,6 +97,8 @@ or parallel execution loop. No subagent delegation is currently authorized.
    plan, unchanged practical guards and explicit uncertainty/sample-size limits.
    Implement/admit sampler, actual model/evaluator gates and resource budgets;
    require V67 actual-model terminal audits before likelihood evaluation.
+   Unregistered V68 paired-statistics source passes8 generated local tests and a
+   full-size bootstrap fixture; sampler/model/evaluator/terminal gates remain.
    Check article identity and overlap against every historical exclusion (currently
    sixty) and calibration source. Predeclare paired pooled NLL/PPL, tail guard,
    uncertainty method and sample-size justification before reading results. Old

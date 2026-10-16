@@ -97,6 +97,15 @@ and no resource registration is active. Complete sampler/overlap/parameter/sourc
 admission and budgets before execution; require V67 model audits before likelihood.
 Shared original/nearest controls run once, not separately for equal service arms.
 
+Additional independent preparation: `research_v68/quality_statistics.py` now
+implements paired article statistics and bootstrap guards. Eight local generated
+tests and one full320article/20000draw software fixture pass. Read its README
+and `validation/v68_quality_statistics_preparation.json`. V68 is UNREGISTERED;
+no sampler, Linux gate, model/evaluator audit or new quality execution exists.
+The initial over-width seed error was fixed before empirical access. The469
+frozen V67-and-earlier files remain unchanged. Continue with the missing data,
+model-export/parity, worker and audit gates; do not infer quality from fixtures.
+
 Next actions, in order:
 1. Observe current chain; preserve failed or cancelled jobs. Never retry V67.
 2. While running, implement the quality sampler/evaluator and source gates under
