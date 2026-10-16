@@ -67,10 +67,13 @@ or parallel execution loop. No subagent delegation is currently authorized.
    IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
-   Preparation15262, hybrid15263 and compression15264 completed0:0. At20:52IST
-   cold15265 was RUNNING48m56s with7of24 certified stages;15266--15275 were
+   Preparation15262, hybrid15263 and compression15264 completed0:0. At21:14IST
+   cold15265 was RUNNING1h11m13s with15of24 certified stages;15266--15275 were
    dependency-pending. Both completed
    comparison receipts/debits passed metadata checks; both binary audits remain.
+   The new reporting-only terminal checker passes25 generated tests and correctly
+   leaves actual snapshots pending. Use docs/TERMINAL_REPORTING_PREPARATION_V69.txt;
+   synthetic receipt success cannot replace both actual terminal audits.
    Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V69.md`, `docs/ACTIVE_SESSION_V68.md`, `docs/ACTIVE_SESSION_V67.md` and
    `research_v67/PROTOCOL.txt`. Reuse the frozen mathematical target and matched point
    solver, with full parsing, canonical validation, startup/cache policy, state
@@ -151,6 +154,7 @@ or parallel execution loop. No subagent delegation is currently authorized.
    formatting, anonymity/authorship, citations, ethics/checklist answers, licenses,
    reproducibility instructions and archive manifests. Resolve genuinely missing
    author/submission details with the user without blocking independent work.
+   The final long(8-page)/short(4-page) format preference is now pending with the user.
    The532-source execution inventory,534-file static package candidate and bounded
    publisher metadata checks are now prepared;
    see docs/SUBMISSION_ARTIFACT_POLICY_V69.txt. Keep binaries/corpus external and
@@ -196,7 +200,7 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate is qualified. At20:52IST preparation15262,
+V67's64-test exact-source Linux gate is qualified. At21:14IST preparation15262,
 hybrid15263 and compression15264 were COMPLETED0:0. Their worker debits are6858,
 4922 and5210 CPU seconds. Cold15265 is RUNNING;15266--15275 are dependency-pending.
 Both completed comparisons have24 stage certificates. Their7 and68 numerical

@@ -6,13 +6,13 @@ GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
 ## Actual cluster observation
 
-At15:22:21UTC (20:52:21IST), hybrid15263 and compression15264 were COMPLETED0:0.
+At15:44:37UTC (21:14:37IST), hybrid15263 and compression15264 were COMPLETED0:0.
 Compression completed in1h27m36s with all24 stages certified. Cold15265 was RUNNING
-48m56s with7of24 certified stages;15266--15275 remained dependency-pending.
+1h11m13s with15of24 certified stages;15266--15275 remained dependency-pending.
 Both terminal audits remain absent.
-The344-file snapshot campaigns/csis_v67_progress_metadata_20261016_o.tar.gz is296304
-bytes, SHA256fabe3d2624e9e2aaa420b98fbd0b84c44ed1c83708d38e901dd668bea8702e2b.
-validation/v67_progress_metadata_check_o.json verifies metadata/source bindings.
+The352-file snapshot campaigns/csis_v67_progress_metadata_20261016_p.tar.gz is297198
+bytes, SHA25667713b52e09a7df8141c174c043cd64df712fe6a3c981af2c8257167785c7a15.
+validation/v67_progress_metadata_check_p.json verifies metadata/source bindings.
 All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
 No new job was submitted. The numerical checkout remains
 f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull reporting changes there.
@@ -29,8 +29,8 @@ partial metadata checks, not model/state byte equality or final campaign cost ve
 reporting invocation/schema errors were corrected and preserved without any cluster
 mutation. Read docs/V67_HYBRID1_RECEIPT_V69.txt. Previous snapshots remain intact.
 
-Preparation15262 ended17:13:01IST after1h55m09s with13 sources,24 stages and all five
-state representations packaged. The earlier actual receipt/debit check remains in
+Preparation15262 ended17:13:01IST after1h55m09s with13 sources,24 stages and all four
+state representations packaged for five comparison arms. The earlier actual receipt/debit check remains in
 validation/v67_preparation_metadata.json:6857.956044 worker CPU seconds,6858 charged,
 1732228KiB peak RSS,9.590220307 controller own CPU seconds and1h54m28 Slurm CPU.
 Numerical binaries were not reaudited by this continuation. Preserve the live
@@ -272,3 +272,19 @@ files (92,050 bytes), with the codec LICENSE matching its frozen hash. Tokenizer
 dist-info had no notice file. Transitive/system/GPU notices remain incomplete;
 no library was installed and no scientific result follows. See
 validation/v69_installed_dependency_notice_check.json.
+
+## Terminal reconciliation prepared
+
+New reporting-only code validates a complete twelve-worker/two-audit receipt graph
+and recomputes storage, preparation, request and separate CPU/scheduler accounting.
+All25 generated tests pass, including a complete synthetic metadata path and
+refusals for absent/failed gates, corrupt bindings and duplicated accounting.
+Actual O/P snapshots remain pending_terminal; no numerical result is promoted.
+The actual successful terminal path has not yet run. No experiment source changed.
+Read docs/TERMINAL_REPORTING_PREPARATION_V69.txt. Five arms use four stored
+representations; earlier five-representation wording is corrected.
+
+Tokenizers' version-specific publisher license page was located, but immutable
+raw retrieval failed with a connection reset and was not retried. The missing
+installed notice and transitive notice gaps remain. The final long/short-paper
+format preference was requested; no reply is inferred and research continues.

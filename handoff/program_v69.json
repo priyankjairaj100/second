@@ -460,6 +460,14 @@
     "threads": 1,
     "worker_allowance_cpu_seconds": 39616
   },
+  "final_paper_format_question": {
+    "experimental_work_blocked": false,
+    "options": [
+      "ACL/ARR long:8 main pages",
+      "ACL/ARR short:4 main pages"
+    ],
+    "status": "awaiting_user_preference"
+  },
   "heartbeat_active": true,
   "held_submission_preparation": {
     "actual_checkpoint_loaded": false,
@@ -658,11 +666,11 @@
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 296304,
-      "sha256": "fabe3d2624e9e2aaa420b98fbd0b84c44ed1c83708d38e901dd668bea8702e2b"
+      "bytes": 297198,
+      "sha256": "67713b52e09a7df8141c174c043cd64df712fe6a3c981af2c8257167785c7a15"
     },
-    "captured_at_utc": "2026-10-16T15:22:21.042311+00:00",
-    "copied_files": 344,
+    "captured_at_utc": "2026-10-16T15:44:37.467303+00:00",
+    "copied_files": 352,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -706,7 +714,7 @@
         "total_cpu": "01:26:58"
       },
       "15265": {
-        "elapsed": "00:48:56",
+        "elapsed": "01:11:13",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-cold-1",
@@ -831,15 +839,15 @@
       },
       "cold-1": {
         "completion_receipt_present": false,
-        "events": 44,
+        "events": 52,
         "last": {
           "certificate_refusal": null,
-          "code_sha256": "c80511ccab0d4b89848c2ecc15f4a70bece26a36f445468f560867141d1cc118",
-          "elapsed_ns": 2342661617115,
+          "code_sha256": "c824dc4f51f13bc8f398704df16959079058823869f96a7d8dfc9fba7802f6e6",
+          "elapsed_ns": 3772325174082,
           "fallback": false,
           "phase": "stage_certified",
           "route": "streamed",
-          "stage_id": "block.0001.mlp_up"
+          "stage_id": "block.0003.mlp_up"
         }
       },
       "cold-2": {
@@ -909,7 +917,7 @@
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|RUNNING|48:57|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|RUNNING|1:11:13|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
@@ -1904,7 +1912,7 @@
     "unchanged_v68_prepared_sources": 9
   },
   "next_actions": [
-    "Close V67 remaining comparisons, fresh oracle and both actual-model/state/cost audits; preserve current jobs and live reservations",
+    "Reconcile existing V67 jobs, fresh oracle and both actual-model/state/cost audits with the new portable terminal checker; all actual terminal receipts remain mandatory. Synthetic25-test success is not evidence. Preserve jobs/live reservations.",
     "Only after both V67 audits succeed register/run V68 data and reconcile all three terminal scheduler costs",
     "Only after actual V68 success freeze/register V69 with actual runtime/held-job admission,98 Linux checks, separate CUDA qualification, all quality phases and post-exit closure",
     "Four review components now have checked manifests, external input/runtime instructions and a nine-receipt crosswalk.561 text files pass known direct-identity checks. Complete actual historical input/receipt distribution, transitive notices, whole-package anonymity/layout and claim-dependent assembly;114 local fixtures do not qualify full reproduction.",
@@ -1913,7 +1921,7 @@
   ],
   "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
   "observed_stage_certificates": {
-    "cold-1": 7,
+    "cold-1": 15,
     "compressed-1": 24,
     "hybrid-1": 24,
     "prepare": 24
@@ -2007,7 +2015,7 @@
     "worker_maximum_rss_kib": 1732228,
     "worker_process_and_waited_descendant_cpu_ns": 6857956044000
   },
-  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_o.tar.gz",
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_p.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,
@@ -2560,6 +2568,138 @@
   "status": "v67_hybrid1_compressed1_complete_cold1_running_v69_preparation_92_tests",
   "submission_preparation": "docs/SUBMISSION_READINESS_V69.txt",
   "submission_ready": false,
+  "terminal_metadata_gate": {
+    "active_jobs": {
+      "15265": "RUNNING",
+      "15266": "PENDING",
+      "15267": "PENDING",
+      "15268": "PENDING",
+      "15269": "PENDING",
+      "15270": "PENDING",
+      "15271": "PENDING",
+      "15272": "PENDING",
+      "15273": "PENDING",
+      "15274": "PENDING",
+      "15275": "PENDING"
+    },
+    "actual_model_state_bytes_checked_locally": false,
+    "automatic_launch_or_retry": false,
+    "captured_at_utc": "2026-10-16T15:44:37.467303+00:00",
+    "cluster_terminal_audit_claims_reconciled": false,
+    "confirmation": false,
+    "independent_solver_validation": false,
+    "inference_executed": false,
+    "missing_receipts": [
+      "primary-audit.json",
+      "supplemental-audit.json",
+      "primary-entry.json",
+      "supplemental-entry.json"
+    ],
+    "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+    "quality_evaluation": false,
+    "schema": "v67-portable-terminal-metadata-review",
+    "snapshot": {
+      "bytes": 297198,
+      "sha256": "67713b52e09a7df8141c174c043cd64df712fe6a3c981af2c8257167785c7a15"
+    },
+    "status": "pending_terminal",
+    "submission_ready": false
+  },
+  "terminal_reporting_preparation": {
+    "actual_model_state_bytes_checked": false,
+    "actual_terminal_artifacts_still_required": true,
+    "actual_terminal_success_path_exercised": false,
+    "captured_at_utc": "2026-10-16T15:44:34.536097+00:00",
+    "checkpoint_or_raw_articles_read": false,
+    "complete_success_path_fixture_generated_only": true,
+    "coverage": [
+      "Pending/failed scheduler state cannot be overridden by terminal-looking receipts",
+      "Complete generated 12-worker/2-audit metadata path with ten comparisons",
+      "Original source/ledger/limit/debit and exact audit-input commitment inventories",
+      "Preparation attribution once; nested request/worker/transaction clocks retained",
+      "Separate allocation CPU; no batch-row double counting",
+      "Corruption, missing inputs/entries, failed audit entry, changed applied limits/model commitments, unsettled ledger, duplicate/missing scheduler rows and wall overshoot refusal"
+    ],
+    "empirical_result_verified": false,
+    "errors": 0,
+    "failures": 0,
+    "frozen_sources_modified": false,
+    "latest_real_snapshot": "campaigns/csis_v67_progress_metadata_20261016_p.tar.gz",
+    "latest_real_snapshot_status": "pending_terminal",
+    "real_snapshot_status": "pending_terminal",
+    "registered_jobs_changed": false,
+    "report_updated_at_utc": "2026-10-16T15:51:18.083228+00:00",
+    "root_review_not_independent": true,
+    "schema": "v67-terminal-reporting-preparation",
+    "scientific_claim_promoted": false,
+    "skips": 0,
+    "source_and_check_bindings": {
+      "validation/check_v67_snapshot.py": {
+        "bytes": 5129,
+        "sha256": "1bc91fefe89bf0746dda11495e00dea80b1ee568355f56a0d71be32526cf6c8a"
+      },
+      "validation/check_v67_terminal_metadata.py": {
+        "bytes": 25683,
+        "sha256": "4297e260dd75ba956c9727c9fa914066541fa923f6c9a76105b41c04e837d063"
+      },
+      "validation/test_v67_terminal_metadata.py": {
+        "bytes": 8809,
+        "sha256": "72ada40cfa809ca2ff7bb03b968f0825e968534f4af39446754e8bc4dee19f27"
+      },
+      "validation/v67_progress_metadata_check_p.json": {
+        "bytes": 7395,
+        "sha256": "7d1789bc08dd0b841555d7c03a198e67a481d30ea48d412ea900d567f14f47ac"
+      },
+      "validation/v67_terminal_fixture.py": {
+        "bytes": 11946,
+        "sha256": "3f4ccaf88a2625c9deb8b1dc8f38596a64d6b1bdfc9caaaf2225d9aa244cfadb"
+      },
+      "validation/v67_terminal_pending_check_o.json": {
+        "bytes": 1087,
+        "sha256": "fb7aedbf1d0cf0da2e447007e1426ea1e3622ca20682522c6ccb4e3ec60aadf8"
+      },
+      "validation/v67_terminal_pending_check_p.json": {
+        "bytes": 1087,
+        "sha256": "f38cae84ff95c02dd59de59ddbe6fe06f7bb69abfaddbda8ed4f0f9afae7d572"
+      },
+      "validation/v67_terminal_reporting_tests_final.txt": {
+        "bytes": 2865,
+        "sha256": "8b6bf902a9f7bbd42717a172bf2b7ca9c0a9863a2b5291dd61fbf3d76654f5e1"
+      }
+    },
+    "status": "reporting_code_qualified_on_generated_metadata_and_live_pending_snapshot",
+    "tests": 25
+  },
+  "tokenizers_publisher_notice_followup": {
+    "actual_license_bytes_archived": false,
+    "all_rust_dependency_notices_complete": false,
+    "installed_dist_info_notice_missing": true,
+    "installed_wheel_source_equivalence_verified": false,
+    "models_or_articles_acquired": false,
+    "observed_tag_commit": "88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3",
+    "packages_installed": false,
+    "pinned_raw_retrieval_attempt": {
+      "base": "https://raw.githubusercontent.com/huggingface/tokenizers/88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3/",
+      "completed_bodies_not_persisted": true,
+      "error_type": "URLError",
+      "no_retry": true,
+      "planned_paths": [
+        "LICENSE",
+        "tokenizers/Cargo.toml"
+      ],
+      "reason": "ConnectionResetError: [Errno 54] Connection reset by peer",
+      "status": "failed"
+    },
+    "publisher": "huggingface/tokenizers",
+    "publisher_license_page": "https://raw.githubusercontent.com/huggingface/tokenizers/v0.23.2/LICENSE",
+    "recorded_at_utc": "2026-10-16T15:33:46.357978+00:00",
+    "schema": "tokenizers-publisher-notice-observation-v69",
+    "tag_api_url": "https://api.github.com/repos/huggingface/tokenizers/git/ref/tags/v0.23.2",
+    "tag_ref_type": "commit",
+    "version": "0.23.2",
+    "web_page_declares": "Apache License Version 2.0",
+    "web_page_read": true
+  },
   "worker_wiring_preparation": {
     "actual_checkpoint_loaded": false,
     "actual_cuda_executed": false,

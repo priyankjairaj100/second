@@ -1,0 +1,30 @@
+test_applied_limit_mutation_refused (validation.test_v67_terminal_metadata.GeneratedCompleteReceiptPath) ... ok
+test_changed_audit_cost_refused (validation.test_v67_terminal_metadata.GeneratedCompleteReceiptPath) ... ok
+test_changed_copied_model_commitment_refused (validation.test_v67_terminal_metadata.GeneratedCompleteReceiptPath) ... ok
+test_complete_synthetic_path_retains_scope_and_adverse_rows (validation.test_v67_terminal_metadata.GeneratedCompleteReceiptPath) ... ok
+test_duplicate_scheduler_row_refused (validation.test_v67_terminal_metadata.GeneratedCompleteReceiptPath) ... ok
+test_failed_audit_entry_cannot_hide_behind_passing_audit (validation.test_v67_terminal_metadata.GeneratedCompleteReceiptPath) ... ok
+test_missing_audit_input_refused (validation.test_v67_terminal_metadata.GeneratedCompleteReceiptPath) ... ok
+test_missing_batch_row_refused (validation.test_v67_terminal_metadata.GeneratedCompleteReceiptPath) ... ok
+test_missing_final_entry_refused_before_reconciliation (validation.test_v67_terminal_metadata.GeneratedCompleteReceiptPath) ... ok
+test_nested_scheduler_cpu_is_not_added_twice (validation.test_v67_terminal_metadata.GeneratedCompleteReceiptPath) ... ok
+test_scheduler_wall_overshoot_refused (validation.test_v67_terminal_metadata.GeneratedCompleteReceiptPath) ... ok
+test_unsettled_ledger_refused (validation.test_v67_terminal_metadata.GeneratedCompleteReceiptPath) ... ok
+test_common_preparation_is_attributed_once (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+test_duration_fraction_and_days (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+test_duration_unknown_and_invalid_refused (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+test_failure_is_not_pending_or_promoted (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+test_fallback_and_nested_clocks_preserved (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+test_four_representations_not_five_arms (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+test_invalid_clock_refused (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+test_missing_terminal_receipt_is_incomplete (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+test_nonzero_exit_is_a_failure (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+test_pending_ignores_terminal_looking_receipts (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+test_ready_is_only_ready_for_reconciliation (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+test_registered_job_census_required (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+test_terminal_queue_contradiction_refused (validation.test_v67_terminal_metadata.TerminalReporting) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.559s
+
+OK
