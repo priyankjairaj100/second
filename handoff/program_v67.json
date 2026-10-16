@@ -1,0 +1,109 @@
+{
+  "schema": "second-progress-v67",
+  "status": "registered_complete_service_running",
+  "last_evidence": {
+    "actual_model_state_comparison_repeated_locally": false,
+    "all_empirical_and_audit_outcomes_pending": true,
+    "archive": {
+      "bytes": 145359,
+      "sha256": "bb5d05edede86264f03a3cd9912495ad4f2ab433a2ef53a29c900ee819c1c5f0"
+    },
+    "captured_at_utc": "2026-10-16T09:50:17.348367+00:00",
+    "copied_files": 65,
+    "frozen_sources_verified": 469,
+    "jobs": [
+      {
+        "job_id": "15262",
+        "name": "prepare"
+      },
+      {
+        "job_id": "15263",
+        "name": "hybrid-1"
+      },
+      {
+        "job_id": "15264",
+        "name": "compressed-1"
+      },
+      {
+        "job_id": "15265",
+        "name": "cold-1"
+      },
+      {
+        "job_id": "15266",
+        "name": "cached-1"
+      },
+      {
+        "job_id": "15267",
+        "name": "modern-1"
+      },
+      {
+        "job_id": "15268",
+        "name": "modern-2"
+      },
+      {
+        "job_id": "15269",
+        "name": "cached-2"
+      },
+      {
+        "job_id": "15270",
+        "name": "cold-2"
+      },
+      {
+        "job_id": "15271",
+        "name": "compressed-2"
+      },
+      {
+        "job_id": "15272",
+        "name": "hybrid-2"
+      },
+      {
+        "job_id": "15273",
+        "name": "oracle"
+      },
+      {
+        "job_id": "15274",
+        "name": "primary"
+      },
+      {
+        "job_id": "15275",
+        "name": "supplemental"
+      }
+    ],
+    "numerical_result_verified": false,
+    "numerical_worker_ledger_at_capture": "one_reserved_attempt_no_observed_CPU_yet",
+    "preparation_at_capture": "RUNNING",
+    "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+    "software": {
+      "errors": 0,
+      "failures": 0,
+      "job_id": "15261",
+      "process_and_waited_child_cpu_ns": 9060333978,
+      "scheduler_allocation_cpu_seconds": 9.977,
+      "skips": 0,
+      "tests": 64
+    },
+    "status": "verified_launch_and_software_metadata_only"
+  },
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "manuscript": {
+    "before_source_whitespace_tokens": 6884,
+    "after_source_whitespace_tokens": 5175,
+    "removed_tokens": 1709,
+    "sha256": "908b2ab335147d9c34c19e0e6fd0e68792d35c2ed7d1fd2f14f58ae8c2284fa4",
+    "missing_citations": [],
+    "source_snapshot": "reports/manuscript_v63.tex",
+    "new_results_added": false
+  },
+  "manuscript_native_compile": "success",
+  "quality_plan": "docs/UNTOUCHED_QUALITY_PLAN_V67.txt",
+  "quality_evaluation_registered": false,
+  "submission_ready": false,
+  "next_actions": [
+    "Reconcile current jobs and preserve one-use receipts",
+    "Prepare next quality and timing gates while jobs run",
+    "Collect and validate both terminal audits",
+    "Decide scientific claims before new evaluations",
+    "Finish existing manuscript and final bundle"
+  ],
+  "heartbeat_active": true
+}

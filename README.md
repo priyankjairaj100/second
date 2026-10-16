@@ -1,3 +1,7 @@
+Current work (16 October 2026): **V67 disjoint-root complete service is running.** All64 Linux gate tests passed; preparation15262 is active, with thirteen comparisons/oracle/audit dependents15263--15275 queued. Read [latest handoff](docs/ACTIVE_SESSION_V67.md), [frozen protocol](research_v67/PROTOCOL.txt) and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). All469 executed sources are frozen. No new numerical result is verified. The manuscript is25% shorter and compiles; untouched-quality design is prepared. Historical checkpoints follow.
+
+---
+
 Current work (16 October 2026): **V66 complete-service operations passed all 44 Linux tests, including five-arm tiny numerical equality.** V63 artifact evidence and V65 disjoint-root data admission are verified. No Second job is active. Read [latest handoff](docs/ACTIVE_SESSION_V66.md), [V67 execution plan](docs/COMPLETE_SERVICE_PLAN_V67.txt) and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). Full-model V67 controller/workers, resource admission and audits remain unimplemented/unregistered. All 456 executed source files are frozen. Historical checkpoints follow.
 
 ---

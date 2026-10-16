@@ -65,9 +65,11 @@ or parallel execution loop. No subagent delegation is currently authorized.
 
 3. **Implement and evaluate the necessary complete modern-lossless service.
    IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
-   actual five-arm tiny-model/state equality. Both had zero skips. V67 empirical controller/workers, complete resource admission and terminal
-   audits remain; keep all V64 and V66 sources frozen. Read
-   `docs/COMPLETE_SERVICE_PLAN_V67.txt`. Reuse the frozen mathematical target and matched point
+   actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
+   failures/skips; full empirical jobs15262--15275 are registered and submitted.
+   Preparation15262 is running, with comparisons/oracle/audits dependency-pending.
+   Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V67.md` and
+   `research_v67/PROTOCOL.txt`. Reuse the frozen mathematical target and matched point
    solver, with full parsing, canonical validation, startup/cache policy, state
    reconstruction, disposal and preparation accounted. Preserve compatible cached,
    hybrid and uncertain-compression controls. Specify invariants and full resource
@@ -78,11 +80,11 @@ or parallel execution loop. No subagent delegation is currently authorized.
    makes its claim irrelevant; record the reason, never imply an unexecuted result.
 
 4. **Freeze the method and test a disjoint calibration root. Data admission
-   COMPLETE; numerical service work next.** V65 jobs 15255--15257 and their
+   COMPLETE; numerical service experiment RUNNING.** V65 jobs 15255--15257 and their
    actual saved-prefix/token audit passed. Thirteen 128-token sources were selected
    outcome-blind from 2,349 complete shard-2 records, after all registered exposure
    checks. Read `docs/ACTIVE_SESSION_V65.md`; keep the admitted root fixed.
-   No new model execution is registered. Use the existing
+   V67 now executes exactly this root and deletion rule. Use the existing
    `docs/NEXT_SCIENTIFIC_GATE_V61.txt` for the protocol requirements. One new root
    is an economical development falsification, not enough for a general reliability
    claim. Pin teacher, data selection, deletion memberships, solvers, decision rule,
@@ -90,7 +92,11 @@ or parallel execution loop. No subagent delegation is currently authorized.
    A failure triggers diagnosis and a documented scientific decision; do not search
    roots until one passes or silently widen the task.
 
-5. **Evaluate untouched quality. Waiting on method freeze and data admission.**
+5. **Evaluate untouched quality. Design prepared; execution not registered.**
+   Read `docs/UNTOUCHED_QUALITY_PLAN_V67.txt` for the320-article two-endpoint
+   plan, unchanged practical guards and explicit uncertainty/sample-size limits.
+   Implement/admit sampler, actual model/evaluator gates and resource budgets;
+   require V67 actual-model terminal audits before likelihood evaluation.
    Check article identity and overlap against every historical exclusion (currently
    sixty) and calibration source. Predeclare paired pooled NLL/PPL, tail guard,
    uncertainty method and sample-size justification before reading results. Old
@@ -132,10 +138,12 @@ V63 is the latest completed empirical checkpoint: the modern lossless archive
 passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
-complete; V65 data admission and portable audit also passed. No Second job is
-active. V66 operations qualified; V67 full-model implementation/admission is next. Full modern-service
-timings, new-root model evidence, untouched quality and prospective timing remain
-absent. The 6,884-source-token manuscript compiles but is not submission-ready.
+complete; V65 data admission and portable audit also passed. V66 operations and
+V67's64-test exact-source Linux gate are qualified. Preparation15262 is running;
+remaining jobs15263--15275 are dependency-pending. Modern-service timings,
+new-root model evidence, untouched quality and prospective timing remain absent.
+The same manuscript compiles after reducing6884 to5175 source whitespace tokens;
+this is not a venue page-count check or submission-ready bundle.
 
 ## When to pause or finish
 
