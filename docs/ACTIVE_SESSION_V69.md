@@ -6,12 +6,12 @@ GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
 ## Actual cluster observation
 
-At14:01:47UTC (19:31:47IST), hybrid-control job15263 remained COMPLETED0:0 after
-1h22m46s. Compression15264 was RUNNING55m59s on csis.mn1 with15of24 stages certified;
+At14:16:31UTC (19:46:31IST), hybrid-control job15263 remained COMPLETED0:0 after
+1h22m46s. Compression15264 was RUNNING1h10m43s on csis.mn1 with19of24 stages certified;
 15265--15275 remained dependency-pending. Both terminal audits remain absent.
-The274-file snapshot campaigns/csis_v67_progress_metadata_20261016_k.tar.gz is248731
-bytes, SHA256a58e1f5f4d2ab218fbddb97b3b2053d3ab4effec92fe4429c28517cbc243b64a.
-validation/v67_progress_metadata_check_k.json verifies metadata/source bindings.
+The278-file snapshot campaigns/csis_v67_progress_metadata_20261016_l.tar.gz is249085
+bytes, SHA2568f47be5818846d00d4874e8fac518a88f52a4b5858029513c097c15d19e4f1e5.
+validation/v67_progress_metadata_check_l.json verifies metadata/source bindings.
 All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
 No new job was submitted. The numerical checkout remains
 f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull reporting changes there.
@@ -119,8 +119,9 @@ audit. The subsequent ACL layout and evidence-reference trim also pass all71
 checks. Read docs/MANUSCRIPT_NUMBER_AUDIT_V69.txt.
 
 The532-source inventory and direct evidence references cover577 unique files.
-All commitments matched;572 text files were scanned, while five archives remain
-uninspected internally. Known author/account/host/path strings occur in47 files.
+All commitments matched;572 text files were scanned. The five archives have now
+passed a separate bounded content scan. Known author/account/host/path strings
+occur in47 of the original577 files.
 Read docs/ANONYMITY_REVIEW_V69.txt for derivative-copy and archive-member work.
 This is a review list, not anonymity clearance. Frozen originals remain unchanged.
 
@@ -154,11 +155,15 @@ implementation was reproduced. Official page count/anonymity remain unverified.
 The same15-minute continuation remains active. No new monitor, subagent, paid
 compute or third-party message is authorized.
 
-Archive header inventory update: all five committed archives now have bounded
-member inventories (2,269 entries;33,307,525 uncompressed member bytes). Every
-member is a regular file with a relative non-traversing path. No member was
-extracted or its payload inspected; content review, selection and anonymous
-derivatives remain pending. See validation/v69_archive_member_inventory.json.
+Archive content review update: a bounded read inspected all2,269 regular members
+and33,307,525 uncompressed bytes across the five preserved archives. No files were
+extracted or executed. Among1,803 JSON files, ten members contain raw historical
+token arrays; those are explicitly excluded from the review package. Known identity
+strings occur in390 members. A further numeric-array flag contains fallback row
+indices and failed coordinates, not tokens; preserve these adverse diagnostics.
+The nine selected audit/measurement receipt candidates still need reviewed
+derivatives. Original archives remain unchanged and excluded from the review ZIP.
+See docs/SOURCE_RECEIPT_PACKAGE_REVIEW_V69.txt and the private selection map.
 
 ## Checked historical companion and shorter bibliography
 
@@ -194,3 +199,12 @@ Preview inspection remains unavailable, so visual layout and main-text pages
 are unverified. The working-draft label remains. Full anonymity, licensing,
 code/runtime reproduction and claim-required new evidence are still open.
 Keep this editor open. See validation/v69_manuscript_evidence_trim.json.
+
+Static source and receipt selection update
+The prepared execution inventory remains532. A broader534-file packaging candidate
+adds two unchanged legacy helper/package files and has no missing static project
+imports across503 Python modules. No experiment source or registration changed.
+The archive scan and private selection map identify ten raw-token exclusions and
+nine original audit/measurement receipt candidates. Reviewed derivatives, runtime
+closure, notices and clean source reproduction remain. See
+docs/SOURCE_RECEIPT_PACKAGE_REVIEW_V69.txt. The summary companion is unchanged.

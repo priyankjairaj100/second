@@ -96,15 +96,18 @@ The unchanged manuscript passes71 transcription/arithmetic checks, including all
 numeric cells in its service table and the adverse quality/cost narrative. Three
 in-memory tamper probes were rejected; no inference or binary audit was repeated.
 An identity inventory checks577 source/evidence commitments and scans572 text
-files, finding47 with known identifying strings. Five archives remain uninspected
-internally. Anonymous derivatives and whole-package validation remain required.
+files, finding47 with known identifying strings. The five archives have now passed the bounded content scan described below. Anonymous derivatives and whole-package validation remain required.
 See MANUSCRIPT_NUMBER_AUDIT_V69.txt and ANONYMITY_REVIEW_V69.txt.
 
-Archive header inventory update: all five committed archives now have bounded
-member inventories (2,269 entries;33,307,525 uncompressed member bytes). Every
-member is a regular file with a relative non-traversing path. No member was
-extracted or its payload inspected; content review, selection and anonymous
-derivatives remain pending. See validation/v69_archive_member_inventory.json.
+Archive content review update: a bounded read inspected all2,269 regular members
+and33,307,525 uncompressed bytes across the five preserved archives. No files were
+extracted or executed. Among1,803 JSON files, ten members contain raw historical
+token arrays; those are explicitly excluded from the review package. Known identity
+strings occur in390 members. A further numeric-array flag contains fallback row
+indices and failed coordinates, not tokens; preserve these adverse diagnostics.
+The nine selected audit/measurement receipt candidates still need reviewed
+derivatives. Original archives remain unchanged and excluded from the review ZIP.
+See docs/SOURCE_RECEIPT_PACKAGE_REVIEW_V69.txt and the private selection map.
 
 Derived companion preparation
 reports/review-evidence-v69 contains checked summaries for five historical result
@@ -125,3 +128,12 @@ project links without changing the proofs, equations, abstract or reported numbe
 Native compilation and all71 number checks pass; source count is4,950 excluding
 embedded style. Rendered pagination/layout and full anonymity remain unverified.
 See REVIEW_HISTORY_COMPANION_V69.txt and validation/v69_manuscript_evidence_trim.json.
+
+Static source and receipt selection update
+The prepared execution inventory remains532. A broader534-file packaging candidate
+adds two unchanged legacy helper/package files and has no missing static project
+imports across503 Python modules. No experiment source or registration changed.
+The archive scan and private selection map identify ten raw-token exclusions and
+nine original audit/measurement receipt candidates. Reviewed derivatives, runtime
+closure, notices and clean source reproduction remain. See
+docs/SOURCE_RECEIPT_PACKAGE_REVIEW_V69.txt. The summary companion is unchanged.

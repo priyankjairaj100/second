@@ -97,6 +97,22 @@
     "status": "review_required",
     "text_files_scanned": 572
   },
+  "archive_content_review": {
+    "archives": 5,
+    "files_extracted": false,
+    "full_anonymity_verified": false,
+    "json_files": 1803,
+    "known_identity_members": 390,
+    "original_archives_changed": false,
+    "private_selection": "docs/SOURCE_RECEIPT_SELECTION_V69.json",
+    "raw_token_member_exclusions": 10,
+    "receipt_candidates": 9,
+    "receipt_derivatives_created": false,
+    "regular_members": 2269,
+    "report": "validation/v69_archive_content_review.json",
+    "source_code_executed": false,
+    "uncompressed_bytes": 33307525
+  },
   "archive_member_inventory": {
     "anonymity_verified": false,
     "archive_summaries": {
@@ -394,11 +410,11 @@
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 248731,
-      "sha256": "a58e1f5f4d2ab218fbddb97b3b2053d3ab4effec92fe4429c28517cbc243b64a"
+      "bytes": 249085,
+      "sha256": "8f47be5818846d00d4874e8fac518a88f52a4b5858029513c097c15d19e4f1e5"
     },
-    "captured_at_utc": "2026-10-16T14:01:47.275176+00:00",
-    "copied_files": 274,
+    "captured_at_utc": "2026-10-16T14:16:31.649172+00:00",
+    "copied_files": 278,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -432,7 +448,7 @@
         "total_cpu": "01:22:10"
       },
       "15264": {
-        "elapsed": "00:55:59",
+        "elapsed": "01:10:43",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-compressed-1",
@@ -577,15 +593,15 @@
       },
       "compressed-1": {
         "completion_receipt_present": false,
-        "events": 16,
+        "events": 20,
         "last": {
           "certificate_refusal": null,
-          "code_sha256": "c824dc4f51f13bc8f398704df16959079058823869f96a7d8dfc9fba7802f6e6",
-          "elapsed_ns": 2702164857411,
+          "code_sha256": "5416882cf7e54c499ecfec6091c66c7a8feeb9ecb58a2af8a0c361bf35289c9a",
+          "elapsed_ns": 3555979391345,
           "fallback": false,
           "phase": "stage_certified",
           "route": "streamed",
-          "stage_id": "block.0003.mlp_up"
+          "stage_id": "block.0004.mlp_up"
         }
       },
       "compressed-2": {
@@ -637,7 +653,7 @@
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|RUNNING|55:59|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|RUNNING|1:10:43|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
@@ -1635,13 +1651,13 @@
     "Close V67 remaining comparisons, fresh oracle and both actual-model/state/cost audits; preserve current jobs and live reservations",
     "Only after both V67 audits succeed register/run V68 data and reconcile all three terminal scheduler costs",
     "Only after actual V68 success freeze/register V69 with actual runtime/held-job admission,98 Linux checks, separate CUDA qualification, all quality phases and post-exit closure",
-    "Curate remaining claim-required source/protocol/original-receipt dependencies and review anonymous derivatives; the15-record summary ZIP is available but is not a full reproduction package",
+    "Prepare reviewed derivatives of nine explicitly selected original audit/measurement receipts, exclude ten raw-token members, preserve adverse evidence, and complete source/protocol/runtime closure. The534-file static candidate and15-record summary ZIP are not a qualified reproduction package.",
     "Visually verify the existing ACL preview and main-text page budget when preview inspection is available; no replacement document or separate PDF",
     "Make evidence-based timing/claim decision and finish licenses, authorship facts and final bundle"
   ],
   "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
   "observed_stage_certificates": {
-    "compressed-1": 15,
+    "compressed-1": 19,
     "hybrid-1": 24,
     "scope": "Counted stage_certified events in saved metadata; not terminal model/state equality."
   },
@@ -1734,7 +1750,7 @@
     "worker_maximum_rss_kib": 1732228,
     "worker_process_and_waited_descendant_cpu_ns": 6857956044000
   },
-  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_k.tar.gz",
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_l.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,
@@ -2006,6 +2022,21 @@
     "unique_exposed_articles": 8
   },
   "schema": "second-progress-v69-preparation",
+  "source_package_review": {
+    "bounded_nonliteral_dynamic_calls_reviewed": 2,
+    "broader_package_sources": 534,
+    "clean_reproduction_verified": false,
+    "execution_sources_changed": false,
+    "local_import_edges": 3174,
+    "missing_static_project_modules": 0,
+    "prepared_execution_sources": 532,
+    "python_modules_parsed": 503,
+    "registration_changed": false,
+    "report": "docs/SOURCE_RECEIPT_PACKAGE_REVIEW_V69.txt",
+    "runtime_closure_verified": false,
+    "static_report": "validation/v69_static_source_closure_extended.json",
+    "supplement": "validation/v69_source_package_supplement.json"
+  },
   "status": "v67_hybrid1_complete_compressed1_running_v69_preparation_92_tests",
   "submission_preparation": "docs/SUBMISSION_READINESS_V69.txt",
   "submission_ready": false,
