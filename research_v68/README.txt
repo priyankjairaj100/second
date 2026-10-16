@@ -1,7 +1,9 @@
 Unregistered quality-analysis preparation,16October2026.
-Read docs/UNTOUCHED_QUALITY_PLAN_V67.txt. No sampler, worker, empirical budget,
-immutable registration or Linux admission exists yet. No new article or actual
-model loss has been read. V67 remains the only active numerical phase.
+Read PROTOCOL.txt and docs/UNTOUCHED_QUALITY_PLAN_V67.txt. Statistics, sampler,
+saved-data audit and a data-only entry are prepared, with22 generated local tests.
+No immutable registration, Linux admission or empirical execution exists yet.
+Only HEAD metadata was read for the proposed validation shard, zero article bytes.
+V67 remains the only active numerical phase. All nine V68 files remain UNFROZEN.
 
 quality_statistics.py implements the proposed paired article-level estimands,
 shared PCG64 resampling, fixed20,000draws and higher empirical quantiles for
@@ -16,13 +18,27 @@ overflow preserves the log quantity and reports ratio/PPL null, never a success.
 An outer audit must bind actual losses to model bytes, tokenizer/data selection,
 parameter exports, evaluator runtime and one-use receipts. These statistics do
 not perform that audit and explicitly report actual_loss_artifact_validation_performed=false.
-Untouched data admission, two matched sequential constructors, six-model
+Actual untouched data admission, two matched sequential constructors, six-model
 parameter/evaluator admission, frozen CPU/GPU parity, execution resource limits
-and terminal audits remain unimplemented. No empirical run is authorized by
+and terminal quality audits remain unimplemented. No empirical run is authorized by
 passing these fixtures. Numerical likelihood waits for both V67 terminal audits.
 
-Eight generated local tests pass. A full320article/20,000draw fixture also runs
+Eight statistics tests, eleven sampler/audit tests and three runner-admission
+tests pass locally. A full320article/20,000draw statistics fixture also runs
 without model inference. Initial tests caught an over-width default seed; it was
 corrected before any registration or empirical access. Source is still unfrozen;
 any subsequent substantive changes require repeating affected software checks.
 Do not edit the469 already frozen files through V67.
+
+quality_data.py uses a fixed8MiB compressed transfer and8MiB decompressed frame,
+complete records only, split-qualified validation IDs and outcome-blind hash order.
+It reserves all2349 previously inspected V65 training records and the entire new
+validation frame, not only selected records. Insufficient, overlapping, mutated
+or malformed data are refused; partial/underfilled evidence is retained without
+retry. The saved-data audit retokenizes actual saved bytes using shared code.
+
+data_runner.py requires both V67 terminal model/state audits and successful entry
+receipts before any registered trial. Source/runtime/history/resource admission,
+one-use submissions, actual Linux checks and terminal scheduler accounting still
+must be completed. Its nominal1506CPU-second data-only allowance is a proposal,
+not an active or spent budget. No model construction or likelihood occurs here.

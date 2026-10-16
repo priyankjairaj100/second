@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checker_sha256": "1bc91fefe89bf0746dda11495e00dea80b1ee568355f56a0d71be32526cf6c8a",
+  "valid_archives": [
+    {
+      "path": "campaigns/csis_v67_launch_metadata_20261016.tar.gz",
+      "copied_files": 65
+    },
+    {
+      "path": "campaigns/csis_v67_progress_metadata_20261016_b.tar.gz",
+      "copied_files": 85
+    }
+  ],
+  "negative_cases": [
+    "altered_test_census_with_updated_manifest",
+    "unexpected_binary_with_updated_manifest"
+  ],
+  "actual_model_state_audit": false
+}

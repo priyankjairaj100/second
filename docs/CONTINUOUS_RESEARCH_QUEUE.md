@@ -68,7 +68,7 @@ or parallel execution loop. No subagent delegation is currently authorized.
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
    Preparation15262 is running, with comparisons/oracle/audits dependency-pending.
-   Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V67.md` and
+   Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V68.md`, `docs/ACTIVE_SESSION_V67.md` and
    `research_v67/PROTOCOL.txt`. Reuse the frozen mathematical target and matched point
    solver, with full parsing, canonical validation, startup/cache policy, state
    reconstruction, disposal and preparation accounted. Preserve compatible cached,
@@ -97,8 +97,12 @@ or parallel execution loop. No subagent delegation is currently authorized.
    plan, unchanged practical guards and explicit uncertainty/sample-size limits.
    Implement/admit sampler, actual model/evaluator gates and resource budgets;
    require V67 actual-model terminal audits before likelihood evaluation.
-   Unregistered V68 paired-statistics source passes8 generated local tests and a
-   full-size bootstrap fixture; sampler/model/evaluator/terminal gates remain.
+   Unregistered V68 statistics, sampler, saved-data audit and data-only runner pass
+   22 generated local tests; see `research_v68/PROTOCOL.txt`. No article content
+   was acquired. The entire prior2349-record frame is protected, not just its13
+   selections. Actual data registration/Linux execution and six-model quality
+   construction/export/parity/terminal gates remain. Wait for both V67 terminal
+   audits before registering the data-only phase; do not disturb active timings.
    Check article identity and overlap against every historical exclusion (currently
    sixty) and calibration source. Predeclare paired pooled NLL/PPL, tail guard,
    uncertainty method and sample-size justification before reading results. Old
@@ -141,8 +145,8 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate are qualified. Preparation15262 is running;
-remaining jobs15263--15275 are dependency-pending. Modern-service timings,
+V67's64-test exact-source Linux gate are qualified. At15:59IST preparation15262 is running with all13 sources
+and7of24 stages recorded; remaining jobs15263--15275 are dependency-pending. Modern-service timings,
 new-root model evidence, untouched quality and prospective timing remain absent.
 The same manuscript compiles after reducing6884 to5175 source whitespace tokens;
 this is not a venue page-count check or submission-ready bundle.
