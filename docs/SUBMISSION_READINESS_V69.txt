@@ -79,3 +79,12 @@ and its proof pages6--7 were visually rechecked. Live Exact-Fun downloads still
 failed, so no fresh publisher-version claim is made. Native compilation succeeded;
 proofs/displays, abstract and empirical sections are unchanged. Source5347 tokens
 is not a venue page count. Final anonymous evidence indexing remains necessary.
+
+Evidence navigation preparation
+The15-record reports/anonymous-evidence-index.txt and separate identifying
+provenance map docs/EVIDENCE_INDEX_MAP_V69.json cover all project bibliography
+entries. All54 direct source files match the saved checkpoint and manifest.
+The map must not enter an anonymous archive. The known-identity scan covers the
+index only; full anonymity, underlying evidence derivatives/dependency closure
+and clean reproduction remain unverified. No original evidence or manuscript
+citation was changed. See validation/v69_evidence_index.json.

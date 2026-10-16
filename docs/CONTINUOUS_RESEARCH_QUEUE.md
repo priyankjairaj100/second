@@ -154,6 +154,10 @@ or parallel execution loop. No subagent delegation is currently authorized.
    see docs/SUBMISSION_ARTIFACT_POLICY_V69.txt. Keep binaries/corpus external and
    preserve the C4 metadata-bound refusal. Project licensing remains unassigned;
    publisher declarations do not close rights, anonymity or reproduction checks.
+   A15-record draft evidence index now maps all project bibliography entries to54
+   checked direct files. Its identifying provenance map is excluded from anonymous
+   packaging. Underlying derivatives/dependency closure and clean reproduction
+   remain; do not replace paper citations with an unavailable anonymous archive.
    Deliver a reviewed source and reproducibility bundle; do not submit externally.
 
 ## Current completion boundary

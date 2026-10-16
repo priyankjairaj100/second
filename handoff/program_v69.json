@@ -15,6 +15,28 @@
     "source_inventory": "validation/v69_submission_inventory.json",
     "submission_ready": false
   },
+  "evidence_index_preparation": {
+    "all_current_project_bibliography_keys_mapped": true,
+    "all_direct_file_bytes_match_reporting_checkpoint_and_manifest": true,
+    "anonymous_derivatives_created": false,
+    "anonymous_index_known_identity_scan_passed": true,
+    "archive_created": false,
+    "full_anonymity_verified": false,
+    "independent_binary_or_numerical_validation_performed": false,
+    "index": {
+      "bytes": 4439,
+      "path": "reports/anonymous-evidence-index.txt",
+      "sha256": "c8114e39c90c0d34f52638c8a08b9dabf8c405b3dbfde91d6082f664bf0556ab"
+    },
+    "manuscript_sha256": "7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda",
+    "manuscript_unchanged": true,
+    "mapping_sha256": "b399d81fc219cbb820bb6096ae9db707e8acb0a351858508eb256dd3d2bd6ba9",
+    "original_source_or_receipt_mutated": false,
+    "record_count": 15,
+    "schema": "evidence-index-check-v69",
+    "status": "passed_index_only",
+    "unique_direct_files": 54
+  },
   "execution_gate_preparation": {
     "actual_checkpoint_loaded": false,
     "actual_cuda_executed": false,

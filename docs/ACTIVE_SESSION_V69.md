@@ -97,6 +97,18 @@ Read docs/SUBMISSION_ARTIFACT_POLICY_V69.txt. Project licensing is unassigned;
 complete notices, anonymous provenance mapping and clean-package checks remain.
 No final archive or external submission was created.
 
+## Evidence index prepared
+
+reports/anonymous-evidence-index.txt groups all15 project bibliography records.
+docs/EVIDENCE_INDEX_MAP_V69.json preserves their original citations and54 direct
+source-file commitments, checked against the saved reporting commit and manifest.
+The map is identifying provenance and must stay outside an anonymous archive.
+The index has no known author/repository/host strings; this is not a full anonymity
+audit. No underlying receipt was rewritten or numerical audit repeated. Anonymous
+derivatives, dependency closure and clean reproduction remain; paper citations
+are unchanged until their accompanying artifact is actually ready. See
+validation/v69_evidence_index.json.
+
 ## Concrete next work
 
 1. Prepare the remaining bounded registration/saved-receipt workflow without
