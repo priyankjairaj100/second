@@ -107,7 +107,7 @@
     "private_selection": "docs/SOURCE_RECEIPT_SELECTION_V69.json",
     "raw_token_member_exclusions": 10,
     "receipt_candidates": 9,
-    "receipt_derivatives_created": false,
+    "receipt_derivatives_created": true,
     "regular_members": 2269,
     "report": "validation/v69_archive_content_review.json",
     "source_code_executed": false,
@@ -193,6 +193,73 @@
     "source_count": 532,
     "source_inventory": "validation/v69_submission_inventory.json",
     "submission_ready": false
+  },
+  "compressed1_receipt_metadata": {
+    "actual_model_state_bytes_checked": false,
+    "archive": {
+      "bytes": 292481,
+      "sha256": "9362533ea83db3697039f40215bb28c20621000456576ff98f015cff6419dca0"
+    },
+    "captured_at_utc": "2026-10-16T14:37:43.993900+00:00",
+    "complete_campaign_costs_verified": false,
+    "controller_all_waited_children_cpu_ns": 5209580961000,
+    "controller_own_cpu_ns": 8377845891,
+    "declared_artifacts": {
+      "admission.json": {
+        "bytes": 555807,
+        "file": "admission.json",
+        "sha256": "8e409e1e4b9b0faff1d37f76faf117f9115042b11beb9acb3ec89bc86250e72b"
+      },
+      "execution-provenance.json": {
+        "bytes": 12727,
+        "file": "execution-provenance.json",
+        "sha256": "22956724f4d2a9433702a3f76cc1fb76a8d447c8c60a7d668800de7da55574cc"
+      },
+      "model.bin": {
+        "bytes": 21233664,
+        "file": "model.bin",
+        "sha256": "35ea0d49671581c0f20fa9a65665acd5abec82d0a1e3edc4e75bca05bdc1f9c5"
+      },
+      "state.bin": {
+        "bytes": 333497142,
+        "file": "state.bin",
+        "sha256": "479f6a97ca867e77102e1d87b415e55fd41b8aa7c41bb43c158b2a808a97e7cc"
+      },
+      "trust.json": {
+        "bytes": 2,
+        "file": "trust.json",
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    "fresh_oracle_comparison_verified": false,
+    "job": {
+      "elapsed": "01:27:36",
+      "end": "2026-10-16T20:03:24",
+      "exit_code": "0:0",
+      "name": "second67-compressed-1",
+      "node": "csis.mn1",
+      "start": "2026-10-16T18:35:48",
+      "state": "COMPLETED",
+      "total_cpu": "01:26:58"
+    },
+    "job_id": "15264",
+    "later_reserved_attempts_preserved": 1,
+    "numerical_result_verified": false,
+    "numerical_solver_fallback_attempted_decisions": 204288,
+    "numerical_solver_fallback_certified_decisions": 204288,
+    "numerical_solver_fallback_rows": 68,
+    "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+    "refused_stages": 0,
+    "report": "validation/v67_compressed1_metadata.json",
+    "retained_membership_independently_rebuilt": false,
+    "stage_certificates": 24,
+    "stage_level_fallback_flags": 0,
+    "status": "verified_completed_comparison_receipt_metadata",
+    "transaction_elapsed_ns": 5250700698394,
+    "trial": "compressed-1",
+    "worker_charged_cpu_seconds": 5210,
+    "worker_maximum_rss_kib": 1844652,
+    "worker_process_and_waited_descendant_cpu_ns": 5209578108000
   },
   "evidence_index_preparation": {
     "all_current_project_bibliography_keys_mapped": true,
@@ -410,11 +477,11 @@
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 249085,
-      "sha256": "8f47be5818846d00d4874e8fac518a88f52a4b5858029513c097c15d19e4f1e5"
+      "bytes": 292481,
+      "sha256": "9362533ea83db3697039f40215bb28c20621000456576ff98f015cff6419dca0"
     },
-    "captured_at_utc": "2026-10-16T14:16:31.649172+00:00",
-    "copied_files": 278,
+    "captured_at_utc": "2026-10-16T14:37:43.993900+00:00",
+    "copied_files": 302,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -448,23 +515,23 @@
         "total_cpu": "01:22:10"
       },
       "15264": {
-        "elapsed": "01:10:43",
-        "end": "Unknown",
+        "elapsed": "01:27:36",
+        "end": "2026-10-16T20:03:24",
         "exit_code": "0:0",
         "name": "second67-compressed-1",
         "node": "csis.mn1",
         "start": "2026-10-16T18:35:48",
-        "state": "RUNNING",
-        "total_cpu": "00:00:00"
+        "state": "COMPLETED",
+        "total_cpu": "01:26:58"
       },
       "15265": {
-        "elapsed": "00:00:00",
+        "elapsed": "00:04:19",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-cold-1",
-        "node": "None assigned",
-        "start": "Unknown",
-        "state": "PENDING",
+        "node": "csis.mn1",
+        "start": "2026-10-16T20:03:24",
+        "state": "RUNNING",
         "total_cpu": "00:00:00"
       },
       "15266": {
@@ -583,8 +650,12 @@
       },
       "cold-1": {
         "completion_receipt_present": false,
-        "events": 0,
-        "last": null
+        "events": 2,
+        "last": {
+          "elapsed_ns": 154119958994,
+          "phase": "source_replayed",
+          "record_id": "c4:en:shard2:line1323"
+        }
       },
       "cold-2": {
         "completion_receipt_present": false,
@@ -592,16 +663,16 @@
         "last": null
       },
       "compressed-1": {
-        "completion_receipt_present": false,
-        "events": 20,
+        "completion_receipt_present": true,
+        "events": 25,
         "last": {
           "certificate_refusal": null,
-          "code_sha256": "5416882cf7e54c499ecfec6091c66c7a8feeb9ecb58a2af8a0c361bf35289c9a",
-          "elapsed_ns": 3555979391345,
+          "code_sha256": "4347d2b1bcefc5a8cab2a44d4a6c31cdc904005e5ec99ca1d673f0d27b8f7853",
+          "elapsed_ns": 5115647495686,
           "fallback": false,
           "phase": "stage_certified",
           "route": "streamed",
-          "stage_id": "block.0004.mlp_up"
+          "stage_id": "block.0005.mlp_down"
         }
       },
       "compressed-2": {
@@ -653,7 +724,7 @@
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|RUNNING|1:10:43|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|RUNNING|4:20|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
@@ -1651,13 +1722,13 @@
     "Close V67 remaining comparisons, fresh oracle and both actual-model/state/cost audits; preserve current jobs and live reservations",
     "Only after both V67 audits succeed register/run V68 data and reconcile all three terminal scheduler costs",
     "Only after actual V68 success freeze/register V69 with actual runtime/held-job admission,98 Linux checks, separate CUDA qualification, all quality phases and post-exit closure",
-    "Prepare reviewed derivatives of nine explicitly selected original audit/measurement receipts, exclude ten raw-token members, preserve adverse evidence, and complete source/protocol/runtime closure. The534-file static candidate and15-record summary ZIP are not a qualified reproduction package.",
+    "The nine receipt derivatives pass exact typed-object roundtrips and clean extraction. Complete source/protocol/runtime closure, portable workflow qualification and whole-package manual anonymity/notices review; existing summary and receipt ZIPs are components, not a complete reproduction package.",
     "Visually verify the existing ACL preview and main-text page budget when preview inspection is available; no replacement document or separate PDF",
     "Make evidence-based timing/claim decision and finish licenses, authorship facts and final bundle"
   ],
   "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
   "observed_stage_certificates": {
-    "compressed-1": 19,
+    "compressed-1": 24,
     "hybrid-1": 24,
     "scope": "Counted stage_certified events in saved metadata; not terminal model/state equality."
   },
@@ -1750,7 +1821,7 @@
     "worker_maximum_rss_kib": 1732228,
     "worker_process_and_waited_descendant_cpu_ns": 6857956044000
   },
-  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_l.tar.gz",
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_m.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,
@@ -2021,6 +2092,97 @@
     "status": "passed_projection_and_census_checks",
     "unique_exposed_articles": 8
   },
+  "review_receipt_derivatives": {
+    "archive": {
+      "bytes": 341604,
+      "path": "reports/development-audit-receipts-v69.zip",
+      "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+    },
+    "captured_at_utc": "2026-10-16T14:36:51.176869+00:00",
+    "clean_extraction_files": 11,
+    "complete_reproduction_package": false,
+    "empirical_work_executed": false,
+    "exact_typed_json_roundtrips": 9,
+    "execution_sources_or_registrations_changed": false,
+    "full_anonymity_verified": false,
+    "known_identity_scan_passed": true,
+    "numerical_audits_repeated": false,
+    "original_archives_unchanged": true,
+    "output_files": {
+      "E10_additive.json": {
+        "bytes": 50920,
+        "sha256": "f55002ac9ce955419b7c767518025fa1c4d98a7f537ed210dd88e693c198eaba"
+      },
+      "E10_primary.json": {
+        "bytes": 221060,
+        "sha256": "36b89cc783a646956e5fb10547c1689b63421af8a070bb057a09f31f396eb165"
+      },
+      "E11_cpu_cuda_parity.json": {
+        "bytes": 72793,
+        "sha256": "f0e5f71e1a3965b7eb123d4288890ae093248ec601e4b3ac2489d9588353eee6"
+      },
+      "E12_exposed_quality.json": {
+        "bytes": 74368,
+        "sha256": "d47d4edf2e7622b8d0c87f420ffd4b59dfb117f92e44617ad16e8cacd7d56f4c"
+      },
+      "E13_adaptive_quality.json": {
+        "bytes": 159018,
+        "sha256": "1760a277031609e527ff737a02d64ee00db81347520535f9f085cefd99e23b66"
+      },
+      "E14_additive_recovery.json": {
+        "bytes": 117311,
+        "sha256": "4e651da58c05105c77f73ba28e96060175263271f5a687615b90f92cc19fff30"
+      },
+      "E14_primary_recovery.json": {
+        "bytes": 361416,
+        "sha256": "09d74d3d9d28e619adb88ad8c95afaa81247af68aaf816eceec68d84fce6b826"
+      },
+      "E15_lossless_audit.json": {
+        "bytes": 1930,
+        "sha256": "2b7e8a7b2e5aa996493636256c059a87c88b96edfee99524f1ffc6519291ff97"
+      },
+      "E15_lossless_measurement.json": {
+        "bytes": 924923,
+        "sha256": "8a4be0d79f6ba4f8834e7c79edc6d2fe91af23971ac376eb34a654cb722063b1"
+      },
+      "MANIFEST.sha256": {
+        "bytes": 889,
+        "sha256": "2b35eb980319b7aac7e6982448195893e7bb1f9c755cb4ae8207862979388f34"
+      },
+      "README.txt": {
+        "bytes": 2083,
+        "sha256": "225c27e0cd4bad08117ba2efc02aa522cc5331acbe115f7426a3ed8a6107b6f1"
+      }
+    },
+    "private_mapping": "docs/REVIEW_RECEIPT_DERIVATION_V69.json",
+    "receipt_count": 9,
+    "redacted_string_counts": {
+      "known_exposed_articles": 8,
+      "other_article_identifiers": 13,
+      "paths": 885
+    },
+    "report": "validation/v69_review_receipts.json",
+    "schema": "review-receipt-derivative-check-v69",
+    "shared_exposed_article_count": 8,
+    "status": "typed_derivatives_and_clean_extraction_verified",
+    "submission_ready": false,
+    "tamper_probes_rejected": [
+      "adverse_guard_flip",
+      "failed_cost_change",
+      "drop_budget",
+      "mapping_collision"
+    ],
+    "typed_census": {
+      "arrays": 1049,
+      "booleans": 1884,
+      "nulls": 64,
+      "numbers": 23872,
+      "object_keys": 38066,
+      "objects": 7539,
+      "strings": 9256
+    },
+    "unchanged_numeric_and_boolean_values": true
+  },
   "schema": "second-progress-v69-preparation",
   "source_package_review": {
     "bounded_nonliteral_dynamic_calls_reviewed": 2,
@@ -2037,7 +2199,7 @@
     "static_report": "validation/v69_static_source_closure_extended.json",
     "supplement": "validation/v69_source_package_supplement.json"
   },
-  "status": "v67_hybrid1_complete_compressed1_running_v69_preparation_92_tests",
+  "status": "v67_hybrid1_compressed1_complete_cold1_running_v69_preparation_92_tests",
   "submission_preparation": "docs/SUBMISSION_READINESS_V69.txt",
   "submission_ready": false,
   "worker_wiring_preparation": {

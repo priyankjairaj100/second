@@ -1,4 +1,4 @@
-# V67 hybrid comparison completed; compression comparison running
+# V67 hybrid and compression completed; cold comparison running
 
 16 October 2026. Latest reporting handoff, not a registration. V68 and V69 remain
 UNREGISTERED and UNFROZEN. Preserve all469 V67 sources and14 inherited historical
@@ -6,12 +6,12 @@ GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
 ## Actual cluster observation
 
-At14:16:31UTC (19:46:31IST), hybrid-control job15263 remained COMPLETED0:0 after
-1h22m46s. Compression15264 was RUNNING1h10m43s on csis.mn1 with19of24 stages certified;
-15265--15275 remained dependency-pending. Both terminal audits remain absent.
-The278-file snapshot campaigns/csis_v67_progress_metadata_20261016_l.tar.gz is249085
-bytes, SHA2568f47be5818846d00d4874e8fac518a88f52a4b5858029513c097c15d19e4f1e5.
-validation/v67_progress_metadata_check_l.json verifies metadata/source bindings.
+At14:37:43UTC (20:07:43IST), hybrid15263 and compression15264 were COMPLETED0:0.
+Compression completed in1h27m36s with all24 stages certified. Cold15265 was RUNNING
+4m19s;15266--15275 remained dependency-pending. Both terminal audits remain absent.
+The302-file snapshot campaigns/csis_v67_progress_metadata_20261016_m.tar.gz is292481
+bytes, SHA2569362533ea83db3697039f40215bb28c20621000456576ff98f015cff6419dca0.
+validation/v67_progress_metadata_check_m.json verifies metadata/source bindings.
 All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
 No new job was submitted. The numerical checkout remains
 f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull reporting changes there.
@@ -21,9 +21,10 @@ and settled4922-second debit, with4921.704328001 worker CPU seconds,8.195606645
 controller own CPU seconds and1936672KiB peak worker RSS. All24 stages certified.
 No stage-level replay fallback or refusal was recorded. Separately, the solver's
 bounded numerical fallback handled7 rows /21504 decisions, all certified; preserve
-this distinction rather than claiming no fallback of any kind. The next compression
-reservation is still live and was not settled or reset. This is a partial metadata
-check, not model/state byte equality or final campaign cost verification. Two local
+this distinction rather than claiming no fallback of any kind. The compression
+reservation is now settled using its actual terminal worker usage. The cold
+reservation is still live; see the completed-compression check below. These are
+partial metadata checks, not model/state byte equality or final campaign cost verification. Two local
 reporting invocation/schema errors were corrected and preserved without any cluster
 mutation. Read docs/V67_HYBRID1_RECEIPT_V69.txt. Previous snapshots remain intact.
 
@@ -32,7 +33,23 @@ state representations packaged. The earlier actual receipt/debit check remains i
 validation/v67_preparation_metadata.json:6857.956044 worker CPU seconds,6858 charged,
 1732228KiB peak RSS,9.590220307 controller own CPU seconds and1h54m28 Slurm CPU.
 Numerical binaries were not reaudited by this continuation. Preserve the live
-compression debit; do not settle it before actual terminal usage.
+cold reservation; do not settle it before actual terminal usage.
+
+## First compression receipt and accounting
+
+validation/v67_compressed1_metadata.json verifies completed-job identity, worker
+seals,24 stage certificates, declared artifact commitments and the settled5,210
+CPU-second debit. Actual worker CPU is5209.578108 seconds; controller own CPU is
+8.377845891 seconds and all waited children use5209.580961 seconds. Transaction
+wall time is5250.700698394 seconds; peak worker RSS is1844652KiB. Slurm reports
+1h26m58s total CPU separately. All counts retain their declared accounting scope.
+
+There are zero stage-level replay/refusal flags. The bounded numerical solver
+fallback handles68 rows /204288 decisions, all certified. Do not describe that as
+no fallback. Cold15265 now holds a live10802-second reservation; this is not actual
+terminal usage. No new job was submitted or repeated. The check does not inspect
+model/state binary bytes, independently rebuild membership or validate fresh-oracle
+equality and complete campaign costs. Read docs/V67_COMPRESSED1_RECEIPT_V69.txt.
 
 ## Production wiring completed locally
 
@@ -161,9 +178,10 @@ extracted or executed. Among1,803 JSON files, ten members contain raw historical
 token arrays; those are explicitly excluded from the review package. Known identity
 strings occur in390 members. A further numeric-array flag contains fallback row
 indices and failed coordinates, not tokens; preserve these adverse diagnostics.
-The nine selected audit/measurement receipt candidates still need reviewed
-derivatives. Original archives remain unchanged and excluded from the review ZIP.
-See docs/SOURCE_RECEIPT_PACKAGE_REVIEW_V69.txt and the private selection map.
+The nine selected audit/measurement receipts now have labelled derivatives with
+exact typed-object checks and clean extraction. Original archives remain unchanged
+and excluded from review ZIPs. Whole-package review and reproduction remain.
+See docs/REVIEW_RECEIPT_COMPANION_V69.txt and the private selection/derivation maps.
 
 ## Checked historical companion and shorter bibliography
 
@@ -205,6 +223,15 @@ The prepared execution inventory remains532. A broader534-file packaging candida
 adds two unchanged legacy helper/package files and has no missing static project
 imports across503 Python modules. No experiment source or registration changed.
 The archive scan and private selection map identify ten raw-token exclusions and
-nine original audit/measurement receipt candidates. Reviewed derivatives, runtime
-closure, notices and clean source reproduction remain. See
+nine original audit/measurement receipts. Labelled derivatives now pass typed-field
+preservation checks. Runtime closure, notices and clean source reproduction remain. See
 docs/SOURCE_RECEIPT_PACKAGE_REVIEW_V69.txt. The summary companion is unchanged.
+
+Receipt companion completion update
+The nine selected historical receipts now have labelled derivatives in
+reports/development-audit-receipts-v69.zip. Clean extraction checks eleven files
+and every original typed JSON field, including23872 numeric values and1884 Booleans.
+All costs, adverse guards and failure scope remain. Private reverse mappings stay
+outside the ZIP; original artifact hashes do not validate redacted paths. Full
+anonymity and source/runtime reproduction remain open. See
+docs/REVIEW_RECEIPT_COMPANION_V69.txt. The manuscript and summary ZIP are unchanged.

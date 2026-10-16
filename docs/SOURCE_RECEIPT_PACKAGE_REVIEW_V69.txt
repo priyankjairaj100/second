@@ -42,9 +42,9 @@ Nine actual JSON receipts were individually rebound and their top-level schemas
 reviewed: V54 primary/additive, V55 exposed-quality, V56 parity, V59 adaptive-quality,
 V62 recovered primary/additive, and V63 measure/audit. Each has an explicit purpose
 and evidence-record mapping. No selected member triggered the raw-payload heuristic.
-Most still contain identifying paths. They require labelled derivatives with private
-original/derivative hashes, consistent mappings and checks preserving every number,
-Boolean, failure, cap and cost. Do not claim redacted paths satisfy original bindings.
+Most originals contain identifying paths. The completed labelled derivatives have
+private original/derivative hashes, consistent mappings and checks preserving every
+number, Boolean, failure, cap and cost. Do not claim redacted paths satisfy original bindings.
 The completed V62 recovery cannot replace or erase the failed V61 audit history.
 
 Preserved outputs and next work
@@ -55,8 +55,8 @@ packaging. All originals remain unchanged. The existing five-file summary ZIP re
 unchanged:15 historical groups,1,054 checked field groups and eight shared exposed
 articles. It is not the full source/protocol/receipt/runtime reproduction package.
 
-Next prepare and verify the nine receipt derivatives, select source/protocol files
-and portable instructions, and qualify that package separately. Complete runtime/
+The nine receipt derivatives are prepared and verified. Next select source/protocol
+files and portable instructions, and qualify that package separately. Complete runtime/
 license notices and clean extraction/reproduction before final inclusion. V67 still
 needs both terminal model/state/cost audits; V68/V69 remain unregistered. The existing
 manuscript was not edited in this checkpoint; its prior native compilation and71
@@ -68,3 +68,9 @@ validation/v69_static_source_closure_extended.json (534-file candidate)
 validation/v69_source_package_supplement.json (two unchanged legacy files)
 validation/v69_archive_content_review.json (bounded payload/identity scan)
 docs/SOURCE_RECEIPT_SELECTION_V69.json (private receipt candidates/exclusions)
+
+Receipt derivative completion update
+The nine candidates now have typed-preserving review derivatives and an eleven-file
+ZIP with clean extraction. See REVIEW_RECEIPT_COMPANION_V69.txt. The historical
+selection map remains unchanged; runtime/source reproduction and whole-package
+anonymity review are not complete. No frozen source or original receipt changed.

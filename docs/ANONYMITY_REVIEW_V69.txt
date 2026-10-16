@@ -41,6 +41,7 @@ extracted or executed. Among1,803 JSON files, ten members contain raw historical
 token arrays; those are explicitly excluded from the review package. Known identity
 strings occur in390 members. A further numeric-array flag contains fallback row
 indices and failed coordinates, not tokens; preserve these adverse diagnostics.
-The nine selected audit/measurement receipt candidates still need reviewed
-derivatives. Original archives remain unchanged and excluded from the review ZIP.
-See docs/SOURCE_RECEIPT_PACKAGE_REVIEW_V69.txt and the private selection map.
+The nine selected audit/measurement receipts now have labelled derivatives with
+exact typed-object checks and clean extraction. Original archives remain unchanged
+and excluded from review ZIPs. Whole-package review and reproduction remain.
+See docs/REVIEW_RECEIPT_COMPANION_V69.txt and the private selection/derivation maps.
