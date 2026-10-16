@@ -64,9 +64,10 @@ or parallel execution loop. No subagent delegation is currently authorized.
    Method selection remains adaptive development, not prospective confirmation.
 
 3. **Implement and evaluate the necessary complete modern-lossless service.
-   IN PROGRESS.** V64 adapter passed 34 Linux tests with zero skips, including
-   actual tiny numerical agreement. Complete empirical workers and resource
-   admission remain to be prepared; keep all 6 V64 sources frozen. Reuse the frozen mathematical target and matched point
+   IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
+   actual five-arm tiny-model/state equality. Both had zero skips. V67 empirical controller/workers, complete resource admission and terminal
+   audits remain; keep all V64 and V66 sources frozen. Read
+   `docs/COMPLETE_SERVICE_PLAN_V67.txt`. Reuse the frozen mathematical target and matched point
    solver, with full parsing, canonical validation, startup/cache policy, state
    reconstruction, disposal and preparation accounted. Preserve compatible cached,
    hybrid and uncertain-compression controls. Specify invariants and full resource
@@ -132,7 +133,7 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. No Second job is
-active. V66 complete-service preparation is next. Full modern-service
+active. V66 operations qualified; V67 full-model implementation/admission is next. Full modern-service
 timings, new-root model evidence, untouched quality and prospective timing remain
 absent. The 6,884-source-token manuscript compiles but is not submission-ready.
 

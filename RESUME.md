@@ -1,3 +1,7 @@
+Current work (16 October 2026): **V66 complete-service operations passed all 44 Linux tests, including five-arm tiny numerical equality.** V63 artifact evidence and V65 disjoint-root data admission are verified. No Second job is active. Read [latest handoff](docs/ACTIVE_SESSION_V66.md), [V67 execution plan](docs/COMPLETE_SERVICE_PLAN_V67.txt) and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). Full-model V67 controller/workers, resource admission and audits remain unimplemented/unregistered. All 456 executed source files are frozen. Historical checkpoints follow.
+
+---
+
 Current work (16 October 2026): **V63 artifact evidence, V64 software qualification and V65 disjoint-root data admission are verified.** No Second job is active. Prepare the complete modern-lossless service comparison on the fixed V65 root under a new V66 registration. Read [latest handoff](docs/ACTIVE_SESSION_V65.md) and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). No new numerical result or quality claim is established. Preserve all frozen sources and one-use attempts. Historical checkpoints follow.
 
 ---
