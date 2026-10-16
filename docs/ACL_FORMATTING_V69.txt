@@ -43,3 +43,9 @@ submission information still require the user's facts. No external submission.
 Current manuscript after the reference trim:4,950 source whitespace tokens excluding
 embedded style. The native compiler succeeded and all71 selected number checks pass.
 See validation/v69_manuscript_evidence_trim.json and its native compile record.
+
+Latest planning-text trim:4,844 source whitespace tokens excluding style contents,
+with all protected proofs/math, abstract, table, bibliography and style unchanged.
+Native compilation and all71 number checks pass. A fresh preview startup attempt
+failed; actual pagination and layout remain unverified. The editor remains open.
+See docs/MANUSCRIPT_PLANNING_TRIM_V69.txt for the exact current source commitment.

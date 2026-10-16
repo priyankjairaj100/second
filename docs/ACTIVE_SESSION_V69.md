@@ -314,3 +314,14 @@ components now pass567-member/569-text-file inventory, manifest, navigation and
 known-direct-identity checks. The original four ZIPs and manuscript are unchanged.
 Remaining system/GPU/transitive notices and project terms stay explicit. See
 docs/REVIEW_DEPENDENCY_NOTICES_V69.txt. This is no new scientific result.
+
+## Current manuscript trim
+
+The existing open manuscript now removes repetitive planning paragraphs and
+updates the reproduction paragraph to describe all five prepared companions.
+Source whitespace tokens fall4950 to4844; all proofs, math, abstract, service
+table and bibliography are byte-unchanged. Native compilation and all71 selected
+number checks pass. All five ZIPs remain unchanged and the current source passes
+fresh cross-component checks. No pending experiment result is added. Read
+MANUSCRIPT_PLANNING_TRIM_V69.txt. Preview inspection failed once again, so actual
+page count/layout remain unverified; final format preference remains pending.

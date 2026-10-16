@@ -355,11 +355,11 @@
         "sha256": "1545341a935e952a3aa6d04b61fd4bf297d6c0ba14f4c533f4729066b9b7f489"
       },
       "reports/manuscript_v69.tex": {
-        "bytes": 51407,
-        "sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60"
+        "bytes": 50539,
+        "sha256": "dc1008aaef0d70a8adbb25b598238036b898e3ed99de23844e67fdff400b3de0"
       }
     },
-    "captured_at_utc": "2026-10-16T16:12:12.692115+00:00",
+    "captured_at_utc": "2026-10-16T16:27:49.766909+00:00",
     "empirical_work_executed": false,
     "evidence_references": [
       "E01",
@@ -386,8 +386,11 @@
     "indirect_identity_linkability_assessed": false,
     "internal_manifests_verified": 5,
     "known_identity_findings": [],
-    "manuscript_edited": false,
+    "manuscript_changed_since_previous_review": true,
+    "manuscript_edited": true,
     "manuscript_matches_open_file": true,
+    "manuscript_revision_scope": "Planning-text trim and current companion description only; protected math, proofs, abstract, tables and bibliography unchanged",
+    "prior_manuscript_sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60",
     "private_mapping_files_included": false,
     "protocol_links_verified": 4,
     "receipt_filename_crosswalk": {
@@ -999,9 +1002,10 @@
   },
   "manuscript": {
     "abstract_source_whitespace_tokens": 197,
-    "after_source_whitespace_tokens": 4950,
+    "after_source_whitespace_tokens": 4844,
     "ai_assistance_disclosed": true,
     "before_source_whitespace_tokens": 6884,
+    "companion_components": 5,
     "companion_records": 15,
     "complete_reproduction_bundle": false,
     "external_bibliography_entries": 7,
@@ -1013,11 +1017,12 @@
     "new_results_added": false,
     "official_review_style": true,
     "page_count_verified": false,
+    "planning_trim": "validation/v69_manuscript_planning_trim.json",
     "project_bibliography_entries": 0,
     "proof_blocks_unchanged": true,
     "related_work_update": "validation/v69_manuscript_literature.json",
-    "removed_tokens": 1934,
-    "sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60",
+    "removed_tokens": 2040,
+    "sha256": "dc1008aaef0d70a8adbb25b598238036b898e3ed99de23844e67fdff400b3de0",
     "source_snapshot": "reports/manuscript_v69.tex",
     "submission_ready": false,
     "token_count_excludes_embedded_official_style": true
@@ -1184,11 +1189,11 @@
     "source_tokens_before_excluding_embedded_style": 5420,
     "submission_ready": false
   },
-  "manuscript_native_compile": "success_after_project_evidence_reference_trim",
+  "manuscript_native_compile": "success_after_planning_trim",
   "manuscript_numbers_check": {
     "actual_empirical_jobs_launched": false,
     "archived_metadata_audits_rerun": false,
-    "captured_at_utc": "2026-10-16T14:08:14.469342+00:00",
+    "captured_at_utc": "2026-10-16T16:27:49.303244+00:00",
     "check_count": 71,
     "checks": [
       {
@@ -1830,8 +1835,8 @@
     },
     "local_inference_calibration_or_binary_audit": false,
     "manuscript": {
-      "bytes": 51407,
-      "sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60"
+      "bytes": 50539,
+      "sha256": "dc1008aaef0d70a8adbb25b598238036b898e3ed99de23844e67fdff400b3de0"
     },
     "schema": "manuscript-number-check-v69",
     "scope": "Selected empirical table, quality figures, percentages and resource totals against previously verified report bytes; not every number in the manuscript or a new scientific result.",
@@ -1844,6 +1849,93 @@
       "reverse_adverse_quality_statement": true,
       "swap_table_size_columns": true
     }
+  },
+  "manuscript_planning_trim": {
+    "companion_scope_bindings": {
+      "validation/v69_cross_component_review_with_notices.json": {
+        "bytes": 2581,
+        "sha256": "4c06def4d10248cf42785cb062f234c3df8d8180063d989c1a55a17324c2924b"
+      },
+      "validation/v69_review_source_component.json": {
+        "bytes": 2149,
+        "sha256": "5dadde1be136be6d0a75869028cb9707b4ab984149bd1f9cffd9f4cb781a9ef0"
+      }
+    },
+    "companion_scope_sources": [
+      "validation/v69_cross_component_review_with_notices.json",
+      "validation/v69_review_source_component.json"
+    ],
+    "counting_scope": "Source whitespace tokens excluding embedded style contents, retaining filecontents delimiters; not prose words or rendered pages",
+    "edited_at_utc": "2026-10-16T16:26:39.827651+00:00",
+    "format_preference_pending": true,
+    "main_page_count_verified": false,
+    "manuscript": {
+      "bytes": 50539,
+      "sha256": "dc1008aaef0d70a8adbb25b598238036b898e3ed99de23844e67fdff400b3de0"
+    },
+    "native_compilation_pending": false,
+    "native_compile_status": "success",
+    "new_experimental_results_inserted": false,
+    "preview_attempt": {
+      "error": "Sky Computer Use service startup request failed",
+      "repeated_attempts": false,
+      "status": "unavailable"
+    },
+    "previous": {
+      "bytes": 51407,
+      "sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60"
+    },
+    "protected_content": {
+      "abstract": {
+        "blocks": 1,
+        "sha256": "26edc3214ea59aca5f747a5f5c91f86a430ae1320a6ed0e0e4b35e6008857de3",
+        "unchanged": true
+      },
+      "bibliography": {
+        "blocks": 1,
+        "sha256": "6924bb7879564d59ba69808779c77e7a0a42a3ce2c580c1bcb62d8115858a345",
+        "unchanged": true
+      },
+      "display_math": {
+        "blocks": 8,
+        "sha256": "83e9bb24e136d4887291a369b06c5e3143a1dbf299987fd0df6ed31de37d321d",
+        "unchanged": true
+      },
+      "inline_math": {
+        "blocks": 53,
+        "sha256": "78c8fe004be91c4f3fe8882caf6a11a76030eea90c26f9f3dd22e29abd4b886d",
+        "unchanged": true
+      },
+      "official_style": {
+        "blocks": 1,
+        "sha256": "45338d96b78e75760ef2b7a8c2c60de2cfccbe7805b978b93f558aa4b372335a",
+        "unchanged": true
+      },
+      "tables": {
+        "blocks": 1,
+        "sha256": "7b27da0c2cc9c5ab5f92aa023e59dcd2026ebfc351273e101ea4e773c6ef20b1",
+        "unchanged": true
+      },
+      "theorems_lemmas_proofs": {
+        "blocks": 6,
+        "sha256": "2fff63054604ffde1eefa7e7c9e929ca8ce80fe4b1e829153991a977c9d47cd8",
+        "unchanged": true
+      }
+    },
+    "remaining_plan_preserved_in_repository": [
+      "docs/UNTOUCHED_QUALITY_PLAN_V67.txt",
+      "docs/CONTINUOUS_RESEARCH_QUEUE.md"
+    ],
+    "removed_planning_paragraphs": [
+      "Quality",
+      "Confirmation and mechanism"
+    ],
+    "schema": "manuscript-planning-trim-v69",
+    "selected_number_checks": 71,
+    "source_whitespace_tokens_after": 4844,
+    "source_whitespace_tokens_before": 4950,
+    "submission_ready": false,
+    "working_draft_label_retained": true
   },
   "model_admission_preparation": {
     "captured_at_utc": "2026-10-16T12:00:36.203713+00:00",

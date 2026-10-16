@@ -184,7 +184,8 @@ or parallel execution loop. No subagent delegation is currently authorized.
    The official ACL style and author-year citations now compile in the existing file.
    Nine receipt derivatives now preserve every typed field under checked string
    mappings and pass clean extraction. The six-file external-input guide and unified navigation
-   now pass clean extraction, byte checks and a561-file known-identity review.
+   now pass clean extraction, byte checks and a569-file known-identity review including
+   the fifth notices component.
    Three older receipt filenames are mapped explicitly to canonical E12 outcomes.
    Complete actual historical input/receipt closure, transitive notices, indirect
    anonymity and rendered layout; see docs/REVIEW_RECEIPT_COMPANION_V69.txt and
@@ -209,7 +210,7 @@ All three completed comparisons have24 stage certificates. Their7,68 and7 numeri
 fallback rows remain distinct from zero stage-level replay/refusal flags.
 Modern-service timings,
 new-root model evidence, untouched quality and prospective timing remain absent.
-The same manuscript now compiles in the official ACL review style at4950 source
+The same manuscript now compiles in the official ACL review style at4844 source
 whitespace tokens excluding embedded style, down from6884,
 with Limitations and AI disclosure. Three omitted prior-work comparisons are now
 restored; all proofs/displays, the abstract and empirical sections are unchanged.
@@ -242,3 +243,9 @@ notice texts in eight files. All five manifests and569 text files pass bounded
 checks. Read docs/REVIEW_DEPENDENCY_NOTICES_V69.txt. Preserve the older raw-download
 failure and distinguish the recovered publisher license from installed-wheel
 provenance. No additional empirical gate is satisfied by these package checks.
+
+The latest manuscript trim removes repetitive planning text and updates the
+companion description. All protected proofs/math, abstract and table are unchanged;
+native compilation and71 selected number checks pass. See
+MANUSCRIPT_PLANNING_TRIM_V69.txt. Preview access is still unavailable, so page
+count and visual layout are not verified. This does not advance scientific gates.
