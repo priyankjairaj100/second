@@ -1,7 +1,8 @@
 V69 construction, evaluator and actual-artifact helpers
 UNREGISTERED and UNFROZEN preparation, 16 October 2026.
 Bounded worker/controller/closure entries are prepared; no registration or data acquisition.
-The held-job launcher and container/GPU wrappers are still required before any launch.
+The held-job launcher and container/GPU wrappers are prepared; actual registration
+and Linux/CUDA qualification remain required before launch.
 Read PROTOCOL.txt for the proposed sequence and remaining admission requirements.
 
 model_gate.py restores actual packed bytes on frozen row grids, checks original
@@ -122,3 +123,16 @@ mocked; no actual worker or CUDA process runs locally. The future Linux suite is
 87 tests including the six unchanged V55 numerical fixtures. One initial local
 test used the symbolic macOS /var temporary path and correctly hit the output
 safety guard; the fixture now resolves the path. The safety guard was preserved.
+
+submission.py is a standard-library host adapter. It refuses active Second jobs,
+checks actual prerequisite/input/source/container commitments and scheduler limits,
+then records one-use intent before submitting nine held jobs. It verifies each
+actual job ID, full resource request and afterok dependency before binding it.
+All nine jobs are rechecked before release, with the first phase released last.
+Changed sources, resources, node exclusions or uncertain responses stop without
+retry, automatic cancellation or rollback. Partial held jobs must be reconciled.
+The typed single-GPU allocation excludes nodes outside the admitted pool instead
+of requesting every pool node. run_cpu.sbatch preserves the inherited container;
+run_gpu.sbatch uses the separate CUDA interpreter. Both set all seven thread
+variables. Local fixtures mock scheduler responses and never invoke real Slurm.
+Actual held-job field formats and CUDA node/runtime admission remain unqualified.

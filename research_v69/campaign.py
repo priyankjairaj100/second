@@ -33,7 +33,7 @@ def bound(e,*,maximum=64*2**20,retain=True):
 def schema(p):
     require(set(p)=={'schema','directory','resources','inputs','new_sources','dependency_files',
         'historical_ledgers','runtimes','hosts','interpreters','software_modules','expected_tests','v68_sha256',
-        'automatic_retry','registered','submission_policy'},'Exact campaign field census required')
+        'automatic_retry','registered','submission_policy','launch'},'Exact campaign field census required')
     require(p['schema']=='untouched-quality-campaign-v69' and p['directory']==str(RUN)
         and p['resources']==gate.design() and p['automatic_retry'] is False and p['registered'] is True
         and p['submission_policy']=='hold-bind-release-once-sequential-afterok',
@@ -53,12 +53,14 @@ def schema(p):
         and type(p['expected_tests']) is int and p['expected_tests']>=70,'Complete Linux checks, including V55, required')
     source_dir=RUN/'research_v69'
     require(type(p['new_sources']) is dict and p['new_sources']
-        and all(Path(n).parent==source_dir and (Path(n).suffix=='.py' or Path(n).name in {'PROTOCOL.txt','README.txt'})
+        and all(Path(n).parent==source_dir and (Path(n).suffix=='.py' or Path(n).name in {'PROTOCOL.txt','README.txt','run_cpu.sbatch','run_gpu.sbatch'})
             for n in p['new_sources']),'Only staged V69 sources admitted as new')
     tests=sorted('research_v69.'+Path(n).stem for n in p['new_sources'] if Path(n).name.startswith('test_') and Path(n).suffix=='.py')
     require(p['software_modules']==sorted(['research_v55.test_sequential',*tests]),'Every staged V69 fixture must be registered')
     require({str(q) for q in source_dir.iterdir() if q.is_file()}==set(p['new_sources']),
         'Exact staged source file census required')
+    from research_v69.submission import policy
+    policy(p)
     return p
 
 

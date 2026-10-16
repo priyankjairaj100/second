@@ -1,3 +1,7 @@
+Current work (16 October 2026): **V67 hybrid job15263 has19of24 certified stages; V69 held-job controls pass92 local tests.** At18:22IST the hybrid run was active1h09m03s; jobs15264--15275 were dependency-pending. Read [latest handoff](ACTIVE_SESSION_V69.md), [submission-control review](V69_SUBMISSION_CONTROL_REVIEW.txt), and [continuous queue](CONTINUOUS_RESEARCH_QUEUE.md). All469 V67 and14 historical GPU/export sources remain unchanged. Nine V68 and40 V69 files are unregistered. Actual Linux/CUDA qualification, terminal scientific evidence and final submission packaging remain pending. Historical checkpoints follow.
+
+---
+
 Current checkpoint: read `ACTIVE_SESSION_V38.md` and `RESEARCH_DECISION_V38.md` first.
 The fresh C4 root is complete; all seven trials and both new ledgers are settled.
 Exact complete-model repair and narrow timing wins now have WikiText and C4 development evidence.

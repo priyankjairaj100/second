@@ -156,14 +156,40 @@ Root implementation review and generated fixture tests are not independent revie
 or empirical validation. Exact local outcomes are preserved in
 validation/v69_worker_preparation.json and docs/V69_EXECUTION_WIRING_REVIEW.txt.
 
+Held-job adapter and wrappers prepared, not registered
+submission.py runs only from the fixed staged Linux path. It requires unchanged
+complete phase caps, actual predecessor receipt/source bytes, clean inherited
+checkout, no active Second jobs, pinned CPU container bytes and matching live
+partition membership/limits before creating one-use intent. Numerical and full
+predecessor semantic/cost checks still execute in the first bounded CPU worker.
+The host preflight performs administrative hashing/metadata only; its CPU and
+transport remain outside the declared experiment-cost scope. Scheduler allocation
+CPU includes wrapper/container startup and is checked against each phase ceiling.
+
+Each of nine jobs is submitted held, with no requeue, one CPU, one node, exact wall
+and physical memory bounds, and a single afterok predecessor. The closure has its
+separate4GiB/900-second allocation. The CUDA phases request one typed A10080GB and
+exclude all partition nodes outside the admitted pool; they never request all pool
+nodes via --nodelist. Actual held job identity, comment/registration, memory, wall,
+CPU, typed GPU, exclusions, command, logs and dependency are checked before binding.
+After all nine bindings exist, source/registration and scheduler policy are checked
+again and all jobs re-inspected. Descendants are released first, the initial CPU
+check last. Any uncertain submit/release response stops with saved intent/history,
+no retry or automatic cancellation. Reconcile partial jobs before any future action.
+
+run_cpu.sbatch preserves the actual inherited .venv-container/bin/python and pinned
+container; run_gpu.sbatch uses the prospectively bound Python3.10 CUDA path. Both
+set all seven thread variables. No frozen wrapper changes. Generated tests cover
+successful binding/reverse release, unknown replies, resource/dependency/source
+changes, active-job exclusion, partial failure and wrapper syntax. They do not
+qualify real Slurm held-field formats, process limits, container execution or CUDA.
+The read-only scheduler observation is saved separately; no job was submitted.
+
 Remaining before any launch
-Build/review the one-use held-job submission adapter and CPU-container/GPU Slurm
-wrappers against actual admitted partitions, hosts and runtime inventories. The
-historical CPU wrapper sets only four thread variables; V69 requires all seven,
-so do not silently reuse it or modify its frozen bytes. Preserve the inherited
-container/interpreter and all469+14 historical sources. Bind actual generated
-sequential outputs through declared predecessor receipts. Freeze the completed
+Capture actual CUDA runtime/host inventories under admitted resource conditions.
+Review actual held-job metadata at the eventual once-only admission; refuse any
+unsupported scheduler format without releasing or retrying jobs. Freeze completed
 source/test inventory and registration only after actual V67/V68 gates succeed.
-Run87 exact-count Linux checks including six unchanged V55 numerical fixtures,
+Run98 exact-count Linux checks including six unchanged V55 numerical fixtures,
 and separate actual CUDA qualification. No competing workload may disturb V67.
 This document and local tests authorize no launch by themselves.

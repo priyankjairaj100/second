@@ -1,4 +1,4 @@
-# V69 production workers prepared; V67 hybrid comparison running
+# V69 held-job submission prepared; V67 hybrid comparison running
 
 16 October 2026. Latest reporting handoff, not a registration. V68 and V69 remain
 UNREGISTERED and UNFROZEN. Preserve all469 V67 sources and14 inherited historical
@@ -6,15 +6,15 @@ GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
 ## Actual cluster observation
 
-At12:27:29UTC (17:57:29IST), hybrid-control job15263 was RUNNING44m28s on csis.mn1.
-It had15of24 certified stages, last block.0003.mlp_up, with no recorded refusal or
-fallback. Preparation15262 remains COMPLETED0:0. Jobs15264--15275 are dependency-
-pending; both terminal audits remain absent. No new empirical job was submitted.
-The232-file snapshot campaigns/csis_v67_progress_metadata_20261016_f.tar.gz is203310
-bytes, SHA25606b0915e7be00abdeafa2c2f38a55088c39ca8aa2147972ea68c5acc4452d7d0.
-validation/v67_progress_metadata_check_f.json verifies its metadata/source bindings.
+At12:52:04UTC (18:22:04IST), hybrid-control job15263 was RUNNING1h09m03s on
+csis.mn1. It had19of24 certified stages, last block.0004.mlp_up, with no recorded
+refusal or fallback. Preparation15262 remains COMPLETED0:0. Jobs15264--15275 are
+dependency-pending; both terminal audits remain absent. No new job was submitted.
+The236-file snapshot campaigns/csis_v67_progress_metadata_20261016_g.tar.gz is203805
+bytes, SHA25691f80d47dd08b5750ccbad364d8aae681e4fb8ae41d05a43fee78ef6d92db172.
+validation/v67_progress_metadata_check_g.json verifies metadata/source bindings.
 All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
-This is progress metadata, not an actual model/state equality or scientific result.
+This is progress metadata, not actual model/state equality or a scientific result.
 The numerical checkout remains f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull
 reporting commits there. Previous snapshots and failures remain preserved.
 
@@ -27,12 +27,12 @@ hybrid debit; do not settle it or treat it as unused before actual terminal usag
 
 ## Production wiring completed locally
 
-V69 now has36 editable files and81 passing generated local tests, with zero final
-failures/errors/skips. See validation/v69_worker_preparation.json and
-docs/V69_EXECUTION_WIRING_REVIEW.txt. The9/33/40/64-test checkpoints remain preserved.
-All152 imported project module origins and the complete frozen byte inventories
-were checked. All36 files parse with Python3.10 grammar. V68's nine sources and22
-fixtures are unchanged. The future CPU qualification is87 tests, including the six
+V69 now has40 editable files and92 passing generated local tests, with zero final
+failures/errors/skips. See validation/v69_submission_preparation.json and
+docs/V69_SUBMISSION_CONTROL_REVIEW.txt. The9/33/40/64/81-test checkpoints remain preserved.
+All154 imported project module origins and the complete frozen byte inventories
+were checked. Python sources parse with Python3.10 grammar; both wrappers pass bash -n. V68's nine sources and22
+fixtures are unchanged. The future CPU qualification is98 tests, including the six
 unchanged V55 sequential numerical checks; those six were not run locally.
 
 campaign.py binds actual V67/V68 inputs, full source/dependency/runtime inventories,
@@ -65,20 +65,31 @@ likelihood ran. One initial20-test run had one error because the fixture used th
 symbolic macOS /var temporary path; resolving that fixture fixed it without changing
 the output safety guard. The failure is preserved. Root review is not independent.
 
+## Held-job launcher completed locally
+
+submission.py now prepares the full once-only held chain and checks live scheduler
+limits, actual inputs/source/container bytes, absence of competing Second work,
+returned job identity/resources/dependencies and exclusive bindings before release.
+All nine jobs are rechecked; descendants release first and CPU checks last. Partial
+submission/release failures retain every intent and known ID without retry. Both
+wrappers set all seven thread variables. No actual Slurm submission was exercised.
+The11 new state-machine fixtures pass; actual held-field formats and CUDA runtime/
+host admission remain unqualified. See the submission review and actual read-only
+scheduler observation. The proposed ceilings fit the observed partition/QoS walls.
+
 ## Concrete next work
 
-1. Prepare/review the held-job submission adapter and CPU-container/GPU Slurm wrappers.
-   The old frozen CPU wrapper sets only four thread variables; V69 requires all seven.
-   Capture actual interpreter paths inside the inherited container and CUDA runtime;
-   bind held job IDs exclusively before release, no-requeue and one serial chain.
-   Review actual host/partition/memory/wall admission before launch, including closure.
+1. Prepare the remaining bounded registration/saved-receipt workflow without
+   reading new article content or launching competing work. Actual CUDA runtime/
+   host inventory and exact held-job fields require prospective admission; local
+   fixture metadata does not qualify them. Preserve source and resource controls.
 2. Close all V67 comparisons, fresh oracle and both actual-model/state/cost audits.
    Make the scientific decision from actual results and preserve adverse evidence.
 3. Only after both V67 audits succeed, register V68 with actual source/runtime/input/
    exclusions/resources; execute checks/data/audit once and reconcile terminal costs.
    Both the entire old2349-record frame and the new inspected frame stay excluded.
 4. Only after V68 success freeze/register V69 with actual data/model/runtime bindings.
-   Run87 Linux checks, separate actual CUDA qualification, parameters, sequential12/6,
+   Run98 Linux checks, separate actual CUDA qualification, parameters, sequential12/6,
    CPU references, GPU collection, terminal audit and post-exit closure once.
 5. Decide claim-required timing replication, then finish paper formatting/anonymity,
    citations/licenses/author facts and final bundle. No conference submission.

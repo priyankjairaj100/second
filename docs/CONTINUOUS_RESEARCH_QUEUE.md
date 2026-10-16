@@ -67,8 +67,8 @@ or parallel execution loop. No subagent delegation is currently authorized.
    IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
-   Preparation15262 completed0:0; first hybrid comparison15263 is running with15of24
-   certified stages at17:57IST,
+   Preparation15262 completed0:0; first hybrid comparison15263 is running with19of24
+   certified stages at18:22IST,
    with remaining comparisons/oracle/audits15264--15275 dependency-pending.
    Keep all469 sources frozen. Read `docs/ACTIVE_SESSION_V69.md`, `docs/ACTIVE_SESSION_V68.md`, `docs/ACTIVE_SESSION_V67.md` and
    `research_v67/PROTOCOL.txt`. Reuse the frozen mathematical target and matched point
@@ -107,13 +107,14 @@ or parallel execution loop. No subagent delegation is currently authorized.
    audits before registering the data-only phase; do not disturb active timings.
    V69 now adds sequential construction, full parameter-array auditing, six-model
    CPU/CUDA factories, parity-gated once-only loss collection and saved-loss audits.
-   All81 generated local fixtures pass; the sequential constructor remains mocked,
+   All92 generated local fixtures pass; the sequential constructor remains mocked,
    while tiny CPU likelihood fixtures execute. Production checkpoint/geometry, runtime/source/process-limit and cost-accounting
    helpers are prepared, including14 historical GPU/export sources omitted from the
    V67 CPU inventory. Production worker/controller/phase and post-exit closure wiring is prepared, with
    complete predecessor seals and separate accounting. Held-job submission and
-   CPU-container/GPU Slurm wrappers, actual registration and Linux/CUDA qualification
-   remain. Read docs/V69_EXECUTION_WIRING_REVIEW.txt. The separate closure adds302
+   CPU-container/GPU Slurm wrappers now pass generated state-machine and syntax
+   checks. Actual held-job fields, CUDA runtime/node admission, registration and
+   Linux/CUDA qualification remain. Read docs/V69_SUBMISSION_CONTROL_REVIEW.txt. The separate closure adds302
    CPU seconds to the44424 eight-phase design;44726 is a ceiling, not an ETA.
    Read research_v69/PROTOCOL.txt; proposed resources are not registered allowances.
    Check article identity and overlap against every historical exclusion (currently
@@ -158,9 +159,9 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate are qualified. At17:26IST preparation15262 is COMPLETED0:0, with all13 sources
+V67's64-test exact-source Linux gate are qualified. At18:22IST preparation15262 is COMPLETED0:0, with all13 sources
 and24 stages recorded and its6858-second worker debit settled. Hybrid15263 is
-running with three certified stages; jobs15264--15275 remain dependency-pending. Modern-service timings,
+running with19 certified stages; jobs15264--15275 remain dependency-pending. Modern-service timings,
 new-root model evidence, untouched quality and prospective timing remain absent.
 The same manuscript compiles after reducing6884 to5269 source whitespace tokens
 and adding Limitations and AI-assistance disclosure. All proofs/math are unchanged.

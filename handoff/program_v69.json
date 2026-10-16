@@ -93,14 +93,46 @@
     "worker_allowance_cpu_seconds": 39616
   },
   "heartbeat_active": true,
+  "held_submission_preparation": {
+    "actual_checkpoint_loaded": false,
+    "actual_cuda_executed": false,
+    "actual_held_job_field_format_qualified": false,
+    "actual_slurm_submission": false,
+    "captured_at_utc": "2026-10-16T12:52:49.955179+00:00",
+    "container_execution_qualified": false,
+    "elapsed_ns": 11697117083,
+    "empirical_likelihood": false,
+    "errors": 0,
+    "failures": 0,
+    "frozen_v67_sources_unchanged": 469,
+    "full_worker_controller_dispatch_executed": false,
+    "generated_held_chain_dispatch_executed": true,
+    "historical_gpu_registration_sha256": "620076c67ae79ee56de784ecd4c6e49ef3b4b22f45742f72956821b1e416cf54",
+    "historical_gpu_sources": 14,
+    "imported_project_modules": 154,
+    "launch_authorized_by_tests": false,
+    "linux_suite_required_tests": 98,
+    "new_sources": 40,
+    "process_cpu_ns": 11062389000,
+    "registration_status": "unregistered_unfrozen",
+    "report": "validation/v69_submission_preparation.json",
+    "scheduler_observation": "validation/v69_scheduler_observation.json",
+    "schema": "v69-held-submission-local-preparation",
+    "skipped": 0,
+    "status": "passed",
+    "tests": 92,
+    "untouched_article_content_acquired": false,
+    "v68_sources_unchanged": 9,
+    "wrapper_bash_syntax_checked": true
+  },
   "latest_metadata_snapshot": {
     "actual_model_state_audit_repeated_locally": false,
     "archive": {
-      "bytes": 203310,
-      "sha256": "06b0915e7be00abdeafa2c2f38a55088c39ca8aa2147972ea68c5acc4452d7d0"
+      "bytes": 203805,
+      "sha256": "91f80d47dd08b5750ccbad364d8aae681e4fb8ae41d05a43fee78ef6d92db172"
     },
-    "captured_at_utc": "2026-10-16T12:27:29.486464+00:00",
-    "copied_files": 232,
+    "captured_at_utc": "2026-10-16T12:52:04.301396+00:00",
+    "copied_files": 236,
     "frozen_sources_verified": 469,
     "jobs": {
       "15261": {
@@ -124,7 +156,7 @@
         "total_cpu": "01:54:28"
       },
       "15263": {
-        "elapsed": "00:44:28",
+        "elapsed": "01:09:03",
         "end": "Unknown",
         "exit_code": "0:0",
         "name": "second67-hybrid-1",
@@ -289,15 +321,15 @@
       },
       "hybrid-1": {
         "completion_receipt_present": false,
-        "events": 17,
+        "events": 21,
         "last": {
           "certificate_refusal": null,
-          "code_sha256": "c824dc4f51f13bc8f398704df16959079058823869f96a7d8dfc9fba7802f6e6",
-          "elapsed_ns": 2616477799298,
+          "code_sha256": "5416882cf7e54c499ecfec6091c66c7a8feeb9ecb58a2af8a0c361bf35289c9a",
+          "elapsed_ns": 3399151179039,
           "fallback": false,
           "phase": "stage_certified",
           "route": "direct_gram",
-          "stage_id": "block.0003.mlp_up"
+          "stage_id": "block.0004.mlp_up"
         }
       },
       "hybrid-2": {
@@ -331,7 +363,7 @@
         }
       }
     },
-    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|PENDING|0:00|(Dependency)\n15263|second67-hybrid-1|RUNNING|44:28|csis.mn1",
+    "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|PENDING|0:00|(Dependency)\n15263|second67-hybrid-1|RUNNING|1:09:03|csis.mn1",
     "scientific_decision_requires_terminal_binary_and_cost_audits": true,
     "status": "verified_snapshot_metadata_only",
     "terminal_receipts_present": false,
@@ -590,7 +622,7 @@
     "worker_maximum_rss_kib": 1732228,
     "worker_process_and_waited_descendant_cpu_ns": 6857956044000
   },
-  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_f.tar.gz",
+  "progress_archive": "campaigns/csis_v67_progress_metadata_20261016_g.tar.gz",
   "quality_data_preparation": {
     "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
     "elapsed_ns": 362670500,
@@ -738,7 +770,7 @@
     "wall_time_estimate": false
   },
   "schema": "second-progress-v69-preparation",
-  "status": "v67_hybrid1_15_stages_v69_workers_and_closure_prepared_unregistered",
+  "status": "v67_hybrid1_19_stages_v69_held_launcher_prepared_unregistered",
   "submission_preparation": "docs/SUBMISSION_READINESS_V69.txt",
   "submission_ready": false,
   "worker_wiring_preparation": {

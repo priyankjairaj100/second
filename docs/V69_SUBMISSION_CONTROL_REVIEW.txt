@@ -1,0 +1,67 @@
+V69 held-job submission review, 16 October 2026
+Root implementation review, not independent review or empirical qualification.
+
+What changed
+submission.py supplies a standard-library host adapter; run_cpu.sbatch and
+run_gpu.sbatch supply distinct, prospectively bound CPU-container/CUDA entries.
+No actual registration or job submission occurred. The full40-file V69 source
+inventory remains editable and unregistered. Earlier81-test worker preparation
+is preserved separately. Both wrappers set all seven library thread limits.
+
+Before submitting, the adapter checks the complete unchanged resource design,
+actual input/source/container bytes, V67/V68 success receipt bindings, inherited
+clean checkout and absence of active Second jobs. It compares actual partition
+limits, membership and QoS to the future registration. Full scientific semantics,
+predecessor costs and numerical runtime qualification remain bounded-worker gates.
+Host preflight performs metadata and hashing only, excluded from experiment costs.
+Scheduler allocation CPU includes the wrappers and container startup, and must
+stay within the same complete phase ceiling.
+
+Nine jobs are submitted held once. Each actual ID, identity, registered comment,
+command/log paths, CPU/node count, memory, wall, typed GPU, exclusion pool and exact
+afterok dependency is verified before an exclusive binding is written. One typed
+A10080GB is requested on one admitted node. The launcher excludes other nodes;
+--nodelist is not used to request every member of a CUDA pool. The CPU node stays
+csis.mn1. All nine bindings must exist and all jobs must still be held before any
+release. New sources, registration and scheduler policy are rechecked. Descendants
+are released first; the initial CPU check is released last. A single failure or
+uncertain response stops, preserving intents, known IDs and partial releases.
+There is no automatic retry, cancellation or rollback. Reconcile partial jobs.
+
+Actual read-only scheduler observation
+At12:40:33UTC the cpu-short partition allowed12h,16GiB and one CPU; gpu-short
+allowed8h and the same request. QoS cpu-short reported12h. Both partitions listed
+cn1--cn4 and mn1. The read-only response, manifest bytes and an existing pending
+V67 job are saved in validation/v69_scheduler_observation.json. The inherited
+container manifest and CPU worker interpreter were observed; the image itself
+was not freshly rehashed here. Future preflight must hash it. Partition suitability
+is not runtime/association/GPU availability qualification. Actual held-job field
+formats and the eventual CUDA node/runtime inventory remain unqualified.
+
+Validation
+All92 local fixtures pass with zero failures/errors/skips:81 earlier fixtures plus
+11 submission tests. The initial11-test submission run also passed. Full-suite
+wall11.697117083s, process CPU11.062389s in existing Python3.12.7 on macOS. All154
+imported project origins,469 frozen V67 files,14 historical GPU/export files and
+nine V68 files match their commitments. Python sources parse with3.10 grammar;
+both shell wrappers pass bash -n. See validation/v69_submission_preparation.json.
+Tests exercise generated real files and a mocked Slurm state machine, including
+unknown responses, active-job refusal, altered resources/dependencies/node pools,
+source mutation before release and partial release failure. No real Slurm command,
+container, checkpoint import, calibration, CUDA or untouched likelihood was run.
+The expected traceback in the full fixture run is an intentionally injected
+controller refusal, not a failed test. Earlier fixture failures remain preserved.
+
+Official behavior consulted
+https://slurm.schedmd.com/sbatch.html
+https://slurm.schedmd.com/scontrol.html
+These document held submission, release, no-requeue and invalid dependencies.
+They do not certify this cluster's exact returned fields or prospective admission.
+
+Next
+Wait for both actual V67 terminal audits, then register/run V68 once with complete
+actual exclusions, runtime, costs and terminal receipts. After actual V68 success,
+freeze V69 source/input/runtime/node/partition registration. Its CPU suite will be
+98 tests including six unchanged V55 numerical fixtures, followed by separate CUDA
+qualification and the once-only chain. Preserve every failure and negative result.
+The source and tests alone neither authorize launch nor establish paper readiness.
