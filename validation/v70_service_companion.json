@@ -1,0 +1,18 @@
+{
+  "archive": {
+    "bytes": 124857,
+    "sha256": "684ca47fd16985c32f5faf0dd7bab81f3bbe9dda297a87455dfb84c0a0ce2dc4"
+  },
+  "comparison_rows": 10,
+  "discarded_field_probes_rejected": [
+    "E16_comparison_and_costs.json",
+    "E16_primary_receipt.json"
+  ],
+  "empirical_audits_rerun": false,
+  "full_anonymity_verified": false,
+  "known_identity_scan_passed": true,
+  "members": 5,
+  "status": "typed_receipts_arithmetic_and_archive_verified",
+  "submission_ready": false,
+  "typed_roundtrips": 3
+}

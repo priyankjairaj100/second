@@ -1,0 +1,48 @@
+{
+  "actual_raw_bytes_or_tokens_rechecked_locally": false,
+  "archive": {
+    "bytes": 169900,
+    "sha256": "3ad8a224306b66f5d93de38ef1de95153e74328256486013574a6ace948075f6"
+  },
+  "candidate_frame_reserved": 3801,
+  "charged_cpu_seconds": 26,
+  "cluster_saved_byte_audit_reconciled": true,
+  "costs": {
+    "audit": {
+      "charged_cpu_seconds": 11,
+      "job_id": "15392",
+      "process_tree_cpu_ns": 10680546981,
+      "scheduler_cpu_seconds": "11.235",
+      "scheduler_wall_seconds": 12
+    },
+    "checks": {
+      "charged_cpu_seconds": 4,
+      "job_id": "15390",
+      "process_tree_cpu_ns": 3255116023,
+      "scheduler_cpu_seconds": "3.824",
+      "scheduler_wall_seconds": 5
+    },
+    "data": {
+      "charged_cpu_seconds": 11,
+      "job_id": "15391",
+      "process_tree_cpu_ns": 10740198318,
+      "scheduler_cpu_seconds": "11.303",
+      "scheduler_wall_seconds": 14
+    }
+  },
+  "eligible_articles": 2778,
+  "jobs": {
+    "audit": "15392",
+    "checks": "15390",
+    "data": "15391"
+  },
+  "model_quality_evaluated": false,
+  "observed_at_utc": "2026-10-18T11:21:58.453396+00:00",
+  "process_tree_cpu_ns": 24675861322,
+  "registration_sha256": "ddcf2b686ff0ed4c4401a4defa361bcd956a32d3697dbe1b71485744c513b3cb",
+  "scheduler_allocation_cpu_seconds": "26.362",
+  "scope": "Saved cluster audit and scheduler metadata; not an independent retokenization or quality result",
+  "selected_articles": 320,
+  "status": "verified_terminal_receipt_metadata",
+  "whole_source_integrity_verified": false
+}

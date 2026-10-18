@@ -193,3 +193,16 @@ source/test inventory and registration only after actual V67/V68 gates succeed.
 Run98 exact-count Linux checks including six unchanged V55 numerical fixtures,
 and separate actual CUDA qualification. No competing workload may disturb V67.
 This document and local tests authorize no launch by themselves.
+
+Pre-registration scheduler compatibility review,18 October2026
+The bounded runtime observer15394 completed without CUDA initialization or model
+execution. Slurm23.11.11 renders a held singleton node request as NumNodes=1-1
+and records a generic one-GPU ReqTRES with the exact a100-80gb type in TresPerNode.
+The still-unregistered submission adapter admits these equivalent encodings,
+continues to reject wider node ranges and additional GPUs, and retains exact
+held resources, typed-GPU request, dependency and kill-invalid-dependency checks.
+Two additional regression fixtures bring local V69 tests to94; the prospective
+Linux phase includes all six unchanged V55 tests,100 total. No numerical solver,
+quality sample, practical threshold or resource ceiling changed. Original runtime
+launcher refusal and its separate administrative release of the same held job
+remain in the record. Actual quality jobs require their own frozen registration.

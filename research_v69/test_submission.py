@@ -87,6 +87,27 @@ class SubmissionTests(unittest.TestCase):
             for flag in ['--hold','--no-requeue','--kill-on-invalid-dep=yes','--ntasks=1','--cpus-per-task=1']:
                 self.assertIn(flag,a)
 
+    def test_singleton_node_range_is_equivalent_and_wider_ranges_refuse(self):
+        p=program()
+        for value in ['1','1-1','1-2','2','0-1','01-01']:
+            with self.subTest(value=value):
+                fake=Scheduler(p);args=s.arguments(p,'cpu_checks');job=fake(args)['stdout'].strip()
+                fake.mutate=lambda phase,f:f.update(NumNodes=value)
+                if value in {'1','1-1'}:
+                    self.assertTrue(s.held(p,'cpu_checks',job,None,fake)['actual_held_job_verified'])
+                else:
+                    with self.assertRaises(ValueError):s.held(p,'cpu_checks',job,None,fake)
+
+    def test_generic_gpu_tres_with_exact_typed_request_is_admitted(self):
+        p=program();fake=Scheduler(p);job=fake(s.arguments(p,'cuda_checks','17000'))['stdout'].strip()
+        def actual(phase,f):
+            f['ReqTRES']=f['ReqTRES'].replace(',gres/gpu:a100-80gb=1','');f['NumNodes']='1-1'
+        fake.mutate=actual
+        self.assertTrue(s.held(p,'cuda_checks',job,'17000',fake)['actual_held_job_verified'])
+        for value in ['gres/gpu=2','gres/gpu=1,gres/gpu:a100-80gb=2']:
+            fake.mutate=lambda phase,f:f.update(ReqTRES='cpu=1,mem=16G,node=1,billing=1,'+value)
+            with self.assertRaises(ValueError):s.held(p,'cuda_checks',job,'17000',fake)
+
     def test_insufficient_partition_or_changed_live_policy_refuses(self):
         p=program();q=copy.deepcopy(p);q['launch']['partitions']['cpu']['MaxTime']='01:00:00'
         with self.assertRaises(ValueError):s.policy(q)

@@ -195,11 +195,11 @@ def held(p,phase,job,previous,call=invoke):
     raw=checked(call,['scontrol','show','job',job,'-o']);f=fields(raw);kind='cuda' if phase in GPU else 'cpu'
     expected=dict(JobId=job,JobName='second69-'+phase,JobState='PENDING',Reason='JobHeldUser',Priority='0',
         Account='faculty',QOS='cpu-short',Partition=p['launch']['partitions'][kind]['PartitionName'],
-        Requeue='0',Restarts='0',NumCPUs='1',NumNodes='1',NumTasks='1',BatchFlag='1',
+        Requeue='0',Restarts='0',NumCPUs='1',NumTasks='1',BatchFlag='1',
         WorkDir=str(ROOT),Command=str(RUN/'research_v69'/('run_gpu.sbatch' if kind=='cuda' else 'run_cpu.sbatch')),
         StdIn='/dev/null',StdOut=str(RUN/phase/('slurm-'+job+'.log')),StdErr=str(RUN/phase/('slurm-'+job+'.log')),
         KillOInInvalidDependent='Yes',Comment='second-v69:'+sha(canonical(p))+':'+phase)
-    require(all(f.get(k)==v for k,v in expected.items()) and f.get('CPUs/Task')=='1'
+    require(all(f.get(k)==v for k,v in expected.items()) and f.get('CPUs/Task')=='1' and f.get('NumNodes') in {'1','1-1'}
         and re.fullmatch(r'poonam\(\d+\)',f.get('UserId','')),'Actual held allocation identity/resources differ')
     require(duration(f['TimeLimit'])==WALL[ORDER.index(phase)]
         and memory(f['MinMemoryNode'])==(4 if phase=='closure' else 16)*2**30,
@@ -212,7 +212,7 @@ def held(p,phase,job,previous,call=invoke):
     allowed={'cpu','node','mem','billing'}
     if kind=='cuda':
         allowed|={'gres/gpu','gres/gpu:a100-80gb'}
-        require(tres.get('gres/gpu')==tres.get('gres/gpu:a100-80gb')=='1'
+        require(tres.get('gres/gpu')=='1' and tres.get('gres/gpu:a100-80gb','1')=='1'
             and f.get('TresPerNode')=='gres/gpu:a100-80gb:1' and f['ReqNodeList']=='(null)',
             'Exactly one typed GPU and scheduler-selected node required')
         actual=set(checked(call,['scontrol','show','hostnames',f['ExcNodeList']]).splitlines())
