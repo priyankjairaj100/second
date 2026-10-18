@@ -117,6 +117,36 @@
     "terminal_quality_result_verified": false
   },
   "branch": "codex/second-cluster-v42",
+  "citation_refresh": {
+    "checked_at_utc": "2026-10-18T13:02:41.205490+00:00",
+    "crossref": "validation/v71_exactfun_crossref_observation.json",
+    "exactfun_fresh_conference_metadata": true,
+    "exactfun_publisher_pdf_verified": false,
+    "exhaustive_novelty_review": false,
+    "manuscript": {
+      "bytes": 53027,
+      "sha256": "65d02e6048156fc1d2270368d8fa7efae192511f79e5aa9d00fc3820a772db0a"
+    },
+    "manuscript_changed": false,
+    "native_preview_observation": "Sky Computer Use service startup request failed",
+    "new_editor_tab": false,
+    "preview_retries": 0,
+    "primary_metadata_supported": [
+      "gptq",
+      "ginart",
+      "medu",
+      "qss",
+      "exactfun",
+      "qebverif",
+      "execcert"
+    ],
+    "proofs_independently_rechecked": false,
+    "rendered_references_verified": false,
+    "schema": "citation-primary-metadata-refresh-v71",
+    "scope_document": "docs/CITATION_CHECK_V71.txt",
+    "separate_pdf": false,
+    "source_check": "validation/v71_manuscript_citation_structure.json"
+  },
   "completed_service": {
     "actual_model_state_bytes_checked_locally": false,
     "added_codec_installation_bytes": 23870575,
@@ -6626,6 +6656,81 @@
     "short_records": 1021,
     "status": "complete"
   },
+  "cpu_notice_inventory": {
+    "actual_metadata_files_matching_registered_pins": 4,
+    "actual_notice_files": 7,
+    "additional_notice_files": [
+      "numpy/notices/numpy/_core/include/numpy/random/LICENSE.txt",
+      "numpy/notices/numpy/ma/LICENSE",
+      "numpy/notices/numpy/random/LICENSE.md"
+    ],
+    "additional_notices_integrated": false,
+    "archive": {
+      "bytes": 107167,
+      "path": "validation/v71_cpu_notice_inventory_20261018_b.tar.gz",
+      "sha256": "adc4365959fd1c2f2ab47cd584a6db0b929f13e8ac2da93615647fe3014e65fe"
+    },
+    "binary_bodies_rechecked": false,
+    "checked_at_utc": "2026-10-18T13:01:14.357265+00:00",
+    "complete_transitive_notices": false,
+    "earlier_notice_files_byte_identical": 4,
+    "member_count": 20,
+    "model_or_corpus_read": false,
+    "native_source_versions_determined": false,
+    "new_job": false,
+    "observed_at_utc": "2026-10-18T12:59:14.058772+00:00",
+    "original_wheel_build_correspondence": false,
+    "packages": {
+      "gmpy2": {
+        "actual_text_pins_matched": 0,
+        "installed_notice_files": 2,
+        "record_matches_registered_files": 5,
+        "record_native_entries": 4,
+        "unhashed_record_self_entries": 0,
+        "version": "2.3.2"
+      },
+      "numpy": {
+        "actual_text_pins_matched": 0,
+        "installed_notice_files": 4,
+        "record_matches_registered_files": 23,
+        "record_native_entries": 22,
+        "unhashed_record_self_entries": 0,
+        "version": "2.3.5"
+      },
+      "tokenizers": {
+        "actual_text_pins_matched": 1,
+        "installed_notice_files": 0,
+        "record_matches_registered_files": 18,
+        "record_native_entries": 1,
+        "unhashed_record_self_entries": 0,
+        "version": "0.23.2"
+      },
+      "zstandard": {
+        "actual_text_pins_matched": 3,
+        "installed_notice_files": 1,
+        "record_matches_registered_files": 10,
+        "record_native_entries": 2,
+        "unhashed_record_self_entries": 1,
+        "version": "0.25.0"
+      }
+    },
+    "record_entries_matching_registered_pins": 56,
+    "record_native_entries": 29,
+    "redistribution_clearance": false,
+    "refusal_probes": {
+      "numpy/notices/numpy/_core/include/numpy/random/LICENSE.txt": "rejected",
+      "tokenizers/RECORD": "rejected"
+    },
+    "schema": "cpu-notice-inventory-reconciliation-v71",
+    "scientific_result": false,
+    "status": "metadata_and_record_commitments_reconciled",
+    "unresolved": [
+      "GMP/MPFR/MPC exact source versions and attribution; SONAMEs are not release-version evidence",
+      "tokenizers installed notice absent; pinned publisher notice remains a source-level declaration",
+      "Rust/transitive-native, Python base/container/compiler/libc and GPU driver/system scope",
+      "author-controlled project release terms"
+    ]
+  },
   "created_at_utc": "2026-10-18T11:55:57.728358+00:00",
   "development_bundle": {
     "archive": {
@@ -6734,8 +6839,8 @@
     "verified_at_utc": "2026-10-18T12:23:57.537487+00:00"
   },
   "independent_numerical_replication": false,
-  "latest_reporting_parent": "c07a9d15eb29e4966f775a928a322402ead1d7bd",
-  "latest_reporting_updated_at_utc": "2026-10-18T12:50:00.307075+00:00",
+  "latest_reporting_parent": "da4186584db66d69ebdaea105cfe902d7a123441",
+  "latest_reporting_updated_at_utc": "2026-10-18T13:04:32.905904+00:00",
   "latest_sealed_worker_observation": {
     "active_worker_reservations": {
       "8def57274c8e11b5ac89c9a8a40834462e495acc61c337719862f7cfe50c33c9": {
@@ -6748,8 +6853,8 @@
     },
     "actual_completed_worker_seals_checked_locally": 3,
     "archive": {
-      "bytes": 175708,
-      "sha256": "695fa015879617d685e57d4c5a167580560b33307a1ebc7b010341c3d478fa5f"
+      "bytes": 176692,
+      "sha256": "48ce5410c8ae0fb957e2479d9b44cb6ef12c6a2a365cf6cc480765061a3e8ae8"
     },
     "completed_phase_costs": {
       "cpu_checks": {
@@ -6832,12 +6937,12 @@
     },
     "likelihood_reexecuted": false,
     "model_state_bytes_checked_locally": false,
-    "observed_at_utc": "2026-10-18T12:48:49.822998+00:00",
+    "observed_at_utc": "2026-10-18T13:02:55.044198+00:00",
     "quality_guard_pass": null,
     "registration_sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c",
     "schema": "v71-saved-campaign-metadata-review",
     "sequential_progress_counts": {
-      "sequential_12": 15,
+      "sequential_12": 19,
       "sequential_6": 0
     },
     "settled_worker_cpu_seconds": 79,
@@ -6932,9 +7037,29 @@
       "bytes": 3876,
       "sha256": "198db5de3ded6b547744290e8fb2be0bbb9aa7099250760bdf4da9f70ccd3629"
     },
+    "validation/v71_campaign_metadata_20261018_e.json": {
+      "bytes": 3876,
+      "sha256": "6f75b6f6b0015ed307346cc9d29262c267b4867d5bf9378ff6816443ed181e0e"
+    },
+    "validation/v71_citation_refresh.json": {
+      "bytes": 962,
+      "sha256": "92d29f6585ae6ce77c5552652f01d342902022a2c40b7007214930027b4739ed"
+    },
+    "validation/v71_cpu_notice_inventory_reconciliation.json": {
+      "bytes": 2659,
+      "sha256": "8524d1a7aa25fddbd7a54baa37639485341d850b57a1550d9c11108ec544cba5"
+    },
+    "validation/v71_cpu_notice_preparation_error.json": {
+      "bytes": 820,
+      "sha256": "e1bc5a41242ab82d18d29301abe45f23b7cc0da8954d47c29d612497608d9132"
+    },
     "validation/v71_cross_component_review.json": {
       "bytes": 2238,
       "sha256": "ac720a2f9877b3616ccee6ac4b264dc57547522eb3c3b5acfdb61bfe0e4fb13c"
+    },
+    "validation/v71_exactfun_crossref_observation.json": {
+      "bytes": 2570,
+      "sha256": "f6156fb6f7d4afa30167b05280b63e5de247655e319a50813df346428d1a4beb"
     },
     "validation/v71_expanded_dependency_notices.json": {
       "bytes": 1633,
@@ -6943,6 +7068,10 @@
     "validation/v71_frozen_source_check.json": {
       "bytes": 88028,
       "sha256": "0372a99286cd22f3405c1890df566cbc0b40f476fec0de584594ad460a265f63"
+    },
+    "validation/v71_manuscript_citation_structure.json": {
+      "bytes": 1352,
+      "sha256": "de2118674c25edc23152c19bfea96770a1a8f4d44fa9bce79c2c9d9058197bfe"
     },
     "validation/v71_reporting_refusal_probes.json": {
       "bytes": 627,

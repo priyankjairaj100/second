@@ -40,8 +40,8 @@ local work. Root review does not count as independent scientific validation.
 5. COMPLETE: separate V70 saved-frame audit15404 retokenized the same prefix and
    verified all3801 complete-token hashes and exact exclusion equality, including
    1021 short records. No new article/model/threshold selection.
-6. ACTIVE: separately registered V71 untouched quality15405--15413. At12:48:49UTC,
-   first three completed, sequential12 running with15/24 stages, others dependency-pending. Actual
+6. ACTIVE: separately registered V71 untouched quality15405--15413. At13:02:55UTC,
+   first three completed, sequential12 running with19/24 stages, others dependency-pending. Actual
    CPU103 tests, CUDA24 generated comparisons and78 checkpoint arrays passed.
    Full quality still unknown. All9 jobs already submitted/released once; NEVER
    rerun launchers. Await both sequential constructions, CPU references, GPU loss
@@ -63,6 +63,12 @@ local work. Root review does not count as independent scientific validation.
    input bodies, GPU driver/system/container and CPU native/Rust attribution remain;
    later installed notices do not extend frozen binary bindings. Read the new
    reports/REVIEW_PACKAGE_README_V71B.txt and preserve all historical components.
+   A later bounded CPU RECORD scan verifies56 declarations against frozen pins
+   and recovers three additional NumPy notices for the next bundle assembly.
+   See CPU_NOTICE_SCOPE_V71.txt; exact native source/build correspondence remains
+   unverified. All seven current bibliography identities now have primary or
+   deposited metadata support; source citation/label checks pass. Proof review
+   and rendered reference appearance remain separate (CITATION_CHECK_V71.txt).
 8. CONDITIONAL: justify prospective balanced timing replication using frozen method,
    matched startup/cache costs and strongest compatible controls. Register a new
    bounded experiment only if required by the intended claim. No automatic second

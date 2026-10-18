@@ -1,0 +1,50 @@
+CPU installed notice and native-entry scope, 18 October2026
+
+A bounded reporting observer read only the installed NumPy2.3.5, gmpy2 2.3.2,
+tokenizers0.23.2 and zstandard0.25.0 METADATA/WHEEL/RECORD and notice text. It did
+not import their runtime modules, read native binaries/models/corpus, change the
+installation, or submit a Slurm job. The fixed bounds were30/31CPU seconds,512MiB
+address space,60seconds wall alarm and8MiB text reads. These are observer limits,
+not numerical campaign charges or measured total cost.
+
+Snapshot B is validation/v71_cpu_notice_inventory_20261018_b.tar.gz,107167 bytes,
+SHA256adc4365959fd1c2f2ab47cd584a6db0b929f13e8ac2da93615647fe3014e65fe.
+Twenty members contain292235 bytes of distribution metadata/notices plus the
+collection record. A separate local checker reconstructs RECORD entries and
+matches56 declared entry commitments to the actual frozen V71 registration.
+Four text files are directly rehashed against frozen pins: tokenizers METADATA
+and zstandard METADATA, WHEEL and RECORD. There are29 declared native entries.
+This is not a re-read of their binary bytes or independent wheel/build provenance.
+
+Seven installed notice files were recovered. The four previously packaged CPU
+texts match byte-for-byte. Three additional NumPy attributions are now preserved:
+- numpy/_core/include/numpy/random/LICENSE.txt
+- numpy/ma/LICENSE
+- numpy/random/LICENSE.md
+They were outside the earlier distribution-only notice scan. Tokenizers still
+has no installed notice in the inspected RECORD; retain the existing immutable
+publisher-source license and its distinction from installed-wheel provenance.
+The new texts are staged in the raw reporting snapshot for the next final bundle
+assembly. They are not silently substituted into the checked V71B development
+bundle; all existing archive/manuscript commitments remain unchanged.
+
+The initial observer stopped before archive output because the registered
+zstandard RECORD contains its own conventional unhashed self-entry. Its source,
+stderr and empty output are preserved. The revised reporting observer accepts
+only that self-entry without a RECORD digest, then directly hashes the actual
+RECORD bytes against their frozen registration pin. All other compared entries
+still require matching size/SHA256 commitments. This is reporting preparation,
+not a changed scientific gate, retry, or altered registered numerical source.
+Two altered-metadata/notice probes fail as required. See
+validation/v71_cpu_notice_inventory_reconciliation.json and
+validation/v71_cpu_notice_preparation_error.json.
+
+Remaining source/attribution scope
+The GMP/MPFR/MPC filenames expose ABI/SONAMEs, which do not establish exact source
+release versions. Their full source/notice correspondence is not verified.
+Installed tokenizers metadata does not reconstruct its compiled Rust dependency
+graph. Python/container/compiler/libc and GPU driver/system components also remain
+outside this bounded observation. No binaries are redistributed by the current
+review bundle; this inventory is not legal clearance or a grant of project rights.
+Author-controlled project release terms remain unset. Preserve all upstream text
+and attribution; do not infer absent permissions or invent dependency versions.

@@ -331,3 +331,47 @@ No separate PDF or new editor tab was created. This is a DEVELOPMENT bundle, not
 submission-ready. Actual quality/cost closure, justified timing decision, complete
 historical inputs, remaining rights/notices, rendered layout, indirect anonymity
 and author-controlled final details still remain.
+
+## Citation and native-notice scope checkpoint,18 October13:02:55UTC
+
+Snapshot E has sequential12 job15408 running with19/24 stage receipts. The first
+three sealed workers remain completed,79 settled CPU seconds; all five successors
+are dependency-pending. No untouched likelihood or terminal quality result exists.
+Read validation/v71_campaign_metadata_20261018_e.json and the new raw archive.
+The same single submission and all frozen sources/resources are preserved.
+
+A current primary-source/deposited-metadata review now supports all seven
+bibliographic identities. In particular, a bounded public Crossref API request
+recovered IEEE's deposited Exact-Fun metadata, verifying author order, title,
+ICDM2023 and pages1439--1444. Web-tool DOI/API requests failed and IEEE presented
+a robot screen; those failures were not bypassed or treated as success. The normal
+public metadata API request succeeded without fetching the publisher PDF. Its raw
+response is preserved. The historical author-version proof comparison retains its
+prior scope, without a fresh full-proof claim. All seven bibliography keys are
+used, eight citation groups resolve, and eight reference uses match fourteen
+unique labels. Read docs/CITATION_CHECK_V71.txt and its two validation records.
+
+A separate bounded CPU installation observer recovered seven notices from four
+distributions and declared29 native entries. The local checker matches56 RECORD
+entry commitments to frozen pins and directly hashes four metadata files against
+those pins; it does not re-read binary bodies or establish build/source identity.
+Four earlier notice texts are unchanged. Three additional NumPy notices outside
+the earlier distribution-only scan are preserved for the next bundle assembly.
+Tokenizers still lacks an installed notice in the inspected RECORD; its existing
+publisher-source license is retained with that limitation. Exact GMP/MPFR/MPC
+source correspondence, Rust/native/system attribution and release terms remain.
+
+The first observer stopped before archive output on zstandard RECORD's unhashed
+self-entry. Its source/error/empty output are preserved. The revised reporting
+observer only exempts that self-entry from the RECORD digest requirement and
+instead verifies actual RECORD bytes against the frozen registration pin.
+This was not a registered job or numerical gate, and no experiment was retried.
+Read docs/CPU_NOTICE_SCOPE_V71.txt and
+validation/v71_cpu_notice_inventory_reconciliation.json.
+
+The V71B development bundle and existing open manuscript remain byte-unchanged.
+The additional notices are not silently substituted into its manifest. One native
+app inventory attempt again returned 'Sky Computer Use service startup request
+failed'; no further UI attempt, replacement editor, new tab or separate PDF was
+made. Actual page/layout review remains unverified. The next scientific action
+is to audit the existing quality chain when its dependent phases finish.
