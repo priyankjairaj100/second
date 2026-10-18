@@ -408,3 +408,28 @@ job was launched or retried. Await the already submitted chain and actual seals
 before interpreting quality. Full native/source attribution, historical input
 reproduction, indirect anonymity, actual rendered pages and author-controlled final
 facts remain open. This bundle remains DEVELOPMENT, not submission-ready.
+
+
+## Sequential12 completion and saved-loss reporting preparation,18 October13:24UTC
+
+Snapshot F verifies four completed original worker seals, including15408. Its
+24-stage sequential construction reports an actual saved-code audit of42,467,328
+codes; the worker debit is5392 CPU seconds and all settled worker charges total5471.
+The original limits, controller/worker clocks and Slurm allocation reconcile.
+Model/code bodies were not fetched or independently reconstructed locally. Job15409
+was running with5/24 stage receipts;15410--15413 remain dependency-pending. No
+untouched likelihood or quality decision exists. All jobs remain the single
+original submission; the numerical checkout remains clean at f900999.
+
+A supplementary reporting collector/checker is prepared to inspect the original
+1944 saved scalar losses only after actual terminal and external closure success.
+It recomputes standard-library pooled NLL, paired log ratios and observed maxima,
+checks24 parity pairs and reported guard logic. It does not rerun bootstrap draws,
+model construction or inference and does not alter the registered acceptance rule.
+Two generated favorable/adverse examples and eleven refusal probes pass; actual
+complete collection and its success path remain unexercised. Nothing was deployed
+or executed on CSIS. Read docs/SAVED_LOSS_REPORTING_V71.txt.
+
+The V71C bundle and existing manuscript are unchanged. Continue the existing chain
+then make the evidence-based quality and timing decisions; full submission gates
+remain open. No source, resource ceiling, one-use attempt or exclusion was changed.

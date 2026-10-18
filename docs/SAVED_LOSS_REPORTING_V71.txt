@@ -1,0 +1,68 @@
+Supplementary saved-loss reporting preparation,18 October2026
+
+Purpose and scope
+After the existing V71 chain completes, inspect the original saved scalar loss
+files locally as well as the actual terminal receipts. This is a reporting check
+prepared before any untouched losses were observed, not a new experiment or an
+additional empirical acceptance criterion. The frozen registration, six models,
+320 articles, thresholds, paired bootstrap and original terminal audit are unchanged.
+Negative quality remains completed evidence. Never repeat inference to resolve a
+reporting discrepancy; preserve it and inspect the existing artifacts.
+
+The bounded collector validation/collect_v71_completed_losses.py requires all
+nine original Slurm allocations15405--15413 to have completed0:0. It reads only
+1944 scalar-loss JSON files, their small completion/statistics/parity metadata,
+and the existing registration, terminal completion and closure receipt. Every
+selected loss artifact must match the commitment in the actual terminal audit.
+It reads no model, checkpoint, article text or token body, imports no numerical
+package and submits no job. The collector is not yet deployed or run on CSIS.
+
+The local checker validation/check_v71_completed_losses.py first requires the
+existing full terminal metadata/cost reconciliation, including external closure
+accounting. Its exact registration, terminal and closure bytes must match that
+snapshot. It independently reads all1944 scalar rows, reconstructs320 six-model
+pairs, checks the24 CPU/CUDA mean-NLL differences at the frozen1e-8 barrier and
+recomputes pooled model NLL, paired pooled log ratios, per-article differences,
+maximum observed ratios in log space, and Boolean guards using the standard
+library. It requires exact equality of those stored log/NLL values and decisions.
+A reporting arithmetic discrepancy is not silently tolerated or reclassified as
+a changed scientific guard.
+
+The checker does NOT regenerate the20000 bootstrap draws. It only reapplies the
+frozen1.05 threshold to the reported upper bounds, whose reconstruction remains
+covered by the registered cluster audit. It does not independently rerun neural
+inference or model construction. This is root review of shared original losses,
+not an independent experimental replication or an additional research unit.
+No perplexity exponential equality across operating-system math libraries is
+claimed; all supplementary scalar comparisons use saved log/NLL quantities.
+
+Preparation validation
+Two generated fixtures, one favorable and one adverse, agree with the existing
+statistics implementation. Eleven refusals cover row order, prediction count,
+missing model, altered pooled mean, paired difference, maximum, bootstrap guard,
+joint guard, duplicate/nonfinite JSON and an actual incomplete metadata snapshot.
+The last probe invokes the checker and confirms refusal before attempting to read
+losses or create a result. This is no actual quality evidence. Complete collection,
+terminal binding and end-to-end success remain unexercised pending real artifacts.
+See validation/v71_loss_reporting_preparation.json.
+
+Execution after closure
+First collect a fresh uniquely named metadata archive and require
+terminal_quality_result_verified=true from check_v71_campaign_metadata. Only then
+copy the reporting collector to a temporary path on the login host and invoke it
+once into a new local archive. Use exclusive local output creation. If transport
+or hashing fails, preserve output/error and inspect before any later action.
+Run the checker with positional arguments: terminal metadata archive basename,
+scalar-loss archive basename, and a new validation report basename. Both archives
+belong under campaigns/. Preserve all earlier snapshots and outputs. Include the
+supplementary result and its limited scope in the scientific decision, without
+changing any registered gate or treating software checks as scientific evidence.
+
+Current observation
+At13:24:32UTC, sequential12 job15408 completed with24 stages and a saved-code audit
+of42,467,328 actual codes. The local snapshot checks its original worker seal,
+limits, debit and scheduler/controller accounting; omitted model/code bodies are
+not rechecked locally. Its worker debit is5392 CPU seconds, bringing settled
+worker charges to5471. Sequential6 job15409 was running with5/24 stage receipts.
+The four downstream phases remain dependency-pending. No untouched likelihood,
+quality outcome, complete campaign cost or submission readiness follows yet.

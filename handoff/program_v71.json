@@ -1,7 +1,7 @@
 {
   "active_campaign": {
     "active_reservations": {
-      "8def57274c8e11b5ac89c9a8a40834462e495acc61c337719862f7cfe50c33c9": {
+      "ad40f5ad27530eb558f86fe301fdbfbc6949d9f0819a12a271c38bc76656791c": {
         "charged_cpu_seconds": 14402,
         "observed_cpu_ns": null,
         "phase": "quality",
@@ -11,8 +11,8 @@
     },
     "all_parameter_arrays_compared": 78,
     "archive": {
-      "bytes": 160969,
-      "sha256": "de1364ba5aa891abfc686294865560c4dc4d9e1319cc297862424cf879d2ca2b"
+      "bytes": 201528,
+      "sha256": "160745f56594eb2463a8520fe247c30afb2af10b0863174dc03d0f2475d3af97"
     },
     "completed": {
       "cpu_checks": {
@@ -38,6 +38,14 @@
           "sha256": "5ed20d55cc20baab97a1b11fbfa4f73ad9e266beefcbf35d6e7d5a91574d195f"
         },
         "job_id": "15407"
+      },
+      "sequential_12": {
+        "charged_worker_cpu_seconds": 5392,
+        "completion": {
+          "bytes": 152865,
+          "sha256": "39e49db9643706788e3d3a69d80f17750ea86a63b7819a2deee073e4fa1a56fb"
+        },
+        "job_id": "15408"
       }
     },
     "cpu_tests": {
@@ -49,7 +57,7 @@
       "tests": 103
     },
     "frozen_numerical_sources_verified": 575,
-    "full_worker_seal_artifacts_rechecked_locally": false,
+    "full_worker_seal_artifacts_rechecked_locally": true,
     "generated_cuda_comparisons": 24,
     "jobs": {
       "closure": {
@@ -89,16 +97,16 @@
         "state": "COMPLETED"
       },
       "sequential_12": {
-        "elapsed_seconds": 166,
+        "elapsed_seconds": 5432,
         "exit_code": "0:0",
         "job_id": "15408",
-        "state": "RUNNING"
+        "state": "COMPLETED"
       },
       "sequential_6": {
-        "elapsed_seconds": 0,
+        "elapsed_seconds": 309,
         "exit_code": "0:0",
         "job_id": "15409",
-        "state": "PENDING"
+        "state": "RUNNING"
       },
       "terminal": {
         "elapsed_seconds": 0,
@@ -108,12 +116,12 @@
       }
     },
     "model_bytes_compared_locally": false,
-    "observed_at_utc": "2026-10-18T11:51:36.004012+00:00",
+    "observed_at_utc": "2026-10-18T13:24:32.711209+00:00",
     "registration_sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c",
     "schema": "v71-active-metadata-check",
-    "scope": "Partial metadata only; checkpoint-array equality is reported by the completed actual cluster audit. Remaining actual model, loss and cost gates still required.",
-    "settled_worker_cpu_seconds": 79,
-    "status": "verified_partial_observation",
+    "scope": "Four original completed worker seals/costs reconciled from snapshot F; actual sequential model bytes were audited on CSIS and not reread locally. Full quality remains unknown.",
+    "settled_worker_cpu_seconds": 5471,
+    "status": "sequential_12_completed_sequential_6_running",
     "terminal_quality_result_verified": false
   },
   "additional_cpu_notice_integration": {
@@ -6868,11 +6876,11 @@
     "verified_at_utc": "2026-10-18T12:23:57.537487+00:00"
   },
   "independent_numerical_replication": false,
-  "latest_reporting_parent": "632881a47b2932330329cd7ebd5fe42438bb8ee6",
-  "latest_reporting_updated_at_utc": "2026-10-18T13:14:45.219797+00:00",
+  "latest_reporting_parent": "0f2e9477483d27a785fd43ba12bc61119eb8d8dc",
+  "latest_reporting_updated_at_utc": "2026-10-18T13:30:08.647241+00:00",
   "latest_sealed_worker_observation": {
     "active_worker_reservations": {
-      "8def57274c8e11b5ac89c9a8a40834462e495acc61c337719862f7cfe50c33c9": {
+      "ad40f5ad27530eb558f86fe301fdbfbc6949d9f0819a12a271c38bc76656791c": {
         "charged_cpu_seconds": 14402,
         "observed_cpu_ns": null,
         "phase": "quality",
@@ -6880,10 +6888,10 @@
         "state": "reserved"
       }
     },
-    "actual_completed_worker_seals_checked_locally": 3,
+    "actual_completed_worker_seals_checked_locally": 4,
     "archive": {
-      "bytes": 176692,
-      "sha256": "48ce5410c8ae0fb957e2479d9b44cb6ef12c6a2a365cf6cc480765061a3e8ae8"
+      "bytes": 201528,
+      "sha256": "160745f56594eb2463a8520fe247c30afb2af10b0863174dc03d0f2475d3af97"
     },
     "completed_phase_costs": {
       "cpu_checks": {
@@ -6939,6 +6947,24 @@
         "waited_worker_cpu_counted_once": true,
         "worker_charged_cpu_seconds": 37,
         "worker_cpu_ns": 36112797000
+      },
+      "sequential_12": {
+        "accounting_status": "verified",
+        "controller_charged_cpu_seconds": 12,
+        "controller_own_cpu_ns": 11254597718,
+        "debit_id": "8def57274c8e11b5ac89c9a8a40834462e495acc61c337719862f7cfe50c33c9",
+        "execution_successful": true,
+        "job_id": "15408",
+        "nonworker_waited_child_cpu_ns": 20394000,
+        "observed_process_tree_cpu_ns": 5402458093718,
+        "phase": "sequential_12",
+        "quality_gate_outcome_not_used_for_accounting": true,
+        "scheduler_cpu_ns": 5403000000000,
+        "scheduler_minus_observed_cpu_ns": 541906282,
+        "scheduler_reporting_quantum_ns": 1000000000,
+        "waited_worker_cpu_counted_once": true,
+        "worker_charged_cpu_seconds": 5392,
+        "worker_cpu_ns": 5391183102000
       }
     },
     "independent_numerical_validation": false,
@@ -6949,8 +6975,8 @@
       "cuda_checks": "COMPLETED",
       "gpu_quality": "PENDING",
       "parameters": "COMPLETED",
-      "sequential_12": "RUNNING",
-      "sequential_6": "PENDING",
+      "sequential_12": "COMPLETED",
+      "sequential_6": "RUNNING",
       "terminal": "PENDING"
     },
     "jobs": {
@@ -6966,15 +6992,15 @@
     },
     "likelihood_reexecuted": false,
     "model_state_bytes_checked_locally": false,
-    "observed_at_utc": "2026-10-18T13:02:55.044198+00:00",
+    "observed_at_utc": "2026-10-18T13:24:32.711209+00:00",
     "quality_guard_pass": null,
     "registration_sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c",
     "schema": "v71-saved-campaign-metadata-review",
     "sequential_progress_counts": {
-      "sequential_12": 19,
-      "sequential_6": 0
+      "sequential_12": 24,
+      "sequential_6": 5
     },
-    "settled_worker_cpu_seconds": 79,
+    "settled_worker_cpu_seconds": 5471,
     "shared_accounting_code": true,
     "status": "pending_terminal",
     "terminal_quality_result_verified": false
@@ -6998,7 +7024,7 @@
   },
   "next_actions": [
     "Reconcile existing V71 jobs15405--15413; never rerun a registered launcher. Await both sequential models, parity, losses, actual terminal audit and external closure accounting.",
-    "Collect a fresh unique terminal metadata archive after actual completion; evaluate the frozen quality rule including negative outcomes. Receipt checks do not reconstruct omitted model/loss bodies locally.",
+    "Collect a fresh unique terminal metadata archive after actual completion and reconcile original audits plus external closure costs. Then use docs/SAVED_LOSS_REPORTING_V71.txt for supplementary saved-scalar arithmetic before reporting the frozen quality rule, including negative outcomes.",
     "Use reports/REVIEW_PACKAGE_README_V71C.txt for the integrated development bundle; preserve old components and creation-time preparation reports. Complete remaining historical input/native attribution scope without adding unnecessary model/data work.",
     "Decide whether prospective balanced timing replication is required by the intended scoped claim; register separately only if justified. No automatic checkpoint/root sweep.",
     "Finish actual rendered page/layout review, indirect anonymity, remaining rights/notices, citations/checklist and author-controlled venue/length facts. Existing manuscript file and editor remain unchanged.",
@@ -7070,6 +7096,10 @@
       "bytes": 3876,
       "sha256": "6f75b6f6b0015ed307346cc9d29262c267b4867d5bf9378ff6816443ed181e0e"
     },
+    "validation/v71_campaign_metadata_20261018_f.json": {
+      "bytes": 4648,
+      "sha256": "b78b7bc7cfa31f0df42f6fea02ff86c49f12c2630810acf29a4900118c318146"
+    },
     "validation/v71_citation_refresh.json": {
       "bytes": 962,
       "sha256": "92d29f6585ae6ce77c5552652f01d342902022a2c40b7007214930027b4739ed"
@@ -7097,6 +7127,10 @@
     "validation/v71_frozen_source_check.json": {
       "bytes": 88028,
       "sha256": "0372a99286cd22f3405c1890df566cbc0b40f476fec0de584594ad460a265f63"
+    },
+    "validation/v71_loss_reporting_preparation.json": {
+      "bytes": 1566,
+      "sha256": "a255ed4f9e44c1558c204d1c9fa4631678140a0da23768c1a054a983955a8f15"
     },
     "validation/v71_manuscript_citation_structure.json": {
       "bytes": 1352,
@@ -7420,5 +7454,10 @@
   },
   "status": "v67_closed_v71_untouched_quality_running",
   "submission_ready": false,
+  "supplementary_loss_reporting": {
+    "report": "validation/v71_loss_reporting_preparation.json",
+    "scope": "Independent standard-library scalar arithmetic on shared original loss files; no bootstrap/inference reexecution or registered gate change.",
+    "status": "prepared_not_executed_on_actual_losses"
+  },
   "untouched_quality_verified": false
 }

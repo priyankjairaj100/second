@@ -40,9 +40,11 @@ local work. Root review does not count as independent scientific validation.
 5. COMPLETE: separate V70 saved-frame audit15404 retokenized the same prefix and
    verified all3801 complete-token hashes and exact exclusion equality, including
    1021 short records. No new article/model/threshold selection.
-6. ACTIVE: separately registered V71 untouched quality15405--15413. At13:02:55UTC,
-   first three completed, sequential12 running with19/24 stages, others dependency-pending. Actual
+6. ACTIVE: separately registered V71 untouched quality15405--15413. At13:24:32UTC,
+   first four completed, sequential12 has24/24 stages and sequential6 is running
+   with5/24 stages; four successors are dependency-pending. Actual
    CPU103 tests, CUDA24 generated comparisons and78 checkpoint arrays passed.
+   Sequential12 settled5392 worker CPU seconds; total settled worker charges5471.
    Full quality still unknown. All9 jobs already submitted/released once; NEVER
    rerun launchers. Await both sequential constructions, CPU references, GPU loss
    collection, actual terminal audit and post-exit closure. Externally reconcile
@@ -50,7 +52,10 @@ local work. Root review does not count as independent scientific validation.
    See research_v71/PROTOCOL.txt and exact registration. A negative quality result
    remains evidence; no favorable resampling. A defect needs separate registration.
 7. IN PROGRESS while jobs run: use the prepared terminal reporting check after actual
-   completion. The V71C development bundle now integrates the expanded installed
+   completion, followed by the prepared supplementary saved-loss arithmetic
+   check in SAVED_LOSS_REPORTING_V71.txt. Its eleven refusal probes and two generated
+   examples are preparation only; no actual losses or bootstrap draws were rerun.
+   The V71C development bundle now integrates the expanded installed
    notices and actual registered selection metadata. Its seven components pass
    724-member/726-text-file checks; the new guide binds all six companion ZIPs and
    ten quality-input groups. The unchanged577-source component retains its213

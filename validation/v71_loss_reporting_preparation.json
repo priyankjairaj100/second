@@ -1,0 +1,49 @@
+{
+  "actual_loss_files_collected": false,
+  "actual_quality_result": false,
+  "actual_terminal_success_path_exercised": false,
+  "captured_at_utc": "2026-10-18T13:28:56.269660+00:00",
+  "generated_examples": [
+    {
+      "generated_delta": 0.001,
+      "observed_joint_gate": true
+    },
+    {
+      "generated_delta": 0.15,
+      "observed_joint_gate": false
+    }
+  ],
+  "pending_snapshot_refused_as_final": true,
+  "python_version": "3.12.7",
+  "registered_sources_changed": false,
+  "rejected_probes": [
+    "reordered_articles",
+    "wrong_prediction_count",
+    "omitted_model",
+    "altered_pooled_mean",
+    "altered_paired_difference",
+    "altered_maximum",
+    "altered_bootstrap_decision",
+    "altered_joint_gate",
+    "duplicate_json",
+    "nonfinite_json",
+    "pending_terminal_metadata"
+  ],
+  "schema": "v71-saved-loss-reporting-preparation",
+  "scope": "Preparatory reporting-only checks; no registered job, neural evaluation or actual complete loss bundle executed.",
+  "sources": {
+    "validation/check_v71_completed_losses.py": {
+      "bytes": 8978,
+      "sha256": "3cdd8e606d9e0da9aee9bdb1a6847f789d92caf8b2d858d05bb86e5bea0a2ba9"
+    },
+    "validation/check_v71_loss_reporting_preparation.py": {
+      "bytes": 4009,
+      "sha256": "e98f750f425573c09905cc520369cde0d8758ea042a8c082c69ee36c78a82055"
+    },
+    "validation/collect_v71_completed_losses.py": {
+      "bytes": 3630,
+      "sha256": "7d5737e472a2cd81c4dede9cf19b733ba93931c9bddccc5da8882f584625bc17"
+    }
+  },
+  "status": "generated_arithmetic_and_refusal_checks_passed"
+}
