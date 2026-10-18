@@ -1,7 +1,7 @@
 # Second: continuous research and submission queue
 
-Current handoff docs/ACTIVE_SESSION_V72.md and handoff/program_v72.json supersede
-V71 status. Historical handoffs/queues keep their original observation cutoffs.
+Current handoff docs/ACTIVE_SESSION_V73.md and handoff/program_v73.json supersede
+V72 reporting status. V72 scientific decision and actual receipts remain current. Historical handoffs/queues keep their original observation cutoffs.
 User authorized sustained continuation; work through ready tasks without a proceed
 message. Existing heartbeat is recovery, not permission to stop after a small action.
 
@@ -40,38 +40,42 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
    general speedup or stable latency. Therefore do not automatically launch timing
    replication or another checkpoint. Further experiments need a justified new
    question and separate prospective registration, not a search for a win.
-6. COMPLETE CHECKPOINT: existing editor updated in place and compiled natively;
-  114 number/math-preservation checks pass. New E17 typed loss/audit/failure/recovery
-   evidence,583-source component,213 clean local fixtures and eight-component
-   review bundle pass740-member/742-text-file inventory/navigation checks. Saved
-   selection metadata and43 upstream notices retained. Read current package README.
-7. COMPLETE SCOPE CHECK: docs/CLAIM_AND_REVIEW_SCOPE_V72.txt checks current claims
-   and supplied-review relevance. All three supplied semantic-weighting reviews
-   concern another manuscript; their scores/experiments are not applied to Second.
-   The current target/cost/quality limitations are consistent; tighten introductory
-   prospective wording during the final format pass. Continue source-only
-   reproduction instructions and included-payload notices as required. Do not expand scope to vendoring runtime/model/corpus binaries
-   or require binary-release attribution for absent files. Record genuine external
-   input/reproduction limitations rather than treating metadata checks as a rerun.
-8. PENDING AUTHOR DECISION: long versus short ACL/ARR paper format. Current source
-   retains methods/proofs/evidence; no appendix remains. An optional choice was
-   presented after V72 bundle preparation. Do not infer an answer. Then trim the
-   same editor to the selected page budget without removing necessary assumptions,
-   adverse results or disclosure. Keep historical source snapshots intact.
-9. BLOCKED PREVIEW: native compiler succeeds, but computer-use preview service
-   startup fails. No repeated attempts within a turn, new tab or separate PDF.
-   Once preview access works, inspect actual page count, table widths, math,
-   references and page breaks. Source/compile checks do not close this gate.
-10. READY/PENDING FACTS: final included-source release terms, indirect anonymity
-    assessment, venue checklist and author-controlled submission metadata. Do not
-    invent authors, consent, rights or ORCID. Build a final appropriately labelled
-    bundle only after its actual remaining gates pass. No external submission.
+6. COMPLETE V73 EDITORIAL CHECKPOINT: same open source shortened from5578 to5042
+   source whitespace tokens (9.61%; not page count), compiled natively and checked
+   against evidence.119 current checks plus114 archived-history checks pass. Main
+   table now reports all ten V67 rows including source traversals. Historical
+   numerical detail stays in unchanged E12--E15 evidence. Proofs/target/quality
+   text remain exact. Eight byte-identical components pass740-member/742-text
+   checks; their213 prior source fixtures remain applicable, not newly executed.
+7. COMPLETE TARGETED SCOPE REVIEW: docs/SUBMISSION_SCOPE_V73.txt records included
+   payload/source URL and indirect-linkage assessment. No direct author links
+   occur in source URLs; actual job IDs, hashes, public code similarity and paper
+   content remain potential linkage channels. Preserve provenance, do not claim
+   anonymity from direct-string checks. Project source has no specified license;
+   do not invent one. Runtime/driver/model/corpus binaries are excluded, so do not
+   expand work into vendoring absent binaries. External-input reproduction scope
+   is documented separately from offline checks, not claimed complete.
+8. PROVISIONAL LONG-PAPER STRUCTURE: optional author format choice is unanswered.
+   Do not invent an answer, but continue reasonable editorial work under this
+   explicit assumption. No appendix remains. Format choice can steer the next
+   actual page-budget pass; keep necessary assumptions/adverse findings visible.
+9. BLOCKED RENDERED VERIFICATION: native compiler succeeds but preview service
+   startup fails. No repeated attempt within a turn, new tab or separate PDF.
+   A text question asks the author for visible total pages and Limitations start
+   page. Once preview access works, inspect table widths, math and page breaks.
+   Source length/compile checks do not close this gate. Avoid redundant polling.
+10. PENDING AUTHOR/DELIVERY FACTS: final format/venue-specific checklist, names/order,
+    ORCID/consent/conflicts and applicable source-release restrictions. Do not
+    invent facts or make a general licensing/anonymous-review compliance claim.
+    Update the actual bundle after required layout/metadata checks pass; no external
+    submission. No new experiment is needed just to fill a waiting period.
 
 ## Completion boundary
 
 Claim-required service and untouched quality are verified; general timing/transfer
-are outside the current claim. Final submission bundle, rendered layout, author
-format/facts and release/anonymity review remain open. Existing development bundle
+are outside the current claim. Final submission bundle, rendered layout, final
+venue/category and author-controlled release/submission facts remain open. Targeted
+source/linkability review is documented, not a guarantee of anonymity or rights. Existing development bundle
 is not submission-ready. Publish coherent checkpoints to the existing branch/draft
 PR; keep completed-job polling quiet and unnecessary launches absent. Pause only
 on user request or when the agreed final bundle and claim-required evidence are

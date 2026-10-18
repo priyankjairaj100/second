@@ -1,0 +1,89 @@
+Second submission scope after the concise manuscript pass,18 October2026
+
+This is a reporting/editorial checkpoint, not another scientific experiment.
+The scoped empirical claim is closed by V67 plus V71/V72. No numerical launch,
+resource change, threshold change or replacement of an adverse result is needed.
+
+Format and layout
+The unanswered long/short preference is optional steering, not a reason to stop
+independent writing. V73 provisionally uses a long-paper structure; no user answer
+is inferred. The author can still choose short format. Main manuscript source
+whitespace tokens fall from5578 to5042 (9.61%), excluding the embedded preamble.
+This is a reproducible source measure, not a linguistic word count or page count.
+There is no appendix. The detailed V61 table is replaced by the current ten-row
+V67 comparison, including source traversal counts. Historical service minutiae
+are condensed into four paragraphs; the failed nearest-anchor guard, adaptive
+teacher selection, failed audit/recovery, and all E12--E15 evidence are retained.
+Formal target/method/proofs/cost, related work, abstract, untouched quality and
+limitations/bibliography are byte-identical to V72. The introduction now reports
+the completed scoped evidence instead of calling it prospective/incomplete.
+Native compilation succeeded.119 selected current checks and114 archived-history
+checks pass. Static citations resolve seven bibliography keys and all10 uses of
+15 labels. These are not a full scientific/proof review or rendered-layout check.
+The native preview service still fails at startup; no new tab or separate PDF was
+created. A text-only request asks for the visible total page count and Limitations
+start page. Actual page budget, table widths, overflows and page breaks remain open.
+
+Included-payload and release review
+The eight component ZIPs are exactly the V72 bytes: source/protocol copies,
+historical summaries, typed audit receipts, E16 service evidence, E17 scalar-loss
+and recovery evidence, saved selection metadata, dependency notices and guide.
+No raw corpus/token bodies, model/state/runtime binaries or private identity maps
+are distributed. The source component has583 copies plus README, verifier and
+manifest. Its10 files containing URLs point to upstream datasets/model assets,
+Zstandard documentation, FPC/ALP provenance, or an SVG namespace. None points to
+the author's repository. This is a targeted inspection, not a provenance proof
+for every line of code or a legal clearance.
+The historical FPC script references downloading fpc.original.c and FPClicense.pdf;
+those external artifacts are absent from this ZIP. The frozen script is untouched.
+The installed-runtime notice component contains43 upstream notice texts. These
+retain upstream names, including SymPy contributor Priyank Patel, unrelated to
+this project's known account identifiers. The embedded ACL style retains its
+upstream header. Neither library/runtime binaries nor driver/container images are
+included, so bundling all their binaries and notices is not a prerequisite for
+this source/evidence build. Do not remove existing notices or assert permission
+for assets not inspected. Project source has no general license grant specified;
+no license or ownership statement has been invented. Author-controlled ownership,
+any third-party restrictions and a public-release license choice remain facts to
+resolve if needed for distribution. The current bundle makes no licensing claim.
+
+Indirect linkability assessment
+Known direct account/host/path strings are checked across742 text members and
+removed from review derivatives; upstream attribution is preserved. Direct-string
+checks do not prove anonymity. Concrete remaining linkage channels are:
+- E17_failed_closure_receipt.json has job_id15413; E17_recovery_receipt.json has
+  job_id15421 and original allocation IDs. E16_comparison_and_costs.json has
+  scheduler IDs15274/15275. These labels by themselves do not name the author.
+- Content hashes, versions, observed costs, source code and scientific wording can
+  match publicly accessible project records. Code similarity is not removed by
+  replacing names or job IDs. Selection hashes support exclusion verification.
+- Upstream asset and citation URLs identify external inputs, not the author.
+Preserve these scientific provenance links; do not silently strip them or claim
+full anonymity. No reverse identity search or guarantee of unlinkability was
+performed. Final handling should follow the chosen venue's actual anonymous-
+review policy. This targeted risk assessment is complete; a broad anonymity
+certification is not claimed.
+
+Reproduction boundary and remaining delivery tasks
+The exact seven-companion commitments in the reproduction guide still match the
+unchanged components. Prior213 clean source fixtures remain applicable to those
+identical source bytes; they are not rerun as new experimental evidence. E17's
+saved-loss verifier and selection verifier support offline checks. External input
+acquisition/retokenization, Linux/CUDA execution and original binary equality
+are separate operations documented in the guide, not reproduced locally here.
+Historical guide/notice statements retain their own observation cutoff. This
+note and the outer README narrow the current scope to the payload actually shared.
+
+Next ordered work:
+1. Resolve the native preview or use the author's existing preview observations;
+   measure main-text boundary and inspect layout, then shorten further as needed.
+2. Apply the final selected venue/page category and its actual checklist. Keep
+   factual author-controlled answers unset, including author names/order, ORCID,
+   consent, conflicts and any source release restrictions. Do not invent them.
+3. Finalize the bounded anonymous-review source/evidence bundle and hash-check
+   the exact deliverable. Call it submission-ready only after actual delivery
+   requirements are satisfied. Do not submit externally.
+
+No benefit comes from rechecking completed experiments or registering another
+quality/timing trial just to fill a waiting period. Preserve all frozen sources,
+registrations, failures, costs, exclusions and historical checkpoints.
