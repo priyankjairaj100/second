@@ -1,0 +1,64 @@
+{
+  "additional_cpu_notices_integrated": true,
+  "archive": {
+    "bytes": 8864723,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v71c.zip",
+    "sha256": "3eb894ccde54fa32ca47dc20f096224dd92dca1e2b12f1f879e1da66702f58c8"
+  },
+  "component_members": 724,
+  "components": 7,
+  "created_at_utc": "2026-10-18T13:12:45.730364+00:00",
+  "expanded_notices_integrated": true,
+  "full_anonymity_verified": false,
+  "full_empirical_reproduction": false,
+  "manifest": {
+    "README.txt": {
+      "bytes": 7535,
+      "sha256": "db5073c3bf7dfb64cc2ad069cd3e492621462ab60760b7737292e5b08b4c8f18"
+    },
+    "development-audit-receipts-v69.zip": {
+      "bytes": 341604,
+      "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+    },
+    "development-dependency-notices-v71c.zip": {
+      "bytes": 460857,
+      "sha256": "944eb649e8f339e3b0a1b39126333d5d950c0909a394da3587b7de34e5771f41"
+    },
+    "development-evidence-v69b.zip": {
+      "bytes": 87257,
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "development-reproduction-guide-v71c.zip": {
+      "bytes": 19558,
+      "sha256": "6a3ed00cd047a4f63fdcfebd1d2ed6ef4d36e6eeddf286c7d5507d799393671b"
+    },
+    "development-selection-metadata-v71.zip": {
+      "bytes": 6194056,
+      "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
+    },
+    "development-service-evidence-v70.zip": {
+      "bytes": 124857,
+      "sha256": "684ca47fd16985c32f5faf0dd7bab81f3bbe9dda297a87455dfb84c0a0ce2dc4"
+    },
+    "development-source-review-v71.zip": {
+      "bytes": 1924634,
+      "sha256": "c0054eba472353f64fc4371c3dd03ba2f34919708967c95cbdc3a9148a510888"
+    },
+    "second-research-draft.tex": {
+      "bytes": 53027,
+      "sha256": "65d02e6048156fc1d2270368d8fa7efae192511f79e5aa9d00fc3820a772db0a"
+    }
+  },
+  "members": 10,
+  "model_binaries_included": false,
+  "open_manuscript_unchanged": true,
+  "original_bundle_preserved": true,
+  "private_identity_map_included": false,
+  "raw_article_or_token_bodies_included": false,
+  "roundtrip_bytes_verified": true,
+  "schema": "development-review-bundle-v71c",
+  "scientific_quality_result": false,
+  "selection_metadata_integrated": true,
+  "separate_pdf_created": false,
+  "submission_ready": false
+}

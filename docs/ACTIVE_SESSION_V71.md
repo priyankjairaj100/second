@@ -375,3 +375,36 @@ app inventory attempt again returned 'Sky Computer Use service startup request
 failed'; no further UI attempt, replacement editor, new tab or separate PDF was
 made. Actual page/layout review remains unverified. The next scientific action
 is to audit the existing quality chain when its dependent phases finish.
+
+## Additional notice integration,18 October2026
+
+The next ready packaging task is complete. New development-dependency-notices-v71c.zip
+adds all three observed NumPy notice texts, preserves96 earlier non-index payloads
+byte-for-byte, and contains43 unchanged upstream notice/attribution texts in102
+members. Source/version/path scope and RECORD commitments are included; no native
+binary, source correspondence or full license-clearance claim is added. Clean
+extraction, exact manifests and altered/missing-file refusals pass.
+
+The new development-reproduction-guide-v71c.zip binds this archive and the same
+five other companion ZIPs. Seven components now pass724-member/726-text-file
+inventory, manifest,16 evidence-reference, six protocol-link and known-direct-
+identifier checks. The prior213 source-fixture result is bound to unchanged source
+bytes; it is not rerun or relabelled as numerical reproduction. Existing selection
+metadata and both E16 actual-audit derivatives remain byte-identical. The new guide
+passes clean extraction and corrupt/missing/extra-file refusal checks.
+
+The integrated outputs/second-development-review-v71c.zip is8864723 bytes,
+SHA2563eb894ccde54fa32ca47dc20f096224dd92dca1e2b12f1f879e1da66702f58c8.
+All ten bundle members roundtrip exactly. Read reports/REVIEW_PACKAGE_README_V71C.txt,
+validation/v71c_development_bundle.json and validation/v71c_cross_component_review.json.
+The older V71/V71B bundles and all previous components are preserved. The existing
+manuscript/source editor remains unchanged; no compilation, separate PDF or new
+tab was needed for this packaging-only update.
+
+At this checkpoint the latest sealed snapshot remains E,13:02:55UTC, with19/24
+sequential12 stage receipts and no final quality result. A later read-only Slurm
+check at13:08UTC still found15408 running and all five successors pending. No
+job was launched or retried. Await the already submitted chain and actual seals
+before interpreting quality. Full native/source attribution, historical input
+reproduction, indirect anonymity, actual rendered pages and author-controlled final
+facts remain open. This bundle remains DEVELOPMENT, not submission-ready.

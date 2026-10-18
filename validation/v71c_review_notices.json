@@ -1,0 +1,28 @@
+{
+  "added_cpu_notices": 3,
+  "archive": {
+    "bytes": 460857,
+    "path": "reports/development-dependency-notices-v71c.zip",
+    "sha256": "944eb649e8f339e3b0a1b39126333d5d950c0909a394da3587b7de34e5771f41"
+  },
+  "binaries_included": false,
+  "changed_file_rejected": true,
+  "clean_extraction_exact": true,
+  "complete_transitive_notices": false,
+  "earlier_payloads_byte_identical": 96,
+  "full_native_correspondence": false,
+  "members": 102,
+  "missing_file_rejected": true,
+  "notice_texts": 43,
+  "previous_component": {
+    "bytes": 456767,
+    "path": "reports/development-dependency-notices-v71.zip",
+    "sha256": "45e860d785c7838ccc3945b3581d2f38b98791dea7baf812554ff1adf56d66ca"
+  },
+  "project_license_assigned": false,
+  "schema": "review-installed-notices-v71c",
+  "scientific_result": false,
+  "source_observation": "validation/v71_cpu_notice_inventory_20261018_b.tar.gz",
+  "submission_ready": false,
+  "verified_at_utc": "2026-10-18T13:12:42.989756+00:00"
+}

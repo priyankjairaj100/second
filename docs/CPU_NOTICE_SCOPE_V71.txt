@@ -48,3 +48,9 @@ outside this bounded observation. No binaries are redistributed by the current
 review bundle; this inventory is not legal clearance or a grant of project rights.
 Author-controlled project release terms remain unset. Preserve all upstream text
 and attribution; do not infer absent permissions or invent dependency versions.
+
+Integration update18October: all three additional NumPy texts are now included in
+development-dependency-notices-v71c.zip and second-development-review-v71c.zip.
+The source-observation reports above retain their creation-time staged state.
+The new guide explicitly binds the new archive; older V71B bytes remain unchanged.
+No new license, native-source, scientific or submission-readiness claim is implied.

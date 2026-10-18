@@ -50,9 +50,9 @@ local work. Root review does not count as independent scientific validation.
    See research_v71/PROTOCOL.txt and exact registration. A negative quality result
    remains evidence; no favorable resampling. A defect needs separate registration.
 7. IN PROGRESS while jobs run: use the prepared terminal reporting check after actual
-   completion. The V71B development bundle now integrates the expanded installed
+   completion. The V71C development bundle now integrates the expanded installed
    notices and actual registered selection metadata. Its seven components pass
-   721-member/723-text-file checks; the new guide binds all six companion ZIPs and
+   724-member/726-text-file checks; the new guide binds all six companion ZIPs and
    ten quality-input groups. The unchanged577-source component retains its213
    passing local fixtures. Actual saved metadata independently reproduces all3801
    eligibility decisions,2778 eligible records,320 fixed selections and the exact
@@ -62,9 +62,9 @@ local work. Root review does not count as independent scientific validation.
    packages. No software fixture establishes empirical reproduction. Full historical
    input bodies, GPU driver/system/container and CPU native/Rust attribution remain;
    later installed notices do not extend frozen binary bindings. Read the new
-   reports/REVIEW_PACKAGE_README_V71B.txt and preserve all historical components.
+   reports/REVIEW_PACKAGE_README_V71C.txt and preserve all historical components.
    A later bounded CPU RECORD scan verifies56 declarations against frozen pins
-   and recovers three additional NumPy notices for the next bundle assembly.
+   and recovers three additional NumPy notices, now integrated in the V71C bundle.
    See CPU_NOTICE_SCOPE_V71.txt; exact native source/build correspondence remains
    unverified. All seven current bibliography identities now have primary or
    deposited metadata support; source citation/label checks pass. Proof review
