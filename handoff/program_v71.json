@@ -6627,6 +6627,69 @@
     "status": "complete"
   },
   "created_at_utc": "2026-10-18T11:55:57.728358+00:00",
+  "development_bundle": {
+    "archive": {
+      "bytes": 8860660,
+      "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v71b.zip",
+      "sha256": "7e7693ccc17fb9461055db2b746e36cbd6a710099faf9572374545d71d2239e1"
+    },
+    "component_members": 721,
+    "components": 7,
+    "created_at_utc": "2026-10-18T12:44:54.835511+00:00",
+    "expanded_notices_integrated": true,
+    "full_anonymity_verified": false,
+    "full_empirical_reproduction": false,
+    "manifest": {
+      "README.txt": {
+        "bytes": 7066,
+        "sha256": "cbfc8fd92cf90a3d726d13b0cfb3740463ef97df0ca863a39accd2c0e50f69d0"
+      },
+      "development-audit-receipts-v69.zip": {
+        "bytes": 341604,
+        "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+      },
+      "development-dependency-notices-v71.zip": {
+        "bytes": 456767,
+        "sha256": "45e860d785c7838ccc3945b3581d2f38b98791dea7baf812554ff1adf56d66ca"
+      },
+      "development-evidence-v69b.zip": {
+        "bytes": 87257,
+        "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+      },
+      "development-reproduction-guide-v71b.zip": {
+        "bytes": 19454,
+        "sha256": "de6a0675ebf10537a9450901810ac3e12d8047a027aafd39387bbb6be32bb493"
+      },
+      "development-selection-metadata-v71.zip": {
+        "bytes": 6194056,
+        "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
+      },
+      "development-service-evidence-v70.zip": {
+        "bytes": 124857,
+        "sha256": "684ca47fd16985c32f5faf0dd7bab81f3bbe9dda297a87455dfb84c0a0ce2dc4"
+      },
+      "development-source-review-v71.zip": {
+        "bytes": 1924634,
+        "sha256": "c0054eba472353f64fc4371c3dd03ba2f34919708967c95cbdc3a9148a510888"
+      },
+      "second-research-draft.tex": {
+        "bytes": 53027,
+        "sha256": "65d02e6048156fc1d2270368d8fa7efae192511f79e5aa9d00fc3820a772db0a"
+      }
+    },
+    "members": 10,
+    "model_binaries_included": false,
+    "open_manuscript_unchanged": true,
+    "original_bundle_preserved": true,
+    "private_identity_map_included": false,
+    "raw_article_or_token_bodies_included": false,
+    "roundtrip_bytes_verified": true,
+    "schema": "development-review-bundle-v71b",
+    "scientific_quality_result": false,
+    "selection_metadata_integrated": true,
+    "separate_pdf_created": false,
+    "submission_ready": false
+  },
   "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
   "expanded_notice_preparation": {
     "active_dependency_edges": 32,
@@ -6671,6 +6734,8 @@
     "verified_at_utc": "2026-10-18T12:23:57.537487+00:00"
   },
   "independent_numerical_replication": false,
+  "latest_reporting_parent": "c07a9d15eb29e4966f775a928a322402ead1d7bd",
+  "latest_reporting_updated_at_utc": "2026-10-18T12:50:00.307075+00:00",
   "latest_sealed_worker_observation": {
     "active_worker_reservations": {
       "8def57274c8e11b5ac89c9a8a40834462e495acc61c337719862f7cfe50c33c9": {
@@ -6683,8 +6748,8 @@
     },
     "actual_completed_worker_seals_checked_locally": 3,
     "archive": {
-      "bytes": 174735,
-      "sha256": "f8cc5d4b921022310354718e7895cfb9414c06515a717a6d417216a856b58715"
+      "bytes": 175708,
+      "sha256": "695fa015879617d685e57d4c5a167580560b33307a1ebc7b010341c3d478fa5f"
     },
     "completed_phase_costs": {
       "cpu_checks": {
@@ -6767,12 +6832,12 @@
     },
     "likelihood_reexecuted": false,
     "model_state_bytes_checked_locally": false,
-    "observed_at_utc": "2026-10-18T12:24:50.185056+00:00",
+    "observed_at_utc": "2026-10-18T12:48:49.822998+00:00",
     "quality_guard_pass": null,
     "registration_sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c",
     "schema": "v71-saved-campaign-metadata-review",
     "sequential_progress_counts": {
-      "sequential_12": 11,
+      "sequential_12": 15,
       "sequential_6": 0
     },
     "settled_worker_cpu_seconds": 79,
@@ -6798,12 +6863,12 @@
     "schema": "native-manuscript-compile-observation-v70"
   },
   "next_actions": [
-    "Inspect existing jobs; never relaunch",
-    "Close V71 actual model/loss/terminal/cost gates",
-    "Apply frozen quality decision, including failures",
-    "Finish current source/input/notice/anonymity package",
-    "Justify and prospectively register claim-required timing only",
-    "Verify actual pages and author-controlled final details"
+    "Reconcile existing V71 jobs15405--15413; never rerun a registered launcher. Await both sequential models, parity, losses, actual terminal audit and external closure accounting.",
+    "Collect a fresh unique terminal metadata archive after actual completion; evaluate the frozen quality rule including negative outcomes. Receipt checks do not reconstruct omitted model/loss bodies locally.",
+    "Use reports/REVIEW_PACKAGE_README_V71B.txt for the integrated development bundle; preserve old components and creation-time preparation reports. Complete remaining historical input/native attribution scope without adding unnecessary model/data work.",
+    "Decide whether prospective balanced timing replication is required by the intended scoped claim; register separately only if justified. No automatic checkpoint/root sweep.",
+    "Finish actual rendered page/layout review, indirect anonymity, remaining rights/notices, citations/checklist and author-controlled venue/length facts. Existing manuscript file and editor remain unchanged.",
+    "Publish coherent checkpoints on the existing branch/draft PR. Keep the current continuation active until agreed evidence and final bundle are verified; do not submit externally."
   ],
   "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
   "previous_failure": {
@@ -6863,6 +6928,10 @@
       "bytes": 3876,
       "sha256": "87b8b4486378cf985a37c29a4c19fee0d107487c9ea5bace008d19e66503243e"
     },
+    "validation/v71_campaign_metadata_20261018_d.json": {
+      "bytes": 3876,
+      "sha256": "198db5de3ded6b547744290e8fb2be0bbb9aa7099250760bdf4da9f70ccd3629"
+    },
     "validation/v71_cross_component_review.json": {
       "bytes": 2238,
       "sha256": "ac720a2f9877b3616ccee6ac4b264dc57547522eb3c3b5acfdb61bfe0e4fb13c"
@@ -6887,6 +6956,10 @@
       "bytes": 721,
       "sha256": "0bd29084aa73336ddf168090ac76369d9cd8a64c0a6752f9cac399a6b26d64ad"
     },
+    "validation/v71_review_selection_component.json": {
+      "bytes": 1773,
+      "sha256": "ee1372b80f6d83c9a44647718431cd7e9f8278671d459837bdb5fd3ff5f47343"
+    },
     "validation/v71_review_source_build.json": {
       "bytes": 776,
       "sha256": "bc39e42bcd982ba71542287ecba4de7790123bcb8886481d1683bad9e95491ba"
@@ -6894,6 +6967,30 @@
     "validation/v71_review_source_fixtures.json": {
       "bytes": 14535,
       "sha256": "07fe655ddcd24ffa071d6323273efee8de41af881c0a623a50ebfbd5a2713f38"
+    },
+    "validation/v71_selection_metadata_reconciliation.json": {
+      "bytes": 1845,
+      "sha256": "b35457c0c38a32658389f215b9dbd2a353c8600f4dd15e89425a6c3623a4055c"
+    },
+    "validation/v71_selection_probe_preparation_error.json": {
+      "bytes": 746,
+      "sha256": "1256d93eda8b5736935f1c4eb6be2fbd250d483b21cd3391fe5b4e2aa0fcabdd"
+    },
+    "validation/v71b_cross_component_review.json": {
+      "bytes": 2671,
+      "sha256": "75ebe2ac61585f2af0e65c3f171a87e49d175d005da0560e9511d9a6ba67596d"
+    },
+    "validation/v71b_development_bundle.json": {
+      "bytes": 2321,
+      "sha256": "de91f03a33282da4b1ca87ad7297f712604876adb8cad09a82e5f5d96d66a4b1"
+    },
+    "validation/v71b_reproduction_guide_build.json": {
+      "bytes": 2008,
+      "sha256": "f694ac871fdf4008eee0bdaf75b80a9f83ff97de80d983333c843d472e99ec33"
+    },
+    "validation/v71b_reproduction_guide_check.json": {
+      "bytes": 871,
+      "sha256": "2f6560fd7c0020bc149ac44c458b9369bdb2fda30a9395520ff20950fc1025b5"
     }
   },
   "registrations": {
@@ -6921,12 +7018,13 @@
   "reporting_base": "6b4907eebc4a047ded2dfa3836710a40e382a66b",
   "reporting_source_publication": "7250bba2d0c5aa38bab694f599c9db3db955d459",
   "reproduction_guide": {
-    "archive_sha256": "0095257b4fc9a2f133a64f9c629cf562dabfb211ab3c33d2fb56bbfae0db03ae",
+    "archive_sha256": "de6a0675ebf10537a9450901810ac3e12d8047a027aafd39387bbb6be32bb493",
     "clean_extraction_verified": true,
     "components": [
       "development-audit-receipts-v69.zip",
-      "development-dependency-notices-v69.zip",
+      "development-dependency-notices-v71.zip",
       "development-evidence-v69b.zip",
+      "development-selection-metadata-v71.zip",
       "development-service-evidence-v70.zip",
       "development-source-review-v71.zip"
     ],
@@ -6940,27 +7038,32 @@
     "model_loaded": false,
     "network_used": false,
     "runtime_qualified": false,
+    "scope": "Component/guide byte checks only; source, data or numerical experiment not executed here.",
     "status": "byte_checks_passed",
     "unexpected_rejected": true
   },
   "review_components": {
-    "archive_members": 615,
+    "archive_members": 721,
     "artifacts": {
       "development-audit-receipts-v69.zip": {
         "bytes": 341604,
         "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
       },
-      "development-dependency-notices-v69.zip": {
-        "bytes": 38839,
-        "sha256": "062bc8b1944e93b2eb22d3a9592e474ee08e50d4ebeb404ea166f7beaac52e03"
+      "development-dependency-notices-v71.zip": {
+        "bytes": 456767,
+        "sha256": "45e860d785c7838ccc3945b3581d2f38b98791dea7baf812554ff1adf56d66ca"
       },
       "development-evidence-v69b.zip": {
         "bytes": 87257,
         "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
       },
-      "development-reproduction-guide-v71.zip": {
-        "bytes": 18887,
-        "sha256": "0095257b4fc9a2f133a64f9c629cf562dabfb211ab3c33d2fb56bbfae0db03ae"
+      "development-reproduction-guide-v71b.zip": {
+        "bytes": 19454,
+        "sha256": "de6a0675ebf10537a9450901810ac3e12d8047a027aafd39387bbb6be32bb493"
+      },
+      "development-selection-metadata-v71.zip": {
+        "bytes": 6194056,
+        "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
       },
       "development-service-evidence-v70.zip": {
         "bytes": 124857,
@@ -6970,16 +7073,16 @@
         "bytes": 1924634,
         "sha256": "c0054eba472353f64fc4371c3dd03ba2f34919708967c95cbdc3a9148a510888"
       },
-      "reports/REVIEW_PACKAGE_README_V71.txt": {
-        "bytes": 6245,
-        "sha256": "817ea3f2d1c704cbb212fd14914f21e58c46998adc89ce2399c7f6df02a5d191"
+      "reports/REVIEW_PACKAGE_README_V71B.txt": {
+        "bytes": 7066,
+        "sha256": "cbfc8fd92cf90a3d726d13b0cfb3740463ef97df0ca863a39accd2c0e50f69d0"
       },
       "reports/manuscript_v70.tex": {
         "bytes": 53027,
         "sha256": "65d02e6048156fc1d2270368d8fa7efae192511f79e5aa9d00fc3820a772db0a"
       }
     },
-    "captured_at_utc": "2026-10-18T12:01:22.086763+00:00",
+    "captured_at_utc": "2026-10-18T12:43:46.428806+00:00",
     "clean_source_fixture_tests": 213,
     "empirical_work_executed": false,
     "evidence_references": [
@@ -7006,18 +7109,137 @@
     "full_source_manual_review": false,
     "full_transitive_notices": false,
     "indirect_identity_linkability_assessed": false,
-    "internal_manifests_verified": 6,
+    "internal_manifests_verified": 7,
     "known_identity_findings": [],
     "manuscript_matches_open_file": true,
     "private_mapping_files_included": false,
     "protocol_links_verified": 6,
-    "schema": "cross-component-review-v71",
+    "schema": "cross-component-review-v71b",
     "status": "inventories_hashes_navigation_and_direct_identifiers_checked",
     "submission_ready": false,
-    "text_files_checked": 617
+    "text_files_checked": 723,
+    "upstream_attribution_matches": [
+      {
+        "file": "development-dependency-notices-v71.zip/cuda/distributions/sympy-1.14.0.dist-info/licenses/AUTHORS",
+        "line": 590,
+        "match": "Priyank"
+      }
+    ],
+    "upstream_attribution_reviewed_and_preserved": true
   },
-  "review_navigation": "reports/REVIEW_PACKAGE_README_V71.txt",
+  "review_navigation": "reports/REVIEW_PACKAGE_README_V71B.txt",
   "schema": "second-reporting-checkpoint-v71",
+  "selection_metadata_reconciliation": {
+    "after_counts": {
+      "chunks": 44538,
+      "content": 32331,
+      "ids": 11416
+    },
+    "all_eligibility_reasons_recomputed": true,
+    "archive": {
+      "bytes": 6202754,
+      "path": "campaigns/csis_v71_selection_metadata_20261018_a.tar.gz",
+      "sha256": "0b538dc3d3ea3e161c63354593fbc379264ce06bc2d9c3bfd42c0f6349fbb863"
+    },
+    "before_counts": {
+      "chunks": 29736,
+      "content": 21371,
+      "ids": 7615
+    },
+    "corpus_to_hash_correspondence_recomputed": false,
+    "eligible_records": 2778,
+    "empirical_likelihoods_read": false,
+    "exact_inspected_frame_union": true,
+    "fixed_sampling_order_recomputed": true,
+    "frame_records": 3801,
+    "full_historical_input_closure": false,
+    "historical_quality_ids_preserved": 60,
+    "members": 13,
+    "metadata_bytes": 12752428,
+    "model_inference": false,
+    "new_job": false,
+    "observed_at_utc": "2026-10-18T12:35:12.124664+00:00",
+    "refusal_probes": {
+      "changed_eligibility": "rejected",
+      "changed_short_token_hash": "rejected",
+      "removed_frame_id": "rejected",
+      "reordered_selected_ids": "rejected"
+    },
+    "registration_sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c",
+    "retokenization_repeated": false,
+    "review_component_prepared": false,
+    "schema": "v71-selection-metadata-reconciliation",
+    "scientific_quality_result": false,
+    "scope": "Actual registered hash/selection metadata and deterministic metadata decisions only. Actual V68/V70 saved-prefix/token audits remain the source for correspondence; this is not an independent tokenization or quality validation.",
+    "selected_metadata_matches": true,
+    "selected_records": 320,
+    "selected_token_bytes_read": false,
+    "short_records": 1021,
+    "source_prefix_read": false,
+    "status": "registered_metadata_and_selection_equations_verified",
+    "verified_at_utc": "2026-10-18T12:37:46.717546+00:00"
+  },
+  "selection_review_component": {
+    "adapted_files": 1,
+    "archive": {
+      "bytes": 6194056,
+      "path": "reports/development-selection-metadata-v71.zip",
+      "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
+    },
+    "clean_extraction_exact": true,
+    "core_functions_ast_equal": [
+      "canonical",
+      "info",
+      "pairs",
+      "parse",
+      "reconcile_selection"
+    ],
+    "full_historical_input_closure": false,
+    "indirect_anonymity_verified": false,
+    "integrated_into_current_bundle": false,
+    "known_identity_findings": [],
+    "metadata_bytes_original": 12685254,
+    "numerical_experiment_executed": false,
+    "original_metadata_files": 11,
+    "package_members": 15,
+    "portable_check": {
+      "after_counts": {
+        "chunks": 44538,
+        "content": 32331,
+        "ids": 11416
+      },
+      "all_eligibility_reasons_recomputed": true,
+      "before_counts": {
+        "chunks": 29736,
+        "content": 21371,
+        "ids": 7615
+      },
+      "corpus_to_hash_correspondence_verified": false,
+      "eligible_records": 2778,
+      "exact_inspected_frame_union": true,
+      "fixed_sampling_order_recomputed": true,
+      "frame_records": 3801,
+      "full_historical_input_closure": false,
+      "historical_quality_ids_preserved": 60,
+      "likelihood_result": false,
+      "original_registration_replayed": false,
+      "raw_corpus_or_tokens_read": false,
+      "selected_metadata_matches": true,
+      "selected_records": 320,
+      "short_records": 1021,
+      "status": "saved_metadata_decisions_verified"
+    },
+    "private_mapping_packaged": false,
+    "refusal_probes": {
+      "altered_file": true,
+      "extra_file": true,
+      "missing_file": true
+    },
+    "schema": "review-selection-component-check-v71",
+    "submission_ready": false,
+    "typed_roundtrips": 11,
+    "verified_at_utc": "2026-10-18T12:40:30.412529+00:00"
+  },
   "status": "v67_closed_v71_untouched_quality_running",
   "submission_ready": false,
   "untouched_quality_verified": false

@@ -40,8 +40,8 @@ local work. Root review does not count as independent scientific validation.
 5. COMPLETE: separate V70 saved-frame audit15404 retokenized the same prefix and
    verified all3801 complete-token hashes and exact exclusion equality, including
    1021 short records. No new article/model/threshold selection.
-6. ACTIVE: separately registered V71 untouched quality15405--15413. At12:24:50UTC,
-   first three completed, sequential12 running with11/24 stages, others dependency-pending. Actual
+6. ACTIVE: separately registered V71 untouched quality15405--15413. At12:48:49UTC,
+   first three completed, sequential12 running with15/24 stages, others dependency-pending. Actual
    CPU103 tests, CUDA24 generated comparisons and78 checkpoint arrays passed.
    Full quality still unknown. All9 jobs already submitted/released once; NEVER
    rerun launchers. Await both sequential constructions, CPU references, GPU loss
@@ -49,19 +49,20 @@ local work. Root review does not count as independent scientific validation.
    the closure's own final allocation. Preserve44726 CPU ceiling and every charge.
    See research_v71/PROTOCOL.txt and exact registration. A negative quality result
    remains evidence; no favorable resampling. A defect needs separate registration.
-7. IN PROGRESS while jobs run: use the prepared terminal reporting check after actual completion
-   and finish unresolved input/notice scope. The current577-source component now
-   passes213 local tests; the new guide binds five companion ZIPs and all ten
-   quality-input groups. Six components pass615-member/617-text-file checks. Keep raw corpus/model bytes
-   and private identity maps out of review components. Historical components stay
-   byte-unchanged. No software fixture alone establishes empirical reproduction.
-   The separately staged development-dependency-notices-v71.zip now preserves the
-   five earlier texts and35 observed CUDA/Python notices. All28 selected installed
-   distributions have notices;32 active declared dependency edges and34 installed
-   RECORD notice hashes pass. Integrate this expanded component and rebind the guide
-   at the next coherent bundle checkpoint. The existing bundle remains unchanged.
-   GPU-node driver/system/container and CPU native/Rust attribution scope remain;
-   current installed notices do not retroactively extend frozen binary bindings.
+7. IN PROGRESS while jobs run: use the prepared terminal reporting check after actual
+   completion. The V71B development bundle now integrates the expanded installed
+   notices and actual registered selection metadata. Its seven components pass
+   721-member/723-text-file checks; the new guide binds all six companion ZIPs and
+   ten quality-input groups. The unchanged577-source component retains its213
+   passing local fixtures. Actual saved metadata independently reproduces all3801
+   eligibility decisions,2778 eligible records,320 fixed selections and the exact
+   exclusion union including short-record hashes. This metadata-only check does
+   not retokenize or read corpus/model/loss bodies. Corpus-to-hash correspondence
+   rests on the original V68/V70 audits. Keep raw bodies/private maps out of review
+   packages. No software fixture establishes empirical reproduction. Full historical
+   input bodies, GPU driver/system/container and CPU native/Rust attribution remain;
+   later installed notices do not extend frozen binary bindings. Read the new
+   reports/REVIEW_PACKAGE_README_V71B.txt and preserve all historical components.
 8. CONDITIONAL: justify prospective balanced timing replication using frozen method,
    matched startup/cache costs and strongest compatible controls. Register a new
    bounded experiment only if required by the intended claim. No automatic second

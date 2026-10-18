@@ -274,3 +274,60 @@ All five successors remain dependency-pending. No likelihood result or terminal
 quality decision exists. Read validation/v71_campaign_metadata_20261018_c.json
 and campaigns/csis_v71_metadata_20261018_c.tar.gz. The active reservation and
 registered ceilings are unchanged; no job was submitted or repeated.
+
+## Integrated development bundle and selection metadata,18 October12:48:49UTC
+
+Snapshot D confirms three completed/sealed phases,79 settled worker CPU seconds,
+sequential12 job15408 running with15/24 saved stage-progress receipts and all five
+successors dependency-pending. No quality likelihood or terminal decision exists.
+Read validation/v71_campaign_metadata_20261018_d.json and its uniquely named raw
+archive. No job was submitted, retried or changed. The numerical checkout remains
+at f900999; all575 numerical/protocol and five administrative commitments match.
+
+A bounded reporting-only collector captured the ten registered quality-metadata
+roles and60 historical quality exclusions without reading model, article or token
+bodies. The raw13-member archive is campaigns/csis_v71_selection_metadata_20261018_a.tar.gz,
+6202754 bytes, SHA2560b538dc3d3ea3e161c63354593fbc379264ce06bc2d9c3bfd42c0f6349fbb863.
+A separate metadata implementation reproduces every saved eligibility reason,
+2778 eligible records, the fixed320-record sample and exact successor exclusion
+union for all3801 inspected records, including1021 short records. Four semantic
+mutation probes reject removed frame IDs, changed eligibility or short full-token
+hashes, and reordered selections. This does not retokenize, re-read corpus/prefix,
+or establish quality. Actual corpus-to-hash correspondence remains supported by
+V68/V70's original saved-prefix audits using the shared tokenizer.
+
+One local probe-preparation error assumed a record shorter than16 tokens, but the
+actual minimum was16. The baseline metadata check had already passed. The error
+and prior checker source hash are preserved; the corrected probe selects a short
+record of nonstandard prefix length from the1007 available records. No registered
+source, empirical attempt or data was changed. See
+validation/v71_selection_probe_preparation_error.json and
+validation/v71_selection_metadata_reconciliation.json.
+
+The new development-selection-metadata-v71.zip contains15 members and eleven
+metadata files. Ten are original bytes; one registration has reversible identifier
+mapping. Eleven typed roundtrips and five checker-function AST comparisons pass.
+The portable read-only checker and missing/changed/extra-file probes pass from
+clean extraction. Private derivation details stay outside the anonymous component.
+Historical hashes can remain indirectly linkable; full anonymity is not claimed.
+
+The new development-reproduction-guide-v71b.zip binds six companion ZIPs and the
+expanded installed notices. Its clean-extraction and altered/missing/extra-file
+checks pass. Seven review components now contain721 members; including the same
+paper and new navigation,723 text files pass manifests,16 evidence references,
+six protocol links and known direct-identifier checks. A broad name scan matched
+one legitimate upstream SymPy author, Priyank Patel, whose attribution is preserved.
+This is not the project author's identity. Full indirect anonymity remains open.
+
+The integrated local outputs/second-development-review-v71b.zip is8860660 bytes,
+SHA2567e7693ccc17fb9461055db2b746e36cbd6a710099faf9572374545d71d2239e1.
+Its ten members roundtrip exactly. Read reports/REVIEW_PACKAGE_README_V71B.txt,
+validation/v71b_cross_component_review.json and validation/v71b_development_bundle.json.
+Earlier component reports describe their creation-time staged state; this new
+bundle is the explicit integration checkpoint. All older bundles/components and
+existing manuscript bytes remain unchanged. No new native compilation is claimed
+for this packaging-only change; the prior native success remains the last check.
+No separate PDF or new editor tab was created. This is a DEVELOPMENT bundle, not
+submission-ready. Actual quality/cost closure, justified timing decision, complete
+historical inputs, remaining rights/notices, rendered layout, indirect anonymity
+and author-controlled final details still remain.
