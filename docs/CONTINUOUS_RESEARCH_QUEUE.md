@@ -1,7 +1,7 @@
 # Second: continuous research and submission queue
 
-Current handoff docs/ACTIVE_SESSION_V73.md and handoff/program_v73.json supersede
-V72 reporting status. V72 scientific decision and actual receipts remain current. Historical handoffs/queues keep their original observation cutoffs.
+Current handoff docs/ACTIVE_SESSION_V74.md and handoff/program_v74.json supersede
+V73 reporting status. V72 scientific decision and actual receipts remain current. Historical handoffs/queues keep their original observation cutoffs.
 User authorized sustained continuation; work through ready tasks without a proceed
 message. Existing heartbeat is recovery, not permission to stop after a small action.
 
@@ -40,13 +40,17 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
    general speedup or stable latency. Therefore do not automatically launch timing
    replication or another checkpoint. Further experiments need a justified new
    question and separate prospective registration, not a search for a win.
-6. COMPLETE V73 EDITORIAL CHECKPOINT: same open source shortened from5578 to5042
-   source whitespace tokens (9.61%; not page count), compiled natively and checked
-   against evidence.119 current checks plus114 archived-history checks pass. Main
-   table now reports all ten V67 rows including source traversals. Historical
-   numerical detail stays in unchanged E12--E15 evidence. Proofs/target/quality
-   text remain exact. Eight byte-identical components pass740-member/742-text
-   checks; their213 prior source fixtures remain applicable, not newly executed.
+6. COMPLETE V74 MANUSCRIPT/CHECKLIST CHECKPOINT: V73 condensed historical detail
+   and installed the ten-row current service table. V74 adds three creator
+   citations,82M total parameter count, English web-text scope and ethics/terms
+   disclosures, removes the draft banner and anonymizes the source author field.
+   Same open source compiles natively;132 current checks plus119/114 archived
+   checks pass. Proofs/target/results remain unchanged.5278 source tokens include
+   references/disclosures, not a page count. Eight unchanged components pass
+   740-member/743-text checks;213 prior source fixtures were not rerun. The new
+   12-member outer bundle includes the22-field Responsible NLP draft checklist.
+   B2/B3/B4/C1 retain explained No answers; D is No, D1--D5 N/A. No author
+   attestation or form submission. An all-Yes checklist is not a completion gate.
 7. COMPLETE TARGETED SCOPE REVIEW: docs/SUBMISSION_SCOPE_V73.txt records included
    payload/source URL and indirect-linkage assessment. No direct author links
    occur in source URLs; actual job IDs, hashes, public code similarity and paper
@@ -64,19 +68,27 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
    A text question asks the author for visible total pages and Limitations start
    page. Once preview access works, inspect table widths, math and page breaks.
    Source length/compile checks do not close this gate. Avoid redundant polling.
-10. PENDING AUTHOR/DELIVERY FACTS: final format/venue-specific checklist, names/order,
-    ORCID/consent/conflicts and applicable source-release restrictions. Do not
-    invent facts or make a general licensing/anonymous-review compliance claim.
-    Update the actual bundle after required layout/metadata checks pass; no external
-    submission. No new experiment is needed just to fill a waiting period.
+10. PREPARED CHECKLIST, PENDING DELIVERY CHOICES: read the section-grounded draft
+    reports/RESPONSIBLE_NLP_CHECKLIST_V74.txt and disclosure review
+    docs/SUBMISSION_CHECKLIST_REVIEW_V74.txt. Confirm final venue/cycle/category
+    and actual delivery rules. Explained No answers preserve unknown terms,
+    content screening and full-program compute; they are not automatically
+    submission blockers. Resolve applicable distribution/anonymity restrictions
+    without inventing a project license. External author facts (names/order,
+    profiles/ORCID, consent, conflicts and service declarations) are required only
+    before a separately authorized submission, not in this anonymous manuscript.
+    Update the actual bundle after layout/chosen-delivery checks; no conference
+    submission or new experiment to fill the waiting period.
 
 ## Completion boundary
 
 Claim-required service and untouched quality are verified; general timing/transfer
-are outside the current claim. Final submission bundle, rendered layout, final
-venue/category and author-controlled release/submission facts remain open. Targeted
-source/linkability review is documented, not a guarantee of anonymity or rights. Existing development bundle
-is not submission-ready. Publish coherent checkpoints to the existing branch/draft
-PR; keep completed-job polling quiet and unnecessary launches absent. Pause only
-on user request or when the agreed final bundle and claim-required evidence are
-actually complete. No final ETA is inferred from resource ceilings.
+are outside the current claim. Manuscript disclosures and a truthful checklist
+draft are prepared. Actual rendered layout/page count and selected venue/category
+requirements still prevent calling the development bundle submission-ready.
+Targeted source/linkability review documents limits, not a guarantee of rights or
+anonymity. Author-owned form facts remain unset; no attestation or submission is
+made. Publish coherent checkpoints to the existing branch/draft PR. Keep routine
+completed-job polling quiet; no numerical launch is required by the current claim.
+Pause only on user request or when the agreed bundle and claim-required evidence
+are actually complete. No final ETA is inferred from resource ceilings.
