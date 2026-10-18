@@ -1,0 +1,2665 @@
+{
+  "actual_loss_artifact_validation_performed": false,
+  "all_endpoint_gates_pass": true,
+  "articles": 320,
+  "bootstrap": {
+    "article_pairing_shared": true,
+    "bit_generator": "PCG64",
+    "draws": 20000,
+    "familywise_nominal_alpha": 0.05,
+    "numpy_version": "2.2.6",
+    "primary_endpoints": 2,
+    "quantile_method": "higher",
+    "seed": 153387658285018601834874226438517110328
+  },
+  "endpoints": {
+    "12": {
+      "article_difference_quantiles": {
+        "0": -0.11257972540394488,
+        "0.25": -0.025235700648132357,
+        "0.5": 0.0052510867441322795,
+        "0.75": 0.036279164401449404,
+        "1": 0.12145638622993156
+      },
+      "article_paired_mean_nll": [
+        {
+          "difference": -0.003552501685756461,
+          "id": "REVIEW_ARTICLE_0003"
+        },
+        {
+          "difference": 0.032000845798796855,
+          "id": "REVIEW_ARTICLE_0004"
+        },
+        {
+          "difference": -0.03624324352657765,
+          "id": "REVIEW_ARTICLE_0005"
+        },
+        {
+          "difference": -0.04985451021256971,
+          "id": "REVIEW_ARTICLE_0006"
+        },
+        {
+          "difference": -0.04455910470399943,
+          "id": "REVIEW_ARTICLE_0007"
+        },
+        {
+          "difference": -0.007957198221339602,
+          "id": "REVIEW_ARTICLE_0008"
+        },
+        {
+          "difference": -0.042346530622770086,
+          "id": "REVIEW_ARTICLE_0009"
+        },
+        {
+          "difference": -0.04792976703182075,
+          "id": "REVIEW_ARTICLE_0010"
+        },
+        {
+          "difference": 0.015639560757736447,
+          "id": "REVIEW_ARTICLE_0011"
+        },
+        {
+          "difference": -0.06110332696997235,
+          "id": "REVIEW_ARTICLE_0012"
+        },
+        {
+          "difference": 0.003736814339893635,
+          "id": "REVIEW_ARTICLE_0013"
+        },
+        {
+          "difference": 0.018528038122251313,
+          "id": "REVIEW_ARTICLE_0014"
+        },
+        {
+          "difference": -0.0048821507787795955,
+          "id": "REVIEW_ARTICLE_0015"
+        },
+        {
+          "difference": 0.02176737782084152,
+          "id": "REVIEW_ARTICLE_0016"
+        },
+        {
+          "difference": 0.02001123475776415,
+          "id": "REVIEW_ARTICLE_0017"
+        },
+        {
+          "difference": 0.04527344831814386,
+          "id": "REVIEW_ARTICLE_0018"
+        },
+        {
+          "difference": -0.013238151520661946,
+          "id": "REVIEW_ARTICLE_0019"
+        },
+        {
+          "difference": -0.0017921933572091887,
+          "id": "REVIEW_ARTICLE_0020"
+        },
+        {
+          "difference": 0.010244334212723598,
+          "id": "REVIEW_ARTICLE_0021"
+        },
+        {
+          "difference": 0.006569532872710507,
+          "id": "REVIEW_ARTICLE_0022"
+        },
+        {
+          "difference": -0.01722231569503607,
+          "id": "REVIEW_ARTICLE_0023"
+        },
+        {
+          "difference": -0.014107716139331452,
+          "id": "REVIEW_ARTICLE_0024"
+        },
+        {
+          "difference": 0.06386049423461267,
+          "id": "REVIEW_ARTICLE_0025"
+        },
+        {
+          "difference": -0.02387436715827823,
+          "id": "REVIEW_ARTICLE_0026"
+        },
+        {
+          "difference": -0.02075910305435946,
+          "id": "REVIEW_ARTICLE_0027"
+        },
+        {
+          "difference": 0.017772587931509536,
+          "id": "REVIEW_ARTICLE_0028"
+        },
+        {
+          "difference": -0.014787222921317542,
+          "id": "REVIEW_ARTICLE_0029"
+        },
+        {
+          "difference": -0.015890455776345305,
+          "id": "REVIEW_ARTICLE_0030"
+        },
+        {
+          "difference": -0.017673951106383885,
+          "id": "REVIEW_ARTICLE_0031"
+        },
+        {
+          "difference": 0.025418018399756954,
+          "id": "REVIEW_ARTICLE_0032"
+        },
+        {
+          "difference": 0.10029612522049412,
+          "id": "REVIEW_ARTICLE_0033"
+        },
+        {
+          "difference": -0.003712368926960518,
+          "id": "REVIEW_ARTICLE_0034"
+        },
+        {
+          "difference": 0.06321401582330309,
+          "id": "REVIEW_ARTICLE_0035"
+        },
+        {
+          "difference": -0.044502388807427275,
+          "id": "REVIEW_ARTICLE_0036"
+        },
+        {
+          "difference": -0.0025623684033605496,
+          "id": "REVIEW_ARTICLE_0037"
+        },
+        {
+          "difference": -0.11257972540394488,
+          "id": "REVIEW_ARTICLE_0038"
+        },
+        {
+          "difference": -0.013405256695546802,
+          "id": "REVIEW_ARTICLE_0039"
+        },
+        {
+          "difference": 0.02323167121810403,
+          "id": "REVIEW_ARTICLE_0040"
+        },
+        {
+          "difference": 0.02249456371437665,
+          "id": "REVIEW_ARTICLE_0041"
+        },
+        {
+          "difference": -0.029181110008258786,
+          "id": "REVIEW_ARTICLE_0042"
+        },
+        {
+          "difference": 0.03554658941702673,
+          "id": "REVIEW_ARTICLE_0043"
+        },
+        {
+          "difference": -0.049086439477941966,
+          "id": "REVIEW_ARTICLE_0044"
+        },
+        {
+          "difference": 0.010512784435708612,
+          "id": "REVIEW_ARTICLE_0045"
+        },
+        {
+          "difference": 0.03652917247549211,
+          "id": "REVIEW_ARTICLE_0046"
+        },
+        {
+          "difference": 0.09645505037696056,
+          "id": "REVIEW_ARTICLE_0047"
+        },
+        {
+          "difference": 0.048528841624782965,
+          "id": "REVIEW_ARTICLE_0048"
+        },
+        {
+          "difference": 0.06545930537927198,
+          "id": "REVIEW_ARTICLE_0049"
+        },
+        {
+          "difference": 0.09422403259937856,
+          "id": "REVIEW_ARTICLE_0050"
+        },
+        {
+          "difference": -0.03449699333133519,
+          "id": "REVIEW_ARTICLE_0051"
+        },
+        {
+          "difference": 0.008249411669865593,
+          "id": "REVIEW_ARTICLE_0052"
+        },
+        {
+          "difference": -0.059080649854240795,
+          "id": "REVIEW_ARTICLE_0053"
+        },
+        {
+          "difference": -0.035783795369252226,
+          "id": "REVIEW_ARTICLE_0054"
+        },
+        {
+          "difference": -0.003466222937493684,
+          "id": "REVIEW_ARTICLE_0055"
+        },
+        {
+          "difference": -0.024364807124238795,
+          "id": "REVIEW_ARTICLE_0056"
+        },
+        {
+          "difference": -0.03435041509198785,
+          "id": "REVIEW_ARTICLE_0057"
+        },
+        {
+          "difference": -0.019154805996780794,
+          "id": "REVIEW_ARTICLE_0058"
+        },
+        {
+          "difference": -0.05209483334566916,
+          "id": "REVIEW_ARTICLE_0059"
+        },
+        {
+          "difference": -0.01661755146906897,
+          "id": "REVIEW_ARTICLE_0060"
+        },
+        {
+          "difference": -0.019837074248555398,
+          "id": "REVIEW_ARTICLE_0061"
+        },
+        {
+          "difference": -0.006772180776589109,
+          "id": "REVIEW_ARTICLE_0062"
+        },
+        {
+          "difference": 0.07774067137985977,
+          "id": "REVIEW_ARTICLE_0063"
+        },
+        {
+          "difference": 0.03277516243647512,
+          "id": "REVIEW_ARTICLE_0064"
+        },
+        {
+          "difference": 0.11098988174010299,
+          "id": "REVIEW_ARTICLE_0065"
+        },
+        {
+          "difference": -0.012601171266505916,
+          "id": "REVIEW_ARTICLE_0066"
+        },
+        {
+          "difference": -0.04043226000963147,
+          "id": "REVIEW_ARTICLE_0067"
+        },
+        {
+          "difference": -0.0003871299261211925,
+          "id": "REVIEW_ARTICLE_0068"
+        },
+        {
+          "difference": -0.06350338452038146,
+          "id": "REVIEW_ARTICLE_0069"
+        },
+        {
+          "difference": -0.06944938388767957,
+          "id": "REVIEW_ARTICLE_0070"
+        },
+        {
+          "difference": 0.0007833780992315923,
+          "id": "REVIEW_ARTICLE_0071"
+        },
+        {
+          "difference": 0.038171169192253725,
+          "id": "REVIEW_ARTICLE_0072"
+        },
+        {
+          "difference": -0.02705002997796385,
+          "id": "REVIEW_ARTICLE_0073"
+        },
+        {
+          "difference": 0.06779416032919905,
+          "id": "REVIEW_ARTICLE_0074"
+        },
+        {
+          "difference": -0.0954533658116822,
+          "id": "REVIEW_ARTICLE_0075"
+        },
+        {
+          "difference": 0.06905830821899402,
+          "id": "REVIEW_ARTICLE_0076"
+        },
+        {
+          "difference": 0.015137979043900247,
+          "id": "REVIEW_ARTICLE_0077"
+        },
+        {
+          "difference": 0.057349073936150734,
+          "id": "REVIEW_ARTICLE_0078"
+        },
+        {
+          "difference": -0.014356045863870013,
+          "id": "REVIEW_ARTICLE_0079"
+        },
+        {
+          "difference": -0.021399698793218912,
+          "id": "REVIEW_ARTICLE_0080"
+        },
+        {
+          "difference": 0.052586373925618136,
+          "id": "REVIEW_ARTICLE_0081"
+        },
+        {
+          "difference": 0.016007091839614487,
+          "id": "REVIEW_ARTICLE_0082"
+        },
+        {
+          "difference": 0.022705943568295455,
+          "id": "REVIEW_ARTICLE_0083"
+        },
+        {
+          "difference": 0.05842745820836365,
+          "id": "REVIEW_ARTICLE_0084"
+        },
+        {
+          "difference": 0.07973830484177519,
+          "id": "REVIEW_ARTICLE_0085"
+        },
+        {
+          "difference": -0.0014612713314551631,
+          "id": "REVIEW_ARTICLE_0086"
+        },
+        {
+          "difference": -0.025235700648132357,
+          "id": "REVIEW_ARTICLE_0087"
+        },
+        {
+          "difference": 0.008262782235684734,
+          "id": "REVIEW_ARTICLE_0088"
+        },
+        {
+          "difference": -0.08975807368348947,
+          "id": "REVIEW_ARTICLE_0089"
+        },
+        {
+          "difference": -0.01510876327871466,
+          "id": "REVIEW_ARTICLE_0090"
+        },
+        {
+          "difference": 0.016756204526533956,
+          "id": "REVIEW_ARTICLE_0091"
+        },
+        {
+          "difference": -0.05526483802835417,
+          "id": "REVIEW_ARTICLE_0092"
+        },
+        {
+          "difference": -0.0457697514453903,
+          "id": "REVIEW_ARTICLE_0093"
+        },
+        {
+          "difference": -0.06554653794762275,
+          "id": "REVIEW_ARTICLE_0094"
+        },
+        {
+          "difference": -0.0388060967962235,
+          "id": "REVIEW_ARTICLE_0095"
+        },
+        {
+          "difference": -0.008192141018607853,
+          "id": "REVIEW_ARTICLE_0096"
+        },
+        {
+          "difference": -0.026317056004920347,
+          "id": "REVIEW_ARTICLE_0097"
+        },
+        {
+          "difference": 0.045387555149591384,
+          "id": "REVIEW_ARTICLE_0098"
+        },
+        {
+          "difference": 0.06370054609981136,
+          "id": "REVIEW_ARTICLE_0099"
+        },
+        {
+          "difference": 0.09124605672642241,
+          "id": "REVIEW_ARTICLE_0100"
+        },
+        {
+          "difference": -0.048760356155267394,
+          "id": "REVIEW_ARTICLE_0101"
+        },
+        {
+          "difference": -0.039959821063794296,
+          "id": "REVIEW_ARTICLE_0102"
+        },
+        {
+          "difference": -0.06847150180276297,
+          "id": "REVIEW_ARTICLE_0103"
+        },
+        {
+          "difference": -0.09516327697072459,
+          "id": "REVIEW_ARTICLE_0104"
+        },
+        {
+          "difference": -0.057856311073873096,
+          "id": "REVIEW_ARTICLE_0105"
+        },
+        {
+          "difference": -0.01694578278382119,
+          "id": "REVIEW_ARTICLE_0106"
+        },
+        {
+          "difference": -0.07262635573514256,
+          "id": "REVIEW_ARTICLE_0107"
+        },
+        {
+          "difference": 0.05575669473805862,
+          "id": "REVIEW_ARTICLE_0108"
+        },
+        {
+          "difference": 0.05948718759229296,
+          "id": "REVIEW_ARTICLE_0109"
+        },
+        {
+          "difference": -0.01858334685425823,
+          "id": "REVIEW_ARTICLE_0110"
+        },
+        {
+          "difference": 0.05891386831482968,
+          "id": "REVIEW_ARTICLE_0111"
+        },
+        {
+          "difference": 0.05152069947833362,
+          "id": "REVIEW_ARTICLE_0112"
+        },
+        {
+          "difference": -0.010402350085031216,
+          "id": "REVIEW_ARTICLE_0113"
+        },
+        {
+          "difference": 0.05144332346866233,
+          "id": "REVIEW_ARTICLE_0114"
+        },
+        {
+          "difference": -0.023857412849587145,
+          "id": "REVIEW_ARTICLE_0115"
+        },
+        {
+          "difference": 0.006974089839772434,
+          "id": "REVIEW_ARTICLE_0116"
+        },
+        {
+          "difference": -0.01813438354568732,
+          "id": "REVIEW_ARTICLE_0117"
+        },
+        {
+          "difference": 0.0013347701420153807,
+          "id": "REVIEW_ARTICLE_0118"
+        },
+        {
+          "difference": 0.0335032062654265,
+          "id": "REVIEW_ARTICLE_0119"
+        },
+        {
+          "difference": 0.008026135969024958,
+          "id": "REVIEW_ARTICLE_0120"
+        },
+        {
+          "difference": 0.060982328024608685,
+          "id": "REVIEW_ARTICLE_0121"
+        },
+        {
+          "difference": -0.024998177957248718,
+          "id": "REVIEW_ARTICLE_0122"
+        },
+        {
+          "difference": 0.062098349567146736,
+          "id": "REVIEW_ARTICLE_0123"
+        },
+        {
+          "difference": -0.056516189326860006,
+          "id": "REVIEW_ARTICLE_0124"
+        },
+        {
+          "difference": 0.039522626036685105,
+          "id": "REVIEW_ARTICLE_0125"
+        },
+        {
+          "difference": 0.07130481023281261,
+          "id": "REVIEW_ARTICLE_0126"
+        },
+        {
+          "difference": -0.06888448567984126,
+          "id": "REVIEW_ARTICLE_0127"
+        },
+        {
+          "difference": -0.009043347591793326,
+          "id": "REVIEW_ARTICLE_0128"
+        },
+        {
+          "difference": 0.0630582824568427,
+          "id": "REVIEW_ARTICLE_0129"
+        },
+        {
+          "difference": -0.05938046510578137,
+          "id": "REVIEW_ARTICLE_0130"
+        },
+        {
+          "difference": -0.024564464443419566,
+          "id": "REVIEW_ARTICLE_0131"
+        },
+        {
+          "difference": 0.014733024802943083,
+          "id": "REVIEW_ARTICLE_0132"
+        },
+        {
+          "difference": -0.03835700018159127,
+          "id": "REVIEW_ARTICLE_0133"
+        },
+        {
+          "difference": 0.0006925371944029265,
+          "id": "REVIEW_ARTICLE_0134"
+        },
+        {
+          "difference": 0.04980448152274242,
+          "id": "REVIEW_ARTICLE_0135"
+        },
+        {
+          "difference": -0.023894278875349027,
+          "id": "REVIEW_ARTICLE_0136"
+        },
+        {
+          "difference": 0.02138384837666233,
+          "id": "REVIEW_ARTICLE_0137"
+        },
+        {
+          "difference": 0.013546593118831435,
+          "id": "REVIEW_ARTICLE_0138"
+        },
+        {
+          "difference": -0.06290572505817339,
+          "id": "REVIEW_ARTICLE_0139"
+        },
+        {
+          "difference": 0.021606788595931008,
+          "id": "REVIEW_ARTICLE_0140"
+        },
+        {
+          "difference": -0.03188063849039929,
+          "id": "REVIEW_ARTICLE_0141"
+        },
+        {
+          "difference": 0.00021521628411309802,
+          "id": "REVIEW_ARTICLE_0142"
+        },
+        {
+          "difference": 0.0328214050976888,
+          "id": "REVIEW_ARTICLE_0143"
+        },
+        {
+          "difference": -0.021633489429165112,
+          "id": "REVIEW_ARTICLE_0144"
+        },
+        {
+          "difference": -0.0030283535289611354,
+          "id": "REVIEW_ARTICLE_0145"
+        },
+        {
+          "difference": -0.0701730464835437,
+          "id": "REVIEW_ARTICLE_0146"
+        },
+        {
+          "difference": -0.008965929324608981,
+          "id": "REVIEW_ARTICLE_0147"
+        },
+        {
+          "difference": -0.004682152968566304,
+          "id": "REVIEW_ARTICLE_0148"
+        },
+        {
+          "difference": 0.02907337312314656,
+          "id": "REVIEW_ARTICLE_0149"
+        },
+        {
+          "difference": -0.01702254113146191,
+          "id": "REVIEW_ARTICLE_0150"
+        },
+        {
+          "difference": -0.05902329472514239,
+          "id": "REVIEW_ARTICLE_0151"
+        },
+        {
+          "difference": 0.07617347551813303,
+          "id": "REVIEW_ARTICLE_0152"
+        },
+        {
+          "difference": -0.03450189962525362,
+          "id": "REVIEW_ARTICLE_0153"
+        },
+        {
+          "difference": 0.02381021505717904,
+          "id": "REVIEW_ARTICLE_0154"
+        },
+        {
+          "difference": 0.028893235505982044,
+          "id": "REVIEW_ARTICLE_0155"
+        },
+        {
+          "difference": -0.019609925818583437,
+          "id": "REVIEW_ARTICLE_0156"
+        },
+        {
+          "difference": -0.02970218854158172,
+          "id": "REVIEW_ARTICLE_0157"
+        },
+        {
+          "difference": -0.04057769323409284,
+          "id": "REVIEW_ARTICLE_0158"
+        },
+        {
+          "difference": -0.0325661417302818,
+          "id": "REVIEW_ARTICLE_0159"
+        },
+        {
+          "difference": 0.0342191552112445,
+          "id": "REVIEW_ARTICLE_0160"
+        },
+        {
+          "difference": -0.01332994954428456,
+          "id": "REVIEW_ARTICLE_0161"
+        },
+        {
+          "difference": 0.04315567857329513,
+          "id": "REVIEW_ARTICLE_0162"
+        },
+        {
+          "difference": 0.022260261069403695,
+          "id": "REVIEW_ARTICLE_0163"
+        },
+        {
+          "difference": 0.031210660126440526,
+          "id": "REVIEW_ARTICLE_0164"
+        },
+        {
+          "difference": -0.03591515779609386,
+          "id": "REVIEW_ARTICLE_0165"
+        },
+        {
+          "difference": 0.05699639830937874,
+          "id": "REVIEW_ARTICLE_0166"
+        },
+        {
+          "difference": -0.009502914986503727,
+          "id": "REVIEW_ARTICLE_0167"
+        },
+        {
+          "difference": -0.028159169425782605,
+          "id": "REVIEW_ARTICLE_0168"
+        },
+        {
+          "difference": -0.06127722345938066,
+          "id": "REVIEW_ARTICLE_0169"
+        },
+        {
+          "difference": 0.016289035541186284,
+          "id": "REVIEW_ARTICLE_0170"
+        },
+        {
+          "difference": -0.0792142647629718,
+          "id": "REVIEW_ARTICLE_0171"
+        },
+        {
+          "difference": 0.010988781133225912,
+          "id": "REVIEW_ARTICLE_0172"
+        },
+        {
+          "difference": -0.005807905046032728,
+          "id": "REVIEW_ARTICLE_0173"
+        },
+        {
+          "difference": -0.032995608555245234,
+          "id": "REVIEW_ARTICLE_0174"
+        },
+        {
+          "difference": -0.026704440302650054,
+          "id": "REVIEW_ARTICLE_0175"
+        },
+        {
+          "difference": 0.052976247395449934,
+          "id": "REVIEW_ARTICLE_0176"
+        },
+        {
+          "difference": -0.10069123823107234,
+          "id": "REVIEW_ARTICLE_0177"
+        },
+        {
+          "difference": 0.027567054077229747,
+          "id": "REVIEW_ARTICLE_0178"
+        },
+        {
+          "difference": -0.01926254969350883,
+          "id": "REVIEW_ARTICLE_0179"
+        },
+        {
+          "difference": -0.04412070671435052,
+          "id": "REVIEW_ARTICLE_0180"
+        },
+        {
+          "difference": 0.022672461998565527,
+          "id": "REVIEW_ARTICLE_0181"
+        },
+        {
+          "difference": 0.036279164401449404,
+          "id": "REVIEW_ARTICLE_0182"
+        },
+        {
+          "difference": -0.016166248504817297,
+          "id": "REVIEW_ARTICLE_0183"
+        },
+        {
+          "difference": 0.05681917721546139,
+          "id": "REVIEW_ARTICLE_0184"
+        },
+        {
+          "difference": -0.06116958571257647,
+          "id": "REVIEW_ARTICLE_0185"
+        },
+        {
+          "difference": 0.10975777625075116,
+          "id": "REVIEW_ARTICLE_0186"
+        },
+        {
+          "difference": 0.0775283855346723,
+          "id": "REVIEW_ARTICLE_0187"
+        },
+        {
+          "difference": -0.004521233399807765,
+          "id": "REVIEW_ARTICLE_0188"
+        },
+        {
+          "difference": 0.0011130192081421721,
+          "id": "REVIEW_ARTICLE_0189"
+        },
+        {
+          "difference": -0.03050435120391693,
+          "id": "REVIEW_ARTICLE_0190"
+        },
+        {
+          "difference": 0.055771288567053115,
+          "id": "REVIEW_ARTICLE_0191"
+        },
+        {
+          "difference": 0.0265402721833655,
+          "id": "REVIEW_ARTICLE_0192"
+        },
+        {
+          "difference": -0.03086578041165877,
+          "id": "REVIEW_ARTICLE_0193"
+        },
+        {
+          "difference": -0.009957924768588504,
+          "id": "REVIEW_ARTICLE_0194"
+        },
+        {
+          "difference": 0.05622990734686632,
+          "id": "REVIEW_ARTICLE_0195"
+        },
+        {
+          "difference": -0.07875573030506704,
+          "id": "REVIEW_ARTICLE_0196"
+        },
+        {
+          "difference": 0.03847433880425313,
+          "id": "REVIEW_ARTICLE_0197"
+        },
+        {
+          "difference": 0.032039704374205835,
+          "id": "REVIEW_ARTICLE_0198"
+        },
+        {
+          "difference": 0.003772957486108415,
+          "id": "REVIEW_ARTICLE_0199"
+        },
+        {
+          "difference": -0.02564740305787002,
+          "id": "REVIEW_ARTICLE_0200"
+        },
+        {
+          "difference": 0.053877203594650855,
+          "id": "REVIEW_ARTICLE_0201"
+        },
+        {
+          "difference": 0.01789481774549525,
+          "id": "REVIEW_ARTICLE_0202"
+        },
+        {
+          "difference": -0.02305406631267051,
+          "id": "REVIEW_ARTICLE_0203"
+        },
+        {
+          "difference": -0.031934531072572214,
+          "id": "REVIEW_ARTICLE_0204"
+        },
+        {
+          "difference": -0.0244545004509882,
+          "id": "REVIEW_ARTICLE_0205"
+        },
+        {
+          "difference": -0.05393976254667117,
+          "id": "REVIEW_ARTICLE_0206"
+        },
+        {
+          "difference": 0.049255036846196296,
+          "id": "REVIEW_ARTICLE_0207"
+        },
+        {
+          "difference": 0.11506174247938361,
+          "id": "REVIEW_ARTICLE_0208"
+        },
+        {
+          "difference": 0.1105356545553379,
+          "id": "REVIEW_ARTICLE_0209"
+        },
+        {
+          "difference": 0.029608177253171705,
+          "id": "REVIEW_ARTICLE_0210"
+        },
+        {
+          "difference": 0.04465315094145314,
+          "id": "REVIEW_ARTICLE_0211"
+        },
+        {
+          "difference": 0.0011722262413992734,
+          "id": "REVIEW_ARTICLE_0212"
+        },
+        {
+          "difference": -0.06656112844336401,
+          "id": "REVIEW_ARTICLE_0213"
+        },
+        {
+          "difference": -0.008300124524777219,
+          "id": "REVIEW_ARTICLE_0214"
+        },
+        {
+          "difference": 0.012742465570799978,
+          "id": "REVIEW_ARTICLE_0215"
+        },
+        {
+          "difference": -0.02765024539920472,
+          "id": "REVIEW_ARTICLE_0216"
+        },
+        {
+          "difference": 0.05329331172916721,
+          "id": "REVIEW_ARTICLE_0217"
+        },
+        {
+          "difference": 0.030015131129021672,
+          "id": "REVIEW_ARTICLE_0218"
+        },
+        {
+          "difference": 0.02331710562231227,
+          "id": "REVIEW_ARTICLE_0219"
+        },
+        {
+          "difference": 0.033181835427325314,
+          "id": "REVIEW_ARTICLE_0220"
+        },
+        {
+          "difference": 0.09353788582296964,
+          "id": "REVIEW_ARTICLE_0221"
+        },
+        {
+          "difference": -0.03682699217881512,
+          "id": "REVIEW_ARTICLE_0222"
+        },
+        {
+          "difference": -0.060006871014938436,
+          "id": "REVIEW_ARTICLE_0223"
+        },
+        {
+          "difference": -0.026721137721055787,
+          "id": "REVIEW_ARTICLE_0224"
+        },
+        {
+          "difference": 0.0067314017806776125,
+          "id": "REVIEW_ARTICLE_0225"
+        },
+        {
+          "difference": 0.006956032413661773,
+          "id": "REVIEW_ARTICLE_0226"
+        },
+        {
+          "difference": 0.014211747589714345,
+          "id": "REVIEW_ARTICLE_0227"
+        },
+        {
+          "difference": 0.021903538320369592,
+          "id": "REVIEW_ARTICLE_0228"
+        },
+        {
+          "difference": 0.0027690921862050725,
+          "id": "REVIEW_ARTICLE_0229"
+        },
+        {
+          "difference": -0.042866824676544964,
+          "id": "REVIEW_ARTICLE_0230"
+        },
+        {
+          "difference": 0.026905216632756253,
+          "id": "REVIEW_ARTICLE_0231"
+        },
+        {
+          "difference": 0.0007840374298724761,
+          "id": "REVIEW_ARTICLE_0232"
+        },
+        {
+          "difference": 0.019712111557692685,
+          "id": "REVIEW_ARTICLE_0233"
+        },
+        {
+          "difference": 0.08827801315643911,
+          "id": "REVIEW_ARTICLE_0234"
+        },
+        {
+          "difference": -0.06748101431729246,
+          "id": "REVIEW_ARTICLE_0235"
+        },
+        {
+          "difference": -0.03243957257839747,
+          "id": "REVIEW_ARTICLE_0236"
+        },
+        {
+          "difference": -0.011505723714145107,
+          "id": "REVIEW_ARTICLE_0237"
+        },
+        {
+          "difference": 0.041445481344430754,
+          "id": "REVIEW_ARTICLE_0238"
+        },
+        {
+          "difference": -0.0002015586338045541,
+          "id": "REVIEW_ARTICLE_0239"
+        },
+        {
+          "difference": -0.045749677127403854,
+          "id": "REVIEW_ARTICLE_0240"
+        },
+        {
+          "difference": 0.014416771176261977,
+          "id": "REVIEW_ARTICLE_0241"
+        },
+        {
+          "difference": -0.044752337781770214,
+          "id": "REVIEW_ARTICLE_0242"
+        },
+        {
+          "difference": 0.006400096886895379,
+          "id": "REVIEW_ARTICLE_0243"
+        },
+        {
+          "difference": -0.08910444811450821,
+          "id": "REVIEW_ARTICLE_0244"
+        },
+        {
+          "difference": 0.008381452735934956,
+          "id": "REVIEW_ARTICLE_0245"
+        },
+        {
+          "difference": 0.054412443125329446,
+          "id": "REVIEW_ARTICLE_0246"
+        },
+        {
+          "difference": 0.008612441241227073,
+          "id": "REVIEW_ARTICLE_0247"
+        },
+        {
+          "difference": 0.010981417562290756,
+          "id": "REVIEW_ARTICLE_0248"
+        },
+        {
+          "difference": 0.03707841175969675,
+          "id": "REVIEW_ARTICLE_0249"
+        },
+        {
+          "difference": 0.12145638622993156,
+          "id": "REVIEW_ARTICLE_0250"
+        },
+        {
+          "difference": -0.01605708517014838,
+          "id": "REVIEW_ARTICLE_0251"
+        },
+        {
+          "difference": 0.10600350281491164,
+          "id": "REVIEW_ARTICLE_0252"
+        },
+        {
+          "difference": 0.028542750829513165,
+          "id": "REVIEW_ARTICLE_0253"
+        },
+        {
+          "difference": 0.005474842026149589,
+          "id": "REVIEW_ARTICLE_0254"
+        },
+        {
+          "difference": 0.010847440472763462,
+          "id": "REVIEW_ARTICLE_0255"
+        },
+        {
+          "difference": 0.057882225970628295,
+          "id": "REVIEW_ARTICLE_0256"
+        },
+        {
+          "difference": 0.06484705829661906,
+          "id": "REVIEW_ARTICLE_0257"
+        },
+        {
+          "difference": -0.003405570029602984,
+          "id": "REVIEW_ARTICLE_0258"
+        },
+        {
+          "difference": -0.04560349261954597,
+          "id": "REVIEW_ARTICLE_0259"
+        },
+        {
+          "difference": 0.0321307367627528,
+          "id": "REVIEW_ARTICLE_0260"
+        },
+        {
+          "difference": 0.08528938545982227,
+          "id": "REVIEW_ARTICLE_0261"
+        },
+        {
+          "difference": -0.00016488577478002492,
+          "id": "REVIEW_ARTICLE_0262"
+        },
+        {
+          "difference": 0.0069425879145197135,
+          "id": "REVIEW_ARTICLE_0263"
+        },
+        {
+          "difference": 0.026776952865100245,
+          "id": "REVIEW_ARTICLE_0264"
+        },
+        {
+          "difference": 0.015439850097984492,
+          "id": "REVIEW_ARTICLE_0265"
+        },
+        {
+          "difference": -0.03924061870093748,
+          "id": "REVIEW_ARTICLE_0266"
+        },
+        {
+          "difference": -0.021263107941135822,
+          "id": "REVIEW_ARTICLE_0267"
+        },
+        {
+          "difference": 0.034161862580458814,
+          "id": "REVIEW_ARTICLE_0268"
+        },
+        {
+          "difference": 0.030968239290839444,
+          "id": "REVIEW_ARTICLE_0269"
+        },
+        {
+          "difference": 0.020703361467275406,
+          "id": "REVIEW_ARTICLE_0270"
+        },
+        {
+          "difference": 0.06980866053516359,
+          "id": "REVIEW_ARTICLE_0271"
+        },
+        {
+          "difference": 0.028097034695307,
+          "id": "REVIEW_ARTICLE_0272"
+        },
+        {
+          "difference": -0.05137184813603327,
+          "id": "REVIEW_ARTICLE_0273"
+        },
+        {
+          "difference": 0.06700607240585629,
+          "id": "REVIEW_ARTICLE_0274"
+        },
+        {
+          "difference": -0.02280567167888618,
+          "id": "REVIEW_ARTICLE_0275"
+        },
+        {
+          "difference": -0.03990118302943563,
+          "id": "REVIEW_ARTICLE_0276"
+        },
+        {
+          "difference": 0.07646732440983216,
+          "id": "REVIEW_ARTICLE_0277"
+        },
+        {
+          "difference": -0.06489076113581539,
+          "id": "REVIEW_ARTICLE_0278"
+        },
+        {
+          "difference": -0.04713182434117275,
+          "id": "REVIEW_ARTICLE_0279"
+        },
+        {
+          "difference": 0.045406063970506866,
+          "id": "REVIEW_ARTICLE_0280"
+        },
+        {
+          "difference": 0.007349262670572003,
+          "id": "REVIEW_ARTICLE_0281"
+        },
+        {
+          "difference": 0.03581223864908701,
+          "id": "REVIEW_ARTICLE_0282"
+        },
+        {
+          "difference": 0.1080745021380658,
+          "id": "REVIEW_ARTICLE_0283"
+        },
+        {
+          "difference": 0.011636043211182383,
+          "id": "REVIEW_ARTICLE_0284"
+        },
+        {
+          "difference": -0.019044511519016344,
+          "id": "REVIEW_ARTICLE_0285"
+        },
+        {
+          "difference": -0.03425451034734052,
+          "id": "REVIEW_ARTICLE_0286"
+        },
+        {
+          "difference": 0.0558011720566966,
+          "id": "REVIEW_ARTICLE_0287"
+        },
+        {
+          "difference": -0.06772407577676676,
+          "id": "REVIEW_ARTICLE_0288"
+        },
+        {
+          "difference": 0.03697710750287036,
+          "id": "REVIEW_ARTICLE_0289"
+        },
+        {
+          "difference": 0.047227527112783906,
+          "id": "REVIEW_ARTICLE_0290"
+        },
+        {
+          "difference": -0.0014638456978089624,
+          "id": "REVIEW_ARTICLE_0291"
+        },
+        {
+          "difference": 0.013188929206076026,
+          "id": "REVIEW_ARTICLE_0292"
+        },
+        {
+          "difference": -0.0041430904034734884,
+          "id": "REVIEW_ARTICLE_0293"
+        },
+        {
+          "difference": 0.016762388246404514,
+          "id": "REVIEW_ARTICLE_0294"
+        },
+        {
+          "difference": 0.012352792810855861,
+          "id": "REVIEW_ARTICLE_0295"
+        },
+        {
+          "difference": 0.10513440822226972,
+          "id": "REVIEW_ARTICLE_0296"
+        },
+        {
+          "difference": -0.014936805100801859,
+          "id": "REVIEW_ARTICLE_0297"
+        },
+        {
+          "difference": 0.04634940480959195,
+          "id": "REVIEW_ARTICLE_0298"
+        },
+        {
+          "difference": -0.014855514174412094,
+          "id": "REVIEW_ARTICLE_0299"
+        },
+        {
+          "difference": 0.017651297822180643,
+          "id": "REVIEW_ARTICLE_0300"
+        },
+        {
+          "difference": -0.00513248082956121,
+          "id": "REVIEW_ARTICLE_0301"
+        },
+        {
+          "difference": -0.006791619208039573,
+          "id": "REVIEW_ARTICLE_0302"
+        },
+        {
+          "difference": 0.02908177215860004,
+          "id": "REVIEW_ARTICLE_0303"
+        },
+        {
+          "difference": -0.08871769261589531,
+          "id": "REVIEW_ARTICLE_0304"
+        },
+        {
+          "difference": 0.0683865797745156,
+          "id": "REVIEW_ARTICLE_0305"
+        },
+        {
+          "difference": 0.08158833557738794,
+          "id": "REVIEW_ARTICLE_0306"
+        },
+        {
+          "difference": -0.0008062853990621107,
+          "id": "REVIEW_ARTICLE_0307"
+        },
+        {
+          "difference": 0.05623578439031365,
+          "id": "REVIEW_ARTICLE_0308"
+        },
+        {
+          "difference": 0.0515538291257255,
+          "id": "REVIEW_ARTICLE_0309"
+        },
+        {
+          "difference": -0.0459107436427496,
+          "id": "REVIEW_ARTICLE_0310"
+        },
+        {
+          "difference": 0.0377740494600228,
+          "id": "REVIEW_ARTICLE_0311"
+        },
+        {
+          "difference": 0.06569748469439494,
+          "id": "REVIEW_ARTICLE_0312"
+        },
+        {
+          "difference": 0.048009515678276736,
+          "id": "REVIEW_ARTICLE_0313"
+        },
+        {
+          "difference": -0.014583596489664282,
+          "id": "REVIEW_ARTICLE_0314"
+        },
+        {
+          "difference": 0.007858882934278326,
+          "id": "REVIEW_ARTICLE_0315"
+        },
+        {
+          "difference": 0.0746840277497142,
+          "id": "REVIEW_ARTICLE_0316"
+        },
+        {
+          "difference": 0.02689889597527693,
+          "id": "REVIEW_ARTICLE_0317"
+        },
+        {
+          "difference": 0.00878667413609506,
+          "id": "REVIEW_ARTICLE_0318"
+        },
+        {
+          "difference": 0.04244292699063918,
+          "id": "REVIEW_ARTICLE_0319"
+        },
+        {
+          "difference": 0.0052510867441322795,
+          "id": "REVIEW_ARTICLE_0320"
+        },
+        {
+          "difference": 0.04338459120888041,
+          "id": "REVIEW_ARTICLE_0321"
+        },
+        {
+          "difference": 0.04208687044216969,
+          "id": "REVIEW_ARTICLE_0322"
+        }
+      ],
+      "gate_pass": true,
+      "log_maximum_article_ratio": 0.12145638622993156,
+      "log_one_sided_97_5_upper": 0.010288408448078934,
+      "log_pooled_ratio": 0.005406349588089282,
+      "log_two_sided_95_percentile_interval": [
+        0.00045517526204143455,
+        0.010288408448078934
+      ],
+      "maximum_article_ratio": 1.129140118793723,
+      "observed_maximum_guard_pass": true,
+      "observed_pooled_guard_pass": true,
+      "one_sided_97_5_upper": 1.0103415160970775,
+      "pooled_ratio": 1.0054209902683444,
+      "two_sided_95_percentile_interval": [
+        1.0004552788700203,
+        1.0103415160970775
+      ],
+      "uncertainty_guard_pass": true
+    },
+    "6": {
+      "article_difference_quantiles": {
+        "0": -0.11922185509240445,
+        "0.25": -0.019003571136288536,
+        "0.5": 0.007295669020993232,
+        "0.75": 0.03502549898595192,
+        "1": 0.11952433906045071
+      },
+      "article_paired_mean_nll": [
+        {
+          "difference": 0.04009820302185451,
+          "id": "REVIEW_ARTICLE_0003"
+        },
+        {
+          "difference": -0.017046897026710313,
+          "id": "REVIEW_ARTICLE_0004"
+        },
+        {
+          "difference": 0.04135826336264866,
+          "id": "REVIEW_ARTICLE_0005"
+        },
+        {
+          "difference": 0.008090940724719881,
+          "id": "REVIEW_ARTICLE_0006"
+        },
+        {
+          "difference": 0.04201317762595598,
+          "id": "REVIEW_ARTICLE_0007"
+        },
+        {
+          "difference": -0.03578082600049127,
+          "id": "REVIEW_ARTICLE_0008"
+        },
+        {
+          "difference": 0.05630915476340252,
+          "id": "REVIEW_ARTICLE_0009"
+        },
+        {
+          "difference": 0.0014663732112844949,
+          "id": "REVIEW_ARTICLE_0010"
+        },
+        {
+          "difference": 0.007502107106603486,
+          "id": "REVIEW_ARTICLE_0011"
+        },
+        {
+          "difference": 0.05404491406611705,
+          "id": "REVIEW_ARTICLE_0012"
+        },
+        {
+          "difference": -0.044535406516889614,
+          "id": "REVIEW_ARTICLE_0013"
+        },
+        {
+          "difference": -0.0949374065462346,
+          "id": "REVIEW_ARTICLE_0014"
+        },
+        {
+          "difference": 0.044856056463179736,
+          "id": "REVIEW_ARTICLE_0015"
+        },
+        {
+          "difference": 0.046740747537385,
+          "id": "REVIEW_ARTICLE_0016"
+        },
+        {
+          "difference": -0.060877518618897696,
+          "id": "REVIEW_ARTICLE_0017"
+        },
+        {
+          "difference": 0.09339912527079063,
+          "id": "REVIEW_ARTICLE_0018"
+        },
+        {
+          "difference": 0.025389373846911353,
+          "id": "REVIEW_ARTICLE_0019"
+        },
+        {
+          "difference": 0.037364779411888316,
+          "id": "REVIEW_ARTICLE_0020"
+        },
+        {
+          "difference": 0.03388158229344707,
+          "id": "REVIEW_ARTICLE_0021"
+        },
+        {
+          "difference": -0.01040751378526,
+          "id": "REVIEW_ARTICLE_0022"
+        },
+        {
+          "difference": -0.00267488942561373,
+          "id": "REVIEW_ARTICLE_0023"
+        },
+        {
+          "difference": 0.030742390671725735,
+          "id": "REVIEW_ARTICLE_0024"
+        },
+        {
+          "difference": 0.017948373992292394,
+          "id": "REVIEW_ARTICLE_0025"
+        },
+        {
+          "difference": -0.0210348439182623,
+          "id": "REVIEW_ARTICLE_0026"
+        },
+        {
+          "difference": 0.0037920744501634077,
+          "id": "REVIEW_ARTICLE_0027"
+        },
+        {
+          "difference": -0.009173989952133045,
+          "id": "REVIEW_ARTICLE_0028"
+        },
+        {
+          "difference": 0.010527783266048916,
+          "id": "REVIEW_ARTICLE_0029"
+        },
+        {
+          "difference": 0.024460050076354527,
+          "id": "REVIEW_ARTICLE_0030"
+        },
+        {
+          "difference": -0.07550692499572366,
+          "id": "REVIEW_ARTICLE_0031"
+        },
+        {
+          "difference": -0.025285300492895225,
+          "id": "REVIEW_ARTICLE_0032"
+        },
+        {
+          "difference": -0.0199799255511727,
+          "id": "REVIEW_ARTICLE_0033"
+        },
+        {
+          "difference": -0.0121174877363252,
+          "id": "REVIEW_ARTICLE_0034"
+        },
+        {
+          "difference": -0.015651688403083182,
+          "id": "REVIEW_ARTICLE_0035"
+        },
+        {
+          "difference": 0.014232366681730715,
+          "id": "REVIEW_ARTICLE_0036"
+        },
+        {
+          "difference": 0.014368574801381769,
+          "id": "REVIEW_ARTICLE_0037"
+        },
+        {
+          "difference": -0.030642807720170365,
+          "id": "REVIEW_ARTICLE_0038"
+        },
+        {
+          "difference": 0.08050807864216634,
+          "id": "REVIEW_ARTICLE_0039"
+        },
+        {
+          "difference": 0.0469225579531828,
+          "id": "REVIEW_ARTICLE_0040"
+        },
+        {
+          "difference": -0.03661181596842565,
+          "id": "REVIEW_ARTICLE_0041"
+        },
+        {
+          "difference": 0.038696502433211884,
+          "id": "REVIEW_ARTICLE_0042"
+        },
+        {
+          "difference": 0.03784394564860842,
+          "id": "REVIEW_ARTICLE_0043"
+        },
+        {
+          "difference": 0.02960045560192651,
+          "id": "REVIEW_ARTICLE_0044"
+        },
+        {
+          "difference": -0.022066718346217935,
+          "id": "REVIEW_ARTICLE_0045"
+        },
+        {
+          "difference": 0.053217564590265574,
+          "id": "REVIEW_ARTICLE_0046"
+        },
+        {
+          "difference": 0.048503596160038236,
+          "id": "REVIEW_ARTICLE_0047"
+        },
+        {
+          "difference": 0.006011507633582004,
+          "id": "REVIEW_ARTICLE_0048"
+        },
+        {
+          "difference": -0.012207396872483737,
+          "id": "REVIEW_ARTICLE_0049"
+        },
+        {
+          "difference": 0.0012861274510239636,
+          "id": "REVIEW_ARTICLE_0050"
+        },
+        {
+          "difference": 0.01120006432061233,
+          "id": "REVIEW_ARTICLE_0051"
+        },
+        {
+          "difference": -0.011065657543357215,
+          "id": "REVIEW_ARTICLE_0052"
+        },
+        {
+          "difference": 0.014733468266045949,
+          "id": "REVIEW_ARTICLE_0053"
+        },
+        {
+          "difference": -0.037964439017066864,
+          "id": "REVIEW_ARTICLE_0054"
+        },
+        {
+          "difference": 0.0015914379679584523,
+          "id": "REVIEW_ARTICLE_0055"
+        },
+        {
+          "difference": -0.04083076900684949,
+          "id": "REVIEW_ARTICLE_0056"
+        },
+        {
+          "difference": -0.0340779417500949,
+          "id": "REVIEW_ARTICLE_0057"
+        },
+        {
+          "difference": -0.021677876633582956,
+          "id": "REVIEW_ARTICLE_0058"
+        },
+        {
+          "difference": -0.005516252202537132,
+          "id": "REVIEW_ARTICLE_0059"
+        },
+        {
+          "difference": 0.015236549912983503,
+          "id": "REVIEW_ARTICLE_0060"
+        },
+        {
+          "difference": 0.06356161998082226,
+          "id": "REVIEW_ARTICLE_0061"
+        },
+        {
+          "difference": -0.04375178089058303,
+          "id": "REVIEW_ARTICLE_0062"
+        },
+        {
+          "difference": -0.003007638302422915,
+          "id": "REVIEW_ARTICLE_0063"
+        },
+        {
+          "difference": 0.03129240405371995,
+          "id": "REVIEW_ARTICLE_0064"
+        },
+        {
+          "difference": 0.018796210199976543,
+          "id": "REVIEW_ARTICLE_0065"
+        },
+        {
+          "difference": -0.018580871345352714,
+          "id": "REVIEW_ARTICLE_0066"
+        },
+        {
+          "difference": -0.0332399376666763,
+          "id": "REVIEW_ARTICLE_0067"
+        },
+        {
+          "difference": -0.008859133280042637,
+          "id": "REVIEW_ARTICLE_0068"
+        },
+        {
+          "difference": 0.028460116627564376,
+          "id": "REVIEW_ARTICLE_0069"
+        },
+        {
+          "difference": -0.02411663766036964,
+          "id": "REVIEW_ARTICLE_0070"
+        },
+        {
+          "difference": -0.011707702458912665,
+          "id": "REVIEW_ARTICLE_0071"
+        },
+        {
+          "difference": 0.046949687393096136,
+          "id": "REVIEW_ARTICLE_0072"
+        },
+        {
+          "difference": -0.039563363529492836,
+          "id": "REVIEW_ARTICLE_0073"
+        },
+        {
+          "difference": 0.03521571852334682,
+          "id": "REVIEW_ARTICLE_0074"
+        },
+        {
+          "difference": -0.06011984119098761,
+          "id": "REVIEW_ARTICLE_0075"
+        },
+        {
+          "difference": 0.039549318995623285,
+          "id": "REVIEW_ARTICLE_0076"
+        },
+        {
+          "difference": 0.03502549898595192,
+          "id": "REVIEW_ARTICLE_0077"
+        },
+        {
+          "difference": -0.051514998556873845,
+          "id": "REVIEW_ARTICLE_0078"
+        },
+        {
+          "difference": 0.0936542082755066,
+          "id": "REVIEW_ARTICLE_0079"
+        },
+        {
+          "difference": 0.0020221259495951747,
+          "id": "REVIEW_ARTICLE_0080"
+        },
+        {
+          "difference": 0.00813662940745157,
+          "id": "REVIEW_ARTICLE_0081"
+        },
+        {
+          "difference": 0.010142582147277894,
+          "id": "REVIEW_ARTICLE_0082"
+        },
+        {
+          "difference": 0.013417925725259985,
+          "id": "REVIEW_ARTICLE_0083"
+        },
+        {
+          "difference": -0.0007977219227847503,
+          "id": "REVIEW_ARTICLE_0084"
+        },
+        {
+          "difference": -0.005350827884997198,
+          "id": "REVIEW_ARTICLE_0085"
+        },
+        {
+          "difference": 0.07307040472398232,
+          "id": "REVIEW_ARTICLE_0086"
+        },
+        {
+          "difference": -0.05467917846104991,
+          "id": "REVIEW_ARTICLE_0087"
+        },
+        {
+          "difference": 0.032099448722871377,
+          "id": "REVIEW_ARTICLE_0088"
+        },
+        {
+          "difference": -0.033977761197696854,
+          "id": "REVIEW_ARTICLE_0089"
+        },
+        {
+          "difference": 0.032248531557146146,
+          "id": "REVIEW_ARTICLE_0090"
+        },
+        {
+          "difference": 0.03185630042748371,
+          "id": "REVIEW_ARTICLE_0091"
+        },
+        {
+          "difference": 0.017261490608866444,
+          "id": "REVIEW_ARTICLE_0092"
+        },
+        {
+          "difference": -0.01663346909006982,
+          "id": "REVIEW_ARTICLE_0093"
+        },
+        {
+          "difference": -0.016322040348322252,
+          "id": "REVIEW_ARTICLE_0094"
+        },
+        {
+          "difference": 0.018806924985111922,
+          "id": "REVIEW_ARTICLE_0095"
+        },
+        {
+          "difference": 0.023808915108335403,
+          "id": "REVIEW_ARTICLE_0096"
+        },
+        {
+          "difference": -0.05084143022591659,
+          "id": "REVIEW_ARTICLE_0097"
+        },
+        {
+          "difference": -0.056493789905192625,
+          "id": "REVIEW_ARTICLE_0098"
+        },
+        {
+          "difference": 0.05673688137202308,
+          "id": "REVIEW_ARTICLE_0099"
+        },
+        {
+          "difference": 0.0011578824122360728,
+          "id": "REVIEW_ARTICLE_0100"
+        },
+        {
+          "difference": -0.0014433790196093697,
+          "id": "REVIEW_ARTICLE_0101"
+        },
+        {
+          "difference": -0.0701838632940008,
+          "id": "REVIEW_ARTICLE_0102"
+        },
+        {
+          "difference": 0.041397468759671,
+          "id": "REVIEW_ARTICLE_0103"
+        },
+        {
+          "difference": 0.11952433906045071,
+          "id": "REVIEW_ARTICLE_0104"
+        },
+        {
+          "difference": 0.046457345806352246,
+          "id": "REVIEW_ARTICLE_0105"
+        },
+        {
+          "difference": -0.010851495011872509,
+          "id": "REVIEW_ARTICLE_0106"
+        },
+        {
+          "difference": -0.01637506673371066,
+          "id": "REVIEW_ARTICLE_0107"
+        },
+        {
+          "difference": 0.03464035764882623,
+          "id": "REVIEW_ARTICLE_0108"
+        },
+        {
+          "difference": 0.007834571203094078,
+          "id": "REVIEW_ARTICLE_0109"
+        },
+        {
+          "difference": 0.002445094735694905,
+          "id": "REVIEW_ARTICLE_0110"
+        },
+        {
+          "difference": -0.09275279590646794,
+          "id": "REVIEW_ARTICLE_0111"
+        },
+        {
+          "difference": 0.0672694209797591,
+          "id": "REVIEW_ARTICLE_0112"
+        },
+        {
+          "difference": -0.011434879443519223,
+          "id": "REVIEW_ARTICLE_0113"
+        },
+        {
+          "difference": 0.06294512411533217,
+          "id": "REVIEW_ARTICLE_0114"
+        },
+        {
+          "difference": -0.023045769153378033,
+          "id": "REVIEW_ARTICLE_0115"
+        },
+        {
+          "difference": -0.014244761540316548,
+          "id": "REVIEW_ARTICLE_0116"
+        },
+        {
+          "difference": 0.022347474508636177,
+          "id": "REVIEW_ARTICLE_0117"
+        },
+        {
+          "difference": 0.037175590642508666,
+          "id": "REVIEW_ARTICLE_0118"
+        },
+        {
+          "difference": 0.00011244927497507774,
+          "id": "REVIEW_ARTICLE_0119"
+        },
+        {
+          "difference": -0.030217079783289958,
+          "id": "REVIEW_ARTICLE_0120"
+        },
+        {
+          "difference": -0.0359073156490623,
+          "id": "REVIEW_ARTICLE_0121"
+        },
+        {
+          "difference": -0.011727625621456874,
+          "id": "REVIEW_ARTICLE_0122"
+        },
+        {
+          "difference": -0.00264457729192743,
+          "id": "REVIEW_ARTICLE_0123"
+        },
+        {
+          "difference": 0.03630453671746233,
+          "id": "REVIEW_ARTICLE_0124"
+        },
+        {
+          "difference": 0.06645281775297911,
+          "id": "REVIEW_ARTICLE_0125"
+        },
+        {
+          "difference": -0.01992669126847598,
+          "id": "REVIEW_ARTICLE_0126"
+        },
+        {
+          "difference": 0.0056615402533821465,
+          "id": "REVIEW_ARTICLE_0127"
+        },
+        {
+          "difference": -0.028710981205180123,
+          "id": "REVIEW_ARTICLE_0128"
+        },
+        {
+          "difference": 0.06860429301936502,
+          "id": "REVIEW_ARTICLE_0129"
+        },
+        {
+          "difference": -0.04162992482633809,
+          "id": "REVIEW_ARTICLE_0130"
+        },
+        {
+          "difference": -0.019755968894577022,
+          "id": "REVIEW_ARTICLE_0131"
+        },
+        {
+          "difference": -0.01110651408281384,
+          "id": "REVIEW_ARTICLE_0132"
+        },
+        {
+          "difference": -0.01566947276435938,
+          "id": "REVIEW_ARTICLE_0133"
+        },
+        {
+          "difference": -0.0192848494186667,
+          "id": "REVIEW_ARTICLE_0134"
+        },
+        {
+          "difference": 0.049620389723601846,
+          "id": "REVIEW_ARTICLE_0135"
+        },
+        {
+          "difference": 0.019410515956385696,
+          "id": "REVIEW_ARTICLE_0136"
+        },
+        {
+          "difference": 0.10900036059734527,
+          "id": "REVIEW_ARTICLE_0137"
+        },
+        {
+          "difference": -0.006136637941631844,
+          "id": "REVIEW_ARTICLE_0138"
+        },
+        {
+          "difference": 0.029772661244981832,
+          "id": "REVIEW_ARTICLE_0139"
+        },
+        {
+          "difference": 0.08852334309582519,
+          "id": "REVIEW_ARTICLE_0140"
+        },
+        {
+          "difference": 0.02103648258628926,
+          "id": "REVIEW_ARTICLE_0141"
+        },
+        {
+          "difference": -0.0047364190824538575,
+          "id": "REVIEW_ARTICLE_0142"
+        },
+        {
+          "difference": -0.013578562900594029,
+          "id": "REVIEW_ARTICLE_0143"
+        },
+        {
+          "difference": 0.05763486146832885,
+          "id": "REVIEW_ARTICLE_0144"
+        },
+        {
+          "difference": -0.028411667335864796,
+          "id": "REVIEW_ARTICLE_0145"
+        },
+        {
+          "difference": 0.04072716291143103,
+          "id": "REVIEW_ARTICLE_0146"
+        },
+        {
+          "difference": 0.019478060895539964,
+          "id": "REVIEW_ARTICLE_0147"
+        },
+        {
+          "difference": -0.08153692766523955,
+          "id": "REVIEW_ARTICLE_0148"
+        },
+        {
+          "difference": 0.0022591904063409764,
+          "id": "REVIEW_ARTICLE_0149"
+        },
+        {
+          "difference": 0.01498940392761595,
+          "id": "REVIEW_ARTICLE_0150"
+        },
+        {
+          "difference": 0.06756625293890083,
+          "id": "REVIEW_ARTICLE_0151"
+        },
+        {
+          "difference": 0.030716773458274792,
+          "id": "REVIEW_ARTICLE_0152"
+        },
+        {
+          "difference": 0.021225978152828905,
+          "id": "REVIEW_ARTICLE_0153"
+        },
+        {
+          "difference": 0.07627976124061521,
+          "id": "REVIEW_ARTICLE_0154"
+        },
+        {
+          "difference": 0.05830512512900405,
+          "id": "REVIEW_ARTICLE_0155"
+        },
+        {
+          "difference": -0.021232739154569802,
+          "id": "REVIEW_ARTICLE_0156"
+        },
+        {
+          "difference": 0.013962492813322756,
+          "id": "REVIEW_ARTICLE_0157"
+        },
+        {
+          "difference": -0.05107258655306616,
+          "id": "REVIEW_ARTICLE_0158"
+        },
+        {
+          "difference": -0.016759421679203686,
+          "id": "REVIEW_ARTICLE_0159"
+        },
+        {
+          "difference": 0.05528869509626879,
+          "id": "REVIEW_ARTICLE_0160"
+        },
+        {
+          "difference": -0.009923458111736958,
+          "id": "REVIEW_ARTICLE_0161"
+        },
+        {
+          "difference": 0.04648120403923111,
+          "id": "REVIEW_ARTICLE_0162"
+        },
+        {
+          "difference": 0.06513551618896746,
+          "id": "REVIEW_ARTICLE_0163"
+        },
+        {
+          "difference": 0.015513749198664469,
+          "id": "REVIEW_ARTICLE_0164"
+        },
+        {
+          "difference": 0.02640113795290759,
+          "id": "REVIEW_ARTICLE_0165"
+        },
+        {
+          "difference": 0.0005460043284160282,
+          "id": "REVIEW_ARTICLE_0166"
+        },
+        {
+          "difference": 0.03489499877182013,
+          "id": "REVIEW_ARTICLE_0167"
+        },
+        {
+          "difference": 0.06652584679555125,
+          "id": "REVIEW_ARTICLE_0168"
+        },
+        {
+          "difference": 0.05062922261783022,
+          "id": "REVIEW_ARTICLE_0169"
+        },
+        {
+          "difference": 0.05286437819528257,
+          "id": "REVIEW_ARTICLE_0170"
+        },
+        {
+          "difference": 0.02606015027067662,
+          "id": "REVIEW_ARTICLE_0171"
+        },
+        {
+          "difference": 0.03022575964612906,
+          "id": "REVIEW_ARTICLE_0172"
+        },
+        {
+          "difference": -0.11922185509240445,
+          "id": "REVIEW_ARTICLE_0173"
+        },
+        {
+          "difference": 0.013404234230073255,
+          "id": "REVIEW_ARTICLE_0174"
+        },
+        {
+          "difference": 0.014816141062557273,
+          "id": "REVIEW_ARTICLE_0175"
+        },
+        {
+          "difference": 0.03329179254377935,
+          "id": "REVIEW_ARTICLE_0176"
+        },
+        {
+          "difference": -0.08322484379575384,
+          "id": "REVIEW_ARTICLE_0177"
+        },
+        {
+          "difference": 0.003654267588090741,
+          "id": "REVIEW_ARTICLE_0178"
+        },
+        {
+          "difference": -0.04213375750983789,
+          "id": "REVIEW_ARTICLE_0179"
+        },
+        {
+          "difference": 0.04759383875599685,
+          "id": "REVIEW_ARTICLE_0180"
+        },
+        {
+          "difference": -0.051523554247649636,
+          "id": "REVIEW_ARTICLE_0181"
+        },
+        {
+          "difference": -0.011582207532577611,
+          "id": "REVIEW_ARTICLE_0182"
+        },
+        {
+          "difference": -0.028921736603281692,
+          "id": "REVIEW_ARTICLE_0183"
+        },
+        {
+          "difference": 0.021231907039259208,
+          "id": "REVIEW_ARTICLE_0184"
+        },
+        {
+          "difference": 0.032384050078602324,
+          "id": "REVIEW_ARTICLE_0185"
+        },
+        {
+          "difference": 0.028796191047741185,
+          "id": "REVIEW_ARTICLE_0186"
+        },
+        {
+          "difference": 0.019864199091089392,
+          "id": "REVIEW_ARTICLE_0187"
+        },
+        {
+          "difference": -0.047530225926150735,
+          "id": "REVIEW_ARTICLE_0188"
+        },
+        {
+          "difference": -0.023816704993052776,
+          "id": "REVIEW_ARTICLE_0189"
+        },
+        {
+          "difference": 0.007810738254320993,
+          "id": "REVIEW_ARTICLE_0190"
+        },
+        {
+          "difference": 0.035339245843404095,
+          "id": "REVIEW_ARTICLE_0191"
+        },
+        {
+          "difference": 0.07086659957365431,
+          "id": "REVIEW_ARTICLE_0192"
+        },
+        {
+          "difference": -0.045394131575699784,
+          "id": "REVIEW_ARTICLE_0193"
+        },
+        {
+          "difference": 0.009573982330008708,
+          "id": "REVIEW_ARTICLE_0194"
+        },
+        {
+          "difference": -0.029970620258963902,
+          "id": "REVIEW_ARTICLE_0195"
+        },
+        {
+          "difference": 0.029532910877240224,
+          "id": "REVIEW_ARTICLE_0196"
+        },
+        {
+          "difference": -0.059157991676152155,
+          "id": "REVIEW_ARTICLE_0197"
+        },
+        {
+          "difference": -0.008043892379562276,
+          "id": "REVIEW_ARTICLE_0198"
+        },
+        {
+          "difference": 0.0636976182542396,
+          "id": "REVIEW_ARTICLE_0199"
+        },
+        {
+          "difference": -0.059039493428988996,
+          "id": "REVIEW_ARTICLE_0200"
+        },
+        {
+          "difference": 0.00265809793072719,
+          "id": "REVIEW_ARTICLE_0201"
+        },
+        {
+          "difference": 0.02209600285764944,
+          "id": "REVIEW_ARTICLE_0202"
+        },
+        {
+          "difference": 0.014575870290709251,
+          "id": "REVIEW_ARTICLE_0203"
+        },
+        {
+          "difference": 0.033665171000583236,
+          "id": "REVIEW_ARTICLE_0204"
+        },
+        {
+          "difference": -0.0150555520234297,
+          "id": "REVIEW_ARTICLE_0205"
+        },
+        {
+          "difference": -0.02511346078467688,
+          "id": "REVIEW_ARTICLE_0206"
+        },
+        {
+          "difference": 0.07876003835124856,
+          "id": "REVIEW_ARTICLE_0207"
+        },
+        {
+          "difference": 0.055766345455553826,
+          "id": "REVIEW_ARTICLE_0208"
+        },
+        {
+          "difference": -0.07159688056362652,
+          "id": "REVIEW_ARTICLE_0209"
+        },
+        {
+          "difference": -0.029788280960214318,
+          "id": "REVIEW_ARTICLE_0210"
+        },
+        {
+          "difference": -0.016470249270202825,
+          "id": "REVIEW_ARTICLE_0211"
+        },
+        {
+          "difference": -0.028440158385594678,
+          "id": "REVIEW_ARTICLE_0212"
+        },
+        {
+          "difference": -0.015522216077979519,
+          "id": "REVIEW_ARTICLE_0213"
+        },
+        {
+          "difference": -0.01176034582425163,
+          "id": "REVIEW_ARTICLE_0214"
+        },
+        {
+          "difference": -0.047254852801985166,
+          "id": "REVIEW_ARTICLE_0215"
+        },
+        {
+          "difference": 0.08032502767481563,
+          "id": "REVIEW_ARTICLE_0216"
+        },
+        {
+          "difference": -0.020611490573668827,
+          "id": "REVIEW_ARTICLE_0217"
+        },
+        {
+          "difference": -0.01580911408012887,
+          "id": "REVIEW_ARTICLE_0218"
+        },
+        {
+          "difference": 0.036554651508207664,
+          "id": "REVIEW_ARTICLE_0219"
+        },
+        {
+          "difference": 0.01795435733307622,
+          "id": "REVIEW_ARTICLE_0220"
+        },
+        {
+          "difference": 0.049209727581941885,
+          "id": "REVIEW_ARTICLE_0221"
+        },
+        {
+          "difference": 0.03310770343939191,
+          "id": "REVIEW_ARTICLE_0222"
+        },
+        {
+          "difference": -0.03669907329639067,
+          "id": "REVIEW_ARTICLE_0223"
+        },
+        {
+          "difference": -0.01565936301321425,
+          "id": "REVIEW_ARTICLE_0224"
+        },
+        {
+          "difference": 0.04058896874892787,
+          "id": "REVIEW_ARTICLE_0225"
+        },
+        {
+          "difference": 0.002390464871628564,
+          "id": "REVIEW_ARTICLE_0226"
+        },
+        {
+          "difference": -0.050129720507040086,
+          "id": "REVIEW_ARTICLE_0227"
+        },
+        {
+          "difference": -0.0033487660753353087,
+          "id": "REVIEW_ARTICLE_0228"
+        },
+        {
+          "difference": 0.007295669020993232,
+          "id": "REVIEW_ARTICLE_0229"
+        },
+        {
+          "difference": -0.03447191976999248,
+          "id": "REVIEW_ARTICLE_0230"
+        },
+        {
+          "difference": -0.03945999276511233,
+          "id": "REVIEW_ARTICLE_0231"
+        },
+        {
+          "difference": 0.009132880001640222,
+          "id": "REVIEW_ARTICLE_0232"
+        },
+        {
+          "difference": -0.05149443303177289,
+          "id": "REVIEW_ARTICLE_0233"
+        },
+        {
+          "difference": -0.004229826012225582,
+          "id": "REVIEW_ARTICLE_0234"
+        },
+        {
+          "difference": 0.007054185783562116,
+          "id": "REVIEW_ARTICLE_0235"
+        },
+        {
+          "difference": -0.012597432038236956,
+          "id": "REVIEW_ARTICLE_0236"
+        },
+        {
+          "difference": -0.06194390286613249,
+          "id": "REVIEW_ARTICLE_0237"
+        },
+        {
+          "difference": 0.08077107733125705,
+          "id": "REVIEW_ARTICLE_0238"
+        },
+        {
+          "difference": 0.04266149116537644,
+          "id": "REVIEW_ARTICLE_0239"
+        },
+        {
+          "difference": -0.009087161060800843,
+          "id": "REVIEW_ARTICLE_0240"
+        },
+        {
+          "difference": -0.0033306214079492223,
+          "id": "REVIEW_ARTICLE_0241"
+        },
+        {
+          "difference": 0.01004918713908775,
+          "id": "REVIEW_ARTICLE_0242"
+        },
+        {
+          "difference": 0.0028698454362043545,
+          "id": "REVIEW_ARTICLE_0243"
+        },
+        {
+          "difference": -0.00997593944778486,
+          "id": "REVIEW_ARTICLE_0244"
+        },
+        {
+          "difference": -0.024725062416117778,
+          "id": "REVIEW_ARTICLE_0245"
+        },
+        {
+          "difference": 0.015216990979550293,
+          "id": "REVIEW_ARTICLE_0246"
+        },
+        {
+          "difference": -0.03082993481350567,
+          "id": "REVIEW_ARTICLE_0247"
+        },
+        {
+          "difference": 0.07584111930688014,
+          "id": "REVIEW_ARTICLE_0248"
+        },
+        {
+          "difference": 0.04276239676520202,
+          "id": "REVIEW_ARTICLE_0249"
+        },
+        {
+          "difference": -0.057508334868659375,
+          "id": "REVIEW_ARTICLE_0250"
+        },
+        {
+          "difference": -0.04986441168531079,
+          "id": "REVIEW_ARTICLE_0251"
+        },
+        {
+          "difference": -0.0044819616682741795,
+          "id": "REVIEW_ARTICLE_0252"
+        },
+        {
+          "difference": 0.004734574583921574,
+          "id": "REVIEW_ARTICLE_0253"
+        },
+        {
+          "difference": 0.005081248022443428,
+          "id": "REVIEW_ARTICLE_0254"
+        },
+        {
+          "difference": 0.001650083667667371,
+          "id": "REVIEW_ARTICLE_0255"
+        },
+        {
+          "difference": 0.02945423515033985,
+          "id": "REVIEW_ARTICLE_0256"
+        },
+        {
+          "difference": -0.03646220868550542,
+          "id": "REVIEW_ARTICLE_0257"
+        },
+        {
+          "difference": 0.03579449895958561,
+          "id": "REVIEW_ARTICLE_0258"
+        },
+        {
+          "difference": 0.019472242310119715,
+          "id": "REVIEW_ARTICLE_0259"
+        },
+        {
+          "difference": 0.0582778413212286,
+          "id": "REVIEW_ARTICLE_0260"
+        },
+        {
+          "difference": 0.008034790050414168,
+          "id": "REVIEW_ARTICLE_0261"
+        },
+        {
+          "difference": 0.04841766007509803,
+          "id": "REVIEW_ARTICLE_0262"
+        },
+        {
+          "difference": 0.04366126579338074,
+          "id": "REVIEW_ARTICLE_0263"
+        },
+        {
+          "difference": -0.01651115237021887,
+          "id": "REVIEW_ARTICLE_0264"
+        },
+        {
+          "difference": -0.03149320676181818,
+          "id": "REVIEW_ARTICLE_0265"
+        },
+        {
+          "difference": -0.03983612463418188,
+          "id": "REVIEW_ARTICLE_0266"
+        },
+        {
+          "difference": -0.029419814515979557,
+          "id": "REVIEW_ARTICLE_0267"
+        },
+        {
+          "difference": 0.04577886774043558,
+          "id": "REVIEW_ARTICLE_0268"
+        },
+        {
+          "difference": -0.020425797923935965,
+          "id": "REVIEW_ARTICLE_0269"
+        },
+        {
+          "difference": 0.04729049493229518,
+          "id": "REVIEW_ARTICLE_0270"
+        },
+        {
+          "difference": 0.024177772016778686,
+          "id": "REVIEW_ARTICLE_0271"
+        },
+        {
+          "difference": 0.06280070108607291,
+          "id": "REVIEW_ARTICLE_0272"
+        },
+        {
+          "difference": -0.020960451985097387,
+          "id": "REVIEW_ARTICLE_0273"
+        },
+        {
+          "difference": 0.03729437268239823,
+          "id": "REVIEW_ARTICLE_0274"
+        },
+        {
+          "difference": 0.03145568001669175,
+          "id": "REVIEW_ARTICLE_0275"
+        },
+        {
+          "difference": 0.025537803936240236,
+          "id": "REVIEW_ARTICLE_0276"
+        },
+        {
+          "difference": 0.0005391614081883573,
+          "id": "REVIEW_ARTICLE_0277"
+        },
+        {
+          "difference": 0.01608653793431761,
+          "id": "REVIEW_ARTICLE_0278"
+        },
+        {
+          "difference": -0.015537623472297363,
+          "id": "REVIEW_ARTICLE_0279"
+        },
+        {
+          "difference": -0.0418989027907816,
+          "id": "REVIEW_ARTICLE_0280"
+        },
+        {
+          "difference": 0.06700671555162091,
+          "id": "REVIEW_ARTICLE_0281"
+        },
+        {
+          "difference": 0.03569304910883323,
+          "id": "REVIEW_ARTICLE_0282"
+        },
+        {
+          "difference": -0.009410600060462234,
+          "id": "REVIEW_ARTICLE_0283"
+        },
+        {
+          "difference": 0.0012214677373569114,
+          "id": "REVIEW_ARTICLE_0284"
+        },
+        {
+          "difference": -0.023299928585620508,
+          "id": "REVIEW_ARTICLE_0285"
+        },
+        {
+          "difference": -0.03605096353758504,
+          "id": "REVIEW_ARTICLE_0286"
+        },
+        {
+          "difference": 0.041181897200130414,
+          "id": "REVIEW_ARTICLE_0287"
+        },
+        {
+          "difference": -0.0009808268828685074,
+          "id": "REVIEW_ARTICLE_0288"
+        },
+        {
+          "difference": 0.007820492122377119,
+          "id": "REVIEW_ARTICLE_0289"
+        },
+        {
+          "difference": -0.0472635193474917,
+          "id": "REVIEW_ARTICLE_0290"
+        },
+        {
+          "difference": 0.01802123671991986,
+          "id": "REVIEW_ARTICLE_0291"
+        },
+        {
+          "difference": -0.04063505897830316,
+          "id": "REVIEW_ARTICLE_0292"
+        },
+        {
+          "difference": -0.005165879747558278,
+          "id": "REVIEW_ARTICLE_0293"
+        },
+        {
+          "difference": 0.02581997266166961,
+          "id": "REVIEW_ARTICLE_0294"
+        },
+        {
+          "difference": 0.043775491558442015,
+          "id": "REVIEW_ARTICLE_0295"
+        },
+        {
+          "difference": 0.04251823812570977,
+          "id": "REVIEW_ARTICLE_0296"
+        },
+        {
+          "difference": 0.007862742702665253,
+          "id": "REVIEW_ARTICLE_0297"
+        },
+        {
+          "difference": -0.047407714080586486,
+          "id": "REVIEW_ARTICLE_0298"
+        },
+        {
+          "difference": 0.012552949738476418,
+          "id": "REVIEW_ARTICLE_0299"
+        },
+        {
+          "difference": 0.02166786343852166,
+          "id": "REVIEW_ARTICLE_0300"
+        },
+        {
+          "difference": 0.004089813152373648,
+          "id": "REVIEW_ARTICLE_0301"
+        },
+        {
+          "difference": 0.02965171679472842,
+          "id": "REVIEW_ARTICLE_0302"
+        },
+        {
+          "difference": 0.07628313036209473,
+          "id": "REVIEW_ARTICLE_0303"
+        },
+        {
+          "difference": -0.019003571136288536,
+          "id": "REVIEW_ARTICLE_0304"
+        },
+        {
+          "difference": 0.008430405297810546,
+          "id": "REVIEW_ARTICLE_0305"
+        },
+        {
+          "difference": 0.0385580581220703,
+          "id": "REVIEW_ARTICLE_0306"
+        },
+        {
+          "difference": 0.0207705722829571,
+          "id": "REVIEW_ARTICLE_0307"
+        },
+        {
+          "difference": 0.07418156730384846,
+          "id": "REVIEW_ARTICLE_0308"
+        },
+        {
+          "difference": 0.0017287125786842486,
+          "id": "REVIEW_ARTICLE_0309"
+        },
+        {
+          "difference": 0.0732233447707249,
+          "id": "REVIEW_ARTICLE_0310"
+        },
+        {
+          "difference": 0.06151437492770435,
+          "id": "REVIEW_ARTICLE_0311"
+        },
+        {
+          "difference": 0.010582466429263254,
+          "id": "REVIEW_ARTICLE_0312"
+        },
+        {
+          "difference": -0.04075878253915184,
+          "id": "REVIEW_ARTICLE_0313"
+        },
+        {
+          "difference": -0.021783778324943593,
+          "id": "REVIEW_ARTICLE_0314"
+        },
+        {
+          "difference": 0.00506246522372104,
+          "id": "REVIEW_ARTICLE_0315"
+        },
+        {
+          "difference": 0.018461605510801622,
+          "id": "REVIEW_ARTICLE_0316"
+        },
+        {
+          "difference": -0.004847926932965525,
+          "id": "REVIEW_ARTICLE_0317"
+        },
+        {
+          "difference": 0.06966483648191509,
+          "id": "REVIEW_ARTICLE_0318"
+        },
+        {
+          "difference": 0.017985378314619545,
+          "id": "REVIEW_ARTICLE_0319"
+        },
+        {
+          "difference": 0.06071471139740947,
+          "id": "REVIEW_ARTICLE_0320"
+        },
+        {
+          "difference": -0.0060893061730246155,
+          "id": "REVIEW_ARTICLE_0321"
+        },
+        {
+          "difference": -0.012920501199817152,
+          "id": "REVIEW_ARTICLE_0322"
+        }
+      ],
+      "gate_pass": true,
+      "log_maximum_article_ratio": 0.11952433906045071,
+      "log_one_sided_97_5_upper": 0.011365880195403032,
+      "log_pooled_ratio": 0.007124031657275523,
+      "log_two_sided_95_percentile_interval": [
+        0.0028662340840539167,
+        0.011365880195403032
+      ],
+      "maximum_article_ratio": 1.1269606728973518,
+      "observed_maximum_guard_pass": true,
+      "observed_pooled_guard_pass": true,
+      "one_sided_97_5_upper": 1.011430717222165,
+      "pooled_ratio": 1.007149467937882,
+      "two_sided_95_percentile_interval": [
+        1.0028703456602743,
+        1.011430717222165
+      ],
+      "uncertainty_guard_pass": true
+    }
+  },
+  "exponential_overflow_reported_as_null": true,
+  "interpretation": "Approximate paired article bootstrap on the admitted bounded frame; no population-tail or generalization guarantee.",
+  "models": {
+    "candidate_12": {
+      "mean_nll": 4.0960976118298795,
+      "perplexity": 60.105275225852594
+    },
+    "candidate_6": {
+      "mean_nll": 4.099478120477954,
+      "perplexity": 60.30880545256843
+    },
+    "nearest": {
+      "mean_nll": 4.312468914101509,
+      "perplexity": 74.62450317741377
+    },
+    "original": {
+      "mean_nll": 4.006683772674331,
+      "perplexity": 54.9642939045506
+    },
+    "sequential_12": {
+      "mean_nll": 4.09069126224179,
+      "perplexity": 59.78120191205737
+    },
+    "sequential_6": {
+      "mean_nll": 4.092354088820679,
+      "perplexity": 59.88069037662254
+    }
+  },
+  "predictions_per_model": 40640,
+  "schema": "prospective-paired-quality-statistics-v68"
+}

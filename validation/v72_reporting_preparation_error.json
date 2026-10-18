@@ -1,0 +1,10 @@
+{
+  "schema": "reporting-preparation-error",
+  "stage": "local saved-receipt reconciliation",
+  "error": "ValueError: symbolic budget snapshot path",
+  "cause": "macOS temporary-directory alias was passed without resolving it",
+  "original_checker_sha256": "9cf43a80099ee138d379ebb1d49b6645b25b29576bd8e6c13a8422925e8e1b31",
+  "correction": "Resolve the local temporary path before using the unchanged frozen ledger reader.",
+  "registered_job_repeated": false,
+  "registered_source_changed": false
+}

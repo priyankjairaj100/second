@@ -1,0 +1,49 @@
+{
+  "job_launches": 0,
+  "jobs": {
+    "15405": {
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15406": {
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15407": {
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15408": {
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15409": {
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15410": {
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15411": {
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15412": {
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15413": {
+      "exit_code": "1:0",
+      "state": "FAILED"
+    },
+    "15421": {
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    }
+  },
+  "observed_at_utc": "2026-10-18T14:17:30.179589+00:00",
+  "scope": "Current terminal states rechecked; original detailed accounting remains in bound archives.",
+  "source": "Fresh read-only squeue and sacct after bundle assembly",
+  "squeue_user_rows": []
+}
