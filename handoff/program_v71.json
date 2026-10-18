@@ -6628,6 +6628,48 @@
   },
   "created_at_utc": "2026-10-18T11:55:57.728358+00:00",
   "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "expanded_notice_preparation": {
+    "active_dependency_edges": 32,
+    "archive": {
+      "bytes": 456767,
+      "path": "reports/development-dependency-notices-v71.zip",
+      "sha256": "45e860d785c7838ccc3945b3581d2f38b98791dea7baf812554ff1adf56d66ca"
+    },
+    "captured_at_utc": "2026-10-18T12:21:33.035405+00:00",
+    "clean_extraction_exact": true,
+    "complete_transitive_system_notices": false,
+    "cpu_measurement_scope": "Metadata-read window only; excludes interpreter startup, imports and tar serialization. Not the total observer cost or an empirical worker debit.",
+    "cuda_distributions": 28,
+    "cuda_notice_texts": 35,
+    "declared_dependency_edges": 213,
+    "earlier_texts_preserved": 5,
+    "historical_binary_notice_binding_verified": false,
+    "integrated_into_current_bundle": false,
+    "known_identity_findings": [],
+    "members": 99,
+    "metadata_graph_recomputed": true,
+    "missing_notices_in_selected_distributions": [],
+    "model_or_data_read": false,
+    "old_review_components_unchanged": true,
+    "packages_installed": false,
+    "process_cpu_seconds_reporting_observer": 0.25675997700000003,
+    "project_license_assigned": false,
+    "raw_observation": {
+      "bytes": 362296,
+      "path": "validation/v71_installed_cuda_notices_20261018_b.tar.gz",
+      "sha256": "3a2714c8f9dca1bbb6c5c30aa093f00b305b3a440dae6910ed54284f01ba3219"
+    },
+    "record_notice_hashes_verified": 34,
+    "refusal_probes": {
+      "metadata_bytes": "rejected",
+      "missing_notice": "rejected",
+      "notice_bytes": "rejected"
+    },
+    "schema": "expanded-dependency-notice-check-v71",
+    "scientific_result": false,
+    "submission_ready": false,
+    "verified_at_utc": "2026-10-18T12:23:57.537487+00:00"
+  },
   "independent_numerical_replication": false,
   "latest_sealed_worker_observation": {
     "active_worker_reservations": {
@@ -6641,8 +6683,8 @@
     },
     "actual_completed_worker_seals_checked_locally": 3,
     "archive": {
-      "bytes": 173035,
-      "sha256": "59a53d0da142a542b08878b1269684e1cfd96e2a726ad6155d0dc289d5689847"
+      "bytes": 174735,
+      "sha256": "f8cc5d4b921022310354718e7895cfb9414c06515a717a6d417216a856b58715"
     },
     "completed_phase_costs": {
       "cpu_checks": {
@@ -6725,12 +6767,12 @@
     },
     "likelihood_reexecuted": false,
     "model_state_bytes_checked_locally": false,
-    "observed_at_utc": "2026-10-18T12:07:00.942300+00:00",
+    "observed_at_utc": "2026-10-18T12:24:50.185056+00:00",
     "quality_guard_pass": null,
     "registration_sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c",
     "schema": "v71-saved-campaign-metadata-review",
     "sequential_progress_counts": {
-      "sequential_12": 7,
+      "sequential_12": 11,
       "sequential_6": 0
     },
     "settled_worker_cpu_seconds": 79,
@@ -6817,9 +6859,17 @@
       "bytes": 3875,
       "sha256": "e401bba4896b5ffbc66ba852c1d5f17569ec4aca23a53cd2cc091d076d9f2231"
     },
+    "validation/v71_campaign_metadata_20261018_c.json": {
+      "bytes": 3876,
+      "sha256": "87b8b4486378cf985a37c29a4c19fee0d107487c9ea5bace008d19e66503243e"
+    },
     "validation/v71_cross_component_review.json": {
       "bytes": 2238,
       "sha256": "ac720a2f9877b3616ccee6ac4b264dc57547522eb3c3b5acfdb61bfe0e4fb13c"
+    },
+    "validation/v71_expanded_dependency_notices.json": {
+      "bytes": 1633,
+      "sha256": "ace2d33f2cab049095439f2253376140dffcc2257897cca6139e3309711a6d2a"
     },
     "validation/v71_frozen_source_check.json": {
       "bytes": 88028,

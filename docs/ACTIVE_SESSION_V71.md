@@ -227,3 +227,50 @@ The existing manuscript still compiles but preview inspection failed once with
 tab/PDF was attempted. Actual page count/layout remain unverified. The prepared
 local second-development-review-v71.zip is a checked DEVELOPMENT bundle, not a
 final submission; the existing source remains open and unchanged by this update.
+
+## Expanded installed notice preparation
+
+While the existing quality chain runs, a bounded read-only observer inspected the
+shared GPU Python installation without importing Torch, initializing CUDA, reading
+model/data, installing packages or submitting a job. Snapshot A only searched
+dist-info notice trees. Snapshot B additionally follows installed RECORD notice
+entries; it recovers cuSPARSELt's notice and other installation-relative notices.
+Both observations and the initial collector source remain preserved. This is
+reporting work, not a numerical campaign or a historical runtime requalification.
+
+The new staged reports/development-dependency-notices-v71.zip has99 members,
+456767 bytes, SHA25645e860d785c7838ccc3945b3581d2f38b98791dea7baf812554ff1adf56d66ca.
+It retains all five earlier CPU/publisher texts unchanged and adds35 CUDA/Python
+notice/attribution texts with installed metadata. All28 distributions reachable
+from Torch and NumPy through active installed Requires-Dist on Linux/x86_64/
+Python3.10.19 without extras have a notice. All32 active version constraints pass;
+the213 declared edges, including inactive extras, remain visible. All34 distribution
+notice files match installed RECORD hashes; the Python license is separately
+observed. The28-distribution graph was recomputed locally from raw METADATA, and
+clean extraction, manifest and three missing/altered-file refusal checks pass.
+Original upstream authorship is retained. Observer B's metadata-read window used
+0.256759977 process CPU seconds. This excludes interpreter startup, imports and tar
+serialization; it is neither the total observer cost nor an empirical worker debit.
+
+Read validation/v71_expanded_dependency_notices.json. The raw snapshot B is
+validation/v71_installed_cuda_notices_20261018_b.tar.gz,362296 bytes,
+SHA2563a2714c8f9dca1bbb6c5c30aa093f00b305b3a440dae6910ed54284f01ba3219.
+Exact current Torch/NumPy version strings match the admitted runtime record, but
+this later notice observation does not retroactively bind frozen binaries or prove
+source equivalence. It does not identify every dynamically loaded native library.
+GPU-node driver/system/compiler/container notices, CPU GMP/MPFR/MPC attribution,
+tokenizers Rust correspondence, and author-controlled project release terms remain.
+
+This component is prepared for the next coherent bundle, not silently substituted
+into the current six-component guide. The guide, existing bundle, manuscript and
+all frozen sources remain byte-unchanged. On integration update its archive binding
+and rerun the full component checks. No new quality result is available here.
+
+## Latest running observation,18 October12:24:50UTC
+
+Snapshot C confirms the same three completed and sealed phases,79 settled worker
+CPU seconds, and sequential12 job15408 running with11/24 saved progress receipts.
+All five successors remain dependency-pending. No likelihood result or terminal
+quality decision exists. Read validation/v71_campaign_metadata_20261018_c.json
+and campaigns/csis_v71_metadata_20261018_c.tar.gz. The active reservation and
+registered ceilings are unchanged; no job was submitted or repeated.

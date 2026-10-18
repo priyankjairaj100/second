@@ -1,0 +1,42 @@
+{
+  "active_dependency_edges": 32,
+  "archive": {
+    "bytes": 456767,
+    "path": "reports/development-dependency-notices-v71.zip",
+    "sha256": "45e860d785c7838ccc3945b3581d2f38b98791dea7baf812554ff1adf56d66ca"
+  },
+  "captured_at_utc": "2026-10-18T12:21:33.035405+00:00",
+  "clean_extraction_exact": true,
+  "complete_transitive_system_notices": false,
+  "cpu_measurement_scope": "Metadata-read window only; excludes interpreter startup, imports and tar serialization. Not the total observer cost or an empirical worker debit.",
+  "cuda_distributions": 28,
+  "cuda_notice_texts": 35,
+  "declared_dependency_edges": 213,
+  "earlier_texts_preserved": 5,
+  "historical_binary_notice_binding_verified": false,
+  "integrated_into_current_bundle": false,
+  "known_identity_findings": [],
+  "members": 99,
+  "metadata_graph_recomputed": true,
+  "missing_notices_in_selected_distributions": [],
+  "model_or_data_read": false,
+  "old_review_components_unchanged": true,
+  "packages_installed": false,
+  "process_cpu_seconds_reporting_observer": 0.25675997700000003,
+  "project_license_assigned": false,
+  "raw_observation": {
+    "bytes": 362296,
+    "path": "validation/v71_installed_cuda_notices_20261018_b.tar.gz",
+    "sha256": "3a2714c8f9dca1bbb6c5c30aa093f00b305b3a440dae6910ed54284f01ba3219"
+  },
+  "record_notice_hashes_verified": 34,
+  "refusal_probes": {
+    "metadata_bytes": "rejected",
+    "missing_notice": "rejected",
+    "notice_bytes": "rejected"
+  },
+  "schema": "expanded-dependency-notice-check-v71",
+  "scientific_result": false,
+  "submission_ready": false,
+  "verified_at_utc": "2026-10-18T12:23:57.537487+00:00"
+}
