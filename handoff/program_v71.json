@@ -6629,6 +6629,115 @@
   "created_at_utc": "2026-10-18T11:55:57.728358+00:00",
   "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
   "independent_numerical_replication": false,
+  "latest_sealed_worker_observation": {
+    "active_worker_reservations": {
+      "8def57274c8e11b5ac89c9a8a40834462e495acc61c337719862f7cfe50c33c9": {
+        "charged_cpu_seconds": 14402,
+        "observed_cpu_ns": null,
+        "phase": "quality",
+        "reserved_cpu_seconds": 14402,
+        "state": "reserved"
+      }
+    },
+    "actual_completed_worker_seals_checked_locally": 3,
+    "archive": {
+      "bytes": 173035,
+      "sha256": "59a53d0da142a542b08878b1269684e1cfd96e2a726ad6155d0dc289d5689847"
+    },
+    "completed_phase_costs": {
+      "cpu_checks": {
+        "accounting_status": "verified",
+        "controller_charged_cpu_seconds": 5,
+        "controller_own_cpu_ns": 4333396012,
+        "debit_id": "6b28c53cdabeaeadb3b372da07809a2efec8dfe8a1ee010ba86ed1e476ba8775",
+        "execution_successful": true,
+        "job_id": "15405",
+        "nonworker_waited_child_cpu_ns": 20490000,
+        "observed_process_tree_cpu_ns": 34152282012,
+        "phase": "cpu_checks",
+        "quality_gate_outcome_not_used_for_accounting": true,
+        "scheduler_cpu_ns": 34719000000,
+        "scheduler_minus_observed_cpu_ns": 566717988,
+        "scheduler_reporting_quantum_ns": 1000000,
+        "waited_worker_cpu_counted_once": true,
+        "worker_charged_cpu_seconds": 30,
+        "worker_cpu_ns": 29798396000
+      },
+      "cuda_checks": {
+        "accounting_status": "verified",
+        "controller_charged_cpu_seconds": 7,
+        "controller_own_cpu_ns": 6650460619,
+        "debit_id": "f58724273077a0d333af8971da8b66bac99e3259e52d7b8f207e0d3f00a1a52f",
+        "execution_successful": true,
+        "job_id": "15406",
+        "nonworker_waited_child_cpu_ns": 95897000,
+        "observed_process_tree_cpu_ns": 18152746619,
+        "phase": "cuda_checks",
+        "quality_gate_outcome_not_used_for_accounting": true,
+        "scheduler_cpu_ns": 18508000000,
+        "scheduler_minus_observed_cpu_ns": 355253381,
+        "scheduler_reporting_quantum_ns": 1000000,
+        "waited_worker_cpu_counted_once": true,
+        "worker_charged_cpu_seconds": 12,
+        "worker_cpu_ns": 11406389000
+      },
+      "parameters": {
+        "accounting_status": "verified",
+        "controller_charged_cpu_seconds": 5,
+        "controller_own_cpu_ns": 4397151898,
+        "debit_id": "3b9a162b5c4cc37a9c05c0666bdc758f3d463484496b6d009616f2e73d9c6d55",
+        "execution_successful": true,
+        "job_id": "15407",
+        "nonworker_waited_child_cpu_ns": 20056000,
+        "observed_process_tree_cpu_ns": 40530004898,
+        "phase": "parameters",
+        "quality_gate_outcome_not_used_for_accounting": true,
+        "scheduler_cpu_ns": 41078000000,
+        "scheduler_minus_observed_cpu_ns": 547995102,
+        "scheduler_reporting_quantum_ns": 1000000,
+        "waited_worker_cpu_counted_once": true,
+        "worker_charged_cpu_seconds": 37,
+        "worker_cpu_ns": 36112797000
+      }
+    },
+    "independent_numerical_validation": false,
+    "job_states": {
+      "closure": "PENDING",
+      "cpu_checks": "COMPLETED",
+      "cpu_parity": "PENDING",
+      "cuda_checks": "COMPLETED",
+      "gpu_quality": "PENDING",
+      "parameters": "COMPLETED",
+      "sequential_12": "RUNNING",
+      "sequential_6": "PENDING",
+      "terminal": "PENDING"
+    },
+    "jobs": {
+      "closure": "15413",
+      "cpu_checks": "15405",
+      "cpu_parity": "15410",
+      "cuda_checks": "15406",
+      "gpu_quality": "15411",
+      "parameters": "15407",
+      "sequential_12": "15408",
+      "sequential_6": "15409",
+      "terminal": "15412"
+    },
+    "likelihood_reexecuted": false,
+    "model_state_bytes_checked_locally": false,
+    "observed_at_utc": "2026-10-18T12:07:00.942300+00:00",
+    "quality_guard_pass": null,
+    "registration_sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c",
+    "schema": "v71-saved-campaign-metadata-review",
+    "sequential_progress_counts": {
+      "sequential_12": 7,
+      "sequential_6": 0
+    },
+    "settled_worker_cpu_seconds": 79,
+    "shared_accounting_code": true,
+    "status": "pending_terminal",
+    "terminal_quality_result_verified": false
+  },
   "manuscript": {
     "kind": "success",
     "manuscript": {
@@ -6704,6 +6813,10 @@
       "bytes": 3202,
       "sha256": "072fabfc7efe052aeac36dde1ca6c8b92529822a763357cd9e728f7566b60892"
     },
+    "validation/v71_campaign_metadata_20261018_b.json": {
+      "bytes": 3875,
+      "sha256": "e401bba4896b5ffbc66ba852c1d5f17569ec4aca23a53cd2cc091d076d9f2231"
+    },
     "validation/v71_cross_component_review.json": {
       "bytes": 2238,
       "sha256": "ac720a2f9877b3616ccee6ac4b264dc57547522eb3c3b5acfdb61bfe0e4fb13c"
@@ -6711,6 +6824,10 @@
     "validation/v71_frozen_source_check.json": {
       "bytes": 88028,
       "sha256": "0372a99286cd22f3405c1890df566cbc0b40f476fec0de584594ad460a265f63"
+    },
+    "validation/v71_reporting_refusal_probes.json": {
+      "bytes": 627,
+      "sha256": "5ce978b549dde3ed9d70c172c26219a623e9d397fff50fed613fd2f363c3e8bd"
     },
     "validation/v71_reproduction_guide_build.json": {
       "bytes": 2007,
@@ -6752,6 +6869,7 @@
     }
   },
   "reporting_base": "6b4907eebc4a047ded2dfa3836710a40e382a66b",
+  "reporting_source_publication": "7250bba2d0c5aa38bab694f599c9db3db955d459",
   "reproduction_guide": {
     "archive_sha256": "0095257b4fc9a2f133a64f9c629cf562dabfb211ab3c33d2fb56bbfae0db03ae",
     "clean_extraction_verified": true,

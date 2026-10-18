@@ -40,8 +40,8 @@ local work. Root review does not count as independent scientific validation.
 5. COMPLETE: separate V70 saved-frame audit15404 retokenized the same prefix and
    verified all3801 complete-token hashes and exact exclusion equality, including
    1021 short records. No new article/model/threshold selection.
-6. ACTIVE: separately registered V71 untouched quality15405--15413. At11:51:36UTC,
-   first three completed, sequential12 running, others dependency-pending. Actual
+6. ACTIVE: separately registered V71 untouched quality15405--15413. At12:07:00UTC,
+   first three completed, sequential12 running with7/24 stages, others dependency-pending. Actual
    CPU103 tests, CUDA24 generated comparisons and78 checkpoint arrays passed.
    Full quality still unknown. All9 jobs already submitted/released once; NEVER
    rerun launchers. Await both sequential constructions, CPU references, GPU loss
@@ -49,7 +49,7 @@ local work. Root review does not count as independent scientific validation.
    the closure's own final allocation. Preserve44726 CPU ceiling and every charge.
    See research_v71/PROTOCOL.txt and exact registration. A negative quality result
    remains evidence; no favorable resampling. A defect needs separate registration.
-7. IN PROGRESS while jobs run: prepare terminal reporting from complete receipts
+7. IN PROGRESS while jobs run: use the prepared terminal reporting check after actual completion
    and finish unresolved input/notice scope. The current577-source component now
    passes213 local tests; the new guide binds five companion ZIPs and all ten
    quality-input groups. Six components pass615-member/617-text-file checks. Keep raw corpus/model bytes

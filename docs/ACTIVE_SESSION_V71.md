@@ -191,3 +191,39 @@ No receipt, archive, experiment source or empirical gate was changed by that fix
 See validation/v71_cross_component_review.json, validation/v71_review_source_fixtures.json
 and validation/v71_reproduction_guide_check.json. Use the V71 navigation page;
 the old source/guide are historical components, not the current reading order.
+
+## Latest sealed-worker checkpoint,18 October12:07:00UTC
+
+Sequential12 job15408 remains running with7/24 saved stage-progress receipts; the
+first three jobs remain complete and15409--15413 dependency-pending. Snapshot B
+includes all six sealed artifacts and terminal status for each completed worker.
+The portable checker now reads actual limits/command/seal files, verifies exact
+settled ledger charges and reconciles controller/child clocks to terminal scheduler
+rows. All three pass; total settled numerical debits79 seconds. The14402-second
+sequential reservation remains live, not a measured charge. No quality conclusion.
+
+Read validation/v71_campaign_metadata_20261018_b.json and campaigns/csis_v71_metadata_20261018_b.tar.gz.
+The updated reporting-only collector also knows the actual closure/receipt.json and
+scheduler.txt paths, includes bounded sequential progress, and keeps model/token
+binaries out. The numerical registration and575 sources are unchanged.
+
+Seven reporting probes reject missing/changed sealed artifacts, underreported
+scheduler costs, wrong registration, unsettled debit and false terminal completion;
+a fake positive closure while jobs run stays pending. This exercises the actual
+partial path, NOT the complete terminal success path. That path still requires
+actual completed receipts. See validation/v71_reporting_refusal_probes.json.
+
+On actual completion collect a fresh uniquely named snapshot with
+validation/collect_v71_metadata.py, then run the read-only
+validation.check_v71_campaign_metadata module with archive and NEW output names.
+It requires eight completed seals, ledger/cost equality,1920 actual loss-file and24
+CPU-reference comparisons reported by the cluster audit, and the closure's own
+terminal allocation. Report negative quality as completed evidence. Do not relaunch.
+The observer does not independently reconstruct omitted model/loss bodies; keep
+that limitation explicit. Active/failed snapshots cannot become terminal success.
+
+The existing manuscript still compiles but preview inspection failed once with
+'Sky Computer Use service startup request failed'. No further preview retry or new
+tab/PDF was attempted. Actual page count/layout remain unverified. The prepared
+local second-development-review-v71.zip is a checked DEVELOPMENT bundle, not a
+final submission; the existing source remains open and unchanged by this update.

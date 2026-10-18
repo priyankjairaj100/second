@@ -1,6 +1,6 @@
 """Bounded read-only V71 observation; no job submission or empirical execution."""
 from pathlib import Path
-import datetime, hashlib, io, json, subprocess, sys, tarfile
+import datetime, hashlib, io, json, re, subprocess, sys, tarfile
 
 ROOT=Path('/nfs_home/users/poonam/second-20261010')
 RUN=ROOT/'local_runs/untouched-quality-v71-20261018-a'
@@ -35,17 +35,31 @@ for phase,job in JOBS.items():
                  'submission-response.json','release-intent.json','release-response.json',
                  'entry-start.json','entry.json','worker/identity.json','worker/result.json',
                  'outputs/completion.json','outputs/checks.json','outputs/gpu.json',
-                 'closure.json',f'slurm-{job}.log']:
+                 'start.json','receipt.json','scheduler.txt',f'slurm-{job}.log']:
         capture(phase+'/'+name)
+    result=files.get(phase+'/worker/result.json')
+    if result is not None:
+        worker=json.loads(result)
+        if worker.get('status')=='complete':
+            attempt=worker['attempt'];assert re.fullmatch(r'attempt-[0-9]{4,}',attempt)
+            assert set(worker['artifacts'])=={'request.json','budget-reservation.json',
+                'stdout-summary.json','stderr-summary.json','pre-settlement-observation.json','limits-applied.json'}
+            for name,e in worker['artifacts'].items():
+                rel=phase+'/worker/'+attempt+'/'+name;capture(rel);assert info(files[rel])==e
+            capture(phase+'/worker/'+attempt+'/status.json')
+    if phase.startswith('sequential_'):
+        progress=sorted((RUN/phase/'outputs/construction').glob('progress-*.json'))
+        assert len(progress)<=24
+        for path in progress:capture(str(path.relative_to(RUN)))
 for name in p['new_sources']:capture(str(Path(name).relative_to(RUN)))
-assert len(files)<200 and sum(map(len,files.values()))<16*2**20
+assert len(files)<350 and sum(map(len,files.values()))<32*2**20
 collection=dict(schema='v71-bounded-metadata-observation',captured_at_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
     registration_sha256=REG,jobs=JOBS,frozen_numerical_sources_verified=575,auxiliary_sources_verified=1,
     numerical_checkout='f900999fcb200509dfad4fc081ce9c87fd172a16',
     files={n:info(b) for n,b in files.items()},
     queue=command('squeue','-h','-u','poonam','-o','%i|%j|%T|%M|%R'),
     accounting=command('sacct','-n','-P','-j',','.join(JOBS.values()),'--format=JobIDRaw,State,ExitCode,ElapsedRaw,TotalCPU,AllocCPUS'),
-    model_or_corpus_bytes_collected=False,atomic_cross_file_snapshot=False,
+    model_or_corpus_bytes_collected=False,completed_worker_seal_artifacts_included=True,atomic_cross_file_snapshot=False,
     scope='Observed metadata only; verify terminal seals and actual artifact audits before scientific conclusions.')
 files['collection.json']=json.dumps(collection,sort_keys=True,separators=(',',':')).encode()
 with tarfile.open(fileobj=sys.stdout.buffer,mode='w|gz') as t:
