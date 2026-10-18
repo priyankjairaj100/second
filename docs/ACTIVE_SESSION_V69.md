@@ -1,18 +1,30 @@
-# V67 hybrid, compression and cold completed; cached comparison running
+# V67 last verified: four comparisons completed; current access unavailable
 
 16 October 2026. Latest reporting handoff, not a registration. V68 and V69 remain
 UNREGISTERED and UNFROZEN. Preserve all469 V67 sources and14 inherited historical
 GPU/export files. Never repeat an existing launcher, job or failed attempt.
 
+## Recovery observation,18 October2026
+
+The interrupted cached-receipt reporting checkpoint is preserved. A bounded SSH
+connection attempt timed out before login; no remote command ran and no repeated
+connection attempt was made. Current job states and terminal results are unknown.
+The last verified full snapshot remains S from16October17:39:21UTC, described
+below. Its RUNNING/PENDING values are historical observations, not current status.
+Network restoration was requested. Reconcile actual Slurm, receipts and both
+audits on restored access before any launch or scientific conclusion. V68/V69
+remain unregistered. See validation/v69_resume_connection_20261018.json.
+
 ## Actual cluster observation
 
-At16:14:26UTC (21:44:26IST), hybrid15263, compression15264 and cold15265 were
-COMPLETED0:0, each with24 certified stages. Cold completed in1h40m20s. The existing
-afterok chain started cached15266, RUNNING42s with no stage certificate yet;
-15267--15275 remained dependency-pending. Both terminal audits remain absent.
-The379-file snapshot campaigns/csis_v67_progress_metadata_20261016_r.tar.gz is341558
-bytes, SHA256e95c6117fb2ffad9f94967ddee988e247b13e495275b8459dcead281014323b7.
-validation/v67_progress_metadata_check_r.json verifies metadata/source bindings.
+At17:39:21UTC (23:09:21IST), hybrid15263, compression15264, cold15265 and
+cached15266 were COMPLETED0:0, each with24 certified stages. Cached completed
+in1h14m20s. The existing afterok chain started modern15267, RUNNING11m17s with
+3of24 stage certificates;15268--15275 remained dependency-pending. Both terminal
+audits remain absent. The424-file snapshot
+campaigns/csis_v67_progress_metadata_20261016_s.tar.gz is385792 bytes, SHA256
+7dd28ef74236398536ee2cbe7c0fa0db9aa7111d31bcb414683f37a2e526fde0.
+validation/v67_progress_metadata_check_s.json verifies metadata/source bindings.
 All469 sources, eleven dependencies and102 historical ledgers were checked remotely.
 No new job was submitted. The numerical checkout remains
 f900999fcb200509dfad4fc081ce9c87fd172a16; do not pull reporting changes there.
@@ -24,7 +36,7 @@ No stage-level replay fallback or refusal was recorded. Separately, the solver's
 bounded numerical fallback handled7 rows /21504 decisions, all certified; preserve
 this distinction rather than claiming no fallback of any kind. The compression
 reservation is now settled using its actual terminal worker usage. The cold
-reservation has also settled; the cached reservation is now live. These are
+reservation has also settled; cached is now settled and modern is live. These are
 partial metadata checks, not model/state byte equality or final campaign cost verification. Two local
 reporting invocation/schema errors were corrected and preserved without any cluster
 mutation. Read docs/V67_HYBRID1_RECEIPT_V69.txt. Previous snapshots remain intact.
@@ -34,7 +46,7 @@ state representations packaged for five comparison arms. The earlier actual rece
 validation/v67_preparation_metadata.json:6857.956044 worker CPU seconds,6858 charged,
 1732228KiB peak RSS,9.590220307 controller own CPU seconds and1h54m28 Slurm CPU.
 Numerical binaries were not reaudited by this continuation. Preserve the live
-cached reservation; do not settle it before actual terminal usage.
+modern reservation; do not settle it before actual terminal usage.
 
 ## First compression receipt and accounting
 
@@ -47,8 +59,8 @@ wall time is5250.700698394 seconds; peak worker RSS is1844652KiB. Slurm reports
 
 There are zero stage-level replay/refusal flags. The bounded numerical solver
 fallback handles68 rows /204288 decisions, all certified. Do not describe that as
-no fallback. Cold15265 has now settled its5974-second debit; cached15266 has a live9002-second
-reservation, which is not actual terminal usage. No new job was submitted or repeated. The check does not inspect
+no fallback. Cold15265 and cached15266 settled their5974- and4422-second debits; modern15267
+has a live10802-second reservation, which is not actual terminal usage. No new job was submitted or repeated. The check does not inspect
 model/state binary bytes, independently rebuild membership or validate fresh-oracle
 equality and complete campaign costs. Read docs/V67_COMPRESSED1_RECEIPT_V69.txt.
 
@@ -60,8 +72,19 @@ validation/v67_cold1_metadata.json checks all24 stage certificates and the settl
 is6016.783538496 seconds; Slurm reports1h39m43 CPU separately. Zero stage replay/
 refusal flags coexist with7 internal numerical fallback rows /21504 certified
 decisions. Read docs/V67_COLD1_RECEIPT_V69.txt. This metadata check establishes no
-actual model/state equality or complete campaign-cost result. Preserve cached's
-live9002-second reservation and require both actual terminal audits.
+actual model/state equality or complete campaign-cost result. Cached has now settled; preserve modern's
+live10802-second reservation and require both actual terminal audits.
+
+## First cached receipt and accounting
+
+validation/v67_cached1_metadata.json verifies24 stage certificates, seals and
+the settled4422-second debit:4421.445833 worker CPU seconds,7.710626739 controller
+own CPU,4421.448697 all-waited-child CPU and1913972KiB peak worker RSS. Transaction
+wall is4455.690168641 seconds; Slurm reports1h13m50 CPU separately. Zero stage
+replay/refusal flags coexist with7 internal fallback rows /21504 certified
+decisions. Read docs/V67_CACHED1_RECEIPT_V69.txt. Modern's10802-second live
+reservation is not observed usage. No new model/state or complete campaign result
+is verified. Both actual terminal audits and the scientific decision remain.
 
 ## Production wiring completed locally
 
@@ -341,3 +364,11 @@ a rendered page count. See validation/v69_manuscript_codec_clarification.json.
 Light queue read at16:38:59UTC (22:08:59IST): cached15266 RUNNING25m15s, with
 15267--15275 dependency-pending. Numerical HEAD remains f900999. This is no new
 metadata archive or terminal result. The R snapshot remains the latest full read.
+
+## Latest receipt checkpoint
+
+The cached comparison is closed at the metadata level; modern comparison15267
+is active. Snapshot S supersedes the earlier light queue reads above while
+preserving them. The manuscript remains4943 source tokens, with its previous
+successful native compile and71-number check; all five companion ZIPs remain
+unchanged. No empirical claim, frozen source, registration or job was altered.

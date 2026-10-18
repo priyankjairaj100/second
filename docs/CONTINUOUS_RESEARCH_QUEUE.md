@@ -41,6 +41,15 @@ state and continue local work. Reconcile jobs before any later submission. Do no
 store credentials in files or the scheduled prompt. Do not create another monitor
 or parallel execution loop. No subagent delegation is currently authorized.
 
+## Current access,18 October2026
+
+SSH timed out before login; stop repeated attempts and await network restoration.
+Current cluster state is unverified. The16October snapshot S below remains the
+last verified observation: four comparisons completed and modern comparison active.
+Do not infer eventual completion from elapsed time. On reconnect, inspect all
+existing jobs and terminal receipts before any registered follow-up. The saved
+cached receipt is being published as historical evidence; the paper is unchanged.
+
 ## Ordered work
 
 1. **Close V63 and preserve terminal evidence. COMPLETE.** All three jobs
@@ -67,10 +76,11 @@ or parallel execution loop. No subagent delegation is currently authorized.
    IN PROGRESS.** V64 adapter passed 34 Linux tests; V66 complete operations passed 44, including
    actual five-arm tiny-model/state equality. V67 passed64 Linux tests with zero
    failures/skips; full empirical jobs15262--15275 are registered and submitted.
-   Preparation15262, hybrid15263, compression15264 and cold15265 completed0:0.
-   At21:44IST cached15266 was RUNNING42s;15267--15275 were dependency-pending.
-   All three completed comparison receipts/debits passed metadata checks;
-   both binary audits remain. Read docs/V67_COLD1_RECEIPT_V69.txt.
+   Preparation15262, hybrid15263, compression15264, cold15265 and cached15266
+   completed0:0. At23:09IST modern15267 was RUNNING11m17s with3of24 stage
+   certificates;15268--15275 were dependency-pending. All four completed comparison
+   receipts/debits pass metadata checks; both binary audits remain. Read
+   docs/V67_CACHED1_RECEIPT_V69.txt. Preserve modern's10802-second live reservation.
    The new reporting-only terminal checker passes25 generated tests and correctly
    leaves actual snapshots pending. Use docs/TERMINAL_REPORTING_PREPARATION_V69.txt;
    synthetic receipt success cannot replace both actual terminal audits.
@@ -206,14 +216,13 @@ passes actual-byte and portable audits but gives only 0.14% incremental storage
 savings. V61/V62 still establish approximately9% compression storage savings with
 39–42% slower requests versus cached lossless. V64 software qualification is
 complete; V65 data admission and portable audit also passed. V66 operations and
-V67's64-test exact-source Linux gate is qualified. At21:44IST preparation15262,
-hybrid15263 and compression15264 were COMPLETED0:0. Their worker debits are6858,
-4922 and5210 CPU seconds. Cold15265 also completed, charged5974; cached15266
-is RUNNING and15267--15275 are dependency-pending.
-All three completed comparisons have24 stage certificates. Their7,68 and7 numerical
-fallback rows remain distinct from zero stage-level replay/refusal flags.
-Modern-service timings,
-new-root model evidence, untouched quality and prospective timing remain absent.
+V67's64-test exact-source Linux gate is qualified. At23:09IST preparation15262,
+hybrid15263, compression15264, cold15265 and cached15266 were COMPLETED0:0, with
+worker debits6858,4922,5210,5974 and4422 CPU seconds. Modern15267 is RUNNING with
+3of24 stage certificates;15268--15275 are dependency-pending. All four completed
+comparisons have24 stage certificates. Their7,68,7 and7 internal fallback rows
+remain distinct from zero stage-level replay/refusal flags. Complete modern-service
+results, audited new-root equality, untouched quality and prospective timing remain absent.
 The same manuscript now compiles in the official ACL review style at4943 source
 whitespace tokens excluding embedded style, down from6884,
 with Limitations and AI disclosure. Three omitted prior-work comparisons are now
