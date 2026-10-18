@@ -1,6 +1,7 @@
 {
   "active_jobs": [],
   "branch": "codex/second-cluster-v42",
+  "claim_and_review_scope": "docs/CLAIM_AND_REVIEW_SCOPE_V72.txt",
   "created_at_utc": "2026-10-18T14:17:30.179589+00:00",
   "evidence_reports": {
     "validation/native_manuscript_v72_compile.json": {
@@ -360,5 +361,6 @@
   "scientific_decision": "docs/RESEARCH_DECISION_V72.txt",
   "status": "scoped_evidence_complete_submission_preparation_remaining",
   "submission_ready": false,
+  "supplied_reviews_apply_to_this_paper": false,
   "untouched_quality_verified": true
 }

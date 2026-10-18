@@ -112,3 +112,10 @@ remain pending. Scope release review to files actually distributed; no runtime
 binary vendoring is needed just to finish a source/evidence bundle. Author-controlled
 facts/release terms cannot be invented. Existing heartbeat remains active for useful
 work/recovery, not redundant completed-job polling. No final project ETA asserted.
+
+Claim/review scope follow-through: docs/CLAIM_AND_REVIEW_SCOPE_V72.txt confirms the
+three supplied semantic-weighting reviews concern the separate SANW manuscript.
+The current Second target, cost, adverse-quality and generalization boundaries were
+read together; no independent peer/proof review is claimed. Keep the demonstrated
+V67/V71 results central and tighten prospective introduction wording during the
+format pass. Source-only release review must not expand into runtime vendoring.

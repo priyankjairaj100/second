@@ -45,9 +45,12 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
    evidence,583-source component,213 clean local fixtures and eight-component
    review bundle pass740-member/742-text-file inventory/navigation checks. Saved
    selection metadata and43 upstream notices retained. Read current package README.
-7. READY: audit reviewer-objection coverage and claim consistency against the now
-   completed evidence; refine source-only reproduction instructions and included-
-   payload notices. Do not expand scope to vendoring runtime/model/corpus binaries
+7. COMPLETE SCOPE CHECK: docs/CLAIM_AND_REVIEW_SCOPE_V72.txt checks current claims
+   and supplied-review relevance. All three supplied semantic-weighting reviews
+   concern another manuscript; their scores/experiments are not applied to Second.
+   The current target/cost/quality limitations are consistent; tighten introductory
+   prospective wording during the final format pass. Continue source-only
+   reproduction instructions and included-payload notices as required. Do not expand scope to vendoring runtime/model/corpus binaries
    or require binary-release attribution for absent files. Record genuine external
    input/reproduction limitations rather than treating metadata checks as a rerun.
 8. PENDING AUTHOR DECISION: long versus short ACL/ARR paper format. Current source
