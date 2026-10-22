@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current manual-work handoff: docs/ACTIVE_SESSION_V75.md and handoff/program_v75.json.
+Current manual-work handoff: docs/ACTIVE_SESSION_V77.md and handoff/program_v77.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user stopped the scheduler: heartbeat PAUSED. Do not resume it automatically.
 The subsequent user request authorises this optimisation/transfer investigation.
@@ -19,14 +19,16 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
 
 ## Ordered work
 
-0. NEW MANUAL INVESTIGATION V75: see research_v75/README.txt. Isolated decoder
-   qualification on generated Mac fixtures and receipt attribution are complete;
-   neither is a new model result. Next: Linux qualification, symmetric control
-   improvements, separate prospective full-request comparison, then justified
-   transfer evidence. The old scoped claim needs no new experiment, but the
-   user's broader question now supplies a distinct research rationale. No launch
-   is registered or ready. Existing caps, frozen sources and quality exclusions
-   remain unchanged; scheduler stays paused.
+0. MANUAL DEEP CAMPAIGN V76/V77: read research_v77/CAMPAIGN_PLAN.txt. V76's
+   exact source-only Linux qualification is prepared; automatic approval review
+   rejected upload and explicit user approval is pending. No staging/launch or
+   registration consumption. Keep scheduler paused. V77 modern-control cache
+   mechanics pass9 local tests; actual parser/runtime qualification is pending.
+   Shape-only transfer screen identifies complete fallback work as the cap for
+   48stages at existing endpoints; a smaller matched root needs new registration.
+   Next Linux gates, fair complete-request comparison, bounded timing replication,
+   then matched transfer. No model result or paper claim changed. Reconcile jobs
+   again before any upload/launch. Preserve all failed gates and old sources.
 
 1. COMPLETE: V63 artifact audit,V65 disjoint root,V66 operations,V67 full service.
    All ten actual model/state comparisons and both terminal audits pass. Compression
