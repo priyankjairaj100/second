@@ -1,9 +1,10 @@
 # Second: continuous research and submission queue
 
-Current handoff docs/ACTIVE_SESSION_V74.md and handoff/program_v74.json supersede
-V73 reporting status. V72 scientific decision and actual receipts remain current. Historical handoffs/queues keep their original observation cutoffs.
-User authorized sustained continuation; work through ready tasks without a proceed
-message. Existing heartbeat is recovery, not permission to stop after a small action.
+Current manual-work handoff: docs/ACTIVE_SESSION_V75.md and handoff/program_v75.json.
+V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
+The user stopped the scheduler: heartbeat PAUSED. Do not resume it automatically.
+The subsequent user request authorises this optimisation/transfer investigation.
+Historical handoffs keep their original observation cutoffs.
 
 ## Immutable execution boundaries
 
@@ -17,6 +18,15 @@ Stop repeated attempts after connection failure. Inspect jobs before any future
 launch. Source checks/tests/receipts alone are not independent scientific replication.
 
 ## Ordered work
+
+0. NEW MANUAL INVESTIGATION V75: see research_v75/README.txt. Isolated decoder
+   qualification on generated Mac fixtures and receipt attribution are complete;
+   neither is a new model result. Next: Linux qualification, symmetric control
+   improvements, separate prospective full-request comparison, then justified
+   transfer evidence. The old scoped claim needs no new experiment, but the
+   user's broader question now supplies a distinct research rationale. No launch
+   is registered or ready. Existing caps, frozen sources and quality exclusions
+   remain unchanged; scheduler stays paused.
 
 1. COMPLETE: V63 artifact audit,V65 disjoint root,V66 operations,V67 full service.
    All ten actual model/state comparisons and both terminal audits pass. Compression
@@ -90,5 +100,5 @@ Targeted source/linkability review documents limits, not a guarantee of rights o
 anonymity. Author-owned form facts remain unset; no attestation or submission is
 made. Publish coherent checkpoints to the existing branch/draft PR. Keep routine
 completed-job polling quiet; no numerical launch is required by the current claim.
-Pause only on user request or when the agreed bundle and claim-required evidence
-are actually complete. No final ETA is inferred from resource ceilings.
+The user has requested a scheduler stop; it is paused and must stay paused
+unless the user asks to resume it. No final ETA is inferred from resource ceilings.
