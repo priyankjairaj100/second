@@ -1,0 +1,84 @@
+V89 prospective fresh recovery, 23 October 2026
+
+Purpose
+Recover the same four-cell, two-endpoint comparison after the infrastructure
+failure of V80. The fixed thirteen-record target, normalization, record order,
+four implementations, arm order seed, 24 stages, independent fresh oracle and
+all CPU/memory/work limits remain unchanged. This is a new registration and a
+fresh namespace, four-cell-recovery-v89-20261023-a. It is not a retry/resumption
+of any V80/V81/V82 allocation. Original failed/cancelled jobs, empty completion,
+104 partial-file bindings, stale locks and the unsettled ledger remain intact.
+
+Carry-forward and execution
+The old 12602-second unknown numerical reservation stays fully charged. New
+numerical reservations total 108020, giving 120622 <= 120624; the two-second
+margin is not authorization to change any worker cap. Old/new controller
+allowances are 602+6020 = 6622 <= 7224. Software and primary/supplemental audits
+retain their separate original allowances. No software pass is a model result.
+New source bindings include all 871 frozen sources and five auxiliary commitments.
+
+The worker adds V87's exclusive, bounded output writer; both actual byte audits
+retain full saved-state/model checks. V89 additionally checks actual saved file
+extents and complete host envelopes. All prior targets and component sources
+remain frozen. No quality, checkpoint transfer, timing replication or scientific
+claim expansion is registered here. V84's impossible old success gates remain
+unchanged; a later new transfer admission must bind real recovered receipts.
+
+Storage allowance and paths
+storage_plan.py derives worker maxima and exact source staging extents, then
+adds finite conservative allowances for controller/ledger replacement, entry
+and host receipts, submission records, logs, audits, native compiler work,
+software fixtures, directory inodes and allocation overhead. Worker maxima are
+enforced; some other roles are conservative engineering allowances. They are
+not a formal bound, a measured peak or a capacity reservation. The external
+Slurm log has a conservative allowance, not a worker-RLIMIT guarantee. Compiler
+temporary allocations remain unmeasured. No old evidence is deleted or credited
+as reclaimable space. Remaining capacity omits already completed worker maxima;
+actual existing files are already charged by the fresh quota observation.
+
+Before upload, the complete staging allowance must pass the source-bound V88
+host guard without writing a probe. Then use an exclusive new directory and
+verify every extracted member. prepare.py checks capacity again and writes a
+new canonical candidate program. submit.py rechecks old jobs, all sources and
+partial evidence, then storage before consuming registration or submitting.
+Each new allocation independently checks capacity before dispatching a container.
+The software entry verifies the actual default /tmp and project device/new-file
+group against its host observation. No temporary or project root is redirected.
+This container mapping and positive admission are still unqualified until the
+actual registered Linux checks succeed. The exhausted project quota blocks all
+upload/registration/launch now; globally free disk does not supply quota headroom.
+
+Complete clocks and failure cleanup
+The host envelope starts before its storage queries, captures container startup,
+entry/worker execution and shutdown, and writes a separate receipt. Numerical
+CPU comes from the actual sealed worker. The envelope subtracts only that CPU;
+helper processes, source/storage checks and bootstrap overhead remain charged
+to the nonnumerical allowance. Nested clocks are not summed. Final host writes,
+host interpreter/import and shell startup and reporter work are not hidden: terminal.py requires actual
+Slurm CPU/time with its reporting precision and records read-only review cost
+separately. Attributed preparation includes the additional host overhead; it
+remains an attribution, not an independently measured lifecycle.
+
+The host collector retains a bounded 64MiB combined diagnostic log. An overflow
+is an unsuccessful attempt with an explicitly incomplete prefix. A timeout or
+overflow records an exclusive cancellation intent and requests cancellation of
+only that newly registered current allocation, once. This is necessary because
+workers create separate process groups. A local process-group kill alone cannot
+prove whole-allocation cleanup. Never cancel an old or unrelated job. Preserve
+any partial intent/response and inspect actual terminal state; no automatic retry.
+Default scancel without --signal or --batch terminates the entire selected job:
+https://slurm.schedmd.com/scancel.html (official manual, checked 23 October 2026).
+No actual cancellation or new job has been executed by this preparation.
+
+Qualification and closure
+The exact-count Linux gate comprises 162 checks, including inherited numerical
+component/service fixtures, new bounded storage/host/launcher tests and actual
+Linux seals. Only the pure local subset has run. macOS protocol/filesystem and
+accounting checks neither qualify numerical code nor test actual Slurm cleanup.
+The actual one-CPU, 16GiB gate must finish with no failures/errors/skips, complete
+host accounting, correct path mapping and successful terminal scheduler state.
+Then submit exactly ten dependent workers and both audits once. Held jobs have
+verified names, dependency, host, CPU, memory, clock and no-requeue constraints
+before release. Any uncertain submission keeps its intent and forbids repetition.
+Both actual audits and host terminal closure are mandatory before interpretation.
+The V72 scientific result and V74 manuscript remain the current supported story.

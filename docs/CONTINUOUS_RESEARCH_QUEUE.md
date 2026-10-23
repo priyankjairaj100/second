@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V88.md and handoff/program_v88.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V89.md and handoff/program_v89.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
@@ -19,10 +19,10 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
 
 ## Ordered work
 
-0. ACTIVE CONTINUATION V88, STORAGE BLOCKED: V80 preparation15905 FAILED120:0;
+0. ACTIVE CONTINUATION V89, STORAGE BLOCKED: V80 preparation15905 FAILED120:0;
    all11 descendants15906--15916 CANCELLED without running. V81 software15917
    FAILED120:0 after two seconds; V82 jobs15921--15925 CANCELLED without running.
-   Account queue remained empty at10:38UTC. The account exceeded its1000GiB hard quota;
+   Account queue remained empty at11:32UTC. The account exceeded its1000GiB hard quota;
    filesystem15T free does not provide account headroom. User action is requested
    to restore capacity without deleting any registered Second evidence. Keep
    notifications quiet while unchanged. No paid storage or alternate filesystem.
@@ -61,7 +61,25 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
    Worker RLIMIT_FSIZE alone does not bound an external Slurm logging process.
    Keep host storage-check overhead in complete transaction/accounting scopes.
    All871frozen sources,5auxiliary commitments and the manuscript remain unchanged.
-   Next restore quota headroom, prepare and qualify separately registered
+   V89 now prepares the complete separate recovery path locally: identical
+   workload/order/caps, carried old reservation, bounded worker outputs, host
+   storage checks before registration and every new allocation, container path
+   verification, bounded diagnostic capture and complete host/terminal accounting.
+   89pure checks pass (33new/56inherited); the162-check Linux gate is unexecuted.
+   Source-only package:934files,9,052,160bytes;935tar members independently checked.
+   The complete conservative staging allowance is74,870,290,017project bytes
+   (69.73GiB),12,193inodes, plus17,263,765,504temporary bytes (16.08GiB),20,482inodes.
+   These are allowances, not measured peaks or reserved space. Native compiler
+   and external Slurm log scopes retain their explicit qualification limits.
+   At11:32UTC the source-bound full-plan host check still refused capacity;
+   account queue/19old dispositions/ledger/empty completion remain unchanged.
+   No new namespace, upload, registration, cancellation or allocation was made.
+   Read docs/RECOVERY_RUNBOOK_V89.txt and research_v89/PROTOCOL.txt. Future overflow
+   cleanup may cancel only its own new allocation once, with preserved intent;
+   process-group termination alone cannot prove cleanup of separately grouped
+   workers. No old or unrelated job is targeted. Inspect actual terminal state.
+   All871frozen sources,5auxiliary commitments and the manuscript remain unchanged.
+   Next restore quota headroom, stage and qualify separately registered
    recovery with conservative failure charges, then close full comparison and
    new transfer admission/experiment. Preserve the exact approved1,327,104 grid
    allowance for both new targets and all CPU/memory/work ceilings. Follow the

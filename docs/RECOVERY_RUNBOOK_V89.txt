@@ -1,0 +1,84 @@
+V89 continuation runbook: prepared locally, not registered or launched
+
+Current block: exhausted project user quota. At11:32UTC23October2026, the full
+source-bound plan refused. Never stage while this is unresolved. Do not delete
+registered Second evidence, refund the old ledger, redirect files, change quotas
+or retry an old allocation. Keep the already pending user question quiet.
+
+Local package directory
+/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v89-prepared
+
+Archive: four-cell-recovery-v89-source-only.tar
+Bytes:9052160
+SHA256:0560ae13f34a60830824011f1c8571b79c7e90f545cb1e78e8a273686732802b
+Inventory:source-inventory.json
+SHA256:9c2df88733a29bedf0591e35157c50af8aabe453f6999e05ec3fc8adb2b484d4
+934bound files,935regular archive members. No weights or corpus data.
+preparation.json records exact plan, allowance and local-only status. Preserve
+the archive; do not regenerate or silently replace it after a source change.
+
+Prospective remote paths
+Archive:/nfs_home/users/poonam/second-20261010/local_runs/four-cell-recovery-v89-source-only.tar
+Run:/nfs_home/users/poonam/second-20261010/local_runs/four-cell-recovery-v89-20261023-a
+Numerical checkout stays f900999fcb200509dfad4fc081ce9c87fd172a16. No git pull.
+
+Admission and staging sequence
+1. Reconcile GitHub/local state and the19 old allocations. Keep the original
+   failure dispositions,104 partial artifacts, zero-byte completion and ledger
+   binding. Inspect any newly present V89 paths/jobs before further action.
+   On connection failure stop repeated attempts and continue only useful local
+   work. Never infer absent work from a failed connection.
+2. Verify archive/inventory hashes and all934 source/evidence members. Use the
+   exact V85/V88 guard sources bound in host-refusal.json to check the full
+   before_upload_requests from preparation.json in memory on the host. This
+   needs74,870,290,017project bytes and12,193inodes, plus17,263,765,504temporary
+   bytes and20,482inodes. User quota, enabled group quotas and each filesystem
+   must pass. This is a fresh observation, not a capacity reservation.
+3. Only after admission, create the new run directory exclusively and upload
+   the archive exclusively. Verify its actual SHA256 before extraction. Reject
+   duplicate, absolute, traversing, symbolic/hard-link or nonregular members;
+   require exactly the935 inventoried members. Write every member exclusively
+   and verify actual extracted bytes. Preserve any interrupted staging; inspect
+   rather than overwrite or assume a retry is harmless. Do not upload binaries.
+4. From that new source root, run the pinned host Python with -B on
+   research_v89/prepare.py, passing the inventory SHA then the archive SHA above.
+   This performs fresh capacity/source/failure checks and writes program.json
+   exclusively. Capture its actual resulting program SHA; no invented value.
+   There is deliberately no prewritten registration or empirical result.
+5. Use research_v89/submit.py checks ACTUAL_PROGRAM_SHA once. It rechecks the
+   original jobs, source/input bindings, failure carry-forward and capacity
+   before writing registration, held submission intent and release evidence.
+   Inspect uncertainty; never call it twice to compensate for a missing reply.
+6. Require the exact162-test pinned-Linux success, no skips/errors/failures,
+   successful checks-host.json, actual matching container filesystem/group
+   observations and successful terminal Slurm allocation. The89 local checks
+   do not satisfy this gate. A failed gate consumes this registration.
+7. Only then use research_v89/submit.py chain ACTUAL_PROGRAM_SHA once. It holds
+   ten workers and two audits, verifies exact constraints/dependencies, records
+   each intent and releases the finite chain. Preserve one CPU,16GiB,all clocks
+   and the original file/work/solver ceilings. No array sweep or extra target.
+8. On timeout/log overflow, the source can preserve an abort intent and request
+   cancellation of only its own new allocation once. No cancellation occurred
+   during preparation. Inspect actual Slurm state before any later action.
+   Every failed/uncertain worker keeps its conservative reserved debit.
+9. After all13 new allocations are terminal, run the source-bound read-only
+   research_v89/terminal.py ACTUAL_PROGRAM_SHA on the host, capture its stdout
+   exclusively into a local reporting receipt, and review both actual audits
+   plus all scheduler/source/input/seal/cost checks. Neither a passing software
+   gate nor partial certificates imply model correctness or speedup.
+10. Apply research_v82/DECISION_RULES.txt to actual full-cost comparison evidence.
+    Rebind later transfer preparation only to successful new terminal receipts.
+    Original V81/V82 attempts remain consumed and V84's old prerequisite gates
+    must refuse. Preserve the approved1,327,104grid cap for both new targets.
+    Register any further matched quality/timing work separately when justified.
+
+Storage and clock limits
+The plan includes all identified finite write roles, but conservative compiler,
+filesystem and Slurm-log allowances are not formal enforced maxima. No positive
+host admission or container mapping is qualified yet. The complete host clock
+contains admission, container startup and worker/entry execution. Interpreter
+and shell startup, final writes and displayed Slurm precision are reconciled at
+terminal closure. Nested CPU clocks are not summed; no old debit is refunded.
+
+V72 remains current scientific evidence; V74 remains current manuscript/bundle.
+No edit, new result or final completion claim is justified by this preparation.
