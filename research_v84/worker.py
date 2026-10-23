@@ -7,7 +7,7 @@ if __name__=='__main__':
     sys.path[:0]=[str(prior[63]/'deps'),str(run),*[str(prior[n]) for n in [66,65,64,63]],str(root)]
 import gc,os,resource,time,traceback
 from research_v84 import campaign as c
-from research_v84.config import RUN,ROOT,ORDER,TRIALS,CELLS,trial_parts,predecessor,expected_artifacts
+from research_v84.config import RUN,ROOT,ORDER,TRIALS,CELLS,trial_parts,predecessor,expected_artifacts,REBUILT_REPRESENTATIONS
 ARTIFACT_LIMIT=2**30
 from research_v80.io import require,read,json_read,write,info
 from research_v81.operations import REPRESENTATIONS,ARM_REPRESENTATION as BASE_REPRESENTATION,rebuild,request
@@ -23,6 +23,7 @@ def _main(plan_path):
         and plan==dict(trial=trial,program=str(RUN/'program.json'),program_sha256=c.sha(RUN/'program.json'),
             output=str(RUN/trial/'outputs'),slurm_job_id=os.environ.get('SLURM_JOB_ID')),'Literal worker plan/job differs')
     verify_command_admission(plan['program_sha256'],'feasibility',c.command(plan_path))
+    require(tuple(REPRESENTATIONS)==REBUILT_REPRESENTATIONS,'Declared rebuild representations differ from production writer')
     out=Path(plan['output']);out.mkdir(parents=True,exist_ok=False);start=time.perf_counter_ns()
     result=dict(schema='matched-complete-service-worker-v84',trial=trial,profile=profile,status='running',complete_model=False,
         program_sha256=plan['program_sha256'],slurm_job_id=plan['slurm_job_id'],artifacts={},

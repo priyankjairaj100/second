@@ -23,7 +23,7 @@ class MatchedProtocol(unittest.TestCase):
             with self.assertRaises(ValueError):trial_parts(trial)
     def test_every_registered_worker_has_exact_artifact_census(self):
         base={'execution-provenance.json','admission.json'}
-        rebuilt={'model.bin','lossless-state.bin','lossless-trust.json','compressed48-state.bin','compressed48-trust.json','modern_lossless-state.bin','modern_lossless-trust.json'}
+        rebuilt={'model.bin','lossless-state.bin','lossless-trust.json','compressed48-state.bin','compressed48-trust.json','hybrid_gram-state.bin','hybrid_gram-trust.json','modern_lossless-state.bin','modern_lossless-trust.json'}
         for trial in ORDER:
             with self.subTest(trial=trial):
                 local=trial.split('/')[1]
@@ -34,5 +34,15 @@ class MatchedProtocol(unittest.TestCase):
             with self.assertRaises(ValueError):expected_artifacts(trial)
     def test_artifact_census_returns_independent_sets(self):
         first=expected_artifacts('gpt2/oracle');first.clear()
-        self.assertEqual(len(expected_artifacts('gpt2/oracle')),16)
+        self.assertEqual(len(expected_artifacts('gpt2/oracle')),20)
+    def test_declaration_matches_actual_production_operation_sources(self):
+        # Inspect the frozen source without importing numerical modules on Mac.
+        import ast
+        root=Path(__file__).resolve().parents[1]
+        service=ast.parse((root/'research_v64/service.py').read_text())
+        modern=next(ast.literal_eval(node.value) for node in service.body if isinstance(node,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='REPRESENTATION' for t in node.targets))
+        operations=ast.parse((root/'research_v81/operations.py').read_text())
+        value=next(node.value for node in operations.body if isinstance(node,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='REPRESENTATIONS' for t in node.targets))
+        actual=tuple(modern if isinstance(node,ast.Name) and node.id=='MODERN' else ast.literal_eval(node) for node in value.elts)
+        self.assertEqual(REBUILT_REPRESENTATIONS,actual)
 if __name__=='__main__':unittest.main()

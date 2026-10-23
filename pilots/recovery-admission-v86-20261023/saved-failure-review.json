@@ -1,0 +1,196 @@
+{
+  "actual_model_state_reopened": false,
+  "bindings_commitment": {
+    "bytes": 16219,
+    "sha256": "29a00e116f1eaf1c6a3284a5e20e9cf324be6bb2589d0f2117ed570b1d3ec921"
+  },
+  "budget": {
+    "combined_controller_reservation": 6622,
+    "combined_numerical_reservation": 120622,
+    "historical_ledger_modified": false,
+    "new_controller_reservation": 6020,
+    "new_numerical_reservation": 108020,
+    "old_controller_reservation": 602,
+    "preserved_controller_ceiling": 7224,
+    "preserved_numerical_ceiling": 120624,
+    "remaining_numerical_reservation_margin": 2,
+    "reservation_is_not_observed_cpu": true,
+    "software_and_audits_have_separate_preserved_caps": true,
+    "unsettled_old_worker_reservation": 12602
+  },
+  "created_utc": "2026-10-23T09:54:14.778363+00:00",
+  "disposition": {
+    "allocations": {
+      "15904": {
+        "elapsed_seconds": 13,
+        "exit_code": "0:0",
+        "job_id": "15904",
+        "reporting_quantum_ns": 1000000,
+        "scheduler_cpu_ns": 11560000000,
+        "state": "COMPLETED"
+      },
+      "15905": {
+        "elapsed_seconds": 6439,
+        "exit_code": "120:0",
+        "job_id": "15905",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 6402000000000,
+        "state": "FAILED"
+      },
+      "15906": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15906",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15907": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15907",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15908": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15908",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15909": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15909",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15910": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15910",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15911": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15911",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15912": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15912",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15913": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15913",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15914": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15914",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15915": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15915",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15916": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15916",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15917": {
+        "elapsed_seconds": 2,
+        "exit_code": "120:0",
+        "job_id": "15917",
+        "reporting_quantum_ns": 1000000,
+        "scheduler_cpu_ns": 850000000,
+        "state": "FAILED"
+      },
+      "15921": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15921",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15922": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15922",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15923": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15923",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15924": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15924",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      },
+      "15925": {
+        "elapsed_seconds": 0,
+        "exit_code": "0:0",
+        "job_id": "15925",
+        "reporting_quantum_ns": 1000000000,
+        "scheduler_cpu_ns": 0,
+        "state": "CANCELLED"
+      }
+    },
+    "scheduler_cpu_does_not_settle_worker": true,
+    "scheduler_cpu_ns": 6414410000000,
+    "scientific_success": false
+  },
+  "launch_authorized": false,
+  "live_cluster_check": false,
+  "old_ledger_bytes": {
+    "bytes": 15987,
+    "sha256": "10f95f5eea81d1bb07a92412ef4b4fe2e802060eb4251524f9559837ceabcb27"
+  },
+  "precise_runtime_exception_recovered": false,
+  "schema": "saved-failure-reconciliation-v86",
+  "scientific_success": false,
+  "snapshot_commitment": {
+    "bytes": 789328,
+    "sha256": "d3ae4b00db5aaba58217c7e08f987905a9b0ccbe43b4d969f47d0fef0fa0e8c8"
+  },
+  "snapshot_utc": "2026-10-23T09:25:24.638848+00:00",
+  "status": "failure_snapshot_reconciled"
+}

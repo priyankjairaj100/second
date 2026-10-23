@@ -6,6 +6,7 @@ RUN=ROOT/'local_runs/matched-complete-service-v84-20261023-a'
 ADMISSION=ROOT/'local_runs/matched-transfer-admission-v82-20261023-a'
 ADMISSION_SHA='5bead3425eb9bb4bec645ac12e681b45e62d87762cef0f15179aecdb427ae27b'
 PROFILES=('distilgpt2','gpt2')
+REBUILT_REPRESENTATIONS=('lossless','compressed48','hybrid_gram','modern_lossless')
 CELLS=dict(reference_compressed='compressed',reference_modern='modern',optimized_compressed='compressed',optimized_modern='modern')
 ARM_ORDER=sorted(CELLS,key=lambda k:hashlib.sha256(('second-matched-depth-service-v84:'+k).encode()).hexdigest())
 LOCAL_ORDER=['prepare',*[a+'-1' for a in ARM_ORDER],*[a+'-2' for a in reversed(ARM_ORDER)],'oracle']
@@ -33,7 +34,7 @@ def expected_artifacts(trial):
     """Declare all outputs without importing the numerical worker."""
     _,local=trial_parts(trial)
     names={'execution-provenance.json','admission.json'}
-    rebuilt={'model.bin'}|{r+'-'+suffix for r in ('lossless','compressed48','modern_lossless') for suffix in ('state.bin','trust.json')}
+    rebuilt={'model.bin'}|{r+'-'+suffix for r in REBUILT_REPRESENTATIONS for suffix in ('state.bin','trust.json')}
     if local=='prepare':names|=rebuilt
     elif local=='oracle':names|={f'step-{s}/'+name for s in (1,2) for name in rebuilt}
     else:names|={'model.bin','state.bin','trust.json'}
@@ -44,7 +45,7 @@ SOFTWARE_MODULES=['research_v63.test_control','research_v63.test_runner','resear
     'research_v84.test_config','research_v84.test_submit','research_v84.test_submit_flow','research_v84.test_worker','research_v84.test_receipts']
 
 def design():
-    return dict(schema='matched-complete-service-v84',software_modules=SOFTWARE_MODULES,expected_tests=87,profiles=list(PROFILES),cells=CELLS,trial_order=ORDER,trials=TRIALS,
+    return dict(schema='matched-complete-service-v84',software_modules=SOFTWARE_MODULES,expected_tests=88,profiles=list(PROFILES),cells=CELLS,trial_order=ORDER,trials=TRIALS,
         normalization=512,root_sources=4,retained_counts=[3,2],tokens_per_record=128,grid_allowance=1327104,
         phase_cpu_seconds=CAP,preserved_phase_ceiling=120624,controller_cpu_allowance_seconds=6040,preserved_controller_ceiling=7224,
         process_address_space_bytes=16*2**30,file_size_bytes=2*2**30,artifact_limit_bytes=2**30,resident_bytes=9*2**30,
