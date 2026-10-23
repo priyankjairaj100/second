@@ -1,0 +1,19 @@
+{
+  "scope": "Generated tiny service software qualification only; no empirical checkpoint or corpus",
+  "empirical_execution": false,
+  "suites": {
+    "legacy": {
+      "tests": 44,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "four_cell_integration": {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "elapsed_ns": 4946016364
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "sbatch",
+    "--hold",
+    "--parsable",
+    "--no-requeue",
+    "--job-name=second79-integration",
+    "--partition=cpu-short",
+    "--qos=cpu-short",
+    "--nodelist=csis.mn1",
+    "--ntasks=1",
+    "--cpus-per-task=1",
+    "--mem=16G",
+    "--time=00:10:00",
+    "--chdir=/nfs_home/users/poonam/second-20261010/local_runs/service-integration-v79-20261023-a",
+    "--output=/nfs_home/users/poonam/second-20261010/local_runs/service-integration-v79-20261023-a/slurm-%j.log",
+    "/nfs_home/users/poonam/second-20261010/local_runs/service-integration-v79-20261023-a/research_v79/run_cpu.sbatch",
+    "a0d71ade247d410150a3178cc385613b3c6dc9e347eaaaca0b20524f64f6770a"
+  ],
+  "created_utc": "2026-10-23T06:50:25.037569+00:00",
+  "program_sha256": "a0d71ade247d410150a3178cc385613b3c6dc9e347eaaaca0b20524f64f6770a",
+  "queue_before": ""
+}

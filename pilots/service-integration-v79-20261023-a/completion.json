@@ -1,0 +1,46 @@
+{
+  "aggregate_cpu_ns": 5464861638,
+  "elapsed_ns": 5728781689,
+  "empirical_execution": false,
+  "error": null,
+  "finished_utc": "2026-10-23T06:50:32.836126+00:00",
+  "hostname": "csis.mn1",
+  "job_id": "15903",
+  "maximum_rss_kib": 66676,
+  "outputs": {
+    "outputs/integration-results.json": {
+      "bytes": 397,
+      "sha256": "44b783129b1b39290d869f99d5553ba355fbe2aa6255b1e697242136c924effa"
+    },
+    "outputs/integration.log": {
+      "bytes": 7863,
+      "sha256": "416250e3a48d6daf7ef5ffaa53bd79a8fcf3c5f2a7fe0eea8b9fb6650a85463d"
+    }
+  },
+  "process_cpu_ns": 448808638,
+  "program_sha256": "a0d71ade247d410150a3178cc385613b3c6dc9e347eaaaca0b20524f64f6770a",
+  "runtime": {
+    "compiler": "cc (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "gmpy2": "2.3.2",
+    "machine": "x86_64",
+    "numpy": "2.3.5",
+    "python": "3.12.14 (main, Sep 19 2026, 03:36:28) [GCC 12.2.0]",
+    "zstandard": "0.25.0",
+    "zstd_backend": "cext",
+    "zstd_version": [
+      1,
+      5,
+      7
+    ]
+  },
+  "status": "complete",
+  "steps": [
+    {
+      "elapsed_ns": 5247123056,
+      "exit": 0,
+      "name": "service-integration"
+    }
+  ],
+  "waited_child_cpu_ns": 5016053000,
+  "waited_child_maximum_rss_kib": 64532
+}

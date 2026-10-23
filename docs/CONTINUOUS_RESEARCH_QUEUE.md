@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current manual-work handoff: docs/ACTIVE_SESSION_V79.md and handoff/program_v79.json.
+Current manual-work handoff: docs/ACTIVE_SESSION_V81.md and handoff/program_v81.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user stopped the scheduler: heartbeat PAUSED. Do not resume it automatically.
 The subsequent user request authorises this optimisation/transfer investigation.
@@ -19,18 +19,23 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
 
 ## Ordered work
 
-0. MANUAL DEEP CAMPAIGN V79: V76 job15897 and V78 job15898 completed0:0,
-   passing decoder/token and actual lossless-parser/cache qualification. Read
-   docs/SOFTWARE_QUALIFICATION_V78.txt. These are component fixtures only.
-   V79 actual tiny-service integration is prepared with49 exact-count checks,
-   an8.26MB source-only package and unchanged software limits. Explicit package
-   upload permission is pending; no V79 staging or job. Keep scheduler paused.
-   Next close V79 once, then build/register the fair4cell x2endpoint complete
-   comparison in research_v79/NEXT_COMPARISON.txt (108020 numerical reservation
-   within120624). Both full audits/fresh model and state bytes remain mandatory.
-   Replication and matched transfer follow separate prospective gates. Preserve
-   all failures, exclusions,808 frozen numerical/software sources and5 auxiliary
-   commitments; no scientific claim changed. Reconcile before every launch.
+0. MANUAL DEEP CAMPAIGN V81: V79 job15903 passed all49 actual integration
+   checks; V80 job15904 passed73 controller/worker/integration/receipt checks.
+   Full four-cell x2endpoint comparison15905--15916 is registered and running;
+   at07:18UTC23October preparation15905 was active, successors pending. No new
+   numerical result exists. Close both full-model/state audits and host terminal
+   accounting before a scientific decision. Never retry/relaunch the chain.
+   V81 generated transfer-format software15917 is queued afterany15916,62checks,
+   no model execution. The user approved exactly1,327,104 grid entries equally
+   for the NEW matched transfer targets only; CPU/memory/work caps unchanged.
+   Prepare matched4x128source DistilGPT2/GPT2 transfer with separate actual model
+   fetch/admission,512-normalized target,complete worker/oracle/audits and quality
+   plan. Weight commitment is pinned but bytes not fetched/verified. Follow up
+   useful results with separately registered balanced timing replication, not
+   opportunistic repeats. Preserve851 frozen source bytes and5 auxiliary files.
+   Existing V72 science/V74 manuscript stand; keep scheduler paused. Reconcile
+   account queue and receipts before any launch. Software fixtures are not
+   complete-model/quality/transfer evidence.
 
 1. COMPLETE: V63 artifact audit,V65 disjoint root,V66 operations,V67 full service.
    All ten actual model/state comparisons and both terminal audits pass. Compression
