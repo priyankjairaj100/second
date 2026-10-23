@@ -1,0 +1,78 @@
+{
+  "aggregate_cpu_ns": 79451753210,
+  "elapsed_ns": 80510080993,
+  "empirical_execution": false,
+  "error": null,
+  "finished_utc": "2026-10-23T06:20:28.091301+00:00",
+  "hostname": "csis.mn1",
+  "job_id": "15897",
+  "maximum_rss_kib": 43976,
+  "outputs": {
+    "outputs/codec.log": {
+      "bytes": 2011,
+      "sha256": "880756d9ed9a98b829cdba3e3b3419d665ccb85ec1ce4dbf63a9edab46898193"
+    },
+    "outputs/codec/decode-17f03da030a87a54.so": {
+      "bytes": 15048,
+      "sha256": "bcbc191673b91ac42077ccc41e50ae6e05f90b81130629526d1c7624c7884b94"
+    },
+    "outputs/codec/sanitize": {
+      "bytes": 34408,
+      "sha256": "34d380a46a2a20846ae6f47bd3f7b3e161a58a10546f69465ab2f2a19eb35151"
+    },
+    "outputs/codec/software-results.json": {
+      "bytes": 2989,
+      "sha256": "7e3827a51c7d3a61a80546272885a1a1a437307fbdcf5aae919bc3362fdf6167"
+    },
+    "outputs/sanitize-build.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outputs/sanitize.log": {
+      "bytes": 58,
+      "sha256": "4a487f8d44ec363f5de733882a1839ee617670f7a4108772d021096ee113edcc"
+    },
+    "outputs/token-results.json": {
+      "bytes": 12817,
+      "sha256": "780d77f82a34c99b773c0aca362bb8e7fc77acc457b8c3a25a9d6dba3b2ea5f0"
+    },
+    "outputs/tokens.log": {
+      "bytes": 8571,
+      "sha256": "ba8b83a969187a81efca075fc27efb731e51aea80d92b87743e36aa159689df5"
+    }
+  },
+  "process_cpu_ns": 349156210,
+  "program_sha256": "482782afc8925528a47a2b97abfc0167968b6bdfbcaf3314922d0777784a9d4b",
+  "runtime": {
+    "compiler": "cc (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "gmpy2": "2.3.2",
+    "machine": "x86_64",
+    "numpy": "2.3.5",
+    "python": "3.12.14 (main, Sep 19 2026, 03:36:28) [GCC 12.2.0]"
+  },
+  "status": "complete",
+  "steps": [
+    {
+      "elapsed_ns": 29934498311,
+      "exit": 0,
+      "name": "codec"
+    },
+    {
+      "elapsed_ns": 192411801,
+      "exit": 0,
+      "name": "sanitize-build"
+    },
+    {
+      "elapsed_ns": 256705825,
+      "exit": 0,
+      "name": "sanitize"
+    },
+    {
+      "elapsed_ns": 49544358187,
+      "exit": 0,
+      "name": "tokens"
+    }
+  ],
+  "waited_child_cpu_ns": 79102597000,
+  "waited_child_maximum_rss_kib": 87852
+}

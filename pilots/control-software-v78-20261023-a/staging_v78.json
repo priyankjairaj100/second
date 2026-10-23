@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "{\"staged\": true, \"files\": 620, \"program_sha256\": \"6ff9101990dec06b5467f482074848d9643d9d5dc04612b383cf3dfa8dcda5fd\", \"checkout_head\": \"f900999fcb200509dfad4fc081ce9c87fd172a16\", \"checkout_status\": \"\", \"queue_before\": \"\"}\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n"
+}
