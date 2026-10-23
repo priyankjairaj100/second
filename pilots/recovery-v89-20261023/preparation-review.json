@@ -755,5 +755,6 @@
   "scientific_result": false,
   "registered": false,
   "launched": false,
-  "initial_local_fixture_failure": "Two cancellation fixtures used macOS symbolic /var ancestors; resolved fixture paths, reran all pure checks. No empirical job was involved."
+  "initial_local_fixture_failure": "Two cancellation fixtures used macOS symbolic /var ancestors; resolved fixture paths, reran all pure checks. No empirical job was involved.",
+  "diff_whitespace_review": "Two extra EOF blank lines in copied receipts.py and test_submit_flow.py; no semantic issue. Kept exact prepared source/package bytes. Static undefined-name checks and all 89 pure tests pass."
 }
