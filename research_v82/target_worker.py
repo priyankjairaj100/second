@@ -16,6 +16,7 @@ from research_v81.profile import PROFILES,PROPOSED_GRID_CAP,validate_geometry
 from research_v81.resource_review import review
 from research_v81.operations import REPRESENTATIONS
 from research_v82.selection import select,SEED
+from research_v82.prerequisite import verify as verify_upstream
 from src.run_store import canonical_json,digest,strict_json
 from src.worker_control import verify_command_admission
 ROOT=Path('/nfs_home/users/poonam/second-20261010')
@@ -37,13 +38,11 @@ def load_plan(path):
     require(json_read(RUN/'registration.json')==dict(program_sha256=plan['program_sha256']),'Registered program commitment required')
     require(p['schema']=='matched-transfer-admission-v82' and p['selection_seed']==SEED and p['profiles']==PROFILES
         and p['grid_allowance']==PROPOSED_GRID_CAP and p['grid_allowance_user_approved'] is True,'Frozen new target design differs')
-    for name,e in p['new_sources'].items():read(RUN/name,e,retain=False)
+    for name,e in p['new_sources'].items():
+        require(not Path(name).is_absolute() and '..' not in Path(name).parts,'Relative source path required');read(RUN/name,e,retain=False)
     old_raw=read(V80_PROGRAM);require(digest(old_raw)==V80_SHA,'Historical input registry differs');old=strict_json(old_raw)
     historical.verify_bindings(old);rows,prov=historical.verify_inputs(old)
-    v81=read(V81_RUN/'completion.json',p['v81_completion']);q=json.loads(v81)
-    require(q['status']=='complete' and q['error'] is None and q['program_sha256']==V81_SHA and q['job_id']=='15917','Passed exact V81 gate required')
-    result=json.loads(read(V81_RUN/'outputs/transfer-results.json',q['outputs']['outputs/transfer-results.json']))
-    require(result['suites']=={k:dict(tests=n,failures=0,errors=0,skipped=0) for k,n in {'legacy':44,'four_cell_integration':5,'profiles':4,'full_geometry_archives':5,'service_guards':4}.items()},'V81 exact-count test census differs')
+    verify_upstream(RUN)
     checkpoint=ROOT/'tmp/models/distilgpt2' if profile=='distilgpt2' else RUN/'checkpoint/gpt2'
     require(p['checkpoint_paths'][profile]==str(checkpoint),'Pinned checkpoint location differs')
     for name,h in PROFILES[profile]['checkpoint_files'].items():require(read(checkpoint/name,retain=False)['sha256']==h,'Actual model input differs')

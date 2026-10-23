@@ -7,6 +7,7 @@ if __name__=='__main__':
 from research_v80.io import require,read,json_read,write
 from research_v80 import campaign as historical
 from research_v82.selection import SEED,select
+from research_v82.prerequisite import verify as verify_upstream
 from research_v82.fetch import fetch_checkpoint
 from research_v82.target_worker import ROOT,RUN,V80_PROGRAM,V80_SHA,V81_RUN,V81_SHA
 from research_v81.profile import PROFILES,PROPOSED_GRID_CAP
@@ -14,16 +15,7 @@ from src.run_store import canonical_json,digest
 from src.worker_control import WorkerLimits,run_limited
 from src.phase_budget import PhaseBudget
 
-DESIGN=dict(schema='matched-transfer-admission-v82',selection_seed=SEED,profiles=PROFILES,
-    grid_allowance=PROPOSED_GRID_CAP,grid_allowance_user_approved=True,numerical_checkout='f900999fcb200509dfad4fc081ce9c87fd172a16',
-    target_cpu_seconds=600,target_wall_seconds=900,target_phase_cpu_seconds=1204,
-    process_memory_bytes=16*2**30,file_size_bytes=2*2**30,threads=1,host='csis.mn1',
-    automatic_retry=False,neural_execution=False,calibration_execution=False,
-    order=['checks','fetch','distilgpt2','gpt2','close'],expected_software_tests=12,
-    checkpoint_paths={'distilgpt2':str(ROOT/'tmp/models/distilgpt2'),'gpt2':str(RUN/'checkpoint/gpt2')},
-    controller_process_cpu_soft_seconds=300,controller_process_cpu_hard_seconds=902,
-    controller_cpu_allowance_seconds=1510,software_aggregate_cpu_seconds=602,
-    grid_approval_text='Approve the transfer-only grid allowance')
+from research_v82.config import DESIGN
 
 def verify(expected,operation):
     raw=read(RUN/'program.json');require(digest(raw)==expected,'Program commitment differs');p=json_read(RUN/'program.json')
@@ -33,10 +25,10 @@ def verify(expected,operation):
         require(not Path(name).is_absolute() and '..' not in Path(name).parts,'Relative source path required');read(RUN/name,e,retain=False)
     old=read(V80_PROGRAM);require(digest(old)==V80_SHA,'Historical program differs')
     old=json.loads(old);historical.verify_bindings(old);historical.verify_inputs(old)
-    q=json.loads(read(V81_RUN/'completion.json',p['v81_completion']))
-    require(q['status']=='complete' and q['error'] is None and q['program_sha256']==V81_SHA and q['job_id']=='15917','Completed V81 software required')
-    report=json.loads(read(V81_RUN/'outputs/transfer-results.json',q['outputs']['outputs/transfer-results.json']))
-    require(report['suites']=={k:dict(tests=n,failures=0,errors=0,skipped=0) for k,n in {'legacy':44,'four_cell_integration':5,'profiles':4,'full_geometry_archives':5,'service_guards':4}.items()},'V81 test census differs')
+    host=json_read(RUN/(operation+'-host-gate.json'))
+    require(host['status']=='complete' and host['operation']==operation and host['program_sha256']==expected
+        and host['job_id']==os.environ['SLURM_JOB_ID'] and host['upstream_job']=='15917','Actual upstream host gate required')
+    verify_upstream(RUN,bind=operation=='checks')
     for earlier in DESIGN['order'][:DESIGN['order'].index(operation)]:
         c=json_read(RUN/(earlier+'-completion.json'))
         require(c['status']=='complete' and c['error'] is None and c['program_sha256']==expected,'Earlier admission step failed/missing; no retry')
@@ -67,9 +59,9 @@ def close(p,expected):
         for name,e in c['artifacts'].items():read(d/name,{k:e[k] for k in ('bytes','sha256')},32*2**20,retain=False)
         s=json_read(d/'selection.json');require(selection is None or selection==s,'Matched source selection differs');selection=s
         models[profile]=c
-    # This is a preliminary admission closure. It does not replace independent
-    # target-byte review, full worker seal/debit verification or host accounting.
-    return dict(status='admitted_pending_host_and_sealed_receipt_review',models=models,selection=selection,budget=snap,
+    from research_v82.seals import verify as verify_seals
+    audit=verify_seals(RUN,p,expected,snap)
+    return dict(status='admitted_pending_host_terminal_accounting',seal_audit=audit,models=models,selection=selection,budget=snap,
         empirical_transfer=False,neural_execution=False,quality_evaluation=False)
 
 def main(operation,expected):
@@ -80,15 +72,15 @@ def main(operation,expected):
     signal.signal(signal.SIGXCPU,lambda *unused:(_ for _ in ()).throw(RuntimeError('Controller CPU cap exceeded')))
     os.sched_setaffinity(0,{min(os.sched_getaffinity(0))})
     for key in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):require(os.environ.get(key)=='1','Single-thread environment required')
-    start=time.perf_counter_ns();cpu=time.process_time_ns();prior=resource.getrusage(resource.RUSAGE_CHILDREN)
+    start=time.perf_counter_ns();cpu=0;prior=resource.getrusage(resource.RUSAGE_CHILDREN)
     write(RUN/(operation+'-start.json'),dict(job_id=os.environ['SLURM_JOB_ID'],operation=operation,program_sha256=expected,started_utc=datetime.datetime.now(datetime.timezone.utc).isoformat()))
     error=None;result=None
     try:
         p,old=verify(expected,operation)
         if operation=='checks':
-            tests=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromNames(['research_v82.test_inputs','research_v82.test_admission']))
-            require(tests.testsRun==12 and tests.wasSuccessful() and not tests.skipped,'Exact software gate failed')
-            result=dict(tests=12,failures=0,errors=0,skipped=0)
+            tests=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromNames(['research_v82.test_inputs','research_v82.test_admission','research_v82.test_prerequisite','research_v82.test_submit','research_v82.test_admission_reports']))
+            require(tests.testsRun==26 and tests.wasSuccessful() and not tests.skipped,'Exact software gate failed')
+            result=dict(tests=26,failures=0,errors=0,skipped=0)
         elif operation=='fetch':result=fetch_checkpoint(RUN/'checkpoint/gpt2')
         elif operation in PROFILES:result=admit_target(operation,p,expected)
         else:result=close(p,expected)

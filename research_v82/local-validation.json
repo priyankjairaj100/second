@@ -1,7 +1,7 @@
 {
   "captured_utc": "2026-10-23T07:33:28.217897+00:00",
   "pure_tests": {
-    "tests": 7,
+    "tests": 21,
     "failures": 0,
     "errors": 0
   },
@@ -17,6 +17,11 @@
     "status": "prepared not executed"
   },
   "actual_target_worker": "unexecuted",
-  "controller": "unqualified and unregistered",
-  "empirical_execution": false
+  "controller": "prepared finite admission chain; Linux gate pending",
+  "empirical_execution": false,
+  "updated_utc": "2026-10-23T07:58:40.101378+00:00",
+  "pre_registration_defects_fixed": [
+    "Canonical registration JSON required by strict reader",
+    "Exact Slurm field/dependency matching replaces substring matching"
+  ]
 }

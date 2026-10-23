@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current manual-work handoff: docs/ACTIVE_SESSION_V82.md and handoff/program_v82.json.
+Current manual-work handoff: docs/ACTIVE_SESSION_V83.md and handoff/program_v83.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user stopped the scheduler: heartbeat PAUSED. Do not resume it automatically.
 The subsequent user request authorises this optimisation/transfer investigation.
@@ -19,29 +19,25 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
 
 ## Ordered work
 
-0. MANUAL DEEP CAMPAIGN V82: V79 job15903 passed all49 actual integration
-   checks; V80 job15904 passed73 controller/worker/integration/receipt checks.
-   Full four-cell x2endpoint comparison15905--15916 is registered and running;
-   at07:35UTC23October preparation15905 had13source traversals and3of24
-   stage certificates; still running, successors pending. No new
-   numerical result exists. Close both full-model/state audits and host terminal
-   accounting before a scientific decision. Never retry/relaunch the chain.
-   V81 generated transfer-format software15917 is queued afterany15916,62checks,
-   no model execution. The user approved exactly1,327,104 grid entries equally
-   for the NEW matched transfer targets only; CPU/memory/work caps unchanged.
-   Prepare matched4x128source DistilGPT2/GPT2 transfer with separate actual model
-   fetch/admission,512-normalized target,complete worker/oracle/audits and quality
-   plan. Weight commitment is pinned but bytes not fetched/verified. V82 source/input
-   selection, bounded fetch and target-admission/controller code are prepared;
-   seven pure tests pass and five Linux guard tests remain unexecuted. There is
-   no V82 registry/package/Slurm launch; complete qualification and host/sealed
-   receipt review before empirical use. Read research_v82/PROTOCOL.txt and
-   research_v82/DECISION_RULES.txt for the narrow claim/generalization choices. Follow up
-   useful results with separately registered balanced timing replication, not
-   opportunistic repeats. Preserve851 frozen source bytes and5 auxiliary files.
-   Existing V72 science/V74 manuscript stand; keep scheduler paused. Reconcile
-   account queue and receipts before any launch. Software fixtures are not
-   complete-model/quality/transfer evidence.
+0. MANUAL DEEP CAMPAIGN V83: V79 software49 and V80 software73 passed.
+   The full V80 comparison15905--15916 is running; latest detailed preparation
+   snapshot has13source traversals and11of24stage certificates, no complete model.
+   Close both actual audits and host accounting before promoting any result.
+   V81 software15917 is pending afterany15916. V82 actual input/target admission
+   is registered and queued once as15921--15925, chained afterok15917. Its26-test
+   Linux gate precedes public model fetch and both actual target constructors.
+   Twenty-one pure tests pass; five numerical-import guards are still pending.
+   The exact1,327,104-entry approved allowance applies equally to both new targets;
+   CPU/memory/work ceilings and historical sources remain unchanged. Weights have
+   not been fetched. Source/software/admission checks are not empirical transfer.
+   Preserve871 frozen sources,5 auxiliary commitments and every registered attempt.
+   V83 host accounting reporter passes13 generated tests but actual terminal
+   closure remains pending. Continue complete matched-transfer worker/oracle/audit
+   preparation independently; register numerical work only after actual target
+   admission and terminal gate review. Read research_v82/DECISION_RULES.txt for
+   the predeclared interpretation and separately registered timing plan.
+   Existing V72 science and V74 manuscript stand; native compilation succeeded,
+   rendered layout remains unverified. Scheduler stays PAUSED. No new monitor.
 
 1. COMPLETE: V63 artifact audit,V65 disjoint root,V66 operations,V67 full service.
    All ten actual model/state comparisons and both terminal audits pass. Compression
