@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V86.md and handoff/program_v86.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V87.md and handoff/program_v87.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
@@ -19,10 +19,10 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
 
 ## Ordered work
 
-0. ACTIVE CONTINUATION V86, STORAGE BLOCKED: V80 preparation15905 FAILED120:0;
+0. ACTIVE CONTINUATION V87, STORAGE BLOCKED: V80 preparation15905 FAILED120:0;
    all11 descendants15906--15916 CANCELLED without running. V81 software15917
    FAILED120:0 after two seconds; V82 jobs15921--15925 CANCELLED without running.
-   Account queue remained empty at09:43UTC. The account exceeded its1000GiB hard quota;
+   Account queue remained empty at10:09UTC. The account exceeded its1000GiB hard quota;
    filesystem15T free does not provide account headroom. User action is requested
    to restore capacity without deleting any registered Second evidence. Keep
    notifications quiet while unchanged. No paid storage or alternate filesystem.
@@ -36,15 +36,20 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
    New storage/source/software gates and actual terminal audits remain mandatory.
    V83's success-only closure must refuse the failed chain. Its old prerequisites
    cannot qualify V84. The latter remains unregistered: an artifact-census bug
-   was fixed, then its missing hybrid_gram declaration was repaired.14pure checks
-   pass,88Linux checks remain unexecuted. Nine V86 failure-admission fixtures pass;
+   was fixed, then its missing hybrid_gram declaration was repaired. V87 adds
+   bounded output writing and actual saved-extent inspection.27pure checks pass;
+   the101-check Linux gate remains unexecuted. Nine V86 failure-admission fixtures pass;
    the actual saved failure snapshot is reconciled without promoting success or
    settling the old ledger. See research_v86/PROTOCOL.txt. Six pure quota
-   refusal fixtures pass; that helper is not yet host-qualified or integrated
-   into a registered recovery. No new scientific result exists.
+   refusal fixtures pass. An exact-source read-only host probe at10:19UTC also
+   refused one byte of headroom; passing host admission and integration remain
+   unqualified. No new scientific result exists.
    A source-reviewed71-artifact census now includes all state/model/metadata
-   outputs; total storage still needs explicit log/progress/temporary bounds.
-   A single native preview attempt again failed before startup; no retry.
+   outputs. Worker model/state/metadata/progress/completion bounds are now prepared
+   and connected to unregistered V84. Total storage still needs explicit staging,
+   controller/log/audit/temporary bounds; see research_v87/PROTOCOL.txt. No package
+   staging, registration or launch occurred. The prior preview failure remains;
+   there was no repeat attempt on this unchanged wake.
    Next restore quota headroom, prepare and qualify separately registered
    recovery with conservative failure charges, then close full comparison and
    new transfer admission/experiment. Preserve the exact approved1,327,104 grid

@@ -1,6 +1,7 @@
 """Prospective primary full-byte audit and supplemental actual-model reread."""
 import time
-from research_v84.config import ROOT,RUN,PROFILES,ORDER,CAP,CELLS
+from research_v84.config import ROOT,RUN,PROFILES,ORDER,CAP,CELLS,expected_artifacts
+from research_v87.outputs import inspect_outputs
 from research_v84 import campaign as c
 from research_v84 import receipts
 from research_v84.state_audit import verify_profile
@@ -41,13 +42,23 @@ def main(kind):
         for e in entries.values():require(inputs.read(e['path'],retain=False)=={k:e[k] for k in ('bytes','sha256')},'Admitted target changed')
     for e in p['terminal_gates'].values():require(inputs.read(e['path'],retain=False)=={k:e[k] for k in ('bytes','sha256')},'Terminal prerequisite changed')
     timing=costs(p,completions,inputs)
+    output_extents={}
+    for trial in ORDER:
+        directory=RUN/trial/'outputs';profile=trial.split('/')[0]
+        extent=inspect_outputs(directory,expected_artifacts(trial),(p['code_counts'][profile]+1)//2)
+        for name,e in extent['files'].items():
+            key=str((directory/name).absolute())
+            observed=inputs.files.get(key)
+            if observed is None:observed=inputs.read(directory/name,retain=False)
+            require(observed['bytes']==e['bytes'],'Output extent changed')
+        output_extents[trial]=extent
     if kind=='primary':evidence={profile:verify_profile(RUN,profile,p,completions,inputs) for profile in PROFILES}
     else:
         primary=inputs.json(RUN/'primary-audit.json')
-        require(primary['status']=='verified' and primary['program_sha256']==c.sha(RUN/'program.json') and primary['budget']==s and primary['costs']==timing and set(primary['evidence'])==set(PROFILES) and all(len(primary['evidence'][profile]['comparisons'])==8 for profile in PROFILES),'Complete primary matched audit required')
+        require(primary['status']=='verified' and primary['program_sha256']==c.sha(RUN/'program.json') and primary['budget']==s and primary['costs']==timing and primary['worker_output_extents']==output_extents and set(primary['evidence'])==set(PROFILES) and all(len(primary['evidence'][profile]['comparisons'])==8 for profile in PROFILES),'Complete primary matched audit required')
         for profile in PROFILES:
             for cell in CELLS:
                 for step in (1,2):require(inputs.read(RUN/profile/(cell+'-'+str(step))/'outputs/model.bin')==inputs.read(RUN/profile/'oracle/outputs'/f'step-{step}/model.bin'),'Actual same-checkpoint supplemental model mismatch')
         evidence=dict(primary_sha256=digest(canonical_json(primary)),actual_model_pairs_equal=16,full_state_audit_required=True)
     inputs.unchanged()
-    write(RUN/(kind+'-audit.json'),dict(schema='complete-matched-'+kind+'-audit-v84',status='verified',program_sha256=c.sha(RUN/'program.json'),budget=s,evidence=evidence,costs=timing,inputs=inputs.files,confirmation=False,quality_evaluation=False,elapsed_ns=time.perf_counter_ns()-start,process_cpu_ns=time.process_time_ns()-cpu,terminal_host_accounting_required=True))
+    write(RUN/(kind+'-audit.json'),dict(schema='complete-matched-'+kind+'-audit-v84',status='verified',program_sha256=c.sha(RUN/'program.json'),budget=s,evidence=evidence,costs=timing,worker_output_extents=output_extents,inputs=inputs.files,confirmation=False,quality_evaluation=False,elapsed_ns=time.perf_counter_ns()-start,process_cpu_ns=time.process_time_ns()-cpu,terminal_host_accounting_required=True))

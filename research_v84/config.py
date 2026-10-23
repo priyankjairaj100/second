@@ -1,6 +1,7 @@
 """Prospective matched workload and finite CPU reservation; not registered."""
 import hashlib
 from pathlib import Path
+from research_v87.outputs import STATE_BYTES, METADATA_BYTES, PROGRESS_BYTES, PROGRESS_FILES
 ROOT=Path('/nfs_home/users/poonam/second-20261010')
 RUN=ROOT/'local_runs/matched-complete-service-v84-20261023-a'
 ADMISSION=ROOT/'local_runs/matched-transfer-admission-v82-20261023-a'
@@ -42,13 +43,15 @@ def expected_artifacts(trial):
 
 SOFTWARE_MODULES=['research_v63.test_control','research_v63.test_runner','research_v64.test_service','research_v64.test_linux','research_v66.test_operations','research_v66.test_linux',
     'research_v79.test_integration','research_v81.test_profile','research_v81.test_archive','research_v81.test_service','research_v80.test_implementation',
-    'research_v84.test_config','research_v84.test_submit','research_v84.test_submit_flow','research_v84.test_worker','research_v84.test_receipts']
+    'research_v84.test_config','research_v84.test_submit','research_v84.test_submit_flow','research_v84.test_worker','research_v84.test_receipts','research_v87.test_outputs']
 
 def design():
-    return dict(schema='matched-complete-service-v84',software_modules=SOFTWARE_MODULES,expected_tests=88,profiles=list(PROFILES),cells=CELLS,trial_order=ORDER,trials=TRIALS,
+    return dict(schema='matched-complete-service-v84',software_modules=SOFTWARE_MODULES,expected_tests=101,profiles=list(PROFILES),cells=CELLS,trial_order=ORDER,trials=TRIALS,
         normalization=512,root_sources=4,retained_counts=[3,2],tokens_per_record=128,grid_allowance=1327104,
         phase_cpu_seconds=CAP,preserved_phase_ceiling=120624,controller_cpu_allowance_seconds=6040,preserved_controller_ceiling=7224,
         process_address_space_bytes=16*2**30,file_size_bytes=2*2**30,artifact_limit_bytes=2**30,resident_bytes=9*2**30,
+        worker_output_limits=dict(state_bytes=STATE_BYTES,metadata_bytes=METADATA_BYTES,
+            progress_bytes=PROGRESS_BYTES,progress_files=PROGRESS_FILES,model_extent='exact packed model bytes'),
         controller_cpu_soft_seconds=300,controller_cpu_hard_seconds=10202,controller_wall_overhead_seconds=600,
         primary_audit_caps=dict(cpu=7200,wall=9000),supplemental_audit_caps=dict(cpu=3600,wall=5400),
         software_caps=dict(cpu=300,aggregate=602,wall=600),threads=1,host='csis.mn1',automatic_retry=False,

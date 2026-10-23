@@ -17,6 +17,7 @@ from research_v63 import archive
 from research_v81 import operations
 from research_v80.io import write,info,json_read
 from src.run_store import canonical_json,digest,strict_json
+from research_v87.outputs import inspect_outputs
 BIG=replace(BUDGET,max_tokens=16,max_sources=4)
 class MatchedFixture(Fixture):
     def __init__(self,checkpoint,profile,provenance,mark=lambda *a,**k:None,**options):
@@ -58,6 +59,9 @@ class MatchedWorkers(unittest.TestCase):
             root=Path(d).resolve();p=setup(root,stack)
             for trial in config.ORDER:worker._main(plan(root,trial))
             completions={t:json_read(root/t/'outputs/completion.json') for t in config.ORDER}
+            for trial in config.ORDER:
+                extent=inspect_outputs(root/trial/'outputs',config.expected_artifacts(trial),(p['code_counts'][trial.split('/')[0]]+1)//2)
+                self.assertLessEqual(extent['output_bytes'],extent['allowance']['output_bytes'])
             for profile in config.PROFILES:
                 result=state_audit.verify_profile(root,profile,p,completions,Inputs());self.assertEqual(len(result['comparisons']),8)
             # Different fixtures must not be compared as the same checkpoint.
@@ -86,6 +90,7 @@ class MatchedWorkers(unittest.TestCase):
             root=Path(d).resolve();p=setup(root,stack);p['code_counts']['gpt2']=999
             with self.assertRaisesRegex(ValueError,'Complete matched model'):worker._main(plan(root,'gpt2/prepare'))
             result=json_read(root/'gpt2/prepare/outputs/completion.json');self.assertEqual(result['status'],'failed');self.assertFalse(result['complete_model'])
+            self.assertFalse((root/'gpt2/prepare/outputs/model.bin').exists())
     def test_one_process_never_runs_twice_after_failure(self):
         with patch.object(worker,'_CONSUMED',False),patch.object(worker,'_main',side_effect=ValueError('fixture failure')) as run:
             with self.assertRaises(ValueError):worker.main('/unused')

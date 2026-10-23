@@ -9,13 +9,14 @@ import gc,os,resource,time,traceback
 from research_v84 import campaign as c
 from research_v84.config import RUN,ROOT,ORDER,TRIALS,CELLS,trial_parts,predecessor,expected_artifacts,REBUILT_REPRESENTATIONS
 ARTIFACT_LIMIT=2**30
-from research_v80.io import require,read,json_read,write,info
+from research_v80.io import require,read,json_read
 from research_v81.operations import REPRESENTATIONS,ARM_REPRESENTATION as BASE_REPRESENTATION,rebuild,request
 from research_v79.implementation import execution
 from research_v81.service import MatchedService
 ARM_REPRESENTATION={cell:BASE_REPRESENTATION[arm] for cell,arm in CELLS.items()}
 from src.run_store import canonical_json,digest,strict_json
 from src.transaction_timing import verify_command_admission
+from research_v87.outputs import Outputs
 
 def _main(plan_path):
     plan_path=Path(plan_path).absolute();plan=json_read(plan_path);p=c.verify(Path(plan['program']))
@@ -24,14 +25,15 @@ def _main(plan_path):
             output=str(RUN/trial/'outputs'),slurm_job_id=os.environ.get('SLURM_JOB_ID')),'Literal worker plan/job differs')
     verify_command_admission(plan['program_sha256'],'feasibility',c.command(plan_path))
     require(tuple(REPRESENTATIONS)==REBUILT_REPRESENTATIONS,'Declared rebuild representations differ from production writer')
-    out=Path(plan['output']);out.mkdir(parents=True,exist_ok=False);start=time.perf_counter_ns()
+    start=time.perf_counter_ns();out=Path(plan['output'])
+    outputs=Outputs(out,expected_artifacts(trial),(p['code_counts'][profile]+1)//2)
     result=dict(schema='matched-complete-service-worker-v84',trial=trial,profile=profile,status='running',complete_model=False,
         program_sha256=plan['program_sha256'],slurm_job_id=plan['slurm_job_id'],artifacts={},
         source_files_sha256=digest(canonical_json(p['sources'])),
         confirmation=False,quality_evaluation=False,os_cache_uncontrolled=True,affinity_cpus=sorted(os.sched_getaffinity(0)))
     def persist(name,blob):
         require(name not in result['artifacts'] and name in expected_artifacts(trial),'Unknown/duplicate declared output')
-        e=write(out/name,blob,raw=True,maximum=ARTIFACT_LIMIT);e['file']=name;result['artifacts'][name]=e
+        e=outputs.artifact(name,blob);e['file']=name;result['artifacts'][name]=e
         return e
     def writer(prefix=''):
         def call(name,blob):
@@ -39,9 +41,8 @@ def _main(plan_path):
         return call
     def mark(phase,**fields):
         item=dict(phase=phase,elapsed_ns=time.perf_counter_ns()-start,**{k:v for k,v in fields.items() if k not in ['admission','solver','elapsed_ns']})
+        outputs.progress(item)
         print(canonical_json(item).decode(),flush=True)
-        write(out/f'progress-{mark.count:04d}.json',item);mark.count+=1
-    mark.count=0
     service=None
     try:
         cell='reference_modern' if local in ('prepare','oracle') else local.rsplit('-',1)[0]
@@ -93,8 +94,8 @@ def _main(plan_path):
         usage=resource.getrusage(resource.RUSAGE_SELF)
         result.update(worker_elapsed_ns=time.perf_counter_ns()-start,process_cpu_seconds=usage.ru_utime+usage.ru_stime,max_rss_kib=usage.ru_maxrss,
             partial_artifacts_are_not_a_committed_complete_model=result['status']!='complete',
-            clock_scope='Worker timer starts after source/runtime/input and CPU-admission verification; controller clock and sealed CPU include those checks, final completion write and shutdown; worker clock includes native setup, context, all service work, fsync, disposal and cache clear')
-        write(out/'completion.json',result)
+            clock_scope='Worker timer starts after source/runtime/input and CPU-admission verification and includes the output-directory claim; controller clock and sealed CPU include those checks, final completion write and shutdown; worker clock includes native setup, context, all service work, fsync, disposal and cache clear')
+        outputs.finish(result)
 
 _CONSUMED=False
 
