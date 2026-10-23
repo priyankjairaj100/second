@@ -1,0 +1,22 @@
+{
+  "captured_utc": "2026-10-23T07:33:28.217897+00:00",
+  "pure_tests": {
+    "tests": 7,
+    "failures": 0,
+    "errors": 0
+  },
+  "initial_local_fixture_failure": {
+    "errors": 2,
+    "failures": 1,
+    "reason": "macOS temporary-directory path contained /var symlink; production refusal was correct",
+    "repair": "Resolve only test fixture temporary root; no weakening of destination guard"
+  },
+  "source_ast": "passed",
+  "linux_admission_guard_tests": {
+    "expected": 5,
+    "status": "prepared not executed"
+  },
+  "actual_target_worker": "unexecuted",
+  "controller": "unqualified and unregistered",
+  "empirical_execution": false
+}

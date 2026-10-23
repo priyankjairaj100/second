@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current manual-work handoff: docs/ACTIVE_SESSION_V81.md and handoff/program_v81.json.
+Current manual-work handoff: docs/ACTIVE_SESSION_V82.md and handoff/program_v82.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user stopped the scheduler: heartbeat PAUSED. Do not resume it automatically.
 The subsequent user request authorises this optimisation/transfer investigation.
@@ -19,10 +19,11 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
 
 ## Ordered work
 
-0. MANUAL DEEP CAMPAIGN V81: V79 job15903 passed all49 actual integration
+0. MANUAL DEEP CAMPAIGN V82: V79 job15903 passed all49 actual integration
    checks; V80 job15904 passed73 controller/worker/integration/receipt checks.
    Full four-cell x2endpoint comparison15905--15916 is registered and running;
-   at07:18UTC23October preparation15905 was active, successors pending. No new
+   at07:35UTC23October preparation15905 had13source traversals and3of24
+   stage certificates; still running, successors pending. No new
    numerical result exists. Close both full-model/state audits and host terminal
    accounting before a scientific decision. Never retry/relaunch the chain.
    V81 generated transfer-format software15917 is queued afterany15916,62checks,
@@ -30,7 +31,12 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
    for the NEW matched transfer targets only; CPU/memory/work caps unchanged.
    Prepare matched4x128source DistilGPT2/GPT2 transfer with separate actual model
    fetch/admission,512-normalized target,complete worker/oracle/audits and quality
-   plan. Weight commitment is pinned but bytes not fetched/verified. Follow up
+   plan. Weight commitment is pinned but bytes not fetched/verified. V82 source/input
+   selection, bounded fetch and target-admission/controller code are prepared;
+   seven pure tests pass and five Linux guard tests remain unexecuted. There is
+   no V82 registry/package/Slurm launch; complete qualification and host/sealed
+   receipt review before empirical use. Read research_v82/PROTOCOL.txt and
+   research_v82/DECISION_RULES.txt for the narrow claim/generalization choices. Follow up
    useful results with separately registered balanced timing replication, not
    opportunistic repeats. Preserve851 frozen source bytes and5 auxiliary files.
    Existing V72 science/V74 manuscript stand; keep scheduler paused. Reconcile

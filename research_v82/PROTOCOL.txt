@@ -1,0 +1,65 @@
+V82 prospective matched-transfer admission, UNREGISTERED
+
+Purpose: bind one deterministic smaller development workload, fetch the pinned
+public GPT2 checkpoint once, construct both actual numerical targets under the
+explicitly approved1,327,104-entry grid cap, and preflight all point/box/fallback
+paths using actual manifests before proposing a complete transfer experiment.
+This is input/target admission. It runs no neural features, calibration solver,
+quality evaluation or request timing benchmark. Metadata checks are not transfer.
+
+Original input trust uses the exact frozen V80 source/input verification and
+V65 data/audit commitments; it never reads V80 numerical outputs or changes them.
+Selection seed second-matched-depth-transfer-v82: ranks all thirteen original
+IDs by SHA256, takes four, restores ID order and deletes to the last three/two.
+Same chosen rows,512 normalization,4bit/dyadic24/ridge1/100,teacher contract and
+implementation family apply to DistilGPT2 and GPT2. These development rows are
+already exposed; preserve every historical exclusion and the separate320-article
+quality reserve. A different normalization means a new target even for DistilGPT2.
+
+The new public GPT2 files are an immutable revision. Exact lengths/hashes come
+from research_v81/checkpoint-planning.json and the verified local config bytes.
+Fetch must use an exclusive new directory and one attempt, with bounded streamed
+bytes and420seconds total read deadline; failed/partial files stay preserved.
+No credentials, authenticated endpoint, paid compute or implicit retry. No new
+transfer may use an unverified advertised weight hash. DistilGPT2 files remain
+in their historical location and are checked rather than replaced.
+
+Planned target worker resource caps: one CPU/thread,16GiB address space,600CPU
+seconds plus hard-limit margin,900seconds wall. Registration must charge both
+per-profile processes and fetch/controller work explicitly. Each target runs in
+a fresh process with native/setup/target-construction cost and RSS recorded.
+No local Mac numerical run. Apply the exact approved cap to BOTH targets,
+leaving all old constructors and defaults unchanged. Native scope is the same
+reference_modern V79 adapter with9GiB resident allowance; no source extraction.
+Save actual anchor/service/calibration targets, execution provenance, stage/grid
+counts, checkpoint extents, and every actual admission report. Derive actual
+checkpoint parameter counts from loader provenance, not model-card metadata.
+
+A full transfer registration requires V81 software pass, V82 actual input/target
+admission, a complete finite worker/controller/one-use ledger, primary actual
+state/model/trust comparison to fresh retained-teacher oracles, supplemental
+re-read plus terminal host accounting, and a fit within unchanged aggregate
+ceilings. Both reference/optimized compressed/modern cells are preferable for
+attribution. Runtime conclusions require a later balanced timing registration;
+one observation is a screen. A failed target/worker remains a refusal, not evidence
+that the mathematical method cannot transfer. No cap escalation without approval.
+
+Quality must be separately evaluated on the new targets before claiming practical
+model transfer. First verify matching tokenizer semantics, source overlap and all
+historical exposures. Reusing a revealed quality result is descriptive, not fresh
+confirmation. Do not alter tolerances or select favorable rows/endpoints. No new
+quality selection or empirical study is registered by this preparation document.
+
+IMPLEMENTATION STATUS (23October2026)
+selection.py, fetch.py, target_worker.py and controller.py are prepared. Seven
+pure source/streaming tests pass locally; five Linux-side admission/one-use guards
+are prepared but unexecuted. Initial local transport-fixture errors came from
+macOS /var being symbolic; resolving only the test temporary root fixed them
+without weakening production path checks. No model/network/numerical execution.
+The planned exact-count software gate is now12 tests. Both numerical target
+processes reserve602CPU seconds, total1204; five300-second controller allowances
+reserve1510, below the old7224 controller ceiling. Planned per-target600CPU/900wall
+caps do not raise the existing numerical phase limit. Fetch/controllers need
+fixed Slurm wrappers, immutable registration and explicit terminal receipt/host
+review before any launch. None exists yet. The preliminary close function is
+labelled pending sealed-receipt and host review and is not scientific closure.
