@@ -1,3 +1,7 @@
+Current manual-work checkpoint (23October2026): **V84 complete matched-transfer implementation is prepared, not registered; V80 preparation23/24 and V81/V82 chains remain active/pending. Scheduler PAUSED.** Read docs/ACTIVE_SESSION_V84.md, docs/CONTINUOUS_RESEARCH_QUEUE.md and handoff/program_v84.json. Ten new pure checks pass; the84-check Linux gate and all new empirical evidence remain pending. Preserve871 frozen sources,5 auxiliary commitments and jobs15905--15917/15921--15925. Never retry or modify registered attempts. V83 terminal closure is prepared, not executed. Numerical f900999 stays clean; V72/V74 science/manuscript stay unchanged pending audited evidence. No monitor/delegation. Historical cutoffs follow.
+
+---
+
 Current manual-work checkpoint (23October2026): **V83: V80 comparison running; V81 software15917 and V82 admission15921--15925 dependency-pending. Scheduler PAUSED.** Read docs/ACTIVE_SESSION_V83.md, docs/CONTINUOUS_RESEARCH_QUEUE.md and handoff/program_v83.json. Preserve871 frozen sources and5 auxiliary commitments; no retries or source changes. V82 is admission only, with26 Linux checks pending and the approved1,327,104grid cap for both new targets. V83 host terminal accounting is prepared with13 generated tests, no actual closure yet. Latest V80 preparation has11of24certificates, not a complete model. Existing V72/V74 scientific claims remain unchanged; native layout is unverified. Continue independent complete-transfer preparation; no delegation or monitor. Historical cutoffs follow.
 
 ---

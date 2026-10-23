@@ -1,0 +1,17 @@
+{
+  "captured_utc": "2026-10-23T08:24:36.394420+00:00",
+  "pure_tests_passed": 10,
+  "source_ast": "passed",
+  "shell_syntax": "passed",
+  "prepared_linux_worker_tests": 6,
+  "prepared_linux_sealed_process_tests": 2,
+  "expected_complete_linux_gate": 84,
+  "registered": false,
+  "submitted": false,
+  "empirical_execution": false,
+  "pre_registration_issues_fixed": [
+    "Distinct chain-intent names prevent collision with first checks intent",
+    "Profile-specific checkpoint provenance replaces DistilGPT2-only assumption",
+    "Profile/cell predecessor paths are isolated; Slurm log/intents use root-level slugs"
+  ]
+}

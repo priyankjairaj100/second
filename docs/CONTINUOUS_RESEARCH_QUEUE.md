@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current manual-work handoff: docs/ACTIVE_SESSION_V83.md and handoff/program_v83.json.
+Current manual-work handoff: docs/ACTIVE_SESSION_V84.md and handoff/program_v84.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user stopped the scheduler: heartbeat PAUSED. Do not resume it automatically.
 The subsequent user request authorises this optimisation/transfer investigation.
@@ -19,9 +19,9 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
 
 ## Ordered work
 
-0. MANUAL DEEP CAMPAIGN V83: V79 software49 and V80 software73 passed.
+0. MANUAL DEEP CAMPAIGN V84: V79 software49 and V80 software73 passed.
    The full V80 comparison15905--15916 is running; latest detailed preparation
-   snapshot has13source traversals and11of24stage certificates, no complete model.
+   snapshot has13source traversals and23of24stage certificates, no complete model.
    Close both actual audits and host accounting before promoting any result.
    V81 software15917 is pending afterany15916. V82 actual input/target admission
    is registered and queued once as15921--15925, chained afterok15917. Its26-test
@@ -32,9 +32,11 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
    not been fetched. Source/software/admission checks are not empirical transfer.
    Preserve871 frozen sources,5 auxiliary commitments and every registered attempt.
    V83 host accounting reporter passes13 generated tests but actual terminal
-   closure remains pending. Continue complete matched-transfer worker/oracle/audit
-   preparation independently; register numerical work only after actual target
-   admission and terminal gate review. Read research_v82/DECISION_RULES.txt for
+   closure remains pending. V84 complete matched worker/controller, two audits, actual-input registry
+   builder and held launcher are prepared:10pure checks pass,8Linux worker/seal
+   checks await execution within the84-check gate. No V84 registry or launch.
+   Proposed20workers reserve82840<=120624numerical CPU seconds and6040<=7224
+   controller seconds. Register only after actual target/terminal gate closure. Read research_v82/DECISION_RULES.txt for
    the predeclared interpretation and separately registered timing plan.
    Existing V72 science and V74 manuscript stand; native compilation succeeded,
    rendered layout remains unverified. Scheduler stays PAUSED. No new monitor.

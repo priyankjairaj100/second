@@ -1,3 +1,7 @@
+Current status (23October2026): see [V84 handoff](docs/ACTIVE_SESSION_V84.md) and [ordered queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). The full optimization comparison is running; transfer software and target admission are conditionally queued. The matched-model experiment is prepared, unregistered. Existing verified V72/V74 scientific claims remain unchanged. Scheduler PAUSED. Earlier entries below retain their historical observation dates.
+
+---
+
 Current work (16 October 2026): **V67 preparation completed; the first hybrid comparison is running. V69 execution gates pass64 generated local tests.** At17:26IST job15263 had three certified stages; jobs15264--15275 were dependency-pending. Read [latest handoff](docs/ACTIVE_SESSION_V69.md), [quality draft protocol](research_v69/PROTOCOL.txt), and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). All469 V67 sources and14 historical GPU/export files remain unchanged. Nine V68 and27 V69 files remain unregistered. Actual worker/controller wiring, Linux/CUDA qualification, untouched quality and terminal scientific evidence remain pending. Historical checkpoints follow.
 
 ---
