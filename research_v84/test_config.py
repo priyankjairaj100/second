@@ -21,4 +21,18 @@ class MatchedProtocol(unittest.TestCase):
     def test_unregistered_trial_and_third_deletion_refuse(self):
         for trial in ('gpt2/reference_modern-3','other/prepare','gpt2/../prepare','prepare'):
             with self.assertRaises(ValueError):trial_parts(trial)
+    def test_every_registered_worker_has_exact_artifact_census(self):
+        base={'execution-provenance.json','admission.json'}
+        rebuilt={'model.bin','lossless-state.bin','lossless-trust.json','compressed48-state.bin','compressed48-trust.json','modern_lossless-state.bin','modern_lossless-trust.json'}
+        for trial in ORDER:
+            with self.subTest(trial=trial):
+                local=trial.split('/')[1]
+                expected=base|rebuilt if local=='prepare' else base|{f'step-{step}/'+name for step in (1,2) for name in rebuilt} if local=='oracle' else base|{'model.bin','state.bin','trust.json'}
+                self.assertEqual(expected_artifacts(trial),expected)
+    def test_artifact_census_refuses_unknown_trial(self):
+        for trial in ('gpt2/oracle/step-3','gpt2/unknown','other/prepare'):
+            with self.assertRaises(ValueError):expected_artifacts(trial)
+    def test_artifact_census_returns_independent_sets(self):
+        first=expected_artifacts('gpt2/oracle');first.clear()
+        self.assertEqual(len(expected_artifacts('gpt2/oracle')),16)
 if __name__=='__main__':unittest.main()

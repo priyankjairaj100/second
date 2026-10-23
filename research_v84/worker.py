@@ -7,7 +7,7 @@ if __name__=='__main__':
     sys.path[:0]=[str(prior[63]/'deps'),str(run),*[str(prior[n]) for n in [66,65,64,63]],str(root)]
 import gc,os,resource,time,traceback
 from research_v84 import campaign as c
-from research_v84.config import RUN,ROOT,ORDER,TRIALS,CELLS,trial_parts,predecessor
+from research_v84.config import RUN,ROOT,ORDER,TRIALS,CELLS,trial_parts,predecessor,expected_artifacts
 ARTIFACT_LIMIT=2**30
 from research_v80.io import require,read,json_read,write,info
 from research_v81.operations import REPRESENTATIONS,ARM_REPRESENTATION as BASE_REPRESENTATION,rebuild,request
@@ -16,15 +16,6 @@ from research_v81.service import MatchedService
 ARM_REPRESENTATION={cell:BASE_REPRESENTATION[arm] for cell,arm in CELLS.items()}
 from src.run_store import canonical_json,digest,strict_json
 from src.transaction_timing import verify_command_admission
-
-def expected_artifacts(trial):
-    _,trial=trial_parts(trial)
-    names={'execution-provenance.json','admission.json'}
-    rebuilt={'model.bin'}|{r+'-'+suffix for r in REPRESENTATIONS for suffix in ['state.bin','trust.json']}
-    if trial=='prepare':names|=rebuilt
-    elif local=='oracle':names|={f'step-{s}/'+n for s in [1,2] for n in rebuilt}
-    else:names|={'model.bin','state.bin','trust.json'}
-    return names
 
 def _main(plan_path):
     plan_path=Path(plan_path).absolute();plan=json_read(plan_path);p=c.verify(Path(plan['program']))

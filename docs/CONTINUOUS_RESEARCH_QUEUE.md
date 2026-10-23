@@ -1,9 +1,9 @@
 # Second: continuous research and submission queue
 
-Current manual-work handoff: docs/ACTIVE_SESSION_V84.md and handoff/program_v84.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V85.md and handoff/program_v85.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
-The user stopped the scheduler: heartbeat PAUSED. Do not resume it automatically.
-The subsequent user request authorises this optimisation/transfer investigation.
+The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
+every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
 Historical handoffs keep their original observation cutoffs.
 
 ## Immutable execution boundaries
@@ -19,27 +19,32 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
 
 ## Ordered work
 
-0. MANUAL DEEP CAMPAIGN V84: V79 software49 and V80 software73 passed.
-   The full V80 comparison15905--15916 is running; latest detailed preparation
-   snapshot has13source traversals and23of24stage certificates, no complete model.
-   Close both actual audits and host accounting before promoting any result.
-   V81 software15917 is pending afterany15916. V82 actual input/target admission
-   is registered and queued once as15921--15925, chained afterok15917. Its26-test
-   Linux gate precedes public model fetch and both actual target constructors.
-   Twenty-one pure tests pass; five numerical-import guards are still pending.
-   The exact1,327,104-entry approved allowance applies equally to both new targets;
-   CPU/memory/work ceilings and historical sources remain unchanged. Weights have
-   not been fetched. Source/software/admission checks are not empirical transfer.
-   Preserve871 frozen sources,5 auxiliary commitments and every registered attempt.
-   V83 host accounting reporter passes13 generated tests but actual terminal
-   closure remains pending. V84 complete matched worker/controller, two audits, actual-input registry
-   builder and held launcher are prepared:10pure checks pass,8Linux worker/seal
-   checks await execution within the84-check gate. No V84 registry or launch.
-   Proposed20workers reserve82840<=120624numerical CPU seconds and6040<=7224
-   controller seconds. Register only after actual target/terminal gate closure. Read research_v82/DECISION_RULES.txt for
-   the predeclared interpretation and separately registered timing plan.
-   Existing V72 science and V74 manuscript stand; native compilation succeeded,
-   rendered layout remains unverified. Scheduler stays PAUSED. No new monitor.
+0. ACTIVE CONTINUATION V85, STORAGE BLOCKED: V80 preparation15905 FAILED120:0;
+   all11 descendants15906--15916 CANCELLED without running. V81 software15917
+   FAILED120:0 after two seconds; V82 jobs15921--15925 CANCELLED without running.
+   Account queue was empty at09:25UTC. The account exceeded its1000GiB hard quota;
+   filesystem15T free does not provide account headroom. User action is requested
+   to restore capacity without deleting any registered Second evidence. Keep
+   notifications quiet while unchanged. No paid storage or alternate filesystem.
+   Preserve871 frozen sources,5 auxiliary commitments, all jobs/partial files,
+   empty receipts and the unresolved12602CPU-second reserved debit. Never retry,
+   repair the old ledger, remove its locks or infer success from24certificates.
+   The quota is a verified launch blocker; the exact failure traceback is absent.
+   Read docs/RECOVERY_PLAN_V85.txt. A separately registered fresh comparison plus
+   the old full reservation can fit120622<=120624numerical seconds; old/new
+   controller allowances fit6622<=7224. This is a prospective calculation only.
+   New storage/source/software gates and actual terminal audits remain mandatory.
+   V83's success-only closure must refuse the failed chain. Its old prerequisites
+   cannot qualify V84. The latter remains unregistered: an artifact-census bug
+   was fixed,13pure checks pass,87Linux checks remain unexecuted. Six pure quota
+   refusal fixtures pass; that helper is not yet host-qualified or integrated
+   into a registered recovery. No new scientific result exists.
+   Next restore quota headroom, prepare and qualify separately registered
+   recovery with conservative failure charges, then close full comparison and
+   new transfer admission/experiment. Preserve the exact approved1,327,104 grid
+   allowance for both new targets and all CPU/memory/work ceilings. Follow the
+   V82 scientific decision rules and separately register justified quality/timing.
+   Existing V72/V74 science/manuscript stands; actual layout remains unverified.
 
 1. COMPLETE: V63 artifact audit,V65 disjoint root,V66 operations,V67 full service.
    All ten actual model/state comparisons and both terminal audits pass. Compression
@@ -113,5 +118,7 @@ Targeted source/linkability review documents limits, not a guarantee of rights o
 anonymity. Author-owned form facts remain unset; no attestation or submission is
 made. Publish coherent checkpoints to the existing branch/draft PR. Keep routine
 completed-job polling quiet; no numerical launch is required by the current claim.
-The user has requested a scheduler stop; it is paused and must stay paused
-unless the user asks to resume it. No final ETA is inferred from resource ceilings.
+The user resumed the existing scheduler; it remains ACTIVE until requested to stop
+or the agreed bundle and claim-required evidence are complete and verified. A wake
+must not relaunch any consumed or cancelled registration. No final ETA follows
+from resource ceilings or the earlier estimate before this storage failure.

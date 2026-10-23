@@ -29,12 +29,22 @@ def predecessor(trial):
     cell,step=local.rsplit('-',1);rep='compressed48' if CELLS[cell]=='compressed' else 'modern_lossless'
     return (profile+'/prepare',rep+'-state.bin',rep+'-trust.json') if step=='1' else (profile+'/'+cell+'-1','state.bin','trust.json')
 
+def expected_artifacts(trial):
+    """Declare all outputs without importing the numerical worker."""
+    _,local=trial_parts(trial)
+    names={'execution-provenance.json','admission.json'}
+    rebuilt={'model.bin'}|{r+'-'+suffix for r in ('lossless','compressed48','modern_lossless') for suffix in ('state.bin','trust.json')}
+    if local=='prepare':names|=rebuilt
+    elif local=='oracle':names|={f'step-{s}/'+name for s in (1,2) for name in rebuilt}
+    else:names|={'model.bin','state.bin','trust.json'}
+    return names
+
 SOFTWARE_MODULES=['research_v63.test_control','research_v63.test_runner','research_v64.test_service','research_v64.test_linux','research_v66.test_operations','research_v66.test_linux',
     'research_v79.test_integration','research_v81.test_profile','research_v81.test_archive','research_v81.test_service','research_v80.test_implementation',
     'research_v84.test_config','research_v84.test_submit','research_v84.test_submit_flow','research_v84.test_worker','research_v84.test_receipts']
 
 def design():
-    return dict(schema='matched-complete-service-v84',software_modules=SOFTWARE_MODULES,expected_tests=84,profiles=list(PROFILES),cells=CELLS,trial_order=ORDER,trials=TRIALS,
+    return dict(schema='matched-complete-service-v84',software_modules=SOFTWARE_MODULES,expected_tests=87,profiles=list(PROFILES),cells=CELLS,trial_order=ORDER,trials=TRIALS,
         normalization=512,root_sources=4,retained_counts=[3,2],tokens_per_record=128,grid_allowance=1327104,
         phase_cpu_seconds=CAP,preserved_phase_ceiling=120624,controller_cpu_allowance_seconds=6040,preserved_controller_ceiling=7224,
         process_address_space_bytes=16*2**30,file_size_bytes=2*2**30,artifact_limit_bytes=2**30,resident_bytes=9*2**30,

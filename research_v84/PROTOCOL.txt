@@ -47,7 +47,7 @@ closure, V81 software closure and V82 actual target/host closure; then freeze a
 new source package and registry using prepare.py. The source-only inventory hash
 must match its packaging receipt. Three actual terminal snapshots must already
 be saved under gates/. The builder verifies actual completed targets/checkpoints
-and never writes a speculative success. Submit the separate84-test Linux gate
+and never writes a speculative success. Submit the separate87-test Linux gate
 once, verify its actual receipt and terminal state, then submit the20workers and
 two actual audits held, validate exact constraints, release once. Never overwrite
 registered source, registry, intent, output or receipt. The launcher requires an
@@ -61,9 +61,9 @@ bytes, sealed limits/debits and complete controller costs. Final host Slurm/CPU
 closure remains necessary; extend the separate read-only reporter only after
 actual job IDs are known. Software tests are not that evidence.
 
-Current preparation:10pure structure/submission-flow tests pass locally. Six
+Current preparation:13pure structure/submission-flow tests pass locally. Six
 Linux tiny actual-file worker/audit tests and two actual sealed-process tests are
-prepared but not executed. The planned84-check gate also includes62existing
+prepared but not executed. The planned87-check gate also includes62existing
 legacy/integration/profile/archive guards and4actual implementation checks. The
 new fixture uses distinct two/three-stage artificial targets to detect checkpoint
 mixing; V81 separately covers complete24/48-stage archive extents. No empirical
@@ -75,3 +75,10 @@ or observed scores cannot simply be assigned to these models. Reused revealed
 quality rows can provide descriptive matched evaluation but are not untouched
 confirmation. Resolve exact tokenizer identity, overlap/exclusion ledger, fixed
 sample and both baseline/candidate model identities before quality registration.
+
+23October2026 V85 review: upstream V80/V81 failed during an observed hard-quota
+block; V82 jobs were cancelled without running. The original successful-gate
+prerequisites are now unsatisfiable. V84 remains UNREGISTERED and must not launch.
+Any later recovery needs separate source/registration and actual terminal gates;
+never relabel an old failure or bypass a prerequisite. The artifact-census bug
+was fixed before registration; its87-check Linux gate remains unexecuted.
