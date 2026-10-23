@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V87.md and handoff/program_v87.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V88.md and handoff/program_v88.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
@@ -19,10 +19,10 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
 
 ## Ordered work
 
-0. ACTIVE CONTINUATION V87, STORAGE BLOCKED: V80 preparation15905 FAILED120:0;
+0. ACTIVE CONTINUATION V88, STORAGE BLOCKED: V80 preparation15905 FAILED120:0;
    all11 descendants15906--15916 CANCELLED without running. V81 software15917
    FAILED120:0 after two seconds; V82 jobs15921--15925 CANCELLED without running.
-   Account queue remained empty at10:09UTC. The account exceeded its1000GiB hard quota;
+   Account queue remained empty at10:38UTC. The account exceeded its1000GiB hard quota;
    filesystem15T free does not provide account headroom. User action is requested
    to restore capacity without deleting any registered Second evidence. Keep
    notifications quiet while unchanged. No paid storage or alternate filesystem.
@@ -50,6 +50,17 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
    controller/log/audit/temporary bounds; see research_v87/PROTOCOL.txt. No package
    staging, registration or launch occurred. The prior preview failure remains;
    there was no repeat attempt on this unchanged wake.
+   V88 now checks both existing project and temporary filesystems, combines
+   aliases on one device and checks enabled new-file group quotas.24pure tests
+   pass. Host /tmp is XFS with explicit noquota; project storage remains under
+   its exhausted user quota, despite an explicitly unlimited observed group.
+   A source-bound read-only probe at10:52UTC refused even one byte. No source
+   package was staged or job launched. The guard is not yet launcher-integrated;
+   positive admission and the pinned container mapping remain unqualified.
+   Read research_v88/WRITE_SCOPE_REVIEW.txt for the remaining finite write roles.
+   Worker RLIMIT_FSIZE alone does not bound an external Slurm logging process.
+   Keep host storage-check overhead in complete transaction/accounting scopes.
+   All871frozen sources,5auxiliary commitments and the manuscript remain unchanged.
    Next restore quota headroom, prepare and qualify separately registered
    recovery with conservative failure charges, then close full comparison and
    new transfer admission/experiment. Preserve the exact approved1,327,104 grid
