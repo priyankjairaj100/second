@@ -1,0 +1,27 @@
+{
+  "files": {
+    "cluster-reconciliation.json": {
+      "bytes": 4101,
+      "sha256": "d58ed0685c978fdcd9663f52b32511d3e4c64e957d3646584219695dead3cd49"
+    },
+    "readonly-review.py": {
+      "bytes": 7743,
+      "sha256": "0211101365f081c7171c438eea62b79385d8bed881efacb1db968b02154bb593"
+    },
+    "request-receipt-review.json": {
+      "bytes": 298417,
+      "sha256": "da19125e103bf940ac9897fe03e70845b827bd88441f429565f9748b35e97e8e"
+    }
+  },
+  "source_commitments_unchanged": {
+    "v90": 18,
+    "v91": 33,
+    "v92": 38
+  },
+  "v89_frozen_archive_files": 934,
+  "v89_local_counterparts": 930,
+  "manuscript_unchanged": true,
+  "new_jobs": false,
+  "source_archive_created": false,
+  "full_scientific_closure": false
+}

@@ -1,3 +1,7 @@
+Current execution checkpoint (24 October2026,10:20UTC): **V95 first V89 request completed; optimized request running.** Read docs/ACTIVE_SESSION_V95.md, handoff/program_v95.json and the queue.16006 reference_compressed-1 COMPLETED0:0;16007 optimized_compressed-1 RUNNING,16008–16016 pending at10:19UTC. Read-only receipt review verified metadata, seal, extents, storage/mapping and accounting:4405 charged CPU seconds within12602,15.505290 nonnumerical seconds within602. One of eight requests is complete; fresh oracle and both audits are pending. No speed or model-equality conclusion. All934V89/18V90/33V91/38V92 commitments unchanged; no new launch or retry. Same manuscript; scheduler ACTIVE. Historical observations follow.
+
+---
+
 Current execution checkpoint (24 October2026,09:07UTC): **V94 preparation receipt closed; first V89 request running.** Read docs/ACTIVE_SESSION_V94.md, handoff/program_v94.json and the queue.16005 COMPLETED0:0;16006 reference_compressed-1 RUNNING,16007–16016 pending at09:04UTC. Read-only preparation review verified metadata, one-use seal, extents, storage/mapping and complete accounting:6702 charged CPU seconds within12602,18.768486 nonnumerical seconds within602. Bulk model/state equality still requires both frozen audits. No new job, package or speed claim. V92 remains prepared142local/221Linux unexecuted; V93 reporting safeguards stand. Same manuscript; scheduler ACTIVE. Historical observations follow.
 
 ---
