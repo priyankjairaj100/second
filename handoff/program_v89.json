@@ -7,7 +7,7 @@
   "model_results_changed": false,
   "manuscript_version": 74,
   "scientific_decision_version": 72,
-  "frozen_sources": 871,
+  "frozen_sources": 934,
   "auxiliary_commitments": 5,
   "v80": {
     "status": "FAILED; descendants CANCELLED unstarted",
@@ -57,9 +57,8 @@
     "actual_terminal_closure": false
   },
   "completion_blockers": [
-    "Restore account storage quota headroom without deleting registered evidence",
-    "Separately registered recovery with old failure reservations retained and storage admission",
-    "Actual complete comparison/transfer audits plus justified target quality/timing",
+    "Actual V89 comparison, both audits and terminal accounting",
+    "Separately registered matched transfer qualification, admission and complete experiment; quality/timing only when justified",
     "Native rendered layout and final delivery choices"
   ],
   "v84": {
@@ -158,12 +157,12 @@
     "existing_v84_linux_gate_tests": 101
   },
   "v89": {
-    "status": "local recovery package prepared; host capacity refused; not registered",
+    "status": "registered; Linux software passed; numerical preparation running",
     "local_pure_checks_passed": 89,
     "new_v89_pure_checks_passed": 33,
     "inherited_pure_checks_passed": 56,
     "expected_linux_tests": 162,
-    "linux_gate_executed": false,
+    "linux_gate_executed": true,
     "source_files": 934,
     "source_archive_bytes": 9052160,
     "source_archive_sha256": "0560ae13f34a60830824011f1c8571b79c7e90f545cb1e78e8a273686732802b",
@@ -175,30 +174,69 @@
     "capacity_reserved": false,
     "host_launcher_integrated_in_prospective_source": true,
     "worker_and_audits_integrated_in_prospective_source": true,
-    "container_mapping_qualified": false,
-    "full_positive_host_admission_qualified": false,
+    "container_mapping_qualified": true,
+    "full_positive_host_admission_qualified": true,
     "host_refusal": "pilots/recovery-v89-20261023/host-refusal.json",
     "preparation_review": "pilots/recovery-v89-20261023/preparation-review.json",
-    "terminal_snapshot_utc": "2026-10-23T11:32:17.825939+00:00",
-    "account_queue_empty": true,
+    "terminal_snapshot_utc": "2026-10-24T07:05:11.155414+00:00",
+    "account_queue_empty": false,
     "old_ledger_unchanged": true,
-    "registered": false,
-    "launched": false,
-    "scientific_result": false
+    "registered": true,
+    "launched": true,
+    "scientific_result": false,
+    "linux_tests_passed": 162,
+    "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9",
+    "checks_job": "16004",
+    "checks_state": "COMPLETED",
+    "checks_exit_code": "0:0",
+    "numerical_jobs": [
+      "16005",
+      "16006",
+      "16007",
+      "16008",
+      "16009",
+      "16010",
+      "16011",
+      "16012",
+      "16013",
+      "16014"
+    ],
+    "audit_jobs": [
+      "16015",
+      "16016"
+    ],
+    "terminal_closure_complete": false,
+    "checkpoint": "pilots/recovery-v89-20261023/execution-20261024/checkpoint.json"
   },
   "operational_followup": {
     "created_utc": "2026-10-24T02:50:56.595833+00:00",
     "receipt": "pilots/recovery-v89-20261023/operational-reconciliation-20261024.json",
-    "last_verified_cluster_observation_utc": "2026-10-24T05:28:20.542104+00:00",
-    "latest_connection_attempt": "2026-10-24T05:28:16Z",
-    "latest_connection_outcome": "access restored; old jobs and receipts verified; user quota exhausted",
+    "last_verified_cluster_observation_utc": "2026-10-24T07:05:11.155414+00:00",
+    "latest_connection_attempt": "2026-10-24T07:05:07Z",
+    "latest_connection_outcome": "access and capacity restored; V89 registered and running",
     "current_cluster_state_verified": true,
     "preview_startup_failed": true,
     "prepared_archive_and_manuscript_unchanged": true,
-    "new_job_or_registration": false,
+    "new_job_or_registration": true,
     "access_restoration_request_pending": false,
     "authentication_receipt": "pilots/recovery-v89-20261023/authentication-block-20261024.json",
     "restored_access_receipt": "pilots/recovery-v89-20261023/restored-access-20261024.json",
-    "project_headroom_sufficient": false
+    "project_headroom_sufficient": true,
+    "storage_restoration_request_pending": false,
+    "cleanup_authorized": true,
+    "cleanup_scope": "verified Third cluster root and disposable pip HTTP cache only",
+    "allocated_bytes_recovered": 84294733824,
+    "execution_checkpoint": "pilots/recovery-v89-20261023/execution-20261024/checkpoint.json"
+  },
+  "updated_at": "2026-10-24T07:08:27.129354+00:00",
+  "prior_frozen_sources": 871,
+  "transfer_recovery_review": {
+    "status": "source/design review only; new orchestration not yet implemented",
+    "review": "docs/MATCHED_TRANSFER_RECOVERY_REVIEW_V89.txt",
+    "storage_census": "pilots/recovery-v89-20261023/transfer-storage-planning-20261024.json",
+    "worker_logical_output_bytes": 61098688512,
+    "ported_conservative_allowance_excluding_sources_and_inputs_bytes": 146041319424,
+    "actual_admission": false,
+    "new_registration": false
   }
 }

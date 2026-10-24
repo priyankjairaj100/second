@@ -1,0 +1,342 @@
+{
+  "schema": "prospective-transfer-storage-review-v89",
+  "status": "planning_only_not_admission",
+  "source_bindings": {
+    "research_v84/config.py": {
+      "bytes": 4731,
+      "sha256": "426fcf20aece8d54c1c4a2e7cbaef6c880674e23e1ecf15414a6b7de43073e33"
+    },
+    "research_v87/outputs.py": {
+      "bytes": 8331,
+      "sha256": "900b19e2de5bdf451158a4c758f3324900b2de0a678de5a65b86b3e67c97a041"
+    },
+    "research_v89/storage_plan.py": {
+      "bytes": 6104,
+      "sha256": "f2238ea991dfb06c75767a3f2e1befba58ef5257bcaae4c327d4199bb587b911"
+    }
+  },
+  "worker_output_rows": [
+    {
+      "trial": "distilgpt2/prepare",
+      "model_bytes": 21233664,
+      "artifacts": 11,
+      "artifact_bytes": 4718854144,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 5322833920,
+      "output_files": 524,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "gpt2/prepare",
+      "model_bytes": 42467328,
+      "artifacts": 11,
+      "artifact_bytes": 4740087808,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 5344067584,
+      "output_files": 524,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "gpt2/reference_compressed-1",
+      "model_bytes": 42467328,
+      "artifacts": 5,
+      "artifact_bytes": 1317535744,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1921515520,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "distilgpt2/reference_compressed-1",
+      "model_bytes": 21233664,
+      "artifacts": 5,
+      "artifact_bytes": 1296302080,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1900281856,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "distilgpt2/optimized_modern-1",
+      "model_bytes": 21233664,
+      "artifacts": 5,
+      "artifact_bytes": 1296302080,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1900281856,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "gpt2/optimized_modern-1",
+      "model_bytes": 42467328,
+      "artifacts": 5,
+      "artifact_bytes": 1317535744,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1921515520,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "gpt2/reference_modern-1",
+      "model_bytes": 42467328,
+      "artifacts": 5,
+      "artifact_bytes": 1317535744,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1921515520,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "distilgpt2/reference_modern-1",
+      "model_bytes": 21233664,
+      "artifacts": 5,
+      "artifact_bytes": 1296302080,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1900281856,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "distilgpt2/optimized_compressed-1",
+      "model_bytes": 21233664,
+      "artifacts": 5,
+      "artifact_bytes": 1296302080,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1900281856,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "gpt2/optimized_compressed-1",
+      "model_bytes": 42467328,
+      "artifacts": 5,
+      "artifact_bytes": 1317535744,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1921515520,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "gpt2/optimized_compressed-2",
+      "model_bytes": 42467328,
+      "artifacts": 5,
+      "artifact_bytes": 1317535744,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1921515520,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "distilgpt2/optimized_compressed-2",
+      "model_bytes": 21233664,
+      "artifacts": 5,
+      "artifact_bytes": 1296302080,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1900281856,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "distilgpt2/reference_modern-2",
+      "model_bytes": 21233664,
+      "artifacts": 5,
+      "artifact_bytes": 1296302080,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1900281856,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "gpt2/reference_modern-2",
+      "model_bytes": 42467328,
+      "artifacts": 5,
+      "artifact_bytes": 1317535744,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1921515520,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "gpt2/optimized_modern-2",
+      "model_bytes": 42467328,
+      "artifacts": 5,
+      "artifact_bytes": 1317535744,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1921515520,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "distilgpt2/optimized_modern-2",
+      "model_bytes": 21233664,
+      "artifacts": 5,
+      "artifact_bytes": 1296302080,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1900281856,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "distilgpt2/reference_compressed-2",
+      "model_bytes": 21233664,
+      "artifacts": 5,
+      "artifact_bytes": 1296302080,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1900281856,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "gpt2/reference_compressed-2",
+      "model_bytes": 42467328,
+      "artifacts": 5,
+      "artifact_bytes": 1317535744,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 1921515520,
+      "output_files": 518,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "gpt2/oracle",
+      "model_bytes": 42467328,
+      "artifacts": 20,
+      "artifact_bytes": 9345957888,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 9949937664,
+      "output_files": 533,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    },
+    {
+      "trial": "distilgpt2/oracle",
+      "model_bytes": 21233664,
+      "artifacts": 20,
+      "artifact_bytes": 9303490560,
+      "progress_bytes": 536870912,
+      "completion_bytes": 67108864,
+      "output_bytes": 9907470336,
+      "output_files": 533,
+      "capacity_reserved": false,
+      "whole_chain_storage_bound": false,
+      "includes_filesystem_allocation_overhead": false
+    }
+  ],
+  "worker_logical_output_bytes": 61098688512,
+  "worker_output_files": 10402,
+  "ported_v89_conservative_roles": [
+    {
+      "role": "worker_outputs",
+      "bytes": 61098688512,
+      "files": 10402
+    },
+    {
+      "role": "controller_and_ledger",
+      "bytes": 42949672960,
+      "files": 1280
+    },
+    {
+      "role": "entry_host_and_storage_receipts",
+      "bytes": 9261023232,
+      "files": 276
+    },
+    {
+      "role": "submission",
+      "bytes": 168820736,
+      "files": 322
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 1543503872,
+      "files": 23
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 96468992,
+      "files": 23
+    },
+    {
+      "role": "registration_inventory",
+      "bytes": 536870912,
+      "files": 16
+    },
+    {
+      "role": "audits",
+      "bytes": 134217728,
+      "files": 2
+    },
+    {
+      "role": "terminal_reports",
+      "bytes": 134217728,
+      "files": 4
+    }
+  ],
+  "ported_allowance_excluding_sources_and_new_checkpoint_bytes": 146041319424,
+  "excluded_roles": [
+    "exact new source staging",
+    "new GPT2 checkpoint and fetch partials",
+    "admission target outputs and its own chain",
+    "other newly identified output roles"
+  ],
+  "temporary_allowance_requires_separate_review": true,
+  "current_v89_admission_not_reusable": true,
+  "measured_peak": false,
+  "formal_bound": false,
+  "registered": false,
+  "launched": false
+}

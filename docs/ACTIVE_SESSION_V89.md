@@ -1,4 +1,59 @@
-# Second V89: separate recovery prepared; capacity still blocks execution
+# Second V89: recovery registered; software passed; comparison running
+
+Current checkpoint:24October2026,07:05:11UTC (12:35IST). Scheduler ACTIVE.
+The user's cleanup authorization resolved the storage block. Identity/ownership,
+mount and empty-job checks preceded deletion of the verified Third cluster root
+and disposable pip HTTP download cache. About78.5GiB was recovered. Local Third,
+its GitHub repository, every Second source/runtime/model/evidence file and all old
+failed/cancelled registrations remain. No quota or compute ceiling changed.
+
+Fresh full source-bound storage admission passed at07:01UTC. Project soft-quota
+headroom was83,220,992,000bytes against74,870,290,017required; existing /tmp and
+the enabled new-file group quota also passed. This does not reserve capacity.
+All19old dispositions, clean numerical f900999, old ledger hash and zero-byte
+completion were reverified before upload. No old lock/debit/output was changed.
+
+The exact archive was staged exclusively;935regular members and all934bindings
+were verified. prepare.py created this actual canonical1,830,432-byte program:
+6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9.
+It is now registered and consumed. Never rerun prepare.py or submit.py checks/chain.
+Software16004 completed0:0 in16elapsed seconds, with162tests and zero failures,
+errors or skips. Actual container paths/devices/new-file groups matched the host.
+The successful host envelope measured12.673476453CPU seconds; Slurm displayed
+12.683CPU seconds. These overlap and must not be added. This is software evidence.
+
+The finite chain was held, verified and released once:
+-16005 preparation, RUNNING at07:05UTC.
+-16006 reference_compressed-1;16007 optimized_compressed-1.
+-16008 reference_modern-1;16009 optimized_modern-1.
+-16010 optimized_modern-2;16011 reference_modern-2.
+-16012 optimized_compressed-2;16013 reference_compressed-2.
+-16014 fresh oracle;16015 primary audit;16016 supplemental audit.
+All successors were dependency-pending. No complete empirical comparison exists
+at this checkpoint. Preserve original targets, order, resource limits and the
+full old12602-second reservation. No general speed or transfer claim follows.
+
+Reporting evidence is under pilots/recovery-v89-20261023/execution-20261024/:
+checkpoint.json, inventory.json, actual program/registration, release chains,
+software/host receipts, logs and the07:05snapshot. The running ledger snapshot
+is explicitly a snapshot, not a settled result. No credentials were recorded.
+Next inspect these existing jobs, then require both real audits and source-bound
+terminal.py closure before scientific decisions. Separately prepare a new transfer
+admission using successful recovered evidence; never reuse V81/V82 or loosen V84.
+Read docs/MATCHED_TRANSFER_RECOVERY_REVIEW_V89.txt for exact stale-gate sites,
+missing software suites and the separate transfer storage census. A direct port
+of V89 overhead allowances would need136.01GiB before new inputs/source staging;
+this is planning only and must not replace a complete newly reviewed write plan.
+
+All934registered source/evidence files are now immutable. This includes the871
+previously frozen sources and five auxiliary commitments. V72 scientific claims
+and the same V74 manuscript are unchanged. Its native compile was previously
+successful; rendered layout and delivery choices still need verification. The
+submission bundle is incomplete. No manuscript change is justified by this gate.
+
+The earlier observations below are historical and retained for provenance.
+
+# Historical V89 preparation and prelaunch observations
 
 23 October 2026. The existing 15-minute heartbeat is ACTIVE. No new monitor,
 delegation, paid compute, third-party message or conference submission. The

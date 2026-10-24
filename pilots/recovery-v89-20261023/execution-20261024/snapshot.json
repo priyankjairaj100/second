@@ -1,0 +1,80 @@
+{
+  "observed_utc": "2026-10-24T07:05:11.155414+00:00",
+  "files": {
+    "program.json": {
+      "bytes": 1830432,
+      "sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    "registration.json": {
+      "bytes": 85,
+      "sha256": "fe092105b2933f5dd6cf6e77c7df0f4841f4089aecbd60d8225c9e700148fc45"
+    },
+    "checks-released-chain.json": {
+      "bytes": 1749,
+      "sha256": "528d738eca738b671cc08a1f0c3558546e58f8088add04fda2f8aed09cdf5868"
+    },
+    "chain-released-chain.json": {
+      "bytes": 20880,
+      "sha256": "cb949c45cbf4d94fa3bad890b5f40c952d97d9310bbdf1c32524a6913575dd89"
+    },
+    "software-completion.json": {
+      "bytes": 892,
+      "sha256": "85dcb6967a6294579e4fd57da1845bccdef45b6373aa4f0a20e5e45ceb20be37"
+    },
+    "checks-host.json": {
+      "bytes": 967,
+      "sha256": "83c58eed05461d211e47b53b5b16c42415b2b7624f95d1d3c9a986d744f0190b"
+    },
+    "checks-host-start.json": {
+      "bytes": 4834,
+      "sha256": "f8c9d4ce026a858da5536defa50775f3b7cecb9a28fc05a5ef5d3cfb5d50d87e"
+    },
+    "checks-entry-start.json": {
+      "bytes": 229,
+      "sha256": "cd621c404d1025ffa43f7ab9d1ac0365b7261aa4faabe788c9564d51c23ddf7e"
+    },
+    "checks-16004.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "checks-bootstrap.log": {
+      "bytes": 24769,
+      "sha256": "1b7b378f4f4ebc5c22ee79727241de787b08b65d996499c5511d4df11ac9f710"
+    },
+    "prepare-host-start.json": {
+      "bytes": 4840,
+      "sha256": "e039c42c13a3e7f66423a7a999434b0c478b4b32ed68ad8aa102436a675dc54e"
+    },
+    "prepare-entry-start.json": {
+      "bytes": 235,
+      "sha256": "fc2d85669d74f243bd811c463a05c358c5d1aa6563e010097ab94b339e694ee4"
+    },
+    "prepare-bootstrap.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "prepare-16005.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "budget/ledger.json": {
+      "bytes": 15987,
+      "sha256": "0652c638357cdccc85b430947acc9881fb5f8563b299f6e040f04ba8045f21b5"
+    }
+  },
+  "queue": {
+    "code": 0,
+    "stdout": "16016|second89-supplemental|PENDING|0:00|(Dependency)\n16015|second89-primary|PENDING|0:00|(Dependency)\n16014|second89-oracle|PENDING|0:00|(Dependency)\n16013|second89-reference_compressed-2|PENDING|0:00|(Dependency)\n16012|second89-optimized_compressed-2|PENDING|0:00|(Dependency)\n16011|second89-reference_modern-2|PENDING|0:00|(Dependency)\n16010|second89-optimized_modern-2|PENDING|0:00|(Dependency)\n16009|second89-optimized_modern-1|PENDING|0:00|(Dependency)\n16008|second89-reference_modern-1|PENDING|0:00|(Dependency)\n16007|second89-optimized_compressed-1|PENDING|0:00|(Dependency)\n16006|second89-reference_compressed-1|PENDING|0:00|(Dependency)\n16005|second89-prepare|RUNNING|1:01|csis.mn1\n",
+    "stderr": ""
+  },
+  "accounting": {
+    "code": 0,
+    "stdout": "16004|COMPLETED|0:0|16|00:12.683|1|16G|csis.mn1\n16004.batch|COMPLETED|0:0|16|00:12.683|1||csis.mn1\n16005|RUNNING|0:0|61|00:00:00|1|16G|csis.mn1\n16005.batch|RUNNING|0:0|61|00:00:00|1||csis.mn1\n16006|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16007|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16008|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16009|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16010|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16011|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16012|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16013|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16014|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16015|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16016|PENDING|0:0|0|00:00:00|0|16G|None assigned\n",
+    "stderr": ""
+  },
+  "quota": {
+    "code": 0,
+    "stdout": "Disk quotas for user poonam (uid 1007): \n     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace\n      /dev/sdb1 966278920  1047527424 1048576000         3213448       0       0        \n      /dev/sda5 171720660  182452224 183500800          508244       0       0        \n",
+    "stderr": ""
+  }
+}

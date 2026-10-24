@@ -19,93 +19,48 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
 
 ## Operational observation, 24 October 2026
 
-Access was restored after the user's reconnection confirmation. The latest
-successful inspection at 24 October 05:28:20 UTC verified the empty account queue,
-all 19 original terminal dispositions, clean numerical f900999, unchanged ledger
-and zero-byte completion. The V89 namespace and archive remain absent. User quota
-is still 4 KiB above its 1000 GiB hard limit; the 69.73 GiB project allowance cannot fit.
-No upload, registration, launch, deletion or ledger mutation occurred. Full
-multi-filesystem admission must run freshly before any future staging; a positive
-capacity result is not inferred from this read-only reconciliation.
+The user explicitly authorized freeing space and clearing the completed Third
+project. Identity, ownership, mount and empty-job checks preceded removal of
+/nfs_home/users/poonam/ccu-acl2027. Only the disposable pip HTTP download cache
+was additionally cleared. About 78.5 GiB of allocated storage was recovered. Local
+Third and every Second source, runtime, old attempt and receipt remain intact.
+At 07:01 UTC, full source-bound V85/V88 admission passed:77.51 GiB below the account
+soft quota, against69.73 GiB needed; the existing temporary filesystem and enabled
+new-file group quota also passed. Capacity is observed, not reserved.
 
-The earlier SSH timeouts and 05:26 UTC authentication rejection remain recorded.
-The access question is resolved; do not repeat it. The pending storage-restoration
-and layout questions remain unanswered. The existing preview inspection failed
-before UI state was available; no repeat attempt or new tab/PDF was made.
-Prepared source package and manuscript are unchanged. Preserve all old jobs,
-partial files, unknown reservation, exclusions and scientific claims.
-Receipts: pilots/recovery-v89-20261023/operational-reconciliation-20261024.json,
-authentication-block-20261024.json and restored-access-20261024.json in the same
-folder. Resume from docs/RECOVERY_RUNBOOK_V89.txt only when fresh capacity passes.
+The 934-file archive was staged exclusively and all 935 regular members verified.
+The new registered program SHA is
+6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9.
+Software 16004 COMPLETED0:0 with all 162 tests, no failure/error/skip, matching actual
+container paths/groups and successful complete host accounting. The fixed chain
+was then submitted held, checked and released once. At 07:05:11 UTC, preparation
+16005 was RUNNING;16006--16016 were dependency-pending. The software pass is not
+scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpoint.json
+and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
 
-0. ACTIVE CONTINUATION V89, STORAGE BLOCKED: V80 preparation15905 FAILED120:0;
-   all11 descendants15906--15916 CANCELLED without running. V81 software15917
-   FAILED120:0 after two seconds; V82 jobs15921--15925 CANCELLED without running.
-   Account queue remained empty at11:32UTC. The account exceeded its 1000 GiB hard quota;
-   filesystem15T free does not provide account headroom. User action is requested
-   to restore capacity without deleting any registered Second evidence. Keep
-   notifications quiet while unchanged. No paid storage or alternate filesystem.
-   Preserve871 frozen sources,5 auxiliary commitments, all jobs/partial files,
-   empty receipts and the unresolved12602CPU-second reserved debit. Never retry,
-   repair the old ledger, remove its locks or infer success from24certificates.
-   The quota is a verified launch blocker; the exact failure traceback is absent.
-   Read docs/RECOVERY_PLAN_V85.txt. A separately registered fresh comparison plus
-   the old full reservation can fit120622<=120624numerical seconds; old/new
-   controller allowances fit6622<=7224. This is a prospective calculation only.
-   New storage/source/software gates and actual terminal audits remain mandatory.
-   V83's success-only closure must refuse the failed chain. Its old prerequisites
-   cannot qualify V84. The latter remains unregistered: an artifact-census bug
-   was fixed, then its missing hybrid_gram declaration was repaired. V87 adds
-   bounded output writing and actual saved-extent inspection.27pure checks pass;
-   the101-check Linux gate remains unexecuted. Nine V86 failure-admission fixtures pass;
-   the actual saved failure snapshot is reconciled without promoting success or
-   settling the old ledger. See research_v86/PROTOCOL.txt. Six pure quota
-   refusal fixtures pass. An exact-source read-only host probe at10:19UTC also
-   refused one byte of headroom; passing host admission and integration remain
-   unqualified. No new scientific result exists.
-   A source-reviewed71-artifact census now includes all state/model/metadata
-   outputs. Worker model/state/metadata/progress/completion bounds are now prepared
-   and connected to unregistered V84. Total storage still needs explicit staging,
-   controller/log/audit/temporary bounds; see research_v87/PROTOCOL.txt. No package
-   staging, registration or launch occurred. The prior preview failure remains;
-   there was no repeat attempt on this unchanged wake.
-   V88 now checks both existing project and temporary filesystems, combines
-   aliases on one device and checks enabled new-file group quotas.24pure tests
-   pass. Host /tmp is XFS with explicit noquota; project storage remains under
-   its exhausted user quota, despite an explicitly unlimited observed group.
-   A source-bound read-only probe at10:52UTC refused even one byte. No source
-   package was staged or job launched. The guard is not yet launcher-integrated;
-   positive admission and the pinned container mapping remain unqualified.
-   Read research_v88/WRITE_SCOPE_REVIEW.txt for the remaining finite write roles.
-   Worker RLIMIT_FSIZE alone does not bound an external Slurm logging process.
-   Keep host storage-check overhead in complete transaction/accounting scopes.
-   All871frozen sources,5auxiliary commitments and the manuscript remain unchanged.
-   V89 now prepares the complete separate recovery path locally: identical
-   workload/order/caps, carried old reservation, bounded worker outputs, host
-   storage checks before registration and every new allocation, container path
-   verification, bounded diagnostic capture and complete host/terminal accounting.
-   89pure checks pass (33new/56inherited); the162-check Linux gate is unexecuted.
-   Source-only package:934files,9,052,160bytes;935tar members independently checked.
-   The complete conservative staging allowance is74,870,290,017project bytes
-   (69.73GiB),12,193inodes, plus17,263,765,504temporary bytes (16.08GiB),20,482inodes.
-   These are allowances, not measured peaks or reserved space. Native compiler
-   and external Slurm log scopes retain their explicit qualification limits.
-   At11:32UTC the source-bound full-plan host check still refused capacity;
-   account queue/19old dispositions/ledger/empty completion remain unchanged.
-   No new namespace, upload, registration, cancellation or allocation was made.
-   Read docs/RECOVERY_RUNBOOK_V89.txt and research_v89/PROTOCOL.txt. Future overflow
-   cleanup may cancel only its own new allocation once, with preserved intent;
-   process-group termination alone cannot prove cleanup of separately grouped
-   workers. No old or unrelated job is targeted. Inspect actual terminal state.
-   All871frozen sources,5auxiliary commitments and the manuscript remain unchanged.
-   Next restore quota headroom, stage and qualify separately registered
-   recovery with conservative failure charges, then close full comparison and
-   new transfer admission/experiment. Preserve the exact approved1,327,104 grid
-   allowance for both new targets and all CPU/memory/work ceilings. Follow the
-   V82 scientific decision rules and separately register justified quality/timing.
-   Existing V72/V74 science/manuscript stands; actual layout remains unverified.
+0. ACTIVE V89 COMPARISON: inspect existing16004--16016 and their receipts before
+   any action. Never repeat prepare.py or either submit.py mode. The actual
+   program and release chain are saved in the execution checkpoint. Ten numerical
+   jobs cover preparation, all eight four-cell/end-point requests and the fresh
+   two-endpoint oracle.16015/16016 perform primary/supplemental audits. On complete
+   terminal success, execute the frozen read-only terminal.py with the actual
+   program SHA and audit all outputs/costs before applying V82 decision rules.
+   On failure, preserve it and the unknown debit; no automatic retry or repair.
+   The original 19 jobs remain unchanged: one complete, two failed and 16 cancelled.
+   Preserve old 12602 CPU seconds in full; old+new numerical reservations 120622
+   remain within 120624, and controller reservations 6622 within 7224. Preserve one
+   CPU, 16 GiB memory, frozen sources, exclusions and all work/output limits.
+   Source-bound admission before every allocation rechecks current capacity.
+   No model result, general speedup, transfer or algorithmic negative is yet
+   established. Independent next work is the separate transfer recovery design:
+   old V81/V82 registrations remain consumed and V84's old gates cannot pass.
+   Read docs/MATCHED_TRANSFER_RECOVERY_REVIEW_V89.txt before implementing the new
+   orchestration and complete write plan. New software/admission/complete-transfer
+   sources must bind the actual V89 terminal result and retain the approved 1,327,104 grid allowance for both new
+   targets. Do not weaken old prerequisites. The same V72/V74 manuscript remains
+   current pending audited results; layout and delivery choices remain unresolved.
 
 1. COMPLETE: V63 artifact audit,V65 disjoint root,V66 operations,V67 full service.
    All ten actual model/state comparisons and both terminal audits pass. Compression
@@ -179,7 +134,8 @@ Targeted source/linkability review documents limits, not a guarantee of rights o
 anonymity. Author-owned form facts remain unset; no attestation or submission is
 made. Publish coherent checkpoints to the existing branch/draft PR. Keep routine
 completed-job polling quiet; no numerical launch is required by the current claim.
-The user resumed the existing scheduler; it remains ACTIVE until requested to stop
+The authorised expanded optimisation/transfer campaign is now running and remains
+incomplete. The user resumed the existing scheduler; it remains ACTIVE until requested to stop
 or the agreed bundle and claim-required evidence are complete and verified. A wake
 must not relaunch any consumed or cancelled registration. No final ETA follows
 from resource ceilings or the earlier estimate before this storage failure.

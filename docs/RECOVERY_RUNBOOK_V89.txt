@@ -1,3 +1,15 @@
+EXECUTED CHECKPOINT,24October2026,07:05UTC
+Storage restored by user-authorized cleanup. Staging, preparation, registration,
+software and chain submission below have ALREADY EXECUTED. NEVER repeat them.
+Actual program SHA:6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9.
+Software16004 COMPLETED0:0 with162passes and actual host/container checks.
+Preparation16005 RUNNING;16006--16016 dependency-pending. Inspect existing jobs
+and receipts, then continue at step9 only after all13allocations are terminal and
+successful. A failure is preserved and forbids automatic retry. Evidence is in
+pilots/recovery-v89-20261023/execution-20261024. Earlier instructions below retain
+the original preparation history; their not-registered/capacity-blocked wording
+is superseded by this execution checkpoint. All registered sources stay frozen.
+
 V89 continuation runbook: prepared locally, not registered or launched
 
 Current block: exhausted project user quota. At11:32UTC23October2026, the full
