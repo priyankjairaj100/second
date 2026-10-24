@@ -1,0 +1,78 @@
+{
+  "actual_cpu_losses": 24,
+  "actual_gpu_losses": 1920,
+  "articles": 320,
+  "bootstrap_draws": 20000,
+  "combined_scheduler_cpu_ns": 7588049000000,
+  "controller_charged_cpu_seconds": 56,
+  "eligible_records": 2778,
+  "evidence_id": "E17",
+  "independent_neural_replication": false,
+  "model_roles": 6,
+  "nominal_familywise_level": 0.95,
+  "numerical_worker_charged_cpu_seconds": 7526,
+  "observed_maximum_guard": 1.2,
+  "one_sided_upper_confidence": 0.975,
+  "original_campaign_successful": false,
+  "original_closure_failed": true,
+  "original_failed_closure_scheduler_cpu_ns": 4817000000,
+  "pooled_guard": 1.05,
+  "predictions_per_article": 127,
+  "primary_endpoints": [
+    12,
+    6
+  ],
+  "quality_guard_pass": true,
+  "sample_frame_complete_records": 3801,
+  "scope": "Fixed target, one bounded article frame, two dependent retained endpoints. Slightly worse perplexity than sequential calibration; predeclared tolerances pass. No population-tail, transfer, timing reliability or general speedup claim.",
+  "separate_recovery_scheduler_cpu_ns": 6312000000,
+  "status": "untouched_quality_verified_with_separate_accounting_recovery",
+  "supplementary_scalar_check": {
+    "archive": {
+      "bytes": 504527,
+      "sha256": "2324b54f8453a8e6bc3ef10a40e1512b752e541feec01a664c0b9e777956eec0"
+    },
+    "endpoints": {
+      "12": {
+        "gate_pass": true,
+        "log_maximum_article_ratio": 0.12145638622993156,
+        "log_pooled_ratio": 0.005406349588089282,
+        "observed_maximum_guard_pass": true,
+        "observed_pooled_guard_pass": true,
+        "reported_bootstrap_upper_guard_pass": true
+      },
+      "6": {
+        "gate_pass": true,
+        "log_maximum_article_ratio": 0.11952433906045071,
+        "log_pooled_ratio": 0.007124031657275523,
+        "observed_maximum_guard_pass": true,
+        "observed_pooled_guard_pass": true,
+        "reported_bootstrap_upper_guard_pass": true
+      }
+    },
+    "independent_arithmetic_implementation": true,
+    "independent_bootstrap_recomputation": false,
+    "independent_neural_evaluation": false,
+    "max_parity_mean_nll_difference": 1.1546319456101628e-14,
+    "model_bytes_read": false,
+    "original_archive": {
+      "bytes": 688960,
+      "sha256": "f736ab88a079d25a21eeeef5ee451ff2a601a4d0b6616bd91b5d2e85ba568646"
+    },
+    "original_closure_failed": true,
+    "paired_articles": 320,
+    "parity_comparisons": 24,
+    "quality_guard_pass": true,
+    "recovery_archive": {
+      "bytes": 43319,
+      "sha256": "15dfbd3568a9496a8e7fefcb63a9ac3d702c7719da1fc3aebce744f9163f9f4e"
+    },
+    "recovery_registration_sha256": "ec6b5a295667cf9b305f7dc2a0a8a7ee14546c5395f5733c9b9ea8a36c4e9df6",
+    "registered_terminal_gate_changed": false,
+    "scalar_losses_checked": 1944,
+    "schema": "v72-recovered-saved-loss-arithmetic",
+    "scope": "Supplementary root reporting check; shared original losses and terminal commitments, not independent experimental replication.",
+    "separate_recovery_verified": true,
+    "status": "verified_saved_scalar_arithmetic"
+  }
+}

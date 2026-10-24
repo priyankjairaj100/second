@@ -1,0 +1,37 @@
+Separate V71 accounting recovery V72,18 October2026
+
+All eight V71 numerical/check/audit jobs15405--15412 completed0:0. Original closure
+15413 failed because sacct was unavailable inside the pinned CPU container. Its
+receipt, source, error and4.817 scheduler CPU seconds remain preserved. Never
+invoke or repair the old closure entry or alter its registration/outputs.
+
+One new bounded artifact/accounting audit consumes a prospectively frozen snapshot
+of actual terminal scheduler rows obtained on the login host, outside the container.
+Bind that snapshot, the original registration, complete settled ledger, original
+failed closure receipt, all575 numerical/protocol sources and the separate V70
+administrative launcher. The snapshot is not fabricated and does not need Slurm
+executables inside the container. Before the sole held submission, require all
+nine original allocations terminal with the recorded states and no active Second
+job. Before release, inspect the exact new job/caps/comment/command and save binding.
+No duplicate submission/release; preserve uncertain responses for inspection.
+
+The new entry uses the unchanged V71 closure.audit function, not closure.main.
+It rechecks original source/runtime/input admission, every worker seal, every
+completed output's actual digest, all eight settled debits and terminal result
+requirements. It runs no constructor, model evaluator or bootstrap and changes
+no quality threshold or data. Independently include the failed closure's measured
+process/child and final scheduler CPU. Preserve original_campaign_successful=false.
+A separate recovered evidence status may be established only after this audit and
+its own external terminal scheduler/cost check succeed. Never fabricate an old
+successful closure receipt. No outcome-dependent experimental choice is made here.
+
+One CPU on csis.mn1,4GiB physical/address-space,128MiB output,core0;600 CPU soft,
+601 hard and602 total scheduler/process allowance;900-second process alarm and
+1200-second Slurm wall. Full original/runtime/output hashing and wrapper/container
+startup are within the new job's scheduler cost, which is checked against602s.
+Own-process plus waited-child CPU are recorded; external final accounting includes
+shutdown and wrapper overhead, without adding nested views twice. New maximum
+allowance602 seconds is separate from unchanged original44726. The combined
+maximum45328 is a ceiling, not an ETA. Read-only source staging, login-host metadata
+acquisition and external reporting are excluded explicitly. One-use attempt and
+new receipt paths are exclusive. No new model, sample or GPU compute is authorized.

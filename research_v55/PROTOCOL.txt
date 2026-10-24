@@ -1,0 +1,66 @@
+V55: prospective exposed-article quality gate for the V54 full-model successor
+
+This source and policy are frozen before observing any V54 full-model outcome.
+The launcher may queue conditional jobs while V54 runs. Registration must wait
+for V54 postrun job13317 and verify BOTH complete actual model/state audits,
+all eight comparisons, the final compressed48 model/state, six settled worker
+debits, bound sources and exposed data. A queued registration is not a registered
+or completed experiment. Any failed prerequisite cancels dependent work. No
+rerun, retry, parameter search, historical modification or model substitution.
+
+Only V54 program03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b
+is admitted. Its actual compressed48 final successor has24 stages and42,467,328
+four-bit codes. Original normalization1664, retained6x128=768 C4 tokens,
+base-only dyadic24 grids, ridge1/100, lower ties, checkpoint and exact finite
+arithmetic remain unchanged. Read and reconstruct its actual packed state,
+registered retained tokens/provenance and model export; require exact equality.
+The48-bit state is a storage representation, not a change in weight precision.
+
+Construct one complete matched sequential comparator from those same six
+retained records. Each ordered finite stream receives the previous certified
+calibrated matrix; no fixed anchor or cached historical features enter it.
+Use the unchanged V43 point dispatcher: token when4*T<=width, streamed primal
+otherwise, including the existing bounded fallback rules. The shared V50 normal
+neighbor kernel is enabled exactly as in V54. All24 stages must pass structural
+admission before any neural feature traversal:16GiB process,8GiB arrays,64billion
+stage and1trillion request work units; declared other residency4GiB. These are
+conservative admission proxies, not runtime or memory-fit promises. OS limits
+remain authoritative. No approximate substitute or expanded rescue on refusal.
+Software fixtures compare all feature words and packed model codes with the
+original ordered sequential constructor, including gelu and gelu_new. This
+sequential target differs from the fixed-anchor target; its construction time
+is not a fixed-target repair-speed comparator.
+
+Inputs are the unchanged eight already exposed V30 WikiText articles,128 tokens
+each,1016 predictions/model. Preserve all60 historical exclusions. This consumes
+no untouched articles and creates no held-out, population or ACL-readiness claim.
+Evaluate full precision and nearest first using the unchanged shared ordinary
+NumPy binary64 evaluator. Require all16 historical mean-NLL deviations<=1e-8
+before constructing or evaluating new models. Then alternate fixed/sequential
+article order. Preserve every loss, count, target, complete sequential code
+array, prefix diagnostic, model receipt and error. No certified neural inference
+or GPU parity follows from CPU likelihoods.
+
+Frozen descriptive guards: pooled fixed/sequential PPL<=1.05 and every article
+ratio<=1.20; use exp(sum paired NLL differences/1016), not average article PPL.
+Also report all per-article outcomes and FP/nearest comparisons. A guard failure
+is a valid adverse result, never an execution failure, retry trigger or excuse
+to omit GPU parity. Overflowing PPL is null with finite log ratios retained.
+No inferential intervals, quality advantage or confirmation claim is authorized.
+
+18 Linux software checks must pass with zero skips and exact source/runtime
+bindings before registration. Each new registration requires a clean commit and
+fresh campaign path; records, source inventory, software receipt, actual input
+hashes, limits, CPU numerical runtime and literal command are bound. One-use
+worker phase cap14402 CPU seconds, soft CPU14400, hard CPU14401, wall18000,
+16GiB address space/Slurm memory,2GiB file limit and one CPU affinity/thread.
+These are prospectively new separate abort ceilings, not recycled allowances
+or completion estimates. Refusals, partial work and failures remain charged.
+Registration/software/read-only audit scheduler costs are reported separately.
+
+The read-only terminal auditor verifies the exact packed fixed and sequential
+models/grids, all32 recorded losses and recomputed descriptive summaries,
+historical parity, retained record binding, prefix chain, complete artifact
+inventory, source/runtime, literal worker command, final seal and settled debit.
+It does not independently rerun neural inference or numerical calibration and
+assumes trusted execution/storage. It accepts valid adverse quality outcomes.

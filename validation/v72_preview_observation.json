@@ -1,0 +1,10 @@
+{
+  "observed_at_utc": "2026-10-18T14:17:30.179589+00:00",
+  "tool": "mcp__cua_repl.js",
+  "action": "getApp Codex",
+  "error": "Sky Computer Use service startup request failed",
+  "retry_count": 0,
+  "new_tab": false,
+  "separate_pdf": false,
+  "rendered_layout_verified": false
+}

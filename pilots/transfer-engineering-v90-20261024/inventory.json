@@ -1,0 +1,14 @@
+{
+  "preservation.json": {
+    "bytes": 598,
+    "sha256": "fe21409dae7de5884bdaefd475af6de8fe8f0efdc401c093a9438359da2a87b1"
+  },
+  "prospective-write-census.json": {
+    "bytes": 28653,
+    "sha256": "802f5b77063e1c6d33399d17a446b913b4256c5201cdaf8e348dc773ace532ad"
+  },
+  "cluster-reconciliation.json": {
+    "bytes": 4087,
+    "sha256": "d96df5be26ffeac8e6ce404cd8f3797f5b49010823e7d167975c98040ff0e346"
+  }
+}

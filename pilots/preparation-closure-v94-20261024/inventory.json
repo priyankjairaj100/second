@@ -1,0 +1,25 @@
+{
+  "files": {
+    "cluster-reconciliation.json": {
+      "bytes": 4113,
+      "sha256": "0f6cdb2f149144e86b99776c0f01f74efbe63cb5bdb83f85bec162d41be615e4"
+    },
+    "preparation-receipt-review.json": {
+      "bytes": 304244,
+      "sha256": "4ca5807306668120e46f73a2900e4ec945e45e1e903bbb8af5800f93c94706db"
+    },
+    "readonly-review.py": {
+      "bytes": 6921,
+      "sha256": "caa2f7f47a408d9b23e6c4836d7a37dee3dce4484ddc78cada64637775b1a50e"
+    }
+  },
+  "source_commitments_unchanged": {
+    "v90": 18,
+    "v91": 33,
+    "v92": 38
+  },
+  "manuscript_unchanged": true,
+  "new_jobs": false,
+  "source_archive_created": false,
+  "full_scientific_closure": false
+}

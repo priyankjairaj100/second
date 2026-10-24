@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-24T07:01:12.808279+00:00",
+  "queue": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "quota": {
+    "code": 0,
+    "stdout": "Disk quotas for user poonam (uid 1007): \n     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace\n      /dev/sdb1 966256924  1047527424 1048576000         3212362       0       0        \n      /dev/sda5 171720660  182452224 183500800          508244       0       0        \n",
+    "stderr": ""
+  },
+  "accounting": {
+    "code": 0,
+    "stdout": "15904|COMPLETED|0:0|13|00:11.560|1|16G|csis.mn1\n15904.batch|COMPLETED|0:0|13|00:11.560|1||csis.mn1\n15905|FAILED|120:0|6439|01:46:42|1|16G|csis.mn1\n15905.batch|FAILED|120:0|6439|01:46:42|1||csis.mn1\n15906|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15907|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15908|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15909|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15910|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15911|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15912|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15913|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15914|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15915|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15916|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15917|FAILED|120:0|2|00:00.850|1|16G|csis.mn1\n15917.batch|FAILED|120:0|2|00:00.850|1||csis.mn1\n15921|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15922|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15923|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15924|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15925|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n",
+    "stderr": ""
+  },
+  "head": {
+    "code": 0,
+    "stdout": "f900999fcb200509dfad4fc081ce9c87fd172a16\n",
+    "stderr": ""
+  },
+  "git": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "ledger": {
+    "bytes": 15987,
+    "sha256": "10f95f5eea81d1bb07a92412ef4b4fe2e802060eb4251524f9559837ceabcb27"
+  },
+  "completion_bytes": 0,
+  "new_paths": {
+    "four-cell-recovery-v89-20261023-a": false,
+    "four-cell-recovery-v89-source-only.tar": false
+  }
+}

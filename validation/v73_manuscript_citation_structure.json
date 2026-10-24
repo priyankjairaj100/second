@@ -1,0 +1,40 @@
+{
+  "bibliographic_metadata_verified_by_this_script": false,
+  "bibliography_keys": [
+    "gptq",
+    "ginart",
+    "medu",
+    "qss",
+    "exactfun",
+    "qebverif",
+    "execcert"
+  ],
+  "bibliography_urls": [
+    "https://arxiv.org/abs/2210.17323v2",
+    "https://papers.nips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf",
+    "https://arxiv.org/abs/2505.03388v1",
+    "https://arxiv.org/html/2610.07197v1",
+    "https://doi.org/10.1109/ICDM58522.2023.00188",
+    "https://github.com/zuobinxiong/zuobinxiong.github.io/blob/300a0672be8d265ddebf20d6e69f790456a1bd81/assets/pdf/ExactFedUnlearning.pdf",
+    "https://arxiv.org/abs/2212.02781v2",
+    "https://arxiv.org/html/2610.02268v1"
+  ],
+  "checked_at_utc": "2026-10-18T14:46:40.253041+00:00",
+  "citation_groups": 8,
+  "empirical_result": false,
+  "labels": 15,
+  "manuscript": {
+    "bytes": 52067,
+    "path": "reports/manuscript_v73.tex",
+    "sha256": "2fb9e3fe2b682fe2400a34b88fa3a276473112c25869f8545bace54f2022e63b"
+  },
+  "manuscript_edited": true,
+  "missing_citations": [],
+  "native_compile_repeated": false,
+  "proof_attribution_verified_by_this_script": false,
+  "reference_uses": 10,
+  "rendered_reference_format_verified": false,
+  "schema": "current-manuscript-citation-structure-v73",
+  "unresolved_references": [],
+  "unused_bibliography_keys": []
+}

@@ -1,0 +1,66 @@
+{
+  "actual_model_state_bytes_checked": false,
+  "archive": {
+    "bytes": 292481,
+    "sha256": "9362533ea83db3697039f40215bb28c20621000456576ff98f015cff6419dca0"
+  },
+  "captured_at_utc": "2026-10-16T14:37:43.993900+00:00",
+  "complete_campaign_costs_verified": false,
+  "controller_all_waited_children_cpu_ns": 5209580961000,
+  "controller_own_cpu_ns": 8377845891,
+  "declared_artifacts": {
+    "admission.json": {
+      "bytes": 555807,
+      "file": "admission.json",
+      "sha256": "8e409e1e4b9b0faff1d37f76faf117f9115042b11beb9acb3ec89bc86250e72b"
+    },
+    "execution-provenance.json": {
+      "bytes": 12727,
+      "file": "execution-provenance.json",
+      "sha256": "22956724f4d2a9433702a3f76cc1fb76a8d447c8c60a7d668800de7da55574cc"
+    },
+    "model.bin": {
+      "bytes": 21233664,
+      "file": "model.bin",
+      "sha256": "35ea0d49671581c0f20fa9a65665acd5abec82d0a1e3edc4e75bca05bdc1f9c5"
+    },
+    "state.bin": {
+      "bytes": 333497142,
+      "file": "state.bin",
+      "sha256": "479f6a97ca867e77102e1d87b415e55fd41b8aa7c41bb43c158b2a808a97e7cc"
+    },
+    "trust.json": {
+      "bytes": 2,
+      "file": "trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    }
+  },
+  "fresh_oracle_comparison_verified": false,
+  "job": {
+    "elapsed": "01:27:36",
+    "end": "2026-10-16T20:03:24",
+    "exit_code": "0:0",
+    "name": "second67-compressed-1",
+    "node": "csis.mn1",
+    "start": "2026-10-16T18:35:48",
+    "state": "COMPLETED",
+    "total_cpu": "01:26:58"
+  },
+  "job_id": "15264",
+  "later_reserved_attempts_preserved": 1,
+  "numerical_result_verified": false,
+  "numerical_solver_fallback_attempted_decisions": 204288,
+  "numerical_solver_fallback_certified_decisions": 204288,
+  "numerical_solver_fallback_rows": 68,
+  "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+  "refused_stages": 0,
+  "retained_membership_independently_rebuilt": false,
+  "stage_certificates": 24,
+  "stage_level_fallback_flags": 0,
+  "status": "verified_completed_comparison_receipt_metadata",
+  "transaction_elapsed_ns": 5250700698394,
+  "trial": "compressed-1",
+  "worker_charged_cpu_seconds": 5210,
+  "worker_maximum_rss_kib": 1844652,
+  "worker_process_and_waited_descendant_cpu_ns": 5209578108000
+}

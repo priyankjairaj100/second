@@ -1,0 +1,222 @@
+{
+  "captured_at_utc": "2026-10-16T12:59:07.298632+00:00",
+  "complete_transitive_license_clearance": false,
+  "items": {
+    "c4": {
+      "automatic_retry": false,
+      "error": {
+        "message": "Metadata response exceeds two MiB",
+        "type": "ValueError"
+      },
+      "metadata_only": true,
+      "method": "GET",
+      "status": "unavailable",
+      "url": "https://huggingface.co/api/datasets/allenai/c4/revision/1588ec454efa1a09f29cd18ddd04fe05fc8653a2"
+    },
+    "distilgpt2": {
+      "automatic_retry": false,
+      "final_url": "https://huggingface.co/api/models/distilbert/distilgpt2?blobs=true",
+      "gated": false,
+      "id": "distilbert/distilgpt2",
+      "license": "apache-2.0",
+      "license_link": null,
+      "license_name": null,
+      "metadata_only": true,
+      "method": "GET",
+      "private": false,
+      "response": {
+        "bytes": 7957,
+        "sha256": "bc77bc61d7f56878bb484fae5d39b0561936a4c4637b10f778cd9a6bac1bf2a4"
+      },
+      "revision": "2290a62682d06624634c1f46a6ad5be0f47f38aa",
+      "selected_file_metadata": [
+        {
+          "blobId": "86f7c9ae4422de194e6b6104b0acc9c8b9d2cd0a",
+          "rfilename": "README.md",
+          "size": 10992
+        },
+        {
+          "blobId": "fed02aafb76b46aa5da200966f9e42262e758023",
+          "rfilename": "config.json",
+          "size": 762
+        },
+        {
+          "blobId": "4a39931cbb1d0cbf2285b4f9afde21d69fca9dce",
+          "lfs": {
+            "pointerSize": 134,
+            "sha256": "e1ff18884359fe8beb795a5f414feb85a6ce3d929ad019c0d958c039d2b94a1b",
+            "size": 352824413
+          },
+          "rfilename": "model.safetensors",
+          "size": 352824413
+        },
+        {
+          "blobId": "4b988bccc9dc5adacd403c00b4704976196548f8",
+          "rfilename": "tokenizer.json",
+          "size": 1355256
+        }
+      ],
+      "status": "publisher_metadata_observed",
+      "status_code": 200,
+      "url": "https://huggingface.co/api/models/distilbert/distilgpt2?blobs=true"
+    },
+    "gmpy2": {
+      "automatic_retry": false,
+      "final_url": "https://pypi.org/pypi/gmpy2/2.3.2/json",
+      "license_classifiers": [],
+      "license_expression": "LGPL-3.0-or-later",
+      "license_field_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "license_first_line": null,
+      "metadata_only": true,
+      "method": "GET",
+      "name": "gmpy2",
+      "project_urls": {
+        "Homepage": "https://github.com/gmpy2/gmpy2"
+      },
+      "response": {
+        "bytes": 75061,
+        "sha256": "9b979e4e10338a6b6da870c24080b3f3a97f5866e97ea1ccbcf0389ab280e3dc"
+      },
+      "status": "publisher_metadata_observed",
+      "status_code": 200,
+      "url": "https://pypi.org/pypi/gmpy2/2.3.2/json",
+      "version": "2.3.2"
+    },
+    "numpy": {
+      "automatic_retry": false,
+      "final_url": "https://pypi.org/pypi/numpy/2.3.5/json",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "license_expression": null,
+      "license_field_sha256": "df40eff048dca919e3c17841c9e3a073831637bcc80d94f6e7130c8cfb6939eb",
+      "license_first_line": "Copyright (c) 2005-2025, NumPy Developers.",
+      "metadata_only": true,
+      "method": "GET",
+      "name": "numpy",
+      "project_urls": {
+        "documentation": "https://numpy.org/doc/",
+        "download": "https://pypi.org/project/numpy/#files",
+        "homepage": "https://numpy.org",
+        "release notes": "https://numpy.org/doc/stable/release",
+        "source": "https://github.com/numpy/numpy",
+        "tracker": "https://github.com/numpy/numpy/issues"
+      },
+      "response": {
+        "bytes": 126913,
+        "sha256": "b152ed47e23df7c54138ba3f4841ce36f7c607def65185e80de0367ad51f0c84"
+      },
+      "status": "publisher_metadata_observed",
+      "status_code": 200,
+      "url": "https://pypi.org/pypi/numpy/2.3.5/json",
+      "version": "2.3.5"
+    },
+    "safetensors": {
+      "automatic_retry": false,
+      "final_url": "https://pypi.org/pypi/safetensors/0.6.2/json",
+      "installed_or_required_version_verified": false,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_expression": null,
+      "license_field_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "license_first_line": null,
+      "metadata_only": true,
+      "method": "GET",
+      "name": "safetensors",
+      "project_urls": {
+        "Homepage": "https://github.com/huggingface/safetensors",
+        "Source": "https://github.com/huggingface/safetensors"
+      },
+      "response": {
+        "bytes": 16946,
+        "sha256": "b7fd4627f413e4cf8ba1e2bb06829bb0ca01376800fba543dff0be15cbca1141"
+      },
+      "scope_note": "Exploratory publisher metadata only; not an observed or required Second runtime dependency",
+      "status": "publisher_metadata_observed",
+      "status_code": 200,
+      "url": "https://pypi.org/pypi/safetensors/0.6.2/json",
+      "version": "0.6.2"
+    },
+    "tokenizers": {
+      "automatic_retry": false,
+      "final_url": "https://pypi.org/pypi/tokenizers/0.23.2/json",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_expression": null,
+      "license_field_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "license_first_line": null,
+      "metadata_only": true,
+      "method": "GET",
+      "name": "tokenizers",
+      "project_urls": {
+        "Homepage": "https://github.com/huggingface/tokenizers",
+        "Source": "https://github.com/huggingface/tokenizers"
+      },
+      "response": {
+        "bytes": 25296,
+        "sha256": "426a2b4af9c418cc2c8bf5fdf2a7706a2f35f77fee70ed0398026f8fffdfc65c"
+      },
+      "status": "publisher_metadata_observed",
+      "status_code": 200,
+      "url": "https://pypi.org/pypi/tokenizers/0.23.2/json",
+      "version": "0.23.2"
+    },
+    "torch": {
+      "automatic_retry": false,
+      "final_url": "https://pypi.org/pypi/torch/2.10.0/json",
+      "license_classifiers": [],
+      "license_expression": null,
+      "license_field_sha256": "118dbcd2d5c9f9b296a9ede9fcc469c5840f7b98ad2c88461055bf2ceda38037",
+      "license_first_line": "BSD-3-Clause",
+      "metadata_only": true,
+      "method": "GET",
+      "name": "torch",
+      "project_urls": {
+        "Documentation": "https://pytorch.org/docs",
+        "Forum": "https://discuss.pytorch.org",
+        "Homepage": "https://pytorch.org",
+        "Issue Tracker": "https://github.com/pytorch/pytorch/issues",
+        "Repository": "https://github.com/pytorch/pytorch"
+      },
+      "response": {
+        "bytes": 66266,
+        "sha256": "32d860fb9c28484a5f8072be89f070d068727cbd400aaf06c3e8b30b62129932"
+      },
+      "status": "publisher_metadata_observed",
+      "status_code": 200,
+      "url": "https://pypi.org/pypi/torch/2.10.0/json",
+      "version": "2.10.0"
+    },
+    "zstandard": {
+      "automatic_retry": false,
+      "final_url": "https://pypi.org/pypi/zstandard/0.25.0/json",
+      "license_classifiers": [],
+      "license_expression": "BSD-3-Clause",
+      "license_field_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "license_first_line": null,
+      "metadata_only": true,
+      "method": "GET",
+      "name": "zstandard",
+      "project_urls": {
+        "Documentation": "https://python-zstandard.readthedocs.io/en/latest/",
+        "Homepage": "https://github.com/indygreg/python-zstandard"
+      },
+      "response": {
+        "bytes": 90168,
+        "sha256": "a9d6f5a97e7a3b5f5125d0c4bac1d5e2c268fd2a5b2148dd8aad511d17240aef"
+      },
+      "status": "publisher_metadata_observed",
+      "status_code": 200,
+      "url": "https://pypi.org/pypi/zstandard/0.25.0/json",
+      "version": "0.25.0"
+    }
+  },
+  "model_or_corpus_content_acquired": false,
+  "packages_installed": false,
+  "project_license_assigned": false,
+  "raw_material_redistribution_authorized": false,
+  "schema": "submission-publisher-license-metadata-v69",
+  "scope": "Publisher declarations only; actual package notices and rights review remain separate"
+}

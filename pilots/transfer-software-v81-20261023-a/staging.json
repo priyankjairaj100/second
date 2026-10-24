@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "{\"staged\": true, \"files\": 851, \"program_sha256\": \"3f89d3c73c21d9d955c9396d6cfbe8150ad98793088f2cca7c6ba5c88c8e5ada\", \"checkout_head\": \"f900999fcb200509dfad4fc081ce9c87fd172a16\", \"checkout_status\": \"\", \"queue_before\": \"15916|second80-supplemental|PENDING\\n15915|second80-primary|PENDING\\n15914|second80-oracle|PENDING\\n15913|second80-reference_compressed-2|PENDING\\n15912|second80-optimized_compressed-2|PENDING\\n15911|second80-reference_modern-2|PENDING\\n15910|second80-optimized_modern-2|PENDING\\n15909|second80-optimized_modern-1|PENDING\\n15908|second80-reference_modern-1|PENDING\\n15907|second80-optimized_compressed-1|PENDING\\n15906|second80-reference_compressed-1|PENDING\\n15905|second80-prepare|RUNNING\\n\"}\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n"
+}

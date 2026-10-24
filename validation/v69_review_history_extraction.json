@@ -1,0 +1,17 @@
+{
+  "archive": {
+    "bytes": 87257,
+    "path": "reports/development-evidence-v69b.zip",
+    "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+  },
+  "files": 5,
+  "full_anonymity_verified": false,
+  "known_identity_strings_found": false,
+  "numerical_reproduction": false,
+  "originals_modified": false,
+  "record_count": 15,
+  "schema": "review-companion-extraction-v69b",
+  "source_execution": false,
+  "status": "passed_clean_extraction_and_scope_checks",
+  "unique_quality_article_labels": 8
+}

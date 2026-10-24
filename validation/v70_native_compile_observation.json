@@ -1,0 +1,17 @@
+{
+  "schema": "native-manuscript-compile-observation-v70",
+  "observed_at_utc": "2026-10-18T11:55:57.728358+00:00",
+  "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex",
+  "manuscript": {
+    "bytes": 53027,
+    "sha256": "65d02e6048156fc1d2270368d8fa7efae192511f79e5aa9d00fc3820a772db0a"
+  },
+  "native_tool": "mcp__codex_app__compile_latex_document",
+  "kind": "success",
+  "message": "The current source compiled successfully with the desktop editor's compiler.",
+  "mirror": "reports/manuscript_v70.tex",
+  "mirror_identical": true,
+  "rendered_layout_verified": false,
+  "page_count_verified": false,
+  "number_check": "validation/v70_manuscript_numbers.json"
+}

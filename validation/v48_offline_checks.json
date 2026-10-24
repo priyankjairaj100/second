@@ -1,0 +1,22 @@
+{
+  "schema": "second-offline-software-validation-v48",
+  "date": "2026-10-11",
+  "source_base_commit": "996eec3e9c5fff3f2a1367e1dc88f7ea35bdf58b",
+  "unit_test_command": ".venv/bin/python -B -m unittest research_v48.test_report",
+  "unit_tests_passed": 10,
+  "complete_historical_archive": "validation/v48_v43_full_archive.json",
+  "metadata_only_archive": "validation/v48_v43_metadata_only.json",
+  "strict_mode_missing_binary_refused": true,
+  "report_source_sha256": "4390e4e4c0436421888696e6943ae417a379dce4f394ca6287e5c9c3860097b8",
+  "test_source_sha256": "8acb5b1adfbc204d7ecd0b3380a509d5779dbf4f9e8ea89a901970319aa4878b",
+  "v45_end_to_end_executed": false,
+  "numerical_reproduction": false,
+  "new_quality_data": false,
+  "cluster_connection": "one_connection_timeout_before_login; user_confirmed_unavailable",
+  "empirical_sources_changed": false,
+  "empirical_ledger_mutated": false,
+  "scope": "Local software checks and integrity/arithmetic audit of historical copied V43 evidence; no new experiment.",
+  "manuscript_compilation": "built_in_editor_success",
+  "manuscript_sha256": "4da520260d0cb55270cecaa29e48c479041dd276e3a61793e234e9d9b4224675",
+  "visual_layout_verified": false
+}

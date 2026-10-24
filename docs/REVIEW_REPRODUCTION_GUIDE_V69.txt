@@ -1,0 +1,72 @@
+External-input guide and cross-component review,16 October2026
+
+reports/development-reproduction-guide-v69.zip is15057 bytes,
+SHA256d533f475ca5db4356210ee2e859304420d7d6e6477c651ec9115a1ee846fb712.
+It contains six files: README, INPUTS.json, RUNTIME.json, dependency declarations,
+an offline verifier and manifest. It does not replace the existing source,
+summary, receipt or manuscript components. Originals remain unchanged.
+
+The guide gives explicit commands for the already-qualified local fixture subset
+and exact commitments for the three model/config/tokenizer inputs, all15 direct
+V67 inputs,28 numerical module/library files,18 tokenizer files and11 codec files.
+It distinguishes the observed local fixture environment from the admitted Linux
+runtime and future unregistered CUDA runtime. Revision-specific retrieval links
+are provided as references; no acquisition or installation was performed.
+The tokenizer hash is bound to the executed data registration, without claiming
+its publisher bytes have been freshly checked. The empirical input/receipt
+closure, transitive notices and project release terms remain incomplete.
+
+Clean extraction verifies all six files and all three referenced ZIP commitments.
+The offline verifier rejects a same-size corrupted ZIP, missing model input and
+unexpected guide file. Values in the external/runtime inventories match their
+original registration fields. These are byte/preparation checks, not runtime or
+empirical validation; the114 source fixtures were not redundantly rerun.
+See validation/v69_review_reproduction_guide.json.
+
+Cross-component review reads559 archive members plus the manuscript and unified
+navigation page:561 UTF-8 files. All four internal manifests and fifteen evidence
+references agree, and no known direct identity pattern is found. The four protocol
+links resolve within the source component; no private mapping file is included.
+ZIP paths, regular-file types, bounds, duplicate names, comments and extra fields
+were checked. No source execution or model/data read occurred.
+
+One concrete navigation issue was resolved in reports/REVIEW_PACKAGE_README_V69.txt:
+E10_primary/additive and E11_cpu_cuda_parity are stable earlier receipt filenames
+whose completed results belong to E12 in the manuscript's canonical evidence index.
+The nine-file crosswalk maps every selected receipt to E12--E15. Receipt bytes,
+original index and all failed/adaptive scope remain unchanged. The unified page
+also preserves the shared eight-article frame and adverse historical comparisons.
+See validation/v69_cross_component_review.json.
+
+This reviews inventory, navigation and reader-facing claims, not every source line
+or every possible identity channel. Exact historical hashes/job identifiers and
+public source similarity may remain indirectly linkable. Full anonymity, actual
+input/runtime reproduction, transitive license notices and native-preview page
+verification remain open. The existing manuscript is unchanged and byte-matches
+its mirror; no new compile was needed. No final bundle or external submission.
+
+At15:22:21UTC (20:52:21IST), cold15265 was RUNNING48m56s with7of24 certified stages;
+15266--15275 remained dependency-pending. The344-file metadata snapshot O checks
+469 frozen sources, eleven installed codec files and102 historical ledgers.
+Fresh oracle and both terminal audits remain pending. No new job was submitted,
+no registered source changed and no live reservation was settled prematurely.
+
+Next independent package work: close actual external historical input/receipt
+distribution and transitive notices if admissible, then whole-package anonymity
+and rendered layout. Do not treat the new guide as closing those gaps. Scientific
+assembly must wait for actual V67/quality evidence and the timing/claim decision.
+
+Installed dependency notice observation
+A bounded read of four actual CPU dist-info license trees retrieved four UTF-8
+license files totaling92,050 bytes: NumPy LICENSE, gmpy2 COPYING/COPYING.LESSER
+and zstandard LICENSE. The codec notice matches its original frozen binding.
+NumPy includes named bundled-library sections, including OpenBLAS, LAPACK, GCC
+runtime and libquadmath. No tokenizer license file was present in the inspected
+dist-info tree. This is a specific missing notice, not a claim that its software
+has no license. Generic GPL/LGPL texts alone do not complete the GMP/MPFR/MPC
+component notice inventory. Python/system/container and GPU dependencies remain.
+The read installed nothing and touched no model/data or empirical ledger. Original
+texts and inventory are preserved in validation/v69_installed_dependency_notices.tar.gz;
+validation/v69_installed_dependency_notice_check.json verifies their bytes. These
+notices are separate from the four review components. No complete transitive
+clearance or project license is asserted.

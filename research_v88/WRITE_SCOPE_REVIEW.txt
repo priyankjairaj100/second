@@ -1,0 +1,81 @@
+Prospective full-chain write-scope review,23October2026
+This is a source review, not a registered storage plan or measured disk peak.
+
+Project filesystem
+Worker outputs: research_v87/outputs.py enforces the declared artifact set,
+exact model size,1GiB states,64MiB metadata/completion and512 one-MiB progress
+slots. V84 uses it; a fresh V80 recovery worker still needs integration.
+Preserve all completed predecessor and independent-oracle outputs. V87's
+30,432,559,104-byte recovery and61,098,688,512-byte matched allowances include
+only these logical output extents, separately for each prospective campaign.
+
+Source package/staging: the exact final archive, unpacked source inventory,
+registration and staging copies need their actual extents and copy counts.
+The package is not built. Do not reuse an earlier package's size as this bound.
+No weights or corpus may be added to a source-only package.
+
+Controller/run-store: src/worker_control.py writes a request, reservation,
+stdout/stderr summaries, pre-settlement observation and limits acknowledgment.
+src/run_store.py also writes identity, lock, status and result records.
+Its atomic writes briefly keep old and replacement bytes. src/phase_budget.py
+maintains a ledger and lock, with an atomic replacement during reservation and
+settlement. Existing writes do not have V87's metadata bound. Keep this scope
+separate from worker outputs, including interrupted writes and sealing overhead.
+Do not alter the old ledger to obtain a smaller new-space allowance.
+
+Entry/submission: research_v84/entry.py writes one start and one terminal receipt
+per allocation. submit.py writes intent, response, held inspection and release
+evidence, plus chain records. Bound the finite sequence and each record before
+claiming its total allowance. One-use registration and partial records remain.
+
+Audits/host accounting: audit.py writes two complete audit reports. V83-style
+terminal accounting can embed actual receipts and source/input commitments.
+Count these serialized bytes separately. A64MiB JSON read ceiling does not
+automatically impose a64MiB cap on every upstream writer.
+
+Slurm logs: submit.py names one log per allocation. The worker's RLIMIT_FSIZE
+does not establish a cap on an external Slurm logging process. Do not multiply
+the worker limit by the number of jobs and call it an enforced log bound.
+Use a reviewed finite logging policy and preserve failures without truncating
+required provenance. Host/bootstrap diagnostics also belong in the allowance.
+
+Temporary filesystem
+Worker streams: src/worker_control.py opens exactly two TemporaryFile streams
+per active run_limited call. Its limited child inherits the descriptors and
+the2GiB file-size ceiling. Parent log summaries retain a digest, byte count and
+at most32768 raw tail bytes per stream; JSON escaping expands the saved tail.
+The stream allowance and stored summaries are different scopes. The stream
+bound alone says nothing about other compiler or test temporary files.
+
+Native builds: source paths include src/native_ball_quantizer.py,
+src/native_box_certificate.py, src/native_token_coefficients_v30.py,
+src/native_box_coefficients_v31.py, src/primal_certificate_v30.py,
+research_v50/neighbors.py, research_v76/token_neighbors.py and
+research_v79/implementation.py. The optimized compressed path copies decode.c
+and fast_decode.py, then builds a shared library. Other wrappers create their
+own source/library pairs. The compiler/linker can create additional internal
+temporary files. Review reachable builds, lifetimes and tool-generated files;
+do not infer their aggregate disk bound from the Python address-space limit.
+Preserve identical source/compiler flags and charge compilation to each complete
+transaction. Do not introduce shared compiled caches to hide preparation cost.
+
+Software fixtures: the101-check V84 gate creates its own generated temporary
+archives and child-controller receipts. Its full pinned-Linux execution remains
+unperformed. These files need a separate conservative allowance. Tiny fixtures
+are software evidence only; they do not qualify empirical model correctness.
+
+Allocation overhead and observations
+Allow for per-file block rounding, directories, filesystem metadata, atomic
+replacement overlap and failures. The observed allocation fragment is4096bytes
+on both host filesystems. XFS allocation behavior is not a logical-file-size
+identity. A reviewed allowance remains distinct from a capacity reservation or
+a guarantee against concurrent writers. The guard must include all requested
+bytes and inodes and never credit free space from a different filesystem.
+
+Blocked facts and next concrete work
+The project user quota still refuses one byte. The observed new-file group has
+explicit zero limits; this does not override the exhausted user quota. /tmp has
+explicit XFS noquota but its free space cannot pay for project output files.
+Finish the finite per-role allowance and host/controller clock binding locally.
+The V88 helper is prepared, not yet connected to a launcher or registered gate.
+No existing experimental source, target, CPU/memory/grid allowance or path changed.

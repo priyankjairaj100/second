@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-23T08:28:13.066684+00:00",
+  "frozen_sources_verified": 871,
+  "auxiliary_commitments_verified": 5,
+  "new_pure_tests_passed": 10,
+  "host_accounting_generated_tests_passed": 13,
+  "prospective_linux_tests_expected": 84,
+  "new_linux_qualification": false,
+  "new_empirical_result": false,
+  "native_manuscript_sha256": "bf3b7a73cda7b4c62fb7fe6fc7df08a36e949cb15f4c0d9e361fc25a732cc8eb",
+  "manuscript_unchanged": true,
+  "preview_status": "unverified: startup tool failed earlier this turn",
+  "source_ast": "passed",
+  "shell_syntax": "passed",
+  "native_compile": "successful earlier this turn; source unchanged",
+  "scheduler": "PAUSED"
+}

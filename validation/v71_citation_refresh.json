@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-10-18T13:02:41.205490+00:00",
+  "crossref": "validation/v71_exactfun_crossref_observation.json",
+  "exactfun_fresh_conference_metadata": true,
+  "exactfun_publisher_pdf_verified": false,
+  "exhaustive_novelty_review": false,
+  "manuscript": {
+    "bytes": 53027,
+    "sha256": "65d02e6048156fc1d2270368d8fa7efae192511f79e5aa9d00fc3820a772db0a"
+  },
+  "manuscript_changed": false,
+  "native_preview_observation": "Sky Computer Use service startup request failed",
+  "new_editor_tab": false,
+  "preview_retries": 0,
+  "primary_metadata_supported": [
+    "gptq",
+    "ginart",
+    "medu",
+    "qss",
+    "exactfun",
+    "qebverif",
+    "execcert"
+  ],
+  "proofs_independently_rechecked": false,
+  "rendered_references_verified": false,
+  "schema": "citation-primary-metadata-refresh-v71",
+  "scope_document": "docs/CITATION_CHECK_V71.txt",
+  "separate_pdf": false,
+  "source_check": "validation/v71_manuscript_citation_structure.json"
+}

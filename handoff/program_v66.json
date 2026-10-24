@@ -1,0 +1,18 @@
+{
+  "acl_ready": false,
+  "archive": "campaigns/csis_v66_software_metadata_20261016.tar.gz",
+  "archive_commitment": {
+    "bytes": 38820,
+    "sha256": "8ce038d191632771f56ed32b0d2bbec06375dc1cf67697c29b5785c7d881ba5f"
+  },
+  "empirical_execution": false,
+  "job": "15259",
+  "next_action": "V67 full-model controller, worker, resource, oracle and audit implementation; separate empirical registration required",
+  "plan": "docs/COMPLETE_SERVICE_PLAN_V67.txt",
+  "registration": "handoff/registration_v66_checks.json",
+  "registration_sha256": "5727138fa7739700e5d14b10a015e33b42765da19dad80b6723a3bdf29e5ada3",
+  "schema": "complete-service-operations-v66-handoff",
+  "skipped": 0,
+  "status": "software_gate_verified",
+  "tests": 44
+}

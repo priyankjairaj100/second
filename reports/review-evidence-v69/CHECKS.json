@@ -1,0 +1,16 @@
+{
+  "copied_field_groups": 306,
+  "full_anonymity_verified": false,
+  "full_reproduction_verified": false,
+  "known_identity_scan_scope": "Four payload files in this directory",
+  "mutation_probes_detected": {
+    "altered_article_ratio": true,
+    "changed_request": true,
+    "erased_failed_guard": true
+  },
+  "numerical_execution": false,
+  "original_receipts_modified": false,
+  "paired_exposed_article_ids": 8,
+  "schema": "review-summary-preparation-check-v1",
+  "status": "passed_projection_checks"
+}

@@ -1,0 +1,24 @@
+test_actual_historical_payload_and_source_are_available_without_model_files (research_v55.test_diagnostic.DiagnosticTests.test_actual_historical_payload_and_source_are_available_without_model_files) ... ok
+test_both_linked_actual_audits_required (research_v55.test_diagnostic.DiagnosticTests.test_both_linked_actual_audits_required) ... ok
+test_bound_input_detects_same_size_mutation (research_v55.test_diagnostic.DiagnosticTests.test_bound_input_detects_same_size_mutation) ... ok
+test_failed_worker_is_charged_recorded_and_never_automatically_retried (research_v55.test_diagnostic.DiagnosticTests.test_failed_worker_is_charged_recorded_and_never_automatically_retried) ... {"returncode":1,"status":"failed"}
+ok
+test_new_phase_binds_literal_command_and_does_not_reuse_old_allowance (research_v55.test_diagnostic.DiagnosticTests.test_new_phase_binds_literal_command_and_does_not_reuse_old_allowance) ... ok
+test_parity_requires_all_sixteen_finite_controls (research_v55.test_diagnostic.DiagnosticTests.test_parity_requires_all_sixteen_finite_controls) ... ok
+test_pooled_and_adverse_article_guards_are_distinct (research_v55.test_diagnostic.DiagnosticTests.test_pooled_and_adverse_article_guards_are_distinct) ... ok
+test_real_complete_synthetic_codes_reconstruct_and_reject_export_mutation (research_v55.test_diagnostic.DiagnosticTests.test_real_complete_synthetic_codes_reconstruct_and_reject_export_mutation) ... ok
+test_feature_words_and_all_model_codes_match_original_constructor (research_v55.test_sequential.SequentialTests.test_feature_words_and_all_model_codes_match_original_constructor) ... ok
+test_retained_membership_canonical_order_and_duplicate_rejection (research_v55.test_sequential.SequentialTests.test_retained_membership_canonical_order_and_duplicate_rejection) ... ok
+test_solver_failure_keeps_completed_prefix_and_closes_every_stream (research_v55.test_sequential.SequentialTests.test_solver_failure_keeps_completed_prefix_and_closes_every_stream) ... ok
+test_stage_and_request_admission_precede_feature_execution (research_v55.test_sequential.SequentialTests.test_stage_and_request_admission_precede_feature_execution) ... ok
+test_wrong_decoder_fixed_target_and_empty_records_refuse (research_v55.test_sequential.SequentialTests.test_wrong_decoder_fixed_target_and_empty_records_refuse) ... ok
+test_wrong_stream_stage_refuses_and_closes (research_v55.test_sequential.SequentialTests.test_wrong_stream_stage_refuses_and_closes) ... ok
+test_prefix_chain_neural_extent_and_resource_admission_bindings (research_v55.test_audit.AuditTests.test_prefix_chain_neural_extent_and_resource_admission_bindings) ... ok
+test_sequential_packed_extent_hash_and_matched_grids (research_v55.test_audit.AuditTests.test_sequential_packed_extent_hash_and_matched_grids) ... ok
+test_summary_and_parity_mutation_are_rejected (research_v55.test_audit.AuditTests.test_summary_and_parity_mutation_are_rejected) ... ok
+test_valid_poor_quality_is_preserved_and_not_reclassified_as_execution_failure (research_v55.test_audit.AuditTests.test_valid_poor_quality_is_preserved_and_not_reclassified_as_execution_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 6.069s
+
+OK

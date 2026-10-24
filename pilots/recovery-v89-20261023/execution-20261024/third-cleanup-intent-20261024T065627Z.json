@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-24T06:56:27.587198+00:00",
+  "authorization": "User explicitly authorized clearing all files of the completed third project to free cluster space for Second.",
+  "target": "/nfs_home/users/poonam/ccu-acl2027",
+  "expected_device": 2065,
+  "expected_inode": 140395834,
+  "expected_uid": 1007,
+  "verified_git_remote": "https://github.com/priyankjairaj100/third.git",
+  "scope": "only this verified cluster directory; retain local Third checkout and all Second paths"
+}

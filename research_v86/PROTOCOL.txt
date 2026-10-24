@@ -1,0 +1,67 @@
+V86 recovery admission preparation, 23 October 2026
+
+This directory does not contain a registered experiment or a numerical launcher.
+It adds two checks needed before a separately registered recovery. It cannot
+make the failed V80/V81 or cancelled V82 registrations successful.
+
+admission.py requires the exact19 original Slurm allocations. It rejects a
+nonterminal, missing, duplicate or unknown allocation; a cancelled successor
+must have no allocated CPU or elapsed time. Batch-step CPU is not added again.
+Every retained allocation has its displayed CPU precision recorded. This is
+scheduler accounting, not a sealed worker CPU measurement.
+
+The original V80 ledger must retain its exact single12602-second reservation,
+null observed CPU and original program identity. The entire reservation carries
+forward. A complete fresh comparison reserves108020, producing120622<=120624.
+The failed controller's602 allowance plus6020 new allowances gives6622<=7224.
+Only two numerical reservation seconds remain. These calculations do not reset
+an old phase, settle it using scheduler time, or authorize any new submission.
+Software and audit limits stay separate; old software failures remain included.
+
+saved_review.py checked the actual saved09:25UTC failure snapshot. It reopens
+that local snapshot and the preserved artifact commitments, binds the exact
+old ledger bytes and requires the empty incomplete completion. Its output is
+failure_snapshot_reconciled, never a successful terminal gate. It does not
+reopen model/state files or inspect the live cluster. Nine pure failure fixtures
+pass; neither these tests nor the saved review constitute Linux qualification,
+scientific correctness evidence or launch authorization.
+
+The09:43UTC live read found unchanged failures/cancellations, an empty account
+queue and the same quota block. That is separate from the historical saved
+review. No new job, source upload, registry, output repair or deletion occurred.
+
+Next required work
+Restore account storage headroom. Derive and review a complete output-space plan
+for the recovery, including all four preparation/oracle representations, logs,
+metadata and receipt sealing. The V85 quota helper checks account and filesystem
+headroom, refuses reliance on soft-limit grace and treats unknown quota as failure.
+Its readings do not reserve capacity against concurrent writers; recheck before
+each controller. It is not yet host-qualified or wired into a recovery launcher.
+
+The source-bound storage-census.json records71 declared complete artifacts:
+11 models,20 states and40 metadata objects, including all four preparation
+representations and both fresh-oracle endpoints. The current writer permits
+1GiB for each, including model files whose exact shape is audited only later.
+Their combined writer allowance is71GiB. This is neither expected storage use
+nor a whole-chain requirement. Progress, receipts, Slurm logs, worker streams,
+compiler temporaries, staging and filesystem overhead need separate allowances.
+Per-file caps alone do not admit the chain. A future recovery must enforce and
+qualify tighter role/count limits or budget the full existing bounds; it cannot
+assume a successful later audit will limit an earlier failed write. No headroom
+amount is approved for launch by this census.
+
+Prepare a new fixed namespace and a complete, separately registered controller,
+worker/audit chain that binds the failed evidence and carry-forward allowances.
+Give all four cells the same admission overhead and include it in the declared
+primary transaction clock. Preserve original targets, rows, source exclusions,
+cell order, fresh oracles, CPU/memory/work caps and every earlier attempt. Verify
+source commitments and current jobs before any launch. Qualify revised controls
+once on the pinned Linux runtime. Never patch or restart the old namespaces.
+
+V84 remains a prospective matched experiment. V85's pure artifact declaration
+missed hybrid_gram, although the frozen V81 rebuild writes four representations.
+V86 repairs that omission, adds a production-source contract check and requires
+runtime agreement before the worker opens an output directory. Fourteen pure
+V84 checks pass; the proposed88-check Linux gate remains unexecuted. Both target
+admission and complete transfer require actual recovered upstream gates and new
+registrations. Do not substitute software tests for full model/state comparisons.

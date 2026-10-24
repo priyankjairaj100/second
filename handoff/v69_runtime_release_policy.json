@@ -1,0 +1,12 @@
+{
+  "changed_resources": false,
+  "job_id": "15394",
+  "new_job": false,
+  "original_launcher_failure_preserved": true,
+  "original_registration_sha256": "5c9f75e196b822dfe7f0297646b24f50ce3a70164ef4758d59ac85e36d223a0b",
+  "reason": "Exact singleton node-range spelling caused pre-release refusal; verify actual allocation and release existing job once.",
+  "registered_at_utc": "2026-10-18T11:30:44.051715+00:00",
+  "retry": false,
+  "schema": "administrative-release-policy-v69",
+  "source_sha256": "e690a8cbbfe35830e8930f1a8221db8a2770a07c9144c6933a184b15b9629d05"
+}

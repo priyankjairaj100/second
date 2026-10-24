@@ -1,0 +1,8 @@
+{
+  "queue": "",
+  "accounting": "JobIDRaw|State|ExitCode|Elapsed|TotalCPU|AllocCPUS|ReqMem|MaxRSS|NodeList\n15898|COMPLETED|0:0|00:00:14|00:12.891|1|16G||csis.mn1\n15898.batch|COMPLETED|0:0|00:00:14|00:12.891|1||3340K|csis.mn1\n",
+  "sources_verified": 620,
+  "dependencies_verified": 11,
+  "outputs_verified": 2,
+  "transport_stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n"
+}

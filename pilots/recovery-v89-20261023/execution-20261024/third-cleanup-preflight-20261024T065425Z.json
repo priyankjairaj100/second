@@ -1,0 +1,53 @@
+{
+  "utc": "2026-10-24T06:54:18.216015+00:00",
+  "root": "/nfs_home/users/poonam/ccu-acl2027",
+  "realpath": "/nfs_home/users/poonam/ccu-acl2027",
+  "is_symlink": false,
+  "stat": {
+    "device": 2065,
+    "inode": 140395834,
+    "uid": 1007
+  },
+  "children": [
+    {
+      "name": "repo",
+      "symlink": false,
+      "directory": true
+    },
+    {
+      "name": "local_workspace",
+      "symlink": false,
+      "directory": true
+    }
+  ],
+  "remote": {
+    "code": 0,
+    "stdout": "https://github.com/priyankjairaj100/third.git\n",
+    "stderr": ""
+  },
+  "head": {
+    "code": 0,
+    "stdout": "de9de39a1a72db40485878452561affe2fbd24aa\n",
+    "stderr": ""
+  },
+  "queue": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "mounts": {
+    "code": 0,
+    "stdout": "/nfs_home                          /dev/sdb1                                     ext4\n\u2514\u2500/nfs_home/users/poonam/nas_mount Administrator@192.168.1.162:D:/Aravind/shared fuse.sshfs\n",
+    "stderr": ""
+  },
+  "quota": {
+    "code": 1,
+    "stdout": "Disk quotas for user poonam (uid 1007): \n     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace\n      /dev/sdb1 1048576000* 1047527424 1048576000   3days 3306263       0       0        \n      /dev/sda5 171720660  182452224 183500800          508244       0       0        \n",
+    "stderr": ""
+  },
+  "disk_usage": {
+    "code": 0,
+    "stdout": "209268736\t/nfs_home/users/poonam/ccu-acl2027/repo\n70452576256\t/nfs_home/users/poonam/ccu-acl2027/local_workspace\n70661849088\t/nfs_home/users/poonam/ccu-acl2027\n",
+    "stderr": ""
+  }
+}

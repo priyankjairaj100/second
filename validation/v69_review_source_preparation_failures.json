@@ -1,0 +1,37 @@
+{
+  "schema": "review-source-preparation-failures-v69",
+  "failures": [
+    {
+      "captured_at_utc": "2026-10-16T14:52:23.038443+00:00",
+      "phase": "source_build_before_output",
+      "error": "Replacement target review. already occurs in research_v61/PROTOCOL.txt; reversibility collision guard stopped before writing source copies.",
+      "correction": "Use the distinct reviewcluster. node prefix and retain collision/reversibility checks.",
+      "registered_work_affected": false,
+      "source_outputs_created": false
+    },
+    {
+      "captured_at_utc": "2026-10-16T14:55:04.368586+00:00",
+      "phase": "clean_extraction_fixture_wrapper_q1",
+      "tests": 114,
+      "test_suite_passed": true,
+      "error": "Post-test source-origin check rejected namespace package research_v37 because its __file__ is None.",
+      "correction": "Require every namespace search location to resolve inside the extraction; continue to require file-backed project imports to originate there.",
+      "registered_work_affected": false,
+      "qualification_success": false,
+      "logs": {
+        "tests.txt": {
+          "bytes": 21667,
+          "sha256": "673be247cb64ce7e6cf818b6770ce2d222f51f2e6723432c34474cf21da1c3b3"
+        },
+        "process.stdout": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "process.stderr": {
+          "bytes": 2113,
+          "sha256": "366bd42a114d2116b756ea0dc6cc2ba3db454c366621d3455f2384feb568b66a"
+        }
+      }
+    }
+  ]
+}

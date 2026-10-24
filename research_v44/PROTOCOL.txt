@@ -1,0 +1,75 @@
+V44: NEW ONE-USE EXPOSED-ARTICLE QUALITY DIAGNOSTIC
+
+This is a prospective development diagnostic, not new confirmation. Do not run,
+register, or submit it until both actual V43 model/state byte audits have passed.
+No V43 source, historical worker, registration, or ledger may be rewritten.
+
+Registration binds the completed V43 program, source inventory and settled ledger,
+the frozen and additive byte audits, actual compressed step-2 model/state and its
+completion, the immutable V30 eight-article registration and historical losses,
+all sixty quality exclusions, checkpoint files, every current research/source
+Python file, this protocol, and the actual CPU software/numerical runtime.
+
+Inputs are exactly the eight exposed V30 validation articles, each with its
+already registered 128-token sequence. No tokenizer, corpus download, pool
+selection, reserve, new article, or held-out model result is needed. Preserve all
+sixty historical exclusions. Each model has 1,016 next-token predictions.
+
+The actual V43 final compressed successor supplies all 42,467,328 four-bit codes
+in all 24 affine stages. Its model export must equal the state's packed arrays.
+The fixed checkpoint, row grids, ridge 1/100, original normalization 96, final
+32 retained calibration tokens, and exact finite decoder remain unchanged.
+Construct a fresh matched sequential comparator from that same final record,
+feeding each calibrated output into the next stage. Its target differs only in
+calibration features; its timing is not a fixed-target repair baseline. The
+existing ordered constructor's pure helper uses the same certified point token
+kernel, bounded 16-coordinate refinement, 8 GiB array policy, 64 billion stage
+and one trillion complete request structural allowance. It admits every stage
+before calibration feature extraction and has no exact-rational rescue.
+
+Use the unchanged NumpyQualityDecoder and nll_from_logits for all four models:
+full_precision, nearest_rounding, fixed_feature, sequential. Likelihoods use
+ordinary NumPy binary64 BLAS/nonlinear arithmetic and are not certified finite
+inference. No GPU equivalence is assumed. Full precision retains the original
+checkpoint matrices; nearest rounding uses the same base-only four-bit grids.
+The pinned checkpoint uses gelu_new, implemented by NumPy tanh. SciPy is only
+needed by the evaluator's unused gelu branch; its absence is recorded explicitly
+in the runtime identity, while missing required or broken packages still refuse.
+Registration checks the pinned gelu_new activation. Registration software job
+13211 failed on an unconditional SciPy import before any quality worker or ledger
+was created; dependent job 13212 never ran. Preserve those logs and source 38ff2ae.
+The correction changes dependency fingerprinting, not evaluation or thresholds;
+use a fresh registration directory after its software check passes.
+
+Evaluate full precision and nearest on all eight exposed articles first, with
+alternating two-model order. Compare all sixteen losses with the old V30 receipt
+at absolute mean-NLL tolerance 1e-8. Any larger deviation refuses the diagnostic
+before constructing/evaluating the two new calibrated models. Their order then
+alternates fixed/sequential by article. Report every loss and prediction count.
+
+Freeze two descriptive development guards: pooled fixed/sequential perplexity
+ratio <= 1.05 and every article fixed/sequential ratio <= 1.20. Pooled ratios are
+exp(sum paired NLL differences / 1016), not means of article perplexities.
+Also report fixed/nearest and fixed/full-precision ratios and all per-article
+outcomes. A guard failure is a valid adverse result. No inferential intervals.
+Perplexity overflow is reported as null with its log value retained; guards use
+the equivalent log thresholds so extreme adverse results do not become retries.
+No retuning, model promotion, population claim, or ACL-readiness claim is permitted.
+
+One fresh PhaseBudget reserves 1,202 CPU seconds: one worker with soft CPU 1,200,
+hard CPU 1,201 plus the controller's conservative second. Wall ceiling 1,500
+seconds, one CPU affinity/thread, RLIMIT_AS and Slurm allocation 16 GiB, file
+ceiling 2 GiB. These are abort ceilings, not a completion guarantee. All refusal,
+failure, timeout and partial output costs remain charged; no automatic retries.
+The controller writes the settled transaction even when the child fails. Final
+worker writes and shutdown fall inside the controller transaction. No historical
+allowance is reused. Ancillary audit/registration CPU is separately disclosed.
+
+Historical guidance only: the earlier ordered sequential128 constructor used
+137.84 CPU seconds and a six-model/eight-article evaluator used 51.99 CPU seconds
+with 3.45 GB peak RSS on prior hardware. Retained32 is smaller, but different
+hardware, cache state, certified arithmetic, or refusal can change its cost.
+
+Commands (root operator only, after source review and both V43 byte audits):
+python -B -m research_v44.campaign register NEW_DIRECTORY V43_DIRECTORY FIRST_AUDIT SECOND_AUDIT
+python -B -m research_v44.campaign run NEW_DIRECTORY

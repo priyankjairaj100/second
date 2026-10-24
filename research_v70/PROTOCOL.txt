@@ -1,0 +1,25 @@
+Saved-frame exclusion audit V70,18 October2026
+
+V69's first controller refused before a worker or inference ran. The new gate
+reconstructed only16/32/64/128-token prefix hashes, whereas frozen Exclusions.tokens
+also preserves each nonempty complete sequence. For short records, complete hashes
+need not equal any listed prefix. Actual metadata shows no missing exclusions and
+1007 extra chunk hashes over the incomplete reconstruction; this observation is
+not yet proof of their content. Preserve all V69 sources/jobs and their failure.
+
+This separately registered one-use CPU job retokenizes ONLY the unchanged saved
+V68 prefix using its original tokenizer/runtime. Recheck the full original saved
+selection, inventory, before/after sets and320 records with the frozen V68 auditor.
+Then publish each candidate's token count and full token-sequence SHA256, including
+short unselected candidates. Independently reconstruct the exact exclusion union
+from the saved candidate metadata plus these complete hashes and require equality.
+No download, sample replacement, model loading, likelihood, changed threshold,
+new exclusions or rewrite of old outputs is permitted. No empirical retry.
+
+One CPU on csis.mn1,4GiB physical/address-space,128MiB file,core0.600 CPU soft,
+601 hard,602 accounting allowance;900-second process alarm and1200-second Slurm
+wall. Whole process and waited-child CPU plus terminal scheduler accounting are
+required. The old numerical checkout and all532 registered V69 source bindings
+remain unchanged. Outputs are commitments, not raw corpus or tokens. This audit
+prepares an exact metadata bridge for a separately registered corrected quality
+campaign; it is not a quality result or permission to retry V69.

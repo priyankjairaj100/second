@@ -1,0 +1,70 @@
+V65: outcome-blind disjoint calibration data admission
+16 October 2026. New bounded data-only phase; not a calibration or quality run.
+
+Scope and fixed selection
+The modern-service software qualification V64 completed34 tests with zero skips,
+including an actual tiny numerical comparison. Its source and registration stay
+frozen. V63's audited artifact comparison remains a modest storage result only.
+Select a single new development root with the same thirteen128-token geometry,
+original normalization1664 and eventual13->12->6 membership sequence. Use the
+first2MiB compressed prefix of C4 English training shard2, immutable dataset
+revision1588ec454efa1a09f29cd18ddd04fe05fc8653a2, byte range0..2097151. Demand206
+and the exact Content-Range, no unbounded full-file fallback or automatic retry.
+Use complete newline-terminated JSON records only, a64MiB decompression bound,
+20000record bound and4MiB text bound per record. The fixed historical tokenizer
+file and tokenizers0.23.2 implementation files are pinned. Take the first128 tokens,
+no BOS/EOS. Rank eligible records by SHA256('second-v65-disjoint-c4-root:'+recordID)
+and take thirteen. Insufficient candidates or any failure closes this attempt;
+do not replace the frame, enlarge it or choose a seed after seeing outcomes.
+This bounded-frame development sample is not corpus-uniform or confirmation.
+
+Exclusions and provenance
+Reconcile all historical metadata in pilots/campaigns/local_runs, including
+post-V45 roots, under the fixed metadata-name policy; exclude only worker/source
+copies and this new run directory. Bind all360 discovered metadata files before
+launch (9,371,911bytes at preflight). Maximum5000files,2MiB per file,64MiB total.
+Union every recovered source ID/content commitment/token prefix with the actual
+V45 protected exclusions. Exclude the entire previously inspected shard1 prefix,
+not only its selected thirteen records. V45's protected set already reserves the
+entire historical shard0 prefix and historical WikiText pools. Preserve every
+historical validation exclusion, including the sixty exposed articles.
+
+Reject exact source IDs, full text, whitespace-normalized text and URL hashes,
+and exact token prefixes of lengths16/32/64/128. Deduplicate selected records
+against each other using the same rules. These are exact commitment checks, not
+semantic or substring deduplication; report that limitation explicitly. Save the
+acquired prefix, selected record/token bytes, source commitments, sampling order,
+protected before/after sets and all selection receipts. Do not redistribute
+source text in the reporting archive. Tokens remain in the private cluster run.
+No model, feature extraction, solver, checkpoint change, held-out losses, test
+selection, quality thresholds or empirical service timings are executed here.
+
+One-use chain and finite limits
+Fresh directory local_runs/disjoint-data-v65-20261016-a. Three jobs: checks,data,
+audit, each submitted once with afterok dependencies, --no-requeue and
+--kill-on-invalid-dep. Checks run exactly9 synthetic tests with zero skips before
+corpus parsing/download. Soft/hard CPU caps:300/301,600/601,600/601seconds.
+Slurm wall caps:600,1200,900seconds. One CPU affinity and library thread limits1,
+4GiB address-space and Slurm memory,128MiB maximum output file,core0. The fresh
+1506-CPU-second allowance is separate from all prior phases; record process and
+waited-child CPU as well as scheduler CPU and reject observed overshoot.
+Data preparation uses no compiler/numerical children. Nine synthetic fixtures
+are not evidence of successful dataset acquisition or disjointness.
+
+Stage before launch, verify clean numerical checkout f900999, all432 historical,
+7V63 and6V64 frozen sources and successful V64 receipt. Pin base runtime, tokenizer
+binary/module files and old data inputs. Reconcile live scheduler first and create
+an exclusive submission intent. No retry, cap increase, source replacement or
+historical mutation. Postrun rehash all inputs and historical metadata; preserve
+any failure. Later fixes require a new registration and path. No unused historical
+budget may be pooled with this allowance. Resource bounds allow tokenizer buffers,
+64MiB decompression, bounded metadata and token prefixes within4GiB; limits and
+actual refusals remain authoritative, not a guarantee of completion.
+
+Separate output audit
+The final job reads actual saved prefix bytes, retokenizes, reconstructs protected
+sets and the fixed hash-order selection, compares exact records/token bytes and
+source metadata, and checks unchanged inputs/runtime. It shares the tokenizer and
+selection implementation, so it is not an independent-implementation validation.
+Only after both preparation and audit succeed may these tokens enter a separately
+registered full-service campaign. This phase never launches that campaign.

@@ -1,0 +1,9 @@
+{"elapsed_ns":17958075,"phase":"request_complete","request_elapsed_ns":16514689,"step":1}
+{"elapsed_ns":30655779,"phase":"request_complete","request_elapsed_ns":11934573,"step":2}
+{"elapsed_ns":19230323,"phase":"request_complete","request_elapsed_ns":17927538,"step":1}
+{"elapsed_ns":19521435,"phase":"request_complete","request_elapsed_ns":18107603,"step":1}
+{"elapsed_ns":34653189,"phase":"request_complete","request_elapsed_ns":14398590,"step":2}
+----------------------------------------------------------------------
+Ran 36 tests in 2.196s
+
+OK

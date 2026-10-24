@@ -1,0 +1,145 @@
+V91 matched-target admission recovery, 24 October 2026
+
+Status: separate source implementation and local checks only. No source package,
+upload, registration, checkpoint fetch, Slurm allocation or empirical result.
+The current V89 comparison and all earlier sources/receipts remain unchanged.
+Actual V89 terminal success is required before the package can be created.
+
+Purpose and preserved scope
+This is the five-operation software/input/target gate for the previously designed
+matched transfer screen. It does not execute calibration, neural features,
+deletions, latency comparisons or quality evaluation on either real checkpoint.
+The deterministic V82 selection remains four of the same thirteen exposed C4
+records, four original 128-token records, normalization 512, retained counts 3/2,
+24 DistilGPT2 stages and 48 GPT2 stages. Both targets use the exact user-approved
+1,327,104 grid-entry allowance. No historical guard, source or result is changed.
+
+New literal namespace:
+/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v91-20261024-a
+Order: checks, fetch, distilgpt2, gpt2, close.
+Old V81 failure15917, V82 cancellations15921--15925 and V80 failure15905 remain
+consumed. V89's actual program is6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9.
+The full old12602-second unresolved debit remains in its required reopened gate.
+
+Admission wiring
+Both producer and actual target child now import the shared V91 contracts and
+V90 read-only verifier. They use exactly the same program/source ledger identity,
+literal command, job, paths, phase,600+2 CPU reservation, limits and attempt-0001
+digest. Missing or settled reservations refuse before checkpoint construction.
+This removes both reproduced prospective V82/V84 wiring defects without changing
+the old files: undefined verifier import and incompatible ledger identities.
+
+The software gate includes the exact62 V81 profile/archive/service checks,11
+unchanged input/admission-report guards,48 V90 pure component checks,3 actual
+V90 child checks,3 new target-loader checks and45 new contract/storage/fetch/
+registry/launcher/host/closure/archive tests. Total172, all required without skips.
+The new target-loader fixtures do not mock the live CPU verifier: matching real
+ledger bytes reach the upstream boundary, while absent admission stops first.
+These are generated-data software checks, not evidence of numerical transfer.
+The full pinned Linux suite remains unexecuted. Do not infer its success from
+local tests, source count, V89's162 checks or generated audit fixtures.
+
+Evidence and registration
+package.py must receive the exact934-file V89 source tar and the actual saved V89
+terminal report. It verifies every frozen local counterpart, adds V90/V91 sources
+and required local fixtures, and computes exact PAX/header/padding extent before
+creating an exclusive uncompressed tar. Archive and extracted payload each have
+a64MiB ceiling and the inventory has fewer than4096 entries. Model weights and
+corpus bytes are excluded. No guessed terminal hash or fabricated successful
+report may be supplied. prepare.py reopens every actual V89 terminal input, both
+audits and the preserved failed artifacts/debit via the V90 gate, and writes a
+separate prospective program. Only submit.py checks mode creates its registration.
+
+The failed V80 program remains an immutable INPUT registry. Its successful data
+admission,13-record root, exclusions, checkpoint provenance, runtime and source
+bindings are reused unchanged. Its failed empirical completion is not reused as
+a success. Each new entry/target checks its own literal program/source/job and
+actual V89 gate. The new software gate must close with complete host/scheduler
+accounting before the four dependent admission jobs can be submitted.
+
+One-use scheduler behavior
+Both modes inspect a fresh empty account queue, all actual V89 terminal jobs and
+the old19 dispositions before launch. Exact source bytes and fresh storage
+admission are required. Each sbatch has exclusive intent/response/submission
+records, is held, has one CPU,16GiB,cpu-short partition/QOS,csis.mn1 and no requeue,
+and is checked before release. Uncertain responses are consumed, never retried.
+A failed held check leaves the job held for inspection. Runtime admission uses
+the complete validated held-chain record, which exists before release. Requiring
+the post-release response at startup would race with fast scheduler dispatch;
+only prior-operation and terminal review require that actual release response.
+
+The immutable public GPT2 revision remains607a30d783dfa663caf39e06633721c8d4cfcd7e.
+config.json is665bytes/SHA0daed7749b4f02b8f76240d5444551d7b08712dab4d0adb8239c56ba823bb7b4;
+model.safetensors is548105171bytes/SHA248dfc3911869ec493c76e65bf2fcf7f615828b0254c12b473182f0f81d3a707.
+The streamed exclusive fetch has the original420-second deadline, public HTTPS
+host restriction, no proxy credentials and no retries. A failed partial remains;
+only exception type is recorded, never signed redirect URLs or raw headers.
+The two finite fetch metadata records now use the bounded exclusive writer.
+
+Target output, seals and closure
+Each actual admission emits the same eight complete canonical target/provenance/
+structural-admission artifacts,32MiB each, plus a64MiB completion. No diagnostic
+record is shortened or silently omitted. Actual-target seals check the full
+24/48-stage geometry, approved grids, exact checkpoint provenance, model extent,
+matched source selection, all twelve representation/retained-size admissions,
+actual applied resource limits, complete worker seal and settled CPU debit.
+close-report.json remains admission pending host accounting. terminal.py reopens
+actual receipts, worker seals, logs, fetch outputs and source bytes, checks all
+five successful scheduler rows and actual release records, rechecks V89 and old
+failures, and binds the resulting input inventory. Only that actual report can
+qualify a later complete-transfer registration. No empirical transfer follows
+from target admission alone.
+
+Resources and clocks
+Each target worker keeps600CPU seconds,900wall seconds,16GiB address space,
+2GiB file size, one thread/affinity CPU. Both reservations total1204CPU seconds.
+All five complete host/controller overheads are bounded by302seconds each,
+1510total. Software has its preserved602-second complete aggregate allowance.
+Software tests execute in a separately measured child; its CPU is contained in
+software602 and subtracted only when determining controller overhead. Actual
+target CPU is likewise subtracted once from its complete host envelope. Helper
+children, source verification, container startup, cleanup and final writes remain
+charged through wait4/host observations and conservative scheduler quantization.
+Software and target nested clocks are never summed with the enclosing clocks.
+All final cost partitions must pass actual scheduler review. The later full
+screen still has its original302-per-worker/6040-total controller allowance.
+
+Every metadata write uses the finite V91 layout or the V90 bounded controller
+writer. Source staging, eight-artifact target outputs, partial fetch, metadata,
+replacement overlap, complete64MiB bootstrap logs, conservative4MiB external
+Slurm logs and existing /tmp allowances are included in the new admission-only
+storage plan. Both filesystems, user/group quotas and actual container device/
+new-file group mapping must pass. Capacity is observed, never reserved; external
+Slurm writes and compiler internals are conservative allowances, not formal disk
+bounds. Existing outputs count in live quota and are never credited as free.
+The V90 prospective68.50GiB full-screen plan is NOT promoted to actual admission.
+A later full screen needs its own integrated source-bound plan and fresh check.
+
+Local verification and limits
+104 local tests passed on Darwin Python3.12.7:45 new tests (including four tiny
+stdlib child/log tests),48 V90 component checks and11 unchanged input/report
+guards. No neural/model computation was performed locally. Undefined-name,
+Python syntax, shell syntax and172-test source census checks passed. All934
+frozen tar members,930 existing local counterparts and18 V90 source commitments
+were rechecked unchanged. Package assembly itself was not performed because its
+actual terminal prerequisite is missing.
+
+A first21-test run had one failure: the shared read-only ledger reader returns
+an unavailable snapshot for a missing ledger, whereas the new wrapper initially
+returned it directly. The wrapper now explicitly refuses unavailable snapshots;
+all subsequent checks pass. A local import probe of target_worker reported
+ModuleNotFoundError:numpy. No dependencies were installed and no target was
+constructed. Actual import/loader qualification is deferred to the pinned Linux
+gate. These local development observations are not registered experiment failures
+or successful empirical evidence.
+
+Remaining gates
+Close and interpret the running V89 comparison before deciding to execute this
+new admission. If justified, create/verify the actual source package, run fresh
+storage admission, register once and execute172 pinned Linux checks. Only after
+that actual host/scheduler success may fetch and actual target admission run.
+After its actual terminal closure, adapt and separately register the20-worker,
+16-comparison screen with the predetermined V84 order/work/caps, if justified.
+A stable speedup claim still needs the separately planned replicated timing
+study; two related GPT checkpoints cannot establish cross-architecture generality.
+The existing V72/V74 bounded tradeoff claim/manuscript remains unchanged.

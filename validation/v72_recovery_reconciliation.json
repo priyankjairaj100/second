@@ -1,0 +1,32 @@
+{
+  "combined_scheduler_cpu_ns": 7588049000000,
+  "controller_charged_cpu_seconds": 56,
+  "failed_closure_scheduler_cpu_ns": 4817000000,
+  "independent_neural_replication": false,
+  "numerical_worker_charged_cpu_seconds": 7526,
+  "observed_at_utc": "2026-10-18T14:02:02.220574+00:00",
+  "original_allowance_cpu_seconds": 44726,
+  "original_archive": {
+    "bytes": 688960,
+    "sha256": "f736ab88a079d25a21eeeef5ee451ff2a601a4d0b6616bd91b5d2e85ba568646"
+  },
+  "original_campaign_successful": false,
+  "original_closure_job": "15413",
+  "original_eight_allocation_scheduler_cpu_ns": 7576920000000,
+  "original_failed_closure_preserved": true,
+  "quality_guard_pass": true,
+  "recovered_quality_evidence_verified": true,
+  "recovery_archive": {
+    "bytes": 43319,
+    "sha256": "15dfbd3568a9496a8e7fefcb63a9ac3d702c7719da1fc3aebce744f9163f9f4e"
+  },
+  "recovery_charged_cpu_seconds": 6,
+  "recovery_job": "15421",
+  "recovery_process_and_children_cpu_ns": 5765793124,
+  "recovery_scheduler_cpu_ns": 6312000000,
+  "registered_numerical_sources_changed": false,
+  "schema": "separate-v72-accounting-recovery-review",
+  "scope": "Original eight actual artifact/audit phases plus separate accounting recovery; original closure failure and cost retained. Local metadata review does not repeat model or loss execution.",
+  "separate_recovery_allowance_cpu_seconds": 602,
+  "status": "verified_separate_accounting_recovery"
+}

@@ -1,0 +1,26 @@
+{
+  "archive_sha256": "6abf11b4b237f263784f3bfb9ce3ddb87f70e3d11f3b3a751ae5e69984cddfd3",
+  "clean_extraction_verified": true,
+  "components": [
+    "development-audit-receipts-v69.zip",
+    "development-dependency-notices-v71c.zip",
+    "development-evidence-v69b.zip",
+    "development-quality-evidence-v72.zip",
+    "development-selection-metadata-v71.zip",
+    "development-service-evidence-v70.zip",
+    "development-source-review-v72.zip"
+  ],
+  "corruption_rejected": true,
+  "empirical_result_verified": false,
+  "external_input_acquisition": false,
+  "full_reproduction_verified": false,
+  "guide_files": 5,
+  "missing_rejected": true,
+  "model_files": [],
+  "model_loaded": false,
+  "network_used": false,
+  "runtime_qualified": false,
+  "scope": "Component/guide byte checks only; source, data or numerical experiment not executed here.",
+  "status": "byte_checks_passed",
+  "unexpected_rejected": true
+}

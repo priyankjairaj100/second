@@ -1,0 +1,21 @@
+{
+  "schema": "second-v50-software-validation",
+  "date": "2026-10-11",
+  "source_commit": "e33181213e1ff6d23a137669978bf89c70a9aaae",
+  "linux_test_job": "13268",
+  "linux_tests_passed": 18,
+  "neighbor_direction_checks": 2032770,
+  "result_bits_and_exception_flags_match": true,
+  "point_box_gram_and_coefficient_words_match": true,
+  "tiny_rational_oracle_pass": true,
+  "local_numerical_tests_skipped": 4,
+  "linux_log_sha256": "52e38cd2c317043c879aaf084d9b138a92cf18d497b183a33b756693c9b6fb41",
+  "gpu_access_job": "13271",
+  "gpu_access_passed": true,
+  "manuscript_compilation": "built_in_editor_success",
+  "manuscript_sha256": "c66ab7219cb1ae63a3d70dfdfd1a4c4970f46e5b08da50473454281da7454db1",
+  "visual_layout_verified": false,
+  "full_model_optimization_admitted": false,
+  "exclusions_preserved": 60,
+  "new_quality_articles": 0
+}

@@ -1,0 +1,10 @@
+{
+  "status": "administrative_preflight_failed",
+  "recorded_at_utc": "2026-10-18T11:17:38.715178+00:00",
+  "error": "KeyError: files for the explicit not-installed scipy declaration",
+  "failed_output": "validation/v68_registration_preflight_20261018_a.json",
+  "frozen_execution_source_changed": false,
+  "registration_created": false,
+  "empirical_attempt": false,
+  "correction": "Accept only the exact existing scipy installed:false/required_for_pinned_gelu_new_route:false declaration; retain actual installed-library checks"
+}

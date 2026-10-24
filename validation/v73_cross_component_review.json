@@ -1,0 +1,90 @@
+{
+  "archive_members": 740,
+  "artifacts": {
+    "development-audit-receipts-v69.zip": {
+      "bytes": 341604,
+      "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+    },
+    "development-dependency-notices-v71c.zip": {
+      "bytes": 460857,
+      "sha256": "944eb649e8f339e3b0a1b39126333d5d950c0909a394da3587b7de34e5771f41"
+    },
+    "development-evidence-v69b.zip": {
+      "bytes": 87257,
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "development-quality-evidence-v72.zip": {
+      "bytes": 251913,
+      "sha256": "c588ac060824b7870f085f8f3dae6e02cee6dcb93ded6aac6bd7d72a8d5f14dc"
+    },
+    "development-reproduction-guide-v72.zip": {
+      "bytes": 19535,
+      "sha256": "6abf11b4b237f263784f3bfb9ce3ddb87f70e3d11f3b3a751ae5e69984cddfd3"
+    },
+    "development-selection-metadata-v71.zip": {
+      "bytes": 6194056,
+      "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
+    },
+    "development-service-evidence-v70.zip": {
+      "bytes": 124857,
+      "sha256": "684ca47fd16985c32f5faf0dd7bab81f3bbe9dda297a87455dfb84c0a0ce2dc4"
+    },
+    "development-source-review-v72.zip": {
+      "bytes": 1930758,
+      "sha256": "e3505d7b353eed4109c7f22f127955513d928590552513263a13ee90811cbf49"
+    },
+    "reports/REVIEW_PACKAGE_README_V73.txt": {
+      "bytes": 7026,
+      "sha256": "8337b3d7c16e525591891b0b8628f72218f3835ba62dd378e34b76062bd5e50c"
+    },
+    "reports/manuscript_v73.tex": {
+      "bytes": 52067,
+      "sha256": "2fb9e3fe2b682fe2400a34b88fa3a276473112c25869f8545bace54f2022e63b"
+    }
+  },
+  "captured_at_utc": "2026-10-18T14:50:38.852303+00:00",
+  "clean_source_fixture_tests": 213,
+  "empirical_work_executed": false,
+  "evidence_references": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17"
+  ],
+  "full_anonymity_verified": false,
+  "full_empirical_input_closure": false,
+  "full_reproduction_verified": false,
+  "full_source_manual_review": false,
+  "full_transitive_notices": false,
+  "indirect_identity_linkability_assessed": false,
+  "internal_manifests_verified": 8,
+  "known_identity_findings": [],
+  "manuscript_matches_open_file": true,
+  "private_mapping_files_included": false,
+  "protocol_links_verified": 7,
+  "schema": "cross-component-review-v73",
+  "status": "inventories_hashes_navigation_and_direct_identifiers_checked",
+  "submission_ready": false,
+  "text_files_checked": 742,
+  "upstream_attribution_matches": [
+    {
+      "file": "development-dependency-notices-v71c.zip/cuda/distributions/sympy-1.14.0.dist-info/licenses/AUTHORS",
+      "line": 590,
+      "match": "Priyank"
+    }
+  ],
+  "upstream_attribution_reviewed_and_preserved": true
+}

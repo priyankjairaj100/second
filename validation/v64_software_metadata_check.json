@@ -1,0 +1,25 @@
+{
+  "actual_tiny_numerical_test": true,
+  "archive": {
+    "bytes": 38380,
+    "sha256": "1dac63ed0f4a3ac439d3e62a270200ff362cc0924f13eac87ea35985b767a234"
+  },
+  "combined_observed_cpu_seconds": 2.859234258,
+  "completion_receipt": {
+    "bytes": 560,
+    "sha256": "c7b4ccc99aa9209a2835a130a6fa3064175997b112b9a68e14df6793f0dc52b9"
+  },
+  "empirical_inputs_read": false,
+  "empirical_result": false,
+  "historical_sources_preserved": 432,
+  "new_sources_checked": 6,
+  "next_gate": "New prospective data selection/admission and full service protocol; no empirical launch registered",
+  "scheduler": "15254|COMPLETED|0:0|6|00:03.831||2026-10-16T14:09:07|2026-10-16T14:09:13\n15254.batch|COMPLETED|0:0|6|00:03.831|3328K|2026-10-16T14:09:07|2026-10-16T14:09:13\n",
+  "scheduler_cpu_seconds": 3.831,
+  "schema": "v64-software-terminal-check",
+  "skipped": 0,
+  "source_review": "Root review; no independent reviewer",
+  "status": "passed",
+  "tests": 34,
+  "v63_sources_preserved": 7
+}

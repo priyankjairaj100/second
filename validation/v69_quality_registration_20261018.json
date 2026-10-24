@@ -1,0 +1,22 @@
+{
+  "allowance_cpu_seconds": 44726,
+  "automatic_retry": false,
+  "created_at_utc": "2026-10-18T11:35:52.940761+00:00",
+  "cuda_inventory_charged_cpu_seconds": 4,
+  "cuda_inventory_host": "csis.cn4",
+  "cuda_inventory_job": "15394",
+  "cuda_inventory_scheduler_cpu_seconds": "4.331",
+  "expected_linux_tests": 100,
+  "local_v69_tests": 94,
+  "new_sources": 40,
+  "numerical_work_started": false,
+  "registration_bytes": 61664,
+  "registration_sha256": "d176bb08cea9c7ef0ded9294d75f47234c5b93f772cddf9c84b0908cbfdd43f1",
+  "schema": "v69-quality-registration-observation",
+  "staged_files": 43,
+  "staging_archive": {
+    "bytes": 93733,
+    "sha256": "77f6b1f28323fa3af686c9ca3e6d00650bd32a4adb75c311c073fa8d11e96764"
+  },
+  "total_numerical_source_bindings": 532
+}

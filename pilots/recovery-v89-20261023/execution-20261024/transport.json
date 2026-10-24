@@ -1,0 +1,4 @@
+{
+  "returncode": 0,
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n"
+}

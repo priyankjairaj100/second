@@ -1,0 +1,450 @@
+{
+  "added_codec_installation_bytes": 23870575,
+  "attributed_timings": {
+    "cached": {
+      "attributed_preparation_ns": 5712525346607,
+      "attributed_two_request_total_ns": 11130793210384,
+      "lifetime_scope": "Attributed shared preparation plus two observed fresh-process request transactions; not an independently measured end-to-end lifecycle",
+      "requests": [
+        {
+          "context_elapsed_ns": 24237013797,
+          "controller_process_cpu_ns": 6989441087,
+          "fallback_stages": [],
+          "max_rss_kib": 1913972,
+          "request_elapsed_ns": 4419007235461,
+          "source_stage_record_pairs": 0,
+          "transaction_elapsed_ns": 4455690168641,
+          "worker_elapsed_ns": 4449533286970
+        },
+        {
+          "context_elapsed_ns": 28508359076,
+          "controller_process_cpu_ns": 3085709372,
+          "fallback_stages": [],
+          "max_rss_kib": 1394020,
+          "request_elapsed_ns": 922484079340,
+          "source_stage_record_pairs": 0,
+          "transaction_elapsed_ns": 962577695136,
+          "worker_elapsed_ns": 957252113717
+        }
+      ]
+    },
+    "cold": {
+      "attributed_preparation_ns": 5712525346607,
+      "attributed_two_request_total_ns": 13386965912106,
+      "lifetime_scope": "Attributed shared preparation plus two observed fresh-process request transactions; not an independently measured end-to-end lifecycle",
+      "requests": [
+        {
+          "context_elapsed_ns": 31158034788,
+          "controller_process_cpu_ns": 8502776700,
+          "fallback_stages": [],
+          "max_rss_kib": 1968144,
+          "request_elapsed_ns": 5973008100985,
+          "source_stage_record_pairs": 288,
+          "transaction_elapsed_ns": 6016783538496,
+          "worker_elapsed_ns": 6010467720322
+        },
+        {
+          "context_elapsed_ns": 26311837625,
+          "controller_process_cpu_ns": 3909147028,
+          "fallback_stages": [],
+          "max_rss_kib": 1122132,
+          "request_elapsed_ns": 1619473475901,
+          "source_stage_record_pairs": 144,
+          "transaction_elapsed_ns": 1657657027003,
+          "worker_elapsed_ns": 1652057773156
+        }
+      ]
+    },
+    "compressed": {
+      "attributed_preparation_ns": 6365232752566,
+      "attributed_two_request_total_ns": 13007523031318,
+      "lifetime_scope": "Attributed shared preparation plus two observed fresh-process request transactions; not an independently measured end-to-end lifecycle",
+      "requests": [
+        {
+          "context_elapsed_ns": 31203387769,
+          "controller_process_cpu_ns": 7653359100,
+          "fallback_stages": [],
+          "max_rss_kib": 1844652,
+          "request_elapsed_ns": 5206569278111,
+          "source_stage_record_pairs": 0,
+          "transaction_elapsed_ns": 5250700698394,
+          "worker_elapsed_ns": 5244182019935
+        },
+        {
+          "context_elapsed_ns": 28093348273,
+          "controller_process_cpu_ns": 3352633703,
+          "fallback_stages": [],
+          "max_rss_kib": 1464052,
+          "request_elapsed_ns": 1351097689067,
+          "source_stage_record_pairs": 0,
+          "transaction_elapsed_ns": 1391589580358,
+          "worker_elapsed_ns": 1385480788612
+        }
+      ]
+    },
+    "hybrid": {
+      "attributed_preparation_ns": 5922163148922,
+      "attributed_two_request_total_ns": 12635007628714,
+      "lifetime_scope": "Attributed shared preparation plus two observed fresh-process request transactions; not an independently measured end-to-end lifecycle",
+      "requests": [
+        {
+          "context_elapsed_ns": 28648944992,
+          "controller_process_cpu_ns": 7470730288,
+          "fallback_stages": [],
+          "max_rss_kib": 1936672,
+          "request_elapsed_ns": 4921935102925,
+          "source_stage_record_pairs": 24,
+          "transaction_elapsed_ns": 4962294372332,
+          "worker_elapsed_ns": 4956856335615
+        },
+        {
+          "context_elapsed_ns": 40682892326,
+          "controller_process_cpu_ns": 4057545066,
+          "fallback_stages": [],
+          "max_rss_kib": 1682292,
+          "request_elapsed_ns": 1694311185467,
+          "source_stage_record_pairs": 144,
+          "transaction_elapsed_ns": 1750550107460,
+          "worker_elapsed_ns": 1741261247473
+        }
+      ]
+    },
+    "modern": {
+      "attributed_preparation_ns": 5709162044388,
+      "attributed_two_request_total_ns": 11248866823405,
+      "lifetime_scope": "Attributed shared preparation plus two observed fresh-process request transactions; not an independently measured end-to-end lifecycle",
+      "requests": [
+        {
+          "context_elapsed_ns": 18469567895,
+          "controller_process_cpu_ns": 7184699675,
+          "fallback_stages": [],
+          "max_rss_kib": 1911400,
+          "request_elapsed_ns": 4579496051876,
+          "source_stage_record_pairs": 0,
+          "transaction_elapsed_ns": 4610748267389,
+          "worker_elapsed_ns": 4604256998904
+        },
+        {
+          "context_elapsed_ns": 18275583454,
+          "controller_process_cpu_ns": 3101022381,
+          "fallback_stages": [],
+          "max_rss_kib": 1511032,
+          "request_elapsed_ns": 897840799447,
+          "source_stage_record_pairs": 0,
+          "transaction_elapsed_ns": 928956511628,
+          "worker_elapsed_ns": 922359058550
+        }
+      ]
+    }
+  },
+  "audit_entries": {
+    "primary": {
+      "affinity_cpus": [
+        0
+      ],
+      "arguments": [],
+      "child_cpu_is_numerical_ledger_work": false,
+      "cpu_limits": [
+        7200,
+        7201
+      ],
+      "elapsed_ns": 3509242636999,
+      "error": null,
+      "finished_utc": "2026-10-17T00:10:59.265992+00:00",
+      "hostname": "REVIEW_HOST_0850",
+      "job_id": "15274",
+      "maximum_rss_kib": 3794560,
+      "operation": "primary",
+      "process_cpu_ns": 3475174972915,
+      "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+      "status": "complete",
+      "waited_child_cpu_ns": 3019000
+    },
+    "supplemental": {
+      "affinity_cpus": [
+        0
+      ],
+      "arguments": [],
+      "child_cpu_is_numerical_ledger_work": false,
+      "cpu_limits": [
+        3600,
+        3601
+      ],
+      "elapsed_ns": 15595136613,
+      "error": null,
+      "finished_utc": "2026-10-17T00:11:17.545483+00:00",
+      "hostname": "REVIEW_HOST_0850",
+      "job_id": "15275",
+      "maximum_rss_kib": 126600,
+      "operation": "supplemental",
+      "process_cpu_ns": 14006663908,
+      "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+      "status": "complete",
+      "waited_child_cpu_ns": 2867000
+    }
+  },
+  "confirmation": false,
+  "controller_own_cpu_ns": 85725711496,
+  "evidence_id": "E16",
+  "full_model_state_comparisons": 10,
+  "independent_implementation": false,
+  "nested_clocks_must_not_be_added": true,
+  "numerical_worker_charged_cpu_seconds": 47767,
+  "oracle_transaction_elapsed_ns": 9336483066635,
+  "preparation_transaction_elapsed_ns": 6906557180490,
+  "quality_evaluated": false,
+  "ratios": [
+    {
+      "checkpoint_inclusive_saving_percent": "4.786959947328355290048568720",
+      "live_saving_percent": "9.376489008326958949602828530",
+      "reference": "cached",
+      "request_slowdown_percent": "17.82214874712328671432378060",
+      "step": 1
+    },
+    {
+      "checkpoint_inclusive_saving_percent": "4.714720311583255660122176580",
+      "live_saving_percent": "9.241711790976369588723403560",
+      "reference": "modern",
+      "request_slowdown_percent": "13.69306183762552126071044920",
+      "step": 1
+    },
+    {
+      "checkpoint_inclusive_saving_percent": "-2.170419314398013408366310100",
+      "live_saving_percent": "-4.571600021047448849555332200",
+      "reference": "hybrid",
+      "request_slowdown_percent": "5.782972941208591748185560000",
+      "step": 1
+    },
+    {
+      "checkpoint_inclusive_saving_percent": "4.786959947328355290048568720",
+      "live_saving_percent": "9.376489008326958949602828530",
+      "reference": "cold",
+      "request_slowdown_percent": "-12.83170573211859027176996271",
+      "step": 1
+    },
+    {
+      "checkpoint_inclusive_saving_percent": "3.151170001226331576752273830",
+      "live_saving_percent": "8.834833375392052458200070990",
+      "reference": "cached",
+      "request_slowdown_percent": "46.46298178215234671174005390",
+      "step": 2
+    },
+    {
+      "checkpoint_inclusive_saving_percent": "3.100783663359607494660861650",
+      "live_saving_percent": "8.701732290049821373775943390",
+      "reference": "modern",
+      "request_slowdown_percent": "50.48299095999769001462032310",
+      "step": 2
+    },
+    {
+      "checkpoint_inclusive_saving_percent": "7.313835701377147644226753670",
+      "live_saving_percent": "19.03027033692772793264859795",
+      "reference": "hybrid",
+      "request_slowdown_percent": "-20.25681582839817409818849345",
+      "step": 2
+    },
+    {
+      "checkpoint_inclusive_saving_percent": "3.151170001226331576752273830",
+      "live_saving_percent": "8.834833375392052458200070990",
+      "reference": "cold",
+      "request_slowdown_percent": "-16.57179267383111341226392536",
+      "step": 2
+    }
+  ],
+  "rows": [
+    {
+      "arm": "cached",
+      "checkpoint_inclusive_bytes": 720828070,
+      "context_elapsed_ns": 24237013797,
+      "controller_process_cpu_ns": 6989441087,
+      "fallback_stages": [],
+      "live_state_bytes": 368002895,
+      "max_rss_kib": 1913972,
+      "numerical_solver_fallback_rows": 7,
+      "request_elapsed_ns": 4419007235461,
+      "retained_records": 12,
+      "source_stage_record_pairs": 0,
+      "stage_refusals": 0,
+      "state_bytes": 368002893,
+      "step": 1,
+      "transaction_elapsed_ns": 4455690168641,
+      "trust_bytes": 2,
+      "worker_elapsed_ns": 4449533286970
+    },
+    {
+      "arm": "cached",
+      "checkpoint_inclusive_bytes": 548440579,
+      "context_elapsed_ns": 28508359076,
+      "controller_process_cpu_ns": 3085709372,
+      "fallback_stages": [],
+      "live_state_bytes": 195615404,
+      "max_rss_kib": 1394020,
+      "numerical_solver_fallback_rows": 0,
+      "request_elapsed_ns": 922484079340,
+      "retained_records": 6,
+      "source_stage_record_pairs": 0,
+      "stage_refusals": 0,
+      "state_bytes": 195615402,
+      "step": 2,
+      "transaction_elapsed_ns": 962577695136,
+      "trust_bytes": 2,
+      "worker_elapsed_ns": 957252113717
+    },
+    {
+      "arm": "cold",
+      "checkpoint_inclusive_bytes": 720828070,
+      "context_elapsed_ns": 31158034788,
+      "controller_process_cpu_ns": 8502776700,
+      "fallback_stages": [],
+      "live_state_bytes": 368002895,
+      "max_rss_kib": 1968144,
+      "numerical_solver_fallback_rows": 7,
+      "request_elapsed_ns": 5973008100985,
+      "retained_records": 12,
+      "source_stage_record_pairs": 288,
+      "stage_refusals": 0,
+      "state_bytes": 368002893,
+      "step": 1,
+      "transaction_elapsed_ns": 6016783538496,
+      "trust_bytes": 2,
+      "worker_elapsed_ns": 6010467720322
+    },
+    {
+      "arm": "cold",
+      "checkpoint_inclusive_bytes": 548440579,
+      "context_elapsed_ns": 26311837625,
+      "controller_process_cpu_ns": 3909147028,
+      "fallback_stages": [],
+      "live_state_bytes": 195615404,
+      "max_rss_kib": 1122132,
+      "numerical_solver_fallback_rows": 0,
+      "request_elapsed_ns": 1619473475901,
+      "retained_records": 6,
+      "source_stage_record_pairs": 144,
+      "stage_refusals": 0,
+      "state_bytes": 195615402,
+      "step": 2,
+      "transaction_elapsed_ns": 1657657027003,
+      "trust_bytes": 2,
+      "worker_elapsed_ns": 1652057773156
+    },
+    {
+      "arm": "hybrid",
+      "checkpoint_inclusive_bytes": 671742686,
+      "context_elapsed_ns": 28648944992,
+      "controller_process_cpu_ns": 7470730288,
+      "fallback_stages": [],
+      "live_state_bytes": 318917511,
+      "max_rss_kib": 1936672,
+      "numerical_solver_fallback_rows": 7,
+      "request_elapsed_ns": 4921935102925,
+      "retained_records": 12,
+      "source_stage_record_pairs": 24,
+      "stage_refusals": 0,
+      "state_bytes": 318868988,
+      "step": 1,
+      "transaction_elapsed_ns": 4962294372332,
+      "trust_bytes": 48523,
+      "worker_elapsed_ns": 4956856335615
+    },
+    {
+      "arm": "hybrid",
+      "checkpoint_inclusive_bytes": 573071815,
+      "context_elapsed_ns": 40682892326,
+      "controller_process_cpu_ns": 4057545066,
+      "fallback_stages": [],
+      "live_state_bytes": 220246640,
+      "max_rss_kib": 1682292,
+      "numerical_solver_fallback_rows": 0,
+      "request_elapsed_ns": 1694311185467,
+      "retained_records": 6,
+      "source_stage_record_pairs": 144,
+      "stage_refusals": 0,
+      "state_bytes": 220221445,
+      "step": 2,
+      "transaction_elapsed_ns": 1750550107460,
+      "trust_bytes": 25195,
+      "worker_elapsed_ns": 1741261247473
+    },
+    {
+      "arm": "compressed",
+      "checkpoint_inclusive_bytes": 686322319,
+      "context_elapsed_ns": 31203387769,
+      "controller_process_cpu_ns": 7653359100,
+      "fallback_stages": [],
+      "live_state_bytes": 333497144,
+      "max_rss_kib": 1844652,
+      "numerical_solver_fallback_rows": 68,
+      "request_elapsed_ns": 5206569278111,
+      "retained_records": 12,
+      "source_stage_record_pairs": 0,
+      "stage_refusals": 0,
+      "state_bytes": 333497142,
+      "step": 1,
+      "transaction_elapsed_ns": 5250700698394,
+      "trust_bytes": 2,
+      "worker_elapsed_ns": 5244182019935
+    },
+    {
+      "arm": "compressed",
+      "checkpoint_inclusive_bytes": 531158284,
+      "context_elapsed_ns": 28093348273,
+      "controller_process_cpu_ns": 3352633703,
+      "fallback_stages": [],
+      "live_state_bytes": 178333109,
+      "max_rss_kib": 1464052,
+      "numerical_solver_fallback_rows": 2,
+      "request_elapsed_ns": 1351097689067,
+      "retained_records": 6,
+      "source_stage_record_pairs": 0,
+      "stage_refusals": 0,
+      "state_bytes": 178333107,
+      "step": 2,
+      "transaction_elapsed_ns": 1391589580358,
+      "trust_bytes": 2,
+      "worker_elapsed_ns": 1385480788612
+    },
+    {
+      "arm": "modern",
+      "checkpoint_inclusive_bytes": 720281581,
+      "context_elapsed_ns": 18469567895,
+      "controller_process_cpu_ns": 7184699675,
+      "fallback_stages": [],
+      "live_state_bytes": 367456406,
+      "max_rss_kib": 1911400,
+      "numerical_solver_fallback_rows": 7,
+      "request_elapsed_ns": 4579496051876,
+      "retained_records": 12,
+      "source_stage_record_pairs": 0,
+      "stage_refusals": 0,
+      "state_bytes": 367456404,
+      "step": 1,
+      "transaction_elapsed_ns": 4610748267389,
+      "trust_bytes": 2,
+      "worker_elapsed_ns": 4604256998904
+    },
+    {
+      "arm": "modern",
+      "checkpoint_inclusive_bytes": 548155397,
+      "context_elapsed_ns": 18275583454,
+      "controller_process_cpu_ns": 3101022381,
+      "fallback_stages": [],
+      "live_state_bytes": 195330222,
+      "max_rss_kib": 1511032,
+      "numerical_solver_fallback_rows": 0,
+      "request_elapsed_ns": 897840799447,
+      "retained_records": 6,
+      "source_stage_record_pairs": 0,
+      "stage_refusals": 0,
+      "state_bytes": 195330220,
+      "step": 2,
+      "transaction_elapsed_ns": 928956511628,
+      "trust_bytes": 2,
+      "worker_elapsed_ns": 922359058550
+    }
+  ],
+  "scheduler_allocation_cpu_seconds": "51356.452",
+  "scope": "Five complete service arms, two endpoints, one disjoint development root. Saved cluster audits compare actual model/state bytes against fresh retained-input reconstruction using a shared solver. Local checks reconcile metadata only. No quality, timing uncertainty, population reliability, or general acceleration result.",
+  "status": "completed_development_service",
+  "timing_replicates_per_arm_endpoint": 1
+}

@@ -1,0 +1,1736 @@
+{
+  "broader_package_source_count": 534,
+  "captured_at_utc": "2026-10-16T14:28:43.806077+00:00",
+  "clean_reproduction_verified": false,
+  "empirical_work_executed": false,
+  "execution_inventory_or_registration_changed": false,
+  "full_anonymity_verified": false,
+  "input_reports": {
+    "validation/v69_archive_content_review.json": {
+      "bytes": 939051,
+      "sha256": "df8bbef15fd6feaafd8ba801b84c4cfaee4906fa62f629d69dbc4d71f746a7ea"
+    },
+    "validation/v69_source_package_supplement.json": {
+      "bytes": 868,
+      "sha256": "c870ca45e7bb2e8b2dd084f11b276b07fd2aa3f35e32dedfa1b14b0cabe07e03"
+    },
+    "validation/v69_static_source_closure_extended.json": {
+      "bytes": 240133,
+      "sha256": "3b25c0d5002127c141dfae2cffdd917cfab28fe9e25afecb3478437abe766c96"
+    },
+    "validation/v69_submission_inventory.json": {
+      "bytes": 81523,
+      "sha256": "9152a49b3964089a2f09bffe8c0231a2328470fe7642f5aea35b2160e014d02f"
+    }
+  },
+  "local_preparation_note": "The initial AST tuple scan encountered an unrelated nonliteral tuple and stopped before writing output. It now selects literal tuples only; no experiment or source change occurred.",
+  "nonliteral_dynamic_import_review": [
+    {
+      "actual_runtime_executed": false,
+      "call_line": 56,
+      "commitment": {
+        "bytes": 14986,
+        "sha256": "39d6043a3d880c0034ec891ce22b6c6aeecbf7af3207aad3c017a8ac8255ed1b"
+      },
+      "note": "Bounded source-declared tuple. scipy absence is recorded as optional for the pinned gelu_new route.",
+      "source": "research_v44/campaign.py",
+      "static_argument_values": [
+        "numpy",
+        "scipy",
+        "gmpy2"
+      ]
+    },
+    {
+      "actual_runtime_executed": false,
+      "call_line": 45,
+      "commitment": {
+        "bytes": 6298,
+        "sha256": "c65795e45c12a4fc28cb4fff34bdc6c819cdcab020fd89aa74f5a14e104bc0d5"
+      },
+      "note": "Bounded stdlib tuple; actual Linux interpreter, native dependencies and module origins remain runtime-gated.",
+      "source": "src/runtime_contract.py",
+      "static_argument_values": [
+        "fractions",
+        "decimal",
+        "_decimal",
+        "math",
+        "json",
+        "struct",
+        "_struct",
+        "fcntl",
+        "resource",
+        "hashlib",
+        "_hashlib"
+      ]
+    }
+  ],
+  "numeric_array_false_positive_review": [
+    {
+      "archive": "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz",
+      "fields": [
+        {
+          "kind": "numeric_array_candidate",
+          "path": [
+            "steps",
+            0,
+            "timing",
+            "stages",
+            23,
+            "solver",
+            "diagnostics",
+            "rows",
+            "fallback_row_indices"
+          ],
+          "values": 18
+        },
+        {
+          "kind": "numeric_array_candidate",
+          "path": [
+            "steps",
+            0,
+            "timing",
+            "stages",
+            23,
+            "solver",
+            "diagnostics",
+            "rows",
+            "ball_failed_coordinates"
+          ],
+          "values": 18
+        }
+      ],
+      "member": "full-precision-service-v61-20261014-a/compressed/outputs/completion.json",
+      "original_commitment": {
+        "bytes": 387000,
+        "sha256": "1a28f5b600b392777a4319532c3f0fa4625d695c6ccb0bbf1fee4bc9208d893e"
+      },
+      "review": "Two18-element lists identify numerical fallback rows/failed coordinates, not token arrays. Preserve these adverse diagnostics. This does not approve inclusion of the surrounding file."
+    }
+  ],
+  "original_archives_excluded_from_review_bundle": [
+    "campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz",
+    "campaigns/csis_terminal_v59_metadata_20261014.tar.gz",
+    "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz",
+    "campaigns/csis_terminal_v62_recovery_metadata_20261016.tar.gz",
+    "campaigns/csis_terminal_v63_lossless_metadata_20261016.tar.gz"
+  ],
+  "original_receipt_candidates": [
+    {
+      "archive": "campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz",
+      "derivative_created": false,
+      "evidence_record": "E10",
+      "final_inclusion_approved": false,
+      "known_identity_categories": [
+        "author_or_account",
+        "local_absolute_root"
+      ],
+      "member": "full-model48-v54-20261011-a/artifact-audit.json",
+      "original_commitment": {
+        "bytes": 147595,
+        "sha256": "dd84bf46734486ce7c586f3f303f97ec2574a23d2e4c46b604251996e93a2a7f"
+      },
+      "purpose": "primary saved model/state and cost audit",
+      "raw_payload_heuristic_flags": [],
+      "reviewed_derivative_required": true,
+      "schema": "complete-service-artifact-audit-v54",
+      "top_level_fields": [
+        "acl_ready",
+        "all_declared_artifacts_rehashed",
+        "analysis_elapsed_ns",
+        "analysis_outside_empirical_worker_ledger",
+        "audit_history_bytes",
+        "budget",
+        "campaign",
+        "comparisons",
+        "complete_model",
+        "confirmation",
+        "limitations",
+        "oracle_worker_ns",
+        "original_tokens",
+        "population_claims",
+        "preparation",
+        "preparation_transaction_ns",
+        "preparation_worker_ns",
+        "prior_failed_cpu_seconds",
+        "program_sha256",
+        "quality_evaluation",
+        "ratios",
+        "retained_tokens",
+        "schema",
+        "shared_checkpoint_bytes",
+        "status",
+        "successive_deletions",
+        "timings",
+        "total_continuation_cpu_seconds"
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz",
+      "derivative_created": false,
+      "evidence_record": "E10",
+      "final_inclusion_approved": false,
+      "known_identity_categories": [
+        "author_or_account",
+        "local_absolute_root"
+      ],
+      "member": "full-model48-v54-20261011-a/postrun-audit.json",
+      "original_commitment": {
+        "bytes": 55723,
+        "sha256": "a9ecf44c13c27a6c17033b5f0e400f1efee1f45655c3c5842c6309d3487ac77b"
+      },
+      "purpose": "additive independent audit implementation and accounting",
+      "raw_payload_heuristic_flags": [],
+      "reviewed_derivative_required": true,
+      "schema": "complete-service-additive-artifact-audit-v54",
+      "top_level_fields": [
+        "analysis_cpu_ns",
+        "analysis_elapsed_ns",
+        "analysis_outside_empirical_worker_ledger",
+        "campaign",
+        "caveats",
+        "evidence",
+        "frozen_audit_path",
+        "frozen_audit_sha256",
+        "frozen_sources_changed",
+        "implementation",
+        "inputs",
+        "ledger_snapshot",
+        "program_sha256",
+        "schema",
+        "scope",
+        "slurm_job_id",
+        "status"
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz",
+      "derivative_created": false,
+      "evidence_record": "E12",
+      "final_inclusion_approved": false,
+      "known_identity_categories": [
+        "article_identifier",
+        "author_or_account",
+        "local_absolute_root"
+      ],
+      "member": "exposed-quality-v55-20261011-a/artifact-audit.json",
+      "original_commitment": {
+        "bytes": 72002,
+        "sha256": "fa4a762a2ca6389968a503c0e224d1bd3f0d1bf0bb0aedb7acd24dd9d251b042"
+      },
+      "purpose": "adverse exposed-quality screen and original development guards",
+      "raw_payload_heuristic_flags": [],
+      "reviewed_derivative_required": true,
+      "schema": "exposed-quality-artifact-audit-v55",
+      "top_level_fields": [
+        "acl_ready",
+        "actual_model_codes_reconstructed",
+        "analysis_cpu_ns",
+        "analysis_elapsed_ns",
+        "analysis_outside_empirical_worker_ledger",
+        "budget",
+        "campaign",
+        "complete_stages",
+        "confirmation",
+        "development_guards_pass",
+        "historical_control_parity",
+        "inputs",
+        "program_sha256",
+        "schema",
+        "scope",
+        "sealed_cpu_receipt_verified",
+        "slurm_job_id",
+        "source_sha256",
+        "status",
+        "summary"
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz",
+      "derivative_created": false,
+      "evidence_record": "E11",
+      "final_inclusion_approved": false,
+      "known_identity_categories": [
+        "article_identifier",
+        "author_or_account",
+        "local_absolute_root"
+      ],
+      "member": "gpu-parity-v56-20261011-a/artifact-audit.json",
+      "original_commitment": {
+        "bytes": 69157,
+        "sha256": "372a5b870c8d4c0a303869e6a17b85df2c8007c42a75fe02c0dc17f9010f1294"
+      },
+      "purpose": "CPU/CUDA parity scope, tolerances and costs",
+      "raw_payload_heuristic_flags": [],
+      "reviewed_derivative_required": true,
+      "schema": "cuda-likelihood-artifact-audit-v56",
+      "top_level_fields": [
+        "acl_ready",
+        "analysis_cpu_ns",
+        "analysis_elapsed_ns",
+        "analysis_outside_empirical_worker_ledger",
+        "budget",
+        "campaign",
+        "confirmation",
+        "cpu_development_guards_pass",
+        "exact_calibration_equivalence",
+        "inputs",
+        "parity",
+        "parity_passed",
+        "program_sha256",
+        "schema",
+        "scope",
+        "slurm_job_id",
+        "source_sha256",
+        "status"
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v59_metadata_20261014.tar.gz",
+      "derivative_created": false,
+      "evidence_record": "E13",
+      "final_inclusion_approved": false,
+      "known_identity_categories": [
+        "article_identifier",
+        "author_or_account",
+        "local_absolute_root"
+      ],
+      "member": "full-precision-anchor-v59-20261014-a/artifact-audit.json",
+      "original_commitment": {
+        "bytes": 173574,
+        "sha256": "286a2c74b676e55ff4d463d31545ca8138eb7dce36e515112fb697575a89f6e6"
+      },
+      "purpose": "adaptive full-precision construction and same exposed-quality screen",
+      "raw_payload_heuristic_flags": [],
+      "reviewed_derivative_required": true,
+      "schema": "full-precision-anchor-quality-artifact-audit-v59",
+      "top_level_fields": [
+        "acl_ready",
+        "actual_candidate_model_sha256",
+        "actual_model_codes_reconstructed",
+        "analysis_cpu_ns",
+        "analysis_elapsed_ns",
+        "analysis_outside_empirical_worker_ledger",
+        "budget",
+        "campaign",
+        "candidate_target_sha256",
+        "checked_losses",
+        "complete_stages",
+        "confirmation",
+        "construction",
+        "development_guards_pass",
+        "first_stage_invariant",
+        "historical_control_parity",
+        "inputs",
+        "program_sha256",
+        "progress",
+        "repair_service",
+        "runtime",
+        "schema",
+        "scope",
+        "sealed_cpu_receipt_verified",
+        "slurm_job_id",
+        "source_sha256",
+        "status",
+        "summary"
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v62_recovery_metadata_20261016.tar.gz",
+      "derivative_created": false,
+      "evidence_record": "E14",
+      "final_inclusion_approved": false,
+      "known_identity_categories": [
+        "author_or_account",
+        "local_absolute_root"
+      ],
+      "member": "primary.json",
+      "original_commitment": {
+        "bytes": 310473,
+        "sha256": "c0452295f2df5eb48046883c1b4f7285e6e9bde33b2d7f8c030be569beb3bf36"
+      },
+      "purpose": "actual saved V61 models, fresh oracle, complete storage and cost audit recovered under V62",
+      "raw_payload_heuristic_flags": [],
+      "reviewed_derivative_required": true,
+      "schema": "complete-full-precision-service-artifact-audit-v61",
+      "top_level_fields": [
+        "acl_ready",
+        "all_declared_artifacts_rehashed",
+        "all_final_six_models_equal_actual_v59_candidate",
+        "allowance_scope",
+        "analysis_cpu_ns",
+        "analysis_elapsed_ns",
+        "analysis_outside_empirical_worker_ledger",
+        "audit_history_bytes",
+        "budget",
+        "calibration_target_sha256",
+        "campaign",
+        "comparisons",
+        "complete_model",
+        "confirmation",
+        "fresh_campaign_cpu_seconds",
+        "inputs",
+        "limitations",
+        "oracle_worker_ns",
+        "original_tokens",
+        "population_claims",
+        "preparation",
+        "preparation_transaction_ns",
+        "preparation_worker_ns",
+        "program_sha256",
+        "quality_evaluation",
+        "ratios",
+        "retained_tokens",
+        "runtime",
+        "schema",
+        "shared_checkpoint_bytes",
+        "slurm_job_id",
+        "source_sha256",
+        "status",
+        "successive_deletions",
+        "timings",
+        "v59_final_model_sha256"
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v62_recovery_metadata_20261016.tar.gz",
+      "derivative_created": false,
+      "evidence_record": "E14",
+      "final_inclusion_approved": false,
+      "known_identity_categories": [
+        "author_or_account",
+        "local_absolute_root"
+      ],
+      "member": "postrun.json",
+      "original_commitment": {
+        "bytes": 136522,
+        "sha256": "120a697ed6f11f055573fef8fe9812f4f0fb305e7adb8427a0d12f2ad5413d02"
+      },
+      "purpose": "separate additive saved V61 model/state and accounting audit recovered under V62",
+      "raw_payload_heuristic_flags": [],
+      "reviewed_derivative_required": true,
+      "schema": "complete-full-precision-service-additive-artifact-audit-v61",
+      "top_level_fields": [
+        "analysis_cpu_ns",
+        "analysis_elapsed_ns",
+        "analysis_outside_empirical_worker_ledger",
+        "campaign",
+        "caveats",
+        "evidence",
+        "frozen_audit_path",
+        "frozen_audit_sha256",
+        "frozen_sources_changed",
+        "implementation",
+        "inputs",
+        "ledger_snapshot",
+        "program_sha256",
+        "schema",
+        "scope",
+        "slurm_job_id",
+        "status"
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v63_lossless_metadata_20261016.tar.gz",
+      "derivative_created": false,
+      "evidence_record": "E15",
+      "final_inclusion_approved": false,
+      "known_identity_categories": [
+        "article_identifier"
+      ],
+      "member": "measure.json",
+      "original_commitment": {
+        "bytes": 460887,
+        "sha256": "98d8dacdee11ebddb5955cab7faa9c5640b40558b00ba1a2d3da012aeefb464e"
+      },
+      "purpose": "artifact-only stronger-lossless measurements and complete worker costs",
+      "raw_payload_heuristic_flags": [],
+      "reviewed_derivative_required": true,
+      "schema": null,
+      "top_level_fields": [
+        "caps",
+        "elapsed_ns",
+        "error",
+        "max_rss_kib",
+        "original_inputs_mutated",
+        "process_cpu_ns",
+        "registration_sha256",
+        "result",
+        "slurm_job_id",
+        "status",
+        "trial"
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v63_lossless_metadata_20261016.tar.gz",
+      "derivative_created": false,
+      "evidence_record": "E15",
+      "final_inclusion_approved": false,
+      "known_identity_categories": [],
+      "member": "audit.json",
+      "original_commitment": {
+        "bytes": 1447,
+        "sha256": "f7a958f0d9a3ab7884a891db7cbea9b8a5f333d7f8f6e3d1d8e79c4912034ae7"
+      },
+      "purpose": "portable saved-byte artifact audit and costs",
+      "raw_payload_heuristic_flags": [],
+      "reviewed_derivative_required": true,
+      "schema": null,
+      "top_level_fields": [
+        "caps",
+        "elapsed_ns",
+        "error",
+        "max_rss_kib",
+        "original_inputs_mutated",
+        "process_cpu_ns",
+        "registration_sha256",
+        "result",
+        "slurm_job_id",
+        "status",
+        "trial"
+      ]
+    }
+  ],
+  "prepared_execution_source_count": 532,
+  "private_provenance_not_for_anonymous_archive": true,
+  "raw_token_member_exclusions": [
+    {
+      "archive": "campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz",
+      "member": "exposed-quality-v55-20261011-a/program.json",
+      "original_commitment": {
+        "bytes": 64743,
+        "sha256": "4de04c4a0bd5db485c7ccd7511a4d5094195afdce15c115a909346879b84125f"
+      },
+      "reason": "Contains raw historical calibration or exposed-quality token arrays; preserve original but exclude from review archive.",
+      "token_array_fields": [
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            7,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            6,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        }
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz",
+      "member": "full-model48-v54-20261011-a/program.json",
+      "original_commitment": {
+        "bytes": 642331,
+        "sha256": "03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b"
+      },
+      "reason": "Contains raw historical calibration or exposed-quality token arrays; preserve original but exclude from review archive.",
+      "token_array_fields": [
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            12,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            11,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            10,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            9,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            8,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            7,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            6,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        }
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz",
+      "member": "gpu-parity-v56-20261011-a/program.json",
+      "original_commitment": {
+        "bytes": 58416,
+        "sha256": "8c3f46537f6b1cdc51c2b43dd3c1ebf2a7afff5114d6b185bcb160c6eaf98f6d"
+      },
+      "reason": "Contains raw historical calibration or exposed-quality token arrays; preserve original but exclude from review archive.",
+      "token_array_fields": [
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            7,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            6,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        }
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v59_metadata_20261014.tar.gz",
+      "member": "full-precision-anchor-v59-20261014-a/program.json",
+      "original_commitment": {
+        "bytes": 69123,
+        "sha256": "4a22292c903b4817629bd43449dcf6f22c827f7c31c9e525fcb3fdcca448e835"
+      },
+      "reason": "Contains raw historical calibration or exposed-quality token arrays; preserve original but exclude from review archive.",
+      "token_array_fields": [
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            7,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            6,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        }
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz",
+      "member": "full-precision-service-v61-20261014-a/program.json",
+      "original_commitment": {
+        "bytes": 656112,
+        "sha256": "6632712f7b79b49734790fa6fc173ec7e5ee70f542fe8f8a0c3ef3ff2171ea2d"
+      },
+      "reason": "Contains raw historical calibration or exposed-quality token arrays; preserve original but exclude from review archive.",
+      "token_array_fields": [
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            12,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            11,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            10,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            9,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            8,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            7,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            6,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        }
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz",
+      "member": "repository/campaigns/quality_v30/registration.json",
+      "original_commitment": {
+        "bytes": 12513,
+        "sha256": "bafbbd721435f8f188ddb7a0f834ee6df3f097d62e6189e03023a5828254b95c"
+      },
+      "reason": "Contains raw historical calibration or exposed-quality token arrays; preserve original but exclude from review archive.",
+      "token_array_fields": [
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            7,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            6,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        }
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz",
+      "member": "repository/local_runs/c4-data-v45-20261010-a/outputs/records.json",
+      "original_commitment": {
+        "bytes": 7983,
+        "sha256": "1b3dd813dc5deacb35974e28f1fbd47d14364b85202a7ad12c8c1e7fc6a53259"
+      },
+      "reason": "Contains raw historical calibration or exposed-quality token arrays; preserve original but exclude from review archive.",
+      "token_array_fields": [
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            12,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            11,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            10,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            9,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            8,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            7,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            6,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        }
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz",
+      "member": "repository/local_runs/exposed-quality-v55-20261011-a/program.json",
+      "original_commitment": {
+        "bytes": 64743,
+        "sha256": "4de04c4a0bd5db485c7ccd7511a4d5094195afdce15c115a909346879b84125f"
+      },
+      "reason": "Contains raw historical calibration or exposed-quality token arrays; preserve original but exclude from review archive.",
+      "token_array_fields": [
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            7,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            6,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        }
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz",
+      "member": "repository/local_runs/full-model48-v54-20261011-a/program.json",
+      "original_commitment": {
+        "bytes": 642331,
+        "sha256": "03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b"
+      },
+      "reason": "Contains raw historical calibration or exposed-quality token arrays; preserve original but exclude from review archive.",
+      "token_array_fields": [
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            12,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            11,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            10,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            9,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            8,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            7,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            6,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        }
+      ]
+    },
+    {
+      "archive": "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz",
+      "member": "repository/local_runs/full-precision-anchor-v59-20261014-a/program.json",
+      "original_commitment": {
+        "bytes": 69123,
+        "sha256": "4a22292c903b4817629bd43449dcf6f22c827f7c31c9e525fcb3fdcca448e835"
+      },
+      "reason": "Contains raw historical calibration or exposed-quality token arrays; preserve original but exclude from review archive.",
+      "token_array_fields": [
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "retained_records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            7,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            6,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            5,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            4,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            3,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            2,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            1,
+            "tokens"
+          ],
+          "values": 128
+        },
+        {
+          "kind": "token_array",
+          "path": [
+            "records",
+            0,
+            "tokens"
+          ],
+          "values": 128
+        }
+      ]
+    }
+  ],
+  "reporting_base": "a439b589cdab7b7029d1f34d26c7b2965ac7dc05",
+  "required_derivative_checks": [
+    "Use explicit per-field mappings, preserve every numeric and Boolean measurement/guard/failure/cap/cost, and retain consistent shared article labels.",
+    "Label derivatives separately from executed receipts, bind original and derivative hashes in private provenance, and do not imply original path/hash bindings validate redacted paths.",
+    "Reject mapping collisions and leftover identifying keys/values; scan all text and perform manual review before final inclusion.",
+    "Preserve failed V61 audit history and earlier adverse screens using the checked companion and original archival provenance; do not silently replace it with successful V62 recovery.",
+    "Verify final package extraction, internal pointers, notices, runtime prerequisites and a separately qualified portable workflow; static import closure is insufficient."
+  ],
+  "schema": "source-receipt-package-selection-v69",
+  "source_files_edited": false,
+  "status": "explicit_candidates_and_exclusions_prepared_not_packaged",
+  "submission_ready": false,
+  "untouched_data_acquired": false
+}

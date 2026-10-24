@@ -1,0 +1,897 @@
+{
+  "schema": "prospective-transfer-write-census-v90",
+  "roles": [
+    {
+      "role": "source_staging",
+      "bytes": 268435456,
+      "files": 8194,
+      "basis": "proposed future packager must enforce tar/extracted bytes and member ceilings",
+      "chain": "admission",
+      "operation": null
+    },
+    {
+      "role": "exclusive_metadata",
+      "bytes": 462422016,
+      "files": 63,
+      "basis": "Records fixed filename census and per-role pre-write byte checks; callers pending",
+      "chain": "admission",
+      "operation": null
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "admission",
+      "operation": "checks"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "admission",
+      "operation": "checks"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "admission",
+      "operation": "fetch"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "admission",
+      "operation": "fetch"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "admission",
+      "operation": "distilgpt2"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "admission",
+      "operation": "distilgpt2"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "admission",
+      "operation": "gpt2"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "admission",
+      "operation": "gpt2"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "admission",
+      "operation": "close"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "admission",
+      "operation": "close"
+    },
+    {
+      "role": "source_staging",
+      "bytes": 268435456,
+      "files": 8194,
+      "basis": "proposed future packager must enforce tar/extracted bytes and member ceilings",
+      "chain": "complete",
+      "operation": null
+    },
+    {
+      "role": "exclusive_metadata",
+      "bytes": 785383424,
+      "files": 245,
+      "basis": "Records fixed filename census and per-role pre-write byte checks; callers pending",
+      "chain": "complete",
+      "operation": null
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "checks"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "checks"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "distilgpt2--prepare"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "distilgpt2--prepare"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "gpt2--prepare"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "gpt2--prepare"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "gpt2--reference_compressed-1"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "gpt2--reference_compressed-1"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "distilgpt2--reference_compressed-1"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "distilgpt2--reference_compressed-1"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "distilgpt2--optimized_modern-1"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "distilgpt2--optimized_modern-1"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "gpt2--optimized_modern-1"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "gpt2--optimized_modern-1"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "gpt2--reference_modern-1"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "gpt2--reference_modern-1"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "distilgpt2--reference_modern-1"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "distilgpt2--reference_modern-1"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "distilgpt2--optimized_compressed-1"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "distilgpt2--optimized_compressed-1"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "gpt2--optimized_compressed-1"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "gpt2--optimized_compressed-1"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "gpt2--optimized_compressed-2"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "gpt2--optimized_compressed-2"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "distilgpt2--optimized_compressed-2"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "distilgpt2--optimized_compressed-2"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "distilgpt2--reference_modern-2"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "distilgpt2--reference_modern-2"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "gpt2--reference_modern-2"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "gpt2--reference_modern-2"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "gpt2--optimized_modern-2"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "gpt2--optimized_modern-2"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "distilgpt2--optimized_modern-2"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "distilgpt2--optimized_modern-2"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "distilgpt2--reference_compressed-2"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "distilgpt2--reference_compressed-2"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "gpt2--reference_compressed-2"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "gpt2--reference_compressed-2"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "gpt2--oracle"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "gpt2--oracle"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "distilgpt2--oracle"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "distilgpt2--oracle"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "primary"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "primary"
+    },
+    {
+      "role": "captured_bootstrap_log",
+      "bytes": 67108864,
+      "files": 1,
+      "basis": "same complete-or-failed collector cap as V89; new caller pending",
+      "chain": "complete",
+      "operation": "supplemental"
+    },
+    {
+      "role": "external_slurm_log",
+      "bytes": 4194304,
+      "files": 1,
+      "basis": "conservative external-writer allowance; not a formal bound",
+      "chain": "complete",
+      "operation": "supplemental"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 4917035008,
+      "files": 137,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "distilgpt2/prepare"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 5064097792,
+      "files": 257,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "gpt2/prepare"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1439170560,
+      "files": 58,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "gpt2/reference_compressed-1"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1392771072,
+      "files": 34,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "distilgpt2/reference_compressed-1"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1389625344,
+      "files": 31,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "distilgpt2/optimized_modern-1"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1436024832,
+      "files": 55,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "gpt2/optimized_modern-1"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1436024832,
+      "files": 55,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "gpt2/reference_modern-1"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1389625344,
+      "files": 31,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "distilgpt2/reference_modern-1"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1392771072,
+      "files": 34,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "distilgpt2/optimized_compressed-1"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1439170560,
+      "files": 58,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "gpt2/optimized_compressed-1"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1438121984,
+      "files": 57,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "gpt2/optimized_compressed-2"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1391722496,
+      "files": 33,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "distilgpt2/optimized_compressed-2"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1389625344,
+      "files": 31,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "distilgpt2/reference_modern-2"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1436024832,
+      "files": 55,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "gpt2/reference_modern-2"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1436024832,
+      "files": 55,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "gpt2/optimized_modern-2"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1389625344,
+      "files": 31,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "distilgpt2/optimized_modern-2"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1391722496,
+      "files": 33,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "distilgpt2/reference_compressed-2"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 1438121984,
+      "files": 57,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "gpt2/reference_compressed-2"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 9922674688,
+      "files": 507,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "gpt2/oracle"
+    },
+    {
+      "role": "worker_outputs",
+      "bytes": 9628549120,
+      "files": 267,
+      "basis": "V90 exact phase census; V87 unchanged per-artifact/progress/completion byte bounds",
+      "chain": "complete",
+      "operation": "distilgpt2/oracle"
+    },
+    {
+      "role": "target_admission_outputs",
+      "bytes": 335544320,
+      "files": 9,
+      "basis": "eight old target artifact ceilings plus full completion; new caller pending",
+      "chain": "admission",
+      "operation": "distilgpt2"
+    },
+    {
+      "role": "target_admission_outputs",
+      "bytes": 335544320,
+      "files": 9,
+      "basis": "eight old target artifact ceilings plus full completion; new caller pending",
+      "chain": "admission",
+      "operation": "gpt2"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "distilgpt2/prepare"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "gpt2/prepare"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "gpt2/reference_compressed-1"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "distilgpt2/reference_compressed-1"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "distilgpt2/optimized_modern-1"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "gpt2/optimized_modern-1"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "gpt2/reference_modern-1"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "distilgpt2/reference_modern-1"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "distilgpt2/optimized_compressed-1"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "gpt2/optimized_compressed-1"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "gpt2/optimized_compressed-2"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "distilgpt2/optimized_compressed-2"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "distilgpt2/reference_modern-2"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "gpt2/reference_modern-2"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "gpt2/optimized_modern-2"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "distilgpt2/optimized_modern-2"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "distilgpt2/reference_compressed-2"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "gpt2/reference_compressed-2"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "gpt2/oracle"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "complete",
+      "operation": "distilgpt2/oracle"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "admission",
+      "operation": "distilgpt2"
+    },
+    {
+      "role": "controller_ledger_and_replacement",
+      "bytes": 33554432,
+      "files": 64,
+      "basis": "new one-use RunStore/PhaseBudget1MiB; caller plan/transaction via Records; 32 extents including overlap",
+      "chain": "admission",
+      "operation": "gpt2"
+    },
+    {
+      "role": "new_public_checkpoint",
+      "bytes": 548105836,
+      "files": 2,
+      "basis": "exclusive exact-size fetch; a partial consumes the same file, never a second attempt",
+      "chain": "admission",
+      "operation": "fetch"
+    },
+    {
+      "role": "fetch_intent_and_receipt",
+      "bytes": 2097152,
+      "files": 2,
+      "basis": "new finite Records caller required",
+      "chain": "admission",
+      "operation": "fetch"
+    }
+  ],
+  "temporary_roles": [
+    {
+      "role": "worker_streams",
+      "bytes": 4294967296,
+      "files": 2
+    },
+    {
+      "role": "native_builds",
+      "bytes": 4294967296,
+      "files": 8192
+    },
+    {
+      "role": "software_fixtures",
+      "bytes": 4294967296,
+      "files": 8192
+    }
+  ],
+  "project": {
+    "logical_bytes": 57899183724,
+    "files": 20058,
+    "required_bytes": 73550418439,
+    "required_files": 24154
+  },
+  "temporary": {
+    "logical_bytes": 12884901888,
+    "files": 16386,
+    "required_bytes": 17263765504,
+    "required_files": 20482
+  },
+  "registered": false,
+  "integrated_into_launcher": false,
+  "linux_qualified": false,
+  "eligible_for_storage_admission": false,
+  "capacity_reserved": false,
+  "measured_peak": false,
+  "formal_disk_bound": false,
+  "historical_outputs_credited_as_free": false,
+  "worker_progress_files": 1714,
+  "source_packages": {
+    "count": 2,
+    "maximum_archive_bytes": 67108864,
+    "maximum_extracted_bytes": 67108864,
+    "maximum_members": 4096
+  }
+}

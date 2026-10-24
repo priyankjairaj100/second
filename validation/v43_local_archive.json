@@ -1,0 +1,419 @@
+{
+  "schema": "local-copied-v43-payload-audit",
+  "status": "verified",
+  "artifact_audit_sha256": "54cc9d3d82327d2f5cd4317b78156639bb5d80a1a6fc0920949f0ec592b27625",
+  "copied_artifacts": [
+    {
+      "path": "prepare/outputs/admission.json",
+      "bytes": 400361,
+      "file": "admission.json",
+      "sha256": "657bd96e28fb86d6589953b3a970affbacc66b950972457a5279bf6a8b2f58d5"
+    },
+    {
+      "path": "prepare/outputs/compressed40-original.bin",
+      "bytes": 39516264,
+      "file": "compressed40-original.bin",
+      "sha256": "33c43780cd132fd3ac1e338a35d16284eb948b46541daa604680d3ddef6eaaa0"
+    },
+    {
+      "path": "prepare/outputs/compressed40-trust.json",
+      "bytes": 2,
+      "file": "compressed40-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "prepare/outputs/execution-provenance.json",
+      "bytes": 6994,
+      "file": "execution-provenance.json",
+      "sha256": "ec1180a3bc5bb833dbcab82da73f1cdd40e4a01363c8ac5af3edd9faf93adeea"
+    },
+    {
+      "path": "prepare/outputs/hybrid_gram-original.bin",
+      "bytes": 130798639,
+      "file": "hybrid_gram-original.bin",
+      "sha256": "c97b837955cc0cd93e05931b8bfe5d7448d92b5fc38ca15eb5146a80d2688d0e"
+    },
+    {
+      "path": "prepare/outputs/hybrid_gram-trust.json",
+      "bytes": 14197,
+      "file": "hybrid_gram-trust.json",
+      "sha256": "9833b70463496c5a4baaf43012bed059a4c21d4c3433ac0375316f8a93eb7b7f"
+    },
+    {
+      "path": "prepare/outputs/lossless-original.bin",
+      "bytes": 44813479,
+      "file": "lossless-original.bin",
+      "sha256": "41632e8990820e2b2ee26ecae678ce568a3e02f3c88dade6fcffde37ee106379"
+    },
+    {
+      "path": "prepare/outputs/lossless-trust.json",
+      "bytes": 2,
+      "file": "lossless-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "prepare/outputs/original-model.bin",
+      "bytes": 21233664,
+      "file": "original-model.bin",
+      "sha256": "17ed988376965db5bb656aefc15d2c71b0cdcbf0c906c1aa2bdf5569a0776fd8"
+    },
+    {
+      "path": "cached/outputs/admission.json",
+      "bytes": 400361,
+      "file": "admission.json",
+      "sha256": "657bd96e28fb86d6589953b3a970affbacc66b950972457a5279bf6a8b2f58d5"
+    },
+    {
+      "path": "cached/outputs/execution-provenance.json",
+      "bytes": 6994,
+      "file": "execution-provenance.json",
+      "sha256": "ec1180a3bc5bb833dbcab82da73f1cdd40e4a01363c8ac5af3edd9faf93adeea"
+    },
+    {
+      "path": "cached/outputs/step-1-model.bin",
+      "bytes": 21233664,
+      "file": "step-1-model.bin",
+      "sha256": "ade37f2681a8357a19c1f5ff37470d7ef862b61944df7c897ffecc74b11eff06"
+    },
+    {
+      "path": "cached/outputs/step-1-state.bin",
+      "bytes": 37599260,
+      "file": "step-1-state.bin",
+      "sha256": "23c4126f8169df794faf3608a657d95a495f2acf1d31a3339a6aac39478d5706"
+    },
+    {
+      "path": "cached/outputs/step-1-trust.json",
+      "bytes": 2,
+      "file": "step-1-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "cached/outputs/step-2-model.bin",
+      "bytes": 21233664,
+      "file": "step-2-model.bin",
+      "sha256": "941edda96b1bec3a30bb467f39641bd44fa1dd03752f71ed6b3c4549867e9ae0"
+    },
+    {
+      "path": "cached/outputs/step-2-state.bin",
+      "bytes": 30386819,
+      "file": "step-2-state.bin",
+      "sha256": "09abaf4881973482a909c972811631a1e3cfd7d77f2d7ab1387a463ad95c98a8"
+    },
+    {
+      "path": "cached/outputs/step-2-trust.json",
+      "bytes": 2,
+      "file": "step-2-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "compressed/outputs/admission.json",
+      "bytes": 400361,
+      "file": "admission.json",
+      "sha256": "657bd96e28fb86d6589953b3a970affbacc66b950972457a5279bf6a8b2f58d5"
+    },
+    {
+      "path": "compressed/outputs/execution-provenance.json",
+      "bytes": 6994,
+      "file": "execution-provenance.json",
+      "sha256": "ec1180a3bc5bb833dbcab82da73f1cdd40e4a01363c8ac5af3edd9faf93adeea"
+    },
+    {
+      "path": "compressed/outputs/step-1-model.bin",
+      "bytes": 21233664,
+      "file": "step-1-model.bin",
+      "sha256": "ade37f2681a8357a19c1f5ff37470d7ef862b61944df7c897ffecc74b11eff06"
+    },
+    {
+      "path": "compressed/outputs/step-1-state.bin",
+      "bytes": 34065451,
+      "file": "step-1-state.bin",
+      "sha256": "21f7fb443f7b03127b7a313d3bcdafb496c89bb4bede943dd69d5c728bb89fb9"
+    },
+    {
+      "path": "compressed/outputs/step-1-trust.json",
+      "bytes": 2,
+      "file": "step-1-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "compressed/outputs/step-2-model.bin",
+      "bytes": 21233664,
+      "file": "step-2-model.bin",
+      "sha256": "941edda96b1bec3a30bb467f39641bd44fa1dd03752f71ed6b3c4549867e9ae0"
+    },
+    {
+      "path": "compressed/outputs/step-2-state.bin",
+      "bytes": 28614688,
+      "file": "step-2-state.bin",
+      "sha256": "c6a5a2d9bc37ac8e1c170dc42fa50b04003aa93aec0616febf83afa72188887a"
+    },
+    {
+      "path": "compressed/outputs/step-2-trust.json",
+      "bytes": 2,
+      "file": "step-2-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "hybrid/outputs/admission.json",
+      "bytes": 400361,
+      "file": "admission.json",
+      "sha256": "657bd96e28fb86d6589953b3a970affbacc66b950972457a5279bf6a8b2f58d5"
+    },
+    {
+      "path": "hybrid/outputs/execution-provenance.json",
+      "bytes": 6994,
+      "file": "execution-provenance.json",
+      "sha256": "ec1180a3bc5bb833dbcab82da73f1cdd40e4a01363c8ac5af3edd9faf93adeea"
+    },
+    {
+      "path": "hybrid/outputs/step-1-model.bin",
+      "bytes": 21233664,
+      "file": "step-1-model.bin",
+      "sha256": "ade37f2681a8357a19c1f5ff37470d7ef862b61944df7c897ffecc74b11eff06"
+    },
+    {
+      "path": "hybrid/outputs/step-1-state.bin",
+      "bytes": 125536816,
+      "file": "step-1-state.bin",
+      "sha256": "bafa80ecbf787b91dfe3d956d91c5ee08568e0652a3c82ae90aa2bb850e68293"
+    },
+    {
+      "path": "hybrid/outputs/step-1-trust.json",
+      "bytes": 10111,
+      "file": "step-1-trust.json",
+      "sha256": "d0e9ed48b760e6143ab54c5e111723e5e3b75db1976e37efdf9d382271290b30"
+    },
+    {
+      "path": "hybrid/outputs/step-2-model.bin",
+      "bytes": 21233664,
+      "file": "step-2-model.bin",
+      "sha256": "941edda96b1bec3a30bb467f39641bd44fa1dd03752f71ed6b3c4549867e9ae0"
+    },
+    {
+      "path": "hybrid/outputs/step-2-state.bin",
+      "bytes": 119981426,
+      "file": "step-2-state.bin",
+      "sha256": "793e6833d5d2031ed7bb6be6fe87d6d8d37a4d741185a68be449e09eb0d40fee"
+    },
+    {
+      "path": "hybrid/outputs/step-2-trust.json",
+      "bytes": 6043,
+      "file": "step-2-trust.json",
+      "sha256": "01897ceb821db4b3bebf2e156f86530a79654b529ed8fe599e2628f26a941b78"
+    },
+    {
+      "path": "cold/outputs/admission.json",
+      "bytes": 400361,
+      "file": "admission.json",
+      "sha256": "657bd96e28fb86d6589953b3a970affbacc66b950972457a5279bf6a8b2f58d5"
+    },
+    {
+      "path": "cold/outputs/execution-provenance.json",
+      "bytes": 6994,
+      "file": "execution-provenance.json",
+      "sha256": "ec1180a3bc5bb833dbcab82da73f1cdd40e4a01363c8ac5af3edd9faf93adeea"
+    },
+    {
+      "path": "cold/outputs/step-1-model.bin",
+      "bytes": 21233664,
+      "file": "step-1-model.bin",
+      "sha256": "ade37f2681a8357a19c1f5ff37470d7ef862b61944df7c897ffecc74b11eff06"
+    },
+    {
+      "path": "cold/outputs/step-1-state.bin",
+      "bytes": 37599260,
+      "file": "step-1-state.bin",
+      "sha256": "23c4126f8169df794faf3608a657d95a495f2acf1d31a3339a6aac39478d5706"
+    },
+    {
+      "path": "cold/outputs/step-1-trust.json",
+      "bytes": 2,
+      "file": "step-1-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "cold/outputs/step-2-model.bin",
+      "bytes": 21233664,
+      "file": "step-2-model.bin",
+      "sha256": "941edda96b1bec3a30bb467f39641bd44fa1dd03752f71ed6b3c4549867e9ae0"
+    },
+    {
+      "path": "cold/outputs/step-2-state.bin",
+      "bytes": 30386819,
+      "file": "step-2-state.bin",
+      "sha256": "09abaf4881973482a909c972811631a1e3cfd7d77f2d7ab1387a463ad95c98a8"
+    },
+    {
+      "path": "cold/outputs/step-2-trust.json",
+      "bytes": 2,
+      "file": "step-2-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "oracle/outputs/admission.json",
+      "bytes": 400361,
+      "file": "admission.json",
+      "sha256": "657bd96e28fb86d6589953b3a970affbacc66b950972457a5279bf6a8b2f58d5"
+    },
+    {
+      "path": "oracle/outputs/execution-provenance.json",
+      "bytes": 6994,
+      "file": "execution-provenance.json",
+      "sha256": "ec1180a3bc5bb833dbcab82da73f1cdd40e4a01363c8ac5af3edd9faf93adeea"
+    },
+    {
+      "path": "oracle/outputs/step-1-compressed40-trust.json",
+      "bytes": 2,
+      "file": "step-1-compressed40-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "oracle/outputs/step-1-compressed40.bin",
+      "bytes": 34065451,
+      "file": "step-1-compressed40.bin",
+      "sha256": "21f7fb443f7b03127b7a313d3bcdafb496c89bb4bede943dd69d5c728bb89fb9"
+    },
+    {
+      "path": "oracle/outputs/step-1-hybrid_gram-trust.json",
+      "bytes": 10111,
+      "file": "step-1-hybrid_gram-trust.json",
+      "sha256": "d0e9ed48b760e6143ab54c5e111723e5e3b75db1976e37efdf9d382271290b30"
+    },
+    {
+      "path": "oracle/outputs/step-1-hybrid_gram.bin",
+      "bytes": 125536816,
+      "file": "step-1-hybrid_gram.bin",
+      "sha256": "bafa80ecbf787b91dfe3d956d91c5ee08568e0652a3c82ae90aa2bb850e68293"
+    },
+    {
+      "path": "oracle/outputs/step-1-lossless-trust.json",
+      "bytes": 2,
+      "file": "step-1-lossless-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "oracle/outputs/step-1-lossless.bin",
+      "bytes": 37599260,
+      "file": "step-1-lossless.bin",
+      "sha256": "23c4126f8169df794faf3608a657d95a495f2acf1d31a3339a6aac39478d5706"
+    },
+    {
+      "path": "oracle/outputs/step-1-model.bin",
+      "bytes": 21233664,
+      "file": "step-1-model.bin",
+      "sha256": "ade37f2681a8357a19c1f5ff37470d7ef862b61944df7c897ffecc74b11eff06"
+    },
+    {
+      "path": "oracle/outputs/step-2-compressed40-trust.json",
+      "bytes": 2,
+      "file": "step-2-compressed40-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "oracle/outputs/step-2-compressed40.bin",
+      "bytes": 28614688,
+      "file": "step-2-compressed40.bin",
+      "sha256": "c6a5a2d9bc37ac8e1c170dc42fa50b04003aa93aec0616febf83afa72188887a"
+    },
+    {
+      "path": "oracle/outputs/step-2-hybrid_gram-trust.json",
+      "bytes": 6043,
+      "file": "step-2-hybrid_gram-trust.json",
+      "sha256": "01897ceb821db4b3bebf2e156f86530a79654b529ed8fe599e2628f26a941b78"
+    },
+    {
+      "path": "oracle/outputs/step-2-hybrid_gram.bin",
+      "bytes": 119981426,
+      "file": "step-2-hybrid_gram.bin",
+      "sha256": "793e6833d5d2031ed7bb6be6fe87d6d8d37a4d741185a68be449e09eb0d40fee"
+    },
+    {
+      "path": "oracle/outputs/step-2-lossless-trust.json",
+      "bytes": 2,
+      "file": "step-2-lossless-trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "oracle/outputs/step-2-lossless.bin",
+      "bytes": 30386819,
+      "file": "step-2-lossless.bin",
+      "sha256": "09abaf4881973482a909c972811631a1e3cfd7d77f2d7ab1387a463ad95c98a8"
+    },
+    {
+      "path": "oracle/outputs/step-2-model.bin",
+      "bytes": 21233664,
+      "file": "step-2-model.bin",
+      "sha256": "941edda96b1bec3a30bb467f39641bd44fa1dd03752f71ed6b3c4549867e9ae0"
+    }
+  ],
+  "comparisons": [
+    {
+      "arm": "cached",
+      "step": 1,
+      "actual_model_bytes_equal": true,
+      "actual_state_bytes_equal": true
+    },
+    {
+      "arm": "cached",
+      "step": 2,
+      "actual_model_bytes_equal": true,
+      "actual_state_bytes_equal": true
+    },
+    {
+      "arm": "compressed",
+      "step": 1,
+      "actual_model_bytes_equal": true,
+      "actual_state_bytes_equal": true
+    },
+    {
+      "arm": "compressed",
+      "step": 2,
+      "actual_model_bytes_equal": true,
+      "actual_state_bytes_equal": true
+    },
+    {
+      "arm": "hybrid",
+      "step": 1,
+      "actual_model_bytes_equal": true,
+      "actual_state_bytes_equal": true
+    },
+    {
+      "arm": "hybrid",
+      "step": 2,
+      "actual_model_bytes_equal": true,
+      "actual_state_bytes_equal": true
+    },
+    {
+      "arm": "cold",
+      "step": 1,
+      "actual_model_bytes_equal": true,
+      "actual_state_bytes_equal": true
+    },
+    {
+      "arm": "cold",
+      "step": 2,
+      "actual_model_bytes_equal": true,
+      "actual_state_bytes_equal": true
+    }
+  ],
+  "changed_codes": [
+    {
+      "from_membership_tokens": 96,
+      "to_membership_tokens": 64,
+      "changed_codes": 2774109,
+      "from_sha256": "17ed988376965db5bb656aefc15d2c71b0cdcbf0c906c1aa2bdf5569a0776fd8",
+      "to_sha256": "ade37f2681a8357a19c1f5ff37470d7ef862b61944df7c897ffecc74b11eff06"
+    },
+    {
+      "from_membership_tokens": 64,
+      "to_membership_tokens": 32,
+      "changed_codes": 2337980,
+      "from_sha256": "ade37f2681a8357a19c1f5ff37470d7ef862b61944df7c897ffecc74b11eff06",
+      "to_sha256": "941edda96b1bec3a30bb467f39641bd44fa1dd03752f71ed6b3c4549867e9ae0"
+    }
+  ],
+  "change_count_method": "XOR adjacent packed byte arrays; count nonzero low and high four-bit nibbles. Frozen stage/row grids make code-index inequality equivalent to changed quantized weights.",
+  "local_binary_bytes": 1269053685,
+  "numerical_reconstruction_repeated": false,
+  "scope": "Rehashed every copied declared artifact and compared actual full model/state payloads locally. Numerical execution and parsed-state trust checks are in the cluster audits."
+}

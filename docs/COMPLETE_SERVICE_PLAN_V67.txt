@@ -1,0 +1,128 @@
+Second V67 full-service development plan
+16 October 2026. Prepared design, not an empirical registration or launch.
+
+Decision and precise scope
+V63 confirms that adding fixed Zstandard3 alternatives saves only about0.14%
+over the already compressed lossless cache. The approximately9% uncertain-state
+storage difference therefore warrants a complete modern-lossless service control,
+while the practical value remains unestablished. V64 and V66 qualify software;
+V65 admits one new outcome-blind root. Combine the missing full modern control
+with the disjoint-root development screen to avoid another full adaptive rerun.
+Do not expand to other models, roots or quality articles within this phase.
+
+Frozen inherited numerical method
+Original DistilGPT2 checkpoint teacher; current4-bit dyadic row grids, ridge1/100,
+original normalization1664,24stages and42,467,328codes; source-local original
+teacher features with positions reset per source. Never install calibrated output
+codes into feature extraction. Keep normal-neighbor primal backend, compressed48
+block256 and complete point fallback. Hybrid keeps exact Grams at eighteen
+width768 stages and lossless factors at six width3072 stages. Modern lossless uses
+the fixed V63 codec rule and V64 numerical adapter through V66 routing. No new
+precision, candidate codec, tolerance, feature teacher or acceptance threshold.
+
+Root and inputs
+Use exactly V65 outputs/records.json,8042bytes,
+3bbdefd1e2836d6797723f8426d9ad359d36da2b2e13b35df4661002a8db89b9.
+Bind selection15936823286a872fd4f3996446eea5fce9a717eafad8a50d0cb918e9b40cd85b,
+data/audit receipts, original prefix, all protected exclusion sets and tokenizer
+identities. Read and verify their actual bytes before registration. Selection is
+complete; do not acquire another frame or replace this root after seeing failure.
+The13 records remain sorted by ID. Delete the first record, then the next six,
+retaining12 and6. This matches the previous geometry and deletion rule while
+changing the root. Keep all60 historical quality exclusions plus the V65 union.
+
+Bind the original checkpoint config/weights, unchanged base/service/calibration
+target payloads and all runtime/source/dependency files. The service target can
+match V61 because teacher, geometry and normalization are unchanged; source
+membership/provenance changes in the complete state. Old V59 candidate-model bytes
+are NOT the expected new result. Never relabel the old-root quality result as new.
+
+Execution structure to implement and test
+Use one fresh preparation, ten one-request workers and one fresh-oracle worker.
+The ten workers are five arms x two successive endpoints. Every arm's second
+request must read that same arm's actual first successor, except cold, which
+rebuilds from retained tokens and does not open predecessor numerical state.
+Retain history for audit; claim logical live-state savings, not physical erasure.
+
+Preparation loads one common context, traverses all13 original sources, solves
+the common model and serializes all four representations. Modern and legacy use
+the same original feature words. Use V66 rebuild with exclusive disk writers.
+The fresh oracle traverses each retained set again and writes all representations;
+it must not read any preparation/request factors, states or model codes.
+Every request must match its fresh oracle's actual complete model bytes and its
+representation's actual canonical successor bytes and trust. Verify membership,
+source provenance, immutable retained descriptors and exact Gram contribution
+lineage. Modern-to-legacy restoration must also equal the fresh legacy state.
+Ten comparisons and two fresh retained traversals are necessary, not sufficient,
+for the scientific conclusion. Shared numerical implementation remains explicit.
+
+Startup, order and clocks
+Use a fresh process/context per request for every arm. Two requests within one
+worker would reuse startup differently from the proposed balanced sequence, so
+do not reuse V61's worker as-is or transfer old performance numbers. Order the
+five arms by a separately frozen hash seed at endpoint1 and reverse at endpoint2;
+commit the actual order in registration before any model outcome. Each arm then
+occupies complementary positions across endpoints, but endpoint workloads differ:
+this is a balanced development schedule, not repeated timing or statistical
+counterbalancing sufficient for inference. No arm is selected from observed time.
+
+Sequential afterok jobs on the same admitted CPU host, one thread/affinity; no
+cache flushing or privileged operations. Record actual affinity, environment,
+start/end and available scheduler co-residence snapshots. Do not claim exclusive
+node access. Record native compilation/startup work under controller transaction
+and CPU accounting, even if outside operation timers. All arms share the same
+runtime installation, including codec imports; report the full physical added
+dependency footprint rather than claiming a minimal per-arm deployment build.
+
+Report V66 request clocks plus complete worker/controller clocks; source/runtime
+and input verification, context load, admission, receipt writes and shutdown cannot
+disappear. Rebuild shares common extraction/model work: attribute it explicitly
+to each representation, retain all encoder/canonical-validation/write/disposal
+costs, and show unallocated shared overhead. Attributed sums are not independently
+measured end-to-end deployment times. Never sum nested clocks or duplicate Slurm
+allocation and batch CPU. Failed attempts and audits remain charged separately.
+
+Resource admission still required
+Keep16GiB OS memory/address-space and2GiB per output file, oneCPU/thread. Before
+freezing caps, inspect full simultaneous residency: original features429,391,872B,
+checkpoint/teacher arrays, incoming and outgoing state blobs, retained descriptor
+maps, codec canonical candidates, complete model codes and per-stage solver buffers.
+The old4GiB resident reservation and passing microtests do not prove full-process
+fit. Reuse unchanged structural point/box+fallback/Gram work admission and add a
+conservative codec/state bound. OS limits remain abort boundaries.
+
+Evidence for choosing new bounded ceilings, not timing predictions:
+V61 process CPU was6598.94s preparation,4978.98s cached,7124.58s cold,
+5926.96s hybrid,6881.21s compressed,8461.61s oracle. Largest recorded V61 worker
+RSS was1,947,736KiB. Modern encoding/canonical work is extra, and new feature values
+can change certificate/fallback work. Use a new phase allowance with per-job
+reservations, never pooled historical budgets or silent increases. Splitting
+request jobs requires separate per-endpoint ceilings, not unaccounted extra runs.
+
+Old primary audit timed out at1800s; V62 recovery primary took1868wallseconds and
+supplemental964seconds. Ten comparisons plus modern validation add work. Admit
+both full actual-byte and accounting audits prospectively with justified ceilings;
+do not reuse the failed30-minute limit or raise a frozen cap after a timeout.
+
+Remaining implementation before launch
+New campaign/controller with exclusive intent, canonical registration, immutable
+source/input/runtime hashes, shape/resource review and sealed PhaseBudget;
+actual-file worker wrapper around frozen V66 operations; separate fresh-oracle
+access rules; primary exact successor/model/Gram audit; supplemental transaction,
+failure, metadata, CPU and complete-cost audit; launcher/dependency receipts and
+bounded terminal collector. Test malformed bindings, replayed attempts, writer
+failure, wrong-root/target state, forbidden oracle reads, second-step predecessor
+and CPU/cap failures before pinned Linux admission. Verify expected counts/zero
+skips and root source review, then freeze the exact new source before inference.
+
+Interpretation and next gates
+One new bounded-frame root and one observation per arm/endpoint are development
+falsification. No confidence interval or population reliability/speed claim.
+All failures, fallback, domination and negative comparisons stay visible. If any
+exactness or complete-cost gate fails, do not promote remaining partial output.
+If modern/cached/hybrid dominates compression, narrow the practical claim and
+reassess contribution. An independently motivated deployment constraint is still
+needed to interpret a storage-versus-latency tradeoff as useful.
+Untouched paired article-level quality, uncertainty/sample-size justification,
+prospective timing replication and final manuscript/bundle validation follow
+separately. No conference submission or paid compute is authorized here.

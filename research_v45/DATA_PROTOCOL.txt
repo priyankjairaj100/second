@@ -1,0 +1,35 @@
+V45 independent calibration-input selection. Frozen before any data worker.
+
+One new root consists of 13 distinct 128-token prefixes from complete records
+in exactly the first 2 MiB of compressed English C4 training shard 00001,
+revision 1588ec454efa1a09f29cd18ddd04fe05fc8653a2. No BOS/EOS, offset zero.
+Sort eligible records by SHA256("second-v45-independent-c4-root:" + ID).
+Select the first thirteen passing exclusions; no model output enters selection.
+Fail rather than expand, change shard, redraw, or automatically retry.
+
+Reconstruct the historical shard-zero 2-MiB prefix and all historical WikiText
+train/validation prepared pools, checking their original file/pool commitments.
+These data are used only for overlap checks, without model evaluation or printing
+source text. Preserve every archived designated ID and content/token commitment
+from selection, registration and plan metadata. Exclude matching IDs, normalized
+text/body/URL hashes and first16/32/64/128-token hashes, including within the new
+root. This checks exact hashes, not semantic near-duplicates. Historical C4 and
+WikiText reservations are protected even when not previously used for inference.
+No new quality/test pool is acquired or evaluated; all sixty quality exclusions
+remain unchanged. Only selected token IDs and hashes are published, no raw corpus.
+
+The range response must be206 with exact first2MiB Content-Range and byte count.
+The new prefix SHA is recorded before model registration. Parse only complete
+newline-terminated records, with at most64MiB decompressed output. Tokenizer JSON
+SHA2568414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6
+and vocabulary50257 are required. Record actual tokenizer version. Restored Wiki
+pools must equal their historical commitments, so tokenization drift refuses.
+
+Fresh data-only phase602CPU seconds, worker600CPU/900wall seconds,4GiB address
+space and Slurm memory, one thread/CPU,128MiB file cap. No prior allowance reused.
+All outcomes and failed/cancelled attempts remain visible. Registration/software
+checks and controller CPU are ancillary outside the data-worker charge. Model
+execution requires a separate reviewed program and resource registration.
+
+This deterministic bounded training-prefix development root is not corpus-uniform,
+randomized replication, untouched quality confirmation, or ACL-readiness evidence.

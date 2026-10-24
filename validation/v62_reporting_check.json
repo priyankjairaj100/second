@@ -1,0 +1,28 @@
+{
+  "archives": {
+    "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz": {
+      "bytes": 3761981,
+      "sha256": "d0ad4f1085b5c8cb5148de2a6608f8cc1d844661e7262882da2f483f5f9e8094"
+    },
+    "campaigns/csis_terminal_v62_recovery_metadata_20261016.tar.gz": {
+      "bytes": 380397,
+      "sha256": "4b146e74e1d60b9939cffa8d077d384685d3bfa1716db3e2e15ce071f2cd3b99"
+    }
+  },
+  "checker_sha256": "c9bc3426be2f95cc0702edc9a62064ee5f5e5bc82c0a0f10c4b392dd6cc21d38",
+  "collector_sha256": "421167d8cf6b6c8cc2484c1b4df59d3bf1a150b8fa83bb940b9bd570a21ec52a",
+  "full_recovery_metadata_integration": "passed",
+  "historical_ledgers_verified": 101,
+  "linux_wrapper_fixtures": 8,
+  "linux_wrapper_skips": 0,
+  "local_boundary_fixtures": 4,
+  "local_boundary_skips": 0,
+  "manuscript_sha256": "a73f0936466dbcf5146ca09b4c66273040316fd9d912a8087a644c9ae8efbd9b",
+  "native_manuscript_compile": "success",
+  "old_failure_preserved": true,
+  "required_inputs_checked": 577,
+  "review": "Root source and evidence review; no independent reviewer in this continuation",
+  "schema": "v62-reporting-validation",
+  "source_files_unchanged": 432,
+  "timestamp_utc": "2026-10-16T07:39:45.313804+00:00"
+}

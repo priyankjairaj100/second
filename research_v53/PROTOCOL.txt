@@ -1,0 +1,54 @@
+V53: explicit uniform compressed48 complete-model adaptive development
+
+This is a new prospective execution plan, not a V45 retry or untouched confirmation.
+The V45 root is known from V45/V51/V52. V45 CPU failure (4801 charged seconds),
+V51 40-bit certificate refusal (2834 total), and adaptive V52 48-bit result
+(690) stay visible. Original normalization1664, ridge1/100, dyadic24 four-bit
+lower-tie grids, fixed nearest-anchor features, thirteen C4 records128 tokens
+and original checkpoint are unchanged. Deletions retain twelve then six sources.
+No new quality articles, changed gates, or GPU feature substitution.
+
+New canonical magic VCST53 and complete-fixed-anchor-successor-v53 schema;
+compressed48 requires48 bits and block256 at every stage, not a per-row choice.
+Historical compressed40 validator and every frozen numerical source stay unchanged.
+The lossless/hybrid controls use the same new framing and full target/token/provenance
+accounting. Exact Grams are restricted to eighteen width768 stages; six width3072
+stages retain lossless factors. Native Gram source admission is thirteen.
+
+All six workers use V50 normal-neighbor primal backend with original token/Gram
+routes and V43 admission/verification. Candidate/backend identity is recorded.
+Preparation is fresh full neural traversal of every original record, then all24
+stages and42,467,328 model codes. No stage prefix substitutes for a complete model.
+Compressed box refusal triggers checked exact retained-token replay, whose source
+words must match commitments and lie in every box. Replay and point solve costs
+are included; refusal without successful replay means failure. No hidden retry.
+
+All four comparison arms execute both successive deletions. Worker order is
+hash-fixed with second-v53-arm-order prefix; jobs run sequentially on csis.mn1
+(one CPU/thread16GiB). This avoids intentional concurrent comparison workloads,
+but does not eliminate cache/order effects or unrelated cluster interference.
+Oracle freshly traverses retained tokens twice, sharing numerical implementation
+but reading no predecessor/repair descriptors. Both audits compare all actual
+model and canonical state bytes, original target, source/trust membership, code
+extent, source/runtime bindings and all settled worker debits.
+
+Fixed NEW worker CPU/wall ceilings (seconds): prepare10800/14400;
+cached10800/14400; compressed18000/21600; hybrid14400/18000;
+cold12600/16200; oracle14400/18000. Each has16GiB RLIMIT_AS,2GiB file cap,
+singleCPU affinity/thread, no automatic retry. Separate cumulative phase cap81012
+CPU seconds includes two rounding seconds per worker. Larger ceilings are an
+explicit resource-policy change after V45 failure, not measured performance or
+an inference that one stage's runtime predicts the full model. They do not reset
+or pool any old budget. Old ledgers are bound and left untouched.
+
+Fresh source/runtime-bound Linux checks must pass before registration. Clean
+source commit, one-use directory and exact program/argv admission required.
+No later arm runs if an earlier arm fails. No claim of success from pending jobs.
+Whole model, all state/trust sidecars, immutable checkpoint and preparation,
+request and attributed two-deletion lifecycle costs reported separately; retained
+audit history is not erased. No physical source deletion/pretraining unlearning.
+
+Success is only complete exact full-model/deletion engineering evidence on this
+adaptive root. It does not establish speedup significance, broad utility, quality,
+novelty, confirmation or ACL readiness. Independent roots, quality, second models,
+stronger lossless codecs and ablations require separate future registrations.

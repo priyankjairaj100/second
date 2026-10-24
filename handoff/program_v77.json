@@ -1,0 +1,28 @@
+{
+  "version": 77,
+  "created_at": "2026-10-22T11:36:22.324054+00:00",
+  "kind": "manual_deep_speed_transfer_campaign_preparation",
+  "handoff": "docs/ACTIVE_SESSION_V77.md",
+  "details": "research_v77/CAMPAIGN_PLAN.txt",
+  "scheduler": "PAUSED",
+  "manuscript_version": 74,
+  "scientific_decision_version": 72,
+  "model_results_changed": false,
+  "experiments_launched": false,
+  "linux_qualified": false,
+  "qualification_program": "research_v76/program.json",
+  "qualification_program_sha256": "482782afc8925528a47a2b97abfc0167968b6bdfbcaf3314922d0777784a9d4b",
+  "frozen_sources_preserved": {
+    "numerical_sources": 581,
+    "auxiliary_sources": 5
+  },
+  "qualification_status": "prepared; source-upload auto-review rejected; explicit user approval pending",
+  "registered_job_id": null,
+  "next_steps": [
+    "Pending CSIS source-upload approval",
+    "Fresh read-only preflight and one-use V76 qualification",
+    "V77 actual parser/control qualification",
+    "Separate bounded full-request comparison and replication",
+    "Smaller matched checkpoint-transfer admission"
+  ]
+}

@@ -1,0 +1,73 @@
+Source review component C, 16 October 2026
+
+The current component is reports/development-source-review-v69c.zip,1814288 bytes,
+SHA256ceea2e249896e7bddf151d9956683c9b7b7cee988df25f092fb7f02440b35037.
+It contains537 files:534 source/protocol/wrapper copies, a README, a fixture checker
+and a manifest. The source union is unchanged:469 frozen V67,14 historical GPU/export,
+9 V68,40 V69 and two existing legacy helper/package files. Every original byte remains
+unchanged. This is a review component, not the final submission or full reproduction.
+
+Reversible source adaptation
+500 files are exact copies;34 replace only declared account/repository/path/node or
+institution identifiers. Private mapping REVIEW_SOURCE_DERIVATION_V69C.json restores
+all534 copies byte-for-byte to the committed originals. All503 Python files parse
+with Python3.10 grammar. Their ASTs differ only by the declared string substitutions;
+no operators, control flow or numeric constants change. This is not a proof that
+changed operational paths preserve execution behavior. Original source/runtime/input
+hashes and one-use guards remain associated with the original experiments.
+
+Placeholders are illustrative, not deployed services. Do not run historical empirical
+launchers or use adapted bytes to satisfy an original registration. Full reproduction
+needs a new admitted environment, paths, inputs, resources, registration and one-use
+attempt. The package includes no historical execution registrations, live ledgers,
+model/state/corpus/environment binaries or raw article token records. Tiny generated
+software fixtures remain present. Older data-dependent tests require their external
+historical inputs; only the declared local fixture subset was executed here.
+
+Clean extraction and fixtures
+A new filesystem extraction checks all537 files and536 manifest entries. In isolated
+CPython3.12.7 on macOS with existing NumPy2.3.5, the22 V68 and92 V69 fixtures all pass:
+114 tests, zero failures/errors/skips. The final run used28.183050416 wall seconds;
+process CPU is recorded separately in validation/v69_review_source_c_fixtures.json.
+All156 file-backed project imports and three namespace-package paths originate in
+the extraction, with zero borrowed project imports from the working checkout.
+All nine shell wrappers match the bytes that passed bash -n; no wrapper was run.
+
+The checker uses120/121-second CPU and64MiB per-file limits, a separate fixture
+write directory and Python audit hooks excluding network and process launches other
+than shell syntax checks. No denied event occurred. These hooks are not a full OS
+sandbox. Production checkpoint import, numerical constructor, runtime/limits and
+Slurm boundaries remain mocked; tiny generated CPU likelihood and statistics are
+real fixtures. No actual checkpoint, CUDA process, untouched article or empirical
+likelihood ran. The future98-test Linux gate and separate CUDA gate remain required.
+Local fixture success does not authorize any job or establish a scientific result.
+
+Identity review and preserved preparation failures
+The final archive has no hits for the known account, institutional/host or local-root
+patterns. Two email-pattern hits in evaluator.py are Python matrix multiplication,
+confirmed by their AST nodes. This is not whole-package anonymity clearance.
+Private maps, fixture logs and machine-specific reports stay outside the review ZIP.
+
+Two local preparation issues are preserved: the first replacement prefix collided
+with ordinary prose and was refused before any output; the first clean fixture run
+passed114 tests but its checker wrongly rejected a valid namespace package afterward.
+The checker now verifies all namespace search locations. Artifact A remains unqualified;
+B passed but retained institution markers in four additional source/protocol files.
+C removes those markers and passed a fresh clean extraction/fixture check. Prior ZIPs,
+private maps, reports and failing wrapper logs remain available. No registered source,
+resource limit, empirical attempt or job changed. The fixture's intentional injected
+immutable-input exception appears in stderr; it is an expected passing refusal test.
+
+Remaining package work
+External input/runtime instructions and a561-file cross-component review are now
+prepared; see REVIEW_REPRODUCTION_GUIDE_V69.txt. Actual input/receipt closure,
+transitive notices and whole-package anonymity remain. The534 source files include legacy
+protocols and guards; a static import graph is not external artifact/runtime closure.
+The historical summary and nine typed-preserving receipt copies remain unchanged.
+Project release terms, whole-package anonymity, native-preview pagination and actual
+claim-required V67/quality/timing evidence are still open. The manuscript is unchanged.
+
+Current reports
+validation/v69_review_source_component.json
+validation/v69_review_source_c_fixtures.json
+validation/v69_review_source_preparation_failures.json
