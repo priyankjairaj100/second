@@ -1,3 +1,7 @@
+Current execution checkpoint (24 October2026,11:20UTC): **V96 two V89 requests completed; modern-lossless reference running.** Read docs/ACTIVE_SESSION_V96.md, handoff/program_v96.json and the queue.16007 optimized_compressed-1 COMPLETED0:0;16008 reference_modern-1 RUNNING,16009–16016 pending at11:19UTC. Optimized receipt metadata/seal/extents/storage/accounting pass:3897 charged CPU seconds within12602,13.259560 nonnumerical seconds within602. Two of eight requests complete; fresh oracle and both audits pending. No comparative claim from partial pairs. All934V89/18V90/33V91/38V92 commitments unchanged; V91/V92 unpackaged and unregistered. No new launch or retry. Same manuscript; scheduler ACTIVE. Historical observations follow.
+
+---
+
 Current execution checkpoint (24 October2026,10:20UTC): **V95 first V89 request completed; optimized request running.** Read docs/ACTIVE_SESSION_V95.md, handoff/program_v95.json and the queue.16006 reference_compressed-1 COMPLETED0:0;16007 optimized_compressed-1 RUNNING,16008–16016 pending at10:19UTC. Read-only receipt review verified metadata, seal, extents, storage/mapping and accounting:4405 charged CPU seconds within12602,15.505290 nonnumerical seconds within602. One of eight requests is complete; fresh oracle and both audits are pending. No speed or model-equality conclusion. All934V89/18V90/33V91/38V92 commitments unchanged; no new launch or retry. Same manuscript; scheduler ACTIVE. Historical observations follow.
 
 ---

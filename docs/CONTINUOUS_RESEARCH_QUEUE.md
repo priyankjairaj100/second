@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V95.md and handoff/program_v95.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V96.md and handoff/program_v96.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
@@ -39,6 +39,16 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V96 execution checkpoint: at11:19:32UTC optimized_compressed-1 job16007 was
+COMPLETED0:0; reference_modern-1 job16008 RUNNING,16009–16016 pending. Two of eight
+requests are complete. The11:20:01UTC review verified optimized request metadata,
+seal, extents, storage/mapping and complete accounting:3897 charged CPU seconds
+within12602,13.259560 conservative nonnumerical seconds within602. Fresh oracle,
+both audits and terminal closure remain pending; no comparative claim follows.
+Read docs/ACTIVE_SESSION_V96.md and pilots/request-closure-v96-20261024/.
+All934V89/18V90/33V91/38V92 commitments and the manuscript remain unchanged.
+No V91/V92 package or registration exists. Existing chain only; no retry.
 
 V95 execution checkpoint: at10:19:32UTC reference_compressed-1 job16006 was
 COMPLETED0:0; optimized_compressed-1 job16007 RUNNING,16008–16016 pending. The
