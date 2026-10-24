@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V89.md and handoff/program_v89.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V90.md and handoff/program_v90.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
@@ -40,6 +40,17 @@ and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
 
+V90 independent checkpoint:48pure checks pass for new bounded controllers,
+read-only exact-command admission, finite metadata writes and source-derived
+progress counts. Three Linux child checks remain unexecuted. Two real bugs in
+the old prepared transfer path were reproduced: wrong verifier import and
+incompatible producer/verifier ledger identities. Frozen sources are unchanged.
+The proposed68.50GiB project/16.08GiB temporary census includes both transfer
+chains, but is explicitly ineligible for live admission until all new callers
+are integrated, qualified and source-bound. Read research_v90/PROTOCOL.txt.
+At07:38UTC16005remained RUNNING with13source replays and3/24stage certificates;
+all successor/audit jobs remained dependency-pending. No scientific result yet.
+
 0. ACTIVE V89 COMPARISON: inspect existing16004--16016 and their receipts before
    any action. Never repeat prepare.py or either submit.py mode. The actual
    program and release chain are saved in the execution checkpoint. Ten numerical
@@ -57,7 +68,9 @@ and its hash inventory. Earlier failure, timeout and quota receipts remain.
    established. Independent next work is the separate transfer recovery design:
    old V81/V82 registrations remain consumed and V84's old gates cannot pass.
    Read docs/MATCHED_TRANSFER_RECOVERY_REVIEW_V89.txt before implementing the new
-   orchestration and complete write plan. New software/admission/complete-transfer
+   orchestration and complete write plan, and docs/ACTIVE_SESSION_V90.md for the
+   now-reproduced admission wiring bugs and tested replacement components.
+   New software/admission/complete-transfer
    sources must bind the actual V89 terminal result and retain the approved 1,327,104 grid allowance for both new
    targets. Do not weaken old prerequisites. The same V72/V74 manuscript remains
    current pending audited results; layout and delivery choices remain unresolved.
