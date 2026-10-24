@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V90.md and handoff/program_v90.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V91.md and handoff/program_v91.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
@@ -40,6 +40,17 @@ and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
 
+V91 independent checkpoint: the separate software/fetch/target admission path
+is implemented with bounded writes, exact live CPU admission, complete host
+accounting, one-use held submission and terminal closure.104 local checks pass;
+its172-test pinned Linux gate is unexecuted. No new package, upload, registration,
+fetch or job exists. At08:06UTC16005had15/24stage certificates; dependent jobs
+were still pending and no actual completion/audit existed. All934 V89 source
+members,930 local counterparts and18 V90 commitments are unchanged. Read
+research_v91/PROTOCOL.txt. Package creation requires actual V89 terminal success;
+only an evidence-based scientific decision can justify the next launch. The new
+admission-only storage plan does not qualify the later full transfer screen.
+
 V90 independent checkpoint:48pure checks pass for new bounded controllers,
 read-only exact-command admission, finite metadata writes and source-derived
 progress counts. Three Linux child checks remain unexecuted. Two real bugs in
@@ -68,8 +79,8 @@ all successor/audit jobs remained dependency-pending. No scientific result yet.
    established. Independent next work is the separate transfer recovery design:
    old V81/V82 registrations remain consumed and V84's old gates cannot pass.
    Read docs/MATCHED_TRANSFER_RECOVERY_REVIEW_V89.txt before implementing the new
-   orchestration and complete write plan, and docs/ACTIVE_SESSION_V90.md for the
-   now-reproduced admission wiring bugs and tested replacement components.
+   orchestration and complete write plan, and docs/ACTIVE_SESSION_V91.md for the
+   new integrated admission path and remaining actual qualification gates.
    New software/admission/complete-transfer
    sources must bind the actual V89 terminal result and retain the approved 1,327,104 grid allowance for both new
    targets. Do not weaken old prerequisites. The same V72/V74 manuscript remains
