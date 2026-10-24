@@ -19,26 +19,31 @@ launch. Source checks/tests/receipts alone are not independent scientific replic
 
 ## Operational observation, 24 October 2026
 
-Local checkout and GitHub draft PR1 agree at d24e58c before this reporting update.
-The last successful cluster inspection was 23 October 11:44:49 UTC: queue empty,
-all 19 original dispositions and the old ledger unchanged, V89 namespace/archive
-absent, full storage admission refused. Later bounded SSH attempts at 17:07 UTC
-and 20:51 UTC timed out; current cluster state is unverified. No retry followed a
-failed connection in the same wake. No upload, registration or job was launched.
-A later attempt to inspect the existing manuscript preview also failed before
-reading UI state (trusted Node process exited). No new tab/PDF or repeat attempt.
-The prepared archive, inventory and manuscript hashes remain unchanged. Existing
-storage and layout questions remain pending; do not repeat them without a change.
-Resume with fresh job/receipt/storage inspection after access returns. This note
-supersedes no frozen source, old disposition, reservation or scientific result.
-Receipt: pilots/recovery-v89-20261023/operational-reconciliation-20261024.json.
+Access was restored after the user's reconnection confirmation. The latest
+successful inspection at 24 October 05:28:20 UTC verified the empty account queue,
+all 19 original terminal dispositions, clean numerical f900999, unchanged ledger
+and zero-byte completion. The V89 namespace and archive remain absent. User quota
+is still 4 KiB above its 1000 GiB hard limit; the 69.73 GiB project allowance cannot fit.
+No upload, registration, launch, deletion or ledger mutation occurred. Full
+multi-filesystem admission must run freshly before any future staging; a positive
+capacity result is not inferred from this read-only reconciliation.
+
+The earlier SSH timeouts and 05:26 UTC authentication rejection remain recorded.
+The access question is resolved; do not repeat it. The pending storage-restoration
+and layout questions remain unanswered. The existing preview inspection failed
+before UI state was available; no repeat attempt or new tab/PDF was made.
+Prepared source package and manuscript are unchanged. Preserve all old jobs,
+partial files, unknown reservation, exclusions and scientific claims.
+Receipts: pilots/recovery-v89-20261023/operational-reconciliation-20261024.json,
+authentication-block-20261024.json and restored-access-20261024.json in the same
+folder. Resume from docs/RECOVERY_RUNBOOK_V89.txt only when fresh capacity passes.
 
 ## Ordered work
 
 0. ACTIVE CONTINUATION V89, STORAGE BLOCKED: V80 preparation15905 FAILED120:0;
    all11 descendants15906--15916 CANCELLED without running. V81 software15917
    FAILED120:0 after two seconds; V82 jobs15921--15925 CANCELLED without running.
-   Account queue remained empty at11:32UTC. The account exceeded its1000GiB hard quota;
+   Account queue remained empty at11:32UTC. The account exceeded its 1000 GiB hard quota;
    filesystem15T free does not provide account headroom. User action is requested
    to restore capacity without deleting any registered Second evidence. Keep
    notifications quiet while unchanged. No paid storage or alternate filesystem.

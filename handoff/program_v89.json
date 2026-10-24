@@ -189,12 +189,16 @@
   "operational_followup": {
     "created_utc": "2026-10-24T02:50:56.595833+00:00",
     "receipt": "pilots/recovery-v89-20261023/operational-reconciliation-20261024.json",
-    "last_verified_cluster_observation_utc": "2026-10-23T11:44:49.726958+00:00",
-    "latest_connection_attempt": "2026-10-23T20:51:31Z",
-    "latest_connection_outcome": "SSH connection timed out",
-    "current_cluster_state_verified": false,
+    "last_verified_cluster_observation_utc": "2026-10-24T05:28:20.542104+00:00",
+    "latest_connection_attempt": "2026-10-24T05:28:16Z",
+    "latest_connection_outcome": "access restored; old jobs and receipts verified; user quota exhausted",
+    "current_cluster_state_verified": true,
     "preview_startup_failed": true,
     "prepared_archive_and_manuscript_unchanged": true,
-    "new_job_or_registration": false
+    "new_job_or_registration": false,
+    "access_restoration_request_pending": false,
+    "authentication_receipt": "pilots/recovery-v89-20261023/authentication-block-20261024.json",
+    "restored_access_receipt": "pilots/recovery-v89-20261023/restored-access-20261024.json",
+    "project_headroom_sufficient": false
   }
 }

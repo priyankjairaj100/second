@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-24T05:27:57.071400+00:00",
+  "attempt_utc": "2026-10-24T05:26:48Z",
+  "source_receipt": "continuation-reconciliation-20261024T052648Z.json",
+  "source_receipt_sha256": "9c2ea25a3cffdd8bf7805cc8b607746e656d8938428b78e0beba0f714c2bdb63",
+  "transport_result": {
+    "returncode": 255,
+    "stderr": "\n##########################################################################################\n\t       Welcome to CSIS Cluster (Dell R7525 aided with Nvidia A100)\n########################################################################################## \npoonam@172.24.16.132: Permission denied (publickey,password,keyboard-interactive).\n"
+  },
+  "cluster_responded": true,
+  "authentication_succeeded": false,
+  "jobs_or_quota_inspected": false,
+  "last_verified_cluster_utc": "2026-10-23T11:44:49.726958+00:00",
+  "login_retry_after_failure": false,
+  "request_to_restore_terminal_session_sent": true,
+  "credentials_requested_or_saved": false,
+  "new_upload_registration_or_job": false,
+  "scientific_results_changed": false,
+  "followup": {
+    "user_confirmed_reconnection": true,
+    "actual_access_restored_utc": "2026-10-24T05:28:20.542104+00:00",
+    "receipt": "pilots/recovery-v89-20261023/restored-access-20261024.json"
+  }
+}

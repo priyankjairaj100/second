@@ -89,3 +89,21 @@ layout remains unverified. The prepared archive/inventory and manuscript hashes
 still match this handoff. No source/test/scientific/manuscript change is implied.
 Read pilots/recovery-v89-20261023/operational-reconciliation-20261024.json. Pending
 storage/layout questions remain unanswered; do not re-ask while unchanged.
+
+At 24 October 05:26 UTC, CSIS responded but rejected SSH authentication. This
+changes the observed access failure from connection timeout to authentication
+failure; it does not verify jobs, storage or old receipt state. The user has been
+asked once to restore a working terminal session without sharing credentials.
+No retry, remote mutation or new allocation followed. That access request was subsequently answered. See
+pilots/recovery-v89-20261023/authentication-block-20261024.json.
+
+Access was actually restored at 24 October 05:28:20 UTC after the user's confirmation.
+The empty queue, all 19 old dispositions, clean f900999 checkout, ledger hash and
+zero-byte completion were reverified; both V89 paths remain absent. The account
+still uses 1,048,576,004 KiB against its 1,048,576,000 KiB hard quota. This directly
+refuses the prepared 69.73 GiB project allowance. The full multi-filesystem guard
+was not rerun because exhausted user quota already blocks admission; it remains
+mandatory before any future staging. No upload, registration, job, deletion or
+ledger mutation occurred. The access question is resolved; the existing storage
+and layout questions remain pending. See restored-access-20261024.json beside
+the authentication receipt. V72 science and the prepared sources/manuscript stand.
