@@ -1,3 +1,7 @@
+Current execution checkpoint (24 October2026,09:07UTC): **V94 preparation receipt closed; first V89 request running.** Read docs/ACTIVE_SESSION_V94.md, handoff/program_v94.json and the queue.16005 COMPLETED0:0;16006 reference_compressed-1 RUNNING,16007–16016 pending at09:04UTC. Read-only preparation review verified metadata, one-use seal, extents, storage/mapping and complete accounting:6702 charged CPU seconds within12602,18.768486 nonnumerical seconds within602. Bulk model/state equality still requires both frozen audits. No new job, package or speed claim. V92 remains prepared142local/221Linux unexecuted; V93 reporting safeguards stand. Same manuscript; scheduler ACTIVE. Historical observations follow.
+
+---
+
 Current continuation checkpoint (24 October2026,08:49UTC): **V93 reporting safeguards prepared; V89 still running.** Read docs/ACTIVE_SESSION_V93.md, handoff/program_v93.json and the queue.16005 has24stage certificates and48payload-stage records but no completed preparation/host/audit;16006–16016 pending. New pure reporting helpers pass6generated tests, with no empirical reduction. Fallback source extraction is nested in stage time; optimized cells bundle multiple changes. Preserve all endpoints and complete host clocks. V92 remains142local tests/221Linux tests unexecuted; no V91/V92 package or launch. Preserve frozen sources, debits, caps and failures. Same manuscript and unresolved layout/delivery gates; scheduler ACTIVE. Historical observations follow.
 
 ---
