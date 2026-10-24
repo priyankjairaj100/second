@@ -17,6 +17,22 @@ new monitor, credentials storage, third-party messages or conference submission.
 Stop repeated attempts after connection failure. Inspect jobs before any future
 launch. Source checks/tests/receipts alone are not independent scientific replication.
 
+## Operational observation, 24 October 2026
+
+Local checkout and GitHub draft PR1 agree at d24e58c before this reporting update.
+The last successful cluster inspection was 23 October 11:44:49 UTC: queue empty,
+all 19 original dispositions and the old ledger unchanged, V89 namespace/archive
+absent, full storage admission refused. Later bounded SSH attempts at 17:07 UTC
+and 20:51 UTC timed out; current cluster state is unverified. No retry followed a
+failed connection in the same wake. No upload, registration or job was launched.
+A later attempt to inspect the existing manuscript preview also failed before
+reading UI state (trusted Node process exited). No new tab/PDF or repeat attempt.
+The prepared archive, inventory and manuscript hashes remain unchanged. Existing
+storage and layout questions remain pending; do not repeat them without a change.
+Resume with fresh job/receipt/storage inspection after access returns. This note
+supersedes no frozen source, old disposition, reservation or scientific result.
+Receipt: pilots/recovery-v89-20261023/operational-reconciliation-20261024.json.
+
 ## Ordered work
 
 0. ACTIVE CONTINUATION V89, STORAGE BLOCKED: V80 preparation15905 FAILED120:0;

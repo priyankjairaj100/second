@@ -74,3 +74,18 @@ bf3b7a73cda7b4c62fb7fe6fc7df08a36e949cb15f4c0d9e361fc25a732cc8eb.
 No new speedup, transfer or algorithmic negative result follows from this work.
 No manuscript edit or repeated preview attempt was warranted. Actual rendered
 layout and final delivery choices remain open; the agreed bundle is incomplete.
+
+## Operational follow-up, 24 October 2026
+
+The 23 October 11:44:49 UTC read-only inspection again verified the 19 original
+outcomes, empty queue, clean numerical checkout, unchanged ledger and zero-byte
+completion. Both new V89 paths were absent and full storage admission refused.
+Later bounded SSH attempts at 17:07 UTC and 20:51 UTC timed out. Current cluster
+state is therefore unverified; do not treat the last quota observation as fresh.
+Each failure stopped that wake's connection attempts. No remote mutation occurred.
+An attempt to inspect the same existing manuscript preview failed before UI state
+could be read: trusted Node process exited unexpectedly. It was not repeated;
+layout remains unverified. The prepared archive/inventory and manuscript hashes
+still match this handoff. No source/test/scientific/manuscript change is implied.
+Read pilots/recovery-v89-20261023/operational-reconciliation-20261024.json. Pending
+storage/layout questions remain unanswered; do not re-ask while unchanged.
