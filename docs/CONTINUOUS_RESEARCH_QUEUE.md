@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V91.md and handoff/program_v91.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V92.md and handoff/program_v92.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
@@ -39,6 +39,19 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V92 independent checkpoint: the complete matched20-worker/16-pair recovery source
+now connects actual V91 prerequisites, bounded outputs/controllers, source-bound
+storage, full host timing, one-use held submission, both audits and terminal
+closure.142 local checks pass;221 pinned Linux checks remain unexecuted. No
+package/upload/registration/job or new target exists. At08:40:42UTC16005 had all
+24stage certificates and32 payload-stage records, but no complete preparation or
+audit.16006--16016 remained pending. All934V89,18V90 and33V91 source commitments
+remain unchanged. Read research_v92/PROTOCOL.txt and the V92 runbook. Actual V89
+scientific closure and actual V91 target admission are still mandatory before
+packaging or launching V92. Source preparation is independent work, not an
+empirical gate or a new scientific result. Same manuscript; one preview-startup
+failure, no retry. Existing scheduler ACTIVE.
 
 V91 independent checkpoint: the separate software/fetch/target admission path
 is implemented with bounded writes, exact live CPU admission, complete host
@@ -81,6 +94,8 @@ all successor/audit jobs remained dependency-pending. No scientific result yet.
    Read docs/MATCHED_TRANSFER_RECOVERY_REVIEW_V89.txt before implementing the new
    orchestration and complete write plan, and docs/ACTIVE_SESSION_V91.md for the
    new integrated admission path and remaining actual qualification gates.
+   V92 separately prepares the complete matched screen; see
+   docs/ACTIVE_SESSION_V92.md. Its actual prerequisites remain unresolved.
    New software/admission/complete-transfer
    sources must bind the actual V89 terminal result and retain the approved 1,327,104 grid allowance for both new
    targets. Do not weaken old prerequisites. The same V72/V74 manuscript remains

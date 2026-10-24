@@ -1,0 +1,247 @@
+{
+  "schema": "prospective-complete-transfer-local-validation-v92",
+  "observed_utc": "2026-10-24T08:39:22.121251+00:00",
+  "runtime": "3.12.7",
+  "platform": "Darwin",
+  "modules": [
+    "research_v92.test_contracts",
+    "research_v92.test_design",
+    "research_v92.test_closure",
+    "research_v92.test_host",
+    "research_v92.test_submit",
+    "research_v92.test_gate",
+    "research_v92.test_accounting",
+    "research_v92.test_chain",
+    "research_v92.test_timing",
+    "research_v91.test_accounting",
+    "research_v91.test_closure",
+    "research_v91.test_contracts",
+    "research_v91.test_fetch",
+    "research_v91.test_host",
+    "research_v91.test_package",
+    "research_v91.test_protocol",
+    "research_v91.test_storage",
+    "research_v91.test_submit",
+    "research_v90.test_metadata",
+    "research_v90.test_outputs",
+    "research_v90.test_admission",
+    "research_v90.test_storage_plan",
+    "research_v90.test_recovery_gate",
+    "research_v82.test_inputs",
+    "research_v82.test_admission_reports"
+  ],
+  "tests": 142,
+  "new_local_tests": 38,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "log": ".........................{\"program_sha256\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"jobs\": [{\"name\": \"checks\", \"operation\": \"checks\", \"arguments\": [], \"job_id\": \"76543\", \"dependency\": null, \"program_sha256\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"snapshot\": \"JobState=PENDING JobName=second92-checks NumCPUs=1 Requeue=0 MinMemoryNode=16G ReqNodeList=csis.mn1 TimeLimit=00:10:00 Partition=cpu-short QOS=cpu-short Reason=JobHeldUser Priority=0 Dependency=(null)\"}]}\n.........................................................{\"program_sha256\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"jobs\": [{\"name\": \"checks\", \"operation\": \"checks\", \"arguments\": [], \"job_id\": \"76543\", \"dependency\": null, \"program_sha256\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"snapshot\": \"JobState=PENDING JobName=second91-checks NumCPUs=1 Requeue=0 MinMemoryNode=16G ReqNodeList=csis.mn1 TimeLimit=00:10:00 Partition=cpu-short QOS=cpu-short Reason=JobHeldUser Priority=0 Dependency=(null)\"}]}\n............................................................\n----------------------------------------------------------------------\nRan 142 tests in 2.966s\n\nOK\n",
+  "prepared_linux_tests": 221,
+  "pinned_linux_gate_executed": false,
+  "new_linux_only_tests_unexecuted": 11,
+  "actual_upstream_missing": true,
+  "source_archive_created": false,
+  "uploaded": false,
+  "registered": false,
+  "empirical_execution": false,
+  "frozen_v89_files": 934,
+  "frozen_local_counterparts": 930,
+  "v91_source_commitments": 33,
+  "partial_source_assembly": {
+    "files": 1027,
+    "bytes": 10441018,
+    "excludes_actual_future_v91_report_and_program": true,
+    "not_a_complete_package": true,
+    "before_final_validation_and_documentation": true
+  },
+  "earlier_development_observations": [
+    {
+      "kind": "host import probe",
+      "error": "ModuleNotFoundError: numpy",
+      "resolved": "historical numerical import moved inside container-only input functions"
+    },
+    {
+      "kind": "test edit",
+      "error": "IndentationError",
+      "resolved": "fixture indentation corrected"
+    },
+    {
+      "tests": 26,
+      "errors": 1,
+      "reason": "Copied cancellation fixture used absent fetch operation",
+      "resolved": "new complete-chain operation used"
+    },
+    {
+      "tests": 3,
+      "errors": 1,
+      "reason": "Generated timing fixture outside required project-root reader",
+      "resolved": "temporary root bound explicitly in fixture"
+    }
+  ],
+  "native_preview": {
+    "status": "unavailable",
+    "attempts": 1,
+    "error": "Sky Computer Use service startup request failed"
+  },
+  "v90_source_commitments": 18,
+  "static_undefined_name_check": "ruff F821 F822 F823 passed",
+  "shell_syntax_check": "bash -n passed",
+  "nonnumerical_host_imports": {
+    "passed": 11,
+    "numerical_dependencies_needed": false
+  },
+  "files": {
+    "research_v92/PARENT_BINDINGS.json": {
+      "bytes": 3446,
+      "sha256": "52716e36960ce81cbb96c4894ed8c5d886b186b3a5fff0a4a3d69875e9119715"
+    },
+    "research_v92/PROTOCOL.txt": {
+      "bytes": 9005,
+      "sha256": "200043aa5245b88fc1db6ab8fe82d414ea7f2615821e1791b84124a5742724b6"
+    },
+    "research_v92/__init__.py": {
+      "bytes": 84,
+      "sha256": "65feffdd9dc5847e25f830a3a6934a3449959b68a7044476937b1a327e663f62"
+    },
+    "research_v92/audit.py": {
+      "bytes": 3957,
+      "sha256": "1ca7c0abb030935be9675533feb0b47b28523ab65f908a223ff1a0e2df067dba"
+    },
+    "research_v92/campaign.py": {
+      "bytes": 5120,
+      "sha256": "1aa353750c59c5db61576c777129800a2c666feeb79539bf4780bad0d42d1699"
+    },
+    "research_v92/closure.py": {
+      "bytes": 4613,
+      "sha256": "23d5c271e6f16a34b7aa6534697791faf3ac228d9b5b1be576fda499eea77d0c"
+    },
+    "research_v92/config.py": {
+      "bytes": 1865,
+      "sha256": "a1ef15a636d73b489cc0c00a1a7f102b112f2cb853999617fa138e4633eb29ab"
+    },
+    "research_v92/container.sh": {
+      "bytes": 1041,
+      "sha256": "9050339f1d1a7959ab6b36140310ccc3f77c9b167c6745d30de82c845d2f365a"
+    },
+    "research_v92/contracts.py": {
+      "bytes": 1986,
+      "sha256": "98c8b980286526fb29541f34354f6e2bb4b07634f0ef5565eb2b9acaae38aa9f"
+    },
+    "research_v92/entry.py": {
+      "bytes": 5019,
+      "sha256": "3deba559f03fb0adaadc90e063f5e72d7f3f875b550c4762a8785bb8c46876da"
+    },
+    "research_v92/gate.py": {
+      "bytes": 6129,
+      "sha256": "fa3948af215529a26c6f3f6a5f65d2dc2aed37c4c8171e0cc930dcac6321e3b3"
+    },
+    "research_v92/host.py": {
+      "bytes": 11774,
+      "sha256": "d467b932d14bfe3f4e33ff1ebe910e53b72982b4bf6906e012428ce792c9cbef"
+    },
+    "research_v92/mapping.py": {
+      "bytes": 1627,
+      "sha256": "1ba69f5f1590622f7e94725905a21ca75b16d410bbd0acf799652089ee5b2183"
+    },
+    "research_v92/package.py": {
+      "bytes": 4535,
+      "sha256": "d8eb5b585cbc4fc08897f8f5b627db151d7313119e58310acd610ddb07ab0aa8"
+    },
+    "research_v92/prepare.py": {
+      "bytes": 2658,
+      "sha256": "cfa8d26b323961f062b2a82994b7e42366e93b331d041ad1c1d43b4efe4e1866"
+    },
+    "research_v92/protocol.py": {
+      "bytes": 1887,
+      "sha256": "0ff4ce38aee46ff9a566c67f690ab70eaad8fc9e5676f46d0288d988ec7663e7"
+    },
+    "research_v92/receipts.py": {
+      "bytes": 4700,
+      "sha256": "901000426a6682eef52e626e4aa9d77eb45ee5956af698f7634f95d3c4ead096"
+    },
+    "research_v92/records.py": {
+      "bytes": 531,
+      "sha256": "4c4c4c1e4ddac2126dc690e9990ef00a8603a7f16c5acd58ed9467d961ce102a"
+    },
+    "research_v92/run_cpu.sbatch": {
+      "bytes": 234,
+      "sha256": "ba119e72cf9d2bf3c0a270b2f217b44dc67fd1015ebdba713150b4c1ba4ddb76"
+    },
+    "research_v92/software.py": {
+      "bytes": 2666,
+      "sha256": "b535803cc88c9dc6bb75b516c69b409d36f44c026e778222b705008e8bcdccbb"
+    },
+    "research_v92/state_audit.py": {
+      "bytes": 7876,
+      "sha256": "dab046b9df46599839f3d1ec5fa46d719902c776251eac24f6d8c84acb057f86"
+    },
+    "research_v92/storage_plan.py": {
+      "bytes": 2539,
+      "sha256": "5f808f602f064d313a394a132cb35921b4f63b20b53175b552f513320428d9a2"
+    },
+    "research_v92/submit.py": {
+      "bytes": 6249,
+      "sha256": "401fcf40bdb7e3fe3c909abad7d30906198012d7f1765f5ffdca65feccc14e32"
+    },
+    "research_v92/terminal.py": {
+      "bytes": 6013,
+      "sha256": "e73bc24deb7aa705ad5a226e21fec1e60dc3f382e5ef1d40953a6101c20e303a"
+    },
+    "research_v92/test_accounting.py": {
+      "bytes": 1567,
+      "sha256": "258f6d4621bbb1c488f426c761a96590c70f78a2feaf4aa43b8f79fc82fc446a"
+    },
+    "research_v92/test_chain.py": {
+      "bytes": 3970,
+      "sha256": "3d9017d107594e20105ce4dcf8942285417517fe9de11325be27d12d9cdc66c8"
+    },
+    "research_v92/test_closure.py": {
+      "bytes": 5159,
+      "sha256": "dcc7cd8510629239381dddb747cf9235d1a84ed263aa94d87f8fbc69e335af8c"
+    },
+    "research_v92/test_contracts.py": {
+      "bytes": 3891,
+      "sha256": "c30b93c452425a1ddec0dbc75971638958b17f2384d4f2aaa6399753c71b5af9"
+    },
+    "research_v92/test_design.py": {
+      "bytes": 2508,
+      "sha256": "b25ac0fb0b917fe6821869559f23be73a0c4993e73228adb71e3fd140fc3c1ec"
+    },
+    "research_v92/test_gate.py": {
+      "bytes": 3198,
+      "sha256": "c1b7f65f94c813c4f4fbb6d3ffd96fd22efb150fe10cb1f8ae836ef5236a633f"
+    },
+    "research_v92/test_host.py": {
+      "bytes": 6034,
+      "sha256": "704404cd7578fce841fe5cc051ef44a2710dcd7f8f72656173b12062028767ef"
+    },
+    "research_v92/test_linux.py": {
+      "bytes": 3544,
+      "sha256": "1b155a8ae53c8f3703d0d96a7d1564b8480162a25842ab2e6b5f9651536bb974"
+    },
+    "research_v92/test_receipts.py": {
+      "bytes": 4350,
+      "sha256": "5eaf0dfea3e6d4cdd5b7dcf260db4a22051ab7432f0da5a7a24170d187d40277"
+    },
+    "research_v92/test_submit.py": {
+      "bytes": 3840,
+      "sha256": "df4023699b40ba71d2c053265fc39b72b11282f6e4b3e1149882240ec2f699cc"
+    },
+    "research_v92/test_timing.py": {
+      "bytes": 3423,
+      "sha256": "a557ca7ad02c33dacb56b859bce76a6ab979393424e5ca83c7db211684490f4c"
+    },
+    "research_v92/test_worker.py": {
+      "bytes": 8942,
+      "sha256": "5ccc02c483082552c6217d79498cf43bb5929430f87062dc31c4d14a4d35baf1"
+    },
+    "research_v92/timing.py": {
+      "bytes": 3290,
+      "sha256": "113770254154e2178c140f4546cc4211289e07381241c740c2c29ccc615bb8dc"
+    },
+    "research_v92/worker.py": {
+      "bytes": 8241,
+      "sha256": "f4ea72aae2c75f2f33ed184efe88e3e84719ba3e2a81ce521f6a520c8a5dfd06"
+    }
+  }
+}
