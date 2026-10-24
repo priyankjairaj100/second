@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V92.md and handoff/program_v92.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V93.md and handoff/program_v93.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
@@ -39,6 +39,15 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V93 reporting checkpoint: fallback source extraction is nested inside stage
+time, and optimized cells bundle multiple changes. Pure helpers preserve
+disjoint clocks and all eight cell/endpoint observations; six generated tests
+pass, with no empirical reduction. Read docs/COST_SCOPE_REVIEW_V93.txt after
+actual V89 closure and before interpreting costs. At08:49:46UTC preparation16005
+had48 payload-stage records but no completion/host/audits; successors remained
+pending. All934V89/18V90/33V91/38V92 commitments remain unchanged. No new job or
+package. V92 remains the prepared matched implementation and actual gates stand.
 
 V92 independent checkpoint: the complete matched20-worker/16-pair recovery source
 now connects actual V91 prerequisites, bounded outputs/controllers, source-bound
