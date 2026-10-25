@@ -1,3 +1,7 @@
+Current connection checkpoint (25 October2026,08:22UTC): **V97 SSH timeout; current cluster state UNKNOWN.** Read docs/ACTIVE_SESSION_V97.md, handoff/program_v97.json and the queue. One bounded SSH attempt timed out before login; no repeat. Last successful snapshot is24October11:19UTC:16004–16007 complete,16008 running,16009–16016 pending. This is historical, not current state. Preserve both timeout receipts. Restore-network/terminal-SSH text question pending; do not repeat it. Inspect existing jobs/receipts before any later action, never duplicate/retry. One manuscript-preview attempt also failed; same source, no new compile/layout claim. V91/V92 prepared but gated. Scheduler ACTIVE; all sources, failures, debits and caps preserved. Historical observations follow.
+
+---
+
 Current execution checkpoint (24 October2026,11:20UTC): **V96 two V89 requests completed; modern-lossless reference running.** Read docs/ACTIVE_SESSION_V96.md, handoff/program_v96.json and the queue.16007 optimized_compressed-1 COMPLETED0:0;16008 reference_modern-1 RUNNING,16009–16016 pending at11:19UTC. Optimized receipt metadata/seal/extents/storage/accounting pass:3897 charged CPU seconds within12602,13.259560 nonnumerical seconds within602. Two of eight requests complete; fresh oracle and both audits pending. No comparative claim from partial pairs. All934V89/18V90/33V91/38V92 commitments unchanged; V91/V92 unpackaged and unregistered. No new launch or retry. Same manuscript; scheduler ACTIVE. Historical observations follow.
 
 ---

@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V96.md and handoff/program_v96.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V97.md and handoff/program_v97.json.
 V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
@@ -39,6 +39,16 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V97 connection checkpoint: the25October08:22UTC SSH attempt timed out before
+login, following the24October16:25UTC timeout. Current queue/outcomes/audits are
+UNKNOWN. The last successful11:19UTC24October snapshot is historical:16004–16007
+complete,16008 running,16009–16016 pending. A restore-connectivity text question
+is pending; do not repeat it or connection attempts after a failure in this turn.
+Read docs/ACTIVE_SESSION_V97.md and pilots/connection-interruption-v97-20261025/.
+After access returns, inspect the existing chain and old19 outcomes before action.
+No retry/launch or result is inferred. One local preview attempt also failed;
+no edit/new compilation/layout claim. V91/V92 remain prepared and gated.
 
 V96 execution checkpoint: at11:19:32UTC optimized_compressed-1 job16007 was
 COMPLETED0:0; reference_modern-1 job16008 RUNNING,16009–16016 pending. Two of eight

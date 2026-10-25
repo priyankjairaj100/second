@@ -1,0 +1,4 @@
+{
+  "returncode": 255,
+  "stderr": "ssh: connect to host 172.24.16.132 port 22: Operation timed out\n"
+}
