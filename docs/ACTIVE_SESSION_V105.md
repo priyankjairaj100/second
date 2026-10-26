@@ -34,11 +34,12 @@ The V98 optimization evidence introduced E18, but the old source component ended
 atV72. The new supplement closes that source-coverage gap. It contains347 added
 review copies. Combined with the unchanged583 base copies, it covers all930
 source/protocol files in the executed934-entry V89 archive. Four execution-specific
-recovery receipts are declared separately and remain preserved privately. Every
+recovery receipts are declared separately and remain preserved outside the review bundle. Every
 original byte was checked against the executed archive. Known path/identity
 adaptation changes56 new copies;857 Python AST checks permit only the declared
 string substitutions. Original frozen sources and all nine V98 components remain
-unchanged. The private derivation map is not included in the review ZIP.
+unchanged. The derivation map is excluded from the review ZIP, but is public in the reporting
+repository. No map privacy or source anonymity is established.
 
 Source supplement: reports/development-optimization-source-v105.zip,
 803078bytes, SHA380feefc22942c6e554b3e3b9008706df5a02f41daf02055874e9f4f0ff016d8.
@@ -49,8 +50,12 @@ is57862bytes, SHA9db55cf070272383eb69c2bb8cdc3c0d8d2054a951e71b931f4c59ee5b7dfd4
 Rendered layout remains unverified after one preview-service startup failure.
 Do not repeat the preview attempt in this turn or create a replacement PDF/tab.
 
-Current development bundle is outputs/second-development-review-v105.zip in the
-chat workspace:9893757bytes, SHAde85f7211b404f6202ab299984ea84fe95b40a2973cdc68fe81f69088c6febd5.
+Current development bundle is outputs/second-development-review-v105b.zip in the
+chat workspace:9894014bytes, SHAf41c4a99a3732f9adf00d52841d7dac116fc8bebfbfeff2debb9e9383d8afb00.
+The earlier V105 ZIP is preserved. V105b changes only the outer README and
+manifest, clarifying that the repository and derivation maps are public. All ten
+components, manuscript and verifier are byte-identical toV105. Earlier component
+wording calling maps private must not be interpreted as repository privacy.
 Its15 members include ten source/evidence components and a portable offline
 verifier. Exact bytes, archive member scope and930-file source coverage pass.
 Deliberately corrupted, missing, extra and independently inconsistent source

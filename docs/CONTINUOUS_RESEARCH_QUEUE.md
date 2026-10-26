@@ -45,9 +45,11 @@ seal, output extents and complete accounting passed08:55UTC. Charged1366seconds
 fits3602 and controller upper16.045441seconds fits301. GPT2 preparation16338
 was running at08:53UTC;16339--16358 remain pending. No request comparison is
 complete. Existing V104 chain only; all limits and prior failures preserved.
-The V105 development bundle adds347 source copies to the583-file base, covering
+The V105b development bundle adds347 source copies to the583-file base, covering
 all930 source/protocol files of executed V89. All nine V98 components are unchanged.
 Portable byte/coverage verification and four corruption/rejection cases pass.
+V105b clarifies that the reporting repository and derivation maps are public;
+all ten components and the manuscript remain unchanged fromV105. No anonymity claim.
 Same manuscript compiles; only package-description prose changed. Scientific
 numbers and claims remainV98. Read docs/ACTIVE_SESSION_V105.md. Final layout,
 venue/category and matched results remain open. Earlier entries are historical.

@@ -267,14 +267,18 @@
   },
   "branch": "codex/second-cluster-v42",
   "bundle": {
-    "bytes": 9893757,
+    "bytes": 9894014,
     "components": 10,
+    "derivation_maps_public": true,
+    "export_revision": "V105b",
+    "full_anonymity_verified": false,
     "full_reproduction_verified": false,
-    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v105.zip",
-    "sha256": "de85f7211b404f6202ab299984ea84fe95b40a2973cdc68fe81f69088c6febd5",
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v105b.zip",
+    "repository_public": true,
+    "sha256": "f41c4a99a3732f9adf00d52841d7dac116fc8bebfbfeff2debb9e9383d8afb00",
     "source_files": 930,
     "submission_ready": false,
-    "validation": "validation/v105_development_bundle.json"
+    "validation": "validation/v105b_development_bundle.json"
   },
   "completed_v101": {
     "actual_target_admission": true,
@@ -573,12 +577,17 @@
   "packaging": {
     "all_originals_unchanged": true,
     "base_source_files": 583,
+    "derivation_maps_public": true,
+    "export_revision": "V105b",
     "new_source_files": 347,
+    "outer_disclosure_clarified": true,
+    "repository_public": true,
     "scope": "Inspection copies; no execution qualification or new empirical result",
     "source_supplement": {
       "bytes": 803078,
       "sha256": "380feefc22942c6e554b3e3b9008706df5a02f41daf02055874e9f4f0ff016d8"
     },
+    "source_supplement_unchanged": true,
     "version": 105
   },
   "prepared_v92_gate_not_satisfied": false,
@@ -593,5 +602,5 @@
   "reporting_checkpoint_evidence_directory": "pilots/preparation-and-review-v105-20261026",
   "scheduler": "ACTIVE",
   "schema": "second-handoff-v105",
-  "updated_utc": "2026-10-26T08:57:44.373015+00:00"
+  "updated_utc": "2026-10-26T09:03:08.543336+00:00"
 }
