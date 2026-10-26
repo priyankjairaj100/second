@@ -1,0 +1,13 @@
+{
+  "captured_utc": "2026-10-26T10:21:29.572941+00:00",
+  "dirty": "",
+  "head": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+  "progress": {},
+  "queue": "",
+  "readonly_cpu_ns": 96834821,
+  "readonly_review_cost_outside_experiment": true,
+  "reviews": {},
+  "scheduler_raw": "16336|second104-checks|COMPLETED|0:0|71|01:06.766|1|16G|csis.mn1\n16336.batch|batch|COMPLETED|0:0|71|01:06.766|1||csis.mn1\n16337|second104-distilgpt2--prepare|COMPLETED|0:0|1389|23:01.262|1|16G|csis.mn1\n16337.batch|batch|COMPLETED|0:0|1389|23:01.262|1||csis.mn1\n16338|second104-gpt2--prepare|COMPLETED|0:0|2993|49:34.004|1|16G|csis.mn1\n16338.batch|batch|COMPLETED|0:0|2993|49:34.004|1||csis.mn1\n16339|second104-gpt2--reference_compressed-1|FAILED|1:0|1913|31:40.824|1|16G|csis.mn1\n16339.batch|batch|FAILED|1:0|1913|31:40.824|1||csis.mn1\n16340|second104-distilgpt2--reference_compressed-1|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16341|second104-distilgpt2--optimized_modern-1|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16342|second104-gpt2--optimized_modern-1|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16343|second104-gpt2--reference_modern-1|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16344|second104-distilgpt2--reference_modern-1|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16345|second104-distilgpt2--optimized_compressed-1|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16346|second104-gpt2--optimized_compressed-1|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16347|second104-gpt2--optimized_compressed-2|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16348|second104-distilgpt2--optimized_compressed-2|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16349|second104-distilgpt2--reference_modern-2|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16350|second104-gpt2--reference_modern-2|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16351|second104-gpt2--optimized_modern-2|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16352|second104-distilgpt2--optimized_modern-2|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16353|second104-distilgpt2--reference_compressed-2|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16354|second104-gpt2--reference_compressed-2|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16355|second104-gpt2--oracle|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16356|second104-distilgpt2--oracle|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16357|second104-primary|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n16358|second104-supplemental|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n",
+  "schema": "matched-request-readonly-review-v108"
+}
