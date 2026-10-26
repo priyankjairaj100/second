@@ -1,14 +1,18 @@
 {
   "actual_terminal_required": true,
+  "collector_executed": false,
+  "collector_guards": 4,
   "empirical_reduction_executed": false,
   "inherited_clock_checks": 6,
   "new_reducer_checks": 7,
   "source_hashes": {
     "reporting_v102/__init__.py": "6537bb330f16e09c93d09891f67139b5b896d07fa209e8865431968a166e59c1",
+    "reporting_v102/collect.py": "a3b88b28e01ee4d8d68adeb5d9d50dc8bba395db2eeddaeea5255cbd7f19928e",
     "reporting_v102/reduce.py": "2de82c1904045681379550b34fdd4d1ae60d53a9df233e50c0d02a7b227dd371",
+    "reporting_v102/test_collect.py": "7cab54c90f5e42f5f4499503caafa6d0b63e035083eaf73d7a4ebdd766d1c7f4",
     "reporting_v102/test_reduce.py": "9a136007585fdf36c384cd872a5f7d9f90b63d167b4a18b01820fb4f3ce2ff2c"
   },
   "status": "prepared_not_empirical",
   "target_namespace": "V104",
-  "tests": 13
+  "tests": 17
 }

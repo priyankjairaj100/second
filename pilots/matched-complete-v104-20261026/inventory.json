@@ -83,6 +83,14 @@
     "bytes": 74,
     "sha256": "fcd529a157428e1f03b5c0bdc5d50294fa160f793af4dd1e1aca6f2042ecb149"
   },
+  "v104-progress-20261026T083527Z.json": {
+    "bytes": 6362,
+    "sha256": "26c5084a7a8c73007e19ec041700b852402df2d4caa2a6ce9c12a23061932398"
+  },
+  "v104-progress-stderr-20261026T083527Z.txt": {
+    "bytes": 74,
+    "sha256": "fcd529a157428e1f03b5c0bdc5d50294fa160f793af4dd1e1aca6f2042ecb149"
+  },
   "v104-stage-intent.json": {
     "bytes": 162,
     "sha256": "a154b7d7eea9336a91a3f59a0da00835d386927ccaf90482611b98a1d2afd2fb"

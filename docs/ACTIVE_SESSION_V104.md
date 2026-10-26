@@ -32,8 +32,8 @@ contained software53.173370seconds and complete controller upper13.593630seconds
 Cumulative software including carried72seconds is at most138.767seconds<=602;
 checks controller including carried19 is at most32.593630seconds<=302.
 The fixed22-job chain16337--16358 was submitted held, checked and released once.
-At08:28:46UTC16337 DistilGPT2 preparation is RUNNING with a bound context_ready
-progress record;16338--16358 remain dependency-pending. No complete model or
+At08:35:27UTC16337 DistilGPT2 preparation is RUNNING, with its bound context
+loaded and all four source records replayed;16338--16358 remain dependency-pending. No complete model or
 comparison exists yet. Never repeat prepare.py or either submit.py mode.
 
 Known earlier costs remain inside the original ceilings: new software530 plus
@@ -49,6 +49,13 @@ four cells, both related GPT-family checkpoints, fixed alternating/reversed orde
 20 numerical workers,16 same-checkpoint fresh-oracle comparisons and both audits.
 Do not infer speed or equality from software tests. The reporting reducer now binds
 V104 and passes13 rejection/clock checks, including cumulative cost preservation.
+Four additional collector checks enforce completed actual job identities, the
+35-file metadata census, size bounds and exact bytes. The one-shot read-only
+collector is prepared but unexecuted: after all23jobs complete successfully, run
+`python3 -m reporting_v102.collect NEW_LOCAL_DESTINATION` from this repository.
+It first checks every scheduler outcome, then invokes the frozen terminal and
+retrieves only terminal-bound metadata. It never submits or retries jobs. A
+connection or verification error stops immediately and preserves its receipt.
 It has not run an empirical reduction. Preserve losses, shared preparation costs,
 disjoint phase timing, all cells and source-access/storage measurements. Stable
 latency, cross-architecture generality and new target quality are not established.

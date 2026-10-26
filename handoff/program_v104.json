@@ -23,7 +23,8 @@
     "checks_tests_required": 227,
     "completed_model_comparisons": 0,
     "first_worker_progress": {
-      "context_ready": 1
+      "context_ready": 1,
+      "source_replayed": 4
     },
     "inventory": {
       "bytes": 146731,
@@ -539,12 +540,14 @@
   "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
   "prepared_v92_gate_not_satisfied": false,
   "reporting": {
+    "collector": "reporting_v102/collect.py",
+    "collector_executed": false,
     "empirical_reduction_executed": false,
     "source": "reporting_v102/reduce.py",
     "target": "V104",
-    "tests": 13
+    "tests": 17
   },
   "scheduler": "ACTIVE",
   "schema": "second-handoff-v104",
-  "updated_utc": "2026-10-26T08:28:49.442902+00:00"
+  "updated_utc": "2026-10-26T08:35:30.605141+00:00"
 }

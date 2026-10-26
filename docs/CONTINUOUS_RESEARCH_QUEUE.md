@@ -46,12 +46,13 @@ container/model work, with16311--16331 cancelled unstarted. All attempts are con
 and preserved. V104 fixes registered operation versus filename alias and exercises
 host-main dispatch for all23operations.148 isolated checks and all227Linux checks
 pass. Software16336 completed0:0 and actual host/accounting review passed. The
-fixed22-job chain16337--16358 was released once. At08:28:46UTC16337 is RUNNING
-with bound target context loaded; all21dependents are pending. Inspect only this
+fixed22-job chain16337--16358 was released once. At08:35:27UTC16337 is RUNNING
+with bound target context loaded and all4source records replayed; all21dependents
+are pending. Inspect only this
 existing chain; do not repeat either launch mode. New software530+72carried=602,
 checks controller283+19=302, numerical controller6039+1=6040; numerical82840 and
 other limits unchanged. Read docs/ACTIVE_SESSION_V104.md. Reporting preparation
-passes13checks with no empirical reduction. V98 science/manuscript remain current.
+passes13reduction/clock checks plus4collector guards, with no empirical reduction. V98 science/manuscript remain current.
 Earlier entries below are historical and do not authorize any retry.
 
 V101 current:172 pinned Linux tests passed; checks16302 COMPLETED0:0. The separately
