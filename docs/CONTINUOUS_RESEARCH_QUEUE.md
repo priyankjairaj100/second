@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V101.md and handoff/program_v101.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V104.md and handoff/program_v104.json.
 V98 is the current manuscript/bundle checkpoint; V72 and the newly closed V89 science stand.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
@@ -39,6 +39,20 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V104 current: actual V101 admission is closed. V100 software16307 failed before
+tests/model work; V103 software16309 passed225tests but dispatch16310 failed before
+container/model work, with16311--16331 cancelled unstarted. All attempts are consumed
+and preserved. V104 fixes registered operation versus filename alias and exercises
+host-main dispatch for all23operations.148 isolated checks and all227Linux checks
+pass. Software16336 completed0:0 and actual host/accounting review passed. The
+fixed22-job chain16337--16358 was released once. At08:28:46UTC16337 is RUNNING
+with bound target context loaded; all21dependents are pending. Inspect only this
+existing chain; do not repeat either launch mode. New software530+72carried=602,
+checks controller283+19=302, numerical controller6039+1=6040; numerical82840 and
+other limits unchanged. Read docs/ACTIVE_SESSION_V104.md. Reporting preparation
+passes13checks with no empirical reduction. V98 science/manuscript remain current.
+Earlier entries below are historical and do not authorize any retry.
 
 V101 current:172 pinned Linux tests passed; checks16302 COMPLETED0:0. The separately
 registered fetch/target/closure chain is released once. Read the V101 handoff and
@@ -248,7 +262,7 @@ anonymity. Author-owned form facts remain unset; no attestation or submission is
 made. Publish coherent checkpoints to the existing branch/draft PR. Keep routine
 completed-job polling quiet; no numerical launch is required by the current claim.
 The authorised expanded optimisation/transfer campaign remains incomplete; V89
-is closed; V91/V99 failures are preserved and the V101 admission chain is active. The user resumed the existing scheduler; it remains ACTIVE until requested to stop
+is closed; V91/V99/V100 failures are preserved, V101 admission is closed, and V103 is active. The user resumed the existing scheduler; it remains ACTIVE until requested to stop
 or the agreed bundle and claim-required evidence are complete and verified. A wake
 must not relaunch any consumed or cancelled registration. No final ETA follows
 from resource ceilings or the earlier estimate before this storage failure.

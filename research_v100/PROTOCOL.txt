@@ -8,8 +8,8 @@ One observation per cell remains descriptive; no stable or universal speed claim
 
 New namespace matched-complete-recovery-v100-20261026-a, target admission
 matched-transfer-admission-v101-20261026-a. The V91 package failed before any
-registration because research_v84.config was omitted. V101 separately preserves
-that source/failure and corrects packaging. Original V91/V92 files and every old
+registration because research_v84.config was omitted. V99 then failed its software allocation on an omitted hash-bound source.
+V101 separately preserves both failures and corrects packaging with carried cost. Original V91/V92 files and every old
 attempt remain unchanged. This new screen requires actual successful V101 source
 archive, program and terminal evidence, then reopens all actual V101/V89 inputs,
 costs, target seals and preserved V91 setup sources before any registration.

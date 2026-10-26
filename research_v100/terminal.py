@@ -24,7 +24,7 @@ def main(expected):
     require(inputs.json(RUN/'program.json')==p and inputs.json(RUN/'registration.json')==dict(program_sha256=expected),
         'Actual registered program changed during terminal review')
     prior=inputs.json(p['target_terminal']['path'])
-    old_ids={str(i) for i in range(15904,15918)}|{str(i) for i in range(15921,15926)}|{str(i) for i in range(16004,16017)}|{r['job_id'] for r in prior['jobs'].values()}
+    old_ids={str(i) for i in range(15904,15918)}|{str(i) for i in range(15921,15926)}|{str(i) for i in range(16004,16017)}|{r['job_id'] for r in prior['jobs'].values()}|{'16301'}
     jobs={}
     for mode,sequence in [('checks',['checks']),('chain',list(OPERATIONS[1:]))]:
         chain=inputs.json(RUN/(mode+'-released-chain.json'));held=inputs.json(RUN/(mode+'-held-chain.json'))

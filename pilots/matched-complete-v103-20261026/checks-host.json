@@ -1,0 +1,33 @@
+{
+  "accounting": {
+    "contained_kind": "generated_software",
+    "contained_work_cpu_ns": 52626715000,
+    "envelope_cpu_ns": 67098367555,
+    "final_host_write_requires_scheduler_accounting": true,
+    "nonnumerical_cap_seconds": 298,
+    "nonnumerical_cpu_ns": 14471652555,
+    "overlapping_clocks_not_summed": true
+  },
+  "arguments": [],
+  "clock_scope": "Host main through admission, container startup, entry, worker sealing and shutdown; host interpreter/import and shell startup plus final host receipt write additionally in scheduler accounting",
+  "elapsed_ns": 70470136266,
+  "error": null,
+  "finished_utc": "2026-10-26T08:02:58.490535+00:00",
+  "host_process_cpu_ns": 1068930555,
+  "job_id": "16309",
+  "operation": "checks",
+  "outcome": {
+    "exit_code": 0,
+    "failure": null,
+    "log": {
+      "bytes": 37387,
+      "complete": true,
+      "observed_bytes": 37387,
+      "sha256": "66e3b59f5aba71aad8efbe0b6a7ab23c86e3c4f14937b627e87811cadf6eba10"
+    },
+    "subtree_cpu_ns": 65985135000
+  },
+  "preflight_waited_child_cpu_ns": 44302000,
+  "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733",
+  "status": "complete"
+}

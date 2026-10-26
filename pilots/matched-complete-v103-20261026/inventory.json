@@ -1,0 +1,50 @@
+{
+  "chain-submission.json": {
+    "bytes": 41255,
+    "sha256": "90671a6abe1661e499a5973b7e0138fabcc81d39ec33a81782411a91ff67a3ab"
+  },
+  "checks-completed.json": {
+    "bytes": 6252,
+    "sha256": "fa927d9ff64c877a38ad1bd1a844cf778a5f810e1cb8705ad19c82d232653639"
+  },
+  "checks-entry.json": {
+    "bytes": 4166,
+    "sha256": "c5f4d223468b2e866e60e913cb754ab0fc206a2a92317f846a58473197f70ef4"
+  },
+  "checks-host.json": {
+    "bytes": 1174,
+    "sha256": "82f054a68d5d874413c51aafa06ceff14e9fc92053897681e2fb4a94ea4c46b7"
+  },
+  "checks-submission.json": {
+    "bytes": 2015,
+    "sha256": "f20253391ccc349adcbeb1689577050dadc9a9e52bb318cbf9d3bb1c995d0350"
+  },
+  "package-preparation.json": {
+    "bytes": 14575,
+    "sha256": "79aeb1b8005cad5a99525ea28151127d21f204eb711c6467a580487ba5db217b"
+  },
+  "preparation.json": {
+    "bytes": 287,
+    "sha256": "33e1ef4faed5e571ba387b0384e81eb52473efc574aceb3f4c149f9ee319c9c0"
+  },
+  "program-identity.json": {
+    "bytes": 119,
+    "sha256": "54624b758dfeca0253de5c94a6a7c79cae58372a561dd1cd092db7752da41dca"
+  },
+  "program.json": {
+    "bytes": 161857,
+    "sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+  },
+  "software-results.json": {
+    "bytes": 2849,
+    "sha256": "5461bceb0993edac13016398f6915814605696332ea510c39c759d6714773fd0"
+  },
+  "source-inventory.json": {
+    "bytes": 141424,
+    "sha256": "fefc4c598aa12659c374940eb8c9eec080b199c3e70b15ec1d8b169ae386db9d"
+  },
+  "staging.json": {
+    "bytes": 8530,
+    "sha256": "3ff7a368ba864a644e26523906dcc6bf5ce7d5d335ae86cce7ce35e66a84b03b"
+  }
+}
