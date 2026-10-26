@@ -1,0 +1,18 @@
+{
+  "adapted_code_execution_qualified": false,
+  "all_source_originals_unchanged": true,
+  "archive": {
+    "bytes": 803078,
+    "sha256": "380feefc22942c6e554b3e3b9008706df5a02f41daf02055874e9f4f0ff016d8"
+  },
+  "archive_roundtrip_verified": true,
+  "empirical_work_executed": false,
+  "excluded_execution_receipts": 4,
+  "full_anonymity_verified": false,
+  "inherited_source_files": 583,
+  "new_copies_adapted": 56,
+  "python_asts_checked": 857,
+  "schema": "optimization-source-supplement-v105",
+  "source_files_added": 347,
+  "total_source_files": 930
+}

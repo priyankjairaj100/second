@@ -1,7 +1,7 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V104.md and handoff/program_v104.json.
-V98 is the current manuscript/bundle checkpoint; V72 and the newly closed V89 science stand.
+Current continuation handoff: docs/ACTIVE_SESSION_V105.md and handoff/program_v105.json.
+V105 is the current manuscript/bundle checkpoint; verified V72/V89 science stands.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
 Historical handoffs keep their original observation cutoffs.
@@ -39,6 +39,18 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V105 current: DistilGPT2 preparation16337 completed0:0; its actual metadata,
+seal, output extents and complete accounting passed08:55UTC. Charged1366seconds
+fits3602 and controller upper16.045441seconds fits301. GPT2 preparation16338
+was running at08:53UTC;16339--16358 remain pending. No request comparison is
+complete. Existing V104 chain only; all limits and prior failures preserved.
+The V105 development bundle adds347 source copies to the583-file base, covering
+all930 source/protocol files of executed V89. All nine V98 components are unchanged.
+Portable byte/coverage verification and four corruption/rejection cases pass.
+Same manuscript compiles; only package-description prose changed. Scientific
+numbers and claims remainV98. Read docs/ACTIVE_SESSION_V105.md. Final layout,
+venue/category and matched results remain open. Earlier entries are historical.
 
 V104 current: actual V101 admission is closed. V100 software16307 failed before
 tests/model work; V103 software16309 passed225tests but dispatch16310 failed before
@@ -241,7 +253,7 @@ all successor/audit jobs remained dependency-pending. No scientific result yet.
    page. Once preview access works, inspect table widths, math and page breaks.
    Source length/compile checks do not close this gate. Avoid redundant polling.
 10. PREPARED CHECKLIST, PENDING DELIVERY CHOICES: read the section-grounded draft
-    reports/RESPONSIBLE_NLP_CHECKLIST_V74.txt and disclosure review
+    reports/RESPONSIBLE_NLP_CHECKLIST_V105.txt and disclosure review
     docs/SUBMISSION_CHECKLIST_REVIEW_V74.txt. Confirm final venue/cycle/category
     and actual delivery rules. Explained No answers preserve unknown terms,
     content screening and full-program compute; they are not automatically
@@ -263,7 +275,7 @@ anonymity. Author-owned form facts remain unset; no attestation or submission is
 made. Publish coherent checkpoints to the existing branch/draft PR. Keep routine
 completed-job polling quiet; no numerical launch is required by the current claim.
 The authorised expanded optimisation/transfer campaign remains incomplete; V89
-is closed; V91/V99/V100 failures are preserved, V101 admission is closed, and V103 is active. The user resumed the existing scheduler; it remains ACTIVE until requested to stop
+is closed; V91/V99/V100 failures are preserved, V101 admission is closed, V103 dispatch failed, and V104 is active. The user resumed the existing scheduler; it remains ACTIVE until requested to stop
 or the agreed bundle and claim-required evidence are complete and verified. A wake
 must not relaunch any consumed or cancelled registration. No final ETA follows
 from resource ceilings or the earlier estimate before this storage failure.

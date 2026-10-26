@@ -1,0 +1,62 @@
+{
+  "active_experiment": "V104",
+  "budget_debit": {
+    "charged_cpu_seconds": 1366,
+    "observed_cpu_ns": 1365217559000,
+    "phase": "feasibility",
+    "reserved_cpu_seconds": 3602,
+    "state": "settled"
+  },
+  "complete_preparation_progress": {
+    "context_ready": 1,
+    "payload_stage": 96,
+    "source_replayed": 4,
+    "stage_certified": 24
+  },
+  "completed_jobs": [
+    "16336",
+    "16337"
+  ],
+  "cost": {
+    "complete_controller_upper_cpu_ns": 16045441000,
+    "contained_kind": "matched_numerical",
+    "contained_work_cpu_ns": 1365217559000,
+    "job_id": "16337",
+    "overlapping_clocks_not_summed": true,
+    "scheduler_cpu_ns": 1381262000000,
+    "scheduler_quantum_ns": 1000000
+  },
+  "created_utc": "2026-10-26T08:57:44.371902+00:00",
+  "full_binary_audits_pending": true,
+  "new_launch": false,
+  "new_numerical_source_changes": false,
+  "pending_jobs": [
+    "16339",
+    "16340",
+    "16341",
+    "16342",
+    "16343",
+    "16344",
+    "16345",
+    "16346",
+    "16347",
+    "16348",
+    "16349",
+    "16350",
+    "16351",
+    "16352",
+    "16353",
+    "16354",
+    "16355",
+    "16356",
+    "16357",
+    "16358"
+  ],
+  "preparation_review": "verified_metadata_seal_extents_and_complete_accounting",
+  "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+  "progress_snapshot_scope": "Scheduler and saved metadata are usable; progress arrays scanned worker instead of outputs and must not be interpreted as zero progress",
+  "running_job": "16338",
+  "schema": "preparation-and-review-checkpoint-v105",
+  "scientific_comparisons_completed": 0,
+  "snapshot_utc": "2026-10-26T08:53:08.344495+00:00"
+}

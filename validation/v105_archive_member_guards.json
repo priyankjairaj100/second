@@ -1,0 +1,34 @@
+{
+  "checks": 7,
+  "empirical_execution": false,
+  "results": {
+    "absolute": {
+      "actual_accepted": false,
+      "expected_accepted": false
+    },
+    "directory": {
+      "actual_accepted": false,
+      "expected_accepted": false
+    },
+    "legacy_no_type": {
+      "actual_accepted": true,
+      "expected_accepted": true
+    },
+    "normalized_duplicate": {
+      "actual_accepted": false,
+      "expected_accepted": false
+    },
+    "regular": {
+      "actual_accepted": true,
+      "expected_accepted": true
+    },
+    "symlink": {
+      "actual_accepted": false,
+      "expected_accepted": false
+    },
+    "traversal": {
+      "actual_accepted": false,
+      "expected_accepted": false
+    }
+  }
+}

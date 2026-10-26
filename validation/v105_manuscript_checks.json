@@ -1,0 +1,38 @@
+{
+  "bibliography_keys": [
+    "gptq",
+    "ginart",
+    "medu",
+    "qss",
+    "exactfun",
+    "qebverif",
+    "execcert",
+    "distilgpt2",
+    "c4",
+    "wikitext"
+  ],
+  "captured_utc": "2026-10-26T08:53:27.622761+00:00",
+  "labels": 16,
+  "manuscript": {
+    "bytes": 57862,
+    "sha256": "9db55cf070272383eb69c2bb8cdc3c0d8d2054a951e71b931f4c59ee5b7dfd42"
+  },
+  "native_compile": {
+    "kind": "success",
+    "source": {
+      "bytes": 57862,
+      "sha256": "9db55cf070272383eb69c2bb8cdc3c0d8d2054a951e71b931f4c59ee5b7dfd42"
+    },
+    "tool": "compile_latex_document"
+  },
+  "native_compile_success": true,
+  "only_change": "Source-supplement reproducibility paragraph; exact replacement against V98",
+  "preview_attempts_this_turn": 1,
+  "preview_error": "Sky Computer Use service startup request failed",
+  "rendered_layout_verified": false,
+  "schema": "manuscript-checks-v105",
+  "scientific_text_and_numbers_unchanged": true,
+  "unresolved_citations": [],
+  "unresolved_references": [],
+  "validation_scope": "Document body, excluding embedded style macro definitions and comments"
+}
