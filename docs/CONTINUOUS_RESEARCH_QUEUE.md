@@ -1,7 +1,7 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V97.md and handoff/program_v97.json.
-V74 remains the manuscript/bundle checkpoint; V72 science and receipts stand.
+Current continuation handoff: docs/ACTIVE_SESSION_V98.md and handoff/program_v98.json.
+V98 is the current manuscript/bundle checkpoint; V72 and the newly closed V89 science stand.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
 Historical handoffs keep their original observation cutoffs.
@@ -39,6 +39,22 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V98 current checkpoint: access restored; all13 V89 allocations and both audits
+completed. Actual terminal closure passed26October06:49UTC. All eight state/model
+comparisons equal fresh reconstruction. Compressed optimization cuts time11.53%/
+36.17%, but optimized compressed vs modern is0.90% faster at12 records and12.73%
+slower at6. Preserve both directions and single-observation scope. Read
+docs/ACTIVE_SESSION_V98.md and docs/RESEARCH_DECISION_V98.txt.
+
+The separate V91 source package was staged, then prepare failed on an omitted
+research_v84.config dependency before any registration/job. All992 staged files
+remain unchanged; no retry or patch in place. NEXT READY WORK: new corrected
+namespace/package with complete dependencies and extracted-only import checks,
+then the same actual software/target gates. V92 needs a separately bound successor
+after actual admission. No replication yet. Current V98 manuscript compiles and
+development bundle verifies; rendered layout/final delivery remain unresolved.
+The V97--V94 descriptions below are historical, superseded observations.
 
 V97 connection checkpoint: the25October08:22UTC SSH attempt timed out before
 login, following the24October16:25UTC timeout. Current queue/outcomes/audits are
@@ -123,7 +139,7 @@ are integrated, qualified and source-bound. Read research_v90/PROTOCOL.txt.
 At07:38UTC16005remained RUNNING with13source replays and3/24stage certificates;
 all successor/audit jobs remained dependency-pending. No scientific result yet.
 
-0. ACTIVE V89 COMPARISON: inspect existing16004--16016 and their receipts before
+0. HISTORICAL V89 EXECUTION INSTRUCTIONS (closed by V98): inspect existing16004--16016 and their receipts before
    any action. Never repeat prepare.py or either submit.py mode. The actual
    program and release chain are saved in the execution checkpoint. Ten numerical
    jobs cover preparation, all eight four-cell/end-point requests and the fresh
@@ -221,8 +237,8 @@ Targeted source/linkability review documents limits, not a guarantee of rights o
 anonymity. Author-owned form facts remain unset; no attestation or submission is
 made. Publish coherent checkpoints to the existing branch/draft PR. Keep routine
 completed-job polling quiet; no numerical launch is required by the current claim.
-The authorised expanded optimisation/transfer campaign is now running and remains
-incomplete. The user resumed the existing scheduler; it remains ACTIVE until requested to stop
+The authorised expanded optimisation/transfer campaign remains incomplete; V89
+is closed and the separately staged V91 setup failure requires a new package. The user resumed the existing scheduler; it remains ACTIVE until requested to stop
 or the agreed bundle and claim-required evidence are complete and verified. A wake
 must not relaunch any consumed or cancelled registration. No final ETA follows
 from resource ceilings or the earlier estimate before this storage failure.
