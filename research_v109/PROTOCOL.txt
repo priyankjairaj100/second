@@ -1,0 +1,41 @@
+V109 separate token-stage diagnostic,26October2026. Prospective, one attempt.
+
+Question: can the existing point-token solver certify block.0011.mlp_up for
+the exact three retained GPT2 records after V104 refused its streamed solver?
+This stage is inferred from the bound ordered46-stage prefix. No original row
+identity or exact tie is claimed. No original streamed attempt is repeated.
+
+Bind the actual failed V104 seal/ledger/Slurm outcomes and both preparation
+seals. Keep all old sources, outputs, failures and cancelled jobs immutable.
+Use only the original hash-bound complete preparation lossless factor archive,
+same checkpoint, same target/grid/normalization, same128-token records and order.
+Reconstruct the actual target before solving. No corpus/model download, selection
+change, quality study, feature replay or complete-model run is performed.
+
+One forced token-point attempt,3072x768,384tokens, original normalization512,
+original exact refinement16 and original64billion work/8GiB arrays/16GiB process
+limits. Existing reference implementation scope retains shared primal kernel;
+no optimized-token adapter or decoder/cache optimization is activated. Shape
+admission reserves9GiB caller residency. Output is one packed4-bit stage plus
+bounded certificate/identity metadata. Failure produces no certified stage claim.
+
+Single CPU,16GiB,600numerical CPU seconds plus2reserved,750worker wall seconds,
+900whole-job wall seconds. Carry6196inside82840original numerical ceiling.
+Qualification180aggregate CPU plus139carried stays inside602; checks controller
+60plus33inside302; numerical controller302plus63inside6040. No cap reset or
+resource increase. Qualification runs all227original Linux checks and18new guards.
+The software allocation is separate and must pass actual scheduler/host/entry
+accounting and source verification before the diagnostic is submitted once.
+
+Source-bound current quota/filesystem/group admission before staging, preparing,
+submitting and host dispatch. Same container/default paths; no redirection.
+Exclusive intent, held job validation and one release. Actual jobs are checked
+before any submission. Complete host/log/worker/ledger/scheduler accounting;
+failure receipts are preserved. Never retry uncertain or failed submissions.
+
+Predeclared outcomes: certified_stage, numerical refusal, resource/engineering
+failure. All outcomes reported. A success only answers this selected-stage
+diagnostic; it is not full-model equality, generality or speed evidence. Any
+prospective full-model route change needs separate qualification/registration,
+all intended cells, fresh complete oracles and audits within remaining limits.
+No subagents, paid compute, new monitor, third-party messages or submission.

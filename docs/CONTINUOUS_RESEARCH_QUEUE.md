@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V108.md and handoff/program_v108.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V110.md and handoff/program_v110.json.
 V106 is the current manuscript/bundle checkpoint; verified V72/V89 science stands.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
@@ -39,6 +39,16 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V110 current: qualification16366 and token-stage diagnostic16367 COMPLETED0:0.
+All246Linux checks and actual terminal accounting pass. The existing alternative
+solver certifies all2,359,296codes of the selected GPT2 stage within unchanged
+limits. This is no full-model transfer or speed result. V109 unregistered setup
+failure and all source bytes are preserved; V104 refusal/19cancellations remain.
+Next prepare a separate prospective fallback policy for all matched cells/oracles,
+reuse completed V104 preparations, and reserve all16requests/two fresh oracles/
+both audits inside remaining original caps. Read ACTIVE_SESSION_V110.md; no
+new full-screen registration exists. Update same manuscript with both outcomes.
 
 V108 current: V104 is terminal with a certification refusal.16339 FAILED1:0;
 16340--16358 cancelled unstarted. Both preparations/software completed. Actual
@@ -311,7 +321,7 @@ anonymity. Author-owned form facts remain unset; no attestation or submission is
 made. Publish coherent checkpoints to the existing branch/draft PR. Keep routine
 completed-job polling quiet; no numerical launch is required by the current claim.
 The authorised expanded optimisation/transfer campaign remains incomplete; V89
-is closed; V91/V99/V100 failures are preserved, V101 admission is closed, V103 dispatch failed, and V104 ended in certification refusal. A separate targeted diagnostic is being prepared. The user resumed the existing scheduler; it remains ACTIVE until requested to stop
+is closed; V91/V99/V100 failures are preserved, V101 admission is closed, V103 dispatch failed, and V104 ended in certification refusal. V110 certifies the selected stage by the alternative token route; a separately qualified full-screen design is next. The user resumed the existing scheduler; it remains ACTIVE until requested to stop
 or the agreed bundle and claim-required evidence are complete and verified. A wake
 must not relaunch any consumed or cancelled registration. No final ETA follows
 from resource ceilings or the earlier estimate before this storage failure.
