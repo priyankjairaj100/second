@@ -1,7 +1,7 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V105.md and handoff/program_v105.json.
-V105 is the current manuscript/bundle checkpoint; verified V72/V89 science stands.
+Current continuation handoff: docs/ACTIVE_SESSION_V106.md and handoff/program_v106.json.
+V106 is the current manuscript/bundle checkpoint; verified V72/V89 science stands.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
 Historical handoffs keep their original observation cutoffs.
@@ -39,6 +39,16 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V106 current: same V104 chain, GPT2 preparation16338 RUNNING at09:06UTC with
+3source replays and no completion;16339--16358 dependency-pending.16337 remains
+completed and verified as recordedV105. Correct outputs/ progress census saved.
+The manuscript replaces one inaccurate private-map phrase; native compile passes.
+V106 bundle verifies and preserves all ten evidence/source components, checklist
+and verifier unchanged fromV105b. Scientific results and claims are unchanged.
+Read docs/ACTIVE_SESSION_V106.md. Remaining work depends on actual matched outputs,
+both audits/terminal, rendered layout and venue/category. Earlier entries below
+are historical; do not repeat registered jobs or user questions.
 
 V105 current: DistilGPT2 preparation16337 completed0:0; its actual metadata,
 seal, output extents and complete accounting passed08:55UTC. Charged1366seconds
