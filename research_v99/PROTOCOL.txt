@@ -1,0 +1,40 @@
+V99 source-packaging recovery,26October2026
+
+V91's exact source archive staged successfully but its first prepare import
+failed on the omitted research_v84.config. It wrote no program, registration,
+ledger, checkpoint or job. All992 staged files and the archive remain unchanged.
+This separate namespace retains that failure and all older failed attempts.
+The new literal root is matched-transfer-admission-v99-20261026-a; no command
+may reuse the V91 run. This is an engineering repair, not a repeated experiment.
+
+The31 Python/shell source files derive from V91 by namespace/schema/job-label/date
+substitution. New preparation/launch/terminal review verifies all old V91 staged
+source bytes, its archive and absence of preparation/registration outputs. The
+new package contains every unchanged V91 source member, the existing V84 config
+dependency, copied V99 code and original failure/review receipts. The actual V89
+terminal report remains required and is reopened on the cluster. Original V89,
+V90,V91 and V92 sources, inputs, exclusions and resource limits are unchanged.
+
+Packaging now traverses reachable project imports before writing an archive.
+It also extracts the actual candidate to an isolated temporary directory and
+imports14 host modules with Python -I -B and no research checkout on sys.path.
+This catches dependencies that local checkout imports had masked. Numeric
+target imports still require the separately registered pinned Linux gate.
+The same172 exact Linux software tests, with new namespace bindings, must pass
+without skips/errors/failures. Local104 tests passed; this is not that Linux gate.
+
+All experimental behavior and resources remain those of V91: five operations
+checks/fetch/distilgpt2/gpt2/close; one CPU;16GiB;600CPU/900wall per target;
+1204 target reservation total;302 per complete host/controller;1510 aggregate;
+602 software aggregate; original420-second immutable public GPT2 fetch with
+no retries; exact approved1,327,104-entry grid and matched4x128 workload. The
+same source-bound storage plan includes the actual larger package, retained old
+files, outputs, logs and existing /tmp. Empty queue, actual upstream outcomes and
+fresh capacity must pass before registration. No general speed/transfer claim
+follows from software or target admission. The subsequent full screen needs a
+new separately bound successor to V92 using the actual V99 terminal evidence.
+
+All writes and submissions stay exclusive and one-use. An uncertain/failed
+allocation is preserved, never retried. A successful target admission does not
+execute calibration or requests. The actual five-job terminal closure is required
+before any complete matched screen. No paid compute, subagents or submission.

@@ -1,0 +1,42 @@
+{
+  "chain-submit-result.json": {
+    "bytes": 7362,
+    "sha256": "11aaf47bdd40b61a0996b1483d2db0d69287e177bac6a63b217470e593b518c2"
+  },
+  "checks-completed.json": {
+    "bytes": 4538,
+    "sha256": "6f1c81ccfaca02e01acbe6ac6a93b0751f0f5e43c25234f7c0ba6203248d0e9d"
+  },
+  "checks-observation-0739.json": {
+    "bytes": 246,
+    "sha256": "623ca5ef5ee1fc8f88e90e48bd26106bb3f8f0bd8bd0a6e1c36921ff9de28268"
+  },
+  "checks-submit-result.json": {
+    "bytes": 2018,
+    "sha256": "134bebbdaaa9d0f2ab6eb72a724ec50973300d1cc2a01e41ae3a89e26e5145e3"
+  },
+  "package-preparation.json": {
+    "bytes": 7969,
+    "sha256": "96ca1a8258e99aea9b6013b5c06078ee4abce84123971159c6f11452c9beea4e"
+  },
+  "preparation-result.json": {
+    "bytes": 287,
+    "sha256": "fa94fb4285aefadd73485b1b485cc7a4c4bd03308689c91212caf887cfc058ed"
+  },
+  "program-identity.json": {
+    "bytes": 119,
+    "sha256": "95013ff7a48a16bb81db6b623c94a5d51a65589ee414169a7fb42805c383f7b8"
+  },
+  "program.json": {
+    "bytes": 138421,
+    "sha256": "aa423ad468a7efabc9ded1d16d0c83672fb2d6e0c6546941dde2c4a3f224d231"
+  },
+  "source-inventory.json": {
+    "bytes": 131439,
+    "sha256": "0c1aa0be03147e71e0780119faace08bc4d5c04c0ea02c8c8ddad956627f772f"
+  },
+  "staging.json": {
+    "bytes": 8105,
+    "sha256": "09d41c19da27cdf8fdb3f394a3eae5ea6d6d96b5865b9825667553acb41220b3"
+  }
+}

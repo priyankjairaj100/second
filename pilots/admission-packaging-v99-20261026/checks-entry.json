@@ -1,0 +1,36 @@
+{
+  "arguments": [],
+  "container_storage_mapping": {
+    "capacity_reserved": false,
+    "observations": {
+      "project": {
+        "device": 2065,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a",
+        "write_group": 1008
+      },
+      "temporary": {
+        "device": 2052,
+        "path": "/tmp",
+        "write_group": 1008
+      }
+    },
+    "paths_redirected": false,
+    "status": "matched_host_devices_and_new_file_groups"
+  },
+  "elapsed_ns": 55767543790,
+  "empirical_execution": false,
+  "error": {
+    "message": "Separate generated software child failed",
+    "type": "ValueError"
+  },
+  "job_id": "16301",
+  "maximum_rss_kib": 72240,
+  "operation": "checks",
+  "process_cpu_ns": 8378454610,
+  "program_sha256": "df3047fd72654336e8d0791d0acbb0486d7da4c87a8f62798b018cc1f85bb446",
+  "result": null,
+  "sealed_worker_cpu_ns": 0,
+  "software_tree_cpu_ns": 46480290000,
+  "status": "failed",
+  "waited_child_cpu_ns": 46483216000
+}

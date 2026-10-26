@@ -1,0 +1,67 @@
+V100 matched complete screen,26October2026. Prepared successor to V92.
+
+Purpose: test exact complete compressed repair and storage/latency behavior on
+matched DistilGPT2/GPT2 depths. The closed V89 screen found useful implementation
+improvements but opposing latency directions against optimized modern storage.
+Keep both endpoints and all cells. This is not a search limited to winning rows.
+One observation per cell remains descriptive; no stable or universal speed claim.
+
+New namespace matched-complete-recovery-v100-20261026-a, target admission
+matched-transfer-admission-v101-20261026-a. The V91 package failed before any
+registration because research_v84.config was omitted. V101 separately preserves
+that source/failure and corrects packaging. Original V91/V92 files and every old
+attempt remain unchanged. This new screen requires actual successful V101 source
+archive, program and terminal evidence, then reopens all actual V101/V89 inputs,
+costs, target seals and preserved V91 setup sources before any registration.
+
+Numerics and resource limits are unchanged from the prospective V84/V92 design:
+four of the same13 exposed C4 development records,4x128tokens, normalization512,
+retained counts3/2;24/48 full stages and42,467,328/84,934,656 codes. Both checkpoints
+use4-bit row-dyadic24,ridge1/100 and the approved1,327,104-entry grid allowance.
+This new target does not inherit V72 quality evidence. Two related GPT-family
+models cannot establish cross-architecture generality.
+
+The predetermined V84 cell order, reversed second endpoint and alternating model
+order remain. There are20 numerical workers and16 request/oracle comparisons:
+two preparations,16 requests,two fresh retained-teacher oracles. Software plus
+primary and separate supplemental audit produce23 Slurm allocations. All22
+successors are submitted held, checked before release and run once. No retries,
+arrays, discarded losses, favorable-only continuation or unregistered workers.
+
+Every worker keeps one CPU/thread,16GiB address space,8GiB array,9GiB resident,
+2GiB file and1GiB state bounds,64-billion stage/1-trillion request work limits.
+DistilGPT2 CPU seconds: preparation3600,oracle4800,first requests3000,second1800;
+GPT2 doubles these. Including two-second reservations, total82840 stays below
+120624. Complete controller allowance302 per worker,6040 total stays below7224.
+Numerical wall is CPU+1800 and scheduler adds600. Software keeps300 child CPU,
+602 aggregate; primary7200CPU/9000wall and supplemental3600CPU/5400wall. Old
+failed/unknown costs remain; none is refunded or silently charged elsewhere.
+
+Fresh host envelopes include source checking, storage admission, container
+startup, numerical work, sealing and shutdown. Final writes are covered by
+scheduler accounting. Nested clocks are not summed. State/model/trust equality,
+retained membership/provenance, zero or actual source traversal, fallbacks, peak
+memory, live and checkpoint-inclusive storage and every receipt/cost are audited.
+Both terminal audits and actual read-only host closure are required for results.
+
+Packaging checks every source hash and reachable project import, then imports14
+host modules from an isolated extraction without the research checkout. New
+numeric imports and tiny fixtures are qualified only by the exact221-test pinned
+Linux gate. Local fixtures are not transfer evidence. No source archive may be
+created with invented prerequisite hashes. Source-only PAX archive/extraction
+remain64MiB and fewer than4096 entries. Actual source-bound project and existing
+/tmp capacity, user/group quotas, device/group mapping and empty queue must pass
+before launch; live capacity is observed, not reserved. Prior outputs remain.
+
+After all23 jobs, reduce every cell/endpoint using complete host time and the V93
+disjoint partition. Preserve all losses. Apply V82/V98 scientific decisions before
+any separately registered timing replication. A64-request proposal is not a job
+authorization or enlarged cap. No new quality frame is selected here. The same
+manuscript is updated only from actual audited outcomes. No paid compute,
+subagents, credentials, new monitor or conference submission.
+
+Unregistered draft revision26October: bind actual V101 admission after V99
+software failure. Preserve V99 and all known costs through V101 carry verification.
+The original V100 local preparation receipt is historical; no V100 archive or
+registration existed at revision. Isolated extracted checks now include142 pure
+checks and all packaged hash manifests before archive creation. Linux221 remains.

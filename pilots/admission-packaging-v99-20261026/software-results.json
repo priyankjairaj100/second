@@ -1,0 +1,48 @@
+{
+  "empirical_execution": false,
+  "schema": "matched-admission-software-v99",
+  "suites": {
+    "bounded_components": {
+      "errors": 4,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 48
+    },
+    "four_cell_integration": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 5
+    },
+    "full_geometry_archives": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 5
+    },
+    "legacy": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 44
+    },
+    "profiles": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 4
+    },
+    "service_guards": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 4
+    },
+    "unchanged_input_and_reports": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 11
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "active": {
+    "archive": {
+      "bytes": 12011520,
+      "sha256": "7d1373f3c45c40f11afcc9ccbb11c1efa7357650e2a20c9414f8911368d7654d"
+    },
+    "carried_controller_seconds": 10,
+    "carried_software_seconds": 56,
+    "checks_job": "16302",
+    "checks_tests": 172,
+    "failed_predecessor_job": "16301",
+    "jobs": [
+      {
+        "arguments": [],
+        "dependency": "16302",
+        "job_id": "16303",
+        "name": "fetch",
+        "operation": "fetch",
+        "program_sha256": "aa423ad468a7efabc9ded1d16d0c83672fb2d6e0c6546941dde2c4a3f224d231"
+      },
+      {
+        "arguments": [],
+        "dependency": "16303",
+        "job_id": "16304",
+        "name": "distilgpt2",
+        "operation": "distilgpt2",
+        "program_sha256": "aa423ad468a7efabc9ded1d16d0c83672fb2d6e0c6546941dde2c4a3f224d231"
+      },
+      {
+        "arguments": [],
+        "dependency": "16304",
+        "job_id": "16305",
+        "name": "gpt2",
+        "operation": "gpt2",
+        "program_sha256": "aa423ad468a7efabc9ded1d16d0c83672fb2d6e0c6546941dde2c4a3f224d231"
+      },
+      {
+        "arguments": [],
+        "dependency": "16305",
+        "job_id": "16306",
+        "name": "close",
+        "operation": "close",
+        "program_sha256": "aa423ad468a7efabc9ded1d16d0c83672fb2d6e0c6546941dde2c4a3f224d231"
+      }
+    ],
+    "new_controller_cap_seconds": 1500,
+    "new_software_cap_seconds": 546,
+    "program_sha256": "aa423ad468a7efabc9ded1d16d0c83672fb2d6e0c6546941dde2c4a3f224d231",
+    "registered": true,
+    "retry_allowed": false,
+    "source_count": 1065,
+    "status": "software_passed_admission_chain_released",
+    "version": 101
+  },
+  "branch": "codex/second-cluster-v42",
+  "completed_v89": {
+    "all_jobs_completed": true,
+    "comparisons": 8,
+    "jobs": [
+      16004,
+      16005,
+      16006,
+      16007,
+      16008,
+      16009,
+      16010,
+      16011,
+      16012,
+      16013,
+      16014,
+      16015,
+      16016
+    ],
+    "old_unknown_cpu_seconds": 12602,
+    "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9",
+    "science": "correct outputs and bounded tradeoff, mixed single-observation latency",
+    "terminal": {
+      "bytes": 368343,
+      "sha256": "367104b1247cbc2b85fdc74ef45e5a30474a69df60483655b5fc4cf4f533e1a2"
+    }
+  },
+  "connectivity": {
+    "status": "restored",
+    "user_action_pending": false
+  },
+  "decision": "docs/RESEARCH_DECISION_V98.txt",
+  "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "evidence_directory": "pilots/target-admission-v101-20261026",
+  "manuscript": {
+    "bytes": 57699,
+    "native_compile_success": true,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex",
+    "rendered_layout_verified": false,
+    "sha256": "9d829b01c03f9431819fa0f9800e182d2cce46878686fb8892017fbfc3621ddf",
+    "submission_ready": false
+  },
+  "next": [
+    "Inspect existing V101 jobs; never retry",
+    "Actual frozen V101 terminal after all five complete",
+    "Separately package and qualify V100 with actual admission",
+    "Complete matched screen and both audits; revise claims and manuscript",
+    "Verify rendered layout and final delivery bundle"
+  ],
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "prepared_v100": {
+    "actual_admission_gate_missing": true,
+    "isolated_pure_tests": 142,
+    "linux_tests_required": 221,
+    "source_archive_created": false,
+    "status": "unregistered_revised_draft"
+  },
+  "prepared_v92_gate_not_satisfied": true,
+  "scheduler": "ACTIVE",
+  "schema": "second-handoff-v101",
+  "updated_utc": "2026-10-26T07:41:58.348222+00:00"
+}
