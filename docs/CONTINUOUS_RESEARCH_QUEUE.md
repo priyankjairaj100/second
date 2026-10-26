@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V106.md and handoff/program_v106.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V107.md and handoff/program_v107.json.
 V106 is the current manuscript/bundle checkpoint; verified V72/V89 science stands.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
@@ -39,6 +39,18 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V107 current: both preparations16337/16338 COMPLETED0:0; first GPT2 comparison
+16339 RUNNING at09:50:47UTC,16340--16358 dependency-pending. The09:55:01UTC
+actual GPT2 preparation review verifies metadata, worker seal, storage/mapping,
+output extents and full accounting:2951charged numerical seconds within7202,
+23.442554controller seconds within302. All48stages/192payload stages exist.
+No completed request or binary comparison yet. The1192source commitments and
+1178local source counterparts are unchanged. Manuscript/bundle remainV106;
+no cosmetic edit, new compile, preview retry or package. Read the V107 handoff.
+Continue only the existing chain; all16requests, two fresh oracles, both audits
+and actual terminal closure remain. Collector stays gated on all23successfuljobs.
+Earlier entries below are historical snapshots, not current scheduler state.
 
 V106 current: same V104 chain, GPT2 preparation16338 RUNNING at09:06UTC with
 3source replays and no completion;16339--16358 dependency-pending.16337 remains

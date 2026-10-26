@@ -1,0 +1,653 @@
+{
+  "active": {
+    "archive": {
+      "bytes": 13332480,
+      "sha256": "bc77582ce38b051e0839a773e3f1780ae856949a9c77098f555686ad4feafb09"
+    },
+    "carried_checks_controller_seconds": 19,
+    "carried_numerical_controller_seconds": 1,
+    "carried_software_seconds": 72,
+    "checks_controller_cap_seconds": 283,
+    "checks_cost": {
+      "complete_controller_upper_cpu_ns": 13593630000,
+      "contained_kind": "generated_software",
+      "contained_work_cpu_ns": 53173370000,
+      "job_id": "16336",
+      "overlapping_clocks_not_summed": true,
+      "scheduler_cpu_ns": 66766000000,
+      "scheduler_quantum_ns": 1000000
+    },
+    "checks_job": "16336",
+    "checks_status": "COMPLETED0:0",
+    "checks_tests_passed": 227,
+    "checks_tests_required": 227,
+    "completed_model_comparisons": 0,
+    "completed_numerical_workers": 2,
+    "first_worker_budget_debit": {
+      "charged_cpu_seconds": 1366,
+      "observed_cpu_ns": 1365217559000,
+      "phase": "feasibility",
+      "reserved_cpu_seconds": 3602,
+      "state": "settled"
+    },
+    "first_worker_cost": {
+      "complete_controller_upper_cpu_ns": 16045441000,
+      "contained_kind": "matched_numerical",
+      "contained_work_cpu_ns": 1365217559000,
+      "job_id": "16337",
+      "overlapping_clocks_not_summed": true,
+      "scheduler_cpu_ns": 1381262000000,
+      "scheduler_quantum_ns": 1000000
+    },
+    "first_worker_progress": {
+      "context_ready": 1,
+      "payload_stage": 96,
+      "source_replayed": 4,
+      "stage_certified": 24
+    },
+    "first_worker_review": "pilots/preparation-and-review-v105-20261026/v104-distilgpt2-preparation-review-20261026T085504Z.json",
+    "first_worker_status": "COMPLETED0:0",
+    "inventory": {
+      "bytes": 146731,
+      "sha256": "b7e995e705a1ca284e8ac0e0adc37a86bfec69d9b9062f0a3c89872c019dd9d3"
+    },
+    "jobs": [
+      {
+        "arguments": [],
+        "dependency": "16336",
+        "job_id": "16337",
+        "name": "distilgpt2--prepare",
+        "operation": "distilgpt2/prepare",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16337",
+        "job_id": "16338",
+        "name": "gpt2--prepare",
+        "operation": "gpt2/prepare",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16338",
+        "job_id": "16339",
+        "name": "gpt2--reference_compressed-1",
+        "operation": "gpt2/reference_compressed-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16339",
+        "job_id": "16340",
+        "name": "distilgpt2--reference_compressed-1",
+        "operation": "distilgpt2/reference_compressed-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16340",
+        "job_id": "16341",
+        "name": "distilgpt2--optimized_modern-1",
+        "operation": "distilgpt2/optimized_modern-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16341",
+        "job_id": "16342",
+        "name": "gpt2--optimized_modern-1",
+        "operation": "gpt2/optimized_modern-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16342",
+        "job_id": "16343",
+        "name": "gpt2--reference_modern-1",
+        "operation": "gpt2/reference_modern-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16343",
+        "job_id": "16344",
+        "name": "distilgpt2--reference_modern-1",
+        "operation": "distilgpt2/reference_modern-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16344",
+        "job_id": "16345",
+        "name": "distilgpt2--optimized_compressed-1",
+        "operation": "distilgpt2/optimized_compressed-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16345",
+        "job_id": "16346",
+        "name": "gpt2--optimized_compressed-1",
+        "operation": "gpt2/optimized_compressed-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16346",
+        "job_id": "16347",
+        "name": "gpt2--optimized_compressed-2",
+        "operation": "gpt2/optimized_compressed-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16347",
+        "job_id": "16348",
+        "name": "distilgpt2--optimized_compressed-2",
+        "operation": "distilgpt2/optimized_compressed-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16348",
+        "job_id": "16349",
+        "name": "distilgpt2--reference_modern-2",
+        "operation": "distilgpt2/reference_modern-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16349",
+        "job_id": "16350",
+        "name": "gpt2--reference_modern-2",
+        "operation": "gpt2/reference_modern-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16350",
+        "job_id": "16351",
+        "name": "gpt2--optimized_modern-2",
+        "operation": "gpt2/optimized_modern-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16351",
+        "job_id": "16352",
+        "name": "distilgpt2--optimized_modern-2",
+        "operation": "distilgpt2/optimized_modern-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16352",
+        "job_id": "16353",
+        "name": "distilgpt2--reference_compressed-2",
+        "operation": "distilgpt2/reference_compressed-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16353",
+        "job_id": "16354",
+        "name": "gpt2--reference_compressed-2",
+        "operation": "gpt2/reference_compressed-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16354",
+        "job_id": "16355",
+        "name": "gpt2--oracle",
+        "operation": "gpt2/oracle",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16355",
+        "job_id": "16356",
+        "name": "distilgpt2--oracle",
+        "operation": "distilgpt2/oracle",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16356",
+        "job_id": "16357",
+        "name": "primary",
+        "operation": "primary",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16357",
+        "job_id": "16358",
+        "name": "supplemental",
+        "operation": "supplemental",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      }
+    ],
+    "numerical_chain_launched": true,
+    "numerical_controller_cap_seconds": 6039,
+    "numerical_cpu_cap_seconds": 82840,
+    "numerical_work_started": true,
+    "observation_utc": "2026-10-26T09:50:47.032237+00:00",
+    "pending_jobs": [
+      "16340",
+      "16341",
+      "16342",
+      "16343",
+      "16344",
+      "16345",
+      "16346",
+      "16347",
+      "16348",
+      "16349",
+      "16350",
+      "16351",
+      "16352",
+      "16353",
+      "16354",
+      "16355",
+      "16356",
+      "16357",
+      "16358"
+    ],
+    "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+    "registered": true,
+    "retry_allowed": false,
+    "running_job": "16339",
+    "running_operation": "gpt2/reference_compressed-1",
+    "running_worker_completion_exists": false,
+    "running_worker_progress": {
+      "context_ready": 1,
+      "stage_certified": 24
+    },
+    "second_worker_budget_debit": {
+      "charged_cpu_seconds": 2951,
+      "observed_cpu_ns": 2950562446000,
+      "phase": "feasibility",
+      "reserved_cpu_seconds": 7202,
+      "state": "settled"
+    },
+    "second_worker_cost": {
+      "complete_controller_upper_cpu_ns": 23442554000,
+      "contained_kind": "matched_numerical",
+      "contained_work_cpu_ns": 2950562446000,
+      "job_id": "16338",
+      "overlapping_clocks_not_summed": true,
+      "scheduler_cpu_ns": 2974004000000,
+      "scheduler_quantum_ns": 1000000
+    },
+    "second_worker_progress": {
+      "context_ready": 1,
+      "payload_stage": 192,
+      "source_replayed": 4,
+      "stage_certified": 48
+    },
+    "second_worker_review": "pilots/gpt2-preparation-v107-20261026/v104-gpt2-preparation-review-20261026T095457Z.json",
+    "second_worker_status": "COMPLETED0:0",
+    "software_aggregate_cap_seconds": 530,
+    "source_count": 1192,
+    "status": "first_gpt2_comparison_request_running",
+    "version": 104
+  },
+  "branch": "codex/second-cluster-v42",
+  "bundle": {
+    "bytes": 9894041,
+    "components": 10,
+    "derivation_maps_public": true,
+    "export_revision": "V106",
+    "full_anonymity_verified": false,
+    "full_reproduction_verified": false,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v106.zip",
+    "repository_public": true,
+    "sha256": "65021751a217b9e90dc91737397b00614d083d00afb7b7be9421f7be5fcd5559",
+    "source_files": 930,
+    "submission_ready": false,
+    "validation": "validation/v106_development_bundle.json"
+  },
+  "completed_v101": {
+    "actual_target_admission": true,
+    "charged_target_cpu_seconds": 109,
+    "empirical_transfer": false,
+    "jobs": [
+      16302,
+      16303,
+      16304,
+      16305,
+      16306
+    ],
+    "terminal_sha256": "3446a9e2b8cbba5196330e936d028e17c897e02183ede6244df3641de03d538d"
+  },
+  "completed_v89": {
+    "all_jobs_completed": true,
+    "comparisons": 8,
+    "jobs": [
+      16004,
+      16005,
+      16006,
+      16007,
+      16008,
+      16009,
+      16010,
+      16011,
+      16012,
+      16013,
+      16014,
+      16015,
+      16016
+    ],
+    "old_unknown_cpu_seconds": 12602,
+    "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9",
+    "science": "correct outputs and bounded tradeoff, mixed single-observation latency",
+    "terminal": {
+      "bytes": 368343,
+      "sha256": "367104b1247cbc2b85fdc74ef45e5a30474a69df60483655b5fc4cf4f533e1a2"
+    }
+  },
+  "connectivity": {
+    "status": "restored",
+    "user_action_pending": false
+  },
+  "decision": "docs/RESEARCH_DECISION_V98.txt",
+  "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "evidence_directory": "pilots/matched-complete-v104-20261026",
+  "failed_v100": {
+    "cause": "sacct called inside container",
+    "job": "16307",
+    "numerical_work": false,
+    "retry_allowed": false,
+    "status": "FAILED1:0"
+  },
+  "failed_v103": {
+    "archive": {
+      "bytes": 12953600,
+      "sha256": "990ad1b231343adf144c9d1bf1c704cadeba726e1e0fcae9e70699cf52bf8fd4"
+    },
+    "cancelled_unstarted_jobs": [
+      "16311",
+      "16312",
+      "16313",
+      "16314",
+      "16315",
+      "16316",
+      "16317",
+      "16318",
+      "16319",
+      "16320",
+      "16321",
+      "16322",
+      "16323",
+      "16324",
+      "16325",
+      "16326",
+      "16327",
+      "16328",
+      "16329",
+      "16330",
+      "16331"
+    ],
+    "carried_v100_software_controller_seconds": 4,
+    "checks_controller_cap_seconds": 298,
+    "checks_job": "16309",
+    "checks_tests_passed": 225,
+    "checks_tests_required": 225,
+    "failed_job": "16310",
+    "jobs": [
+      {
+        "arguments": [],
+        "dependency": "16309",
+        "job_id": "16310",
+        "name": "distilgpt2--prepare",
+        "operation": "distilgpt2/prepare",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16310",
+        "job_id": "16311",
+        "name": "gpt2--prepare",
+        "operation": "gpt2/prepare",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16311",
+        "job_id": "16312",
+        "name": "gpt2--reference_compressed-1",
+        "operation": "gpt2/reference_compressed-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16312",
+        "job_id": "16313",
+        "name": "distilgpt2--reference_compressed-1",
+        "operation": "distilgpt2/reference_compressed-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16313",
+        "job_id": "16314",
+        "name": "distilgpt2--optimized_modern-1",
+        "operation": "distilgpt2/optimized_modern-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16314",
+        "job_id": "16315",
+        "name": "gpt2--optimized_modern-1",
+        "operation": "gpt2/optimized_modern-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16315",
+        "job_id": "16316",
+        "name": "gpt2--reference_modern-1",
+        "operation": "gpt2/reference_modern-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16316",
+        "job_id": "16317",
+        "name": "distilgpt2--reference_modern-1",
+        "operation": "distilgpt2/reference_modern-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16317",
+        "job_id": "16318",
+        "name": "distilgpt2--optimized_compressed-1",
+        "operation": "distilgpt2/optimized_compressed-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16318",
+        "job_id": "16319",
+        "name": "gpt2--optimized_compressed-1",
+        "operation": "gpt2/optimized_compressed-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16319",
+        "job_id": "16320",
+        "name": "gpt2--optimized_compressed-2",
+        "operation": "gpt2/optimized_compressed-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16320",
+        "job_id": "16321",
+        "name": "distilgpt2--optimized_compressed-2",
+        "operation": "distilgpt2/optimized_compressed-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16321",
+        "job_id": "16322",
+        "name": "distilgpt2--reference_modern-2",
+        "operation": "distilgpt2/reference_modern-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16322",
+        "job_id": "16323",
+        "name": "gpt2--reference_modern-2",
+        "operation": "gpt2/reference_modern-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16323",
+        "job_id": "16324",
+        "name": "gpt2--optimized_modern-2",
+        "operation": "gpt2/optimized_modern-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16324",
+        "job_id": "16325",
+        "name": "distilgpt2--optimized_modern-2",
+        "operation": "distilgpt2/optimized_modern-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16325",
+        "job_id": "16326",
+        "name": "distilgpt2--reference_compressed-2",
+        "operation": "distilgpt2/reference_compressed-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16326",
+        "job_id": "16327",
+        "name": "gpt2--reference_compressed-2",
+        "operation": "gpt2/reference_compressed-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16327",
+        "job_id": "16328",
+        "name": "gpt2--oracle",
+        "operation": "gpt2/oracle",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16328",
+        "job_id": "16329",
+        "name": "distilgpt2--oracle",
+        "operation": "distilgpt2/oracle",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16329",
+        "job_id": "16330",
+        "name": "primary",
+        "operation": "primary",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16330",
+        "job_id": "16331",
+        "name": "supplemental",
+        "operation": "supplemental",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      }
+    ],
+    "numerical_chain_launched": true,
+    "numerical_controller_cap_seconds": 6040,
+    "numerical_cpu_cap_seconds": 82840,
+    "numerical_work_started": false,
+    "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733",
+    "registered": true,
+    "retry_allowed": false,
+    "software_aggregate_cap_seconds": 598,
+    "source_count": 1148,
+    "status": "failed_pre_container_dispatch",
+    "version": 103
+  },
+  "manuscript": {
+    "bytes": 57861,
+    "compiled_in_v107": false,
+    "edited_in_v107": false,
+    "native_compile_success": true,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex",
+    "rendered_layout_verified": false,
+    "scientific_content_unchanged_from_v105": true,
+    "scientific_text_and_numbers_unchanged_from_v98": true,
+    "sha256": "387c80e2d297da8571e5729e441b33062fd9456be0b09ec75cbcf984c2dbd571",
+    "submission_ready": false,
+    "validation": "validation/v106_manuscript_checks.json"
+  },
+  "next": [
+    "Inspect existing V104 chain16339--16358; no launch or retry",
+    "Close all20workers,16comparisons,both audits and frozen terminal",
+    "Run prepared read-only collector only after all23jobs complete successfully",
+    "Reduce every cell and preserved cost; apply V82 scientific decision rules",
+    "Finalize same manuscript after actual evidence and rendered-layout/delivery checks"
+  ],
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "packaging": {
+    "all_originals_unchanged": true,
+    "base_source_files": 583,
+    "change": "Manuscript source-map wording only; ten evidence/source components unchanged",
+    "derivation_maps_public": true,
+    "export_revision": "V106",
+    "new_source_files": 347,
+    "outer_disclosure_clarified": true,
+    "repository_public": true,
+    "scope": "Inspection copies; no execution qualification or new empirical result",
+    "source_supplement": {
+      "bytes": 803078,
+      "sha256": "380feefc22942c6e554b3e3b9008706df5a02f41daf02055874e9f4f0ff016d8"
+    },
+    "source_supplement_unchanged": true,
+    "version": 106
+  },
+  "prepared_v92_gate_not_satisfied": false,
+  "reporting": {
+    "collector": "reporting_v102/collect.py",
+    "collector_executed": false,
+    "empirical_reduction_executed": false,
+    "frozen_source_verification_v107": {
+      "all_local_sources_unchanged": true,
+      "archive": {
+        "bytes": 13332480,
+        "sha256": "bc77582ce38b051e0839a773e3f1780ae856949a9c77098f555686ad4feafb09"
+      },
+      "archive_members": 1193,
+      "archive_only_receipts": 14,
+      "local_sources_verified": 1178,
+      "registered_remote_sources_verified_by_review": true,
+      "source_members": 1192
+    },
+    "schema_review_v107": "Frozen terminal, audit and completion field names match prepared collector/reducer; actual completed terminal and all-cell reduction remain unexecuted",
+    "source": "reporting_v102/reduce.py",
+    "target": "V104",
+    "tests": 17
+  },
+  "reporting_checkpoint_evidence_directory": "pilots/gpt2-preparation-v107-20261026",
+  "scheduler": "ACTIVE",
+  "schema": "second-handoff-v107",
+  "updated_utc": "2026-10-26T09:58:08.278592+00:00"
+}

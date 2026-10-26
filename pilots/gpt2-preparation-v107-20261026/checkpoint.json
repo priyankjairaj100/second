@@ -1,0 +1,87 @@
+{
+  "active_experiment": "V104",
+  "budget_debit": {
+    "charged_cpu_seconds": 2951,
+    "observed_cpu_ns": 2950562446000,
+    "phase": "feasibility",
+    "reserved_cpu_seconds": 7202,
+    "state": "settled"
+  },
+  "bundle_revision": "V106",
+  "complete_preparation_progress": {
+    "context_ready": 1,
+    "payload_stage": 192,
+    "source_replayed": 4,
+    "stage_certified": 48
+  },
+  "completed_comparison_requests": 0,
+  "completed_jobs": [
+    "16336",
+    "16337",
+    "16338"
+  ],
+  "completed_numerical_workers": 2,
+  "cost": {
+    "complete_controller_upper_cpu_ns": 23442554000,
+    "contained_kind": "matched_numerical",
+    "contained_work_cpu_ns": 2950562446000,
+    "job_id": "16338",
+    "overlapping_clocks_not_summed": true,
+    "scheduler_cpu_ns": 2974004000000,
+    "scheduler_quantum_ns": 1000000
+  },
+  "created_utc": "2026-10-26T09:58:08.278592+00:00",
+  "frozen_sources": {
+    "all_local_sources_unchanged": true,
+    "archive": {
+      "bytes": 13332480,
+      "sha256": "bc77582ce38b051e0839a773e3f1780ae856949a9c77098f555686ad4feafb09"
+    },
+    "archive_members": 1193,
+    "archive_only_receipts": 14,
+    "local_sources_verified": 1178,
+    "registered_remote_sources_verified_by_review": true,
+    "source_members": 1192
+  },
+  "full_binary_audits_pending": true,
+  "manuscript_revision": "V106",
+  "new_launch": false,
+  "new_manuscript_edit": false,
+  "new_native_compile": false,
+  "new_numerical_source_changes": false,
+  "output_bytes": 1222863273,
+  "output_files": 257,
+  "pending_jobs": [
+    "16340",
+    "16341",
+    "16342",
+    "16343",
+    "16344",
+    "16345",
+    "16346",
+    "16347",
+    "16348",
+    "16349",
+    "16350",
+    "16351",
+    "16352",
+    "16353",
+    "16354",
+    "16355",
+    "16356",
+    "16357",
+    "16358"
+  ],
+  "preparation_review": "verified_metadata_seal_extents_and_complete_accounting",
+  "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+  "review_utc": "2026-10-26T09:55:01.301106+00:00",
+  "running_job": "16339",
+  "running_operation": "gpt2/reference_compressed-1",
+  "running_progress_at_snapshot": {
+    "context_ready": 1,
+    "stage_certified": 24
+  },
+  "schema": "gpt2-preparation-checkpoint-v107",
+  "scientific_correctness_checked": false,
+  "snapshot_utc": "2026-10-26T09:50:47.032237+00:00"
+}
