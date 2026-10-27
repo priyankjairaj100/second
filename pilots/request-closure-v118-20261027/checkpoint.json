@@ -1,0 +1,1074 @@
+{
+  "captured_utc": "2026-10-27T08:17:17.677606+00:00",
+  "complete_requests": 16,
+  "current_observation": {
+    "active_worker_progress": {
+      "16424": {
+        "completion_exists": false,
+        "operation": "gpt2/oracle",
+        "progress_counts": {
+          "context_ready": 1,
+          "source_replayed": 1
+        }
+      }
+    },
+    "captured_utc": "2026-10-27T08:17:17.677606+00:00",
+    "first_request_completion": {
+      "bytes": 351136,
+      "sha256": "96d91a7a976be2373bf8abae6d379bd11b7a3e8ad9c8bfca8bd32b31b7a256a1"
+    },
+    "first_request_progress_counts": {
+      "context_ready": 1,
+      "source_replayed": 3,
+      "stage_certified": 48
+    },
+    "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+    "numerical_status": "",
+    "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+    "queue": "16427|second112-supplemental|PENDING|0:00|(Dependency)\n16426|second112-primary|PENDING|0:00|(Dependency)\n16425|second112-distilgpt2--oracle|PENDING|0:00|(Dependency)\n16424|second112-gpt2--oracle|RUNNING|5:14|csis.mn1\n",
+    "scheduler_raw": "16407|second112-checks|COMPLETED|0:0|80|01:13.989|1|16G|csis.mn1\n16407.batch|batch|COMPLETED|0:0|80|01:13.989|1||csis.mn1\n16408|second112-gpt2--reference_compressed-1|COMPLETED|0:0|2028|33:35.116|1|16G|csis.mn1\n16408.batch|batch|COMPLETED|0:0|2028|33:35.116|1||csis.mn1\n16409|second112-distilgpt2--reference_compressed-1|COMPLETED|0:0|590|09:45.247|1|16G|csis.mn1\n16409.batch|batch|COMPLETED|0:0|590|09:45.247|1||csis.mn1\n16410|second112-distilgpt2--optimized_modern-1|COMPLETED|0:0|287|04:44.106|1|16G|csis.mn1\n16410.batch|batch|COMPLETED|0:0|287|04:44.106|1||csis.mn1\n16411|second112-gpt2--optimized_modern-1|COMPLETED|0:0|581|09:36.338|1|16G|csis.mn1\n16411.batch|batch|COMPLETED|0:0|581|09:36.338|1||csis.mn1\n16412|second112-gpt2--reference_modern-1|COMPLETED|0:0|734|12:08.123|1|16G|csis.mn1\n16412.batch|batch|COMPLETED|0:0|734|12:08.123|1||csis.mn1\n16413|second112-distilgpt2--reference_modern-1|COMPLETED|0:0|369|06:06.833|1|16G|csis.mn1\n16413.batch|batch|COMPLETED|0:0|369|06:06.833|1||csis.mn1\n16414|second112-distilgpt2--optimized_compressed-1|COMPLETED|0:0|412|06:48.460|1|16G|csis.mn1\n16414.batch|batch|COMPLETED|0:0|412|06:48.460|1||csis.mn1\n16415|second112-gpt2--optimized_compressed-1|COMPLETED|0:0|1545|25:34.814|1|16G|csis.mn1\n16415.batch|batch|COMPLETED|0:0|1545|25:34.814|1||csis.mn1\n16416|second112-gpt2--optimized_compressed-2|COMPLETED|0:0|615|10:10.914|1|16G|csis.mn1\n16416.batch|batch|COMPLETED|0:0|615|10:10.914|1||csis.mn1\n16417|second112-distilgpt2--optimized_compressed-2|COMPLETED|0:0|326|05:22.594|1|16G|csis.mn1\n16417.batch|batch|COMPLETED|0:0|326|05:22.594|1||csis.mn1\n16418|second112-distilgpt2--reference_modern-2|COMPLETED|0:0|221|03:37.890|1|16G|csis.mn1\n16418.batch|batch|COMPLETED|0:0|221|03:37.890|1||csis.mn1\n16419|second112-gpt2--reference_modern-2|COMPLETED|0:0|407|06:43.720|1|16G|csis.mn1\n16419.batch|batch|COMPLETED|0:0|407|06:43.720|1||csis.mn1\n16420|second112-gpt2--optimized_modern-2|COMPLETED|0:0|326|05:23.866|1|16G|csis.mn1\n16420.batch|batch|COMPLETED|0:0|326|05:23.866|1||csis.mn1\n16421|second112-distilgpt2--optimized_modern-2|COMPLETED|0:0|180|02:58.123|1|16G|csis.mn1\n16421.batch|batch|COMPLETED|0:0|180|02:58.123|1||csis.mn1\n16422|second112-distilgpt2--reference_compressed-2|COMPLETED|0:0|437|07:13.748|1|16G|csis.mn1\n16422.batch|batch|COMPLETED|0:0|437|07:13.748|1||csis.mn1\n16423|second112-gpt2--reference_compressed-2|COMPLETED|0:0|839|13:52.802|1|16G|csis.mn1\n16423.batch|batch|COMPLETED|0:0|839|13:52.802|1||csis.mn1\n16424|second112-gpt2--oracle|RUNNING|0:0|314|00:00:00|1|16G|csis.mn1\n16424.batch|batch|RUNNING|0:0|314|00:00:00|1||csis.mn1\n16425|second112-distilgpt2--oracle|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16426|second112-primary|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16427|second112-supplemental|PENDING|0:0|0|00:00:00|0|16G|None assigned\n"
+  },
+  "independent_model_equality_verified": false,
+  "manuscript_bundle_unchanged_v117": true,
+  "new_job": false,
+  "new_reviewed_operations": {
+    "distilgpt2/optimized_compressed-2": {
+      "captured_utc": "2026-10-27T07:38:06.596760+00:00",
+      "code_count": 42467328,
+      "complete_host_elapsed_ns": 325130705141,
+      "cost": {
+        "complete_controller_upper_cpu_ns": 13951438000,
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 308643562000,
+        "job_id": "16417",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 322594000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "full_model_transfer_claim": false,
+      "independent_model_equality_verified": false,
+      "inputs": {
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--optimized_compressed-2-16417.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--optimized_compressed-2-bootstrap.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--optimized_compressed-2-entry.json": {
+          "bytes": 838,
+          "sha256": "f07b7d510f03d903c54f2e34b09c4ad39be5bbe01b5f8c49408949013a2e0267"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--optimized_compressed-2-host-start.json": {
+          "bytes": 6400,
+          "sha256": "f6432b836935cc08d994c22c66acce7a488811d60ea873b1960b99521d6879b3"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--optimized_compressed-2-host.json": {
+          "bytes": 1033,
+          "sha256": "ec22584a83eaa75aef79716772a62646906a60c1227f4185bce0023284833433"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/outputs/admission.json": {
+          "bytes": 544939,
+          "sha256": "5f3eb01fab68cffb353f40314f057194caa26f18255177546dac9bb65e1d36ac"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/outputs/completion.json": {
+          "bytes": 180806,
+          "sha256": "c948fda17b70ad39498711c252f000c2a91fe2b1e7f9fd45ef421541ef93d700"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/outputs/execution-provenance.json": {
+          "bytes": 12727,
+          "sha256": "cbb6f2cc7c5002b7346706af87c953faffbdef88385c8b9cefc523ca09656429"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/outputs/model.bin": {
+          "bytes": 21233664,
+          "sha256": "3c0de8c371a68e020ac6bf738fc9f53e4e027289478f220f9b655e2306b2c569"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/outputs/state.bin": {
+          "bytes": 74890522,
+          "sha256": "46ebabe33b0b6fcf5626b98d82786940174ac01032c466a5b08f64f35df3361e"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/outputs/trust.json": {
+          "bytes": 2,
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/worker/attempt-0001/budget-reservation.json": {
+          "bytes": 308,
+          "sha256": "fd3e3fecf2a46c778059ce474006f241cfd0ff36654791487cb88a7a0aa0944f"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/worker/attempt-0001/limits-applied.json": {
+          "bytes": 443,
+          "sha256": "30dfa799077732b480586795380874a5fb8940f2fbfe3a2750b69fe1328cf445"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/worker/attempt-0001/pre-settlement-observation.json": {
+          "bytes": 741,
+          "sha256": "64413b9c3f5c06dc64126dfbc94033549f15b978dd6f2fdf228c4c42d38ccf8b"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/worker/attempt-0001/request.json": {
+          "bytes": 747,
+          "sha256": "907baafa386068cb3873c17d9286f9c1fc3be1775722663d7bf0b674d2067ab5"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/worker/attempt-0001/status.json": {
+          "bytes": 3038,
+          "sha256": "fc8205eb05ed1196617d5838c96ad58f55c08da49b1bc34ed8b3b020fe0d3ac7"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/worker/attempt-0001/stderr-summary.json": {
+          "bytes": 125,
+          "sha256": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/worker/attempt-0001/stdout-summary.json": {
+          "bytes": 6330,
+          "sha256": "b04216ffae3dbaa4db3d89507e235edf40442294abfe17836dd223fe25991264"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/worker/identity.json": {
+          "bytes": 979,
+          "sha256": "192cc9364715d925714fd33bd74402edc3e877729899f15163cd39c08ad668c4"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/worker/result.json": {
+          "bytes": 3038,
+          "sha256": "fc8205eb05ed1196617d5838c96ad58f55c08da49b1bc34ed8b3b020fe0d3ac7"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/program.json": {
+          "bytes": 186414,
+          "sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381"
+        }
+      },
+      "live_state_bytes": 74890524,
+      "operation": "distilgpt2/optimized_compressed-2",
+      "point_route_policy": {
+        "adapter_sha256": "59d2c07a8c955b07acb835f59a425620355f632ccde4b23a1388711e8bfd38f8",
+        "box_and_gram_policy": "unchanged",
+        "closed": true,
+        "cross_route_retry": false,
+        "other_assessments": 222,
+        "point_assessments": 306,
+        "point_route": "token",
+        "policy": "all-point-inputs-token-from-start-v112"
+      },
+      "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+      "readonly_host_cpu_ns": 490366824,
+      "readonly_host_elapsed_ns": 665756661,
+      "readonly_review_cost_outside_experiment": true,
+      "scheduler_raw": "16417|second112-distilgpt2--optimized_compressed-2|COMPLETED|0:0|326|05:22.594|1|16G|csis.mn1\n16417.batch|batch|COMPLETED|0:0|326|05:22.594|1||csis.mn1\n",
+      "speed_comparison": false,
+      "stages": 24,
+      "status": "verified_actual_request_receipt_and_accounting",
+      "worker_budget_debit": {
+        "charged_cpu_seconds": 309,
+        "observed_cpu_ns": 308643562000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 1802,
+        "state": "settled"
+      }
+    },
+    "distilgpt2/optimized_modern-2": {
+      "captured_utc": "2026-10-27T07:51:38.778067+00:00",
+      "code_count": 42467328,
+      "complete_host_elapsed_ns": 179705840439,
+      "cost": {
+        "complete_controller_upper_cpu_ns": 13684797000,
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 164439203000,
+        "job_id": "16421",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 178123000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "full_model_transfer_claim": false,
+      "independent_model_equality_verified": false,
+      "inputs": {
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--optimized_modern-2-16421.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--optimized_modern-2-bootstrap.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--optimized_modern-2-entry.json": {
+          "bytes": 834,
+          "sha256": "b8108c2d51719c1488cfdcd0a531337d93dabfb09e873051a7076eaef4402218"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--optimized_modern-2-host-start.json": {
+          "bytes": 6398,
+          "sha256": "4040f2bb2d9277587a91cf1ff1f61bfa9be5d555541ce2e6658871cf0acfb063"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--optimized_modern-2-host.json": {
+          "bytes": 1029,
+          "sha256": "8c71f76e451ad0223b29f540fc0d1d54764a5a08e9484f58f6b852dc5d31d8ae"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/outputs/admission.json": {
+          "bytes": 544939,
+          "sha256": "5f3eb01fab68cffb353f40314f057194caa26f18255177546dac9bb65e1d36ac"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/outputs/completion.json": {
+          "bytes": 157464,
+          "sha256": "d1b63a14982c5f83c1ebcecdd329401bd64d6967ea4ad526de75da072d789d02"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/outputs/execution-provenance.json": {
+          "bytes": 12727,
+          "sha256": "cbb6f2cc7c5002b7346706af87c953faffbdef88385c8b9cefc523ca09656429"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/outputs/model.bin": {
+          "bytes": 21233664,
+          "sha256": "3c0de8c371a68e020ac6bf738fc9f53e4e027289478f220f9b655e2306b2c569"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/outputs/state.bin": {
+          "bytes": 80535648,
+          "sha256": "e863bcda904440ca9e566f443b0592010e01a3076d63f955b90f8a7fb634a219"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/outputs/trust.json": {
+          "bytes": 2,
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/worker/attempt-0001/budget-reservation.json": {
+          "bytes": 308,
+          "sha256": "ac437827f09f1e3d565a524c3d99406db681bf27b611f1f63f1969df28abd667"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/worker/attempt-0001/limits-applied.json": {
+          "bytes": 443,
+          "sha256": "e616f214c3461915fb9acecb238478881d458b059a0a8035a7b5884088c62954"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/worker/attempt-0001/pre-settlement-observation.json": {
+          "bytes": 741,
+          "sha256": "eb76251d9c880354fe5b2aec35284b2f184d19982866b610d25ae6b1ec3190c6"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/worker/attempt-0001/request.json": {
+          "bytes": 739,
+          "sha256": "80bb2aac50faf4ce43b398c5a59f3a0789a8794468bebfdfd89756661653b7ee"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/worker/attempt-0001/status.json": {
+          "bytes": 3034,
+          "sha256": "dd6488baf9286ae6a69a1d45a590a66c6a87ec0335c8dd87df0280e26ab3666a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/worker/attempt-0001/stderr-summary.json": {
+          "bytes": 125,
+          "sha256": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/worker/attempt-0001/stdout-summary.json": {
+          "bytes": 6269,
+          "sha256": "35b5cad0721b4055e2fa9c17a8f770810ba6444f0b9ca103f1a630682ca6f69b"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/worker/identity.json": {
+          "bytes": 971,
+          "sha256": "3d827b6a27871a84e3a03fc15e6707e21fac308be73f6a05b7cf3f46e5a1c17e"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_modern-2/worker/result.json": {
+          "bytes": 3034,
+          "sha256": "dd6488baf9286ae6a69a1d45a590a66c6a87ec0335c8dd87df0280e26ab3666a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/program.json": {
+          "bytes": 186414,
+          "sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381"
+        }
+      },
+      "live_state_bytes": 80535650,
+      "operation": "distilgpt2/optimized_modern-2",
+      "point_route_policy": {
+        "adapter_sha256": "59d2c07a8c955b07acb835f59a425620355f632ccde4b23a1388711e8bfd38f8",
+        "box_and_gram_policy": "unchanged",
+        "closed": true,
+        "cross_route_retry": false,
+        "other_assessments": 126,
+        "point_assessments": 330,
+        "point_route": "token",
+        "policy": "all-point-inputs-token-from-start-v112"
+      },
+      "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+      "readonly_host_cpu_ns": 509942613,
+      "readonly_host_elapsed_ns": 686212345,
+      "readonly_review_cost_outside_experiment": true,
+      "scheduler_raw": "16421|second112-distilgpt2--optimized_modern-2|COMPLETED|0:0|180|02:58.123|1|16G|csis.mn1\n16421.batch|batch|COMPLETED|0:0|180|02:58.123|1||csis.mn1\n",
+      "speed_comparison": false,
+      "stages": 24,
+      "status": "verified_actual_request_receipt_and_accounting",
+      "worker_budget_debit": {
+        "charged_cpu_seconds": 165,
+        "observed_cpu_ns": 164439203000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 1802,
+        "state": "settled"
+      }
+    },
+    "distilgpt2/reference_compressed-2": {
+      "captured_utc": "2026-10-27T07:59:05.555483+00:00",
+      "code_count": 42467328,
+      "complete_host_elapsed_ns": 436690829114,
+      "cost": {
+        "complete_controller_upper_cpu_ns": 14302276000,
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 419446724000,
+        "job_id": "16422",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 433748000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "full_model_transfer_claim": false,
+      "independent_model_equality_verified": false,
+      "inputs": {
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_compressed-2-16422.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_compressed-2-bootstrap.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_compressed-2-entry.json": {
+          "bytes": 838,
+          "sha256": "51759b45d7c1e9f8c7733d146c63a698c02f60c42236d66574c7b9b5bd9ca0b7"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_compressed-2-host-start.json": {
+          "bytes": 6402,
+          "sha256": "77ecd50eecd68ad0c26d2f89b6d382216bf7b7dccd5549cd6b2781f011b57cbf"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_compressed-2-host.json": {
+          "bytes": 1033,
+          "sha256": "e237b4fa08465e1de1b4420f10bf0f47f767715891ad52040ab62473503506d7"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/outputs/admission.json": {
+          "bytes": 544939,
+          "sha256": "5f3eb01fab68cffb353f40314f057194caa26f18255177546dac9bb65e1d36ac"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/outputs/completion.json": {
+          "bytes": 177653,
+          "sha256": "a393d63f88cd1d1fdc1dbdca0fb4d7494360ebd6b5e0796d7c9293682c8cab9f"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/outputs/execution-provenance.json": {
+          "bytes": 12727,
+          "sha256": "cbb6f2cc7c5002b7346706af87c953faffbdef88385c8b9cefc523ca09656429"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/outputs/model.bin": {
+          "bytes": 21233664,
+          "sha256": "3c0de8c371a68e020ac6bf738fc9f53e4e027289478f220f9b655e2306b2c569"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/outputs/state.bin": {
+          "bytes": 74890522,
+          "sha256": "46ebabe33b0b6fcf5626b98d82786940174ac01032c466a5b08f64f35df3361e"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/outputs/trust.json": {
+          "bytes": 2,
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/worker/attempt-0001/budget-reservation.json": {
+          "bytes": 308,
+          "sha256": "bdb76e41ca8a4a49733ae7e39045e72ebd7612c1330c15171f4076094e96c7d4"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/worker/attempt-0001/limits-applied.json": {
+          "bytes": 443,
+          "sha256": "9268093f7315a7ec0d883614a5d620f346e4d90f116c228cb7bac714a823e9ff"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/worker/attempt-0001/pre-settlement-observation.json": {
+          "bytes": 741,
+          "sha256": "62caa649976a5d8d5b0a3e0de1579e9c15d7eeef51799ba217631e21d855e681"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/worker/attempt-0001/request.json": {
+          "bytes": 747,
+          "sha256": "862528ddcde988dee0af314e013451ea52e13ed56adab3f6a676174c68a73f16"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/worker/attempt-0001/status.json": {
+          "bytes": 3038,
+          "sha256": "0a79500ffae928d4c4dfa827bd4122a025f29b9726f73303ee5150d9958c71b8"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/worker/attempt-0001/stderr-summary.json": {
+          "bytes": 125,
+          "sha256": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/worker/attempt-0001/stdout-summary.json": {
+          "bytes": 6333,
+          "sha256": "d6948ae0b31f84a9ef0281d67b8af59b506dc82927389fff9cd2267d0f55f941"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/worker/identity.json": {
+          "bytes": 979,
+          "sha256": "afbfbf058a542a38013613876a528ec9293d5295b2047447ef60ea324e1b4bd7"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_compressed-2/worker/result.json": {
+          "bytes": 3038,
+          "sha256": "0a79500ffae928d4c4dfa827bd4122a025f29b9726f73303ee5150d9958c71b8"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/program.json": {
+          "bytes": 186414,
+          "sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381"
+        }
+      },
+      "live_state_bytes": 74890524,
+      "operation": "distilgpt2/reference_compressed-2",
+      "point_route_policy": {
+        "adapter_sha256": "59d2c07a8c955b07acb835f59a425620355f632ccde4b23a1388711e8bfd38f8",
+        "box_and_gram_policy": "unchanged",
+        "closed": true,
+        "cross_route_retry": false,
+        "other_assessments": 222,
+        "point_assessments": 306,
+        "point_route": "token",
+        "policy": "all-point-inputs-token-from-start-v112"
+      },
+      "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+      "readonly_host_cpu_ns": 515471604,
+      "readonly_host_elapsed_ns": 695676437,
+      "readonly_review_cost_outside_experiment": true,
+      "scheduler_raw": "16422|second112-distilgpt2--reference_compressed-2|COMPLETED|0:0|437|07:13.748|1|16G|csis.mn1\n16422.batch|batch|COMPLETED|0:0|437|07:13.748|1||csis.mn1\n",
+      "speed_comparison": false,
+      "stages": 24,
+      "status": "verified_actual_request_receipt_and_accounting",
+      "worker_budget_debit": {
+        "charged_cpu_seconds": 420,
+        "observed_cpu_ns": 419446724000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 1802,
+        "state": "settled"
+      }
+    },
+    "distilgpt2/reference_modern-2": {
+      "captured_utc": "2026-10-27T07:38:07.323321+00:00",
+      "code_count": 42467328,
+      "complete_host_elapsed_ns": 219801998678,
+      "cost": {
+        "complete_controller_upper_cpu_ns": 13806122000,
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 204084878000,
+        "job_id": "16418",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 217890000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "full_model_transfer_claim": false,
+      "independent_model_equality_verified": false,
+      "inputs": {
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_modern-2-16418.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_modern-2-bootstrap.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_modern-2-entry.json": {
+          "bytes": 834,
+          "sha256": "e7437033526c918ad5654689bdca33bb5006d567aabb96c55d201055b7f8c50a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_modern-2-host-start.json": {
+          "bytes": 6396,
+          "sha256": "b8359f4671b94f3f619f2a316aafdb4ea1efec82f43a553f7246a8b871393389"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_modern-2-host.json": {
+          "bytes": 1029,
+          "sha256": "3c6e945069b4b2718c9b7ca51b5ec0e97e4e7667567a65666e86eaebc551da8a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/outputs/admission.json": {
+          "bytes": 544939,
+          "sha256": "5f3eb01fab68cffb353f40314f057194caa26f18255177546dac9bb65e1d36ac"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/outputs/completion.json": {
+          "bytes": 155434,
+          "sha256": "9ff07f11ca126f2bcb9d29a08f5d1550060349b04d710f4fed853d54f8075af2"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/outputs/execution-provenance.json": {
+          "bytes": 12727,
+          "sha256": "cbb6f2cc7c5002b7346706af87c953faffbdef88385c8b9cefc523ca09656429"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/outputs/model.bin": {
+          "bytes": 21233664,
+          "sha256": "3c0de8c371a68e020ac6bf738fc9f53e4e027289478f220f9b655e2306b2c569"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/outputs/state.bin": {
+          "bytes": 80535648,
+          "sha256": "e863bcda904440ca9e566f443b0592010e01a3076d63f955b90f8a7fb634a219"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/outputs/trust.json": {
+          "bytes": 2,
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/worker/attempt-0001/budget-reservation.json": {
+          "bytes": 308,
+          "sha256": "ab2a1af1dc21a3c6adad403410a59cb47571daf3440b269ae2b05d49d25d9499"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/worker/attempt-0001/limits-applied.json": {
+          "bytes": 443,
+          "sha256": "4b2ae92785a9d3d08d9e73aab2535ead6976c1e454c9ba412e0464d050189626"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/worker/attempt-0001/pre-settlement-observation.json": {
+          "bytes": 741,
+          "sha256": "53bb03fc54e39fbaefcee935b1ec92c3b37a137c909f7d9bbeabbbfbd3d7ba14"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/worker/attempt-0001/request.json": {
+          "bytes": 739,
+          "sha256": "24f04d543a9871bfab514c229d2614094d6ae45195b7fe2b20227c4472acba03"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/worker/attempt-0001/status.json": {
+          "bytes": 3034,
+          "sha256": "184f3619205fa5950d90a87bf3373f0fe73531536dc7ed2ac2f2dd1b98edf1d2"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/worker/attempt-0001/stderr-summary.json": {
+          "bytes": 125,
+          "sha256": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/worker/attempt-0001/stdout-summary.json": {
+          "bytes": 6272,
+          "sha256": "4ab8a8702f2ae9377f8b44f45fa351169fd769fa9697837bbf91a845042a36f8"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/worker/identity.json": {
+          "bytes": 971,
+          "sha256": "35215a4dc27047c35fc8704740c961655cbdff4438f217dd4b3b16409b9ec890"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-2/worker/result.json": {
+          "bytes": 3034,
+          "sha256": "184f3619205fa5950d90a87bf3373f0fe73531536dc7ed2ac2f2dd1b98edf1d2"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/program.json": {
+          "bytes": 186414,
+          "sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381"
+        }
+      },
+      "live_state_bytes": 80535650,
+      "operation": "distilgpt2/reference_modern-2",
+      "point_route_policy": {
+        "adapter_sha256": "59d2c07a8c955b07acb835f59a425620355f632ccde4b23a1388711e8bfd38f8",
+        "box_and_gram_policy": "unchanged",
+        "closed": true,
+        "cross_route_retry": false,
+        "other_assessments": 126,
+        "point_assessments": 330,
+        "point_route": "token",
+        "policy": "all-point-inputs-token-from-start-v112"
+      },
+      "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+      "readonly_host_cpu_ns": 501679553,
+      "readonly_host_elapsed_ns": 677471939,
+      "readonly_review_cost_outside_experiment": true,
+      "scheduler_raw": "16418|second112-distilgpt2--reference_modern-2|COMPLETED|0:0|221|03:37.890|1|16G|csis.mn1\n16418.batch|batch|COMPLETED|0:0|221|03:37.890|1||csis.mn1\n",
+      "speed_comparison": false,
+      "stages": 24,
+      "status": "verified_actual_request_receipt_and_accounting",
+      "worker_budget_debit": {
+        "charged_cpu_seconds": 205,
+        "observed_cpu_ns": 204084878000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 1802,
+        "state": "settled"
+      }
+    },
+    "gpt2/optimized_compressed-2": {
+      "captured_utc": "2026-10-27T07:31:19.737956+00:00",
+      "code_count": 84934656,
+      "complete_host_elapsed_ns": 615039425050,
+      "cost": {
+        "complete_controller_upper_cpu_ns": 14508112000,
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 596406888000,
+        "job_id": "16416",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 610914000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "full_model_transfer_claim": false,
+      "independent_model_equality_verified": false,
+      "inputs": {
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--optimized_compressed-2-16416.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--optimized_compressed-2-bootstrap.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--optimized_compressed-2-entry.json": {
+          "bytes": 832,
+          "sha256": "16ad9f8efeb53937648c648c8ca9c5d0d42a408ec5f6ec2b7c76406591c8eb0a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--optimized_compressed-2-host-start.json": {
+          "bytes": 6394,
+          "sha256": "abdd0b3a3266d96ee2067e46b527d16b39f07c35c3489979a59e152fc432f7af"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--optimized_compressed-2-host.json": {
+          "bytes": 1027,
+          "sha256": "8b58e72f2853da8536f8431a537c068d449208103e957d9e6e2a167e59eb4bb7"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/outputs/admission.json": {
+          "bytes": 1086804,
+          "sha256": "ca69fd7e97b06dbd04c20052513e36d6589b2b5cf6643e8aeb061c8a5baed862"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/outputs/completion.json": {
+          "bytes": 354913,
+          "sha256": "5f6cd8f33fd7ac3de38423d93fe19b42cb5383c4c50e7d2dffd5c874ec4a11d9"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/outputs/execution-provenance.json": {
+          "bytes": 17702,
+          "sha256": "c23566594edb99ce9a3610997426a8db343524f2306fd5b5e39032ae7b574384"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/outputs/model.bin": {
+          "bytes": 42467328,
+          "sha256": "e0baeb4f7e5076510f08ae7ec6ac82dedacdb5b3026fe24bd78e9f65b4644499"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/outputs/state.bin": {
+          "bytes": 149783789,
+          "sha256": "d891c850df7dc6ba2c708f2ee85df2beb3a1003bcc658dd9ce6c5c3b652cbe03"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/outputs/trust.json": {
+          "bytes": 2,
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/worker/attempt-0001/budget-reservation.json": {
+          "bytes": 308,
+          "sha256": "d4eb8443736efac58ad253d1ef069d3e534d7e9d71d8d7b855843d10a17d0e68"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/worker/attempt-0001/limits-applied.json": {
+          "bytes": 443,
+          "sha256": "14206b4fe3d53ec00bf436d5d667595fb2a2e8d806399d81226eb2242f009238"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/worker/attempt-0001/pre-settlement-observation.json": {
+          "bytes": 742,
+          "sha256": "45ebd4073591606d65f40d7a5ab8ce8b905f69c4403a1deb9332511c846d3dc7"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/worker/attempt-0001/request.json": {
+          "bytes": 735,
+          "sha256": "6e869987ce79865d1c70fc591966750f149aa5dd9fc7eddcf47e709c78ad07a8"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/worker/attempt-0001/status.json": {
+          "bytes": 3034,
+          "sha256": "834f78fe20d1c4d43da4ae5c664f25f3f5b531a911a1b559030d06750d7f169e"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/worker/attempt-0001/stderr-summary.json": {
+          "bytes": 125,
+          "sha256": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/worker/attempt-0001/stdout-summary.json": {
+          "bytes": 12363,
+          "sha256": "1198dc53ddc4fa514a1bff7a88c9970e8749d990ebf415376eba77046733cfaf"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/worker/identity.json": {
+          "bytes": 967,
+          "sha256": "30a7816065986fe40a55f9f61fadbfb55db3ac55974cd6c8951fe7ce439c12a1"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/worker/result.json": {
+          "bytes": 3034,
+          "sha256": "834f78fe20d1c4d43da4ae5c664f25f3f5b531a911a1b559030d06750d7f169e"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/program.json": {
+          "bytes": 186414,
+          "sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381"
+        }
+      },
+      "live_state_bytes": 149783791,
+      "operation": "gpt2/optimized_compressed-2",
+      "point_route_policy": {
+        "adapter_sha256": "59d2c07a8c955b07acb835f59a425620355f632ccde4b23a1388711e8bfd38f8",
+        "box_and_gram_policy": "unchanged",
+        "closed": true,
+        "cross_route_retry": false,
+        "other_assessments": 444,
+        "point_assessments": 612,
+        "point_route": "token",
+        "policy": "all-point-inputs-token-from-start-v112"
+      },
+      "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+      "readonly_host_cpu_ns": 662124156,
+      "readonly_host_elapsed_ns": 841575634,
+      "readonly_review_cost_outside_experiment": true,
+      "scheduler_raw": "16416|second112-gpt2--optimized_compressed-2|COMPLETED|0:0|615|10:10.914|1|16G|csis.mn1\n16416.batch|batch|COMPLETED|0:0|615|10:10.914|1||csis.mn1\n",
+      "speed_comparison": false,
+      "stages": 48,
+      "status": "verified_actual_request_receipt_and_accounting",
+      "worker_budget_debit": {
+        "charged_cpu_seconds": 597,
+        "observed_cpu_ns": 596406888000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3602,
+        "state": "settled"
+      }
+    },
+    "gpt2/optimized_modern-2": {
+      "captured_utc": "2026-10-27T07:51:38.039165+00:00",
+      "code_count": 84934656,
+      "complete_host_elapsed_ns": 326341357585,
+      "cost": {
+        "complete_controller_upper_cpu_ns": 13996433000,
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 309870567000,
+        "job_id": "16420",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 323866000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "full_model_transfer_claim": false,
+      "independent_model_equality_verified": false,
+      "inputs": {
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--optimized_modern-2-16420.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--optimized_modern-2-bootstrap.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--optimized_modern-2-entry.json": {
+          "bytes": 828,
+          "sha256": "25ad562bfafbbba47707ec52288fa405488642172b82e1c4952f4cc5ae02bd7f"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--optimized_modern-2-host-start.json": {
+          "bytes": 6392,
+          "sha256": "b11759a196a9aa04ce786dfec905f99b0a04e56cf406126e82ee6c95913c1b92"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--optimized_modern-2-host.json": {
+          "bytes": 1023,
+          "sha256": "e2085da4b6dddebceb5a4d42b020c8060bc65ba99e0dc6ddb3d65a549c97d3bb"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/outputs/admission.json": {
+          "bytes": 1086804,
+          "sha256": "ca69fd7e97b06dbd04c20052513e36d6589b2b5cf6643e8aeb061c8a5baed862"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/outputs/completion.json": {
+          "bytes": 307961,
+          "sha256": "99c6ca3c712b186b4c5bf08b39051ee868d4e74f72b4872367d2575e91f07621"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/outputs/execution-provenance.json": {
+          "bytes": 17702,
+          "sha256": "c23566594edb99ce9a3610997426a8db343524f2306fd5b5e39032ae7b574384"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/outputs/model.bin": {
+          "bytes": 42467328,
+          "sha256": "e0baeb4f7e5076510f08ae7ec6ac82dedacdb5b3026fe24bd78e9f65b4644499"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/outputs/state.bin": {
+          "bytes": 161209504,
+          "sha256": "58403e3464563b777875ddaddc7a3f84d577a81ffb0d84fdbfb4ee1c7043f073"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/outputs/trust.json": {
+          "bytes": 2,
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/worker/attempt-0001/budget-reservation.json": {
+          "bytes": 308,
+          "sha256": "8608147a5206fa571db1ba8fb199a00c854c34f7b70a219c842eaf6a5b224454"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/worker/attempt-0001/limits-applied.json": {
+          "bytes": 443,
+          "sha256": "7534c3b4b5dd524d39b0b4f55e1ebd78a6b08d0105ec2229e5feab95e412cbbc"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/worker/attempt-0001/pre-settlement-observation.json": {
+          "bytes": 742,
+          "sha256": "36e7e2482e3a0aefdfb2fb2756beaad92ba2b26fdd269f4a77740fece7b4570a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/worker/attempt-0001/request.json": {
+          "bytes": 727,
+          "sha256": "99a2a594612f5e4c4a758a8b9803a44e1a924c209c03a6bcce08849242c6dab9"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/worker/attempt-0001/status.json": {
+          "bytes": 3030,
+          "sha256": "2317fdd4adc70fc9540bd5a092f1012516833936063ba488932fab97a31a57fc"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/worker/attempt-0001/stderr-summary.json": {
+          "bytes": 125,
+          "sha256": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/worker/attempt-0001/stdout-summary.json": {
+          "bytes": 12252,
+          "sha256": "8fc5c370f4574cbb143894dfe34508dcc762cfd93fef1f543b0a8585f08ab813"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/worker/identity.json": {
+          "bytes": 959,
+          "sha256": "b5fe1f5737d8402103183e06d6732b61ba5b07c87110b3e6a95269e1a2c2edbd"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_modern-2/worker/result.json": {
+          "bytes": 3030,
+          "sha256": "2317fdd4adc70fc9540bd5a092f1012516833936063ba488932fab97a31a57fc"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/program.json": {
+          "bytes": 186414,
+          "sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381"
+        }
+      },
+      "live_state_bytes": 161209506,
+      "operation": "gpt2/optimized_modern-2",
+      "point_route_policy": {
+        "adapter_sha256": "59d2c07a8c955b07acb835f59a425620355f632ccde4b23a1388711e8bfd38f8",
+        "box_and_gram_policy": "unchanged",
+        "closed": true,
+        "cross_route_retry": false,
+        "other_assessments": 252,
+        "point_assessments": 660,
+        "point_route": "token",
+        "policy": "all-point-inputs-token-from-start-v112"
+      },
+      "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+      "readonly_host_cpu_ns": 678081944,
+      "readonly_host_elapsed_ns": 855693001,
+      "readonly_review_cost_outside_experiment": true,
+      "scheduler_raw": "16420|second112-gpt2--optimized_modern-2|COMPLETED|0:0|326|05:23.866|1|16G|csis.mn1\n16420.batch|batch|COMPLETED|0:0|326|05:23.866|1||csis.mn1\n",
+      "speed_comparison": false,
+      "stages": 48,
+      "status": "verified_actual_request_receipt_and_accounting",
+      "worker_budget_debit": {
+        "charged_cpu_seconds": 310,
+        "observed_cpu_ns": 309870567000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3602,
+        "state": "settled"
+      }
+    },
+    "gpt2/reference_compressed-2": {
+      "captured_utc": "2026-10-27T08:15:17.256928+00:00",
+      "code_count": 84934656,
+      "complete_host_elapsed_ns": 838152917618,
+      "cost": {
+        "complete_controller_upper_cpu_ns": 14798983000,
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 818004017000,
+        "job_id": "16423",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 832802000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "full_model_transfer_claim": false,
+      "independent_model_equality_verified": false,
+      "inputs": {
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--reference_compressed-2-16423.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--reference_compressed-2-bootstrap.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--reference_compressed-2-entry.json": {
+          "bytes": 832,
+          "sha256": "d36e85f54fdb412adca12c029fffb08d29f073fd509570e39a298a950bc25457"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--reference_compressed-2-host-start.json": {
+          "bytes": 6396,
+          "sha256": "ce362cbc9b7b123d83820daf06d81e1e897e472d3267927ccf0a84ff186757bb"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--reference_compressed-2-host.json": {
+          "bytes": 1027,
+          "sha256": "e891cfa9ef9ab2f18099d462908ba00cc65ed0630be25ee85fc93514c1bd2730"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/outputs/admission.json": {
+          "bytes": 1086804,
+          "sha256": "ca69fd7e97b06dbd04c20052513e36d6589b2b5cf6643e8aeb061c8a5baed862"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/outputs/completion.json": {
+          "bytes": 350482,
+          "sha256": "5b2e87996293713e2a523c5cecc3b953df2b78462bafe2cceedac3527063252d"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/outputs/execution-provenance.json": {
+          "bytes": 17702,
+          "sha256": "c23566594edb99ce9a3610997426a8db343524f2306fd5b5e39032ae7b574384"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/outputs/model.bin": {
+          "bytes": 42467328,
+          "sha256": "e0baeb4f7e5076510f08ae7ec6ac82dedacdb5b3026fe24bd78e9f65b4644499"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/outputs/state.bin": {
+          "bytes": 149783789,
+          "sha256": "d891c850df7dc6ba2c708f2ee85df2beb3a1003bcc658dd9ce6c5c3b652cbe03"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/outputs/trust.json": {
+          "bytes": 2,
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/worker/attempt-0001/budget-reservation.json": {
+          "bytes": 308,
+          "sha256": "e0fdaea30d2071759670c90fe4be775ae92d1c082f262e937d81253be4c3341f"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/worker/attempt-0001/limits-applied.json": {
+          "bytes": 443,
+          "sha256": "65853aced197023664ce2778dac45f8d77ca3c5c733e353c61365850ae74c4e7"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/worker/attempt-0001/pre-settlement-observation.json": {
+          "bytes": 742,
+          "sha256": "2b8520010718f66f183caf97587a4a2d00df04aeb26223351bb379f4905010c6"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/worker/attempt-0001/request.json": {
+          "bytes": 735,
+          "sha256": "20360e33ec27c79c23c76754f13267c04f5fd385d5fda7df6ae0fc199f16087c"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/worker/attempt-0001/status.json": {
+          "bytes": 3034,
+          "sha256": "d75a14f3793d10b5ba691dfdb9326411323460b90de47f12eba6ae3edf90a543"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/worker/attempt-0001/stderr-summary.json": {
+          "bytes": 125,
+          "sha256": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/worker/attempt-0001/stdout-summary.json": {
+          "bytes": 12367,
+          "sha256": "e997880e5c3d391143d810da7f60266ef079d5f166ca34c107ca37612b05aecb"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/worker/identity.json": {
+          "bytes": 967,
+          "sha256": "1055a72178281738f8fdd5a53b4d821f0d85a4ff3cf922119671620b9547e6ef"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_compressed-2/worker/result.json": {
+          "bytes": 3034,
+          "sha256": "d75a14f3793d10b5ba691dfdb9326411323460b90de47f12eba6ae3edf90a543"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/program.json": {
+          "bytes": 186414,
+          "sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381"
+        }
+      },
+      "live_state_bytes": 149783791,
+      "operation": "gpt2/reference_compressed-2",
+      "point_route_policy": {
+        "adapter_sha256": "59d2c07a8c955b07acb835f59a425620355f632ccde4b23a1388711e8bfd38f8",
+        "box_and_gram_policy": "unchanged",
+        "closed": true,
+        "cross_route_retry": false,
+        "other_assessments": 444,
+        "point_assessments": 612,
+        "point_route": "token",
+        "policy": "all-point-inputs-token-from-start-v112"
+      },
+      "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+      "readonly_host_cpu_ns": 641895859,
+      "readonly_host_elapsed_ns": 821902035,
+      "readonly_review_cost_outside_experiment": true,
+      "scheduler_raw": "16423|second112-gpt2--reference_compressed-2|COMPLETED|0:0|839|13:52.802|1|16G|csis.mn1\n16423.batch|batch|COMPLETED|0:0|839|13:52.802|1||csis.mn1\n",
+      "speed_comparison": false,
+      "stages": 48,
+      "status": "verified_actual_request_receipt_and_accounting",
+      "worker_budget_debit": {
+        "charged_cpu_seconds": 819,
+        "observed_cpu_ns": 818004017000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3602,
+        "state": "settled"
+      }
+    },
+    "gpt2/reference_modern-2": {
+      "captured_utc": "2026-10-27T07:44:31.362971+00:00",
+      "code_count": 84934656,
+      "complete_host_elapsed_ns": 406505784164,
+      "cost": {
+        "complete_controller_upper_cpu_ns": 14374162000,
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 389346838000,
+        "job_id": "16419",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 403720000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "full_model_transfer_claim": false,
+      "independent_model_equality_verified": false,
+      "inputs": {
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--reference_modern-2-16419.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--reference_modern-2-bootstrap.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--reference_modern-2-entry.json": {
+          "bytes": 828,
+          "sha256": "101d3f91033db305671d7f7e16b2ac233fe316406bde41f5aebdeeca9120ae0f"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--reference_modern-2-host-start.json": {
+          "bytes": 6392,
+          "sha256": "6551ae36d5346f4b845b99ad726aa07c96637407b265422a533674942b567e15"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2--reference_modern-2-host.json": {
+          "bytes": 1023,
+          "sha256": "cc4db33cc7c50d994adc64a704c08e7c8eaa24eff4cb14fee691749cba9df18e"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/outputs/admission.json": {
+          "bytes": 1086804,
+          "sha256": "ca69fd7e97b06dbd04c20052513e36d6589b2b5cf6643e8aeb061c8a5baed862"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/outputs/completion.json": {
+          "bytes": 305948,
+          "sha256": "843423ba16945fd411955b3d4708f223ce0d80abb0de36b6a127cf740994104b"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/outputs/execution-provenance.json": {
+          "bytes": 17702,
+          "sha256": "c23566594edb99ce9a3610997426a8db343524f2306fd5b5e39032ae7b574384"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/outputs/model.bin": {
+          "bytes": 42467328,
+          "sha256": "e0baeb4f7e5076510f08ae7ec6ac82dedacdb5b3026fe24bd78e9f65b4644499"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/outputs/state.bin": {
+          "bytes": 161209504,
+          "sha256": "58403e3464563b777875ddaddc7a3f84d577a81ffb0d84fdbfb4ee1c7043f073"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/outputs/trust.json": {
+          "bytes": 2,
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/worker/attempt-0001/budget-reservation.json": {
+          "bytes": 308,
+          "sha256": "0cab855b844c1a4e00f013f55256a720056a18fd9a25dcc3f25d8f849350b8f9"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/worker/attempt-0001/limits-applied.json": {
+          "bytes": 443,
+          "sha256": "4a64aef6c2160e372050edcce8c434ebe0b0c14b86c96dac3f7e38061429200a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/worker/attempt-0001/pre-settlement-observation.json": {
+          "bytes": 742,
+          "sha256": "4567fc5329a065ac1457fe42dabcafb5b174bea895c551a2be277a8491ffa81a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/worker/attempt-0001/request.json": {
+          "bytes": 727,
+          "sha256": "a917892f62e089bd410033f6279c8d74037f730d98e9c88655f9b8e8f52cffb1"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/worker/attempt-0001/status.json": {
+          "bytes": 3030,
+          "sha256": "4feefed83f7cef82d2552d203b50a40eeb4eceabfba2c3ed71e28962a519f11a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/worker/attempt-0001/stderr-summary.json": {
+          "bytes": 125,
+          "sha256": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/worker/attempt-0001/stdout-summary.json": {
+          "bytes": 12254,
+          "sha256": "72a49e0ce356d8ba82a1d817486cf33c9b10af85ac163faa1536a6764bcf43d9"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/worker/identity.json": {
+          "bytes": 959,
+          "sha256": "0a65fde7e49be3766e5f28e208719788054df49b8874d52e411d5099644c83f1"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/reference_modern-2/worker/result.json": {
+          "bytes": 3030,
+          "sha256": "4feefed83f7cef82d2552d203b50a40eeb4eceabfba2c3ed71e28962a519f11a"
+        },
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/program.json": {
+          "bytes": 186414,
+          "sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381"
+        }
+      },
+      "live_state_bytes": 161209506,
+      "operation": "gpt2/reference_modern-2",
+      "point_route_policy": {
+        "adapter_sha256": "59d2c07a8c955b07acb835f59a425620355f632ccde4b23a1388711e8bfd38f8",
+        "box_and_gram_policy": "unchanged",
+        "closed": true,
+        "cross_route_retry": false,
+        "other_assessments": 252,
+        "point_assessments": 660,
+        "point_route": "token",
+        "policy": "all-point-inputs-token-from-start-v112"
+      },
+      "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+      "readonly_host_cpu_ns": 678503643,
+      "readonly_host_elapsed_ns": 862479234,
+      "readonly_review_cost_outside_experiment": true,
+      "scheduler_raw": "16419|second112-gpt2--reference_modern-2|COMPLETED|0:0|407|06:43.720|1|16G|csis.mn1\n16419.batch|batch|COMPLETED|0:0|407|06:43.720|1||csis.mn1\n",
+      "speed_comparison": false,
+      "stages": 48,
+      "status": "verified_actual_request_receipt_and_accounting",
+      "worker_budget_debit": {
+        "charged_cpu_seconds": 390,
+        "observed_cpu_ns": 389346838000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3602,
+        "state": "settled"
+      }
+    }
+  },
+  "prior_reviews": "V115-V117 actual first-endpoint receipts",
+  "retry": false,
+  "reviewed_requests": 16,
+  "schema": "v118-all-requests-reviewed",
+  "source_counterparts_unchanged": 1322,
+  "speed_comparison": false
+}

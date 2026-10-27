@@ -1,6 +1,6 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V117.md and handoff/program_v117.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V118.md and handoff/program_v118.json.
 V117 is the current compiled manuscript and review bundle; V112 is the qualified and running experiment. Verified V72/V89 science stands; E19 adds the scoped failed-screen/stage diagnostic.
 The user explicitly stopped the scheduler on27October2026: heartbeat PAUSED,
 verified in configuration. Continue foreground work and the already released Slurm
@@ -40,6 +40,13 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V118 current: at08:17:17UTC all sixteen requests16408--16423 completed0:0
+and all sixteen saved-output/accounting reviews passed.16424GPT2oracle running;
+16425DistilGPT2oracle and both audits16426/16427pending. No new comparative or
+independent model-equality claim. Collector still gated. All1322original sources,
+compiled V117 manuscript and verified13-component bundle unchanged. Read
+ACTIVE_SESSION_V118; continue existing chain only. Scheduler stays PAUSED.
 
 V117 current: at07:16:14UTC all eight first-endpoint requests16408--16415 were
 completed0:0 and their saved-output/accounting reviews passed.16416running;
