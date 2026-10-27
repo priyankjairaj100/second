@@ -1,7 +1,7 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V112.md and handoff/program_v112.json.
-V111 is the current manuscript/bundle checkpoint; V112 is the prepared experiment candidate. Verified V72/V89 science stands; E19 adds the scoped failed-screen/stage diagnostic.
+Current continuation handoff: docs/ACTIVE_SESSION_V113.md and handoff/program_v113.json.
+V111 is the current manuscript/bundle checkpoint; V112 is the qualified and running experiment. Verified V72/V89 science stands; E19 adds the scoped failed-screen/stage diagnostic.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
 Historical handoffs keep their original observation cutoffs.
@@ -39,6 +39,19 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V113 current: access restored; V112 software16407 COMPLETED0:0 with all318Linux
+checks and actual accounting verified. Program a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381.
+The20-job dependent chain16408--16427 was held, verified and released once.
+At05:33:22UTC16408 was RUNNING;16409--16427 dependency-pending. No complete
+request/model comparison yet. Every stage/prepare/checks/chain launch is consumed;
+inspect only existing jobs and never repeat launchers. All original sources,
+preparations, failures, carried costs and limits remain. Read ACTIVE_SESSION_V113.
+The restore-access question is resolved. Reporting_v113 is prepared and passes22
+generated guards, including complete cost carry and historical preparation costs;
+collector remains gated on all21successfulallocations and both actual audits.
+Same V111 manuscript/bundle; no new empirical claim, cosmetic edit or repeat compile.
+Final layout and venue/category remain pending. Older entries below are historical.
 
 V112 current: new full point-token screen is prepared, not uploaded/registered.
 All164isolated local checks pass;318pinned Linux checks remain. V111 source archive
