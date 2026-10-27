@@ -1,7 +1,7 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V110.md and handoff/program_v110.json.
-V106 is the current manuscript/bundle checkpoint; verified V72/V89 science stands.
+Current continuation handoff: docs/ACTIVE_SESSION_V112.md and handoff/program_v112.json.
+V111 is the current manuscript/bundle checkpoint; V112 is the prepared experiment candidate. Verified V72/V89 science stands; E19 adds the scoped failed-screen/stage diagnostic.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
 Historical handoffs keep their original observation cutoffs.
@@ -39,6 +39,23 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V112 current: new full point-token screen is prepared, not uploaded/registered.
+All164isolated local checks pass;318pinned Linux checks remain. V111 source archive
+is preserved after a prelogin SSH timeout27October02:40UTC; no upload or job ran.
+A final audit review reproduced a binary-reader defect (64MiB retained limit and
+UTF8 decoding). Separate V112 fixes it under original1GiB artifact/64MiBJSON caps;
+four generated regression tests pass. All18new workers,16comparisons, fresh oracles
+and both audits remain required. Reuse V104 preparations; numerical6304+72036
+fits82840 and all controller/software ceilings are carried. Read ACTIVE_SESSION_V112.
+Current remote state UNKNOWN; do not repeat SSH attempts while disconnected.
+Restore-access text question pending. After access changes, inspect queue, old
+receipts and namespace absence/storage before stage_v112.py once. Never repeat
+stage_v111.py, either packager or any historical registered job. Existing same
+manuscript now includes E19 and compiles. V111 bundle verifies12components and1226
+source files with five corruption/scope rejection tests; actual rendered layout
+and venue/category remain pending. No fresh preview attempt, subagent, paid
+compute, new monitor or submission. Older entries below are historical snapshots.
 
 V110 current: qualification16366 and token-stage diagnostic16367 COMPLETED0:0.
 All246Linux checks and actual terminal accounting pass. The existing alternative
@@ -321,7 +338,7 @@ anonymity. Author-owned form facts remain unset; no attestation or submission is
 made. Publish coherent checkpoints to the existing branch/draft PR. Keep routine
 completed-job polling quiet; no numerical launch is required by the current claim.
 The authorised expanded optimisation/transfer campaign remains incomplete; V89
-is closed; V91/V99/V100 failures are preserved, V101 admission is closed, V103 dispatch failed, and V104 ended in certification refusal. V110 certifies the selected stage by the alternative token route; a separately qualified full-screen design is next. The user resumed the existing scheduler; it remains ACTIVE until requested to stop
+is closed; V91/V99/V100 failures are preserved, V101 admission is closed, V103 dispatch failed, and V104 ended in certification refusal. V110 certifies the selected stage by the alternative token route; V112 full screen is prepared and awaits restored access plus actual Linux qualification. The user resumed the existing scheduler; it remains ACTIVE until requested to stop
 or the agreed bundle and claim-required evidence are complete and verified. A wake
 must not relaunch any consumed or cancelled registration. No final ETA follows
 from resource ceilings or the earlier estimate before this storage failure.

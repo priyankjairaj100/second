@@ -1,0 +1,119 @@
+{
+  "costs": {
+    "conservative_next_checks_controller_carry_seconds": 48,
+    "conservative_next_numerical_controller_carry_seconds": 79,
+    "conservative_next_software_carry_seconds": 207,
+    "cumulative_numerical_charged_seconds": 6304,
+    "old_unrelated_unknown_reservation_seconds": 12602,
+    "original_numerical_ceiling": 82840,
+    "overlapping_clocks_not_summed": true,
+    "preserved_separately": true
+  },
+  "diagnostic": {
+    "actual_worker_cpu_ns": 107086957000,
+    "certified_codes": 2359296,
+    "code_extent_checked": true,
+    "columns": 768,
+    "complete_costs": {
+      "checks": {
+        "complete_controller_upper_cpu_ns": 14116019000,
+        "contained_kind": "generated_software",
+        "contained_work_cpu_ns": 53140981000,
+        "job_id": "16366",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 67256000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "diagnostic": {
+        "complete_controller_upper_cpu_ns": 15639043000,
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 107086957000,
+        "job_id": "16367",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 122725000000,
+        "scheduler_quantum_ns": 1000000
+      }
+    },
+    "full_model_oracle_executed": false,
+    "independent_stage_oracle_executed": false,
+    "job": "16367",
+    "normalization": 512,
+    "numerical_cpu_charged_seconds": 108,
+    "original_streamed_route_repeated": false,
+    "original_target_and_grids": true,
+    "packed_code_bytes": 1179648,
+    "packed_code_sha256": "ee74029083f0e92e6b30267ffd233751ecc89e079749a7533dded588d37b3717",
+    "retained_sources": 3,
+    "route": "token",
+    "rows": 3072,
+    "selected_stage": "block.0011.mlp_up",
+    "software_checks": 246,
+    "software_job": "16366",
+    "source": "original complete preparation lossless factors"
+  },
+  "full_model_comparisons": 0,
+  "full_model_transfer": false,
+  "matched_screen": {
+    "both_preparations_complete": true,
+    "cancelled_unstarted_jobs": [
+      "16340",
+      "16341",
+      "16342",
+      "16343",
+      "16344",
+      "16345",
+      "16346",
+      "16347",
+      "16348",
+      "16349",
+      "16350",
+      "16351",
+      "16352",
+      "16353",
+      "16354",
+      "16355",
+      "16356",
+      "16357",
+      "16358"
+    ],
+    "completed_requests": 0,
+    "completed_stage_prefix": 46,
+    "coordinate": 359,
+    "failed_job": "16339",
+    "failed_operation": "gpt2/reference_compressed-1",
+    "failed_request_actual_worker_cpu_ns": 1878664510000,
+    "failed_request_complete_controller_upper_cpu_ns": 22160490000,
+    "failed_request_cpu_charged_seconds": 1879,
+    "failed_request_scheduler_cpu_lower_ns": 1900824000000,
+    "failed_request_scheduler_cpu_upper_ns": 1900825000000,
+    "failure": "certification_refusal",
+    "native_status": 3,
+    "normalization": 512,
+    "numerical_cpu_charged_seconds": 6196,
+    "old_receipts_modified": false,
+    "original_row_identity_saved": false,
+    "original_sources": 4,
+    "profiles": [
+      "distilgpt2",
+      "gpt2"
+    ],
+    "refusal_proves_budget_impossibility": false,
+    "refusal_proves_wrong_model": false,
+    "retained_counts": [
+      3,
+      2
+    ],
+    "retained_sources_replayed": 3,
+    "route_for_box_and_point": "streamed",
+    "stage_counts": [
+      24,
+      48
+    ],
+    "stage_inferred_from_completed_prefix_and_bound_target": "block.0011.mlp_up",
+    "subset_row": 0,
+    "tokens_per_record": 128
+  },
+  "new_quality_evidence": false,
+  "schema": "e19-scoped-diagnostic-v111",
+  "speed_comparison": false
+}

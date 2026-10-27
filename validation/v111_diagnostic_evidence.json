@@ -1,0 +1,29 @@
+{
+  "archive": {
+    "bytes": 3523,
+    "sha256": "19e26dfb22d13a2c0894338e31efbbb20a154cbbef11e55bbe9a0a0f0bdbbd7d"
+  },
+  "checked_actual_saved_values": true,
+  "empirical_execution": false,
+  "full_model_transfer": false,
+  "independent_stage_oracle": false,
+  "inputs": {
+    "v104-distilgpt2-preparation-review-20261026T085504Z.json": {
+      "bytes": 191874,
+      "sha256": "dd15bb737af8630576f4174145e0ffa37b9954857469aa6a0aa921a97ae502ec"
+    },
+    "v104-failure-accounting-v108.json": {
+      "bytes": 2477,
+      "sha256": "c022f3c87ca57890272c1aa2c27752a33147ee6a9f677d9555c85f7e9437e484"
+    },
+    "v104-gpt2-preparation-review-20261026T095457Z.json": {
+      "bytes": 558508,
+      "sha256": "0dd79b124db8d02f90e45f700d542d3935bf290c53687c277f29e884c3558732"
+    },
+    "v110-diagnostic-review-20261026T110110Z.json": {
+      "bytes": 88027,
+      "sha256": "8a3183b0c38ab2dda6ed0f8f553b1b27bd7b4734162f6837032e858cedd41ba8"
+    }
+  },
+  "schema": "diagnostic-evidence-build-v111"
+}

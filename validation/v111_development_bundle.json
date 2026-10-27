@@ -1,0 +1,111 @@
+{
+  "archive": {
+    "bytes": 10647866,
+    "sha256": "e8ffa396455ff37339e404a2b79fc0cea1d81d546c48c4ab118eba3e7fe9ef4d"
+  },
+  "components": 12,
+  "corruption_rejected": true,
+  "created_utc": "2026-10-27T02:46:34.925216+00:00",
+  "full_reproduction_verified": false,
+  "inconsistent_source_coverage_rejected": true,
+  "manifest": {
+    "README.txt": {
+      "bytes": 2286,
+      "sha256": "31a866412dff7492b4929bf019df8fe26198d9caceb58bb30edaca793912143a"
+    },
+    "RESPONSIBLE_NLP_CHECKLIST_DRAFT.txt": {
+      "bytes": 9496,
+      "sha256": "5fa8b5de2b5bd99f150a9ffd07977dbc63ec4d85feca9fb5f26eb62872772d12"
+    },
+    "development-audit-receipts-v69.zip": {
+      "bytes": 341604,
+      "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+    },
+    "development-dependency-notices-v71c.zip": {
+      "bytes": 460857,
+      "sha256": "944eb649e8f339e3b0a1b39126333d5d950c0909a394da3587b7de34e5771f41"
+    },
+    "development-diagnostic-evidence-v111.zip": {
+      "bytes": 3523,
+      "sha256": "19e26dfb22d13a2c0894338e31efbbb20a154cbbef11e55bbe9a0a0f0bdbbd7d"
+    },
+    "development-evidence-v69b.zip": {
+      "bytes": 87257,
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "development-optimization-source-v105.zip": {
+      "bytes": 803078,
+      "sha256": "380feefc22942c6e554b3e3b9008706df5a02f41daf02055874e9f4f0ff016d8"
+    },
+    "development-optimization-v98.zip": {
+      "bytes": 5722,
+      "sha256": "014a1d296dd3102dc81f58e4e0a4840452e73d3bc3167884d4b8e0dcebc871f8"
+    },
+    "development-quality-evidence-v72.zip": {
+      "bytes": 251913,
+      "sha256": "c588ac060824b7870f085f8f3dae6e02cee6dcb93ded6aac6bd7d72a8d5f14dc"
+    },
+    "development-reproduction-guide-v72.zip": {
+      "bytes": 19535,
+      "sha256": "6abf11b4b237f263784f3bfb9ce3ddb87f70e3d11f3b3a751ae5e69984cddfd3"
+    },
+    "development-selection-metadata-v71.zip": {
+      "bytes": 6194056,
+      "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
+    },
+    "development-service-evidence-v70.zip": {
+      "bytes": 124857,
+      "sha256": "684ca47fd16985c32f5faf0dd7bab81f3bbe9dda297a87455dfb84c0a0ce2dc4"
+    },
+    "development-source-review-v72.zip": {
+      "bytes": 1930758,
+      "sha256": "e3505d7b353eed4109c7f22f127955513d928590552513263a13ee90811cbf49"
+    },
+    "development-transfer-source-v111.zip": {
+      "bytes": 792544,
+      "sha256": "db94cb1964bd0ad8f394e0d871603c9a1b81d8cc2b5602f318f2cfa76e46488b"
+    },
+    "second-research-draft.tex": {
+      "bytes": 59315,
+      "sha256": "cea87a82c5137306729871eb0030846c72bfe7c4039566509ab573621fc4fb48"
+    },
+    "verify_review_bundle.py": {
+      "bytes": 5686,
+      "sha256": "a7b5faea9a2bb0472bc296450994a737e464fc9e929b6a8dce6edc377f466ad3"
+    }
+  },
+  "members": 17,
+  "missing_rejected": true,
+  "native_compile_success": true,
+  "new_pdf_created": false,
+  "new_transfer_result": false,
+  "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v111.zip",
+  "rendered_layout_verified": false,
+  "roundtrip_bytes_verified": true,
+  "schema": "development-review-bundle-v111",
+  "source": {
+    "bytes": 59315,
+    "sha256": "cea87a82c5137306729871eb0030846c72bfe7c4039566509ab573621fc4fb48"
+  },
+  "source_originals_changed": false,
+  "submission_ready": false,
+  "unchanged_v106_components": 10,
+  "unexpected_rejected": true,
+  "unsupported_full_model_transfer_claim_rejected": true,
+  "verified": {
+    "adapted_code_execution_qualified": false,
+    "components": 12,
+    "empirical_pipeline_executed": false,
+    "external_inputs_acquired": false,
+    "full_anonymity_verified": false,
+    "full_model_transfer": false,
+    "independent_stage_oracle_executed": false,
+    "source_component_counts": {
+      "development-optimization-source-v105.zip": 347,
+      "development-source-review-v72.zip": 583,
+      "development-transfer-source-v111.zip": 296
+    },
+    "source_files": 1226,
+    "status": "verified_supplied_bytes_source_coverage_and_scoped_diagnostic_arithmetic"
+  }
+}
