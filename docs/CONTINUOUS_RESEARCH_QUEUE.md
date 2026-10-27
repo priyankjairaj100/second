@@ -1,7 +1,7 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V115.md and handoff/program_v115.json.
-V111 is the current manuscript; V114 is the source-complete review bundle; V112 is the qualified and running experiment. Verified V72/V89 science stands; E19 adds the scoped failed-screen/stage diagnostic.
+Current continuation handoff: docs/ACTIVE_SESSION_V116.md and handoff/program_v116.json.
+V116 is the current compiled manuscript and review bundle; V112 is the qualified and running experiment. Verified V72/V89 science stands; E19 adds the scoped failed-screen/stage diagnostic.
 The user explicitly stopped the scheduler on27October2026: heartbeat PAUSED,
 verified in configuration. Continue foreground work and the already released Slurm
 chain. Do not resume the automation from historical heartbeat instructions.
@@ -40,6 +40,16 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V116 current: at06:50:30UTC seven requests16408--16414 completed0:0 and all seven
+saved-output/accounting reviews passed.16415running;16416--16427pending. Neither
+fresh-oracle equality nor new speed/transfer is established. Same registered
+chain and unchanged1322sourcecounterparts; collector remains gated. The same open
+manuscript was shortened by moving detailed history verbatim to an appendix;
+theory, numbers and claims remain unchanged. Native compilation and V116 bundle
+integrity pass; all13 prior evidence/source components and verifier unchanged.
+Preview service failed to start; rendered layout/venue remain unresolved.
+Read ACTIVE_SESSION_V116. Scheduler remains PAUSED; continue foreground work.
 
 V115 current: recurring scheduler PAUSED at direct user request. At06:11:17UTC,
 16408/16409 were COMPLETED0:0;16410 running,16411--16427 dependency-pending.

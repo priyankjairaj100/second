@@ -1,0 +1,43 @@
+{
+  "bibliography_keys": [
+    "gptq",
+    "ginart",
+    "medu",
+    "qss",
+    "exactfun",
+    "qebverif",
+    "execcert",
+    "distilgpt2",
+    "c4",
+    "wikitext"
+  ],
+  "bibliography_unchanged": true,
+  "captured_utc": "2026-10-27T06:42:55.041779+00:00",
+  "historical_sections_preserved_verbatim": true,
+  "labels": 16,
+  "main_body_source_bytes_after": 35511,
+  "main_body_source_bytes_before": 39446,
+  "manuscript": {
+    "bytes": 60809,
+    "sha256": "3cb08fdd306801c49576ff118a09996834a835c33f6faa4f1c0d9da10541ca75"
+  },
+  "native_compile": {
+    "kind": "success",
+    "source": {
+      "bytes": 60809,
+      "sha256": "3cb08fdd306801c49576ff118a09996834a835c33f6faa4f1c0d9da10541ca75"
+    },
+    "tool": "compile_latex_document"
+  },
+  "native_compile_success": true,
+  "new_empirical_result": false,
+  "original_numeric_values_preserved": true,
+  "preparation_assertions": "Two local construction checks stopped before modifying the open manuscript: version identifiers are not numerical results, and embedded style command definitions are not document citations. Corrected checks exclude V-prefixed identifiers and restrict citation parsing to the document body. No research source or result changed.",
+  "previous_sha256": "cea87a82c5137306729871eb0030846c72bfe7c4039566509ab573621fc4fb48",
+  "rendered_layout_verified": false,
+  "same_open_file": true,
+  "schema": "manuscript-restructure-v116",
+  "theory_and_accounting_unchanged": true,
+  "unresolved_citations": [],
+  "unresolved_references": []
+}

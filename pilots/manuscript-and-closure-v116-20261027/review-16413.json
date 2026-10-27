@@ -1,0 +1,129 @@
+{
+  "captured_utc": "2026-10-27T06:44:48.641568+00:00",
+  "code_count": 42467328,
+  "complete_host_elapsed_ns": 369644315910,
+  "cost": {
+    "complete_controller_upper_cpu_ns": 13594023000,
+    "contained_kind": "matched_numerical",
+    "contained_work_cpu_ns": 353239977000,
+    "job_id": "16413",
+    "overlapping_clocks_not_summed": true,
+    "scheduler_cpu_ns": 366833000000,
+    "scheduler_quantum_ns": 1000000
+  },
+  "full_model_transfer_claim": false,
+  "independent_model_equality_verified": false,
+  "inputs": {
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_modern-1-16413.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_modern-1-bootstrap.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_modern-1-entry.json": {
+      "bytes": 834,
+      "sha256": "4f4a6fdf3abe5fe6b36d5a906ef485201ffefc5bf6a6ad5fd8388a2425be430b"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_modern-1-host-start.json": {
+      "bytes": 6396,
+      "sha256": "227f9e9faea6f71a4540cb78d08206e3f0e9264580717d0b0192bd3f5bf0648f"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2--reference_modern-1-host.json": {
+      "bytes": 1029,
+      "sha256": "2276922b9bc183da401bfa24c5cefc1e314b1f86d5cc3b45d817fd04ee105243"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/outputs/admission.json": {
+      "bytes": 544939,
+      "sha256": "5f3eb01fab68cffb353f40314f057194caa26f18255177546dac9bb65e1d36ac"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/outputs/completion.json": {
+      "bytes": 155557,
+      "sha256": "a53b640d9314782717c5b9e38db51402896d6f9b686003a8a79777ce035e0be9"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/outputs/execution-provenance.json": {
+      "bytes": 12727,
+      "sha256": "cbb6f2cc7c5002b7346706af87c953faffbdef88385c8b9cefc523ca09656429"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/outputs/model.bin": {
+      "bytes": 21233664,
+      "sha256": "2038bb85995a36c2184fb38d4c99a45105b378fec86ed3b3b2d82d8ec9a7feea"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/outputs/state.bin": {
+      "bytes": 109247563,
+      "sha256": "084a0885e0fe3bfae782630bf796e261c3deea7d917e9e9b16e505e0e7ff152c"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/outputs/trust.json": {
+      "bytes": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/worker/attempt-0001/budget-reservation.json": {
+      "bytes": 308,
+      "sha256": "1df545309112b7a35e777590f3408783ec3fcefc1084bbf8f5d9c8ee1670c158"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/worker/attempt-0001/limits-applied.json": {
+      "bytes": 443,
+      "sha256": "0aa896a258733198554ea82e50e1a638c56dd7b1a07c1b44e37c73ebdb821b43"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/worker/attempt-0001/pre-settlement-observation.json": {
+      "bytes": 741,
+      "sha256": "da70ed637e1c4257d8c81394ea8e44328852322eee1289c73a5be7a77a26872d"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/worker/attempt-0001/request.json": {
+      "bytes": 739,
+      "sha256": "84d345d4a06968dd4714305c93c7354a0b516a5a89fe45987c2bbc1f644b3a86"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/worker/attempt-0001/status.json": {
+      "bytes": 3034,
+      "sha256": "410af732dd45aac665530ee8a88938fc28ab4f7e54080e1f37b113dac57c4182"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/worker/attempt-0001/stderr-summary.json": {
+      "bytes": 125,
+      "sha256": "e48ab6cc9dc35f3054a46598d774b04d7876566c6dac8e2a724d82f96f8fee2c"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/worker/attempt-0001/stdout-summary.json": {
+      "bytes": 6277,
+      "sha256": "2f484ba094259410b107b3d65be9674158612e7627fe942d1a0620c3f7798ba4"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/worker/identity.json": {
+      "bytes": 971,
+      "sha256": "9169f029f084e2c838a35f536c2e68de878a45b2a3bbb952b2fbb562e4472a2c"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/reference_modern-1/worker/result.json": {
+      "bytes": 3034,
+      "sha256": "410af732dd45aac665530ee8a88938fc28ab4f7e54080e1f37b113dac57c4182"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/program.json": {
+      "bytes": 186414,
+      "sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381"
+    }
+  },
+  "live_state_bytes": 109247565,
+  "operation": "distilgpt2/reference_modern-1",
+  "point_route_policy": {
+    "adapter_sha256": "59d2c07a8c955b07acb835f59a425620355f632ccde4b23a1388711e8bfd38f8",
+    "box_and_gram_policy": "unchanged",
+    "closed": true,
+    "cross_route_retry": false,
+    "other_assessments": 126,
+    "point_assessments": 330,
+    "point_route": "token",
+    "policy": "all-point-inputs-token-from-start-v112"
+  },
+  "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+  "readonly_host_cpu_ns": 553526906,
+  "readonly_host_elapsed_ns": 736495856,
+  "readonly_review_cost_outside_experiment": true,
+  "scheduler_raw": "16413|second112-distilgpt2--reference_modern-1|COMPLETED|0:0|369|06:06.833|1|16G|csis.mn1\n16413.batch|batch|COMPLETED|0:0|369|06:06.833|1||csis.mn1\n",
+  "speed_comparison": false,
+  "stages": 24,
+  "status": "verified_actual_request_receipt_and_accounting",
+  "worker_budget_debit": {
+    "charged_cpu_seconds": 354,
+    "observed_cpu_ns": 353239977000,
+    "phase": "feasibility",
+    "reserved_cpu_seconds": 3002,
+    "state": "settled"
+  }
+}
