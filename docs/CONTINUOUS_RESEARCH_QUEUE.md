@@ -1,7 +1,7 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V116.md and handoff/program_v116.json.
-V116 is the current compiled manuscript and review bundle; V112 is the qualified and running experiment. Verified V72/V89 science stands; E19 adds the scoped failed-screen/stage diagnostic.
+Current continuation handoff: docs/ACTIVE_SESSION_V117.md and handoff/program_v117.json.
+V117 is the current compiled manuscript and review bundle; V112 is the qualified and running experiment. Verified V72/V89 science stands; E19 adds the scoped failed-screen/stage diagnostic.
 The user explicitly stopped the scheduler on27October2026: heartbeat PAUSED,
 verified in configuration. Continue foreground work and the already released Slurm
 chain. Do not resume the automation from historical heartbeat instructions.
@@ -40,6 +40,16 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V117 current: at07:16:14UTC all eight first-endpoint requests16408--16415 were
+completed0:0 and their saved-output/accounting reviews passed.16416running;
+16417--16427pending. Both oracles/audits/terminal still required; no speed or
+independent model equality claim. The unchanged collector is still unexecuted.
+New reporting_v117 prepares all-row tables/costs with25 distinct generated guards;
+no actual reduction. The same manuscript now explains the implemented coefficient
+certificate and compiles. All13 prior evidence/source components unchanged in the
+verified V117 bundle. All1322 source counterparts unchanged. Read ACTIVE_SESSION_V117.
+Scheduler stays PAUSED. Rendered layout/PDF/venue remain unresolved; no repeat question.
 
 V116 current: at06:50:30UTC seven requests16408--16414 completed0:0 and all seven
 saved-output/accounting reviews passed.16415running;16416--16427pending. Neither
