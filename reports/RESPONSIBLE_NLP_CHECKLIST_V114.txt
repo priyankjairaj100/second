@@ -1,0 +1,154 @@
+Responsible NLP checklist: draft answers for the current manuscript
+Updated27 October2026 from the18October draft. Policy fields still require a
+fresh check after venue/cycle selection. These are proposed responses, not a submitted form or
+an author attestation. Recheck against the chosen cycle's actual fields and the
+final paper. Labels below paraphrase the official questions; use the form's IDs.
+
+Official guidance:
+https://aclrollingreview.org/responsibleNLPresearch/
+https://aclrollingreview.org/authorchecklist
+ARR asks for section-grounded Yes responses and explanations for No responses.
+An explained No is not, by itself, a reason to reject a submission. Supplementary
+material may support an answer. Do not change a No to Yes merely to fill the form.
+
+A1. Limitations — Yes
+Section2 fixes the teacher, normalization, arithmetic, grids and ordering.
+Sections3--5 state containment, trusted-execution, bounded-refusal, replay and
+complete-cost assumptions. Section8 and Limitations restrict complete comparative evidence to one
+checkpoint, two dependent endpoints and a bounded article frame; they disclose
+adaptive teacher selection, failed guards and single-trajectory timings.
+
+A2. Potential risks — Yes
+Section8 (Deployment limits) and Ethical considerations distinguish calibration-
+state repair from pretraining unlearning, privacy or physical erasure. They warn
+that external corpora and audit archives remain, and discuss personal/offensive
+web content, absent demographic/fairness claims and the restricted review payload.
+
+B. Scientific artifacts — Yes
+The work uses existing checkpoints, corpora, tokenization/numerical libraries
+and new calibration-service code, saved-loss records and evidence derivatives.
+
+B1. Artifact attribution — Yes
+Sections6 and8 cite the WikiText creators, Hugging Face's DistilGPT2 model card
+and the C4 publication. The reproduction guide's INPUTS.json and DEPENDENCIES.txt
+provide upstream asset URLs, pinned revisions and package-version sources; the
+notices companion retains upstream attribution. This is attribution, not a claim
+that every dependency's implementation or licensing was independently audited.
+
+B2. Artifact terms — No (incomplete across the supplied project artifacts)
+Section9 and the reproduction guide document publisher-declared Apache2.0 terms
+for DistilGPT2, ODC-BY for C4 and additional Common Crawl conditions; upstream
+package notices are supplied. A general license for the new project source has
+not been assigned, and complete historical asset-use/distribution clearance has
+not been established. Raw corpus/token/model/runtime binaries are excluded.
+No blanket redistribution permission is claimed. Authors must resolve any terms
+required by their intended distribution; these declarations are not legal advice.
+
+B3. Intended use and access compatibility — No (partial documentation)
+Ethical considerations specifies a research prototype for calibration-state
+maintenance, and Section8 limits deployment claims. The review package omits
+raw text/tokens and model/runtime binaries. Compatibility with every historical
+asset's original access conditions has not been independently established; no
+commercial-deployment or privacy guarantee is asserted.
+
+B4. Personal/offensive-content checks — No
+Ethical considerations explicitly makes no claim of a content-level privacy or
+offensive-text audit. Public benchmark use, source-hash exclusion checks and
+review-author redaction do not establish that source text lacks personal or
+harmful content. Raw corpus text and token sequences are excluded from the
+review package. No privacy-audit result should be inferred from the metadata tests.
+
+B5. Artifact scope documentation — Yes, with explicit limits
+Section8 identifies English C4 web text, the DistilGPT2 checkpoint and a
+related GPT2 selected-stage diagnostic. Section6
+identifies the historical WikiText-2 pilots. Section9 and the reproduction guide
+bind specific inputs/runtime versions. Ethical considerations disclaims a
+demographic characterization and fairness improvements. This documents the known
+scope; it does not establish representativeness of web authors or the full corpus.
+
+B6. Data counts and separation — Yes
+Section8 reports thirteen128-token calibration records and the13->12->6 deletion
+trajectory, plus the320-article outcome-blind evaluation from2778 eligible records
+in a3801-record frame. It describes all-frame reservation and historical/calibration
+exclusions. E17 and the selection companion retain per-model/article counts and
+saved selection commitments. The guide states that this is not a uniform sample
+of the entire corpus or a standard full-dataset benchmark split.
+
+C. Computational experiments — Yes
+Complete-model repair, fresh reconstruction, sequential calibration, likelihood
+evaluation, parity tests and actual terminal audits were executed.
+
+C1. Model size, infrastructure and total compute — No (project-wide total incomplete)
+Section8 gives approximately82 million total DistilGPT2 parameters separately
+from42,467,328 quantized codes. Sections5 and8 distinguish preparation, requests,
+audits, failures and overlapping worker/scheduler clocks. E16--E19 and the source/
+runtime supplements give actual campaign accounting and execution configuration.
+The separately recovered final quality campaign consumes7588.049 scheduler CPU
+seconds including its failed closure and recovery. That value is not the complete
+research-program cost. E18 adds the optimization screen: scheduler CPU is
+[39389.110,39396.116)seconds, with the old unresolved12602-second reservation
+retained separately. The matched screen failed its first request. E19 reports that refusal and
+a separately registered token-stage certificate, without a full-model transfer
+or speed claim. Their cumulative numerical debit is6304CPU seconds; software
+and controller partitions are separate, with original failures preserved. A single consolidated all-experiments CPU/GPU total, with
+historical unknown/interrupted reservations reconciled, is not supplied. We do
+not equate requested resource ceilings with consumed compute or add nested clocks.
+
+C2. Setup and adaptive choices — Yes
+Sections2--3 define the target, grids, enclosures and solver/fallback schedule.
+Section8 preserves the failed nearest-anchor target,40-bit refusal and later
+48-bit choice, adaptive original-checkpoint teacher screen, frozen quality guards
+and untouched comparison. The source supplement's protocols specify normalization
+1664 for the original trajectory and512 for the matched diagnostic, ridge1/100,
+4-bit model grids,48-bit descriptors and source block extents, plus runtime
+and bounded admission details. The untouched articles were not used to replace
+models or thresholds after observing their losses.
+
+C3. Statistical summaries — Yes
+Section8 identifies each service timing as one observation with no timing interval.
+The quality table gives pooled ratios, one-sided97.5% bootstrap upper bounds and
+observed maxima; text also reports paired95% intervals. The20000-draw bootstrap
+pairs articles and shares draws across endpoints. The paper limits its uncertainty
+claim to the bounded admitted frame and distinguishes observed maxima from
+population-tail guarantees.
+
+C4. Implementation and settings — Yes
+Sections2--3 and8 specify the finite CPU target and evaluation distinction. The
+source/protocol and reproduction-guide components bind code, tokenizer, versions,
+runtime files and evaluation settings. The guide separates runnable offline
+checks from external-input Linux/CUDA execution. These records document the
+implementation; local fixtures do not independently reproduce the experiments.
+The optimization, diagnostic and point-policy source supplements supply739
+additional review copies, covering1322 source/protocol files together with the
+583-file base. Seventeen execution-specific receipts remain excluded and
+enumerated; path-adapted copies cannot satisfy original execution hashes.
+The point-policy sources correspond to a software-qualified, running study; no
+completed model-transfer or general speedup result is added by this supplement.
+Offline bundle checks verify supplied bytes and coverage only.
+
+D. Human annotation or participant study — No
+The documented experiments use existing corpora and model computations. There
+is no recruited participant or human-annotation component in this study.
+
+D1. Participant instructions — N/A
+D2. Recruitment/payment — N/A
+D3. Participant consent procedure — N/A
+D4. Participant-study ethics-board approval — N/A
+D5. Annotator demographics — N/A
+These answers apply to the absent participant/annotation component. They do not
+assert consent by the authors of underlying web pages, IRB approval or exemption,
+or absence of personal information in existing corpora; see B2--B5.
+
+E. AI assistance — Yes
+E1. AI-use disclosure — Yes
+Acknowledgements states that generative AI assisted experiment planning, software
+development, analysis, literature checking and manuscript drafting. Human authors
+remain responsible for the final methods, results, references and text. This
+records assistance; it does not certify that author review has already occurred.
+
+Author-controlled submission fields still unset
+Choose the venue/cycle and final long/short category; confirm actual rendered
+page count. Author identities/order, affiliations, OpenReview profiles/ORCIDs,
+conflicts, consent to submit, concurrent/resubmission and preprint status, and
+reviewing-service declarations must come from the authors. This file is not
+permission to submit, a completed ethics attestation or a license assignment.

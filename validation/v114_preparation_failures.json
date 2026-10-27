@@ -1,0 +1,15 @@
+{
+  "schema": "review-preparation-failures-v114",
+  "captured_utc": "2026-10-27T05:42:00.033741+00:00",
+  "failures": [
+    {
+      "operation": "Local source supplement construction",
+      "error": "AssertionError: inventory == program[sources] == program[source_inventory]",
+      "cause": "source_inventory is an identity object in V112, while sources is the file map",
+      "resolution": "Check sources against parsed inventory and source_inventory against exact original inventory bytes; verify original archive separately",
+      "before_any_output_archive": true,
+      "cluster_action": false,
+      "numerical_source_changed": false
+    }
+  ]
+}

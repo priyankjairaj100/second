@@ -1,7 +1,7 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V113.md and handoff/program_v113.json.
-V111 is the current manuscript/bundle checkpoint; V112 is the qualified and running experiment. Verified V72/V89 science stands; E19 adds the scoped failed-screen/stage diagnostic.
+Current continuation handoff: docs/ACTIVE_SESSION_V114.md and handoff/program_v114.json.
+V111 is the current manuscript; V114 is the source-complete review bundle; V112 is the qualified and running experiment. Verified V72/V89 science stands; E19 adds the scoped failed-screen/stage diagnostic.
 The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
 every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
 Historical handoffs keep their original observation cutoffs.
@@ -39,6 +39,17 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V114 current: at05:44:42UTC16408 remained RUNNING with46/48 stage certificates,
+no completion;16409--16427 dependency-pending. The actual program/clean numerical
+checkout match. Review bundle now has13 components and1322 source/protocol copies,
+including96 new copies from the exact qualified V112 archive. All12 prior
+components and the V111 manuscript remain byte-identical. Portable checks and six
+corruption/scope rejection cases pass; no new numerical result or adapted-runtime
+qualification. Source-builder inventory-schema assertion failure is preserved and
+corrected before any archive output. Read ACTIVE_SESSION_V114. Existing jobs only;
+reporting_v113 remains gated on all actual terminal evidence. Original sources,
+limits, costs and failures remain. Layout/venue pending; no repeated questions.
 
 V113 current: access restored; V112 software16407 COMPLETED0:0 with all318Linux
 checks and actual accounting verified. Program a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381.
