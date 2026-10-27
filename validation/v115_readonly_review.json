@@ -1,0 +1,120 @@
+{
+  "complete_requests": 2,
+  "earlier_readonly_helper_failure": {
+    "correction": "New read-only helper disables core.preloadIndex and sets index.threads=1; same60secondCPU and512MiB limits",
+    "numerical_failure": false,
+    "original_helper_preserved": true,
+    "reason": "Git optional threaded lstat failed inside the existing512MiB address-space limit",
+    "receipt": "v112-first-request-review-20261027T060312Z",
+    "registered_sources_unchanged": true,
+    "ssh_transport_failure": false
+  },
+  "full_model_transfer_claim": false,
+  "independent_model_equality_verified": false,
+  "local_checkpoint_preparation_failure": {
+    "effects": "Import failed before any file or remote operation; replacement uses standard-library re for the two exact configuration fields",
+    "reason": "The system Python lacks tomllib"
+  },
+  "manuscript_unchanged": true,
+  "request_summaries": [
+    {
+      "captured_utc": "2026-10-27T06:04:33.664168+00:00",
+      "code_count": 84934656,
+      "complete_host_elapsed_ns": 2027290442863,
+      "cost": {
+        "complete_controller_upper_cpu_ns": 16597131000,
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 1998519869000,
+        "job_id": "16408",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 2015116000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "full_model_transfer_claim": false,
+      "independent_model_equality_verified": false,
+      "live_state_bytes": 201503885,
+      "operation": "gpt2/reference_compressed-1",
+      "point_route_policy": {
+        "adapter_sha256": "59d2c07a8c955b07acb835f59a425620355f632ccde4b23a1388711e8bfd38f8",
+        "box_and_gram_policy": "unchanged",
+        "closed": true,
+        "cross_route_retry": false,
+        "other_assessments": 444,
+        "point_assessments": 661,
+        "point_route": "token",
+        "policy": "all-point-inputs-token-from-start-v112"
+      },
+      "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+      "readonly_host_cpu_ns": 900477698,
+      "readonly_host_elapsed_ns": 915460531,
+      "readonly_review_cost_outside_experiment": true,
+      "scheduler_raw": "16408|second112-gpt2--reference_compressed-1|COMPLETED|0:0|2028|33:35.116|1|16G|csis.mn1\n16408.batch|batch|COMPLETED|0:0|2028|33:35.116|1||csis.mn1\n",
+      "speed_comparison": false,
+      "stages": 48,
+      "status": "verified_actual_first_request_receipt_and_accounting",
+      "worker_budget_debit": {
+        "charged_cpu_seconds": 1999,
+        "observed_cpu_ns": 1998519869000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 6002,
+        "state": "settled"
+      }
+    },
+    {
+      "captured_utc": "2026-10-27T06:11:56.252289+00:00",
+      "code_count": 42467328,
+      "complete_host_elapsed_ns": 589239197828,
+      "cost": {
+        "complete_controller_upper_cpu_ns": 14105207000,
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 571142793000,
+        "job_id": "16409",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 585247000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "full_model_transfer_claim": false,
+      "independent_model_equality_verified": false,
+      "live_state_bytes": 100751218,
+      "operation": "distilgpt2/reference_compressed-1",
+      "point_route_policy": {
+        "adapter_sha256": "59d2c07a8c955b07acb835f59a425620355f632ccde4b23a1388711e8bfd38f8",
+        "box_and_gram_policy": "unchanged",
+        "closed": true,
+        "cross_route_retry": false,
+        "other_assessments": 222,
+        "point_assessments": 306,
+        "point_route": "token",
+        "policy": "all-point-inputs-token-from-start-v112"
+      },
+      "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+      "readonly_host_cpu_ns": 684955136,
+      "readonly_host_elapsed_ns": 693856769,
+      "readonly_review_cost_outside_experiment": true,
+      "scheduler_raw": "16409|second112-distilgpt2--reference_compressed-1|COMPLETED|0:0|590|09:45.247|1|16G|csis.mn1\n16409.batch|batch|COMPLETED|0:0|590|09:45.247|1||csis.mn1\n",
+      "speed_comparison": false,
+      "stages": 24,
+      "status": "verified_actual_request_receipt_and_accounting",
+      "worker_budget_debit": {
+        "charged_cpu_seconds": 572,
+        "observed_cpu_ns": 571142793000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3002,
+        "state": "settled"
+      }
+    }
+  ],
+  "review_bundle_unchanged": true,
+  "scheduler": {
+    "automation_id": "continue-second-research",
+    "cluster_jobs_cancelled": false,
+    "new_monitor_created": false,
+    "status": "PAUSED",
+    "updated_at": 1793080741075,
+    "user_requested_stop": true,
+    "verified_from_configuration": true
+  },
+  "schema": "v115-readonly-request-review-checkpoint",
+  "source_counterparts_unchanged": 1322,
+  "speed_comparison": false
+}

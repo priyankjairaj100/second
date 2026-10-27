@@ -1,9 +1,10 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V114.md and handoff/program_v114.json.
+Current continuation handoff: docs/ACTIVE_SESSION_V115.md and handoff/program_v115.json.
 V111 is the current manuscript; V114 is the source-complete review bundle; V112 is the qualified and running experiment. Verified V72/V89 science stands; E19 adds the scoped failed-screen/stage diagnostic.
-The user explicitly resumed the existing scheduler on23October2026: heartbeat ACTIVE
-every15minutes in this chat. Continue the authorised optimisation/transfer campaign.
+The user explicitly stopped the scheduler on27October2026: heartbeat PAUSED,
+verified in configuration. Continue foreground work and the already released Slurm
+chain. Do not resume the automation from historical heartbeat instructions.
 Historical handoffs keep their original observation cutoffs.
 
 ## Immutable execution boundaries
@@ -39,6 +40,18 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V115 current: recurring scheduler PAUSED at direct user request. At06:11:17UTC,
+16408/16409 were COMPLETED0:0;16410 running,16411--16427 dependency-pending.
+Actual saved outputs, artifact hashes, seals, policy and complete accounting passed
+for both first requests: GPT2 all48stages/84,934,656codes; DistilGPT2 all24stages/
+42,467,328codes. No independent model equality or speed comparison yet. Current
+chain is serial by registered worker, ledger and terminal guards; dependency
+removal would fail it, and overlapping on the fixed host changes timing contention.
+No new job or retry. Preserve caps and all carried costs. Read ACTIVE_SESSION_V115.
+Both oracles/audits and actual terminal remain; reporting_v113 stays gated.
+All1322 sources, V111 manuscript and V114 bundle unchanged. Earlier entries below
+are historical and their ACTIVE scheduler references do not apply now.
 
 V114 current: at05:44:42UTC16408 remained RUNNING with46/48 stage certificates,
 no completion;16409--16427 dependency-pending. The actual program/clean numerical
