@@ -1,0 +1,166 @@
+ADVERSARIAL MANUSCRIPT REVIEW V121
+28 October 2026
+Title: Lossy Calibration Archives for Exact Model Repair
+Scope: scientific argument, proofs, numerical claims, references and final PDF.
+This is an internal adversarial review, not an external referee report.
+
+VERDICT AND CENTRAL STORY
+The defensible contribution is a certificate-and-state construction that turns
+lossy calibration evidence into exactly specified discrete model repairs, together
+with complete measurements of the storage, source-access and latency choices.
+The useful conceptual distinction is between reconstructing exact feature values
+and determining exact weight codes. A feature enclosure can settle the latter
+without settling the former. Successful repairs also produce canonical state for
+the next deletion. Changed codes are covered; this is not only an unchanged-model
+stability argument.
+
+This is a bounded contribution. The evidence does not support general acceleration,
+cross-architecture transfer or improved inference efficiency. The current results
+support a storage-led maintenance setting with an explicit tolerance for repair
+latency and possible source replay. The rewrite presents that result directly.
+Publication importance remains a judgment for reviewers; citation and correctness
+checks alone cannot establish TACL-level significance.
+
+RESOLVED FINDINGS
+
+1. Target ambiguity and an over-broad GPTQ reading (Sections 2, 3 and 8).
+The earlier description left too much room to interpret the target as ordinary
+GPTQ or a global quantized optimum. The revised definition states the quadratic
+proxy, conditional continuous minimization and subsequent discrete rounding.
+The greedy procedure need not find the global discrete optimum. Fixed teacher,
+positive ridge, fixed original normalization, and base-only dyadic grids are part
+of the target. Published GPTQ uses asymmetric min-max grids and quantized-prefix
+propagation. The quality comparator is now explicitly a matched sequential
+constructor in this target family, not an off-the-shelf GPTQ implementation.
+
+2. Incomplete attribution of known rounding theory (Sections 3 and 8).
+QuIP and the GPTQ/Babai geometry analysis were absent. Both are added. The existing
+quadratic/LDL rounding analysis and nearest-plane connection are credited. The
+Babai distortion bound is identified with its no-clipping premise. That theorem
+is not silently applied to the manuscript's finite saturated grids. The claimed
+new construction concerns uncertain calibration evidence and reusable repair state.
+
+3. Overlap with executable certification literature (Section 8).
+ExecCert already turns residual bounds into discrete prediction agreement through
+margins. The revised comparison acknowledges this explicitly. Interval bounds and
+proposal/verification separation are established tools. The distinction is the
+adaptive chain of weight-code decisions and its canonical successor state, rather
+than a generic claim to have invented discrete-output certification.
+
+4. Missing token-space derivation and proof premises (Sections 3-5).
+The manuscript now includes both feature-space and token-space coefficient
+identities, the token residual bound and its positive-definite inverse argument.
+A numerical proposal stays fixed during a verification check. For uncertain
+features, the inequalities must hold uniformly through outward enclosure; an
+arbitrary entrywise Gram enclosure is not itself assumed positive definite.
+The suffix identity, spectral bound, prefix induction, exact source subtraction
+and canonical-state composition were manually checked against their premises.
+Independent rational checks cover 315 small matrices, including rank-deficient
+features with positive ridge, 459 coefficient/bound cases and 459 rounding-cell
+boundary cases. They support the derivation review; they are not a formal proof
+of the entire executable implementation or new empirical evidence.
+
+5. Confusing sufficient certification with identifiability (Section 4.3).
+Two realizations in one feature box that yield different codes establish genuine
+ambiguity. Separate coefficient intervals may also refuse when all realizations
+agree, because interval combinations can be unattainable. The distinction is now
+explicit. A certificate refusal alone is not evidence of information impossibility.
+
+6. Complexity language (Section 4.4).
+The displayed work polynomials are admission proxies, not bounds on the entire
+verified request. Interval width, decoding, repeated verification and replay also
+affect runtime. The common token policy in the final matched study is distinguished
+from the earlier dispatcher without claiming an asymptotic total-cost theorem.
+
+7. Timing and source-access units (Section 6 and Tables 1-3).
+The baseline request clock excludes caller context loading and controller overhead;
+optimization and matched studies use complete host clocks. Comparisons remain
+within each study. Source access counts source-stage traversals, not distinct disk
+reads or network requests. Nested extraction time is not added to its parent stage
+time. Optimized packages contain multiple changes, so their speed differences are
+not attributed solely to a decoder or individual kernel.
+
+8. Storage denominator and practical relevance (Abstract; Sections 7 and 9).
+The abstract now includes the matched checkpoint-inclusive savings of 1.30-2.24%
+alongside the 7.01-7.86% live-state savings. A deployed model still needs unchanged
+checkpoint components. The target preserves binary64 feature values; comparison
+against a conventional lower-precision activation cache would require its own
+correctness contract. Repair-state savings imply neither reduced inference memory
+nor faster serving.
+
+9. Quality estimand and population (Sections 6.2 and 7.4).
+The pooled ratio is defined from article mean negative log losses, using equal
+127-prediction counts. Paired resampling keeps whole articles and uses the next
+higher empirical quantile. The original 320-article bounded frame, guard thresholds,
+teacher-selection exposure, 40-bit refusal and separate 48-bit study remain. The
+quality result belongs to the earlier DistilGPT2 target with normalization 1664;
+it does not validate the later 512-normalized matched targets. No quality gain is
+claimed: the reported paired intervals lie above one.
+
+10. Bibliographic error and metadata conflicts (References).
+MEDU's Alon Helvitz was corrected to Alon Helvits. The primary PDF, publisher-
+deposited Crossref record and author institution agree; the arXiv abstract metadata
+uses the other spelling. Xiao-Wen Chang in ExecCert was retained after checking
+the primary PDF/HTML despite its abstract metadata variant. Full Ginart author
+names follow the primary proceedings PDF. Model cards remain corporate-authored
+cards, with pinned revisions and access dates, not misattributed original papers.
+All 11 original references exist; two relevant papers were added. No fabricated
+reference was found. See validation/v121_reference_audit.json for all 13 entries.
+
+REFERENCE AUDIT METHOD AND LIMITS
+Pass one checked identity, author order, titles, version/publication years, venues,
+DOIs and available page metadata against primary records. Pass two checked the
+specific attributed technical claim in primary text. Pass three checked the final
+rendered entries, citation resolution and embedded URL destinations. Publisher
+BibTeX independently confirms QuIP's volume and pages. JMLR confirms C4 metadata.
+Several publisher/OpenReview endpoints were blocked; primary author versions and
+independent deposited metadata were used and identified per entry. Exact-Fun's
+claim was checked in the 11-page author version; its published bibliographic range
+1439-1444 is independently recorded by Crossref. The published six-page PDF was
+not independently inspected. The audit is not an exhaustive novelty search, and
+link destinations are not a guarantee of future website availability.
+
+REMAINING SUBSTANTIVE REVIEW RISKS
+A. Practical magnitude. Matched checkpoint-inclusive savings are modest. All four
+optimized compressed settings are slower than optimized modern lossless storage,
+by 43.59-166.15% in the observed host times. Savings must justify those costs for a
+specific maintenance use case. The paper now gives the necessary denominators and
+complete comparison rather than promising general deployment benefit.
+B. Breadth. DistilGPT2 and GPT2 are two related model depths, not two architectures.
+The matched root contains four records, and the earlier root contains thirteen.
+These establish complete scoped execution but not large-model or corpus-scale
+behavior. The tested feature-precision contract differs from many practical caches.
+C. Timing variation. Each timing cell is one observation with fixed execution order
+and uncontrolled OS cache state. No latency confidence interval, stable ranking
+across hosts or general speedup follows. The earlier near-tie is not a robust win.
+D. Source availability. Both compressed GPT2 three-record cells replay 144 source-
+stage pairs. Source-free repair is not universal; refused requests need sufficient
+source access or remain unresolved. Numerical fallback and source replay differ.
+E. Oracle independence. Fresh reconstruction reads retained inputs independently
+of candidate state but shares the numerical solver. Actual byte comparisons cover
+models, canonical state and required trust artifacts; they do not eliminate a
+solver bug common to both executions. Small rational review checks narrow specific
+algebra risks without changing that boundary.
+F. Quality. No new quality result exists for the matched target. The earlier quality
+study tolerates a small measured loss relative to its matched sequential comparator;
+it does not show predictive improvement or uniform population guarantees.
+G. Verification/reproduction. Proofs assume the frozen finite evaluator, correct
+outward arithmetic, input provenance and stated execution environment. Hashes do
+not prove semantic containment. The portable archive verifies supplied records
+and arithmetic; full fresh reproduction from external inputs was not performed.
+H. Submission and rights. Author eligibility, history, consent and metadata remain
+unverified. Source release licensing and complete indirect anonymity of historical
+public material remain unresolved. The evidence archive is author-side; TACL
+prohibits external review supplements. No manuscript upload was performed.
+
+FINAL VALIDATION
+The same open manuscript compiled in the native editor. An independent export of
+that exact source has 10 full content pages, 1 reference page and no appendix.
+All 11 rendered pages were visually inspected. Official style is unchanged; fonts
+are embedded, PDF author metadata is empty, labels/citations resolve, and there
+are no overfull boxes or em dashes. Ten baseline rows, eight optimization times,
+sixteen matched times/storage contrasts and two quality endpoints were checked
+against frozen reports. All 1,322 original source/protocol counterparts verify
+unchanged. Packaging separately verifies all 14 unchanged scientific components.
+No cluster connection, job, consumed collector, numerical experiment or original
+research-code modification was made for this revision. The scheduler stays paused.

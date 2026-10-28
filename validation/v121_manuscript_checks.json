@@ -1,0 +1,187 @@
+{
+  "schema": "second-tacl-manuscript-v121",
+  "manuscript": {
+    "bytes": 70545,
+    "sha256": "770b8182fb309d5cc64a4d289b7f2d266cbbc7f82fea0f74869273bef3c049d7"
+  },
+  "pdf": {
+    "bytes": 114014,
+    "sha256": "b2c0374eeaa7259696dd4d384c17d35b20365c697d5dfed9575a6f80670778f0"
+  },
+  "title": "Lossy Calibration Archives for Exact Model Repair",
+  "content_pages": 10,
+  "reference_pages": 1,
+  "total_pages": 11,
+  "appendices": 0,
+  "style": {
+    "bytes": 20501,
+    "sha256": "7c71ede112ccb3711c7073c4b1c60abfb076b83945e0e9d14ed79caa37dca3b6"
+  },
+  "official_style_unmodified": true,
+  "labels": 32,
+  "citation_keys": 13,
+  "all_references_resolved": true,
+  "overfull_boxes": 0,
+  "first_page_no_tables_or_figures": true,
+  "pdf_author_metadata_empty": true,
+  "embedded_fonts": [
+    "/AKHCZK+CMMI10",
+    "/BZIVMZ+NimbusSanL-Bold",
+    "/CAFSZL+CMR8",
+    "/DDIEWW+CMMI8",
+    "/FKPJSN+MSBM10",
+    "/IHAIZV+NimbusRomNo9L-Regu",
+    "/IXFAWU+NimbusRomNo9L-Medi",
+    "/JAGKKY+CMSY8",
+    "/KPXLOM+NimbusMonL-Regu",
+    "/NOMARO+CMEX10",
+    "/PVTTLK+CMMI6",
+    "/TQTHRL+NimbusRomNo9L-ReguItal",
+    "/VDVGTR+CMSY10",
+    "/YEUUOC+CMR10"
+  ],
+  "source_author_identifier_scan_pass": true,
+  "no_em_dashes": true,
+  "core_proofs_in_main": 3,
+  "baseline_rows_checked": 10,
+  "optimization_times_checked": 8,
+  "matched_times_checked": 16,
+  "quality_endpoints_checked": 2,
+  "original_source_files_verified": 1322,
+  "original_research_sources_changed": false,
+  "toy_exact_rational_check": true,
+  "toy_is_not_empirical_evidence": true,
+  "new_empirical_execution": false,
+  "native_compile_success": true,
+  "native_compiler_message": "The current source compiled successfully with the desktop editor's compiler.",
+  "export_engine": "Official portable Tectonic 0.17.0; independent PDF export of the same source",
+  "column_bottoms": [
+    {
+      "page": 1,
+      "column_bottom_points": [
+        765.3331420960004,
+        765.3332220960002
+      ]
+    },
+    {
+      "page": 2,
+      "column_bottom_points": [
+        765.3331320960002,
+        765.3331120959999
+      ]
+    },
+    {
+      "page": 3,
+      "column_bottom_points": [
+        765.3331520960004,
+        765.3331420960004
+      ]
+    },
+    {
+      "page": 4,
+      "column_bottom_points": [
+        765.3331220960001,
+        766.2892417280004
+      ]
+    },
+    {
+      "page": 5,
+      "column_bottom_points": [
+        765.333112096,
+        765.3331320960003
+      ]
+    },
+    {
+      "page": 6,
+      "column_bottom_points": [
+        765.3331920960002,
+        765.3331220960002
+      ]
+    },
+    {
+      "page": 7,
+      "column_bottom_points": [
+        765.3331220960002,
+        765.3331220960001
+      ]
+    },
+    {
+      "page": 8,
+      "column_bottom_points": [
+        765.3331320960002,
+        765.3331320960003
+      ]
+    },
+    {
+      "page": 9,
+      "column_bottom_points": [
+        765.333102096,
+        765.333112096
+      ]
+    },
+    {
+      "page": 10,
+      "column_bottom_points": [
+        765.3331720960003,
+        745.2544120960001
+      ]
+    },
+    {
+      "page": 11,
+      "column_bottom_points": [
+        765.333102096,
+        270.20693209599995
+      ]
+    }
+  ],
+  "visual_review_status": "passed_all_11_pages",
+  "rendered_page_hashes": {
+    "page-01.png": {
+      "bytes": 342436,
+      "sha256": "d6b5b76f0534d07e8ec604705651d105c8bec3f49fe625906d0000d530ba2164"
+    },
+    "page-02.png": {
+      "bytes": 358605,
+      "sha256": "2d995c098c3c55da3d1f412bf9c44bdf4eb5abf807fcedd5c8896ca064b6c5ee"
+    },
+    "page-03.png": {
+      "bytes": 380003,
+      "sha256": "ed2a840515766502b6211ad5f12a07018a51b3789723fd7341c14d83aa737841"
+    },
+    "page-04.png": {
+      "bytes": 366565,
+      "sha256": "182a699e811ad854b2a55b16f87ccb7b841897b1f94a593d30a89fb7e66ac69d"
+    },
+    "page-05.png": {
+      "bytes": 392064,
+      "sha256": "f336a09b48dfb501555950b1ecc1d2dd4ddbd63c04ea41192070db9c00c09f83"
+    },
+    "page-06.png": {
+      "bytes": 403393,
+      "sha256": "529d66b8feb7287791925cecc63d80122775339386807f2162de25ec6599bc1c"
+    },
+    "page-07.png": {
+      "bytes": 398639,
+      "sha256": "004578a6743948b53773aab78ec78dc69032d80081302ff62a9c951a5abb376f"
+    },
+    "page-08.png": {
+      "bytes": 372560,
+      "sha256": "5ce104fc8dcdfbb702c37b739cb33c0225e2b77a0814c65e29d546824f285398"
+    },
+    "page-09.png": {
+      "bytes": 369137,
+      "sha256": "b5f4045074a902449cfdea1f388f18edbb095835df4e3b9079b0c31d2454f713"
+    },
+    "page-10.png": {
+      "bytes": 407020,
+      "sha256": "2f49a039c2a49e456163793f2a57be133cddc64199a1c73225c7bd9b02cc1fcb"
+    },
+    "page-11.png": {
+      "bytes": 302697,
+      "sha256": "2ff54ce879cdc49e6f92b7a2c09bfd323f33f1626d2d7deb0de20e3fec4da3a8"
+    }
+  },
+  "full_indirect_anonymity_verified": false,
+  "author_attestations_completed": false,
+  "submission_performed": false
+}

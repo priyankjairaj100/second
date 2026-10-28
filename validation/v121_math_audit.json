@@ -1,0 +1,16 @@
+{
+  "schema": "second-manuscript-mathematical-audit-v121",
+  "rational_matrix_cases": 315,
+  "coefficient_identity_and_squared_bounds": 459,
+  "rounding_cell_boundary_cases": 459,
+  "reverse_ldl_suffix_identity": true,
+  "token_dual_identity": true,
+  "quadratic_stationarity": true,
+  "both_feature_residual_bounds": true,
+  "token_residual_bound": true,
+  "lower_midpoint_ties": true,
+  "worked_example": true,
+  "manual_proof_review": "suffix factorization, spectral bound, prefix induction, exact subtraction, canonical state composition",
+  "scope": "Independent exact rational illustration checks support manual derivation review; not empirical results or a formal verification of the executable implementation.",
+  "new_model_or_cluster_experiment": false
+}

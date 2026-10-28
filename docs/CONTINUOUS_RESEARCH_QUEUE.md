@@ -1,5 +1,19 @@
 # Second: continuous research and submission queue
 
+Current continuation handoff: docs/ACTIVE_SESSION_V121.md and handoff/program_v121.json.
+V121 adversarial revision is complete in the same open document: 10 content pages,
+1 reference page, no appendices. Native compilation, independent export and visual
+inspection pass. All13references received primary identity, claim-scope and final
+render/link checks. One author-name error corrected; QuIP and GPTQ/Babai added.
+Read docs/ADVERSARIAL_REVIEW_V121.txt for resolved findings and remaining limits.
+All1322original sources and14scientific components are unchanged. Science is closed;
+no new experiment, job or consumed collector is required or run. Source/PDF and
+verified author bundles are versionedV121. Before any separately authorized upload,
+follow TACL_SUBMISSION_CHECKLIST_V121.txt. Author declarations remain unverified;
+TACL prohibits external review supplements. Scheduler PAUSED; do not resume it.
+
+Earlier entries below are historical snapshots; V121 above governs current state.
+
 Current continuation handoff: docs/ACTIVE_SESSION_V120.md and handoff/program_v120.json.
 V120 TACL manuscript and rendered delivery artifacts are complete: 10 content pages
 plus 1 references page, no appendices. Same open source, native compilation, independent
