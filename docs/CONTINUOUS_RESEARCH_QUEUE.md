@@ -1,5 +1,19 @@
 # Second: continuous research and submission queue
 
+Current continuation handoff: docs/ACTIVE_SESSION_V120.md and handoff/program_v120.json.
+V120 TACL manuscript and rendered delivery artifacts are complete: 10 content pages
+plus 1 references page, no appendices. Same open source, native compilation, independent
+PDF export, visual inspection and frozen-result cross-checks pass. Core proofs are
+self-contained; official style is unchanged. All1322 original source files and all14
+evidence/source components remain unchanged. No new experiment is required or run.
+Read TACL_SUBMISSION_CHECKLIST_V120.txt before any separately authorized upload.
+External review supplements are prohibited; the larger archive is author-side only.
+Author history/eligibility, consent and metadata remain unverified. No submission.
+Scheduler remains PAUSED. Foreground paper preparation is complete; do not resume
+historical heartbeat work, create monitors or repeat registered jobs.
+
+Earlier entries below are historical snapshots; V120 above governs current state.
+
 Current continuation handoff: docs/ACTIVE_SESSION_V119.md and handoff/program_v119.json.
 V119 is the compiled manuscript and verified 14-component development review bundle.
 V112 is CLOSED: all 21 jobs, 16 comparisons, both fresh oracles, both audits and

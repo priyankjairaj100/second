@@ -1,0 +1,289 @@
+{
+  "branch": "codex/second-cluster-v42",
+  "conference_submission": false,
+  "credentials_stored": false,
+  "current_handoff": "docs/ACTIVE_SESSION_V120.md",
+  "current_science": {
+    "actual_complete_model_state_trust_pairs": 16,
+    "all_prior_V72_V89_findings_preserved": true,
+    "complete_host_time_increase_percent_range": [
+      43.593,
+      166.148
+    ],
+    "cross_architecture_generality": false,
+    "general_speedup": false,
+    "live_storage_savings_percent_range": [
+      7.009,
+      7.858
+    ],
+    "new_complete_related_checkpoint_correctness": true,
+    "new_complete_speed_comparison": true,
+    "new_quality_evaluation": false,
+    "optimized_compressed_slower_in_all_four_matched_strata": true,
+    "source_replay_at_gpt2_three_records": true,
+    "stable_latency_established": false
+  },
+  "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "evidence_directory": "pilots/matched-closure-v119-20261027",
+  "evidence_manifest": {
+    "bytes": 24943,
+    "sha256": "0195f7e7a5b9dab8550e554612ac66ee423d8a58b7ef64893755811ca1876d4b"
+  },
+  "experiment": {
+    "actual_terminal": {
+      "bytes": 746962,
+      "sha256": "caac5f13105e096fff8e6dc50af6f27525195c8cbccdf01117e31057ef54a251"
+    },
+    "all_21_jobs_completed_0_0": true,
+    "all_launchers_consumed": true,
+    "both_binary_audits_passed": true,
+    "carried_numerical_seconds": 6304,
+    "collector_consumed": true,
+    "collector_executions": 1,
+    "complete_requests": 16,
+    "cumulative_screen_numerical_seconds": 20526,
+    "current_observation": {
+      "active_worker_progress": {},
+      "captured_utc": "2026-10-27T10:36:51.513887+00:00",
+      "first_request_completion": {
+        "bytes": 351136,
+        "sha256": "96d91a7a976be2373bf8abae6d379bd11b7a3e8ad9c8bfca8bd32b31b7a256a1"
+      },
+      "first_request_progress_counts": {
+        "context_ready": 1,
+        "source_replayed": 3,
+        "stage_certified": 48
+      },
+      "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+      "numerical_status": "",
+      "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+      "queue": "",
+      "scheduler_raw": "16407|second112-checks|COMPLETED|0:0|80|01:13.989|1|16G|csis.mn1\n16407.batch|batch|COMPLETED|0:0|80|01:13.989|1||csis.mn1\n16408|second112-gpt2--reference_compressed-1|COMPLETED|0:0|2028|33:35.116|1|16G|csis.mn1\n16408.batch|batch|COMPLETED|0:0|2028|33:35.116|1||csis.mn1\n16409|second112-distilgpt2--reference_compressed-1|COMPLETED|0:0|590|09:45.247|1|16G|csis.mn1\n16409.batch|batch|COMPLETED|0:0|590|09:45.247|1||csis.mn1\n16410|second112-distilgpt2--optimized_modern-1|COMPLETED|0:0|287|04:44.106|1|16G|csis.mn1\n16410.batch|batch|COMPLETED|0:0|287|04:44.106|1||csis.mn1\n16411|second112-gpt2--optimized_modern-1|COMPLETED|0:0|581|09:36.338|1|16G|csis.mn1\n16411.batch|batch|COMPLETED|0:0|581|09:36.338|1||csis.mn1\n16412|second112-gpt2--reference_modern-1|COMPLETED|0:0|734|12:08.123|1|16G|csis.mn1\n16412.batch|batch|COMPLETED|0:0|734|12:08.123|1||csis.mn1\n16413|second112-distilgpt2--reference_modern-1|COMPLETED|0:0|369|06:06.833|1|16G|csis.mn1\n16413.batch|batch|COMPLETED|0:0|369|06:06.833|1||csis.mn1\n16414|second112-distilgpt2--optimized_compressed-1|COMPLETED|0:0|412|06:48.460|1|16G|csis.mn1\n16414.batch|batch|COMPLETED|0:0|412|06:48.460|1||csis.mn1\n16415|second112-gpt2--optimized_compressed-1|COMPLETED|0:0|1545|25:34.814|1|16G|csis.mn1\n16415.batch|batch|COMPLETED|0:0|1545|25:34.814|1||csis.mn1\n16416|second112-gpt2--optimized_compressed-2|COMPLETED|0:0|615|10:10.914|1|16G|csis.mn1\n16416.batch|batch|COMPLETED|0:0|615|10:10.914|1||csis.mn1\n16417|second112-distilgpt2--optimized_compressed-2|COMPLETED|0:0|326|05:22.594|1|16G|csis.mn1\n16417.batch|batch|COMPLETED|0:0|326|05:22.594|1||csis.mn1\n16418|second112-distilgpt2--reference_modern-2|COMPLETED|0:0|221|03:37.890|1|16G|csis.mn1\n16418.batch|batch|COMPLETED|0:0|221|03:37.890|1||csis.mn1\n16419|second112-gpt2--reference_modern-2|COMPLETED|0:0|407|06:43.720|1|16G|csis.mn1\n16419.batch|batch|COMPLETED|0:0|407|06:43.720|1||csis.mn1\n16420|second112-gpt2--optimized_modern-2|COMPLETED|0:0|326|05:23.866|1|16G|csis.mn1\n16420.batch|batch|COMPLETED|0:0|326|05:23.866|1||csis.mn1\n16421|second112-distilgpt2--optimized_modern-2|COMPLETED|0:0|180|02:58.123|1|16G|csis.mn1\n16421.batch|batch|COMPLETED|0:0|180|02:58.123|1||csis.mn1\n16422|second112-distilgpt2--reference_compressed-2|COMPLETED|0:0|437|07:13.748|1|16G|csis.mn1\n16422.batch|batch|COMPLETED|0:0|437|07:13.748|1||csis.mn1\n16423|second112-gpt2--reference_compressed-2|COMPLETED|0:0|839|13:52.802|1|16G|csis.mn1\n16423.batch|batch|COMPLETED|0:0|839|13:52.802|1||csis.mn1\n16424|second112-gpt2--oracle|COMPLETED|0:0|3123|51:43.680|1|16G|csis.mn1\n16424.batch|batch|COMPLETED|0:0|3123|51:43.680|1||csis.mn1\n16425|second112-distilgpt2--oracle|COMPLETED|0:0|1558|25:48.529|1|16G|csis.mn1\n16425.batch|batch|COMPLETED|0:0|1558|25:48.529|1||csis.mn1\n16426|second112-primary|COMPLETED|0:0|3651|01:00:27|1|16G|csis.mn1\n16426.batch|batch|COMPLETED|0:0|3651|01:00:27|1||csis.mn1\n16427|second112-supplemental|COMPLETED|0:0|39|00:37.343|1|16G|csis.mn1\n16427.batch|batch|COMPLETED|0:0|39|00:37.343|1||csis.mn1\n"
+    },
+    "fresh_oracles": 2,
+    "jobs": [
+      {
+        "dependency": null,
+        "job_id": "16407",
+        "operation": "checks"
+      },
+      {
+        "dependency": "16407",
+        "job_id": "16408",
+        "operation": "gpt2/reference_compressed-1"
+      },
+      {
+        "dependency": "16408",
+        "job_id": "16409",
+        "operation": "distilgpt2/reference_compressed-1"
+      },
+      {
+        "dependency": "16409",
+        "job_id": "16410",
+        "operation": "distilgpt2/optimized_modern-1"
+      },
+      {
+        "dependency": "16410",
+        "job_id": "16411",
+        "operation": "gpt2/optimized_modern-1"
+      },
+      {
+        "dependency": "16411",
+        "job_id": "16412",
+        "operation": "gpt2/reference_modern-1"
+      },
+      {
+        "dependency": "16412",
+        "job_id": "16413",
+        "operation": "distilgpt2/reference_modern-1"
+      },
+      {
+        "dependency": "16413",
+        "job_id": "16414",
+        "operation": "distilgpt2/optimized_compressed-1"
+      },
+      {
+        "dependency": "16414",
+        "job_id": "16415",
+        "operation": "gpt2/optimized_compressed-1"
+      },
+      {
+        "dependency": "16415",
+        "job_id": "16416",
+        "operation": "gpt2/optimized_compressed-2"
+      },
+      {
+        "dependency": "16416",
+        "job_id": "16417",
+        "operation": "distilgpt2/optimized_compressed-2"
+      },
+      {
+        "dependency": "16417",
+        "job_id": "16418",
+        "operation": "distilgpt2/reference_modern-2"
+      },
+      {
+        "dependency": "16418",
+        "job_id": "16419",
+        "operation": "gpt2/reference_modern-2"
+      },
+      {
+        "dependency": "16419",
+        "job_id": "16420",
+        "operation": "gpt2/optimized_modern-2"
+      },
+      {
+        "dependency": "16420",
+        "job_id": "16421",
+        "operation": "distilgpt2/optimized_modern-2"
+      },
+      {
+        "dependency": "16421",
+        "job_id": "16422",
+        "operation": "distilgpt2/reference_compressed-2"
+      },
+      {
+        "dependency": "16422",
+        "job_id": "16423",
+        "operation": "gpt2/reference_compressed-2"
+      },
+      {
+        "dependency": "16423",
+        "job_id": "16424",
+        "operation": "gpt2/oracle"
+      },
+      {
+        "dependency": "16424",
+        "job_id": "16425",
+        "operation": "distilgpt2/oracle"
+      },
+      {
+        "dependency": "16425",
+        "job_id": "16426",
+        "operation": "primary"
+      },
+      {
+        "dependency": "16426",
+        "job_id": "16427",
+        "operation": "supplemental"
+      }
+    ],
+    "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a",
+    "new_numerical_seconds": 14222,
+    "no_retry_or_duplicate": true,
+    "old_unknown_v80_cpu_seconds": 12602,
+    "overlapping_clocks_not_added": true,
+    "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+    "rendered_all_16_requests": true,
+    "reused_preparation_host_ns": {
+      "distilgpt2": 1389527885430,
+      "gpt2": 2992097643050
+    },
+    "scheduler_cpu_lower_ns": 18213235000000,
+    "scheduler_cpu_upper_ns": 18214255000000,
+    "status": "closed_verified",
+    "terminal_captured_utc": "2026-10-27T10:37:38.171685+00:00",
+    "unchanged_numerical_cap_seconds": 82840,
+    "version": 112
+  },
+  "frozen_local_source_counterparts_verified": 1322,
+  "github_repository": "priyankjairaj100/second",
+  "manuscript": {
+    "identity": {
+      "bytes": 69570,
+      "sha256": "3e4a313612a46eb8f9ada920e29af599f67a5f5ca0adb7b9d0c420f13e09ba46"
+    },
+    "native_compile_success": true,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex",
+    "pdf_export_verified": true,
+    "rendered_layout_verified": true,
+    "same_open_document": true,
+    "validation": "validation/v120_manuscript_checks.json",
+    "version": 120,
+    "title": "Lossy Calibration Archives for Exact Model Repair",
+    "venue": "TACL",
+    "content_pages": 10,
+    "reference_pages": 1,
+    "appendices": 0
+  },
+  "new_experiment_required_for_current_claim": false,
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "paid_compute": false,
+  "pending": [
+    "Author eligibility/history, consent and metadata before a separately authorized submission",
+    "Source release license remains an author decision; no external review supplement is allowed"
+  ],
+  "preview_attempt": "validation/v116_preview_attempt.json",
+  "prior_handoff": "docs/ACTIVE_SESSION_V119.md",
+  "proposed_64_request_replication_launched": false,
+  "publication_baseline": "d7be2c98494b5a9978534124b6ec30a2fdb08368",
+  "resumed_delivery_check": "validation/v119_delivery_check.json",
+  "review_bundle": {
+    "version": 120,
+    "author_archive_only": true,
+    "review_upload_permitted": false,
+    "archive": {
+      "bytes": 10998446,
+      "sha256": "e207ba58c1f82436502fcd821b6a9459dd1e63548f8a35e33782e6acbf49f735"
+    },
+    "members": 20,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-author-review-v120.zip",
+    "unchanged_components": 14,
+    "verified": {
+      "adapted_code_execution_qualified": false,
+      "binary_reaudit_by_this_verifier": false,
+      "components": 14,
+      "cross_architecture_generality": false,
+      "empirical_pipeline_executed_by_this_verifier": false,
+      "external_inputs_acquired": false,
+      "full_anonymity_verified": false,
+      "matched_reported_model_state_trust_pairs": 16,
+      "matched_reported_requests": 16,
+      "new_quality_evaluation": false,
+      "related_checkpoint_evidence_included": true,
+      "source_component_counts": {
+        "development-optimization-source-v105.zip": 347,
+        "development-point-policy-source-v114.zip": 96,
+        "development-source-review-v72.zip": 583,
+        "development-transfer-source-v111.zip": 296
+      },
+      "source_files": 1322,
+      "stable_speedup_established": false,
+      "status": "verified_supplied_bytes_source_coverage_and_scoped_arithmetic"
+    }
+  },
+  "scheduler": "PAUSED",
+  "scheduler_observation": {
+    "automation_id": "continue-second-research",
+    "new_monitor_created": false,
+    "status": "PAUSED",
+    "user_requested_stop": true,
+    "verified_from_configuration": true,
+    "verified_utc": "2026-10-28T08:06:12.832205+00:00"
+  },
+  "schema": "second-handoff-v120",
+  "scientific_decision": "docs/RESEARCH_DECISION_V119.txt",
+  "scientific_work_complete_for_current_claim": true,
+  "speed_campaign_closed": true,
+  "subagents_used": false,
+  "submission_bundle_complete_and_verified": true,
+  "updated_utc": "2026-10-28T08:06:12.832205+00:00",
+  "verification": "validation/v120_manuscript_checks.json",
+  "new_empirical_execution": false,
+  "author_attestations_completed": false,
+  "actual_submission_performed": false,
+  "delivery_pdf": {
+    "bytes": 110438,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-tacl-submission.pdf",
+    "sha256": "efb5a3216e2a7bb28a0f692b0f07948736a5bd8c0e3cafc0ada301ed5f733838"
+  },
+  "source_package": {
+    "archive": {
+      "bytes": 35340,
+      "sha256": "0ad461c7584550a0bb1f8ad90205083687cb23cd689bae0fa2a1bb0f60a2d7bf"
+    },
+    "members": 5,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-tacl-source-v120.zip"
+  },
+  "prior_preview_failure_resolved_for_delivery_by": "Independent same-source PDF export; native preview UI not re-accessed"
+}

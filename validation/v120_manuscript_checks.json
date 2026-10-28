@@ -1,0 +1,172 @@
+{
+  "schema": "second-tacl-manuscript-v120",
+  "manuscript": {
+    "bytes": 69570,
+    "sha256": "3e4a313612a46eb8f9ada920e29af599f67a5f5ca0adb7b9d0c420f13e09ba46"
+  },
+  "pdf": {
+    "bytes": 110438,
+    "sha256": "efb5a3216e2a7bb28a0f692b0f07948736a5bd8c0e3cafc0ada301ed5f733838"
+  },
+  "title": "Lossy Calibration Archives for Exact Model Repair",
+  "content_pages": 10,
+  "reference_pages": 1,
+  "total_pages": 11,
+  "appendices": 0,
+  "style": {
+    "bytes": 20501,
+    "sha256": "7c71ede112ccb3711c7073c4b1c60abfb076b83945e0e9d14ed79caa37dca3b6"
+  },
+  "official_style_unmodified": true,
+  "labels": 32,
+  "citation_keys": 11,
+  "all_references_resolved": true,
+  "overfull_boxes": 0,
+  "first_page_no_tables_or_figures": true,
+  "pdf_author_metadata_empty": true,
+  "embedded_fonts": [
+    "/AKHCZK+CMMI10",
+    "/BZIVMZ+NimbusSanL-Bold",
+    "/CAFSZL+CMR8",
+    "/DDIEWW+CMMI8",
+    "/FKPJSN+MSBM10",
+    "/IHAIZV+NimbusRomNo9L-Regu",
+    "/IXFAWU+NimbusRomNo9L-Medi",
+    "/JAGKKY+CMSY8",
+    "/KPXLOM+NimbusMonL-Regu",
+    "/NOMARO+CMEX10",
+    "/PVTTLK+CMMI6",
+    "/TQTHRL+NimbusRomNo9L-ReguItal",
+    "/VDVGTR+CMSY10",
+    "/YEUUOC+CMR10"
+  ],
+  "source_author_identifier_scan_pass": true,
+  "no_em_dashes": true,
+  "core_proofs_in_main": 3,
+  "baseline_rows_checked": 10,
+  "optimization_times_checked": 8,
+  "matched_times_checked": 16,
+  "quality_endpoints_checked": 2,
+  "original_source_files_verified": 1322,
+  "original_research_sources_changed": false,
+  "toy_exact_rational_check": true,
+  "toy_is_not_empirical_evidence": true,
+  "new_empirical_execution": false,
+  "native_compile_success": true,
+  "native_compiler_message": "The current source compiled successfully with the desktop editor's compiler.",
+  "export_engine": "Official portable Tectonic 0.17.0; independent PDF export of the same source",
+  "column_bottoms": [
+    {
+      "page": 1,
+      "column_bottom_points": [
+        765.3331420960004,
+        765.3332220960002
+      ]
+    },
+    {
+      "page": 2,
+      "column_bottom_points": [
+        769.9914817279999,
+        765.3331320960002
+      ]
+    },
+    {
+      "page": 3,
+      "column_bottom_points": [
+        765.3331220960001,
+        765.333102096
+      ]
+    },
+    {
+      "page": 4,
+      "column_bottom_points": [
+        765.3331020959998,
+        765.3331520960004
+      ]
+    },
+    {
+      "page": 5,
+      "column_bottom_points": [
+        766.2892817280001,
+        765.2022030400001
+      ]
+    },
+    {
+      "page": 6,
+      "column_bottom_points": [
+        765.3331420960004,
+        765.3331820960002
+      ]
+    },
+    {
+      "page": 7,
+      "column_bottom_points": [
+        765.3332320960003,
+        765.3331520960004
+      ]
+    },
+    {
+      "page": 8,
+      "column_bottom_points": [
+        765.3331320960003,
+        765.333112096
+      ]
+    },
+    {
+      "page": 9,
+      "column_bottom_points": [
+        765.333102096,
+        765.333112096
+      ]
+    },
+    {
+      "page": 10,
+      "column_bottom_points": [
+        765.3331920960003,
+        751.4400020960004
+      ]
+    },
+    {
+      "page": 11,
+      "column_bottom_points": [
+        765.333112096,
+        116.78221209599985
+      ]
+    }
+  ],
+  "visual_review_status": "passed_all_11_pages",
+  "full_indirect_anonymity_verified": false,
+  "author_attestations_completed": false,
+  "submission_performed": false,
+  "visually_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "final_render_sha256": {
+    "page-01.png": "bcb4c1fcd1a656b2c93f9996f4b9882288661490c02af31e45851471773422aa",
+    "page-02.png": "0f953116f997a87c1bcedf1a164a6245b0836e68c62884ea8fa457bb26bfbb2e",
+    "page-03.png": "453ff60160a598b1d845f8bf687750ee0d26876d963dfca4e4453b63d8fd74b6",
+    "page-04.png": "5de9a131ec86149dcdcdd563ba21befd3b5c53031f99d45f60d346d1ad9c80fa",
+    "page-05.png": "3bb18dbb89582d0e3b6a51ba0011a9e56bf0e0be11d5008cdd9d09d8c15ead48",
+    "page-06.png": "1cb8189d5f66e8c99bdf33514a986ce0330b0cfd7def356ba43eb1bddade8534",
+    "page-07.png": "fbd1ace0097ab98ea9a39a54e385a8c175e552c30d1792a48af0ec73a635bba1",
+    "page-08.png": "c161b2dcec444cc66782e6235cdc6a4952824e3fe34a4527e520cafb0ca984e3",
+    "page-09.png": "8c679218caa978e26efedf3ec65ca2ba82d232240ce288f26e01d765f6296fca",
+    "page-10.png": "18e7dd5c5c2287df79c76d37fd53e469966a1d73412235bb1b8f2ab863ee90dd",
+    "page-11.png": "43e9e2f525fe8a1cb67f342714c3ef021ca7e48344f8926986c3116ff8de641d"
+  },
+  "local_preparation_notes": [
+    "Initial manuscript audit selected a style-file comment instead of the real title; corrected the selector before producing the audit.",
+    "Earlier pagination passes were over length; source edits resolved this without changing official layout.",
+    "A stale twelfth PNG from a prior longer pass was excluded and removed; the delivered PDF has eleven pages."
+  ]
+}
