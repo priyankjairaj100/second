@@ -1,0 +1,46 @@
+{
+  "actual_empirical_collection": false,
+  "created_utc": "2026-10-27T08:39:35.958078+00:00",
+  "generated_gate_rejections": [
+    "unfinished allocation",
+    "failed allocation",
+    "substituted program"
+  ],
+  "initial_source_files": {
+    "validation/build_matched_evidence_v119.py": {
+      "bytes": 6169,
+      "sha256": "ceddf7dd9aa1c6ef64193b19c9c5299454d46c822400dd64f24bbdf2a7c44973"
+    },
+    "validation/package_review_bundle_v119.py": {
+      "bytes": 6260,
+      "sha256": "a926d89f6156b0813383d847908b82ce2d1ac1f0c7e7afb3aea8bd3d5fa4c44b"
+    },
+    "validation/verify_review_bundle_v119.py": {
+      "bytes": 13088,
+      "sha256": "262a04e981cd2ec2906122c08b9eeb4d19abd3c92c43749bcdaf8e0ec4887595"
+    }
+  },
+  "no_archive_on_rejection": true,
+  "original_research_sources_not_modified": true,
+  "outer_bundle_requires_completed_e20_and_native_compiled_manuscript": true,
+  "positive_actual_evidence_packaging": false,
+  "preexecution_word_spacing_edit": true,
+  "prior_13_components_not_modified": true,
+  "schema": "matched-evidence-package-preparation-v119",
+  "source_files": {
+    "validation/build_matched_evidence_v119.py": {
+      "bytes": 6174,
+      "sha256": "5cd56f0619b2da3466d587def9447e66f92c5130dc264418ff3b37e537d7124d"
+    },
+    "validation/package_review_bundle_v119.py": {
+      "bytes": 6267,
+      "sha256": "e002df820aa34d0e7918415d53af2dd59055436f6ba9844d47b190691842f5b2"
+    },
+    "validation/verify_review_bundle_v119.py": {
+      "bytes": 13088,
+      "sha256": "262a04e981cd2ec2906122c08b9eeb4d19abd3c92c43749bcdaf8e0ec4887595"
+    }
+  },
+  "syntax_checked": true,
+  "verifier_on_actual_14_component_bundle": false
+}

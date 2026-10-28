@@ -1,0 +1,220 @@
+{
+  "all_experiments_total_established": false,
+  "clocks_overlap": true,
+  "combine_scheduler_worker_controller_clocks": false,
+  "cumulative_screen_controller_upper_ns": 341810256999,
+  "cumulative_screen_numerical_seconds": 20526,
+  "cumulative_screen_software_upper_cpu_ns": 280990000000,
+  "historical_preparation_cost_is_not_zero": true,
+  "numerical_budget": {
+    "attempts": {
+      "04d0b9e12f68b5fcb8cb9a8a951a97b53c789927b5ca5adeabe33096bb0ad285": {
+        "charged_cpu_seconds": 714,
+        "observed_cpu_ns": 713904514000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 6002,
+        "state": "settled"
+      },
+      "0e59f11f4b59f8674da3c61be3ce791221ff1377745908a1da4e6b133d8c7205": {
+        "charged_cpu_seconds": 572,
+        "observed_cpu_ns": 571142793000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3002,
+        "state": "settled"
+      },
+      "40e2cab59335e7ed82c5caed1ea68fd805ae85b7b67372385036d402512a38e9": {
+        "charged_cpu_seconds": 3086,
+        "observed_cpu_ns": 3085774716000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 9602,
+        "state": "settled"
+      },
+      "48e24c8562dfdc69ab331319b3b10744201433ed2ae55a22668f00a63c9d7804": {
+        "charged_cpu_seconds": 819,
+        "observed_cpu_ns": 818004017000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3602,
+        "state": "settled"
+      },
+      "5eb9231b70d3a7b4aafbb3c0c8199ade30a3d5b42526bdac89e527991c004fc4": {
+        "charged_cpu_seconds": 597,
+        "observed_cpu_ns": 596406888000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3602,
+        "state": "settled"
+      },
+      "5f53f2dcc0708dd27bb999acb2c4832f9710e4ff334c8d6700ef82616a6ce334": {
+        "charged_cpu_seconds": 165,
+        "observed_cpu_ns": 164439203000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 1802,
+        "state": "settled"
+      },
+      "6f4e4616ecf6de7867125e4953d9bcd48ea0bcb518860944401de99bb305e100": {
+        "charged_cpu_seconds": 205,
+        "observed_cpu_ns": 204084878000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 1802,
+        "state": "settled"
+      },
+      "8f617acd6d258b84571c4855325e5d83440e08c754179e6bb84865d9556459bb": {
+        "charged_cpu_seconds": 1519,
+        "observed_cpu_ns": 1518739896000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 6002,
+        "state": "settled"
+      },
+      "974a6041590726134e6dbe13a2d5a31ed8f70d57816bd16af2cd98c92a9f5deb": {
+        "charged_cpu_seconds": 309,
+        "observed_cpu_ns": 308643562000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 1802,
+        "state": "settled"
+      },
+      "b83837c3346b31bed7989aa6195a31cdd677e82fb9cda3f705dc963e2090b206": {
+        "charged_cpu_seconds": 1534,
+        "observed_cpu_ns": 1533032018000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 4802,
+        "state": "settled"
+      },
+      "befd170ee7a5f99eeb558168d8d3a91698c30f7b55bfdbfa1b4bd1feaed4151c": {
+        "charged_cpu_seconds": 1999,
+        "observed_cpu_ns": 1998519869000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 6002,
+        "state": "settled"
+      },
+      "bf96260f01202e435991df89e283b9cc91c310c71daabecde91f60a76091a790": {
+        "charged_cpu_seconds": 310,
+        "observed_cpu_ns": 309870567000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3602,
+        "state": "settled"
+      },
+      "cddbecb244ba5d33e6c4950c26e0fda9b2b2b80de25a0e7c83349247481035f5": {
+        "charged_cpu_seconds": 563,
+        "observed_cpu_ns": 562298494001,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 6002,
+        "state": "settled"
+      },
+      "ce007bbe6e31e83aafe918d38046a5f976de3562a353e368b77b921d0d186e01": {
+        "charged_cpu_seconds": 271,
+        "observed_cpu_ns": 270647507000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3002,
+        "state": "settled"
+      },
+      "e442543c9a6d0b6f7ada3c4f1ad043a3640f07379f2689727fd9666f1fa79210": {
+        "charged_cpu_seconds": 420,
+        "observed_cpu_ns": 419446724000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 1802,
+        "state": "settled"
+      },
+      "e4f6b48e2969d6d88dcca2f92f4a7ab20e3e94ae0c2b4f29e3dbebd062ac6295": {
+        "charged_cpu_seconds": 354,
+        "observed_cpu_ns": 353239977000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3002,
+        "state": "settled"
+      },
+      "e55b3e9aeb434cdc5021d31cc6f4a1ad7cd76f96e8dc5f03021424472de0de4d": {
+        "charged_cpu_seconds": 395,
+        "observed_cpu_ns": 394568282000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3002,
+        "state": "settled"
+      },
+      "f6bb6fdb7701b214f78a33bbaee803e2384da553d998144f6550316640cb09e2": {
+        "charged_cpu_seconds": 390,
+        "observed_cpu_ns": 389346838000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 3602,
+        "state": "settled"
+      }
+    },
+    "binding": {
+      "identity": {
+        "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+        "sources_sha256": "633aa917d4ab03de4e7be45e53a3b0ed5af821266be6db38c3437dcfd0de7505"
+      },
+      "phase_cpu_seconds": {
+        "feasibility": 72036
+      },
+      "scope": "trusted_worker_cpu_admission_not_process_tree_containment"
+    },
+    "binding_sha256": "b3311970eefc060d9e9a6b42bf1d520331b642439cf193248e96ecfe18ad0d81",
+    "charged_cpu_seconds": {
+      "feasibility": 14222
+    },
+    "ledger_bytes": 3848,
+    "ledger_sha256": "758c153069d8255d19a0c8a8f4f9ab679527796e2648793590d12645585b6385",
+    "over_cap": {
+      "feasibility": false
+    },
+    "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/budget/ledger.json",
+    "phase_cpu_seconds": {
+      "feasibility": 72036
+    },
+    "read_only": true,
+    "reservation_overrun_attempts": [],
+    "reserved_unknown_attempts": 0,
+    "schema": "phase-cpu-read-snapshot-v1",
+    "scope": "complete trusted protocol ledger at read time; not project/global/hostile completeness",
+    "status": "verified"
+  },
+  "old_unknown_v80_cpu_seconds": 12602,
+  "preparation_cost_in_current_scheduler_total": false,
+  "preparation_reexecuted": false,
+  "preparation_shared_across_cells": true,
+  "prior_screen_costs": {
+    "carried_checks_controller_seconds": 48,
+    "carried_numerical_controller_seconds": 79,
+    "carried_numerical_seconds": 6304,
+    "carried_software_seconds": 207,
+    "complete_model_comparisons": 0,
+    "diagnostic_program_sha256": "29e114bb8cae47f5dc8fa70a346d62cd575e6b0dfc959b286903bed0071e2602",
+    "gate": {
+      "bytes": 88026,
+      "sha256": "7b1a3579f7253178465985994b6f557bea7f85837e22eecb6570a6013bbe63cf"
+    },
+    "preserved_failure": {
+      "charged_numerical_seconds": 6196,
+      "complete_model_comparisons": 0,
+      "gate": {
+        "bytes": 14136,
+        "sha256": "cb5ac11f8e81cbf0b21c6a5325b77a63391801c1f0e45653a8a0f6f5ae57a725"
+      },
+      "parent_program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+      "preserved_v109_setup_failure": {
+        "archive": {
+          "bytes": 13445120,
+          "sha256": "e305f782fced1853c00d42d5504c1bcbad5ce8ac520a51f8d7e18b56315324c0"
+        },
+        "inventory": {
+          "bytes": 149603,
+          "sha256": "622405b5a86022448bd64f7783b0894272e7f3760ee7235a230f4075dab84639"
+        },
+        "numerical_work": false,
+        "original_files": 1217,
+        "registered": false,
+        "setup_cost_outside_registered_experiment": true,
+        "status": "preserved_unregistered_host_preparation_failure"
+      },
+      "rounded_checks_controller_carry": 33,
+      "rounded_numerical_controller_carry": 63,
+      "rounded_software_carry": 139,
+      "status": "preserved_failed_screen_and_actual_costs"
+    },
+    "status": "preserved_failure_and_scoped_success"
+  },
+  "reused_preparation_host_ns": {
+    "distilgpt2": 1389527885430,
+    "gpt2": 2992097643050
+  },
+  "scheduler_cpu_lower_ns": 18213235000000,
+  "scheduler_cpu_upper_ns": 18214255000000,
+  "worker_controller_upper_ns": 262810256999
+}

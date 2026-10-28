@@ -1,7 +1,13 @@
 # Second: continuous research and submission queue
 
-Current continuation handoff: docs/ACTIVE_SESSION_V118.md and handoff/program_v118.json.
-V117 is the current compiled manuscript and review bundle; V112 is the qualified and running experiment. Verified V72/V89 science stands; E19 adds the scoped failed-screen/stage diagnostic.
+Current continuation handoff: docs/ACTIVE_SESSION_V119.md and handoff/program_v119.json.
+V119 is the compiled manuscript and verified 14-component development review bundle.
+V112 is CLOSED: all 21 jobs, 16 comparisons, both fresh oracles, both audits and
+actual terminal closure passed. The speed campaign is complete; no new experiment
+is required for the bounded claim. V72/V89 findings and all failures remain.
+Rendered layout/PDF export and delivery choices remain unresolved. One fresh
+28 October editor-access attempt again failed at service startup; no repeated
+attempt followed. See validation/v119_delivery_check.json.
 The user explicitly stopped the scheduler on27October2026: heartbeat PAUSED,
 verified in configuration. Continue foreground work and the already released Slurm
 chain. Do not resume the automation from historical heartbeat instructions.
@@ -40,6 +46,23 @@ scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpo
 and its hash inventory. Earlier failure, timeout and quota receipts remain.
 
 ## Ordered work
+
+V119 current: SCIENTIFIC CAMPAIGN COMPLETE. All21 jobs16407--16427 completed0:0;
+queue empty at10:36:51UTC. Both actual audits and terminal closure pass. One-use
+collection and all-row reduction completed once; all16 model/state/trust pairs
+match fresh reconstruction across24/48stages. Optimized compression uses7.01--7.86%
+less live storage but takes43.59--166.15%longer in all four matched settings. Both
+compressed GPT2/three-record cells replay144source-stage/record pairs. New numerical
+14222+carried6304=20526within82840; prior shared preparation/costs/failures remain.
+Read RESEARCH_DECISION_V119: bounded tradeoff framing; no64-request replication.
+Same open manuscript compiles; all13 prior components remain byte-identical in the
+new14-component package with1322source copies. Positive verification and six
+corruption/scope rejections pass. Scheduler PAUSED. No new job is required.
+Ready delivery work depends on restored preview/page-count access and final
+venue/cycle/category; existing question remains pending. No routine repeat.
+
+Earlier entries below are historical snapshots, including their former use of
+"current", "running" and "ACTIVE". V119 above governs current state.
 
 V118 current: at08:17:17UTC all sixteen requests16408--16423 completed0:0
 and all sixteen saved-output/accounting reviews passed.16424GPT2oracle running;
@@ -391,7 +414,7 @@ all successor/audit jobs remained dependency-pending. No scientific result yet.
     Update the actual bundle after layout/chosen-delivery checks; no conference
     submission or new experiment to fill the waiting period.
 
-## Completion boundary
+## Historical completion boundary before V119
 
 Claim-required service and untouched quality are verified; general timing/transfer
 are outside the current claim. Manuscript disclosures and a truthful checklist
@@ -406,3 +429,20 @@ is closed; V91/V99/V100 failures are preserved, V101 admission is closed, V103 d
 or the agreed bundle and claim-required evidence are complete and verified. A wake
 must not relaunch any consumed or cancelled registration. No final ETA follows
 from resource ceilings or the earlier estimate before this storage failure.
+
+## Current completion boundary (V119)
+
+The expanded optimization/related-checkpoint campaign is now closed and audited.
+No additional experiment is needed for the current conditional correctness and
+bounded storage/access/latency claim. All16 matched outputs pass; all four optimized
+compressed timing contrasts lose, and one endpoint requires source replay. Keep
+all earlier negative findings. The same final manuscript compiles; the14-component
+review archive and1322supplied source copies verify. No general speedup, stable
+latency, new quality or cross-architecture claim is established.
+
+Remaining: inspect rendered page count, tables/math and final PDF when preview
+access changes; confirm final venue/cycle/category and current delivery policies;
+complete author-owned form facts only before separately authorized submission.
+Those unresolved gates prevent a submission-ready claim. Existing questions and
+preview failure stand; no duplicate question or unchanged retry. The scheduler
+remains PAUSED at the user's request. No new monitor, numerical launch or submission.

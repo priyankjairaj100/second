@@ -1,0 +1,14 @@
+{
+  "prior_sha256": "339529d9bf3800e9365ea3a473cb954b1049c7faf9914684175326ed847f7d51",
+  "new_sha256": "357a9e9bd1e065c2e136e826afe64e80fbc7e1e0ad40e35c20f50d941e0ed0bf",
+  "actual_terminal": {
+    "bytes": 746962,
+    "sha256": "caac5f13105e096fff8e6dc50af6f27525195c8cbccdf01117e31057ef54a251"
+  },
+  "all_16_rows_included": true,
+  "all_four_compressed_ratios_above_one": true,
+  "new_quality_claim": false,
+  "stable_latency_claim": false,
+  "cross_architecture_claim": false,
+  "abstract_word_count": 236
+}

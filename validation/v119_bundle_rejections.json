@@ -1,0 +1,64 @@
+{
+  "actual_binary_reaudit": false,
+  "archive": {
+    "bytes": 10894544,
+    "sha256": "0d095e27895e9ecd7ad709920892ed084c05630cfc9abede2e188132bc89e841"
+  },
+  "checks": [
+    {
+      "case": "unchanged_positive",
+      "expected_acceptance": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"adapted_code_execution_qualified\": false, \"binary_reaudit_by_this_verifier\": false, \"components\": 14, \"cross_architecture_generality\": false, \"empirical_pipeline_executed_by_this_verifier\": false, \"external_inputs_acquired\": false, \"full_anonymity_verified\": false, \"matched_reported_model_state_trust_pairs\": 16, \"matched_reported_requests\": 16, \"new_quality_evaluation\": false, \"related_checkpoint_evidence_included\": true, \"source_component_counts\": {\"development-optimization-source-v105.zip\": 347, \"development-point-policy-source-v114.zip\": 96, \"development-source-review-v72.zip\": 583, \"development-transfer-source-v111.zip\": 296}, \"source_files\": 1322, \"stable_speedup_established\": false, \"status\": \"verified_supplied_bytes_source_coverage_and_scoped_arithmetic\"}\n"
+    },
+    {
+      "case": "corrupted_component",
+      "expected_acceptance": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/vc/_6j6_dkd7q7_y5b5f1qmn28c0000gn/T/second-v119-check-1gp1lrdp/verify_review_bundle.py\", line 203, in <module>\n    if __name__=='__main__':main(sys.argv[1])\n  File \"/var/folders/vc/_6j6_dkd7q7_y5b5f1qmn28c0000gn/T/second-v119-check-1gp1lrdp/verify_review_bundle.py\", line 43, in main\n    assert path.is_file() and not path.is_symlink() and identity(path.read_bytes()) == expected\nAssertionError\n",
+      "stdout": ""
+    },
+    {
+      "case": "missing_component",
+      "expected_acceptance": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/vc/_6j6_dkd7q7_y5b5f1qmn28c0000gn/T/second-v119-check-ipfq2ait/verify_review_bundle.py\", line 203, in <module>\n    if __name__=='__main__':main(sys.argv[1])\n  File \"/var/folders/vc/_6j6_dkd7q7_y5b5f1qmn28c0000gn/T/second-v119-check-ipfq2ait/verify_review_bundle.py\", line 39, in main\n    assert {p.name for p in directory.iterdir()} == set(manifest)|{'MANIFEST.json'}\nAssertionError\n",
+      "stdout": ""
+    },
+    {
+      "case": "unexpected_file",
+      "expected_acceptance": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/vc/_6j6_dkd7q7_y5b5f1qmn28c0000gn/T/second-v119-check-83690qjw/verify_review_bundle.py\", line 203, in <module>\n    if __name__=='__main__':main(sys.argv[1])\n  File \"/var/folders/vc/_6j6_dkd7q7_y5b5f1qmn28c0000gn/T/second-v119-check-83690qjw/verify_review_bundle.py\", line 39, in main\n    assert {p.name for p in directory.iterdir()} == set(manifest)|{'MANIFEST.json'}\nAssertionError\n",
+      "stdout": ""
+    },
+    {
+      "case": "rehashed_false_stable_speedup",
+      "expected_acceptance": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/vc/_6j6_dkd7q7_y5b5f1qmn28c0000gn/T/second-v119-check-mh0z06jv/verify_review_bundle.py\", line 203, in <module>\n    if __name__=='__main__':main(sys.argv[1])\n  File \"/var/folders/vc/_6j6_dkd7q7_y5b5f1qmn28c0000gn/T/second-v119-check-mh0z06jv/verify_review_bundle.py\", line 120, in main\n    assert audit['evidence'] == result['scope'] == scope\nAssertionError\n",
+      "stdout": ""
+    },
+    {
+      "case": "rehashed_changed_host_time",
+      "expected_acceptance": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/vc/_6j6_dkd7q7_y5b5f1qmn28c0000gn/T/second-v119-check-ti513k0w/verify_review_bundle.py\", line 203, in <module>\n    if __name__=='__main__':main(sys.argv[1])\n  File \"/var/folders/vc/_6j6_dkd7q7_y5b5f1qmn28c0000gn/T/second-v119-check-ti513k0w/verify_review_bundle.py\", line 141, in main\n    assert sum(row['disjoint_host_partition_ns'].values()) == row['host_elapsed_ns']\nAssertionError\n",
+      "stdout": ""
+    },
+    {
+      "case": "rehashed_omitted_losing_row",
+      "expected_acceptance": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/var/folders/vc/_6j6_dkd7q7_y5b5f1qmn28c0000gn/T/second-v119-check-paxk5w_q/verify_review_bundle.py\", line 203, in <module>\n    if __name__=='__main__':main(sys.argv[1])\n  File \"/var/folders/vc/_6j6_dkd7q7_y5b5f1qmn28c0000gn/T/second-v119-check-paxk5w_q/verify_review_bundle.py\", line 130, in main\n    assert len(audit['comparisons']) == len(result['rows']) == 16\nAssertionError\n",
+      "stdout": ""
+    }
+  ],
+  "created_utc": "2026-10-27T10:48:57.500185+00:00",
+  "numerical_execution": false,
+  "original_bundle_unchanged": true,
+  "positive_acceptance": true,
+  "rejection_cases": 6,
+  "schema": "bundle-corruption-scope-checks-v119"
+}

@@ -1,0 +1,12 @@
+{
+  "author_delivery_question_already_pending": true,
+  "captured_utc": "2026-10-28T06:44:31.206388+00:00",
+  "local_tex_engine_available": false,
+  "native_compile_success_previously_verified": true,
+  "no_repeat_after_failure": true,
+  "operation": "One fresh attempt to access existing Codex editor in resumed session",
+  "pdf_export_verified": false,
+  "rendered_layout_verified": false,
+  "result": "Sky Computer Use service startup request failed",
+  "schema": "final-delivery-check-v119"
+}

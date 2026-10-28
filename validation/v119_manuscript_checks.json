@@ -1,0 +1,25 @@
+{
+  "actual_terminal": {
+    "bytes": 746962,
+    "sha256": "caac5f13105e096fff8e6dc50af6f27525195c8cbccdf01117e31057ef54a251"
+  },
+  "all_actual_citations_resolve": true,
+  "all_actual_references_resolve": true,
+  "all_sixteen_matched_table_values_from_closed_renderer": true,
+  "bibliography_keys": 11,
+  "checklist_response_labels_unchanged": true,
+  "created_utc": "2026-10-27T10:47:13.813293+00:00",
+  "labels": 22,
+  "manuscript": {
+    "bytes": 70084,
+    "sha256": "89366264fb9cad6b35616f26321cf3dbb4f3c7215945729548ef86aeda5119ed"
+  },
+  "native_compile_success": true,
+  "native_compiler_response": "The current source compiled successfully with the desktop editor's compiler.",
+  "no_new_numerical_execution": true,
+  "pdf_export_verified": false,
+  "prior_adverse_findings_preserved": true,
+  "rendered_layout_verified": false,
+  "schema": "manuscript-checks-v119",
+  "three_prior_proof_bodies_verbatim": true
+}
