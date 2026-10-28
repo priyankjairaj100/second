@@ -1,12 +1,12 @@
 {
   "schema": "second-tacl-manuscript-v120",
   "manuscript": {
-    "bytes": 69570,
-    "sha256": "3e4a313612a46eb8f9ada920e29af599f67a5f5ca0adb7b9d0c420f13e09ba46"
+    "bytes": 69568,
+    "sha256": "003aff0e4ec392bb71ad6ac1235f01561825327110a892274e298c85cd41e282"
   },
   "pdf": {
     "bytes": 110438,
-    "sha256": "efb5a3216e2a7bb28a0f692b0f07948736a5bd8c0e3cafc0ada301ed5f733838"
+    "sha256": "f6dd8d12b7f1cdc9fc57593749afcd3339d5df1120cff454517fec04b0c9ecee"
   },
   "title": "Lossy Calibration Archives for Exact Model Repair",
   "content_pages": 10,
@@ -167,6 +167,7 @@
   "local_preparation_notes": [
     "Initial manuscript audit selected a style-file comment instead of the real title; corrected the selector before producing the audit.",
     "Earlier pagination passes were over length; source edits resolved this without changing official layout.",
-    "A stale twelfth PNG from a prior longer pass was excluded and removed; the delivered PDF has eleven pages."
+    "A stale twelfth PNG from a prior longer pass was excluded and removed; the delivered PDF has eleven pages.",
+    "The final Git whitespace check found two trailing spaces in manuscript prose; removed them, rebuilt all delivery packages and verified every rendered page is pixel-identical."
   ]
 }

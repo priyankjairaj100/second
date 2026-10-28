@@ -39,13 +39,13 @@ Verification
 
 Deliverables in the chat's outputs directory:
 second-tacl-submission.pdf (110,438 bytes)
-SHA256 efb5a3216e2a7bb28a0f692b0f07948736a5bd8c0e3cafc0ada301ed5f733838
-second-research-draft.tex (69,570 bytes)
-SHA256 3e4a313612a46eb8f9ada920e29af599f67a5f5ca0adb7b9d0c420f13e09ba46
-second-tacl-source-v120.zip (35,340 bytes)
-SHA256 0ad461c7584550a0bb1f8ad90205083687cb23cd689bae0fa2a1bb0f60a2d7bf
-second-author-review-v120.zip (10,998,446 bytes)
-SHA256 e207ba58c1f82436502fcd821b6a9459dd1e63548f8a35e33782e6acbf49f735
+SHA256 f6dd8d12b7f1cdc9fc57593749afcd3339d5df1120cff454517fec04b0c9ecee
+second-research-draft.tex (69,568 bytes)
+SHA256 003aff0e4ec392bb71ad6ac1235f01561825327110a892274e298c85cd41e282
+second-tacl-source-v120.zip (35,338 bytes)
+SHA256 8032c9e9a28ba43204a9484ae6c1f2f139e00cc29c8d3dd2141899c01d95d0d6
+second-author-review-v120.zip (10,998,448 bytes)
+SHA256 3fac0525bc482defe9de04c257fa48a213662d7c318c5d0a20ad74e898e308af
 
 Repository copies are reports/manuscript_v120.tex and reports/second_tacl_v120.pdf.
 Validation and package manifests are validation/v120_manuscript_checks.json and
