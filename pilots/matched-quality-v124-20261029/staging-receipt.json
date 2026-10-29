@@ -1,0 +1,11 @@
+{
+  "preflight": "16645 f3_small PENDING\n16646 f3_mid PENDING\n16644 f3_tiny RUNNING\n16643 f0_mid RUNNING\n\n",
+  "staging": "STAGED_SOURCE_VERIFIED 1079\n",
+  "ssh_stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n<stdin>:6: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.\n",
+  "archive": {
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/matched-quality-v124/source-v124.tar.gz",
+    "bytes": 1974495,
+    "sha256": "f615b8b74e2c6083d070f9340f1d67342abeec2e9dac280ef66fc192417dd18f"
+  },
+  "registration_sha256": "5dc0c7e4dff99153fb9fe258a79aed3ef4d23897e4ff3f3ee3b8442804e7ab24"
+}

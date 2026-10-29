@@ -1,0 +1,18 @@
+{
+  "version": 132,
+  "observed_utc": "2026-10-29T08:30:36.523617+00:00",
+  "active_session": "docs/ACTIVE_SESSION_V132.md",
+  "original_quality_audit": "pilots/matched-quality-v125-20261029/actual-audit.json",
+  "gptq_quality_jobs": [
+    16704,
+    16705,
+    16706,
+    16707
+  ],
+  "sequential_current": "pilots/matched-sequential-v132-20261029",
+  "sequential_primary_quality_guard": "pending",
+  "manuscript_version": 123,
+  "scheduler": "PAUSED",
+  "submission_ready": false,
+  "old_attempts_consumed": true
+}

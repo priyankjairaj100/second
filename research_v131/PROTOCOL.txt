@@ -1,0 +1,24 @@
+V131 likelihood of four completed published-GPTQ practical controls
+
+Use the exact frozen V124320-article frame and V125 likelihood runtime.
+Bind every constructor completion/model/weight file before registration.
+Require all four original constructors completed0:0 before release. Reopen
+all quantized weights and metadata, full shapes/order, original checkpoint
+parameter words, calibration memberships and pinned upstream settings.
+
+Before held-out losses for each control, run three synthetic sequence comparisons
+of its complete model through independently coded NumPy and TorchCPU likelihood.
+MeanNLLdifference<=1e-8; abort on failure, never silently change precision.
+No calibration or new data selection. Preserve all V124statistical decisions.
+Compute320x127next-token losses per model, original row ordering, noBOS/EOS,
+full vocabulary50257; save each article plus full terminal receipt and hash census.
+
+These four GPTQ comparisons are secondary descriptive references. The primary
+fixed/sequential guard waits for all four sequential controls and uses the
+prospective V12498.75percentile one-sided bounds across4strata.
+
+Each worker1CPU16GiB,3600CPU/4500wall seconds, hardCPU=soft+1; files<=128MiB,
+source+outputs<=2GiB. FourCPUreservations14400+4x60launch=14640. Exact CPU
+likelihood workloads in V125 finished in under8minutes each, informing this bound.
+One-use held submissions bound before release. No retries, paid compute,GPU,
+new scheduler, subagent or submission. Audit actual losses/receipts before claims.
