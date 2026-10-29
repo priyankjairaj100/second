@@ -21,3 +21,9 @@ cross-arm model equality. Inspect runtime/jobs and freeze all inputs/caps first.
 Use the actual Record provenance map, not the token-record list passed by the
 likelihood-only sequential constructor. No calibration, file deletion or corpus
 access occurs in this format module. Timing and operating-range work remain.
+
+Pre-registration adversarial review added two tests (10 total). A deletion from a
+reference-only predecessor must validate the entire saved frame/model first, then
+resolve only retained IDs. select_retained implements that order. Corrupt models
+are refused before source lookup. The generic full unpack still resolves every
+listed record when requested explicitly; cold deletion must use select_retained.

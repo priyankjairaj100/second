@@ -1,0 +1,10 @@
+{
+  "registration_sha256": "e2f02e4176cd64a7223ec97e2b6cfc02f9d9d159a3fb3538b365636cb06ac18e",
+  "jobs": {
+    "sequential__distilgpt2__2": 16725,
+    "sequential__distilgpt2__3": 16726,
+    "sequential__gpt2__2": 16727,
+    "sequential__gpt2__3": 16728
+  },
+  "status": "bound_held"
+}

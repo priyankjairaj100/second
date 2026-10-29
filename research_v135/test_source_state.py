@@ -35,4 +35,14 @@ class SourceOnly(unittest.TestCase):
         v=s.unpack(b);ref=s.pack(v.target,v.records,v.codes,'references');seen=[]
         def provider(rid,meta):seen.append(rid);return [3,4]
         s.unpack(ref,provider);self.assertEqual(seen,['b'])
+    def test_predecessor_reference_selection_never_reads_deleted(self):
+        b=s.pack(self.t,self.r,self.c,'references');seen=[]
+        def provider(rid,meta):
+            self.assertEqual(rid,'b');seen.append(rid);return [3,4]
+        v=s.select_retained(b,('b',),provider);self.assertEqual(seen,['b']);self.assertEqual(v.records,self.r[1:])
+        self.assertEqual(s.successor(v,('b',),self.c),s.pack(self.t,self.r[1:],self.c,'references'))
+    def test_corrupt_predecessor_rejected_before_external_lookup(self):
+        b=s.pack(self.t,self.r,self.c,'references');seen=[]
+        with self.assertRaises(ValueError):s.select_retained(b[:-1],('b',),lambda *x:seen.append(x))
+        self.assertEqual(seen,[])
 if __name__=='__main__':unittest.main()

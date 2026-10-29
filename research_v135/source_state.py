@@ -43,32 +43,60 @@ def pack(target,records,codes,mode='tokens'):
     require(len(h)<=MAX_HEADER,'Header cap exceeded');out=MAGIC+struct.pack('<Q',len(h))+h+b''.join(chunks)
     require(len(out)<=MAX_BYTES,'Archive cap exceeded');return out
 
-def unpack(blob,provider=None):
+def _decode(blob):
+    """Validate the entire frame and model before any external source lookup."""
     require(type(blob)is bytes and 16<=len(blob)<=MAX_BYTES and blob[:8]==MAGIC,'Bound source-only frame required')
     n=struct.unpack_from('<Q',blob,8)[0];require(0<n<=MAX_HEADER and 16+n<=len(blob),'Header extent invalid')
     raw=blob[16:16+n];h=strict_json(raw)
     require(canonical_json(h)==raw and set(h)=={'schema','mode','anchor','fixed','records','stages'} and h['schema']=='source-only-state-v135','Canonical exact header schema required')
     require(h['mode'] in ('tokens','references'),'Unknown source mode')
-    target=BoundTarget(canonical_json(h['anchor']),canonical_json(h['fixed']));records=[]
+    target=BoundTarget(canonical_json(h['anchor']),canonical_json(h['fixed']))
     require(h['records'] and [r['record_id'] for r in h['records']]==sorted({r['record_id'] for r in h['records']}),'Canonical nonempty records required')
     for r in h['records']:
         keys={'record_id','token_sha256','token_count','provenance'}|({'tokens'} if h['mode']=='tokens' else set())
         require(set(r)==keys,'Unexpected retained source fields')
+        # Validate identity/provenance without resolving a reference.
+        Record(r['record_id'],(0,),canonical_json(r['provenance']))
+        require(type(r['token_count'])is int and r['token_count']>0,'Positive token count required')
+        v=r['token_sha256'];require(type(v)is str and len(v)==64 and all(c in '0123456789abcdef' for c in v),'Token commitment required')
+        if h['mode']=='tokens':
+            item=Record(r['record_id'],tuple(r['tokens']),canonical_json(r['provenance']))
+            require(len(item.tokens)==r['token_count'] and item.token_sha256==r['token_sha256'],'Stored token words changed')
+    require(len(h['stages'])==len(target.stages),'Incomplete stage extent');codes=[];offset=16+n
+    for stage,m,grid in zip(target.stages,h['stages'],h['anchor']['stages']):
+        count=(stage.rows*stage.width*4+7)//8;payload=blob[offset:offset+count]
+        code=StageCodes(stage.stage_id,stage.rows,stage.width,'dyadic_row',4,(),payload,tuple(float.fromhex(v) for v in grid['row_scale_hex']))
+        require(code.metadata()==m,'Stage payload/grid mismatch');codes.append(code);offset+=count
+    require(offset==len(blob),'Trailing model bytes')
+    return target,h,tuple(codes)
+
+def _resolve(target,h,codes,ids,provider):
+    by={r['record_id']:r for r in h['records']}
+    require(type(ids)is tuple and ids and ids==tuple(sorted(set(ids))) and set(ids)<=set(by),'Canonical retained subset required')
+    records=[]
+    for rid in ids:
+        r=by[rid]
         if h['mode']=='tokens':tokens=tuple(r['tokens'])
         else:
             if provider is None:raise PermissionError('Retained reference unavailable')
-            tokens=tuple(provider(r['record_id'],r['provenance']))
-        item=Record(r['record_id'],tokens,canonical_json(r['provenance']))
+            tokens=tuple(provider(rid,r['provenance']))
+        item=Record(rid,tokens,canonical_json(r['provenance']))
         require(len(tokens)==r['token_count'] and item.token_sha256==r['token_sha256'],'Retained source words changed');records.append(item)
-    require(len(h['stages'])==len(target.stages),'Incomplete stage extent');codes=[];offset=16+n
-    for s,m,grid in zip(target.stages,h['stages'],h['anchor']['stages']):
-        count=(s.rows*s.width*4+7)//8;payload=blob[offset:offset+count]
-        c=StageCodes(s.stage_id,s.rows,s.width,'dyadic_row',4,(),payload,tuple(float.fromhex(v) for v in grid['row_scale_hex']))
-        require(c.metadata()==m,'Stage payload/grid mismatch');codes.append(c);offset+=count
-    require(offset==len(blob),'Trailing model bytes')
-    v=View(target,tuple(records),tuple(codes),h['mode'],tuple(h['records']))
-    require(pack(v.target,v.records,v.codes,v.mode)==blob,'Noncanonical source-only state')
-    return v
+    return View(target,tuple(records),codes,h['mode'],tuple(by[i] for i in ids))
+
+def unpack(blob,provider=None):
+    target,h,codes=_decode(blob)
+    return _resolve(target,h,codes,tuple(r['record_id'] for r in h['records']),provider)
+
+def select_retained(blob,retained_ids,provider=None):
+    """Validate predecessor bytes, then resolve only the requested retained IDs.
+
+    Returned codes are predecessor codes and must be reconstructed before they
+    can be passed to successor. This function is not a numerical repair.
+    """
+    target,h,codes=_decode(blob)
+    return _resolve(target,h,codes,retained_ids,provider)
+
 
 def successor(view,retained_ids,codes):
     require(type(view)is View and type(retained_ids)is tuple and retained_ids==tuple(sorted(set(retained_ids))),'Canonical retained ID tuple required')
