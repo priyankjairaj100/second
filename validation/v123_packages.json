@@ -1,0 +1,62 @@
+{
+  "author_evidence_is_review_supplement": false,
+  "author_evidence_package": {
+    "archive": {
+      "bytes": 11051312,
+      "sha256": "d416395d2cf196f8599cdb55fcfcc5d6fa78294f0150d0317ca31a37c7d6b06a"
+    },
+    "members": 36,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-author-review-v123.zip",
+    "unchanged_components": 14,
+    "verified": {
+      "adapted_code_execution_qualified": false,
+      "binary_reaudit_by_this_verifier": false,
+      "components": 14,
+      "cross_architecture_generality": false,
+      "empirical_pipeline_executed_by_this_verifier": false,
+      "external_inputs_acquired": false,
+      "full_anonymity_verified": false,
+      "matched_reported_model_state_trust_pairs": 16,
+      "matched_reported_requests": 16,
+      "new_quality_evaluation": false,
+      "related_checkpoint_evidence_included": true,
+      "source_component_counts": {
+        "development-optimization-source-v105.zip": 347,
+        "development-point-policy-source-v114.zip": 96,
+        "development-source-review-v72.zip": 583,
+        "development-transfer-source-v111.zip": 296
+      },
+      "source_files": 1322,
+      "stable_speedup_established": false,
+      "status": "verified_supplied_bytes_source_coverage_and_scoped_arithmetic"
+    }
+  },
+  "changed_code_self_test": "{\"byte_pairs\": 65536, \"packed_vectors\": 6, \"failures\": 0}",
+  "clean_empirical_reproduction": false,
+  "created_utc": "2026-10-29T05:49:12.568830+00:00",
+  "generated_checks_reproduced_from_extracted_flat_files": true,
+  "manuscript": {
+    "bytes": 71628,
+    "sha256": "e93ee5d1d4dc01a5f181fd9e3e990279e568b43abd4b35e70bfbce6f9cc9ae74"
+  },
+  "new_saved_output_measurement": true,
+  "no_new_model_calibration_or_inference": true,
+  "original_sources_changed": false,
+  "pdf": {
+    "bytes": 120809,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-tacl-submission.pdf",
+    "sha256": "cdc0e9d60a199eb20f73ad15b69075c86e140df7f95c6eee905465204fc39d6e"
+  },
+  "schema": "second-tacl-packages-v123",
+  "source_package": {
+    "archive": {
+      "bytes": 50987,
+      "sha256": "605600ff035e7e47457cc1aabd846bc5f65e1faa60363994b8faed7e812d6586"
+    },
+    "members": 8,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-tacl-source-v123.zip"
+  },
+  "source_package_is_review_supplement": false,
+  "submission_performed": false,
+  "submission_readiness_established": false
+}

@@ -1,0 +1,103 @@
+V123 response to the review of V122
+29 October 2026
+
+The review correctly distinguishes a stronger technical specification from an
+unchanged language-model evaluation. This revision fixes the four requested
+technical points, exposes test coverage, and measures code changes from existing
+saved models. It does not claim to resolve matched-target quality or the missing
+minimal-storage source-only comparison.
+
+Four technical corrections
+
+1. Step 3 now applies only to an unresolved stage. A request stops only when that
+   stage remains uncertified after any permitted replay. Already certified stages
+   do not trigger the stopping branch.
+2. The coefficient at the feature-box center is now c^0_ih. The generic interval
+   center retains its previous symbol; the text explicitly specializes the
+   propagation formula to c^0_ih for the archive-width argument.
+3. Source inspection found that the service disables rational fallback. Both its
+   maximum exact rank and exact-coordinate count are zero; point numerical
+   refinement has a sixteen-coordinate cap. Lower-level solver defaults of 64/16
+   do not describe the service call. V122's vague reference to separate bounds is
+   replaced with these actual limits. See src/adaptive_calibration_v30.py and
+   research_v43/dispatcher.py; V112 preserves this point solver under its route
+   policy. No original implementation or resource limit was changed.
+   The codec step is now explicit: for index precision p=48 and block exponent
+   e_b=max floor(log2(abs(x))), step=2^max(e_b-p+2,-1074). Zero receives exponent
+   -1074. Signed indices use floor(x/step); the existing exact-value/escape rules
+   remain. The source is src/fixed_factor_codec_v26.py.
+4. For s>0 the square-root check normalizes a=s*2^(-e) in [1/2,2), with even e.
+   It accepts finite nonnegative r only when nextdown(fl(r*r)) >= a and rescales
+   by 2^(e/2). There are at most eight tested proposals, starting with sqrt(a),
+   rather than eight additional upward moves. Zero returns zero. This matches
+   the frozen primal_certificate_v30 Python and native implementation.
+
+Coverage table
+
+New Table 6 gives generation rules, dimensions, parameter ranges, independent
+rational references, difficult cases, checked outcomes and assertion failures.
+It separates independently written algebra from extracted frozen Python helpers.
+The latter do exercise those exact reference functions; neither group executes
+the production C kernels or full repair transactions. Those remaining validation
+gates are not presented as closed. Earlier environment import failures remain in
+the V122 report. No rerun or reinterpretation of old tests is used as model evidence.
+
+New measurement from saved model binaries
+
+Read-only cluster inventory confirmed all four headline endpoint models survive
+and match their original completion hashes. A separate, prospectively recorded
+posthoc audit then compared packed four-bit code indices with their predecessors
+and roots. It did not recalibrate a model or evaluate likelihoods.
+
+Optimized-compressed transitions (4 to 3 records, then 3 to 2):
+- DistilGPT2: 4,150,626 and 3,746,142 changed codes out of 42,467,328 per model.
+- GPT2: 8,993,197 and 8,080,117 changed codes out of 84,934,656 per model.
+- The fractions range from 8.82% to 10.59%. All changes are in stages certified
+  without replay except 245,692 in GPT2's first endpoint, whose final-block MLP
+  up-projection used retained-source replay. Whole-stage classification cannot
+  identify which individual codes would have required replay.
+
+All stage-level counts, root-relative changes, input hashes and source bindings
+are retained. These are four related-model transitions, not independent roots or
+evidence for a precision-success curve. They directly answer whether the matched
+models contain changed codes; the original equality audits establish exactness.
+
+Audit job 16651 completed 0:0 with a four-second Slurm elapsed time, 3.658 scheduler
+CPU seconds and 3.610096228 worker CPU seconds. The clocks overlap. Worker peak RSS
+was 160,480 KiB; the scheduler's short-interval sample reports 3,296 KiB, so both
+are retained without equating them. Limits were one CPU, 16 GiB, ten-minute wall
+and 300/301 CPU seconds. The one-use intent and fresh namespace prevent duplicates.
+Self-tests compared all 65,536 byte pairs and six multibyte vectors with an
+independent per-nibble counter. An initial local Python3.9 int.bit_count call was
+unavailable; the pre-registration fix uses portable bin(...).count('1'). No
+registered job failed or was retried. The audit used host Python3.6 standard
+integer/byte operations; it does not qualify or alter the frozen numerical runtime.
+
+Next evidence gate
+
+The exact model/target identities and complete extents are recorded in
+validation/v123_quality_input_readiness.json. Quality still needs a new held-out
+frame and prospectively selected articles. The entire previously inspected
+quality/calibration frames are excluded, not merely the 320 evaluated articles.
+Do not use their remaining articles as a new untouched sample. Generalize and
+audit the loader for both checkpoints, bind original and sequential/practical
+GPTQ comparators, and freeze evaluation/compute limits before observing losses.
+This remains the first new language-model experiment. No quality job is launched.
+
+The remaining priorities are the minimal source-only cold state, precision and
+margin measurements (including tightness of the archive-width bound on selected
+stages), additional roots/sizes/deletion orders, repeated timing, production
+verifier/abort checks and clean external-input reproduction. Existing registrations
+remain consumed. New work must have separate source-bound attempts and limits.
+
+Delivery
+
+The same open manuscript retains ten content pages, one reference page and no
+appendices. Repeated table values and historical prose were shortened to make
+room for the coverage table and measured code changes, without changing official
+formatting. All fifteen bibliography entries remain; no new literature claim was
+added. All 1,322 frozen source/protocol counterparts and fourteen historical ZIP
+components are preserved. The new audit is an additional author-side artifact.
+The source and full evidence packages remain separate from the PDF-only download.
+The scheduler remains paused. No subagents, paid compute, old-job retry or actual
+conference submission occurred. Substantial empirical revision is still required.

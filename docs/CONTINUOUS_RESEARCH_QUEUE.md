@@ -1,5 +1,7 @@
 # Second: continuous research and submission queue
 
+Current checkpoint 29 October 2026: **V123 technical fixes and saved-code audit complete; empirical TACL revision pending.** Read docs/ACTIVE_SESSION_V123.md, docs/REVIEW_FOLLOWUP_V123.txt and handoff/program_v123.json. The same manuscript has ten content pages plus references, no appendices; native/export, all-page visual, number, reference and package checks pass. Job 16651 completed 0:0. Actual predecessor code changes are 8.82--10.59%, with 245,692 changed codes in one replayed GPT2 stage. No calibration or quality experiment ran. Four exact saved targets are inventoried. Next qualify loaders/references and register new quality excluding all prior inspected frames. Minimal source-only cold, operating range, native/transaction tests and clean reproduction remain pending. All 1,322 originals and 14 historical ZIPs are unchanged. V119 and 16651 are consumed; no retries. Scheduler PAUSED; no subagents, paid compute, monitor or submission. Earlier snapshots are historical.
+
 Current continuation handoff: docs/ACTIVE_SESSION_V122.md and handoff/program_v122.json.
 V122 addresses the external manuscript review with stronger theory, arithmetic
 specification and economics. Ten content pages plus references; all final pages,

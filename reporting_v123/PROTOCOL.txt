@@ -1,0 +1,15 @@
+V123 posthoc saved-code audit. Registered before counts are observed.
+Read only the two completed preparations and four optimized-compressed endpoint
+model binaries, each bound to original complete metadata and live inventory hashes.
+Count changed packed nibbles for predecessor-to-successor and root-to-successor,
+by stage. Aggregate changes in replayed/nonreplayed stages using original timing
+metadata. Do not attribute individual necessity of replay from whole-stage logs.
+No calibration, inference, empirical retry or new source selection occurs.
+One Slurm CPU-short job: 1 CPU, 16 GiB, ten-minute wall, 300/301 CPU seconds.
+Only the new audit namespace is writable; result creation is exclusive and an
+intent prevents another submission. Any failure consumes this audit attempt.
+Inspect actual terminal accounting and hashes before reporting the counts.
+Self-tests compare all 65,536 possible byte pairs and six packed vectors against
+independent per-nibble comparisons. Initial local use of int.bit_count failed on
+Python3.9 before registration; the final portable counter uses bin(...).count.
+This is a recorded compatibility fix, not a retried scientific job.
