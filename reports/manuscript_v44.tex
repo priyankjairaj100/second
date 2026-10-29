@@ -1,0 +1,770 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\setlength{\columnsep}{0.27in}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\calS}{\mathcal{S}}
+\newcommand{\Qfix}{Q_{\mathrm{fix}}}
+\newcommand{\pending}[1]{\par\noindent\textbf{Pending evidence.} #1\par}
+\title{Certified Calibration Repair from Compressed Fixed-Anchor Features}
+\author{Research working draft\\Author and affiliation details pending}
+\date{10 October 2026\\\textbf{Working draft---not submission-ready}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Removing a calibration record from a quantized language model raises two distinct
+questions: which discrete model should replace it, and which persistent state is
+needed for subsequent requests? We study a precisely specified counterfactual in
+which a fixed pretrained checkpoint and a membership-independent nearest-grid
+anchor determine source-local calibration features. The target interprets finite
+feature words as exact dyadic numbers, retains the original normalization, and
+uses fixed grids and deterministic adaptive rounding. We describe repair from
+compressed feature enclosures, with universal decision certificates, bounded
+exact replay, stage-specific certified solvers, and canonical successor states.
+We prove conditional code and state correctness; acceptance, termination under a
+resource cap, and practical benefit are separate obligations. Historical
+single-stage development experiments show a tradeoff rather than universal
+superiority: at 768 retained tokens, forty-bit compression saves 20.24\% of the
+declared payload while taking 10.29\% longer than a lossless cache; at 1,536 tokens,
+native exact Gram deletion is both faster and smaller. A complete-model pilot
+matches all 42.47 million codes and canonical successor bytes over two deletions.
+Compression takes 1.79 and 1.60 times the lossless-cache request time, while saving
+less than 1\% of declared deployment storage including the checkpoint. This is a
+bounded correctness result with an adverse cost tradeoff, not competitive
+acceleration. On eight previously exposed articles, final-model perplexity is
+53.72 versus 52.82 for matched sequential calibration: the 1.71\% regression
+passes the frozen development tolerance but establishes no quality advantage.
+Useful-scale validation, untouched quality evaluation, a second model,
+prospective confirmation, and broader comparisons remain necessary before
+submission.
+\end{abstract}
+
+\section{Introduction}
+Post-training quantization uses calibration data to select low-bit model weights.
+When calibration membership changes, an application may need a replacement that
+matches an explicitly defined retained-data reconstruction. Repeating the entire
+calibration computation is one option. Keeping all exact feature values is
+another. A smaller archive is useful only if it preserves enough information to
+recover the required discrete decisions, or can detect when additional source
+access is needed.
+
+Our question is therefore about the joint cost of \emph{preparing, retaining,
+accessing, and updating calibration evidence}. A repair method is not useful
+merely because it is faster than an unoptimized cold constructor. An equally
+informed indexed constructor can execute the same repair procedure. Strong
+comparisons must include exact cached features, exact additive statistics, and
+fresh reconstruction under matching output and access contracts.
+
+We examine compressed, source-local feature enclosures. Compression discards
+exact feature words from the live descriptor while retaining intervals that
+contain them. A numerical proposal suggests coefficients or codes; a separate
+outward verifier must certify each decision for every realization of the feature
+box. An unresolved stage can trigger an admitted exact replay and point
+certificate. If those checks do not complete, the service refuses rather than
+returning an approximate replacement.
+
+The counterfactual is deliberately restricted. A fixed nearest-grid anchor,
+constructed from the pretrained weights alone, produces every calibration
+feature. Repaired weights do not change later calibration features. This differs
+from ordinary sequential calibration and from stock floating-point GPTQ
+implementations~\cite{gptq}. It also concerns calibration membership, not removal
+of information from the checkpoint's pretraining.
+
+The prospective contribution is exact discrete-code recovery from uncertain
+archived evidence with useful complete costs. Fixed features, sufficient
+statistics, matrix identities, and decision stability are classical ingredients;
+we do not claim them as new. This draft separates the conditional correctness
+argument from the still-incomplete evidence for practical and scientific value.
+The target boundaries follow the V41 project handoff~\cite{boundaries};
+the current draft adds the complete-model V43 and diagnostic V44 evidence~\cite{v43,v44}.
+
+\section{An explicit reconstruction target}
+\label{sec:target}
+Let $W$ be a fixed pretrained checkpoint and let $\calD_0$ be an original set of
+identified token records. Fix the tokenizer, record boundaries, stage order,
+coordinate order, ridge parameters, row grids, and finite feature evaluator.
+The original normalization $N_0>0$ is part of this specification; deletion does
+not replace it with the number of surviving tokens.
+
+For each stage $\ell$, construct a nearest-grid anchor matrix from the stage's
+base weights, using lower-code midpoint ties. The full anchor depends only on
+$W$ and these frozen grids. For source $j$, let
+\[
+ X_{\ell j}=F_\ell(W_{\mathrm{anchor}},j)
+       \in\Q^{d_\ell\times t_j}.
+\]
+Here $F_\ell$ is the declared finite CPU computation, followed by exact
+interpretation of each successful binary64 output word as a dyadic rational.
+It is not an ideal real-arithmetic transformer. Unsupported or unresolved finite
+operations cause refusal, so this evaluator is partial. Each source is evaluated
+independently; its features cannot depend on another source's membership.
+
+For a retained set $R\subseteq\calD_0$, concatenate its features in canonical
+source order to obtain $X_\ell(R)$, and define
+\begin{equation}
+ H_\ell(R)=\lambda_\ell I+
+   \frac{X_\ell(R)X_\ell(R)^\top}{N_0},
+ \qquad \lambda_\ell>0.
+ \label{eq:metric}
+\end{equation}
+A target with stage-specific original normalizations can be defined similarly;
+all empirical configurations discussed here use one frozen token count.
+
+\paragraph{Exact adaptive rounding.}
+For one stage, write its rational positive-definite metric as a reverse LDL
+factorization
+\[
+ H=L^\top\operatorname{diag}(\tau)L,
+ \qquad B=I-L,
+\]
+where $L$ is unit lower triangular and every pivot $\tau_i$ is positive. For each
+base-weight row $w$, process coordinates in their frozen order:
+\begin{align}
+ v_i&=w_i-\sum_{h<i} B_{ih}(w_h-q_h),\label{eq:recurrence}\\
+ q_i&=\operatorname{nearest}_{G_i}(v_i).
+ \label{eq:rounding}
+\end{align}
+Stage and output-row indices are suppressed in this notation. In V43, each
+output row has one base-only dyadic24 scale $s_{\ell,r}$ and grid
+$G_{\ell,r}=s_{\ell,r}\{-8,\ldots,7\}$, shared across its coordinates.
+Each finite increasing rational grid $G_i$ is fixed before deletion. Nearest
+rounding saturates at endpoints; an exact midpoint selects the lower code. The
+collection of all stage outputs defines $\Qfix(R)$ wherever the required feature
+evaluations succeed. Positive ridge makes the mathematical suffix systems
+invertible, but does not guarantee that a bounded numerical implementation will
+certify every decision.
+
+\paragraph{What remains fixed.}
+The checkpoint, anchor, original normalization, grids, arithmetic target, and
+ordering belong to target identity. Changing any of them requires a new target.
+Fresh reconstruction used as an oracle must retain the same original
+normalization. Matching a separately retuned or sequentially recalibrated model
+would answer a different question.
+
+\section{Repair from compressed evidence}
+\label{sec:method}
+Trusted preparation evaluates each original source once through all stages.
+For each $X_{\ell j}$ it constructs a canonical descriptor $D_{\ell j}$ whose
+public decoding is an entrywise box
+\begin{equation}
+ \underline X_{\ell j}\leq X_{\ell j}\leq\overline X_{\ell j}.
+ \label{eq:containment}
+\end{equation}
+Preparation checks this containment against the actual finite values. Descriptor
+metadata binds the source ID, token identity, stage, target, codec settings, and
+source-word commitment. A hash detects changed bytes; it does not independently
+prove containment or authenticate an untrusted execution host.
+
+A request validates the predecessor, retained membership, deletion IDs, and all
+target and provenance bindings. Retained source-local descriptors remain
+unchanged. At each stage the service presents their decoded boxes to a universal
+certificate. The numerical solver may use floating-point proposals, but proposals
+alone never establish correctness. Directed residual bounds and decision-cell
+checks supply the evidence.
+
+\paragraph{Decision cells.}
+For $G_i=\{g_0<\cdots<g_{k-1}\}$, let
+$m_a=(g_a+g_{a+1})/2$. The cell selecting an interior code $g_a$ is
+$(m_{a-1},m_a]$; endpoint cells extend to infinity. Thus a closed enclosure
+$[\underline v_i,\overline v_i]$ certifies $g_a$ only when it lies wholly within
+that cell. A lower boundary is strict and an upper boundary is inclusive. This
+asymmetry is required by the lower-code tie rule, including exact midpoint cases.
+Previously certified codes are used when bounding the next adaptive decision.
+
+\paragraph{Bounded fallback.}
+If a box certificate refuses, the service may regenerate the retained sources'
+exact finite features and invoke an admitted point certificate. Every traversed
+ancestor is charged, including stages whose compressed certificates already
+accepted. Replayed source words and their containment must match trusted
+preparation. Repeated stage failures may reuse an already regenerated source
+within the same request, with that access made explicit. Temporary exact features
+do not silently replace the canonical compressed representation. Exhausted CPU,
+memory, refinement, or replay allowances cause refusal without a complete model
+release.
+
+\subsection{Stage-specific numerical representations}
+For width $d$, retained token count $T$, and output-row count $r$, token-space
+coefficient construction has a leading structural term proportional to $dT^2$.
+Feature-space construction has terms proportional to $d^2T+d^3$, followed by
+row work proportional to $rd^2$. These expressions describe arithmetic schedules,
+not measured runtime. Interval width, repeated verification, decoding, source
+replay, and native implementation constants can reverse finite-size rankings.
+
+The feature-space route builds directed Gram enclosures from actual feature
+boxes, or accepts an exact Gram with trusted source lineage. It must not infer
+positive semidefiniteness for every arbitrary matrix in an entrywise Gram box.
+Every \emph{realized feature Gram} is positive semidefinite; that is the premise
+used by the certificate.
+
+For $K=XX^\top$, $\beta=\lambda N_0$, and a suffix $S$, let
+$A=\beta I+K_{S,S}$. If a proposal $\widehat z$ has a verified residual bound
+$\|b-A\widehat z\|_2\leq\eta$, then
+\begin{equation}
+ \|A^{-1}b-\widehat z\|_2\leq\frac{\eta}{\beta}.
+ \label{eq:residual}
+\end{equation}
+This follows from $A\succeq\beta I$. For uncertain features the residual bound
+must hold uniformly over their box, including directed product and summation
+errors. Such bounds support coefficient enclosures and then the adaptive cell
+checks; they do not make an unverified nominal solve exact.
+
+Our prospective dispatcher admits the complete bounded solver schedule and its
+explicit arrays before feature access. It prefers token space when $4T\leq d$
+and streamed primal otherwise, subject to admission. This is a declared
+engineering rule, not a learned optimal crossover. Compatible controls receive
+the same kernels and choices. A trusted native exact Gram uses the same
+feature-space certificate; its integer accumulator and archive parsing have
+separate bounds.
+
+\section{Conditional correctness and state}
+The following statements concern the specified target and access contract. They
+are not claims of universal completion, speed, cryptographic authenticity, or
+novelty of interval verification.
+
+\begin{theorem}[Conditional code correctness]
+\label{thm:codes}
+Assume that retained features are defined by the frozen source-local evaluator,
+trusted descriptors satisfy~\eqref{eq:containment}, and every accepted rounding
+certificate is valid for all feature realizations in its supplied box, conditional
+on the accepted prefix. Assume that any fallback reproduces those same finite
+features and certifies~\eqref{eq:recurrence}--\eqref{eq:rounding}. If the service
+successfully commits all required stages, its model is $\Qfix(R)$.
+\end{theorem}
+\begin{proof}
+Source locality makes each retained source's feature matrix equal to its
+retained-only reconstruction. These matrices lie inside the prepared boxes.
+For the first coordinate, a universally valid cell certificate therefore selects
+the exact target code. Suppose the preceding codes equal the target prefix. The
+certificate's conditional premise is then satisfied, so its next accepted code
+also equals the target. Induction establishes every row. A successful fallback
+uses the same features and exact point target, hence has the same conclusion.
+The feature anchor is independent of calibrated outputs, so this argument applies
+to every stage without changing a later stage's defining inputs. The complete
+extent check establishes equality of the entire committed model.
+\end{proof}
+
+\paragraph{Canonical service state.}
+Fix the codec, preparer, provenance policy, source ordering, target serialization,
+and representation rule. Let $E(R)$ contain either retained canonical source
+descriptors or the canonical exact pooled Grams required by that rule. Define
+\begin{equation}
+ \calS(R)=\operatorname{encode}\bigl(
+   \text{target},\Qfix(R),R,E(R),\text{provenance}\bigr).
+ \label{eq:state}
+\end{equation}
+Required tokens or source-retrieval obligations and external trust sidecars are
+part of the service's storage/access accounting. The common pretrained checkpoint
+and runtime dependencies remain required even if reported separately.
+State provenance means retained-record provenance and target/codec bindings.
+Execution logs and execution-provenance artifacts remain external; canonical
+state equality alone does not compare them or the external Gram-trust sidecars.
+The packed model artifact contains code indices for all 24 calibrated affine
+stages; unchanged checkpoint components are still needed for inference.
+
+\begin{lemma}[Exact source subtraction]
+For fixed source-local features, $K(R)=\sum_{j\in R}X_jX_j^\top$. Exact addition and
+subtraction of trusted source contributions, with original normalization
+unchanged, produce the same rational Gram as fresh retained-source accumulation.
+\end{lemma}
+\begin{proof}
+The summands are unchanged by other sources' deletion. Finite sums over disjoint
+source sets are additive in exact rational arithmetic. Subtracting precisely the
+removed summands therefore leaves exactly the retained sum. Canonical integer
+scaling, source ordering, and serialization remove representation dependence on
+addition or deletion order.
+\end{proof}
+
+\begin{theorem}[Canonical successor equality]
+\label{thm:state}
+Under Theorem~\ref{thm:codes}, suppose source descriptors are deterministic and
+retained unchanged, exact Gram updates satisfy the preceding lemma, and all
+compared executions use the same policies in~\eqref{eq:state}. A successful repair
+returns the abstract canonical model and state $\calS(R)$, and therefore the same
+bytes as any successful certified fresh retained-input reconstruction in the
+same representation. This does not guarantee that a bounded fresh numerical
+reconstruction completes. The equality conclusion holds after any
+sequence of successful valid deletions.
+\end{theorem}
+\begin{proof}
+The model agrees by Theorem~\ref{thm:codes}. Each retained descriptor agrees because
+its source-local inputs and deterministic encoder agree. Each pooled Gram agrees
+by exact subtraction and canonicalization. Membership, target, provenance, and
+serialization policies are identical, so every serialized component agrees.
+Applying this argument to each valid successor proves the sequence claim.
+\end{proof}
+
+State equality is representation-specific: a Gram state need not equal a
+compressed-descriptor state. Changing the preparer or provenance format can also
+change state bytes while leaving model codes unchanged. Implementation tests must
+therefore compare independently reconstructed actual payloads, not only output
+hashes or parser roundtrips. The theorem assumes precisely the premises those
+checks are intended to exercise.
+
+\section{Complete cost and access accounting}
+A repair may reduce live storage while increasing request latency. Let $P_a$ be
+initial preparation for representation $a$, and $C_{a,k}$ its complete cost on the
+$k$th actual successor transition. For a declared initial-model convention,
+\begin{equation}
+ L_a(m)=P_a+\sum_{k=1}^{m}C_{a,k}
+ \label{eq:lifetime}
+\end{equation}
+is its preparation-inclusive lifetime cost. A break-even observation requires
+comparing these complete sums under matched access and output contracts. Repeating
+alternative deletions from one unchanged root is not a successor-state sequence.
+No theorem above bounds~\eqref{eq:lifetime} by a competitor's cost.
+
+Request clocks must account for loading and validating the predecessor, source
+access, exact accumulation, every certificate attempt, fallback, serialization,
+complete output, and disposal. Shared checkpoint load, native compilation,
+controller work, and independent audits need explicit placement rather than an
+implicit zero. Nested timings cannot be added to their enclosing timer as if they
+were disjoint. Refused runs retain their full observed cost and are not successful
+speed observations.
+
+An exact pooled Gram can be compact at large token counts, but deleting a record
+requires that record's contribution. If individual contributions are not stored,
+the service must retain access to deleted-source tokens or another way to
+regenerate them. The pooled Gram and a membership digest alone do not supply that
+information. Compressed fallback similarly requires retained-source access.
+
+Storage includes model codes, descriptors or Grams, targets, tokens or retrieval
+indexes, provenance, and required trust metadata. We report the shared checkpoint
+separately and in a complete deployment total. An exported model already embedded
+in a state must not be counted twice. Audit archives are separate physical data;
+logical deletion from live calibration state does not erase those archives.
+
+\section{Historical development evidence}
+\label{sec:history}
+The V39/V40 experiments use the pinned DistilGPT2 checkpoint and thirteen real
+WikiText-2 training articles, each contributing 128 tokens. Original normalization
+is $N_0=1664$, ridge is $1/100$, and the base-only row grids have four bits. The
+requests retain 128, 768, or 1,536 tokens as specified by their campaign. They are
+alternative requests from the same root, not independent roots or successive
+deletions. Each arm/size has one development observation.
+
+These experiments cover only the first complete QKV stage: 2,304 output rows,
+width 768, and 1,769,472 codes. All seventeen V39 and twelve V40 outputs matched
+the exact stage codes within their recorded comparisons. V40 additionally
+compared every native source Gram against its Python reference and matched the
+retained deletion/fresh Gram archives. Table~\ref{tab:history} presents selected
+observations, retaining the important adverse outcomes; complete arm tables are
+in the immutable project reports~\cite{v39,v40}.
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{llrrrr}
+\toprule
+Campaign & Arm & Retained tokens & Seconds & Payload bytes & Replay fallback\\
+\midrule
+V39 & Cached token &128&1.493786&1,626,898&No\\
+V39 & Cached primal &128&14.760016&1,626,898&No\\
+V39 & Compressed 48-bit &128&2.096019&1,554,233&No\\
+V39 & Compressed 32-bit &768&56.414186&3,455,531&Yes\\
+V39 & Cached token &1,536&86.450110&9,205,544&No\\
+V39 & Cached primal &1,536&31.323544&9,205,544&No\\
+V39 & Gram deletion (Python) &1,536&22.674841&6,256,845&No\\
+\midrule
+V40 & Cached primal &768&23.020064&5,071,731&No\\
+V40 & Streamed compressed 40-bit &768&25.387995&4,045,355&No\\
+V40 & Native Gram deletion &768&30.136403&6,255,273&No\\
+V40 & Cached primal &1,536&34.310553&9,205,544&No\\
+V40 & Streamed compressed 40-bit &1,536&36.965634&7,152,668&No\\
+V40 & Native Gram deletion &1,536&18.835432&6,256,852&No\\
+\bottomrule
+\end{tabular}
+\caption{Selected historical single-stage development observations. Every row
+matches the declared exact stage target; the 32-bit row includes its failed
+certificate and fallback. Payloads include descriptors or a Gram, stage metadata,
+and packed codes, but exclude the checkpoint and raw tokens. Arm times include
+loading, replay, accumulation, certification, diagnostics, and output; shared
+construction/builds and comparison/receipt costs are separately recorded. These
+are neither complete-service nor lifetime measurements. Cross-campaign timing
+ratios are not controlled treatment estimates.}
+\label{tab:history}
+\end{table*}
+
+\paragraph{What the stronger control changes.}
+At 768 retained tokens, V40's forty-bit compressed arm saves 20.2372\% of its
+payload against cached primal, while taking 10.2864\% longer. At 1,536 tokens,
+native Gram deletion takes 18.835432 seconds versus compression's 36.965634
+seconds, and compression has 14.3174\% more payload. Omitting that stronger Gram
+control would misrepresent the result. The useful possibility is a
+workload-dependent storage--latency tradeoff, not universal compression speedup.
+
+The V39 thirty-two-bit certificate refused at row 40, coordinate 424. Regenerating
+the retained features and completing the registered fallback cost 31.454036
+seconds within the 56.414186-second arm. This outcome illustrates why certificate
+acceptance and fallback must be measured, rather than inferred from a nominal
+compression ratio.
+
+V40's native source accumulation took 9.397484 seconds versus 54.821483 seconds
+for the Python reference, a component ratio of 5.833634. Preparation also ran both
+implementations and compared them, so that ratio is not a complete preparation,
+repair, or lifetime speedup. Its streamed primal implementation avoided retained
+feature concatenation but was slightly slower in both observations; the explicit
+working-set bound is not a measured whole-process memory saving.
+
+\paragraph{Audit limits.}
+The temporary runners compared actual binaries before shutdown. The fresh local
+metadata audits checked published source identities, receipts, ledgers, and
+ratios, but 77 derived V39 and 46 derived V40 binaries were absent locally. Those
+metadata audits cannot independently repeat missing numerical comparisons.
+Neither pilot measures language quality or supplies population confidence
+intervals. Sixty previously exposed validation articles remain excluded from
+future confirmation.
+
+\section{Complete-model development pilot: V43}
+\label{sec:v43}
+The registered integration workload took the first three article IDs in the
+published V39 development sampling order and the first 32 existing tokens from
+each. The original target used $N_0=96$. It deleted the first sorted source ID,
+retained 64 tokens, then deleted the next ID from that actual successor and retained
+32 tokens. These short prefixes are exposed development inputs. They are chosen
+to test complete-model integration and state transitions, not to establish useful
+calibration scale or language quality.
+
+The service covered all 24 stages and 42,467,328 codes. Separate arms used a lossless
+cache, forty-bit compressed descriptors with exact fallback, and a declared hybrid
+native representation. The hybrid stored native exact pooled Grams at the eighteen
+width-768 stages and lossless factors at the six width-3072 MLP-down stages. It is
+not a pure-Gram full-model experiment. Cold reconstruction built a complete
+lossless state using the same optimized point dispatcher. A separate oracle
+reexecuted retained source tokens and freshly constructed all three representations
+without reading predecessor descriptors or Gram payloads. This oracle is
+independent of predecessor evidence; it shares the point solver and codec
+implementation, so it is not an independent implementation of the mathematics.
+
+\paragraph{Actual code and state checks.}
+All eight arm--successor comparisons passed the cluster byte audit: each complete
+model equalled the oracle model, and each canonical state equalled freshly
+constructed state in its representation. The copied artifacts also passed local
+rehashing and direct model/state byte comparison. The first transition changed
+2,774,109 code indices; the second changed 2,337,980. These counts compare adjacent
+packed models under identical row grids, so the result is not merely retention of
+an unchanged model. All 48 compressed stage certificates accepted without neural
+replay or exact-feature fallback. Cached repair also replayed no sources; cold
+reconstruction traversed 48 then 24 stage--source pairs. Hybrid deletion replayed
+the deleted source through all 24 stages on each request before exact subtraction.
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{llrrrr}
+\toprule
+Arm & Retained tokens & Request seconds & Live-state bytes & Deployment bytes & Peak MiB\\
+\midrule
+Lossless cache &64&36.161&37,599,262&390,424,437&940.6\\
+Lossless cache &32&25.546&30,386,821&383,211,996&940.6\\
+Compressed 40-bit &64&64.713&34,065,453&386,890,628&1,136.5\\
+Compressed 40-bit &32&40.959&28,614,690&381,439,865&1,136.5\\
+Hybrid native Gram &64&403.980&125,546,927&478,372,102&1,273.5\\
+Hybrid native Gram &32&397.422&119,987,469&472,812,644&1,273.5\\
+Cold lossless &64&86.999&37,599,262&390,424,437&918.2\\
+Cold lossless &32&49.928&30,386,821&383,211,996&918.2\\
+\bottomrule
+\end{tabular}
+\caption{Complete-model V43 development observations, one per actual successor
+request. Live state includes packed model codes, both target manifests, retained
+tokens/provenance, representation payloads, and the Gram-trust sidecar. Declared
+deployment adds the shared 352,825,175-byte checkpoint/config. It excludes runtime
+installation, audit archives, and separate execution-provenance receipts. Request
+clocks cover predecessor loading/validation through complete output and disposal;
+shared worker startup/admission is outside them. Peak RSS is measured for the
+whole two-request worker, repeated in its two rows.}
+\label{tab:v43}
+\end{table*}
+
+\paragraph{Cost result.}
+Compression was 78.96\% and 60.34\% slower than lossless cached repair, while
+reducing live state by 9.40\% and 5.83\%. With the common checkpoint counted, the
+storage reductions were only 0.905\% and 0.462\%. Thus this pilot does not establish
+a practically competitive compression advantage. The cache is faster but retains
+more bytes; neither that distinction nor the particularly expensive hybrid at
+these very small token counts supports universal dominance claims. Compression
+was faster than cold reconstruction per request, which alone would be an
+incomplete comparison.
+
+Preparation used 22.783 seconds for context loading, 77.195 seconds for common
+source extraction, and 39.994 seconds for the common original model. Representation
+encoding, serialization, output, and disposal then cost 6.779 seconds for lossless,
+44.130 for compression, and 46.618 for the hybrid. The combined preparation
+transaction, which constructed all three representations, took 243.354 seconds.
+Attributing the common preparation plus only each arm's own representation cost,
+then adding its complete two-request controller transaction, gives 237.209 seconds
+for cached repair, 318.162 for compression, 1,016.411 for hybrid repair, and 313.410
+for cold reconstruction. Under this declared initial-model convention, compression
+was 34.13\% more costly than the cache and 1.52\% more costly than cold
+reconstruction. These are attributed totals, not separately measured deployments:
+5.850 seconds of combined preparation overhead remains separately reported,
+and no future break-even is extrapolated. The request-worker transactions include
+their own context startup; the per-request columns in Table~\ref{tab:v43} do not.
+
+\paragraph{Registration, resources, and audit boundary.}
+The run used frozen source commit \texttt{304a9cc}, program \texttt{e350109a}, and
+main audit \texttt{54cc9d3d}; complete identities and artifact bindings are retained
+in the repository evidence~\cite{v43}. The registered runtime was Linux x86\_64,
+CPython 3.12.14, with one institutional Slurm CPU, a 16-GiB virtual-address limit
+and matching Slurm memory allocation. No GPU arithmetic defined the target.
+All six corrected-campaign workers completed, with settled charges of 242, 90,
+134, 826, 166, and 262 CPU seconds for preparation, cache, compression, hybrid,
+cold, and oracle respectively. Together with the preserved 24-second failed
+initial attempt, the total was 1,744 CPU seconds within the 13,000-second
+continuation ceiling. That initial attempt failed in progress logging before
+feature extraction; it was not a numerical refusal. Main audit analysis took
+155.848 seconds separately from this worker ledger. Software and supplemental
+audit costs are also separate.
+
+The local archive retains 1,269,053,685 bytes of binary artifacts; its local
+check rehashes all 57 declared binary and metadata artifacts and compares actual
+model/state bytes. Local validation did not repeat model inference. A completed
+supplemental audit (Slurm 13210, receipt \texttt{cd03e4c3}) additionally binds 138
+input artifacts to the frozen program and sealed worker receipts. All eight
+comparisons pass actual model/state byte equality, exact retained membership,
+model-export/code consistency, cross-representation target/model agreement, and
+registered-record binding. This audit took 102.184 wall seconds and 101.711 CPU
+seconds, separately from the worker ledger. It checks retained artifacts and
+provenance; it is not another numerical reconstruction or protection against a
+hostile host. These checks support the narrow integration result above, not
+scalable performance or a competitive compression system.
+
+\paragraph{Exposed quality diagnostic (V44).}
+A separately registered diagnostic evaluates the actual final V43 model against
+matched sequential calibration, nearest rounding, and full precision~\cite{v44}.
+Both calibrated targets use the final 32 retained tokens, original normalization
+96, ridge $1/100$, and the same frozen row grids and checkpoint. The diagnostic
+uses the same eight previously exposed V30 validation articles, truncated to 128
+tokens each, with 1,016 next-token predictions per model. It consumes no new
+quality inputs and preserves all sixty historical validation exclusions.
+
+Before accepting new losses, all sixteen full-precision and nearest-rounding
+article losses passed the frozen historical parity tolerance of $10^{-8}$ in
+absolute mean negative log likelihood (NLL); the largest deviation was
+$5.371\times10^{-15}$. Likelihoods use the shared NumPy binary64 evaluator. They
+are approximate likelihood measurements, not certified inference or evidence of
+GPU equivalence.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrr}
+\toprule
+Model & Mean NLL & PPL & PPL/FP \\
+\midrule
+Full precision & 3.819909 & 45.60008 & 1.00000 \\
+Nearest rounding & 4.172389 & 64.87023 & 1.42259 \\
+Matched sequential & 3.966798 & 52.81515 & 1.15822 \\
+Fixed anchor & 3.983710 & 53.71594 & 1.17798 \\
+\bottomrule
+\end{tabular}
+\caption{V44 descriptive quality on eight already exposed articles. Perplexity
+(PPL) is the exponential of pooled mean NLL; FP denotes full precision. Raw
+per-article losses and all comparisons are retained in the completion receipt.}
+\label{tab:v44}
+\end{table}
+
+The fixed/sequential pooled PPL ratio is 1.0170556 and the largest article ratio
+is 1.0532114. Both frozen development guards (at most 1.05 pooled and 1.20 for
+every article) pass. Fixed-anchor loss is nevertheless higher on six articles
+and lower on two; its pooled PPL is 1.71\% worse than matched sequential and
+17.80\% worse than full precision. The guard pass is a bounded development
+diagnostic, not superiority, a population estimate, or untouched confirmation.
+No inferential interval is reported. The one-use worker (Slurm 13215) completed
+with 94 settled CPU seconds under its separate 1,202-second phase allowance.
+Its source commit is \texttt{db95069}, program \texttt{e3d7b6df}, and completion
+receipt \texttt{98870a81}; no adverse-result retry or threshold adjustment was
+used.
+
+\section{Related work and contribution boundary}
+GPTQ develops post-training quantization using approximate second-order
+information~\cite{gptq}. Our reconstruction contract must be stated independently:
+finite source-local fixed-anchor features, original normalization, exact dyadic
+interpretation, frozen grids, and lower midpoint ties. Agreement with this target
+does not certify agreement with an unspecified GPTQ implementation or with a
+sequential calibration target whose downstream activations change.
+
+Exact additive sufficient statistics, ridge systems, low-rank identities,
+residual-based verification, and margin stability are established methods. The
+lemmas and conditional arguments above organize those ingredients around a
+specific archived-evidence contract; their presentation is not a priority claim.
+Any publishable contribution must identify what discrete recovery from genuinely
+uncertain compressed features adds, and demonstrate useful costs against equally
+optimized exact-cache and Gram controls.
+
+\paragraph{Quantization-enabled exact deletion.}
+Ginart et al.~\cite{ginart} retain metadata for quantized $k$-means, check whether
+deletion changes quantized centroids, update metadata when stable, and otherwise
+retrain. Their randomized-lattice analysis concerns expected deletion costs.
+Thus stability checks, exact deletion aided by quantization, retraining fallback,
+and unchanged models with updated metadata are established prior work.
+
+Exact-Fun~\cite{exactfun} changes federated training to a quantized procedure,
+retains historical models, corrects deleted gradients, checks recomputed
+quantized parameters, and retrains from an affected round. Its full author-version
+Theorem 2 proof uses uniform within-cell positions and independent coordinates;
+the overlap calculation also uses a uniform perturbation model. Its probability
+formula is not a distribution-free consequence of a displacement bound alone.
+Our intended distinction is universal recovery of the specified adaptive codes
+over uncertain feature evidence, including changed codes, rather than the
+general fact that rounding can leave an output unchanged after deletion.
+
+\paragraph{Executable certificates.}
+ExecCert~\cite{execcert} separates candidate generation, the release contract, and
+the verifier. It studies executable residual certificates, transfer to exact
+references, guarded updates and rebuilds, decision agreement, and lifecycle costs.
+Its Section 4.4 explicitly discusses finite output formats and codebooks. Our
+adaptive weight-code contract over uncertain calibration features specializes a
+different obligation from ridge-relative or fixed-readout tolerances; this does
+not establish that the broader framework cannot express that contract.
+
+These comparisons narrow the candidate contribution to exact adaptive-code
+recovery from a lossy evidence representation, together with independently
+checked canonical successor state. The conditional theorems alone do not
+establish a new verification principle. A strong paper still needs a clearly
+identified certificate or evidence advantage and useful complete costs. The
+primary-source review is not an exhaustive priority search, and no execution or
+reproduction of these external implementations is claimed.
+
+\section{Remaining validation and limitations}
+The next evaluation must separate three questions: does the service return the
+specified model and state; does that model retain useful prediction quality; and
+do its complete costs improve a meaningful deployment tradeoff? Exactness alone
+answers only the first.
+
+\paragraph{Scale and transfer.}
+After the integration gate, use prospectively registered calibration sizes below,
+near, and above stage width, independent corpus roots, and a second complete model.
+The six width-3072 stages require their own admission and measured process costs.
+A first-QKV timing cannot be multiplied by 24 to estimate full-model performance.
+Measure actual changing-state sequences with matched representation choices and
+all required source access.
+
+\paragraph{Quality.}
+Use untouched article-level evaluation units with overlap checks against exposed
+data. Preserve all sixty historical validation exclusions; re-downloading the
+same validation file does not make it unexposed. Compare with full precision,
+nearest rounding, and an explicitly matched sequential-calibration reference.
+Register useful endpoints and uncertainty analysis before evaluation. Do not tune
+codec precision, solver routing, or stopping rules on future confirmation data.
+
+\paragraph{Confirmation and mechanism.}
+Freeze method choices before prospective randomized repetitions. Include
+preparation, compilation, cache conditions, failures, replay, and serialization.
+Evaluate compression precision, interval verification, solver dimension, and
+source access through matched ablations. A single observation per arm and a
+shared calibration root do not support a population confidence interval.
+
+\paragraph{Deployment limits.}
+The trusted computing base includes the finite evaluator, directed arithmetic,
+compiler/runtime assumptions, source provenance, and immutable inputs during
+verification. Hashes are integrity commitments under that trust model, not proof
+against a hostile host. The current exact evaluator runs on supported CPU
+arithmetic; using a GPU feature kernel would require a separate equivalence
+argument or a separately declared target. Positive ridge does not guarantee
+bounded numerical certification, and refusal must remain a visible outcome.
+
+Logical successor-state deletion leaves audit artifacts and original external
+corpora intact. It does not erase information in pretrained parameters, enforce
+legal data-removal obligations, or certify physical memory or filesystem erasure.
+Those are separate contracts. Most importantly, this draft remains a research
+program with conditional correctness and bounded development evidence, not a
+submission-ready claim of general efficient language-model unlearning.
+
+\section{Reproducibility and evidence status}
+Historical V39 and V40 reports identify their registration, source, workflow and
+final evidence commits~\cite{v39,v40}. The V41 claim matrix fixes the interpretation
+used here~\cite{boundaries}. Future releases should preserve every failed attempt,
+source snapshot, resource ledger, selected-source commitment and actual comparison
+receipt; derived binaries needed for independent reproduction must be distributed
+or reproducibly regenerated under a new registration.
+
+The completed V43 main, local, and supplemental artifact checks and the V44
+exposed-quality diagnostic have separate receipts and resource accounts. The
+listed external papers' titles, authors, and years were checked against primary
+sources; this focused check does not replace a broader priority review.
+
+\pending{Before sharing as a paper, add useful-scale, untouched-quality,
+transfer, and prospective confirmation results, and complete the broader
+comparative evaluation. Compile and visually inspect this source after the final
+evidence edits.}
+
+\begin{thebibliography}{9}
+\bibitem{gptq}
+Elias Frantar, Saleh Ashkboos, Torsten Hoefler, and Dan Alistarh.
+2023. \emph{GPTQ: Accurate Post-Training Quantization for Generative Pre-trained
+Transformers}. ICLR. Primary preprint:
+\href{https://arxiv.org/abs/2210.17323v2}{arXiv:2210.17323, version 2}.
+
+\bibitem{ginart}
+Antonio A. Ginart, Melody Y. Guan, Gregory Valiant, and James Zou.
+2019. \emph{Making AI Forget You: Data Deletion in Machine Learning}.
+Advances in Neural Information Processing Systems 32.
+\href{https://papers.nips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf}{Primary proceedings paper}.
+
+\bibitem{exactfun}
+Zuobin Xiong, Wei Li, Yingshu Li, and Zhipeng Cai.
+2023. \emph{Exact-Fun: An Exact and Efficient Federated Unlearning Approach}.
+IEEE International Conference on Data Mining, pages 1439--1444.
+\href{https://doi.org/10.1109/ICDM58522.2023.00188}{Conference record};
+\href{https://github.com/zuobinxiong/zuobinxiong.github.io/blob/300a0672be8d265ddebf20d6e69f790456a1bd81/assets/pdf/ExactFedUnlearning.pdf}{pinned full author version},
+Theorem 2, pages 6--7. The proof comparison uses this historical author version.
+
+\bibitem{execcert}
+Ziyu Zhao, Xinyu Wang, Xiao-Wen Chang, and Yixuan He.
+2026. \emph{From Mathematical to Executable Certificates for Machine Unlearning}.
+\href{https://arxiv.org/html/2610.02268v1}{arXiv:2610.02268, version 1}.
+
+\bibitem{v39}
+Project \emph{second}. 2026. \emph{Real-data scale results and research decision:
+V39}. Immutable project report at commit
+\texttt{fbcc98c} (full identity in link):
+\href{https://github.com/priyankjairaj100/second/blob/fbcc98c6559de4b88ffc9c8b960cf680d89e29d3/docs/SCALE_RESULTS_V39.md}{report and evidence pointers}.
+Original completed workflow:
+\href{https://github.com/priyankjairaj100/second/actions/runs/38023401448}{run 38023401448}.
+
+\bibitem{v40}
+Project \emph{second}. 2026. \emph{Native Gram and streamed scale results: V40}.
+Immutable project report at commit
+\texttt{fbcc98c} (full identity in link):
+\href{https://github.com/priyankjairaj100/second/blob/fbcc98c6559de4b88ffc9c8b960cf680d89e29d3/docs/NATIVE_SCALE_RESULTS_V40.md}{report and evidence pointers}.
+Original completed workflow:
+\href{https://github.com/priyankjairaj100/second/actions/runs/38025361543}{run 38025361543}.
+
+\bibitem{boundaries}
+Project \emph{second}. 2026. \emph{Paper claim boundaries and evidence obligations}.
+V41 handoff, immutable commit
+\texttt{fbcc98c} (full identity in link):
+\href{https://github.com/priyankjairaj100/second/blob/fbcc98c6559de4b88ffc9c8b960cf680d89e29d3/docs/CLAIM_BOUNDARIES_V41.md}{target, claims, and remaining obligations}.
+
+\bibitem{v43}
+Project \emph{second}. 2026. \emph{Complete fixed-anchor service development
+pilot: V43}. Frozen source \texttt{304a9cc}:
+\href{https://github.com/priyankjairaj100/second/blob/304a9cc73b3c263032f3ef6a02487b4d2df40fbe/research_v43/PROTOCOL.txt}{prospective protocol}.
+Full program and main byte audit identities are in
+\path{local_runs/full-model-v43-20261010-b/program.json} and
+\path{local_runs/full-model-v43-20261010-b/artifact-audit.json};
+the supplemental receipt is
+\path{local_runs/full-model-v43-20261010-b/postrun-audit.json}
+(\texttt{cd03e4c3}), and the retained-payload check is
+\path{validation/v43_local_archive.json}.
+
+\bibitem{v44}
+Project \emph{second}. 2026. \emph{Bounded exposed-quality diagnostic: V44}.
+Registered source \texttt{db95069}:
+\href{https://github.com/priyankjairaj100/second/blob/db95069b2c3484ac615052fb1c1a711c8c773c2d/research_v44/PROTOCOL.txt}{prospective protocol}.
+Full program identity is retained in
+\path{local_runs/exposed-quality-v44-20261010-b/program.json}; results and
+per-article losses are in
+\path{local_runs/exposed-quality-v44-20261010-b/quality/outputs/completion.json}
+(\texttt{98870a81}).
+\end{thebibliography}
+\end{document}

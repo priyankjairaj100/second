@@ -1,0 +1,38 @@
+{
+  "bootstrap.log": {
+    "bytes": 2648,
+    "sha256": "e2b94670b86fda0b47ecb8c3a25be058d3ee58b5b75d987ee020711c12500e86"
+  },
+  "checks-submission.json": {
+    "bytes": 2015,
+    "sha256": "9de8f581730e0e1c46ed69b3ed1800537563df4fd7f47fb30b7eedc5de25ef6f"
+  },
+  "failed-software-carry.json": {
+    "bytes": 139309,
+    "sha256": "69688c732ea3274ca088d07e1cd760c6400966a0a8cdacc47c55a325a7952a7b"
+  },
+  "inspection.json": {
+    "bytes": 2053,
+    "sha256": "ddef1c4588a05670d27eabc8cb192a206b2162c80ded96ebc3d88565f4c9a7c9"
+  },
+  "package-preparation.json": {
+    "bytes": 14478,
+    "sha256": "59ea16be58e1b0424edb18a13d0dc6c0fc53652ad3e46ac54162cdf44f1124ec"
+  },
+  "preparation.json": {
+    "bytes": 287,
+    "sha256": "ad592b82745195a2e1a180951e8cae1da9d6704c95a20e66845bd3e51ac2b628"
+  },
+  "program.json": {
+    "bytes": 155034,
+    "sha256": "6be461e20f7e853817f5a610bd7d4705c089b56fd5f57968c64091288d66ea97"
+  },
+  "source-inventory.json": {
+    "bytes": 136369,
+    "sha256": "df257566179670e6cf5a462bd939049bfb7aa48d9641eb7d9c0ca6e90a4db83b"
+  },
+  "staging.json": {
+    "bytes": 8381,
+    "sha256": "7a59f84757b39bacdc1d97c486dabc400b6b6bd84ba2eaab6995e4167d06a111"
+  }
+}

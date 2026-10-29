@@ -1,0 +1,90 @@
+{
+  "attempt": "saved-code-audit-v123-20261029-a",
+  "automatic_retry": false,
+  "classification": "Whole-stage replay; changed codes in a replayed stage are not necessarily individually replay-dependent.",
+  "limits": {
+    "cpus": 1,
+    "memory_bytes": 17179869184,
+    "process_cpu_hard_seconds": 301,
+    "process_cpu_soft_seconds": 300,
+    "slurm_wall_seconds": 600
+  },
+  "profiles": [
+    {
+      "endpoints": [
+        {
+          "completion": {
+            "bytes": 181592,
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-1/outputs/completion.json",
+            "sha256": "ac0fd70e4d897324dc4e398e3b90d85ac2177ae353dfa24404885820590176d3"
+          },
+          "model": {
+            "bytes": 21233664,
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-1/outputs/model.bin",
+            "sha256": "2038bb85995a36c2184fb38d4c99a45105b378fec86ed3b3b2d82d8ec9a7feea"
+          },
+          "step": 1
+        },
+        {
+          "completion": {
+            "bytes": 180806,
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/outputs/completion.json",
+            "sha256": "c948fda17b70ad39498711c252f000c2a91fe2b1e7f9fd45ef421541ef93d700"
+          },
+          "model": {
+            "bytes": 21233664,
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/outputs/model.bin",
+            "sha256": "3c0de8c371a68e020ac6bf738fc9f53e4e027289478f220f9b655e2306b2c569"
+          },
+          "step": 2
+        }
+      ],
+      "preparation": {
+        "bytes": 168488,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/distilgpt2/prepare/outputs/completion.json",
+        "sha256": "3c8f26b12960183222e6a7053ba64515132f2b1cb7cd49f43e92d42550b35ab5"
+      },
+      "profile": "distilgpt2"
+    },
+    {
+      "endpoints": [
+        {
+          "completion": {
+            "bytes": 355577,
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-1/outputs/completion.json",
+            "sha256": "41913c24341b9acb6fcbef16af529757d7ba146156de717fe6b665608974ee67"
+          },
+          "model": {
+            "bytes": 42467328,
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-1/outputs/model.bin",
+            "sha256": "34e9e20c1da268fb88d30abf0b418fd5938f10401dde9d34aa2c23edc77fe0ec"
+          },
+          "step": 1
+        },
+        {
+          "completion": {
+            "bytes": 354913,
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/outputs/completion.json",
+            "sha256": "5f6cd8f33fd7ac3de38423d93fe19b42cb5383c4c50e7d2dffd5c874ec4a11d9"
+          },
+          "model": {
+            "bytes": 42467328,
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/outputs/model.bin",
+            "sha256": "e0baeb4f7e5076510f08ae7ec6ac82dedacdb5b3026fe24bd78e9f65b4644499"
+          },
+          "step": 2
+        }
+      ],
+      "preparation": {
+        "bytes": 329684,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/prepare/outputs/completion.json",
+        "sha256": "4f95f2c6bee94d68dbe338409aaf84d493cc0876e126c24c6389f22815c01474"
+      },
+      "profile": "gpt2"
+    }
+  ],
+  "purpose": "Posthoc count of changed four-bit code indices in already completed outputs. No construction, inference or quality claim.",
+  "registered_locally_utc": "2026-10-29T05:37:09.450429+00:00",
+  "schema": "saved-code-audit-registration-v123",
+  "script_sha256": "be6b64c21777e427d27149c46b46f3e307a294f1a4de70b91cd449bbc51378d1"
+}

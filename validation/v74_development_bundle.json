@@ -1,0 +1,75 @@
+{
+  "additional_cpu_notices_integrated": true,
+  "archive": {
+    "bytes": 9125809,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v74.zip",
+    "sha256": "7711d559f033686fc5b6c97fca4f5ba7d5ef9cd5ba1821bb0a20cead8a881fb6"
+  },
+  "author_attestation": false,
+  "component_members": 740,
+  "components": 8,
+  "created_at_utc": "2026-10-18T15:49:18.914686+00:00",
+  "draft_checklist_included": true,
+  "expanded_notices_integrated": true,
+  "form_submitted": false,
+  "full_anonymity_verified": false,
+  "full_empirical_reproduction": false,
+  "manifest": {
+    "README.txt": {
+      "bytes": 7853,
+      "sha256": "65c82ca64cb4ad1535c0f78dc528c05a52291de27e8323035243e5e1ec9a74eb"
+    },
+    "RESPONSIBLE_NLP_CHECKLIST_DRAFT.txt": {
+      "bytes": 8471,
+      "sha256": "245704f83292e1ab07d75354098a7a73ac069f2e0eeb48be66b7071b3557b825"
+    },
+    "development-audit-receipts-v69.zip": {
+      "bytes": 341604,
+      "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+    },
+    "development-dependency-notices-v71c.zip": {
+      "bytes": 460857,
+      "sha256": "944eb649e8f339e3b0a1b39126333d5d950c0909a394da3587b7de34e5771f41"
+    },
+    "development-evidence-v69b.zip": {
+      "bytes": 87257,
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "development-quality-evidence-v72.zip": {
+      "bytes": 251913,
+      "sha256": "c588ac060824b7870f085f8f3dae6e02cee6dcb93ded6aac6bd7d72a8d5f14dc"
+    },
+    "development-reproduction-guide-v72.zip": {
+      "bytes": 19535,
+      "sha256": "6abf11b4b237f263784f3bfb9ce3ddb87f70e3d11f3b3a751ae5e69984cddfd3"
+    },
+    "development-selection-metadata-v71.zip": {
+      "bytes": 6194056,
+      "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
+    },
+    "development-service-evidence-v70.zip": {
+      "bytes": 124857,
+      "sha256": "684ca47fd16985c32f5faf0dd7bab81f3bbe9dda297a87455dfb84c0a0ce2dc4"
+    },
+    "development-source-review-v72.zip": {
+      "bytes": 1930758,
+      "sha256": "e3505d7b353eed4109c7f22f127955513d928590552513263a13ee90811cbf49"
+    },
+    "second-research-draft.tex": {
+      "bytes": 54149,
+      "sha256": "bf3b7a73cda7b4c62fb7fe6fc7df08a36e949cb15f4c0d9e361fc25a732cc8eb"
+    }
+  },
+  "members": 12,
+  "model_binaries_included": false,
+  "open_manuscript_matches_current_snapshot": true,
+  "original_bundle_preserved": true,
+  "private_identity_map_included": false,
+  "raw_article_or_token_bodies_included": false,
+  "roundtrip_bytes_verified": true,
+  "schema": "development-review-bundle-v74",
+  "scientific_quality_result": true,
+  "selection_metadata_integrated": true,
+  "separate_pdf_created": false,
+  "submission_ready": false
+}

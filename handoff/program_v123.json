@@ -1,0 +1,392 @@
+{
+  "actual_submission_performed": false,
+  "adversarial_review": {
+    "added_references": [],
+    "clean_empirical_reproduction": false,
+    "full_code_formal_verification": false,
+    "generated_checks": "validation/v122_generated_checks.json",
+    "historical_report": "docs/ADVERSARIAL_REVIEW_V121.txt",
+    "inherited_primary_checks": 15,
+    "native_compilation": "validation/v123_native_compile.json",
+    "new_primary_checks": 0,
+    "primary_reference_identities_checked": 15,
+    "prior_math_checks": "validation/v121_math_audit.json",
+    "reference_audit": "validation/v123_reference_audit.json",
+    "report": "docs/REVIEW_FOLLOWUP_V123.txt"
+  },
+  "artifact_packages_verified": true,
+  "author_attestations_completed": false,
+  "branch": "codex/second-cluster-v42",
+  "cluster_last_observation_is_historical": false,
+  "cluster_observation_cutoff_utc": "2026-10-29T05:40:35.060589+00:00",
+  "cluster_reconciled_this_turn": true,
+  "conference_submission": false,
+  "credentials_stored": false,
+  "current_handoff": "docs/ACTIVE_SESSION_V123.md",
+  "current_science": {
+    "actual_complete_model_state_trust_pairs": 16,
+    "all_prior_V72_V89_findings_preserved": true,
+    "complete_host_time_increase_percent_range": [
+      43.593,
+      166.148
+    ],
+    "cross_architecture_generality": false,
+    "general_speedup": false,
+    "live_storage_savings_percent_range": [
+      7.009,
+      7.858
+    ],
+    "new_complete_related_checkpoint_correctness": true,
+    "new_complete_speed_comparison": true,
+    "new_quality_evaluation": false,
+    "optimized_compressed_slower_in_all_four_matched_strata": true,
+    "saved_changed_code_fraction_range": [
+      0.0882123311360677,
+      0.10588371606520665
+    ],
+    "saved_code_change_audit_job": 16651,
+    "source_replay_at_gpt2_three_records": true,
+    "stable_latency_established": false
+  },
+  "delivery_pdf": {
+    "bytes": 120809,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-tacl-submission.pdf",
+    "sha256": "cdc0e9d60a199eb20f73ad15b69075c86e140df7f95c6eee905465204fc39d6e"
+  },
+  "downloads": "validation/v123_delivery.json",
+  "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "evidence_directory": "pilots/matched-closure-v119-20261027",
+  "evidence_manifest": {
+    "bytes": 24943,
+    "sha256": "0195f7e7a5b9dab8550e554612ac66ee423d8a58b7ef64893755811ca1876d4b"
+  },
+  "experiment": {
+    "actual_terminal": {
+      "bytes": 746962,
+      "sha256": "caac5f13105e096fff8e6dc50af6f27525195c8cbccdf01117e31057ef54a251"
+    },
+    "all_21_jobs_completed_0_0": true,
+    "all_launchers_consumed": true,
+    "both_binary_audits_passed": true,
+    "carried_numerical_seconds": 6304,
+    "collector_consumed": true,
+    "collector_executions": 1,
+    "complete_requests": 16,
+    "cumulative_screen_numerical_seconds": 20526,
+    "current_observation": {
+      "active_worker_progress": {},
+      "captured_utc": "2026-10-27T10:36:51.513887+00:00",
+      "first_request_completion": {
+        "bytes": 351136,
+        "sha256": "96d91a7a976be2373bf8abae6d379bd11b7a3e8ad9c8bfca8bd32b31b7a256a1"
+      },
+      "first_request_progress_counts": {
+        "context_ready": 1,
+        "source_replayed": 3,
+        "stage_certified": 48
+      },
+      "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+      "numerical_status": "",
+      "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+      "queue": "",
+      "scheduler_raw": "16407|second112-checks|COMPLETED|0:0|80|01:13.989|1|16G|csis.mn1\n16407.batch|batch|COMPLETED|0:0|80|01:13.989|1||csis.mn1\n16408|second112-gpt2--reference_compressed-1|COMPLETED|0:0|2028|33:35.116|1|16G|csis.mn1\n16408.batch|batch|COMPLETED|0:0|2028|33:35.116|1||csis.mn1\n16409|second112-distilgpt2--reference_compressed-1|COMPLETED|0:0|590|09:45.247|1|16G|csis.mn1\n16409.batch|batch|COMPLETED|0:0|590|09:45.247|1||csis.mn1\n16410|second112-distilgpt2--optimized_modern-1|COMPLETED|0:0|287|04:44.106|1|16G|csis.mn1\n16410.batch|batch|COMPLETED|0:0|287|04:44.106|1||csis.mn1\n16411|second112-gpt2--optimized_modern-1|COMPLETED|0:0|581|09:36.338|1|16G|csis.mn1\n16411.batch|batch|COMPLETED|0:0|581|09:36.338|1||csis.mn1\n16412|second112-gpt2--reference_modern-1|COMPLETED|0:0|734|12:08.123|1|16G|csis.mn1\n16412.batch|batch|COMPLETED|0:0|734|12:08.123|1||csis.mn1\n16413|second112-distilgpt2--reference_modern-1|COMPLETED|0:0|369|06:06.833|1|16G|csis.mn1\n16413.batch|batch|COMPLETED|0:0|369|06:06.833|1||csis.mn1\n16414|second112-distilgpt2--optimized_compressed-1|COMPLETED|0:0|412|06:48.460|1|16G|csis.mn1\n16414.batch|batch|COMPLETED|0:0|412|06:48.460|1||csis.mn1\n16415|second112-gpt2--optimized_compressed-1|COMPLETED|0:0|1545|25:34.814|1|16G|csis.mn1\n16415.batch|batch|COMPLETED|0:0|1545|25:34.814|1||csis.mn1\n16416|second112-gpt2--optimized_compressed-2|COMPLETED|0:0|615|10:10.914|1|16G|csis.mn1\n16416.batch|batch|COMPLETED|0:0|615|10:10.914|1||csis.mn1\n16417|second112-distilgpt2--optimized_compressed-2|COMPLETED|0:0|326|05:22.594|1|16G|csis.mn1\n16417.batch|batch|COMPLETED|0:0|326|05:22.594|1||csis.mn1\n16418|second112-distilgpt2--reference_modern-2|COMPLETED|0:0|221|03:37.890|1|16G|csis.mn1\n16418.batch|batch|COMPLETED|0:0|221|03:37.890|1||csis.mn1\n16419|second112-gpt2--reference_modern-2|COMPLETED|0:0|407|06:43.720|1|16G|csis.mn1\n16419.batch|batch|COMPLETED|0:0|407|06:43.720|1||csis.mn1\n16420|second112-gpt2--optimized_modern-2|COMPLETED|0:0|326|05:23.866|1|16G|csis.mn1\n16420.batch|batch|COMPLETED|0:0|326|05:23.866|1||csis.mn1\n16421|second112-distilgpt2--optimized_modern-2|COMPLETED|0:0|180|02:58.123|1|16G|csis.mn1\n16421.batch|batch|COMPLETED|0:0|180|02:58.123|1||csis.mn1\n16422|second112-distilgpt2--reference_compressed-2|COMPLETED|0:0|437|07:13.748|1|16G|csis.mn1\n16422.batch|batch|COMPLETED|0:0|437|07:13.748|1||csis.mn1\n16423|second112-gpt2--reference_compressed-2|COMPLETED|0:0|839|13:52.802|1|16G|csis.mn1\n16423.batch|batch|COMPLETED|0:0|839|13:52.802|1||csis.mn1\n16424|second112-gpt2--oracle|COMPLETED|0:0|3123|51:43.680|1|16G|csis.mn1\n16424.batch|batch|COMPLETED|0:0|3123|51:43.680|1||csis.mn1\n16425|second112-distilgpt2--oracle|COMPLETED|0:0|1558|25:48.529|1|16G|csis.mn1\n16425.batch|batch|COMPLETED|0:0|1558|25:48.529|1||csis.mn1\n16426|second112-primary|COMPLETED|0:0|3651|01:00:27|1|16G|csis.mn1\n16426.batch|batch|COMPLETED|0:0|3651|01:00:27|1||csis.mn1\n16427|second112-supplemental|COMPLETED|0:0|39|00:37.343|1|16G|csis.mn1\n16427.batch|batch|COMPLETED|0:0|39|00:37.343|1||csis.mn1\n"
+    },
+    "fresh_oracles": 2,
+    "jobs": [
+      {
+        "dependency": null,
+        "job_id": "16407",
+        "operation": "checks"
+      },
+      {
+        "dependency": "16407",
+        "job_id": "16408",
+        "operation": "gpt2/reference_compressed-1"
+      },
+      {
+        "dependency": "16408",
+        "job_id": "16409",
+        "operation": "distilgpt2/reference_compressed-1"
+      },
+      {
+        "dependency": "16409",
+        "job_id": "16410",
+        "operation": "distilgpt2/optimized_modern-1"
+      },
+      {
+        "dependency": "16410",
+        "job_id": "16411",
+        "operation": "gpt2/optimized_modern-1"
+      },
+      {
+        "dependency": "16411",
+        "job_id": "16412",
+        "operation": "gpt2/reference_modern-1"
+      },
+      {
+        "dependency": "16412",
+        "job_id": "16413",
+        "operation": "distilgpt2/reference_modern-1"
+      },
+      {
+        "dependency": "16413",
+        "job_id": "16414",
+        "operation": "distilgpt2/optimized_compressed-1"
+      },
+      {
+        "dependency": "16414",
+        "job_id": "16415",
+        "operation": "gpt2/optimized_compressed-1"
+      },
+      {
+        "dependency": "16415",
+        "job_id": "16416",
+        "operation": "gpt2/optimized_compressed-2"
+      },
+      {
+        "dependency": "16416",
+        "job_id": "16417",
+        "operation": "distilgpt2/optimized_compressed-2"
+      },
+      {
+        "dependency": "16417",
+        "job_id": "16418",
+        "operation": "distilgpt2/reference_modern-2"
+      },
+      {
+        "dependency": "16418",
+        "job_id": "16419",
+        "operation": "gpt2/reference_modern-2"
+      },
+      {
+        "dependency": "16419",
+        "job_id": "16420",
+        "operation": "gpt2/optimized_modern-2"
+      },
+      {
+        "dependency": "16420",
+        "job_id": "16421",
+        "operation": "distilgpt2/optimized_modern-2"
+      },
+      {
+        "dependency": "16421",
+        "job_id": "16422",
+        "operation": "distilgpt2/reference_compressed-2"
+      },
+      {
+        "dependency": "16422",
+        "job_id": "16423",
+        "operation": "gpt2/reference_compressed-2"
+      },
+      {
+        "dependency": "16423",
+        "job_id": "16424",
+        "operation": "gpt2/oracle"
+      },
+      {
+        "dependency": "16424",
+        "job_id": "16425",
+        "operation": "distilgpt2/oracle"
+      },
+      {
+        "dependency": "16425",
+        "job_id": "16426",
+        "operation": "primary"
+      },
+      {
+        "dependency": "16426",
+        "job_id": "16427",
+        "operation": "supplemental"
+      }
+    ],
+    "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a",
+    "new_numerical_seconds": 14222,
+    "no_retry_or_duplicate": true,
+    "old_unknown_v80_cpu_seconds": 12602,
+    "overlapping_clocks_not_added": true,
+    "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+    "rendered_all_16_requests": true,
+    "reused_preparation_host_ns": {
+      "distilgpt2": 1389527885430,
+      "gpt2": 2992097643050
+    },
+    "scheduler_cpu_lower_ns": 18213235000000,
+    "scheduler_cpu_upper_ns": 18214255000000,
+    "status": "closed_verified",
+    "terminal_captured_utc": "2026-10-27T10:37:38.171685+00:00",
+    "unchanged_numerical_cap_seconds": 82840,
+    "version": 112
+  },
+  "frozen_local_source_counterparts_verified": 1322,
+  "github_repository": "priyankjairaj100/second",
+  "historical_campaign_closed": true,
+  "manuscript": {
+    "appendices": 0,
+    "citation_keys": 15,
+    "content_pages": 10,
+    "identity": {
+      "bytes": 71628,
+      "sha256": "e93ee5d1d4dc01a5f181fd9e3e990279e568b43abd4b35e70bfbce6f9cc9ae74"
+    },
+    "native_compile_success": true,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex",
+    "pdf_export_verified": true,
+    "reference_pages": 1,
+    "rendered_layout_verified": true,
+    "same_open_document": true,
+    "title": "Lossy Calibration Archives for Exact Model Repair",
+    "validation": "validation/v123_manuscript_checks.json",
+    "venue": "TACL",
+    "version": 123
+  },
+  "matched_quality_inputs": "validation/v123_quality_input_readiness.json",
+  "new_empirical_execution": true,
+  "new_empirical_execution_scope": "Posthoc saved-code artifact audit only; no new calibration or inference",
+  "new_empirical_revision_required_for_tacl": true,
+  "new_experiment_required_for_current_claim": false,
+  "new_experiment_required_for_tacl_practical_claims": true,
+  "new_saved_output_audit": {
+    "accounting_note": "Four-second job: scheduler sampled RSS is smaller than worker high-water RSS. Preserve both; clocks overlap and are not added.",
+    "captured_utc": "2026-10-29T05:40:35.060589+00:00",
+    "completed_0_0": true,
+    "job_id": 16651,
+    "manifest_sha256": "8bd9dc397319161becc5a4c1d113f18c0e6e420463efe7d1d214974200d71d70",
+    "native_kernel_qualification": false,
+    "new_calibration_or_inference": false,
+    "posthoc_artifact_measurement": true,
+    "profiles": [
+      {
+        "changed_fraction": 0.09773692378291378,
+        "changed_from_predecessor": 4150626,
+        "changed_from_root": 4150626,
+        "changed_in_nonreplayed_stages": 4150626,
+        "changed_in_replayed_stages": 0,
+        "code_count": 42467328,
+        "profile": "distilgpt2",
+        "retained_records": 3,
+        "step": 1
+      },
+      {
+        "changed_fraction": 0.0882123311360677,
+        "changed_from_predecessor": 3746142,
+        "changed_from_root": 4423075,
+        "changed_in_nonreplayed_stages": 3746142,
+        "changed_in_replayed_stages": 0,
+        "code_count": 42467328,
+        "profile": "distilgpt2",
+        "retained_records": 2,
+        "step": 2
+      },
+      {
+        "changed_fraction": 0.10588371606520665,
+        "changed_from_predecessor": 8993197,
+        "changed_from_root": 8993197,
+        "changed_in_nonreplayed_stages": 8747505,
+        "changed_in_replayed_stages": 245692,
+        "code_count": 84934656,
+        "profile": "gpt2",
+        "retained_records": 3,
+        "step": 1
+      },
+      {
+        "changed_fraction": 0.09513333403033974,
+        "changed_from_predecessor": 8080117,
+        "changed_from_root": 9535791,
+        "changed_in_nonreplayed_stages": 8080117,
+        "changed_in_replayed_stages": 0,
+        "code_count": 84934656,
+        "profile": "gpt2",
+        "retained_records": 2,
+        "step": 2
+      }
+    ],
+    "quality_results": false,
+    "result_sha256": "f8b60d8c43e987e6c061a6b0a7ded44191c626a89d67b8bd0a9c51ad455a5702",
+    "scheduler_peak_rss_kib": 3296,
+    "scheduler_total_cpu_seconds": 3.658,
+    "schema": "saved-code-audit-closure-v123",
+    "single_job_submitted": true,
+    "slurm_elapsed_seconds": 4,
+    "worker_cpu_seconds": 3.610096228,
+    "worker_peak_rss_kib": 160480
+  },
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "paid_compute": false,
+  "pending": [
+    "Qualify both exact-model loaders and matched sequential/practical GPTQ references; register a new outcome-blind held-out frame excluding all prior inspected frames and evaluate all four headline target strata",
+    "Implement and audit a minimal source-only cold state under explicit access regimes",
+    "Measure precision-success and decision margins/bound tightness, additional roots/sizes/deletion orders; saved-code counts are now complete only for the existing four transitions",
+    "Qualify actual native arithmetic and aborted production transactions; repeat timing and complete a clean empirical reproduction",
+    "Author release terms, eligibility/history, consent and metadata before any separately authorized submission"
+  ],
+  "preview_attempt": "validation/v116_preview_attempt.json",
+  "prior_handoff": "docs/ACTIVE_SESSION_V122.md",
+  "prior_preview_failure_resolved_for_delivery_by": "Independent same-source PDF export; native preview UI not re-accessed",
+  "proposed_64_request_replication_launched": false,
+  "publication_baseline": "0709a3c8b2916ad622cfbbd5920a284e04bcf49f",
+  "reporting_base_commit": "0709a3c8b2916ad622cfbbd5920a284e04bcf49f",
+  "resumed_delivery_check": "validation/v119_delivery_check.json",
+  "review_bundle": {
+    "archive": {
+      "bytes": 11051312,
+      "sha256": "d416395d2cf196f8599cdb55fcfcc5d6fa78294f0150d0317ca31a37c7d6b06a"
+    },
+    "author_archive_only": true,
+    "members": 36,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-author-review-v123.zip",
+    "review_upload_permitted": false,
+    "unchanged_components": 14,
+    "verified": {
+      "adapted_code_execution_qualified": false,
+      "binary_reaudit_by_this_verifier": false,
+      "components": 14,
+      "cross_architecture_generality": false,
+      "empirical_pipeline_executed_by_this_verifier": false,
+      "external_inputs_acquired": false,
+      "full_anonymity_verified": false,
+      "matched_reported_model_state_trust_pairs": 16,
+      "matched_reported_requests": 16,
+      "new_quality_evaluation": false,
+      "related_checkpoint_evidence_included": true,
+      "source_component_counts": {
+        "development-optimization-source-v105.zip": 347,
+        "development-point-policy-source-v114.zip": 96,
+        "development-source-review-v72.zip": 583,
+        "development-transfer-source-v111.zip": 296
+      },
+      "source_files": 1322,
+      "stable_speedup_established": false,
+      "status": "verified_supplied_bytes_source_coverage_and_scoped_arithmetic"
+    },
+    "version": 123
+  },
+  "revision_plan": "docs/TACL_REVISION_EVIDENCE_PLAN_V122.txt",
+  "scheduler": "PAUSED",
+  "scheduler_changed_this_turn": false,
+  "scheduler_observation": {
+    "automation_id": "continue-second-research",
+    "new_monitor_created": false,
+    "status": "PAUSED",
+    "user_requested_stop": true,
+    "verified_from_configuration": true,
+    "verified_utc": "2026-10-28T08:06:12.832205+00:00"
+  },
+  "schema": "second-handoff-v123",
+  "scientific_decision": "docs/RESEARCH_DECISION_V119.txt",
+  "scientific_readiness_note": "V123 technical corrections and saved-code audit complete. Actual changed codes are measured, but quality of the four matched targets, the minimal cold baseline, operating range, repeated timing, production-kernel/transaction qualification and clean reproduction remain pending.",
+  "scientific_work_complete_for_current_claim": false,
+  "source_package": {
+    "archive": {
+      "bytes": 50987,
+      "sha256": "605600ff035e7e47457cc1aabd846bc5f65e1faa60363994b8faed7e812d6586"
+    },
+    "members": 8,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-tacl-source-v123.zip"
+  },
+  "speed_campaign_closed": true,
+  "subagents_used": false,
+  "submission_bundle_complete_and_verified": false,
+  "submission_readiness_established": false,
+  "updated_utc": "2026-10-29T05:51:15.338442+00:00",
+  "verification": "validation/v123_manuscript_checks.json"
+}

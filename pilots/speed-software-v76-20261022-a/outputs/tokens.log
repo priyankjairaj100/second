@@ -1,0 +1,53 @@
+test_admission_precedes_compilation_and_numerical_allocation (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_admission_precedes_compilation_and_numerical_allocation) ... ok
+test_directed_results_equal_existing_reference (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_directed_results_equal_existing_reference) ... ok
+test_empty_tokens_have_exact_zero_error_without_compilation (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_empty_tokens_have_exact_zero_error_without_compilation) ... ok
+test_exact_rational_coefficients_lie_inside_error_balls (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_exact_rational_coefficients_lie_inside_error_balls) ... ok
+test_existing_row_certificate_matches_exact_quantizer (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_existing_row_certificate_matches_exact_quantizer) ... ok
+test_overflow_and_underflow_refuse_without_result (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_overflow_and_underflow_refuse_without_result) ... ok
+test_runtime_and_build_identities (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_runtime_and_build_identities) ... ok
+test_shape_value_and_scalar_contracts (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_shape_value_and_scalar_contracts) ... ok
+test_subnormal_products_match_reference_and_exact_containment (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_subnormal_products_match_reference_and_exact_containment) ... ok
+test_unaligned_noncontiguous_readonly_inputs_are_preserved (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_unaligned_noncontiguous_readonly_inputs_are_preserved) ... ok
+test_admission_precedes_gram_and_compilation (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_admission_precedes_gram_and_compilation) ... ok
+test_alignment_layout_and_immutable_outputs (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_alignment_layout_and_immutable_outputs) ... ok
+test_all_exact_corner_coefficients_satisfy_universal_error_balls (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_all_exact_corner_coefficients_satisfy_universal_error_balls) ... ok
+test_api_validation_and_build_identity (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_api_validation_and_build_identity) ... ok
+test_correlated_diagonal_squares_and_cross_products_enclose_exact_values (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_correlated_diagonal_squares_and_cross_products_enclose_exact_values) ... ok
+test_each_native_gram_update_matches_reference_directed_endpoints (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_each_native_gram_update_matches_reference_directed_endpoints) ... ok
+test_empty_tokens_charge_positive_work_without_compilation (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_empty_tokens_charge_positive_work_without_compilation) ... ok
+test_failed_compilation_and_runtime_guards_remain_visible (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_failed_compilation_and_runtime_guards_remain_visible) ... ok
+test_invalid_nominal_inverse_uses_same_verified_zero_proposal_policy (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_invalid_nominal_inverse_uses_same_verified_zero_proposal_policy) ... ok
+test_overflow_and_underflow_refuse_with_no_coefficient_result (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_overflow_and_underflow_refuse_with_no_coefficient_result) ... ok
+test_point_and_uncertain_coefficients_match_reference_encodings (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_point_and_uncertain_coefficients_match_reference_encodings) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.242s
+
+OK
+test_admission_precedes_compilation_and_numerical_allocation (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_admission_precedes_compilation_and_numerical_allocation) ... ok
+test_directed_results_equal_existing_reference (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_directed_results_equal_existing_reference) ... ok
+test_empty_tokens_have_exact_zero_error_without_compilation (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_empty_tokens_have_exact_zero_error_without_compilation) ... ok
+test_exact_rational_coefficients_lie_inside_error_balls (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_exact_rational_coefficients_lie_inside_error_balls) ... ok
+test_existing_row_certificate_matches_exact_quantizer (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_existing_row_certificate_matches_exact_quantizer) ... ok
+test_overflow_and_underflow_refuse_without_result (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_overflow_and_underflow_refuse_without_result) ... ok
+test_runtime_and_build_identities (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_runtime_and_build_identities) ... ok
+test_shape_value_and_scalar_contracts (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_shape_value_and_scalar_contracts) ... ok
+test_subnormal_products_match_reference_and_exact_containment (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_subnormal_products_match_reference_and_exact_containment) ... ok
+test_unaligned_noncontiguous_readonly_inputs_are_preserved (tests.test_native_token_coefficients_v30.NativeTokenCoefficientTests.test_unaligned_noncontiguous_readonly_inputs_are_preserved) ... ok
+test_admission_precedes_gram_and_compilation (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_admission_precedes_gram_and_compilation) ... ok
+test_alignment_layout_and_immutable_outputs (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_alignment_layout_and_immutable_outputs) ... ok
+test_all_exact_corner_coefficients_satisfy_universal_error_balls (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_all_exact_corner_coefficients_satisfy_universal_error_balls) ... ok
+test_api_validation_and_build_identity (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_api_validation_and_build_identity) ... ok
+test_correlated_diagonal_squares_and_cross_products_enclose_exact_values (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_correlated_diagonal_squares_and_cross_products_enclose_exact_values) ... ok
+test_each_native_gram_update_matches_reference_directed_endpoints (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_each_native_gram_update_matches_reference_directed_endpoints) ... ok
+test_empty_tokens_charge_positive_work_without_compilation (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_empty_tokens_charge_positive_work_without_compilation) ... ok
+test_failed_compilation_and_runtime_guards_remain_visible (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_failed_compilation_and_runtime_guards_remain_visible) ... ok
+test_invalid_nominal_inverse_uses_same_verified_zero_proposal_policy (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_invalid_nominal_inverse_uses_same_verified_zero_proposal_policy) ... ok
+test_overflow_and_underflow_refuse_with_no_coefficient_result (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_overflow_and_underflow_refuse_with_no_coefficient_result) ... ok
+test_point_and_uncertain_coefficients_match_reference_encodings (tests.test_native_box_coefficients_v31.NativeBoxCoefficientTests.test_point_and_uncertain_coefficients_match_reference_encodings) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.097s
+
+OK
+{"status": "passed", "parity_cases": 16, "benchmarks": [{"kind": "point", "width": 192, "tokens": 32, "speedup": 1.2057051002301802}, {"kind": "box", "width": 192, "tokens": 32, "speedup": 1.1818094819896543}, {"kind": "point", "width": 768, "tokens": 128, "speedup": 1.4625404129736035}, {"kind": "box", "width": 768, "tokens": 128, "speedup": 1.4084834760309604}, {"kind": "point", "width": 1536, "tokens": 128, "speedup": 1.4650276213617341}, {"kind": "box", "width": 1536, "tokens": 128, "speedup": 1.4103704783930073}]}

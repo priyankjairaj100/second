@@ -1,0 +1,99 @@
+Second: final speed/related-checkpoint campaign decision, 27 October 2026
+
+Decision: close the current speedup campaign. Lead with conditional exact code
+recovery, canonical successor state, and a measured storage/access/latency
+tradeoff. Do not claim general acceleration, stable latency, cross-architecture
+reliability, or quality transfer. No additional experiment is required for this
+bounded claim. Do not launch the proposed 64-request timing replication.
+
+Evidence gate
+All 21 registered V112 allocations (16407--16427) completed 0:0. Both complete
+fresh retained-input oracles, the primary audit, supplemental audit and unchanged
+terminal closure passed. All 16 model/state/trust comparisons match fresh
+reconstruction: 24 stages/42,467,328 codes for DistilGPT2 and 48 stages/84,934,656
+codes for GPT2. The one-use collector executed once after closure; the unchanged
+renderer recomputed every row from that actual closed collection. This decision
+rests on those executions, not on software tests or receipt hashes alone.
+Terminal SHA256: caac5f13105e096fff8e6dc50af6f27525195c8cbccdf01117e31057ef54a251.
+Program SHA256: a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381.
+
+Complete host seconds, all registered measured cells
+Checkpoint / retained     Reference C   Optimized C   Reference M   Optimized M
+DistilGPT2 / 3               589.239       411.279       369.644       286.419
+DistilGPT2 / 2               436.691       325.131       219.802       179.706
+GPT2 / 3                   2027.290      1544.049       733.046       580.147
+GPT2 / 2                    838.153       615.039       406.506       326.341
+C = compressed; M = modern lossless. Exact nanoseconds remain in E20.
+
+Optimized C versus optimized M: complete time / live bytes / inclusive bytes
+DistilGPT2 / 3: +43.593% / -7.777% / -1.839%
+DistilGPT2 / 2: +80.924% / -7.009% / -1.303%
+GPT2 / 3:     +166.148% / -7.858% / -2.241%
+GPT2 / 2:      +88.465% / -7.087% / -1.611%
+All four observed latency contrasts favor the optimized lossless control. The
+modest storage savings shrink further when the shared checkpoint is included.
+Both optimization packages improve their respective reference implementations,
+but this does not establish that compressed storage is the faster choice.
+
+Measured explanation and remaining uncertainty
+Both compressed GPT2 requests at three records replay the final-block MLP
+up-projection and traverse 144 source-stage/record pairs each. Optimized compressed
+stage work takes 1458.767 seconds, including 695.104 seconds of nested source
+extraction, versus 476.578 seconds for optimized modern storage. Other 14 requests
+have no source traversal or fallback. Even without replay, at DistilGPT2/two
+records the optimized compressed stage work takes 267.560 versus 114.651 seconds;
+its validation cost of 2.266 versus 9.120 seconds does not offset that difference.
+These phase observations explain where measured costs accumulate, but do not
+isolate decoder, cache, kernel or certification effects. Decoder-only duration is
+not measured; source extraction is nested and must never be double-counted.
+
+Each cell is one fixed-order fresh-process observation with uncontrolled OS cache,
+one CPU and 16 GiB. Both checkpoints share a GPT-family lineage and the same small
+exposed four-by-128-token root, fixed normalization 512 and 4->3->2 deletion.
+The existing token solver was fixed prospectively for all point-valued solves in
+every arm and oracle after the earlier refusal/stage diagnostic. Box/Gram policies,
+the exact target and approved 1,327,104-entry grid limit remained unchanged.
+These results refute an observed win at every tested setting, not all possible
+future algorithms, hardware, workloads or timing distributions. Shared numerical
+code also means fresh reconstruction is not an independent implementation.
+
+Why stop additional speed experiments
+The prospective V82 decision rules select the bounded tradeoff framing after a
+localized win or loss. V89 already showed mixed optimized endpoint latency
+(0.90% faster at twelve records; 12.73% slower at six), and its attributed
+preparation-plus-two-request cost favored modern storage. The completed matched
+screen now loses at all four tested strata. Repeating a selected favorable case
+would be biased; a balanced 64-request study would estimate latency uncertainty
+but has no evidence-based general-win hypothesis here. Spare budget is not a
+scientific justification. A later new question requires a separate rationale and
+registration; no current registered job may be retried or duplicated.
+
+Importance to the paper
+Broader speed and transfer would strengthen practical importance and external
+validity, but are not prerequisites for conditional exactness and the measured
+bounded tradeoff. Their absence materially limits the empirical contribution:
+the demonstrated storage gains are modest, latency often worsens, source access
+can be required, and the fixed-teacher target differs from sequential calibration.
+The defensible contribution is the specified recovery contract, executable
+certification/canonical state and an honest evaluation of operating limits.
+Do not market this as a general acceleration method or imply acceptance prospects.
+
+Preserved evidence and costs
+V72's separate 320-article quality evidence concerns the earlier 1664-normalized
+DistilGPT2 target only; it shows small quality costs within frozen tolerances,
+not equivalence or quality improvement. No new quality run was performed. Preserve
+the earlier 5.92% failure, 40-bit refusal, V104 first-request refusal/19 cancelled
+dependents, V109 setup failure, V111 timeout and all original sources/exclusions.
+New numerical debit is 14,222 seconds; carried 6,304 yields 20,526 within 82,840.
+Current all-21-allocation scheduler CPU is [18,213.235,18,214.255) seconds. Historical
+shared preparation host times remain 1389.527885430 and 2992.097643050 seconds;
+they were reused, not reexecuted or free, and cannot be assigned wholly to one arm.
+Software/controller clocks and the old unknown 12,602-second debit remain separate.
+Do not add overlapping clocks or claim a consolidated all-history compute total.
+
+Delivery
+Integrate all results into the same manuscript, native-compile, preserve all 13
+prior evidence/source components and add E20. Keep scheduler PAUSED. Remaining
+submission gates are rendered layout/PDF export, final venue/cycle/category and
+author-controlled declarations/policy review. They are not new experiment gates.
+No paid compute, subagent, third-party message or conference submission.

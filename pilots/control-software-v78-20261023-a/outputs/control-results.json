@@ -1,0 +1,313 @@
+{
+  "scope": "Generated V63 parser and control software qualification; no neural or full-request measurement",
+  "suites": {
+    "reference": {
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "optimized": {
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "cache_mechanics": {
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "cache_parser": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "profiles": [
+    {
+      "shape": [
+        128,
+        768
+      ],
+      "operation": "three full parse/decode calls with cache create/clear",
+      "samples_ns": {
+        "reference": [
+          232116537,
+          230578364,
+          232234998,
+          230651399,
+          231010050,
+          230942784
+        ],
+        "optimized": [
+          100036633,
+          100020462,
+          99832351,
+          99914575,
+          99781286,
+          100720501
+        ]
+      },
+      "median_seconds": {
+        "reference": 0.230976417,
+        "optimized": 0.0999675185
+      },
+      "speedup": 2.310514659819229,
+      "cache_statistics": [
+        {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "retained_bytes": 1478847,
+          "peak_retained_bytes": 1479103,
+          "entries": 1,
+          "mapping_bytes": 384,
+          "base_mapping_bytes": 128,
+          "byte_cap": 33554432,
+          "entry_cap": 4096,
+          "closed": false
+        },
+        {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "retained_bytes": 1478847,
+          "peak_retained_bytes": 1479103,
+          "entries": 1,
+          "mapping_bytes": 384,
+          "base_mapping_bytes": 128,
+          "byte_cap": 33554432,
+          "entry_cap": 4096,
+          "closed": false
+        },
+        {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "retained_bytes": 1478847,
+          "peak_retained_bytes": 1479103,
+          "entries": 1,
+          "mapping_bytes": 384,
+          "base_mapping_bytes": 128,
+          "byte_cap": 33554432,
+          "entry_cap": 4096,
+          "closed": false
+        },
+        {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "retained_bytes": 1478847,
+          "peak_retained_bytes": 1479103,
+          "entries": 1,
+          "mapping_bytes": 384,
+          "base_mapping_bytes": 128,
+          "byte_cap": 33554432,
+          "entry_cap": 4096,
+          "closed": false
+        },
+        {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "retained_bytes": 1478847,
+          "peak_retained_bytes": 1479103,
+          "entries": 1,
+          "mapping_bytes": 384,
+          "base_mapping_bytes": 128,
+          "byte_cap": 33554432,
+          "entry_cap": 4096,
+          "closed": false
+        },
+        {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "retained_bytes": 1478847,
+          "peak_retained_bytes": 1479103,
+          "entries": 1,
+          "mapping_bytes": 384,
+          "base_mapping_bytes": 128,
+          "byte_cap": 33554432,
+          "entry_cap": 4096,
+          "closed": false
+        }
+      ],
+      "source_words_sha256": "bfdb2c59094f37622dd8ef6764da2440cb2bad4502986b18783f3f643ec1c617"
+    },
+    {
+      "shape": [
+        128,
+        3072
+      ],
+      "operation": "three full parse/decode calls with cache create/clear",
+      "samples_ns": {
+        "reference": [
+          941862910,
+          928734400,
+          941918804,
+          930555794,
+          944101874,
+          929715373
+        ],
+        "optimized": [
+          411795998,
+          400357205,
+          410965076,
+          400146983,
+          412512488,
+          399952309
+        ]
+      },
+      "median_seconds": {
+        "reference": 0.936209352,
+        "optimized": 0.4056611405
+      },
+      "speedup": 2.3078605726101094,
+      "cache_statistics": [
+        {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "retained_bytes": 5910271,
+          "peak_retained_bytes": 5910527,
+          "entries": 1,
+          "mapping_bytes": 384,
+          "base_mapping_bytes": 128,
+          "byte_cap": 33554432,
+          "entry_cap": 4096,
+          "closed": false
+        },
+        {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "retained_bytes": 5910271,
+          "peak_retained_bytes": 5910527,
+          "entries": 1,
+          "mapping_bytes": 384,
+          "base_mapping_bytes": 128,
+          "byte_cap": 33554432,
+          "entry_cap": 4096,
+          "closed": false
+        },
+        {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "retained_bytes": 5910271,
+          "peak_retained_bytes": 5910527,
+          "entries": 1,
+          "mapping_bytes": 384,
+          "base_mapping_bytes": 128,
+          "byte_cap": 33554432,
+          "entry_cap": 4096,
+          "closed": false
+        },
+        {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "retained_bytes": 5910271,
+          "peak_retained_bytes": 5910527,
+          "entries": 1,
+          "mapping_bytes": 384,
+          "base_mapping_bytes": 128,
+          "byte_cap": 33554432,
+          "entry_cap": 4096,
+          "closed": false
+        },
+        {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "retained_bytes": 5910271,
+          "peak_retained_bytes": 5910527,
+          "entries": 1,
+          "mapping_bytes": 384,
+          "base_mapping_bytes": 128,
+          "byte_cap": 33554432,
+          "entry_cap": 4096,
+          "closed": false
+        },
+        {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "retained_bytes": 5910271,
+          "peak_retained_bytes": 5910527,
+          "entries": 1,
+          "mapping_bytes": 384,
+          "base_mapping_bytes": 128,
+          "byte_cap": 33554432,
+          "entry_cap": 4096,
+          "closed": false
+        }
+      ],
+      "source_words_sha256": "3149850d93a80e4cc6c20b0ab2dcf86619e8f5fd539298b6e0c83d4e2d78dfb3"
+    }
+  ],
+  "codec_manifest": {
+    "source_sha256": "89c6c2b839427ab81dd5215eae17ed491edf77c2c1ccee69f762fa1c9e9277da",
+    "old_codec_manifest": {
+      "source_sha256": {
+        "fixed_lossless_codec_v29.py": "6d0c5c3d13506091bd88310b93b5b0931f1c09b1f6e902fe0e2c40b35c441c0c",
+        "compact_state.py": "af4bb17f90f497b22da1fdaf6bc5fe0656ba86c27def9f4dd80d9e785c88e829",
+        "run_store.py": "369345e6342763262f7e894c18d82b544c81f9c6da1b5f76c979107c144d7e10"
+      },
+      "zlib_compile_version": "1.2.13",
+      "zlib_runtime_version": "1.2.13",
+      "zlib_module_kind": "extension",
+      "zlib_runtime_binary_sha256": "db27b566d290d390647a8152bb60f96af080c66016d1631d473c1758b8e3b6cb",
+      "parameters": {
+        "level": 6,
+        "wbits": 15,
+        "mem_level": 8,
+        "strategy": 0
+      },
+      "canonical_scope": "this bound encoder and compressor runtime"
+    },
+    "zstandard_version": "0.25.0",
+    "zstd_version": [
+      1,
+      5,
+      7
+    ],
+    "native_sha256": "7eb41c8b36cd99ed6c67e39f8574e42472687a14c6038c512bb3a90b7082616d",
+    "package_sha256": "5dd909e0b60a946a0b08deaf57545d17dc044f5df4040beec55f7ef6c6fecd11",
+    "parameters": {
+      "level": 3,
+      "threads": 0,
+      "write_content_size": true,
+      "write_checksum": true,
+      "write_dict_id": false,
+      "dictionary": null
+    },
+    "modes": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_decoded_bytes": 4194304,
+    "max_window_bytes": 4194304,
+    "canonical_scope": "this bound encoder and compressor runtime"
+  },
+  "elapsed_ns": 11036815413
+}

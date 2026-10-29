@@ -1,0 +1,28 @@
+{
+  "captured_utc": "2026-10-26T10:06:19.914499+00:00",
+  "dirty": "",
+  "head": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+  "progress": {
+    "distilgpt2/reference_compressed-1": {
+      "completion_exists": false,
+      "counts": {},
+      "directory": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/distilgpt2/reference_compressed-1/outputs"
+    },
+    "gpt2/reference_compressed-1": {
+      "completion_exists": false,
+      "counts": {
+        "context_ready": 1,
+        "source_replayed": 2,
+        "stage_certified": 46
+      },
+      "directory": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/outputs"
+    }
+  },
+  "queue": "16358|second104-supplemental|PENDING|(Dependency)\n16357|second104-primary|PENDING|(Dependency)\n16356|second104-distilgpt2--oracle|PENDING|(Dependency)\n16355|second104-gpt2--oracle|PENDING|(Dependency)\n16354|second104-gpt2--reference_compressed-2|PENDING|(Dependency)\n16353|second104-distilgpt2--reference_compressed-2|PENDING|(Dependency)\n16352|second104-distilgpt2--optimized_modern-2|PENDING|(Dependency)\n16351|second104-gpt2--optimized_modern-2|PENDING|(Dependency)\n16350|second104-gpt2--reference_modern-2|PENDING|(Dependency)\n16349|second104-distilgpt2--reference_modern-2|PENDING|(Dependency)\n16348|second104-distilgpt2--optimized_compressed-2|PENDING|(Dependency)\n16347|second104-gpt2--optimized_compressed-2|PENDING|(Dependency)\n16346|second104-gpt2--optimized_compressed-1|PENDING|(Dependency)\n16345|second104-distilgpt2--optimized_compressed-1|PENDING|(Dependency)\n16344|second104-distilgpt2--reference_modern-1|PENDING|(Dependency)\n16343|second104-gpt2--reference_modern-1|PENDING|(Dependency)\n16342|second104-gpt2--optimized_modern-1|PENDING|(Dependency)\n16341|second104-distilgpt2--optimized_modern-1|PENDING|(Dependency)\n16340|second104-distilgpt2--reference_compressed-1|PENDING|(Dependency)\n16339|second104-gpt2--reference_compressed-1|RUNNING|csis.mn1\n",
+  "readonly_cpu_ns": 269114458,
+  "readonly_review_cost_outside_experiment": true,
+  "reviews": {},
+  "scheduler_raw": "16336|second104-checks|COMPLETED|0:0|71|01:06.766|1|16G|csis.mn1\n16336.batch|batch|COMPLETED|0:0|71|01:06.766|1||csis.mn1\n16337|second104-distilgpt2--prepare|COMPLETED|0:0|1389|23:01.262|1|16G|csis.mn1\n16337.batch|batch|COMPLETED|0:0|1389|23:01.262|1||csis.mn1\n16338|second104-gpt2--prepare|COMPLETED|0:0|2993|49:34.004|1|16G|csis.mn1\n16338.batch|batch|COMPLETED|0:0|2993|49:34.004|1||csis.mn1\n16339|second104-gpt2--reference_compressed-1|RUNNING|0:0|1585|00:00:00|1|16G|csis.mn1\n16339.batch|batch|RUNNING|0:0|1585|00:00:00|1||csis.mn1\n16340|second104-distilgpt2--reference_compressed-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16341|second104-distilgpt2--optimized_modern-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16342|second104-gpt2--optimized_modern-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16343|second104-gpt2--reference_modern-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16344|second104-distilgpt2--reference_modern-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16345|second104-distilgpt2--optimized_compressed-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16346|second104-gpt2--optimized_compressed-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16347|second104-gpt2--optimized_compressed-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16348|second104-distilgpt2--optimized_compressed-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16349|second104-distilgpt2--reference_modern-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16350|second104-gpt2--reference_modern-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16351|second104-gpt2--optimized_modern-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16352|second104-distilgpt2--optimized_modern-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16353|second104-distilgpt2--reference_compressed-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16354|second104-gpt2--reference_compressed-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16355|second104-gpt2--oracle|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16356|second104-distilgpt2--oracle|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16357|second104-primary|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16358|second104-supplemental|PENDING|0:0|0|00:00:00|0|16G|None assigned\n",
+  "schema": "matched-request-readonly-review-v108"
+}

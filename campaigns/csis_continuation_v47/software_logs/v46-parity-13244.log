@@ -1,0 +1,8 @@
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+{"elapsed_wall_ns": 21890861284, "kind": "nonzero_exit", "returncode": 1, "status": "failed"}

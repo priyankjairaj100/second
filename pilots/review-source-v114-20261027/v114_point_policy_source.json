@@ -1,0 +1,20 @@
+{
+  "adapted_code_execution_qualified": false,
+  "all_source_originals_unchanged": true,
+  "archive": {
+    "bytes": 236880,
+    "sha256": "6ccc2ad011d2d2eb49e4ed3177f4f61600e51e307d24d4f9a2e956a5ce36dc38"
+  },
+  "archive_roundtrip_verified": true,
+  "empirical_work_executed": false,
+  "excluded_execution_receipts": 17,
+  "full_anonymity_verified": false,
+  "full_model_transfer_result": false,
+  "general_speedup_result": false,
+  "inherited_source_files": 1226,
+  "new_copies_adapted": 26,
+  "python_asts_checked": 1211,
+  "schema": "point-policy-source-supplement-v114",
+  "source_files_added": 96,
+  "total_source_files": 1322
+}

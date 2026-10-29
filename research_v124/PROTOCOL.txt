@@ -1,0 +1,81 @@
+V124 matched-target quality study, registered before new held-out losses.
+29 October 2026. User instruction: run the missing experiments now.
+
+Purpose: measure predictive quality of the four exact saved V112/V119 headline
+models (DistilGPT2 and GPT2, three and two retained calibration records, N0=512).
+Model/target/checkpoint hashes are bound to the completed original requests. This
+stage does not recalibrate models, change their target, repeat a consumed attempt,
+or make a speed claim. All historical failures and negative findings remain.
+
+New held-out sample: C4 validation shard2 at revision
+1588ec454efa1a09f29cd18ddd04fe05fc8653a2. Acquire exactly an 8MiB compressed prefix;
+inspect exactly an 8MiB decompressed prefix, retaining complete records only. Pin
+whole-file size/hash as upstream metadata, not a claim to hash the whole file.
+Use the unchanged GPT2 tokenizer and V68 selection/exclusion semantics, with a new
+seed second-v124-matched-quality-before-loss:. Select320 eligible articles, first
+128tokens each,127predictions. No special tokens, positions reset per article.
+Exclude the entire V68-protected historical calibration/quality frames and all
+later matched calibration records. V70's successful actual exclusion-union audit
+must bind the saved prior exclusion bytes. Reserve every newly inspected article,
+not only selected articles. Preserve any underfilled/failed frame; no expansion,
+new seed, resampling or repeated acquisition. Sampling is within this bounded
+frame, not a uniform sample from C4. Exact overlaps only, not semantic deduplication.
+
+Immediate allocations: one data job, two model-loader/inference qualification
+jobs, then six separate quality jobs: original checkpoint, candidate3, candidate2
+for each model. All 320 articles are shared and selected before any new losses.
+No inference of quality from code-equality tests. Every model role runs once.
+The original checkpoint is evaluated once per model, not once per endpoint.
+
+Qualification: independently decode the safetensors payload and compare every
+embedding, position, norm, bias, output head and stage-matrix word with the imported
+binary64 arrays. Verify base target geometry/hash, complete packed-model extent,
+per-stage packed hashes, retained IDs and actual row grids. Compare vectorized
+code expansion with StageCodes for every saved code. Run NumPy/Torch binary64 CPU
+NLL parity at a fixed1e-8 mean-NLL tolerance for three synthetic token sequences
+for all three roles. No CUDA device, model fitting or held-out loss in qualification.
+Four generated loader/mutation tests must also pass. These checks qualify this
+saved-model likelihood path; production repair/native-certificate and abort tests
+remain required for future repair experiments, not retroactively claimed here.
+
+Inference: common NumPy binary64 implementation from scripts/run_quality_v30.py,
+with one BLAS/OMP/MKL thread. Approximate likelihood, not certified arithmetic.
+Use the existing Torch environment on CPU only for the parity comparison; the
+frozen calibration runtime and original model codes are unchanged. Record actual
+Python/NumPy/Torch versions and host. Input sources are hash-checked before/after.
+
+Statistics frozen now: pooled token mean NLL and perplexity; paired article
+log-perplexity differences,20,000 PCG64 whole-article bootstrap draws, seed124,
+95% percentile intervals, absolute and relative values and observed worst article.
+Primary eventual contrasts are fixed-teacher versus matched sequential at all four
+model/endpoints. Apply one-sided98.75% bounds (Bonferroni familywise5% across four).
+Retain the previous program's practical tolerance prospectively: pooled ratio and
+upper bound<=1.05, each observed article ratio<=1.20. This is an application guard,
+not proof of equivalence. Original-checkpoint and practical-GPTQ comparisons are
+secondary descriptive95% intervals; do not use them to claim the primary guard.
+Do not classify the quality gate until all four matched sequential contrasts exist.
+Missing comparators/failed roles remain explicitly incomplete; no selective pooling.
+
+Next comparator construction is fixed in purpose before candidate losses: custom
+sequential uses the same records, grids, ridge, normalization and point-token route;
+practical GPTQ uses an independently pinned established implementation,4bits,
+per-output-row scales, no groups, block128,1% damping, no activation ordering, no
+quality tuning. Its grids/metric may differ and it is not an equality oracle.
+Separate source/runtime qualification and bounded one-use registrations are
+required before these new constructors execute. They share this exact held-out
+sample without changing it after outcomes. Comparator preparation proceeds while
+initial jobs run. Do not mislabel initial original-checkpoint results as the full
+matched sequential/GPTQ comparison.
+
+Limits: every allocation1CPU,16GiB,csis.mn1,cpu-short; data600CPU/1200wall seconds,
+checks1200CPU/1800wall each, each evaluation3600CPU/4500wall. Hard CPU=soft+1.
+Total initial worker reservation24600CPU seconds plus nine finite launcher/runtime
+allowances of60CPU seconds=25140. No reservation borrowed from consumed campaigns.
+Bounded new project outputs/source/input files<=2GiB; each output file<=128MiB.
+55GiB user soft-quota headroom and filesystem headroom checked before staging.
+No paid compute, GPU allocation, scheduler restart, subagents or third-party message.
+The source package and program are frozen before held-job submission. Exclusive
+intent files, held-job IDs and group registries prevent duplicate submissions.
+Release evaluation jobs only after successful qualification/data receipts and
+terminal scheduler states are checked. A failed registration is consumed.
+Audit actual saved loss rows, hashes and terminal accounting before any paper result.

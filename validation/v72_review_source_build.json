@@ -1,0 +1,19 @@
+{
+  "adapted_copies": 50,
+  "all_copies_reverse_to_original_bytes": true,
+  "archive": {
+    "bytes": 1930758,
+    "path": "reports/development-source-review-v72.zip",
+    "sha256": "e3505d7b353eed4109c7f22f127955513d928590552513263a13ee90811cbf49"
+  },
+  "empirical_work_executed": false,
+  "full_anonymity_verified": false,
+  "full_reproduction_verified": false,
+  "original_source_count": 583,
+  "package_files": 586,
+  "python_asts_checked": 545,
+  "python_changes_only_declared_strings": true,
+  "schema": "review-source-component-build-v72",
+  "status": "built_pending_clean_fixture_qualification",
+  "unchanged_original_sources": 583
+}

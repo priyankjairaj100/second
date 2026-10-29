@@ -1,0 +1,12 @@
+{
+  "recorded_at_utc": "2026-10-18T14:46:40.213090+00:00",
+  "phase": "initial heartbeat reconciliation",
+  "transport": "existing SSH control socket with BatchMode and 10-second connection timeout",
+  "exit_code": 255,
+  "error": "Permission denied (publickey,password,keyboard-interactive).",
+  "slurm_read_succeeded": false,
+  "new_job_launched": false,
+  "repeated_attempt": false,
+  "last_successful_job_observation": "validation/v72_final_job_observation.json",
+  "credential_saved": false
+}

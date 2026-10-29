@@ -1,0 +1,500 @@
+Current checkpoint 29 October 2026: **V137 matched quality CLOSED: three of four primary guards pass.** Read docs/ACTIVE_SESSION_V137.md and handoff/program_v137.json. All4480 article losses audited. GPT2/three-record observed-article ratio1.402707 fails1.20; preserve boundary. Fixed/GPTQ PPL7.7--11.5%lower under frozen settings. Allqualityjobscomplete;9084.405actual allocationCPUseconds including failures. Same manuscript updated/native compiled/visually verified10+1pages. Minimal source-only baseline next, V135format10tests only. Operating range, native faults, justified repeated timing and clean reproduction pending. SchedulerPAUSED; old attempts consumed. Earlier snapshots below are historical.
+
+Current checkpoint 29 October 2026: **V136 matched sequential quality running after actual V133 saved-model audits.** Read docs/ACTIVE_SESSION_V136.md and handoff/program_v136.json. V125 and V131 audited: fixed targets have7.7--11.5%lower PPL than frozen practical GPTQ; primary sequential comparison pending16725--16728. V132 receipt-serialization failures and V134 pre-loss binding failures preserved; no constructor rerun. V135 source-only format preparation passes8tests, no empirical job. Same manuscript remainsV123 pending closed-result update. SchedulerPAUSED; no subagents/paid compute/duplicate/submission. Earlier snapshots are historical.
+
+Current checkpoint 29 October 2026: **V132 active empirical revision. Six matched-target quality evaluations completed and audited; sequential/GPTQ comparison in progress.** Read docs/ACTIVE_SESSION_V132.md. V125 jobs16683--16688 completed0:0 with1920verified article losses; saved targets have11.8--15.4%higher perplexity than original checkpoints. Primary fixed/sequential guard remains pending. V129published-GPTQ controls16696--16699complete; V131quality16704--16707released. V132corrects the new sequential wrapper target-binding error after preserving all prior software/constructor failures;331Linux checks must pass before constructors. Frozen sources/14ZIPs unchanged; same manuscript stillV123until coherent result update. SchedulerPAUSED; no old retries/subagents/paid compute/monitor/submission. Earlier snapshots are historical.
+
+# Second: continuous research and submission queue
+
+Current checkpoint 29 October 2026: **V123 technical fixes and saved-code audit complete; empirical TACL revision pending.** Read docs/ACTIVE_SESSION_V123.md, docs/REVIEW_FOLLOWUP_V123.txt and handoff/program_v123.json. The same manuscript has ten content pages plus references, no appendices; native/export, all-page visual, number, reference and package checks pass. Job 16651 completed 0:0. Actual predecessor code changes are 8.82--10.59%, with 245,692 changed codes in one replayed GPT2 stage. No calibration or quality experiment ran. Four exact saved targets are inventoried. Next qualify loaders/references and register new quality excluding all prior inspected frames. Minimal source-only cold, operating range, native/transaction tests and clean reproduction remain pending. All 1,322 originals and 14 historical ZIPs are unchanged. V119 and 16651 are consumed; no retries. Scheduler PAUSED; no subagents, paid compute, monitor or submission. Earlier snapshots are historical.
+
+Current continuation handoff: docs/ACTIVE_SESSION_V122.md and handoff/program_v122.json.
+V122 addresses the external manuscript review with stronger theory, arithmetic
+specification and economics. Ten content pages plus references; all final pages,
+references, numbers and packages verified. All 1322 original sources and fourteen
+scientific ZIP components are unchanged. Generated checks are not model results.
+TACL EMPIRICAL REVISION IS STILL PENDING. The old bounded-claim campaign is closed,
+but readiness requires matched-target quality, a minimal source-only cold baseline,
+operating-range/precision telemetry, repeated timing and clean reproduction.
+Read REVIEW_RESPONSE_V122.txt and TACL_REVISION_EVIDENCE_PLAN_V122.txt before acting.
+No new experiment registered or launched. Next: inventory inputs and prepare the
+exact-target quality protocol, then the source-only cold representation. Inspect
+live Slurm/receipts before cluster actions; old launchers/collectors remain consumed.
+Scheduler PAUSED; no subagent, paid compute, monitor or submission. Author release
+terms/eligibility/history/consent remain decisions; no external review supplement.
+Earlier completion statements below concern historical narrower checkpoints.
+
+Current continuation handoff: docs/ACTIVE_SESSION_V121.md and handoff/program_v121.json.
+V121 adversarial revision is complete in the same open document: 10 content pages,
+1 reference page, no appendices. Native compilation, independent export and visual
+inspection pass. All13references received primary identity, claim-scope and final
+render/link checks. One author-name error corrected; QuIP and GPTQ/Babai added.
+Read docs/ADVERSARIAL_REVIEW_V121.txt for resolved findings and remaining limits.
+All1322original sources and14scientific components are unchanged. Science is closed;
+no new experiment, job or consumed collector is required or run. Source/PDF and
+verified author bundles are versionedV121. Before any separately authorized upload,
+follow TACL_SUBMISSION_CHECKLIST_V121.txt. Author declarations remain unverified;
+TACL prohibits external review supplements. Scheduler PAUSED; do not resume it.
+
+Earlier entries below are historical snapshots; V121 above governs current state.
+
+Current continuation handoff: docs/ACTIVE_SESSION_V120.md and handoff/program_v120.json.
+V120 TACL manuscript and rendered delivery artifacts are complete: 10 content pages
+plus 1 references page, no appendices. Same open source, native compilation, independent
+PDF export, visual inspection and frozen-result cross-checks pass. Core proofs are
+self-contained; official style is unchanged. All1322 original source files and all14
+evidence/source components remain unchanged. No new experiment is required or run.
+Read TACL_SUBMISSION_CHECKLIST_V120.txt before any separately authorized upload.
+External review supplements are prohibited; the larger archive is author-side only.
+Author history/eligibility, consent and metadata remain unverified. No submission.
+Scheduler remains PAUSED. Foreground paper preparation is complete; do not resume
+historical heartbeat work, create monitors or repeat registered jobs.
+
+Earlier entries below are historical snapshots; V120 above governs current state.
+
+Current continuation handoff: docs/ACTIVE_SESSION_V119.md and handoff/program_v119.json.
+V119 is the compiled manuscript and verified 14-component development review bundle.
+V112 is CLOSED: all 21 jobs, 16 comparisons, both fresh oracles, both audits and
+actual terminal closure passed. The speed campaign is complete; no new experiment
+is required for the bounded claim. V72/V89 findings and all failures remain.
+Rendered layout/PDF export and delivery choices remain unresolved. One fresh
+28 October editor-access attempt again failed at service startup; no repeated
+attempt followed. See validation/v119_delivery_check.json.
+The user explicitly stopped the scheduler on27October2026: heartbeat PAUSED,
+verified in configuration. Continue foreground work and the already released Slurm
+chain. Do not resume the automation from historical heartbeat instructions.
+Historical handoffs keep their original observation cutoffs.
+
+## Immutable execution boundaries
+
+Repository /Users/priyankjairaj/Downloads/ACL/Second, GitHub priyankjairaj100/second,
+branch codex/second-cluster-v42, draft PR1. Numerical checkout remains f900999;
+never pull reporting commits there. Preserve all registrations,575 historical
+sources+six V72 recovery sources, five administrative commitments, caps, exclusions,
+failures and negative findings. No retries, duplicated jobs, paid compute, subagents,
+new monitor, credentials storage, third-party messages or conference submission.
+Stop repeated attempts after connection failure. Inspect jobs before any future
+launch. Source checks/tests/receipts alone are not independent scientific replication.
+
+## Operational observation, 24 October 2026
+
+The user explicitly authorized freeing space and clearing the completed Third
+project. Identity, ownership, mount and empty-job checks preceded removal of
+/nfs_home/users/poonam/ccu-acl2027. Only the disposable pip HTTP download cache
+was additionally cleared. About 78.5 GiB of allocated storage was recovered. Local
+Third and every Second source, runtime, old attempt and receipt remain intact.
+At 07:01 UTC, full source-bound V85/V88 admission passed:77.51 GiB below the account
+soft quota, against69.73 GiB needed; the existing temporary filesystem and enabled
+new-file group quota also passed. Capacity is observed, not reserved.
+
+The 934-file archive was staged exclusively and all 935 regular members verified.
+The new registered program SHA is
+6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9.
+Software 16004 COMPLETED0:0 with all 162 tests, no failure/error/skip, matching actual
+container paths/groups and successful complete host accounting. The fixed chain
+was then submitted held, checked and released once. At 07:05:11 UTC, preparation
+16005 was RUNNING;16006--16016 were dependency-pending. The software pass is not
+scientific evidence. See pilots/recovery-v89-20261023/execution-20261024/checkpoint.json
+and its hash inventory. Earlier failure, timeout and quota receipts remain.
+
+## Ordered work
+
+V119 current: SCIENTIFIC CAMPAIGN COMPLETE. All21 jobs16407--16427 completed0:0;
+queue empty at10:36:51UTC. Both actual audits and terminal closure pass. One-use
+collection and all-row reduction completed once; all16 model/state/trust pairs
+match fresh reconstruction across24/48stages. Optimized compression uses7.01--7.86%
+less live storage but takes43.59--166.15%longer in all four matched settings. Both
+compressed GPT2/three-record cells replay144source-stage/record pairs. New numerical
+14222+carried6304=20526within82840; prior shared preparation/costs/failures remain.
+Read RESEARCH_DECISION_V119: bounded tradeoff framing; no64-request replication.
+Same open manuscript compiles; all13 prior components remain byte-identical in the
+new14-component package with1322source copies. Positive verification and six
+corruption/scope rejections pass. Scheduler PAUSED. No new job is required.
+Ready delivery work depends on restored preview/page-count access and final
+venue/cycle/category; existing question remains pending. No routine repeat.
+
+Earlier entries below are historical snapshots, including their former use of
+"current", "running" and "ACTIVE". V119 above governs current state.
+
+V118 current: at08:17:17UTC all sixteen requests16408--16423 completed0:0
+and all sixteen saved-output/accounting reviews passed.16424GPT2oracle running;
+16425DistilGPT2oracle and both audits16426/16427pending. No new comparative or
+independent model-equality claim. Collector still gated. All1322original sources,
+compiled V117 manuscript and verified13-component bundle unchanged. Read
+ACTIVE_SESSION_V118; continue existing chain only. Scheduler stays PAUSED.
+
+V117 current: at07:16:14UTC all eight first-endpoint requests16408--16415 were
+completed0:0 and their saved-output/accounting reviews passed.16416running;
+16417--16427pending. Both oracles/audits/terminal still required; no speed or
+independent model equality claim. The unchanged collector is still unexecuted.
+New reporting_v117 prepares all-row tables/costs with25 distinct generated guards;
+no actual reduction. The same manuscript now explains the implemented coefficient
+certificate and compiles. All13 prior evidence/source components unchanged in the
+verified V117 bundle. All1322 source counterparts unchanged. Read ACTIVE_SESSION_V117.
+Scheduler stays PAUSED. Rendered layout/PDF/venue remain unresolved; no repeat question.
+
+V116 current: at06:50:30UTC seven requests16408--16414 completed0:0 and all seven
+saved-output/accounting reviews passed.16415running;16416--16427pending. Neither
+fresh-oracle equality nor new speed/transfer is established. Same registered
+chain and unchanged1322sourcecounterparts; collector remains gated. The same open
+manuscript was shortened by moving detailed history verbatim to an appendix;
+theory, numbers and claims remain unchanged. Native compilation and V116 bundle
+integrity pass; all13 prior evidence/source components and verifier unchanged.
+Preview service failed to start; rendered layout/venue remain unresolved.
+Read ACTIVE_SESSION_V116. Scheduler remains PAUSED; continue foreground work.
+
+V115 current: recurring scheduler PAUSED at direct user request. At06:11:17UTC,
+16408/16409 were COMPLETED0:0;16410 running,16411--16427 dependency-pending.
+Actual saved outputs, artifact hashes, seals, policy and complete accounting passed
+for both first requests: GPT2 all48stages/84,934,656codes; DistilGPT2 all24stages/
+42,467,328codes. No independent model equality or speed comparison yet. Current
+chain is serial by registered worker, ledger and terminal guards; dependency
+removal would fail it, and overlapping on the fixed host changes timing contention.
+No new job or retry. Preserve caps and all carried costs. Read ACTIVE_SESSION_V115.
+Both oracles/audits and actual terminal remain; reporting_v113 stays gated.
+All1322 sources, V111 manuscript and V114 bundle unchanged. Earlier entries below
+are historical and their ACTIVE scheduler references do not apply now.
+
+V114 current: at05:44:42UTC16408 remained RUNNING with46/48 stage certificates,
+no completion;16409--16427 dependency-pending. The actual program/clean numerical
+checkout match. Review bundle now has13 components and1322 source/protocol copies,
+including96 new copies from the exact qualified V112 archive. All12 prior
+components and the V111 manuscript remain byte-identical. Portable checks and six
+corruption/scope rejection cases pass; no new numerical result or adapted-runtime
+qualification. Source-builder inventory-schema assertion failure is preserved and
+corrected before any archive output. Read ACTIVE_SESSION_V114. Existing jobs only;
+reporting_v113 remains gated on all actual terminal evidence. Original sources,
+limits, costs and failures remain. Layout/venue pending; no repeated questions.
+
+V113 current: access restored; V112 software16407 COMPLETED0:0 with all318Linux
+checks and actual accounting verified. Program a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381.
+The20-job dependent chain16408--16427 was held, verified and released once.
+At05:33:22UTC16408 was RUNNING;16409--16427 dependency-pending. No complete
+request/model comparison yet. Every stage/prepare/checks/chain launch is consumed;
+inspect only existing jobs and never repeat launchers. All original sources,
+preparations, failures, carried costs and limits remain. Read ACTIVE_SESSION_V113.
+The restore-access question is resolved. Reporting_v113 is prepared and passes22
+generated guards, including complete cost carry and historical preparation costs;
+collector remains gated on all21successfulallocations and both actual audits.
+Same V111 manuscript/bundle; no new empirical claim, cosmetic edit or repeat compile.
+Final layout and venue/category remain pending. Older entries below are historical.
+
+V112 current: new full point-token screen is prepared, not uploaded/registered.
+All164isolated local checks pass;318pinned Linux checks remain. V111 source archive
+is preserved after a prelogin SSH timeout27October02:40UTC; no upload or job ran.
+A final audit review reproduced a binary-reader defect (64MiB retained limit and
+UTF8 decoding). Separate V112 fixes it under original1GiB artifact/64MiBJSON caps;
+four generated regression tests pass. All18new workers,16comparisons, fresh oracles
+and both audits remain required. Reuse V104 preparations; numerical6304+72036
+fits82840 and all controller/software ceilings are carried. Read ACTIVE_SESSION_V112.
+Current remote state UNKNOWN; do not repeat SSH attempts while disconnected.
+Restore-access text question pending. After access changes, inspect queue, old
+receipts and namespace absence/storage before stage_v112.py once. Never repeat
+stage_v111.py, either packager or any historical registered job. Existing same
+manuscript now includes E19 and compiles. V111 bundle verifies12components and1226
+source files with five corruption/scope rejection tests; actual rendered layout
+and venue/category remain pending. No fresh preview attempt, subagent, paid
+compute, new monitor or submission. Older entries below are historical snapshots.
+
+V110 current: qualification16366 and token-stage diagnostic16367 COMPLETED0:0.
+All246Linux checks and actual terminal accounting pass. The existing alternative
+solver certifies all2,359,296codes of the selected GPT2 stage within unchanged
+limits. This is no full-model transfer or speed result. V109 unregistered setup
+failure and all source bytes are preserved; V104 refusal/19cancellations remain.
+Next prepare a separate prospective fallback policy for all matched cells/oracles,
+reuse completed V104 preparations, and reserve all16requests/two fresh oracles/
+both audits inside remaining original caps. Read ACTIVE_SESSION_V110.md; no
+new full-screen registration exists. Update same manuscript with both outcomes.
+
+V108 current: V104 is terminal with a certification refusal.16339 FAILED1:0;
+16340--16358 cancelled unstarted. Both preparations/software completed. Actual
+failed seal and scheduler accounting verify1879charged request seconds and
+22.160490controller upper; total numerical6196within82840. No completed request
+or model comparison exists. Read ACTIVE_SESSION_V108.md and RESEARCH_DECISION_V108.txt.
+Never repeat any consumed job or weaken the successful collector/terminal gate.
+Next ready work is a separately qualified/registered token-only single-stage
+diagnostic; shape admission passes but no diagnostic is registered or executed.
+Preserve remaining original caps, all failures and frozen sources. V106 manuscript/
+bundle and V98 verified science remain; incorporate the failure at the next
+scientific writing checkpoint. Earlier entries below are historical snapshots.
+
+V107 current: both preparations16337/16338 COMPLETED0:0; first GPT2 comparison
+16339 RUNNING at09:50:47UTC,16340--16358 dependency-pending. The09:55:01UTC
+actual GPT2 preparation review verifies metadata, worker seal, storage/mapping,
+output extents and full accounting:2951charged numerical seconds within7202,
+23.442554controller seconds within302. All48stages/192payload stages exist.
+No completed request or binary comparison yet. The1192source commitments and
+1178local source counterparts are unchanged. Manuscript/bundle remainV106;
+no cosmetic edit, new compile, preview retry or package. Read the V107 handoff.
+Continue only the existing chain; all16requests, two fresh oracles, both audits
+and actual terminal closure remain. Collector stays gated on all23successfuljobs.
+Earlier entries below are historical snapshots, not current scheduler state.
+
+V106 current: same V104 chain, GPT2 preparation16338 RUNNING at09:06UTC with
+3source replays and no completion;16339--16358 dependency-pending.16337 remains
+completed and verified as recordedV105. Correct outputs/ progress census saved.
+The manuscript replaces one inaccurate private-map phrase; native compile passes.
+V106 bundle verifies and preserves all ten evidence/source components, checklist
+and verifier unchanged fromV105b. Scientific results and claims are unchanged.
+Read docs/ACTIVE_SESSION_V106.md. Remaining work depends on actual matched outputs,
+both audits/terminal, rendered layout and venue/category. Earlier entries below
+are historical; do not repeat registered jobs or user questions.
+
+V105 current: DistilGPT2 preparation16337 completed0:0; its actual metadata,
+seal, output extents and complete accounting passed08:55UTC. Charged1366seconds
+fits3602 and controller upper16.045441seconds fits301. GPT2 preparation16338
+was running at08:53UTC;16339--16358 remain pending. No request comparison is
+complete. Existing V104 chain only; all limits and prior failures preserved.
+The V105b development bundle adds347 source copies to the583-file base, covering
+all930 source/protocol files of executed V89. All nine V98 components are unchanged.
+Portable byte/coverage verification and four corruption/rejection cases pass.
+V105b clarifies that the reporting repository and derivation maps are public;
+all ten components and the manuscript remain unchanged fromV105. No anonymity claim.
+Same manuscript compiles; only package-description prose changed. Scientific
+numbers and claims remainV98. Read docs/ACTIVE_SESSION_V105.md. Final layout,
+venue/category and matched results remain open. Earlier entries are historical.
+
+V104 current: actual V101 admission is closed. V100 software16307 failed before
+tests/model work; V103 software16309 passed225tests but dispatch16310 failed before
+container/model work, with16311--16331 cancelled unstarted. All attempts are consumed
+and preserved. V104 fixes registered operation versus filename alias and exercises
+host-main dispatch for all23operations.148 isolated checks and all227Linux checks
+pass. Software16336 completed0:0 and actual host/accounting review passed. The
+fixed22-job chain16337--16358 was released once. At08:35:27UTC16337 is RUNNING
+with bound target context loaded and all4source records replayed; all21dependents
+are pending. Inspect only this
+existing chain; do not repeat either launch mode. New software530+72carried=602,
+checks controller283+19=302, numerical controller6039+1=6040; numerical82840 and
+other limits unchanged. Read docs/ACTIVE_SESSION_V104.md. Reporting preparation
+passes13reduction/clock checks plus4collector guards, with no empirical reduction. V98 science/manuscript remain current.
+Earlier entries below are historical and do not authorize any retry.
+
+V101 current:172 pinned Linux tests passed; checks16302 COMPLETED0:0. The separately
+registered fetch/target/closure chain is released once. Read the V101 handoff and
+actual job list before acting. V99 software16301 FAILED1:0 is preserved, with56
+software/10 controller seconds carried inside the original602/1510 ceilings.
+Imports and hash-bound source dependencies are now checked; isolated104 checks
+pass. V100 remains an unregistered draft with142 isolated checks,221 Linux gates
+pending actual V101 terminal. Inspect existing jobs, close admission, then package
+and qualify V100 separately. V98 manuscript/science unchanged. Earlier snapshots
+below are historical. No retry, paid compute, subagents or submission.
+
+V98 current checkpoint: access restored; all13 V89 allocations and both audits
+completed. Actual terminal closure passed26October06:49UTC. All eight state/model
+comparisons equal fresh reconstruction. Compressed optimization cuts time11.53%/
+36.17%, but optimized compressed vs modern is0.90% faster at12 records and12.73%
+slower at6. Preserve both directions and single-observation scope. Read
+docs/ACTIVE_SESSION_V98.md and docs/RESEARCH_DECISION_V98.txt.
+
+The separate V91 source package was staged, then prepare failed on an omitted
+research_v84.config dependency before any registration/job. All992 staged files
+remain unchanged; no retry or patch in place. NEXT READY WORK: new corrected
+namespace/package with complete dependencies and extracted-only import checks,
+then the same actual software/target gates. V92 needs a separately bound successor
+after actual admission. No replication yet. Current V98 manuscript compiles and
+development bundle verifies; rendered layout/final delivery remain unresolved.
+The V97--V94 descriptions below are historical, superseded observations.
+
+V97 connection checkpoint: the25October08:22UTC SSH attempt timed out before
+login, following the24October16:25UTC timeout. Current queue/outcomes/audits are
+UNKNOWN. The last successful11:19UTC24October snapshot is historical:16004–16007
+complete,16008 running,16009–16016 pending. A restore-connectivity text question
+is pending; do not repeat it or connection attempts after a failure in this turn.
+Read docs/ACTIVE_SESSION_V97.md and pilots/connection-interruption-v97-20261025/.
+After access returns, inspect the existing chain and old19 outcomes before action.
+No retry/launch or result is inferred. One local preview attempt also failed;
+no edit/new compilation/layout claim. V91/V92 remain prepared and gated.
+
+V96 execution checkpoint: at11:19:32UTC optimized_compressed-1 job16007 was
+COMPLETED0:0; reference_modern-1 job16008 RUNNING,16009–16016 pending. Two of eight
+requests are complete. The11:20:01UTC review verified optimized request metadata,
+seal, extents, storage/mapping and complete accounting:3897 charged CPU seconds
+within12602,13.259560 conservative nonnumerical seconds within602. Fresh oracle,
+both audits and terminal closure remain pending; no comparative claim follows.
+Read docs/ACTIVE_SESSION_V96.md and pilots/request-closure-v96-20261024/.
+All934V89/18V90/33V91/38V92 commitments and the manuscript remain unchanged.
+No V91/V92 package or registration exists. Existing chain only; no retry.
+
+V95 execution checkpoint: at10:19:32UTC reference_compressed-1 job16006 was
+COMPLETED0:0; optimized_compressed-1 job16007 RUNNING,16008–16016 pending. The
+10:20:27UTC read-only review verified request metadata/seal/output extents,
+storage/mapping and complete accounting:4405 charged CPU seconds within12602,
+15.505290 conservative nonnumerical seconds within602. One of eight requests is
+complete; fresh oracle and both audits are pending. No comparative scientific
+conclusion follows. Read docs/ACTIVE_SESSION_V95.md and
+pilots/request-closure-v95-20261024/. All934V89/18V90/33V91/38V92 commitments and
+the manuscript remain unchanged. Existing chain only; no new launch or retry.
+
+V94 execution checkpoint: preparation16005 COMPLETED0:0 at the09:04:36UTC
+observation;16006 reference_compressed-1 RUNNING,16007–16016 pending. A09:07:28UTC
+read-only review verified preparation metadata/seal/output extents, saved
+storage/mapping and complete scheduler accounting. Its6702 charged CPU seconds
+fit12602; conservative complete nonnumerical CPU18.768486seconds fits602.
+Bulk model/state hashing and independent equality remain with the frozen audits
+after timed work. No speed/transfer conclusion follows. Read the V94 handoff and
+pilots/preparation-closure-v94-20261024/. Existing chain only; no new launch.
+
+V93 reporting checkpoint: fallback source extraction is nested inside stage
+time, and optimized cells bundle multiple changes. Pure helpers preserve
+disjoint clocks and all eight cell/endpoint observations; six generated tests
+pass, with no empirical reduction. Read docs/COST_SCOPE_REVIEW_V93.txt after
+actual V89 closure and before interpreting costs. At08:49:46UTC preparation16005
+had48 payload-stage records but no completion/host/audits; successors remained
+pending. All934V89/18V90/33V91/38V92 commitments remain unchanged. No new job or
+package. V92 remains the prepared matched implementation and actual gates stand.
+
+V92 independent checkpoint: the complete matched20-worker/16-pair recovery source
+now connects actual V91 prerequisites, bounded outputs/controllers, source-bound
+storage, full host timing, one-use held submission, both audits and terminal
+closure.142 local checks pass;221 pinned Linux checks remain unexecuted. No
+package/upload/registration/job or new target exists. At08:40:42UTC16005 had all
+24stage certificates and32 payload-stage records, but no complete preparation or
+audit.16006--16016 remained pending. All934V89,18V90 and33V91 source commitments
+remain unchanged. Read research_v92/PROTOCOL.txt and the V92 runbook. Actual V89
+scientific closure and actual V91 target admission are still mandatory before
+packaging or launching V92. Source preparation is independent work, not an
+empirical gate or a new scientific result. Same manuscript; one preview-startup
+failure, no retry. Existing scheduler ACTIVE.
+
+V91 independent checkpoint: the separate software/fetch/target admission path
+is implemented with bounded writes, exact live CPU admission, complete host
+accounting, one-use held submission and terminal closure.104 local checks pass;
+its172-test pinned Linux gate is unexecuted. No new package, upload, registration,
+fetch or job exists. At08:06UTC16005had15/24stage certificates; dependent jobs
+were still pending and no actual completion/audit existed. All934 V89 source
+members,930 local counterparts and18 V90 commitments are unchanged. Read
+research_v91/PROTOCOL.txt. Package creation requires actual V89 terminal success;
+only an evidence-based scientific decision can justify the next launch. The new
+admission-only storage plan does not qualify the later full transfer screen.
+
+V90 independent checkpoint:48pure checks pass for new bounded controllers,
+read-only exact-command admission, finite metadata writes and source-derived
+progress counts. Three Linux child checks remain unexecuted. Two real bugs in
+the old prepared transfer path were reproduced: wrong verifier import and
+incompatible producer/verifier ledger identities. Frozen sources are unchanged.
+The proposed68.50GiB project/16.08GiB temporary census includes both transfer
+chains, but is explicitly ineligible for live admission until all new callers
+are integrated, qualified and source-bound. Read research_v90/PROTOCOL.txt.
+At07:38UTC16005remained RUNNING with13source replays and3/24stage certificates;
+all successor/audit jobs remained dependency-pending. No scientific result yet.
+
+0. HISTORICAL V89 EXECUTION INSTRUCTIONS (closed by V98): inspect existing16004--16016 and their receipts before
+   any action. Never repeat prepare.py or either submit.py mode. The actual
+   program and release chain are saved in the execution checkpoint. Ten numerical
+   jobs cover preparation, all eight four-cell/end-point requests and the fresh
+   two-endpoint oracle.16015/16016 perform primary/supplemental audits. On complete
+   terminal success, execute the frozen read-only terminal.py with the actual
+   program SHA and audit all outputs/costs before applying V82 decision rules.
+   On failure, preserve it and the unknown debit; no automatic retry or repair.
+   The original 19 jobs remain unchanged: one complete, two failed and 16 cancelled.
+   Preserve old 12602 CPU seconds in full; old+new numerical reservations 120622
+   remain within 120624, and controller reservations 6622 within 7224. Preserve one
+   CPU, 16 GiB memory, frozen sources, exclusions and all work/output limits.
+   Source-bound admission before every allocation rechecks current capacity.
+   No model result, general speedup, transfer or algorithmic negative is yet
+   established. Independent next work is the separate transfer recovery design:
+   old V81/V82 registrations remain consumed and V84's old gates cannot pass.
+   Read docs/MATCHED_TRANSFER_RECOVERY_REVIEW_V89.txt before implementing the new
+   orchestration and complete write plan, and docs/ACTIVE_SESSION_V91.md for the
+   new integrated admission path and remaining actual qualification gates.
+   V92 separately prepares the complete matched screen; see
+   docs/ACTIVE_SESSION_V92.md. Its actual prerequisites remain unresolved.
+   New software/admission/complete-transfer
+   sources must bind the actual V89 terminal result and retain the approved 1,327,104 grid allowance for both new
+   targets. Do not weaken old prerequisites. The same V72/V74 manuscript remains
+   current pending audited results; layout and delivery choices remain unresolved.
+
+1. COMPLETE: V63 artifact audit,V65 disjoint root,V66 operations,V67 full service.
+   All ten actual model/state comparisons and both terminal audits pass. Compression
+   saves9.24%/8.70% live state against modern lossless with13.69%/50.48% slower
+   observed requests. Original nearest-anchor5.92% quality regression retained.
+2. COMPLETE: V68 untouched frame320 selected/2778 eligible/3801 all reserved.
+   CLOSED FAILURE V69 admission15395 and cancelled15396--15403 preserved. Separate
+   V70 exact-frame audit15404 verified short-record full hashes and exclusions.
+3. COMPLETE WITH SEPARATE RECOVERY: V71 workers15405--15411 and terminal15412
+   completed0:0. Original closure15413 FAILED1:0 because sacct was missing inside
+   its container. Separate registered V72 accounting job15421 completed0:0 and
+   verified all original artifacts/costs. NEVER rerun these jobs or relabel the
+   failed closure. Full scheduler CPU7588.049 includes both failure and recovery;
+   nested worker/controller measures overlap. All registered caps unchanged.
+4. COMPLETE: actual saved-scalar reporting checks1944 losses. Both endpoints pass
+   frozen pooled/upper/max guards: ratios1.005421/1.007149, upper1.010342/1.011431,
+   max1.129140/1.126961. Both95% intervals above1 imply small quality cost within
+   tolerance. No gain/equivalence/transfer claim; no new sample or threshold.
+5. COMPLETE: scientific decision docs/RESEARCH_DECISION_V72.txt. Current manuscript
+   claims conditional correctness and observed space/access/latency tradeoff, not
+   general speedup or stable latency. Therefore do not automatically launch timing
+   replication or another checkpoint. Further experiments need a justified new
+   question and separate prospective registration, not a search for a win.
+6. COMPLETE V74 MANUSCRIPT/CHECKLIST CHECKPOINT: V73 condensed historical detail
+   and installed the ten-row current service table. V74 adds three creator
+   citations,82M total parameter count, English web-text scope and ethics/terms
+   disclosures, removes the draft banner and anonymizes the source author field.
+   Same open source compiles natively;132 current checks plus119/114 archived
+   checks pass. Proofs/target/results remain unchanged.5278 source tokens include
+   references/disclosures, not a page count. Eight unchanged components pass
+   740-member/743-text checks;213 prior source fixtures were not rerun. The new
+   12-member outer bundle includes the22-field Responsible NLP draft checklist.
+   B2/B3/B4/C1 retain explained No answers; D is No, D1--D5 N/A. No author
+   attestation or form submission. An all-Yes checklist is not a completion gate.
+7. COMPLETE TARGETED SCOPE REVIEW: docs/SUBMISSION_SCOPE_V73.txt records included
+   payload/source URL and indirect-linkage assessment. No direct author links
+   occur in source URLs; actual job IDs, hashes, public code similarity and paper
+   content remain potential linkage channels. Preserve provenance, do not claim
+   anonymity from direct-string checks. Project source has no specified license;
+   do not invent one. Runtime/driver/model/corpus binaries are excluded, so do not
+   expand work into vendoring absent binaries. External-input reproduction scope
+   is documented separately from offline checks, not claimed complete.
+8. PROVISIONAL LONG-PAPER STRUCTURE: optional author format choice is unanswered.
+   Do not invent an answer, but continue reasonable editorial work under this
+   explicit assumption. No appendix remains. Format choice can steer the next
+   actual page-budget pass; keep necessary assumptions/adverse findings visible.
+9. BLOCKED RENDERED VERIFICATION: native compiler succeeds but preview service
+   startup fails. No repeated attempt within a turn, new tab or separate PDF.
+   A text question asks the author for visible total pages and Limitations start
+   page. Once preview access works, inspect table widths, math and page breaks.
+   Source length/compile checks do not close this gate. Avoid redundant polling.
+10. PREPARED CHECKLIST, PENDING DELIVERY CHOICES: read the section-grounded draft
+    reports/RESPONSIBLE_NLP_CHECKLIST_V105.txt and disclosure review
+    docs/SUBMISSION_CHECKLIST_REVIEW_V74.txt. Confirm final venue/cycle/category
+    and actual delivery rules. Explained No answers preserve unknown terms,
+    content screening and full-program compute; they are not automatically
+    submission blockers. Resolve applicable distribution/anonymity restrictions
+    without inventing a project license. External author facts (names/order,
+    profiles/ORCID, consent, conflicts and service declarations) are required only
+    before a separately authorized submission, not in this anonymous manuscript.
+    Update the actual bundle after layout/chosen-delivery checks; no conference
+    submission or new experiment to fill the waiting period.
+
+## Historical completion boundary before V119
+
+Claim-required service and untouched quality are verified; general timing/transfer
+are outside the current claim. Manuscript disclosures and a truthful checklist
+draft are prepared. Actual rendered layout/page count and selected venue/category
+requirements still prevent calling the development bundle submission-ready.
+Targeted source/linkability review documents limits, not a guarantee of rights or
+anonymity. Author-owned form facts remain unset; no attestation or submission is
+made. Publish coherent checkpoints to the existing branch/draft PR. Keep routine
+completed-job polling quiet; no numerical launch is required by the current claim.
+The authorised expanded optimisation/transfer campaign remains incomplete; V89
+is closed; V91/V99/V100 failures are preserved, V101 admission is closed, V103 dispatch failed, and V104 ended in certification refusal. V110 certifies the selected stage by the alternative token route; V112 full screen is prepared and awaits restored access plus actual Linux qualification. The user resumed the existing scheduler; it remains ACTIVE until requested to stop
+or the agreed bundle and claim-required evidence are complete and verified. A wake
+must not relaunch any consumed or cancelled registration. No final ETA follows
+from resource ceilings or the earlier estimate before this storage failure.
+
+## Current completion boundary (V119)
+
+The expanded optimization/related-checkpoint campaign is now closed and audited.
+No additional experiment is needed for the current conditional correctness and
+bounded storage/access/latency claim. All16 matched outputs pass; all four optimized
+compressed timing contrasts lose, and one endpoint requires source replay. Keep
+all earlier negative findings. The same final manuscript compiles; the14-component
+review archive and1322supplied source copies verify. No general speedup, stable
+latency, new quality or cross-architecture claim is established.
+
+Remaining: inspect rendered page count, tables/math and final PDF when preview
+access changes; confirm final venue/cycle/category and current delivery policies;
+complete author-owned form facts only before separately authorized submission.
+Those unresolved gates prevent a submission-ready claim. Existing questions and
+preview failure stand; no duplicate question or unchanged retry. The scheduler
+remains PAUSED at the user's request. No new monitor, numerical launch or submission.

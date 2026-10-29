@@ -1,0 +1,14 @@
+{
+  "README.txt": {
+    "bytes": 1216,
+    "sha256": "0f26dc2fa0e1fb1b1e9c9e39c0281bf1a7291643ba39d8b66fa016805e5cb1c1"
+  },
+  "audit-summary.json": {
+    "bytes": 6602,
+    "sha256": "2f2721424867b254a8b1539519415c163a0a36c1cf76d84a7228c7f720633ec5"
+  },
+  "results.json": {
+    "bytes": 13844,
+    "sha256": "8d3b070bf0b01bcf444a9f1c1f92944fe60787963c3def907c795144fa1c3863"
+  }
+}

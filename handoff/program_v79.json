@@ -1,0 +1,40 @@
+{
+  "version": 79,
+  "created_at": "2026-10-23T06:41:42.458669+00:00",
+  "kind": "completed_component_gates_and_prepared_service_integration",
+  "handoff": "docs/ACTIVE_SESSION_V79.md",
+  "scheduler": "PAUSED",
+  "manuscript_version": 74,
+  "scientific_decision_version": 72,
+  "model_results_changed": false,
+  "empirical_experiments_launched": false,
+  "software_jobs": {
+    "76": {
+      "job_id": "15897",
+      "status": "COMPLETED 0:0",
+      "qualified": true
+    },
+    "78": {
+      "job_id": "15898",
+      "status": "COMPLETED 0:0",
+      "qualified": true
+    }
+  },
+  "frozen_source_union_count": 808,
+  "auxiliary_source_count": 5,
+  "integration": {
+    "version": 79,
+    "status": "prepared; explicit package upload permission pending; no staging or submission",
+    "source_count": 777,
+    "source_bytes": 7537157,
+    "program_sha256": "a0d71ade247d410150a3178cc385613b3c6dc9e347eaaaca0b20524f64f6770a",
+    "archive_bytes": 8263680,
+    "archive_sha256": "51b54bcec5d1489be1d950c273b19b41039d3c5c3e538bf6071f7e8b4c1f2462"
+  },
+  "next_steps": [
+    "Approve/stage/submit V79 once, after fresh queue and receipt inspection",
+    "Close actual tiny-service integration gate",
+    "Build and separately register the bounded four-cell complete-request development comparison",
+    "Balanced paired timing replication and matched checkpoint transfer after justified gates"
+  ]
+}

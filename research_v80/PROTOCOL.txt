@@ -1,0 +1,66 @@
+V80 prospective complete-request development comparison, 23 October 2026
+
+Question: Do qualified implementation changes improve whole requests on the
+existing root, and can compressed48 beat an equally optimized modern lossless
+control? This is an engineering screen. A single observation per cell and
+endpoint does not establish stable timing, general speed or model transfer.
+
+V79 job15903 completed0:0, all49 actual tiny-service checks passed. V76/V78
+qualified the exact native decoder, token primitives and canonical-choice cache.
+No frozen implementation is edited. The new worker uses V79's exact adapter.
+
+All four cells share V50 primal neighbors. Both optimized cells use V76 token
+primitives. Optimized compressed uses the native payload decoder; optimized
+modern uses1GiB bounded canonical-choice reuse, including full clear. Every
+cell reserves9GiB residency through actual solver admission. OS cap16GiB,
+arrays8GiB, stage64e9 and whole-request1e12 work caps remain. Complete point
+fallback is reserved. Structural admission is not proof of actual process fit.
+
+Use original full-precision DistilGPT2 teacher, V65 fixed13-record root,
+128tokens/record, normalization1664 and13->12->6 endpoints. All24stages and
+42,467,328codes, ridge1/100,4bit/dyadic24 grids, compressed48/block256 stay fixed.
+No added empirical data, changed target, new quality sample or threshold.
+Every second request reads its own first successor. Original results remain.
+
+Ten fresh-process numerical workers: prepare all states; four endpoint1 cells
+in SHA256 order of 'second-four-cell-development-v80:'+cell; four endpoint2
+cells in reverse order; fresh oracle at both endpoints. Prepare/oracle use
+reference kernels and actual retained-teacher traversals. All states remain
+physically retained for audit, including intermediates and failures.
+
+Numerical reservations108020CPU seconds fit the preserved120624 ceiling.
+Do not spend the remainder opportunistically. Controller allowance6020 fits
+7224. Separate software602, primary7200 and supplemental3600 allowances stay.
+One CPU/thread on csis.mn1; same per-arm worker/wall caps from V67. Software
+runs73 exact-count checks with zero failures/errors/skips. No timing-win gate.
+
+Clock worker setup before native compilation and context load; enclose all
+admission, state reads/canonical verification, solve/fallback, state/model/trust
+writes/fsync, disposal and cache clear. Controller clocks additionally include
+input/source/runtime verification and sealing. Final entry write/container exit
+belong in scheduler accounting. Never add these overlapping clock measures.
+Cache entries/charges, source reads, fallback rows/stages, all raw stage timings,
+implementation source/binary identities and actual RSS are retained. Native
+libraries may stay mapped until process exit; no immediate-unmapping claim.
+
+Primary audit parses complete saved states, checks all eight actual model,
+state and trust byte comparisons against fresh oracle, retained source bytes,
+membership/provenance, canonical restoration, complete extent and accounting.
+Supplemental re-reads all eight actual model pairs and binds the full primary
+state audit plus all seals/limits/ledger/controller receipts. Root review is
+not independent review. Scheduler accounting is collected on the host after
+both audits are terminal, avoiding the prior unavailable-in-container sacct
+failure. Scientific closure additionally requires every expected job terminal
+COMPLETED0:0, both successful audit entry receipts, input/source identity,
+settled budgets and complete host accounting. No self-terminal accounting claim.
+
+One exclusive held software submission, then a separate finite held dependency
+chain after its passing gate. Save intent/response/IDs before release. No
+requeue, resubmit, repair in place, cap increase or hidden replacement. Failed
+or unknown attempts remain frozen. No monitor, delegation or paid compute.
+Scheduler remains paused. No paper claim changes from software tests alone.
+
+Success may justify separately registered balanced timing replication; failure
+requires an explained diagnosis. Matched512-token DistilGPT2/GPT2 depth transfer
+needs its own pins, target,48-stage archive guards, admission and quality plan.
+No transfer is launched or implied by V80. No selection of favorable timings.

@@ -1,0 +1,116 @@
+======================================================================
+ERROR: test_all_nine_bindings_exist_and_rechecked_before_first_release (research_v69.test_submission.SubmissionTests.test_all_nine_bindings_exist_and_rechecked_before_first_release)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_submission.py", line 131, in test_all_nine_bindings_exist_and_rechecked_before_first_release
+    fake.fail=check_release;jobs=s.launch(expected,fake)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/submission.py", line 300, in launch
+    actual=held(p,phase,job,previous,call);write(RUN/phase/'held-verification.json',actual)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/submission.py", line 202, in held
+    require(all(f.get(k)==v for k,v in expected.items()) and f.get('CPUs/Task')=='1' and f.get('NumNodes') in {'1','1-1'}
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/submission.py", line 46, in require
+    if not ok:raise ValueError(message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Actual held allocation identity/resources differ
+
+======================================================================
+ERROR: test_generic_gpu_tres_with_exact_typed_request_is_admitted (research_v69.test_submission.SubmissionTests.test_generic_gpu_tres_with_exact_typed_request_is_admitted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_submission.py", line 106, in test_generic_gpu_tres_with_exact_typed_request_is_admitted
+    self.assertTrue(s.held(p,'cuda_checks',job,'17000',fake)['actual_held_job_verified'])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/submission.py", line 202, in held
+    require(all(f.get(k)==v for k,v in expected.items()) and f.get('CPUs/Task')=='1' and f.get('NumNodes') in {'1','1-1'}
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/submission.py", line 46, in require
+    if not ok:raise ValueError(message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Actual held allocation identity/resources differ
+
+======================================================================
+ERROR: test_singleton_node_range_is_equivalent_and_wider_ranges_refuse (research_v69.test_submission.SubmissionTests.test_singleton_node_range_is_equivalent_and_wider_ranges_refuse) (value='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_submission.py", line 97, in test_singleton_node_range_is_equivalent_and_wider_ranges_refuse
+    self.assertTrue(s.held(p,'cpu_checks',job,None,fake)['actual_held_job_verified'])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/submission.py", line 202, in held
+    require(all(f.get(k)==v for k,v in expected.items()) and f.get('CPUs/Task')=='1' and f.get('NumNodes') in {'1','1-1'}
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/submission.py", line 46, in require
+    if not ok:raise ValueError(message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Actual held allocation identity/resources differ
+
+======================================================================
+ERROR: test_singleton_node_range_is_equivalent_and_wider_ranges_refuse (research_v69.test_submission.SubmissionTests.test_singleton_node_range_is_equivalent_and_wider_ranges_refuse) (value='1-1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_submission.py", line 97, in test_singleton_node_range_is_equivalent_and_wider_ranges_refuse
+    self.assertTrue(s.held(p,'cpu_checks',job,None,fake)['actual_held_job_verified'])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/submission.py", line 202, in held
+    require(all(f.get(k)==v for k,v in expected.items()) and f.get('CPUs/Task')=='1' and f.get('NumNodes') in {'1','1-1'}
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/submission.py", line 46, in require
+    if not ok:raise ValueError(message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Actual held allocation identity/resources differ
+
+======================================================================
+FAIL: test_partial_release_failure_keeps_successful_history_and_first_job_held (research_v69.test_submission.SubmissionTests.test_partial_release_failure_keeps_successful_history_and_first_job_held)
+----------------------------------------------------------------------
+ValueError: Actual held allocation identity/resources differ
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_submission.py", line 185, in test_partial_release_failure_keeps_successful_history_and_first_job_held
+    with self.assertRaisesRegex(ValueError,'release'):s.launch(expected,fake)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "release" does not match "Actual held allocation identity/resources differ"
+
+======================================================================
+FAIL: test_source_changed_during_binding_prevents_all_releases (research_v69.test_submission.SubmissionTests.test_source_changed_during_binding_prevents_all_releases)
+----------------------------------------------------------------------
+ValueError: Actual held allocation identity/resources differ
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_submission.py", line 175, in test_source_changed_during_binding_prevents_all_releases
+    with self.assertRaisesRegex(ValueError,'commitment'):s.launch(expected,fake)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "commitment" does not match "Actual held allocation identity/resources differ"
+
+======================================================================
+FAIL: test_uncertain_second_submission_keeps_first_held_and_never_retries (research_v69.test_submission.SubmissionTests.test_uncertain_second_submission_keeps_first_held_and_never_retries) (mode='timeout')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_submission.py", line 152, in test_uncertain_second_submission_keeps_first_held_and_never_retries
+    self.assertEqual(fake.released,[]);self.assertEqual(sum(a[0]=='sbatch' for a in fake.calls),2)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2
+
+======================================================================
+FAIL: test_uncertain_second_submission_keeps_first_held_and_never_retries (research_v69.test_submission.SubmissionTests.test_uncertain_second_submission_keeps_first_held_and_never_retries) (mode='cluster_suffix')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_submission.py", line 152, in test_uncertain_second_submission_keeps_first_held_and_never_retries
+    self.assertEqual(fake.released,[]);self.assertEqual(sum(a[0]=='sbatch' for a in fake.calls),2)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2
+
+======================================================================
+FAIL: test_uncertain_second_submission_keeps_first_held_and_never_retries (research_v69.test_submission.SubmissionTests.test_uncertain_second_submission_keeps_first_held_and_never_retries) (mode='nonzero')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_submission.py", line 152, in test_uncertain_second_submission_keeps_first_held_and_never_retries
+    self.assertEqual(fake.released,[]);self.assertEqual(sum(a[0]=='sbatch' for a in fake.calls),2)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.037s
+
+FAILED (failures=5, errors=4)

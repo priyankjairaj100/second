@@ -1,0 +1,67 @@
+{
+  "schema": "reporting-scope-review-v93",
+  "observed_utc": "2026-10-24T08:56:11.675624+00:00",
+  "source_review": {
+    "research_v61/service.py": {
+      "bytes": 15598,
+      "sha256": "c89c021ba683f9651ac74ef1d427a496c4eb7e6ded12ea2f21fce7f234e38638"
+    },
+    "research_v64/service.py": {
+      "bytes": 8221,
+      "sha256": "567ce9ffa1b955748761b100f9682a1e31b2432b9a2ce7a03ba8833af60664f7"
+    },
+    "research_v66/operations.py": {
+      "bytes": 9072,
+      "sha256": "0e6539cb781710b8a525dd56a5412e16e3c8d2f0379a5a12a6f0c482282acacd"
+    },
+    "research_v79/implementation.py": {
+      "bytes": 6403,
+      "sha256": "4acb838fa818d635e3e480c62527573c75105fe2e8962bf226be5ecc3c16ff8a"
+    },
+    "research_v89/audit.py": {
+      "bytes": 15650,
+      "sha256": "07b71bc5ea0c5f185e6cd4a4d156ca8dac7fdcf2e1e62b266c7f2d390a2f46ce"
+    },
+    "research_v92/timing.py": {
+      "bytes": 3290,
+      "sha256": "113770254154e2178c140f4546cc4211289e07381241c740c2c29ccc615bb8dc"
+    },
+    "research_v82/DECISION_RULES.txt": {
+      "bytes": 5203,
+      "sha256": "0169d1d447c6a3361b55ca0ba26459805665f667aabf69e3314bf8fc3553c3a0"
+    }
+  },
+  "reporting_sources": {
+    "reporting_v93/__init__.py": {
+      "bytes": 83,
+      "sha256": "5743f778f4eaf18fa4dc4a72e062fa84b967c628d75a0ecc8c4dcc6684d5988a"
+    },
+    "reporting_v93/cost_scope.py": {
+      "bytes": 5330,
+      "sha256": "ad0e91593bbac458d544af252c2567685d9689b225d8f361990800a9203f2508"
+    },
+    "reporting_v93/test_cost_scope.py": {
+      "bytes": 3792,
+      "sha256": "51a3016adde8efc38ae495b16809b329d2d9fa9964c3df4716ac74449aef9cc7"
+    }
+  },
+  "tests": 6,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_data": "generated scalar clocks only",
+  "runtime": "Darwin Python3.12.7",
+  "prior_commitments_verified": {
+    "v90": 18,
+    "v91": 33,
+    "v92": 38
+  },
+  "empirical_input_reduction_executed": false,
+  "registered_sources_modified": false,
+  "new_jobs": false,
+  "source_archive_created": false,
+  "manuscript_changed": false,
+  "v89_frozen_files_verified": 934,
+  "v89_local_counterparts_verified": 930,
+  "archive_inspection_note": "Initial read-only lookup used inventory.json; actual source-inventory.json was then inspected and all commitments verified."
+}

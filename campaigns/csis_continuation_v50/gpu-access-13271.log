@@ -1,0 +1,8 @@
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+{"schema": "second-cuda-engineering-smoke-v1", "torch": "2.10.0+cu128", "cuda_build": "12.8", "cuda_available": true, "slurm_job_id": "13271", "synthetic_fixture": true, "research_target_equivalence_established": false, "empirical_evidence": false, "passed": true, "device": "NVIDIA A100 80GB PCIe", "device_count": 1, "device_memory_bytes": 85095874560, "batch_shape": [4, 16], "result_shape": [4, 8]}

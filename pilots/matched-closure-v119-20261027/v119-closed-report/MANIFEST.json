@@ -1,0 +1,213 @@
+{
+  "actual_terminal": {
+    "bytes": 746962,
+    "sha256": "caac5f13105e096fff8e6dc50af6f27525195c8cbccdf01117e31057ef54a251"
+  },
+  "files": {
+    "REPORTING_SCOPE.txt": {
+      "bytes": 1990,
+      "sha256": "376499e2061b01504ab3181014889226fcfd021150bb17f60cb1b8269ffe8272"
+    },
+    "all-requests.tsv": {
+      "bytes": 5353,
+      "sha256": "bce04765df5b0b98c53855c278c7118b38c8a2c1163ffd43f4aaf91ed378e59a"
+    },
+    "costs-and-scope.json": {
+      "bytes": 8252,
+      "sha256": "dfa32128599bd0392428c15940ed6d30f8f0f95db29a6244f0d9c1427c11a731"
+    },
+    "matched-table.tex": {
+      "bytes": 992,
+      "sha256": "2f7b8e76a3abec77f2dba6ed729b3ff660aeab85fb6d0853acb118a344c57f6a"
+    },
+    "signed-contrasts.json": {
+      "bytes": 884,
+      "sha256": "c6cb8abf57e3f1a3065338447b5c894401e59d4300886f9517a16c77dc1328a5"
+    }
+  },
+  "independent_binary_reaudit": false,
+  "inputs": {
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2--optimized_compressed-1-host.json": {
+      "bytes": 1033,
+      "sha256": "e5d48569d0829bb25fb2a659a25e509d158362dec2674ab32b548390dde10c66"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2--optimized_compressed-2-host.json": {
+      "bytes": 1033,
+      "sha256": "ec22584a83eaa75aef79716772a62646906a60c1227f4185bce0023284833433"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2--optimized_modern-1-host.json": {
+      "bytes": 1029,
+      "sha256": "7c5eaccb4e1f9760d30918e4b5b795833efa13402dc7328bb252ad2fedf8b8f4"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2--optimized_modern-2-host.json": {
+      "bytes": 1029,
+      "sha256": "8c71f76e451ad0223b29f540fc0d1d54764a5a08e9484f58f6b852dc5d31d8ae"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2--reference_compressed-1-host.json": {
+      "bytes": 1033,
+      "sha256": "68def51b76ab60f07c324aefa3e76a78965b42f9d01deba2f75079a62efa3e50"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2--reference_compressed-2-host.json": {
+      "bytes": 1033,
+      "sha256": "e237b4fa08465e1de1b4420f10bf0f47f767715891ad52040ab62473503506d7"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2--reference_modern-1-host.json": {
+      "bytes": 1029,
+      "sha256": "2276922b9bc183da401bfa24c5cefc1e314b1f86d5cc3b45d817fd04ee105243"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2--reference_modern-2-host.json": {
+      "bytes": 1029,
+      "sha256": "3c6e945069b4b2718c9b7ca51b5ec0e97e4e7667567a65666e86eaebc551da8a"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2/optimized_compressed-1/outputs/completion.json": {
+      "bytes": 181592,
+      "sha256": "ac0fd70e4d897324dc4e398e3b90d85ac2177ae353dfa24404885820590176d3"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2/optimized_compressed-2/outputs/completion.json": {
+      "bytes": 180806,
+      "sha256": "c948fda17b70ad39498711c252f000c2a91fe2b1e7f9fd45ef421541ef93d700"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2/optimized_modern-1/outputs/completion.json": {
+      "bytes": 157606,
+      "sha256": "104d28716db816779c8aab25cbbe596843072770f8688788c84d9e4a1918157e"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2/optimized_modern-2/outputs/completion.json": {
+      "bytes": 157464,
+      "sha256": "d1b63a14982c5f83c1ebcecdd329401bd64d6967ea4ad526de75da072d789d02"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2/reference_compressed-1/outputs/completion.json": {
+      "bytes": 178430,
+      "sha256": "a78f2ee7f9b41efa1b546ee03bde145e7eb037cb74167972b6ffda4934038a19"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2/reference_compressed-2/outputs/completion.json": {
+      "bytes": 177653,
+      "sha256": "a393d63f88cd1d1fdc1dbdca0fb4d7494360ebd6b5e0796d7c9293682c8cab9f"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2/reference_modern-1/outputs/completion.json": {
+      "bytes": 155557,
+      "sha256": "a53b640d9314782717c5b9e38db51402896d6f9b686003a8a79777ce035e0be9"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/distilgpt2/reference_modern-2/outputs/completion.json": {
+      "bytes": 155434,
+      "sha256": "9ff07f11ca126f2bcb9d29a08f5d1550060349b04d710f4fed853d54f8075af2"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gates/v104-failed-screen-v110.json": {
+      "bytes": 14136,
+      "sha256": "cb5ac11f8e81cbf0b21c6a5325b77a63391801c1f0e45653a8a0f6f5ae57a725"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2--optimized_compressed-1-host.json": {
+      "bytes": 1031,
+      "sha256": "1528371f668766e91c566cc4f31fe0ba84d781f7c3bf72baf40d034f8d03b98c"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2--optimized_compressed-2-host.json": {
+      "bytes": 1027,
+      "sha256": "8b58e72f2853da8536f8431a537c068d449208103e957d9e6e2a167e59eb4bb7"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2--optimized_modern-1-host.json": {
+      "bytes": 1023,
+      "sha256": "5b95118ee56b51aeaa9078589dea2ee3af050b6562720d1a27b424380462ae16"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2--optimized_modern-2-host.json": {
+      "bytes": 1023,
+      "sha256": "e2085da4b6dddebceb5a4d42b020c8060bc65ba99e0dc6ddb3d65a549c97d3bb"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2--reference_compressed-1-host.json": {
+      "bytes": 1031,
+      "sha256": "02540067ea9c317b680bae4cd7edcb2b2f1944aac077450fc846e7590ebf2068"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2--reference_compressed-2-host.json": {
+      "bytes": 1027,
+      "sha256": "e891cfa9ef9ab2f18099d462908ba00cc65ed0630be25ee85fc93514c1bd2730"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2--reference_modern-1-host.json": {
+      "bytes": 1023,
+      "sha256": "1b005715a41916505a6e2a13b705b999c7aec37bdeeb994eb2cf14860901e600"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2--reference_modern-2-host.json": {
+      "bytes": 1023,
+      "sha256": "cc4db33cc7c50d994adc64a704c08e7c8eaa24eff4cb14fee691749cba9df18e"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2/optimized_compressed-1/outputs/completion.json": {
+      "bytes": 355577,
+      "sha256": "41913c24341b9acb6fcbef16af529757d7ba146156de717fe6b665608974ee67"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2/optimized_compressed-2/outputs/completion.json": {
+      "bytes": 354913,
+      "sha256": "5f6cd8f33fd7ac3de38423d93fe19b42cb5383c4c50e7d2dffd5c874ec4a11d9"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2/optimized_modern-1/outputs/completion.json": {
+      "bytes": 308227,
+      "sha256": "8c4e6903c33044b21604bdcfe5812c002da4bdee3ed6f18b4343392e074f4f4d"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2/optimized_modern-2/outputs/completion.json": {
+      "bytes": 307961,
+      "sha256": "99c6ca3c712b186b4c5bf08b39051ee868d4e74f72b4872367d2575e91f07621"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2/reference_compressed-1/outputs/completion.json": {
+      "bytes": 351136,
+      "sha256": "96d91a7a976be2373bf8abae6d379bd11b7a3e8ad9c8bfca8bd32b31b7a256a1"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2/reference_compressed-2/outputs/completion.json": {
+      "bytes": 350482,
+      "sha256": "5b2e87996293713e2a523c5cecc3b953df2b78462bafe2cceedac3527063252d"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2/reference_modern-1/outputs/completion.json": {
+      "bytes": 306174,
+      "sha256": "95ccfc5747ec3c7ce35e671a85148607788a7346f61c3b3a44d815bb38414948"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/gpt2/reference_modern-2/outputs/completion.json": {
+      "bytes": 305948,
+      "sha256": "843423ba16945fd411955b3d4708f223ce0d80abb0de36b6a127cf740994104b"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/historical/distilgpt2-prepare-host.json": {
+      "bytes": 1022,
+      "sha256": "846901cfbbb28e20eca431df50641609f5152873e3417272066de06194e804fa"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/historical/gpt2-prepare-host.json": {
+      "bytes": 1016,
+      "sha256": "812edbf3d50e7ac1df492cb6c3fec894a749c732c7333b12583ca3f58c11804b"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/primary-audit.json": {
+      "bytes": 3560130,
+      "sha256": "2621962a99bf1db9a63899069c1beedaecd5e05093aae9c7c99fea85bb38b76a"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/program.json": {
+      "bytes": 186414,
+      "sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/receipts/supplemental-audit.json": {
+      "bytes": 3552217,
+      "sha256": "2f3e620735eb1537ad58050107e25026062adf57b6d2cf1753ca71e4330b6508"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/reduction.json": {
+      "bytes": 32951,
+      "sha256": "212d07218b3d58ce0cf1b5ad3a82e98762eee779251ab85238fc7566ffbdd596"
+    },
+    "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-closed-collection/terminal-stdout.json": {
+      "bytes": 746962,
+      "sha256": "caac5f13105e096fff8e6dc50af6f27525195c8cbccdf01117e31057ef54a251"
+    }
+  },
+  "no_numerical_execution": true,
+  "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+  "reporting_sources": {
+    "reporting_v113/collect.py": {
+      "bytes": 7342,
+      "sha256": "fc04e80f176124b6f730b818c312b1ea1c9b374622c71df88694490649213008"
+    },
+    "reporting_v113/reduce.py": {
+      "bytes": 10178,
+      "sha256": "fa679977f914baae1ad684f34b34c0f6b6392150cb7cd57d1fcf20a6fe392f5f"
+    },
+    "reporting_v117/render.py": {
+      "bytes": 13511,
+      "sha256": "456816fd9a61ca06389853e5471f28142742abbf1828cd2fed14897fc66aed74"
+    },
+    "reporting_v93/cost_scope.py": {
+      "bytes": 5330,
+      "sha256": "ad0e91593bbac458d544af252c2567685d9689b225d8f361990800a9203f2508"
+    }
+  },
+  "schema": "closed-matched-report-v117",
+  "submission_ready": false
+}

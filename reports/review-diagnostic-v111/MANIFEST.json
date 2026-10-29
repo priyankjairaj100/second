@@ -1,0 +1,14 @@
+{
+  "README.txt": {
+    "bytes": 1761,
+    "sha256": "7b847fe1d11fd6956a509cc8050d24b034cfe9f1aa5d8eb17d70b69d657d9d85"
+  },
+  "provenance.json": {
+    "bytes": 1103,
+    "sha256": "28563ef49016cbc5d1059021b12aacab85a506e5a8a9d7d38ece7bfffaa5c2b7"
+  },
+  "results.json": {
+    "bytes": 3610,
+    "sha256": "db9a9717c8e74c953efd56e32a578aa4bf22c13242cd57ea170d7fb6ec48c17d"
+  }
+}

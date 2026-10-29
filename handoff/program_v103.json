@@ -1,0 +1,298 @@
+{
+  "active": {
+    "archive": {
+      "bytes": 12953600,
+      "sha256": "990ad1b231343adf144c9d1bf1c704cadeba726e1e0fcae9e70699cf52bf8fd4"
+    },
+    "cancelled_unstarted_jobs": [
+      "16311",
+      "16312",
+      "16313",
+      "16314",
+      "16315",
+      "16316",
+      "16317",
+      "16318",
+      "16319",
+      "16320",
+      "16321",
+      "16322",
+      "16323",
+      "16324",
+      "16325",
+      "16326",
+      "16327",
+      "16328",
+      "16329",
+      "16330",
+      "16331"
+    ],
+    "carried_v100_software_controller_seconds": 4,
+    "checks_controller_cap_seconds": 298,
+    "checks_job": "16309",
+    "checks_tests_passed": 225,
+    "checks_tests_required": 225,
+    "failed_job": "16310",
+    "jobs": [
+      {
+        "arguments": [],
+        "dependency": "16309",
+        "job_id": "16310",
+        "name": "distilgpt2--prepare",
+        "operation": "distilgpt2/prepare",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16310",
+        "job_id": "16311",
+        "name": "gpt2--prepare",
+        "operation": "gpt2/prepare",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16311",
+        "job_id": "16312",
+        "name": "gpt2--reference_compressed-1",
+        "operation": "gpt2/reference_compressed-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16312",
+        "job_id": "16313",
+        "name": "distilgpt2--reference_compressed-1",
+        "operation": "distilgpt2/reference_compressed-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16313",
+        "job_id": "16314",
+        "name": "distilgpt2--optimized_modern-1",
+        "operation": "distilgpt2/optimized_modern-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16314",
+        "job_id": "16315",
+        "name": "gpt2--optimized_modern-1",
+        "operation": "gpt2/optimized_modern-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16315",
+        "job_id": "16316",
+        "name": "gpt2--reference_modern-1",
+        "operation": "gpt2/reference_modern-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16316",
+        "job_id": "16317",
+        "name": "distilgpt2--reference_modern-1",
+        "operation": "distilgpt2/reference_modern-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16317",
+        "job_id": "16318",
+        "name": "distilgpt2--optimized_compressed-1",
+        "operation": "distilgpt2/optimized_compressed-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16318",
+        "job_id": "16319",
+        "name": "gpt2--optimized_compressed-1",
+        "operation": "gpt2/optimized_compressed-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16319",
+        "job_id": "16320",
+        "name": "gpt2--optimized_compressed-2",
+        "operation": "gpt2/optimized_compressed-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16320",
+        "job_id": "16321",
+        "name": "distilgpt2--optimized_compressed-2",
+        "operation": "distilgpt2/optimized_compressed-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16321",
+        "job_id": "16322",
+        "name": "distilgpt2--reference_modern-2",
+        "operation": "distilgpt2/reference_modern-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16322",
+        "job_id": "16323",
+        "name": "gpt2--reference_modern-2",
+        "operation": "gpt2/reference_modern-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16323",
+        "job_id": "16324",
+        "name": "gpt2--optimized_modern-2",
+        "operation": "gpt2/optimized_modern-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16324",
+        "job_id": "16325",
+        "name": "distilgpt2--optimized_modern-2",
+        "operation": "distilgpt2/optimized_modern-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16325",
+        "job_id": "16326",
+        "name": "distilgpt2--reference_compressed-2",
+        "operation": "distilgpt2/reference_compressed-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16326",
+        "job_id": "16327",
+        "name": "gpt2--reference_compressed-2",
+        "operation": "gpt2/reference_compressed-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16327",
+        "job_id": "16328",
+        "name": "gpt2--oracle",
+        "operation": "gpt2/oracle",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16328",
+        "job_id": "16329",
+        "name": "distilgpt2--oracle",
+        "operation": "distilgpt2/oracle",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16329",
+        "job_id": "16330",
+        "name": "primary",
+        "operation": "primary",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16330",
+        "job_id": "16331",
+        "name": "supplemental",
+        "operation": "supplemental",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      }
+    ],
+    "numerical_chain_launched": true,
+    "numerical_controller_cap_seconds": 6040,
+    "numerical_cpu_cap_seconds": 82840,
+    "numerical_work_started": false,
+    "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733",
+    "registered": true,
+    "retry_allowed": false,
+    "software_aggregate_cap_seconds": 598,
+    "source_count": 1148,
+    "status": "failed_pre_container_dispatch",
+    "version": 103
+  },
+  "branch": "codex/second-cluster-v42",
+  "completed_v101": {
+    "actual_target_admission": true,
+    "charged_target_cpu_seconds": 109,
+    "empirical_transfer": false,
+    "jobs": [
+      16302,
+      16303,
+      16304,
+      16305,
+      16306
+    ],
+    "terminal_sha256": "3446a9e2b8cbba5196330e936d028e17c897e02183ede6244df3641de03d538d"
+  },
+  "completed_v89": {
+    "all_jobs_completed": true,
+    "comparisons": 8,
+    "jobs": [
+      16004,
+      16005,
+      16006,
+      16007,
+      16008,
+      16009,
+      16010,
+      16011,
+      16012,
+      16013,
+      16014,
+      16015,
+      16016
+    ],
+    "old_unknown_cpu_seconds": 12602,
+    "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9",
+    "science": "correct outputs and bounded tradeoff, mixed single-observation latency",
+    "terminal": {
+      "bytes": 368343,
+      "sha256": "367104b1247cbc2b85fdc74ef45e5a30474a69df60483655b5fc4cf4f533e1a2"
+    }
+  },
+  "connectivity": {
+    "status": "restored",
+    "user_action_pending": false
+  },
+  "decision": "docs/RESEARCH_DECISION_V98.txt",
+  "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "evidence_directory": "pilots/matched-complete-v103-20261026",
+  "failed_v100": {
+    "cause": "sacct called inside container",
+    "job": "16307",
+    "numerical_work": false,
+    "retry_allowed": false,
+    "status": "FAILED1:0"
+  },
+  "manuscript": {
+    "bytes": 57699,
+    "native_compile_success": true,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex",
+    "rendered_layout_verified": false,
+    "sha256": "9d829b01c03f9431819fa0f9800e182d2cce46878686fb8892017fbfc3621ddf",
+    "submission_ready": false
+  },
+  "next": [
+    "Preserve V103 failure and all sources",
+    "Separately qualify corrected V104 with cumulative known-cost deductions",
+    "Never retry V103"
+  ],
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "prepared_v92_gate_not_satisfied": true,
+  "scheduler": "ACTIVE",
+  "schema": "second-handoff-v103",
+  "updated_utc": "2026-10-26T08:07:07.602435+00:00"
+}

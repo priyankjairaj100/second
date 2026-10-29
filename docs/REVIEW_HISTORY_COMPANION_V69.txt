@@ -1,0 +1,51 @@
+Historical development-evidence companion, revision B,16 October2026
+
+Artifact: reports/development-evidence-v69b.zip
+Bytes:87,257
+SHA256:c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407
+Readable source directory: reports/review-evidence-v69b/
+
+The five files contain1,054 copied field groups from21 manifest-bound sources,
+covering all15 historical record groups with selected values or scope notes.
+All29 stage-scale arm observations remain. So do early full-model service costs,
+exposed-quality/parity findings, capped preparation, wide-stage refusal, adaptive
+precision follow-up, admission failure, failed quality and failed/recovered audit
+costs. E03 is a historical scope note; E10/E11 qualification/admission is explicitly
+separate from actual outcomes in E12. This is not full protocol/source/receipt
+dependency closure or the final submission bundle.
+
+The earlier and later quality screens reuse exactly the SAME eight article IDs.
+One Q01--Q08 mapping is used across E05,E06,E12,E13; repeated losses are not new
+independent evaluation units. Text, tokens and original article IDs are excluded.
+Known account/host/repository identifier strings were absent from all extracted
+summary files, but no full anonymity or security clearance is asserted.
+
+validation/build_review_history_v69.py composes the original checked summary
+projector with explicit additional projections. Every copied group is compared
+to its original value; the private map preserves exact source and field paths.
+Four in-memory tamper probes reject hidden refusal, erased failed/adaptive scope
+and changed service clocks. A clean temporary-directory extraction then checks
+all five payloads and hashes,15 record IDs, shared article labels and adverse flags.
+Neither check reruns inference, calibration or original numerical audits.
+
+Private map docs/REVIEW_HISTORY_DERIVATION_V69.json stays OUTSIDE the review ZIP.
+The generator and original reports also remain outside this summary artifact.
+Original hashes/records are unchanged. The preceding smaller companion remains
+preserved. Two local presentation-generator errors are retained in
+validation/v69_review_history_preparation_failure.json: an incorrect disjoint-frame
+assumption was rejected before outputs; a relative output-path report error was
+fixed with resolved paths after preserving partial artifacts. Neither was an
+empirical worker/registration failure or a new scientific result.
+
+The existing manuscript now references E01--E15 directly instead of15 verbose
+self-bibliography entries. This is warranted by an actual available companion,
+without describing it as original receipts or a complete reproduction package.
+Seven external references, proofs, equations and the197-token abstract are kept.
+A short scope paragraph explicitly says the code/runtime package is unfinished.
+Native compilation and71 selected number checks pass. All original citations
+remain in the identifying EVIDENCE_INDEX_MAP_V69.json.
+
+Still required: V67 actual terminal evidence; gated untouched quality; the timing
+decision; complete source/protocol/receipt selection and notices; source ownership;
+clean code reproduction; visual page/layout review and full anonymity. No external
+submission, new empirical launch or registered retry was performed.

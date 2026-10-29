@@ -1,0 +1,88 @@
+V82 prospective matched-transfer admission, UNREGISTERED
+
+Purpose: bind one deterministic smaller development workload, fetch the pinned
+public GPT2 checkpoint once, construct both actual numerical targets under the
+explicitly approved1,327,104-entry grid cap, and preflight all point/box/fallback
+paths using actual manifests before proposing a complete transfer experiment.
+This is input/target admission. It runs no neural features, calibration solver,
+quality evaluation or request timing benchmark. Metadata checks are not transfer.
+
+Original input trust uses the exact frozen V80 source/input verification and
+V65 data/audit commitments; it never reads V80 numerical outputs or changes them.
+Selection seed second-matched-depth-transfer-v82: ranks all thirteen original
+IDs by SHA256, takes four, restores ID order and deletes to the last three/two.
+Same chosen rows,512 normalization,4bit/dyadic24/ridge1/100,teacher contract and
+implementation family apply to DistilGPT2 and GPT2. These development rows are
+already exposed; preserve every historical exclusion and the separate320-article
+quality reserve. A different normalization means a new target even for DistilGPT2.
+
+The new public GPT2 files are an immutable revision. Exact lengths/hashes come
+from research_v81/checkpoint-planning.json and the verified local config bytes.
+Fetch must use an exclusive new directory and one attempt, with bounded streamed
+bytes and420seconds total read deadline; failed/partial files stay preserved.
+No credentials, authenticated endpoint, paid compute or implicit retry. No new
+transfer may use an unverified advertised weight hash. DistilGPT2 files remain
+in their historical location and are checked rather than replaced.
+
+Planned target worker resource caps: one CPU/thread,16GiB address space,600CPU
+seconds plus hard-limit margin,900seconds wall. Registration must charge both
+per-profile processes and fetch/controller work explicitly. Each target runs in
+a fresh process with native/setup/target-construction cost and RSS recorded.
+No local Mac numerical run. Apply the exact approved cap to BOTH targets,
+leaving all old constructors and defaults unchanged. Native scope is the same
+reference_modern V79 adapter with9GiB resident allowance; no source extraction.
+Save actual anchor/service/calibration targets, execution provenance, stage/grid
+counts, checkpoint extents, and every actual admission report. Derive actual
+checkpoint parameter counts from loader provenance, not model-card metadata.
+
+A full transfer registration requires V81 software pass, V82 actual input/target
+admission, a complete finite worker/controller/one-use ledger, primary actual
+state/model/trust comparison to fresh retained-teacher oracles, supplemental
+re-read plus terminal host accounting, and a fit within unchanged aggregate
+ceilings. Both reference/optimized compressed/modern cells are preferable for
+attribution. Runtime conclusions require a later balanced timing registration;
+one observation is a screen. A failed target/worker remains a refusal, not evidence
+that the mathematical method cannot transfer. No cap escalation without approval.
+
+Quality must be separately evaluated on the new targets before claiming practical
+model transfer. First verify matching tokenizer semantics, source overlap and all
+historical exposures. Reusing a revealed quality result is descriptive, not fresh
+confirmation. Do not alter tolerances or select favorable rows/endpoints. No new
+quality selection or empirical study is registered by this preparation document.
+
+FINITE ADMISSION CHAIN (23October2026, before execution)
+The five one-use jobs are checks,fetch,distilgpt2,gpt2,close, each afterok its
+predecessor; checks depends on the known V81 software job15917. All are submitted
+held, their exact fields inspected, then released once. V81 in turn waits afterany
+for the V80 terminal job; this admission consumes no V80 empirical outputs.
+V81 must actually complete0:0 on the pinned host, with all62 exact-count software
+checks and bounded CPU receipt. The prospective prerequisite binds its program
+and job identity. At first admission, the actual completion/report byte hashes are
+saved exclusively; every subsequent step and target rechecks that same binding.
+A scheduled dependency is not a passing result. Failure blocks all successors;
+uncertain submissions are inspected and never repeated.
+
+The V82 Linux software gate is26 checks:7selection/fetch,5admission guards,
+4upstream-receipt,6held-job/canonical-write and4saved-admission-report checks.
+Twenty-one pure structural checks pass locally; the five numerical-import guards
+remain unexecuted until the pinned Linux gate. No local model/feature execution.
+Initial Mac fixture errors and their narrow path fix remain in local-validation.
+A canonical-JSON writer mismatch and partial Slurm-field matching were found and
+fixed before registration; adversarial rejection tests cover both.
+
+Each actual target process reserves602CPU seconds, total1204; five300-second
+controller allowances reserve1510, below7224. Controllers have300soft/902hard
+limits solely to allow their600CPU child, with actual own CPU checked separately.
+Software aggregate allowance602 overlaps its controller and is not added twice.
+One CPU,16GiB memory and all inherited work/array ceilings remain unchanged.
+Slurm wall limits are10min/checks,10min/fetch,25min/target and10min/close.
+Fetch has its separate420second deadline. Neither missing outputs nor successful
+software tests authorize a retry or a scientific claim.
+
+Closure reopens actual target artifacts, both sealed process receipts, applied
+limits, settled ledger prefixes, checkpoint/target commitments, complete stage
+counts, all12admission reports per model, implementation source identities and
+cleanup. It explicitly remains pending host terminal accounting. All five Slurm
+jobs must then be reconciled from the host; a container cannot attest to its own
+terminal state. No complete repair, quality or latency claim follows from target
+admission. The matched numerical experiment requires separate registration.

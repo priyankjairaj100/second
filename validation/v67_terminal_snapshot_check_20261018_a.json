@@ -1,0 +1,321 @@
+{
+  "actual_model_state_audit_repeated_locally": false,
+  "archive": {
+    "bytes": 834112,
+    "sha256": "510dc7dc7b7df1000bf56fa8fdd97ec9893ce397c759307251fa7d486f29d89e"
+  },
+  "captured_at_utc": "2026-10-18T11:14:02.462595+00:00",
+  "copied_files": 981,
+  "frozen_sources_verified": 469,
+  "jobs": {
+    "15261": {
+      "elapsed": "00:00:11",
+      "end": "2026-10-16T15:16:55",
+      "exit_code": "0:0",
+      "name": "second67-checks",
+      "node": "csis.mn1",
+      "start": "2026-10-16T15:16:44",
+      "state": "COMPLETED",
+      "total_cpu": "00:09.977"
+    },
+    "15262": {
+      "elapsed": "01:55:09",
+      "end": "2026-10-16T17:13:01",
+      "exit_code": "0:0",
+      "name": "second67-prepare",
+      "node": "csis.mn1",
+      "start": "2026-10-16T15:17:52",
+      "state": "COMPLETED",
+      "total_cpu": "01:54:28"
+    },
+    "15263": {
+      "elapsed": "01:22:46",
+      "end": "2026-10-16T18:35:47",
+      "exit_code": "0:0",
+      "name": "second67-hybrid-1",
+      "node": "csis.mn1",
+      "start": "2026-10-16T17:13:01",
+      "state": "COMPLETED",
+      "total_cpu": "01:22:10"
+    },
+    "15264": {
+      "elapsed": "01:27:36",
+      "end": "2026-10-16T20:03:24",
+      "exit_code": "0:0",
+      "name": "second67-compressed-1",
+      "node": "csis.mn1",
+      "start": "2026-10-16T18:35:48",
+      "state": "COMPLETED",
+      "total_cpu": "01:26:58"
+    },
+    "15265": {
+      "elapsed": "01:40:20",
+      "end": "2026-10-16T21:43:44",
+      "exit_code": "0:0",
+      "name": "second67-cold-1",
+      "node": "csis.mn1",
+      "start": "2026-10-16T20:03:24",
+      "state": "COMPLETED",
+      "total_cpu": "01:39:43"
+    },
+    "15266": {
+      "elapsed": "01:14:20",
+      "end": "2026-10-16T22:58:04",
+      "exit_code": "0:0",
+      "name": "second67-cached-1",
+      "node": "csis.mn1",
+      "start": "2026-10-16T21:43:44",
+      "state": "COMPLETED",
+      "total_cpu": "01:13:50"
+    },
+    "15267": {
+      "elapsed": "01:16:54",
+      "end": "2026-10-17T00:14:58",
+      "exit_code": "0:0",
+      "name": "second67-modern-1",
+      "node": "csis.mn1",
+      "start": "2026-10-16T22:58:04",
+      "state": "COMPLETED",
+      "total_cpu": "01:16:24"
+    },
+    "15268": {
+      "elapsed": "00:15:33",
+      "end": "2026-10-17T00:30:31",
+      "exit_code": "0:0",
+      "name": "second67-modern-2",
+      "node": "csis.mn1",
+      "start": "2026-10-17T00:14:58",
+      "state": "COMPLETED",
+      "total_cpu": "15:23.662"
+    },
+    "15269": {
+      "elapsed": "00:16:05",
+      "end": "2026-10-17T00:46:36",
+      "exit_code": "0:0",
+      "name": "second67-cached-2",
+      "node": "csis.mn1",
+      "start": "2026-10-17T00:30:31",
+      "state": "COMPLETED",
+      "total_cpu": "15:57.748"
+    },
+    "15270": {
+      "elapsed": "00:27:41",
+      "end": "2026-10-17T01:14:17",
+      "exit_code": "0:0",
+      "name": "second67-cold-2",
+      "node": "csis.mn1",
+      "start": "2026-10-17T00:46:36",
+      "state": "COMPLETED",
+      "total_cpu": "27:24.745"
+    },
+    "15271": {
+      "elapsed": "00:23:15",
+      "end": "2026-10-17T01:37:32",
+      "exit_code": "0:0",
+      "name": "second67-compressed-2",
+      "node": "csis.mn1",
+      "start": "2026-10-17T01:14:17",
+      "state": "COMPLETED",
+      "total_cpu": "23:01.936"
+    },
+    "15272": {
+      "elapsed": "00:29:14",
+      "end": "2026-10-17T02:06:46",
+      "exit_code": "0:0",
+      "name": "second67-hybrid-2",
+      "node": "csis.mn1",
+      "start": "2026-10-17T01:37:32",
+      "state": "COMPLETED",
+      "total_cpu": "28:40.029"
+    },
+    "15273": {
+      "elapsed": "02:35:41",
+      "end": "2026-10-17T04:42:27",
+      "exit_code": "0:0",
+      "name": "second67-oracle",
+      "node": "csis.mn1",
+      "start": "2026-10-17T02:06:46",
+      "state": "COMPLETED",
+      "total_cpu": "02:33:34"
+    },
+    "15274": {
+      "elapsed": "00:58:32",
+      "end": "2026-10-17T05:40:59",
+      "exit_code": "0:0",
+      "name": "second67-primary",
+      "node": "csis.mn1",
+      "start": "2026-10-17T04:42:27",
+      "state": "COMPLETED",
+      "total_cpu": "57:56.373"
+    },
+    "15275": {
+      "elapsed": "00:00:18",
+      "end": "2026-10-17T05:41:17",
+      "exit_code": "0:0",
+      "name": "second67-supplemental",
+      "node": "csis.mn1",
+      "start": "2026-10-17T05:40:59",
+      "state": "COMPLETED",
+      "total_cpu": "00:14.982"
+    }
+  },
+  "numerical_result_verified": false,
+  "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+  "progress": {
+    "cached-1": {
+      "completion_receipt_present": true,
+      "events": 25,
+      "last": {
+        "certificate_refusal": null,
+        "code_sha256": "4347d2b1bcefc5a8cab2a44d4a6c31cdc904005e5ec99ca1d673f0d27b8f7853",
+        "elapsed_ns": 4410690775072,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "streamed",
+        "stage_id": "block.0005.mlp_down"
+      }
+    },
+    "cached-2": {
+      "completion_receipt_present": true,
+      "events": 25,
+      "last": {
+        "certificate_refusal": null,
+        "code_sha256": "398fbc9b87400eb068b3d173cb491561f78b509a5335f6163d0b134d250fa13f",
+        "elapsed_ns": 937364388045,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "token",
+        "stage_id": "block.0005.mlp_down"
+      }
+    },
+    "cold-1": {
+      "completion_receipt_present": true,
+      "events": 61,
+      "last": {
+        "certificate_refusal": null,
+        "code_sha256": "4347d2b1bcefc5a8cab2a44d4a6c31cdc904005e5ec99ca1d673f0d27b8f7853",
+        "elapsed_ns": 5971250262107,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "streamed",
+        "stage_id": "block.0005.mlp_down"
+      }
+    },
+    "cold-2": {
+      "completion_receipt_present": true,
+      "events": 55,
+      "last": {
+        "certificate_refusal": null,
+        "code_sha256": "398fbc9b87400eb068b3d173cb491561f78b509a5335f6163d0b134d250fa13f",
+        "elapsed_ns": 1632219996105,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "token",
+        "stage_id": "block.0005.mlp_down"
+      }
+    },
+    "compressed-1": {
+      "completion_receipt_present": true,
+      "events": 25,
+      "last": {
+        "certificate_refusal": null,
+        "code_sha256": "4347d2b1bcefc5a8cab2a44d4a6c31cdc904005e5ec99ca1d673f0d27b8f7853",
+        "elapsed_ns": 5115647495686,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "streamed",
+        "stage_id": "block.0005.mlp_down"
+      }
+    },
+    "compressed-2": {
+      "completion_receipt_present": true,
+      "events": 25,
+      "last": {
+        "certificate_refusal": null,
+        "code_sha256": "398fbc9b87400eb068b3d173cb491561f78b509a5335f6163d0b134d250fa13f",
+        "elapsed_ns": 1320550437361,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "token",
+        "stage_id": "block.0005.mlp_down"
+      }
+    },
+    "hybrid-1": {
+      "completion_receipt_present": true,
+      "events": 26,
+      "last": {
+        "certificate_refusal": null,
+        "code_sha256": "4347d2b1bcefc5a8cab2a44d4a6c31cdc904005e5ec99ca1d673f0d27b8f7853",
+        "elapsed_ns": 4927187505800,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "streamed",
+        "stage_id": "block.0005.mlp_down"
+      }
+    },
+    "hybrid-2": {
+      "completion_receipt_present": true,
+      "events": 31,
+      "last": {
+        "certificate_refusal": null,
+        "code_sha256": "398fbc9b87400eb068b3d173cb491561f78b509a5335f6163d0b134d250fa13f",
+        "elapsed_ns": 1722582926143,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "token",
+        "stage_id": "block.0005.mlp_down"
+      }
+    },
+    "modern-1": {
+      "completion_receipt_present": true,
+      "events": 25,
+      "last": {
+        "certificate_refusal": null,
+        "code_sha256": "4347d2b1bcefc5a8cab2a44d4a6c31cdc904005e5ec99ca1d673f0d27b8f7853",
+        "elapsed_ns": 4571525558250,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "streamed",
+        "stage_id": "block.0005.mlp_down"
+      }
+    },
+    "modern-2": {
+      "completion_receipt_present": true,
+      "events": 25,
+      "last": {
+        "certificate_refusal": null,
+        "code_sha256": "398fbc9b87400eb068b3d173cb491561f78b509a5335f6163d0b134d250fa13f",
+        "elapsed_ns": 905621650267,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "token",
+        "stage_id": "block.0005.mlp_down"
+      }
+    },
+    "oracle": {
+      "completion_receipt_present": true,
+      "events": 259,
+      "last": {
+        "elapsed_ns": 9312605624398,
+        "phase": "payload_stage",
+        "representation": "modern_lossless",
+        "stage_id": "block.0005.mlp_down"
+      }
+    },
+    "prepare": {
+      "completion_receipt_present": true,
+      "events": 134,
+      "last": {
+        "elapsed_ns": 6866025584430,
+        "phase": "payload_stage",
+        "representation": "modern_lossless",
+        "stage_id": "block.0005.mlp_down"
+      }
+    }
+  },
+  "queue": "",
+  "scientific_decision_requires_terminal_binary_and_cost_audits": true,
+  "status": "verified_snapshot_metadata_only",
+  "terminal_receipts_present": true,
+  "volatile_files_omitted": []
+}

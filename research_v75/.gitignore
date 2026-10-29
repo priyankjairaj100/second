@@ -1,0 +1,3 @@
+*.so
+sanitize
+__pycache__/

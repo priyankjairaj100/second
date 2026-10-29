@@ -1,0 +1,103 @@
+Matched transfer recovery review,24 October 2026
+Status: source/design review only. No new registration, fetch, target or model run.
+
+Current usable gate
+V89 program 6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9
+has passed 162 Linux software checks in 16004. The full empirical chain16005--16016
+is running. Its actual primary/supplemental audits and read-only terminal.py
+report are required before a scientific interpretation. Do not fabricate their
+hashes, report success from tests, or alter V89 while it executes.
+
+Preserve and replace the right dependencies
+V81 job 15917 failed; V82 jobs 15921--15925 were cancelled without executing.
+V84 is unregistered and intentionally still requires their actual success.
+A simple version rename or changing only its configuration will not recover it:
+- research_v82/prerequisite.py checks the exact V81 program,job 15917 and62tests.
+- research_v82/host_gate.py checks15917 from the host; controller.py also binds
+  that ID, the immutable admission receipt and its literal operation namespace.
+- research_v82/target_worker.py binds a literal command/namespace, old V81 gate,
+  checkpoint paths and selection. seals.py reconstructs its exact worker command.
+- research_v82/submit.py binds old queued IDs and the dependency on15917.
+- research_v84/config.py pins the consumed admission program/path.
+- research_v84/prepare.py and campaign.py separately bind V80/V81/V82 terminal
+  programs and actual target files. worker/seal/audit/entry/submit paths must all
+  agree with a new registration, including literal command admission.
+These are protective gates, not bugs to weaken. Frozen V81/V82 sources and all934
+V89-bound files stay unchanged. A future version needs complete new orchestration
+and tests under distinct namespaces, while reusing unchanged numerical modules.
+
+The old V80 program remains a valid historical input/source registry. Calls to
+its verify_inputs/verify_bindings/load_records are distinct from demanding a
+successful V80 empirical result. Preserve those original data commitments. Bind
+new empirical qualification to the actual successful V89 terminal report and
+all files in its input inventory, including both audits and old failure carry-
+forward. Preserve the full 12602-second unknown old debit even after success.
+Never replace old history with a derived success-only receipt.
+
+New software/admission before complete transfer
+V89 did not execute the V81 profile/full-depth/archive/service suites. Its162pass
+count is not a substitute for those specific guards. A separate new exact-count
+Linux gate must include the62-check transfer qualification (44legacy,5integration,
+4profiles,5full-geometry archives,4service guards) and the relevant new admission,
+launcher/storage/accounting tests. Existing26V82 guards include old-gate assumptions;
+port them explicitly and add failures for wrong new IDs/programs, incomplete
+terminal results, source mutation, namespace collision and unknown submission.
+Do not advertise a final suite count before the actual new suite is frozen.
+
+Keep the deterministic V82 four-of-thirteen exposed-development selection and
+seed, matched4x128tokens/512normalization, retained3/2records,24/48 complete stages,
+and exactly1,327,104grid entries for BOTH checkpoints. Do not silently use the
+13-record V89 target or carry over V72 quality scores. Preserve all historical
+exclusions. The public GPT2 fetch remains exclusive, immutable-revision/hash-
+verified, streamed/bounded and one-use; credentials and signed redirect URLs must
+not enter receipts. Neither new checkpoint bytes nor actual targets are present
+as successful V82 outputs. Recheck actual paths before any later fetch.
+
+New target admission must close both sealed600CPU-second workers (1204total
+reserved with margins), actual24/48-stage manifests, target/checkpoint/source
+bytes, twelve admission reports per profile and complete host terminal costs.
+No neural execution, full repair, latency or quality claim follows from admission.
+Only then prepare the complete 20-worker/16-comparison matched screen from V84's
+unchanged workload/order. Keep82840numerical and6040controller reservations within
+the respective120624/7224ceilings; one CPU/thread, 16 GiB address space,9GiB resident,
+file/array/work limits remain. Any changed helper scope must fit these ceilings,
+not disappear from cost accounting. New software and both audit scopes remain
+separate and bounded. New source and actual gate hashes are required before
+registration; original consumed jobs cannot be reused or resubmitted.
+
+Storage and execution-envelope work still required
+V89's passing69.73 GiB allowance covers its own ten-worker design. It does not
+admit a twenty-worker transfer run. A pure source-derived census of V84's exact
+artifact sets gives61,098,688,512logical worker-output bytes (56.90GiB), including
+bounded progress/completion metadata and all four rebuilt representations.
+Carrying the same conservative V89 per-controller/entry/log/audit allowances to
+23 operations gives146,041,319,424bytes (136.01GiB) AFTER its 25% allocation margin
+and 1 GiB fixed margin, BEFORE new source staging, checkpoint/fetch partials and
+admission outputs. This is a planning comparison, neither a measured peak nor a
+final admission requirement; it is not a theorem that the transfer cannot fit.
+See pilots/recovery-v89-20261023/transfer-storage-planning-20261024.json for the
+full rows, arithmetic and exact source bindings.
+
+Finish a new complete write plan before upload: bound actual controller metadata
+and replacement overlap, source/staging, fetched/partial checkpoint bytes, target
+admission files, all 20 workers, shared ledger, host/entry receipts, logs, audits,
+compiler/test temporaries, directory/inode and allocation overhead. A tighter
+allowance needs source-based enforcement/extent evidence; simply copying a lower
+number is invalid. Keep all existing Second outputs physically charged. Do not
+credit possible future deletion or treat global free space as user headroom.
+Use fresh user/group/filesystem admission for existing project and /tmp at each
+allocation, actual container mapping, complete bootstrap/helper/controller CPU,
+and both terminal audits. Reuse the V89 envelope design through a reviewed new
+implementation; its literal RUN,operation set and storage plan cannot be pointed
+at a new directory by monkeypatching the registered source.
+
+Interpretation and writing
+Apply research_v82/DECISION_RULES.txt to all V89 cells/endpoints after closure.
+Reference-to-optimized attribution and optimized-compressed-to-optimized-modern
+storage choice answer different questions. Stable timing needs its own balanced,
+budget-admitted repetition; one screen cannot prove general speedup. A correct
+matched DistilGPT2/GPT2 screen would establish only related-checkpoint/depth
+transfer on the declared small workload. Quality on its new targets is separate.
+If gains remain localized, the existing exactness plus storage/access/latency
+contribution remains defensible, with restricted external validity and all losses
+visible. Current V72/V74 scientific claims and manuscript remain unchanged.

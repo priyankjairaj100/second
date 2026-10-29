@@ -1,0 +1,910 @@
+{
+  "captured_utc": "2026-10-26T10:22:35.392167+00:00",
+  "files": {
+    "budget/ledger.json": {
+      "attempts": {
+        "48605591015b9beed71c1002342f50925fcb00232b198513f6db41c049584659": {
+          "charged_cpu_seconds": 1366,
+          "observed_cpu_ns": 1365217559000,
+          "phase": "feasibility",
+          "reserved_cpu_seconds": 3602,
+          "state": "settled"
+        },
+        "71ccdf8d268c985243fb5b62b6e85edddac110ec65e1cb2aab15e983eaf0abf1": {
+          "charged_cpu_seconds": 1879,
+          "observed_cpu_ns": 1878664510000,
+          "phase": "feasibility",
+          "reserved_cpu_seconds": 6002,
+          "state": "settled"
+        },
+        "bad0339ced98b7e5c05b74dd3351b24c5b44b9467badef23fe962b91f1a26e87": {
+          "charged_cpu_seconds": 2951,
+          "observed_cpu_ns": 2950562446000,
+          "phase": "feasibility",
+          "reserved_cpu_seconds": 7202,
+          "state": "settled"
+        }
+      },
+      "binding": {
+        "identity": {
+          "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+          "sources_sha256": "b7e995e705a1ca284e8ac0e0adc37a86bfec69d9b9062f0a3c89872c019dd9d3"
+        },
+        "phase_cpu_seconds": {
+          "feasibility": 82840
+        },
+        "scope": "trusted_worker_cpu_admission_not_process_tree_containment"
+      },
+      "schema": "phase-cpu-ledger-v1"
+    },
+    "gpt2--reference_compressed-1-entry-start.json": {
+      "arguments": [],
+      "job_id": "16339",
+      "operation": "gpt2/reference_compressed-1",
+      "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+      "started_utc": "2026-10-26T09:39:57.839870+00:00"
+    },
+    "gpt2--reference_compressed-1-entry.json": {
+      "affinity_cpus": [
+        0
+      ],
+      "arguments": [],
+      "container_storage_mapping": {
+        "capacity_reserved": false,
+        "observations": {
+          "project": {
+            "device": 2065,
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a",
+            "write_group": 1008
+          },
+          "temporary": {
+            "device": 2052,
+            "path": "/tmp",
+            "write_group": 1008
+          }
+        },
+        "paths_redirected": false,
+        "status": "matched_host_devices_and_new_file_groups"
+      },
+      "cpu_limits": [
+        300,
+        10202
+      ],
+      "elapsed_ns": 1909741639904,
+      "empirical_execution": true,
+      "error": {
+        "message": "New matched worker failed; no retry",
+        "type": "ValueError"
+      },
+      "hostname": "csis.mn1",
+      "job_id": "16339",
+      "maximum_rss_kib": 72668,
+      "operation": "gpt2/reference_compressed-1",
+      "process_cpu_ns": 18044945072,
+      "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+      "result": null,
+      "sealed_worker_cpu_ns": 0,
+      "software_tree_cpu_ns": 0,
+      "status": "failed",
+      "waited_child_cpu_ns": 1878667725000
+    },
+    "gpt2--reference_compressed-1-host-start.json": {
+      "admission": {
+        "capacity_reserved": false,
+        "concurrent_writers_can_invalidate": true,
+        "filesystem_paths_changed": false,
+        "filesystems": {
+          "2052": {
+            "available_bytes": 142409236480,
+            "available_files": 104526488,
+            "decision": {
+              "capacity_reserved": false,
+              "concurrent_writers_can_invalidate": true,
+              "status": "admitted_at_observation_only"
+            },
+            "filesystem": "xfs",
+            "fragment_bytes": 4096,
+            "group_checks": {},
+            "options": [
+              "attr2",
+              "inode64",
+              "logbsize=256k",
+              "logbufs=8",
+              "noquota",
+              "relatime",
+              "rw",
+              "seclabel",
+              "sunit=512",
+              "swidth=512"
+            ],
+            "paths": [
+              "/tmp"
+            ],
+            "quota": {
+              "source": "/dev/sda4",
+              "status": "disabled_by_observed_xfs_noquota"
+            },
+            "required_bytes": 17263765504,
+            "required_files": 20482,
+            "scopes": [
+              "temporary"
+            ],
+            "source": "/dev/sda4",
+            "write_groups": {
+              "1008": {
+                "required_bytes": 17263765504,
+                "required_files": 20482
+              }
+            }
+          },
+          "2065": {
+            "available_bytes": 16077338234880,
+            "available_files": 788204362,
+            "decision": {
+              "available_bytes": 74586103808,
+              "available_files": 788204362,
+              "capacity_reserved": false,
+              "concurrent_writers_can_invalidate": true,
+              "group_project_quota_attested": false,
+              "required_bytes": 57332347904,
+              "required_files": 7017,
+              "status": "admitted_at_observation_only"
+            },
+            "filesystem": "ext4",
+            "fragment_bytes": 4096,
+            "group_checks": {
+              "1008": {
+                "decision": {
+                  "available_bytes": 16077338234880,
+                  "available_files": 788204362,
+                  "capacity_reserved": false,
+                  "concurrent_writers_can_invalidate": true,
+                  "group_project_quota_attested": false,
+                  "required_bytes": 57332347904,
+                  "required_files": 7017,
+                  "status": "admitted_at_observation_only"
+                },
+                "quota": {
+                  "block_limits_explicitly_unlimited": true,
+                  "file_hard_limit": 0,
+                  "file_headroom": null,
+                  "file_limits_explicitly_unlimited": true,
+                  "file_soft_limit": 0,
+                  "hard_limit_bytes": 0,
+                  "headroom_bytes": 16077338234880,
+                  "refuses_soft_limit_grace": true,
+                  "soft_limit_bytes": 0,
+                  "source": "/dev/sdb1",
+                  "unlimited_bytes_limited_by_filesystem": true,
+                  "used_bytes": 998081978368,
+                  "used_files": 3222426
+                }
+              }
+            },
+            "options": [
+              "grpquota",
+              "quota",
+              "relatime",
+              "rw",
+              "seclabel",
+              "usrquota"
+            ],
+            "paths": [
+              "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a"
+            ],
+            "quota": {
+              "block_unit_bytes": 1024,
+              "file_headroom": null,
+              "hard_limit_bytes": 1073741824000,
+              "headroom_bytes": 74586103808,
+              "refuses_soft_limit_grace": true,
+              "soft_limit_bytes": 1072668082176,
+              "source": "/dev/sdb1",
+              "used_bytes": 998081978368,
+              "used_files": 3222426
+            },
+            "required_bytes": 57332347904,
+            "required_files": 7017,
+            "scopes": [
+              "project"
+            ],
+            "source": "/dev/sdb1",
+            "write_groups": {
+              "1008": {
+                "required_bytes": 57332347904,
+                "required_files": 7017
+              }
+            }
+          }
+        },
+        "group_project_quota_attested": false,
+        "observed_new_file_groups_checked": true,
+        "other_write_groups_covered": false,
+        "requested": {
+          "project": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a",
+            "required_bytes": 57332347904,
+            "required_files": 7017
+          },
+          "temporary": {
+            "path": "/tmp",
+            "required_bytes": 17263765504,
+            "required_files": 20482
+          }
+        },
+        "status": "admitted_at_observation_only",
+        "whole_chain_allowance_verified": false
+      },
+      "arguments": [],
+      "job_id": "16339",
+      "live_failure_scheduler_verified": true,
+      "operation": "gpt2/reference_compressed-1",
+      "prior_failure_verification": {
+        "carried_controller_seconds": 19,
+        "carried_numerical_controller_seconds": 1,
+        "carried_software_seconds": 72,
+        "checks_job": "16309",
+        "failed_job": "16310",
+        "new_checks_controller_seconds": 283,
+        "new_numerical_controller_seconds": 6039,
+        "new_software_seconds": 530,
+        "no_numerical_work": true,
+        "original_checks_controller_seconds": 302,
+        "original_numerical_controller_seconds": 6040,
+        "original_software_seconds": 602,
+        "prior_complete_failure": {
+          "carried_controller_seconds": 4,
+          "carried_software_seconds": 4,
+          "job_id": "16307",
+          "new_checks_controller_seconds": 298,
+          "new_software_seconds": 598,
+          "no_numerical_work": true,
+          "original_checks_controller_seconds": 302,
+          "original_software_seconds": 602,
+          "prior_admission_failures": {
+            "carried_controller_seconds": 10,
+            "carried_software_seconds": 56,
+            "job_id": "16301",
+            "new_checks_controller_seconds": 292,
+            "new_controller_seconds": 1500,
+            "new_software_seconds": 546,
+            "no_numerical_work": true,
+            "original_controller_seconds": 1510,
+            "original_software_seconds": 602,
+            "scheduler_cpu_lower_ns": 55799000000,
+            "scheduler_cpu_upper_ns": 55800000000,
+            "status": "preserved_setup_and_software_failures",
+            "v91": {
+              "archive": {
+                "bytes": 11550720,
+                "sha256": "4aee02bcf7c18e4c649b2a74b8bd9e926f00ea6f4c3e352a9039a7e77a437426"
+              },
+              "inventory": {
+                "bytes": 122566,
+                "sha256": "5755a6c68ab47a367786821ba140e9711364b84680a86685920f4f36a1823a32"
+              },
+              "old_job_launched": false,
+              "source_count": 991,
+              "status": "preserved_pre_registration_setup_failure"
+            },
+            "v99_program_sha256": "df3047fd72654336e8d0791d0acbb0486d7da4c87a8f62798b018cc1f85bb446",
+            "v99_report": {
+              "bytes": 130223,
+              "sha256": "1545f12d3cb50780eb43dc88f15e1883618ea3ba6641592d1379f5e3bb3e3db4"
+            }
+          },
+          "program_sha256": "6be461e20f7e853817f5a610bd7d4705c089b56fd5f57968c64091288d66ea97",
+          "scheduler_cpu_lower_ns": 3249000000,
+          "scheduler_cpu_upper_ns": 3250000000,
+          "status": "preserved_pre_software_failure",
+          "v100_report": {
+            "bytes": 139309,
+            "sha256": "69688c732ea3274ca088d07e1cd760c6400966a0a8cdacc47c55a325a7952a7b"
+          }
+        },
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733",
+        "status": "preserved_qualification_and_pre_dispatch_failure",
+        "v103_report": {
+          "bytes": 158924,
+          "sha256": "f9173e659ca9dce4c59345dcc8383339ca2e167fb85157ec3559acaa0d6049bd"
+        }
+      },
+      "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+      "requests": {
+        "project": {
+          "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a",
+          "required_bytes": 57332347904,
+          "required_files": 7017
+        },
+        "temporary": {
+          "path": "/tmp",
+          "required_bytes": 17263765504,
+          "required_files": 20482
+        }
+      },
+      "snapshot": {
+        "group_reports": {
+          "1008": "Disk quotas for group poonam (gid 1008): \n     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace\n      /dev/sdb1 974689432       0       0         3222426       0       0        \n      /dev/sda5 171720664       0       0          508245       0       0        \n"
+        },
+        "inspection_elapsed_ns": 31643416,
+        "launches_job": false,
+        "observations": {
+          "project": {
+            "available_bytes": 16077338234880,
+            "available_files": 788204362,
+            "device": 2065,
+            "filesystem": "ext4",
+            "fragment_bytes": 4096,
+            "mount": "/nfs_home",
+            "options": "rw,relatime,seclabel,quota,usrquota,grpquota",
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a",
+            "source": "/dev/sdb1",
+            "write_group": 1008
+          },
+          "temporary": {
+            "available_bytes": 142409236480,
+            "available_files": 104526488,
+            "device": 2052,
+            "filesystem": "xfs",
+            "fragment_bytes": 4096,
+            "mount": "/",
+            "options": "rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=256k,sunit=512,swidth=512,noquota",
+            "path": "/tmp",
+            "source": "/dev/sda4",
+            "write_group": 1008
+          }
+        },
+        "observed_utc": "2026-10-26T09:39:56.500009+00:00",
+        "quota_exit_code": 0,
+        "quota_text": "Disk quotas for user poonam (uid 1007): \n     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace\n      /dev/sdb1 974689432  1047527424 1048576000         3222426       0       0        \n      /dev/sda5 171720660  182452224 183500800          508244       0       0        \n",
+        "read_only": true,
+        "requested": {
+          "project": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a",
+            "required_bytes": 57332347904,
+            "required_files": 7017
+          },
+          "temporary": {
+            "path": "/tmp",
+            "required_bytes": 17263765504,
+            "required_files": 20482
+          }
+        },
+        "status": "snapshot_only_not_admission"
+      },
+      "started_utc": "2026-10-26T09:39:56.502918+00:00"
+    },
+    "gpt2--reference_compressed-1-host.json": {
+      "accounting": null,
+      "arguments": [],
+      "clock_scope": "Host main through admission, container startup, entry, worker sealing and shutdown; host interpreter/import and shell startup plus final host receipt write additionally in scheduler accounting",
+      "elapsed_ns": 1912748972042,
+      "error": {
+        "message": "Contained allocation did not complete successfully",
+        "type": "ValueError"
+      },
+      "finished_utc": "2026-10-26T10:11:47.975058+00:00",
+      "host_process_cpu_ns": 3487367315,
+      "job_id": "16339",
+      "operation": "gpt2/reference_compressed-1",
+      "outcome": {
+        "exit_code": 1,
+        "failure": null,
+        "log": {
+          "bytes": 1494,
+          "complete": true,
+          "observed_bytes": 1494,
+          "sha256": "a131e202ee225a4df148c8e5ae7c00d2019ac019ee4c3eee4c74d140d82b0cab"
+        },
+        "subtree_cpu_ns": 1897266472000
+      },
+      "preflight_waited_child_cpu_ns": 53418000,
+      "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+      "status": "failed"
+    },
+    "gpt2/reference_compressed-1/outputs/completion.json": {
+      "affinity_cpus": [
+        0
+      ],
+      "artifacts": {
+        "admission.json": {
+          "bytes": 1092288,
+          "file": "admission.json",
+          "sha256": "a0beb6d19440f5d1cd99586c39db46381cddd8b805b1c99ec92addffcba2dd24"
+        },
+        "execution-provenance.json": {
+          "bytes": 17702,
+          "file": "execution-provenance.json",
+          "sha256": "c23566594edb99ce9a3610997426a8db343524f2306fd5b5e39032ae7b574384"
+        }
+      },
+      "base_target_sha256": "ef1c7c55c098b43aae4f93bd00e191f843d792c9fe5a125fc4655256f2286711",
+      "calibration_target_sha256": "cf6841efbcb390bf3fa66751032d8a38695e4cd53f02199e9b1433222af4ef60",
+      "clock_scope": "Worker timer starts after source/runtime/input and CPU-admission verification and includes the output-directory claim; controller clock and sealed CPU include those checks, final completion write and shutdown; worker clock includes native setup, context, all service work, fsync, disposal and cache clear",
+      "complete_model": false,
+      "confirmation": false,
+      "context_elapsed_ns": 32516615590,
+      "error": "certified stage refused: primal native row verification failed: status=3, row=0, coordinate=359",
+      "error_type": "DispatchRefused",
+      "execution_provenance_sha256": "c23566594edb99ce9a3610997426a8db343524f2306fd5b5e39032ae7b574384",
+      "implementation": {
+        "arm": "compressed",
+        "cache": null,
+        "cache_allowance_bytes": 0,
+        "cell": "reference_compressed",
+        "closed": true,
+        "implementation_sha256": "4acb838fa818d635e3e480c62527573c75105fe2e8962bf226be5ecc3c16ff8a",
+        "primal": {
+          "backend": "normal_neighbor_primal_v50",
+          "binary_sha256": "f20650a6ef20629368f8c71a6b24a56c96a4eaac0be8ad3101d95697acd3d7d1",
+          "compile_elapsed_ns": 309407186,
+          "compiler": "/usr/bin/cc",
+          "compiler_version": "cc (Debian 12.2.0-14+deb12u1) 12.2.0",
+          "flags": [
+            "-std=c11",
+            "-O3",
+            "-shared",
+            "-fPIC",
+            "-fno-fast-math",
+            "-ffp-contract=off",
+            "-frounding-math",
+            "-fexcess-precision=standard"
+          ],
+          "original_c_source_sha256": "09d168f3efe9ce29f305ff7f6c98570171850b49a43220f400e2e3398ac8e7e8",
+          "source_sha256": "0ba4fb047fce2a2c97ca51727fbd0adddea7f487bfd18d1f73934c6a3f4487e3",
+          "wrapper_sha256": "3bfe2c729b12c1a0fc247e3a6448a5e26f1298949737af535d181f61c0ffaf20"
+        },
+        "resident_reservation_bytes": 9663676416
+      },
+      "max_rss_kib": 1643572,
+      "os_cache_uncontrolled": true,
+      "partial_artifacts_are_not_a_committed_complete_model": true,
+      "process_cpu_seconds": 1877.308908,
+      "profile": "gpt2",
+      "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+      "quality_evaluation": false,
+      "schema": "matched-complete-service-worker-v104",
+      "service_target_sha256": "f133a7af9c2576d826a64d128b46e089b1d41a94cd84c76ef7b026397603a405",
+      "shared_primal_kernel": {
+        "backend": "normal_neighbor_primal_v50",
+        "binary_sha256": "f20650a6ef20629368f8c71a6b24a56c96a4eaac0be8ad3101d95697acd3d7d1",
+        "compile_elapsed_ns": 309407186,
+        "compiler": "/usr/bin/cc",
+        "compiler_version": "cc (Debian 12.2.0-14+deb12u1) 12.2.0",
+        "flags": [
+          "-std=c11",
+          "-O3",
+          "-shared",
+          "-fPIC",
+          "-fno-fast-math",
+          "-ffp-contract=off",
+          "-frounding-math",
+          "-fexcess-precision=standard"
+        ],
+        "original_c_source_sha256": "09d168f3efe9ce29f305ff7f6c98570171850b49a43220f400e2e3398ac8e7e8",
+        "source_sha256": "0ba4fb047fce2a2c97ca51727fbd0adddea7f487bfd18d1f73934c6a3f4487e3",
+        "wrapper_sha256": "3bfe2c729b12c1a0fc247e3a6448a5e26f1298949737af535d181f61c0ffaf20"
+      },
+      "slurm_job_id": "16339",
+      "source_files_sha256": "b7e995e705a1ca284e8ac0e0adc37a86bfec69d9b9062f0a3c89872c019dd9d3",
+      "status": "failed",
+      "traceback": "Traceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v37/direct_gram_ball.py\", line 108, in _rows_with_ball\n    fallback, receipt = primal._rows_native(\n                        ^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/src/primal_certificate_v30.py\", line 428, in _rows_native\n    raise PrimalUnresolved(f'primal native row verification failed: status={status}, row={failed[0]}, coordinate={failed[1]}')\nsrc.primal_certificate_v30.PrimalUnresolved: primal native row verification failed: status=3, row=0, coordinate=359\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v43/dispatcher.py\", line 317, in _run\n    answer = operation(weights)\n             ^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v43/dispatcher.py\", line 341, in operation\n    return certify_streamed_primal_ball(private_weights, stream, total_tokens=total_tokens,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v40/streamed_primal_ball.py\", line 120, in certify_streamed_primal_ball\n    codes, row_diagnostics = direct_gram_ball._rows_with_ball(weights, evidence.centers, evidence.radii, grid, boundaries)\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v37/direct_gram_ball.py\", line 120, in _rows_with_ball\n    raise error from exc\nresearch_v37.direct_gram_ball.DirectGramBallUnresolved: primal native row verification failed: status=3, row=0, coordinate=359\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v61/service.py\", line 222, in solve\n    answer = dispatch.solve_blocks(spec, weights, blocks(kind, direct_values),\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v43/dispatcher.py\", line 363, in solve_blocks\n    return _run(spec, weights, admission, operation)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v43/dispatcher.py\", line 319, in _run\n    raise DispatchRefused('certified stage refused: ' + str(error), admission,\nresearch_v43.dispatcher.DispatchRefused: certified stage refused: primal native row verification failed: status=3, row=0, coordinate=359\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v37/direct_gram_ball.py\", line 108, in _rows_with_ball\n    fallback, receipt = primal._rows_native(\n                        ^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/src/primal_certificate_v30.py\", line 428, in _rows_native\n    raise PrimalUnresolved(f'primal native row verification failed: status={status}, row={failed[0]}, coordinate={failed[1]}')\nsrc.primal_certificate_v30.PrimalUnresolved: primal native row verification failed: status=3, row=0, coordinate=359\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v43/dispatcher.py\", line 317, in _run\n    answer = operation(weights)\n             ^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v43/dispatcher.py\", line 341, in operation\n    return certify_streamed_primal_ball(private_weights, stream, total_tokens=total_tokens,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v40/streamed_primal_ball.py\", line 120, in certify_streamed_primal_ball\n    codes, row_diagnostics = direct_gram_ball._rows_with_ball(weights, evidence.centers, evidence.radii, grid, boundaries)\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v37/direct_gram_ball.py\", line 120, in _rows_with_ball\n    raise error from exc\nresearch_v37.direct_gram_ball.DirectGramBallUnresolved: primal native row verification failed: status=3, row=0, coordinate=359\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v104/worker.py\", line 88, in _main\n    result['request']=request(service,records[-prior_count:],records[-retained:],arm,read_predecessor,writer())\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v81/operations.py\", line 125, in request\n    codes,admission=service.solve(rows,representation,payloads,grams,trust,timing)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v66/operations.py\", line 39, in solve\n    return implementation.solve(self,rows,representation,payloads,grams,trust,timing,direct_values=direct_values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v61/service.py\", line 243, in solve\n    answer = dispatch.solve_blocks(spec, weights, blocks('point', replay),\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v43/dispatcher.py\", line 363, in solve_blocks\n    return _run(spec, weights, admission, operation)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v43/dispatcher.py\", line 319, in _run\n    raise DispatchRefused('certified stage refused: ' + str(error), admission,\nresearch_v43.dispatcher.DispatchRefused: certified stage refused: primal native row verification failed: status=3, row=0, coordinate=359\n",
+      "trial": "gpt2/reference_compressed-1",
+      "worker_elapsed_ns": 1884583216791
+    },
+    "gpt2/reference_compressed-1/plan.json": {
+      "output": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/outputs",
+      "program": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/program.json",
+      "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+      "slurm_job_id": "16339",
+      "trial": "gpt2/reference_compressed-1"
+    },
+    "gpt2/reference_compressed-1/transaction.json": {
+      "budget": {
+        "attempts": {
+          "48605591015b9beed71c1002342f50925fcb00232b198513f6db41c049584659": {
+            "charged_cpu_seconds": 1366,
+            "observed_cpu_ns": 1365217559000,
+            "phase": "feasibility",
+            "reserved_cpu_seconds": 3602,
+            "state": "settled"
+          },
+          "71ccdf8d268c985243fb5b62b6e85edddac110ec65e1cb2aab15e983eaf0abf1": {
+            "charged_cpu_seconds": 1879,
+            "observed_cpu_ns": 1878664510000,
+            "phase": "feasibility",
+            "reserved_cpu_seconds": 6002,
+            "state": "settled"
+          },
+          "bad0339ced98b7e5c05b74dd3351b24c5b44b9467badef23fe962b91f1a26e87": {
+            "charged_cpu_seconds": 2951,
+            "observed_cpu_ns": 2950562446000,
+            "phase": "feasibility",
+            "reserved_cpu_seconds": 7202,
+            "state": "settled"
+          }
+        },
+        "binding_sha256": "d9353690560f6cf5d9cda6d71a6375e20e807b7103555a63afd27fac73fa6523",
+        "charged_cpu_seconds": {
+          "feasibility": 6196
+        },
+        "over_cap": {
+          "feasibility": false
+        },
+        "phase_cpu_seconds": {
+          "feasibility": 82840
+        }
+      },
+      "clock_scope": "Dispatch through sealed outcome/ledger; host clock also includes source/gate checks and final writes",
+      "controller_process_cpu_ns": 5660518284,
+      "elapsed_ns": 1897477309531,
+      "slurm_job_id": "16339",
+      "worker_outcome": {
+        "elapsed_wall_ns": 1897436616154,
+        "kind": "nonzero_exit",
+        "returncode": 1,
+        "status": "failed"
+      }
+    },
+    "gpt2/reference_compressed-1/worker/identity.json": {
+      "command": [
+        "/nfs_home/users/poonam/second-20261010/.venv-container/bin/python",
+        "-B",
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v104/worker.py",
+        "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/plan.json"
+      ],
+      "cwd": "/nfs_home/users/poonam/second-20261010",
+      "identity": {
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+        "trial": "gpt2/reference_compressed-1"
+      },
+      "limits": {
+        "address_space_bytes": 17179869184,
+        "affinity_cpus": [
+          0
+        ],
+        "cpu_seconds": 6000,
+        "file_size_bytes": 2147483648,
+        "termination_grace_seconds": 1,
+        "threads": 1,
+        "wall_seconds": 7800
+      },
+      "phase_budget": {
+        "binding_sha256": "d9353690560f6cf5d9cda6d71a6375e20e807b7103555a63afd27fac73fa6523",
+        "directory": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/budget",
+        "phase": "feasibility"
+      },
+      "schema": "limited-worker-identity-v1"
+    },
+    "gpt2/reference_compressed-1/worker/result.json": {
+      "artifacts": {
+        "budget-reservation.json": {
+          "bytes": 308,
+          "sha256": "f2e88983209ddd4dd769dbf60c723bb284e0268779452f7191dc6138a3d407d8"
+        },
+        "limits-applied.json": {
+          "bytes": 441,
+          "sha256": "421c80fc9cf469eac28235976598590d8e81a7bc320ab50fcfb2121f456f986d"
+        },
+        "pre-settlement-observation.json": {
+          "bytes": 750,
+          "sha256": "0a27df435128f77c3d2cef4bffe71d8f6b0de3a8b1e0e146f68117a92bb3d29e"
+        },
+        "request.json": {
+          "bytes": 735,
+          "sha256": "ed0ba3b75d5b403ba666e0112a93d91dc60b61812292c3255799797c1e364c83"
+        },
+        "stderr-summary.json": {
+          "bytes": 8053,
+          "sha256": "d3c7bf738cd580be1c1151118860abf12985248830f7d65c37a98a9c90e5334c"
+        },
+        "stdout-summary.json": {
+          "bytes": 12171,
+          "sha256": "3a2b730de5f66df3a319817831ff1a3bccdab841cf8be073ee113a4422759962"
+        }
+      },
+      "attempt": "attempt-0001",
+      "budget_attempt_id": "71ccdf8d268c985243fb5b62b6e85edddac110ec65e1cb2aab15e983eaf0abf1",
+      "budget_debit": {
+        "charged_cpu_seconds": 1879,
+        "observed_cpu_ns": 1878664510000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 6002,
+        "state": "settled"
+      },
+      "budget_reservation_overrun": false,
+      "budget_scope": "CPU admission allowance; trusted comparison worker; controller CPU excluded",
+      "controller_completion_means": "the outcome is sealed; inspect outcome.status for worker success",
+      "execution": "isolated_process_os_cache_uncontrolled",
+      "identity_sha256": "3b54beb918ecee8ea7df922fe6de9c388d448317cbf382a803e0ecac199a6a6c",
+      "limit_scope": "address space and CPU per process; wall limit and cleanup for ordinary process-group descendants",
+      "limits": {
+        "address_space_bytes": 17179869184,
+        "affinity_cpus": [
+          0
+        ],
+        "cpu_seconds": 6000,
+        "file_size_bytes": 2147483648,
+        "termination_grace_seconds": 1,
+        "threads": 1,
+        "wall_seconds": 7800
+      },
+      "limits_applied": {
+        "address_space": [
+          17179869184,
+          17179869184
+        ],
+        "affinity_cpus": [
+          0
+        ],
+        "cpu_seconds": [
+          6000,
+          6001
+        ],
+        "file_size": [
+          2147483648,
+          2147483648
+        ],
+        "pid": 657072,
+        "process_group": 657072,
+        "request_sha256": "ed0ba3b75d5b403ba666e0112a93d91dc60b61812292c3255799797c1e364c83",
+        "thread_environment": {
+          "BLIS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "RAYON_NUM_THREADS": "1",
+          "VECLIB_MAXIMUM_THREADS": "1"
+        }
+      },
+      "memory_scope": "RLIMIT_AS limits virtual address space, not physical RSS",
+      "no_shell": true,
+      "outcome": {
+        "elapsed_wall_ns": 1897436616154,
+        "kind": "nonzero_exit",
+        "returncode": 1,
+        "status": "failed"
+      },
+      "resource_usage": {
+        "max_rss_kib": 1643572,
+        "scope": "wait4_reaped_worker_including_waited_for_descendants_as_reported_by_os",
+        "system_cpu_ns": 10660785000,
+        "total_cpu_ns": 1878664510000,
+        "user_cpu_ns": 1868003725000
+      },
+      "schema": "limited-worker-record-v1",
+      "status": "complete",
+      "thread_scope": "library thread environment requests; CPU affinity also applies",
+      "timing_boundary": {
+        "cleanup_end_ns": 10289152220359068,
+        "cleanup_start_ns": 10289152220328241,
+        "clock": "time.perf_counter_ns_same_controller_process",
+        "excluded_tail": "CPU settlement, log summaries, acknowledgment validation, receipt commit and store close",
+        "start_ns": 10287254783742914
+      },
+      "worker_identity": {
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+        "trial": "gpt2/reference_compressed-1"
+      },
+      "worker_pid": 657072
+    },
+    "registration.json": {
+      "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+    }
+  },
+  "inputs": {
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/budget/ledger.json": {
+      "bytes": 936,
+      "sha256": "eb1b6391cdcd815b58ee70f258d30ff16e305d64bf57f6d48d9f12ee006ecaeb"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2--reference_compressed-1-16339.log": {
+      "bytes": 802,
+      "sha256": "6d824ffaa58f00f8fdf8d6e0cce392568323778385918918bc30674f7849ffb1"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2--reference_compressed-1-bootstrap.log": {
+      "bytes": 1494,
+      "sha256": "a131e202ee225a4df148c8e5ae7c00d2019ac019ee4c3eee4c74d140d82b0cab"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2--reference_compressed-1-entry-start.json": {
+      "bytes": 208,
+      "sha256": "36403822b9162e978bc59134ee392459c5f856a42e4423b73b22b22e74592154"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2--reference_compressed-1-entry.json": {
+      "bytes": 886,
+      "sha256": "ea27d86210558603dccfb7e22fd3a5a971d4c3ec681dbbeb03f3ddc6e48e99b4"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2--reference_compressed-1-host-start.json": {
+      "bytes": 7264,
+      "sha256": "36327f5ef61f3122cd8798d5c023231df68cb50aaaebd26bbfc5258b01fd48c6"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2--reference_compressed-1-host.json": {
+      "bytes": 855,
+      "sha256": "f5b13d14bc348df09c8a68c7678319bb3aa2f755d86a88f04dc7694208d2b3e0"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/outputs/completion.json": {
+      "bytes": 10796,
+      "sha256": "b1b34c6d4e8f9d5268af7db291183bcc42f459253bec1113cd3ff7c114797f9d"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/plan.json": {
+      "bytes": 402,
+      "sha256": "e3b9a6da394ed13bd1fcdd4258aeee27a99be8ed00620897d16a1f09dfef54d9"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/transaction.json": {
+      "bytes": 1127,
+      "sha256": "f88fb8779f816fe3c58fe3c29c49fe3eae3582107aebd51c9f6dce7a616209ec"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/worker/attempt-0001/budget-reservation.json": {
+      "bytes": 308,
+      "sha256": "f2e88983209ddd4dd769dbf60c723bb284e0268779452f7191dc6138a3d407d8"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/worker/attempt-0001/limits-applied.json": {
+      "bytes": 441,
+      "sha256": "421c80fc9cf469eac28235976598590d8e81a7bc320ab50fcfb2121f456f986d"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/worker/attempt-0001/pre-settlement-observation.json": {
+      "bytes": 750,
+      "sha256": "0a27df435128f77c3d2cef4bffe71d8f6b0de3a8b1e0e146f68117a92bb3d29e"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/worker/attempt-0001/request.json": {
+      "bytes": 735,
+      "sha256": "ed0ba3b75d5b403ba666e0112a93d91dc60b61812292c3255799797c1e364c83"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/worker/attempt-0001/status.json": {
+      "bytes": 3042,
+      "sha256": "d6df7f37ca37afdd3e11f9773719558333e036ed9a5f88cb07e613637052e172"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/worker/attempt-0001/stderr-summary.json": {
+      "bytes": 8053,
+      "sha256": "d3c7bf738cd580be1c1151118860abf12985248830f7d65c37a98a9c90e5334c"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/worker/attempt-0001/stdout-summary.json": {
+      "bytes": 12171,
+      "sha256": "3a2b730de5f66df3a319817831ff1a3bccdab841cf8be073ee113a4422759962"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/worker/identity.json": {
+      "bytes": 967,
+      "sha256": "3b54beb918ecee8ea7df922fe6de9c388d448317cbf382a803e0ecac199a6a6c"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/worker/result.json": {
+      "bytes": 3042,
+      "sha256": "d6df7f37ca37afdd3e11f9773719558333e036ed9a5f88cb07e613637052e172"
+    },
+    "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/registration.json": {
+      "bytes": 85,
+      "sha256": "d5b577ec56382e3b77c8051ed231319fff34da5d01a3983c212bf755573b9476"
+    }
+  },
+  "logs": {
+    "gpt2--reference_compressed-1-16339.log": {
+      "bytes": 802,
+      "sha256": "6d824ffaa58f00f8fdf8d6e0cce392568323778385918918bc30674f7849ffb1",
+      "tail": "Traceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v104/host.py\", line 221, in <module>\n    main(*sys.argv[1:])\n    ~~~~^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v104/host.py\", line 217, in main\n    require(error is None, 'One-use host envelope failed; inspect, never retry')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v80/io.py\", line 7, in require\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: One-use host envelope failed; inspect, never retry\n",
+      "tail_only": false
+    },
+    "gpt2--reference_compressed-1-bootstrap.log": {
+      "bytes": 1494,
+      "sha256": "a131e202ee225a4df148c8e5ae7c00d2019ac019ee4c3eee4c74d140d82b0cab",
+      "tail": "Traceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v104/entry.py\", line 54, in main\n    campaign.run(operation,p,expected)\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v104/campaign.py\", line 76, in run\n    require(receipt['outcome']['status']=='complete' and receipt['outcome']['returncode']==0,'New matched worker failed; no retry')\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v80/io.py\", line 7, in require\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: New matched worker failed; no retry\nTraceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v104/entry.py\", line 79, in <module>\n    if __name__=='__main__':main(*sys.argv[1:])\n                            ^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v104/entry.py\", line 76, in main\n    require(error is None,'One-use admission entry failed; no retry')\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/research_v80/io.py\", line 7, in require\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: One-use admission entry failed; no retry\n",
+      "tail_only": false
+    }
+  },
+  "missing": [],
+  "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+  "readonly_cpu_ns": 247728182,
+  "readonly_review_cost_outside_experiment": true,
+  "schema": "v104-failed-request-readonly-capture",
+  "worker": {
+    "artifacts": {
+      "budget-reservation.json": {
+        "bytes": 308,
+        "sha256": "f2e88983209ddd4dd769dbf60c723bb284e0268779452f7191dc6138a3d407d8"
+      },
+      "limits-applied.json": {
+        "bytes": 441,
+        "sha256": "421c80fc9cf469eac28235976598590d8e81a7bc320ab50fcfb2121f456f986d"
+      },
+      "pre-settlement-observation.json": {
+        "bytes": 750,
+        "sha256": "0a27df435128f77c3d2cef4bffe71d8f6b0de3a8b1e0e146f68117a92bb3d29e"
+      },
+      "request.json": {
+        "bytes": 735,
+        "sha256": "ed0ba3b75d5b403ba666e0112a93d91dc60b61812292c3255799797c1e364c83"
+      },
+      "stderr-summary.json": {
+        "bytes": 8053,
+        "sha256": "d3c7bf738cd580be1c1151118860abf12985248830f7d65c37a98a9c90e5334c"
+      },
+      "stdout-summary.json": {
+        "bytes": 12171,
+        "sha256": "3a2b730de5f66df3a319817831ff1a3bccdab841cf8be073ee113a4422759962"
+      }
+    },
+    "attempt": "attempt-0001",
+    "budget_attempt_id": "71ccdf8d268c985243fb5b62b6e85edddac110ec65e1cb2aab15e983eaf0abf1",
+    "budget_debit": {
+      "charged_cpu_seconds": 1879,
+      "observed_cpu_ns": 1878664510000,
+      "phase": "feasibility",
+      "reserved_cpu_seconds": 6002,
+      "state": "settled"
+    },
+    "budget_reservation_overrun": false,
+    "budget_scope": "CPU admission allowance; trusted comparison worker; controller CPU excluded",
+    "controller_completion_means": "the outcome is sealed; inspect outcome.status for worker success",
+    "execution": "isolated_process_os_cache_uncontrolled",
+    "identity_sha256": "3b54beb918ecee8ea7df922fe6de9c388d448317cbf382a803e0ecac199a6a6c",
+    "limit_scope": "address space and CPU per process; wall limit and cleanup for ordinary process-group descendants",
+    "limits": {
+      "address_space_bytes": 17179869184,
+      "affinity_cpus": [
+        0
+      ],
+      "cpu_seconds": 6000,
+      "file_size_bytes": 2147483648,
+      "termination_grace_seconds": 1,
+      "threads": 1,
+      "wall_seconds": 7800
+    },
+    "limits_applied": {
+      "address_space": [
+        17179869184,
+        17179869184
+      ],
+      "affinity_cpus": [
+        0
+      ],
+      "cpu_seconds": [
+        6000,
+        6001
+      ],
+      "file_size": [
+        2147483648,
+        2147483648
+      ],
+      "pid": 657072,
+      "process_group": 657072,
+      "request_sha256": "ed0ba3b75d5b403ba666e0112a93d91dc60b61812292c3255799797c1e364c83",
+      "thread_environment": {
+        "BLIS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "RAYON_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      }
+    },
+    "memory_scope": "RLIMIT_AS limits virtual address space, not physical RSS",
+    "no_shell": true,
+    "outcome": {
+      "elapsed_wall_ns": 1897436616154,
+      "kind": "nonzero_exit",
+      "returncode": 1,
+      "status": "failed"
+    },
+    "resource_usage": {
+      "max_rss_kib": 1643572,
+      "scope": "wait4_reaped_worker_including_waited_for_descendants_as_reported_by_os",
+      "system_cpu_ns": 10660785000,
+      "total_cpu_ns": 1878664510000,
+      "user_cpu_ns": 1868003725000
+    },
+    "schema": "limited-worker-record-v1",
+    "status": "complete",
+    "thread_scope": "library thread environment requests; CPU affinity also applies",
+    "timing_boundary": {
+      "cleanup_end_ns": 10289152220359068,
+      "cleanup_start_ns": 10289152220328241,
+      "clock": "time.perf_counter_ns_same_controller_process",
+      "excluded_tail": "CPU settlement, log summaries, acknowledgment validation, receipt commit and store close",
+      "start_ns": 10287254783742914
+    },
+    "worker_identity": {
+      "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+      "trial": "gpt2/reference_compressed-1"
+    },
+    "worker_pid": 657072
+  }
+}

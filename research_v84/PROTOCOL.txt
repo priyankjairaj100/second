@@ -1,0 +1,100 @@
+V84 prospective complete matched DistilGPT2/GPT2 screen: UNREGISTERED
+
+Question: on the same four exposed C4 development records, do the qualified
+optimizations preserve the complete model/state contract on both checkpoint
+depths, and how do complete compressed requests compare with equally optimized
+modern lossless requests? Two related GPT2-family checkpoints do not establish
+cross-architecture generality. Single observations do not establish stable speed.
+
+The two models use the identical frozen V82 source selection, four128-token
+records,512normalization,4bit output-row dyadic24 grids, ridge1/100 and the
+approved1,327,104-entry allowance. Delete to the last3 and then2 records. Actual
+24/48stage teacher targets, original checkpoint files and source provenance must
+match the separately completed V82 admission byte for byte in each fresh process.
+No cross-checkpoint model-byte equality is expected. Every candidate is compared
+against fresh original-teacher reconstruction for its own checkpoint and retained
+records. Previously exposed data and every historical exclusion remain disclosed.
+
+Finite design:20numerical workers, comprising preparation, four cells at each of
+two endpoints and fresh two-endpoint oracle for each model. The reference and
+optimized compressed/modern cells share the qualified primal kernel. Optimized
+cells share token acceleration; optimized compressed uses the native decoder,
+optimized modern uses the same bounded1GiB canonical cache. Cell order is fixed by
+a declared hash seed; endpoint2 reverses it. Model order alternates prospectively
+across operations. Every second request reads its own cell/profile predecessor.
+Neither oracle accepts a predecessor. No retry, dropped failure, favorable-row
+selection, secret cap increase, quality execution or GPU job is included.
+
+Primary time: complete controller transaction, including input/source checks,
+worker startup, compilation/context, actual request work, output writes, cleanup,
+sealed receipts and ledger snapshot. Wider scheduler and narrower worker/request
+clocks remain separately reported and overlap; never sum them. OS cache is not
+controlled. Report all16requests, source accesses/fallbacks, CPU, memory and both
+live-state/checkpoint-inclusive storage. Do not pool away losses. This screen
+precedes any separately registered timing replication described in V82 rules.
+
+Resources: one CPU/thread,16GiB address space,8GiB explicit array guard,9GiB
+resident reservation,64billion stage work and1trillion request work remain.
+DistilGPT2 reserves3600CPU for preparation,4800for oracle,3000per first request and
+1800per second. GPT2 has twice these CPU reservations. Total numerical reservation
+82840<=120624 includes two-second per-worker margins. Twenty controller allowances
+reserve6040<=7224. Software300/301CPU,602aggregate,10min; primary7200CPU/9000wall,
+supplemental3600CPU/5400wall. Whole-process fit and these reservations are not
+runtime predictions. A failure is preserved, not evidence of impossibility.
+
+Required before registration: actual V80 primary/supplemental plus V83 host
+closure, V81 software closure and V82 actual target/host closure; then freeze a
+new source package and registry using prepare.py. The source-only inventory hash
+must match its packaging receipt. Three actual terminal snapshots must already
+be saved under gates/. The builder verifies actual completed targets/checkpoints
+and never writes a speculative success. Submit the separate101-test Linux gate
+once, verify its actual receipt and terminal state, then submit the20workers and
+two actual audits held, validate exact constraints, release once. Never overwrite
+registered source, registry, intent, output or receipt. The launcher requires an
+empty account queue and clean numerical f900999 before either submission stage.
+
+Primary audit reparses original/retained states, checks target/checkpoint identity,
+all model/code bytes, complete canonical state/trust bytes and retained source
+membership against the independent oracles:16comparisons. Supplemental audit
+reopens16actual candidate/oracle model pairs and binds the primary receipt, input
+bytes, sealed limits/debits and complete controller costs. Final host Slurm/CPU
+closure remains necessary; extend the separate read-only reporter only after
+actual job IDs are known. Software tests are not that evidence.
+
+Current preparation:14pure structure/submission-flow tests pass locally. Six
+Linux tiny actual-file worker/audit tests and two actual sealed-process tests are
+prepared but not executed. The planned101-check gate also includes62existing
+legacy/integration/profile/archive guards,4actual implementation checks and13new
+pure output-limit checks. The
+new fixture uses distinct two/three-stage artificial targets to detect checkpoint
+mixing; V81 separately covers complete24/48-stage archive extents. No empirical
+model work or software qualification is claimed from this preparation.
+
+Quality on these new512-normalized targets remains a separate requirement for a
+practical model-quality claim. V72 quality used a different target; its tolerances
+or observed scores cannot simply be assigned to these models. Reused revealed
+quality rows can provide descriptive matched evaluation but are not untouched
+confirmation. Resolve exact tokenizer identity, overlap/exclusion ledger, fixed
+sample and both baseline/candidate model identities before quality registration.
+
+23October2026 V85 review: upstream V80/V81 failed during an observed hard-quota
+block; V82 jobs were cancelled without running. The original successful-gate
+prerequisites are now unsatisfiable. V84 remains UNREGISTERED and must not launch.
+Any later recovery needs separate source/registration and actual terminal gates;
+never relabel an old failure or bypass a prerequisite. The artifact-census bug
+was fixed before registration; its87-check Linux gate remains unexecuted.
+
+V86 review correction: the V85 pure artifact declaration omitted hybrid_gram.
+The actual rebuild produces four representations. The declaration now includes
+all four state/trust pairs; a source-based contract test and worker runtime guard
+check agreement. Fourteen pure checks pass; the88-check Linux gate has not run.
+The original V85 observation above remains historical, not current qualification.
+
+V87 adds bounded worker output writing and actual saved-extent checks. The
+13new pure filesystem/refusal checks pass locally, making27pure checks with
+the14existing V84 checks. The proposed101-check Linux suite is still pending.
+The model extent is checked before creating its file; progress/completion sizes
+and counts are bounded, and partial writes cannot become successful outputs.
+CPU, memory, work, state and numerical targets remain unchanged. The complete
+chain still needs controller/log/temporary-space admission and recovered gates.
+Read research_v87/PROTOCOL.txt; no registration or launch is made.

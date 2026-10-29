@@ -1,0 +1,66 @@
+V69 production execution wiring review, 16 October 2026
+Root implementation review, not independent review or empirical validation.
+
+Prepared
+campaign.py requires the complete actual V67 and V68 artifact gates, original
+checkpoint/export identities, full frozen source/dependency inventories, separate
+CPU/CUDA runtime records and prospectively bound interpreter commands. V68's three
+completed scheduler rows and whole-process plus child costs are now prerequisites.
+All earlier phases must have real completed worker seals, settled debits, controller
+receipts and matching saved output manifests. A separately admitted current worker
+may be the only live reservation; it cannot be called completed or omitted at closure.
+
+entry.py preserves an exclusive intent before verification/dispatch and refuses any
+second call. It records full controller and waited-child clocks and checks separate
+helper cost. worker.py requires a live exact-command phase allowance before creating
+outputs or numerical dispatch. Every failed phase keeps partial outputs and error
+records. phase_flow.py connects all eight registered operations, including actual
+checkpoint-derived parameter reuse, unchanged V55/V50 sequential12/6 construction,
+CPU references, one CUDA collection with the24-pair barrier, and actual saved-byte
+terminal audits. The terminal pass repeats every original parameter word comparison
+and saved sequential-code audit; it does not independently repeat calibration or
+likelihood inference. The statistics implementation is shared and that limitation
+remains explicit. Negative quality passes through as completed evidence.
+
+closure.py is a separate bounded post-exit job. It reconciles the eight actual
+worker/controller/scheduler allocations and every settled debit, then its own final
+scheduler row must be observed after exit. It adds302 CPU seconds to the unchanged
+44424 eight-phase design,44726 total. This is an unregistered ceiling, not measured
+cost or an ETA. External reporting/transport is excluded explicitly. No infinite
+claim to measure the external observer's own accounting is made.
+
+Review findings addressed before registration
+The CPU runtime does not expose the CUDA runtime's top-level executable field.
+Interpreter commands are therefore bound separately and checked against actual
+sys.executable; CPU binary identity still comes from the unchanged inherited runtime.
+The current worker's live debit cannot be mistaken for a missing predecessor debit.
+Only its verified admission ID may coexist with otherwise completed predecessors.
+GPU allocator/transfer reports are read after device-context exit, when final peaks
+and roundtrip counts exist. The real quality route requires318 array roundtrips.
+The historical CPU wrapper sets four thread variables, while the new gate requires
+seven. That wrapper remains frozen; a separately registered V69 wrapper is required.
+
+Validation and limitations
+81 local tests passed with zero failures/errors/skips in existing Python3.12.7.
+All152 imported project module origins were checked against actual byte inventories.
+All469 V67 sources,14 historical GPU/export files and nine V68 files are unchanged.
+All36 V69 source files also parse with the Python3.10 grammar. Generated fixtures
+exercise actual saved seals/files and tiny CPU inference; production checkpoint,
+sequential numerical, operating-system and scheduler boundaries are mocked.
+No real process, CUDA, checkpoint import, untouched article or new model loss ran.
+One initial20-test run had one error: the fixture used macOS's symbolic /var path;
+the output guard correctly refused it. Resolving the fixture path fixed that test
+without changing the safety guard. Preserve that failure in the qualification report.
+The future Linux suite is87 tests including the six unchanged V55 numerical checks.
+
+Concrete next work
+Prepare the held-job submission adapter and separate CPU-container/GPU wrappers.
+Register their sources and actual runtime/host/partition resource admission before
+launch. Capture actual CPU interpreter path inside the inherited container; set all
+seven thread variables explicitly without changing the old wrapper or container.
+Bind each returned held Slurm job ID exclusively before release, and use one serial
+no-requeue/afterok chain. On an uncertain submission outcome, reconcile jobs instead
+of retrying. The closure job needs its own held binding and900-second wall bound.
+Only after both V67 terminal audits pass may V68 registration/data run. Only after
+actual V68 data/cost success may V69 be frozen and registered. Current local checks
+cannot grant that authorization. No empirical launch occurred in this checkpoint.

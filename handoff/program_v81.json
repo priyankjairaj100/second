@@ -1,0 +1,79 @@
+{
+  "version": 81,
+  "created_at": "2026-10-23T07:20:49.805812+00:00",
+  "kind": "qualified integration and active complete comparison; queued transfer software",
+  "handoff": "docs/ACTIVE_SESSION_V81.md",
+  "scheduler": "PAUSED",
+  "manuscript_version": 74,
+  "scientific_decision_version": 72,
+  "model_results_changed": false,
+  "empirical_experiments_launched": true,
+  "programs": {
+    "79": "a0d71ade247d410150a3178cc385613b3c6dc9e347eaaaca0b20524f64f6770a",
+    "80": "89f6a71e5b4f74b667bac64149c77005862d36b2b2e3dedc2a7260fb05c0ad60",
+    "81": "3f89d3c73c21d9d955c9396d6cfbe8150ad98793088f2cca7c6ba5c88c8e5ada"
+  },
+  "observation_utc": "2026-10-23T07:18:25.779926+00:00",
+  "v79": {
+    "aggregate_cpu_ns": 5464861638,
+    "job_id": "15903",
+    "terminal": {
+      "AllocCPUS": "1",
+      "Elapsed": "00:00:08",
+      "ExitCode": "0:0",
+      "JobIDRaw": "15903",
+      "MaxRSS": "",
+      "NodeList": "csis.mn1",
+      "ReqMem": "16G",
+      "State": "COMPLETED",
+      "TotalCPU": "00:06.330"
+    },
+    "tests": 49
+  },
+  "v80": {
+    "aggregate_software_cpu_ns": 10653662229,
+    "jobs": {
+      "optimized_compressed-1": "15907",
+      "optimized_compressed-2": "15912",
+      "optimized_modern-1": "15909",
+      "optimized_modern-2": "15910",
+      "oracle": "15914",
+      "prepare": "15905",
+      "primary": "15915",
+      "reference_compressed-1": "15906",
+      "reference_compressed-2": "15913",
+      "reference_modern-1": "15908",
+      "reference_modern-2": "15911",
+      "supplemental": "15916"
+    },
+    "software_job": "15904",
+    "software_terminal": {
+      "AllocCPUS": "1",
+      "Elapsed": "00:00:13",
+      "ExitCode": "0:0",
+      "JobIDRaw": "15904",
+      "MaxRSS": "",
+      "NodeList": "csis.mn1",
+      "ReqMem": "16G",
+      "State": "COMPLETED",
+      "TotalCPU": "00:11.560"
+    },
+    "status": "running; no numerical result yet",
+    "tests": 73
+  },
+  "v81": {
+    "job_id": "15917",
+    "status": "dependency pending; not qualified",
+    "tests_expected": 62,
+    "transfer_grid_user_approved": 1327104
+  },
+  "frozen_source_count": 851,
+  "auxiliary_source_count": 5,
+  "next_steps": [
+    "Complete V80 without retry; obtain both actual audits and host terminal accounting",
+    "Close V81 software gate after its queued job; preserve any failure",
+    "Prepare/register matched transfer with approved grid limit and complete data/model/resource/oracle gates",
+    "If justified, separately register balanced timing replication",
+    "Update the existing manuscript and bundle only from verified evidence; rendered layout and venue choices remain"
+  ]
+}

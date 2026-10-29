@@ -1,0 +1,35 @@
+V108 scientific decision,26October2026
+
+Observed: the first matched GPT2 compressed request did not certify a complete
+model. Both box and replayed point inputs failed the existing streamed route at
+native selected-row0/coordinate359.46preceding stages certified. The original row
+identity and exact numerical cause were not saved.19dependents never executed.
+
+This is a practical completion limitation of the frozen implementation on the
+registered target. It preserves conditional correctness: refusal produces no
+certified complete output. It neither supplies transfer evidence nor disproves
+all alternative exact algorithms. The V89 mixed endpoint speed/storage results
+remain the strongest completed service evidence. Generality would strengthen
+external validity, but is not necessary for the narrower conditional-correctness
+and bounded storage/source-access/latency contribution.
+
+One targeted next question is justified: can the existing token point solver
+certify the same inferred failing stage under the unchanged target and original
+resource limits? Shape-only admission says yes to memory/work feasibility, not
+to numerical success or CPU/wall fit. Use a separately registered token-only
+diagnostic bound to original lossless preparation payloads and fixed checkpoint.
+Never rerun the old streamed attempt or silently add fallback to frozen sources.
+
+If the diagnostic certifies, inspect its exact codes, timing and provenance,
+then decide whether a separately qualified prospective full-model design fits
+the remaining original campaign caps. A selected-stage success is not transfer,
+general speedup or a causal timing comparison. Fresh complete oracles and audits
+remain mandatory for any full-model claim. If it refuses or exceeds its caps,
+retain that outcome and reassess mechanism evidence; do not retry a consumed job.
+
+Writing should keep practical magnitude and scope explicit. Include the matched
+screen failure as an implementation limitation, preserve all earlier adverse
+quality/timing results, and avoid a universal negative claim from one refusal.
+No new result is required for the current narrow claim; this diagnostic belongs
+to the user's authorized generality investigation. Final submission packaging
+still requires actual rendered layout and the selected venue/category rules.

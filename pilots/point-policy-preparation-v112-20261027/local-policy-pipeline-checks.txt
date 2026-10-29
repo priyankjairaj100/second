@@ -1,0 +1,6 @@
+............................................
+----------------------------------------------------------------------
+Ran 44 tests in 1.515s
+
+OK
+{"program_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "jobs": [{"name": "checks", "operation": "checks", "arguments": [], "job_id": "76543", "dependency": null, "program_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "snapshot": "JobState=PENDING JobName=second111-checks NumCPUs=1 Requeue=0 MinMemoryNode=16G ReqNodeList=csis.mn1 TimeLimit=00:10:00 Partition=cpu-short QOS=cpu-short Reason=JobHeldUser Priority=0 Dependency=(null)"}]}

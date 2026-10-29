@@ -1,0 +1,169 @@
+{
+  "schema": "recovery-launch-checkpoint-v89",
+  "observed_utc": "2026-10-24T07:05:11.155414+00:00",
+  "explicit_cleanup_authorized": true,
+  "deleted_cluster_roots": [
+    "/nfs_home/users/poonam/ccu-acl2027",
+    "/nfs_home/users/poonam/.cache/pip/http-v2"
+  ],
+  "retained": "Second evidence, runtimes, source and old attempts; local Third checkout and GitHub",
+  "allocated_bytes_recovered": 84294733824,
+  "project_soft_headroom_at_admission_bytes": 83220992000,
+  "project_required_before_upload_bytes": 74870290017,
+  "storage_admission": "admitted_at_observation_only",
+  "capacity_reserved": false,
+  "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9",
+  "source_files": 934,
+  "registered": true,
+  "software": {
+    "job_id": "16004",
+    "state": "COMPLETED",
+    "exit": "0:0",
+    "tests": 162,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 16,
+    "scheduler_cpu_display": "00:12.683",
+    "envelope_cpu_ns": 12673476453,
+    "container_mapping": "matched_host_devices_and_new_file_groups",
+    "empirical_result": false
+  },
+  "jobs": [
+    {
+      "arguments": [],
+      "dependency": null,
+      "job_id": "16004",
+      "name": "checks",
+      "operation": "checks",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    {
+      "arguments": [
+        "prepare"
+      ],
+      "dependency": "16004",
+      "job_id": "16005",
+      "name": "prepare",
+      "operation": "run",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    {
+      "arguments": [
+        "reference_compressed-1"
+      ],
+      "dependency": "16005",
+      "job_id": "16006",
+      "name": "reference_compressed-1",
+      "operation": "run",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    {
+      "arguments": [
+        "optimized_compressed-1"
+      ],
+      "dependency": "16006",
+      "job_id": "16007",
+      "name": "optimized_compressed-1",
+      "operation": "run",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    {
+      "arguments": [
+        "reference_modern-1"
+      ],
+      "dependency": "16007",
+      "job_id": "16008",
+      "name": "reference_modern-1",
+      "operation": "run",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    {
+      "arguments": [
+        "optimized_modern-1"
+      ],
+      "dependency": "16008",
+      "job_id": "16009",
+      "name": "optimized_modern-1",
+      "operation": "run",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    {
+      "arguments": [
+        "optimized_modern-2"
+      ],
+      "dependency": "16009",
+      "job_id": "16010",
+      "name": "optimized_modern-2",
+      "operation": "run",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    {
+      "arguments": [
+        "reference_modern-2"
+      ],
+      "dependency": "16010",
+      "job_id": "16011",
+      "name": "reference_modern-2",
+      "operation": "run",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    {
+      "arguments": [
+        "optimized_compressed-2"
+      ],
+      "dependency": "16011",
+      "job_id": "16012",
+      "name": "optimized_compressed-2",
+      "operation": "run",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    {
+      "arguments": [
+        "reference_compressed-2"
+      ],
+      "dependency": "16012",
+      "job_id": "16013",
+      "name": "reference_compressed-2",
+      "operation": "run",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    {
+      "arguments": [
+        "oracle"
+      ],
+      "dependency": "16013",
+      "job_id": "16014",
+      "name": "oracle",
+      "operation": "run",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    {
+      "arguments": [],
+      "dependency": "16014",
+      "job_id": "16015",
+      "name": "primary",
+      "operation": "primary",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    {
+      "arguments": [],
+      "dependency": "16015",
+      "job_id": "16016",
+      "name": "supplemental",
+      "operation": "supplemental",
+      "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    }
+  ],
+  "numerical_status": "prepare 16005 RUNNING; 16006-16016 dependency pending",
+  "old_unknown_reservation_cpu_seconds": 12602,
+  "old_attempts_retried": false,
+  "old_ledger_changed": false,
+  "all_old_19_dispositions_unchanged_before_launch": true,
+  "combined_numerical_reservation_cpu_seconds": 120622,
+  "preserved_numerical_ceiling": 120624,
+  "both_audits_complete": false,
+  "terminal_closure_complete": false,
+  "scientific_result": false,
+  "v72_v74_claims_unchanged": true
+}

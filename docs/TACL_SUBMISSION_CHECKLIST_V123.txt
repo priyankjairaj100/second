@@ -1,0 +1,61 @@
+TACL preparation checklist, 29 October 2026
+
+PREPARED
+Title: Lossy Calibration Archives for Exact Model Repair.
+Original-submission format: 10 content pages and 1 reference page, no appendices.
+Official tacl2021v1 style is embedded unchanged. A4, two columns, prescribed type,
+anonymous title/header, page numbers, and review rulers are retained. No first-page
+float or identifying acknowledgments. The native compiler succeeds; the exported
+PDF is independently compiled from the same source. Font embedding, references,
+layout and displayed results are checked in validation/v123_manuscript_checks.json.
+
+SCIENTIFIC REVISION STILL REQUIRED
+The manuscript changes and packaged historical evidence do not complete the
+empirical TACL revision. Missing gates: quality on the four headline matched
+target strata plus a practical GPTQ reference; minimal source-only cold baseline;
+independent roots and calibration-size/deletion coverage; precision-success and
+margin telemetry; repeated timing and a clean external-input reproduction.
+See docs/REVIEW_FOLLOWUP_V123.txt and TACL_REVISION_EVIDENCE_PLAN_V122.txt.
+Do not mark the paper submission-ready from PDF layout or software tests alone.
+
+REFERENCE AND MATHEMATICAL REVIEW
+All 15 entries pass identity, attributed-scope and final rendered/link checks.
+The original 13 primary checks are inherited from V121 (28 October); Rump 2010
+and Shewchuk 1997 received primary-PDF and DOI metadata checks on 29 October.
+Independent rational identities remain recorded in v121_math_audit.json.
+V122 adds 39,366 enumerated realizations of 486 small feature boxes and scoped
+Python primitive checks. These are generated correctness checks, not model
+experiments, native-C qualification, production abort tests or clean reproduction.
+
+APPENDIX DECISION
+The user explicitly requested no appendices and also discussed possible appendix
+content. The rewrite follows the former, with all core proofs in the main paper.
+The March 2024 policy permits up to 5 pages of replication details and up to 3
+pages of complementary tables/figures. Appendices are unreviewed, follow the
+references in the same review PDF, and use the same style/anonymity rules. Free
+narrative is restricted to replication detail. Nothing essential depends on them.
+Source: https://transacl.org/index.php/tacl/announcement/view/105
+
+UPLOAD AND AUTHOR CHECKS
+TACL disallows external review supplements and links to them. The larger evidence
+archive and editable-source ZIP are author-side materials, not review uploads.
+Before a separately authorized submission, authors must confirm author order,
+affiliations/country/contact details, consent, prior publication/review history,
+no concurrent review, the 9-month ACL/AACL/EACL/NAACL/EMNLP/ARR restriction, and the
+12-month TACL rejection restriction where applicable. Record any non-archival
+prior version in the editor-facing fields. These personal/history facts are
+unverified. Rename the upload using the assigned TACL number and 1-3 title words.
+The source-release license remains an author decision. No submission was made.
+Suggested section: Empirical and Data-Driven Methods.
+Suggested keywords: post-training quantization; calibration; exact reconstruction;
+interval certification; data deletion; model maintenance; storage tradeoffs.
+Source: https://transacl.org/index.php/tacl/about/submissions
+
+FORMAT SOURCE
+https://transacl.org/tacl-submission-templates/tacl2021v1-submission-formatting-instructions.pdf
+https://transacl.org/tacl-submission-templates/tacl2021v1.sty
+The 2024 appendix announcement supersedes the older formatting PDF's appendix rule.
+
+V123: the four technical corrections and Table 6 coverage are in the manuscript.
+A separate saved-output audit, job16651, measured changed-code counts. This does
+not close quality, minimal-cold, precision-success or independent-root evidence.

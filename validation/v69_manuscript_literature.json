@@ -1,0 +1,24 @@
+{
+  "abstract_unchanged": true,
+  "added_references": [
+    "qss",
+    "medu",
+    "qebverif"
+  ],
+  "after_sha256": "7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda",
+  "after_source_whitespace_tokens": 5347,
+  "all_proof_and_display_blocks_unchanged": true,
+  "before_sha256": "11e5a67c5edc102b7b11f2f5962b877f73efbc7ae0688863ca274832023bc393",
+  "before_source_whitespace_tokens": 5269,
+  "captured_at_utc": "2026-10-16T13:08:19.192627+00:00",
+  "empirical_sections_unchanged": true,
+  "missing_citations": [],
+  "native_compile": "success",
+  "native_compile_pending": false,
+  "native_compile_receipt": "validation/native_manuscript_v69_literature_compile.json",
+  "new_empirical_results_added": false,
+  "related_work_after_tokens": 421,
+  "related_work_before_tokens": 400,
+  "schema": "manuscript-related-work-update-v69",
+  "venue_page_count_verified": false
+}

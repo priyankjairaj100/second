@@ -1,0 +1,45 @@
+V104 separate matched-screen recovery,26October2026.
+
+Actual V89 scientific closure and V101 matched-target terminal remain mandatory.
+The scientific design is unchanged: matched4x128-token records,retained3/2,
+24/48stages,approved1,327,104grid entries on both related GPT-family models,
+four cells,fixed alternating model order/reversed second endpoint,20workers,
+16same-checkpoint fresh-oracle comparisons,primary and supplemental audits.
+No new quality frame or cross-architecture/stable-latency claim is authorized.
+
+Preserve V100software16307 FAILED1:0 before software/model work and its4-second
+software/controller charge. Preserve V103software16309 COMPLETED0:0 (225tests)
+and first dispatch16310 FAILED1:0 before host-start/container/budget/worker;
+16311--16331 are cancelled unstarted. The V103 source/program/complete chain and
+all receipts remain unchanged. No old allocation or registration is retried.
+The V103 scheduler intervals are[67.113,67.114)seconds for qualification and
+[0.883,0.884)seconds for failed dispatch. Its contained software52.626715seconds
+implies at most14.487285seconds checks-controller CPU.
+
+Carry68seconds software,15checks-controller and1first-worker-controller from
+V103, plus the prior V1004software/controller seconds. Thus new software530 plus
+carried72 stays within original602; new checks-controller283 plus carried19
+stays within302. First worker controller301 plus carried1 stays within302;
+other19workers remain302, new total6039 plus carried1 stays within6040.
+The20numerical-worker budget82840 is unchanged: no failed predecessor launched
+any numerical worker or created a numerical ledger. Earlier V99 known charges
+and the original V80unknown12602seconds remain visible through their own gates.
+Memory1CPU/16GiB,work/output bounds,audit caps and wall limits remain unchanged.
+
+The correction passes the registered operation (profile/trial) to storage
+admission; only filenames use profile--trial. A new regression exercises the
+actual host main path for all23operations with external side effects replaced;
+another rejects filename aliases as storage operations. Live Slurm checks stay
+on the host and are bound into each current allocation receipt. Container and
+numerical prerequisites reopen actual immutable inputs without invoking Slurm.
+A new captured V103 failure report is verified before preparation,submission,
+every host dispatch,container prerequisites and final terminal closure.
+
+Every preceding source byte is inherited from the exact V103 archive. Imports
+and hash-manifest dependencies are closed;148 isolated pure checks and227pinned
+Linux checks are mandatory. The old software pass is not reused to skip the new
+gate. The complete fixed chain is submitted held,validated and released once.
+Full source-bound storage/user/group quota admission is repeated before launch;
+capacity is observed,not reserved. All cells,failures,negative findings and
+complete host costs remain. No paid compute,subagents,credentials,new monitor,
+third-party messages or conference submission.

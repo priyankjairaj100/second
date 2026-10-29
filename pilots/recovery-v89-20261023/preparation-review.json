@@ -1,0 +1,760 @@
+{
+  "created_utc": "2026-10-23T11:31:17.472812+00:00",
+  "pure_tests_passed": 89,
+  "new_v89_pure_tests_passed": 33,
+  "inherited_pure_tests_passed": 56,
+  "local_test_log": {
+    "bytes": 188,
+    "sha256": "41b713410b1d60c3d60f90af44da31e97702a870750663b73c49b62719711d0b"
+  },
+  "expected_linux_tests": 162,
+  "actual_linux_tests_executed": false,
+  "static_undefined_names": "passed",
+  "shell_syntax": "passed",
+  "package": {
+    "actual_linux_gate_executed": false,
+    "archive": {
+      "bytes": 9052160,
+      "sha256": "0560ae13f34a60830824011f1c8571b79c7e90f545cb1e78e8a273686732802b"
+    },
+    "auxiliary_commitments_preserved": 5,
+    "before_checks_requests": {
+      "project": {
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs",
+        "required_bytes": 74817567744,
+        "required_files": 10323
+      },
+      "temporary": {
+        "path": "/tmp",
+        "required_bytes": 17263765504,
+        "required_files": 20482
+      }
+    },
+    "before_upload_requests": {
+      "project": {
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs",
+        "required_bytes": 74870290017,
+        "required_files": 12193
+      },
+      "temporary": {
+        "path": "/tmp",
+        "required_bytes": 17263765504,
+        "required_files": 20482
+      }
+    },
+    "expected_linux_tests": 162,
+    "frozen_sources_preserved": 871,
+    "launched": false,
+    "registered": false,
+    "software_test_count_is_not_a_result": true,
+    "source_bytes": 8206989,
+    "source_count": 934,
+    "source_inventory_sha256": "9c2df88733a29bedf0591e35157c50af8aabe453f6999e05ec3fc8adb2b484d4",
+    "status": "prepared_locally_not_registered",
+    "storage_plan": {
+      "additional_directory_inodes": 4096,
+      "allocation_fixed_margin_bytes": 1073741824,
+      "allocation_fragment_bytes": 4096,
+      "allocation_margin_denominator": 4,
+      "allocation_margin_numerator": 1,
+      "capacity_reserved": false,
+      "container_mapping_qualified": false,
+      "formal_disk_bound": false,
+      "measured_peak": false,
+      "roles": [
+        {
+          "basis": "exact extents; two copies allowed",
+          "bytes": 34518298,
+          "files": 1870,
+          "operation": null,
+          "role": "source_staging"
+        },
+        {
+          "basis": "conservative metadata and atomic replacement allowance",
+          "bytes": 536870912,
+          "files": 16,
+          "operation": null,
+          "role": "registration_and_inventory"
+        },
+        {
+          "basis": "V87 enforced logical output extents",
+          "bytes": 5322833920,
+          "files": 524,
+          "operation": "prepare",
+          "role": "worker_outputs"
+        },
+        {
+          "basis": "conservative 32 metadata extents including replacement overlap",
+          "bytes": 2147483648,
+          "files": 64,
+          "operation": "prepare",
+          "role": "controller_and_ledger"
+        },
+        {
+          "basis": "V87 enforced logical output extents",
+          "bytes": 1900281856,
+          "files": 518,
+          "operation": "reference_compressed-1",
+          "role": "worker_outputs"
+        },
+        {
+          "basis": "conservative 32 metadata extents including replacement overlap",
+          "bytes": 2147483648,
+          "files": 64,
+          "operation": "reference_compressed-1",
+          "role": "controller_and_ledger"
+        },
+        {
+          "basis": "V87 enforced logical output extents",
+          "bytes": 1900281856,
+          "files": 518,
+          "operation": "optimized_compressed-1",
+          "role": "worker_outputs"
+        },
+        {
+          "basis": "conservative 32 metadata extents including replacement overlap",
+          "bytes": 2147483648,
+          "files": 64,
+          "operation": "optimized_compressed-1",
+          "role": "controller_and_ledger"
+        },
+        {
+          "basis": "V87 enforced logical output extents",
+          "bytes": 1900281856,
+          "files": 518,
+          "operation": "reference_modern-1",
+          "role": "worker_outputs"
+        },
+        {
+          "basis": "conservative 32 metadata extents including replacement overlap",
+          "bytes": 2147483648,
+          "files": 64,
+          "operation": "reference_modern-1",
+          "role": "controller_and_ledger"
+        },
+        {
+          "basis": "V87 enforced logical output extents",
+          "bytes": 1900281856,
+          "files": 518,
+          "operation": "optimized_modern-1",
+          "role": "worker_outputs"
+        },
+        {
+          "basis": "conservative 32 metadata extents including replacement overlap",
+          "bytes": 2147483648,
+          "files": 64,
+          "operation": "optimized_modern-1",
+          "role": "controller_and_ledger"
+        },
+        {
+          "basis": "V87 enforced logical output extents",
+          "bytes": 1900281856,
+          "files": 518,
+          "operation": "optimized_modern-2",
+          "role": "worker_outputs"
+        },
+        {
+          "basis": "conservative 32 metadata extents including replacement overlap",
+          "bytes": 2147483648,
+          "files": 64,
+          "operation": "optimized_modern-2",
+          "role": "controller_and_ledger"
+        },
+        {
+          "basis": "V87 enforced logical output extents",
+          "bytes": 1900281856,
+          "files": 518,
+          "operation": "reference_modern-2",
+          "role": "worker_outputs"
+        },
+        {
+          "basis": "conservative 32 metadata extents including replacement overlap",
+          "bytes": 2147483648,
+          "files": 64,
+          "operation": "reference_modern-2",
+          "role": "controller_and_ledger"
+        },
+        {
+          "basis": "V87 enforced logical output extents",
+          "bytes": 1900281856,
+          "files": 518,
+          "operation": "optimized_compressed-2",
+          "role": "worker_outputs"
+        },
+        {
+          "basis": "conservative 32 metadata extents including replacement overlap",
+          "bytes": 2147483648,
+          "files": 64,
+          "operation": "optimized_compressed-2",
+          "role": "controller_and_ledger"
+        },
+        {
+          "basis": "V87 enforced logical output extents",
+          "bytes": 1900281856,
+          "files": 518,
+          "operation": "reference_compressed-2",
+          "role": "worker_outputs"
+        },
+        {
+          "basis": "conservative 32 metadata extents including replacement overlap",
+          "bytes": 2147483648,
+          "files": 64,
+          "operation": "reference_compressed-2",
+          "role": "controller_and_ledger"
+        },
+        {
+          "basis": "V87 enforced logical output extents",
+          "bytes": 9907470336,
+          "files": 533,
+          "operation": "oracle",
+          "role": "worker_outputs"
+        },
+        {
+          "basis": "conservative 32 metadata extents including replacement overlap",
+          "bytes": 2147483648,
+          "files": 64,
+          "operation": "oracle",
+          "role": "controller_and_ledger"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "checks",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "checks",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "checks",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "checks",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "prepare",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "prepare",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "prepare",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "prepare",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "reference_compressed-1",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "reference_compressed-1",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "reference_compressed-1",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "reference_compressed-1",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "optimized_compressed-1",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "optimized_compressed-1",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "optimized_compressed-1",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "optimized_compressed-1",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "reference_modern-1",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "reference_modern-1",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "reference_modern-1",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "reference_modern-1",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "optimized_modern-1",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "optimized_modern-1",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "optimized_modern-1",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "optimized_modern-1",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "optimized_modern-2",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "optimized_modern-2",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "optimized_modern-2",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "optimized_modern-2",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "reference_modern-2",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "reference_modern-2",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "reference_modern-2",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "reference_modern-2",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "optimized_compressed-2",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "optimized_compressed-2",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "optimized_compressed-2",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "optimized_compressed-2",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "reference_compressed-2",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "reference_compressed-2",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "reference_compressed-2",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "reference_compressed-2",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "oracle",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "oracle",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "oracle",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "oracle",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "primary",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "primary",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "primary",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "primary",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "six bounded new metadata writes plus partial/overlap allowance",
+          "bytes": 402653184,
+          "files": 12,
+          "operation": "supplemental",
+          "role": "entry_host_and_storage_receipts"
+        },
+        {
+          "basis": "conservative intent/response/held/release/chain allowance",
+          "bytes": 7340032,
+          "files": 14,
+          "operation": "supplemental",
+          "role": "submission"
+        },
+        {
+          "basis": "host collector stops the new allocation on overflow",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "supplemental",
+          "role": "captured_bootstrap_log"
+        },
+        {
+          "basis": "conservative allowance; external Slurm writer is not RLIMIT-bound",
+          "bytes": 4194304,
+          "files": 1,
+          "operation": "supplemental",
+          "role": "slurm_bootstrap_log"
+        },
+        {
+          "basis": "new audit writer limit",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "primary",
+          "role": "audit_report"
+        },
+        {
+          "basis": "new audit writer limit",
+          "bytes": 67108864,
+          "files": 1,
+          "operation": "supplemental",
+          "role": "audit_report"
+        },
+        {
+          "basis": "conservative actual host terminal reports and failure preservation",
+          "bytes": 134217728,
+          "files": 4,
+          "operation": null,
+          "role": "terminal_accounting"
+        }
+      ],
+      "schema": "recovery-write-plan-v89",
+      "source_archive_bytes": 9052160,
+      "source_files": 934,
+      "temporary_roles": [
+        {
+          "basis": "two inherited streams; worker 2GiB RLIMIT_FSIZE",
+          "bytes": 4294967296,
+          "files": 2,
+          "role": "worker_streams"
+        },
+        {
+          "basis": "conservative allowance; compiler internals not bounded",
+          "bytes": 4294967296,
+          "files": 8192,
+          "role": "native_builds"
+        },
+        {
+          "basis": "conservative separate allowance; Linux measurement pending",
+          "bytes": 4294967296,
+          "files": 8192,
+          "role": "software_fixtures"
+        }
+      ],
+      "total_is_conservative_allowance": true
+    },
+    "uploaded": false
+  },
+  "source_bindings": {
+    "research_v89/PROTOCOL.txt": {
+      "bytes": 5715,
+      "sha256": "147358e0708f29ac38d697865213240485b220c8add41504cac56adb5f987ed4"
+    },
+    "research_v89/__init__.py": {
+      "bytes": 79,
+      "sha256": "b222ad92d05ec2c0817ab9492eb85c5c685a5b866edbb2cee046b8a2307735c1"
+    },
+    "research_v89/audit.py": {
+      "bytes": 15650,
+      "sha256": "07b71bc5ea0c5f185e6cd4a4d156ca8dac7fdcf2e1e62b266c7f2d390a2f46ce"
+    },
+    "research_v89/campaign.py": {
+      "bytes": 9361,
+      "sha256": "3b31484005f4c6ca9a536c0c1f5ec01da18a8dea65733e6554588e7a8c0e7bf7"
+    },
+    "research_v89/config.py": {
+      "bytes": 3598,
+      "sha256": "26bdef1ff078a61503a310b176d2aa2ea84302f770bb9ddaa2ce232d1a4c5e94"
+    },
+    "research_v89/container.sh": {
+      "bytes": 1034,
+      "sha256": "55d78810505dfd0e44ef1dcaa4517808d59f992189ebe0d56a70d6c1fd40fb60"
+    },
+    "research_v89/entry.py": {
+      "bytes": 5888,
+      "sha256": "50ab3b6ac0ba988235ad1575f21acd58de2c1dec91088c15bece1eaa7ee895a2"
+    },
+    "research_v89/envelope.py": {
+      "bytes": 4046,
+      "sha256": "75d4cf06f833a9f9f35386cc06c283edaa00eb94328e0a538a8e9f5a56b59157"
+    },
+    "research_v89/host.py": {
+      "bytes": 12142,
+      "sha256": "989caea78ea03c80160673631effc016e6bf8be09c1e1366e2b8ede5175c9ca7"
+    },
+    "research_v89/implementation_audit.py": {
+      "bytes": 3779,
+      "sha256": "41a2ddbfdd246d17f323e8e5f56c612e45d804d7030780512fdf29914698575a"
+    },
+    "research_v89/mapping.py": {
+      "bytes": 1627,
+      "sha256": "1f55a6bad6cc7af7defc4136900f0fab76a6f0de13d0a1943291f6e50394e03f"
+    },
+    "research_v89/package.py": {
+      "bytes": 5570,
+      "sha256": "8554c2a61eb76e41c3f01fc88510339269cbf68e8c5a832b93335b095bffa253"
+    },
+    "research_v89/prepare.py": {
+      "bytes": 4337,
+      "sha256": "270066f821d951e1d3466856d66b61aeeb70b354cb870b8fa293e3b4a94cfb80"
+    },
+    "research_v89/receipts.py": {
+      "bytes": 7061,
+      "sha256": "5b13c07ff459e82872a1977e8c07dee5fbee5cfc99d05a3b9b89046cc51fef88"
+    },
+    "research_v89/recovery.py": {
+      "bytes": 1757,
+      "sha256": "8a50bfe933db7ea5565c276d9858f0319cc1ff32553e37f790e9c2ee23e938a1"
+    },
+    "research_v89/resource_review.py": {
+      "bytes": 2506,
+      "sha256": "dddb9a9871889b92a8e0335da78f261b8981c044c6dbaa01b9f4fd0940756c9a"
+    },
+    "research_v89/run_cpu.sbatch": {
+      "bytes": 227,
+      "sha256": "d124cbaa5ddf0ecd52b5b43959d3892a8cce7831d86c6838186c7f93a0cd8c1a"
+    },
+    "research_v89/storage_plan.py": {
+      "bytes": 6104,
+      "sha256": "f2238ea991dfb06c75767a3f2e1befba58ef5257bcaae4c327d4199bb587b911"
+    },
+    "research_v89/submit.py": {
+      "bytes": 7111,
+      "sha256": "d9d098e096193984478be16540a4e6edc7f7ea47ceceb157c146b62ffebb4c6d"
+    },
+    "research_v89/terminal.py": {
+      "bytes": 9787,
+      "sha256": "9136f22e50b097a5b43475aec88faf47a34cf0d163e658a5b262f6f955a581e4"
+    },
+    "research_v89/test_envelope.py": {
+      "bytes": 4542,
+      "sha256": "0b25f292e2d6596ebca9f5fcbe83b7946e9dd65c8c5b33ec1f4321cda6db3534"
+    },
+    "research_v89/test_host.py": {
+      "bytes": 10157,
+      "sha256": "4192cd01cae4482732e9038e74838daba4a5cf6e4a142f6853fb687e24052827"
+    },
+    "research_v89/test_implementation.py": {
+      "bytes": 2365,
+      "sha256": "52be604f27971b06d13dee3a70dfd7cfe9784141c030b4518590b7b972b3c6ae"
+    },
+    "research_v89/test_protocol.py": {
+      "bytes": 6795,
+      "sha256": "29351d5152a228e2bfb2c4cb0192bd50e1e5cea74ed83e520df14a4183482747"
+    },
+    "research_v89/test_receipts.py": {
+      "bytes": 4121,
+      "sha256": "f2084e9c98c9c80c49ef8a73ca444e4f098034a35d78bd995719b72a1a4eee71"
+    },
+    "research_v89/test_submit.py": {
+      "bytes": 1229,
+      "sha256": "f6b9e7379604edfb3935cf82508b45504ebd29fe95df8631460fac4e59d223ce"
+    },
+    "research_v89/test_submit_flow.py": {
+      "bytes": 5744,
+      "sha256": "63c67b11befbd2b697a38b439ef38d272a5a9e7bd0be30c1e9d8b399f42c65b8"
+    },
+    "research_v89/test_terminal.py": {
+      "bytes": 2718,
+      "sha256": "9d8b8f04e1996db8bd9eb18dbf0f36a1d5c9cbe37cbd924000160975bfa880a2"
+    },
+    "research_v89/test_worker.py": {
+      "bytes": 7927,
+      "sha256": "2673ea494d8d1301983ba983d6e6409e3e9a9e4cf2e25502cf75d75dd7624a8c"
+    },
+    "research_v89/worker.py": {
+      "bytes": 7889,
+      "sha256": "ecd88c5dad2487e1cb951485605031cac46272bc5738fc7dd50d3b1c2dc05e7c"
+    }
+  },
+  "manuscript_sha256": "bf3b7a73cda7b4c62fb7fe6fc7df08a36e949cb15f4c0d9e361fc25a732cc8eb",
+  "scientific_result": false,
+  "registered": false,
+  "launched": false,
+  "initial_local_fixture_failure": "Two cancellation fixtures used macOS symbolic /var ancestors; resolved fixture paths, reran all pure checks. No empirical job was involved.",
+  "diff_whitespace_review": "Two extra EOF blank lines in copied receipts.py and test_submit_flow.py; no semantic issue. Kept exact prepared source/package bytes. Static undefined-name checks and all 89 pure tests pass."
+}

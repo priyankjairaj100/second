@@ -1,0 +1,512 @@
+{
+  "acl_ready": false,
+  "active_jobs": [],
+  "automatic_retry": false,
+  "available_bound_inputs_verified": 177,
+  "branch": "codex/second-cluster-v42",
+  "checkpoint_kind": "archive_and_analysis_not_new_experiment",
+  "codes": 42467328,
+  "complete_model_state_audit_scope": "Actual binary checks executed by completed bounded cluster audits; local continuation checks copied metadata and arithmetic, not independent numerical replay.",
+  "complete_model_state_audits_verified": true,
+  "confirmation": false,
+  "current_handoff": "docs/ACTIVE_SESSION_V58.md",
+  "decision_document": "docs/RESEARCH_DECISION_V58.md",
+  "development_quality_guards_pass": false,
+  "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "evidence_archive": {
+    "bytes": 1133669,
+    "copied_metadata_files": 833,
+    "large_numerical_binaries_included": false,
+    "path": "campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz",
+    "sha256": "9def1cc4d01ea52930601ec0a457bc13755077ad0af77fddf9732bfc507b992e"
+  },
+  "frozen_source_counts": {
+    "54": 386,
+    "55": 399,
+    "56": 409
+  },
+  "gpu_calibration_equivalence": false,
+  "gpu_likelihood_parity_pass": true,
+  "gpu_max_absolute_mean_nll_deviation": 1.2084821332612728e-14,
+  "historical_quality_exclusions": 60,
+  "jobs": {
+    "13310": {
+      "Elapsed": "01:51:13",
+      "ExitCode": "0:0",
+      "JobID": "13310",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "01:50:50"
+    },
+    "13311": {
+      "Elapsed": "01:21:59",
+      "ExitCode": "0:0",
+      "JobID": "13311",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "01:21:40"
+    },
+    "13312": {
+      "Elapsed": "01:55:36",
+      "ExitCode": "0:0",
+      "JobID": "13312",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "01:55:09"
+    },
+    "13313": {
+      "Elapsed": "01:37:48",
+      "ExitCode": "0:0",
+      "JobID": "13313",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "01:37:22"
+    },
+    "13314": {
+      "Elapsed": "01:41:03",
+      "ExitCode": "0:0",
+      "JobID": "13314",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "01:40:33"
+    },
+    "13315": {
+      "Elapsed": "02:20:33",
+      "ExitCode": "0:0",
+      "JobID": "13315",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "02:19:40"
+    },
+    "13316": {
+      "Elapsed": "00:26:07",
+      "ExitCode": "0:0",
+      "JobID": "13316",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "25:58.689"
+    },
+    "13317": {
+      "Elapsed": "00:15:47",
+      "ExitCode": "0:0",
+      "JobID": "13317",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "15:41.632"
+    },
+    "13325": {
+      "Elapsed": "00:00:04",
+      "ExitCode": "0:0",
+      "JobID": "13325",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "00:02.821"
+    },
+    "13326": {
+      "Elapsed": "00:26:46",
+      "ExitCode": "0:0",
+      "JobID": "13326",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "26:39.846"
+    },
+    "13327": {
+      "Elapsed": "00:01:09",
+      "ExitCode": "0:0",
+      "JobID": "13327",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "01:07.798"
+    },
+    "13329": {
+      "Elapsed": "00:01:37",
+      "ExitCode": "0:0",
+      "JobID": "13329",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "01:26.813"
+    },
+    "13352": {
+      "Elapsed": "00:04:46",
+      "ExitCode": "0:0",
+      "JobID": "13352",
+      "MaxRSS": "",
+      "State": "COMPLETED",
+      "TotalCPU": "04:42.624"
+    }
+  },
+  "local_metadata_validation": "passed_metadata_only",
+  "local_validation": "validation/v58_terminal_metadata_check.json",
+  "manuscript_compilation": "native_editor_success",
+  "manuscript_snapshot": "reports/manuscript_v58.tex",
+  "missing_binary_inputs_not_locally_revalidated": 30,
+  "missing_metadata_inputs": 0,
+  "new_empirical_jobs": 0,
+  "next_checkpoint_registered": false,
+  "original_tokens": 1664,
+  "pending_jobs": [],
+  "prior_failed_preparation_cpu_seconds": 4801,
+  "programs": {
+    "54": "03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b",
+    "55": "4de04c4a0bd5db485c7ccd7511a4d5094195afdce15c115a909346879b84125f",
+    "56": "8c3f46537f6b1cdc51c2b43dd3c1ebf2a7afff5114d6b185bcb160c6eaf98f6d"
+  },
+  "quality_summary": {
+    "acl_ready": false,
+    "confirmation": false,
+    "development_guards_pass": false,
+    "fixed_feature_comparisons": {
+      "full_precision": {
+        "article_log_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": 0.25435347378613626,
+          "wikitext2:validation:article-row-1299": 0.23080823753123222,
+          "wikitext2:validation:article-row-132": 0.18044342317478496,
+          "wikitext2:validation:article-row-2115": 0.17461660304364277,
+          "wikitext2:validation:article-row-2237": 0.17958844270008079,
+          "wikitext2:validation:article-row-2352": 0.14511473166187513,
+          "wikitext2:validation:article-row-2525": 0.1620248541977989,
+          "wikitext2:validation:article-row-3636": 0.1937433303536288
+        },
+        "article_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": 1.289627573252888,
+          "wikitext2:validation:article-row-1299": 1.259617668893998,
+          "wikitext2:validation:article-row-132": 1.1977483547641727,
+          "wikitext2:validation:article-row-2115": 1.1907895839800111,
+          "wikitext2:validation:article-row-2237": 1.1967247409545052,
+          "wikitext2:validation:article-row-2352": 1.156172212218082,
+          "wikitext2:validation:article-row-2525": 1.175889466747207,
+          "wikitext2:validation:article-row-3636": 1.2137847012811158
+        },
+        "articles_fixed_equal": 0,
+        "articles_fixed_higher": 8,
+        "articles_fixed_lower": 0,
+        "max_article_log_ratio": 0.25435347378613626,
+        "max_article_ratio": 1.289627573252888,
+        "pooled_log_perplexity_ratio": 0.19008663705614748,
+        "pooled_perplexity_ratio": 1.2093543680209724
+      },
+      "nearest_rounding": {
+        "article_log_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": -0.08482079624437346,
+          "wikitext2:validation:article-row-1299": -0.040254693398533235,
+          "wikitext2:validation:article-row-132": -0.02850208966640993,
+          "wikitext2:validation:article-row-2115": -0.3286385741538926,
+          "wikitext2:validation:article-row-2237": -0.24291219532897518,
+          "wikitext2:validation:article-row-2352": -0.2631723407768739,
+          "wikitext2:validation:article-row-2525": -0.08976582585492408,
+          "wikitext2:validation:article-row-3636": -0.221075412082386
+        },
+        "article_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": 0.9186769000018375,
+          "wikitext2:validation:article-row-1299": 0.9605447635847393,
+          "wikitext2:validation:article-row-132": 0.9719002631966808,
+          "wikitext2:validation:article-row-2115": 0.7199031613419568,
+          "wikitext2:validation:article-row-2237": 0.7843403794971392,
+          "wikitext2:validation:article-row-2352": 0.7686094231510399,
+          "wikitext2:validation:article-row-2525": 0.9141452293860179,
+          "wikitext2:validation:article-row-3636": 0.8016562234454679
+        },
+        "articles_fixed_equal": 0,
+        "articles_fixed_higher": 0,
+        "articles_fixed_lower": 8,
+        "max_article_log_ratio": -0.02850208966640993,
+        "max_article_ratio": 0.9719002631966808,
+        "pooled_log_perplexity_ratio": -0.16239274093829603,
+        "pooled_perplexity_ratio": 0.8501072670433516
+      },
+      "sequential": {
+        "article_log_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": 0.16065551623805902,
+          "wikitext2:validation:article-row-1299": 0.007783176979429536,
+          "wikitext2:validation:article-row-132": 0.024435159291295878,
+          "wikitext2:validation:article-row-2115": 0.035653672388109695,
+          "wikitext2:validation:article-row-2237": 0.06396042623087111,
+          "wikitext2:validation:article-row-2352": 0.09433649510776922,
+          "wikitext2:validation:article-row-2525": 0.02861315866244591,
+          "wikitext2:validation:article-row-3636": 0.04483071013714924
+        },
+        "article_perplexity_ratios": {
+          "wikitext2:validation:article-row-1040": 1.1742803786080982,
+          "wikitext2:validation:article-row-1299": 1.0078135446358643,
+          "wikitext2:validation:article-row-132": 1.0247361443351606,
+          "wikitext2:validation:article-row-2115": 1.03629688610979,
+          "wikitext2:validation:article-row-2237": 1.0660502103018303,
+          "wikitext2:validation:article-row-2352": 1.098929468098631,
+          "wikitext2:validation:article-row-2525": 1.0290264475029116,
+          "wikitext2:validation:article-row-3636": 1.0458507929840155
+        },
+        "articles_fixed_equal": 0,
+        "articles_fixed_higher": 8,
+        "articles_fixed_lower": 0,
+        "max_article_log_ratio": 0.16065551623805902,
+        "max_article_ratio": 1.1742803786080982,
+        "pooled_log_perplexity_ratio": 0.0575335393793912,
+        "pooled_perplexity_ratio": 1.0592207956671105
+      }
+    },
+    "guards": {
+      "every_article_pass": true,
+      "pooled_pass": false
+    },
+    "inferential_interval": null,
+    "ratio_overflow_rule": "null perplexity/ratio means exp exceeded binary64; finite log values determine guards",
+    "scope": "Adaptive diagnostic on eight previously exposed articles; no population, superiority, or submission-readiness claim",
+    "thresholds": {
+      "max_article_fixed_over_sequential": 1.2,
+      "max_pooled_fixed_over_sequential": 1.05
+    },
+    "totals": {
+      "fixed_feature": {
+        "mean_nll": 4.0099961328145906,
+        "nll_sum": 4074.1560709396244,
+        "perplexity": 55.146657300702955,
+        "predictions": 1016
+      },
+      "full_precision": {
+        "mean_nll": 3.8199094957584436,
+        "nll_sum": 3881.0280476905787,
+        "perplexity": 45.60008113332969,
+        "predictions": 1016
+      },
+      "nearest_rounding": {
+        "mean_nll": 4.172388873752887,
+        "nll_sum": 4239.147095732933,
+        "perplexity": 64.87023395588822,
+        "predictions": 1016
+      },
+      "sequential": {
+        "mean_nll": 3.9524625934352,
+        "nll_sum": 4015.701994930163,
+        "perplexity": 52.063420135148434,
+        "predictions": 1016
+      }
+    }
+  },
+  "repository": "https://github.com/priyankjairaj100/second",
+  "research_decision": "Resolve or redesign the target-quality and practical-value limitations before model/root expansion; do not relax frozen thresholds or drop stronger controls.",
+  "retained_tokens": [
+    1536,
+    768
+  ],
+  "schema": "second-terminal-handoff-v58",
+  "snapshot_utc": "2026-10-13T09:05:30.169670+00:00",
+  "source_base": "8825fcc4933f31759abb71c6ce55c945a5e7c307",
+  "stages": 24,
+  "status": "terminal_exactness_passed_quality_failed_gpu_parity_passed",
+  "terminal_receipts": {
+    "v54_primary_audit": {
+      "bytes": 147595,
+      "present": true,
+      "reported": {
+        "acl_ready": false,
+        "all_declared_artifacts_rehashed": true,
+        "analysis_elapsed_ns": 1564795641747,
+        "analysis_outside_empirical_worker_ledger": true,
+        "audit_history_bytes": 5118304289,
+        "campaign": "/nfs_home/users/poonam/second-20261010/local_runs/full-model48-v54-20261011-a",
+        "complete_model": true,
+        "confirmation": false,
+        "oracle_worker_ns": 8404457758748,
+        "original_tokens": 1664,
+        "population_claims": false,
+        "preparation_transaction_ns": 6671088160548,
+        "preparation_worker_ns": 6668719487722,
+        "prior_failed_cpu_seconds": 4801,
+        "program_sha256": "03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b",
+        "quality_evaluation": false,
+        "schema": "complete-service-artifact-audit-v54",
+        "shared_checkpoint_bytes": 352825175,
+        "status": "verified",
+        "successive_deletions": 2,
+        "total_continuation_cpu_seconds": 43453
+      },
+      "sha256": "dd84bf46734486ce7c586f3f303f97ec2574a23d2e4c46b604251996e93a2a7f"
+    },
+    "v54_supplemental_audit": {
+      "bytes": 55723,
+      "present": true,
+      "reported": {
+        "analysis_cpu_ns": 939997302621,
+        "analysis_elapsed_ns": 944137874551,
+        "analysis_outside_empirical_worker_ledger": true,
+        "campaign": "/nfs_home/users/poonam/second-20261010/local_runs/full-model48-v54-20261011-a",
+        "frozen_audit_path": "/nfs_home/users/poonam/second-20261010/local_runs/full-model48-v54-20261011-a/artifact-audit.json",
+        "frozen_audit_sha256": "dd84bf46734486ce7c586f3f303f97ec2574a23d2e4c46b604251996e93a2a7f",
+        "frozen_sources_changed": false,
+        "program_sha256": "03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b",
+        "schema": "complete-service-additive-artifact-audit-v54",
+        "scope": "Actual ordered model codes, common targets, registered retained records/provenance, full canonical bytes, trust sidecars and literal storage checked against frozen execution receipts.",
+        "slurm_job_id": "13317",
+        "status": "verified"
+      },
+      "sha256": "a9ecf44c13c27a6c17033b5f0e400f1efee1f45655c3c5842c6309d3487ac77b"
+    },
+    "v55_audit": {
+      "bytes": 72002,
+      "present": true,
+      "reported": {
+        "acl_ready": false,
+        "actual_model_codes_reconstructed": 42467328,
+        "analysis_cpu_ns": 66316212936,
+        "analysis_elapsed_ns": 66611756295,
+        "analysis_outside_empirical_worker_ledger": true,
+        "campaign": "/nfs_home/users/poonam/second-20261010/local_runs/exposed-quality-v55-20261011-a",
+        "complete_stages": 24,
+        "confirmation": false,
+        "development_guards_pass": false,
+        "program_sha256": "4de04c4a0bd5db485c7ccd7511a4d5094195afdce15c115a909346879b84125f",
+        "schema": "exposed-quality-artifact-audit-v55",
+        "scope": "Actual fixed/sequential packed arrays and row grids, all 32 losses, descriptive summaries, historical parity and sealed CPU debit verified. Trusted execution assumed; no independent inference or quantization rerun.",
+        "sealed_cpu_receipt_verified": true,
+        "slurm_job_id": "13327",
+        "status": "verified"
+      },
+      "sha256": "fa4a762a2ca6389968a503c0e224d1bd3f0d1bf0bb0aedb7acd24dd9d251b042"
+    },
+    "v55_completion": {
+      "bytes": 18092,
+      "present": true,
+      "reported": {
+        "acl_ready": false,
+        "approximate_numpy_binary64_likelihood": true,
+        "certified_inference": false,
+        "code_count": 42467328,
+        "confirmation": false,
+        "context_elapsed_ns": 83172388768,
+        "cpu_self_seconds": 1593.7515859999999,
+        "development_guards_pass": false,
+        "disposal_elapsed_ns": 22389837,
+        "fixed_model_sha256": "3fa620349c5d94e839d5a15b6dd13898960a748678d15f9cdcab65c5775085ba",
+        "fixed_target_sha256": "908d7b60579a0197d775a4672f8c07c0aec9d9c870b1452f73a05c27a5a2f855",
+        "intervals": false,
+        "max_rss_kib": 2554812,
+        "model_target": "fixed-anchor retained768/original1664 versus matched sequential",
+        "no_new_quality_inputs": true,
+        "original_normalization": 1664,
+        "program_sha256": "4de04c4a0bd5db485c7ccd7511a4d5094195afdce15c115a909346879b84125f",
+        "retained_calibration_tokens": 768,
+        "schema": "exposed-quality-worker-v55",
+        "sequential_construction_elapsed_ns": 1491410333041,
+        "sequential_target_sha256": "ddcc41a5420a63c60f64372af1fb5e077efc9266ad12feafe6ed04be5d6248b8",
+        "shared_evaluator_sha256": "db1253faa8a7d99fc2edf63405d6efe493e8e1a5783f3b4b1c6d970e88137d0d",
+        "slurm_job_id": "13326",
+        "status": "complete",
+        "timing_scope": "Context, parity, sequential construction, all likelihoods, writes and disposal; controller additionally charges verification before worker clock, terminal commit and exit",
+        "valid_diagnostic": true,
+        "worker_elapsed_ns": 1599945465733
+      },
+      "sha256": "1c35aa42d570e51d17f800e538bf6118ccf4a0ede85d0903ddc1ed3c2689b135"
+    },
+    "v56_audit": {
+      "bytes": 69157,
+      "present": true,
+      "reported": {
+        "acl_ready": false,
+        "analysis_cpu_ns": 4712401060,
+        "analysis_elapsed_ns": 4897040653,
+        "analysis_outside_empirical_worker_ledger": true,
+        "campaign": "/nfs_home/users/poonam/second-20261010/local_runs/gpu-parity-v56-20261011-a",
+        "confirmation": false,
+        "cpu_development_guards_pass": false,
+        "exact_calibration_equivalence": false,
+        "parity_passed": true,
+        "program_sha256": "8c3f46537f6b1cdc51c2b43dd3c1ebf2a7afff5114d6b185bcb160c6eaf98f6d",
+        "schema": "cuda-likelihood-artifact-audit-v56",
+        "scope": "32 actual same-model exposed NLL comparisons and CPU accounting verified; no independent inference rerun, certified feature/calibration equivalence or controlled speed claim.",
+        "slurm_job_id": "13329",
+        "status": "verified"
+      },
+      "sha256": "372a5b870c8d4c0a303869e6a17b85df2c8007c42a75fe02c0dc17f9010f1294"
+    },
+    "v56_completion": {
+      "bytes": 9666,
+      "present": true,
+      "reported": {
+        "acl_ready": false,
+        "amp": false,
+        "certified_inference": false,
+        "confirmation": false,
+        "context_elapsed_ns": 63148094989,
+        "copied_arrays_with_bitwise_roundtrip": 150,
+        "cpu_development_guards_pass": false,
+        "cpu_self_seconds": 72.15228400000001,
+        "deterministic_algorithms": true,
+        "device": "NVIDIA A100 80GB PCIe",
+        "dtype": "float64",
+        "exact_calibration_equivalence": false,
+        "first_actual_batch_parity_passed": true,
+        "max_rss_kib": 2939116,
+        "new_quality_inputs": false,
+        "parity_passed": true,
+        "peak_cuda_allocated_bytes": 1494948864,
+        "peak_cuda_reserved_bytes": 1562378240,
+        "program_sha256": "8c3f46537f6b1cdc51c2b43dd3c1ebf2a7afff5114d6b185bcb160c6eaf98f6d",
+        "schema": "cuda-likelihood-parity-result-v56",
+        "scope": "32 exposed likelihood comparisons only; timings are not a controlled speed comparison",
+        "slurm_job_id": "13329",
+        "status": "complete",
+        "tf32": false,
+        "torch": "2.10.0+cu128",
+        "valid_diagnostic": true,
+        "worker_elapsed_ns": 70175519432
+      },
+      "sha256": "92d048126b951be519c649b971f9b7f037d4b75011e6033e6eda907b234ed990"
+    }
+  },
+  "untouched_quality": false,
+  "updated_date": "2026-10-13",
+  "v54_comparisons": 8,
+  "v54_cpu_seconds": 38652,
+  "v54_ratios": {
+    "cached": {
+      "compressed_deployment_saving": [
+        0.04725249200482551,
+        0.031056477711430497
+      ],
+      "compressed_live_state_saving": [
+        0.09261438470026218,
+        0.0871475264101772
+      ],
+      "compressed_over_control_observed_lifetime": 1.1718225423781568,
+      "compressed_over_control_request_time": [
+        1.1929122630135098,
+        1.4143137852993473
+      ]
+    },
+    "cold": {
+      "compressed_deployment_saving": [
+        0.04725249200482551,
+        0.031056477711430497
+      ],
+      "compressed_live_state_saving": [
+        0.09261438470026218,
+        0.0871475264101772
+      ],
+      "compressed_over_control_observed_lifetime": 0.9829488777736001,
+      "compressed_over_control_request_time": [
+        0.8879677500311495,
+        0.8224108555495543
+      ]
+    },
+    "hybrid": {
+      "compressed_deployment_saving": [
+        -0.022323516044190805,
+        0.07229162199643546
+      ],
+      "compressed_live_state_saving": [
+        -0.04705246171674293,
+        0.18837830009858925
+      ],
+      "compressed_over_control_observed_lifetime": 1.054955859378041,
+      "compressed_over_control_request_time": [
+        1.1320629540942568,
+        0.7783050985000217
+      ]
+    }
+  },
+  "v54_with_prior_failure_cpu_seconds": 43453,
+  "v55_cpu_seconds": 1595,
+  "v56_cpu_seconds": 73,
+  "visual_layout_review": false,
+  "worker_seals_locally_verified": 8
+}

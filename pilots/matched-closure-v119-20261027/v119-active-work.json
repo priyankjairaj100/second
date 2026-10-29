@@ -1,0 +1,31 @@
+{
+  "actual_collector_executed": false,
+  "actual_e20_packaged": false,
+  "actual_reduction_executed": false,
+  "current_observation": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-chain-observation-20261027T101239Z.json",
+  "limitations": [
+    "Preview startup failure remains; no retry without changed condition.",
+    "Final venue/cycle/category question remains pending; do not repeat.",
+    "No duplicate jobs, retries, cap changes, subagents, paid compute or submission."
+  ],
+  "manuscript": {
+    "description": "Three correctness proof bodies moved verbatim to appendix; pinned GPT2 citation added. Prior empirical claims unchanged.",
+    "native_compile_success": true,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex",
+    "proof_record": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v119-proof-placement-precompile.json",
+    "sha256": "339529d9bf3800e9365ea3a473cb954b1049c7faf9914684175326ed847f7d51"
+  },
+  "next": "Wait for both actual audits, then reporting_v113.collect and reporting_v117.render, integrate every row and complete costs, native compile, build and verify V119 evidence/bundle, publish existing branch/draftPR.",
+  "prepared_files": [
+    "validation/build_matched_evidence_v119.py",
+    "validation/verify_review_bundle_v119.py",
+    "validation/package_review_bundle_v119.py",
+    "validation/v119_package_preparation.json",
+    "validation/v119_checkpoint_citation.json"
+  ],
+  "published_handoff": "docs/ACTIVE_SESSION_V118.md",
+  "published_head": "338343d",
+  "scheduler": "PAUSED",
+  "state": "All16 requests and both oracles complete0:0; primary16426 running and supplemental16427 pending at latest observation. No actual collector or reduction.",
+  "updated_utc": "2026-10-27T10:18:27.922020+00:00"
+}

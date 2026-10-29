@@ -1,0 +1,47 @@
+V79 prospective four-cell integration SOFTWARE gate, 23 October2026
+
+V76 job15897 and V78 job15898 passed their separately registered component
+gates. V79 combines those exact qualified bytes in a new service adapter.
+This registration executes artificial tiny-decoder software fixtures only.
+No empirical checkpoint, corpus, quality article or historical launcher runs.
+The recurring scheduler stays paused. This is a single finite CPU allocation.
+
+Four cells: reference compressed/reference modern/optimized compressed/
+optimized modern. All share unchanged V50 primal neighbors. The optimized
+cells additionally use the V76 point and box token primitives. Optimized
+compressed enables the byte-identical V75 decoder in a private compile
+directory, retaining original frame/hash/canonical parsing. Optimized modern
+enables V77 canonical-choice reuse with1GiB allowance and per-request clear.
+All four cells enforce the same9GiB resident reservation through actual
+dispatcher admission, preserving16GiB OS cap, stage/request work caps and
+complete point fallback. Runtime dispatch identities are recorded separately
+from the unchanged target/state identities. Existing source files are untouched.
+
+Fixed sequence:44 existing V63/V64/V66 Linux tests, then5 new integration
+tests. The new tests run actual tiny finite teacher/solver operations: each
+of the four cells must return the independently reconstructed complete model,
+state and trust bytes; optimized corruption must fail before solver access;
+9GiB residency must be enforced before predecessor access; every dispatch
+must restore after injected failure and caches must clear; the single-use
+outer transaction must include load/setup/cleanup and refuse reuse.
+Exact counts, zero skips/errors/failures required. No timing-win criterion.
+Within software tests native libraries may be reused; this does not qualify
+reuse across empirical requests. Future empirical workers require fresh
+processes and one transaction each, including native compilation cost.
+
+Namespace service-integration-v79-20261023-a. Bind source-only snapshot plus
+the same11 read-only V63 Zstandard dependency files and successful V76/V78
+completion receipts. Pinned runtime and container commitments match V78.
+Verify all source/dependency bytes before and after. Single held/no-requeue
+job; exclusive registration/intent, capture job ID and verify limits before
+release. Never repeat a failed or uncertain attempt.
+
+Caps unchanged:1CPU/thread on csis.mn1,16GiB AS/scheduler,2GiB per file,
+600seconds wall,300/301 process CPU,602seconds aggregate parent and waited
+children CPU. Retain all failures, partial artifacts, scheduler accounting,
+process/child RSS and complete logs. Root review is not independent review.
+Success additionally requires terminal Slurm COMPLETED0:0 and output hashes.
+
+Passing establishes software integration on tiny generated inputs only.
+The complete-model campaign described in NEXT_COMPARISON.txt is separate,
+unregistered and not launched by this gate. No manuscript claim changes.

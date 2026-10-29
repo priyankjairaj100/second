@@ -1,0 +1,51 @@
+Second V112: next experiment and writing decision
+27 October2026
+
+Verified V72/V89 findings remain: modest storage benefit, scoped source-access
+avoidance, mixed optimized latency and a small quality cost inside frozen guards.
+V104's first GPT2 request failed bounded certification; it completed no matched
+request. V110 subsequently certified2359296codes of the implicated stage with the
+existing token solver and unchanged target/limits. This is selected-stage
+certification, not an independent fresh oracle, full-model transfer or timing win.
+
+A prospective all-point-token policy is justified for the full matched screen.
+It chooses token before every point-valued solve, including exact-source fallback
+and both fresh oracles, and applies equally to reference/optimized compressed and
+modern cells. Boxes and Gram keep their existing policy. No old streamed attempt
+is repeated. Both complete preparations are reused as sealed read-only inputs.
+Reserve all16requests, two fresh complete oracles, primary and supplemental audits
+before launch. Every cell/end-point must be reported. The original V82 decision
+rules remain; do not change workload/order/grid/quality guards after outcomes.
+
+V111 source is retained; a prelaunch audit review found the metadata reader was
+unsuitable for full binary states. V112 is a separate successor with the corrected
+bounded binary reader, original caps and regression checks. Actual Linux source
+qualification must precede registration of its dependent numerical chain. A source
+package, generated tests or structural admission does not establish correctness.
+
+All possible box plus token fallback paths fit the unchanged stage/request bounds.
+The maximum stage reservation is39,803,195,392 work units; worst GPT2 request
+reservation858,006,405,120 at512tokens fits the1trillion cap. The endpoint request
+reservations are561,161,355,264 at384tokens and344,645,615,616 at256tokens. These
+are work proxies, not timing predictions. Eighteen numerical reservations total
+72036;6304actual earlier debit yields78340<=82840. Complete controllers5436+79
+fit6040; software395+207=602; checks controller254+48=302. All other original
+caps and old unrelated12602unknown debit remain.
+
+Generality would strengthen practical relevance, but the contribution does not
+logically require a general speedup. If complete matched audits pass, report
+related-checkpoint transfer only, with single-observation timings. Two GPT-family
+models cannot establish broad architecture/workload generality. If compression
+loses a stratum, retain that loss and use measured phases to explain it. Neither
+a certification refusal nor a slow implementation proves all future speedups
+impossible. Do not use the selected-stage solve time as a comparison to a failed
+full request. Any further timing replication needs a separate prospective useful
+question and admissible complete budget under the existing V82 rules.
+
+The manuscript and V111 review bundle now include E19, with the failed screen and
+scoped diagnostic. Native compile and portable byte/coverage/arithmetic checks
+passed. Actual rendered layout and final venue/category remain pending, and SSH
+currently blocks qualification. No submission-ready, transfer or general-speedup
+claim is made. No additional experiment is needed for the narrower established
+storage/source-access/latency contribution; the authorized broader campaign is
+still incomplete and the existing heartbeat remains active.

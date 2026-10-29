@@ -1,0 +1,17 @@
+{
+  "checker_sha256": "2a32dcde70f0b0e9d5f7d3f3056c5cfe0af36bc0bc3ed11f4c7ba35db72beb7a",
+  "isolated_copy_only": true,
+  "mutation": "Append one newline to the copied registration JSON; collection manifest is unchanged.",
+  "original_capture_unchanged": true,
+  "original_file_sha256": "71bc8fdbfa222d334b831a4c379602ae3b4949cc7e06d2053c8cc826cf4ca96f",
+  "schema": "second-v58-copied-metadata-tamper-rejection",
+  "status": "passed",
+  "tampered_file": "full-model48-v54-20261011-a/registration.json",
+  "validation_exit_code": 1,
+  "validation_result": {
+    "error": "Copied file hash mismatch: full-model48-v54-20261011-a/registration.json",
+    "error_type": "ValueError",
+    "schema": "second-terminal-metadata-check-v58",
+    "validation_status": "failed"
+  }
+}

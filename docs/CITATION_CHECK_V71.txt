@@ -1,0 +1,84 @@
+Current seven-reference check, 18 October 2026
+Scope: existing unchanged manuscript SHA256
+65d02e6048156fc1d2270368d8fa7efae192511f79e5aa9d00fc3820a772db0a.
+This is a bounded metadata and attribution refresh, not an exhaustive novelty
+search, independent proof audit or external-system reproduction.
+
+Static structure
+All seven bibliography keys are used by eight citation groups; there are no
+missing or unused entries. Eight reference uses resolve to fourteen unique labels.
+All eight bibliography destinations use HTTPS. These are source-text checks;
+rendered author-year citations, wrapping, page count and venue compliance are not
+verified. See validation/v71_manuscript_citation_structure.json. The manuscript
+and development bundle were not edited, recompiled or repackaged in this refresh.
+
+GPTQ
+The pinned v2 record confirms Frantar, Ashkboos, Hoefler and Alistarh, the title,
+2023 revision and ICLR2023 listing. Its approximate second-order quantization
+setting supports the manuscript's limited description. No external speed/quality
+result is transferred to this project's different target.
+https://arxiv.org/abs/2210.17323v2
+
+Ginart and colleagues
+The NeurIPS2019 primary proceedings record confirms the title, author identities
+and volume32. Displayed names omit some middle initials used in the manuscript;
+this does not indicate different authors. The present refresh is metadata only.
+Section4.1's stored quantization metadata, stability checks and retraining fallback
+remain supported by the separately recorded16October proceedings-PDF inspection.
+https://papers.nips.cc/paper_files/paper/2019/hash/cb79f8fa58b91d3af6c9c991f63962d3-Abstract.html
+
+MEDU
+The v1 primary record confirms Lang, Helvitz and Shlezinger, title and2025 date.
+Its abstract supports lossy stored distributed-training updates and a bound on
+deviation from retraining, which is the distinction made in the manuscript.
+https://arxiv.org/abs/2505.03388v1
+
+QSS
+The pinned v1 title, five authors and2026 date match. The introduction explicitly
+separates frozen schema from additive content, label from instance deletion, and
+includes rebuilds when schema examples are deleted. The manuscript describes
+this prior work without claiming fixed schemas or exact statistics as novel.
+https://arxiv.org/html/2610.07197v1
+
+Exact-Fun
+The DOI redirect failed in the web tool, Crossref's API was inaccessible through
+that tool, and the IEEE page presented a robot-verification screen. No challenge
+was bypassed. A normal bounded request to the public Crossref metadata API then
+succeeded and recovered the IEEE-deposited conference metadata: Xiong, Wei Li,
+Yingshu Li and Cai,2023, ICDM, pages1439--1444, DOI10.1109/ICDM58522.2023.00188.
+The title and author order match the bibliography. The raw7019-byte response is
+preserved with SHA256f7d47711e805a5accdabf53ebea8c5d68fccc5b086b4dc3eed7258338b3fbf90.
+This closes the previously unresolved fresh conference-metadata check. It does
+not retrieve or verify the publisher PDF or change the manuscript's explicit
+historical author-version proof scope.
+https://api.crossref.org/works/10.1109/ICDM58522.2023.00188
+https://doi.org/10.1109/ICDM58522.2023.00188
+The pinned author-repository file page still resolves. Its proof is not freshly
+reread here; the saved-file hash and16October page6--7 inspection remain documented
+in LITERATURE_REFRESH_V69.txt. In particular, the uniformity/independence
+qualification is not silently promoted to a statement about all later versions.
+https://github.com/zuobinxiong/zuobinxiong.github.io/blob/300a0672be8d265ddebf20d6e69f790456a1bd81/assets/pdf/ExactFedUnlearning.pdf
+
+QEBVerif
+The v2 record confirms Zhang, Song and Sun, title and2023 revision. Its abstract
+supports differential reachability with MILP fallback for network-versus-quantized
+inference-output differences. The bibliography intentionally cites this checked
+preprint without inferring proceedings details.
+https://arxiv.org/abs/2212.02781v2
+
+ExecCert
+The pinned v1 confirms Zhao, Wang, Chang and He, title and2026 date. Sections3--4
+separate producer, contract and verifier. Section4.4 explicitly treats finite
+formats, with codebook construction referenced in the appendix. The manuscript
+correctly avoids saying this broader framework cannot express the present target.
+https://arxiv.org/html/2610.02268v1
+
+Remaining boundary
+No citation correction is justified by this bounded refresh. All seven cited
+identities now have current primary/deposited-metadata support, but that is not
+proof-level correctness or a comprehensive literature search. Preserve prior
+full-text inspection scopes and all failed retrieval observations. Actual rendered
+reference appearance remains unverified: a fresh native-app inventory attempt
+returned 'Sky Computer Use service startup request failed'. No repeated UI attempt,
+new tab, separate PDF or replacement editor was used. The final paper still needs
+actual quality/cost closure, a justified timing decision and submission packaging.

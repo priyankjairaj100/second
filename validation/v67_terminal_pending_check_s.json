@@ -1,0 +1,35 @@
+{
+  "active_jobs": {
+    "15267": "RUNNING",
+    "15268": "PENDING",
+    "15269": "PENDING",
+    "15270": "PENDING",
+    "15271": "PENDING",
+    "15272": "PENDING",
+    "15273": "PENDING",
+    "15274": "PENDING",
+    "15275": "PENDING"
+  },
+  "actual_model_state_bytes_checked_locally": false,
+  "automatic_launch_or_retry": false,
+  "captured_at_utc": "2026-10-16T17:39:21.931391+00:00",
+  "cluster_terminal_audit_claims_reconciled": false,
+  "confirmation": false,
+  "independent_solver_validation": false,
+  "inference_executed": false,
+  "missing_receipts": [
+    "primary-audit.json",
+    "supplemental-audit.json",
+    "primary-entry.json",
+    "supplemental-entry.json"
+  ],
+  "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+  "quality_evaluation": false,
+  "schema": "v67-portable-terminal-metadata-review",
+  "snapshot": {
+    "bytes": 385792,
+    "sha256": "7dd28ef74236398536ee2cbe7c0fa0db9aa7111d31bcb414683f37a2e526fde0"
+  },
+  "status": "pending_terminal",
+  "submission_ready": false
+}

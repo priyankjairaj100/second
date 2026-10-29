@@ -1,0 +1,14 @@
+{
+  "bound_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "bound_source": "research_v101/fetch.py:11-12",
+  "current_card_checked_utc": "2026-10-27",
+  "entire_card_reproduced": false,
+  "fresh_model_or_corpus_downloaded": false,
+  "html_view_error_preserved": "Web tool could not open blob view; pinned raw README retrieved successfully",
+  "pinned_card_verified": true,
+  "publisher_declared_license": "MIT",
+  "publisher_model_card_parameters": "124M",
+  "scientific_result": false,
+  "url": "https://huggingface.co/openai-community/gpt2/blob/607a30d783dfa663caf39e06633721c8d4cfcd7e/README.md",
+  "verified_url": "https://huggingface.co/openai-community/gpt2/raw/607a30d783dfa663caf39e06633721c8d4cfcd7e/README.md"
+}

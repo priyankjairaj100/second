@@ -1,0 +1,105 @@
+{
+  "scope": "Generated software fixtures; no model, dataset, service or Linux campaign result",
+  "platform": "macOS-13.0-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.12.7 (main, Oct  1 2024, 02:05:46) [Clang 15.0.0 (clang-1500.1.0.2.5)]",
+  "numpy": "2.3.5",
+  "reference_sha256": "d5f8a4c5279ef759b7d58eadd85429cffdfe7bdb3fe788aaaed05d12501f8711",
+  "clock": "perf_counter_ns",
+  "fixture_seed": 20261022,
+  "compile_excluded": true,
+  "legacy_tests": {
+    "reference": {
+      "tests": 8,
+      "passed": true,
+      "log": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.962s\n\nOK\n"
+    },
+    "prototype": {
+      "tests": 8,
+      "passed": true,
+      "log": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.376s\n\nOK\n"
+    }
+  },
+  "differential_cases": {
+    "valid": 40,
+    "mutated": 8410,
+    "accepted_mutations": 2710,
+    "rejected_mutations": 4100
+  },
+  "benchmarks": [
+    {
+      "shape": [
+        128,
+        768
+      ],
+      "bits": 48,
+      "block_size": 256,
+      "operation": "legacy parse(blob).box(), two full decodes plus checks/copies",
+      "payload_sha256": "1a0cb40bcc973f201b9b3b7193643538ee0645bc178ebc2f8f3b955aa61783cf",
+      "bytes": 615969,
+      "samples_ns": {
+        "reference": [
+          191459792,
+          190836292,
+          191861792,
+          192582375,
+          192288625,
+          193817417
+        ],
+        "prototype": [
+          9425209,
+          9529792,
+          9792417,
+          9529916,
+          9749958,
+          9395375
+        ]
+      },
+      "median_seconds": {
+        "reference": 0.1920752085,
+        "prototype": 0.009529854
+      },
+      "ratio_reference_over_prototype": 20.155105051976662
+    },
+    {
+      "shape": [
+        128,
+        3072
+      ],
+      "bits": 48,
+      "block_size": 256,
+      "operation": "legacy parse(blob).box(), two full decodes plus checks/copies",
+      "payload_sha256": "c6e975c89df14a2f8a0a87a6e292d3ce3e52dc2534cbc66fcbf7677e01c9a990",
+      "bytes": 2461475,
+      "samples_ns": {
+        "reference": [
+          780318750,
+          785430500,
+          783432834,
+          774076292,
+          785779333,
+          879973167
+        ],
+        "prototype": [
+          38280708,
+          38148583,
+          38533959,
+          38739833,
+          37999625,
+          38232584
+        ]
+      },
+      "median_seconds": {
+        "reference": 0.784431667,
+        "prototype": 0.038256646
+      },
+      "ratio_reference_over_prototype": 20.504454755390736
+    }
+  ],
+  "source_hashes": {
+    "decode.c": "17f03da030a87a54d3dc5e242b0539a9faaa83183e318089387bc5eade5b130b",
+    "fast_decode.py": "491db99fd7f8b5a749b448df24842a1d8fdddaa8cdf53e5d266bdbac8b268b77",
+    "check.py": "1cf190a858a63890ad9540edb98b0eebf44dff2cc05a994d8ea6d0cdc99740d1"
+  },
+  "elapsed_seconds": 14.21923337498447
+}

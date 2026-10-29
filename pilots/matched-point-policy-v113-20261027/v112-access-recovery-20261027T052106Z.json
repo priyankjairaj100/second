@@ -1,0 +1,52 @@
+{
+  "absent_archives": [
+    "matched-complete-recovery-v111-source-only.tar",
+    "matched-complete-recovery-v112-source-only.tar"
+  ],
+  "absent_namespaces": [
+    "matched-complete-recovery-v111-20261026-a",
+    "matched-complete-recovery-v112-20261026-a"
+  ],
+  "mutations": false,
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "numerical_checkout_clean": true,
+  "observed_utc": "2026-10-27T05:21:06Z",
+  "queue_empty": true,
+  "schema": "read-only-access-recovery-v112",
+  "ssh_access_restored": true,
+  "v104": {
+    "cancelled_unstarted": [
+      16340,
+      16341,
+      16342,
+      16343,
+      16344,
+      16345,
+      16346,
+      16347,
+      16348,
+      16349,
+      16350,
+      16351,
+      16352,
+      16353,
+      16354,
+      16355,
+      16356,
+      16357,
+      16358
+    ],
+    "checks": "16336",
+    "failed_first_request": "16339",
+    "preparations": [
+      "16337",
+      "16338"
+    ]
+  },
+  "v110": {
+    "completed": [
+      "16366",
+      "16367"
+    ]
+  }
+}

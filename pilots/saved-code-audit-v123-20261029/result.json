@@ -1,0 +1,1142 @@
+{
+  "schema": "saved-model-changes-v123",
+  "status": "complete",
+  "manifest_sha256": "8bd9dc397319161becc5a4c1d113f18c0e6e420463efe7d1d214974200d71d70",
+  "job_id": "16651",
+  "started_utc": "2026-10-29T05:37:58.152002+00:00",
+  "new_calibration_or_inference": false,
+  "self_test": {
+    "byte_pairs": 65536,
+    "packed_vectors": 6,
+    "failures": 0
+  },
+  "models": [
+    {
+      "profile": "distilgpt2",
+      "step": 1,
+      "retained_records": 3,
+      "code_count": 42467328,
+      "changed_from_predecessor": 4150626,
+      "changed_fraction": 0.09773692378291378,
+      "changed_from_root": 4150626,
+      "changed_in_nonreplayed_stages": 4150626,
+      "changed_in_replayed_stages": 0,
+      "root_model": {
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/distilgpt2/prepare/outputs/model.bin",
+        "bytes": 21233664,
+        "sha256": "084a960d0a222e2ab3b0434d5e1e1872d3dbe9f6c267c8ce2e8ca108fb9ea536"
+      },
+      "model": {
+        "bytes": 21233664,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-1/outputs/model.bin",
+        "sha256": "2038bb85995a36c2184fb38d4c99a45105b378fec86ed3b3b2d82d8ec9a7feea"
+      },
+      "completion": {
+        "bytes": 181592,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-1/outputs/completion.json",
+        "sha256": "ac0fd70e4d897324dc4e398e3b90d85ac2177ae353dfa24404885820590176d3"
+      },
+      "stages": [
+        {
+          "stage_id": "block.0000.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 123638,
+          "changed_from_root": 123638,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0000.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 36623,
+          "changed_from_root": 36623,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0000.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 156926,
+          "changed_from_root": 156926,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0000.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 173573,
+          "changed_from_root": 173573,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 158479,
+          "changed_from_root": 158479,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 74133,
+          "changed_from_root": 74133,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 215001,
+          "changed_from_root": 215001,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 183466,
+          "changed_from_root": 183466,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 217558,
+          "changed_from_root": 217558,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 72350,
+          "changed_from_root": 72350,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 237463,
+          "changed_from_root": 237463,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 198769,
+          "changed_from_root": 198769,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 263496,
+          "changed_from_root": 263496,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 77708,
+          "changed_from_root": 77708,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 238039,
+          "changed_from_root": 238039,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 214964,
+          "changed_from_root": 214964,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 263183,
+          "changed_from_root": 263183,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 71302,
+          "changed_from_root": 71302,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 226650,
+          "changed_from_root": 226650,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 212642,
+          "changed_from_root": 212642,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 263171,
+          "changed_from_root": 263171,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 65890,
+          "changed_from_root": 65890,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 202022,
+          "changed_from_root": 202022,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 203580,
+          "changed_from_root": 203580,
+          "source_replay_at_stage": false
+        }
+      ]
+    },
+    {
+      "profile": "distilgpt2",
+      "step": 2,
+      "retained_records": 2,
+      "code_count": 42467328,
+      "changed_from_predecessor": 3746142,
+      "changed_fraction": 0.0882123311360677,
+      "changed_from_root": 4423075,
+      "changed_in_nonreplayed_stages": 3746142,
+      "changed_in_replayed_stages": 0,
+      "root_model": {
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/distilgpt2/prepare/outputs/model.bin",
+        "bytes": 21233664,
+        "sha256": "084a960d0a222e2ab3b0434d5e1e1872d3dbe9f6c267c8ce2e8ca108fb9ea536"
+      },
+      "model": {
+        "bytes": 21233664,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/outputs/model.bin",
+        "sha256": "3c0de8c371a68e020ac6bf738fc9f53e4e027289478f220f9b655e2306b2c569"
+      },
+      "completion": {
+        "bytes": 180806,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/outputs/completion.json",
+        "sha256": "c948fda17b70ad39498711c252f000c2a91fe2b1e7f9fd45ef421541ef93d700"
+      },
+      "stages": [
+        {
+          "stage_id": "block.0000.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 106496,
+          "changed_from_root": 133954,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0000.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 31742,
+          "changed_from_root": 39436,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0000.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 138101,
+          "changed_from_root": 172457,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0000.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 149934,
+          "changed_from_root": 187600,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 142647,
+          "changed_from_root": 171402,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 65749,
+          "changed_from_root": 75021,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 193601,
+          "changed_from_root": 233246,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 163355,
+          "changed_from_root": 197243,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 196750,
+          "changed_from_root": 230762,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 65603,
+          "changed_from_root": 74100,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 217985,
+          "changed_from_root": 255752,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 178479,
+          "changed_from_root": 212506,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 237966,
+          "changed_from_root": 273897,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 70150,
+          "changed_from_root": 80226,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 219124,
+          "changed_from_root": 256953,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 191679,
+          "changed_from_root": 228499,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 236826,
+          "changed_from_root": 272980,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 63865,
+          "changed_from_root": 73364,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 211770,
+          "changed_from_root": 246618,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 189522,
+          "changed_from_root": 226185,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 238126,
+          "changed_from_root": 272065,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 59481,
+          "changed_from_root": 68308,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 193465,
+          "changed_from_root": 223630,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 183726,
+          "changed_from_root": 216871,
+          "source_replay_at_stage": false
+        }
+      ]
+    },
+    {
+      "profile": "gpt2",
+      "step": 1,
+      "retained_records": 3,
+      "code_count": 84934656,
+      "changed_from_predecessor": 8993197,
+      "changed_fraction": 0.10588371606520665,
+      "changed_from_root": 8993197,
+      "changed_in_nonreplayed_stages": 8747505,
+      "changed_in_replayed_stages": 245692,
+      "root_model": {
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/prepare/outputs/model.bin",
+        "bytes": 42467328,
+        "sha256": "0e163d64e332f82f38e35eb37b3026a79b56af67954df04571292cafe49242a7"
+      },
+      "model": {
+        "bytes": 42467328,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-1/outputs/model.bin",
+        "sha256": "34e9e20c1da268fb88d30abf0b418fd5938f10401dde9d34aa2c23edc77fe0ec"
+      },
+      "completion": {
+        "bytes": 355577,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-1/outputs/completion.json",
+        "sha256": "41913c24341b9acb6fcbef16af529757d7ba146156de717fe6b665608974ee67"
+      },
+      "stages": [
+        {
+          "stage_id": "block.0000.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 122582,
+          "changed_from_root": 122582,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0000.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 38849,
+          "changed_from_root": 38849,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0000.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 174592,
+          "changed_from_root": 174592,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0000.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 183050,
+          "changed_from_root": 183050,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 134483,
+          "changed_from_root": 134483,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 45531,
+          "changed_from_root": 45531,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 197045,
+          "changed_from_root": 197045,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 164638,
+          "changed_from_root": 164638,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 154387,
+          "changed_from_root": 154387,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 64151,
+          "changed_from_root": 64151,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 261985,
+          "changed_from_root": 261985,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 169406,
+          "changed_from_root": 169406,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 205928,
+          "changed_from_root": 205928,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 70108,
+          "changed_from_root": 70108,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 282249,
+          "changed_from_root": 282249,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 182113,
+          "changed_from_root": 182113,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 229541,
+          "changed_from_root": 229541,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 62376,
+          "changed_from_root": 62376,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 269537,
+          "changed_from_root": 269537,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 187294,
+          "changed_from_root": 187294,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 274166,
+          "changed_from_root": 274166,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 75513,
+          "changed_from_root": 75513,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 289570,
+          "changed_from_root": 289570,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 203053,
+          "changed_from_root": 203053,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0006.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 264948,
+          "changed_from_root": 264948,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0006.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 61210,
+          "changed_from_root": 61210,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0006.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 275834,
+          "changed_from_root": 275834,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0006.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 209955,
+          "changed_from_root": 209955,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0007.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 276107,
+          "changed_from_root": 276107,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0007.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 75784,
+          "changed_from_root": 75784,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0007.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 271572,
+          "changed_from_root": 271572,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0007.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 217523,
+          "changed_from_root": 217523,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0008.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 261638,
+          "changed_from_root": 261638,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0008.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 71900,
+          "changed_from_root": 71900,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0008.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 266625,
+          "changed_from_root": 266625,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0008.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 217639,
+          "changed_from_root": 217639,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0009.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 271557,
+          "changed_from_root": 271557,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0009.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 69695,
+          "changed_from_root": 69695,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0009.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 267205,
+          "changed_from_root": 267205,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0009.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 220041,
+          "changed_from_root": 220041,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0010.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 270181,
+          "changed_from_root": 270181,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0010.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 67979,
+          "changed_from_root": 67979,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0010.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 260659,
+          "changed_from_root": 260659,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0010.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 233771,
+          "changed_from_root": 233771,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0011.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 272288,
+          "changed_from_root": 272288,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0011.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 70253,
+          "changed_from_root": 70253,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0011.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 245692,
+          "changed_from_root": 245692,
+          "source_replay_at_stage": true
+        },
+        {
+          "stage_id": "block.0011.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 230994,
+          "changed_from_root": 230994,
+          "source_replay_at_stage": false
+        }
+      ]
+    },
+    {
+      "profile": "gpt2",
+      "step": 2,
+      "retained_records": 2,
+      "code_count": 84934656,
+      "changed_from_predecessor": 8080117,
+      "changed_fraction": 0.09513333403033974,
+      "changed_from_root": 9535791,
+      "changed_in_nonreplayed_stages": 8080117,
+      "changed_in_replayed_stages": 0,
+      "root_model": {
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/prepare/outputs/model.bin",
+        "bytes": 42467328,
+        "sha256": "0e163d64e332f82f38e35eb37b3026a79b56af67954df04571292cafe49242a7"
+      },
+      "model": {
+        "bytes": 42467328,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/outputs/model.bin",
+        "sha256": "e0baeb4f7e5076510f08ae7ec6ac82dedacdb5b3026fe24bd78e9f65b4644499"
+      },
+      "completion": {
+        "bytes": 354913,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/outputs/completion.json",
+        "sha256": "5f6cd8f33fd7ac3de38423d93fe19b42cb5383c4c50e7d2dffd5c874ec4a11d9"
+      },
+      "stages": [
+        {
+          "stage_id": "block.0000.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 104837,
+          "changed_from_root": 133621,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0000.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 34037,
+          "changed_from_root": 41730,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0000.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 153554,
+          "changed_from_root": 190826,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0000.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 155385,
+          "changed_from_root": 194841,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 119142,
+          "changed_from_root": 147633,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 39844,
+          "changed_from_root": 48081,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 176746,
+          "changed_from_root": 215147,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0001.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 142680,
+          "changed_from_root": 177959,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 137757,
+          "changed_from_root": 169178,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 56120,
+          "changed_from_root": 65771,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 232708,
+          "changed_from_root": 281239,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0002.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 148724,
+          "changed_from_root": 184164,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 185467,
+          "changed_from_root": 221956,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 60752,
+          "changed_from_root": 71433,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 253838,
+          "changed_from_root": 299122,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0003.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 160589,
+          "changed_from_root": 197336,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 207212,
+          "changed_from_root": 244772,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 55684,
+          "changed_from_root": 64810,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 245415,
+          "changed_from_root": 286722,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0004.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 168378,
+          "changed_from_root": 203660,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 245525,
+          "changed_from_root": 285221,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 62315,
+          "changed_from_root": 75770,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 263305,
+          "changed_from_root": 306328,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0005.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 179886,
+          "changed_from_root": 216902,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0006.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 239363,
+          "changed_from_root": 275705,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0006.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 56796,
+          "changed_from_root": 65337,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0006.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 253628,
+          "changed_from_root": 294411,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0006.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 185866,
+          "changed_from_root": 224239,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0007.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 248260,
+          "changed_from_root": 286473,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0007.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 66368,
+          "changed_from_root": 76999,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0007.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 250392,
+          "changed_from_root": 289521,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0007.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 190733,
+          "changed_from_root": 230594,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0008.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 238529,
+          "changed_from_root": 272516,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0008.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 61909,
+          "changed_from_root": 71899,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0008.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 246421,
+          "changed_from_root": 285162,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0008.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 193411,
+          "changed_from_root": 230872,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0009.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 246540,
+          "changed_from_root": 280829,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0009.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 60812,
+          "changed_from_root": 70329,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0009.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 249513,
+          "changed_from_root": 284971,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0009.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 197493,
+          "changed_from_root": 234392,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0010.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 245308,
+          "changed_from_root": 279273,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0010.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 58461,
+          "changed_from_root": 69381,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0010.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 244689,
+          "changed_from_root": 280262,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0010.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 206080,
+          "changed_from_root": 245893,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0011.qkv",
+          "code_count": 1769472,
+          "changed_from_predecessor": 248056,
+          "changed_from_root": 281164,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0011.attn_out",
+          "code_count": 589824,
+          "changed_from_predecessor": 62247,
+          "changed_from_root": 71672,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0011.mlp_up",
+          "code_count": 2359296,
+          "changed_from_predecessor": 233793,
+          "changed_from_root": 266296,
+          "source_replay_at_stage": false
+        },
+        {
+          "stage_id": "block.0011.mlp_down",
+          "code_count": 2359296,
+          "changed_from_predecessor": 205549,
+          "changed_from_root": 243379,
+          "source_replay_at_stage": false
+        }
+      ]
+    }
+  ],
+  "error": null,
+  "elapsed_seconds": 3.7277891896665096,
+  "process_cpu_seconds": 3.610096228,
+  "max_rss_kib": 160480,
+  "runtime_python": "3.6.8 (default, Feb  5 2026, 20:19:29) \n[GCC 8.5.0 20210514 (Red Hat 8.5.0-28)]",
+  "finished_utc": "2026-10-29T05:38:01.879806+00:00",
+  "scope": "Posthoc counts of saved output codes, not new calibration, quality, precision-success or independent-root evidence. Replay classification applies to whole stages; no claim that every changed code in a replayed stage required replay."
+}

@@ -1,0 +1,65 @@
+{
+  "original_completion_sha256": "6ee91ad5be06a174f4d3aae32f60df8f07d5a176b580275b1d864a2388e4ac8c",
+  "status": "complete",
+  "job_id": "16677",
+  "artifacts": {
+    "acquisition.json": {
+      "bytes": 542,
+      "sha256": "3d2fb8d14380cd715e8d8fa1181dbba7de099850bdf8890bc59240f12f122da8"
+    },
+    "attempt.json": {
+      "bytes": 122,
+      "sha256": "ae2b7b19cce94351c1014f90879bde3d62ee639706bbf8d77be4c266b9b7cc7e"
+    },
+    "candidate-inventory.json": {
+      "bytes": 2446075,
+      "sha256": "2d6261be33aa11c4d710bedf3c44f8360687ffa5e9bfccbd8a2445ec72911310"
+    },
+    "exclusions-after.json": {
+      "bytes": 7213473,
+      "sha256": "c56d3560fe28d78f4ee2357a9b986a054d75b6d221c95a85ebd3e840754fe75d"
+    },
+    "exclusions-before.json": {
+      "bytes": 5469684,
+      "sha256": "fc31eee4074884af4b7966eeda0ffe3fc41e13595d3f535d9b6c9011cb248210"
+    },
+    "records.json": {
+      "bytes": 200710,
+      "sha256": "f3f22b3345b0856a360eedeae4ab4e43e813bf418abd8adcb9f8af7663f32e0a"
+    },
+    "selection.json": {
+      "bytes": 132589,
+      "sha256": "bb598a63342fc966a294aba658ef7e6cfded40e9e6fbf905d3c12f694038ee52"
+    },
+    "validation-prefix.gz.part": {
+      "bytes": 8388608,
+      "sha256": "5378207846dfd9f628f7711cc06673e57da319c16b0283fe1b6113c0852a24ed"
+    }
+  },
+  "audit": {
+    "actual_exclusion_union_equal": true,
+    "actual_full_candidate_inventory_equal": true,
+    "actual_records_equal": true,
+    "actual_saved_prefix_retokenized": true,
+    "implementation_shared_with_preparation": true,
+    "model_inference": false,
+    "quality_evaluation": false,
+    "selected_articles": 320,
+    "status": "verified"
+  },
+  "records": {
+    "bytes": 200710,
+    "sha256": "f3f22b3345b0856a360eedeae4ab4e43e813bf418abd8adcb9f8af7663f32e0a"
+  },
+  "frame": {
+    "complete_records": 3563,
+    "compressed_bytes_consumed_at_most": 8388608,
+    "decompressed_prefix": {
+      "bytes": 8388608,
+      "sha256": "f90dda6af9153cb6c166f4c38b0f9f279c3ec48c46f26b844d5f03f5a1ed184f"
+    },
+    "incomplete_trailing_bytes": 574,
+    "whole_gzip_trailer_verified": false
+  },
+  "worker_cpu_seconds": 11.737031311
+}

@@ -1,0 +1,2219 @@
+{
+  "cpu_wall_fit_verified": false,
+  "created_utc": "2026-10-26T10:27:29.650932+00:00",
+  "existing_stage_refusal_preserved": true,
+  "implied_launch_authorization": false,
+  "numerical_execution": false,
+  "policy": {
+    "max_array_bytes": 8589934592,
+    "max_box_preconditioned_coordinates": 16,
+    "max_box_rounds": 4,
+    "max_point_refinement_coordinates": 16,
+    "max_process_bytes": 17179869184,
+    "max_request_work_units": 1000000000000,
+    "max_stage_work_units": 64000000000
+  },
+  "profile_cases": {
+    "distilgpt2": [
+      {
+        "all_stages_within_cumulative_limit": true,
+        "stages": [
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0000.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0000.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0000.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0000.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0001.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0001.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0001.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0001.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0002.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0002.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0002.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0002.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0003.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0003.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0003.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0003.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0004.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0004.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0004.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0004.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0005.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0005.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0005.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0005.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          }
+        ],
+        "tokens": 384,
+        "within_request_limit": true,
+        "worst_case_request_work": 336458244096
+      },
+      {
+        "all_stages_within_cumulative_limit": true,
+        "stages": [
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0000.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0000.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0000.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0000.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0001.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0001.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0001.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0001.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0002.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0002.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0002.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0002.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0003.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0003.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0003.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0003.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0004.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0004.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0004.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0004.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0005.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0005.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0005.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0005.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          }
+        ],
+        "tokens": 256,
+        "within_request_limit": true,
+        "worst_case_request_work": 226798952448
+      }
+    ],
+    "gpt2": [
+      {
+        "all_stages_within_cumulative_limit": true,
+        "stages": [
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0000.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0000.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0000.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0000.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0001.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0001.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0001.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0001.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0002.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0002.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0002.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0002.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0003.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0003.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0003.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0003.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0004.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0004.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0004.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0004.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0005.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0005.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0005.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0005.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0006.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0006.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0006.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0006.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0007.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0007.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0007.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0007.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0008.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0008.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0008.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0008.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0009.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0009.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0009.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0009.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0010.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0010.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0010.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0010.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 257957888,
+            "alternate_token_work": 4305199104,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0011.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 11117813760
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 144711680,
+            "alternate_token_work": 3398000640,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0011.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 6586638336
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 314580992,
+            "alternate_token_work": 4758798336,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0011.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13383401472
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 465575936,
+            "alternate_token_work": 10874019840,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0011.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 24988520448
+          }
+        ],
+        "tokens": 384,
+        "within_request_limit": true,
+        "worst_case_request_work": 672916488192
+      },
+      {
+        "all_stages_within_cumulative_limit": true,
+        "stages": [
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0000.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0000.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0000.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0000.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0001.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0001.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0001.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0001.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0002.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0002.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0002.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0002.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0003.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0003.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0003.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0003.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0004.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0004.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0004.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0004.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0005.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0005.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0005.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0005.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0006.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0006.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0006.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0006.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0007.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0007.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0007.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0007.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0008.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0008.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0008.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0008.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0009.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0009.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0009.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0009.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0010.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0010.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0010.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0010.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 221257728,
+            "alternate_token_work": 2082217984,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              2304,
+              768
+            ],
+            "stage": "block.0011.qkv",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 8739119104
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 108011520,
+            "alternate_token_work": 1477009408,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              768,
+              768
+            ],
+            "stage": "block.0011.attn_out",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 4509933568
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 277880832,
+            "alternate_token_work": 2384822272,
+            "box_route": "streamed",
+            "extra_token_attempt_reserved": true,
+            "point_route": "streamed",
+            "shape": [
+              3072,
+              768
+            ],
+            "stage": "block.0011.mlp_up",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 10853711872
+          },
+          {
+            "alternate_token_admitted": true,
+            "alternate_token_arrays": 381689856,
+            "alternate_token_work": 5102657536,
+            "box_route": "token",
+            "extra_token_attempt_reserved": false,
+            "point_route": "token",
+            "shape": [
+              768,
+              3072
+            ],
+            "stage": "block.0011.mlp_down",
+            "within_single_stage_cumulative_limit": true,
+            "worst_case_all_three_work": 13697060864
+          }
+        ],
+        "tokens": 256,
+        "within_request_limit": true,
+        "worst_case_request_work": 453597904896
+      }
+    ]
+  },
+  "registered": false,
+  "schema": "alternate-point-route-shape-review-v108",
+  "scientific_success": false,
+  "shape_only": true,
+  "source_program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+}

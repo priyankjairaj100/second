@@ -1,0 +1,38 @@
+First V67 cached comparison receipt,16 October2026
+
+Job15266 completed0:0 at22:58:04IST after1h14m20s. The23:09:21IST saved snapshot
+checks all24 stage certificates, worker/result/attempt seals, controller/Slurm
+and program identities, declared artifact commitments and the settled4422-second
+debit. Worker process plus waited-descendant CPU is4421.445833 seconds; controller
+own CPU is7.710626739 seconds and all waited children use4421.448697 seconds.
+Transaction wall time is4455.690168641 seconds; peak worker RSS is1913972KiB.
+Slurm total CPU is1h13m50s, kept separate from the nested process clocks.
+
+All24 stages have zero stage-level replay fallback or certificate refusal flags.
+The bounded numerical solver separately falls back on7 rows and certifies all
+21504 attempted decisions. Preserve both scopes. This metadata check does not
+establish model/state byte equality or comparative scientific performance.
+
+The existing afterok chain started modern15267 at22:58:04IST. At collection it
+was RUNNING11m17s with3of24 stage certificates. Its10802-second reservation is
+live, not actual terminal usage.15268--15275 remain dependency-pending and both
+actual terminal audits are absent. No job was submitted, retried or changed.
+All469 frozen sources, eleven codec files and102 historical ledgers still match.
+
+The424-file archive is385792 bytes, SHA256
+7dd28ef74236398536ee2cbe7c0fa0db9aa7111d31bcb414683f37a2e526fde0.
+Earlier snapshots and their pending status remain intact. A progress-only398-file
+workspace observation at17:09:32UTC is also preserved outside the repository;
+it contained19 cached stage certificates and was not a terminal result.
+The current terminal checker returns pending_terminal with no comparison table.
+
+No model/state binary was retrieved, retained membership was not independently
+rebuilt, and fresh-oracle equality/complete campaign costs remain unverified.
+Both final audits and the scientific decision remain mandatory before promoting
+claims or registering V68. The manuscript and five review ZIPs are unchanged.
+
+Artifacts
+campaigns/csis_v67_progress_metadata_20261016_s.tar.gz
+validation/v67_progress_metadata_check_s.json
+validation/v67_cached1_metadata.json
+validation/v67_terminal_pending_check_s.json

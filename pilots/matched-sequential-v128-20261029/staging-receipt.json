@@ -1,0 +1,13 @@
+{
+  "preflight": "16645 f3_small PENDING\n16646 f3_mid PENDING\n",
+  "staging": "STAGED_SOURCE_VERIFIED 1416\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n",
+  "archive": {
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/matched-sequential-v128/source-v128.tar.gz",
+    "bytes": 3081467,
+    "sha256": "765f3046f3f55c7a906b3bfc52a978505526ca8c09438fd0f7597454af446369"
+  },
+  "registration_sha256": "c9d62782ff0993fd0887fee17bf9da0aea690a749d81e1602d8c0de1edafca8e",
+  "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v128-20261029-a",
+  "sources": 1416
+}

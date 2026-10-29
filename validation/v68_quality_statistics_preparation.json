@@ -1,0 +1,30 @@
+{
+  "actual_model_losses_evaluated": false,
+  "actual_quality_articles_accessed": false,
+  "empirical_registration_exists": false,
+  "full_planning_shape_fixture": {
+    "all_endpoint_gates_pass": true,
+    "articles": 320,
+    "bootstrap_draws": 20000,
+    "elapsed_seconds": 0.11992883300990798,
+    "maximum_rss": 71286784,
+    "maximum_rss_unit": "bytes",
+    "models": 6,
+    "predictions_per_article": 127,
+    "process_cpu_seconds": 0.5207409999999999,
+    "seed": 153387658285018601834874226438517110328,
+    "seed_encoding": "unsigned big-endian bytes of second-quality68"
+  },
+  "initial_fixture_failure": "Default seed exceeded declared128bit bound; corrected before registration or empirical access",
+  "local_unit_tests_passed": 8,
+  "numpy_version": "1.26.4",
+  "outer_artifact_audit_implemented": false,
+  "pinned_linux_gate_complete": false,
+  "sample_is_generated_fixture": true,
+  "sources": {
+    "research_v68/__init__.py": "5e6de3b714a5fbbbe9254a7a810ad4f0c56b46ae7713fb6ce697b338579d6f25",
+    "research_v68/quality_statistics.py": "aa4f85679f3b85360c6e096bfa2ec8de4635a421e68a8fcbaafa0ce0784e30a0",
+    "research_v68/test_quality_statistics.py": "1cbd25c0a967b065626492b8644d887636aded4c804685c0a20aa38c6b26bc12"
+  },
+  "status": "unregistered_software_preparation_only"
+}

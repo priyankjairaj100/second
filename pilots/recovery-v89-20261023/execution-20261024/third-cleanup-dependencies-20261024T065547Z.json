@@ -1,0 +1,125 @@
+{
+  "other_candidate_names": [],
+  "second_runtime_realpaths": {
+    "/nfs_home/users/poonam/second-20261010/.venv-container/bin/python": "/usr/local/bin/python",
+    "/nfs_home/users/poonam/second-20261010/local_runs/cluster-setup-20261010/container-13155.sha256": "/nfs_home/users/poonam/second-20261010/local_runs/cluster-setup-20261010/container-13155.sha256"
+  },
+  "third_root_symlinks": [
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/model-00004-of-00005.safetensors",
+      "target": "../../blobs/02a05716064ca298c767b7accf9aed9153f9e090eff4605b871de005ce7ce3a9"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/model.safetensors.index.json",
+      "target": "../../blobs/79fe50f48e72f95e85b1059c699a10762feae6f9"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/generation_config.json",
+      "target": "../../blobs/1f25da7209c31534ef2e1c30e65d67b9e6fa2101"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/model-00002-of-00005.safetensors",
+      "target": "../../blobs/cec7e36f1451270477569401d5c06af9df8f12da341ff446322796979a30d88b"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/model-00001-of-00005.safetensors",
+      "target": "../../blobs/37597b50c825674e56ff1b058f0d148b57dcbc1c39727b641a87ffbf247886ec"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/config.json",
+      "target": "../../blobs/b915fa628e2c2b50a7f208583ed9fccc8020a561"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/model-00005-of-00005.safetensors",
+      "target": "../../blobs/f41f0dd6989345ad1f29d6ab341cbf965bec0954bd90884913ff4cb1b8cc8402"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/tokenizer_config.json",
+      "target": "../../blobs/15f29a02681ccd10caf0f033de0dd2cfc0ad2982"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/merges.txt",
+      "target": "../../blobs/f619617c65cf57f7b8830a27be33985b9602d0c9"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/model-00003-of-00005.safetensors",
+      "target": "../../blobs/fd68cdd7584ed9bdb5d891cd72fe05abbb50b6ad2860d147786d27a15f764aaa"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/tokenizer.json",
+      "target": "../../blobs/ec5acd742ca3df11b3b7933152376b737565842d"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/vocab.json",
+      "target": "../../blobs/1a16106ee5912ae5a9685e15409b2461da2e270e"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/models/mistral-nemo-hub-v2/models--mistralai--Mistral-Nemo-Instruct-2407/snapshots/04d8a90549d23fc6bd7f642064003592df51e9b3/special_tokens_map.json",
+      "target": "../../blobs/451134b2ddc2e78555d1e857518c54b4bdc2e87d"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/judge-qwen-v2-20261011/lib64",
+      "target": "lib"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/judge-qwen-v2-20261011/bin/python3.13",
+      "target": "/nfs_home/software/miniconda/bin/python3.13"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/judge-qwen-v2-20261011/bin/python3",
+      "target": "python3.13"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/judge-qwen-v2-20261011/bin/python",
+      "target": "python3.13"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/judge-qwen-v3-20261011/lib64",
+      "target": "lib"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/judge-qwen-v3-20261011/bin/python3.13",
+      "target": "/nfs_home/software/miniconda/bin/python3.13"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/judge-qwen-v3-20261011/bin/python3",
+      "target": "python3.13"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/judge-qwen-v3-20261011/bin/python",
+      "target": "python3.13"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/encoder-cpu/lib64",
+      "target": "lib"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/encoder-cpu/bin/python3.13",
+      "target": "python3"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/encoder-cpu/bin/python3",
+      "target": "/nfs_home/software/miniconda/bin/python3"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/encoder-cpu/bin/python",
+      "target": "python3"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/encoder-cuda/lib64",
+      "target": "lib"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/encoder-cuda/bin/python3.13",
+      "target": "python3"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/encoder-cuda/bin/python3",
+      "target": "/nfs_home/software/miniconda/bin/python3"
+    },
+    {
+      "path": "/nfs_home/users/poonam/ccu-acl2027/local_workspace/envs/encoder-cuda/bin/python",
+      "target": "python3"
+    }
+  ]
+}

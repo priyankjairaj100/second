@@ -1,0 +1,1 @@
+{"exit": 0, "stdout": "{'file': 'program.json', 'bytes': 155034, 'sha256': '6be461e20f7e853817f5a610bd7d4705c089b56fd5f57968c64091288d66ea97'}\n", "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n", "captured_utc": "2026-10-26T07:47:31.756128+00:00"}

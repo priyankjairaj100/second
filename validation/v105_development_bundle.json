@@ -1,0 +1,99 @@
+{
+  "archive": {
+    "bytes": 9893757,
+    "sha256": "de85f7211b404f6202ab299984ea84fe95b40a2973cdc68fe81f69088c6febd5"
+  },
+  "components": 10,
+  "corruption_rejected": true,
+  "created_utc": "2026-10-26T08:53:58.537930+00:00",
+  "full_reproduction_verified": false,
+  "inconsistent_source_coverage_rejected": true,
+  "manifest": {
+    "README.txt": {
+      "bytes": 1947,
+      "sha256": "073ad03a0fa26cb8b610ce6ee2109d5b3f4ef57959761ce42884aeb164e4f481"
+    },
+    "RESPONSIBLE_NLP_CHECKLIST_DRAFT.txt": {
+      "bytes": 9110,
+      "sha256": "7b0d82135db0b16aa4eca548b1ce0e18c973b05e8b2fca4a7399e8415a440968"
+    },
+    "development-audit-receipts-v69.zip": {
+      "bytes": 341604,
+      "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+    },
+    "development-dependency-notices-v71c.zip": {
+      "bytes": 460857,
+      "sha256": "944eb649e8f339e3b0a1b39126333d5d950c0909a394da3587b7de34e5771f41"
+    },
+    "development-evidence-v69b.zip": {
+      "bytes": 87257,
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "development-optimization-source-v105.zip": {
+      "bytes": 803078,
+      "sha256": "380feefc22942c6e554b3e3b9008706df5a02f41daf02055874e9f4f0ff016d8"
+    },
+    "development-optimization-v98.zip": {
+      "bytes": 5722,
+      "sha256": "014a1d296dd3102dc81f58e4e0a4840452e73d3bc3167884d4b8e0dcebc871f8"
+    },
+    "development-quality-evidence-v72.zip": {
+      "bytes": 251913,
+      "sha256": "c588ac060824b7870f085f8f3dae6e02cee6dcb93ded6aac6bd7d72a8d5f14dc"
+    },
+    "development-reproduction-guide-v72.zip": {
+      "bytes": 19535,
+      "sha256": "6abf11b4b237f263784f3bfb9ce3ddb87f70e3d11f3b3a751ae5e69984cddfd3"
+    },
+    "development-selection-metadata-v71.zip": {
+      "bytes": 6194056,
+      "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
+    },
+    "development-service-evidence-v70.zip": {
+      "bytes": 124857,
+      "sha256": "684ca47fd16985c32f5faf0dd7bab81f3bbe9dda297a87455dfb84c0a0ce2dc4"
+    },
+    "development-source-review-v72.zip": {
+      "bytes": 1930758,
+      "sha256": "e3505d7b353eed4109c7f22f127955513d928590552513263a13ee90811cbf49"
+    },
+    "second-research-draft.tex": {
+      "bytes": 57862,
+      "sha256": "9db55cf070272383eb69c2bb8cdc3c0d8d2054a951e71b931f4c59ee5b7dfd42"
+    },
+    "verify_review_bundle.py": {
+      "bytes": 3383,
+      "sha256": "ef1eefc2f24619a5672fb6a1d5a41b0464b0f0a2c8e31ae7360f54fa79a0aeff"
+    }
+  },
+  "members": 15,
+  "missing_rejected": true,
+  "native_compile_success": true,
+  "new_pdf_created": false,
+  "new_transfer_result": false,
+  "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v105.zip",
+  "rendered_layout_verified": false,
+  "roundtrip_bytes_verified": true,
+  "schema": "development-review-bundle-v105",
+  "source": {
+    "bytes": 57862,
+    "sha256": "9db55cf070272383eb69c2bb8cdc3c0d8d2054a951e71b931f4c59ee5b7dfd42"
+  },
+  "source_originals_changed": false,
+  "submission_ready": false,
+  "unchanged_v98_components": 9,
+  "unexpected_rejected": true,
+  "verified": {
+    "adapted_code_execution_qualified": false,
+    "components": 10,
+    "empirical_pipeline_executed": false,
+    "external_inputs_acquired": false,
+    "full_anonymity_verified": false,
+    "source_component_counts": {
+      "development-optimization-source-v105.zip": 347,
+      "development-source-review-v72.zip": 583
+    },
+    "source_files": 930,
+    "status": "verified_supplied_bytes_and_source_coverage"
+  }
+}

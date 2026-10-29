@@ -1,0 +1,27 @@
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+yp_bind_client_create_v3: RPC: Program not registered
+Traceback (most recent call last):
+  File "/nfs_home/software/envs/pytorch-12.8/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/nfs_home/software/envs/pytorch-12.8/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/nfs_home/users/poonam/second-20261010/research_v46/campaign.py", line 163, in <module>
+    if args.operation=='register':register(args.directory)
+  File "/nfs_home/users/poonam/second-20261010/research_v46/campaign.py", line 114, in register
+    inputs=dependencies();v44,_=validate(inputs)
+  File "/nfs_home/users/poonam/second-20261010/research_v46/campaign.py", line 94, in validate
+    _,records,_=validate_inputs(p['inputs'])
+  File "/nfs_home/users/poonam/second-20261010/research_v44/campaign.py", line 129, in validate_inputs
+    paths = {name:bound(entry) for name,entry in inputs.items()}
+  File "/nfs_home/users/poonam/second-20261010/research_v44/campaign.py", line 129, in <dictcomp>
+    paths = {name:bound(entry) for name,entry in inputs.items()}
+  File "/nfs_home/users/poonam/second-20261010/research_v44/campaign.py", line 40, in bound
+    and sha(path) == entry['sha256'], 'Bound input changed: '+str(path))
+  File "/nfs_home/users/poonam/second-20261010/research_v43/campaign.py", line 37, in sha
+    return hashlib.file_digest(stream, 'sha256').hexdigest()
+AttributeError: module 'hashlib' has no attribute 'file_digest'

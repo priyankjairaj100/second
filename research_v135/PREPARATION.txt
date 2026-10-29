@@ -1,0 +1,29 @@
+V135 preparation only; no numerical job or timing claim.
+
+Minimal source-only persistent representation contains the deployed packed codes,
+complete frozen target manifests, retained tokens or references and provenance.
+It stores no features, descriptors or Gram. Byte count includes actual tokens in
+"tokens" mode. That mode can replay after external corpus disappearance and must
+not be described as dependent on external retained-source access. "references"
+mode calls an explicit retained-record provider and refuses when unavailable or
+when token identities differ. Neither mode permits deleted-record traversal.
+
+Eight generated tests cover both formats, source availability, exact words,
+canonical successor serialization, deletion membership, model corruption and
+rejection of hidden caches. These are format tests, not empirical validation.
+The first local draft used StageBinding.scale_values, an absent attribute; it
+was corrected before registration to read the bound anchor's row_scale_hex.
+
+Next: after the matched quality decision, register actual fixed-target cold
+reconstruction from the same four-record roots. Keep preparation/requests/oracle
+cost separate; independently reconstruct same-representation state and check
+cross-arm model equality. Inspect runtime/jobs and freeze all inputs/caps first.
+Use the actual Record provenance map, not the token-record list passed by the
+likelihood-only sequential constructor. No calibration, file deletion or corpus
+access occurs in this format module. Timing and operating-range work remain.
+
+Pre-registration adversarial review added two tests (10 total). A deletion from a
+reference-only predecessor must validate the entire saved frame/model first, then
+resolve only retained IDs. select_retained implements that order. Corrupt models
+are refused before source lookup. The generic full unpack still resolves every
+listed record when requested explicitly; cold deletion must use select_retained.

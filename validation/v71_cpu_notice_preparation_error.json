@@ -1,0 +1,21 @@
+{
+  "empty_output": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "error": "AssertionError: registered zstandard RECORD self-entry has no digest/size in its own RECORD",
+  "initial_source": {
+    "bytes": 5930,
+    "sha256": "0b087f7b47a06304fc0ac0d9c5b06bb47096427cb1f21f40bcdfaa4978c894af"
+  },
+  "numerical_source_modified": false,
+  "recorded_at_utc": "2026-10-18T13:02:41.205490+00:00",
+  "registered_job_retried": false,
+  "resolution": "Allow only RECORD self-entry and directly verify the actual metadata bytes against the existing frozen pin",
+  "schema": "cpu-notice-observer-preparation-error-v71",
+  "scientific_failure": false,
+  "stderr": {
+    "bytes": 449,
+    "sha256": "4ecd56b12c4fae3abdc9da7156e1d08d8d8627834e7f29eb3c475e69c80e4746"
+  }
+}

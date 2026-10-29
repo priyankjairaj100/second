@@ -1,0 +1,111 @@
+{
+  "schema": "control-quality-audit-v131",
+  "status": "verified",
+  "registration_sha256": "18a08e2e4d75817ffc57d45a59ef5472154643ed61996ec679781b38f2cbea86",
+  "models": {
+    "gptq__distilgpt2__2": {
+      "job": 16704,
+      "completion_sha256": "583b9dfee70f1dbec73431d95cc32f79389ae2b82c33b51b88aadba340b71a19",
+      "scheduler": [
+        "16704",
+        "COMPLETED",
+        "0:0",
+        "04:58.738",
+        "305",
+        ""
+      ],
+      "worker_cpu_seconds": 297.777398903,
+      "peak_rss_kib": 3798592,
+      "perplexity": 59.7992320767022
+    },
+    "gptq__distilgpt2__3": {
+      "job": 16705,
+      "completion_sha256": "e9624b35f60278ed9f8091a695fcd9f1f6271cd235c0a3aa3c442c7c00a7cbdc",
+      "scheduler": [
+        "16705",
+        "COMPLETED",
+        "0:0",
+        "05:03.957",
+        "309",
+        ""
+      ],
+      "worker_cpu_seconds": 303.094575986,
+      "peak_rss_kib": 3794016,
+      "perplexity": 60.638321302921405
+    },
+    "gptq__gpt2__2": {
+      "job": 16706,
+      "completion_sha256": "559f60796f834ce3470809f692b6cc2d6a892c2edf32a7df533be0fb5b8cb79e",
+      "scheduler": [
+        "16706",
+        "COMPLETED",
+        "0:0",
+        "07:42.115",
+        "471",
+        ""
+      ],
+      "worker_cpu_seconds": 461.26040013,
+      "peak_rss_kib": 5224508,
+      "perplexity": 53.41931530150316
+    },
+    "gptq__gpt2__3": {
+      "job": 16707,
+      "completion_sha256": "2935fcb0d5b38f32261d1e3d3b43d6702643b55e81e1b4d779e485f7247fca8a",
+      "scheduler": [
+        "16707",
+        "COMPLETED",
+        "0:0",
+        "07:42.894",
+        "472",
+        ""
+      ],
+      "worker_cpu_seconds": 462.308974936,
+      "peak_rss_kib": 5224708,
+      "perplexity": 53.044663190390466
+    }
+  },
+  "comparisons": {
+    "gptq__distilgpt2__2": {
+      "fixed_over_control_perplexity_ratio": 0.9233213751819815,
+      "paired_95_percentile_ratio": [
+        0.9156088723435436,
+        0.9310439354133584
+      ],
+      "observed_max_article_ratio": 1.18626316069451,
+      "observed_max_article_id": "c4:en:validation:shard2:line2772",
+      "primary_quality_guard_evaluated": false
+    },
+    "gptq__distilgpt2__3": {
+      "fixed_over_control_perplexity_ratio": 0.9082925962504135,
+      "paired_95_percentile_ratio": [
+        0.899446842763631,
+        0.9171620847063019
+      ],
+      "observed_max_article_ratio": 1.2293597078531207,
+      "observed_max_article_id": "c4:en:validation:shard2:line80",
+      "primary_quality_guard_evaluated": false
+    },
+    "gptq__gpt2__2": {
+      "fixed_over_control_perplexity_ratio": 0.8853806341098623,
+      "paired_95_percentile_ratio": [
+        0.8769797235005794,
+        0.8939025197649504
+      ],
+      "observed_max_article_ratio": 1.0676005665485677,
+      "observed_max_article_id": "c4:en:validation:shard2:line217",
+      "primary_quality_guard_evaluated": false
+    },
+    "gptq__gpt2__3": {
+      "fixed_over_control_perplexity_ratio": 0.9056793172776041,
+      "paired_95_percentile_ratio": [
+        0.8970648453791648,
+        0.9142896862895723
+      ],
+      "observed_max_article_ratio": 1.1663419528526544,
+      "observed_max_article_id": "c4:en:validation:shard2:line743",
+      "primary_quality_guard_evaluated": false
+    }
+  },
+  "bootstrap_repetitions": 20000,
+  "seed": 124
+}

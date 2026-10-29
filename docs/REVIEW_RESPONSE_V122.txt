@@ -1,0 +1,169 @@
+Response to the external manuscript review, V122
+29 October 2026
+
+Decision
+
+Substantial empirical revision is warranted before submission to TACL. The
+review's strongest objections are the missing quality evidence for the headline
+targets, the tiny calibration range, and the omitted source-only cold baseline.
+The current results establish a scoped storage/source-access/latency tradeoff.
+They do not establish a general speedup or a compelling deployment advantage.
+The review's numerical ratings are subjective, not official TACL decisions.
+
+The central contribution should remain adaptive recovery of exact weight codes
+from lossy calibration intervals, followed by a canonical reusable successor
+state. Generic interval arithmetic, residual bounds, decision margins and exact
+subtraction are established ingredients. A stronger paper needs evidence about
+when this combination is useful. Editorial changes alone cannot provide that.
+
+This checkpoint revises the same open manuscript and adds generated correctness
+checks. It does not run a new empirical study. The closed V119 campaign, its
+failures and all consumed attempts remain unchanged. The new empirical plan is
+docs/TACL_REVISION_EVIDENCE_PLAN_V122.txt; it is a draft, not a job registration.
+
+Evidence-package clarification
+
+The reviewer received Second-TACL-v121-PDF.zip, the download fallback containing
+only the PDF. Their statement about that ZIP is correct. A separate full author
+evidence archive already existed. The V122 full archive now also carries this
+response, the revision plan, generated checks and the reference audit. Its byte
+verification is not a clean empirical reproduction. TACL does not permit an
+external review supplement; the evidence archive is for author-side inspection.
+
+1. Quality for the exact headline targets: unresolved
+
+The thirteen-record DistilGPT2 study uses N0=1664 and cannot qualify the four-record
+DistilGPT2/GPT2 targets with N0=512. The existing measured quality degradation
+against the custom sequential constructor is small and passes its declared guard;
+it is not equality, and that comparator is not an established GPTQ implementation.
+The manuscript retains this distinction. Required next evidence is quality on all
+four model/retained-set strata, with identical resource-study target identities,
+plus a separately defined practical GPTQ reference. No new quality value is added.
+
+2. Operating range and independent replication: unresolved
+
+The current two related models and two-step trajectories do not establish wider
+feature-width, calibration-size or architecture coverage. Millions of compared
+codes are output coverage, not independent samples; this is now explicit. The
+revision plan prioritizes distinct roots and a calibration-size sweep before a
+more expensive architecture extension. Unadmitted sizes must remain failures of
+the admitted operating range, not silently disappear or trigger relaxed caps.
+
+3. Minimal-storage cold comparison: design explained, baseline still missing
+
+Source inspection confirms that the existing cold arm reconstructs retained
+features and writes a lossless successor. Its equal storage is a design choice,
+not evidence of minimal cold storage. Section 6 now states this. The access
+conditions distinguish lossless state (neither source class required), compressed
+state (retained-source replay on refusal), and hybrid Gram state (deleted-source
+access for subtraction). A source-only cold state requires a separate canonical
+representation, implementation, audit and experiment; it has not been measured.
+
+4. Practical economics: arithmetic added, deployment case still unestablished
+
+Section 6 now reports the absolute E16 storage savings and an explicit shared
+installation model. For independent states with one additional codec installation
+I, the net saved bytes are sum(B_lossless - B_compressed) - I. The actual I is
+23,870,575 bytes. At twelve retained records, gross saving is 33,959,262 bytes,
+leaving 10,088,687 bytes for one state. At six records, gross saving is 16,997,113
+bytes, so one state uses 6,873,462 additional bytes after this charge. Two separate
+six-record states sharing that installation save 10,123,651 bytes in total.
+
+These are sensitivity calculations, not a measured multi-tenant deployment.
+They assume separate per-state archives and no further cross-state deduplication.
+The 6.89% preparation-inclusive compressed time penalty is now stated. Binary64
+is the exact reference contract chosen for this study; its use is not evidence
+that a deployment requires binary64. A lower-precision target needs its own
+quality and correctness comparison. Prices, deletion frequencies and operational
+constraints must be supplied or measured before claiming economic benefit.
+
+5. Executable specification: substantially addressed in the manuscript
+
+The paper now gives prepare/verify/replay/commit pseudocode, separates canonical
+state from trust sidecars, and specifies outward elementary sums/products,
+norm bounds, checked square-root proposals, nonfinite refusal, gradual underflow,
+midpoint cells and bounded refinement. Approximate inverse/BLAS values are
+proposals; directed checks authorize acceptance. Native fast-math and fused
+contraction are disabled. The evaluator contract binds ordered binary64 feature
+operations, MPFR endpoint agreement, source/runtime/CPU-dispatch identities and
+single-threaded numerical libraries. Changed bindings require requalification
+and replay must reproduce the original feature words. These descriptions were
+checked against the frozen source. They are not a formal proof of the executable.
+
+6. Independent oracle: expanded, with remaining scope explicit
+
+V121 already contained an independently written rational checker for suffix/dual
+identities, conditional quadratic minimization, ties and endpoint cells. That
+checker was absent from the PDF-only download. V122 adds 486 small feature boxes
+and 39,366 enumerated vertex/interior realizations. All coefficient perturbation
+checks pass, along with 13,770 point-level implications of the uniform-cell
+condition. Norms are bounded conservatively using rational quantities. Sampling
+these finite points does not itself prove the continuum theorem.
+
+V122 also checks elementary helpers extracted from the frozen Python reference
+against exact rational values: 316 finite containment cases pass; 26 nonfinite
+cases are identified as requiring refusal. Values include cancellation, signed
+zero, subnormals, adjacent-to-one values and extreme magnitudes. This is not a
+test of the Linux native C verifier or evidence that production transaction
+aborts preserve every predecessor byte. Those checks remain in the next gate.
+
+The bundled Python's NumPy import failed before the first check because its
+Accelerate symbol was unavailable on this macOS. The successful run used existing
+system Python 3.9.6 and NumPy 1.26.3. No dependency or production runtime changed.
+Exact execution metadata and the failed attempt are recorded in the check report.
+
+7. Archive precision and success: new sufficient bound, empirical curve pending
+
+Section 4.3 now connects feature-box radius to coefficient error. With center
+Xbar, entrywise radius E, epsilon=||E||_F, kappa=||Xbar||_F and positive ridge beta,
+the Gram perturbation is at most gamma=2*kappa*epsilon+epsilon^2. Resolvent bounds
+give D_ih=gamma/beta+||Kbar_h,S_i||_2*gamma/beta^2. Propagating D along the center's
+accepted prefix gives a sufficient decision-cell condition. Cell widths determine
+epsilon; small ridge and large earlier rounding residuals worsen the bound.
+
+This standard perturbation argument strengthens the explanatory theory but is
+conservative. It does not establish achievable archive precision or completion
+probability. The new rational enumeration supports algebraic review only.
+Changed-code counts, changed codes certified without replay, stage margins,
+interval widths and precision-success curves remain unmeasured. Section 7 now
+reports replay with the compressed denominator: six of eight compressed requests
+use no replay, while all eight lossless requests use none. These eight compressed
+requests cover four target/endpoint strata, not eight independent roots.
+
+8. Timing and clean reproduction: unresolved
+
+The single-observation fixed-order results remain exactly as measured. The near
+0.9% timing difference is not promoted to a stable win. Repeated fresh-process
+timings, randomized order and disclosed cache conditions are planned. A full
+clean reproduction from external inputs and a release license remain incomplete.
+The author must choose release terms; this checkpoint does not assign rights.
+
+Other manuscript corrections
+
+The introduction now credits verified numerical computation and adaptive robust
+arithmetic. Rump (2010) and Shewchuk (1997) are verified against their primary PDFs
+and independently deposited DOI metadata. The thirteen V121 reference audits are
+preserved; the two new entries and all fifteen rendered entries/links are checked.
+No additional hallucinated reference was found. This is not an exhaustive novelty
+search. Rump is background for verified arithmetic; Shewchuk is background for
+robust discrete decisions, not a same-task competitor.
+
+Fixed N0 also changes effective regularization. If T tokens remain, the equivalent
+retained-average objective has ridge lambda_l*N0/T. The manuscript now makes this
+explicit instead of suggesting fixed normalization is mathematically necessary
+for subtraction. Trust sidecars, canonical bytes and the grid-storage guard are
+defined. A compact boxed procedure fills the explanatory role of the requested
+pipeline diagram. Historical accounting is shortened; all raw history remains in
+the archive. The user-requested ten content pages and no-appendix format remain.
+
+Submission decision
+
+Do not treat V122 as an empirically completed TACL revision. Resolve matched-target
+quality and the minimal cold comparison first, then expand the admitted operating
+range and measure precision success. A strong result would be useful quality plus
+a clear access/storage regime in which lossless evidence is unaffordable and cold
+reconstruction is unavailable or slower enough to justify certification. If that
+regime does not materialize, the honest contribution is a narrow exact-repair
+methodology result; more speed hunting or prose cannot establish practical value.
+No conference submission, scheduler restart, cluster job or third-party message
+was made in this checkpoint.

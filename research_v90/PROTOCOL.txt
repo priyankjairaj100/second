@@ -1,0 +1,128 @@
+V90 prospective transfer engineering, 24 October 2026
+
+Status: locally checked components and write census. NO new empirical
+registration, source upload, checkpoint fetch or allocation. These components
+are NOT connected to a new transfer launcher. No scientific result follows.
+V89's registered program and jobs16004--16016 remain completely unchanged.
+
+Purpose and preserved scope
+The new transfer path must use the same V82 four-of-thirteen selection,4x128
+original tokens,512normalization, retained3/2records,24/48complete stages and
+user-approved1,327,104grid allowance for both profiles. All original work, CPU,
+memory, array and artifact ceilings remain. New engineering limits only tighten
+otherwise excessive controller metadata/progress-file allowances. No diagnostic
+record is shortened, dropped or replaced by a success flag. Unexpected or
+oversized output fails the new attempt, which cannot be retried automatically.
+
+Bounded new controllers
+run_store.py, phase_budget.py and worker_control.py are separate source forks
+of the exact files in PARENT_BINDINGS.json. Parent bytes are unchanged.
+- Controller metadata is limited to1MiB before any directory/temp-file write.
+  Reads are bounded, nonsymbolic, regular and stable; FIFO reads cannot block.
+- Each worker root is created exclusively and onlyattempt-0001 is allowed.
+  Existing empty, partial and completed roots refuse. Completed records cannot
+  be mistaken for a new observation. Six immutable controller artifact names
+  are permitted. Atomic replacement overlap is included in the storage census.
+- The shared ledger retains its original schema and reservation/settlement
+  arithmetic. It accepts at most20attempts and1MiB. Unknown work stays fully
+  charged. A missing ledger in an existing directory is not reinitialized.
+  Real observed CPU may exceed its reservation; it is never silently clipped.
+- The new child module is research_v90.worker_control. Applied CPU/address/file/
+  affinity limits, wait4 accounting, process-group cleanup and32KiB stream-tail
+  summaries retain the original behavior. The original full-output hashes and
+  byte counts remain. New full process/host qualification has NOT run.
+- records.py offers a finite declared-path exclusive writer, with1MiB small
+  records and explicit64MiB large reports. Partial writes remain consumed and
+  physically retained. New host/entry/submit/fetch callers still need integration.
+
+Reproduced transfer wiring bugs
+1. Frozen research_v82/target_worker.py imports verify_command_admission from
+   src.worker_control, which has no such definition. The implementation is in
+   src.transaction_timing. Cancelled V82 never exercised this path.
+2. Correcting that import alone would not work. Both V82 and V84 producers use
+   {program_sha256,sources_sha256} identities. The old verifier constructs
+   {protocol_sha256,source_sha256}, including a different source inventory.
+   A generated actual ledger reproduces the identity/schema refusal. Existing
+   integration fixtures mock the command verifier, so those fixtures alone
+   cannot establish live admission compatibility. V89 uses the old verifier's
+   matching identity and is unaffected by these two prospective-transfer bugs.
+
+admission.py now provides a shared new ledger_identity helper and a read-only
+exact-command verifier. It binds program/source inventory, caps, command, cwd,
+ledger path/digest, worker identity/limits, literalattempt-0001and its digest,
+phase and the full live cpu_seconds+2reservation. It never creates a missing
+ledger, acquires a lock, settles or repairs debits. Future controller AND worker
+must call this shared contract after source/program/literal Slurm-plan checks.
+Changing a frozen file or merely weakening its old receipt gate is forbidden.
+
+Progress-file census from the frozen call graph
+PROGRESS_SOURCE_BINDINGS.json binds ten reviewed files. The new output constructor
+rechecks those source hashes. Each progress record keeps the original1MiB
+ceiling; scientific JSON/completion stays64MiB, state1GiB and models exact-size.
+For s=24or48stages:
+- Preparation: one context,4source events,s certificates,4s payload events.
+- Two-endpoint oracle: one context,3+2source events,2s certificates,8s payload
+  events. This is246/486records, including all four rebuilt representations.
+- Each modern request: one context plus s certificates; no source replay.
+- Each compressed request: one context plus s certificates, and either zero
+  or all3/2 retained source events. Service.solve memoizes its fallback replay
+  within a request. Every stage's refusal diagnostic stays in its certificate.
+The20workers therefore need at most1714progress files versus10240previously
+allowed:8,940,453,376bytes (8.326GiB) less logical allowance. Complete phase counts
+are required, including zero-or-full fallback replay. Exceeding a count poisons
+the writer; a failed/partial output cannot become a complete scientific result.
+The new complete worker still must be connected to this writer and qualified.
+
+Prospective storage census, NOT admission
+storage_plan.py includes both five-operation target-admission and23-operation
+complete-service chains:two bounded source packages/staging copies, large
+registrations/gates/reports, exact metadata paths,22sealed controllers with
+replacement/ledger overlap, complete worker artifacts, actual target outputs,
+exact public GPT2 input/partial fetch, captured and external logs, both audits,
+terminal reports, compiler/test/worker temporaries, file/directory overhead,
+25percentallocation margin and1GiBfixed margin. It credits no historical deletion.
+The aggregate proposed project allowance is73,550,418,439bytes (68.50GiB), plus
+17,263,765,504temporary bytes (16.08GiB). These are conservative engineering
+allowances, NOT measured peaks, reserved capacity or formal global disk bounds.
+The explicitly false eligible_for_storage_admission flag must remain false.
+Packager, host, entry, worker, fetch, submit, audit and terminal callers must first
+be completed and their whole write census reviewed. Source packages must be
+uncompressed tar<=64MiB, extracted bytes<=64MiB and<=4096regularmembers each.
+Fresh source-bound V85/V88 user/group/filesystem checks and actual container
+mapping are mandatory before any later upload/allocation. Existing V89 storage
+admission cannot be reused for transfer. Controller caps stay302seconds per
+complete worker,6040total, not V89's602per worker.
+
+Validation and limitations
+48pure local checks pass under Python3.12.7. They cover before-I/O bounds, exact
+ceilings, symbolic/nonregular/changed files, atomic failure, root reuse, artifact
+census, failure text, unknown reservations, overrun arithmetic, ledger identity,
+exact command refusal, progress diagnostics/counts and complete write arithmetic.
+Three generated pinned-Linux checks are prepared but NOT run: successful sealed
+child, failed child and real child admission against its live ledger. Actual
+V81 profile/archive/service suites and future full orchestration suites remain
+necessary. No local neural/model execution took place. An initial invocation
+used system Python3.9.6:20tests,9errors because Path.stat(follow_symlinks=False)
+is unsupported there. It was not a cluster attempt. Correct supported-runtime
+pure tests passed; the earlier local invocation remains recorded.
+
+Recovery evidence gate
+recovery_gate.py requires the actual canonical V89 terminal output and its exact
+byte/hash binding. It reopens every registered terminal input, both actual
+audits and preserved failed artifacts/ledger. It checks all13registered jobs,
+all8cell/endpoints, ten settled new workers, matching audit clocks, no changed
+scope, no old-debit refund and no omitted audit input. Seven generated report
+fixtures pass; the real gate cannot run before actual V89 closure exists.
+Fresh scheduler inspection is still mandatory before any future launch.
+
+Next implementation gate
+Finish separately registered transfer software/target admission and its host
+closure using these contracts. Bind the actual successful V89 terminal schema
+recovery-terminal-v89, exact current program/jobs and every reopened input,
+including both audits and the old failure carry-forward. Do not fabricate a
+future terminal hash. The old V80 input registry still supplies unchanged source
+selection/provenance. Keep V81/V82 failed/cancelled registrations consumed.
+Only after new actual-target closure can the complete20-worker/16comparison
+screen be registered. Timing repetition or quality evaluation needs its own
+justified scope and precomputed unchanged resource caps. V72/V74 manuscript
+claims remain until actual new scientific audits pass.

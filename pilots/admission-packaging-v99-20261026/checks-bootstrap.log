@@ -1,0 +1,266 @@
+test_codec_binding_and_reference_target_cannot_be_relabelled (research_v63.test_control.ArchiveTests.test_codec_binding_and_reference_target_cannot_be_relabelled) ... ok
+test_duplicate_or_reordered_records_refuse (research_v63.test_control.ArchiveTests.test_duplicate_or_reordered_records_refuse) ... ok
+test_non_subset_and_missing_extra_sources_refuse (research_v63.test_control.ArchiveTests.test_non_subset_and_missing_extra_sources_refuse) ... ok
+test_roundtrip_restores_actual_old_state (research_v63.test_control.ArchiveTests.test_roundtrip_restores_actual_old_state) ... ok
+test_source_binding_and_stage_grids_refuse (research_v63.test_control.ArchiveTests.test_source_binding_and_stage_grids_refuse) ... ok
+test_trailing_changed_payload_and_header_bound_refuse (research_v63.test_control.ArchiveTests.test_trailing_changed_payload_and_header_bound_refuse) ... ok
+test_transition_equals_fresh_and_retains_descriptor_bytes (research_v63.test_control.ArchiveTests.test_transition_equals_fresh_and_retains_descriptor_bytes) ... ok
+test_actual_largest_registered_shape_zstd_roundtrip (research_v63.test_control.CodecTests.test_actual_largest_registered_shape_zstd_roundtrip) ... ok
+test_all_five_modes_decode_exactly (research_v63.test_control.CodecTests.test_all_five_modes_decode_exactly) ... ok
+test_canonical_choice_records_every_mode_and_is_deterministic (research_v63.test_control.CodecTests.test_canonical_choice_records_every_mode_and_is_deterministic) ... ok
+test_changed_hash_runtime_shape_and_noncanonical_mode_refuse (research_v63.test_control.CodecTests.test_changed_hash_runtime_shape_and_noncanonical_mode_refuse) ... ok
+test_content_size_checksum_and_skippable_requirements (research_v63.test_control.CodecTests.test_content_size_checksum_and_skippable_requirements) ... ok
+test_exact_signed_zero_subnormal_and_extreme_words (research_v63.test_control.CodecTests.test_exact_signed_zero_subnormal_and_extreme_words) ... ok
+test_extent_nonfinite_unknown_mode_and_limits_refuse (research_v63.test_control.CodecTests.test_extent_nonfinite_unknown_mode_and_limits_refuse) ... ok
+test_old_and_new_magic_are_distinct (research_v63.test_control.CodecTests.test_old_and_new_magic_are_distinct) ... ok
+test_trailing_extra_frame_truncation_and_checksum_refuse (research_v63.test_control.CodecTests.test_trailing_extra_frame_truncation_and_checksum_refuse) ... ok
+test_window_and_dictionary_rejected_before_decompression (research_v63.test_control.CodecTests.test_window_and_dictionary_rejected_before_decompression) ... ok
+test_bound_read_refuses_tamper_wrong_extent_and_symlink (research_v63.test_runner.RunnerTests.test_bound_read_refuses_tamper_wrong_extent_and_symlink) ... ok
+test_exclusive_outputs (research_v63.test_runner.RunnerTests.test_exclusive_outputs) ... ok
+test_json_duplicates_and_nonfinite_refuse (research_v63.test_runner.RunnerTests.test_json_duplicates_and_nonfinite_refuse) ... ok
+test_registration_caps_scope_and_paths_refuse (research_v63.test_runner.RunnerTests.test_registration_caps_scope_and_paths_refuse) ... ok
+test_corrupt_predecessor_cannot_return_successor (research_v64.test_service.ModernServiceTests.test_corrupt_predecessor_cannot_return_successor) ... ok
+test_direct_values_and_archive_route_match (research_v64.test_service.ModernServiceTests.test_direct_values_and_archive_route_match) ... ok
+test_failed_encoding_time_is_retained (research_v64.test_service.ModernServiceTests.test_failed_encoding_time_is_retained) ... ok
+test_identical_point_words_solver_options_and_output_codes (research_v64.test_service.ModernServiceTests.test_identical_point_words_solver_options_and_output_codes) ... ok
+test_invalid_direct_shape_dtype_and_nonfinite_values_refuse (research_v64.test_service.ModernServiceTests.test_invalid_direct_shape_dtype_and_nonfinite_values_refuse) ... ok
+test_missing_and_extra_sources_refuse (research_v64.test_service.ModernServiceTests.test_missing_and_extra_sources_refuse) ... ok
+test_predecessor_membership_and_non_subset_refuse (research_v64.test_service.ModernServiceTests.test_predecessor_membership_and_non_subset_refuse) ... ok
+test_repair_recomputes_codes_and_matches_fresh_state (research_v64.test_service.ModernServiceTests.test_repair_recomputes_codes_and_matches_fresh_state) ... ok
+test_stage_weight_or_order_mutation_refuses_before_any_solver (research_v64.test_service.ModernServiceTests.test_stage_weight_or_order_mutation_refuses_before_any_solver) ... ok
+test_structural_refusal_before_source_parse_or_solver (research_v64.test_service.ModernServiceTests.test_structural_refusal_before_source_parse_or_solver) ... ok
+test_wrong_representation_or_external_gram_trust_refuses (research_v64.test_service.ModernServiceTests.test_wrong_representation_or_external_gram_trust_refuses) ... ok
+test_wrong_source_identity_and_trailing_bytes_refuse (research_v64.test_service.ModernServiceTests.test_wrong_source_identity_and_trailing_bytes_refuse) ... ok
+test_actual_solver_and_fresh_teacher_reconstruction_equal (research_v64.test_linux.LinuxNumericalTests.test_actual_solver_and_fresh_teacher_reconstruction_equal) ... ok
+test_cold_never_reads_predecessor (research_v66.test_operations.OperationTests.test_cold_never_reads_predecessor) ... ok
+test_corrupt_modern_state_refuses_without_solver (research_v66.test_operations.OperationTests.test_corrupt_modern_state_refuses_without_solver) ... ok
+test_four_point_arms_recompute_and_write_equal_models (research_v66.test_operations.OperationTests.test_four_point_arms_recompute_and_write_equal_models) ... ok
+test_modified_tokens_refuse_before_predecessor_access (research_v66.test_operations.OperationTests.test_modified_tokens_refuse_before_predecessor_access) ... ok
+test_noncanonical_trust_refuses (research_v66.test_operations.OperationTests.test_noncanonical_trust_refuses) ... ok
+test_output_commitment_mismatch_refuses (research_v66.test_operations.OperationTests.test_output_commitment_mismatch_refuses) ... ok
+test_unknown_representation_refuses_before_solver (research_v66.test_operations.OperationTests.test_unknown_representation_refuses_before_solver) ... ok
+test_unsorted_root_refuses_before_predecessor_access (research_v66.test_operations.OperationTests.test_unsorted_root_refuses_before_predecessor_access) ... ok
+test_wrong_representation_refuses_before_solver (research_v66.test_operations.OperationTests.test_wrong_representation_refuses_before_solver) ... ok
+test_five_requests_equal_fresh_model_state_and_trust (research_v66.test_linux.LinuxOperationTests.test_five_requests_equal_fresh_model_state_and_trust) ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 2.606s
+
+OK
+test_actual_four_cells_equal_fresh_model_state_and_trust (research_v79.test_integration.Checks.test_actual_four_cells_equal_fresh_model_state_and_trust) ... ok
+test_corrupt_state_refuses_before_solver_in_optimized_cells (research_v79.test_integration.Checks.test_corrupt_state_refuses_before_solver_in_optimized_cells) ... ok
+test_failure_restores_every_dispatch_and_clears_cache (research_v79.test_integration.Checks.test_failure_restores_every_dispatch_and_clears_cache) ... ok
+test_resident_refusal_precedes_predecessor_access (research_v79.test_integration.Checks.test_resident_refusal_precedes_predecessor_access) ... ok
+test_single_use_outer_transaction_closes_and_matches_fresh (research_v79.test_integration.Checks.test_single_use_outer_transaction_closes_and_matches_fresh) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.574s
+
+OK
+test_exact_complete_profiles_and_code_extents (research_v81.test_profile.Checks.test_exact_complete_profiles_and_code_extents) ... ok
+test_missing_extra_reordered_and_mismatched_profile_refuse (research_v81.test_profile.Checks.test_missing_extra_reordered_and_mismatched_profile_refuse) ... ok
+test_recipe_or_stage_mutation_refuses (research_v81.test_profile.Checks.test_recipe_or_stage_mutation_refuses) ... ok
+test_source_count_length_vocabulary_and_duplicates_refuse (research_v81.test_profile.Checks.test_source_count_length_vocabulary_and_duplicates_refuse) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.004s
+
+OK
+test_48_stage_extent_actual_restoration_and_24_stage_profile (research_v81.test_archive.FullGeometryArchives.test_48_stage_extent_actual_restoration_and_24_stage_profile) ... ok
+test_missing_code_source_or_oversized_source_set_refuses (research_v81.test_archive.FullGeometryArchives.test_missing_code_source_or_oversized_source_set_refuses) ... ok
+test_old_and_new_archive_framing_are_not_interchangeable (research_v81.test_archive.FullGeometryArchives.test_old_and_new_archive_framing_are_not_interchangeable) ... ok
+test_retained_transition_equals_independent_pack (research_v81.test_archive.FullGeometryArchives.test_retained_transition_equals_independent_pack) ... ok
+test_wrong_profile_missing_stages_and_malformed_frame_refuse (research_v81.test_archive.FullGeometryArchives.test_wrong_profile_missing_stages_and_malformed_frame_refuse) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 40.716s
+
+OK
+test_approved_grid_does_not_bypass_checkpoint_identity (research_v81.test_service.Guards.test_approved_grid_does_not_bypass_checkpoint_identity) ... ok
+test_default_gpt2_grid_refuses_before_checkpoint_access (research_v81.test_service.Guards.test_default_gpt2_grid_refuses_before_checkpoint_access) ... ok
+test_legacy_repair_entry_refuses (research_v81.test_service.Guards.test_legacy_repair_entry_refuses) ... ok
+test_modern_serialization_uses_distinct_archive_and_records_time (research_v81.test_service.Guards.test_modern_serialization_uses_distinct_archive_and_records_time) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
+test_bad_root_order_membership_and_tokens_refuse (research_v82.test_inputs.Inputs.test_bad_root_order_membership_and_tokens_refuse) ... ok
+test_config_bytes_match_exact_fetch_commitment (research_v82.test_inputs.Inputs.test_config_bytes_match_exact_fetch_commitment) ... ok
+test_deadline_and_symbolic_destination_refuse (research_v82.test_inputs.Inputs.test_deadline_and_symbolic_destination_refuse) ... ok
+test_exact_stream_and_consumed_destination (research_v82.test_inputs.Inputs.test_exact_stream_and_consumed_destination) ... ok
+test_public_https_host_boundary (research_v82.test_inputs.Inputs.test_public_https_host_boundary) ... ok
+test_selection_is_fixed_matched_and_endpoint_nested (research_v82.test_inputs.Inputs.test_selection_is_fixed_matched_and_endpoint_nested) ... ok
+test_wrong_hash_truncation_and_overflow_preserve_failure_files (research_v82.test_inputs.Inputs.test_wrong_hash_truncation_and_overflow_preserve_failure_files) ... ok
+test_complete_census_and_full_fallback_budget_pass (research_v82.test_admission_reports.SavedReports.test_complete_census_and_full_fallback_budget_pass) ... ok
+test_omitted_fallback_reservation_and_array_overrun_refuse (research_v82.test_admission_reports.SavedReports.test_omitted_fallback_reservation_and_array_overrun_refuse) ... ok
+test_partial_or_duplicate_census_refuses (research_v82.test_admission_reports.SavedReports.test_partial_or_duplicate_census_refuses) ... ok
+test_refused_stage_altered_target_and_policy_refuse (research_v82.test_admission_reports.SavedReports.test_refused_stage_altered_target_and_policy_refuse) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.008s
+
+OK
+test_missing_existing_ledger_never_reinitializes_debits (research_v90.test_metadata.BudgetTests.test_missing_existing_ledger_never_reinitializes_debits) ... ok
+test_only_observed_usage_settles_and_overrun_is_not_clipped (research_v90.test_metadata.BudgetTests.test_only_observed_usage_settles_and_overrun_is_not_clipped) ... ok
+test_oversize_reservation_keeps_previous_debits (research_v90.test_metadata.BudgetTests.test_oversize_reservation_keeps_previous_debits) ... ok
+test_parent_sources_are_still_exact (research_v90.test_metadata.BudgetTests.test_parent_sources_are_still_exact) ... ok
+test_snapshot_is_read_only_and_historical_reader_compatible (research_v90.test_metadata.BudgetTests.test_snapshot_is_read_only_and_historical_reader_compatible) ... ok
+test_twenty_attempt_bound_and_reused_id_preserve_ledger (research_v90.test_metadata.BudgetTests.test_twenty_attempt_bound_and_reused_id_preserve_ledger) ... ok
+test_unknown_reservation_is_fully_charged_after_reopen (research_v90.test_metadata.BudgetTests.test_unknown_reservation_is_fully_charged_after_reopen) ... ok
+test_changed_read_identity_refuses (research_v90.test_metadata.MetadataTests.test_changed_read_identity_refuses) ... ok
+test_exact_ceiling_and_replacement_overflow_preserve_old_bytes (research_v90.test_metadata.MetadataTests.test_exact_ceiling_and_replacement_overflow_preserve_old_bytes) ... ok
+test_existing_attempt_is_not_renumbered (research_v90.test_metadata.MetadataTests.test_existing_attempt_is_not_renumbered) ... ok
+test_existing_empty_partial_and_complete_roots_never_retry (research_v90.test_metadata.MetadataTests.test_existing_empty_partial_and_complete_roots_never_retry) ... ok
+test_existing_worker_refuses_before_process_launch (research_v90.test_metadata.MetadataTests.test_existing_worker_refuses_before_process_launch) ... ok
+test_failed_replace_leaves_old_commit_and_no_false_new_record (research_v90.test_metadata.MetadataTests.test_failed_replace_leaves_old_commit_and_no_false_new_record) ... ok
+test_failure_message_is_kept_verbatim_and_not_promoted (research_v90.test_metadata.MetadataTests.test_failure_message_is_kept_verbatim_and_not_promoted) ... ok
+test_identity_overflow_does_not_consume_worker_directory (research_v90.test_metadata.MetadataTests.test_identity_overflow_does_not_consume_worker_directory) ... ok
+test_log_summary_byte_encoding_fits_without_new_truncation (research_v90.test_metadata.MetadataTests.test_log_summary_byte_encoding_fits_without_new_truncation) ... ok
+test_nonregular_read_refuses_without_waiting_for_pipe_writer (research_v90.test_metadata.MetadataTests.test_nonregular_read_refuses_without_waiting_for_pipe_writer) ... ok
+test_only_fixed_artifacts_and_complete_hashes (research_v90.test_metadata.MetadataTests.test_only_fixed_artifacts_and_complete_hashes) ... ok
+test_oversize_existing_read_and_symbolic_read_refuse (research_v90.test_metadata.MetadataTests.test_oversize_existing_read_and_symbolic_read_refuse) ... ok
+test_oversize_refuses_before_directory_or_temporary_file (research_v90.test_metadata.MetadataTests.test_oversize_refuses_before_directory_or_temporary_file) ... ok
+test_symbolic_output_ancestor_is_refused (research_v90.test_metadata.MetadataTests.test_symbolic_output_ancestor_is_refused) ... ok
+test_complete_census_allows_only_zero_or_full_fallback_replay (research_v90.test_outputs.OutputTests.test_complete_census_allows_only_zero_or_full_fallback_replay) ... ok
+test_existing_byte_overflow_still_fails_without_truncation (research_v90.test_outputs.OutputTests.test_existing_byte_overflow_still_fails_without_truncation) ... ERROR
+test_full_refusal_diagnostic_is_kept_verbatim (research_v90.test_outputs.OutputTests.test_full_refusal_diagnostic_is_kept_verbatim) ... ERROR
+test_full_twenty_worker_census_and_unchanged_byte_limits (research_v90.test_outputs.OutputTests.test_full_twenty_worker_census_and_unchanged_byte_limits) ... ok
+test_phase_overflow_retains_every_prior_record (research_v90.test_outputs.OutputTests.test_phase_overflow_retains_every_prior_record) ... ERROR
+test_record_layout_caps_and_collision (research_v90.test_outputs.OutputTests.test_record_layout_caps_and_collision) ... ok
+test_record_partial_failure_is_retained_and_consumed (research_v90.test_outputs.OutputTests.test_record_partial_failure_is_retained_and_consumed) ... ok
+test_unknown_trial_and_phase_refuse (research_v90.test_outputs.OutputTests.test_unknown_trial_and_phase_refuse) ... ERROR
+test_changed_sources_cap_identity_and_limits_refuse (research_v90.test_admission.AdmissionTests.test_changed_sources_cap_identity_and_limits_refuse) ... ok
+test_exact_live_allowance_passes_without_any_ledger_write (research_v90.test_admission.AdmissionTests.test_exact_live_allowance_passes_without_any_ledger_write) ... ok
+test_frozen_legacy_import_bug_is_recorded_without_mutation (research_v90.test_admission.AdmissionTests.test_frozen_legacy_import_bug_is_recorded_without_mutation) ... ok
+test_legacy_verifier_rejects_actual_transfer_identity_schema (research_v90.test_admission.AdmissionTests.test_legacy_verifier_rejects_actual_transfer_identity_schema) ... ok
+test_missing_environment_and_extra_fields_refuse (research_v90.test_admission.AdmissionTests.test_missing_environment_and_extra_fields_refuse) ... ok
+test_missing_ledger_is_not_created (research_v90.test_admission.AdmissionTests.test_missing_ledger_is_not_created) ... ok
+test_settled_allowance_is_not_reusable (research_v90.test_admission.AdmissionTests.test_settled_allowance_is_not_reusable) ... ok
+test_wrong_command_cwd_phase_root_digest_and_attempt_refuse (research_v90.test_admission.AdmissionTests.test_wrong_command_cwd_phase_root_digest_and_attempt_refuse) ... ok
+test_all_role_extents_and_allocation_margin_accounted_once (research_v90.test_storage_plan.StorageTests.test_all_role_extents_and_allocation_margin_accounted_once) ... ok
+test_metadata_census_is_accepted_by_exact_writer (research_v90.test_storage_plan.StorageTests.test_metadata_census_is_accepted_by_exact_writer) ... ok
+test_progress_reduction_does_not_cut_artifact_or_diagnostic_extent (research_v90.test_storage_plan.StorageTests.test_progress_reduction_does_not_cut_artifact_or_diagnostic_extent) ... ok
+test_twentytwo_workers_and_twenty_eight_allocations (research_v90.test_storage_plan.StorageTests.test_twentytwo_workers_and_twenty_eight_allocations) ... ok
+test_changed_primary_or_nonidentical_successor_refuses (research_v90.test_recovery_gate.RecoveryGateTests.test_changed_primary_or_nonidentical_successor_refuses) ... ok
+test_exact_synthetic_structure_does_not_expand_scientific_scope (research_v90.test_recovery_gate.RecoveryGateTests.test_exact_synthetic_structure_does_not_expand_scientific_scope) ... ok
+test_missing_or_duplicate_cell_is_not_eight_comparisons (research_v90.test_recovery_gate.RecoveryGateTests.test_missing_or_duplicate_cell_is_not_eight_comparisons) ... ok
+test_omitted_audit_input_refuses_even_with_verified_label (research_v90.test_recovery_gate.RecoveryGateTests.test_omitted_audit_input_refuses_even_with_verified_label) ... ok
+test_pending_or_missing_allocation_refuses (research_v90.test_recovery_gate.RecoveryGateTests.test_pending_or_missing_allocation_refuses) ... ok
+test_refunded_unknown_old_work_and_unsettled_new_work_refuse (research_v90.test_recovery_gate.RecoveryGateTests.test_refunded_unknown_old_work_and_unsettled_new_work_refuse) ... ok
+test_software_or_failed_or_old_report_cannot_replace_terminal (research_v90.test_recovery_gate.RecoveryGateTests.test_software_or_failed_or_old_report_cannot_replace_terminal) ... ok
+
+======================================================================
+ERROR: test_existing_byte_overflow_still_fails_without_truncation (research_v90.test_outputs.OutputTests.test_existing_byte_overflow_still_fails_without_truncation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v90/test_outputs.py", line 55, in test_existing_byte_overflow_still_fails_without_truncation
+    out = new.Outputs(self.root/'outputs', 'gpt2/reference_compressed-1')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v90/outputs.py", line 66, in __init__
+    verify_progress_sources()
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v90/outputs.py", line 24, in verify_progress_sources
+    read(root/p, expected, maximum=2**20, retain=False)
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 17, in read
+    p=regular(path);a=p.stat();require(a.st_size<=maximum,'Input extent exceeds bound')
+      ^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 11, in regular
+    require(not any(q.is_symlink() for q in (p,*p.parents)) and p.is_file(),'Regular nonsymbolic input required')
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 7, in require
+    if not x:raise ValueError(m)
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: Regular nonsymbolic input required
+
+======================================================================
+ERROR: test_full_refusal_diagnostic_is_kept_verbatim (research_v90.test_outputs.OutputTests.test_full_refusal_diagnostic_is_kept_verbatim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v90/test_outputs.py", line 49, in test_full_refusal_diagnostic_is_kept_verbatim
+    out = new.Outputs(self.root/'outputs', 'gpt2/reference_compressed-1')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v90/outputs.py", line 66, in __init__
+    verify_progress_sources()
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v90/outputs.py", line 24, in verify_progress_sources
+    read(root/p, expected, maximum=2**20, retain=False)
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 17, in read
+    p=regular(path);a=p.stat();require(a.st_size<=maximum,'Input extent exceeds bound')
+      ^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 11, in regular
+    require(not any(q.is_symlink() for q in (p,*p.parents)) and p.is_file(),'Regular nonsymbolic input required')
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 7, in require
+    if not x:raise ValueError(m)
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: Regular nonsymbolic input required
+
+======================================================================
+ERROR: test_phase_overflow_retains_every_prior_record (research_v90.test_outputs.OutputTests.test_phase_overflow_retains_every_prior_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v90/test_outputs.py", line 38, in test_phase_overflow_retains_every_prior_record
+    out = new.Outputs(self.root/'outputs', 'gpt2/reference_modern-1')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v90/outputs.py", line 66, in __init__
+    verify_progress_sources()
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v90/outputs.py", line 24, in verify_progress_sources
+    read(root/p, expected, maximum=2**20, retain=False)
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 17, in read
+    p=regular(path);a=p.stat();require(a.st_size<=maximum,'Input extent exceeds bound')
+      ^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 11, in regular
+    require(not any(q.is_symlink() for q in (p,*p.parents)) and p.is_file(),'Regular nonsymbolic input required')
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 7, in require
+    if not x:raise ValueError(m)
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: Regular nonsymbolic input required
+
+======================================================================
+ERROR: test_unknown_trial_and_phase_refuse (research_v90.test_outputs.OutputTests.test_unknown_trial_and_phase_refuse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v90/test_outputs.py", line 32, in test_unknown_trial_and_phase_refuse
+    out = new.Outputs(self.root/'outputs', 'distilgpt2/reference_modern-1')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v90/outputs.py", line 66, in __init__
+    verify_progress_sources()
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v90/outputs.py", line 24, in verify_progress_sources
+    read(root/p, expected, maximum=2**20, retain=False)
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 17, in read
+    p=regular(path);a=p.stat();require(a.st_size<=maximum,'Input extent exceeds bound')
+      ^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 11, in regular
+    require(not any(q.is_symlink() for q in (p,*p.parents)) and p.is_file(),'Regular nonsymbolic input required')
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 7, in require
+    if not x:raise ValueError(m)
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: Regular nonsymbolic input required
+
+----------------------------------------------------------------------
+Ran 48 tests in 0.962s
+
+FAILED (errors=4)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v99/software.py", line 56, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v99/software.py", line 53, in main
+    raise RuntimeError('New exact software suite failed: '+name)
+RuntimeError: New exact software suite failed: bounded_components
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v99/entry.py", line 45, in main
+    require(result_code==0,'Separate generated software child failed')
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 7, in require
+    if not x:raise ValueError(m)
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: Separate generated software child failed
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v99/entry.py", line 76, in <module>
+    if __name__=='__main__':main(*sys.argv[1:])
+                            ^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v99/entry.py", line 73, in main
+    require(error is None,'One-use admission entry failed; no retry')
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v99-20261026-a/research_v80/io.py", line 7, in require
+    if not x:raise ValueError(m)
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: One-use admission entry failed; no retry

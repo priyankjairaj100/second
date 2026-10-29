@@ -1,0 +1,12 @@
+{
+  "authorization": "User requested task ordering and sustained work on 16 October 2026",
+  "automation_id": "continue-second-research",
+  "automation_status": "ACTIVE",
+  "empirical_registration": false,
+  "interval_minutes": 15,
+  "notify_only_meaningful_change": true,
+  "queue": "docs/CONTINUOUS_RESEARCH_QUEUE.md",
+  "schema": "second-continuous-research-work",
+  "scope": "This existing chat; research and submission bundle preparation",
+  "submission_ready": false
+}

@@ -1,0 +1,248 @@
+{
+  "schema": "second-handoff-v97",
+  "updated_utc": "2026-10-25T08:39:28.617965+00:00",
+  "branch": "codex/second-cluster-v42",
+  "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "scheduler": "ACTIVE",
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "active": {
+    "version": 89,
+    "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9",
+    "cluster_state": "UNKNOWN_AFTER_CONNECTION_TIMEOUT",
+    "last_successful_reconciliation_utc": "2026-10-24T11:19:32.983028+00:00",
+    "latest_connection_attempt_utc": "2026-10-25T08:22:06Z",
+    "registered_jobs": [
+      "16004",
+      "16005",
+      "16006",
+      "16007",
+      "16008",
+      "16009",
+      "16010",
+      "16011",
+      "16012",
+      "16013",
+      "16014",
+      "16015",
+      "16016"
+    ],
+    "requires_reconciliation_before_any_launch": true,
+    "last_verified_completed_request_count": 2,
+    "request_count": 8
+  },
+  "engineering": {
+    "version": 92,
+    "status": "complete_source_prepared_not_registered",
+    "local_tests": 142,
+    "new_local_tests": 38,
+    "prepared_linux_tests": 221,
+    "new_linux_only_tests_unexecuted": 11,
+    "linux_gate_executed": false,
+    "source_archive_created": false,
+    "uploaded": false,
+    "registered": false,
+    "checkpoint_fetched": false,
+    "targets_admitted": false,
+    "empirical_result": false,
+    "prerequisite_v91_status": "source_prepared_172_test_gate_unexecuted"
+  },
+  "preserved": {
+    "v89_bound_files": 934,
+    "local_counterparts": 930,
+    "v90_source_commitments": 18,
+    "old_unknown_cpu_seconds": 12602,
+    "old_ledger_sha256": "10f95f5eea81d1bb07a92412ef4b4fe2e802060eb4251524f9559837ceabcb27",
+    "v91_source_commitments": 33,
+    "v92_source_commitments": 38
+  },
+  "next": [
+    "Restore access and reconcile existing 16004-16016, old19 outcomes and actual receipts; do not infer status from elapsed time or duplicate any job",
+    "Let existing V89 requests/oracle/audits run; close with frozen terminal only after all succeed, then apply V82/V93 interpretation rules",
+    "If justified, create exact V91 source package with actual V89 terminal and fresh storage admission",
+    "One-use V91 software qualification then bounded fetch/target admission and actual host closure",
+    "Use actual V91 archive/program/terminal to package and qualify V92 with221 Linux checks; run only if justified",
+    "Close all23 V92 allocations and both audits before interpreting matched family speed/storage evidence",
+    "Update same manuscript from actual audited evidence; finish rendered layout and selected delivery checks"
+  ],
+  "manuscript": {
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex",
+    "sha256": "bf3b7a73cda7b4c62fb7fe6fc7df08a36e949cb15f4c0d9e361fc25a732cc8eb",
+    "scientific_checkpoint": "V72/V74",
+    "edited": false,
+    "rendered_layout_verified": false,
+    "submission_ready": false,
+    "preview_access": "One attempt on 25 October: Sky Computer Use service startup request failed; no retry, edit or compilation this turn"
+  },
+  "reporting": {
+    "version": 93,
+    "status": "prepared_scalar_helpers_only",
+    "tests": 6,
+    "actual_evidence_reduction": false,
+    "review": "docs/COST_SCOPE_REVIEW_V93.txt",
+    "findings": [
+      "Fallback source extraction is nested within stage time",
+      "Within-representation optimization effects bundle multiple changes",
+      "Every cell and endpoint retained with complete host time"
+    ]
+  },
+  "preparation_review": {
+    "observed_utc": "2026-10-24T09:07:28.742061+00:00",
+    "scope": {
+      "bulk_output_hashes_rechecked": false,
+      "comparison_complete": false,
+      "independent_model_state_equality": false,
+      "quality_evaluation": false,
+      "reason": "No bulk artifact reread while timed requests run; both frozen terminal audits remain required",
+      "transfer": false
+    },
+    "status": "metadata_seal_storage_and_accounting_verified",
+    "host_elapsed_ns": 6756663858876,
+    "budget_debit": {
+      "charged_cpu_seconds": 6702,
+      "observed_cpu_ns": 6701231514000,
+      "phase": "feasibility",
+      "reserved_cpu_seconds": 12602,
+      "state": "settled"
+    },
+    "costs": {
+      "contained_numerical_cpu_ns": 6701231514000,
+      "host_envelope_cpu_ns": 6719748958364,
+      "job_id": "16005",
+      "nonnumerical_upper_cpu_ns": 18768486000,
+      "overlapping_clocks_not_summed": true,
+      "scheduler_cpu_ns": 6719000000000,
+      "scheduler_reporting_quantum_ns": 1000000000
+    },
+    "live_ledger_observation": {
+      "attempts": 2,
+      "bytes": 16184,
+      "not_a_frozen_terminal_ledger": true,
+      "reserved_unknown_attempts": 1,
+      "sha256": "91d5032183c4694dafd6dea6ed465164331dd8bf0f668fa86670c6ed7a74572d"
+    },
+    "receipt": "pilots/preparation-closure-v94-20261024/preparation-receipt-review.json"
+  },
+  "request_reviews": {
+    "reference_compressed-1": {
+      "observed_utc": "2026-10-24T10:20:27.178037+00:00",
+      "scope": {
+        "bulk_output_hashes_rechecked": false,
+        "comparison_complete": false,
+        "independent_model_state_equality": false,
+        "quality_evaluation": false,
+        "reason": "No bulk artifact reread while timed requests run; both frozen terminal audits remain required",
+        "transfer": false
+      },
+      "status": "metadata_seal_storage_and_accounting_verified",
+      "job_id": "16006",
+      "host_elapsed_ns": 4444116105524,
+      "budget_debit": {
+        "charged_cpu_seconds": 4405,
+        "observed_cpu_ns": 4404494710000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 12602,
+        "state": "settled"
+      },
+      "costs": {
+        "contained_numerical_cpu_ns": 4404494710000,
+        "host_envelope_cpu_ns": 4419655263979,
+        "job_id": "16006",
+        "nonnumerical_upper_cpu_ns": 15505290000,
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 4419000000000,
+        "scheduler_reporting_quantum_ns": 1000000000
+      },
+      "live_ledger_observation": {
+        "attempts": 3,
+        "bytes": 16381,
+        "not_a_frozen_terminal_ledger": true,
+        "reserved_unknown_attempts": 1,
+        "sha256": "aaa6c1bbeebe41dff5046cb09c0dbce2e7bc4efd55c6d7bf2c4cc20b5ff3c1a7"
+      },
+      "receipt": "pilots/request-closure-v95-20261024/request-receipt-review.json",
+      "trial": "reference_compressed-1"
+    },
+    "optimized_compressed-1": {
+      "observed_utc": "2026-10-24T11:20:01.642597+00:00",
+      "scope": {
+        "bulk_output_hashes_rechecked": false,
+        "comparison_complete": false,
+        "independent_model_state_equality": false,
+        "quality_evaluation": false,
+        "reason": "No bulk artifact reread while timed requests run; both frozen terminal audits remain required",
+        "transfer": false
+      },
+      "status": "metadata_seal_storage_and_accounting_verified",
+      "job_id": "16007",
+      "host_elapsed_ns": 3931645761864,
+      "budget_debit": {
+        "charged_cpu_seconds": 3897,
+        "observed_cpu_ns": 3896740440000,
+        "phase": "feasibility",
+        "reserved_cpu_seconds": 12602,
+        "state": "settled"
+      },
+      "costs": {
+        "contained_numerical_cpu_ns": 3896740440000,
+        "host_envelope_cpu_ns": 3909769417423,
+        "job_id": "16007",
+        "nonnumerical_upper_cpu_ns": 13259560000,
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 3909000000000,
+        "scheduler_reporting_quantum_ns": 1000000000
+      },
+      "live_ledger_observation": {
+        "attempts": 4,
+        "bytes": 16578,
+        "not_a_frozen_terminal_ledger": true,
+        "reserved_unknown_attempts": 1,
+        "sha256": "433b4edb14fb06a72999374c970ee12b533ba03dec7ab2494886898bdd3496ea"
+      },
+      "receipt": "pilots/request-closure-v96-20261024/request-receipt-review.json",
+      "trial": "optimized_compressed-1"
+    }
+  },
+  "last_verified_execution_snapshot": {
+    "version": 89,
+    "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9",
+    "software_job": "16004",
+    "software_tests": 162,
+    "preparation_job": "16005",
+    "preparation_state": "COMPLETED",
+    "stage_certificates": 24,
+    "stage_total": 24,
+    "observed_utc": "2026-10-24T11:19:32.983028+00:00",
+    "dependent_jobs": [
+      "16009",
+      "16010",
+      "16011",
+      "16012",
+      "16013",
+      "16014",
+      "16015",
+      "16016"
+    ],
+    "actual_model_completion": true,
+    "both_audits_complete": false,
+    "payload_stage_records": 96,
+    "preparation_exit": "0:0",
+    "actual_preparation_completion": true,
+    "independent_model_state_equality": false,
+    "current_request_job": "16008",
+    "current_request": "reference_modern-1",
+    "current_request_state": "RUNNING",
+    "completed_request_jobs": [
+      "16006",
+      "16007"
+    ],
+    "completed_request_count": 2,
+    "request_count": 8,
+    "actual_first_request_completion": true
+  },
+  "connectivity": {
+    "status": "timed_out_before_login",
+    "receipt": "pilots/connection-interruption-v97-20261025/",
+    "user_action_pending": true,
+    "repeat_attempts_stopped": true
+  }
+}

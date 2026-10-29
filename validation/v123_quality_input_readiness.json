@@ -1,0 +1,133 @@
+{
+  "schema": "matched-quality-input-readiness-v123",
+  "observed_utc": "2026-10-29T05:31:27.999674+00:00",
+  "bound_closed_program": {
+    "bytes": 186414,
+    "exists": true,
+    "mtime_ns": 1793078569276025576,
+    "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/program.json",
+    "sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381"
+  },
+  "model_input_gate": "four saved endpoint models present and SHA256 matched to successful original completion metadata",
+  "new_quality_executed": false,
+  "new_calibration_executed": false,
+  "settings": [
+    {
+      "profile_step": "distilgpt2/1",
+      "retained_ids": [
+        "c4:en:shard2:line1662",
+        "c4:en:shard2:line508",
+        "c4:en:shard2:line651"
+      ],
+      "normalization": 512,
+      "model": {
+        "bytes": 21233664,
+        "exists": true,
+        "mtime_ns": 1793083826067444383,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-1/outputs/model.bin",
+        "sha256": "2038bb85995a36c2184fb38d4c99a45105b378fec86ed3b3b2d82d8ec9a7feea"
+      },
+      "completion": {
+        "bytes": 181592,
+        "exists": true,
+        "mtime_ns": 1793083826154443785,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-1/outputs/completion.json",
+        "sha256": "ac0fd70e4d897324dc4e398e3b90d85ac2177ae353dfa24404885820590176d3"
+      },
+      "base_target_sha256": "01ee42bff076fed9dec594a3f74cd1e8844c3592c196e0381d3f28141b718772",
+      "calibration_target_sha256": "78bf6dfd0d9d3f4569b76dc6275d45df27edac974ae39c625589f8f09e471780",
+      "service_target_sha256": "227c86734464eb559333e98ef2e99bbe2402fa6114ed4f211c6ab8e8371e3a71",
+      "stages": 24,
+      "codes": 42467328
+    },
+    {
+      "profile_step": "distilgpt2/2",
+      "retained_ids": [
+        "c4:en:shard2:line508",
+        "c4:en:shard2:line651"
+      ],
+      "normalization": 512,
+      "model": {
+        "bytes": 21233664,
+        "exists": true,
+        "mtime_ns": 1793086312804203614,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/outputs/model.bin",
+        "sha256": "3c0de8c371a68e020ac6bf738fc9f53e4e027289478f220f9b655e2306b2c569"
+      },
+      "completion": {
+        "bytes": 180806,
+        "exists": true,
+        "mtime_ns": 1793086312905202890,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/distilgpt2/optimized_compressed-2/outputs/completion.json",
+        "sha256": "c948fda17b70ad39498711c252f000c2a91fe2b1e7f9fd45ef421541ef93d700"
+      },
+      "base_target_sha256": "01ee42bff076fed9dec594a3f74cd1e8844c3592c196e0381d3f28141b718772",
+      "calibration_target_sha256": "78bf6dfd0d9d3f4569b76dc6275d45df27edac974ae39c625589f8f09e471780",
+      "service_target_sha256": "227c86734464eb559333e98ef2e99bbe2402fa6114ed4f211c6ab8e8371e3a71",
+      "stages": 24,
+      "codes": 42467328
+    },
+    {
+      "profile_step": "gpt2/1",
+      "retained_ids": [
+        "c4:en:shard2:line1662",
+        "c4:en:shard2:line508",
+        "c4:en:shard2:line651"
+      ],
+      "normalization": 512,
+      "model": {
+        "bytes": 42467328,
+        "exists": true,
+        "mtime_ns": 1793085370640065989,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-1/outputs/model.bin",
+        "sha256": "34e9e20c1da268fb88d30abf0b418fd5938f10401dde9d34aa2c23edc77fe0ec"
+      },
+      "completion": {
+        "bytes": 355577,
+        "exists": true,
+        "mtime_ns": 1793085370813064787,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-1/outputs/completion.json",
+        "sha256": "41913c24341b9acb6fcbef16af529757d7ba146156de717fe6b665608974ee67"
+      },
+      "base_target_sha256": "ef1c7c55c098b43aae4f93bd00e191f843d792c9fe5a125fc4655256f2286711",
+      "calibration_target_sha256": "cf6841efbcb390bf3fa66751032d8a38695e4cd53f02199e9b1433222af4ef60",
+      "service_target_sha256": "f133a7af9c2576d826a64d128b46e089b1d41a94cd84c76ef7b026397603a405",
+      "stages": 48,
+      "codes": 84934656
+    },
+    {
+      "profile_step": "gpt2/2",
+      "retained_ids": [
+        "c4:en:shard2:line508",
+        "c4:en:shard2:line651"
+      ],
+      "normalization": 512,
+      "model": {
+        "bytes": 42467328,
+        "exists": true,
+        "mtime_ns": 1793085986740275683,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/outputs/model.bin",
+        "sha256": "e0baeb4f7e5076510f08ae7ec6ac82dedacdb5b3026fe24bd78e9f65b4644499"
+      },
+      "completion": {
+        "bytes": 354913,
+        "exists": true,
+        "mtime_ns": 1793085986894274587,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a/gpt2/optimized_compressed-2/outputs/completion.json",
+        "sha256": "5f6cd8f33fd7ac3de38423d93fe19b42cb5383c4c50e7d2dffd5c874ec4a11d9"
+      },
+      "base_target_sha256": "ef1c7c55c098b43aae4f93bd00e191f843d792c9fe5a125fc4655256f2286711",
+      "calibration_target_sha256": "cf6841efbcb390bf3fa66751032d8a38695e4cd53f02199e9b1433222af4ef60",
+      "service_target_sha256": "f133a7af9c2576d826a64d128b46e089b1d41a94cd84c76ef7b026397603a405",
+      "stages": 48,
+      "codes": 84934656
+    }
+  ],
+  "pending": [
+    "New outcome-blind evaluation frame and sample, excluding all previously inspected calibration and quality frames, not merely the previously evaluated articles",
+    "Generalized independently audited model loader for both checkpoints",
+    "Matched sequential and practical GPTQ comparators",
+    "Frozen evaluation estimand, guard and total CPU/runtime registration",
+    "Actual per-model quality losses and terminal audit"
+  ]
+}

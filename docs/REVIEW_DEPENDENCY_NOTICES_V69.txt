@@ -1,0 +1,42 @@
+Observed dependency notices companion,16 October2026
+
+reports/development-dependency-notices-v69.zip is a38,839-byte preparation archive,
+SHA256062bc8b1944e93b2eb22d3a9592e474ee08e50d4ebeb404ea166f7beaac52e03.
+Its eight files contain five unchanged notice texts totaling103,407 bytes,
+a source inventory, README and manifest. Exact clean extraction and manifest
+checks passed. No dependency binary, model, corpus or environment is supplied.
+
+Four notices are copies of the actual CPU distribution texts observed earlier:
+NumPy LICENSE, gmpy2 COPYING/COPYING.LESSER and zstandard LICENSE. Only the codec
+notice was already bound by the original runtime inventory; the others are later
+observations. Generic GPL/LGPL texts alone do not identify every GMP/MPFR/MPC
+copyright notice or build. The prior installed-notice archive remains unchanged.
+
+The fifth text is the tokenizers publisher LICENSE at immutable source commit
+88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3. GitHub's connector retrieved LICENSE and
+tokenizers/Cargo.toml; both returned Git blob commitments match the saved bytes.
+Cargo declares version0.23.2 and Apache-2.0. The earlier raw-URL connection-reset
+failure remains in validation/v69_tokenizers_publisher_notice.json. This successful
+alternative retrieval is recorded separately, without overwriting that failure.
+The installed dist-info still lacks a notice, and no installed-wheel/source or
+Rust dependency/feature equivalence was verified. Remaining transitive/system/GPU
+notices and the research project's release terms remain unresolved.
+
+The original four review ZIPs and manuscript are unchanged. The navigation page
+now includes this fifth component and states its limited scope. A fresh cross-
+component report checks567 archive members and569 text files, all five manifests,
+fifteen evidence references, the existing receipt crosswalk and four protocol
+links. No known direct identity string occurs; indirect linkage and full anonymity
+remain unverified. The earlier four-component report is preserved.
+
+Read validation/v69_review_dependency_notices.json,
+validation/v69_tokenizers_publisher_notice_recovery.json and
+validation/v69_cross_component_review_with_notices.json. The builder and bounded
+review checker are reporting code, outside frozen execution inventories. These
+checks do not run inference, admit a new experiment or complete a submission.
+
+At16:10:14UTC (21:40:14IST), the actual V67 snapshot showed cold15265 still running
+1h36m50s with23of24 stage certificates.15266--15275 remained dependency-pending.
+The portable terminal checker correctly returns pending_terminal. No job was
+submitted, retried, cancelled or changed. Both actual terminal audits remain
+mandatory before V68 registration. Final paper format preference remains pending.

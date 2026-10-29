@@ -1,0 +1,71 @@
+V112 prospective point-token matched screen (prepared, not an empirical result)
+
+Motivation: V104 GPT2 first compressed request failed certification in both box
+and exact-point streamed passes. V110's one selected-stage token attempt certified
+all 2,359,296 codes with the fixed target and original limits. This motivates
+choosing token for every point-valued solve from the start. No V104 or V110 job
+is retried; no route attempt is repeated as an implicit runtime fallback.
+
+All four original cells and both fresh oracles use the same new point policy.
+The compressed-box and Gram algorithms are unchanged. Source replay on a box
+refusal is still explicit and charged, but its point solve uses token. Original
+reference/optimized codec, neighbor and bounded reuse differences remain. The
+policy is an execution identity, not a new checkpoint/calibration target. Store
+its source hash, counters and closed scope in every worker completion. Audits
+reject missing, unclosed or changed execution identities. No single component
+can receive a causal timing attribution from these bundled comparisons.
+
+Reuse the separately completed, sealed V104 preparations for both models.
+Never launch another preparation. New workers: 16 requests (four cells times two
+retained endpoints times two checkpoints) and two fresh two-endpoint oracles.
+Preserve original order with only preparation entries removed, four 128-token
+source records, original normalization512, 24/48 stages, gridallowance1,327,104,
+fixed target and checkpoint hashes. Step1 reads old preparation bytes; step2
+reads its own newly completed step1. Every oracle reconstructs from original
+retained tokens and cannot open predecessor state. Primary audit reopens all
+old preparation payload bytes, checks all16 actual state/trust/model pairs and
+retained-source invariance; supplemental independently rereads all16 model pairs.
+Both audits and complete actual terminal accounting are mandatory for any result.
+
+Reservation72036 plus actual carried numerical6304 =78340 <= original82840.
+All original per-worker numerical CPU/wall ceilings remain. Eighteen complete
+controllers reserve5436 plus carry79 =5515 <=6040. Software aggregate395 plus
+carry207 =602; checks controller254 plus carry48 =302. Original audit ceilings
+remain7200/3600CPU and9000/5400wall. One CPU,16GiB process,2GiB file size,9GiB caller
+residency,8GiB solver arrays,16 refinement coordinates,64billion per stage and
+one trillion per request unchanged. Box plus possible point-token work is
+checked together against the stage ceiling before execution. No cost refund
+for failed V104/V109 or past unknown12602; overlapping clocks never summed.
+
+New finite write plan reserves only18 worker outputs, all21 allocation logs,
+full metadata, controller ledger overlap, source staging and temporary builds.
+Old preparation files remain allocated and are never credited as newly free.
+Fresh source-bound quota/path/group admission and actual Slurm reconciliation
+are required before upload, registration and each allocation. Default container
+path/device/group mapping remains verified. No credentials, weights or corpus
+are in the source package. Existing Linux runtime only; no paid compute.
+
+One-use held launchers, exclusive intents, no requeue or retry. Actual V110 closure
+and V104 failure/costs are reopened. Host preparation must not import container-
+only numerical runtime. Source qualification must precede the full chain; all
+software fixtures are generated data and cannot substitute for empirical
+results. Original source archive and every failed/cancelled receipt immutable.
+
+Report every cell and endpoint, refusals and replay counts. Complete host wall
+clock is the primary service measure; stage/replay clocks overlap. Reused
+preparation is historical cost, not zero: preserve/report its full old measured
+clock separately for any lifecycle discussion. Fresh-process native setup is
+included; OS cache is uncontrolled. This is a single-observation related-family
+screen with no new quality evaluation or cross-architecture generality.
+
+Binary audit correction: V111 was packaged locally but SSH failed before login,
+so no remote preparation or job exists from that attempt. Its immutable archive
+is preserved. Review then found that the inherited matched audit reader treated
+binary state as UTF8 metadata and imposed a64MiB retained-read cap, despite
+126--373MB completed preparation states. V112 uses a separate tracked binary
+reader with the original1GiB artifact and64MiB JSON bounds, strict project/regular
+path checks, hash/metadata stability and final reread. It decodes only JSON. Both
+primary and supplemental audits use it, and the actual-file worker pipeline
+fixture now uses the same reader. Generated regression checks retain non-UTF8
+and64MiB+1 binary files, enforce bounds and reject mutation/symbolic/outside paths.
+No scientific artifact or global resource cap is changed. No V111 job is retried.

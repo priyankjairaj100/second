@@ -1,0 +1,14 @@
+{
+  "prior_sha256": "9bd51a682fd634cd1d80520eccc493772511236919b43b5945be866108b96800",
+  "new_sha256": "339529d9bf3800e9365ea3a473cb954b1049c7faf9914684175326ed847f7d51",
+  "three_proof_bodies_verbatim": true,
+  "new_empirical_result": false,
+  "new_pinned_model_card_citation": true,
+  "rendered_page_count_known": false,
+  "preliminary_guard_failure": "Expected four proof environments instead of actual three; assertion refused before source write. Original source hash reverified; corrected to preserve original count.",
+  "native_compile_success": true,
+  "labels": 21,
+  "bibliography_keys": 11,
+  "all_document_references_and_citations_resolve": true,
+  "reference_scan_correction": "Initial scan included template macro arguments; document-body-only scan resolves every actual reference and citation. Native compilation succeeded before both scans."
+}

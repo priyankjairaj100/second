@@ -1,0 +1,35 @@
+{
+  "bibliography_keys": [
+    "gptq",
+    "ginart",
+    "medu",
+    "qss",
+    "exactfun",
+    "qebverif",
+    "execcert",
+    "distilgpt2",
+    "c4",
+    "wikitext"
+  ],
+  "captured_utc": "2026-10-27T02:45:48.121639+00:00",
+  "full_model_transfer_claim": false,
+  "labels": 16,
+  "manuscript": {
+    "bytes": 59315,
+    "sha256": "cea87a82c5137306729871eb0030846c72bfe7c4039566509ab573621fc4fb48"
+  },
+  "native_compile": {
+    "kind": "success",
+    "source": {
+      "bytes": 59315,
+      "sha256": "cea87a82c5137306729871eb0030846c72bfe7c4039566509ab573621fc4fb48"
+    },
+    "tool": "compile_latex_document"
+  },
+  "native_compile_success": true,
+  "new_scientific_scope": "V104 failed screen and V110 selected-stage-only diagnostic",
+  "rendered_layout_verified": false,
+  "schema": "manuscript-checks-v111",
+  "unresolved_citations": [],
+  "unresolved_references": []
+}

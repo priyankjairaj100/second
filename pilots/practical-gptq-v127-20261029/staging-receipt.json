@@ -1,0 +1,13 @@
+{
+  "preflight": "16686 second125-gpt2__candidate_2 RUNNING\n16645 f3_small PENDING\n16646 f3_mid PENDING\n16644 f3_tiny RUNNING\n16643 f0_mid RUNNING\n",
+  "staging": "STAGED_SOURCE_VERIFIED 1422\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n",
+  "archive": {
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/practical-gptq-v127/source-v127.tar.gz",
+    "bytes": 2877802,
+    "sha256": "418a255fe1a0c000d29cc15a829f1d32135b27ab1404528a261823d2124c77ae"
+  },
+  "registration_sha256": "1d60cc91440ca59b00d095c1e21da97ef8750847d98cc2675221f965f127c246",
+  "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/practical-gptq-v127-20261029-a",
+  "sources": 1422
+}

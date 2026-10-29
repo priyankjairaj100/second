@@ -1,0 +1,12 @@
+{
+  "cause": "The preparation probe assumed an actual frame record with 0 < token_count < 16; none exists. The baseline metadata reconciliation passed before probe selection.",
+  "error": "StopIteration",
+  "location": "main short-token-hash mutation probe",
+  "old_probe_condition": "0 < token_count < 16",
+  "recorded_at_utc": "2026-10-18T12:37:44.723873+00:00",
+  "registered_job_retried": false,
+  "remedy": "Choose an actual nonempty short record whose length is not a standard 16/32/64 prefix length; leave the experiment and all saved metadata unchanged.",
+  "schema": "v71-selection-reporting-probe-preparation-error",
+  "scientific_failure": false,
+  "source_sha256": "a7a792d3d1d0e936f57a837f4f475fbc7243a241d8b5b10ce9ab9c88b6691d03"
+}

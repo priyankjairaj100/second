@@ -1,0 +1,28 @@
+{
+  "accounting": null,
+  "arguments": [],
+  "clock_scope": "Host main through admission, container startup, entry, worker sealing and shutdown; host interpreter/import and shell startup plus final host receipt write additionally in scheduler accounting",
+  "elapsed_ns": 58004450982,
+  "error": {
+    "message": "Contained allocation did not complete successfully",
+    "type": "ValueError"
+  },
+  "finished_utc": "2026-10-26T07:10:58.224386+00:00",
+  "host_process_cpu_ns": 309291229,
+  "job_id": "16301",
+  "operation": "checks",
+  "outcome": {
+    "exit_code": 1,
+    "failure": null,
+    "log": {
+      "bytes": 28315,
+      "complete": true,
+      "observed_bytes": 28315,
+      "sha256": "0063abe6adffb40304b99dc39c2bfaf680cf3736ea6f3872afad15e0c4ce3a1d"
+    },
+    "subtree_cpu_ns": 55455127000
+  },
+  "preflight_waited_child_cpu_ns": 20866000,
+  "program_sha256": "df3047fd72654336e8d0791d0acbb0486d7da4c87a8f62798b018cc1f85bb446",
+  "status": "failed"
+}
