@@ -1,0 +1,22 @@
+{
+  "observed_utc": "2026-10-29T09:03:41.597745+00:00",
+  "schema": "paired-quality-analysis-lock-v136",
+  "source": "reporting_v136/quality.py",
+  "source_sha256": "e50706dd52f94a2dd3852bc76633f59080715d9fcefc9ba5aa4b6e694a11479c",
+  "bootstrap": {
+    "generator": "PCG64",
+    "seed": 124,
+    "draws": 20000,
+    "units": 320,
+    "shared_indices": true,
+    "percentile_method": "numpy quantile default linear",
+    "primary_upper_quantile": 0.9875,
+    "secondary_interval": [
+      0.025,
+      0.975
+    ]
+  },
+  "model_losses_inspected": false,
+  "prior_secondary_only_analysis": "Same analysis used for V131 GPTQ before sequential quality results",
+  "preserves_primary_thresholds": true
+}

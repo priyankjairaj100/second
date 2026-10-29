@@ -1,0 +1,30 @@
+V133: independent read-only closure of saved V132 sequential models.
+
+V132 jobs are not retried. Each produced its complete packed model, code metadata,
+construction report and per-stage diagnostics before failing to serialize a bytes
+execution-provenance field in its final completion receipt. Original FAILED 1:0
+states and absent completion receipts remain unchanged. V133 is a separate audit,
+not a successful replacement construction or independent recalibration.
+
+Admission requires actual FAILED 1:0 accounting, the exact final serialization
+trace, all required files and the completed 331-check qualification. It binds and
+rehashes the entire producer source package, original checkpoints, target, token
+records, original fixed model, stage artifacts and final model. It checks every
+packed stage hash/grid, retained membership, target identity, first-stage equality,
+the actual installed predecessor hash chain, all point-token admissions, complete
+per-code interval decision counts, unchanged caps and no exact-rational decisions.
+Eight generated corruption/serialization checks run in each audit worker. Tests
+are software evidence; the saved model/stage artifacts supply empirical evidence.
+
+The original native runtime sidecar was not saved. Its constructor was source-bound
+and ran the frozen pinned container launcher, but V133 does not invent the missing
+worker process totals or runtime sidecar. Charge actual Slurm TotalCPU for original
+failed jobs and separate audit CPU. No old model or receipt is changed. Audit receipt
+marks this provenance limitation and preserves producer job status explicitly.
+
+Four one-CPU, 16 GiB audits, at most 300 CPU seconds and 600 wall seconds each;
+128 MiB individual output bound. Reserve 4x300 + 4x60 launch = 1440 CPU seconds,
+within unused original sequential campaign reserve after actual predecessor costs.
+No inference, calibration, solver call, source feature extraction or corpus access.
+A later separately registered quality evaluation may admit the audited immutable
+model bytes through this completed audit, preserving the failed producer status.
