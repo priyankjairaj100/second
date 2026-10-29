@@ -1,5 +1,21 @@
 # Second: continuous research and submission queue
 
+Current continuation handoff: docs/ACTIVE_SESSION_V122.md and handoff/program_v122.json.
+V122 addresses the external manuscript review with stronger theory, arithmetic
+specification and economics. Ten content pages plus references; all final pages,
+references, numbers and packages verified. All 1322 original sources and fourteen
+scientific ZIP components are unchanged. Generated checks are not model results.
+TACL EMPIRICAL REVISION IS STILL PENDING. The old bounded-claim campaign is closed,
+but readiness requires matched-target quality, a minimal source-only cold baseline,
+operating-range/precision telemetry, repeated timing and clean reproduction.
+Read REVIEW_RESPONSE_V122.txt and TACL_REVISION_EVIDENCE_PLAN_V122.txt before acting.
+No new experiment registered or launched. Next: inventory inputs and prepare the
+exact-target quality protocol, then the source-only cold representation. Inspect
+live Slurm/receipts before cluster actions; old launchers/collectors remain consumed.
+Scheduler PAUSED; no subagent, paid compute, monitor or submission. Author release
+terms/eligibility/history/consent remain decisions; no external review supplement.
+Earlier completion statements below concern historical narrower checkpoints.
+
 Current continuation handoff: docs/ACTIVE_SESSION_V121.md and handoff/program_v121.json.
 V121 adversarial revision is complete in the same open document: 10 content pages,
 1 reference page, no appendices. Native compilation, independent export and visual
