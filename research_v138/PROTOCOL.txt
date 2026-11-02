@@ -1,0 +1,64 @@
+Minimal source-only cold comparison V138, prospectively frozen30October2026 before execution.
+
+Decision: the V136 matched quality gate passes three of four fixed targets. Study
+all four existing endpoints, explicitly labeling GPT2/three-record as the failed
+quality boundary. No new quality sample, threshold, target, grid or seed search.
+
+Root: exact V82-selected four C4 training records,128tokens each,N0=512,ridge.01.
+Profiles DistilGPT2/GPT2,24/48stages. Original target, original-teacher features,
+native interval acceptance and existing point-token policy remain unchanged.
+Stages choose the existing optimized token route, no cross-route retry. No CUDA.
+
+The source-only representation contains deployed packed codes, complete target,
+retained tokens or immutable references and provenance. No features or Gram.
+Count canonical state plus its two-byte empty trust sidecar as private live bytes.
+Separate the model.bin audit copy (codes already embedded), manifest/receipt files,
+installed checkpoints and required external retained-source bytes. Token mode is
+self-contained for sources. Reference mode needs an explicit per-record provider.
+Deleting an ID from this service does not delete an external corpus/provider file.
+
+Fresh root construction for each profile emits both representations and one
+per-record external provider artifact. A separate fresh process performs each
+4-to-3 and3-to-2 deletion for each representation. Reference requests resolve only
+retained IDs. Token requests do not call the provider. A separate fresh retained
+constructor for each profile/count reads original tokens and emits both formats.
+Audit exact model bytes against the historical fixed target and complete state,
+model and empty trust bytes against the fresh same-representation constructor.
+No output/model/cache from another arm enters a constructor before it finishes.
+
+After each request, four source-availability probes cross retained/deleted
+availability. These probes resolve state words only; their time and access log are
+separate from the request, and they do not count as four calibration experiments.
+Reference mode must refuse missing retained sources before neural work; deleted
+source availability is irrelevant. Token mode must succeed in all four probes.
+
+Qualification:318existing Linux checks,10new format checks,6new transaction
+checks and1real-native service test. Inject at proposal, during actual source
+replay, before seal and before final publish. Compare predecessor model/state/
+trust/inventory and require no published successor. Scratch remains marked partial.
+These tests do not establish broad operating range or complete native arithmetic
+property coverage.335must pass before numerical construction.
+
+OneCPU/16GiB each; pinnedPython3.12.14 container/NumPy2.3.5. Original8GiBarray,
+16refinement,64Bstage/1Trequest work caps, exactrationalcaps0. GPT2grid1,327,104.
+Two preparations at5000CPU/6300wall, twelve requests/oracles at3600CPU/4500wall,
+qualification300CPU/600wall and final audit300CPU/600wall.16x60CPU launcher reserve.
+Total54,760CPU ceiling. This is a new finite budget justified by previous root
+preparation <=2951CPU and <=1,659s matched requests; it does not reuse old ceilings.
+Reserve4GiB new project storage; check actualquota/jobs before stage. No paidcompute.
+Failed attempts consume their original reservation and remain; never retry a job.
+
+Each independent process records wall/processCPU/children/RSS, retained-stage
+traversals, per-stage admission/certificates, peak live feature array bytes,
+serialization/publication time, predecessor/successor/temporary bytes and context
+cleanup. ActualSlurm accounting includes failures and separate launch costs when
+available. No multiplied allocation/batch doublecount. Baseline timing is a single
+observed process per cell, naturalOS cache with possible concurrent allocations.
+Historical cross-version timing is exploratory, not a paired replicated speedup.
+Parallelize independent work; keep each same-mode chain's predecessor dependency.
+
+All outcomes determine the minimal-storage/source-access boundary. If cold wins
+storage but needs traversal, assess whether a measured latency or source condition
+justifies a cached archive. Do not launch timingreplications or declare deployment
+superiority from this first baseline. Preserve all14historicalZIPs and newer failures.
+No scheduler, subagents, third-party message or submission.
