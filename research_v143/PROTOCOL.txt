@@ -1,0 +1,38 @@
+V143 corrected source-only service experiment, 2 November2026.
+
+V138's immutable wrapper looked up endpoints['retained2'/'retained3'] after model
+construction and publication, although the registered names are candidate_2/3.
+Eight producers FAILED1:0 and four dependent requests were CANCELLED without
+execution. Their attempts, clocks, reservations and files remain unchanged.
+V144 independently audits saved original first-endpoint outputs and all four
+separate fresh retained constructors. Reuse the original successful root states
+and audited independent outputs; do not repeat preparation or oracle construction.
+
+This new registration executes eight complete requests with corrected endpoint
+lookup and an early schema check. Same fixed model targets, sources, request order,
+representations, numerical modules, caps and source-access probes as V138.
+The earlier reporting failures are not successful timing observations. V143 time
+is one successful-process observation per cell if it completes; no replicate or
+general speedup claim. Comparing historical resource times remains exploratory.
+
+Qualification: all335V138 tests plus3new endpoint-schema checks,338required. The
+new early check resolves both actual profile maps and rejects wrong or incomplete
+keys before numerical work. Four existing native transaction fault points stay.
+V140's separate406production-arithmetic cases remain software evidence; no rerun.
+
+For each model and tokens/references mode,4-to-3 request uses immutable successful
+V138root state.3-to-2 uses its own new3-record predecessor afterok. Independent
+final audit compares model/state/trust bytes with the separately constructed
+V138fresh outputs admitted by completed V144audit. Preserve FAILED producer labels
+and missing original result-sidecars in the final evidence. Actual outputs and
+stage records, not tests alone, support the equality comparison. New request
+receipts retain full native runtime/clock/source-access metadata.
+
+New finite budget:338checks300CPU/600wall,8requests3600CPU/4500wall each,final
+audit300CPU/600wall,10x60launcher reserve=30,000CPU seconds.1CPU/16GiB perjob,
+8GiBarrays,16pointrefinement,64Bstage/1Trequest,exactrationalcaps0. ApprovedGPT2
+exactgrid1,327,104 unchanged.4GiB new storage reservation. This does not reuse or
+refund V138's54,760CPU ceiling. Actual old failures are included in total cost.
+No paidcompute,GPU,source changes,old job retry,scheduler restart or submission.
+The unlaunchedV141audit registration is preserved as withdrawn; V144supersedes it.
+No quality losses, thresholds, model grids or record selection are changed.

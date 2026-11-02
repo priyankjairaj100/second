@@ -1,0 +1,32 @@
+{
+  "sacct": "17189|FAILED|1:0|3|00:01.555|\n17189.batch|FAILED|1:0|3|00:01.555|3308K\n",
+  "stderr": "test_changed_model_rejected (research_v142.test_audit.AuditChecks.test_changed_model_rejected) ... ok\ntest_missing_stage_rejected (research_v142.test_audit.AuditChecks.test_missing_stage_rejected) ... ok\ntest_outer_contract_rejected (research_v142.test_audit.AuditChecks.test_outer_contract_rejected) ... ok\ntest_valid_nested_contract (research_v142.test_audit.AuditChecks.test_valid_nested_contract) ... ok\ntest_wrong_membership_rejected (research_v142.test_audit.AuditChecks.test_wrong_membership_rejected) ... ok\ntest_wrong_source_event_rejected (research_v142.test_audit.AuditChecks.test_wrong_source_event_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.034s\n\nOK\nTraceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/source-output-audit-v142-20261102-a/research_v142/worker.py\", line 25, in main\n    answer=run(p);save(out/'saved-output-audit.json',answer)\n           ^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/source-output-audit-v142-20261102-a/research_v142/audit.py\", line 29, in run\n    jobs=p['producer_jobs'];account=subprocess.check_output(['sacct','-n','-P','-j',','.join(map(str,jobs.values())),'--format=JobID,State,ExitCode,ElapsedRaw,TotalCPU,MaxRSS'],text=True)\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/subprocess.py\", line 466, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/subprocess.py\", line 548, in run\n    with Popen(*popenargs, **kwargs) as process:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/subprocess.py\", line 1026, in __init__\n    self._execute_child(args, executable, preexec_fn, close_fds,\n  File \"/usr/local/lib/python3.12/subprocess.py\", line 1955, in _execute_child\n    raise child_exception_type(errno_num, err_msg, err_filename)\nFileNotFoundError: [Errno 2] No such file or directory: 'sacct'\nTraceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/source-output-audit-v142-20261102-a/research_v142/worker.py\", line 34, in <module>\n    if __name__=='__main__':main(*sys.argv[1:])\n                            ^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/source-output-audit-v142-20261102-a/research_v142/worker.py\", line 33, in main\n    assert result['status']=='complete',result['error']\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'type': 'FileNotFoundError', 'message': \"[Errno 2] No such file or directory: 'sacct'\"}\n",
+  "completion": {
+    "status": "failed",
+    "registration_sha256": "180dbdcf3ada2b71839e32e83d29e197921032b6bbd574ea29983d49a521a997",
+    "job_id": "17189",
+    "error": {
+      "type": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: 'sacct'"
+    },
+    "generated_software_only": false,
+    "calibration_repeated": false,
+    "elapsed_seconds": 0.7194070350378752,
+    "process_cpu_seconds": 1.017950204,
+    "child_cpu_seconds": 0.020226,
+    "peak_rss_kib": 49064,
+    "host": "csis.mn1",
+    "python": "3.12.14 (main, Sep 19 2026, 03:36:28) [GCC 12.2.0]",
+    "artifacts": {
+      "attempt.json": {
+        "bytes": 117,
+        "sha256": "74066094f0286c13420f0926e89870f16c985627e90d6b50a227549b31bb9cd6"
+      }
+    }
+  },
+  "completion_identity": {
+    "path": "/nfs_home/users/poonam/second-20261010/local_runs/source-output-audit-v142-20261102-a/checks/completion.json",
+    "bytes": 699,
+    "sha256": "2b1043c9f81e6d86c38895e81a612bb216fff1ea52d1df5fc835f15c9c9f6eae"
+  }
+}

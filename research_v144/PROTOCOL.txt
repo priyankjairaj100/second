@@ -1,0 +1,31 @@
+V142 independent saved-output audit, 2 November2026. Read-only, no recalibration.
+V138 uses nonexistent endpoints['retained2'/'retained3'] after constructing and
+publishing all numerical outputs. Registered maps use candidate_2/candidate_3.
+This is a reporting-wrapper defect. Preserve FAILED1:0 and missing result sidecars.
+Do not relabel elapsed times from failed producers as successful service timings.
+
+After all twelve V138 measure jobs become terminal, audit eight executed jobs
+(four first requests and four separate fresh constructors). Require exact KeyError,
+actual FAILED1:0, complete24/48stage events, matching packedcode commitments,
+point-token admissions, exact original-target contracts and correct retained IDs.
+Rehash every saved file from the failure receipt and every1441producer source.
+Decode complete canonical state and compare packed model bytes to the historical
+fixed target. Independently validate token/reference membership and source words.
+Four dependent second-endpoint jobs must be cancelled without worker directories.
+No old receipt, model, source, launch intent or accounting entry is modified.
+
+A successful audit admits the four saved independent fresh outputs as immutable
+comparison artifacts for a separately registered corrected service experiment.
+It does not restore missing execution sidecars, call original jobs successful,
+or replace the independent full-chain reproduction requirement.
+One CPU,16GiB,300CPU/600wall,60launcherCPU reserve,360CPUceiling,64MiBsource/output
+reservation. No model inference, source-feature extraction, solver call or replay.
+
+V141 was withdrawn before staging: static review found an outer-versus-nested
+calibration binding error in the audit itself. V142 corrects that comparison and
+adds six independent corruption/nested-contract checks, run locally and on Linux.
+All V141 source/registration files remain unchanged; no V141 job was launched.
+
+V142job17189 FAILED before inspecting any model: sacct is not installed inside
+the numerical container. V144 consumes a hash-bound final host sacct snapshot
+instead. Preserve V142failure and1.555actual CPU seconds. No solver rerun.

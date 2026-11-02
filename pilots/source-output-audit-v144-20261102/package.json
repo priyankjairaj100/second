@@ -1,0 +1,10 @@
+{
+  "archive": {
+    "path": "/Users/priyankjairaj/Downloads/ACL/Second/pilots/source-output-audit-v144-20261102/source-v144.tar.gz",
+    "bytes": 3110552,
+    "sha256": "b7a406d96b48861f664e2e2635128dd936cc1860a1d8d001f00bcca0c31f3f45"
+  },
+  "registration_sha256": "bf5662e5b61342c398bd6812ac378f1930d1f49f532f6320992f404e15e38771",
+  "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/source-output-audit-v144-20261102-a",
+  "sources": 1470
+}

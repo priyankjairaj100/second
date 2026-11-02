@@ -1,0 +1,17 @@
+{
+  "schema": "second-handoff-v144",
+  "updated_utc": "2026-11-02T07:06:26.068289+00:00",
+  "handoff": "docs/ACTIVE_SESSION_V144.md",
+  "scheduler": "PAUSED",
+  "scientific_revision_complete": false,
+  "source_only_original_status": "V138 8failed reporting/4cancelled; V144saved-output audit passed",
+  "corrected_registration": "b1923472f9778b40152a7464c1595788f00621118befcba32bc7e12a2cd31ccb",
+  "corrected_package": "pilots/source-only-corrected-v143-20261102/package.json",
+  "native_validation_passed": true,
+  "saved_output_audit": {
+    "path": "/nfs_home/users/poonam/second-20261010/local_runs/source-output-audit-v144-20261102-a/checks/completion.json",
+    "bytes": 25588,
+    "sha256": "0223fb6a36d31195e4880e60b8e9dea37fc487a2becefc9c9a8c541f1687c2d6"
+  },
+  "submission_ready": false
+}

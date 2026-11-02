@@ -1,0 +1,599 @@
+{
+  "sacct": "17190|COMPLETED|0:0|27|00:25.283|\n17190.batch|COMPLETED|0:0|27|00:25.283|3312K\n",
+  "stderr": "test_changed_model_rejected (research_v144.test_audit.AuditChecks.test_changed_model_rejected) ... ok\ntest_missing_stage_rejected (research_v144.test_audit.AuditChecks.test_missing_stage_rejected) ... ok\ntest_outer_contract_rejected (research_v144.test_audit.AuditChecks.test_outer_contract_rejected) ... ok\ntest_valid_nested_contract (research_v144.test_audit.AuditChecks.test_valid_nested_contract) ... ok\ntest_wrong_membership_rejected (research_v144.test_audit.AuditChecks.test_wrong_membership_rejected) ... ok\ntest_wrong_source_event_rejected (research_v144.test_audit.AuditChecks.test_wrong_source_event_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.034s\n\nOK\n",
+  "completion": {
+    "status": "complete",
+    "registration_sha256": "bf5662e5b61342c398bd6812ac378f1930d1f49f532f6320992f404e15e38771",
+    "job_id": "17190",
+    "error": null,
+    "generated_software_only": false,
+    "calibration_repeated": false,
+    "result": {
+      "producer_registration_sha256": "ed6af45c6908479b0bed6436abe5d2e677787060890dedfe8145df0641af6bb8",
+      "producer_sources_verified": 1441,
+      "results": {
+        "distilgpt2__oracle2": {
+          "producer_completion": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle2/completion.json",
+            "bytes": 4316,
+            "sha256": "e0ee57ebb0aa063d4b9453e367737dd3e54c5de07a88cd8dd1b127b1b4a7f60f"
+          },
+          "producer_stderr": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle2.err",
+            "bytes": 1260,
+            "sha256": "985b30569414a92949edd2ed9688ff728e870daf5803647cf4786978d5764cd9"
+          },
+          "job_id": 17179,
+          "producer_state": "FAILED",
+          "producer_exit": "1:0",
+          "reporting_error": {
+            "diagnostics": null,
+            "message": "'retained2'",
+            "type": "KeyError"
+          },
+          "checked": {
+            "tokens": {
+              "stages": 24,
+              "model": {
+                "bytes": 21233664,
+                "sha256": "3c0de8c371a68e020ac6bf738fc9f53e4e027289478f220f9b655e2306b2c569"
+              },
+              "state": {
+                "bytes": 23170013,
+                "sha256": "578c9102bdd5f4fbea376db32c52341e29c529f32d3e09172cae0479a38fc424"
+              },
+              "trust": {
+                "bytes": 2,
+                "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+              }
+            },
+            "references": {
+              "stages": 24,
+              "model": {
+                "bytes": 21233664,
+                "sha256": "3c0de8c371a68e020ac6bf738fc9f53e4e027289478f220f9b655e2306b2c569"
+              },
+              "state": {
+                "bytes": 23168884,
+                "sha256": "6cfb095b69ffdcbc53d67d2db323e4ac9ac3d15c5e25ebf0d590b497e86de470"
+              },
+              "trust": {
+                "bytes": 2,
+                "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+              }
+            }
+          },
+          "successful_service_timing_available": false,
+          "actual_failed_worker_elapsed": 480.30325673520565,
+          "actual_failed_worker_cpu": 476.261573339,
+          "result_sidecar_missing": true
+        },
+        "distilgpt2__oracle3": {
+          "producer_completion": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle3/completion.json",
+            "bytes": 4432,
+            "sha256": "d0977287dc15456e6d820cb3a0c8738f77034017c81eef54ac0aead7adfbbce7"
+          },
+          "producer_stderr": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle3.err",
+            "bytes": 1260,
+            "sha256": "835e11cd585c1f3841ae5e063d588c23628beec88c5af61947a2505636e84786"
+          },
+          "job_id": 17178,
+          "producer_state": "FAILED",
+          "producer_exit": "1:0",
+          "reporting_error": {
+            "diagnostics": null,
+            "message": "'retained3'",
+            "type": "KeyError"
+          },
+          "checked": {
+            "tokens": {
+              "stages": 24,
+              "model": {
+                "bytes": 21233664,
+                "sha256": "2038bb85995a36c2184fb38d4c99a45105b378fec86ed3b3b2d82d8ec9a7feea"
+              },
+              "state": {
+                "bytes": 23171325,
+                "sha256": "6009ada3fcc44363ff47a69db7a85cb0d3e62f5a10f441f9036a8b3ede2fd1c5"
+              },
+              "trust": {
+                "bytes": 2,
+                "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+              }
+            },
+            "references": {
+              "stages": 24,
+              "model": {
+                "bytes": 21233664,
+                "sha256": "2038bb85995a36c2184fb38d4c99a45105b378fec86ed3b3b2d82d8ec9a7feea"
+              },
+              "state": {
+                "bytes": 23169588,
+                "sha256": "2acccc8892daa5f5fd7d5b5f3a3b526ebaa23c52f01fa16664706af49c5c6b51"
+              },
+              "trust": {
+                "bytes": 2,
+                "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+              }
+            }
+          },
+          "successful_service_timing_available": false,
+          "actual_failed_worker_elapsed": 626.4801421295851,
+          "actual_failed_worker_cpu": 621.969055109,
+          "result_sidecar_missing": true
+        },
+        "distilgpt2__references2": {
+          "job_id": 17177,
+          "producer_state": "CANCELLED",
+          "unexecuted": true
+        },
+        "distilgpt2__references3": {
+          "producer_completion": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__references3/completion.json",
+            "bytes": 3977,
+            "sha256": "d81ab79cb1f920b3ea3ee2d16f1767bd9bd481834d4b71c37c25248602a855be"
+          },
+          "producer_stderr": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__references3.err",
+            "bytes": 1260,
+            "sha256": "835e11cd585c1f3841ae5e063d588c23628beec88c5af61947a2505636e84786"
+          },
+          "job_id": 17176,
+          "producer_state": "FAILED",
+          "producer_exit": "1:0",
+          "reporting_error": {
+            "diagnostics": null,
+            "message": "'retained3'",
+            "type": "KeyError"
+          },
+          "checked": {
+            "references": {
+              "stages": 24,
+              "model": {
+                "bytes": 21233664,
+                "sha256": "2038bb85995a36c2184fb38d4c99a45105b378fec86ed3b3b2d82d8ec9a7feea"
+              },
+              "state": {
+                "bytes": 23169588,
+                "sha256": "2acccc8892daa5f5fd7d5b5f3a3b526ebaa23c52f01fa16664706af49c5c6b51"
+              },
+              "trust": {
+                "bytes": 2,
+                "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+              }
+            }
+          },
+          "successful_service_timing_available": false,
+          "actual_failed_worker_elapsed": 622.1710529923439,
+          "actual_failed_worker_cpu": 617.880615696,
+          "result_sidecar_missing": true
+        },
+        "distilgpt2__tokens2": {
+          "job_id": 17175,
+          "producer_state": "CANCELLED",
+          "unexecuted": true
+        },
+        "distilgpt2__tokens3": {
+          "producer_completion": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__tokens3/completion.json",
+            "bytes": 3957,
+            "sha256": "a9baf1dd96143e1d2ed50cadbbd51a057ef8472081040a6cdd5bcb4e35d6ff27"
+          },
+          "producer_stderr": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__tokens3.err",
+            "bytes": 1260,
+            "sha256": "835e11cd585c1f3841ae5e063d588c23628beec88c5af61947a2505636e84786"
+          },
+          "job_id": 17174,
+          "producer_state": "FAILED",
+          "producer_exit": "1:0",
+          "reporting_error": {
+            "diagnostics": null,
+            "message": "'retained3'",
+            "type": "KeyError"
+          },
+          "checked": {
+            "tokens": {
+              "stages": 24,
+              "model": {
+                "bytes": 21233664,
+                "sha256": "2038bb85995a36c2184fb38d4c99a45105b378fec86ed3b3b2d82d8ec9a7feea"
+              },
+              "state": {
+                "bytes": 23171325,
+                "sha256": "6009ada3fcc44363ff47a69db7a85cb0d3e62f5a10f441f9036a8b3ede2fd1c5"
+              },
+              "trust": {
+                "bytes": 2,
+                "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+              }
+            }
+          },
+          "successful_service_timing_available": false,
+          "actual_failed_worker_elapsed": 624.0125713068992,
+          "actual_failed_worker_cpu": 617.864253735,
+          "result_sidecar_missing": true
+        },
+        "gpt2__oracle2": {
+          "producer_completion": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle2/completion.json",
+            "bytes": 6903,
+            "sha256": "41743876507e4476d3b5cb8e96b644698a1a1a8007d51e191ee6432c76b4161c"
+          },
+          "producer_stderr": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle2.err",
+            "bytes": 1260,
+            "sha256": "985b30569414a92949edd2ed9688ff728e870daf5803647cf4786978d5764cd9"
+          },
+          "job_id": 17185,
+          "producer_state": "FAILED",
+          "producer_exit": "1:0",
+          "reporting_error": {
+            "diagnostics": null,
+            "message": "'retained2'",
+            "type": "KeyError"
+          },
+          "checked": {
+            "tokens": {
+              "stages": 48,
+              "model": {
+                "bytes": 42467328,
+                "sha256": "e0baeb4f7e5076510f08ae7ec6ac82dedacdb5b3026fe24bd78e9f65b4644499"
+              },
+              "state": {
+                "bytes": 46343015,
+                "sha256": "b15e260d3f52e822fc8705e7016b2e10249f51c61dd7134cdd4e389309c1360e"
+              },
+              "trust": {
+                "bytes": 2,
+                "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+              }
+            },
+            "references": {
+              "stages": 48,
+              "model": {
+                "bytes": 42467328,
+                "sha256": "e0baeb4f7e5076510f08ae7ec6ac82dedacdb5b3026fe24bd78e9f65b4644499"
+              },
+              "state": {
+                "bytes": 46341886,
+                "sha256": "8f332091186acd3acf95b95eb70afaaca85ab7bc6ec47b48e90db98e5ebdc049"
+              },
+              "trust": {
+                "bytes": 2,
+                "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+              }
+            }
+          },
+          "successful_service_timing_available": false,
+          "actual_failed_worker_elapsed": 755.5124701205641,
+          "actual_failed_worker_cpu": 750.487748403,
+          "result_sidecar_missing": true
+        },
+        "gpt2__oracle3": {
+          "producer_completion": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle3/completion.json",
+            "bytes": 7010,
+            "sha256": "8412f36b6e8d6e1d8fe0d94ab2201ff67d35e727215405509c95c7c7c506fb15"
+          },
+          "producer_stderr": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle3.err",
+            "bytes": 1260,
+            "sha256": "835e11cd585c1f3841ae5e063d588c23628beec88c5af61947a2505636e84786"
+          },
+          "job_id": 17184,
+          "producer_state": "FAILED",
+          "producer_exit": "1:0",
+          "reporting_error": {
+            "diagnostics": null,
+            "message": "'retained3'",
+            "type": "KeyError"
+          },
+          "checked": {
+            "tokens": {
+              "stages": 48,
+              "model": {
+                "bytes": 42467328,
+                "sha256": "34e9e20c1da268fb88d30abf0b418fd5938f10401dde9d34aa2c23edc77fe0ec"
+              },
+              "state": {
+                "bytes": 46344327,
+                "sha256": "616dd6d30c3ea81fc6fa1216d72521e14ea0ff7a45ddf2881956c37eb681ace1"
+              },
+              "trust": {
+                "bytes": 2,
+                "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+              }
+            },
+            "references": {
+              "stages": 48,
+              "model": {
+                "bytes": 42467328,
+                "sha256": "34e9e20c1da268fb88d30abf0b418fd5938f10401dde9d34aa2c23edc77fe0ec"
+              },
+              "state": {
+                "bytes": 46342590,
+                "sha256": "063f9aeb67a8700c2885e487ec0036533ce94f97cd53f720af98ce968668b057"
+              },
+              "trust": {
+                "bytes": 2,
+                "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+              }
+            }
+          },
+          "successful_service_timing_available": false,
+          "actual_failed_worker_elapsed": 1244.3111824803054,
+          "actual_failed_worker_cpu": 1237.234206814,
+          "result_sidecar_missing": true
+        },
+        "gpt2__references2": {
+          "job_id": 17183,
+          "producer_state": "CANCELLED",
+          "unexecuted": true
+        },
+        "gpt2__references3": {
+          "producer_completion": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__references3/completion.json",
+            "bytes": 6566,
+            "sha256": "7cb915dd29b4b4e1f2ae0c3ea3922deeba7ca52e3d8968cb428851bd2ffe1908"
+          },
+          "producer_stderr": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__references3.err",
+            "bytes": 1260,
+            "sha256": "835e11cd585c1f3841ae5e063d588c23628beec88c5af61947a2505636e84786"
+          },
+          "job_id": 17182,
+          "producer_state": "FAILED",
+          "producer_exit": "1:0",
+          "reporting_error": {
+            "diagnostics": null,
+            "message": "'retained3'",
+            "type": "KeyError"
+          },
+          "checked": {
+            "references": {
+              "stages": 48,
+              "model": {
+                "bytes": 42467328,
+                "sha256": "34e9e20c1da268fb88d30abf0b418fd5938f10401dde9d34aa2c23edc77fe0ec"
+              },
+              "state": {
+                "bytes": 46342590,
+                "sha256": "063f9aeb67a8700c2885e487ec0036533ce94f97cd53f720af98ce968668b057"
+              },
+              "trust": {
+                "bytes": 2,
+                "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+              }
+            }
+          },
+          "successful_service_timing_available": false,
+          "actual_failed_worker_elapsed": 1243.2242231238633,
+          "actual_failed_worker_cpu": 1236.204479761,
+          "result_sidecar_missing": true
+        },
+        "gpt2__tokens2": {
+          "job_id": 17181,
+          "producer_state": "CANCELLED",
+          "unexecuted": true
+        },
+        "gpt2__tokens3": {
+          "producer_completion": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__tokens3/completion.json",
+            "bytes": 6556,
+            "sha256": "c51cfd5110f4c50bfc1332c19f0924813aac4e75a59da18ff72f50e5edbd5e67"
+          },
+          "producer_stderr": {
+            "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__tokens3.err",
+            "bytes": 1260,
+            "sha256": "835e11cd585c1f3841ae5e063d588c23628beec88c5af61947a2505636e84786"
+          },
+          "job_id": 17180,
+          "producer_state": "FAILED",
+          "producer_exit": "1:0",
+          "reporting_error": {
+            "diagnostics": null,
+            "message": "'retained3'",
+            "type": "KeyError"
+          },
+          "checked": {
+            "tokens": {
+              "stages": 48,
+              "model": {
+                "bytes": 42467328,
+                "sha256": "34e9e20c1da268fb88d30abf0b418fd5938f10401dde9d34aa2c23edc77fe0ec"
+              },
+              "state": {
+                "bytes": 46344327,
+                "sha256": "616dd6d30c3ea81fc6fa1216d72521e14ea0ff7a45ddf2881956c37eb681ace1"
+              },
+              "trust": {
+                "bytes": 2,
+                "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+              }
+            }
+          },
+          "successful_service_timing_available": false,
+          "actual_failed_worker_elapsed": 1243.4367824457586,
+          "actual_failed_worker_cpu": 1236.106929951,
+          "result_sidecar_missing": true
+        }
+      },
+      "oracles": {
+        "distilgpt2__oracle2": {
+          "producer_job": 17179,
+          "producer_state": "FAILED",
+          "artifacts": {
+            "tokens/state.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle2/tokens/state.bin",
+              "bytes": 23170013,
+              "sha256": "578c9102bdd5f4fbea376db32c52341e29c529f32d3e09172cae0479a38fc424"
+            },
+            "tokens/model.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle2/tokens/model.bin",
+              "bytes": 21233664,
+              "sha256": "3c0de8c371a68e020ac6bf738fc9f53e4e027289478f220f9b655e2306b2c569"
+            },
+            "tokens/trust.json": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle2/tokens/trust.json",
+              "bytes": 2,
+              "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            },
+            "references/state.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle2/references/state.bin",
+              "bytes": 23168884,
+              "sha256": "6cfb095b69ffdcbc53d67d2db323e4ac9ac3d15c5e25ebf0d590b497e86de470"
+            },
+            "references/model.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle2/references/model.bin",
+              "bytes": 21233664,
+              "sha256": "3c0de8c371a68e020ac6bf738fc9f53e4e027289478f220f9b655e2306b2c569"
+            },
+            "references/trust.json": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle2/references/trust.json",
+              "bytes": 2,
+              "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            }
+          }
+        },
+        "distilgpt2__oracle3": {
+          "producer_job": 17178,
+          "producer_state": "FAILED",
+          "artifacts": {
+            "tokens/state.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle3/tokens/state.bin",
+              "bytes": 23171325,
+              "sha256": "6009ada3fcc44363ff47a69db7a85cb0d3e62f5a10f441f9036a8b3ede2fd1c5"
+            },
+            "tokens/model.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle3/tokens/model.bin",
+              "bytes": 21233664,
+              "sha256": "2038bb85995a36c2184fb38d4c99a45105b378fec86ed3b3b2d82d8ec9a7feea"
+            },
+            "tokens/trust.json": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle3/tokens/trust.json",
+              "bytes": 2,
+              "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            },
+            "references/state.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle3/references/state.bin",
+              "bytes": 23169588,
+              "sha256": "2acccc8892daa5f5fd7d5b5f3a3b526ebaa23c52f01fa16664706af49c5c6b51"
+            },
+            "references/model.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle3/references/model.bin",
+              "bytes": 21233664,
+              "sha256": "2038bb85995a36c2184fb38d4c99a45105b378fec86ed3b3b2d82d8ec9a7feea"
+            },
+            "references/trust.json": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/distilgpt2__oracle3/references/trust.json",
+              "bytes": 2,
+              "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            }
+          }
+        },
+        "gpt2__oracle2": {
+          "producer_job": 17185,
+          "producer_state": "FAILED",
+          "artifacts": {
+            "tokens/state.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle2/tokens/state.bin",
+              "bytes": 46343015,
+              "sha256": "b15e260d3f52e822fc8705e7016b2e10249f51c61dd7134cdd4e389309c1360e"
+            },
+            "tokens/model.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle2/tokens/model.bin",
+              "bytes": 42467328,
+              "sha256": "e0baeb4f7e5076510f08ae7ec6ac82dedacdb5b3026fe24bd78e9f65b4644499"
+            },
+            "tokens/trust.json": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle2/tokens/trust.json",
+              "bytes": 2,
+              "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            },
+            "references/state.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle2/references/state.bin",
+              "bytes": 46341886,
+              "sha256": "8f332091186acd3acf95b95eb70afaaca85ab7bc6ec47b48e90db98e5ebdc049"
+            },
+            "references/model.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle2/references/model.bin",
+              "bytes": 42467328,
+              "sha256": "e0baeb4f7e5076510f08ae7ec6ac82dedacdb5b3026fe24bd78e9f65b4644499"
+            },
+            "references/trust.json": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle2/references/trust.json",
+              "bytes": 2,
+              "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            }
+          }
+        },
+        "gpt2__oracle3": {
+          "producer_job": 17184,
+          "producer_state": "FAILED",
+          "artifacts": {
+            "tokens/state.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle3/tokens/state.bin",
+              "bytes": 46344327,
+              "sha256": "616dd6d30c3ea81fc6fa1216d72521e14ea0ff7a45ddf2881956c37eb681ace1"
+            },
+            "tokens/model.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle3/tokens/model.bin",
+              "bytes": 42467328,
+              "sha256": "34e9e20c1da268fb88d30abf0b418fd5938f10401dde9d34aa2c23edc77fe0ec"
+            },
+            "tokens/trust.json": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle3/tokens/trust.json",
+              "bytes": 2,
+              "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            },
+            "references/state.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle3/references/state.bin",
+              "bytes": 46342590,
+              "sha256": "063f9aeb67a8700c2885e487ec0036533ce94f97cd53f720af98ce968668b057"
+            },
+            "references/model.bin": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle3/references/model.bin",
+              "bytes": 42467328,
+              "sha256": "34e9e20c1da268fb88d30abf0b418fd5938f10401dde9d34aa2c23edc77fe0ec"
+            },
+            "references/trust.json": {
+              "path": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a/gpt2__oracle3/references/trust.json",
+              "bytes": 2,
+              "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            }
+          }
+        }
+      },
+      "sacct": "17174|FAILED|1:0|627|10:19.996|\n17174.batch|FAILED|1:0|627|10:19.996|775536K\n17175|CANCELLED|0:0|0|00:00:00|\n17176|FAILED|1:0|625|10:20.071|\n17176.batch|FAILED|1:0|625|10:20.071|775784K\n17177|CANCELLED|0:0|0|00:00:00|\n17178|FAILED|1:0|629|10:24.161|\n17178.batch|FAILED|1:0|629|10:24.161|732088K\n17179|FAILED|1:0|483|07:58.562|\n17179.batch|FAILED|1:0|483|07:58.562|706132K\n17180|FAILED|1:0|1246|20:38.333|\n17180.batch|FAILED|1:0|1246|20:38.333|1135496K\n17181|CANCELLED|0:0|0|00:00:00|\n17182|FAILED|1:0|1246|20:38.396|\n17182.batch|FAILED|1:0|1246|20:38.396|1140324K\n17183|CANCELLED|0:0|0|00:00:00|\n17184|FAILED|1:0|1247|20:39.517|\n17184.batch|FAILED|1:0|1247|20:39.517|1026820K\n17185|FAILED|1:0|758|12:32.745|\n17185.batch|FAILED|1:0|758|12:32.745|983868K\n",
+      "calibration_repeated": false,
+      "old_status_modified": false,
+      "first_endpoint_outputs_audited": 4,
+      "independently_constructed_oracles_audited": 4,
+      "blocked_second_endpoints": 4
+    },
+    "elapsed_seconds": 24.906816059723496,
+    "process_cpu_seconds": 24.769767914,
+    "child_cpu_seconds": 0.01865,
+    "peak_rss_kib": 376328,
+    "host": "csis.mn1",
+    "python": "3.12.14 (main, Sep 19 2026, 03:36:28) [GCC 12.2.0]",
+    "artifacts": {
+      "saved-output-audit.json": {
+        "bytes": 23694,
+        "sha256": "d7d8a6c92108fe611b0d80cbc42896a1d462cddf60a6c59fe163b75dc691dcd6"
+      },
+      "attempt.json": {
+        "bytes": 117,
+        "sha256": "ab4e2840728dc94a2c7b5b4f8bcb497d46b0dbdbc49689b81c38daf1e78d38b3"
+      }
+    }
+  },
+  "completion_identity": {
+    "path": "/nfs_home/users/poonam/second-20261010/local_runs/source-output-audit-v144-20261102-a/checks/completion.json",
+    "bytes": 25588,
+    "sha256": "0223fb6a36d31195e4880e60b8e9dea37fc487a2becefc9c9a8c541f1687c2d6"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "distilgpt2__oracle2": {
+    "complete_receipt": true,
+    "stage_certified": 24,
+    "status": "failed",
+    "error": {
+      "diagnostics": null,
+      "message": "'retained2'",
+      "type": "KeyError"
+    },
+    "elapsed": 480.30325673520565
+  },
+  "distilgpt2__oracle3": {
+    "complete_receipt": false,
+    "stage_certified": 22
+  },
+  "distilgpt2__references2": {
+    "complete_receipt": false,
+    "stage_certified": 0
+  },
+  "distilgpt2__references3": {
+    "complete_receipt": false,
+    "stage_certified": 22
+  },
+  "distilgpt2__tokens2": {
+    "complete_receipt": false,
+    "stage_certified": 0
+  },
+  "distilgpt2__tokens3": {
+    "complete_receipt": false,
+    "stage_certified": 22
+  },
+  "gpt2__oracle2": {
+    "complete_receipt": false,
+    "stage_certified": 16
+  },
+  "gpt2__oracle3": {
+    "complete_receipt": false,
+    "stage_certified": 0
+  },
+  "gpt2__references2": {
+    "complete_receipt": false,
+    "stage_certified": 0
+  },
+  "gpt2__references3": {
+    "complete_receipt": false,
+    "stage_certified": 0
+  },
+  "gpt2__tokens2": {
+    "complete_receipt": false,
+    "stage_certified": 0
+  },
+  "gpt2__tokens3": {
+    "complete_receipt": false,
+    "stage_certified": 0
+  },
+  "source_records_top_keys": [
+    "records"
+  ],
+  "selected_input_path": {
+    "bytes": 8042,
+    "path": "/nfs_home/users/poonam/second-20261010/local_runs/disjoint-data-v65-20261016-a/outputs/records.json",
+    "sha256": "3bbdefd1e2836d6797723f8426d9ad359d36da2b2e13b35df4661002a8db89b9"
+  },
+  "queue": "   JOBID                               NAME      STATE       TIME NODELIST(REASON)\n   17183        second138-gpt2__references2    PENDING       0:00 (Dependency)\n   17181            second138-gpt2__tokens2    PENDING       0:00 (Dependency)\n   17177  second138-distilgpt2__references2    PENDING       0:00 (Dependency)\n   17175      second138-distilgpt2__tokens2    PENDING       0:00 (Dependency)\n   17176  second138-distilgpt2__references3    RUNNING       9:59 csis.mn1\n   17178      second138-distilgpt2__oracle3    RUNNING       9:59 csis.mn1\n   17180            second138-gpt2__tokens3    RUNNING       9:59 csis.mn1\n   17182        second138-gpt2__references3    RUNNING       9:59 csis.mn1\n   17184            second138-gpt2__oracle3    RUNNING       9:59 csis.mn1\n   17185            second138-gpt2__oracle2    RUNNING       9:59 csis.mn1\n   17174      second138-distilgpt2__tokens3    RUNNING      10:00 csis.mn1\n",
+  "installed_binary_hashes": {
+    "numpy/_core/_umath_tests.cpython-312-x86_64-linux-gnu.so": "ed0edb6cafa2dba589761083c3edb64e72f30fd816c32a9af771440a5b7933b0",
+    "numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so": "ba96467ae494babaf7c3458b09cc03c4200c2e10010860d80e452ffb8b01c8cd",
+    "numpy/_core/_simd.cpython-312-x86_64-linux-gnu.so": "346508d7b24a196ca4175518dd3b09aee32b6c7f9809f78fc031504436c0d3f7",
+    "numpy/_core/_rational_tests.cpython-312-x86_64-linux-gnu.so": "2fed2e7ef5e6168b842e958eff52093b2669ee6d448b39c6c064990b79464550",
+    "numpy/_core/_operand_flag_tests.cpython-312-x86_64-linux-gnu.so": "2da00a615720d1fc0fb902fcf73f2ad7e1aba50ca469a34ae2426e5d102b983b",
+    "numpy/_core/_struct_ufunc_tests.cpython-312-x86_64-linux-gnu.so": "53ffdbcd324e449e12d40c77f77635ba2d6fa7036640a273340224202c0afa19",
+    "numpy/_core/_multiarray_tests.cpython-312-x86_64-linux-gnu.so": "fae3aacacf309c276cc4c8cbdc13735117763f1c5f652cb48bb97ecc9c1b9dd8",
+    "numpy/linalg/lapack_lite.cpython-312-x86_64-linux-gnu.so": "93ca06e05991d23cc5fa02e76c757b97cf20b5ef29ec0ef69fb88a2432ddf5d5",
+    "numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so": "64bfb8bb8a1a09ca31f7a6e307a87b4c78a75f3489aaf3c61ed8aa4ffada9845",
+    "numpy/random/_sfc64.cpython-312-x86_64-linux-gnu.so": "62906d05604056ee4de2ce978cd9d23e0de603c80a769a648ceac74d8ab680b6",
+    "numpy/random/_mt19937.cpython-312-x86_64-linux-gnu.so": "a3a98159adbf86abf95b34b4989840f0f0bfbde3a5c87ad2a3e01ea7c0428d4d",
+    "numpy/random/_pcg64.cpython-312-x86_64-linux-gnu.so": "2b9bc903a5ab4f857e169e93cf59a824564f1361b1fc4ff5bb336a54ece72ba9",
+    "numpy/random/mtrand.cpython-312-x86_64-linux-gnu.so": "70b2d9942f3d35be9f95c7bc3ba19e78e3db00e2b0a323ca02363cee9c9e128c",
+    "numpy/random/_philox.cpython-312-x86_64-linux-gnu.so": "9fb7e485037c7f00aa3e4aa1056f15f7f9b964aa4f04657952194efaa9174356",
+    "numpy/random/_generator.cpython-312-x86_64-linux-gnu.so": "d7fed73c3e361b6ff683a9148b74d982f1702b1af3631e496066034cd1cba7ad",
+    "numpy/random/bit_generator.cpython-312-x86_64-linux-gnu.so": "d15c630c101e132de14d924facadf581f5e004b0974b17afa2f0dea1bcf5fe6e",
+    "numpy/random/_common.cpython-312-x86_64-linux-gnu.so": "e7fb21cc610f6e22f1f40a365b0fe6c573132b6c22199ed21dbe51c0e7c73620",
+    "numpy/random/_bounded_integers.cpython-312-x86_64-linux-gnu.so": "53a8bd2e993d32c304b91020970c8b67fa178e142137f525743ba92755524b84",
+    "numpy/fft/_pocketfft_umath.cpython-312-x86_64-linux-gnu.so": "e849dc89e717b2a315948dd0127786098372c7a2206cfd130fa818b73e69164d",
+    "numpy.libs/libscipy_openblas64_-fdde5778.so": "ee2039cf13a45e1e89f04d0cea9585657d93ffaa425594e1935161013fdf4e12",
+    "numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0": "6ed5137f412781ad7863439fb543613f620b43c32b63292a0029246162f5bbc6",
+    "numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0": "c6090048eccc763522c12ef016f81da6b627cb3a044f55cf0479a839c41c0980",
+    "gmpy2/gmpy2.cpython-312-x86_64-linux-gnu.so": "0d9ff005ed65c5c86172557ef53f01d583b264b59846f18da537ee5b561a82a6",
+    "gmpy2.libs/libgmp-a6f47472.so.10.5.0": "af9a8973755d91abf7b49378cb0342bbc2004998dcb3c0b620ffd808f5992cf6",
+    "gmpy2.libs/libmpc-93977c64.so.3.4.1": "0b3f749d9052c7b6c114a40c8add75a8fc06daa81231612ffbc425794bd73e94",
+    "gmpy2.libs/libmpfr-bb88ce0c.so.6.2.2": "b937cae570f8d8790832e36bf1609ef4096a6b7fb54b86596c77f228a1adee27"
+  }
+}
