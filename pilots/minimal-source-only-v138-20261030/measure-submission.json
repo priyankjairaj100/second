@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": "{\"registration_sha256\": \"ed6af45c6908479b0bed6436abe5d2e677787060890dedfe8145df0641af6bb8\", \"jobs\": {\"distilgpt2__tokens3\": 17174, \"distilgpt2__tokens2\": 17175, \"distilgpt2__references3\": 17176, \"distilgpt2__references2\": 17177, \"distilgpt2__oracle3\": 17178, \"distilgpt2__oracle2\": 17179, \"gpt2__tokens3\": 17180, \"gpt2__tokens2\": 17181, \"gpt2__references3\": 17182, \"gpt2__references2\": 17183, \"gpt2__oracle3\": 17184, \"gpt2__oracle2\": 17185}, \"status\": \"released\"}\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n"
+}

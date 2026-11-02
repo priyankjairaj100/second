@@ -1,0 +1,10 @@
+{
+  "archive": {
+    "path": "/Users/priyankjairaj/Downloads/ACL/Second/pilots/native-independent-v140-20261102/source-v140.tar.gz",
+    "bytes": 3104347,
+    "sha256": "8818d377f59841f62675a25697f033d6271d085aa0b0089349967c4446cb6dcf"
+  },
+  "registration_sha256": "576591b9ba423781f9c27719b7182c68eff54c31fc222352a218ef537f870e52",
+  "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/native-independent-v140-20261102-a",
+  "sources": 1449
+}

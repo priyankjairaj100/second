@@ -1,0 +1,4077 @@
+{
+  "seed": 14020261102,
+  "cases": [
+    {
+      "family": "native_add_multiply",
+      "index": 0,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x0.0000000000001p-1022",
+        "0x0.0000000000002p-1022",
+        "-0x0.0000000000001p-1022",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 0,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x0.0000000000001p-1022",
+        "0x0.0000000000002p-1022",
+        "-0x0.0000000000001p-1022",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 1,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+0",
+        "-0x1.0000000000000p+0",
+        "-0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 1,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+0",
+        "-0x1.0000000000000p+0",
+        "-0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 2,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0p+0",
+        "0x0.0p+0",
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 2,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0p+0",
+        "0x0.0p+0",
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 3,
+      "operation": 0,
+      "status": 3,
+      "input_hex": [
+        "0x1.fffffffffffffp+1023",
+        "0x1.fffffffffffffp+1023",
+        "0x1.fffffffffffffp+1023",
+        "0x1.fffffffffffffp+1023"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 3,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "0x1.fffffffffffffp+1023",
+        "0x1.fffffffffffffp+1023",
+        "0x1.fffffffffffffp+1023",
+        "0x1.fffffffffffffp+1023"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 4,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+1",
+        "-0x1.0000000000000p+1",
+        "-0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 4,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+1",
+        "-0x1.0000000000000p+1",
+        "-0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 5,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 5,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 6,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "-0x0.0000000000001p-1022",
+        "-0x1.0000000000000p-100",
+        "0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 6,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "-0x0.0000000000001p-1022",
+        "-0x1.0000000000000p-100",
+        "0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 7,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+100",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 7,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+100",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 8,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p-1022",
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 8,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p-1022",
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 9,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-1",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-540"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 9,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-1",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-540"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 10,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p-100",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 10,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p-100",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 11,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 11,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 12,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 12,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 13,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+500",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 13,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+500",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 14,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 14,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 15,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p+500",
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 15,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p+500",
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 16,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 16,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 17,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p-1022",
+        "-0x1.0000000000000p-1022",
+        "-0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 17,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p-1022",
+        "-0x1.0000000000000p-1022",
+        "-0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 18,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "0x1.0000000000000p+0",
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 18,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "0x1.0000000000000p+0",
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 19,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 19,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 20,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p-1",
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 20,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p-1",
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 21,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "-0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 21,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "-0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 22,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-100",
+        "-0x1.0000000000000p-100",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 22,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-100",
+        "-0x1.0000000000000p-100",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 23,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-100",
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p+1",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 23,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-100",
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p+1",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 24,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+500",
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 24,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+500",
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 25,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-100",
+        "-0x1.0000000000000p-540",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 25,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-100",
+        "-0x1.0000000000000p-540",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 26,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p-540"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 26,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p-540"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 27,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+500",
+        "-0x1.0000000000000p+100",
+        "0x1.0000000000000p-540"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 27,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+500",
+        "-0x1.0000000000000p+100",
+        "0x1.0000000000000p-540"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 28,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p+1",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 28,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p+1",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 29,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+1000",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 29,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+1000",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 30,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-1",
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 30,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-1",
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 31,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1000",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 31,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1000",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 32,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1",
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 32,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1",
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 33,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "0x0.0000000000001p-1022",
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 33,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "0x0.0000000000001p-1022",
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 34,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "-0x0.0000000000001p-1022",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p-540"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 34,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "-0x0.0000000000001p-1022",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p-540"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 35,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p-100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 35,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p-100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 36,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+1",
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 36,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+1",
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 37,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 37,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 38,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p+0",
+        "-0x1.0000000000000p+1",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 38,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p+0",
+        "-0x1.0000000000000p+1",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 39,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "0x1.0000000000000p+500",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 39,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "0x1.0000000000000p+500",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 40,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 40,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 41,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 41,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 42,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+100",
+        "-0x0.0000000000001p-1022",
+        "-0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 42,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+100",
+        "-0x0.0000000000001p-1022",
+        "-0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 43,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-540",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 43,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-540",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 44,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 44,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 45,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+100",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 45,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+100",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 46,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 46,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 47,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 47,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 48,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 48,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 49,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+500",
+        "-0x1.0000000000000p-100",
+        "0x1.0000000000000p-540"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 49,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+500",
+        "-0x1.0000000000000p-100",
+        "0x1.0000000000000p-540"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 50,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 50,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 51,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p+1000",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 51,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p+1000",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 52,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+500",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 52,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+500",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 53,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p+100",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 53,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p+100",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 54,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-100",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 54,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-100",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 55,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+100",
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 55,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+100",
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 56,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p-100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 56,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p-100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 57,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+500",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 57,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+500",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 58,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "-0x1.0000000000000p-1022",
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p-100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 58,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "-0x1.0000000000000p-1022",
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p-100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 59,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "-0x0.0000000000001p-1022",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 59,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "-0x0.0000000000001p-1022",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 60,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 60,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 61,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 61,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 62,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+0",
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 62,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+0",
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 63,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1",
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 63,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1",
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 64,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0000000000001p-1022",
+        "0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+500",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 64,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0000000000001p-1022",
+        "0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+500",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 65,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-100",
+        "0x1.0000000000000p+1",
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 65,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-100",
+        "0x1.0000000000000p+1",
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 66,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p+500",
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 66,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p+500",
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 67,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "0x1.0000000000000p-1",
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 67,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "0x1.0000000000000p-1",
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 68,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+500",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 68,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+500",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 69,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 69,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 70,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p+100",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 70,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p+100",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 71,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0000000000001p-1022",
+        "0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 71,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0000000000001p-1022",
+        "0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 72,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 72,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 73,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 73,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 74,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 74,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 75,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p+1",
+        "0x1.0000000000000p+1",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 75,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p+1",
+        "0x1.0000000000000p+1",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 76,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p+1",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p-540"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 76,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x0.0000000000001p-1022",
+        "0x1.0000000000000p+1",
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p-540"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 77,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p-100",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 77,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p-100",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 78,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p+1",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 78,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p+1",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 79,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 79,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 80,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 80,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 81,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+1",
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 81,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+1",
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 82,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 82,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p-540",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 83,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 83,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 84,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p-540",
+        "-0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 84,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p-540",
+        "-0x1.0000000000000p-540",
+        "-0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 85,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 85,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x0.0000000000001p-1022",
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 86,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+1000",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 86,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+1000",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 87,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+1",
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 87,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+1",
+        "0x1.0000000000000p+0",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 88,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-100",
+        "-0x1.0000000000000p-1022",
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 88,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-100",
+        "-0x1.0000000000000p-1022",
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 89,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 89,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+1",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 90,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-540",
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 90,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-540",
+        "-0x1.0000000000000p-540",
+        "0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 91,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 91,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "0x1.0000000000000p-1",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 92,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p+0",
+        "-0x1.0000000000000p+500",
+        "-0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 92,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+100",
+        "-0x1.0000000000000p+0",
+        "-0x1.0000000000000p+500",
+        "-0x1.0000000000000p-1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 93,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-100",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 93,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1000",
+        "-0x1.0000000000000p-100",
+        "0x1.0000000000000p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 94,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "-0x1.0000000000000p-1",
+        "-0x1.0000000000000p-100",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 94,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "-0x1.0000000000000p-1",
+        "-0x1.0000000000000p-100",
+        "0x1.0000000000000p+0"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 95,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+0",
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 95,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+0",
+        "-0x1.0000000000000p-1",
+        "0x1.0000000000000p+500"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 96,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1",
+        "-0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p-100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 96,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+1",
+        "-0x0.0000000000001p-1022",
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p-100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 97,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 97,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1000",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p+1000"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 98,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 98,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+0",
+        "0x1.0000000000000p+500",
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+1"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 99,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p-1",
+        "-0x1.0000000000000p+1000",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 99,
+      "operation": 1,
+      "status": 3,
+      "input_hex": [
+        "-0x1.0000000000000p+500",
+        "0x1.0000000000000p-1",
+        "-0x1.0000000000000p+1000",
+        "0x0.0000000000001p-1022"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 100,
+      "operation": 0,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+0",
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "native_add_multiply",
+      "index": 100,
+      "operation": 1,
+      "status": 0,
+      "input_hex": [
+        "0x1.0000000000000p-1022",
+        "0x1.0000000000000p+0",
+        "-0x1.0000000000000p+1000",
+        "0x1.0000000000000p+100"
+      ]
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 0,
+      "width": 2,
+      "tokens": 1,
+      "coordinates": 2
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 1,
+      "width": 3,
+      "tokens": 2,
+      "coordinates": 3
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 2,
+      "width": 4,
+      "tokens": 3,
+      "coordinates": 4
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 3,
+      "width": 2,
+      "tokens": 1,
+      "coordinates": 2
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 4,
+      "width": 3,
+      "tokens": 2,
+      "coordinates": 3
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 5,
+      "width": 4,
+      "tokens": 3,
+      "coordinates": 4
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 6,
+      "width": 2,
+      "tokens": 1,
+      "coordinates": 2
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 7,
+      "width": 3,
+      "tokens": 2,
+      "coordinates": 3
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 8,
+      "width": 4,
+      "tokens": 3,
+      "coordinates": 4
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 9,
+      "width": 2,
+      "tokens": 1,
+      "coordinates": 2
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 10,
+      "width": 3,
+      "tokens": 2,
+      "coordinates": 3
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 11,
+      "width": 4,
+      "tokens": 3,
+      "coordinates": 4
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 12,
+      "width": 2,
+      "tokens": 1,
+      "coordinates": 2
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 13,
+      "width": 3,
+      "tokens": 2,
+      "coordinates": 3
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 14,
+      "width": 4,
+      "tokens": 3,
+      "coordinates": 4
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 15,
+      "width": 2,
+      "tokens": 1,
+      "coordinates": 2
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 16,
+      "width": 3,
+      "tokens": 2,
+      "coordinates": 3
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 17,
+      "width": 4,
+      "tokens": 3,
+      "coordinates": 4
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 18,
+      "width": 2,
+      "tokens": 1,
+      "coordinates": 2
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 19,
+      "width": 3,
+      "tokens": 2,
+      "coordinates": 3
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 20,
+      "width": 4,
+      "tokens": 3,
+      "coordinates": 4
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 21,
+      "width": 2,
+      "tokens": 1,
+      "coordinates": 2
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 22,
+      "width": 3,
+      "tokens": 2,
+      "coordinates": 3
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 23,
+      "width": 4,
+      "tokens": 3,
+      "coordinates": 4
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 24,
+      "width": 2,
+      "tokens": 1,
+      "coordinates": 2
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 25,
+      "width": 3,
+      "tokens": 2,
+      "coordinates": 3
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 26,
+      "width": 4,
+      "tokens": 3,
+      "coordinates": 4
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 27,
+      "width": 2,
+      "tokens": 1,
+      "coordinates": 2
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 28,
+      "width": 3,
+      "tokens": 2,
+      "coordinates": 3
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 29,
+      "width": 4,
+      "tokens": 3,
+      "coordinates": 4
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 30,
+      "width": 2,
+      "tokens": 1,
+      "coordinates": 2
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 31,
+      "width": 3,
+      "tokens": 2,
+      "coordinates": 3
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 32,
+      "width": 4,
+      "tokens": 3,
+      "coordinates": 4
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 33,
+      "width": 2,
+      "tokens": 1,
+      "coordinates": 2
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 34,
+      "width": 3,
+      "tokens": 2,
+      "coordinates": 3
+    },
+    {
+      "family": "point_coefficient_containment",
+      "index": 35,
+      "width": 4,
+      "tokens": 3,
+      "coordinates": 4
+    },
+    {
+      "family": "box_coefficient_containment",
+      "index": 0,
+      "realizations": 19,
+      "coordinates": 2
+    },
+    {
+      "family": "box_coefficient_containment",
+      "index": 1,
+      "realizations": 19,
+      "coordinates": 2
+    },
+    {
+      "family": "box_coefficient_containment",
+      "index": 2,
+      "realizations": 19,
+      "coordinates": 2
+    },
+    {
+      "family": "box_coefficient_containment",
+      "index": 3,
+      "realizations": 19,
+      "coordinates": 2
+    },
+    {
+      "family": "box_coefficient_containment",
+      "index": 4,
+      "realizations": 19,
+      "coordinates": 2
+    },
+    {
+      "family": "box_coefficient_containment",
+      "index": 5,
+      "realizations": 19,
+      "coordinates": 2
+    },
+    {
+      "family": "box_coefficient_containment",
+      "index": 6,
+      "realizations": 19,
+      "coordinates": 2
+    },
+    {
+      "family": "box_coefficient_containment",
+      "index": 7,
+      "realizations": 19,
+      "coordinates": 2
+    },
+    {
+      "family": "box_coefficient_containment",
+      "index": 8,
+      "realizations": 19,
+      "coordinates": 2
+    },
+    {
+      "family": "box_coefficient_containment",
+      "index": 9,
+      "realizations": 19,
+      "coordinates": 2
+    },
+    {
+      "family": "box_coefficient_containment",
+      "index": 10,
+      "realizations": 19,
+      "coordinates": 2
+    },
+    {
+      "family": "box_coefficient_containment",
+      "index": 11,
+      "realizations": 19,
+      "coordinates": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 0,
+      "route": "token",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 0,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 1,
+      "route": "token",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 1,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 2,
+      "route": "token",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 2,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 3,
+      "route": "token",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 3,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 4,
+      "route": "token",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 4,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 5,
+      "route": "token",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 5,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 6,
+      "route": "token",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 6,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 7,
+      "route": "token",
+      "status": "refused",
+      "width": 5,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 7,
+      "route": "streamed",
+      "status": "refused",
+      "width": 5,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 8,
+      "route": "token",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 8,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 9,
+      "route": "token",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 9,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 10,
+      "route": "token",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 10,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 11,
+      "route": "token",
+      "status": "refused",
+      "width": 5,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 11,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 12,
+      "route": "token",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 12,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 13,
+      "route": "token",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 13,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 14,
+      "route": "token",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 14,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 15,
+      "route": "token",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 15,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 16,
+      "route": "token",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 16,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 17,
+      "route": "token",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 17,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 18,
+      "route": "token",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 18,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 19,
+      "route": "token",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 19,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 20,
+      "route": "token",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 20,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 21,
+      "route": "token",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 21,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 22,
+      "route": "token",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 22,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 23,
+      "route": "token",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 23,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 24,
+      "route": "token",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 24,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 25,
+      "route": "token",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 25,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 26,
+      "route": "token",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 26,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 27,
+      "route": "token",
+      "status": "refused",
+      "width": 5,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 27,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 28,
+      "route": "token",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 28,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 29,
+      "route": "token",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 29,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 30,
+      "route": "token",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 30,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 31,
+      "route": "token",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 31,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 32,
+      "route": "token",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 32,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 33,
+      "route": "token",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 33,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 34,
+      "route": "token",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 34,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 35,
+      "route": "token",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 35,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 0
+    },
+    {
+      "family": "point_dispatch",
+      "index": 36,
+      "route": "token",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 36,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 37,
+      "route": "token",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 37,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 38,
+      "route": "token",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 38,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 39,
+      "route": "token",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 39,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 40,
+      "route": "token",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 40,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 41,
+      "route": "token",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 41,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 42,
+      "route": "token",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 42,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 43,
+      "route": "token",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 43,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 44,
+      "route": "token",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 44,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 2,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 45,
+      "route": "token",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 45,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 3,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 46,
+      "route": "token",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 46,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 4,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 47,
+      "route": "token",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 4
+    },
+    {
+      "family": "point_dispatch",
+      "index": 47,
+      "route": "streamed",
+      "status": "accepted",
+      "width": 5,
+      "tokens": 4
+    },
+    {
+      "family": "box_dispatch",
+      "index": 0,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 0,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 1,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 1,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 2,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 2,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 3,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 3,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 4,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 4,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 5,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 5,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 6,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 6,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 7,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 7,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 8,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 8,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 9,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 9,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 10,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 10,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 11,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 11,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 12,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 12,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 13,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 13,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 14,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 14,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 15,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 15,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 16,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 16,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 17,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 17,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 18,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 18,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 19,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 19,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 20,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 20,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 21,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 21,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 22,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 22,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 23,
+      "route": "token",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "box_dispatch",
+      "index": 23,
+      "route": "streamed",
+      "status": "accepted",
+      "realizations": 19,
+      "sampled_oracle_disagreement": false
+    },
+    {
+      "family": "edge_dispatch",
+      "name": "ties",
+      "route": "token",
+      "status": "accepted"
+    },
+    {
+      "family": "edge_dispatch",
+      "name": "ties",
+      "route": "streamed",
+      "status": "accepted"
+    },
+    {
+      "family": "edge_dispatch",
+      "name": "near_ties",
+      "route": "token",
+      "status": "accepted"
+    },
+    {
+      "family": "edge_dispatch",
+      "name": "near_ties",
+      "route": "streamed",
+      "status": "accepted"
+    },
+    {
+      "family": "edge_dispatch",
+      "name": "saturation",
+      "route": "token",
+      "status": "accepted"
+    },
+    {
+      "family": "edge_dispatch",
+      "name": "saturation",
+      "route": "streamed",
+      "status": "accepted"
+    },
+    {
+      "family": "edge_dispatch",
+      "name": "subnormal",
+      "route": "token",
+      "status": "accepted"
+    },
+    {
+      "family": "edge_dispatch",
+      "name": "subnormal",
+      "route": "streamed",
+      "status": "accepted"
+    },
+    {
+      "family": "edge_dispatch",
+      "name": "cancellation",
+      "route": "token",
+      "status": "accepted"
+    },
+    {
+      "family": "edge_dispatch",
+      "name": "cancellation",
+      "route": "streamed",
+      "status": "accepted"
+    },
+    {
+      "family": "overflow_dispatch",
+      "route": "token",
+      "status": "refused"
+    },
+    {
+      "family": "overflow_dispatch",
+      "route": "streamed",
+      "status": "refused"
+    }
+  ],
+  "failures": 0,
+  "empirical_model_result": false,
+  "builds": {
+    "interval": {
+      "source_sha256": "c72c845389db8e88cd3f5e326abd91781dba7e34bdb491262bcb081fb305c838",
+      "wrapper_sha256": "1b58c9c7771bd025d9f22c692fa77a5e8db7d2c27fc45bc2d3a0d0823bcd0033",
+      "coefficient_source_sha256": "272dfff6829fdf0e1c5f30595c83d146844784f59f3c92de6b67d446c5473088",
+      "binary_sha256": "c5dac9f3356dd99fbea38f8aae616665b7929b102534767c099e7c8ff4fb450d",
+      "compiler": "/usr/bin/cc",
+      "compiler_version": "cc (Debian 12.2.0-14+deb12u1) 12.2.0",
+      "flags": [
+        "-std=c11",
+        "-O3",
+        "-shared",
+        "-fPIC",
+        "-fno-fast-math",
+        "-ffp-contract=off",
+        "-frounding-math",
+        "-fexcess-precision=standard"
+      ],
+      "compile_elapsed_ns": 521617293,
+      "compiled_now": true,
+      "call_compile_elapsed_ns": 521617293
+    },
+    "point_coefficients": {
+      "source_sha256": "7c77774fff2766246946fe88cf5beb84f3d1268f218326298ddd2d4832556916",
+      "binary_sha256": "c3c041d3b393a439acaca6623452d6c4c118ae0947769cd6628356112c09cbef",
+      "wrapper_sha256": "807cb9007c1948a2243499996400f22720d12c8ca87c45460e6ab23ebf8669bc",
+      "compiler": "/usr/bin/cc",
+      "compiler_version": "cc (Debian 12.2.0-14+deb12u1) 12.2.0",
+      "flags": [
+        "-std=c11",
+        "-O3",
+        "-shared",
+        "-fPIC",
+        "-fno-fast-math",
+        "-ffp-contract=off",
+        "-frounding-math",
+        "-fexcess-precision=standard"
+      ],
+      "compile_elapsed_ns": 193733820,
+      "compiled_now": true,
+      "call_compile_elapsed_ns": 193733820
+    },
+    "box_coefficients": {
+      "source_sha256": "83cc2668faaadb550ab57a2dc5a7cdf9ae4ba1b8aa435c849256f88261b4aa16",
+      "binary_sha256": "3a4d4dfcf71dcfd44f2d76b610c513d567b5f0c5ec1a5de9948d30d3ecf3626d",
+      "wrapper_sha256": "c25b42dd2808e6a39017d81e036725e7a66f17337dcedb4ea5eaca0a0848909f",
+      "compiler": "/usr/bin/cc",
+      "compiler_version": "cc (Debian 12.2.0-14+deb12u1) 12.2.0",
+      "flags": [
+        "-std=c11",
+        "-O3",
+        "-shared",
+        "-fPIC",
+        "-fno-fast-math",
+        "-ffp-contract=off",
+        "-frounding-math",
+        "-fexcess-precision=standard"
+      ],
+      "compile_elapsed_ns": 224144825,
+      "compiled_now": true,
+      "call_compile_elapsed_ns": 224144825
+    }
+  },
+  "summary": {
+    "box_coefficient_containment": {
+      "cases": 12,
+      "accepted": 0,
+      "refused": 0
+    },
+    "box_dispatch": {
+      "cases": 48,
+      "accepted": 48,
+      "refused": 0
+    },
+    "edge_dispatch": {
+      "cases": 10,
+      "accepted": 10,
+      "refused": 0
+    },
+    "native_add_multiply": {
+      "cases": 202,
+      "accepted": 0,
+      "refused": 0
+    },
+    "overflow_dispatch": {
+      "cases": 2,
+      "accepted": 0,
+      "refused": 2
+    },
+    "point_coefficient_containment": {
+      "cases": 36,
+      "accepted": 0,
+      "refused": 0
+    },
+    "point_dispatch": {
+      "cases": 96,
+      "accepted": 92,
+      "refused": 4
+    }
+  }
+}
