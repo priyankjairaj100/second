@@ -1,0 +1,38 @@
+V145: clean-directory compressed-state reproduction, 2 November 2026.
+
+Rebuild the three exact public wheel payloads in a new dependency directory under
+the original immutable Python3.12.14 Debian image. No existing site-packages are
+used. Copy only the declared original DistilGPT2 checkpoint and tokenized V65
+source records into a new input namespace. Verify every input and wheel hash.
+This reproduces from declared tokenized external inputs; raw C4 acquisition and
+upstream tokenization are not repeated. It is not an independent calibration root.
+
+Six bootstrap corruption/input tests plus the existing338 production checks and
+406 independent arithmetic cases must pass. Verify the actual regenerated anchor
+and fixed-calibration target identities before model execution. No target codes,
+cached features, prior state or oracle outputs are numerical inputs. Old target
+hashes are immutable comparison metadata only.
+
+Run one fresh four-record compressed48 preparation, one fresh two-record
+constructor, one four-to-two compressed deletion using only the new preparation,
+and one complete model/state/trust equality audit. This exercises a batch deletion
+on the existing DistilGPT2 development root. It adds neither independent-root nor
+cross-architecture evidence. All24stages and the complete packed model must match
+the unchanged registered target. Preserve failure/refusal; no automatic retry.
+
+One CPU,16GiB memory,4GiB new storage reserve. Existing solver policy remains:
+8GiB arrays,16point refinements,64billion work/stage,1trillion work/request,
+exact rational repair caps zero. DistilGPT2 geometry unchanged. File-size guard
+2GiB for qualification fixtures and128MiB for model/output files. Phase CPU/wall
+seconds: checks600/900; preparation3000/4500; oracle2400/3600; request1800/2700;
+audit300/600. Five60second host/container launch reservations give8400CPU total.
+
+Prepare and independent oracle may overlap; request depends on completed prepare.
+Final audit requires every prior job COMPLETED0:0 and matching completion receipt.
+One-use held-and-release submissions, no requeue. All durations are diagnostic
+fresh-process observations with natural OS cache state and shared-host contention.
+They are not randomized paired timings and do not establish a speedup.
+
+Success requires actual terminal scheduler accounting, all artifact commitments,
+all original code identities, complete equality, and total execution within cap.
+No conference submission, scheduler restart, paid compute or third-party contact.

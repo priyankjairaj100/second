@@ -1,0 +1,25 @@
+{
+  "schema": "second-handoff-v146",
+  "updated_utc": "2026-11-02T07:26:40.866820+00:00",
+  "handoff": "docs/ACTIVE_SESSION_V146.md",
+  "scheduler": "PAUSED",
+  "source_only_measure_jobs": [
+    17193,
+    17194,
+    17195,
+    17196,
+    17197,
+    17198,
+    17199,
+    17200
+  ],
+  "source_only_audit_released": false,
+  "source_only_collector_consumed": false,
+  "clean_reproduction_registration": "0ca864497df084f5c8eb36c0c675647fe353a4e1f5301d0007f016885023f7be",
+  "clean_reproduction_qualification_job": 17204,
+  "clean_reproduction_measure_released": false,
+  "failed_clean_reproduction_job": 17203,
+  "failed_clean_reproduction_cpu_seconds": 1.828,
+  "manuscript_version": 137,
+  "submission_ready": false
+}

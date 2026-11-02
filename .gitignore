@@ -143,3 +143,8 @@ campaigns/compressed_service_v31/**/*.lock
 /campaigns/csis_full_model_v43/**/*.lock
 /campaigns/csis_exposed_quality_v44/**/*.bin
 /campaigns/csis_exposed_quality_v44/**/*.lock
+
+# V145/V146 staging archives include pinned third-party binary wheel payloads.
+# Preserve them locally and on CSIS; publish identities and source separately.
+pilots/clean-compressed-reproduction-v145-20261102/source-v145.tar.gz
+pilots/clean-compressed-reproduction-v146-20261102/source-v146.tar.gz

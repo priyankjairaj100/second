@@ -1,0 +1,37 @@
+{
+  "completion": {
+    "schema": "clean-compressed-reproduction-v145",
+    "registration_sha256": "3f297f0da6a1ad1ca92f7e3fa2484a708524011b96f55d57865c0207db381659",
+    "phase": "checks",
+    "job_id": "17203",
+    "status": "failed",
+    "error": {
+      "type": "ModuleNotFoundError",
+      "message": "No module named 'numpy'"
+    },
+    "result": null,
+    "environment_manifest": {
+      "bytes": 146396,
+      "sha256": "a9dd755026922082e5451202e9a3471705f6048d1cb3c4e199fa196a73c3017e"
+    },
+    "elapsed_seconds": 1.0285319481045008,
+    "process_cpu_seconds": 1.317926566,
+    "child_cpu_seconds": 0.018475,
+    "peak_rss_kib": 85752,
+    "host": "csis.mn1",
+    "python": "3.12.14 (main, Sep 19 2026, 03:36:28) [GCC 12.2.0]",
+    "artifacts": {
+      "attempt.json": {
+        "bytes": 117,
+        "sha256": "25690d22c7e07b1ba4d69bac8242ebe9edf57952631dc056ae50edc1b7c1d6f9"
+      }
+    }
+  },
+  "completion_identity": {
+    "bytes": 835,
+    "sha256": "a20b6a3152a56f5c4e56e37c3a471d0758b9449d6d925e3cac75992d6d647d6d"
+  },
+  "stderr": "Traceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/clean-compressed-reproduction-v145-20261102-a/research_v145/worker.py\", line 123, in main\n    r['result']=setup(p,out) if phase=='checks' else audit(p,out,h) if phase=='audit' else model(p,phase,out,h)\n                ^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/clean-compressed-reproduction-v145-20261102-a/research_v145/worker.py\", line 31, in setup\n    from research_v143.worker import checks\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/clean-compressed-reproduction-v145-20261102-a/research_v143/worker.py\", line 7, in <module>\n    from research_v135 import source_state\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/clean-compressed-reproduction-v145-20261102-a/research_v135/source_state.py\", line 10, in <module>\n    from research_v61.state import Record\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/clean-compressed-reproduction-v145-20261102-a/research_v61/state.py\", line 38, in <module>\n    from research_v35.exact_gram import GramBudget, SourceCommitment, loads as load_gram\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/clean-compressed-reproduction-v145-20261102-a/research_v35/exact_gram.py\", line 24, in <module>\n    import numpy as np\nModuleNotFoundError: No module named 'numpy'\nTraceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/clean-compressed-reproduction-v145-20261102-a/research_v145/worker.py\", line 132, in <module>\n    if __name__=='__main__':main(*sys.argv[1:])\n                            ^^^^^^^^^^^^^^^^^^^\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/clean-compressed-reproduction-v145-20261102-a/research_v145/worker.py\", line 131, in main\n    assert r['status']=='complete',r['error']\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'type': 'ModuleNotFoundError', 'message': \"No module named 'numpy'\"}\n",
+  "stdout": "",
+  "sacct": "17203|FAILED|1:0|00:00:03|00:01.828\n17203.batch|FAILED|1:0|00:00:03|00:01.828\n"
+}
