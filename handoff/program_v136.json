@@ -1,0 +1,18 @@
+{
+  "schema": "second-handoff-v136",
+  "updated_utc": "2026-10-29T09:03:41.597745+00:00",
+  "status": "sequential_quality_running",
+  "jobs": [
+    16725,
+    16726,
+    16727,
+    16728
+  ],
+  "registration_sha256": "e2f02e4176cd64a7223ec97e2b6cfc02f9d9d159a3fb3538b365636cb06ac18e",
+  "handoff": "docs/ACTIVE_SESSION_V136.md",
+  "scheduler": "PAUSED",
+  "primary_quality_gate": "pending_actual_all_four",
+  "new_practical_quality": "V131 audited; fixed/GPTQ ratios below one in all four strata",
+  "source_only": "research_v135 preparation only",
+  "manuscript": "V123 until audited result update"
+}

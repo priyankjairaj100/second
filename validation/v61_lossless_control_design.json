@@ -1,0 +1,33 @@
+{
+  "actual_codec_runtime_pinned": false,
+  "changes_to_active_sources_or_runtime": false,
+  "current_codec_sha256": "6d0c5c3d13506091bd88310b93b5b0931f1c09b1f6e902fe0e2c40b35c441c0c",
+  "current_lossless_codec": "raw/zlib6/byte-shuffled-zlib6 deterministic selection",
+  "descriptor_counts": [
+    312,
+    288,
+    144
+  ],
+  "empirical_factors_read": false,
+  "frozen_sources_unchanged": 432,
+  "largest_raw_factor_bytes": 3145728,
+  "new_codec_implemented": false,
+  "new_codec_tests_run": false,
+  "new_jobs_submitted": 0,
+  "original_raw_factor_bytes": 429391872,
+  "program_sha256": "6632712f7b79b49734790fa6fc173ec7e5ee70f542fe8f8a0c3ef3ff2171ea2d",
+  "proposal_sha256": "12c6b43aa54d3889939b16d091b8e641f2a67b016a11b13b1e3b78201bb4d222",
+  "proposed_versions": {
+    "python_zstandard": "0.25.0",
+    "zstd": "1.5.7"
+  },
+  "schema": "v61-lossless-control-design-check",
+  "source_count": 13,
+  "source_geometry_is_not_memory_or_runtime_admission": true,
+  "stages": 24,
+  "status": "static_design_only",
+  "width_counts": {
+    "3072": 6,
+    "768": 18
+  }
+}

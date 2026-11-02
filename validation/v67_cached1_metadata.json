@@ -1,0 +1,66 @@
+{
+  "actual_model_state_bytes_checked": false,
+  "archive": {
+    "bytes": 385792,
+    "sha256": "7dd28ef74236398536ee2cbe7c0fa0db9aa7111d31bcb414683f37a2e526fde0"
+  },
+  "captured_at_utc": "2026-10-16T17:39:21.931391+00:00",
+  "complete_campaign_costs_verified": false,
+  "controller_all_waited_children_cpu_ns": 4421448697000,
+  "controller_own_cpu_ns": 7710626739,
+  "declared_artifacts": {
+    "admission.json": {
+      "bytes": 555807,
+      "file": "admission.json",
+      "sha256": "8e409e1e4b9b0faff1d37f76faf117f9115042b11beb9acb3ec89bc86250e72b"
+    },
+    "execution-provenance.json": {
+      "bytes": 12727,
+      "file": "execution-provenance.json",
+      "sha256": "22956724f4d2a9433702a3f76cc1fb76a8d447c8c60a7d668800de7da55574cc"
+    },
+    "model.bin": {
+      "bytes": 21233664,
+      "file": "model.bin",
+      "sha256": "35ea0d49671581c0f20fa9a65665acd5abec82d0a1e3edc4e75bca05bdc1f9c5"
+    },
+    "state.bin": {
+      "bytes": 368002893,
+      "file": "state.bin",
+      "sha256": "db346339f6a1e9665f086d6216e81c46afcde73c2d98e73bc861bd9622150bf5"
+    },
+    "trust.json": {
+      "bytes": 2,
+      "file": "trust.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    }
+  },
+  "fresh_oracle_comparison_verified": false,
+  "job": {
+    "elapsed": "01:14:20",
+    "end": "2026-10-16T22:58:04",
+    "exit_code": "0:0",
+    "name": "second67-cached-1",
+    "node": "csis.mn1",
+    "start": "2026-10-16T21:43:44",
+    "state": "COMPLETED",
+    "total_cpu": "01:13:50"
+  },
+  "job_id": "15266",
+  "later_reserved_attempts_preserved": 1,
+  "numerical_result_verified": false,
+  "numerical_solver_fallback_attempted_decisions": 21504,
+  "numerical_solver_fallback_certified_decisions": 21504,
+  "numerical_solver_fallback_rows": 7,
+  "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+  "refused_stages": 0,
+  "retained_membership_independently_rebuilt": false,
+  "stage_certificates": 24,
+  "stage_level_fallback_flags": 0,
+  "status": "verified_completed_comparison_receipt_metadata",
+  "transaction_elapsed_ns": 4455690168641,
+  "trial": "cached-1",
+  "worker_charged_cpu_seconds": 4422,
+  "worker_maximum_rss_kib": 1913972,
+  "worker_process_and_waited_descendant_cpu_ns": 4421445833000
+}

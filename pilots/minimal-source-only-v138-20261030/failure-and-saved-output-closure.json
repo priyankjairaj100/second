@@ -1,0 +1,33 @@
+{
+  "utc": "2026-11-02T07:03:39.198836+00:00",
+  "V138_measure_status": "8FAILED1:0,4CANCELLEDwithout_execution",
+  "cause": "Final historical endpoint lookup uses retained2/3 but maps contain candidate_2/3",
+  "actual_measure_cpu_seconds": 6811.781,
+  "actual_total_v138_cpu_seconds": 9626.619,
+  "original_ceiling_not_refunded": 54760,
+  "V141": "withdrawn unlaunched: audit nested target binding static-review finding",
+  "V142": {
+    "job": 17189,
+    "status": "FAILED1:0",
+    "actual_cpu_seconds": 1.555,
+    "cause": "sacct unavailable inside container; no model audited"
+  },
+  "V144": {
+    "job": 17190,
+    "status": "COMPLETED0:0",
+    "actual_cpu_seconds": 25.283,
+    "four_first_endpoint_outputs_audited": true,
+    "four_fresh_oracles_audited": true
+  },
+  "successful_service_timing_from_failed_jobs": false,
+  "V140": {
+    "job": 17186,
+    "status": "COMPLETED0:0",
+    "cases": 406,
+    "actual_cpu_seconds": 3.504
+  },
+  "V143_pre_registration_local_errors": [
+    "Registration helper initially lacked repository PYTHONPATH; failed before creating registration",
+    "Staging helper invoked before package existed; failed before intent, connection or remote mutation"
+  ]
+}

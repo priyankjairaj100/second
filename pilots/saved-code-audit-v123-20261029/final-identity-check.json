@@ -1,0 +1,11 @@
+{
+  "checked_utc": "2026-10-29T05:48:18.454695+00:00",
+  "remote_sha256_equals_local": {
+    "reporting_v123/changed_codes.py": "be6b64c21777e427d27149c46b46f3e307a294f1a4de70b91cd449bbc51378d1",
+    "reporting_v123/manifest.json": "8bd9dc397319161becc5a4c1d113f18c0e6e420463efe7d1d214974200d71d70",
+    "pilots/saved-code-audit-v123-20261029/result.json": "f8b60d8c43e987e6c061a6b0a7ded44191c626a89d67b8bd0a9c51ad455a5702"
+  },
+  "squeue_exit": 1,
+  "squeue_message": "slurm_load_jobs error: Invalid job id specified",
+  "interpretation": "Job already has preserved terminal COMPLETED 0:0 accounting; absence from active scheduler is not a new success test. No job rerun."
+}

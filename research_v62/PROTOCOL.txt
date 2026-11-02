@@ -1,0 +1,58 @@
+V62: separate artifact-audit recovery after the V61 audit timeout
+15 October 2026. No calibration, neural inference, quality evaluation or data selection.
+
+Preserved failure
+V61 jobs 13561–13568 completed, including six sealed numerical workers. Primary
+audit 13569 reached its original 30-minute wall limit; supplemental audit 13570
+was cancelled by its failed dependency. Both original audit receipts are absent.
+The original V61 chain therefore did not pass its terminal gate. Preserve its
+sources, program, 81,012-CPU-second allowance, settled ledger, logs, job outcomes
+and absent receipt paths. Do not relaunch the V61 pipeline or fill those paths.
+Failure capture: SHA256 d0ad4f1085b5c8cb5148de2a6608f8cc1d844661e7262882da2f483f5f9e8094.
+
+Purpose and exact acceptance boundary
+Read only the already completed artifacts. Invoke the exact frozen primary and
+supplemental audit functions from numerical commit f900999fcb200509dfad4fc081ce9c87fd172a16,
+with fresh outputs inside local_runs/audit-recovery-v62-20261015-a. No parser,
+comparison, canonical validation, solver, certificate, source or runtime change.
+The supplemental function consumes the new primary output. The original failed
+scheduler history stays distinct from these new audit jobs. Any successful
+conclusion must say validation was recovered in this separate phase.
+
+Identity and admission
+Before submission freeze registration.json with the exact V61 program and failure
+manifest hashes, all 432 numerical sources, every captured metadata commitment,
+every declared uncopied binary commitment, six completion hashes, the settled
+ledger, the exact runner, its eight boundary fixtures and this protocol. Bind the original frozen container
+wrapper and container manifest. No original campaign file or ledger is writable
+by the audit logic. At entry and successful exit verify registered metadata,
+source and program bytes; frozen auditors rehash their actual binary inputs.
+A metadata snapshot is not itself a binary-content proof.
+
+Fresh bounded support work
+Exactly two sequential jobs, primary then supplemental, one attempt each. The
+primary job must first pass all eight wrapper fixtures with zero skips under the
+pinned Linux runtime, within its same CPU/wall allocation, before any audit call. Each
+uses one CPU, 16 GiB address-space and Slurm memory caps, 64 MiB output-file cap,
+3600 process CPU seconds (hard 3601), and 65 minutes Slurm wall time. The new
+support allowance is 7204 CPU seconds, separate from all scientific ledgers;
+measure process CPU and scheduler CPU, including the failed original audit.
+The old V54 primary audit took 1564.796 seconds and its supplemental took
+944.138 seconds. V61's observed timeout establishes only that 30 minutes was
+insufficient. The new 60-minute CPU ceiling is a finite recovery allowance,
+not a proven fit or a retroactive change to V61 admission. A second timeout,
+refusal, changed input or missing comparison stops this phase; no retries,
+automatic limit increases or numerical reruns. Preserve all partial output.
+
+Diagnostics and publication
+The runner enables periodic Python stack traces to the bounded log to locate
+slow validation if another timeout occurs; it does not monkey-patch or profile
+the auditor. Exclusive attempt markers prevent duplicate invocation. A completed
+wrapper receipt binds the new registration, Slurm ID, applied limits and actual
+audit output hash. Success additionally requires both scheduler jobs complete,
+both frozen audit outputs verified, eight complete model/state comparisons,
+final-six V59 byte links, exact input censuses and settled old worker debits.
+Do not promote the original success-only collector/checker by rewriting its
+failed scheduler rows or missing audit paths. A separately reviewed recovery
+collector/checker must bind the old failure capture and these actual new paths.
+No paper claim is updated before that evidence is validated.

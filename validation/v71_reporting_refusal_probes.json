@@ -1,0 +1,17 @@
+{
+  "schema": "v71-reporting-refusal-probes",
+  "actual_snapshot": "campaigns/csis_v71_metadata_20261018_b.tar.gz",
+  "probes": {
+    "missing_actual_sealed_artifact": "rejected",
+    "changed_actual_sealed_artifact": "rejected",
+    "underreported_scheduler_cost": "rejected",
+    "wrong_registration": "rejected",
+    "unsettled_completed_worker_debit": "rejected",
+    "fake_quality_closure_while_jobs_run": "kept_pending",
+    "fake_terminal_job_without_model_loss_audits": "rejected"
+  },
+  "passed": true,
+  "complete_terminal_path_exercised": false,
+  "actual_empirical_work": false,
+  "frozen_sources_changed": false
+}

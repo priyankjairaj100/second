@@ -1,0 +1,38 @@
+{
+  "bundle": {
+    "bytes": 10874083,
+    "sha256": "b8d1da3ccc45ebf0157765d424c2bf49c53ddd2b290b26b1df1207fdc6adc9ca"
+  },
+  "excluded_execution_receipts": [
+    "gates/target-admission-origin.json",
+    "gates/target-admission-terminal.json",
+    "gates/v100-failed-software-carry.json",
+    "gates/v101-program.json",
+    "gates/v103-dispatch-failure-carry.json",
+    "gates/v104-failed-screen-v109.json",
+    "gates/v104-failed-screen-v110.json",
+    "gates/v110-selected-stage-closure.json",
+    "gates/v89-terminal-origin.json",
+    "gates/v89-terminal.json",
+    "gates/v91-failed-setup-review.json",
+    "gates/v91-preparation-failure.json",
+    "gates/v99-failed-software-carry.json",
+    "recovery-evidence/binding-origin.json",
+    "recovery-evidence/old-accounting.txt",
+    "recovery-evidence/original-accounting.txt",
+    "recovery-evidence/partial-artifact-bindings.json"
+  ],
+  "manuscript": {
+    "bytes": 60809,
+    "sha256": "3cb08fdd306801c49576ff118a09996834a835c33f6faa4f1c0d9da10541ca75"
+  },
+  "native_compile_success": true,
+  "new_scientific_result": false,
+  "original_sources_changed": false,
+  "rendered_layout_verified": false,
+  "reporting_collector_executed": false,
+  "scheduler": "PAUSED",
+  "schema": "v116-reporting-checkpoint",
+  "source_counterparts_verified": 1322,
+  "successful_request_reviews": 7
+}

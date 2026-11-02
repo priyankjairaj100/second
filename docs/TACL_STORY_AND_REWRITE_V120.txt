@@ -1,0 +1,58 @@
+Second TACL final rewrite, 28 October 2026
+
+Central contribution
+Lossy calibration evidence can preserve exact adaptive model decisions. Recovering
+a discrete low-bit model does not require recovering every original feature word.
+This is the strongest story supported by the frozen work. It combines a fixed,
+source-local calibration target, a uniform feature-box certificate, bounded exact
+replay, and canonical state for successive deletions. It is not a new general
+interval-verification principle or a general acceleration result.
+
+Practical relevance
+A calibration collection may lose duplicated, corrupted or disallowed records.
+Maintenance then needs the defined retained-data model and a usable next state.
+The relevant choice is which evidence to retain: exact features, interval-valued
+features, or aggregate statistics backed by source access. Compare deployed bytes,
+source traversals, complete latency and preparation costs together. The strongest
+lossless cache wins the final latency comparison; compression offers a modest
+storage alternative. Its practical appeal is conditional on storage/access costs,
+not an experimentally validated deployment demand curve.
+
+Paper structure
+Pages 1-2 explain the maintenance problem, discrete-information distinction and a
+worked two-weight example in which deletion changes a code despite lossy evidence.
+Page 3 defines the finite target, grids and source-local features before formal use.
+Pages 4-6 derive coefficient and decision-margin bounds and give all three proofs.
+The remaining main pages define controls and complete accounting, report every
+comparison, distinguish the two calibration roots and quality population, relate
+the work to prior art, and state implementation/reproduction and use conditions.
+References begin on page 11. No appendix or outside review supplement is required
+to understand the theory or principal results.
+
+Scientific preservation
+All prior experimental sources and the 14 evidence/source components are unchanged.
+The first service study, optimization, matched two-checkpoint screen and untouched
+quality study remain separate. The smaller matched targets have no quality result.
+Single observations do not establish stable latency or cross-architecture transfer.
+Failures and negative findings are retained in the author-side evidence archive;
+material scope is attached directly to the relevant result or theorem.
+No old registration, collector, numerical job or audit was executed again.
+
+Changes beyond prose
+The new margin calculation is an elementary consequence of the triangle inequality;
+it explains the stored precision requirement and conservatism of interval products.
+The token-space coefficient identity is derived from the same ridge system, not a
+new measured implementation. The toy example is checked with exact fractions and
+is explicitly not an empirical result. No new scientific claim comes from tests.
+
+Venue and delivery
+The official TACL submission style replaces ACL style. Long operational identifiers
+and repeated caveats no longer drive the opening. The AI-use disclosure is retained
+without an acknowledgments section. MEDU, QEBVerif and WikiText citations point to
+published versions; model-card citations are pinned and separately rendered.
+The native editor remains the working document. A workspace-local official Tectonic
+export helper resolves the former PDF-export block without uploading manuscript
+content, installing a system TeX distribution, or requiring the failed UI service.
+The portable compiler release digest and exact style bytes are recorded.
+Submission eligibility and personal author declarations remain author-controlled;
+the scientific manuscript and submission-format artifacts are prepared, not uploaded.

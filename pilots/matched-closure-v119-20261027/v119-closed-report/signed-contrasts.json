@@ -1,0 +1,34 @@
+[
+  {
+    "checkpoint_inclusive_change_percent": "-1.839",
+    "complete_host_change_percent": "43.593",
+    "live_storage_change_percent": "-7.777",
+    "profile": "distilgpt2",
+    "retained_records": 3,
+    "step": 1
+  },
+  {
+    "checkpoint_inclusive_change_percent": "-1.303",
+    "complete_host_change_percent": "80.924",
+    "live_storage_change_percent": "-7.009",
+    "profile": "distilgpt2",
+    "retained_records": 2,
+    "step": 2
+  },
+  {
+    "checkpoint_inclusive_change_percent": "-2.241",
+    "complete_host_change_percent": "166.148",
+    "live_storage_change_percent": "-7.858",
+    "profile": "gpt2",
+    "retained_records": 3,
+    "step": 1
+  },
+  {
+    "checkpoint_inclusive_change_percent": "-1.611",
+    "complete_host_change_percent": "88.465",
+    "live_storage_change_percent": "-7.087",
+    "profile": "gpt2",
+    "retained_records": 2,
+    "step": 2
+  }
+]

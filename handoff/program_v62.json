@@ -1,0 +1,327 @@
+{
+  "acl_ready": false,
+  "all_final_six_models_equal_actual_v59_candidate": true,
+  "archives": {
+    "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz": {
+      "bytes": 3761981,
+      "sha256": "d0ad4f1085b5c8cb5148de2a6608f8cc1d844661e7262882da2f483f5f9e8094"
+    },
+    "campaigns/csis_terminal_v62_recovery_metadata_20261016.tar.gz": {
+      "bytes": 380397,
+      "sha256": "4b146e74e1d60b9939cffa8d077d384685d3bfa1716db3e2e15ce071f2cd3b99"
+    }
+  },
+  "charged_worker_cpu_seconds": 39983,
+  "codes_per_comparison": 42467328,
+  "comparison_count": 8,
+  "cutoff_utc": "2026-10-16T07:33:16.150537+00:00",
+  "decision": "Compression remains a modest storage versus latency tradeoff against the lossless cache; no broad acceleration claim. Close the prospectively fixed modern lossless control before expansion.",
+  "independent_root_replication": false,
+  "local_binary_revalidation": false,
+  "new_jobs_submitted_this_continuation": 0,
+  "next_gate": "New version, isolated pinned codec runtime, boundary fixtures and bounded artifact-only source-local lossless comparison; no empirical launch registered here.",
+  "numerical_binaries_omitted": 33,
+  "old_failed_audit_cpu_seconds": 1811.125,
+  "original_chain_terminal_gate_passed": false,
+  "original_copied_files": 1285,
+  "original_missing_audit_paths": 2,
+  "original_omitted_lockfiles": 7,
+  "program_sha256": "6632712f7b79b49734790fa6fc173ec7e5ee70f542fe8f8a0c3ef3ff2171ea2d",
+  "prospective_timing_replication": false,
+  "quality_evaluation_performed": false,
+  "ratios": {
+    "cached": {
+      "compressed_deployment_saving": [
+        0.04804139647180028,
+        0.031614146981247204
+      ],
+      "compressed_live_state_saving": [
+        0.09408513450245015,
+        0.08861866556791054
+      ],
+      "compressed_over_control_observed_lifetime": 1.2463375240685712,
+      "compressed_over_control_request_time": [
+        1.3862279549632128,
+        1.4173701788219075
+      ]
+    },
+    "cold": {
+      "compressed_deployment_saving": [
+        0.04804139647180028,
+        0.031614146981247204
+      ],
+      "compressed_live_state_saving": [
+        0.09408513450245015,
+        0.08861866556791054
+      ],
+      "compressed_over_control_observed_lifetime": 1.0350548955848726,
+      "compressed_over_control_request_time": [
+        1.0177105647615263,
+        0.807778198669662
+      ]
+    },
+    "hybrid": {
+      "compressed_deployment_saving": [
+        -0.021061556340586263,
+        0.07370579105617958
+      ],
+      "compressed_live_state_saving": [
+        -0.044331558703457175,
+        0.19159126494959822
+      ],
+      "compressed_over_control_observed_lifetime": 1.1223330883419715,
+      "compressed_over_control_request_time": [
+        1.3246603995362762,
+        0.7638773247103106
+      ]
+    }
+  },
+  "recovery_copied_files": 19,
+  "recovery_registration_sha256": "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b",
+  "recovery_scheduler_cpu_seconds": 2812.037,
+  "recovery_verified": true,
+  "registered_numerical_commit": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "remaining": [
+    "Modern lossless control and practical-value decision",
+    "Fresh disjoint calibration root after method freeze",
+    "Untouched article-level quality with prospective uncertainty plan",
+    "Balanced repeated timing with full costs",
+    "Second checkpoint only for transfer claims",
+    "Final concise paper, format/anonymity checks, reproducibility bundle and submission checklist"
+  ],
+  "scheduler_accounting": {
+    "original": {
+      "13561": {
+        "elapsed_seconds": 25,
+        "end": "2026-10-14T10:41:20",
+        "exit_code": "0:0",
+        "max_rss": "3336K",
+        "start": "2026-10-14T10:40:55",
+        "state": "COMPLETED",
+        "total_cpu": "00:24.151"
+      },
+      "13562": {
+        "elapsed_seconds": 8,
+        "end": "2026-10-14T10:42:09",
+        "exit_code": "0:0",
+        "max_rss": "3300K",
+        "start": "2026-10-14T10:42:01",
+        "state": "COMPLETED",
+        "total_cpu": "00:05.324"
+      },
+      "13563": {
+        "elapsed_seconds": 6635,
+        "end": "2026-10-14T12:32:44",
+        "exit_code": "0:0",
+        "max_rss": "1726056K",
+        "start": "2026-10-14T10:42:09",
+        "state": "COMPLETED",
+        "total_cpu": "01:50:12"
+      },
+      "13564": {
+        "elapsed_seconds": 5011,
+        "end": "2026-10-14T13:56:16",
+        "exit_code": "0:0",
+        "max_rss": "1944668K",
+        "start": "2026-10-14T12:32:45",
+        "state": "COMPLETED",
+        "total_cpu": "01:23:11"
+      },
+      "13565": {
+        "elapsed_seconds": 7166,
+        "end": "2026-10-14T15:55:42",
+        "exit_code": "0:0",
+        "max_rss": "1965112K",
+        "start": "2026-10-14T13:56:16",
+        "state": "COMPLETED",
+        "total_cpu": "01:59:01"
+      },
+      "13566": {
+        "elapsed_seconds": 5969,
+        "end": "2026-10-14T17:35:11",
+        "exit_code": "0:0",
+        "max_rss": "1946288K",
+        "start": "2026-10-14T15:55:42",
+        "state": "COMPLETED",
+        "total_cpu": "01:39:02"
+      },
+      "13567": {
+        "elapsed_seconds": 6962,
+        "end": "2026-10-14T19:31:13",
+        "exit_code": "0:0",
+        "max_rss": "1922152K",
+        "start": "2026-10-14T17:35:11",
+        "state": "COMPLETED",
+        "total_cpu": "01:55:01"
+      },
+      "13568": {
+        "elapsed_seconds": 8516,
+        "end": "2026-10-14T21:53:09",
+        "exit_code": "0:0",
+        "max_rss": "1669548K",
+        "start": "2026-10-14T19:31:13",
+        "state": "COMPLETED",
+        "total_cpu": "02:21:29"
+      },
+      "13569": {
+        "elapsed_seconds": 1822,
+        "end": "2026-10-14T22:23:32",
+        "exit_code": "0:15",
+        "max_rss": "2748716K",
+        "start": "2026-10-14T21:53:10",
+        "state": "CANCELLED",
+        "total_cpu": "30:11.125"
+      }
+    },
+    "recovery": {
+      "15150": {
+        "elapsed_seconds": 1868,
+        "end": "2026-10-15T17:28:24",
+        "exit_code": "0:0",
+        "max_rss": "2746308K",
+        "start": "2026-10-15T16:57:16",
+        "state": "COMPLETED",
+        "total_cpu": "30:54.276"
+      },
+      "15151": {
+        "elapsed_seconds": 964,
+        "end": "2026-10-15T17:44:28",
+        "exit_code": "0:0",
+        "max_rss": "3455392K",
+        "start": "2026-10-15T17:28:24",
+        "state": "COMPLETED",
+        "total_cpu": "15:57.761"
+      }
+    }
+  },
+  "schema": "second-v62-recovered-service-decision",
+  "status": "complete_scoped_development_evidence",
+  "timings": {
+    "cached": {
+      "attributed_preparation_ns": 5549006168169,
+      "attributed_two_deletion_lifetime_ns": 10554755490890,
+      "complete_deployment_bytes": [
+        720958060,
+        548498557
+      ],
+      "context_elapsed_ns": 18605739045,
+      "fallback_stages": [
+        [],
+        []
+      ],
+      "lifetime_scope": "Observed two-request path with attributed common+representation preparation and measured complete request-worker transaction. Shared preparation admission/final receipt overhead reported separately.",
+      "live_state_bytes": [
+        368132885,
+        195673382
+      ],
+      "max_rss_kib": 1906080,
+      "replay_neural_stage_record_pairs": [
+        0,
+        0
+      ],
+      "representation": "lossless",
+      "request_elapsed_ns": [
+        4083950874134,
+        894161625326
+      ],
+      "transaction_elapsed_ns": 5005749322721,
+      "worker_elapsed_ns": 5001437192381,
+      "worker_outside_request_ns": 23324692921
+    },
+    "cold": {
+      "attributed_preparation_ns": 5549006168169,
+      "attributed_two_deletion_lifetime_ns": 12709265838728,
+      "complete_deployment_bytes": [
+        720958060,
+        548498557
+      ],
+      "context_elapsed_ns": 19070440556,
+      "fallback_stages": [
+        [],
+        []
+      ],
+      "lifetime_scope": "Observed two-request path with attributed common+representation preparation and measured complete request-worker transaction. Shared preparation admission/final receipt overhead reported separately.",
+      "live_state_bytes": [
+        368132885,
+        195673382
+      ],
+      "max_rss_kib": 1947736,
+      "replay_neural_stage_record_pairs": [
+        288,
+        144
+      ],
+      "representation": "lossless",
+      "request_elapsed_ns": [
+        5562767121070,
+        1568943089664
+      ],
+      "transaction_elapsed_ns": 7160259670559,
+      "worker_elapsed_ns": 7155722352294,
+      "worker_outside_request_ns": 24012141560
+    },
+    "compressed": {
+      "attributed_preparation_ns": 6198012056765,
+      "attributed_two_deletion_lifetime_ns": 13154787825665,
+      "complete_deployment_bytes": [
+        686322228,
+        531158243
+      ],
+      "context_elapsed_ns": 18810922750,
+      "fallback_stages": [
+        [],
+        []
+      ],
+      "lifetime_scope": "Observed two-request path with attributed common+representation preparation and measured complete request-worker transaction. Shared preparation admission/final receipt overhead reported separately.",
+      "live_state_bytes": [
+        333497053,
+        178333068
+      ],
+      "max_rss_kib": 1847260,
+      "replay_neural_stage_record_pairs": [
+        0,
+        0
+      ],
+      "representation": "compressed48",
+      "request_elapsed_ns": [
+        5661286868421,
+        1267358022784
+      ],
+      "transaction_elapsed_ns": 6956775768900,
+      "worker_elapsed_ns": 6952507796350,
+      "worker_outside_request_ns": 23862905145
+    },
+    "hybrid": {
+      "attributed_preparation_ns": 5758967443826,
+      "attributed_two_deletion_lifetime_ns": 11720930232128,
+      "complete_deployment_bytes": [
+        672165379,
+        573422826
+      ],
+      "context_elapsed_ns": 19384985457,
+      "fallback_stages": [
+        [],
+        []
+      ],
+      "lifetime_scope": "Observed two-request path with attributed common+representation preparation and measured complete request-worker transaction. Shared preparation admission/final receipt overhead reported separately.",
+      "live_state_bytes": [
+        319340204,
+        220597651
+      ],
+      "max_rss_kib": 1935460,
+      "replay_neural_stage_record_pairs": [
+        24,
+        144
+      ],
+      "representation": "hybrid_gram",
+      "request_elapsed_ns": [
+        4273764710112,
+        1659111982758
+      ],
+      "transaction_elapsed_ns": 5961962788302,
+      "worker_elapsed_ns": 5957536137456,
+      "worker_outside_request_ns": 24659444586
+    }
+  },
+  "untouched_quality": false,
+  "worker_allowance_cpu_seconds": 81012
+}

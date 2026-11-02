@@ -1,0 +1,29 @@
+V83 prospective host terminal accounting, not a numerical experiment
+
+V80 jobs15904--15916, V81 job15917 and V82 jobs15921--15925 have fixed identities
+and program commitments in terminal.py. No job is launched, retried or modified
+by this reporter. Run from the host only after the relevant chain is terminal.
+Successful Slurm allocation rows, exact job/host/resource identities, actual
+controller receipts, sealed worker receipts and all actual audit inputs must
+agree. .batch/.extern steps and nested clocks are not added twice. Any failed or
+nonterminal allocation refuses success closure; its raw record remains a failure.
+
+V80 requires both actual model/state audits, eight complete successor comparisons,
+all source/input commitments, ten distinct settled numerical debits, terminal
+entries and separate software/controller/audit/scheduler costs. It does not infer
+numerical equality from a checksum or a passing unit test. Prior model/state
+comparisons come from the separately executed audits, whose actual consumed input
+bytes are reopened and verified against their committed inventories.
+
+V81 closure covers62 software checks only. V82 closure covers26 software checks,
+two actual target admissions and their checkpoint/target bytes and process seals.
+V82 admits new targets; it is not a neural/repair/quality/transfer experiment.
+All final inputs are rehashed before emitting the snapshot. The reporter has a
+300/301CPU-second limit and2GiB address-space cap, and records its own administrative
+cost separately from experiment costs. It does not claim those read-only costs
+were part of the already registered numerical ledgers.
+
+Thirteen generated parser/accounting/file-integrity tests pass locally. Actual
+terminal reporting is pending: no program is complete merely because these tests
+pass. This source has not run against final V80/V81/V82 receipts. Preserve all
+one-use attempts and require a new reporting revision for any needed change.

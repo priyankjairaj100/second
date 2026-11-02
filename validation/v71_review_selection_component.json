@@ -1,0 +1,61 @@
+{
+  "adapted_files": 1,
+  "archive": {
+    "bytes": 6194056,
+    "path": "reports/development-selection-metadata-v71.zip",
+    "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
+  },
+  "clean_extraction_exact": true,
+  "core_functions_ast_equal": [
+    "canonical",
+    "info",
+    "pairs",
+    "parse",
+    "reconcile_selection"
+  ],
+  "full_historical_input_closure": false,
+  "indirect_anonymity_verified": false,
+  "integrated_into_current_bundle": false,
+  "known_identity_findings": [],
+  "metadata_bytes_original": 12685254,
+  "numerical_experiment_executed": false,
+  "original_metadata_files": 11,
+  "package_members": 15,
+  "portable_check": {
+    "after_counts": {
+      "chunks": 44538,
+      "content": 32331,
+      "ids": 11416
+    },
+    "all_eligibility_reasons_recomputed": true,
+    "before_counts": {
+      "chunks": 29736,
+      "content": 21371,
+      "ids": 7615
+    },
+    "corpus_to_hash_correspondence_verified": false,
+    "eligible_records": 2778,
+    "exact_inspected_frame_union": true,
+    "fixed_sampling_order_recomputed": true,
+    "frame_records": 3801,
+    "full_historical_input_closure": false,
+    "historical_quality_ids_preserved": 60,
+    "likelihood_result": false,
+    "original_registration_replayed": false,
+    "raw_corpus_or_tokens_read": false,
+    "selected_metadata_matches": true,
+    "selected_records": 320,
+    "short_records": 1021,
+    "status": "saved_metadata_decisions_verified"
+  },
+  "private_mapping_packaged": false,
+  "refusal_probes": {
+    "altered_file": true,
+    "extra_file": true,
+    "missing_file": true
+  },
+  "schema": "review-selection-component-check-v71",
+  "submission_ready": false,
+  "typed_roundtrips": 11,
+  "verified_at_utc": "2026-10-18T12:40:30.412529+00:00"
+}

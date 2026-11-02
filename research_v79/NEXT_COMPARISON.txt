@@ -1,0 +1,67 @@
+Prospective complete-request development comparison; NOT REGISTERED
+
+First question: do the qualified implementation changes improve complete
+requests, and does compressed48 beat a fairly optimized modern lossless
+control at either existing endpoint? This is an engineering development
+screen, not confirmation, stable timing, or checkpoint transfer evidence.
+
+Keep V65 root13->12->6,128tokens/record, normalization1664, fixed original
+DistilGPT2 teacher, all24stages/42,467,328codes, ridge1/100, dyadic24 grids,
+compressed48/block256 and the same finite solver/certificates/fallback.
+No new quality evaluation: exact actual model-byte equality to fresh
+reconstruction is required. Changed canonical model bytes fail this variant.
+
+Design has ten numerical workers: fresh preparation; four cells at endpoint1;
+the same four in reverse order at endpoint2; fresh oracle at both endpoints.
+Every second request reads its own first successor; never borrow another
+cell's successor. Contemporaneous reference cells replace no historical
+results. Use SHA256 ordering of 'second-four-cell-development-v80:' + cell
+for the first endpoint, reversed at the second. Freeze before launch. This
+complementary order over unequal workloads is not timing replication.
+
+Use the existing per-arm bounds for both implementation versions:
+compressed12600/9000 softCPU seconds; modern10800/7200; preparation12600,
+oracle16200. Each reservation is soft+2. Ten reservations total108020CPU
+seconds, below the existing120624 phase ceiling by12604 seconds. Do not
+spend that remainder opportunistically. Ten controller reservations total
+6020seconds, below7224. Existing separate7200/3600 audit and602 software
+allowances stay unchanged; do not add nested clocks or treat ceilings as ETA.
+This fits because it uses one observation per cell/endpoint. Five repeats
+of all four cells do not fit and will not be silently substituted or reduced.
+
+Shared9GiB resident admission includes1GiB cache allowance conservatively
+for every cell. Reassess ACTUAL bound stage geometry and full point fallback
+before any input/solver work. The old whole-request work cap remains1e12,
+each stage64e9, arrays8GiB, process16GiB, artifact1GiB/fileOS2GiB. Cache
+capacity accounting and actual RSS are distinct. Reserve encoder temporaries,
+incoming/outgoing states, teacher, code buffers and compiler/runtime residency.
+
+Fresh process/context per request. Outer clocks include native compilation,
+context loading, all descriptor reads/validation, solve, output writes/fsync,
+disposal and cache clear. Controller/sealed clocks also include source/input
+verification, receipt writes and shutdown. Compare equivalent scopes only.
+Record raw stage timings, fallback/refusal/source-replay counts, cache
+hits/misses/evictions/peak charged bytes, every implementation identity and
+complete storage. Compiled code can stay mapped until process exit; account
+its process residency rather than claiming immediate unmapping.
+
+Preparation and oracle must use reference kernels and actual fresh retained
+teacher traversals. Primary audit parses every actual successor, compares
+eight complete model/state/trust results and source membership/provenance,
+and restores modern archives to reference legacy state. Supplemental audit
+re-reads all eight model pairs/artifacts, receipts and CPU limits, binds the
+primary result, and settles every controller/numerical charge plus Slurm.
+Both terminal audits must pass before any empirical speed interpretation.
+
+Not yet built: source/input/protocol registry, full worker/controller/entry,
+sealed budget ledger, resource review for actual manifest, full primary and
+supplemental audits, submission helper and integration tests for these files.
+V79 adapter qualification alone cannot authorize an empirical launch.
+
+After this screen, pre-register a feasible balanced paired replication of
+optimized compressed versus optimized modern, preserving every sample and
+failure. Define repetitions, bounds and scope before results. Existing roots
+yield timing stability, not generality. Later matched512-token DistilGPT2/
+GPT-2 depth transfer requires new model/revision/input pins, target and48-stage
+archive admission. The structural refusal at larger GPT-2 endpoints is a
+budget finding, not proof against transfer. No weights downloaded here.

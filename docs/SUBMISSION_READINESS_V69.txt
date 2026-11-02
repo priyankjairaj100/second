@@ -1,0 +1,162 @@
+Submission preparation checkpoint, 16 October 2026
+Scope: current existing manuscript and future anonymous ARR/ACL package.
+This is not a submission, acceptance prediction or completed compliance review.
+
+Official guidance checked live
+ARR common submission checklist: https://aclrollingreview.org/authorchecklist
+ARR call for papers: https://aclrollingreview.org/cfp
+ACL formatting: https://acl-org.github.io/ACLPUB/formatting.html
+
+ARR permits four main-text pages for short papers and eight for long papers.
+Limitations, ethical considerations, references and appendices do not count in
+those main-text limits. The required Limitations section must contain limitations,
+not new experiments or analysis. Review submissions require anonymous materials,
+the official review style and appropriate Responsible NLP answers. These checks
+remain separate from successful compilation. [ARR checklist and ACL formatting]
+
+Completed text preparation
+The existing editor file now has a dedicated Limitations section and an
+AI-assistance-only Acknowledgements section. The current ARR checklist permits
+that disclosure in the review version, despite the general formatting page's
+instruction to omit ordinary acknowledgements. The disclosure covers planning,
+coding, analysis, literature checking and drafting; it does not claim that human
+author validation is already complete. Native compilation succeeded. All theorem,
+lemma, proposition, proof and math spans are unchanged. No new empirical result
+was inserted. reports/manuscript_v69.tex and its validation record preserve bytes.
+
+Required formatting/anonymity work
+The source now uses the unmodified official ACL review style,11pt Times and
+author-year citations, with successful native compilation. The style is embedded
+for the standalone editor. Actual venue page count remains unverified: preview
+inspection could not start. See ACL_FORMATTING_V69.txt. The15 project-record
+bibliography entries and17 identifying repository links have now been replaced
+by concise E01--E15 references to the available development-evidence companion.
+Their exact original provenance is preserved outside that review companion.
+Do not relabel the current public repository as anonymous. Remove working-draft
+meta-text and finish the abstract, bibliography style and final story after the
+evidence decision. The current abstract is below200 source whitespace tokens;
+this is a text check, not a rendered submission validation. [ACL formatting]
+
+Scientific and artifact blockers
+V67 terminal evidence, actual untouched quality, the timing decision, and any
+claim-required replication remain open. Source/tests/receipts alone cannot replace
+actual model or loss evidence. Verify dataset/checkpoint/dependency licenses and
+redistribution before assembling the archive. Preserve negative findings, failed
+attempts, caps and all exclusions. Keep raw checkpoint/corpus binaries out unless
+distribution has been explicitly verified. Check every final table against its
+audited artifact, then validate clean extraction and reproduction instructions.
+
+Literature refresh scope
+GPTQ's authors, title, ICLR2023 listing and approximate-second-order description
+match https://arxiv.org/abs/2210.17323v2 . ExecCert's title/authors and finite-format
+discussion in Section4.4 match https://arxiv.org/html/2610.02268v1 . The Ginart
+proceedings PDF resolves, but its full bibliographic/proof check was not repeated.
+The Exact-Fun pinned author repository page resolves; DOI/Crossref access and raw
+PDF fetching failed in this refresh. Preserve the earlier primary-source review,
+but do not mark that reference freshly reverified or replace it from a secondary
+summary. Final bibliography verification remains incomplete.
+
+Author-controlled final information
+Before external submission, confirm paper type/cycle, author order, affiliations,
+OpenReview profiles/ORCIDs, conflicts, preprint/resubmission status and any required
+reviewing-service contributor. Current ARR rules require complete author profiles
+and appropriate disclosure of AI assistance. These facts cannot be inferred from
+repository names or generated prose. They do not block the ongoing experiments or
+package preparation. No conference submission or third-party message is authorized.
+
+Artifact inventory update
+The current prepared chain's532 source commitments have been checked. Publisher
+metadata for the exact DistilGPT2 weights/config and pinned C4 card is recorded,
+along with main package declarations. This narrows the packaging work; it does not
+establish blanket redistribution rights or a complete dependency license audit.
+No project license is assigned and no final archive exists. Use
+SUBMISSION_ARTIFACT_POLICY_V69.txt for the external-binary policy, anonymity mapping
+and remaining clean-extraction gates. Frozen sources remain unchanged.
+
+Literature update
+QSS, MEDU and QEBVerif now appear in the existing manuscript with explicit target
+and guarantee distinctions. Their primary records were checked again. Ginart's
+Section4.1 was freshly read; the saved Exact-Fun author PDF matches its commitment
+and its proof pages6--7 were visually rechecked. Live Exact-Fun downloads still
+failed, so no fresh publisher-version claim is made. Native compilation succeeded;
+proofs/displays, abstract and empirical sections are unchanged. Source5347 tokens
+is not a venue page count. Final anonymous evidence indexing remains necessary.
+
+Evidence navigation preparation
+The15-record reports/anonymous-evidence-index.txt and separate identifying
+provenance map docs/EVIDENCE_INDEX_MAP_V69.json cover all project bibliography
+entries. All54 direct source files match the saved checkpoint and manifest.
+The map must not enter an anonymous archive. The known-identity scan covers the
+index only; full anonymity, underlying evidence derivatives/dependency closure
+and clean reproduction remain unverified. No original evidence or manuscript
+citation was changed. See validation/v69_evidence_index.json.
+
+Selected number and identity checks
+The unchanged manuscript passes71 transcription/arithmetic checks, including all24
+numeric cells in its service table and the adverse quality/cost narrative. Three
+in-memory tamper probes were rejected; no inference or binary audit was repeated.
+An identity inventory checks577 source/evidence commitments and scans572 text
+files, finding47 with known identifying strings. The five archives have now passed
+the bounded content scan described below. Nine selected receipt derivatives are
+verified; whole-package anonymity and source/runtime validation remain required.
+See MANUSCRIPT_NUMBER_AUDIT_V69.txt and ANONYMITY_REVIEW_V69.txt.
+
+Archive content review update: a bounded read inspected all2,269 regular members
+and33,307,525 uncompressed bytes across the five preserved archives. No files were
+extracted or executed. Among1,803 JSON files, ten members contain raw historical
+token arrays; those are explicitly excluded from the review package. Known identity
+strings occur in390 members. A further numeric-array flag contains fallback row
+indices and failed coordinates, not tokens; preserve these adverse diagnostics.
+The nine selected audit/measurement receipts now have labelled derivatives with
+exact typed-object checks and clean extraction. Original archives remain unchanged
+and excluded from review ZIPs. Whole-package review and reproduction remain.
+See docs/REVIEW_RECEIPT_COMPANION_V69.txt and the private selection/derivation maps.
+
+Derived companion preparation
+reports/review-evidence-v69 contains checked summaries for five historical result
+groups, with306 copied field groups matching eight original reports. Eight exposed
+article IDs are consistently renamed and all adverse guards/costs retained.
+Source receipts remain immutable and the identifying derivation map stays outside
+anonymous packaging. This companion is not a full reproduction archive or final
+anonymity clearance. See REVIEW_COMPANION_V69.txt.
+
+Historical companion revision B and paper-reference trim
+The five-file development-evidence-v69b.zip contains selected summaries or scope
+notes for all15 records, with1,054 copied field groups checked against21 sources.
+Clean extraction verifies file hashes, shared eight-article identities and adverse
+outcomes. It is not the full code/runtime/protocol/receipt reproduction archive.
+The same paper now has seven external bibliography entries, with project records
+referenced by E01--E15. This removes470 source whitespace tokens and17 identifying
+project links without changing the proofs, equations, abstract or reported numbers.
+Native compilation and all71 number checks pass; source count is4,950 excluding
+embedded style. Rendered pagination/layout and full anonymity remain unverified.
+See REVIEW_HISTORY_COMPANION_V69.txt and validation/v69_manuscript_evidence_trim.json.
+
+Static source and receipt selection update
+The prepared execution inventory remains532. A broader534-file packaging candidate
+adds two unchanged legacy helper/package files and has no missing static project
+imports across503 Python modules. No experiment source or registration changed.
+The archive scan and private selection map identify ten raw-token exclusions and
+nine original audit/measurement receipts. Labelled derivatives now pass typed-field
+preservation checks. Runtime closure, notices and clean source reproduction remain. See
+docs/SOURCE_RECEIPT_PACKAGE_REVIEW_V69.txt. The summary companion is unchanged.
+
+Receipt companion completion update
+The nine selected historical receipts now have labelled derivatives in
+reports/development-audit-receipts-v69.zip. Clean extraction checks eleven files
+and every original typed JSON field, including23872 numeric values and1884 Booleans.
+All costs, adverse guards and failure scope remain. Private reverse mappings stay
+outside the ZIP; original artifact hashes do not validate redacted paths. Full
+anonymity and source/runtime reproduction remain open. See
+docs/REVIEW_RECEIPT_COMPANION_V69.txt. The manuscript and summary ZIP are unchanged.
+
+Source component completion update
+The actual development-source-review-v69c.zip contains534 source/protocol/wrapper
+copies plus README/checker/manifest. All originals remain unchanged;34 identifier
+adaptations reverse exactly, and503 Python ASTs differ only by those strings.
+Clean extraction passes114 local fixtures with156 project modules and three
+namespace packages loaded only from the extraction. Nine wrappers passed syntax
+checks. This qualifies the local fixture subset, not Linux/CUDA or full empirical
+reproduction. Two preparation failures and earlier components remain preserved.
+See docs/REVIEW_SOURCE_COMPONENT_V69.txt. External input/runtime instructions,
+notices, whole-package review and claim-required evidence remain.

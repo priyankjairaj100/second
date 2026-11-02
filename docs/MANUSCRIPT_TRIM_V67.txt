@@ -1,0 +1,21 @@
+Manuscript reduction,16October2026
+Existing open source edited in place; native compiler returned success.
+Prior snapshot reports/manuscript_v63.tex remains unchanged.
+New exact snapshot reports/manuscript_v67.tex.
+
+Source whitespace tokens:6884 ->5175, reduction1709(24.83%). No page-count claim.
+Abstract shortened; repeated pilot chronology reduced to one paragraph.
+V45/V51/V52 engineering history consolidated while retaining capped failure,
+40bit refusal, adaptive48bit selection and shared-implementation limits.
+Removed the older nearest-anchor complete-service table from the reading path;
+its adverse latency/storage results and failed quality guard remain in text.
+V61 full service table and V63 stronger lossless control remain intact.
+Reproduction prose consolidated; detailed file inventories stay in evidence.
+Removed only the now-unused partial-audit bibliography entry. No unresolved
+citation key remains. Every correctness proof and mathematical definition is
+unchanged. Frozen prior sources, receipts and numerical data are unchanged.
+
+No new V67 scientific result was added. Pending chain output remains unverified.
+This is an editorial checkpoint, not an anonymous venue-formatted final bundle.
+The current source has no appendix section; most redundant history was in the
+main text and reproduction section, so those were trimmed instead of proofs.

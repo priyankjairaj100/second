@@ -1,0 +1,29 @@
+Matched point-token screen: closed-data reporting derivative
+
+This derivative reports all sixteen actual request rows, both retained endpoints,
+both related GPT-family checkpoints and all four matched implementation cells.
+Complete host time is primary. Positive signed time/storage changes mean the
+optimized compressed arm is slower/larger than optimized modern. No row is dropped
+and no average pools away a losing endpoint. Nanosecond integers are retained;
+the TeX table rounds seconds to three decimals and the ratio to four decimals.
+
+Preparation was shared across cells and executed in the earlier V104 attempt.
+Its original complete host clocks remain separate and nonzero. They cannot be
+charged again as new numerical work or assigned entirely to one representation.
+The current scheduler envelope includes the new checks, workers and both audits.
+Contained worker/controller clocks overlap and must not be added to that envelope.
+The prior software/controller/numerical charges and old unresolved12602-second
+reservation remain separate. No complete all-experiments compute total is claimed.
+
+Source extraction is nested within stage work on fallback; decoder-only duration
+is unavailable. Unattributed request time is not assigned to decoding or another
+named operation. The optimizations are bundled, so individual effects are not
+identified. OS cache is uncontrolled and each cell has one observation. The two
+related checkpoints do not establish cross-architecture generality. No new quality
+evaluation was executed; earlier V72 quality cannot be transferred to this target.
+
+Actual model/state/trust equality comes from the two completed cluster audits and
+the frozen terminal check. This renderer rechecks their bound reporting metadata;
+it does not rerun numerical work, independently re-audit binary payloads or prove
+the trustworthiness of a fabricated receipt. Publication requires reviewing the
+actual terminal and all outputs. No conference submission is performed.

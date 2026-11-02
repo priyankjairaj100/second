@@ -1,0 +1,3 @@
+/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable
+43 registered V69 files staged once
+{"jobs":[{"job_id":"15395","phase":"cpu_checks","previous_job_id":null},{"job_id":"15396","phase":"cuda_checks","previous_job_id":"15395"},{"job_id":"15397","phase":"parameters","previous_job_id":"15396"},{"job_id":"15398","phase":"sequential_12","previous_job_id":"15397"},{"job_id":"15399","phase":"sequential_6","previous_job_id":"15398"},{"job_id":"15400","phase":"cpu_parity","previous_job_id":"15399"},{"job_id":"15401","phase":"gpu_quality","previous_job_id":"15400"},{"job_id":"15402","phase":"terminal","previous_job_id":"15401"},{"job_id":"15403","phase":"closure","previous_job_id":"15402"}]}

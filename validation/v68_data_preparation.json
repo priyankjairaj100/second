@@ -1,0 +1,55 @@
+{
+  "captured_at_utc": "2026-10-16T10:28:54.665806+00:00",
+  "elapsed_ns": 362670500,
+  "empirical_data_acquired": false,
+  "errors": 0,
+  "failures": 0,
+  "linux_gate_run": false,
+  "model_inference": false,
+  "platform": "macOS-13.0-arm64-arm-64bit",
+  "process_cpu_ns": 2149675000,
+  "python": "3.9.6",
+  "registration_exists": false,
+  "skips": 0,
+  "source_files": {
+    "research_v68/PROTOCOL.txt": {
+      "bytes": 6601,
+      "sha256": "41da0a2218b6ada4d6e103410ef12cde9c9a0cec52f0ca3d86fa79df629809cd"
+    },
+    "research_v68/README.txt": {
+      "bytes": 3084,
+      "sha256": "f4511ac093c498355bea2bd98c0036e6ab364dae7cef0d39255e835f755dfdd7"
+    },
+    "research_v68/__init__.py": {
+      "bytes": 86,
+      "sha256": "5e6de3b714a5fbbbe9254a7a810ad4f0c56b46ae7713fb6ce697b338579d6f25"
+    },
+    "research_v68/data_runner.py": {
+      "bytes": 11060,
+      "sha256": "c858fbe1a475cf0bfae187c5fdfe7abe04afefcefce41d67ecb11718743d2b58"
+    },
+    "research_v68/quality_data.py": {
+      "bytes": 14572,
+      "sha256": "9fffe09481953b31729ab5bf7c2f07e3bc1abd903383630b703359c565b2c8d9"
+    },
+    "research_v68/quality_statistics.py": {
+      "bytes": 5811,
+      "sha256": "aa4f85679f3b85360c6e096bfa2ec8de4635a421e68a8fcbaafa0ce0784e30a0"
+    },
+    "research_v68/test_data_runner.py": {
+      "bytes": 4642,
+      "sha256": "da458c508210be8f021cb7ba51eb14dd0990c46d0991264c6e46590c732e9707"
+    },
+    "research_v68/test_quality_data.py": {
+      "bytes": 8778,
+      "sha256": "c827507d56cdce1c77d012b50b67d676585f18b8bcda24818df7330b48edccd8"
+    },
+    "research_v68/test_quality_statistics.py": {
+      "bytes": 3711,
+      "sha256": "1cbd25c0a967b065626492b8644d887636aded4c804685c0a20aa38c6b26bc12"
+    }
+  },
+  "sources_frozen": false,
+  "status": "passed_local_generated_fixtures",
+  "tests": 22
+}

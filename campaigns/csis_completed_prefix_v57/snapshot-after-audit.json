@@ -1,0 +1,109 @@
+{
+  "schema": "campaign-live-progress-v57",
+  "captured_at_utc": "2026-10-11T14:53:48.314278+00:00",
+  "status": "completed_prefix_with_remaining_campaign_running",
+  "published_cluster_commit": "a13a0c83fb6b1de7f3284047f81c62dd6cbbc83a",
+  "remote_worktree_clean": true,
+  "trials": {
+    "prepare": {
+      "completion_present": true,
+      "observed_phases": {
+        "context_ready": 1,
+        "source_replayed": 13,
+        "stage_certified": 24,
+        "payload_stage": 72
+      },
+      "latest_progress": {
+        "elapsed_ns": 6637547965048,
+        "phase": "payload_stage",
+        "representation": "hybrid_gram",
+        "stage_id": "block.0005.mlp_down"
+      },
+      "unreadable_progress": [],
+      "completion_status": "complete",
+      "worker_elapsed_ns": 6668719487722
+    },
+    "cached": {
+      "completion_present": true,
+      "observed_phases": {
+        "context_ready": 1,
+        "stage_certified": 48,
+        "request_complete": 2
+      },
+      "latest_progress": {
+        "elapsed_ns": 4913954414500,
+        "phase": "request_complete",
+        "request_elapsed_ns": 899972086670,
+        "step": 2
+      },
+      "unreadable_progress": [],
+      "completion_status": "complete",
+      "worker_elapsed_ns": 4913955099450
+    },
+    "cold": {
+      "completion_present": false,
+      "observed_phases": {
+        "context_ready": 1,
+        "source_replayed": 12,
+        "payload_stage": 24,
+        "stage_certified": 15
+      },
+      "latest_progress": {
+        "certificate_refusal": null,
+        "code_sha256": "704a864c94095b5fb62d598fed52a79656009634f5148928bc41e515efb8b869",
+        "component_elapsed_ns": 20344355987,
+        "elapsed_ns": 3458243465627,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "streamed",
+        "stage_id": "block.0003.mlp_up"
+      },
+      "unreadable_progress": []
+    },
+    "hybrid": {
+      "completion_present": false,
+      "observed_phases": {},
+      "latest_progress": null,
+      "unreadable_progress": []
+    },
+    "compressed": {
+      "completion_present": false,
+      "observed_phases": {},
+      "latest_progress": null,
+      "unreadable_progress": []
+    },
+    "oracle": {
+      "completion_present": false,
+      "observed_phases": {},
+      "latest_progress": null,
+      "unreadable_progress": []
+    }
+  },
+  "terminal_audits_present": {
+    "artifact-audit.json": false,
+    "postrun-audit.json": false
+  },
+  "v57_prefix_audit_present": true,
+  "conditional_v55_registration_exists": false,
+  "conditional_v56_registration_exists": false,
+  "frozen_source_bindings": {
+    "v54": {
+      "files": 386,
+      "changed": []
+    },
+    "v55": {
+      "files": 399,
+      "changed": []
+    },
+    "v56": {
+      "files": 409,
+      "changed": []
+    }
+  },
+  "accounting": "JobID|State|ExitCode|Elapsed|TotalCPU|MaxRSS\n13310|COMPLETED|0:0|01:51:13|01:50:50|\n13310.batch|COMPLETED|0:0|01:51:13|01:50:50|2043524K\n13311|COMPLETED|0:0|01:21:59|01:21:40|\n13311.batch|COMPLETED|0:0|01:21:59|01:21:40|2246004K\n13312|RUNNING|0:0|01:01:36|00:00:00|\n13312.batch|RUNNING|0:0|01:01:36|00:00:00|\n13313|PENDING|0:0|00:00:00|00:00:00|\n13314|PENDING|0:0|00:00:00|00:00:00|\n13315|PENDING|0:0|00:00:00|00:00:00|\n13316|PENDING|0:0|00:00:00|00:00:00|\n13317|PENDING|0:0|00:00:00|00:00:00|\n13325|PENDING|0:0|00:00:00|00:00:00|\n13326|PENDING|0:0|00:00:00|00:00:00|\n13327|PENDING|0:0|00:00:00|00:00:00|\n13329|PENDING|0:0|00:00:00|00:00:00|\n13352|COMPLETED|0:0|00:04:46|04:42.624|\n13352.batch|COMPLETED|0:0|00:04:46|04:42.624|1220480K\n",
+  "complete_campaign_verified": false,
+  "quality_for_new_model_verified": false,
+  "gpu_parity_for_new_model_verified": false,
+  "confirmation": false,
+  "acl_ready": false
+}

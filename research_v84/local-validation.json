@@ -1,0 +1,21 @@
+{
+  "captured_utc": "2026-10-23T10:25:31.775688+00:00",
+  "pure_tests_passed": 27,
+  "source_ast": "passed",
+  "shell_syntax": "passed",
+  "prepared_linux_worker_tests": 6,
+  "prepared_linux_sealed_process_tests": 2,
+  "expected_complete_linux_gate": 101,
+  "registered": false,
+  "submitted": false,
+  "empirical_execution": false,
+  "pre_registration_issues_fixed": [
+    "Distinct chain-intent names prevent collision with first checks intent",
+    "Profile-specific checkpoint provenance replaces DistilGPT2-only assumption",
+    "Profile/cell predecessor paths are isolated; Slurm log/intents use root-level slugs",
+    "Artifact census used undefined local for every request/oracle; moved declaration to pure config and checked all twenty trial paths",
+    "V85 pure census omitted hybrid_gram; V86 includes all four production representations and verifies agreement against source and at runtime",
+    "V87 enforces model extent before writing, bounds progress/metadata, preserves partial writes and checks actual output extents"
+  ],
+  "output_writer_pure_tests_passed": 13
+}

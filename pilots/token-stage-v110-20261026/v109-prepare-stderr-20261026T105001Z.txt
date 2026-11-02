@@ -1,0 +1,25 @@
+/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/token-stage-diagnostic-v109-20261026-a/research_v109/prepare.py", line 35, in <module>
+    if __name__=='__main__':main(*sys.argv[1:])
+                            ~~~~^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/token-stage-diagnostic-v109-20261026-a/research_v109/prepare.py", line 20, in main
+    p=parent.verify(prerequisite=True);require(parent.sha(PARENT/'program.json')==PARENT_SHA,'Parent changed')
+  File "/nfs_home/users/poonam/second-20261010/local_runs/token-stage-diagnostic-v109-20261026-a/research_v104/campaign.py", line 60, in verify
+    if prerequisite:prerequisites(p)
+                    ~~~~~~~~~~~~~^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/token-stage-diagnostic-v109-20261026-a/research_v104/campaign.py", line 44, in prerequisites
+    historical.verify_bindings(old);historical.verify_inputs(old);load_records(p)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/token-stage-diagnostic-v109-20261026-a/research_v80/campaign.py", line 75, in verify_bindings
+    require(runtime()==p['runtime'],'Pinned base runtime changed')
+            ~~~~~~~^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/token-stage-diagnostic-v109-20261026-a/research_v44/campaign.py", line 56, in runtime
+    module = importlib.import_module(name)
+  File "/nfs_home/software/miniconda/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'gmpy2'

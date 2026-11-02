@@ -1,0 +1,19 @@
+{
+  "execution_inventory_changed": false,
+  "reason": "Four preserved legacy scripts import the stage-capsule helper outside the532-file prepared execution union. Include the existing package initializer and helper in the broader source-package candidate.",
+  "registered_attempts_changed": false,
+  "reporting_commit": "a439b589cdab7b7029d1f34d26c7b2965ac7dc05",
+  "schema": "submission-source-supplement-v69",
+  "scope": "Packaging closure for legacy scripts only; does not amend any experiment registration.",
+  "source_bytes_changed": false,
+  "sources": {
+    "research_v36/__init__.py": {
+      "bytes": 86,
+      "sha256": "741d00594cef7bd2622892e5c4adf848185b8cc69804a943ed7d740f9ad5c8ea"
+    },
+    "research_v36/archive_stage_capsule.py": {
+      "bytes": 10509,
+      "sha256": "2c8b16f773d55de557ca8d2177081dbf7af5d324d8f09e95d7d5b01f0eca2eb7"
+    }
+  }
+}

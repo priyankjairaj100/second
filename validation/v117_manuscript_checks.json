@@ -1,0 +1,39 @@
+{
+  "all_prior_content_preserved_except_declared_crossreferences": true,
+  "bibliography_unchanged": true,
+  "changes": [
+    "Explain suffix inverse coefficient identity and the two implemented residual bounds",
+    "Connect the method section to the derivation",
+    "Repair two obsolete directional references after appendix relocation"
+  ],
+  "created_utc": "2026-10-27T07:10:00.524627+00:00",
+  "labels": 19,
+  "manuscript": {
+    "bytes": 63714,
+    "sha256": "9bd51a682fd634cd1d80520eccc493772511236919b43b5945be866108b96800"
+  },
+  "native_compile": {
+    "kind": "success",
+    "source": {
+      "bytes": 63714,
+      "sha256": "9bd51a682fd634cd1d80520eccc493772511236919b43b5945be866108b96800"
+    },
+    "tool": "compile_latex_document"
+  },
+  "native_compile_success": true,
+  "new_empirical_result": false,
+  "previous_sha256": "3cb08fdd306801c49576ff118a09996834a835c33f6faa4f1c0d9da10541ca75",
+  "proof_scope": "Standard reverse-LDL suffix identity and ridge/SVD coefficient bounds matching frozen primal implementation; not a new completion or speed theorem",
+  "registered_algorithm_changed": false,
+  "rendered_layout_verified": false,
+  "same_open_file": true,
+  "schema": "coefficient-explanation-v117",
+  "scientific_numbers_unchanged": true,
+  "source_correspondence": [
+    "src/primal_certificate_v30.py:_column_python",
+    "src/primal_certificate_v30.py:_coefficient_bounds",
+    "src/primal_certificate_v30.py:_rows_python"
+  ],
+  "unresolved_citations": [],
+  "unresolved_references": []
+}

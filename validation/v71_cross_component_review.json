@@ -1,0 +1,73 @@
+{
+  "archive_members": 615,
+  "artifacts": {
+    "development-audit-receipts-v69.zip": {
+      "bytes": 341604,
+      "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+    },
+    "development-dependency-notices-v69.zip": {
+      "bytes": 38839,
+      "sha256": "062bc8b1944e93b2eb22d3a9592e474ee08e50d4ebeb404ea166f7beaac52e03"
+    },
+    "development-evidence-v69b.zip": {
+      "bytes": 87257,
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "development-reproduction-guide-v71.zip": {
+      "bytes": 18887,
+      "sha256": "0095257b4fc9a2f133a64f9c629cf562dabfb211ab3c33d2fb56bbfae0db03ae"
+    },
+    "development-service-evidence-v70.zip": {
+      "bytes": 124857,
+      "sha256": "684ca47fd16985c32f5faf0dd7bab81f3bbe9dda297a87455dfb84c0a0ce2dc4"
+    },
+    "development-source-review-v71.zip": {
+      "bytes": 1924634,
+      "sha256": "c0054eba472353f64fc4371c3dd03ba2f34919708967c95cbdc3a9148a510888"
+    },
+    "reports/REVIEW_PACKAGE_README_V71.txt": {
+      "bytes": 6245,
+      "sha256": "817ea3f2d1c704cbb212fd14914f21e58c46998adc89ce2399c7f6df02a5d191"
+    },
+    "reports/manuscript_v70.tex": {
+      "bytes": 53027,
+      "sha256": "65d02e6048156fc1d2270368d8fa7efae192511f79e5aa9d00fc3820a772db0a"
+    }
+  },
+  "captured_at_utc": "2026-10-18T12:01:22.086763+00:00",
+  "clean_source_fixture_tests": 213,
+  "empirical_work_executed": false,
+  "evidence_references": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16"
+  ],
+  "full_anonymity_verified": false,
+  "full_empirical_input_closure": false,
+  "full_reproduction_verified": false,
+  "full_source_manual_review": false,
+  "full_transitive_notices": false,
+  "indirect_identity_linkability_assessed": false,
+  "internal_manifests_verified": 6,
+  "known_identity_findings": [],
+  "manuscript_matches_open_file": true,
+  "private_mapping_files_included": false,
+  "protocol_links_verified": 6,
+  "schema": "cross-component-review-v71",
+  "status": "inventories_hashes_navigation_and_direct_identifiers_checked",
+  "submission_ready": false,
+  "text_files_checked": 617
+}

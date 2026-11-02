@@ -1,0 +1,45 @@
+{
+  "actual_retokenization_repeated_locally": false,
+  "cancelled_jobs": [
+    "15396",
+    "15397",
+    "15398",
+    "15399",
+    "15400",
+    "15401",
+    "15402",
+    "15403"
+  ],
+  "failed_campaign_archive": {
+    "bytes": 106738,
+    "sha256": "efcb1ce6f5bc726298f094188bbbc39399ce43828c5b8bd4004cddb006864ff3"
+  },
+  "failed_controller_cpu_ns": 1477196746,
+  "failed_job": "15395",
+  "failed_scheduler_cpu_seconds": "2.007",
+  "frame_audit_archive": {
+    "bytes": 209403,
+    "sha256": "f44ef0692ec3a6868198bea0488094ca39a5f2f405a133d221153dc52ff422e0"
+  },
+  "frame_audit_costs": {
+    "charged_cpu_seconds": 11,
+    "process_tree_cpu_ns": 10045330793,
+    "scheduler": {
+      "allocated_cpus": 1,
+      "elapsed_seconds": 12,
+      "exit_code": "0:0",
+      "job_id": "15404",
+      "reporting_quantum_ns": 1000000,
+      "state": "COMPLETED",
+      "total_cpu_ns": 10631000000
+    },
+    "status": "verified_separate_frame_audit_costs"
+  },
+  "frame_audit_job": "15404",
+  "full_frame_articles": 3801,
+  "no_frozen_source_changed": true,
+  "numerical_worker_started": false,
+  "quality_losses_evaluated": false,
+  "short_records": 1021,
+  "status": "verified_failed_admission_and_separate_frame_audit_metadata"
+}

@@ -1,0 +1,407 @@
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/entry.py", line 30, in main
+    x=c.verify(p,phase);c.predecessors(p,phase);gate.imported_sources(x['registered_sources'])
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 1093, in __call__
+    return self._mock_call(*args, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 1097, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 1152, in _execute_mock_call
+    raise effect
+ValueError: generated immutable input mismatch
+======================================================================
+ERROR: test_finished_reads_real_seal_debit_and_outputs_instead_of_completion_alone (test_campaign.CampaignTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_campaign.py", line 73, in test_finished_reads_real_seal_debit_and_outputs_instead_of_completion_alone
+    d,i,s=sealed_fixture(directory);p={'fixture':'generated'};registration=digest(canonical_json(p))
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_cost_accounting.py", line 35, in sealed_fixture
+    snapshot=read_budget_snapshot(root/'budget',identity=bid,phase_cpu_seconds=policy)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/phase_budget.py", line 93, in read_budget_snapshot
+    after = os.fstat(fd); current = path.stat(follow_symlinks=False)
+TypeError: stat() got an unexpected keyword argument 'follow_symlinks'
+
+======================================================================
+ERROR: test_only_verified_active_reservation_can_coexist_with_completed_predecessor (test_campaign.CampaignTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_campaign.py", line 59, in test_only_verified_active_reservation_can_coexist_with_completed_predecessor
+    d,i,s=sealed_fixture(Path(tmp).resolve())
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_cost_accounting.py", line 35, in sealed_fixture
+    snapshot=read_budget_snapshot(root/'budget',identity=bid,phase_cpu_seconds=policy)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/phase_budget.py", line 93, in read_budget_snapshot
+    after = os.fstat(fd); current = path.stat(follow_symlinks=False)
+TypeError: stat() got an unexpected keyword argument 'follow_symlinks'
+
+======================================================================
+ERROR: test_construction_flow (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_construction_flow
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_construction_flow.py", line 6, in <module>
+    from research_v69.test_model_gate import fixture
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_model_gate.py", line 12, in <module>
+    from research_v69 import model_gate as g
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/model_gate.py", line 9, in <module>
+    from src.dyadic_row_target import DyadicRowTarget
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_row_target.py", line 7, in <module>
+    from .dyadic_row_quantizer import dyadic_row_scales
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_row_quantizer.py", line 14, in <module>
+    from .batched_token_solver import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/batched_token_solver.py", line 16, in <module>
+    from .low_rank_certified import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/low_rank_certified.py", line 20, in <module>
+    from .transformer_backend import _check_runtime
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/transformer_backend.py", line 51, in <module>
+    from .compact_exact import CompactDyadicMatrix, CompactDyadicVector, exact_json_sha256
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/compact_exact.py", line 24, in <module>
+    @dataclass(frozen=True, slots=True)
+TypeError: dataclass() got an unexpected keyword argument 'slots'
+
+
+======================================================================
+ERROR: test_accounted_failed_worker_remains_failed_and_quality_flag_cannot_select_costs (test_cost_accounting.CostAccountingTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_cost_accounting.py", line 84, in test_accounted_failed_worker_remains_failed_and_quality_flag_cannot_select_costs
+    d,i,s=sealed_fixture(Path(tmp).resolve(),True);worker=c.worker(d,i,s)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_cost_accounting.py", line 35, in sealed_fixture
+    snapshot=read_budget_snapshot(root/'budget',identity=bid,phase_cpu_seconds=policy)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/phase_budget.py", line 93, in read_budget_snapshot
+    after = os.fstat(fd); current = path.stat(follow_symlinks=False)
+TypeError: stat() got an unexpected keyword argument 'follow_symlinks'
+
+======================================================================
+ERROR: test_accounting_rejects_missing_children_over_budget_or_underreported_scheduler (test_cost_accounting.CostAccountingTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_cost_accounting.py", line 91, in test_accounting_rejects_missing_children_over_budget_or_underreported_scheduler
+    d,i,s=sealed_fixture(Path(tmp).resolve());worker=c.worker(d,i,s)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_cost_accounting.py", line 35, in sealed_fixture
+    snapshot=read_budget_snapshot(root/'budget',identity=bid,phase_cpu_seconds=policy)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/phase_budget.py", line 93, in read_budget_snapshot
+    after = os.fstat(fd); current = path.stat(follow_symlinks=False)
+TypeError: stat() got an unexpected keyword argument 'follow_symlinks'
+
+======================================================================
+ERROR: test_actual_saved_worker_seal_and_ledger_are_read_and_mutations_refuse (test_cost_accounting.CostAccountingTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_cost_accounting.py", line 66, in test_actual_saved_worker_seal_and_ledger_are_read_and_mutations_refuse
+    directory,identity,snapshot=sealed_fixture(Path(tmp).resolve())
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_cost_accounting.py", line 35, in sealed_fixture
+    snapshot=read_budget_snapshot(root/'budget',identity=bid,phase_cpu_seconds=policy)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/phase_budget.py", line 93, in read_budget_snapshot
+    after = os.fstat(fd); current = path.stat(follow_symlinks=False)
+TypeError: stat() got an unexpected keyword argument 'follow_symlinks'
+
+======================================================================
+ERROR: test_settled_worker_cpu_is_not_added_again_to_waited_children (test_cost_accounting.CostAccountingTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_cost_accounting.py", line 74, in test_settled_worker_cpu_is_not_added_again_to_waited_children
+    d,i,s=sealed_fixture(Path(tmp).resolve());worker=c.worker(d,i,s)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_cost_accounting.py", line 35, in sealed_fixture
+    snapshot=read_budget_snapshot(root/'budget',identity=bid,phase_cpu_seconds=policy)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/phase_budget.py", line 93, in read_budget_snapshot
+    after = os.fstat(fd); current = path.stat(follow_symlinks=False)
+TypeError: stat() got an unexpected keyword argument 'follow_symlinks'
+
+======================================================================
+ERROR: test_cuda_qualification (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_cuda_qualification
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_cuda_qualification.py", line 6, in <module>
+    from research_v69 import cuda_qualification as q
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/cuda_qualification.py", line 10, in <module>
+    from research_v69 import model_backend
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/model_backend.py", line 10, in <module>
+    from research_v43.dispatcher import _weight_digest
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v43/dispatcher.py", line 34, in <module>
+    from research_v37.direct_gram_ball import assess_direct_gram_ball_budget
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v37/direct_gram_ball.py", line 19, in <module>
+    from research_v35 import direct_gram as direct
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v35/direct_gram.py", line 21, in <module>
+    from src import primal_certificate_v30 as primal
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/primal_certificate_v30.py", line 22, in <module>
+    from . import native_box_certificate as native_box
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/native_box_certificate.py", line 20, in <module>
+    from . import preconditioned_box_certificate as preconditioned
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/preconditioned_box_certificate.py", line 11, in <module>
+    from .dyadic_box_certificate import certify_dyadic_box
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_box_certificate.py", line 8, in <module>
+    from .dyadic_row_quantizer import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_row_quantizer.py", line 14, in <module>
+    from .batched_token_solver import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/batched_token_solver.py", line 16, in <module>
+    from .low_rank_certified import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/low_rank_certified.py", line 20, in <module>
+    from .transformer_backend import _check_runtime
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/transformer_backend.py", line 51, in <module>
+    from .compact_exact import CompactDyadicMatrix, CompactDyadicVector, exact_json_sha256
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/compact_exact.py", line 24, in <module>
+    @dataclass(frozen=True, slots=True)
+TypeError: dataclass() got an unexpected keyword argument 'slots'
+
+
+======================================================================
+ERROR: test_cpu_runtime_preserves_exact_inherited_identity (test_execution_gate.ExecutionGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 1227, in _dot_lookup
+    return getattr(thing, comp)
+AttributeError: module 'research_v61' has no attribute 'campaign'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_execution_gate.py", line 50, in test_cpu_runtime_preserves_exact_inherited_identity
+    with patch.object(g.sys,'platform','linux'),patch('research_v61.campaign.runtime',return_value=expected) as capture:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 1389, in __enter__
+    self.target = self.getter()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 1564, in <lambda>
+    getter = lambda: _importer(target)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 1240, in _importer
+    thing = _dot_lookup(thing, comp, import_path)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 1229, in _dot_lookup
+    __import__(import_path)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v61/campaign.py", line 9, in <module>
+    from research_v59 import campaign as prior
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v59/campaign.py", line 9, in <module>
+    from research_v55 import campaign as prior
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v55/campaign.py", line 9, in <module>
+    from research_v54.campaign import new, read, sha
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v54/campaign.py", line 13, in <module>
+    from research_v53.resource_review import review
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v53/resource_review.py", line 4, in <module>
+    from research_v43.dispatcher import StageSpec,ResourcePolicy,assess_stage
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v43/dispatcher.py", line 34, in <module>
+    from research_v37.direct_gram_ball import assess_direct_gram_ball_budget
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v37/direct_gram_ball.py", line 19, in <module>
+    from research_v35 import direct_gram as direct
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v35/direct_gram.py", line 21, in <module>
+    from src import primal_certificate_v30 as primal
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/primal_certificate_v30.py", line 22, in <module>
+    from . import native_box_certificate as native_box
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/native_box_certificate.py", line 20, in <module>
+    from . import preconditioned_box_certificate as preconditioned
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/preconditioned_box_certificate.py", line 11, in <module>
+    from .dyadic_box_certificate import certify_dyadic_box
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_box_certificate.py", line 8, in <module>
+    from .dyadic_row_quantizer import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_row_quantizer.py", line 14, in <module>
+    from .batched_token_solver import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/batched_token_solver.py", line 16, in <module>
+    from .low_rank_certified import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/low_rank_certified.py", line 20, in <module>
+    from .transformer_backend import _check_runtime
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/transformer_backend.py", line 51, in <module>
+    from .compact_exact import CompactDyadicMatrix, CompactDyadicVector, exact_json_sha256
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/compact_exact.py", line 24, in <module>
+    @dataclass(frozen=True, slots=True)
+TypeError: dataclass() got an unexpected keyword argument 'slots'
+
+======================================================================
+ERROR: test_input_gate (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_input_gate
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_input_gate.py", line 5, in <module>
+    from research_v69 import input_gate as g
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/input_gate.py", line 10, in <module>
+    from research_v69.construction_flow import membership
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/construction_flow.py", line 8, in <module>
+    from research_v43.dispatcher import ResourcePolicy
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v43/dispatcher.py", line 34, in <module>
+    from research_v37.direct_gram_ball import assess_direct_gram_ball_budget
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v37/direct_gram_ball.py", line 19, in <module>
+    from research_v35 import direct_gram as direct
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v35/direct_gram.py", line 21, in <module>
+    from src import primal_certificate_v30 as primal
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/primal_certificate_v30.py", line 22, in <module>
+    from . import native_box_certificate as native_box
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/native_box_certificate.py", line 20, in <module>
+    from . import preconditioned_box_certificate as preconditioned
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/preconditioned_box_certificate.py", line 11, in <module>
+    from .dyadic_box_certificate import certify_dyadic_box
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_box_certificate.py", line 8, in <module>
+    from .dyadic_row_quantizer import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_row_quantizer.py", line 14, in <module>
+    from .batched_token_solver import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/batched_token_solver.py", line 16, in <module>
+    from .low_rank_certified import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/low_rank_certified.py", line 20, in <module>
+    from .transformer_backend import _check_runtime
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/transformer_backend.py", line 51, in <module>
+    from .compact_exact import CompactDyadicMatrix, CompactDyadicVector, exact_json_sha256
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/compact_exact.py", line 24, in <module>
+    @dataclass(frozen=True, slots=True)
+TypeError: dataclass() got an unexpected keyword argument 'slots'
+
+
+======================================================================
+ERROR: test_model_backend (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_model_backend
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_model_backend.py", line 7, in <module>
+    from research_v69 import model_backend as b
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/model_backend.py", line 10, in <module>
+    from research_v43.dispatcher import _weight_digest
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v43/dispatcher.py", line 34, in <module>
+    from research_v37.direct_gram_ball import assess_direct_gram_ball_budget
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v37/direct_gram_ball.py", line 19, in <module>
+    from research_v35 import direct_gram as direct
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v35/direct_gram.py", line 21, in <module>
+    from src import primal_certificate_v30 as primal
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/primal_certificate_v30.py", line 22, in <module>
+    from . import native_box_certificate as native_box
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/native_box_certificate.py", line 20, in <module>
+    from . import preconditioned_box_certificate as preconditioned
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/preconditioned_box_certificate.py", line 11, in <module>
+    from .dyadic_box_certificate import certify_dyadic_box
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_box_certificate.py", line 8, in <module>
+    from .dyadic_row_quantizer import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_row_quantizer.py", line 14, in <module>
+    from .batched_token_solver import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/batched_token_solver.py", line 16, in <module>
+    from .low_rank_certified import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/low_rank_certified.py", line 20, in <module>
+    from .transformer_backend import _check_runtime
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/transformer_backend.py", line 51, in <module>
+    from .compact_exact import CompactDyadicMatrix, CompactDyadicVector, exact_json_sha256
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/compact_exact.py", line 24, in <module>
+    @dataclass(frozen=True, slots=True)
+TypeError: dataclass() got an unexpected keyword argument 'slots'
+
+
+======================================================================
+ERROR: test_model_gate (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_model_gate
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_model_gate.py", line 12, in <module>
+    from research_v69 import model_gate as g
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/model_gate.py", line 9, in <module>
+    from src.dyadic_row_target import DyadicRowTarget
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_row_target.py", line 7, in <module>
+    from .dyadic_row_quantizer import dyadic_row_scales
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_row_quantizer.py", line 14, in <module>
+    from .batched_token_solver import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/batched_token_solver.py", line 16, in <module>
+    from .low_rank_certified import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/low_rank_certified.py", line 20, in <module>
+    from .transformer_backend import _check_runtime
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/transformer_backend.py", line 51, in <module>
+    from .compact_exact import CompactDyadicMatrix, CompactDyadicVector, exact_json_sha256
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/compact_exact.py", line 24, in <module>
+    @dataclass(frozen=True, slots=True)
+TypeError: dataclass() got an unexpected keyword argument 'slots'
+
+
+======================================================================
+ERROR: test_phase_flow (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_phase_flow
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_phase_flow.py", line 8, in <module>
+    from research_v69 import phase_flow as f,execution_gate,quality_flow
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/phase_flow.py", line 11, in <module>
+    from research_v69 import production_gate as production,construction_flow as construction
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/production_gate.py", line 10, in <module>
+    from research_v43.dispatcher import ResourcePolicy,StageSpec,assess_stage
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v43/dispatcher.py", line 34, in <module>
+    from research_v37.direct_gram_ball import assess_direct_gram_ball_budget
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v37/direct_gram_ball.py", line 19, in <module>
+    from research_v35 import direct_gram as direct
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v35/direct_gram.py", line 21, in <module>
+    from src import primal_certificate_v30 as primal
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/primal_certificate_v30.py", line 22, in <module>
+    from . import native_box_certificate as native_box
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/native_box_certificate.py", line 20, in <module>
+    from . import preconditioned_box_certificate as preconditioned
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/preconditioned_box_certificate.py", line 11, in <module>
+    from .dyadic_box_certificate import certify_dyadic_box
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_box_certificate.py", line 8, in <module>
+    from .dyadic_row_quantizer import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_row_quantizer.py", line 14, in <module>
+    from .batched_token_solver import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/batched_token_solver.py", line 16, in <module>
+    from .low_rank_certified import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/low_rank_certified.py", line 20, in <module>
+    from .transformer_backend import _check_runtime
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/transformer_backend.py", line 51, in <module>
+    from .compact_exact import CompactDyadicMatrix, CompactDyadicVector, exact_json_sha256
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/compact_exact.py", line 24, in <module>
+    @dataclass(frozen=True, slots=True)
+TypeError: dataclass() got an unexpected keyword argument 'slots'
+
+
+======================================================================
+ERROR: test_production_gate (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_production_gate
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/test_production_gate.py", line 8, in <module>
+    from research_v69 import production_gate as g
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v69/production_gate.py", line 10, in <module>
+    from research_v43.dispatcher import ResourcePolicy,StageSpec,assess_stage
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v43/dispatcher.py", line 34, in <module>
+    from research_v37.direct_gram_ball import assess_direct_gram_ball_budget
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v37/direct_gram_ball.py", line 19, in <module>
+    from research_v35 import direct_gram as direct
+  File "/Users/priyankjairaj/Downloads/ACL/Second/research_v35/direct_gram.py", line 21, in <module>
+    from src import primal_certificate_v30 as primal
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/primal_certificate_v30.py", line 22, in <module>
+    from . import native_box_certificate as native_box
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/native_box_certificate.py", line 20, in <module>
+    from . import preconditioned_box_certificate as preconditioned
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/preconditioned_box_certificate.py", line 11, in <module>
+    from .dyadic_box_certificate import certify_dyadic_box
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_box_certificate.py", line 8, in <module>
+    from .dyadic_row_quantizer import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/dyadic_row_quantizer.py", line 14, in <module>
+    from .batched_token_solver import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/batched_token_solver.py", line 16, in <module>
+    from .low_rank_certified import (
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/low_rank_certified.py", line 20, in <module>
+    from .transformer_backend import _check_runtime
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/transformer_backend.py", line 51, in <module>
+    from .compact_exact import CompactDyadicMatrix, CompactDyadicVector, exact_json_sha256
+  File "/Users/priyankjairaj/Downloads/ACL/Second/src/compact_exact.py", line 24, in <module>
+    @dataclass(frozen=True, slots=True)
+TypeError: dataclass() got an unexpected keyword argument 'slots'
+
+
+----------------------------------------------------------------------
+Ran 65 tests in 11.064s
+
+FAILED (errors=14)

@@ -1,0 +1,6 @@
+{
+  "utc": "2026-11-02T06:54:52.156195+00:00",
+  "status": "withdrawn_before_staging_or_submission",
+  "jobs_launched": 0,
+  "reason": "Static review found nested calibration target compared to outer fixed payload; preserve registration and replace with tested V142"
+}

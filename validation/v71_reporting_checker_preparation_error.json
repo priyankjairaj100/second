@@ -1,0 +1,7 @@
+{
+  "scope": "reporting-only preparation",
+  "error": "Compared runtime-observer string digests against byte/hash objects",
+  "observed": "All three raw digests already matched; no source changed",
+  "resolution": "Handle the registered digest-only administrative schema explicitly",
+  "empirical_execution": false
+}

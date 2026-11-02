@@ -1,0 +1,62 @@
+Submission checklist and disclosure pass V74,18 October2026
+
+Primary policy pages read live:
+https://aclrollingreview.org/responsibleNLPresearch/
+https://aclrollingreview.org/authorchecklist
+The draft answers follow the A--E IDs, with paraphrased labels and original
+section-grounded responses. No form was opened/submitted. Explained No answers
+are allowed by ARR guidance; lack of an all-Yes checklist is not automatically a
+submission blocker. Author facts and actual policy decisions remain author-owned.
+Do not invent approval, consent, rights or a project license. Missing project-wide
+compute aggregation does not invalidate already audited scoped campaign figures.
+
+Concrete manuscript edits
+Removed the working-draft banner and made the source author field anonymous.
+Added creator citations for DistilGPT2, C4 and historical WikiText-2; stated English
+web-text scope and approximately82 million total checkpoint parameters, distinct
+from42,467,328 quantized codes. Added a concise Ethical considerations section
+before AI-only Acknowledgements. It disclaims content-level PII/offensive-text
+screening, demographic/fairness results and privacy/erasure guarantees. The
+reproduction section now states actual publisher-term observations and the
+unassigned project-source license instead of a list of unfinished editorial tasks.
+No result, threshold, proof, registered source, scientific decision or resource
+allowance changed. Main tables remain exact. Author names are unnecessary in an
+anonymous review manuscript; they remain required only for the external submission
+form that this task is not authorized to submit.
+
+Primary asset facts verified
+Hugging Face's pinned DistilGPT2 card names the creator, English language,
+approximately82M parameters, Apache2.0 declaration and research-use/bias context:
+https://huggingface.co/distilbert/distilgpt2/blob/2290a62682d06624634c1f46a6ad5be0f47f38aa/README.md
+Raffel et al.2020 author list/title/year/JMLR21(140):1--67 and introduction of C4:
+https://jmlr.org/papers/v21/20-074.html
+Merity et al.2016 author list/title/year and WikiText introduction:
+https://arxiv.org/abs/1609.07843
+The historical WikiText-2 version is independently present in frozen
+research_v39/data.py and the unchanged source companion. The current source/data
+pointers remain pinned; no corpus/model content was downloaded or evaluated.
+
+The pinned C4 card could not be freshly loaded through the web tool (blob and raw
+views failed). Its ODC-BY/Common Crawl declaration is taken from the already
+captured16October metadata in validation/v69_pinned_publisher_metadata.json and
+the unchanged reproduction guide. The record binds41136 bytes SHA256
+bfa4b9d8af6f9d2955d39b7cb617d580763aad7fb9024e425be60738b69ea140.
+This is explicitly prior pinned publisher evidence, not a fresh fetch or blanket
+clearance for individual web pages. No further access retry or legal inference.
+
+Proposed answers
+A1/A2,B,B1,B5/B6,C,C2/C3/C4,E/E1:Yes with scope-qualified justifications.
+B2,B3,B4,C1:No with specific remaining gaps.
+D:No; D1--D5:N/A for the absent recruited-participant/annotation component.
+These choices describe the current source and actual supplied materials; unknown
+privacy content, full historical rights and program-wide compute remain unknown.
+A No is not converted to Yes merely because the manuscript now explains that gap.
+Read reports/RESPONSIBLE_NLP_CHECKLIST_V74.txt for the complete author-review draft.
+
+Remaining delivery work
+Actual rendered page count, overflows and pagination remain unverified after the
+preview service failure; the earlier text question is still pending. Provisional
+long-paper structure continues. Final venue/cycle/category and human-controlled
+form facts remain unset. Do not silently substitute policy from a different cycle,
+create a separate PDF or publish/submit externally. The development bundle can
+contain the draft checklist without pretending it has been approved by an author.

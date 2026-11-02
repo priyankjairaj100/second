@@ -1,0 +1,32 @@
+V67 terminal evidence and scientific decision,18 October2026
+
+Primary sources are campaigns/csis_v67_terminal_metadata_20261018_a.tar.gz and
+validation/v67_terminal_reconciliation_20261018_a.json. All15 allocations completed;
+all ten actual cluster model/state comparisons match fresh reconstruction. No
+model/state bytes were recomputed locally. The complete comparison rows, timing
+components, source pairs, fallback rows and source commitments remain in that JSON.
+
+Compression is a modest space/access tradeoff, not the fastest service. The
+Zstandard-augmented lossless cache is the strongest compatible no-source baseline:
+compression saves9.241712%/8.701732% live state but takes13.693062%/50.482991%
+longer at12/6 retained records. Checkpoint-inclusive savings4.714720%/3.100784%.
+Relative to the original cache, savings9.376489%/8.834833% and request penalties
+17.822149%/46.462982%. Hybrid wins both dimensions first but requires source
+access. No universal Pareto superiority is claimed.
+
+Numerical worker debits47767 CPU seconds, controller-own85.725711496 seconds,
+and all15 scheduler allocations51356.452 seconds are overlapping accounting
+views. Do not add them. Scheduler .batch rows are not additional allocations.
+The two audit times ended17 October;18 October is retrieval/reconciliation time.
+The modern codec adds23870575 installed bytes, separately from retained state.
+Fixed order, one new calibration root and two dependent deletion requests do not
+support independent timing uncertainty, generalized reliability or break-even.
+
+Decision: retain this bounded tradeoff as the empirical result and run the already
+specified untouched320-article evaluation before claiming usable quality. Preserve
+all prior adverse findings. Stronger timing claims require separate prospective
+replication. Transfer to another checkpoint is conditional on a justified claim.
+
+E16 is the new review-facing service companion. It preserves the complete typed
+primary/supplemental receipts under disclosed string mappings and ten comparisons.
+Original metadata remains immutable; private maps must not enter anonymous uploads.

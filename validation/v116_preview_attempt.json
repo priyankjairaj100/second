@@ -1,0 +1,9 @@
+{
+  "captured_utc": "2026-10-27T06:44:20.723220+00:00",
+  "operation": "Read existing Codex manuscript preview",
+  "tool": "mcp__cua_repl.js",
+  "result": "Sky Computer Use service startup request failed",
+  "rendered_layout_verified": false,
+  "repeat_attempt": false,
+  "source_changed_by_preview": false
+}

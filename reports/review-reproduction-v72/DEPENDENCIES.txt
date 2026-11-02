@@ -1,0 +1,50 @@
+External dependencies and attribution record: development preparation
+
+This is an inventory of observed publisher declarations and notice locations,
+not a license grant, complete NOTICE file or legal clearance. No third-party
+library binaries, wheels, container, corpus or model is redistributed here.
+Project ownership and release terms remain unassigned; authors must resolve them
+before public code release. Historical execution files remain unchanged.
+
+Checkpoint: DistilGPT2, Hugging Face/distilbert; publisher declares Apache2.0.
+https://huggingface.co/distilbert/distilgpt2/blob/2290a62682d06624634c1f46a6ad5be0f47f38aa/README.md
+Dataset: C4, Allen Institute for AI; pinned card declares ODC-BY and refers to
+Common Crawl content terms. Database terms do not grant every underlying page's
+rights. Article text/tokens are excluded from this package.
+https://huggingface.co/datasets/allenai/c4/blob/1588ec454efa1a09f29cd18ddd04fe05fc8653a2/README.md
+https://opendatacommons.org/licenses/by/1-0/
+https://commoncrawl.org/terms-of-use/
+
+Observed PyPI declarations,16 October2026 (exact version pages):
+NumPy2.3.5 CPU and2.2.6 historical CUDA: BSD classifier.
+https://pypi.org/project/numpy/2.3.5/
+https://pypi.org/project/numpy/2.2.6/
+gmpy2 2.3.2: LGPL-3.0-or-later.
+https://pypi.org/project/gmpy2/2.3.2/
+zstandard0.25.0: BSD-3-Clause.
+https://pypi.org/project/zstandard/0.25.0/
+tokenizers0.23.2: Apache classifier.
+https://pypi.org/project/tokenizers/0.23.2/
+torch2.10.0: BSD-3-Clause license field; actual installed build is separately bound.
+https://pypi.org/project/torch/2.10.0/
+
+RUNTIME.json identifies28 actual NumPy/gmpy2 module/library files,18 tokenizer
+runtime files and11 installed codec files, including the codec LICENSE file hash.
+This guide does not include their license text. Preserve each installed
+distribution's actual dist-info/licenses, LICENSE/NOTICE and bundled-library
+notices in the external installation; consult them before redistribution.
+NumPy's BLAS/Fortran dependencies, gmpy2's GMP/MPFR/MPC, Python, compiler/libc,
+the container base, Torch's bundled libraries and CUDA/driver components require
+their own applicable notices. These have not all been collected or cleared here.
+The safetensors0.6.2 publisher was inspected previously but no installed/required
+version was established; it is deliberately absent from runtime requirements.
+
+The existing manuscript embeds the unmodified ACL style with its original source
+header. Its style provenance and attribution must remain in the eventual paper
+source bundle. The fixture checker and documentation are project-authored files,
+subject to the project's unresolved release terms. No dependency installation or
+license replacement is performed by the guide or its verifier.
+
+Update18 October2026: development-dependency-notices-v71c.zip preserves the five earlier texts and adds35 observed installed CUDA/Python notices. All28 selected distribution notice sets and32 active declared dependency constraints were checked;34 distribution notice files match their RECORD entries. This is later metadata/notice observation, not a retroactive frozen binary binding. Full GPU-node/system/native attribution and project release terms remain open.
+
+V72 update: actual quality and separately registered accounting recovery are complete; no new dependency/runtime installation. E17 supplies scalar evidence. System/native attribution and project release terms remain unresolved.

@@ -1,0 +1,22 @@
+{
+  "copied_field_groups": 1054,
+  "earlier_exposed_articles": 8,
+  "full_anonymity_verified": false,
+  "full_reproduction_verified": false,
+  "input_source_count": 21,
+  "later_exposed_articles": 8,
+  "mutation_probes_detected": {
+    "alter_service_clock": true,
+    "erase_adaptive_scope": true,
+    "erase_feasibility_failure": true,
+    "hide_stage_refusal": true
+  },
+  "numerical_execution": false,
+  "original_receipts_modified": false,
+  "record_count": 15,
+  "schema": "historical-review-companion-check-v69b",
+  "shared_article_identity_verified": true,
+  "stage_arm_observations": 29,
+  "status": "passed_projection_and_census_checks",
+  "unique_exposed_articles": 8
+}

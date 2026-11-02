@@ -1,0 +1,8 @@
+/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable
+Traceback (most recent call last):
+  File "/tmp/second-collect-cpu-notice-inventory-v71.py", line 106, in <module>
+    item = decode_entry(digest, length)
+  File "/tmp/second-collect-cpu-notice-inventory-v71.py", line 53, in decode_entry
+    assert digest.startswith('sha256=') and length.isdigit()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

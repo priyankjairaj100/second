@@ -1,0 +1,57 @@
+V130 matched sequential controls, prospective one-use registration
+
+Construct four controls: DistilGPT2 and GPT2, each on the exact retained3/2-record
+sets bound to the V119 saved fixed-teacher endpoints. Reuse no old launchers.
+Each control uses all24/48 stages, original weights/grids, normalization512,
+ridge1/100 and ordered finite MPFR activations. Each calibrated output becomes
+the next stage prefix. Candidate codes are used only for the first-stage equality
+check, never as sequential features. No held-out losses enter construction.
+
+Execution uses the historical V112 point-token policy and optimized native
+primitives, in Python3.12.14/NumPy2.3.5/gmpy2 2.3.2 inside the same pinned
+Singularity image. V125's likelihood-only libm adapter is not activated here.
+Check every checkpoint and source hash, rebuild both target identities and compare
+actual anchor/calibration payload bytes, preserve original record order/tokens.
+
+New software qualification reruns318 inherited checks plus6 sequential parity/
+refusal checks and4 new membership checks. Generated checks are not model results.
+This does not claim the entire planned new repair-transaction fault campaign.
+
+Before releasing constructors, require actual successful software completion and
+COMPLETED0:0 accounting. All jobs submitted held with exclusive intent, then bound
+to the registration before release. Each attempt consumed even on failure.
+No automatic retry. Refusal remains a failed stratum, not a reason to retune.
+
+Four constructors<=7200CPU/9000wall seconds each; software<=600CPU/900wall.
+HardCPU=soft+1,1CPU/16GiB each,8GiB solver arrays,64B stage/1T request work,
+16point-refinement coordinates, exact rational caps remain0. Approved transfer
+grid1,327,104 applies only to the established GPT2 profile. 9GiB resident allowance
+from historical implementation preserved. Bound29400 workerCPU+5x60launcher=29700.
+The two native matched oracles in V119 and earlier sequential receipts motivate
+this conservative finite ceiling; old budgets are not replenished or borrowed.
+New source+output<=2GiB, individual file128MiB. No paid compute/GPU/scheduler.
+
+Persist complete packed codes, metadata, stage progress and terminal receipt.
+Independently expand every saved nibble and compare every array word, check first
+stage equality, all stage routes/prefixes and rehash all inputs after construction.
+Partial outputs never imply a completed model. Evaluate these controls later on
+exactly the frozen V124320-article file, using the qualified likelihood routine.
+Report all four paired fixed/sequential contrasts under the already frozen V124
+statistics and guards. Do not substitute original-checkpoint losses for this test.
+
+V130 packaging correction: V126software16689 failed because two historical
+JSONfixtures used by seven recovery-gate tests were absent from its archive.
+The328-test scope, numerical implementation and all constructor limits are
+unchanged. Include both exact fixture files and run164 extracted-only local
+checks before packaging. PreserveV126source and failure, never invoke its
+construct group. Carryceil(49.708)=50CPUseconds. Remaining V130software
+reservation550CPU rather than600 keeps the original29700CPU ceiling.
+
+V130 software-wrapper correction. V128job16693 failed at inherited sealed-child
+tests: those historical fixtures request their original2GiB file limit, while
+the new outer software wrapper limited files to128MiB. No calibration executed.
+Restore the historical2GiB software-only file envelope; all actual numerical
+constructors keep128MiB. Overall source/output cap remains2GiB. No memory,CPU,
+solver/refinement/grid or scientific gate is increased. Keep all328 checks.
+Carry50CPU from16689 plusceil(49.629)=50 from16693, reduce freshsoftwareCPU to500;
+total remains29700. Both prior registrations consumed, constructors unlaunched.

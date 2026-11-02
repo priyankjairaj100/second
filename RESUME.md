@@ -1,3 +1,31 @@
+Current work (16 October 2026): **V67 hybrid15263 completed0:0; compression15264 is running. V69 held-job controls pass92 local tests.** At18:57IST the compression run was active21m26s with7of24 certified stages;15265--15275 were dependency-pending. The hybrid receipt/debit check passed; fresh-oracle model/state audits remain pending. Read [latest handoff](docs/ACTIVE_SESSION_V69.md), [partial receipt scope](docs/V67_HYBRID1_RECEIPT_V69.txt), and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). All469 frozen V67 and14 historical GPU/export sources remain unchanged. V68/V69 remain unregistered. The manuscript compiles and passes71 selected number checks; an identity scan identifies47 files for anonymous-copy review. Historical checkpoints follow.
+
+---
+
+Current work (16 October 2026): **V66 complete-service operations passed all 44 Linux tests, including five-arm tiny numerical equality.** V63 artifact evidence and V65 disjoint-root data admission are verified. No Second job is active. Read [latest handoff](docs/ACTIVE_SESSION_V66.md), [V67 execution plan](docs/COMPLETE_SERVICE_PLAN_V67.txt) and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). Full-model V67 controller/workers, resource admission and audits remain unimplemented/unregistered. All 456 executed source files are frozen. Historical checkpoints follow.
+
+---
+
+Current work (16 October 2026): **V63 artifact evidence, V64 software qualification and V65 disjoint-root data admission are verified.** No Second job is active. Prepare the complete modern-lossless service comparison on the fixed V65 root under a new V66 registration. Read [latest handoff](docs/ACTIVE_SESSION_V65.md) and [continuous queue](docs/CONTINUOUS_RESEARCH_QUEUE.md). No new numerical result or quality claim is established. Preserve all frozen sources and one-use attempts. Historical checkpoints follow.
+
+---
+
+Continuous work (16 October 2026): measurement 15245 completed; actual archive audit 15246 is running. Follow [the ordered queue](docs/CONTINUOUS_RESEARCH_QUEUE.md) and [current handoff](docs/ACTIVE_SESSION_V63.md). Recurring same-chat continuation is active every 15 minutes. No V63 result is verified yet. Historical checkpoints follow.
+
+---
+
+Current checkpoint (16 October 2026, 13:31 IST): **V63 Linux checks passed; the modern lossless artifact measurement is running.** Jobs 15244/15245/15246 are checks/measurement/audit. Read [current handoff](docs/ACTIVE_SESSION_V63.md), [status](handoff/program_v63.json), and [frozen protocol](research_v63/PROTOCOL.txt). No new size or speed result is verified yet. The phase reuses audited artifacts, copies existing model codes and performs no neural/calibration/quality execution. Preserve all frozen sources and original failures; never repeat the launcher or change caps. V62 remains the latest completed scientific checkpoint. Historical checkpoints follow.
+
+---
+
+Current checkpoint (16 October 2026): **V61 numerical work is complete; separate V62 recovery audits passed.** All eight complete model/state comparisons match fresh reconstruction; final-six models equal the V59 candidate. Original audit timeout/cancellation remain preserved. Compression saves about 9% live state but is 39–42% slower than cached lossless. No chain job remains active. Read [current handoff](docs/ACTIVE_SESSION_V62.md), [costs/status](handoff/program_v62.json), and [evidence guide](docs/TERMINAL_EVIDENCE_V62.txt). Next is a newly registered modern lossless-control comparison, then fresh-root/untouched-quality/timing work if useful. No new phase is launched. Preserve all frozen sources, failures and exclusions; never repeat old launchers. The manuscript compiles but is not submission-ready. Historical checkpoints follow.
+
+---
+
+Current checkpoint (14 October 2026, 06:47:58 UTC): **V61 preparation has recorded all 24 stage certificates and is packaging state.** All 13 sources were traversed; no stage refusal or fallback is recorded. Preparation remains RUNNING, with seven controls/oracle/audit jobs dependency-pending. Read [the current handoff](docs/ACTIVE_SESSION_V61.md), [status](handoff/program_v61.json), and [conditional lossless-control design](docs/LOSSLESS_CONTROL_PREPARATION_V61.txt). The existing lossless cache already uses zlib; the proposed Zstandard comparison is not implemented, registered or measured. Keep the cluster at numerical commit `f900999` and never relaunch or modify registered sources. Complete-service correctness, performance and ACL readiness remain unverified. Historical checkpoints follow.
+
+---
+
 Current checkpoint: read `docs/ACTIVE_SESSION_V41.md` and `handoff/program_v41.json` first.
 V39 and V40 are complete: all seventeen and twelve stage outputs match, respectively.
 Read `docs/NATIVE_SCALE_RESULTS_V40.md` and `docs/RESEARCH_DECISION_V41.md` for all results and limits.

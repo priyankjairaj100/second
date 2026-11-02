@@ -1,0 +1,240 @@
+{
+  "captured_at_utc": "2026-10-16T08:01:47.945886+00:00",
+  "read_only": true,
+  "head": {
+    "returncode": 0,
+    "stdout": "f900999fcb200509dfad4fc081ce9c87fd172a16\n",
+    "stderr": ""
+  },
+  "git_status": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "squeue": {
+    "returncode": 0,
+    "stdout": "15246|second63-audit|PENDING|0:00|(Dependency)\n15245|second63-measure|RUNNING|2:45|csis.mn1\n",
+    "stderr": ""
+  },
+  "sacct": {
+    "returncode": 0,
+    "stdout": "15244|second63-checks|COMPLETED|0:0|00:00:04|00:02.398||2026-10-16T13:28:59|2026-10-16T13:29:03\n15244.batch|batch|COMPLETED|0:0|00:00:04|00:02.398|3256K|2026-10-16T13:28:59|2026-10-16T13:29:03\n15245|second63-measure|RUNNING|0:0|00:02:45|00:00:00||2026-10-16T13:29:03|Unknown\n15245.batch|batch|RUNNING|0:0|00:02:45|00:00:00||2026-10-16T13:29:03|Unknown\n15246|second63-audit|PENDING|0:0|00:00:00|00:00:00||Unknown|Unknown\n",
+    "stderr": ""
+  },
+  "files": {
+    "audit-submission.json": {
+      "bytes": 775,
+      "sha256": "10b47c0fe94f991e925e1a883e3445d33dc4ff0c968b41bb37e6ef74798e6be4",
+      "contents": {
+        "arguments": [
+          "sbatch",
+          "--parsable",
+          "--no-requeue",
+          "--nodelist=csis.mn1",
+          "--mem=16G",
+          "--time=00:35:00",
+          "--job-name=second63-audit",
+          "--output=/nfs_home/users/poonam/second-20261010/local_runs/lossless-control-v63-20261016-a/audit-%j.log",
+          "--dependency=afterok:15245",
+          "--kill-on-invalid-dep=yes",
+          "cluster_setup/run_cpu.sbatch",
+          "local_runs/cluster-setup-20261010/container-13155.sha256",
+          "/nfs_home/users/poonam/second-20261010/local_runs/lossless-control-v63-20261016-a/research_v63/runner.py",
+          "/nfs_home/users/poonam/second-20261010/local_runs/lossless-control-v63-20261016-a/registration.json",
+          "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6",
+          "audit"
+        ],
+        "job_id": "15246",
+        "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6"
+      }
+    },
+    "checks-start.json": {
+      "bytes": 179,
+      "sha256": "55b4eb2fc659a599bb5552f37f828a5675218b79d4e861a15d7dea3e9cf05d4d",
+      "contents": {
+        "caps": {
+          "cpu": 300,
+          "wall": 600
+        },
+        "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6",
+        "slurm_job_id": "15244",
+        "status": "started",
+        "trial": "checks"
+      }
+    },
+    "checks-submission.json": {
+      "bytes": 721,
+      "sha256": "a31422668bc913d526a9067cd7e830c3a6d19da7d936e251be489e8f04d167e9",
+      "contents": {
+        "arguments": [
+          "sbatch",
+          "--parsable",
+          "--no-requeue",
+          "--nodelist=csis.mn1",
+          "--mem=16G",
+          "--time=00:10:00",
+          "--job-name=second63-checks",
+          "--output=/nfs_home/users/poonam/second-20261010/local_runs/lossless-control-v63-20261016-a/checks-%j.log",
+          "cluster_setup/run_cpu.sbatch",
+          "local_runs/cluster-setup-20261010/container-13155.sha256",
+          "/nfs_home/users/poonam/second-20261010/local_runs/lossless-control-v63-20261016-a/research_v63/runner.py",
+          "/nfs_home/users/poonam/second-20261010/local_runs/lossless-control-v63-20261016-a/registration.json",
+          "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6",
+          "checks"
+        ],
+        "job_id": "15244",
+        "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6"
+      }
+    },
+    "checks.json": {
+      "bytes": 1651,
+      "sha256": "40f065a9f3f9d6d992102d28c0b09fb35ae3aee604eac7736c461761c53b6807",
+      "contents": {
+        "caps": {
+          "cpu": 300,
+          "wall": 600
+        },
+        "elapsed_ns": 2053303431,
+        "error": null,
+        "max_rss_kib": 68676,
+        "original_inputs_mutated": false,
+        "process_cpu_ns": 1457176171,
+        "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6",
+        "result": {
+          "codec_binding": "d96991708db4a13f04d51e82d7a2165703687c33ac30756a945e6f918565ff78",
+          "codec_manifest": {
+            "canonical_scope": "this bound encoder and compressor runtime",
+            "max_decoded_bytes": 4194304,
+            "max_window_bytes": 4194304,
+            "modes": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "native_sha256": "7eb41c8b36cd99ed6c67e39f8574e42472687a14c6038c512bb3a90b7082616d",
+            "old_codec_manifest": {
+              "canonical_scope": "this bound encoder and compressor runtime",
+              "parameters": {
+                "level": 6,
+                "mem_level": 8,
+                "strategy": 0,
+                "wbits": 15
+              },
+              "source_sha256": {
+                "compact_state.py": "af4bb17f90f497b22da1fdaf6bc5fe0656ba86c27def9f4dd80d9e785c88e829",
+                "fixed_lossless_codec_v29.py": "6d0c5c3d13506091bd88310b93b5b0931f1c09b1f6e902fe0e2c40b35c441c0c",
+                "run_store.py": "369345e6342763262f7e894c18d82b544c81f9c6da1b5f76c979107c144d7e10"
+              },
+              "zlib_compile_version": "1.2.13",
+              "zlib_module_kind": "extension",
+              "zlib_runtime_binary_sha256": "db27b566d290d390647a8152bb60f96af080c66016d1631d473c1758b8e3b6cb",
+              "zlib_runtime_version": "1.2.13"
+            },
+            "package_sha256": "5dd909e0b60a946a0b08deaf57545d17dc044f5df4040beec55f7ef6c6fecd11",
+            "parameters": {
+              "dictionary": null,
+              "level": 3,
+              "threads": 0,
+              "write_checksum": true,
+              "write_content_size": true,
+              "write_dict_id": false
+            },
+            "source_sha256": "89c6c2b839427ab81dd5215eae17ed491edf77c2c1ccee69f762fa1c9e9277da",
+            "zstandard_version": "0.25.0",
+            "zstd_version": [
+              1,
+              5,
+              7
+            ]
+          },
+          "empirical_inputs_opened": false,
+          "skipped": 0,
+          "tests": 21
+        },
+        "slurm_job_id": "15244",
+        "status": "complete",
+        "trial": "checks"
+      }
+    },
+    "jobs.json": {
+      "bytes": 52,
+      "sha256": "7482f3c94d4b7e67f45e9939e6a5a85037e00b96862c0f054b62b590f91ac6b1",
+      "contents": {
+        "audit": "15246",
+        "checks": "15244",
+        "measure": "15245"
+      }
+    },
+    "measure-start.json": {
+      "bytes": 182,
+      "sha256": "8d31a4a42686552912da8daf1a1e56b3dd10339236e1115b5a1d347a329a2fd0",
+      "contents": {
+        "caps": {
+          "cpu": 3600,
+          "wall": 3900
+        },
+        "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6",
+        "slurm_job_id": "15245",
+        "status": "started",
+        "trial": "measure"
+      }
+    },
+    "measure-submission.json": {
+      "bytes": 781,
+      "sha256": "3f79280471700197bc0c1313a3a5417f42f12d3bc61aea441b435ae50060394a",
+      "contents": {
+        "arguments": [
+          "sbatch",
+          "--parsable",
+          "--no-requeue",
+          "--nodelist=csis.mn1",
+          "--mem=16G",
+          "--time=01:05:00",
+          "--job-name=second63-measure",
+          "--output=/nfs_home/users/poonam/second-20261010/local_runs/lossless-control-v63-20261016-a/measure-%j.log",
+          "--dependency=afterok:15244",
+          "--kill-on-invalid-dep=yes",
+          "cluster_setup/run_cpu.sbatch",
+          "local_runs/cluster-setup-20261010/container-13155.sha256",
+          "/nfs_home/users/poonam/second-20261010/local_runs/lossless-control-v63-20261016-a/research_v63/runner.py",
+          "/nfs_home/users/poonam/second-20261010/local_runs/lossless-control-v63-20261016-a/registration.json",
+          "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6",
+          "measure"
+        ],
+        "job_id": "15245",
+        "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6"
+      }
+    },
+    "preflight.json": {
+      "bytes": 229,
+      "sha256": "0e100b2e96470201a14bf725f4545440f140b2393753cadf75c6cf7e08d6c4b3",
+      "contents": {
+        "empirical_file_contents_read": false,
+        "frozen_sources_unchanged": 432,
+        "queue": "15242|third-v4-byte-repair-mistral|RUNNING",
+        "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6",
+        "status": "staged"
+      }
+    },
+    "submission-intent.json": {
+      "bytes": 166,
+      "sha256": "6627dffe561921a4539bbe4b472616a879f670e19e88ce2111324b05dac04627",
+      "contents": {
+        "automatic_retry": false,
+        "created_at_utc": "2026-10-16T07:58:59.285702+00:00",
+        "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6"
+      }
+    },
+    "trust.json": {
+      "bytes": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "contents": {}
+    }
+  },
+  "logs": {
+    "checks-15244.log": "test_codec_binding_and_reference_target_cannot_be_relabelled (research_v63.test_control.ArchiveTests.test_codec_binding_and_reference_target_cannot_be_relabelled) ... ok\ntest_duplicate_or_reordered_records_refuse (research_v63.test_control.ArchiveTests.test_duplicate_or_reordered_records_refuse) ... ok\ntest_non_subset_and_missing_extra_sources_refuse (research_v63.test_control.ArchiveTests.test_non_subset_and_missing_extra_sources_refuse) ... ok\ntest_roundtrip_restores_actual_old_state (research_v63.test_control.ArchiveTests.test_roundtrip_restores_actual_old_state) ... ok\ntest_source_binding_and_stage_grids_refuse (research_v63.test_control.ArchiveTests.test_source_binding_and_stage_grids_refuse) ... ok\ntest_trailing_changed_payload_and_header_bound_refuse (research_v63.test_control.ArchiveTests.test_trailing_changed_payload_and_header_bound_refuse) ... ok\ntest_transition_equals_fresh_and_retains_descriptor_bytes (research_v63.test_control.ArchiveTests.test_transition_equals_fresh_and_retains_descriptor_bytes) ... ok\ntest_actual_largest_registered_shape_zstd_roundtrip (research_v63.test_control.CodecTests.test_actual_largest_registered_shape_zstd_roundtrip) ... ok\ntest_all_five_modes_decode_exactly (research_v63.test_control.CodecTests.test_all_five_modes_decode_exactly) ... ok\ntest_canonical_choice_records_every_mode_and_is_deterministic (research_v63.test_control.CodecTests.test_canonical_choice_records_every_mode_and_is_deterministic) ... ok\ntest_changed_hash_runtime_shape_and_noncanonical_mode_refuse (research_v63.test_control.CodecTests.test_changed_hash_runtime_shape_and_noncanonical_mode_refuse) ... ok\ntest_content_size_checksum_and_skippable_requirements (research_v63.test_control.CodecTests.test_content_size_checksum_and_skippable_requirements) ... ok\ntest_exact_signed_zero_subnormal_and_extreme_words (research_v63.test_control.CodecTests.test_exact_signed_zero_subnormal_and_extreme_words) ... ok\ntest_extent_nonfinite_unknown_mode_and_limits_refuse (research_v63.test_control.CodecTests.test_extent_nonfinite_unknown_mode_and_limits_refuse) ... ok\ntest_old_and_new_magic_are_distinct (research_v63.test_control.CodecTests.test_old_and_new_magic_are_distinct) ... ok\ntest_trailing_extra_frame_truncation_and_checksum_refuse (research_v63.test_control.CodecTests.test_trailing_extra_frame_truncation_and_checksum_refuse) ... ok\ntest_window_and_dictionary_rejected_before_decompression (research_v63.test_control.CodecTests.test_window_and_dictionary_rejected_before_decompression) ... ok\ntest_bound_read_refuses_tamper_wrong_extent_and_symlink (research_v63.test_runner.RunnerTests.test_bound_read_refuses_tamper_wrong_extent_and_symlink) ... ok\ntest_exclusive_outputs (research_v63.test_runner.RunnerTests.test_exclusive_outputs) ... ok\ntest_json_duplicates_and_nonfinite_refuse (research_v63.test_runner.RunnerTests.test_json_duplicates_and_nonfinite_refuse) ... ok\ntest_registration_caps_scope_and_paths_refuse (research_v63.test_runner.RunnerTests.test_registration_caps_scope_and_paths_refuse) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.218s\n\nOK\n",
+    "measure-15245.log": ""
+  }
+}

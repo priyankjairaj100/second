@@ -1,0 +1,95 @@
+{
+  "scope": "Generated software fixtures; no model, dataset, service or Linux campaign result",
+  "platform": "macOS-13.0-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.12.7 (main, Oct  1 2024, 02:05:46) [Clang 15.0.0 (clang-1500.1.0.2.5)]",
+  "numpy": "2.3.5",
+  "reference_sha256": "d5f8a4c5279ef759b7d58eadd85429cffdfe7bdb3fe788aaaed05d12501f8711",
+  "clock": "perf_counter_ns",
+  "fixture_seed": 20261022,
+  "compile_excluded": true,
+  "differential_cases": {
+    "valid": 40,
+    "mutated": 6810,
+    "boundary": 1600,
+    "accepted_mutations": 2710,
+    "rejected_mutations": 4100
+  },
+  "benchmarks": [
+    {
+      "shape": [
+        128,
+        768
+      ],
+      "bits": 48,
+      "block_size": 256,
+      "operation": "legacy parse(blob).box(), two full decodes plus checks/copies",
+      "payload_sha256": "1a0cb40bcc973f201b9b3b7193643538ee0645bc178ebc2f8f3b955aa61783cf",
+      "bytes": 615969,
+      "samples_ns": {
+        "reference": [
+          193801167,
+          191115708,
+          191677167,
+          191516667,
+          192197042,
+          191508541
+        ],
+        "prototype": [
+          9383750,
+          9471584,
+          9363125,
+          9421208,
+          9540667,
+          9272292
+        ]
+      },
+      "median_seconds": {
+        "reference": 0.191596917,
+        "prototype": 0.009402479
+      },
+      "ratio_reference_over_prototype": 20.377276779879008
+    },
+    {
+      "shape": [
+        128,
+        3072
+      ],
+      "bits": 48,
+      "block_size": 256,
+      "operation": "legacy parse(blob).box(), two full decodes plus checks/copies",
+      "payload_sha256": "c6e975c89df14a2f8a0a87a6e292d3ce3e52dc2534cbc66fcbf7677e01c9a990",
+      "bytes": 2461475,
+      "samples_ns": {
+        "reference": [
+          774729041,
+          768936291,
+          768308917,
+          769318625,
+          769014541,
+          784540292
+        ],
+        "prototype": [
+          38520292,
+          37896125,
+          37816916,
+          37399083,
+          37687625,
+          37565750
+        ]
+      },
+      "median_seconds": {
+        "reference": 0.769166583,
+        "prototype": 0.0377522705
+      },
+      "ratio_reference_over_prototype": 20.37404831055128
+    }
+  ],
+  "source_hashes": {
+    "decode.c": "17f03da030a87a54d3dc5e242b0539a9faaa83183e318089387bc5eade5b130b",
+    "fast_decode.py": "491db99fd7f8b5a749b448df24842a1d8fdddaa8cdf53e5d266bdbac8b268b77",
+    "check.py": "956785d60e8b0b197e8a6813f6c28878ad16ed0f05eb56bd7e1c0a6c1b32f0cc"
+  },
+  "elapsed_seconds": 11.607133999990765,
+  "archive_note": "Middle run timing samples recovered exactly from tool output; test logs removed because their timing strings were not retained in that output. Same C and wrapper; check.py before optional repository-path argument."
+}

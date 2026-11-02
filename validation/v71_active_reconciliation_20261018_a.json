@@ -1,0 +1,117 @@
+{
+  "active_reservations": {
+    "8def57274c8e11b5ac89c9a8a40834462e495acc61c337719862f7cfe50c33c9": {
+      "charged_cpu_seconds": 14402,
+      "observed_cpu_ns": null,
+      "phase": "quality",
+      "reserved_cpu_seconds": 14402,
+      "state": "reserved"
+    }
+  },
+  "all_parameter_arrays_compared": 78,
+  "archive": {
+    "bytes": 160969,
+    "sha256": "de1364ba5aa891abfc686294865560c4dc4d9e1319cc297862424cf879d2ca2b"
+  },
+  "completed": {
+    "cpu_checks": {
+      "charged_worker_cpu_seconds": 30,
+      "completion": {
+        "bytes": 33838,
+        "sha256": "21cbaa477c08cb021a9796481acc3789bc9931b9bed2f0beedd153d266b142aa"
+      },
+      "job_id": "15405"
+    },
+    "cuda_checks": {
+      "charged_worker_cpu_seconds": 12,
+      "completion": {
+        "bytes": 26587,
+        "sha256": "88ae5ac7cf657b735920816f70bc3e95a5432a89c5f1ac5f73b294fa3007c804"
+      },
+      "job_id": "15406"
+    },
+    "parameters": {
+      "charged_worker_cpu_seconds": 37,
+      "completion": {
+        "bytes": 134245,
+        "sha256": "5ed20d55cc20baab97a1b11fbfa4f73ad9e266beefcbf35d6e7d5a91574d195f"
+      },
+      "job_id": "15407"
+    }
+  },
+  "cpu_tests": {
+    "empirical_quality": false,
+    "errors": 0,
+    "failures": 0,
+    "includes_unchanged_v55_numerical_fixtures": true,
+    "skips": 0,
+    "tests": 103
+  },
+  "frozen_numerical_sources_verified": 575,
+  "full_worker_seal_artifacts_rechecked_locally": false,
+  "generated_cuda_comparisons": 24,
+  "jobs": {
+    "closure": {
+      "elapsed_seconds": 0,
+      "exit_code": "0:0",
+      "job_id": "15413",
+      "state": "PENDING"
+    },
+    "cpu_checks": {
+      "elapsed_seconds": 39,
+      "exit_code": "0:0",
+      "job_id": "15405",
+      "state": "COMPLETED"
+    },
+    "cpu_parity": {
+      "elapsed_seconds": 0,
+      "exit_code": "0:0",
+      "job_id": "15410",
+      "state": "PENDING"
+    },
+    "cuda_checks": {
+      "elapsed_seconds": 22,
+      "exit_code": "0:0",
+      "job_id": "15406",
+      "state": "COMPLETED"
+    },
+    "gpu_quality": {
+      "elapsed_seconds": 0,
+      "exit_code": "0:0",
+      "job_id": "15411",
+      "state": "PENDING"
+    },
+    "parameters": {
+      "elapsed_seconds": 42,
+      "exit_code": "0:0",
+      "job_id": "15407",
+      "state": "COMPLETED"
+    },
+    "sequential_12": {
+      "elapsed_seconds": 166,
+      "exit_code": "0:0",
+      "job_id": "15408",
+      "state": "RUNNING"
+    },
+    "sequential_6": {
+      "elapsed_seconds": 0,
+      "exit_code": "0:0",
+      "job_id": "15409",
+      "state": "PENDING"
+    },
+    "terminal": {
+      "elapsed_seconds": 0,
+      "exit_code": "0:0",
+      "job_id": "15412",
+      "state": "PENDING"
+    }
+  },
+  "model_bytes_compared_locally": false,
+  "observed_at_utc": "2026-10-18T11:51:36.004012+00:00",
+  "registration_sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c",
+  "schema": "v71-active-metadata-check",
+  "scope": "Partial metadata only; checkpoint-array equality is reported by the completed actual cluster audit. Remaining actual model, loss and cost gates still required.",
+  "settled_worker_cpu_seconds": 79,
+  "status": "verified_partial_observation",
+  "terminal_quality_result_verified": false
+}

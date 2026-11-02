@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": "{\"registration_sha256\": \"bf5662e5b61342c398bd6812ac378f1930d1f49f532f6320992f404e15e38771\", \"jobs\": {\"checks\": 17190}, \"status\": \"released\"}\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n"
+}

@@ -1,0 +1,476 @@
+{
+  "captured_at_utc": "2026-10-16T13:23:55.389407+00:00",
+  "complete_evidence_inventory": false,
+  "index": {
+    "bytes": 4439,
+    "path": "reports/anonymous-evidence-index.txt",
+    "sha256": "c8114e39c90c0d34f52638c8a08b9dabf8c405b3dbfde91d6082f664bf0556ab"
+  },
+  "original_manuscript_sha256": "7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda",
+  "private_mapping_exclude_from_anonymous_archive": true,
+  "record_count": 15,
+  "records": [
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Real-data scale results and research decision:\nV39}. Immutable project report at commit\n\\texttt{fbcc98c} (full identity in link):\n\\href{https://github.com/priyankjairaj100/second/blob/fbcc98c6559de4b88ffc9c8b960cf680d89e29d3/docs/SCALE_RESULTS_V39.md}{report and evidence pointers}.\nOriginal completed workflow:\n\\href{https://github.com/priyankjairaj100/second/actions/runs/38023401448}{run 38023401448}.",
+      "original_citation_key": "v39",
+      "proposed_review_directory": "evidence/E01/",
+      "record_id": "E01",
+      "scope": "Seventeen complete first-stage observations compare representations and exact codes. The registered low-precision refusal and replay remain included. This is a single-stage development comparison, not a complete service or independent timing replication.",
+      "source_files": [
+        {
+          "bytes": 6370,
+          "path": "docs/SCALE_RESULTS_V39.md",
+          "sha256": "92bae228a0efd97418a297dcb99ec941db43078f027ca1fe95f721b9e07e923c"
+        },
+        {
+          "bytes": 55354,
+          "path": "campaigns/ci_scale_v39/analysis.json",
+          "sha256": "107af243d8aa0006b219def2f684aa4698a0b2a8bcaf0ab502c3f3b51a1b4e43"
+        },
+        {
+          "bytes": 104634,
+          "path": "validation/scale_metadata_audit_v40.json",
+          "sha256": "4e5aa001ad915be104e73d02a500b7c324e631c65b7b97e80de4dd690741b92f"
+        }
+      ],
+      "title": "Real-data stage-scale comparison"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Native Gram and streamed scale results: V40}.\nImmutable project report at commit\n\\texttt{fbcc98c} (full identity in link):\n\\href{https://github.com/priyankjairaj100/second/blob/fbcc98c6559de4b88ffc9c8b960cf680d89e29d3/docs/NATIVE_SCALE_RESULTS_V40.md}{report and evidence pointers}.\nOriginal completed workflow:\n\\href{https://github.com/priyankjairaj100/second/actions/runs/38025361543}{run 38025361543}.",
+      "original_citation_key": "v40",
+      "proposed_review_directory": "evidence/E02/",
+      "record_id": "E02",
+      "scope": "Twelve complete first-stage outputs agree, with native and Python source-archive comparisons. Strong Gram controls remain in the comparison. Payload and stage clocks exclude shared preparation and are not deployment costs.",
+      "source_files": [
+        {
+          "bytes": 7851,
+          "path": "docs/NATIVE_SCALE_RESULTS_V40.md",
+          "sha256": "57e35c04a40894439953c1630c87ddd7660cbea654f93226b4310928a3d0e3bb"
+        },
+        {
+          "bytes": 37416,
+          "path": "campaigns/ci_native_scale_v40/analysis.json",
+          "sha256": "9d429b68fa1f3efba59386e51d6778ff20d793091bed405d1235cd7128e0e642"
+        },
+        {
+          "bytes": 64394,
+          "path": "validation/native_scale_metadata_audit_v41.json",
+          "sha256": "04109d3968c5950b801d4eca019b6a24cd171d4bbbbad31a6a92446ab52e3d87"
+        }
+      ],
+      "title": "Native Gram and streamed stage controls"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Paper claim boundaries and evidence obligations}.\nV41 handoff, immutable commit\n\\texttt{fbcc98c} (full identity in link):\n\\href{https://github.com/priyankjairaj100/second/blob/fbcc98c6559de4b88ffc9c8b960cf680d89e29d3/docs/CLAIM_BOUNDARIES_V41.md}{target, claims, and remaining obligations}.",
+      "original_citation_key": "boundaries",
+      "proposed_review_directory": "evidence/E03/",
+      "record_id": "E03",
+      "scope": "Defines the calibration-reconstruction target and separates conditional proof, implementation and empirical obligations. This is a scope record, not an experiment or a completed evidence gate.",
+      "source_files": [
+        {
+          "bytes": 6399,
+          "path": "docs/CLAIM_BOUNDARIES_V41.md",
+          "sha256": "b4d87a13f5d7dd2a3c3188a7b9ff723b4985e3a30df07080de244b510e5b7f72"
+        }
+      ],
+      "title": "Target and claim boundaries"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Complete fixed-anchor service development\npilot: V43}. Frozen source \\texttt{304a9cc}:\n\\href{https://github.com/priyankjairaj100/second/blob/304a9cc73b3c263032f3ef6a02487b4d2df40fbe/research_v43/PROTOCOL.txt}{prospective protocol}.\nFull program and main byte audit identities are in\n\\path{local_runs/full-model-v43-20261010-b/program.json} and\n\\path{local_runs/full-model-v43-20261010-b/artifact-audit.json};\nthe supplemental receipt is\n\\path{local_runs/full-model-v43-20261010-b/postrun-audit.json}\n(\\texttt{cd03e4c3}), and the retained-payload check is\n\\path{validation/v43_local_archive.json}.",
+      "original_citation_key": "v43",
+      "proposed_review_directory": "evidence/E04/",
+      "record_id": "E04",
+      "scope": "Contains the prospective protocol, model/state audit, supplemental accounting and copied-artifact checks for the early service pilot. Its target, calibration workload and costs are specific to that pilot.",
+      "source_files": [
+        {
+          "bytes": 13596,
+          "path": "research_v43/PROTOCOL.txt",
+          "sha256": "73973c1c8e6a07fc04c04b0f358057ea57f63c64bf7e6e3b16172eed9634f0b2"
+        },
+        {
+          "bytes": 46407,
+          "path": "campaigns/csis_full_model_v43/program.json",
+          "sha256": "e350109ae0771afcd9bb94abf6bf40a8082110a76c33bcaaf7e23922a107ce4d"
+        },
+        {
+          "bytes": 117493,
+          "path": "campaigns/csis_full_model_v43/artifact-audit.json",
+          "sha256": "54cc9d3d82327d2f5cd4317b78156639bb5d80a1a6fc0920949f0ec592b27625"
+        },
+        {
+          "bytes": 54096,
+          "path": "campaigns/csis_full_model_v43/postrun-audit.json",
+          "sha256": "cd03e4c347464f13c39b528ea022313f2b3858c1ad8ca0bbff665cd5623aa99b"
+        },
+        {
+          "bytes": 14262,
+          "path": "validation/v43_local_archive.json",
+          "sha256": "aeb64f3c0db34ec9963aff77060269c10008f238d3f51a9a183ab7ea9d30a540"
+        },
+        {
+          "bytes": 2941,
+          "path": "validation/v48_v43_full_archive.json",
+          "sha256": "65acc4daf8ccc5845ac869272f24944380ec51917e411d86d8183310956708c1"
+        }
+      ],
+      "title": "Early complete fixed-anchor service"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Bounded exposed-quality diagnostic: V44}.\nRegistered source \\texttt{db95069}:\n\\href{https://github.com/priyankjairaj100/second/blob/db95069b2c3484ac615052fb1c1a711c8c773c2d/research_v44/PROTOCOL.txt}{prospective protocol}.\nFull program identity is retained in\n\\path{local_runs/exposed-quality-v44-20261010-b/program.json}; results and\nper-article losses are in\n\\path{local_runs/exposed-quality-v44-20261010-b/quality/outputs/completion.json}\n(\\texttt{98870a81}).",
+      "original_citation_key": "v44",
+      "proposed_review_directory": "evidence/E05/",
+      "record_id": "E05",
+      "scope": "Preserves the bounded, previously exposed article screen and its actual losses. This diagnostic does not establish untouched quality or a confirmatory result.",
+      "source_files": [
+        {
+          "bytes": 5098,
+          "path": "research_v44/PROTOCOL.txt",
+          "sha256": "e2a993fb258566a2e307368d2e2cb2e7e7c93c1b411b09114cd37811515a5fbf"
+        },
+        {
+          "bytes": 53151,
+          "path": "campaigns/csis_exposed_quality_v44/program.json",
+          "sha256": "e3d7b6dfd1ad9199a180aac2e706ef8b2334c709947b2b8b6e90e4a81dc3e02c"
+        },
+        {
+          "bytes": 32283,
+          "path": "campaigns/csis_exposed_quality_v44/quality/outputs/completion.json",
+          "sha256": "98870a817e1e7183424158cb392929b7a971e9c89b876ad878f0ecf787fdab4c"
+        },
+        {
+          "bytes": 5235,
+          "path": "validation/v44_local_archive.json",
+          "sha256": "83ea8eae8ed6d34af99975d4ac374a724e84a514d09cfa0d4146dbe483d62bc3"
+        }
+      ],
+      "title": "Early exposed-quality diagnostic"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{CPU parameter export and CUDA likelihood parity: V47}.\nFrozen source \\texttt{c811dec}:\n\\href{https://github.com/priyankjairaj100/second/blob/c811dec/research_v47/PROTOCOL.txt}{prospective protocol}.\nGPU program \\texttt{620076c6}; CPU export program \\texttt{1803adfd}.\nResults: \\path{campaigns/csis_cuda_parity_v47/parity/outputs/completion.json};\nlocal copied-evidence audit: \\path{validation/v47_local_archive.json}.",
+      "original_citation_key": "v47",
+      "proposed_review_directory": "evidence/E06/",
+      "record_id": "E06",
+      "scope": "Binds parameter-array export and same-model likelihood parity. GPU evaluator agreement does not prove GPU calibration equivalence or GPU speedup.",
+      "source_files": [
+        {
+          "bytes": 2395,
+          "path": "research_v47/PROTOCOL.txt",
+          "sha256": "1cc15520cdd1351b8855185a2680fdf69447a97666fe235b164238859a0a4e17"
+        },
+        {
+          "bytes": 47939,
+          "path": "campaigns/csis_cuda_parity_v47/program.json",
+          "sha256": "620076c67ae79ee56de784ecd4c6e49ef3b4b22f45742f72956821b1e416cf54"
+        },
+        {
+          "bytes": 9604,
+          "path": "campaigns/csis_cuda_parity_v47/parity/outputs/completion.json",
+          "sha256": "873647518224bcf87a2dc6ab41841581ed756a023f21eb758fbed30ff8e33161"
+        },
+        {
+          "bytes": 8595,
+          "path": "validation/v47_local_archive.json",
+          "sha256": "4c38efd936a074d8895558acd3118c6784e100a16ee09c887d2ac6a04abadda7"
+        }
+      ],
+      "title": "Parameter export and CPU/CUDA likelihood parity"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Larger C4 preparation: terminal failure and\nbounded software diagnosis, V49}.\nProgram \\texttt{02c7f6cf}; Slurm preparation job 13228; dependency cancellations\n13229--13235. Archived sealed receipts and partial progress:\n\\path{campaigns/csis_full_model_v45_failure}; local integrity check:\n\\path{validation/v49_v45_failure_audit.json}. No complete larger-model result.",
+      "original_citation_key": "v49failure",
+      "proposed_review_directory": "evidence/E07/",
+      "record_id": "E07",
+      "scope": "The larger preparation failed at its CPU cap after eleven certified stages. The charged cost and seven cancelled dependents remain part of the record. No complete model resulted.",
+      "source_files": [
+        {
+          "bytes": 629542,
+          "path": "campaigns/csis_full_model_v45_failure/program.json",
+          "sha256": "02c7f6cfc0240bc34f2a5faec05dfb5392b81d12e5ac4cd95279167ef99c6d50"
+        },
+        {
+          "bytes": 180,
+          "path": "campaigns/csis_full_model_v45_failure/slurm-accounting.txt",
+          "sha256": "75c040e31aa4cda2298a9248866f1f90ebc0b04aa30f5d0fa5622e3ba8d25ba0"
+        },
+        {
+          "bytes": 9745,
+          "path": "validation/v49_v45_failure_audit.json",
+          "sha256": "94a2534d1aa11bf07c4e20c65261bf6756f78135e2ef9d7562900ecffe147359"
+        },
+        {
+          "bytes": 969,
+          "path": "validation/v49_v45_terminal_report.json",
+          "sha256": "024dd27785884c0a54d1f750a64aa7d0616cd39a74481a1667ceb89f53688720"
+        }
+      ],
+      "title": "Capped preparation failure"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Real wide-stage feasibility gate: V51}.\nFrozen source \\texttt{2c1a2bc}:\n\\href{https://github.com/priyankjairaj100/second/blob/2c1a2bc699e4633bdab7243bb9e042be2f884c83/research_v51/PROTOCOL.txt}{prospective protocol}.\nProgram \\texttt{af83f983}; Slurm job 13276.\nTerminal metadata: \\path{campaigns/csis_wide_stage_v51_terminal}.\nFull-archive and point-pair integrity checks:\n\\path{validation/v51_terminal_audit.json} and\n\\path{validation/v52_v51_point_pair_audit.json}.\nThe compressed-input arm refused certification; the complete gate failed.",
+      "original_citation_key": "v51",
+      "proposed_review_directory": "evidence/E08/",
+      "record_id": "E08",
+      "scope": "The optimized and historical point solvers agree, but the compressed-input arm refused certification. The complete feasibility gate failed; the point-pair check does not erase that failure.",
+      "source_files": [
+        {
+          "bytes": 5049,
+          "path": "research_v51/PROTOCOL.txt",
+          "sha256": "86df75bf2bfec4c89609411122a551acdf82937b876256b01fe9eed17b59c5c2"
+        },
+        {
+          "bytes": 72801,
+          "path": "campaigns/csis_wide_stage_v51_terminal/program.json",
+          "sha256": "af83f983447e022a5e5b386ddf60eb62db804db57dbd652212eab51fe9b7d10b"
+        },
+        {
+          "bytes": 47203,
+          "path": "validation/v51_terminal_audit.json",
+          "sha256": "0bb7ab7e8fd728026c38dd8c64bda42857a408aee9b7262ccf0f29a6afaf61e8"
+        },
+        {
+          "bytes": 1720,
+          "path": "validation/v52_v51_point_pair_audit.json",
+          "sha256": "60330798fda60187cc60d500f7a447577840f88eb7f46edec86346666dd1f2c4"
+        }
+      ],
+      "title": "Wide-stage feasibility refusal"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Adaptive 48-bit wide-stage diagnostic: V52}.\nFrozen source \\texttt{6b70d70}:\n\\href{https://github.com/priyankjairaj100/second/blob/6b70d703a716cef744f49ba1c55add3a691c3267/research_v52/PROTOCOL.txt}{prospective diagnostic protocol}.\nProgram \\texttt{f22f6667}; Slurm job 13291.\nTerminal metadata: \\path{campaigns/csis_precision48_v52};\nactual-artifact integrity check: \\path{validation/v52_terminal_audit.json}.\nThe same known development root was reused; no untouched quality evaluation.",
+      "original_citation_key": "v52",
+      "proposed_review_directory": "evidence/E09/",
+      "record_id": "E09",
+      "scope": "A separately registered higher-precision follow-up certified the same known development stage. The root was reused; this is an adaptive diagnostic, not untouched quality or prospective confirmation.",
+      "source_files": [
+        {
+          "bytes": 3617,
+          "path": "research_v52/PROTOCOL.txt",
+          "sha256": "770e4935927b3b1acf147b357f8cddbc30a7611af374a0d7a3b16355e05a60cc"
+        },
+        {
+          "bytes": 79295,
+          "path": "campaigns/csis_precision48_v52/program.json",
+          "sha256": "f22f6667500b4205107929bd4607c00730ed4df61db1ac13f7f87137a5838ec0"
+        },
+        {
+          "bytes": 24998,
+          "path": "validation/v52_terminal_audit.json",
+          "sha256": "7f88ea5c081547c5189b18cb3922794f8e6a39af17de81b31f7bcb4123055d5e"
+        }
+      ],
+      "title": "Adaptive higher-precision diagnostic"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Explicit compressed48 full-model integration and archive admission: V53--V54}.\n\\href{https://github.com/priyankjairaj100/second/blob/9826a95/research_v54/PROTOCOL.txt}{Prospective protocol};\n\\href{https://github.com/priyankjairaj100/second/blob/7f3b10d/research_v53/PROTOCOL.txt}{numerical and resource policy}.\nProgram: \\path{03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b}.\nLaunch metadata: \\path{campaigns/csis_full_model48_v54_launch}.\nTerminal results and both completed audits are preserved in the V58 metadata archive below.",
+      "original_citation_key": "v54",
+      "proposed_review_directory": "evidence/E10/",
+      "record_id": "E10",
+      "scope": "Preserves the numerical/resource policy, the failed admission attempt, and the later separate full-model registration. Completed outcomes are indexed in E12; launch metadata alone is not a result.",
+      "source_files": [
+        {
+          "bytes": 3673,
+          "path": "research_v53/PROTOCOL.txt",
+          "sha256": "b53ddb902df5062f440c0b4d70444824642227197b72c5d80977d2a226720f99"
+        },
+        {
+          "bytes": 1661,
+          "path": "research_v54/PROTOCOL.txt",
+          "sha256": "93b6aba0743cfff766c4e7f0ad37bb267ed5841558f97e50bb0c9616f24ee7ca"
+        },
+        {
+          "bytes": 1541,
+          "path": "validation/v53_admission_failure_audit.json",
+          "sha256": "9c1b638fda7060816cda81a47de14133063f928c5254f1c2d7c6789ed2c5016e"
+        },
+        {
+          "bytes": 642331,
+          "path": "campaigns/csis_full_model48_v54_launch/program.json",
+          "sha256": "03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b"
+        },
+        {
+          "bytes": 7309,
+          "path": "validation/v54_launch_audit.json",
+          "sha256": "d826c579a72cecce7cc922345a09be81fba4fa0c244e7d146a1498ffcb24abac"
+        }
+      ],
+      "title": "Full-model integration and admission history"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Conditional full-model quality and GPU parity: V55--V56}.\n\\href{https://github.com/priyankjairaj100/second/blob/792400b/research_v55/PROTOCOL.txt}{CPU quality protocol};\n\\href{https://github.com/priyankjairaj100/second/blob/5dcd24c/research_v56/PROTOCOL.txt}{GPU parity protocol}.\nSoftware jobs13324 and13328 passed18 and12 tests respectively, with zero skips.\nJobs13325--13327 and13329 completed. CPU pooled quality failed; GPU likelihood parity passed.\nLaunch evidence: \\path{validation/v56_launch_audit.json}.",
+      "original_citation_key": "v56plan",
+      "proposed_review_directory": "evidence/E11/",
+      "record_id": "E11",
+      "scope": "Prospective CPU-quality and GPU-parity protocols and launch checks. The software checks qualify execution only. Actual adverse quality and parity outcomes are indexed in E12.",
+      "source_files": [
+        {
+          "bytes": 4557,
+          "path": "research_v55/PROTOCOL.txt",
+          "sha256": "497824fa57628deefb4e91c982f1d291e2323816a451a007898c4818bfa06bcc"
+        },
+        {
+          "bytes": 3153,
+          "path": "research_v56/PROTOCOL.txt",
+          "sha256": "c0d5f8a4c27baf0d7ae275b8e89b875496956582ba91cfe6e1cfaeffa9cae46a"
+        },
+        {
+          "bytes": 4075,
+          "path": "validation/v56_launch_audit.json",
+          "sha256": "bd2e1911e77fcc595aa7474ee14bc86812a145bae0109f5214d7731e7a7bc63c"
+        }
+      ],
+      "title": "Quality and GPU parity protocols"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Terminal complete-model, quality and GPU evidence: V58 archive}.\nCompleted V54 program \\texttt{03a6181b}; V55 \\texttt{4de04c4a}; V56 \\texttt{8c3f4653}.\nMetadata: \\path{campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz}.\nLocal integrity and arithmetic: \\path{validation/v58_terminal_metadata_check.json}.\nThe archive preserves the failed CPU quality guard. No new numerical execution\nor independent local inference replay was performed for this archival check.",
+      "original_citation_key": "v58terminal",
+      "proposed_review_directory": "evidence/E12/",
+      "record_id": "E12",
+      "scope": "Records complete-model/state agreement, the failed pooled quality guard and passing GPU likelihood parity. The maximum-article guard passing does not override the pooled failure. Portable metadata checks do not independently repeat inference.",
+      "source_files": [
+        {
+          "bytes": 1133669,
+          "path": "campaigns/csis_terminal_v54_v56_metadata_20261013.tar.gz",
+          "sha256": "9def1cc4d01ea52930601ec0a457bc13755077ad0af77fddf9732bfc507b992e"
+        },
+        {
+          "bytes": 26939,
+          "path": "validation/v58_terminal_metadata_check.json",
+          "sha256": "6fb9d5bb224822e21c94a2c4b996caede545317e290edb7f2021fff322eb4415"
+        }
+      ],
+      "title": "Nearest-anchor service and failed quality guard"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Adaptive full-precision-anchor quality screen: V59}.\n\\href{https://github.com/priyankjairaj100/second/blob/60a514098511526924cb5746a2a61851b5f6bd23/research_v59/PROTOCOL.txt}{Frozen protocol and numerical source}.\nProgram \\texttt{4a22292c}; jobs13548--13551 completed; all49 software checks passed.\nCompletion \\texttt{2c807129} and actual-artifact audit \\texttt{286a2c74} preserve\npassing exposed quality guards without a repair-service or confirmation claim.\nMetadata: \\path{campaigns/csis_terminal_v59_metadata_20261014.tar.gz}.\nPortable check: \\path{validation/v59_terminal_metadata_check.json}.",
+      "original_citation_key": "v59terminal",
+      "proposed_review_directory": "evidence/E13/",
+      "record_id": "E13",
+      "scope": "Records the full-precision feature-teacher candidate and both passing guards on eight exposed articles. This is an adaptive model-only screen, not an untouched test or a repair-service measurement.",
+      "source_files": [
+        {
+          "bytes": 7388,
+          "path": "research_v59/PROTOCOL.txt",
+          "sha256": "ef907669b3770b5baba97d3a13921a7891e038b2ce2db3bcd3f386691fbd044d"
+        },
+        {
+          "bytes": 538971,
+          "path": "campaigns/csis_terminal_v59_metadata_20261014.tar.gz",
+          "sha256": "aecceb538d03b798f11c914c672b6daac86eaab3eac60dc72434544d823084f3"
+        },
+        {
+          "bytes": 116365,
+          "path": "validation/v59_terminal_metadata_check.json",
+          "sha256": "0843c877c78d47208ba059cae6470c6976adc0d7b61d984a341a04291a9cf3c8"
+        }
+      ],
+      "title": "Adaptive original-checkpoint quality screen"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Project \\emph{second}. 2026. \\emph{Original-checkpoint repair service and separate\naudit recovery: V61--V62}.\n\\href{https://github.com/priyankjairaj100/second/blob/codex/second-cluster-v42/research_v62/PROTOCOL.txt}{Recovery protocol}.\nOriginal failed gate: \\path{campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz}.\nRecovered audits: \\path{campaigns/csis_terminal_v62_recovery_metadata_20261016.tar.gz}.\nPortable check: \\path{validation/v62_recovery_metadata_check.json}.\nJobs15150--15151 verify existing artifacts; no numerical or quality rerun.",
+      "original_citation_key": "v62terminal",
+      "proposed_review_directory": "evidence/E14/",
+      "record_id": "E14",
+      "scope": "Records eight actual model/state comparisons and the quality-screen model linkage. Preserve the original audit timeout and separately charged recovery. Compression saves state but is slower than cached lossless; hybrid is the stronger first-endpoint control. Metadata checks do not rerun calibration.",
+      "source_files": [
+        {
+          "bytes": 5876,
+          "path": "research_v61/PROTOCOL.txt",
+          "sha256": "6b21c851caf34079521b88a47f9c5c11986fa962bd3f4ce37e240a80d115eebe"
+        },
+        {
+          "bytes": 3920,
+          "path": "research_v62/PROTOCOL.txt",
+          "sha256": "e33bf78b4379f8d54b72f0672a12f899458a5964c2b0dda2dd39b8d9d0fb870d"
+        },
+        {
+          "bytes": 3761981,
+          "path": "campaigns/csis_terminal_v61_failed_audit_metadata_20261015.tar.gz",
+          "sha256": "d0ad4f1085b5c8cb5148de2a6608f8cc1d844661e7262882da2f483f5f9e8094"
+        },
+        {
+          "bytes": 380397,
+          "path": "campaigns/csis_terminal_v62_recovery_metadata_20261016.tar.gz",
+          "sha256": "4b146e74e1d60b9939cffa8d077d384685d3bfa1716db3e2e15ce071f2cd3b99"
+        },
+        {
+          "bytes": 18246,
+          "path": "validation/v62_recovery_metadata_check.json",
+          "sha256": "3e4c84b53967a1c3f8aaae45120d0853c704dedbb1e8ed518c6f29204c43aad1"
+        }
+      ],
+      "title": "Original-checkpoint service and separate audit recovery"
+    },
+    {
+      "anonymous_derivatives_created": false,
+      "direct_source_bytes_verified": true,
+      "original_bibliography_tex": "Second research project. 2026.\n\\emph{Audited source-local modern lossless archive comparison (V63).}\nFrozen registration, source/runtime bindings, actual-byte audit and terminal\nmetadata archive, 16 October.\n\\href{https://github.com/priyankjairaj100/second/blob/codex/second-cluster-v42/docs/TERMINAL_EVIDENCE_V63.txt}{Evidence and scope}.",
+      "original_citation_key": "v63terminal",
+      "proposed_review_directory": "evidence/E15/",
+      "record_id": "E15",
+      "scope": "Actual saved archives restore original feature/state bytes and preserve supplied codes. The small extra saving and added deployment dependency remain visible. This is an artifact experiment; it supplies no new calibration, likelihood or complete-service latency.",
+      "source_files": [
+        {
+          "bytes": 6906,
+          "path": "research_v63/PROTOCOL.txt",
+          "sha256": "bacb6d4b5756755187535e97b1bafae31764f722da58bfd107885223ca9fc387"
+        },
+        {
+          "bytes": 4428,
+          "path": "docs/TERMINAL_EVIDENCE_V63.txt",
+          "sha256": "027edaa8e6006bc4e36c7c690e8b91f1ce37e2b5825520b0352e43749b666130"
+        },
+        {
+          "bytes": 163318,
+          "path": "campaigns/csis_terminal_v63_lossless_metadata_20261016.tar.gz",
+          "sha256": "ec9435ce4cfe2bfb67db2f3d2f8ab7e4b9ebdc06feaea3cf8b6daaa436757f23"
+        },
+        {
+          "bytes": 2548,
+          "path": "validation/v63_terminal_metadata_check.json",
+          "sha256": "d8a799b33990689b2bc3142f9e64062ded44690a34b2a0986a95f9fc0330faaa"
+        }
+      ],
+      "title": "Modern lossless artifact control"
+    }
+  ],
+  "remaining": [
+    "Review and label each anonymous derivative with its own hash; preserve original commitments in the private map",
+    "Curate underlying protocols, sources, receipts and costs through an explicit file allowlist; direct pointers are not their dependency closure",
+    "Remove author/repository/host identity from review copies without mislabelling them as executed bytes",
+    "Replace manuscript project bibliography entries only when the accompanying evidence artifact is actually assembled and checked",
+    "Add actual new experiment records after successful terminal reconciliation; preserve every adverse outcome",
+    "Verify clean extraction, reproduction instructions, licensing and the final manuscript citation mapping"
+  ],
+  "schema": "evidence-index-provenance-map-v69",
+  "source_checkpoint": "7699ee27946ff9883f83ed227306d25622f2a50e",
+  "status": "index_prepared_original_bytes_checked_derivatives_pending",
+  "unique_direct_files": 54
+}

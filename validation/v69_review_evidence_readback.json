@@ -1,0 +1,18 @@
+{
+  "captured_at_utc": "2026-10-16T13:57:41.677909+00:00",
+  "checks": {
+    "adaptive_quality_passed_but_both_exposed": true,
+    "all_lifetime_sums": true,
+    "capped_failure_preserved": true,
+    "failed_audit_preserved": true,
+    "four_payload_hashes_match": true,
+    "lossless_scope_artifact_only": true,
+    "nearest_anchor_quality_failed": true,
+    "paired_article_ids": true,
+    "predictions": true
+  },
+  "full_reproduction_verified": false,
+  "numerical_or_binary_audit": false,
+  "source_report": "validation/v69_review_evidence.json",
+  "status": "passed_readback_summary_consistency"
+}

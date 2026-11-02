@@ -1,0 +1,49 @@
+V78 prospective actual-parser software qualification, 23 October 2026
+
+Question: does bounded request-scoped canonical-choice reuse preserve the
+actual V63 lossless parser/archive contract on its pinned Linux runtime?
+V76 passed job15897. This new attempt qualifies the fair lossless control;
+it is not a repeat or repair of V76. No model, corpus, empirical service,
+historical launcher or quality article is executed. Scheduler stays PAUSED.
+
+One fresh namespace local_runs/control-software-v78-20261023-a. Bind all
+source bytes and existing read-only V63 Zstandard dependency bytes before
+submission; preserve numerical checkout f900999 and every historical source.
+Reuse pinned Python3.12.14, NumPy2.3.5, gmpy2 2.3.2, python-zstandard0.25.0
+with C backend libzstd1.5.7 and the existing container-13155 commitment.
+
+Fixed sequence: all17 V63 codec/archive legacy tests in reference mode and
+then with the qualified candidate enabled;9 stdlib cache mechanics tests;
+8 additional actual parser/archive tests. Require exact counts, no failures,
+errors or skips. Exercise tighter per-call limits/expected hashes after cache
+hits, every canonical-mode alternative, metadata/runtime drift, signed zero/
+subnormal/extreme words, all encoder measurements, eviction/oversize behavior,
+all prefix truncations plus300 seeded mutations, and archive identity binding.
+The restored archive is compared to a reference computed outside the cache.
+Seeds20261023 mutations and20261024 profiles are fixed before execution.
+
+Profile generated128x768 and128x3072 finite arrays with a zero every31st
+column. For each shape, six alternating reference/optimized pairs. Every
+sample performs three complete parse/decode calls and checks exact bytes.
+Optimized samples create and clear a fresh32MiB logical cache inside the
+clock; require one miss and two hits. Store all samples and byte identities.
+This isolates repeated parser work; it is not full-request/model speed or
+transfer. Compiler/library load, tests and fixture creation remain in job cost.
+
+Use1CPU/thread, csis.mn1,16GiB AS/scheduler memory,2GiB per file,10minute
+wall, inherited300/301 CPU seconds per process and602 aggregate parent plus
+waited-child CPU seconds. Pin one allocated core. No cap increases or retries.
+Verify every registered source and all11 installed dependency files before
+and after. Cache logical-byte accounting is not a formal RSS bound; retain
+process and scheduler memory measurements. No cross-request factor retention.
+
+Create exclusive registration and intent; submit one held no-requeue job,
+record and verify its exact resource assignment before releasing it once.
+Any source drift, failed check, unknown submission, skip, cap exhaustion or
+timeout closes this attempt without retry. Preserve partial outputs and logs.
+Success requires exact-count checks, output/source hashes, bounded actual CPU
+and terminal Slurm COMPLETED0:0. Root review is not independent review.
+
+No new scientific claim follows from passing this gate. The next distinct
+registration must validate complete service integration, fresh reconstruction,
+fair contemporaneous controls, request clocks and bounded phase accounting.

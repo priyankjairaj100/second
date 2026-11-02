@@ -1,0 +1,64 @@
+{
+  "status": "complete",
+  "registration_sha256": "576591b9ba423781f9c27719b7182c68eff54c31fc222352a218ef537f870e52",
+  "job_id": "17186",
+  "error": null,
+  "generated_software_only": true,
+  "reference_unit_checks": 3,
+  "generated_cases": 406,
+  "summary": {
+    "box_coefficient_containment": {
+      "cases": 12,
+      "accepted": 0,
+      "refused": 0
+    },
+    "box_dispatch": {
+      "cases": 48,
+      "accepted": 48,
+      "refused": 0
+    },
+    "edge_dispatch": {
+      "cases": 10,
+      "accepted": 10,
+      "refused": 0
+    },
+    "native_add_multiply": {
+      "cases": 202,
+      "accepted": 0,
+      "refused": 0
+    },
+    "overflow_dispatch": {
+      "cases": 2,
+      "accepted": 0,
+      "refused": 2
+    },
+    "point_coefficient_containment": {
+      "cases": 36,
+      "accepted": 0,
+      "refused": 0
+    },
+    "point_dispatch": {
+      "cases": 96,
+      "accepted": 92,
+      "refused": 4
+    }
+  },
+  "production_sources_unchanged": true,
+  "independent_reference": "exact Gauss-Jordan conditional minimization; no production oracle import",
+  "elapsed_seconds": 2.7120460998266935,
+  "process_cpu_seconds": 1.702333404,
+  "child_cpu_seconds": 1.247336,
+  "peak_rss_kib": 45700,
+  "host": "csis.mn1",
+  "python": "3.12.14 (main, Sep 19 2026, 03:36:28) [GCC 12.2.0]",
+  "artifacts": {
+    "actual-arithmetic.json": {
+      "bytes": 90846,
+      "sha256": "481e1075b2c60c29bac9503b78c831a6c1ed6f20373e5f9980127fedc2569685"
+    },
+    "attempt.json": {
+      "bytes": 117,
+      "sha256": "69777025af912f6e88cbcde77a4534f3e82482d2a681b3a37d8b50353feced92"
+    }
+  }
+}

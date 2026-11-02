@@ -1,0 +1,81 @@
+{
+  "archive": {
+    "bytes": 6194056,
+    "path": "reports/development-selection-metadata-v71.zip",
+    "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
+  },
+  "changed_files": {
+    "registration.json": {
+      "derivative": {
+        "bytes": 168806,
+        "sha256": "d5805c6b0e644e7c70b1550eb2c63656c84e97d138be2f0889c39b2aef112458"
+      },
+      "original": {
+        "bytes": 183993,
+        "sha256": "ddcf2b686ff0ed4c4401a4defa361bcd956a32d3697dbe1b71485744c513b3cb"
+      }
+    }
+  },
+  "exclude_from_anonymous_review": true,
+  "mapping": {
+    "/nfs_home/software/envs/pytorch-12.8": "/review/runtime",
+    "/nfs_home/users/poonam/second-20261010": "/review/project",
+    "CSIS": "REVIEW_CLUSTER",
+    "csis.": "reviewcluster.",
+    "csis_": "reviewcluster_",
+    "poonam": "review_user",
+    "priyankjairaj100/second": "REVIEW_OWNER/REVIEW_REPOSITORY"
+  },
+  "original_files": {
+    "acquisition.json": {
+      "bytes": 542,
+      "sha256": "7ff3115c714667282ff5568868be0fbd8bf31f71d9fcfad68f829dd8405fd675"
+    },
+    "after.json": {
+      "bytes": 5469684,
+      "sha256": "fc31eee4074884af4b7966eeda0ffe3fc41e13595d3f535d9b6c9011cb248210"
+    },
+    "audit.json": {
+      "bytes": 838,
+      "sha256": "dd9eceaf4fbdfa8734a24b55c14b182424a2f2092c41e18aed62d09c8301b95d"
+    },
+    "before.json": {
+      "bytes": 3611705,
+      "sha256": "5ea584ef747c2cfa8b89b7512c0ba984d0417e0e4793b018f2641df92fd8c3f0"
+    },
+    "checks.json": {
+      "bytes": 622,
+      "sha256": "4712c4864dab1db0b874739fd0904b861e4470f28328ceeddd401d593a3680f6"
+    },
+    "data.json": {
+      "bytes": 133145,
+      "sha256": "5e21869f7dfb396ac9b375f7e3c382f0eadf50f497f045d0b629c4087fefdf65"
+    },
+    "frame_audit.json": {
+      "bytes": 543366,
+      "sha256": "47e56859d318a96deeeb82b84358467a3190d52076553741eb52b9aa7eaceea6"
+    },
+    "historical-quality-exclusions.json": {
+      "bytes": 5224,
+      "sha256": "3a620e938c40d35daed69674f703bcb16840178cc7d9527427650a6e0de28876"
+    },
+    "inventory.json": {
+      "bytes": 2603538,
+      "sha256": "1ee01d8fc6f20875c1f3ef63c135663531dbf10237b3a8323d6b2d3a2115e201"
+    },
+    "registration.json": {
+      "bytes": 183993,
+      "sha256": "ddcf2b686ff0ed4c4401a4defa361bcd956a32d3697dbe1b71485744c513b3cb"
+    },
+    "selection.json": {
+      "bytes": 132597,
+      "sha256": "86b76106e4eb855161db9e680dba4d81e6a2c5dfcecbd4456f025e36f1efcc32"
+    }
+  },
+  "original_observation": {
+    "bytes": 6202754,
+    "path": "campaigns/csis_v71_selection_metadata_20261018_a.tar.gz",
+    "sha256": "0b538dc3d3ea3e161c63354593fbc379264ce06bc2d9c3bfd42c0f6349fbb863"
+  },
+  "schema": "private-selection-derivation-v71"
+}

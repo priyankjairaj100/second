@@ -1,0 +1,35 @@
+V47 separates CPU parameter decoding from ordinary CUDA likelihood evaluation.
+V46 job13244 failed before any likelihood due to the certified CPU checkpoint
+loader's libm identity guard on GPU Python3.10. Its22CPU seconds remain settled.
+Never bypass or monkey-patch that guard. Preserve V46 source and all receipts.
+
+New CPU-only export phase602CPU maximum: one600CPU/900wall worker,8GiB host/AS,
+2GiB file cap, one thread, pinned exact CPU container. Load the same checkpoint
+and unchanged NumPy evaluator; export every parameter as exact binary64 arrays.
+Use an uncompressed non-pickle NPZ and manifest with shape/type/word SHA per array.
+Read every exported array back and verify all words. No inference or data selection.
+
+Then a separate GPU phase1202CPU maximum,1200CPU/1500wall worker,16GiB Slurm host
+RAM,128TiB CUDA virtual address allowance,8GiB PyTorch allocator, one A10080GB,
+one CPU/thread,2GiB files and1800second Slurm allocation. Register actual GPU
+runtime plus the completed, settled, source-bound export. The prior caps are
+not reused. All jobs --no-requeue and afterok; failures stop the dependency chain.
+
+GPU decoding uses the sealed CPU arrays. It never constructs the certified finite
+CPU decoder on the GPU host. Verify every NPZ array and every CPU-GPU-CPU copy
+by exact binary64 words, and preserve the unchanged V46 TorchQualityDecoder.
+Fixed/sequential four-bit codes, complete state, row grids, checkpoint, all eight
+exposed128-token articles and all sixty exclusions remain the V44 identities.
+
+Same frozen gate: all32 absolute per-article mean-NLL deviations<=1e-8 against
+V44 CPU results. First actual full-precision batch must pass before continuing.
+Synthetic decoder/CUDA fixtures and snapshot corruption checks precede inference.
+Float64, noAMP/TF32, deterministic algorithms, CUBLAS4096:8, causal full attention.
+One article at a time; synchronized timing includes each declared likelihood.
+No hidden warmup, automatic retry, changed gate, new article or heldout exposure.
+Record adverse parity as failure of this engineering gate, not threshold tuning.
+
+Passing is observed likelihood parity on these32 cases only. It is not certified
+inference, exact calibration equivalence, portable universal numerical equality,
+a controlled GPU speedup, prediction-quality confirmation or ACL readiness.
+The V45 full-model experiment remains frozen and independent.

@@ -1,0 +1,30 @@
+Pure structural screening, V139. No calibration or model inference ran.
+
+The current optimized point-token policy admits a four-record DistilGPT2 shape
+with128tokens/record and fixed9GiB resident reservation. For a complete compressed
+root request, box plus full point fallback reserves603,301,502,976 work units.
+The proposed13-,32- and128-record shapes exceed the unchanged stage and cumulative
+work caps under this policy. At13records the widest stage's point route alone
+requires234,682,081,280 units against64,000,000,000. This is a bound on a declared
+complete numerical schedule, not a measurement of actual runtime.
+
+A separately selected streamed point route passes13-record geometry, including
+59,709,087,744 units for the3072-wide stage. It is not the current optimized policy,
+not a pass for the compressed service plus fallback, and not evidence of numerical
+completion. At32records even the streamed widest stage exceeds the stage cap
+(83,377,545,216 units).128records also fail. No cap was raised, and no dataset or
+checkpoint was loaded. Current MatchedService additionally restricts roots to4;
+new root shapes need an explicit implementation and independent qualification.
+
+The isolated codec accepts16,24,32,40,48bits. The complete frozen service format,
+however, binds48bit descriptors and rejects other values. An empirical precision
+sweep therefore requires a separately versioned representation/validator and
+whole-service qualification; simply changing an encoder parameter is invalid.
+No old source is to be modified. This finding is preparation, not a precision-
+versus-success curve. Minimal cold results still govern whether to expand timing.
+
+Run from repository root: .venv/bin/python -B -m research_v139.admission
+The report includes candidate requirements even for rejected routes; zero values
+in dispatcher selected-route fields are not treated as zero-cost computations.
+A failed initial local invocation by path (missing package import path) performed
+no numerical work; the module invocation is the supported entry point.

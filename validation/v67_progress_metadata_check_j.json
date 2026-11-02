@@ -1,0 +1,252 @@
+{
+  "actual_model_state_audit_repeated_locally": false,
+  "archive": {
+    "bytes": 248306,
+    "sha256": "5ac6c303343976eb81d6f75195f78fa46c9894acf76b938cca844a3739bc0cf2"
+  },
+  "captured_at_utc": "2026-10-16T13:42:31.750313+00:00",
+  "copied_files": 270,
+  "frozen_sources_verified": 469,
+  "jobs": {
+    "15261": {
+      "elapsed": "00:00:11",
+      "end": "2026-10-16T15:16:55",
+      "exit_code": "0:0",
+      "name": "second67-checks",
+      "node": "csis.mn1",
+      "start": "2026-10-16T15:16:44",
+      "state": "COMPLETED",
+      "total_cpu": "00:09.977"
+    },
+    "15262": {
+      "elapsed": "01:55:09",
+      "end": "2026-10-16T17:13:01",
+      "exit_code": "0:0",
+      "name": "second67-prepare",
+      "node": "csis.mn1",
+      "start": "2026-10-16T15:17:52",
+      "state": "COMPLETED",
+      "total_cpu": "01:54:28"
+    },
+    "15263": {
+      "elapsed": "01:22:46",
+      "end": "2026-10-16T18:35:47",
+      "exit_code": "0:0",
+      "name": "second67-hybrid-1",
+      "node": "csis.mn1",
+      "start": "2026-10-16T17:13:01",
+      "state": "COMPLETED",
+      "total_cpu": "01:22:10"
+    },
+    "15264": {
+      "elapsed": "00:36:43",
+      "end": "Unknown",
+      "exit_code": "0:0",
+      "name": "second67-compressed-1",
+      "node": "csis.mn1",
+      "start": "2026-10-16T18:35:48",
+      "state": "RUNNING",
+      "total_cpu": "00:00:00"
+    },
+    "15265": {
+      "elapsed": "00:00:00",
+      "end": "Unknown",
+      "exit_code": "0:0",
+      "name": "second67-cold-1",
+      "node": "None assigned",
+      "start": "Unknown",
+      "state": "PENDING",
+      "total_cpu": "00:00:00"
+    },
+    "15266": {
+      "elapsed": "00:00:00",
+      "end": "Unknown",
+      "exit_code": "0:0",
+      "name": "second67-cached-1",
+      "node": "None assigned",
+      "start": "Unknown",
+      "state": "PENDING",
+      "total_cpu": "00:00:00"
+    },
+    "15267": {
+      "elapsed": "00:00:00",
+      "end": "Unknown",
+      "exit_code": "0:0",
+      "name": "second67-modern-1",
+      "node": "None assigned",
+      "start": "Unknown",
+      "state": "PENDING",
+      "total_cpu": "00:00:00"
+    },
+    "15268": {
+      "elapsed": "00:00:00",
+      "end": "Unknown",
+      "exit_code": "0:0",
+      "name": "second67-modern-2",
+      "node": "None assigned",
+      "start": "Unknown",
+      "state": "PENDING",
+      "total_cpu": "00:00:00"
+    },
+    "15269": {
+      "elapsed": "00:00:00",
+      "end": "Unknown",
+      "exit_code": "0:0",
+      "name": "second67-cached-2",
+      "node": "None assigned",
+      "start": "Unknown",
+      "state": "PENDING",
+      "total_cpu": "00:00:00"
+    },
+    "15270": {
+      "elapsed": "00:00:00",
+      "end": "Unknown",
+      "exit_code": "0:0",
+      "name": "second67-cold-2",
+      "node": "None assigned",
+      "start": "Unknown",
+      "state": "PENDING",
+      "total_cpu": "00:00:00"
+    },
+    "15271": {
+      "elapsed": "00:00:00",
+      "end": "Unknown",
+      "exit_code": "0:0",
+      "name": "second67-compressed-2",
+      "node": "None assigned",
+      "start": "Unknown",
+      "state": "PENDING",
+      "total_cpu": "00:00:00"
+    },
+    "15272": {
+      "elapsed": "00:00:00",
+      "end": "Unknown",
+      "exit_code": "0:0",
+      "name": "second67-hybrid-2",
+      "node": "None assigned",
+      "start": "Unknown",
+      "state": "PENDING",
+      "total_cpu": "00:00:00"
+    },
+    "15273": {
+      "elapsed": "00:00:00",
+      "end": "Unknown",
+      "exit_code": "0:0",
+      "name": "second67-oracle",
+      "node": "None assigned",
+      "start": "Unknown",
+      "state": "PENDING",
+      "total_cpu": "00:00:00"
+    },
+    "15274": {
+      "elapsed": "00:00:00",
+      "end": "Unknown",
+      "exit_code": "0:0",
+      "name": "second67-primary",
+      "node": "None assigned",
+      "start": "Unknown",
+      "state": "PENDING",
+      "total_cpu": "00:00:00"
+    },
+    "15275": {
+      "elapsed": "00:00:00",
+      "end": "Unknown",
+      "exit_code": "0:0",
+      "name": "second67-supplemental",
+      "node": "None assigned",
+      "start": "Unknown",
+      "state": "PENDING",
+      "total_cpu": "00:00:00"
+    }
+  },
+  "numerical_result_verified": false,
+  "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+  "progress": {
+    "cached-1": {
+      "completion_receipt_present": false,
+      "events": 0,
+      "last": null
+    },
+    "cached-2": {
+      "completion_receipt_present": false,
+      "events": 0,
+      "last": null
+    },
+    "cold-1": {
+      "completion_receipt_present": false,
+      "events": 0,
+      "last": null
+    },
+    "cold-2": {
+      "completion_receipt_present": false,
+      "events": 0,
+      "last": null
+    },
+    "compressed-1": {
+      "completion_receipt_present": false,
+      "events": 12,
+      "last": {
+        "certificate_refusal": null,
+        "code_sha256": "2c19cc69ac72b74a95811ed7fd00025584e19f074ba661fb390dca73ef81c0c6",
+        "elapsed_ns": 1897411016904,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "streamed",
+        "stage_id": "block.0002.mlp_up"
+      }
+    },
+    "compressed-2": {
+      "completion_receipt_present": false,
+      "events": 0,
+      "last": null
+    },
+    "hybrid-1": {
+      "completion_receipt_present": true,
+      "events": 26,
+      "last": {
+        "certificate_refusal": null,
+        "code_sha256": "4347d2b1bcefc5a8cab2a44d4a6c31cdc904005e5ec99ca1d673f0d27b8f7853",
+        "elapsed_ns": 4927187505800,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "streamed",
+        "stage_id": "block.0005.mlp_down"
+      }
+    },
+    "hybrid-2": {
+      "completion_receipt_present": false,
+      "events": 0,
+      "last": null
+    },
+    "modern-1": {
+      "completion_receipt_present": false,
+      "events": 0,
+      "last": null
+    },
+    "modern-2": {
+      "completion_receipt_present": false,
+      "events": 0,
+      "last": null
+    },
+    "oracle": {
+      "completion_receipt_present": false,
+      "events": 0,
+      "last": null
+    },
+    "prepare": {
+      "completion_receipt_present": true,
+      "events": 134,
+      "last": {
+        "elapsed_ns": 6866025584430,
+        "phase": "payload_stage",
+        "representation": "modern_lossless",
+        "stage_id": "block.0005.mlp_down"
+      }
+    }
+  },
+  "queue": "15275|second67-supplemental|PENDING|0:00|(Dependency)\n15274|second67-primary|PENDING|0:00|(Dependency)\n15273|second67-oracle|PENDING|0:00|(Dependency)\n15272|second67-hybrid-2|PENDING|0:00|(Dependency)\n15271|second67-compressed-2|PENDING|0:00|(Dependency)\n15270|second67-cold-2|PENDING|0:00|(Dependency)\n15269|second67-cached-2|PENDING|0:00|(Dependency)\n15268|second67-modern-2|PENDING|0:00|(Dependency)\n15267|second67-modern-1|PENDING|0:00|(Dependency)\n15266|second67-cached-1|PENDING|0:00|(Dependency)\n15265|second67-cold-1|PENDING|0:00|(Dependency)\n15264|second67-compressed-1|RUNNING|36:43|csis.mn1",
+  "scientific_decision_requires_terminal_binary_and_cost_audits": true,
+  "status": "verified_snapshot_metadata_only",
+  "terminal_receipts_present": false,
+  "volatile_files_omitted": []
+}

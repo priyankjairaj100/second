@@ -1,0 +1,70 @@
+{
+  "schema": "second-handoff-v91",
+  "updated_utc": "2026-10-24T08:13:50.867566+00:00",
+  "branch": "codex/second-cluster-v42",
+  "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "scheduler": "ACTIVE",
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "active": {
+    "version": 89,
+    "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9",
+    "software_job": "16004",
+    "software_tests": 162,
+    "preparation_job": "16005",
+    "preparation_state": "RUNNING",
+    "stage_certificates": 15,
+    "stage_total": 24,
+    "observed_utc": "2026-10-24T08:06:36.004005+00:00",
+    "dependent_jobs": [
+      "16006",
+      "16007",
+      "16008",
+      "16009",
+      "16010",
+      "16011",
+      "16012",
+      "16013",
+      "16014",
+      "16015",
+      "16016"
+    ],
+    "actual_model_completion": false,
+    "both_audits_complete": false
+  },
+  "engineering": {
+    "version": 91,
+    "status": "source_prepared_not_registered",
+    "local_tests": 104,
+    "new_tests": 45,
+    "prepared_linux_tests": 172,
+    "linux_gate_executed": false,
+    "source_archive_created": false,
+    "uploaded": false,
+    "registered": false,
+    "checkpoint_fetched": false,
+    "targets_admitted": false,
+    "empirical_result": false
+  },
+  "preserved": {
+    "v89_bound_files": 934,
+    "local_counterparts": 930,
+    "v90_source_commitments": 18,
+    "old_unknown_cpu_seconds": 12602,
+    "old_ledger_sha256": "10f95f5eea81d1bb07a92412ef4b4fe2e802060eb4251524f9559837ceabcb27"
+  },
+  "next": [
+    "Close V89 from actual audits and frozen terminal reporter; apply V82 decision rules",
+    "If justified, create exact V91 source package with actual V89 terminal binding and fresh storage admission",
+    "One-use V91 software qualification, then bounded fetch/target admission and host closure",
+    "Only with actual target evidence, integrate and register complete matched transfer screen with unchanged caps",
+    "Update same manuscript only from audited evidence; finish rendered layout and selected delivery checks"
+  ],
+  "manuscript": {
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex",
+    "sha256": "bf3b7a73cda7b4c62fb7fe6fc7df08a36e949cb15f4c0d9e361fc25a732cc8eb",
+    "scientific_checkpoint": "V72/V74",
+    "edited": false,
+    "rendered_layout_verified": false,
+    "submission_ready": false
+  }
+}

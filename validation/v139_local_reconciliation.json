@@ -1,0 +1,18 @@
+{
+  "schema": "source-only-local-reconciliation-v139",
+  "utc": "2026-11-02T01:09:13.179048+00:00",
+  "frozen_sources": 1441,
+  "archive_hash_verified": true,
+  "linux_qualification_job": 16881,
+  "linux_qualification": "COMPLETED 0:0; actual saved receipt and prior scheduler read",
+  "linux_checks": 335,
+  "preparation_jobs": [
+    16882,
+    16883
+  ],
+  "preparation_current_status": "unknown: 2 November SSH timed out before login",
+  "model_oracle_pairs_not_yet_established": true,
+  "new_empirical_claim": false,
+  "final_collector_generated_tests": 6,
+  "final_collector_executed": false
+}

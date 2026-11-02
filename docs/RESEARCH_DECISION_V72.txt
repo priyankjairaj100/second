@@ -1,0 +1,69 @@
+Scientific decision after audited untouched quality,18 October2026
+
+Decision
+Close the current empirical program for the manuscript's scoped claim: conditional
+correctness plus an observed space/source-access/latency tradeoff and quality within
+predeclared tolerances on the selected bounded frame. Do not register additional
+identical evaluations or timing runs merely to seek a favorable outcome. No new
+numerical experiment is queued. This is a root scientific decision, not independent
+external review, a claim of general reliability, or conference acceptance/readiness.
+
+Evidence
+V67's ten actual model/state comparisons equal fresh retained-input construction.
+Compression saves9.241712%/8.701732% live state versus modern lossless while measured
+requests are13.693062%/50.482991% slower. With the common checkpoint, savings are
+4.714720%/3.100784%. Hybrid is smaller/faster at the first endpoint if retained-source
+access is allowed. Internal row fallbacks68/2 do not constitute source replay.
+These are single fixed-order trajectory observations without timing confidence
+intervals. Do not present them as a stable latency advantage or reliable speedup.
+
+The V71 model construction, CPU reference losses, GPU evaluation and actual terminal
+audit completed. V72 separately recovered accounting after the original closure
+failed because sacct was unavailable inside its container. The original job remains
+FAILED, its4.817 scheduler CPU seconds are retained, and no construction/inference
+was repeated. Separate recovery15421 completed0:0 with6.312 scheduler CPU seconds.
+The total7588.049 scheduler CPU seconds overlaps7526 charged numerical-worker CPU
+seconds and56 controller charges; never add these measures. Preserve the original
+44726 and separate602 allowance ceilings, which are budgets rather than results.
+
+There are320 fixed articles, six model roles,127 predictions/article/model and
+40640 predictions/model. At12 and6 retained records, candidate/sequential pooled
+perplexity ratios are1.0054209902683444/1.007149467937882. Their one-sided97.5%
+bootstrap uppers1.0103415160970775/1.011430717222165 pass1.05; maxima
+1.129140118793723/1.1269606728973518 pass1.20. The paired95% intervals
+[1.0004552788700203,1.0103415160970775] and
+[1.0028703456602743,1.011430717222165] lie above one. State a small quality cost
+within tolerance, not a quality gain or equivalence. Bootstrap uncertainty is
+approximate and restricted to the admitted frame; observed maxima are not
+population-tail guarantees. All24 CPU/CUDA references pass1e-8 mean-NLL parity;
+actual max difference1.1546319456101628e-14. The terminal audit verified actual
+codes/parameters/loss artifacts and recomputed registered statistics. The local
+saved-scalar checker independently recomputes arithmetic from shared original
+losses, but does not independently repeat bootstrap or neural evaluation.
+
+Preserved adverse history and selection
+The old nearest-anchor target failed its5% pooled guard with5.92% regression.
+Choosing the original checkpoint teacher was adaptive. The later320-article data
+were selected without observing outcomes from2778 eligible articles in a bounded
+3801-record frame. Reserve that whole frame, the old60 quality IDs and2349
+calibration-frame records. Failed V69 admission and cancelled descendants remain;
+V70 separately verified missing short-record full-token hashes before V71. No
+sample, target, threshold or exclusion rule changed after these outcomes.
+
+What would justify new experiments
+A stable latency difference needs a separately registered balanced timing study
+with startup/cache costs and compatible strong controls. A transfer claim needs
+new checkpoint/architecture evidence. Neither is claimed in the current paper;
+therefore neither is automatically scheduled. A new scientific question must be
+justified prospectively, with new namespace, frozen resources and one-use attempts.
+
+Release work
+The manuscript was updated in the existing editor and compiled successfully.114
+selected number/math-preservation checks pass, as do static citations/labels.
+The new development bundle integrates E17 and current source, not runtime/model/
+corpus binaries. It is not yet submission-ready. Resolve format/page category,
+inspect the rendered existing preview, assess included-source release/attribution
+and indirect anonymity, document reproducibility limits and author-controlled
+facts, and complete the venue checklist. Do not expand this source-only package
+into runtime redistribution solely to close a binary-notice inventory. No appendix
+remains to trim. Actual external reproduction and broad anonymity are unverified.

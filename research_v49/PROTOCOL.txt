@@ -1,0 +1,32 @@
+V49 synthetic software profile, 11 October 2026.
+
+V45 preparation failed at its unchanged 4800-CPU-second worker limit. Its charge
+is settled at4801 seconds; all seven dependent jobs were cancelled. No complete
+model exists. Preserve that failure, partial progress and all original sources.
+
+Question: which existing streamed-certificate components dominate synthetic
+software execution at increasing width? This diagnostic does not use a model,
+corpus, deletion sequence, quality sample or failed-run intermediate features.
+
+Fixed cases in order: widths192,768,1536; four output rows;128 tokens; one block.
+NumPy PCG64 seed20261011+width; integer weights[-1024,1024]/512 and integer
+features[-16,16]/64, all exactly represented dyadics. Original normalization1664,
+ridge1/100, four-bit dyadic24 row grids and the unchanged V40 streamed certifier.
+Record fixture hashes before execution. No tuning on these observations.
+
+One worker,600CPU/900wall seconds, one pinned CPU/thread,16GiB process limit,
+1GiB file limit. Fresh software_profile ledger602 seconds. Registration and
+software tests are ancillary and outside the limited-worker charge. No retry,
+cap increase or automatic next model run follows failure or synthetic success.
+
+Record Gram formation, coefficient enclosure, row verification, compiler/runtime
+provenance, complete case time, code hash and all available component diagnostics.
+Partial progress survives refusal/timeout. Certification uses existing kernels;
+the diagnostic does not independently verify all large synthetic codes.
+No stage-width extrapolation is a measured full-model runtime. GPU quality parity
+does not authorize moving this directed CPU certificate onto CUDA.
+
+This profile can motivate a separately reviewed implementation change. It cannot
+modify V45's frozen target, limits or ledger, promote its partial11-stage prefix,
+establish language quality, or demonstrate a scientific performance advantage.
+All60 historical quality exclusions remain preserved.

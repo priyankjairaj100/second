@@ -1,0 +1,117 @@
+Second: preparation for the missing modern lossless control
+14 October 2026. Conditional design only; no new empirical registration or run.
+
+The existing control is already compressed
+V61's cached/cold lossless descriptors use src/fixed_lossless_codec_v29.py.
+Its fixed selection rule chooses raw, zlib level 6, or byte-shuffled zlib level 6
+payloads by encoded size, with deterministic ties. Decoding preserves finite
+binary64 words, including signed zero. The parser also re-encodes to enforce
+the bound canonical representation. Therefore the manuscript's lossless cache
+must not be described as an uncompressed archive or a control with no codec.
+The missing comparison is a stronger codec under the same complete contract.
+
+Conditional candidate, selected for an ordinary supported reference
+Prepare Zstandard 1.5.7 through python-zstandard 0.25.0, subject to isolated Linux
+build and exact binary/source pinning. These are public release/documentation
+versions, not verified installed cluster dependencies. Use level 3 (documented
+default), threads=0 (single-thread compression), content size and checksum enabled,
+no dictionary and no dictionary ID. Do not change the active V61 environment.
+No level, dictionary or block-size search on the measured factors is proposed.
+
+The proposed fixed mode set extends the old three choices with plain Zstandard
+and byte-shuffled Zstandard. Each source/stage is independent. Select the smallest
+complete serialized descriptor, with a fixed mode-order tie break, and charge
+every attempted encoder and all validation. Report mode counts and every candidate's
+encoding cost; a per-descriptor rule is part of the codec, not favorable-only
+reporting of experimental arms. All choices must be frozen before reading factors
+for a new empirical phase. This design is not yet an executable protocol.
+
+Source and state contract
+Use one independent frame per source/stage, not a frame spanning multiple records.
+No shared trained dictionary or prefix chain may preserve information from removed
+sources or change the bytes of retained descriptors after deletion. Bind source,
+tokens, stage, target, exact source-word commitment, shape, codec/runtime, mode,
+frame extent and byte order. Compare decoded words with the actual admitted
+source array during preparation. Frame checksums alone do not establish provenance.
+
+Keep one complete original-checkpoint-teacher target with original normalization
+1664, grids/order/ridge and all source identities unchanged. A different descriptor
+format requires a separately versioned canonical state family and fresh-state oracle;
+do not relabel it as an existing V61 representation. Successor state includes the
+actual model codes, records/provenance, descriptors, indexes and trust information.
+Within the new representation, compare actual complete successor bytes with fresh
+construction. Preserve retained descriptor bytes. Compare actual decoded words and
+model codes with the established reference; a hash-only comparison is insufficient.
+
+Decoder and allocation boundary
+For the existing geometry, 13 sources x 24 stages gives 312 descriptors. Eighteen
+stages have width 768 and six width 3072. At 128 tokens per source, the largest raw
+factor is 3,145,728 bytes; all original factor words total 429,391,872 bytes. These
+are geometry calculations, not compressed sizes or whole-process memory estimates.
+Retained endpoints contain 288 and 144 source/stage factors.
+
+Before allocation, require exactly one ordinary frame, its declared content size
+equal to the checked shape extent, and an admitted window size. Reject absent or
+inconsistent sizes, dictionaries, skippable/extra frames, trailing bytes, truncation,
+checksum failures, nonfinite decoded values and output overflow. Set
+allow_extra_data=False; the documented default permits trailing data. Do not rely
+on a max_output_size argument alone as proof of bounded allocation. Pin and test
+the actual backend's frame/window behavior, including the wrapper's KiB unit for
+max_window_size. Resource accounting includes raw, shuffled, encoded, decoded and
+re-encoded buffers plus codec contexts; raw factor extent alone is not admission.
+
+Preserve the existing canonical re-encoding obligation in the first comparison.
+Removing that cost only for the new control would change validation semantics.
+Any future trusted-manifest optimization must have a separately reviewed trust
+contract and be given to every compatible control in a fresh comparison.
+
+Minimal staged execution after V61 closes
+First inspect both V61 audits and the strongest-control tradeoff. Freeze a new
+input/runtime/source inventory, exclusive paths, CPU/wall/memory caps and failure
+policy before any codec measurement. No historical budget is reused. Use a new
+isolated environment; an exact codec version label alone is not a runtime receipt.
+
+Then run bounded Linux fixtures for word preservation (including signed zero and
+extreme finite values), deterministic encoding, retained descriptor invariance,
+malformed frame refusal, allocation bounds and complete state reconstruction.
+Only after this gate, an artifact-only development phase may read the audited
+existing factors to measure all encodes/decodes, canonical validation and actual
+state bytes. It must not rerun neural extraction or likelihood evaluation merely
+to obtain identical inputs. Record migration from the old archive separately from
+the codec's clean preparation cost; original extraction is still part of deployment
+preparation, not free historical work.
+
+An artifact-only storage/decode result is not a deletion latency result. A useful
+candidate still needs a separately admitted complete two-request service comparison
+with the same point solver, parsing, validation, serialization, disposal and fresh
+oracle. Preserve cached-zlib, hybrid Gram and uncertain-compression controls. Do not
+derive end-to-end time by adding a codec microbenchmark to old V61 timings. Later
+prospective timing uses balanced order, matched startup/cache conditions, and all
+failures. No new quality evaluation is needed solely for representations proven
+to return the identical model; independent-root/untouched-quality gates remain.
+
+Interpretation and remaining blockers
+This comparison can test whether uncertain compression has a useful benefit over
+a modern general lossless control. It cannot establish dominance over all floating-
+point codecs: FPC and ALP remain relevant alternatives, with implementation/support
+and contract compatibility to evaluate before broader claims. No codec wins or
+source-model costs are known from this preparation. Installed runtime hashes,
+implementation, fixtures, full resource admission and empirical results are pending.
+
+Primary references inspected for this design
+Zstandard 1.5.7 release: https://github.com/facebook/zstd/releases/tag/v1.5.7
+Frame independence, content extent and checksum specification:
+https://github.com/facebook/zstd/blob/v1.5.7/doc/zstd_compression_format.md
+Versioned compression API (level 3, threads=0, size/checksum options):
+https://python-zstandard.readthedocs.io/en/0.25.0/compressor.html
+Versioned decompression API (window bound, extra data and allocation behavior):
+https://python-zstandard.readthedocs.io/en/0.25.0/decompressor.html
+The proposed contract and fair-accounting choices above are our design inferences,
+not performance claims from these sources.
+
+Literature handoff correction
+The old V41 Exact-Fun retrieval limitation was closed in docs/LITERATURE_UPDATE_V43.md.
+The current manuscript already cites the pinned full author version. Do not reopen
+that historical retrieval task because a live unversioned URL remains unavailable.
+Theorem-level overlap and the broader lack of a demonstrated practical advantage
+remain distinct from successful document retrieval.

@@ -1,0 +1,41 @@
+{
+  "archive": {
+    "bytes": 11714560,
+    "sha256": "e1994e4d8b873f5361752904f117381562463af3bcfbbcebe4a144973cc9019a"
+  },
+  "inventory": {
+    "bytes": 126988,
+    "sha256": "c00569ed643abc0797b3abba2978493439dc2644c38ae32deae635bb2e9e274b"
+  },
+  "isolated_host_imports": {
+    "imported": [
+      "config",
+      "records",
+      "storage_plan",
+      "protocol",
+      "mapping",
+      "host",
+      "entry",
+      "submit",
+      "prepare",
+      "closure",
+      "terminal",
+      "package",
+      "prior_setup",
+      "software"
+    ],
+    "isolated": true
+  },
+  "linux_qualified": false,
+  "missing_dependency": "research_v84.config",
+  "original_sources_unchanged": true,
+  "prior_failure": "f078c7ad1a0757236b2168fa5ac5a45ac9f26098370a48b24e1067ccb7065c0d",
+  "pure_tests": 104,
+  "reachable_project_module_count": 165,
+  "registered_linux_tests": 172,
+  "scientific_result": false,
+  "shell_syntax_check": true,
+  "source_count": 1028,
+  "static_undefined_name_check": true,
+  "status": "local_packaging_checks_passed"
+}

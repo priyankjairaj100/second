@@ -1,0 +1,413 @@
+{
+  "schema": "campaign-live-progress-v57",
+  "captured_at_utc": "2026-10-13T09:05:30.169670+00:00",
+  "status": "scheduler_completed_requires_artifact_validation",
+  "published_cluster_commit": "e2268159df5d02c81372e8e4d1a64c6b1f4dd6a5",
+  "remote_worktree_clean": true,
+  "trials": {
+    "prepare": {
+      "completion_present": true,
+      "observed_phases": {
+        "context_ready": 1,
+        "source_replayed": 13,
+        "stage_certified": 24,
+        "payload_stage": 72
+      },
+      "latest_progress": {
+        "elapsed_ns": 6637547965048,
+        "phase": "payload_stage",
+        "representation": "hybrid_gram",
+        "stage_id": "block.0005.mlp_down"
+      },
+      "unreadable_progress": [],
+      "completion_status": "complete",
+      "worker_elapsed_ns": 6668719487722
+    },
+    "cached": {
+      "completion_present": true,
+      "observed_phases": {
+        "context_ready": 1,
+        "stage_certified": 48,
+        "request_complete": 2
+      },
+      "latest_progress": {
+        "elapsed_ns": 4913954414500,
+        "phase": "request_complete",
+        "request_elapsed_ns": 899972086670,
+        "step": 2
+      },
+      "unreadable_progress": [],
+      "completion_status": "complete",
+      "worker_elapsed_ns": 4913955099450
+    },
+    "cold": {
+      "completion_present": true,
+      "observed_phases": {
+        "context_ready": 1,
+        "source_replayed": 18,
+        "payload_stage": 48,
+        "stage_certified": 48,
+        "request_complete": 2
+      },
+      "latest_progress": {
+        "elapsed_ns": 6930549825781,
+        "phase": "request_complete",
+        "request_elapsed_ns": 1547697139420,
+        "step": 2
+      },
+      "unreadable_progress": [],
+      "completion_status": "complete",
+      "worker_elapsed_ns": 6930550522433
+    },
+    "hybrid": {
+      "completion_present": true,
+      "observed_phases": {
+        "context_ready": 1,
+        "source_replayed": 7,
+        "stage_certified": 48,
+        "request_complete": 2
+      },
+      "latest_progress": {
+        "elapsed_ns": 5863502326030,
+        "phase": "request_complete",
+        "request_elapsed_ns": 1635403559626,
+        "step": 2
+      },
+      "unreadable_progress": [],
+      "completion_status": "complete",
+      "worker_elapsed_ns": 5863503010489
+    },
+    "compressed": {
+      "completion_present": true,
+      "observed_phases": {
+        "context_ready": 1,
+        "stage_certified": 48,
+        "request_complete": 2
+      },
+      "latest_progress": {
+        "elapsed_ns": 6055826406362,
+        "phase": "request_complete",
+        "request_elapsed_ns": 1272842928562,
+        "step": 2
+      },
+      "unreadable_progress": [],
+      "completion_status": "complete",
+      "worker_elapsed_ns": 6055827074561
+    },
+    "oracle": {
+      "completion_present": true,
+      "observed_phases": {
+        "context_ready": 1,
+        "source_replayed": 18,
+        "stage_certified": 48,
+        "payload_stage": 144
+      },
+      "latest_progress": {
+        "elapsed_ns": 8386083961047,
+        "phase": "payload_stage",
+        "representation": "hybrid_gram",
+        "stage_id": "block.0005.mlp_down"
+      },
+      "unreadable_progress": [],
+      "completion_status": "complete",
+      "worker_elapsed_ns": 8404457758748
+    }
+  },
+  "terminal_audits_present": {
+    "artifact-audit.json": true,
+    "postrun-audit.json": true
+  },
+  "v57_prefix_audit_present": true,
+  "conditional_v55_registration_exists": true,
+  "conditional_v56_registration_exists": true,
+  "frozen_source_bindings": {
+    "v54": {
+      "files": 386,
+      "changed": []
+    },
+    "v55": {
+      "files": 399,
+      "changed": []
+    },
+    "v56": {
+      "files": 409,
+      "changed": []
+    }
+  },
+  "accounting": "JobID|State|ExitCode|Elapsed|TotalCPU|MaxRSS\n13310|COMPLETED|0:0|01:51:13|01:50:50|\n13310.batch|COMPLETED|0:0|01:51:13|01:50:50|2043524K\n13311|COMPLETED|0:0|01:21:59|01:21:40|\n13311.batch|COMPLETED|0:0|01:21:59|01:21:40|2246004K\n13312|COMPLETED|0:0|01:55:36|01:55:09|\n13312.batch|COMPLETED|0:0|01:55:36|01:55:09|2325700K\n13313|COMPLETED|0:0|01:37:48|01:37:22|\n13313.batch|COMPLETED|0:0|01:37:48|01:37:22|2302588K\n13314|COMPLETED|0:0|01:41:03|01:40:33|\n13314.batch|COMPLETED|0:0|01:41:03|01:40:33|2253340K\n13315|COMPLETED|0:0|02:20:33|02:19:40|\n13315.batch|COMPLETED|0:0|02:20:33|02:19:40|1992016K\n13316|COMPLETED|0:0|00:26:07|25:58.689|\n13316.batch|COMPLETED|0:0|00:26:07|25:58.689|2719952K\n13317|COMPLETED|0:0|00:15:47|15:41.632|\n13317.batch|COMPLETED|0:0|00:15:47|15:41.632|3427676K\n13325|COMPLETED|0:0|00:00:04|00:02.821|\n13325.batch|COMPLETED|0:0|00:00:04|00:02.821|3196K\n13326|COMPLETED|0:0|00:26:46|26:39.846|\n13326.batch|COMPLETED|0:0|00:26:46|26:39.846|2616228K\n13327|COMPLETED|0:0|00:01:09|01:07.798|\n13327.batch|COMPLETED|0:0|00:01:09|01:07.798|455380K\n13329|COMPLETED|0:0|00:01:37|01:26.813|\n13329.batch|COMPLETED|0:0|00:01:37|01:26.813|2597768K\n13352|COMPLETED|0:0|00:04:46|04:42.624|\n13352.batch|COMPLETED|0:0|00:04:46|04:42.624|1220480K\n",
+  "scheduler_jobs": {
+    "13310": {
+      "JobID": "13310",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "01:51:13",
+      "TotalCPU": "01:50:50",
+      "MaxRSS": ""
+    },
+    "13311": {
+      "JobID": "13311",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "01:21:59",
+      "TotalCPU": "01:21:40",
+      "MaxRSS": ""
+    },
+    "13312": {
+      "JobID": "13312",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "01:55:36",
+      "TotalCPU": "01:55:09",
+      "MaxRSS": ""
+    },
+    "13313": {
+      "JobID": "13313",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "01:37:48",
+      "TotalCPU": "01:37:22",
+      "MaxRSS": ""
+    },
+    "13314": {
+      "JobID": "13314",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "01:41:03",
+      "TotalCPU": "01:40:33",
+      "MaxRSS": ""
+    },
+    "13315": {
+      "JobID": "13315",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "02:20:33",
+      "TotalCPU": "02:19:40",
+      "MaxRSS": ""
+    },
+    "13316": {
+      "JobID": "13316",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:26:07",
+      "TotalCPU": "25:58.689",
+      "MaxRSS": ""
+    },
+    "13317": {
+      "JobID": "13317",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:15:47",
+      "TotalCPU": "15:41.632",
+      "MaxRSS": ""
+    },
+    "13325": {
+      "JobID": "13325",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:04",
+      "TotalCPU": "00:02.821",
+      "MaxRSS": ""
+    },
+    "13326": {
+      "JobID": "13326",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:26:46",
+      "TotalCPU": "26:39.846",
+      "MaxRSS": ""
+    },
+    "13327": {
+      "JobID": "13327",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:01:09",
+      "TotalCPU": "01:07.798",
+      "MaxRSS": ""
+    },
+    "13329": {
+      "JobID": "13329",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:01:37",
+      "TotalCPU": "01:26.813",
+      "MaxRSS": ""
+    },
+    "13352": {
+      "JobID": "13352",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:04:46",
+      "TotalCPU": "04:42.624",
+      "MaxRSS": ""
+    }
+  },
+  "active_jobs": [],
+  "pending_jobs": [],
+  "scheduler_failure_jobs": [],
+  "terminal_receipts": {
+    "v54_primary_audit": {
+      "present": true,
+      "bytes": 147595,
+      "sha256": "dd84bf46734486ce7c586f3f303f97ec2574a23d2e4c46b604251996e93a2a7f",
+      "reported": {
+        "acl_ready": false,
+        "all_declared_artifacts_rehashed": true,
+        "analysis_elapsed_ns": 1564795641747,
+        "analysis_outside_empirical_worker_ledger": true,
+        "audit_history_bytes": 5118304289,
+        "campaign": "/nfs_home/users/poonam/second-20261010/local_runs/full-model48-v54-20261011-a",
+        "complete_model": true,
+        "confirmation": false,
+        "oracle_worker_ns": 8404457758748,
+        "original_tokens": 1664,
+        "population_claims": false,
+        "preparation_transaction_ns": 6671088160548,
+        "preparation_worker_ns": 6668719487722,
+        "prior_failed_cpu_seconds": 4801,
+        "program_sha256": "03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b",
+        "quality_evaluation": false,
+        "schema": "complete-service-artifact-audit-v54",
+        "shared_checkpoint_bytes": 352825175,
+        "status": "verified",
+        "successive_deletions": 2,
+        "total_continuation_cpu_seconds": 43453
+      }
+    },
+    "v54_supplemental_audit": {
+      "present": true,
+      "bytes": 55723,
+      "sha256": "a9ecf44c13c27a6c17033b5f0e400f1efee1f45655c3c5842c6309d3487ac77b",
+      "reported": {
+        "analysis_cpu_ns": 939997302621,
+        "analysis_elapsed_ns": 944137874551,
+        "analysis_outside_empirical_worker_ledger": true,
+        "campaign": "/nfs_home/users/poonam/second-20261010/local_runs/full-model48-v54-20261011-a",
+        "frozen_audit_path": "/nfs_home/users/poonam/second-20261010/local_runs/full-model48-v54-20261011-a/artifact-audit.json",
+        "frozen_audit_sha256": "dd84bf46734486ce7c586f3f303f97ec2574a23d2e4c46b604251996e93a2a7f",
+        "frozen_sources_changed": false,
+        "program_sha256": "03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b",
+        "schema": "complete-service-additive-artifact-audit-v54",
+        "scope": "Actual ordered model codes, common targets, registered retained records/provenance, full canonical bytes, trust sidecars and literal storage checked against frozen execution receipts.",
+        "slurm_job_id": "13317",
+        "status": "verified"
+      }
+    },
+    "v55_completion": {
+      "present": true,
+      "bytes": 18092,
+      "sha256": "1c35aa42d570e51d17f800e538bf6118ccf4a0ede85d0903ddc1ed3c2689b135",
+      "reported": {
+        "acl_ready": false,
+        "approximate_numpy_binary64_likelihood": true,
+        "certified_inference": false,
+        "code_count": 42467328,
+        "confirmation": false,
+        "context_elapsed_ns": 83172388768,
+        "cpu_self_seconds": 1593.7515859999999,
+        "development_guards_pass": false,
+        "disposal_elapsed_ns": 22389837,
+        "fixed_model_sha256": "3fa620349c5d94e839d5a15b6dd13898960a748678d15f9cdcab65c5775085ba",
+        "fixed_target_sha256": "908d7b60579a0197d775a4672f8c07c0aec9d9c870b1452f73a05c27a5a2f855",
+        "intervals": false,
+        "max_rss_kib": 2554812,
+        "model_target": "fixed-anchor retained768/original1664 versus matched sequential",
+        "no_new_quality_inputs": true,
+        "original_normalization": 1664,
+        "program_sha256": "4de04c4a0bd5db485c7ccd7511a4d5094195afdce15c115a909346879b84125f",
+        "retained_calibration_tokens": 768,
+        "schema": "exposed-quality-worker-v55",
+        "sequential_construction_elapsed_ns": 1491410333041,
+        "sequential_target_sha256": "ddcc41a5420a63c60f64372af1fb5e077efc9266ad12feafe6ed04be5d6248b8",
+        "shared_evaluator_sha256": "db1253faa8a7d99fc2edf63405d6efe493e8e1a5783f3b4b1c6d970e88137d0d",
+        "slurm_job_id": "13326",
+        "status": "complete",
+        "timing_scope": "Context, parity, sequential construction, all likelihoods, writes and disposal; controller additionally charges verification before worker clock, terminal commit and exit",
+        "valid_diagnostic": true,
+        "worker_elapsed_ns": 1599945465733
+      }
+    },
+    "v55_audit": {
+      "present": true,
+      "bytes": 72002,
+      "sha256": "fa4a762a2ca6389968a503c0e224d1bd3f0d1bf0bb0aedb7acd24dd9d251b042",
+      "reported": {
+        "acl_ready": false,
+        "actual_model_codes_reconstructed": 42467328,
+        "analysis_cpu_ns": 66316212936,
+        "analysis_elapsed_ns": 66611756295,
+        "analysis_outside_empirical_worker_ledger": true,
+        "campaign": "/nfs_home/users/poonam/second-20261010/local_runs/exposed-quality-v55-20261011-a",
+        "complete_stages": 24,
+        "confirmation": false,
+        "development_guards_pass": false,
+        "program_sha256": "4de04c4a0bd5db485c7ccd7511a4d5094195afdce15c115a909346879b84125f",
+        "schema": "exposed-quality-artifact-audit-v55",
+        "scope": "Actual fixed/sequential packed arrays and row grids, all 32 losses, descriptive summaries, historical parity and sealed CPU debit verified. Trusted execution assumed; no independent inference or quantization rerun.",
+        "sealed_cpu_receipt_verified": true,
+        "slurm_job_id": "13327",
+        "status": "verified"
+      }
+    },
+    "v56_completion": {
+      "present": true,
+      "bytes": 9666,
+      "sha256": "92d048126b951be519c649b971f9b7f037d4b75011e6033e6eda907b234ed990",
+      "reported": {
+        "acl_ready": false,
+        "amp": false,
+        "certified_inference": false,
+        "confirmation": false,
+        "context_elapsed_ns": 63148094989,
+        "copied_arrays_with_bitwise_roundtrip": 150,
+        "cpu_development_guards_pass": false,
+        "cpu_self_seconds": 72.15228400000001,
+        "deterministic_algorithms": true,
+        "device": "NVIDIA A100 80GB PCIe",
+        "dtype": "float64",
+        "exact_calibration_equivalence": false,
+        "first_actual_batch_parity_passed": true,
+        "max_rss_kib": 2939116,
+        "new_quality_inputs": false,
+        "parity_passed": true,
+        "peak_cuda_allocated_bytes": 1494948864,
+        "peak_cuda_reserved_bytes": 1562378240,
+        "program_sha256": "8c3f46537f6b1cdc51c2b43dd3c1ebf2a7afff5114d6b185bcb160c6eaf98f6d",
+        "schema": "cuda-likelihood-parity-result-v56",
+        "scope": "32 exposed likelihood comparisons only; timings are not a controlled speed comparison",
+        "slurm_job_id": "13329",
+        "status": "complete",
+        "tf32": false,
+        "torch": "2.10.0+cu128",
+        "valid_diagnostic": true,
+        "worker_elapsed_ns": 70175519432
+      }
+    },
+    "v56_audit": {
+      "present": true,
+      "bytes": 69157,
+      "sha256": "372a5b870c8d4c0a303869e6a17b85df2c8007c42a75fe02c0dc17f9010f1294",
+      "reported": {
+        "acl_ready": false,
+        "analysis_cpu_ns": 4712401060,
+        "analysis_elapsed_ns": 4897040653,
+        "analysis_outside_empirical_worker_ledger": true,
+        "campaign": "/nfs_home/users/poonam/second-20261010/local_runs/gpu-parity-v56-20261011-a",
+        "confirmation": false,
+        "cpu_development_guards_pass": false,
+        "exact_calibration_equivalence": false,
+        "parity_passed": true,
+        "program_sha256": "8c3f46537f6b1cdc51c2b43dd3c1ebf2a7afff5114d6b185bcb160c6eaf98f6d",
+        "schema": "cuda-likelihood-artifact-audit-v56",
+        "scope": "32 actual same-model exposed NLL comparisons and CPU accounting verified; no independent inference rerun, certified feature/calibration equivalence or controlled speed claim.",
+        "slurm_job_id": "13329",
+        "status": "verified"
+      }
+    }
+  },
+  "verification_scope": "Read-only progress and receipt inspection. This snapshot does not execute final artifact audits or infer favorable scientific outcomes from scheduler success.",
+  "complete_campaign_verified": null,
+  "quality_for_new_model_verified": null,
+  "gpu_parity_for_new_model_verified": null,
+  "confirmation": false,
+  "acl_ready": false
+}

@@ -1,0 +1,13 @@
+{
+  "full_storage_qualification": false,
+  "launch_authorized": false,
+  "observed_utc": "2026-10-23T10:19:58.123200+00:00",
+  "read_only": true,
+  "refusal": {
+    "message": "Insufficient account or filesystem byte headroom",
+    "type": "StorageAdmissionError"
+  },
+  "requested_bytes": 1,
+  "requested_files": 1,
+  "source_sha256": "7507bdbf33b79043ff9a488266122ac6693c550055bf10756c39c083e395f7ba"
+}

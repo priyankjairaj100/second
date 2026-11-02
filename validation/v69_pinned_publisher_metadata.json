@@ -1,0 +1,41 @@
+{
+  "captured_at_utc": "2026-10-16T12:59:58.317827+00:00",
+  "complete_rights_clearance": false,
+  "empirical_article_content_acquired": false,
+  "items": {
+    "c4_card": {
+      "automatic_retry": false,
+      "bytes": 41136,
+      "content_terms_url": "https://commoncrawl.org/terms-of-use/",
+      "license_url": "https://opendatacommons.org/licenses/by/1-0/",
+      "metadata_only": true,
+      "publisher_license": "ODC-BY",
+      "publisher_requires_common_crawl_terms": true,
+      "sha256": "bfa4b9d8af6f9d2955d39b7cb617d580763aad7fb9024e425be60738b69ea140",
+      "status": "observed",
+      "url": "https://huggingface.co/datasets/allenai/c4/raw/1588ec454efa1a09f29cd18ddd04fe05fc8653a2/README.md"
+    },
+    "model_config": {
+      "automatic_retry": false,
+      "bytes": 762,
+      "metadata_only": true,
+      "sha256": "4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a",
+      "status": "observed",
+      "url": "https://huggingface.co/distilbert/distilgpt2/raw/2290a62682d06624634c1f46a6ad5be0f47f38aa/config.json"
+    },
+    "numpy_cuda": {
+      "automatic_retry": false,
+      "bytes": 110602,
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "license_expression": null,
+      "metadata_only": true,
+      "sha256": "51dd78a65b122d87244ebf772615784f4cf57f2695cab22a14a58802160f9489",
+      "status": "observed",
+      "url": "https://pypi.org/pypi/numpy/2.2.6/json",
+      "version": "2.2.6"
+    }
+  },
+  "schema": "submission-pinned-publisher-metadata-v69"
+}

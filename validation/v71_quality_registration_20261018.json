@@ -1,0 +1,21 @@
+{
+  "allowance_cpu_seconds": 44726,
+  "created_at_utc": "2026-10-18T11:46:34.334871+00:00",
+  "expected_linux_tests": 103,
+  "frame_audit_job": "15404",
+  "local_tests": 97,
+  "new_job_chain_not_a_v69_retry": true,
+  "prior_failed_jobs_preserved": true,
+  "prior_failed_registration": "d176bb08cea9c7ef0ded9294d75f47234c5b93f772cddf9c84b0908cbfdd43f1",
+  "registration_bytes": 62099,
+  "registration_sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c",
+  "same_320_selected_articles": true,
+  "same_guards_and_caps": true,
+  "same_v67_models_and_target": true,
+  "schema": "v71-quality-registration-observation",
+  "source_files": 40,
+  "staging_archive": {
+    "bytes": 95880,
+    "sha256": "d0f707c83a8b7ac463e41b8ea4ef98323018bea459c27211be4832007099fae6"
+  }
+}

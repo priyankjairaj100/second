@@ -1,0 +1,49 @@
+{
+  "schema": "registration-failure-v53",
+  "status": "verified_pre_numerical_failure",
+  "registration_job": "13299",
+  "cancelled_jobs": [
+    13300,
+    13301,
+    13302,
+    13303,
+    13304,
+    13305,
+    13306,
+    13307
+  ],
+  "program_created": false,
+  "numerical_worker_started": false,
+  "numerical_budget_created": false,
+  "software_tests_passed": 70,
+  "software_job": "13298",
+  "registration_scheduler_cpu_seconds": 1.979,
+  "cause": "Old exact live-inventory comparison rejects 25 later metadata additions; all264 original entries unchanged. V54 validates immutable historical selection and explicitly records additions.",
+  "source_commit": "7f3b10d7e0f51df3a78616d48f0e96b803b98906",
+  "files": {
+    "accounting.txt": {
+      "bytes": 718,
+      "sha256": "c3b27fd34576dafb5c741e2709fc20908bcc6dc9196adcc8e75c2fc9e9d8ca09"
+    },
+    "source-commit.txt": {
+      "bytes": 41,
+      "sha256": "92bc9f212a8e8cf9afb1bc4b1b8d20b3322c3b18d3c4725e2e4c295804597455"
+    },
+    "software-13298.log": {
+      "bytes": 14756,
+      "sha256": "9bdfdfa946d876522c3b20f33ab8919782f263b38e0ef5892cf191ba2a6adfb3"
+    },
+    "software-checks.json": {
+      "bytes": 48496,
+      "sha256": "02251a083027016d0acf2bbdbcdacf0283c44246cc1d14e7a8bedbae26476776"
+    },
+    "register-13299.log": {
+      "bytes": 1265,
+      "sha256": "78cee6aae0ec5132fc79c5cd2dd9df26174508b3958f74ca5ba7642bb5fb1e3b"
+    },
+    "jobs.tsv": {
+      "bytes": 122,
+      "sha256": "b8a30629d73a5227e9c770430917ebdbf1aa9fed8c3082ff9052e9e199f1c0d5"
+    }
+  }
+}

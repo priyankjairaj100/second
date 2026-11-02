@@ -1,0 +1,11 @@
+{
+  "started_utc": "2026-10-24T06:56:31.067627+00:00",
+  "finished_utc": "2026-10-24T06:56:47.147931+00:00",
+  "deleted_root": "/nfs_home/users/poonam/ccu-acl2027",
+  "root_absent": true,
+  "quota": {
+    "code": 0,
+    "stdout": "Disk quotas for user poonam (uid 1007): \n     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace\n      /dev/sdb1 979570288  1047527424 1048576000         3222988       0       0        \n      /dev/sda5 171720660  182452224 183500800          508244       0       0        \n",
+    "stderr": ""
+  }
+}

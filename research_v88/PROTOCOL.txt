@@ -1,0 +1,83 @@
+V88 prospective storage admission across existing filesystems
+23 October 2026. No replacement registration, source-package staging or Slurm launch.
+
+Purpose and observed gap
+The V87 bound covers worker model/state/metadata/progress/completion files.
+Frozen src/worker_control.py creates two TemporaryFile streams. Native wrappers
+also create TemporaryDirectory build trees. They use the existing default
+temporary location. A project-directory quota check alone does not cover them.
+No output is being redirected to another filesystem to bypass the quota.
+
+The host observes the project under /dev/sdb1, mounted at /nfs_home as ext4.
+It has both user and group quota mount flags. /tmp is on /dev/sda4, mounted at /
+as XFS with explicit noquota. These are host observations, not yet a verified
+mapping inside the pinned numerical container. The original namespace, partial
+files, frozen sources and unresolved12602-second reservation remain unchanged.
+
+Read-only admission
+research_v88/storage.py requires explicit project and temporary allowances.
+It rejects missing scopes, relative/symbolic paths, unknown quotas, ambiguous
+mounts, changed roots, unsupported project-quota mounts and insufficient space.
+It sums requirements when both paths share a device. It checks both bytes and
+inodes against filesystem availability and the minimum positive user soft/hard
+limit. Soft-limit grace is never admission. The project still requires a known
+finite user hard limit. A missing quota row never means unlimited space.
+
+For group-quota mounts, the guard queries the group that would own new files:
+the existing parent's group when setgid is set, otherwise the effective group.
+It sums each group's requirements on a shared device. An explicit all-zero group
+limit is interpreted as unlimited for that group only. User and filesystem limits
+still apply. Unknown, conflicting or insufficient group evidence refuses.
+The future registry must identify the actual write roots and preserve their group
+inheritance. This is not an attestation about unrelated files or other write groups.
+
+Only the temporary scope can use explicit XFS noquota mount evidence. Linux's
+XFS documentation states that this option disables quota accounting and
+enforcement. Other quota flags or a contradictory quota row refuse that path.
+Filesystem bytes/inodes must still fit. Source checked23October2026:
+https://www.kernel.org/doc/html/latest/admin-guide/xfs.html#mount-options
+No mount, quota, directory, environment or file location is changed by the guard.
+
+capture() returns a fresh snapshot labelled non-admission. inspect() captures
+fresh state and evaluates it. No saved passing receipt grants a later admission.
+Each host command is bounded at ten seconds and is never retried. The helper
+does not call tempfile.gettempdir(), whose discovery can write probe files.
+It creates no files and starts no experiment. Quota checks do not reserve space.
+Concurrent account or filesystem writers can invalidate an observed pass.
+
+Validation and preserved evidence
+Eighteen new pure tests cover separate/shared filesystems, group accounting,
+observed setgid inheritance, malformed/missing quota evidence, explicit XFS
+noquota, insufficient temporary bytes/inodes and changed roots. Six existing
+V85 quota tests also pass. These are software fixtures, not model measurements.
+Host probes run source-bound helpers in memory with -B. They do not stage a
+source package. Both refuse even one byte of project allowance. Preserve the
+initial helper source used before adding group review alongside its receipt.
+The final probe captures group information as well. It does not establish a
+passing admission, container mapping, whole-chain allowance or Linux software gate.
+Preserve these probe-bound helper bytes. Put later helper revisions in a new version.
+
+Remaining integration, in order
+1. Register reviewed allowances for every role in WRITE_SCOPE_REVIEW.txt.
+   Distinguish enforced file extents, conservative engineering allowances and
+   unverified scopes. Worker logical-byte bounds are not a total-space guarantee.
+   Include source/staging copies, retained predecessors/oracles, metadata,
+   logs, native builds, software fixtures and allocation/sealing overhead.
+2. Verify the existing temporary path and group inheritance in the pinned
+   container. Preserve source paths and the same mapping for every comparison.
+   Do not redirect around the blocked project quota.
+3. Integrate the fresh check before registration and every new controller.
+   Bind the actual plan and host observations. Keep all admission overhead in
+   complete transaction/accounting scopes. A host-side check outside the old
+   controller clock cannot silently become uncharged work.
+4. Prepare the fresh recovery's controller, worker and audits under a new
+   namespace. Keep old reservations and unchanged numerical/controller ceilings.
+   V84's original success prerequisites remain impossible and must still refuse.
+   Rebind only to actual separately recovered terminal evidence.
+5. After account headroom returns, qualify and register the finite Linux chain.
+   Inspect original jobs, sources, quota and receipts first. Never retry an old
+   attempt or launch based on these generated tests or read-only host probes.
+
+V72 remains the scientific evidence; V74 remains the manuscript/bundle checkpoint.
+No speedup, transfer result, negative scientific conclusion or completion claim
+follows from the infrastructure failure. The existing scheduler remains ACTIVE.

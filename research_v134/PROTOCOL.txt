@@ -1,0 +1,6 @@
+V134: one-use quality evaluation of four immutable V132 sequential outputs admitted by independent V133 audits.
+The V132 FAILED 1:0 states and missing original completion receipts remain. No model is recalibrated.
+The V124 sample, heldout frame, four-stratum primary guard, bootstrap seed124 and20000 draws are unchanged.
+Before any heldout loss, audit all checkpoint parameter words and three independent NumPy/Torch cases per model at meanNLL tolerance1e-8.
+One CPU,16GiB,3600CPU/4500wall per job;4workers plus4x60 launch reserve =14640CPU.
+No GPU, tuning, new corpus selection or retries. Record every refusal.

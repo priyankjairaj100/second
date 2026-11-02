@@ -1,0 +1,75 @@
+{
+  "schema": "second-handoff-v140",
+  "updated_utc": "2026-11-02T06:15:06.372237+00:00",
+  "handoff": "docs/ACTIVE_SESSION_V140.md",
+  "scheduler": "PAUSED",
+  "scientific_revision_complete": false,
+  "source_only": "V138 measure active; audit and collector unexecuted",
+  "measure_jobs": {
+    "distilgpt2__tokens3": 17174,
+    "distilgpt2__tokens2": 17175,
+    "distilgpt2__references3": 17176,
+    "distilgpt2__references2": 17177,
+    "distilgpt2__oracle3": 17178,
+    "distilgpt2__oracle2": 17179,
+    "gpt2__tokens3": 17180,
+    "gpt2__tokens2": 17181,
+    "gpt2__references3": 17182,
+    "gpt2__references2": 17183,
+    "gpt2__oracle3": 17184,
+    "gpt2__oracle2": 17185
+  },
+  "native_audit": {
+    "registration_sha256": "576591b9ba423781f9c27719b7182c68eff54c31fc222352a218ef537f870e52",
+    "job_id": "17186",
+    "status": "COMPLETED 0:0",
+    "actual_allocation_cpu_seconds": 3.504,
+    "generated_cases": 406,
+    "primitive_status_counts": {
+      "0": 179,
+      "3": 23
+    },
+    "point_refusals": [
+      {
+        "family": "point_dispatch",
+        "index": 7,
+        "route": "token",
+        "status": "refused",
+        "width": 5,
+        "tokens": 1
+      },
+      {
+        "family": "point_dispatch",
+        "index": 7,
+        "route": "streamed",
+        "status": "refused",
+        "width": 5,
+        "tokens": 1
+      },
+      {
+        "family": "point_dispatch",
+        "index": 11,
+        "route": "token",
+        "status": "refused",
+        "width": 5,
+        "tokens": 2
+      },
+      {
+        "family": "point_dispatch",
+        "index": 27,
+        "route": "token",
+        "status": "refused",
+        "width": 5,
+        "tokens": 2
+      }
+    ],
+    "box_oracle_realizations": 912,
+    "coefficient_box_realizations": 228,
+    "assertion_failures": 0,
+    "model_experiment": false,
+    "sources_unchanged": true,
+    "all_possible_inputs_proved": false
+  },
+  "manuscript": "reports/manuscript_v137.tex",
+  "submission_ready": false
+}

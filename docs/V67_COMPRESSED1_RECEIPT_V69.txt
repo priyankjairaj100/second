@@ -1,0 +1,31 @@
+First V67 compression receipt, 16 October 2026
+
+Job15264 completed0:0 at20:03:24IST after1h27m36s. The20:07:43IST saved snapshot
+checks all24 stage certificates, worker/result/attempt seals, controller/Slurm and
+program identities, declared artifact commitments and the settled budget debit.
+Worker process plus waited-descendant CPU is5209.578108 seconds, charged5210.
+Controller own CPU is8.377845891 seconds and all waited children use5209.580961.
+Transaction wall time is5250.700698394 seconds; maximum worker RSS is1844652KiB.
+Slurm total CPU is1h26m58s, reported separately rather than substituted for worker
+or controller clocks. No reservation overrun was recorded.
+
+Zero stages record replay fallback or certificate refusal. Separately, the bounded
+numerical solver falls back on68 rows and certifies all204288 attempted decisions.
+Preserve both counts and their distinct semantics. The prior hybrid comparison had
+7 numerical fallback rows /21504 certified decisions and no stage replay/refusal.
+Do not infer comparative scientific performance from this partial metadata check.
+
+Cold15265 was RUNNING4m19s. Its10802-second reservation remains live with no observed
+terminal CPU. Jobs15266--15275 are dependency-pending; both terminal audits remain
+absent. No job was submitted, retried, released or cancelled by this continuation.
+The469 frozen sources, eleven dependencies and102 historical ledgers still match.
+
+No model/state binary bytes were retrieved or checked, retained membership was not
+independently rebuilt and fresh-oracle/campaign-wide costs are not yet verified.
+Require both terminal audits and the actual scientific decision before modifying
+claims or registering V68. Keep the original numerical checkout fixed.
+
+Artifacts
+campaigns/csis_v67_progress_metadata_20261016_m.tar.gz
+validation/v67_progress_metadata_check_m.json
+validation/v67_compressed1_metadata.json

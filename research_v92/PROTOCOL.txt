@@ -1,0 +1,132 @@
+V92 prospective complete matched-transfer recovery, 24 October 2026
+
+Status: source preparation only. No package, upload, registration, Slurm job,
+model load, calibration, request, audit result or empirical transfer exists.
+V89 is active; V91 admission has not yet executed. Their actual successful
+terminal evidence and a scientific decision remain required before this launch.
+
+Purpose and unchanged workload
+The previously specified V84 question and order remain: compare reference and
+optimized compressed and modern lossless requests on the same four exposed C4
+records at two GPT-family checkpoint depths. The frozen hash selection,512-token
+normalization,4bit/output-row dyadic24 target, ridge1/100, four128-token records,
+retained3/2 endpoints and exact approved1,327,104 grids are unchanged. There are
+20 workers,16 same-checkpoint candidate/oracle pairs, alternating checkpoint order
+and reversed cell order at endpoint2. No new outcome-dependent selection exists.
+The two profiles have24/48 stages and42,467,328/84,934,656 codes.
+
+New literal root:
+/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v92-20261024-a
+One software job,20 numerical jobs, primary audit and supplemental audit form23
+allocations. Old V80/V81/V82 failures/cancellations and all V89/V90/V91 files stay
+unchanged. The numerical Git checkout remains clean f900999. No old command,
+registration, reservation, partial output or completion is reused or repaired.
+
+Actual prerequisites
+package.py requires the actual V91 source tar, actual canonical program and actual
+successful terminal report. It checks the tar against that program, every member,
+the inventory and every existing local frozen counterpart. No fabricated report
+or guessed future program hash may be supplied. The new gate reopens all actual
+V91 terminal input bytes, every host/log/cost/worker seal, settled target ledger,
+both exact target artifacts and public checkpoint. It separately reopens actual
+V89 evidence through the unchanged V90 gate. The old12602-second unresolved debit
+and failed/cancelled outcomes remain. Missing, failed or nonterminal gates refuse.
+The actual V91 inventory is additionally checked against its program commitment;
+the V91 terminal reporter need not have listed that separate inventory file.
+
+prepare.py makes an exclusive candidate registry after fresh source-bound project
+and temporary-filesystem admission. It reads actual target artifacts/checkpoint
+extents. It does not register or submit. The checks launcher then checks fresh
+empty account queue, actual completed V89/V91 jobs, all19 old dispositions and
+clean numerical Git before registering once. The numerical chain requires actual
+software host/scheduler success. Every dependent job is held and verified before
+any release. Uncertain submission consumes its intent. A wrong held constraint
+leaves the job held. Runtime uses the existing held-chain record; terminal review
+requires actual release records. The22-job chain and dependency order are fixed.
+
+Shared production and child CPU contract
+The controller and actual numerical child call the same contract builder and V90
+read-only admission verifier. Program/source identity, trial/profile, job, command,
+cwd, worker root, phase, limits and attempt-0001 digest must all match the live
+reservation before model construction. Unknown attempts remain fully charged.
+The V90 bounded run-store and ledger retain full diagnostics and at most20 workers.
+No ledger is initialized when reading a missing prior ledger.
+
+Finite output path
+The actual worker uses the V90 phase-aware writer. Its exact source-bound progress
+census covers1714 files across both profiles, preserving every context/source/
+stage/payload event. Per-file limits stay1MiB progress,64MiB JSON/completion,1GiB
+state and exact packed model bytes. The prepare/oracle outputs still contain all
+four representations. Nothing is truncated or omitted to fit a new allowance.
+Every metadata path, plan, transaction, source tar, log and failure receipt has an
+explicit allowance. Source tar/extracted payload remain64MiB each and fewer than
+4096 members. The full source-bound plan is checked before upload and before each
+allocation, with actual project and existing /tmp devices plus user/group quotas.
+Previously written files are already charged in live usage, never credited free.
+Compiler and external Slurm logs retain conservative allowances, not a formal
+whole-filesystem bound. Actual capacity is observed and never reserved.
+
+Resources unchanged
+Numerical reservations total82840 including the original two-second margins,
+below the separate120624 matched-study ceiling. DistilGPT2 preparation3600,
+oracle4800, first request3000 and second request1800CPU seconds; GPT2 doubles
+those values. Numerical wall caps stayCPU+1800; Slurm adds the existing600-second
+controller wall allowance. One CPU/thread,16GiB process space,2GiB file-size,
+8GiB explicit arrays,9GiB resident,64billion stage work and1trillion request work
+remain. Worker controllers keep300soft/10202hard limits and302 complete overhead
+seconds each,6040 total below7224. The hard limit preserves child ceilings and
+is not permission to spend that much controller CPU. Software retains300/301
+child CPU and602 complete aggregate with302 controller overhead. Primary audit
+retains7200soft/7201 aggregate and9000wall; supplemental3600/3601 and5400wall.
+
+Timing scope
+Complete host elapsed time is the primary prospective measure. It includes fresh
+source/storage/input verification, container startup, numerical context, request,
+output, sealing, cleanup and shutdown. The inner transaction starts at worker
+dispatch, so it is reported separately and cannot stand in for those checks.
+The final host receipt write and shell startup are additionally covered by actual
+scheduler CPU/elapsed observations. Host, entry, transaction, worker and request
+clocks overlap and are never added together. Child numerical CPU is subtracted
+once only to isolate controller overhead. Final conservative scheduler accounting
+must satisfy all original caps. No OS-cache flush or control is claimed.
+
+Audits and scientific decision
+Primary verification reopens all saved artifacts, all actual seals/debits, progress
+censuses, controller/host clocks and admitted target bytes. It parses both original
+and retained states, compares all16 complete model/state/trust pairs against each
+checkpoint's own fresh original-teacher oracle and checks source membership and
+storage. No cross-checkpoint byte equality is expected. Supplemental verification
+reopens all16 actual model pairs and binds the primary receipt and all identical
+cost/output records. The terminal reporter requires all23 successful actual jobs,
+actual releases, every settled debit, both agreeing audits and all input bytes.
+No local test, source hash, stage progress or target admission substitutes for it.
+
+Apply the frozen V82 scientific decision rules. Report every cell/endpoint and
+failure. Separate shared optimization attribution from the choice of compressed
+versus equally optimized modern lossless storage. A single observation is a
+screen, not stable timing evidence. Two related GPT checkpoints do not establish
+cross-architecture generality. A favorable complete screen can justify the
+separately registered timing-replication design; it does not automatically launch
+it. Negative or failed controls remain visible. No V72 quality score transfers
+to the new512-normalized targets. Practical quality needs its own exact identity,
+sample/exclusion ledger and prospective evaluation. The existing V72/V74 bounded
+storage/access/latency contribution remains the current manuscript claim.
+
+Verification scope
+38 new local checks cover real small ledgers, all20 literal commands, storage and
+fixed workload, host log/timeout children, actual saved host/log bytes, generated
+upstream metadata, complete timing partitions and a fake full22-job Slurm chain.
+They execute no checkpoint or empirical neural calculation. The prepared221-test
+Linux gate retains all172 V91 suites and adds49 checks: these38 plus3 actual child
+loader guards,2 sealed-child receipt checks and6 generated full-file pipeline
+checks. The tiny pipeline uses two/three-stage fixtures and deliberately scaled
+progress/model extents; unchanged V81 suites cover full24/48-stage geometry.
+Its upstream functions are mocked only in these fixtures; separate live-ledger
+loader tests do not mock the CPU verifier. The entire221-test pinned gate remains
+unexecuted. Package construction itself remains unavailable before real V91 close.
+
+During source development, host import probing caught an eager numerical import;
+it is now deferred to container-only input functions. A copied test had a stale
+fetch operation and another lacked the generated temporary-root reader binding;
+these fixtures were corrected. A transient test-edit indentation error was fixed
+before verification. No registered experiment was launched by these checks.

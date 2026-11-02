@@ -1,0 +1,73 @@
+{
+  "archive": {
+    "bytes": 38839,
+    "path": "reports/development-dependency-notices-v69.zip",
+    "sha256": "062bc8b1944e93b2eb22d3a9592e474ee08e50d4ebeb404ea166f7beaac52e03"
+  },
+  "clean_extraction_exact": true,
+  "complete_transitive_notices": false,
+  "earlier_publisher_failure_preserved": true,
+  "files": 8,
+  "installed_tokenizer_notice_missing": true,
+  "installed_wheel_source_equivalence_verified": false,
+  "known_identity_findings": [],
+  "manifest_checked": true,
+  "manuscript_edited": false,
+  "notice_bytes": 103407,
+  "notice_sources": {
+    "notices/gmpy2/licenses/COPYING": {
+      "binding_scope": "Observed distribution notice; only zstandard was already part of the frozen runtime inventory",
+      "bytes": 35147,
+      "observed_at_utc": "2026-10-16T15:25:12.493819+00:00",
+      "origin": "Installed CPU distribution license tree",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "notices/gmpy2/licenses/COPYING.LESSER": {
+      "binding_scope": "Observed distribution notice; only zstandard was already part of the frozen runtime inventory",
+      "bytes": 7651,
+      "observed_at_utc": "2026-10-16T15:25:12.493819+00:00",
+      "origin": "Installed CPU distribution license tree",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+    },
+    "notices/numpy/LICENSE.txt": {
+      "binding_scope": "Observed distribution notice; only zstandard was already part of the frozen runtime inventory",
+      "bytes": 47768,
+      "observed_at_utc": "2026-10-16T15:25:12.493819+00:00",
+      "origin": "Installed CPU distribution license tree",
+      "sha256": "2046a3130e50b11c01659b3a0d963e6ae0b7436ff8e89cbcfd9e87bc6112d595"
+    },
+    "notices/tokenizers/LICENSE": {
+      "binding_scope": "Publisher source notice; installed wheel/source equivalence not verified",
+      "bytes": 11357,
+      "cargo_metadata": {
+        "bytes": 2765,
+        "git_blob_sha1": "e9d6bcc3c749a7f0f674a37275aa115ba34afba9",
+        "sha256": "a7550a462a6e4da8f6ff6aa3420f25f189c5e7ec7303485e9e7e31c20aa6f3e3",
+        "url": "https://github.com/huggingface/tokenizers/blob/88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3/tokenizers/Cargo.toml"
+      },
+      "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "origin": "Publisher source at immutable commit",
+      "repository": "huggingface/tokenizers",
+      "revision": "88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "url": "https://github.com/huggingface/tokenizers/blob/88a4498ad4ea1a9487b0a9b0ff881383fd5a06a3/LICENSE",
+      "version": "0.23.2"
+    },
+    "notices/zstandard/licenses/LICENSE": {
+      "binding_scope": "Observed distribution notice; only zstandard was already part of the frozen runtime inventory",
+      "bytes": 1484,
+      "observed_at_utc": "2026-10-16T15:25:12.493819+00:00",
+      "origin": "Installed CPU distribution license tree",
+      "sha256": "788fe85e53724a40b299051c4abc9cf74d42b27e7968325b80891c25f79adb4b"
+    }
+  },
+  "notice_texts": 5,
+  "notice_texts_unchanged": true,
+  "original_four_components_unchanged": true,
+  "packages_installed": false,
+  "project_license_assigned": false,
+  "schema": "review-observed-dependency-notices-v69",
+  "scientific_result": false,
+  "submission_ready": false,
+  "verified_at_utc": "2026-10-16T16:11:38.184178+00:00"
+}

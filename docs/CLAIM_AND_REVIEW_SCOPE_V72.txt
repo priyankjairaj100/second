@@ -1,0 +1,76 @@
+Current-claim and supplied-review scope check,18 October2026
+
+Scope and status
+Root read-through of reports/manuscript_v72.tex after actual quality/cost closure.
+This is not independent peer review, proof verification or an acceptance forecast.
+No experiment, source registration, threshold or manuscript was changed here.
+
+Supplied reviews are for another paper
+The three user-supplied reviews discuss Retrieval Decisions under Semantic Negative
+Weighting: symmetric contrastive targets, caption kernels, compatibility gaps,
+source-group decoding and adapter training. They are not reviews of Second's
+Certified Calibration Repair from Compressed Fixed-Anchor Features. The historical
+V58/V59 handoffs already record this distinction. Do not import those probability
+readout experiments, projection-proof corrections or reviewer scores into Second,
+and do not mark those objections as solved by Second's new results.
+
+Transferable review principles applied to the actual paper
+1. Distinguish target correctness from practical value. Section 'An explicit
+   reconstruction target' fixes teacher, dyadic finite features, normalization,
+   grids and tie rules; the introduction and limitations state that this differs
+   from sequential calibration and pretraining-data unlearning. The theorem is
+   conditional on successful complete certification, not a completion guarantee.
+2. Compare equally informed alternatives. The five service arms include indexed
+   lossless caches, cold reconstruction and a pooled-Gram hybrid. V67 adds the
+   complete modern lossless cache. The paper reports smaller compression state but
+   slower requests, and the hybrid's stronger first endpoint with source access.
+   This supports a tradeoff, not a speed win. Checkpoint-inclusive savings and codec
+   installation remain explicit; overlapping cost measures are not summed.
+3. Keep adverse evidence visible. The abstract includes the earlier5.92% regression
+   beyond5% tolerance. The body preserves failed guards, adaptive teacher selection,
+   exposure of the old eight-article set, failed admission and failed/recovered
+   audit/accounting history. Current quality is slightly worse than sequential,
+   and both95% intervals above1 are explicitly disclosed.
+4. Use actual evidence for the asserted scope. Conditional model/state correctness
+   is supported by actual fresh comparison audits, not checksum/fixture success
+   alone. The untouched320-article evaluation uses exact fixed selection/exclusions,
+   paired endpoints and frozen guards; actual terminal checks cover1944 loss files.
+   Local supplementary arithmetic uses the same original losses and cannot serve
+   as an independent neural implementation or a new replication.
+5. Bound generalization. One checkpoint, short calibration inputs, two dependent
+   retained endpoints and one bounded eligible-article frame do not establish
+   transfer, realistic population tails or broad reliability. The current paper
+   makes none of these claims. Single-order request timings lack uncertainty;
+   balanced prospective repetition is required only for a stable timing claim.
+6. Protect reader bandwidth. The draft has no appendix. The empirical history and
+   detailed operational accounting are still long, and the introduction retains
+   prospective/incomplete wording that should be tightened during the format pass.
+   The next writing pass should lead with the demonstrated narrow contribution,
+   keep current V67/V71 findings prominent, and retain historical failures briefly
+   with precise E12--E17 pointers. Do not remove mathematical assumptions or move
+   new empirical results into Limitations to satisfy a page limit.
+
+Theory-scope read-through
+Conditional code correctness follows coordinate induction with the exact accepted
+prefix, then stage independence under the fixed teacher. Canonical state equality
+also assumes deterministic descriptors, exact retained Gram operations and identical
+representation/serialization/provenance policies. It does not compare different
+representations, external execution logs or Gram-trust sidecars. The residual bound
+uses the positive-ridge lower spectral bound only for realized feature Grams, not
+arbitrary matrices inside an entrywise Gram box. No unconditional completion or
+novel general matrix/verification principle should be asserted. This read-through
+found no additional manuscript correction to those stated premises; unchanged
+proof spans and source checks do not constitute independent proof validation.
+
+Submission scope
+The current bundle includes source copies, scalar/hash evidence, instructions and
+observed notices, not model/data/runtime binaries. Review rights and attribution
+for that actual payload. An exhaustive runtime redistribution package would be a
+separate scope, not a prerequisite automatically created by this source bundle.
+Project ownership/license choice and author facts remain author-controlled. Do not
+assert full legal clearance or full empirical reproduction from this scope note.
+
+Current publication deliberately remains draft. Actual layout access is unavailable
+and long/short format is pending. Those gates are real; completed-job polling or
+another identical quality run will not resolve them. Continue the same editor once
+format is known, preserve current complete evidence and compile after each edit.

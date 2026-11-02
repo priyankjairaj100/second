@@ -1,0 +1,66 @@
+{
+  "actual_model_state_bytes_checked": false,
+  "archive": {
+    "bytes": 247320,
+    "sha256": "75073d8641d0378d6fe5404511cf3a1e7da1a819054e5b4defdd5d24f14b8479"
+  },
+  "captured_at_utc": "2026-10-16T13:10:27.588915+00:00",
+  "complete_campaign_costs_verified": false,
+  "controller_all_waited_children_cpu_ns": 4921707197000,
+  "controller_own_cpu_ns": 8195606645,
+  "declared_artifacts": {
+    "admission.json": {
+      "bytes": 555807,
+      "file": "admission.json",
+      "sha256": "8e409e1e4b9b0faff1d37f76faf117f9115042b11beb9acb3ec89bc86250e72b"
+    },
+    "execution-provenance.json": {
+      "bytes": 12727,
+      "file": "execution-provenance.json",
+      "sha256": "22956724f4d2a9433702a3f76cc1fb76a8d447c8c60a7d668800de7da55574cc"
+    },
+    "model.bin": {
+      "bytes": 21233664,
+      "file": "model.bin",
+      "sha256": "35ea0d49671581c0f20fa9a65665acd5abec82d0a1e3edc4e75bca05bdc1f9c5"
+    },
+    "state.bin": {
+      "bytes": 318868988,
+      "file": "state.bin",
+      "sha256": "9700dcd3dec4e77890bfc036c683a7e175a9cf88a0cadd4c9b3bb53eef0c7e02"
+    },
+    "trust.json": {
+      "bytes": 48523,
+      "file": "trust.json",
+      "sha256": "a2659f409bf6ebb77a89719649542d45b29e747bf43be1d4312e319dfd555a14"
+    }
+  },
+  "fresh_oracle_comparison_verified": false,
+  "job": {
+    "elapsed": "01:22:46",
+    "end": "2026-10-16T18:35:47",
+    "exit_code": "0:0",
+    "name": "second67-hybrid-1",
+    "node": "csis.mn1",
+    "start": "2026-10-16T17:13:01",
+    "state": "COMPLETED",
+    "total_cpu": "01:22:10"
+  },
+  "job_id": "15263",
+  "later_reserved_attempts_preserved": 1,
+  "numerical_result_verified": false,
+  "numerical_solver_fallback_attempted_decisions": 21504,
+  "numerical_solver_fallback_certified_decisions": 21504,
+  "numerical_solver_fallback_rows": 7,
+  "program_sha256": "11e0db146e79330852f550a1cc3b2dd7568a66cdfe8006b004dca3840149cc30",
+  "refused_stages": 0,
+  "retained_membership_independently_rebuilt": false,
+  "stage_certificates": 24,
+  "stage_level_fallback_flags": 0,
+  "status": "verified_completed_comparison_receipt_metadata",
+  "transaction_elapsed_ns": 4962294372332,
+  "trial": "hybrid-1",
+  "worker_charged_cpu_seconds": 4922,
+  "worker_maximum_rss_kib": 1936672,
+  "worker_process_and_waited_descendant_cpu_ns": 4921704328001
+}

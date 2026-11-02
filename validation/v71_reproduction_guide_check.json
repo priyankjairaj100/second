@@ -1,0 +1,23 @@
+{
+  "components": [
+    "development-audit-receipts-v69.zip",
+    "development-dependency-notices-v69.zip",
+    "development-evidence-v69b.zip",
+    "development-service-evidence-v70.zip",
+    "development-source-review-v71.zip"
+  ],
+  "empirical_result_verified": false,
+  "full_reproduction_verified": false,
+  "guide_files": 5,
+  "model_files": [],
+  "model_loaded": false,
+  "network_used": false,
+  "runtime_qualified": false,
+  "status": "byte_checks_passed",
+  "clean_extraction_verified": true,
+  "corruption_rejected": true,
+  "missing_rejected": true,
+  "unexpected_rejected": true,
+  "archive_sha256": "0095257b4fc9a2f133a64f9c629cf562dabfb211ab3c33d2fb56bbfae0db03ae",
+  "external_input_acquisition": false
+}

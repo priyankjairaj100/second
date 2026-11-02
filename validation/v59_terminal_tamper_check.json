@@ -1,0 +1,33 @@
+{
+  "cases": [
+    {
+      "case": "audit_input_omission",
+      "copy_manifest_rehashed": true,
+      "exit_status": 1,
+      "omitted_entry": "/nfs_home/users/poonam/second-20261010/local_runs/full-precision-anchor-v59-20261014-a/quality/outputs/completion.json",
+      "result": {
+        "error": "Audit input census differs",
+        "error_type": "ValueError",
+        "schema": "second-v59-portable-metadata-check",
+        "validation_status": "failed"
+      }
+    },
+    {
+      "case": "ledger_source_omission",
+      "copy_manifest_rehashed": true,
+      "exit_status": 1,
+      "omitted_entry": "scripts/run_adaptive_service_v30.py",
+      "result": {
+        "error": "Complete ledger source/schema/scope binding",
+        "error_type": "ValueError",
+        "schema": "second-v59-portable-metadata-check",
+        "validation_status": "failed"
+      }
+    }
+  ],
+  "checker_sha256": "7c80a7950ff30f40d0928307545ec97ab1c7acd73aeee7a49f253debcd7bd039",
+  "isolated_copies_only": true,
+  "original_capture": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/terminal-v59-metadata",
+  "original_capture_unchanged": true,
+  "schema": "second-v59-terminal-metadata-tamper-check"
+}

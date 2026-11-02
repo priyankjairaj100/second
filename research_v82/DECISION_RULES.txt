@@ -1,0 +1,75 @@
+Prospective interpretation of the deep speed/transfer campaign
+
+The scientific claim is not selected by which result looks most favorable.
+Preserve all cells, endpoints, failures and earlier negative findings.
+
+V80 asks whether the optimizations change complete requests, and whether
+compressed storage beats the equally optimized modern lossless control on the
+existing root. Eight actual successor comparisons to independent reconstruction,
+both audits and terminal host accounting are necessary for usable evidence.
+One observation in each cell is an engineering screen, not stable latency.
+Compare reference->optimized within each representation for attribution; compare
+optimized compressed->optimized modern for the practical storage choice. Native
+setup, context loading, validation and cleanup must remain in the primary clock.
+Use the same measured clock for every ratio. Do not sum nested phase timings.
+
+A component gain can be large while its total contribution is small. After V80,
+use actual non-overlapping request phase measurements to explain this. Common
+solve/context/source/encoding cost, bounded-cache overhead and improved controls
+may limit the benefit of faster compressed decoding. A resource refusal is not
+proof that transfer is scientifically impossible; an execution or protocol bug
+requires a separate new registration, never a silent rerun of consumed attempts.
+
+V81 tests the format/guards for a second complete depth. V82 is input/actual-target
+admission. Neither establishes transfer. A subsequent matched experiment must
+use the same4x128-token workload and approved grids for both DistilGPT2 and GPT2,
+fresh retained-teacher oracles for each checkpoint, all24/48 stages, full model,
+state and trust bytes, terminal accounting and every registered outcome. Model
+bytes across the two checkpoints need not match. This is related-checkpoint/depth
+transfer; two GPT2-family models do not establish cross-architecture generality.
+The small workload and changed512 normalization must be disclosed. Quality under
+V72's different target is not evidence for the new target's quality.
+
+If V80 and the matched transfer screen are correct and useful, a separate timing
+registration should compare the two optimized representations using eight paired
+blocks per checkpoint/endpoint, with seeded randomized within-pair order and
+all64 requests declared in advance. Independent fresh processes/contexts and
+same audited predecessors/oracles are required. Exact budgets must be calculated
+from the admitted target and prior CPU observations before registration; if the
+preserved ceiling cannot admit all64 requests, narrow the scientific question or
+retain descriptive single-observation results. Do not spend leftover budget on
+favorable endpoints or add repetitions based on p-values. This is a design
+proposal, not an approved registered experiment or permission for larger caps.
+
+For that proposed study the primary outcome is complete controller transaction
+wall time; worker/request clocks, CPU, peak memory and live/checkpoint-inclusive
+storage are secondary outcomes. Publish every pair and each of the four strata.
+Use a predeclared one-sided paired assignment/randomization test of faster
+compressed transactions with Holm correction across the four strata; also report
+paired ratios and uncertainty. No pooled average should conceal a losing stratum.
+No claim of universal speed follows even if all four strata support improvement.
+Cache/host conditions, pinned implementations, source counts and scope remain
+part of the result. Any failed trial is reported and prevents an all-trials
+success statement; do not quietly analyze only completed favorable pairs.
+
+Writing decision after evidence closure:
+- Correct, reliably faster requests on both tested checkpoints: lead with exact
+  compressed repair that improves the measured storage/time frontier, state the
+  tested models/workload and retain all original comparisons.
+- Correct with a localized gain or a loss against the improved lossless control:
+  lead with certified repair and the measured storage/access/latency tradeoff;
+  present the optimization attribution and restricted operating conditions.
+- Correct but no practical speed gain across the tested settings: retain the
+  bounded tradeoff contribution, explain measured cost attribution and negative
+  transfer/speed evidence precisely. Do not claim a theorem against all speedups.
+- Incorrect or unaudited new execution: keep the existing verified V72/V74 story;
+  preserve the failure and withhold new scientific claims.
+
+Generality is helpful for practical importance, but it is not logically required
+for the established conditional exactness and bounded storage/access result.
+Its absence reduces external validity and makes the magnitude of demonstrated
+savings, realistic deployment assumptions and clear comparison costs more
+important to reviewers. A correct narrower result can be written honestly; it
+must not be sold as general acceleration. Broad language requires actual diverse
+workload/checkpoint evidence, not only generic mathematical notation or software
+support for more stages. Conference acceptance is not guaranteed by either path.

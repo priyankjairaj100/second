@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-10-22T11:36:22.324054+00:00",
+  "scope": "Mac cache mechanics and shape-only admission; no Linux, Zstandard, model or full-request result",
+  "platform": "macOS-13.0-arm64-arm-64bit",
+  "python": "3.9.6",
+  "tests": 9,
+  "failures": 0,
+  "errors": 0,
+  "sources": {
+    "mechanics.log": {
+      "bytes": 808,
+      "sha256": "496c73a41670bcb4239aae30df9be25ba1dfb2ef91524ef0199212b4417a117a"
+    },
+    "canonical_reuse.py": {
+      "bytes": 4606,
+      "sha256": "02735109518ae8d68d3240fb785e41df79cc1e979c1e3f680dbc7c6bd928f4d0"
+    },
+    "admission_grid.py": {
+      "bytes": 2829,
+      "sha256": "a12b1fe7ba6d5b2be34d964012e6a54ccb9f8890e88bd6f6c0da273b06a615c7"
+    },
+    "check_mechanics.py": {
+      "bytes": 4467,
+      "sha256": "ec8e347d2cf8ebcfdf091eedc49d34cd8c4b85389ff88bdf1617bec03303d762"
+    },
+    "CAMPAIGN_PLAN.txt": {
+      "bytes": 11155,
+      "sha256": "993cb8d079fd9697e88715280e3b31ec150428c70d4fabf050288f3ce476196f"
+    },
+    "__init__.py": {
+      "bytes": 80,
+      "sha256": "2ceffa9cf57fe827e3b997f937f4f049fb4e2a53311618b0283a3eb1fdda0966"
+    },
+    "admission-grid.json": {
+      "bytes": 537467,
+      "sha256": "6c3d081015133fd226639a3a700a87d7b1dcb791bdb0383ad3ad187c569c7f66"
+    }
+  }
+}

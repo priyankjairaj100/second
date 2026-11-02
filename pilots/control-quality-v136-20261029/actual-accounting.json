@@ -1,0 +1,486 @@
+{
+  "schema": "revision-quality-actual-accounting-v134",
+  "observed_utc": "2026-10-29T09:09:12.352801+00:00",
+  "families": {
+    "V124": {
+      "jobs": [
+        {
+          "JobIDRaw": "16677",
+          "JobName": "second124-data",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "18",
+          "TotalCPU": "00:12.430",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16678",
+          "JobName": "second124-checks_distilgpt2",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "31",
+          "TotalCPU": "00:23.801",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16679",
+          "JobName": "second124-checks_gpt2",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "32",
+          "TotalCPU": "00:25.643",
+          "AllocCPUS": "1"
+        }
+      ],
+      "terminal": true,
+      "total_cpu_seconds": "61.874"
+    },
+    "V125": {
+      "jobs": [
+        {
+          "JobIDRaw": "16681",
+          "JobName": "second125-checks_distilgpt2",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "61",
+          "TotalCPU": "00:59.199",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16682",
+          "JobName": "second125-checks_gpt2",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "77",
+          "TotalCPU": "01:15.738",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16683",
+          "JobName": "second125-distilgpt2__candidate_2",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "343",
+          "TotalCPU": "05:38.925",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16684",
+          "JobName": "second125-distilgpt2__candidate_3",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "343",
+          "TotalCPU": "05:39.523",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16685",
+          "JobName": "second125-distilgpt2__original",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "335",
+          "TotalCPU": "05:32.099",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16686",
+          "JobName": "second125-gpt2__candidate_2",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "473",
+          "TotalCPU": "07:48.699",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16687",
+          "JobName": "second125-gpt2__candidate_3",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "463",
+          "TotalCPU": "07:39.925",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16688",
+          "JobName": "second125-gpt2__original",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "427",
+          "TotalCPU": "07:02.938",
+          "AllocCPUS": "1"
+        }
+      ],
+      "terminal": true,
+      "total_cpu_seconds": "2497.046"
+    },
+    "V126": {
+      "jobs": [
+        {
+          "JobIDRaw": "16689",
+          "JobName": "second126-checks",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "50",
+          "TotalCPU": "00:49.708",
+          "AllocCPUS": "1"
+        }
+      ],
+      "terminal": true,
+      "total_cpu_seconds": "49.708"
+    },
+    "V127": {
+      "jobs": [
+        {
+          "JobIDRaw": "16690",
+          "JobName": "second127-checks",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "4",
+          "TotalCPU": "00:02.733",
+          "AllocCPUS": "1"
+        }
+      ],
+      "terminal": true,
+      "total_cpu_seconds": "2.733"
+    },
+    "V128": {
+      "jobs": [
+        {
+          "JobIDRaw": "16693",
+          "JobName": "second128-checks",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "53",
+          "TotalCPU": "00:49.629",
+          "AllocCPUS": "1"
+        }
+      ],
+      "terminal": true,
+      "total_cpu_seconds": "49.629"
+    },
+    "V129": {
+      "jobs": [
+        {
+          "JobIDRaw": "16694",
+          "JobName": "second129-checks",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "53",
+          "TotalCPU": "00:51.241",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16696",
+          "JobName": "second129-distilgpt2__candidate_2",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "44",
+          "TotalCPU": "00:42.748",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16697",
+          "JobName": "second129-distilgpt2__candidate_3",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "48",
+          "TotalCPU": "00:46.858",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16698",
+          "JobName": "second129-gpt2__candidate_2",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "86",
+          "TotalCPU": "01:24.186",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16699",
+          "JobName": "second129-gpt2__candidate_3",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "87",
+          "TotalCPU": "01:24.659",
+          "AllocCPUS": "1"
+        }
+      ],
+      "terminal": true,
+      "total_cpu_seconds": "309.692"
+    },
+    "V130": {
+      "jobs": [
+        {
+          "JobIDRaw": "16695",
+          "JobName": "second130-checks",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "66",
+          "TotalCPU": "01:01.493",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16700",
+          "JobName": "second130-distilgpt2__candidate_2",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "24",
+          "TotalCPU": "00:22.061",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16701",
+          "JobName": "second130-distilgpt2__candidate_3",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "24",
+          "TotalCPU": "00:21.963",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16702",
+          "JobName": "second130-gpt2__candidate_2",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "37",
+          "TotalCPU": "00:35.365",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16703",
+          "JobName": "second130-gpt2__candidate_3",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "37",
+          "TotalCPU": "00:35.339",
+          "AllocCPUS": "1"
+        }
+      ],
+      "terminal": true,
+      "total_cpu_seconds": "176.221"
+    },
+    "V131": {
+      "jobs": [
+        {
+          "JobIDRaw": "16704",
+          "JobName": "second131-gptq__distilgpt2__2",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "305",
+          "TotalCPU": "04:58.738",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16705",
+          "JobName": "second131-gptq__distilgpt2__3",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "309",
+          "TotalCPU": "05:03.957",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16706",
+          "JobName": "second131-gptq__gpt2__2",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "471",
+          "TotalCPU": "07:42.115",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16707",
+          "JobName": "second131-gptq__gpt2__3",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "472",
+          "TotalCPU": "07:42.894",
+          "AllocCPUS": "1"
+        }
+      ],
+      "terminal": true,
+      "total_cpu_seconds": "1527.704"
+    },
+    "V132": {
+      "jobs": [
+        {
+          "JobIDRaw": "16708",
+          "JobName": "second132-checks",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "66",
+          "TotalCPU": "01:01.503",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16711",
+          "JobName": "second132-distilgpt2__candidate_2",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "368",
+          "TotalCPU": "06:06.048",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16712",
+          "JobName": "second132-distilgpt2__candidate_3",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "589",
+          "TotalCPU": "09:45.581",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16713",
+          "JobName": "second132-gpt2__candidate_2",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "731",
+          "TotalCPU": "12:06.628",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16714",
+          "JobName": "second132-gpt2__candidate_3",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "1165",
+          "TotalCPU": "19:19.215",
+          "AllocCPUS": "1"
+        }
+      ],
+      "terminal": true,
+      "total_cpu_seconds": "2898.975"
+    },
+    "V133": {
+      "jobs": [
+        {
+          "JobIDRaw": "16717",
+          "JobName": "second133-distilgpt2__candidate_2",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "2",
+          "TotalCPU": "00:00.764",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16718",
+          "JobName": "second133-distilgpt2__candidate_3",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "1",
+          "TotalCPU": "00:00.688",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16719",
+          "JobName": "second133-gpt2__candidate_2",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "1",
+          "TotalCPU": "00:01.021",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16720",
+          "JobName": "second133-gpt2__candidate_3",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "1",
+          "TotalCPU": "00:01.020",
+          "AllocCPUS": "1"
+        }
+      ],
+      "terminal": true,
+      "total_cpu_seconds": "3.493"
+    },
+    "V134": {
+      "jobs": [
+        {
+          "JobIDRaw": "16721",
+          "JobName": "second134-sequential__distilgpt2__2",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "0",
+          "TotalCPU": "00:00.118",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16722",
+          "JobName": "second134-sequential__distilgpt2__3",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "0",
+          "TotalCPU": "00:00.119",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16723",
+          "JobName": "second134-sequential__gpt2__2",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "0",
+          "TotalCPU": "00:00.116",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16724",
+          "JobName": "second134-sequential__gpt2__3",
+          "State": "FAILED",
+          "ExitCode": "1:0",
+          "ElapsedRaw": "0",
+          "TotalCPU": "00:00.113",
+          "AllocCPUS": "1"
+        }
+      ],
+      "terminal": true,
+      "total_cpu_seconds": "0.466"
+    },
+    "V136": {
+      "jobs": [
+        {
+          "JobIDRaw": "16725",
+          "JobName": "second136-sequential__distilgpt2__2",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "278",
+          "TotalCPU": "04:32.684",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16726",
+          "JobName": "second136-sequential__distilgpt2__3",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "323",
+          "TotalCPU": "05:16.706",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16727",
+          "JobName": "second136-sequential__gpt2__2",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "465",
+          "TotalCPU": "07:39.058",
+          "AllocCPUS": "1"
+        },
+        {
+          "JobIDRaw": "16728",
+          "JobName": "second136-sequential__gpt2__3",
+          "State": "COMPLETED",
+          "ExitCode": "0:0",
+          "ElapsedRaw": "464",
+          "TotalCPU": "07:38.416",
+          "AllocCPUS": "1"
+        }
+      ],
+      "terminal": true,
+      "total_cpu_seconds": "1506.864"
+    }
+  },
+  "total_cpu_seconds": "9084.405",
+  "all_terminal": true,
+  "scope": "Slurm TotalCPU of distinct top-level allocations; batch/extern rows not double-counted; launcher/controller CPU not measured here"
+}

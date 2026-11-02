@@ -1,0 +1,139 @@
+{
+  "schema": "local-copied-v44-artifact-audit",
+  "status": "verified",
+  "program_sha256": "e3d7b6dfd1ad9199a180aac2e706ef8b2334c709947b2b8b6e90e4a81dc3e02c",
+  "completion_sha256": "98870a817e1e7183424158cb392929b7a971e9c89b876ad878f0ecf787fdab4c",
+  "artifacts": [
+    {
+      "path": "quality/outputs/execution-provenance.json",
+      "bytes": 9036,
+      "file": "execution-provenance.json",
+      "sha256": "11dfc300476f83bf1c4970daf636c0c804ada7f126b8cb12c000df6df5f55fcf"
+    },
+    {
+      "path": "quality/outputs/fixed-target.json",
+      "bytes": 854,
+      "file": "fixed-target.json",
+      "sha256": "15b2506f7ea0006a8ef60f0c9df9c5ba6d75018e53abb9069332df6915352c9b"
+    },
+    {
+      "path": "quality/outputs/historical-parity.json",
+      "bytes": 2714,
+      "file": "historical-parity.json",
+      "sha256": "9f4f8a66c3e390fe05064ad36dc932147d9ee9abd76f602467835fbb3cd863bc"
+    },
+    {
+      "path": "quality/outputs/sequential-diagnostics.json",
+      "bytes": 76356,
+      "file": "sequential-diagnostics.json",
+      "sha256": "4f90ccb44089bcae4d336057a47eac7475e5572bdd5f3add467d76b2c442347c"
+    },
+    {
+      "path": "quality/outputs/sequential-model-metadata.json",
+      "bytes": 958907,
+      "file": "sequential-model-metadata.json",
+      "sha256": "47503cdc056e02fee3d2796172e12c8b0c32745116a85d3f9452481e5e8e465f"
+    },
+    {
+      "path": "quality/outputs/sequential-model.bin",
+      "bytes": 21233664,
+      "file": "sequential-model.bin",
+      "sha256": "9b2b3cc21d4e6db822aff61ab86881b95d1b511e6d8f6e5273aae5d1ab2baab4"
+    },
+    {
+      "path": "quality/outputs/sequential-target.json",
+      "bytes": 968695,
+      "file": "sequential-target.json",
+      "sha256": "ad56d7638f1ccbc56438aab9c819de22516139153542d57d76a7f8a498d257ac"
+    }
+  ],
+  "bound_inputs": [
+    {
+      "name": "all_exclusions",
+      "local_path": "campaigns/heldout_quality_v30_exclusions.json",
+      "sha256": "3a620e938c40d35daed69674f703bcb16840178cc7d9527427650a6e0de28876",
+      "bytes": 5224
+    },
+    {
+      "name": "checkpoint_config",
+      "local_path": "tmp/models/distilgpt2/config.json",
+      "sha256": "4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a",
+      "bytes": 762
+    },
+    {
+      "name": "checkpoint_weights",
+      "local_path": "tmp/models/distilgpt2/model.safetensors",
+      "sha256": "e1ff18884359fe8beb795a5f414feb85a6ce3d929ad019c0d958c039d2b94a1b",
+      "bytes": 352824413
+    },
+    {
+      "name": "first_audit",
+      "local_path": "local_runs/full-model-v43-20261010-b/artifact-audit.json",
+      "sha256": "54cc9d3d82327d2f5cd4317b78156639bb5d80a1a6fc0920949f0ec592b27625",
+      "bytes": 117493
+    },
+    {
+      "name": "fixed_completion",
+      "local_path": "local_runs/full-model-v43-20261010-b/compressed/outputs/completion.json",
+      "sha256": "15deb0cccdb0debad1c44f4dc5b40c07d5136981cbeae3825de70a0e8d4a194d",
+      "bytes": 437692
+    },
+    {
+      "name": "fixed_model",
+      "local_path": "local_runs/full-model-v43-20261010-b/compressed/outputs/step-2-model.bin",
+      "sha256": "941edda96b1bec3a30bb467f39641bd44fa1dd03752f71ed6b3c4549867e9ae0",
+      "bytes": 21233664
+    },
+    {
+      "name": "fixed_state",
+      "local_path": "local_runs/full-model-v43-20261010-b/compressed/outputs/step-2-state.bin",
+      "sha256": "c6a5a2d9bc37ac8e1c170dc42fa50b04003aa93aec0616febf83afa72188887a",
+      "bytes": 28614688
+    },
+    {
+      "name": "historical_losses",
+      "local_path": "campaigns/research_v30/attempts/quality-001/outputs/completion.json",
+      "sha256": "fa9ddadf0506a4d36378fa32ac4af9bea8b2a543222e0fb6f4458df1cef2fd9b",
+      "bytes": 20145
+    },
+    {
+      "name": "historical_registration",
+      "local_path": "campaigns/quality_v30/registration.json",
+      "sha256": "bafbbd721435f8f188ddb7a0f834ee6df3f097d62e6189e03023a5828254b95c",
+      "bytes": 12513
+    },
+    {
+      "name": "second_audit",
+      "local_path": "local_runs/full-model-v43-20261010-b/postrun-audit.json",
+      "sha256": "cd03e4c347464f13c39b528ea022313f2b3858c1ad8ca0bbff665cd5623aa99b",
+      "bytes": 54096
+    },
+    {
+      "name": "v43_ledger",
+      "local_path": "local_runs/full-model-v43-20261010-b/budget/ledger.json",
+      "sha256": "562472b4b293d0c7c86bf421827f4dd6f99afd5f5938a90f9300afb54d0c1337",
+      "bytes": 16958
+    },
+    {
+      "name": "v43_program",
+      "local_path": "local_runs/full-model-v43-20261010-b/program.json",
+      "sha256": "e350109ae0771afcd9bb94abf6bf40a8082110a76c33bcaaf7e23922a107ce4d",
+      "bytes": 46407
+    },
+    {
+      "name": "v43_registration",
+      "local_path": "local_runs/full-model-v43-20261010-b/registration.json",
+      "sha256": "b86595cd253b40e0418b57d81b0fbce30c5b3d74e9a52595683a807e134e6857",
+      "bytes": 85
+    }
+  ],
+  "registered_source_files_verified": 316,
+  "sealed_worker_artifacts_verified": 6,
+  "losses_recomputed": true,
+  "development_guards_pass": true,
+  "historical_control_parity": true,
+  "all_reservations_settled": true,
+  "charged_cpu_seconds": 94,
+  "inference_repeated": false,
+  "scope": "Local hash/binding/arithmetic audit of actual copied artifacts and receipts; does not independently repeat inference or attest remote execution."
+}

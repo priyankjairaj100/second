@@ -1,0 +1,2036 @@
+{
+  "calibration_inference_or_binary_audit_repeated": false,
+  "evidence_kind": "derived numerical summary of preserved development audit reports",
+  "full_reproduction_package_complete": false,
+  "original_receipts_included": false,
+  "records": {
+    "E01": {
+      "analysis_cost_outside_worker_ledger": true,
+      "analysis_cpu_ns": 174653391,
+      "cases": {
+        "128": {
+          "all_arms_certified": true,
+          "arms": {
+            "cached_primal": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 14760015890,
+              "component_state_bytes": 1626898,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "cached_token": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 1493786498,
+              "component_state_bytes": 1626898,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "compressed_48": {
+              "certificate_accepted": true,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 2096018762,
+              "component_state_bytes": 1554233,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "gram_delete": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 99786839997,
+              "component_state_bytes": 6253952,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 12,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "gram_fresh": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 22182039981,
+              "component_state_bytes": 6253951,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 1,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            }
+          },
+          "exact_code_agreement": true
+        },
+        "1536": {
+          "all_arms_certified": true,
+          "arms": {
+            "cached_primal": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 31323543544,
+              "component_state_bytes": 9205544,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "cached_token": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 86450109571,
+              "component_state_bytes": 9205544,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "compressed_48": {
+              "certificate_accepted": true,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 35568670882,
+              "component_state_bytes": 8332316,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "gram_delete": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 22674840509,
+              "component_state_bytes": 6256845,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 1,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "gram_fresh": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 98466778300,
+              "component_state_bytes": 6256844,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 12,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            }
+          },
+          "exact_code_agreement": true
+        },
+        "768": {
+          "all_arms_certified": true,
+          "arms": {
+            "cached_primal": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 22245018633,
+              "component_state_bytes": 5071731,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "cached_token": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 23290472566,
+              "component_state_bytes": 5071731,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "compressed_32": {
+              "certificate_accepted": false,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 56414186465,
+              "component_state_bytes": 3455531,
+              "fallback": true,
+              "fallback_elapsed_ns": 31454036334,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 6,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "compressed_40": {
+              "certificate_accepted": true,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 24372359657,
+              "component_state_bytes": 4045355,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "compressed_48": {
+              "certificate_accepted": true,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 24361421497,
+              "component_state_bytes": 4635179,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "gram_delete": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 63976923937,
+              "component_state_bytes": 6255266,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 7,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            },
+            "gram_fresh": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 56869621355,
+              "component_state_bytes": 6255265,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "fallback_refusal": null,
+              "neural_stage_record_pairs": 6,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "All retained feature descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw token inputs, and audit files excluded. This is not complete persistent service state.",
+              "status": "certified"
+            }
+          },
+          "exact_code_agreement": true
+        }
+      },
+      "confirmation": false,
+      "costs": {
+        "data": {
+          "charged_cpu_seconds": {
+            "feasibility": 5
+          },
+          "over_cap": {
+            "feasibility": false
+          },
+          "phase_cpu_seconds": {
+            "feasibility": 122
+          }
+        },
+        "model": {
+          "charged_cpu_seconds": {
+            "feasibility": 877
+          },
+          "over_cap": {
+            "feasibility": false
+          },
+          "phase_cpu_seconds": {
+            "feasibility": 2400
+          }
+        }
+      },
+      "full_model": false,
+      "historical_scope": "Seventeen complete first-stage observations compare representations and exact codes. The registered low-precision refusal and replay remain included. This is a single-stage development comparison, not a complete service or independent timing replication.",
+      "lifetime_benefit_established": false,
+      "paired_repetitions": 1,
+      "population_inference": false,
+      "stage": "First complete QKV stage only. Shared checkpoint loads and native builds are outside arm ratios.",
+      "title": "Real-data stage-scale comparison"
+    },
+    "E02": {
+      "analysis_cost_outside_worker_ledger": true,
+      "analysis_cpu_ns": 133596960,
+      "cases": {
+        "1536": {
+          "all_arms_certified": true,
+          "arms": {
+            "cached_primal": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 34310553484,
+              "component_state_bytes": 9205544,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "Retained descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw tokens, and audits excluded.",
+              "status": "certified"
+            },
+            "gram_delete_native": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 18835432439,
+              "component_state_bytes": 6256852,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "neural_stage_record_pairs": 1,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "Retained descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw tokens, and audits excluded.",
+              "status": "certified"
+            },
+            "gram_delete_python": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 22515107369,
+              "component_state_bytes": 6256852,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "neural_stage_record_pairs": 1,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "Retained descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw tokens, and audits excluded.",
+              "status": "certified"
+            },
+            "gram_fresh_native": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 40863567348,
+              "component_state_bytes": 6256851,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "neural_stage_record_pairs": 12,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "Retained descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw tokens, and audits excluded.",
+              "status": "certified"
+            },
+            "streamed_compressed_40": {
+              "certificate_accepted": true,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 36965633851,
+              "component_state_bytes": 7152668,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 2,
+              "state_scope": "Retained descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw tokens, and audits excluded.",
+              "status": "certified"
+            },
+            "streamed_primal": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 34576271418,
+              "component_state_bytes": 9205544,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "Retained descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw tokens, and audits excluded.",
+              "status": "certified"
+            }
+          },
+          "exact_code_agreement": true
+        },
+        "768": {
+          "all_arms_certified": true,
+          "arms": {
+            "cached_primal": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 23020063557,
+              "component_state_bytes": 5071731,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "Retained descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw tokens, and audits excluded.",
+              "status": "certified"
+            },
+            "gram_delete_native": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 30136403415,
+              "component_state_bytes": 6255273,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "neural_stage_record_pairs": 7,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "Retained descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw tokens, and audits excluded.",
+              "status": "certified"
+            },
+            "gram_delete_python": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 54093522542,
+              "component_state_bytes": 6255273,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "neural_stage_record_pairs": 7,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "Retained descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw tokens, and audits excluded.",
+              "status": "certified"
+            },
+            "gram_fresh_native": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 28041307590,
+              "component_state_bytes": 6255272,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "neural_stage_record_pairs": 6,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "Retained descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw tokens, and audits excluded.",
+              "status": "certified"
+            },
+            "streamed_compressed_40": {
+              "certificate_accepted": true,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 25387995231,
+              "component_state_bytes": 4045355,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "Retained descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw tokens, and audits excluded.",
+              "status": "certified"
+            },
+            "streamed_primal": {
+              "certificate_accepted": null,
+              "code_count": 1769472,
+              "codes_committed": true,
+              "component_elapsed_ns": 23571554824,
+              "component_state_bytes": 5071731,
+              "fallback": false,
+              "fallback_elapsed_ns": 0,
+              "neural_stage_record_pairs": 0,
+              "numerical_solver_fallback_rows": 0,
+              "state_scope": "Retained descriptors or exact Gram, stage metadata, and stage codes. Base checkpoint, raw tokens, and audits excluded.",
+              "status": "certified"
+            }
+          },
+          "exact_code_agreement": true
+        }
+      },
+      "confirmation": false,
+      "costs": {
+        "data": {
+          "charged_cpu_seconds": {
+            "feasibility": 4
+          },
+          "over_cap": {
+            "feasibility": false
+          },
+          "phase_cpu_seconds": {
+            "feasibility": 122
+          }
+        },
+        "model": {
+          "charged_cpu_seconds": {
+            "feasibility": 506
+          },
+          "over_cap": {
+            "feasibility": false
+          },
+          "phase_cpu_seconds": {
+            "feasibility": 1700
+          }
+        }
+      },
+      "full_model": false,
+      "historical_scope": "Twelve complete first-stage outputs agree, with native and Python source-archive comparisons. Strong Gram controls remain in the comparison. Payload and stage clocks exclude shared preparation and are not deployment costs.",
+      "lifetime_benefit_established": false,
+      "paired_repetitions": 1,
+      "population_inference": false,
+      "stage": "First complete QKV stage only. Shared checkpoint loads and native builds are outside arm ratios.",
+      "title": "Native Gram and streamed stage controls"
+    },
+    "E03": {
+      "historical_scope": "Defines the calibration-reconstruction target and separates conditional proof, implementation and empirical obligations. This is a scope record, not an experiment or a completed evidence gate.",
+      "title": "Target and claim boundaries"
+    },
+    "E04": {
+      "actual_payload_comparisons": [
+        {
+          "actual_model_bytes_equal": true,
+          "actual_state_bytes_equal": true,
+          "arm": "cached",
+          "step": 1
+        },
+        {
+          "actual_model_bytes_equal": true,
+          "actual_state_bytes_equal": true,
+          "arm": "cached",
+          "step": 2
+        },
+        {
+          "actual_model_bytes_equal": true,
+          "actual_state_bytes_equal": true,
+          "arm": "compressed",
+          "step": 1
+        },
+        {
+          "actual_model_bytes_equal": true,
+          "actual_state_bytes_equal": true,
+          "arm": "compressed",
+          "step": 2
+        },
+        {
+          "actual_model_bytes_equal": true,
+          "actual_state_bytes_equal": true,
+          "arm": "hybrid",
+          "step": 1
+        },
+        {
+          "actual_model_bytes_equal": true,
+          "actual_state_bytes_equal": true,
+          "arm": "hybrid",
+          "step": 2
+        },
+        {
+          "actual_model_bytes_equal": true,
+          "actual_state_bytes_equal": true,
+          "arm": "cold",
+          "step": 1
+        },
+        {
+          "actual_model_bytes_equal": true,
+          "actual_state_bytes_equal": true,
+          "arm": "cold",
+          "step": 2
+        }
+      ],
+      "charged_cpu_seconds": 1720,
+      "comparisons": 8,
+      "complete_model_verified_by_remote_audits": true,
+      "confirmation": false,
+      "costs": {
+        "cached": {
+          "attributed_preparation_ns": 146755561029,
+          "attributed_two_deletion_lifetime_ns": 237208909566,
+          "complete_deployment_bytes": [
+            390424437,
+            383211996
+          ],
+          "live_state_bytes": [
+            37599262,
+            30386821
+          ],
+          "request_elapsed_ns": [
+            36161499307,
+            25545741208
+          ]
+        },
+        "cold": {
+          "attributed_preparation_ns": 146755561029,
+          "attributed_two_deletion_lifetime_ns": 313409759100,
+          "complete_deployment_bytes": [
+            390424437,
+            383211996
+          ],
+          "live_state_bytes": [
+            37599262,
+            30386821
+          ],
+          "request_elapsed_ns": [
+            86999332754,
+            49927668891
+          ]
+        },
+        "compressed": {
+          "attributed_preparation_ns": 184107058329,
+          "attributed_two_deletion_lifetime_ns": 318162226273,
+          "complete_deployment_bytes": [
+            386890628,
+            381439865
+          ],
+          "live_state_bytes": [
+            34065453,
+            28614690
+          ],
+          "request_elapsed_ns": [
+            64713257081,
+            40959253441
+          ]
+        },
+        "hybrid": {
+          "attributed_preparation_ns": 186595038176,
+          "attributed_two_deletion_lifetime_ns": 1016410757649,
+          "complete_deployment_bytes": [
+            478372102,
+            472812644
+          ],
+          "live_state_bytes": [
+            125546927,
+            119987469
+          ],
+          "request_elapsed_ns": [
+            403979927944,
+            397421591685
+          ]
+        }
+      },
+      "historical_scope": "Contains the prospective protocol, model/state audit, supplemental accounting and copied-artifact checks for the early service pilot. Its target, calibration workload and costs are specific to that pilot.",
+      "lifetime_scope": "Attributed shared preparation plus observed two-request transaction; not an independently measured standalone pipeline.",
+      "numerical_reproduction": false,
+      "prior_failed_cpu_seconds": 24,
+      "ratios": {
+        "cached": {
+          "compressed_deployment_saving": [
+            0.009051198298840046,
+            0.004624414210665839
+          ],
+          "compressed_live_state_saving": [
+            0.0939861266425921,
+            0.05831906536060483
+          ],
+          "compressed_over_control_observed_lifetime": 1.3412743511831535,
+          "compressed_over_control_request_time": [
+            1.789562333453167,
+            1.6033691529049487
+          ]
+        },
+        "cold": {
+          "compressed_deployment_saving": [
+            0.009051198298840046,
+            0.004624414210665839
+          ],
+          "compressed_live_state_saving": [
+            0.0939861266425921,
+            0.05831906536060483
+          ],
+          "compressed_over_control_observed_lifetime": 1.0151637498036035,
+          "compressed_over_control_request_time": [
+            0.7438362460087334,
+            0.8203718369151287
+          ]
+        },
+        "hybrid": {
+          "compressed_deployment_saving": [
+            0.1912349687984104,
+            0.19325367068652255
+          ],
+          "compressed_live_state_saving": [
+            0.7286635856885608,
+            0.7615193466577748
+          ],
+          "compressed_over_control_observed_lifetime": 0.313025244841881,
+          "compressed_over_control_request_time": [
+            0.1601892881419856,
+            0.10306247646822542
+          ]
+        }
+      },
+      "title": "Early complete fixed-anchor service",
+      "total_continuation_cpu_seconds": 1744
+    },
+    "E05": {
+      "all_reservations_settled": true,
+      "approximate_numpy_binary64_likelihood": true,
+      "certified_inference": false,
+      "charged_cpu_seconds": 94,
+      "code_count": 42467328,
+      "confirmation": false,
+      "cpu_self_seconds": 92.77937999999999,
+      "development_guards_pass": true,
+      "historical_scope": "Preserves the bounded, previously exposed article screen and its actual losses. This diagnostic does not establish untouched quality or a confirmatory result.",
+      "inference_repeated": false,
+      "max_rss_kib": 2289192,
+      "no_new_quality_inputs": true,
+      "original_normalization": 96,
+      "quality": {
+        "articles": {
+          "Q01": {
+            "fixed_feature": {
+              "elapsed_ns": 676839334,
+              "mean_nll": 4.127396840899296,
+              "nll_sum": 524.1793987942106,
+              "predictions": 127
+            },
+            "full_precision": {
+              "elapsed_ns": 653118221,
+              "mean_nll": 3.9131675249976547,
+              "nll_sum": 496.97227567470213,
+              "predictions": 127
+            },
+            "nearest_rounding": {
+              "elapsed_ns": 678155042,
+              "mean_nll": 4.252341795028165,
+              "nll_sum": 540.0474079685769,
+              "predictions": 127
+            },
+            "sequential": {
+              "elapsed_ns": 676754756,
+              "mean_nll": 4.076299254449947,
+              "nll_sum": 517.6900053151433,
+              "predictions": 127
+            }
+          },
+          "Q02": {
+            "fixed_feature": {
+              "elapsed_ns": 675995127,
+              "mean_nll": 4.353786444020856,
+              "nll_sum": 552.9308783906487,
+              "predictions": 127
+            },
+            "full_precision": {
+              "elapsed_ns": 653312212,
+              "mean_nll": 4.209136008449627,
+              "nll_sum": 534.5602730731026,
+              "predictions": 127
+            },
+            "nearest_rounding": {
+              "elapsed_ns": 679054672,
+              "mean_nll": 4.480198939379393,
+              "nll_sum": 568.9852653011828,
+              "predictions": 127
+            },
+            "sequential": {
+              "elapsed_ns": 677574206,
+              "mean_nll": 4.315408229295547,
+              "nll_sum": 548.0568451205344,
+              "predictions": 127
+            }
+          },
+          "Q03": {
+            "fixed_feature": {
+              "elapsed_ns": 674856341,
+              "mean_nll": 3.3669894779137004,
+              "nll_sum": 427.60766369503995,
+              "predictions": 127
+            },
+            "full_precision": {
+              "elapsed_ns": 651511218,
+              "mean_nll": 3.18810736734295,
+              "nll_sum": 404.88963565255466,
+              "predictions": 127
+            },
+            "nearest_rounding": {
+              "elapsed_ns": 677755349,
+              "mean_nll": 3.397052880184145,
+              "nll_sum": 431.4257157833864,
+              "predictions": 127
+            },
+            "sequential": {
+              "elapsed_ns": 677075465,
+              "mean_nll": 3.3151455186028027,
+              "nll_sum": 421.02348086255597,
+              "predictions": 127
+            }
+          },
+          "Q04": {
+            "fixed_feature": {
+              "elapsed_ns": 674815374,
+              "mean_nll": 4.450433984983146,
+              "nll_sum": 565.2051160928595,
+              "predictions": 127
+            },
+            "full_precision": {
+              "elapsed_ns": 651439150,
+              "mean_nll": 4.258364406943389,
+              "nll_sum": 540.8122796818103,
+              "predictions": 127
+            },
+            "nearest_rounding": {
+              "elapsed_ns": 678832438,
+              "mean_nll": 4.761619584140924,
+              "nll_sum": 604.7256871858973,
+              "predictions": 127
+            },
+            "sequential": {
+              "elapsed_ns": 675124692,
+              "mean_nll": 4.445570956446568,
+              "nll_sum": 564.5875114687142,
+              "predictions": 127
+            }
+          },
+          "Q05": {
+            "fixed_feature": {
+              "elapsed_ns": 674709176,
+              "mean_nll": 3.5676605618253157,
+              "nll_sum": 453.09289135181507,
+              "predictions": 127
+            },
+            "full_precision": {
+              "elapsed_ns": 656292211,
+              "mean_nll": 3.382649738656602,
+              "nll_sum": 429.59651680938845,
+              "predictions": 127
+            },
+            "nearest_rounding": {
+              "elapsed_ns": 679464156,
+              "mean_nll": 3.805150376685658,
+              "nll_sum": 483.25409783907855,
+              "predictions": 127
+            },
+            "sequential": {
+              "elapsed_ns": 674811187,
+              "mean_nll": 3.5620578651139074,
+              "nll_sum": 452.38134886946625,
+              "predictions": 127
+            }
+          },
+          "Q06": {
+            "fixed_feature": {
+              "elapsed_ns": 672872376,
+              "mean_nll": 4.2656724039028635,
+              "nll_sum": 541.7403952956637,
+              "predictions": 127
+            },
+            "full_precision": {
+              "elapsed_ns": 652598698,
+              "mean_nll": 4.091998265033762,
+              "nll_sum": 519.6837796592878,
+              "predictions": 127
+            },
+            "nearest_rounding": {
+              "elapsed_ns": 680744605,
+              "mean_nll": 4.500285337472511,
+              "nll_sum": 571.5362378590089,
+              "predictions": 127
+            },
+            "sequential": {
+              "elapsed_ns": 676271694,
+              "mean_nll": 4.255987814507559,
+              "nll_sum": 540.5104524424601,
+              "predictions": 127
+            }
+          },
+          "Q07": {
+            "fixed_feature": {
+              "elapsed_ns": 675829598,
+              "mean_nll": 4.000602786439024,
+              "nll_sum": 508.07655387775606,
+              "predictions": 127
+            },
+            "full_precision": {
+              "elapsed_ns": 654202374,
+              "mean_nll": 3.917310286403502,
+              "nll_sum": 497.49840637324473,
+              "predictions": 127
+            },
+            "nearest_rounding": {
+              "elapsed_ns": 679410013,
+              "mean_nll": 4.169100966456225,
+              "nll_sum": 529.4758227399406,
+              "predictions": 127
+            },
+            "sequential": {
+              "elapsed_ns": 675143658,
+              "mean_nll": 4.013891053486959,
+              "nll_sum": 509.7641637928438,
+              "predictions": 127
+            }
+          },
+          "Q08": {
+            "fixed_feature": {
+              "elapsed_ns": 682327984,
+              "mean_nll": 3.73713579368576,
+              "nll_sum": 474.61624579809154,
+              "predictions": 127
+            },
+            "full_precision": {
+              "elapsed_ns": 652024219,
+              "mean_nll": 3.5985423682400635,
+              "nll_sum": 457.01488076648803,
+              "predictions": 127
+            },
+            "nearest_rounding": {
+              "elapsed_ns": 677092671,
+              "mean_nll": 4.013361110676078,
+              "nll_sum": 509.6968610558619,
+              "predictions": 127
+            },
+            "sequential": {
+              "elapsed_ns": 678209172,
+              "mean_nll": 3.7500233146134554,
+              "nll_sum": 476.25296095590886,
+              "predictions": 127
+            }
+          }
+        },
+        "comparisons": {
+          "full_precision": {
+            "articles_fixed_equal": 0,
+            "articles_fixed_higher": 8,
+            "articles_fixed_lower": 0,
+            "max_article_log_ratio": 0.21422931590164113,
+            "max_article_ratio": 1.2389067232337898,
+            "pooled_log_perplexity_ratio": 0.1638002909503015,
+            "pooled_perplexity_ratio": 1.1779790385257256
+          },
+          "nearest_rounding": {
+            "articles_fixed_equal": 0,
+            "articles_fixed_higher": 0,
+            "articles_fixed_lower": 8,
+            "max_article_log_ratio": -0.030063402270444586,
+            "max_article_ratio": 0.9703840070488189,
+            "pooled_log_perplexity_ratio": -0.18867908704414205,
+            "pooled_perplexity_ratio": 0.8280521967388249
+          },
+          "sequential": {
+            "articles_fixed_equal": 0,
+            "articles_fixed_higher": 6,
+            "articles_fixed_lower": 2,
+            "max_article_log_ratio": 0.05184395931089744,
+            "max_article_ratio": 1.0532113858601153,
+            "pooled_log_perplexity_ratio": 0.01691178589415182,
+            "pooled_perplexity_ratio": 1.017055599717572
+          }
+        },
+        "guards": {
+          "every_article_pass": true,
+          "pooled_pass": true
+        },
+        "inferential_interval": null,
+        "thresholds": {
+          "max_article_fixed_over_sequential": 1.2,
+          "max_pooled_fixed_over_sequential": 1.05
+        },
+        "totals": {
+          "fixed_feature": {
+            "mean_nll": 3.983709786708745,
+            "nll_sum": 4047.449143296085,
+            "perplexity": 53.71593973013478,
+            "predictions": 1016
+          },
+          "full_precision": {
+            "mean_nll": 3.8199094957584436,
+            "nll_sum": 3881.0280476905787,
+            "perplexity": 45.60008113332969,
+            "predictions": 1016
+          },
+          "nearest_rounding": {
+            "mean_nll": 4.172388873752887,
+            "nll_sum": 4239.147095732933,
+            "perplexity": 64.87023395588822,
+            "predictions": 1016
+          },
+          "sequential": {
+            "mean_nll": 3.9667980008145935,
+            "nll_sum": 4030.266768827627,
+            "perplexity": 52.8151457452781,
+            "predictions": 1016
+          }
+        }
+      },
+      "retained_calibration_tokens": 32,
+      "sequential_construction_elapsed_ns": 44008997216,
+      "title": "Early exposed-quality diagnostic",
+      "worker_elapsed_ns": 92767495424
+    },
+    "E06": {
+      "all_three_worker_reservations_settled": true,
+      "amp": false,
+      "certified_inference": false,
+      "confirmation": false,
+      "copied_arrays_with_bitwise_roundtrip": 150,
+      "cpu_export_charge": 19,
+      "cpu_self_seconds": 20.394163,
+      "deterministic_algorithms": true,
+      "device": "NVIDIA A100 80GB PCIe",
+      "dtype": "float64",
+      "exact_calibration_equivalence": false,
+      "failed_v46_charge": 22,
+      "first_actual_batch_parity_passed": true,
+      "gpu_parity_charge": 22,
+      "historical_scope": "Binds parameter-array export and same-model likelihood parity. GPU evaluator agreement does not prove GPU calibration equivalence or GPU speedup.",
+      "max_rss_kib": 2938036,
+      "new_quality_inputs": false,
+      "numerical_inference_repeated": false,
+      "parameter_npz_copied_locally": false,
+      "parity": {
+        "checks": {
+          "Q01": {
+            "fixed_feature": {
+              "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "full_precision": {
+              "absolute_mean_nll_deviation": 2.6855158516917172e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "nearest_rounding": {
+              "absolute_mean_nll_deviation": 6.26620365394734e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "sequential": {
+              "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+              "passed": true,
+              "threshold": 1e-08
+            }
+          },
+          "Q02": {
+            "fixed_feature": {
+              "absolute_mean_nll_deviation": 5.3710317033834344e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "full_precision": {
+              "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "nearest_rounding": {
+              "absolute_mean_nll_deviation": 2.6855158516917172e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "sequential": {
+              "absolute_mean_nll_deviation": 8.951719505639057e-15,
+              "passed": true,
+              "threshold": 1e-08
+            }
+          },
+          "Q03": {
+            "fixed_feature": {
+              "absolute_mean_nll_deviation": 4.475859752819529e-16,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "full_precision": {
+              "absolute_mean_nll_deviation": 3.580687802255623e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "nearest_rounding": {
+              "absolute_mean_nll_deviation": 0.0,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "sequential": {
+              "absolute_mean_nll_deviation": 5.818617678665387e-15,
+              "passed": true,
+              "threshold": 1e-08
+            }
+          },
+          "Q04": {
+            "fixed_feature": {
+              "absolute_mean_nll_deviation": 5.3710317033834344e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "full_precision": {
+              "absolute_mean_nll_deviation": 4.475859752819529e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "nearest_rounding": {
+              "absolute_mean_nll_deviation": 2.6855158516917172e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "sequential": {
+              "absolute_mean_nll_deviation": 1.0742063406766869e-14,
+              "passed": true,
+              "threshold": 1e-08
+            }
+          },
+          "Q05": {
+            "fixed_feature": {
+              "absolute_mean_nll_deviation": 7.161375604511246e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "full_precision": {
+              "absolute_mean_nll_deviation": 6.713789629229293e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "nearest_rounding": {
+              "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "sequential": {
+              "absolute_mean_nll_deviation": 8.951719505639057e-16,
+              "passed": true,
+              "threshold": 1e-08
+            }
+          },
+          "Q06": {
+            "fixed_feature": {
+              "absolute_mean_nll_deviation": 8.056547555075152e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "full_precision": {
+              "absolute_mean_nll_deviation": 8.951719505639057e-16,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "nearest_rounding": {
+              "absolute_mean_nll_deviation": 3.580687802255623e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "sequential": {
+              "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+              "passed": true,
+              "threshold": 1e-08
+            }
+          },
+          "Q07": {
+            "fixed_feature": {
+              "absolute_mean_nll_deviation": 7.161375604511246e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "full_precision": {
+              "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "nearest_rounding": {
+              "absolute_mean_nll_deviation": 1.7903439011278115e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "sequential": {
+              "absolute_mean_nll_deviation": 5.3710317033834344e-15,
+              "passed": true,
+              "threshold": 1e-08
+            }
+          },
+          "Q08": {
+            "fixed_feature": {
+              "absolute_mean_nll_deviation": 0.0,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "full_precision": {
+              "absolute_mean_nll_deviation": 1.2084821332612728e-14,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "nearest_rounding": {
+              "absolute_mean_nll_deviation": 2.2379298764097643e-15,
+              "passed": true,
+              "threshold": 1e-08
+            },
+            "sequential": {
+              "absolute_mean_nll_deviation": 1.3427579258458586e-15,
+              "passed": true,
+              "threshold": 1e-08
+            }
+          }
+        },
+        "maximum_absolute_mean_nll_deviation": 1.2084821332612728e-14,
+        "passed": true
+      },
+      "parity_passed": true,
+      "peak_cuda_allocated_bytes": 1494948864,
+      "peak_cuda_reserved_bytes": 1562378240,
+      "scope": "32 exposed likelihood comparisons only; timings are not a controlled speed comparison",
+      "tf32": false,
+      "title": "Parameter export and CPU/CUDA likelihood parity",
+      "torch": "2.10.0+cu128",
+      "worker_elapsed_ns": 16898785934
+    },
+    "E07": {
+      "charged_cpu_seconds": 4801,
+      "complete_model": false,
+      "completed_stage_count": 11,
+      "confirmation": false,
+      "historical_scope": "The larger preparation failed at its CPU cap after eleven certified stages. The charged cost and seven cancelled dependents remain part of the record. No complete model resulted.",
+      "quality_evaluation": false,
+      "source_records_replayed": 13,
+      "stage_count": 24,
+      "title": "Capped larger preparation failure",
+      "worker_cpu_ns": 4800713602000,
+      "worker_outcome": {
+        "elapsed_wall_ns": 4824964031612,
+        "kind": "cpu_limit",
+        "returncode": -24,
+        "signal": 24,
+        "status": "failed"
+      }
+    },
+    "E08": {
+      "all_point_code_bytes_equal": true,
+      "candidate_over_reference_solve_time": 0.5248990399025106,
+      "charged_cpu_seconds": {
+        "candidate": 609,
+        "compressed": 637,
+        "prepare": 430,
+        "reference": 1158
+      },
+      "code_count": 2359296,
+      "complete_model": false,
+      "compressed40_feature_saving": 0.23565897634365174,
+      "confirmation": false,
+      "failure": {
+        "error": "certified stage refused: primal native row verification failed: status=3, row=41, coordinate=1591",
+        "failed_coordinate": 1591,
+        "failed_stage_row": 43,
+        "failed_subset_row": 41,
+        "interval_fallback_rows": 689,
+        "max_coefficient_radius": 1.3443024315536796e-06,
+        "native_certified_rows": 79
+      },
+      "feature_descriptor_bytes": {
+        "compressed40": 26887374,
+        "lossless": 35177196
+      },
+      "gate_passed": false,
+      "historical_scope": "The optimized and historical point solvers agree, but the compressed-input arm refused certification. The complete feasibility gate failed; the point-pair check does not erase that failure.",
+      "point_measurements": {
+        "candidate": {
+          "max_coefficient_radius": 5.017982424765192e-09,
+          "solve_seconds": 609.961067633
+        },
+        "reference": {
+          "max_coefficient_radius": 5.017982424765192e-09,
+          "solve_seconds": 1162.054073763
+        }
+      },
+      "quality_evaluation": false,
+      "scope": "Single fixed-order adaptive development stage. Actual new point bytes match; historical V45 comparison remains hash-only. Certificate refusal does not prove incorrect codes or a mathematical impossibility.",
+      "title": "Wide-stage feasibility refusal",
+      "total_charged_cpu_seconds": 2834
+    },
+    "E09": {
+      "actual_complete_code_bytes_equal": true,
+      "adaptive_development": true,
+      "charged_cpu_seconds": 690,
+      "complete_model": false,
+      "complete_stage_codes": 2359296,
+      "confirmation": false,
+      "encoding_and_containment_seconds": 61.775345337,
+      "feature_descriptor_bytes": 31999182,
+      "feature_saving_vs_v51_lossless": 0.09034301653832788,
+      "historical_scope": "A separately registered higher-precision follow-up certified the same known development stage. The root was reused; this is an adaptive diagnostic, not untouched quality or prospective confirmation.",
+      "interval_fallback_rows": 7,
+      "max_coefficient_radius": 8.671818066163581e-09,
+      "native_certified_rows": 761,
+      "peak_rss_kib": 759000,
+      "prior_preparation_charge": 430,
+      "prior_preparation_reused": true,
+      "prior_v51_total_charge": 2834,
+      "quality_evaluation": false,
+      "scope": "One adaptively selected precision on a known development stage. Feature-descriptor storage only; prepared-input timing excludes previously charged neural preparation. No full-model state/deletion/quality/confirmation result.",
+      "solve_and_write_seconds": 629.885273409,
+      "title": "Adaptive higher-precision diagnostic",
+      "worker_elapsed_seconds": 691.676164905
+    },
+    "E10": {
+      "cause": "Old exact live-inventory comparison rejects 25 later metadata additions; all264 original entries unchanged. V54 validates immutable historical selection and explicitly records additions.",
+      "completed_outcomes": "See E12; software/admission records are not model results.",
+      "historical_scope": "Preserves the numerical/resource policy, the failed admission attempt, and the later separate full-model registration. Completed outcomes are indexed in E12; launch metadata alone is not a result.",
+      "numerical_budget_created": false,
+      "numerical_worker_started": false,
+      "program_created": false,
+      "registration_scheduler_cpu_seconds": 1.979,
+      "software_tests_passed": 70,
+      "title": "Full-model integration and admission history"
+    },
+    "E11": {
+      "completed_outcomes": "See E12 for actual failed CPU quality and passing GPU parity.",
+      "confirmation": false,
+      "historical_scope": "Prospective CPU-quality and GPU-parity protocols and launch checks. The software checks qualify execution only. Actual adverse quality and parity outcomes are indexed in E12.",
+      "numerical_results_verified": false,
+      "qualification": {
+        "v55": {
+          "skipped": 0,
+          "source_files": 399,
+          "tests_passed": 18
+        },
+        "v56": {
+          "skipped": 0,
+          "source_files": 409,
+          "tests_passed": 12
+        }
+      },
+      "title": "Quality and GPU parity protocols"
+    },
+    "E12": {
+      "codes": 42467328,
+      "complete_model_state_comparison_count": 8,
+      "current_worker_cpu_seconds": 38652,
+      "gpu_likelihood_parity": {
+        "comparisons": 32,
+        "maximum_absolute_mean_nll_deviation": 1.2084821332612728e-14,
+        "passed": true,
+        "threshold": 1e-08
+      },
+      "gpu_worker_charged_cpu_seconds": 73,
+      "historical_quality_exclusions": 60,
+      "historical_scope": "Records complete-model/state agreement, the failed pooled quality guard and passing GPU likelihood parity. The maximum-article guard passing does not override the pooled failure. Portable metadata checks do not independently repeat inference.",
+      "original_tokens": 1664,
+      "prior_failed_cpu_seconds": 4801,
+      "quality": {
+        "comparisons": {
+          "full_precision": {
+            "articles_fixed_equal": 0,
+            "articles_fixed_higher": 8,
+            "articles_fixed_lower": 0,
+            "max_article_log_ratio": 0.25435347378613626,
+            "max_article_ratio": 1.289627573252888,
+            "pooled_log_perplexity_ratio": 0.19008663705614748,
+            "pooled_perplexity_ratio": 1.2093543680209724
+          },
+          "nearest_rounding": {
+            "articles_fixed_equal": 0,
+            "articles_fixed_higher": 0,
+            "articles_fixed_lower": 8,
+            "max_article_log_ratio": -0.02850208966640993,
+            "max_article_ratio": 0.9719002631966808,
+            "pooled_log_perplexity_ratio": -0.16239274093829603,
+            "pooled_perplexity_ratio": 0.8501072670433516
+          },
+          "sequential": {
+            "articles_fixed_equal": 0,
+            "articles_fixed_higher": 8,
+            "articles_fixed_lower": 0,
+            "max_article_log_ratio": 0.16065551623805902,
+            "max_article_ratio": 1.1742803786080982,
+            "pooled_log_perplexity_ratio": 0.0575335393793912,
+            "pooled_perplexity_ratio": 1.0592207956671105
+          }
+        },
+        "development_guards_pass": false,
+        "guards": {
+          "every_article_pass": true,
+          "pooled_pass": false
+        },
+        "paired_articles": {
+          "Q01": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.25435347378613626,
+              "perplexity_ratio": 1.289627573252888
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.08482079624437346,
+              "perplexity_ratio": 0.9186769000018375
+            },
+            "sequential": {
+              "log_perplexity_ratio": 0.16065551623805902,
+              "perplexity_ratio": 1.1742803786080982
+            }
+          },
+          "Q02": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.23080823753123222,
+              "perplexity_ratio": 1.259617668893998
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.040254693398533235,
+              "perplexity_ratio": 0.9605447635847393
+            },
+            "sequential": {
+              "log_perplexity_ratio": 0.007783176979429536,
+              "perplexity_ratio": 1.0078135446358643
+            }
+          },
+          "Q03": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.18044342317478496,
+              "perplexity_ratio": 1.1977483547641727
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.02850208966640993,
+              "perplexity_ratio": 0.9719002631966808
+            },
+            "sequential": {
+              "log_perplexity_ratio": 0.024435159291295878,
+              "perplexity_ratio": 1.0247361443351606
+            }
+          },
+          "Q04": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.17461660304364277,
+              "perplexity_ratio": 1.1907895839800111
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.3286385741538926,
+              "perplexity_ratio": 0.7199031613419568
+            },
+            "sequential": {
+              "log_perplexity_ratio": 0.035653672388109695,
+              "perplexity_ratio": 1.03629688610979
+            }
+          },
+          "Q05": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.17958844270008079,
+              "perplexity_ratio": 1.1967247409545052
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.24291219532897518,
+              "perplexity_ratio": 0.7843403794971392
+            },
+            "sequential": {
+              "log_perplexity_ratio": 0.06396042623087111,
+              "perplexity_ratio": 1.0660502103018303
+            }
+          },
+          "Q06": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.14511473166187513,
+              "perplexity_ratio": 1.156172212218082
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.2631723407768739,
+              "perplexity_ratio": 0.7686094231510399
+            },
+            "sequential": {
+              "log_perplexity_ratio": 0.09433649510776922,
+              "perplexity_ratio": 1.098929468098631
+            }
+          },
+          "Q07": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.1620248541977989,
+              "perplexity_ratio": 1.175889466747207
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.08976582585492408,
+              "perplexity_ratio": 0.9141452293860179
+            },
+            "sequential": {
+              "log_perplexity_ratio": 0.02861315866244591,
+              "perplexity_ratio": 1.0290264475029116
+            }
+          },
+          "Q08": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.1937433303536288,
+              "perplexity_ratio": 1.2137847012811158
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.221075412082386,
+              "perplexity_ratio": 0.8016562234454679
+            },
+            "sequential": {
+              "log_perplexity_ratio": 0.04483071013714924,
+              "perplexity_ratio": 1.0458507929840155
+            }
+          }
+        },
+        "thresholds": {
+          "max_article_fixed_over_sequential": 1.2,
+          "max_pooled_fixed_over_sequential": 1.05
+        },
+        "totals": {
+          "full_precision": {
+            "mean_nll": 3.8199094957584436,
+            "nll_sum": 3881.0280476905787,
+            "perplexity": 45.60008113332969,
+            "predictions": 1016
+          },
+          "nearest_anchor": {
+            "mean_nll": 4.0099961328145906,
+            "nll_sum": 4074.1560709396244,
+            "perplexity": 55.146657300702955,
+            "predictions": 1016
+          },
+          "nearest_rounding": {
+            "mean_nll": 4.172388873752887,
+            "nll_sum": 4239.147095732933,
+            "perplexity": 64.87023395588822,
+            "predictions": 1016
+          },
+          "sequential": {
+            "mean_nll": 3.9524625934352,
+            "nll_sum": 4015.701994930163,
+            "perplexity": 52.063420135148434,
+            "predictions": 1016
+          }
+        }
+      },
+      "quality_worker_charged_cpu_seconds": 1595,
+      "retained_tokens": [
+        1536,
+        768
+      ],
+      "service_arms": {
+        "cached": {
+          "attributed_preparation_ns": 5578669642819,
+          "attributed_two_deletion_lifetime_ns": 10494863647782,
+          "complete_deployment_bytes": [
+            720355447,
+            548177329
+          ],
+          "live_state_bytes": [
+            367530272,
+            195352154
+          ],
+          "request_elapsed_ns": [
+            3986584099390,
+            899972086670
+          ],
+          "transaction_elapsed_ns": 4916194004963,
+          "worker_elapsed_ns": 4913955099450,
+          "worker_outside_request_ns": 27398913390
+        },
+        "cold": {
+          "attributed_preparation_ns": 5578669642819,
+          "attributed_two_deletion_lifetime_ns": 12511452100654,
+          "complete_deployment_bytes": [
+            720355447,
+            548177329
+          ],
+          "live_state_bytes": [
+            367530272,
+            195352154
+          ],
+          "request_elapsed_ns": [
+            5355650652324,
+            1547697139420
+          ],
+          "transaction_elapsed_ns": 6932782457835,
+          "worker_elapsed_ns": 6930550522433,
+          "worker_outside_request_ns": 27202730689
+        },
+        "compressed": {
+          "attributed_preparation_ns": 6237566736909,
+          "attributed_two_deletion_lifetime_ns": 12298117801656,
+          "complete_deployment_bytes": [
+            686316857,
+            531152872
+          ],
+          "live_state_bytes": [
+            333491682,
+            178327697
+          ],
+          "request_elapsed_ns": [
+            4755645059697,
+            1272842928562
+          ],
+          "transaction_elapsed_ns": 6060551064747,
+          "worker_elapsed_ns": 6055827074561,
+          "worker_outside_request_ns": 27339086302
+        },
+        "hybrid": {
+          "attributed_preparation_ns": 5791685297486,
+          "attributed_two_deletion_lifetime_ns": 11657471440470,
+          "complete_deployment_bytes": [
+            671330402,
+            572542929
+          ],
+          "live_state_bytes": [
+            318505227,
+            219717754
+          ],
+          "request_elapsed_ns": [
+            4200866252621,
+            1635403559626
+          ],
+          "transaction_elapsed_ns": 5865786142984,
+          "worker_elapsed_ns": 5863503010489,
+          "worker_outside_request_ns": 27233198242
+        }
+      },
+      "stages": 24,
+      "title": "Nearest-anchor service and failed exposed-quality guard",
+      "total_continuation_cpu_seconds": 43453,
+      "untouched_quality": false
+    },
+    "E13": {
+      "actual_quality_guard_passed": true,
+      "charged_cpu_seconds": 1626,
+      "constructor_elapsed_ns": 1484628365599,
+      "controller_transaction_elapsed_ns": 1633577485841,
+      "historical_control_parity": {
+        "checked_losses": 32,
+        "max_absolute_mean_nll_deviation": 0.0,
+        "passed": true
+      },
+      "historical_scope": "Records the full-precision feature-teacher candidate and both passing guards on eight exposed articles. This is an adaptive model-only screen, not an untouched test or a repair-service measurement.",
+      "observed_cpu_ns": 1625890830000,
+      "quality": {
+        "comparisons": {
+          "full_precision": {
+            "articles_candidate_equal": 0,
+            "articles_candidate_higher": 8,
+            "articles_candidate_lower": 0,
+            "max_article_log_ratio": 0.19640803111734229,
+            "max_article_ratio": 1.2170233874499647,
+            "pooled_log_perplexity_ratio": 0.1284469195792245,
+            "pooled_perplexity_ratio": 1.1370610640096095
+          },
+          "nearest_anchor": {
+            "articles_candidate_equal": 0,
+            "articles_candidate_higher": 0,
+            "articles_candidate_lower": 8,
+            "max_article_log_ratio": -0.015259081278846379,
+            "max_article_ratio": 0.9848567486009765,
+            "pooled_log_perplexity_ratio": -0.06163971747692299,
+            "pooled_perplexity_ratio": 0.9402215711763078
+          },
+          "nearest_rounding": {
+            "articles_candidate_equal": 0,
+            "articles_candidate_higher": 0,
+            "articles_candidate_lower": 8,
+            "max_article_log_ratio": -0.07465489981242318,
+            "max_article_ratio": 0.9280637060304696,
+            "pooled_log_perplexity_ratio": -0.22403245841521904,
+            "pooled_perplexity_ratio": 0.799289190287897
+          },
+          "sequential": {
+            "articles_candidate_equal": 0,
+            "articles_candidate_higher": 3,
+            "articles_candidate_lower": 5,
+            "max_article_log_ratio": 0.06353619101183337,
+            "max_article_ratio": 1.0655980501752642,
+            "pooled_log_perplexity_ratio": -0.004106178097531792,
+            "pooled_perplexity_ratio": 0.9959022407247494
+          }
+        },
+        "development_guards_pass": true,
+        "guards": {
+          "every_article_pass": true,
+          "pooled_pass": true
+        },
+        "paired_articles": {
+          "Q01": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.1572341485599106,
+              "perplexity_ratio": 1.170269598764339
+            },
+            "nearest_anchor": {
+              "log_perplexity_ratio": -0.09711932522622564,
+              "perplexity_ratio": 0.9074477182683939
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.1819401214705991,
+              "perplexity_ratio": 0.8336512567325489
+            },
+            "sequential": {
+              "log_perplexity_ratio": 0.06353619101183337,
+              "perplexity_ratio": 1.0655980501752642
+            }
+          },
+          "Q02": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.19640803111734229,
+              "perplexity_ratio": 1.2170233874499647
+            },
+            "nearest_anchor": {
+              "log_perplexity_ratio": -0.03440020641388995,
+              "perplexity_ratio": 0.9661847539170889
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.07465489981242318,
+              "perplexity_ratio": 0.9280637060304696
+            },
+            "sequential": {
+              "log_perplexity_ratio": -0.026617029434460416,
+              "perplexity_ratio": 0.9737340816183115
+            }
+          },
+          "Q03": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.12736654433295266,
+              "perplexity_ratio": 1.135833274738546
+            },
+            "nearest_anchor": {
+              "log_perplexity_ratio": -0.05307687884183229,
+              "perplexity_ratio": 0.9483071049278817
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.08157896850824223,
+              "perplexity_ratio": 0.9216599248706906
+            },
+            "sequential": {
+              "log_perplexity_ratio": -0.028641719550536415,
+              "perplexity_ratio": 0.9717645663494361
+            }
+          },
+          "Q04": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.1593575217647964,
+              "perplexity_ratio": 1.172757157946463
+            },
+            "nearest_anchor": {
+              "log_perplexity_ratio": -0.015259081278846379,
+              "perplexity_ratio": 0.9848567486009765
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.343897655432739,
+              "perplexity_ratio": 0.7090014867868037
+            },
+            "sequential": {
+              "log_perplexity_ratio": 0.020394591109263317,
+              "perplexity_ratio": 1.0206039818394044
+            }
+          },
+          "Q05": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.09593541275424064,
+              "perplexity_ratio": 1.1006879712936564
+            },
+            "nearest_anchor": {
+              "log_perplexity_ratio": -0.08365302994584015,
+              "perplexity_ratio": 0.9197503265585952
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.3265652252748153,
+              "perplexity_ratio": 0.7213973201755863
+            },
+            "sequential": {
+              "log_perplexity_ratio": -0.019692603714969035,
+              "perplexity_ratio": 0.9805000290529675
+            }
+          },
+          "Q06": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.06816609567846175,
+              "perplexity_ratio": 1.0705431062962039
+            },
+            "nearest_anchor": {
+              "log_perplexity_ratio": -0.0769486359834134,
+              "perplexity_ratio": 0.9259374122496844
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.3401209767602873,
+              "perplexity_ratio": 0.7116842203031966
+            },
+            "sequential": {
+              "log_perplexity_ratio": 0.017387859124355816,
+              "perplexity_ratio": 1.0175399079361687
+            }
+          },
+          "Q07": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.07618207633019645,
+              "perplexity_ratio": 1.0791590455890616
+            },
+            "nearest_anchor": {
+              "log_perplexity_ratio": -0.08584277786760246,
+              "perplexity_ratio": 0.9177385086833671
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.17560860372252654,
+              "perplexity_ratio": 0.8389462795367386
+            },
+            "sequential": {
+              "log_perplexity_ratio": -0.05722961920515655,
+              "perplexity_ratio": 0.9443771973270654
+            }
+          },
+          "Q08": {
+            "full_precision": {
+              "log_perplexity_ratio": 0.14692552609589513,
+              "perplexity_ratio": 1.1582676991001388
+            },
+            "nearest_anchor": {
+              "log_perplexity_ratio": -0.04681780425773368,
+              "perplexity_ratio": 0.9542612440885271
+            },
+            "nearest_rounding": {
+              "log_perplexity_ratio": -0.2678932163401197,
+              "perplexity_ratio": 0.7649894651163824
+            },
+            "sequential": {
+              "log_perplexity_ratio": -0.001987094120584437,
+              "perplexity_ratio": 0.9980148788438992
+            }
+          }
+        },
+        "thresholds": {
+          "max_article_candidate_over_sequential": 1.2,
+          "max_pooled_candidate_over_sequential": 1.05
+        },
+        "totals": {
+          "full_precision": {
+            "mean_nll": 3.8199094957584436,
+            "nll_sum": 3881.0280476905787,
+            "perplexity": 45.60008113332969,
+            "predictions": 1016
+          },
+          "nearest_anchor": {
+            "mean_nll": 4.0099961328145906,
+            "nll_sum": 4074.1560709396244,
+            "perplexity": 55.146657300702955,
+            "predictions": 1016
+          },
+          "nearest_rounding": {
+            "mean_nll": 4.172388873752887,
+            "nll_sum": 4239.147095732933,
+            "perplexity": 64.87023395588822,
+            "predictions": 1016
+          },
+          "original_checkpoint_anchor": {
+            "mean_nll": 3.9483564153376682,
+            "nll_sum": 4011.530117983071,
+            "perplexity": 51.85007677238838,
+            "predictions": 1016
+          },
+          "sequential": {
+            "mean_nll": 3.9524625934352,
+            "nll_sum": 4015.701994930163,
+            "perplexity": 52.063420135148434,
+            "predictions": 1016
+          }
+        }
+      },
+      "title": "Adaptive original-checkpoint feature-teacher quality screen",
+      "untouched_quality": false,
+      "worker_elapsed_ns": 1630261437620
+    },
+    "E14": {
+      "codes": 42467328,
+      "complete_model_state_comparison_count": 8,
+      "historical_quality_exclusions": 60,
+      "historical_scope": "Records eight actual model/state comparisons and the quality-screen model linkage. Preserve the original audit timeout and separately charged recovery. Compression saves state but is slower than cached lossless; hybrid is the stronger first-endpoint control. Metadata checks do not rerun calibration.",
+      "independent_root_replication": false,
+      "numerical_worker_allowance_cpu_seconds": 81012,
+      "numerical_worker_charged_cpu_seconds": 39983,
+      "numerical_worker_observed_cpu_ns": 39979978213000,
+      "old_failed_audit_cpu_seconds": 1811.125,
+      "original_audit_timeout_preserved": true,
+      "original_terminal_gate_passed": false,
+      "original_tokens": 1664,
+      "prospective_timing_replication": false,
+      "recovery_allocations": {
+        "primary": {
+          "elapsed_seconds": 1868,
+          "exit_code": "0:0",
+          "state": "COMPLETED",
+          "total_cpu": "30:54.276"
+        },
+        "supplemental": {
+          "elapsed_seconds": 964,
+          "exit_code": "0:0",
+          "state": "COMPLETED",
+          "total_cpu": "15:57.761"
+        }
+      },
+      "recovery_scheduler_cpu_seconds": 2812.037,
+      "retained_tokens": [
+        1536,
+        768
+      ],
+      "same_final_models_as_E13": true,
+      "service_arms": {
+        "cached": {
+          "attributed_preparation_ns": 5549006168169,
+          "attributed_two_deletion_lifetime_ns": 10554755490890,
+          "complete_deployment_bytes": [
+            720958060,
+            548498557
+          ],
+          "live_state_bytes": [
+            368132885,
+            195673382
+          ],
+          "request_elapsed_ns": [
+            4083950874134,
+            894161625326
+          ],
+          "transaction_elapsed_ns": 5005749322721,
+          "worker_elapsed_ns": 5001437192381,
+          "worker_outside_request_ns": 23324692921
+        },
+        "cold": {
+          "attributed_preparation_ns": 5549006168169,
+          "attributed_two_deletion_lifetime_ns": 12709265838728,
+          "complete_deployment_bytes": [
+            720958060,
+            548498557
+          ],
+          "live_state_bytes": [
+            368132885,
+            195673382
+          ],
+          "request_elapsed_ns": [
+            5562767121070,
+            1568943089664
+          ],
+          "transaction_elapsed_ns": 7160259670559,
+          "worker_elapsed_ns": 7155722352294,
+          "worker_outside_request_ns": 24012141560
+        },
+        "compressed": {
+          "attributed_preparation_ns": 6198012056765,
+          "attributed_two_deletion_lifetime_ns": 13154787825665,
+          "complete_deployment_bytes": [
+            686322228,
+            531158243
+          ],
+          "live_state_bytes": [
+            333497053,
+            178333068
+          ],
+          "request_elapsed_ns": [
+            5661286868421,
+            1267358022784
+          ],
+          "transaction_elapsed_ns": 6956775768900,
+          "worker_elapsed_ns": 6952507796350,
+          "worker_outside_request_ns": 23862905145
+        },
+        "hybrid": {
+          "attributed_preparation_ns": 5758967443826,
+          "attributed_two_deletion_lifetime_ns": 11720930232128,
+          "complete_deployment_bytes": [
+            672165379,
+            573422826
+          ],
+          "live_state_bytes": [
+            319340204,
+            220597651
+          ],
+          "request_elapsed_ns": [
+            4273764710112,
+            1659111982758
+          ],
+          "transaction_elapsed_ns": 5961962788302,
+          "worker_elapsed_ns": 5957536137456,
+          "worker_outside_request_ns": 24659444586
+        }
+      },
+      "stages": 24,
+      "title": "Original-checkpoint repair service and separate audit recovery",
+      "untouched_quality": false
+    },
+    "E15": {
+      "added_control_source_bytes": 54803,
+      "added_dependency_bytes": 23870575,
+      "deletion_latency_measured": false,
+      "historical_scope": "Actual saved archives restore original feature/state bytes and preserve supplied codes. The small extra saving and added deployment dependency remain visible. This is an artifact experiment; it supplies no new calibration, likelihood or complete-service latency.",
+      "memberships": [
+        {
+          "mode_counts": {
+            "0": 0,
+            "1": 0,
+            "2": 234,
+            "3": 0,
+            "4": 78
+          },
+          "new_checkpoint_inclusive_bytes": 749155833,
+          "new_checkpoint_plus_added_dependency_bytes": 773081211,
+          "new_dependency_inclusive_saving": -0.031151770728225836,
+          "new_live_bytes": 396330658,
+          "new_live_saving": 0.001436349026161854,
+          "observed_total_endpoint_seconds": 321.720152017,
+          "old_checkpoint_inclusive_bytes": 749725921,
+          "old_live_bytes": 396900746,
+          "retained_records": 13
+        },
+        {
+          "mode_counts": {
+            "0": 0,
+            "1": 0,
+            "2": 216,
+            "3": 0,
+            "4": 72
+          },
+          "new_checkpoint_inclusive_bytes": 720428750,
+          "new_checkpoint_plus_added_dependency_bytes": 744354128,
+          "new_dependency_inclusive_saving": -0.0324513578501362,
+          "new_live_bytes": 367603575,
+          "new_live_saving": 0.0014378231925681328,
+          "observed_total_endpoint_seconds": 328.383237505,
+          "old_checkpoint_inclusive_bytes": 720958060,
+          "old_live_bytes": 368132885,
+          "retained_records": 12
+        },
+        {
+          "mode_counts": {
+            "0": 0,
+            "1": 0,
+            "2": 108,
+            "3": 0,
+            "4": 36
+          },
+          "new_checkpoint_inclusive_bytes": 548233792,
+          "new_checkpoint_plus_added_dependency_bytes": 572159170,
+          "new_dependency_inclusive_saving": -0.04313705605610196,
+          "new_live_bytes": 195408617,
+          "new_live_saving": 0.0013530966618647833,
+          "observed_total_endpoint_seconds": 164.96083906,
+          "old_checkpoint_inclusive_bytes": 548498557,
+          "old_live_bytes": 195673382,
+          "retained_records": 6
+        }
+      ],
+      "phase_allowance_cpu_seconds": 5706,
+      "process_cpu_seconds": 1466.282449351,
+      "quality_evaluation": false,
+      "scheduler_allocation_cpu_seconds": 1469.321,
+      "scope": "Actual stored-archive size and exactness; supplied existing model codes; no new repair-latency, calibration or quality measurement",
+      "title": "Modern lossless artifact control"
+    }
+  },
+  "schema": "review-evidence-summary-v1",
+  "scopes": {
+    "audit": "Cluster actual-byte audit findings are reported; this companion does not reexecute them.",
+    "cost": "Attributed preparation and two-request sums use the recorded reporting convention; they are not a measured deployment lifetime.",
+    "historical_quality": "Q01--Q08 identify the same eight exposed articles across E05,E06,E12,E13. Reusing them is adaptive development, not independent quality confirmation.",
+    "pending": "Complete modern-lossless service, untouched quality and claim-required timing decisions remain pending.",
+    "quality": "Eight previously exposed articles; adaptive development only.",
+    "record_completeness": "All fifteen historical groups have selected summaries or scope notes. This is not their complete protocol/source/receipt dependency closure.",
+    "state": "Agreement is representation-specific and uses the declared fixed-teacher reconstruction target.",
+    "timing": "One fixed-order observation per request; no population timing confidence interval."
+  },
+  "status": "preparation",
+  "units": {
+    "charged_cpu": "integer CPU seconds, separate from elapsed wall time",
+    "quality": "mean negative log likelihood in nats; perplexity is exp(mean NLL)",
+    "request_and_process_times": "nanoseconds unless a key states seconds",
+    "storage": "bytes; checkpoint-inclusive deployment is separate from live state"
+  }
+}

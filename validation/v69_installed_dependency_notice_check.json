@@ -1,0 +1,96 @@
+{
+  "all_transitive_notices_complete": false,
+  "archive": {
+    "bytes": 29832,
+    "path": "validation/v69_installed_dependency_notices.tar.gz",
+    "sha256": "b7e099c11e25a61c22da1848cbfcf130eb8d640407d24b6bbab8378a1d37250e"
+  },
+  "captured_at_utc": "2026-10-16T15:25:12.493819+00:00",
+  "dependencies_installed": false,
+  "files": {
+    "gmpy2/licenses/COPYING": {
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "gmpy2/licenses/COPYING.LESSER": {
+      "bytes": 7651,
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+    },
+    "numpy/LICENSE.txt": {
+      "bytes": 47768,
+      "sha256": "2046a3130e50b11c01659b3a0d963e6ae0b7436ff8e89cbcfd9e87bc6112d595"
+    },
+    "zstandard/licenses/LICENSE": {
+      "bytes": 1484,
+      "sha256": "788fe85e53724a40b299051c4abc9cf74d42b27e7968325b80891c25f79adb4b"
+    }
+  },
+  "inventory": {
+    "gmpy2": {
+      "files": {
+        "gmpy2/licenses/COPYING": {
+          "bytes": 35147,
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        "gmpy2/licenses/COPYING.LESSER": {
+          "bytes": 7651,
+          "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+        }
+      },
+      "notice_files_found": 2
+    },
+    "numpy": {
+      "files": {
+        "numpy/LICENSE.txt": {
+          "bytes": 47768,
+          "sha256": "2046a3130e50b11c01659b3a0d963e6ae0b7436ff8e89cbcfd9e87bc6112d595"
+        }
+      },
+      "notice_files_found": 1
+    },
+    "tokenizers": {
+      "files": {},
+      "notice_files_found": 0
+    },
+    "zstandard": {
+      "files": {
+        "zstandard/licenses/LICENSE": {
+          "bytes": 1484,
+          "sha256": "788fe85e53724a40b299051c4abc9cf74d42b27e7968325b80891c25f79adb4b"
+        }
+      },
+      "notice_files_found": 1
+    }
+  },
+  "known_identity_scan_passed": true,
+  "model_or_data_read": false,
+  "no_notice_copied_into_four_review_components": true,
+  "numpy_bundled_notice_sections": [
+    "lapack-lite",
+    "dragon4",
+    "libdivide",
+    "Meson",
+    "spin",
+    "tempita",
+    "OpenBLAS",
+    "LAPACK",
+    "GCC runtime library",
+    "libquadmath"
+  ],
+  "other_notice_texts_newly_observed_not_historical_runtime_bindings": true,
+  "project_license_assigned": false,
+  "remaining": [
+    "Tokenizers actual release notice and Rust dependency notices",
+    "GMP/MPFR/MPC component copyright and licensing notices beyond generic GPL/LGPL texts",
+    "Python/compiler/libc/container distributions",
+    "Torch/CUDA/driver installation and bundled dependencies",
+    "Project ownership and release terms"
+  ],
+  "schema": "installed-cpu-dependency-notice-check-v69",
+  "scientific_result": false,
+  "source_location_scope": "versioned CPU dist-info license trees; no full system or GPU scan",
+  "tokenizers_notice_missing_in_inspected_dist_info": true,
+  "total_notice_bytes": 92050,
+  "verified_at_utc": "2026-10-16T15:26:34.344511+00:00",
+  "zstandard_notice_matches_frozen_binding": true
+}

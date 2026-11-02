@@ -1,0 +1,173 @@
+Prospective TACL evidence plan, V122
+29 October 2026. Draft only: not registered, staged or launched.
+
+Objective and decision order
+
+Determine whether exact adaptive code recovery from lossy calibration evidence has
+a useful quality/storage/source-access regime. Do not optimize for finding a speed
+win. The first decisions are whether the exact headline targets retain useful
+quality and whether a source-only cold service dominates the claimed tradeoff.
+The closed V119 observations remain exploratory evidence for this revision.
+
+0. Inventory, registration and software gate
+
+Before cluster actions, inspect live Slurm jobs, storage and all receipts. The
+last saved job observation is 27 October 2026; it is not a live snapshot. Never
+reuse consumed launchers or collectors. On connection failure stop retries and
+continue local preparation. Freeze a separate source package, source/data/model
+identities, successful software checks, request list, randomization, success rules,
+cost ledger, exclusions, attempt IDs and wall-time caps before any new measurement.
+
+Retain existing per-worker bounds: one CPU, 16 GiB process, 8 GiB solver arrays,
+16 point-refinement coordinates, 64 billion stage work units, 1 trillion request
+work units. The exact GPT2 grid allowance applies only to its approved matched
+transfer target. Old consumed campaign ceilings are not a fresh compute budget.
+Estimate a finite new total from admitted shapes and previous receipts before
+registration; request a real resource decision only if outside existing authority.
+No paid compute, GPU substitution, scheduler restart, subagents or submission.
+
+Before scientific execution, qualify the native arithmetic and transaction path
+in the pinned Linux runtime. Run exact-rational small cases through the actual
+native acceptance API, including ties, clipping, cancellation, subnormals and
+overflow. Fault-inject after proposal, during replay, before seal and before final
+publish; compare complete predecessor/model/trust bytes and published-state
+inventory. A refused request may leave explicitly marked scratch artifacts but
+must not publish a complete successor or mutate its predecessor. Generated tests
+qualify software; they do not count as model experiments.
+
+1. Quality on the four existing headline target strata
+
+Inventory availability and word identities for the existing DistilGPT2 and GPT2
+four-record roots and their three-/two-record successors. Use the same checkpoint,
+tokenizer, grids, layer ridge, N0=512, selected records, retained IDs and ordered
+feature evaluator as the resource comparison. Do not reconstruct a different
+target and call it matching quality. If original binaries are absent, record
+that fact and register a fresh reconstruction with equality checks against saved
+commitments. Old attempts stay consumed.
+
+Evaluate the original checkpoint, exact fixed-teacher target, the matched custom
+sequential constructor, and an established GPTQ implementation. Pin the practical
+GPTQ source/runtime and its weight precision, grouping, clipping and calibration
+input. Document differences in grids/activations and completion domain: GPTQ is
+a practical quality reference, not a same-target equality oracle. A CPU-compatible
+reference must be qualified rather than silently replaced with our own solver.
+
+Use a new outcome-blind held-out article selection, separate from all calibration
+roots and previous selection/tuning. Freeze complete-article boundaries, overlap
+exclusions, token accounting and matched tokenization within each model. Do not
+compare raw perplexity across different tokenizers as an effect estimate. Declare
+the pooled-token estimand, paired article bootstrap, multiplicity treatment and
+one-sided quality guard before viewing losses. The old 5% guard stays historical;
+any new guard must be justified prospectively, not selected from observed losses.
+
+Report absolute and relative losses/perplexities for each model and endpoint,
+intervals, per-article paired effects, worst cases and all exclusions. Reused
+binary-equal codes need one quality evaluation, not duplicate claims per storage
+arm. If these targets fail the new guard, retain the result and reconsider the
+headline settings before broader timing work. Do not bury failures by pooling.
+
+2. Minimal source-only cold state and source-access comparison
+
+Define a new canonical source-only representation: deployed packed codes, retained
+token records or immutable source references, target specification, and necessary
+provenance. It must persist no feature cache or Gram merely to imitate the old
+cold arm. Separate retained tokens from external references and charge the bytes
+actually needed for guaranteed replay. The successor drops deleted IDs and any
+corresponding source tokens under this representation. External corpus deletion
+is outside this state operation and must not be implied.
+
+Reconstruct retained features from that state, certify the same target, serialize
+the new representation and audit equality against a fresh source-only constructor.
+Cross-arm equality concerns model codes; canonical-state equality is within each
+representation. Measure preparation, request, successor and peak temporary bytes,
+installed/shared assets, retained/deleted source traversal, and complete host time.
+
+Report four access regimes: retained sources available/unavailable crossed with
+deleted sources available/unavailable. Lossless evidence requires neither;
+source-only cold requires retained access; hybrid subtraction requires deleted
+access; compression may require retained replay on refusal. If a required source
+is absent, record refusal rather than granting hidden source access. Timing under
+an available-source regime cannot be reused as successful service under absence.
+
+3. Explanatory telemetry before expanding the study
+
+Count actual predecessor-to-successor code changes at each stage and separately
+root-to-successor changes. Compare arrays, not hashes or equality coverage counts.
+Partition changed outputs by direct box certification, numerical refinement,
+source replay and refusal. Report request-level replay among compressed requests
+and endpoint/root denominators separately. Instrument source-access counters,
+decision-cell distances, interval widths, refinements and retained box widths.
+Treat unbounded endpoint cell sides explicitly; do not mix infinities into means.
+
+Existing saved telemetry may support some counts after read-only binary inventory.
+Missing telemetry must be marked missing, not reconstructed from equality claims.
+New instrumented measurements need a separately qualified package and registered
+attempt. Show preparation and audit cost separately from complete request cost.
+
+4. Bounded operating-range and precision study
+
+Start with shape admission for proposed calibration roots of 4, 13, 32 and 128
+records of 128 tokens. Admit a size only under the unchanged memory/work bounds.
+Record every nonadmitted size with its limiting term, including d*T^2 or d^3.
+The proposed sizes are a screening plan, not promises that all can execute.
+
+For feasible sizes, prospectively select three distinct calibration roots without
+quality or certifiability screening. Use disjoint source articles where possible.
+Register a stable deletion ordering and a separately seeded ordering, each with
+four retained checkpoints at fixed fractions where root size permits. Longer
+trajectories require sufficiently large roots; a two-record endpoint cannot
+support an invented four-step sequence. Root/order, not code, is the unit of
+independent empirical coverage. Report all failed and refused trajectories.
+
+Use a staged design to avoid an uncontrolled factorial search. First study the
+reference configuration on admitted DistilGPT2 sizes/roots. Then sweep archive
+precision 16, 24, 32, 40 and 48 only if those existing codec modes are valid under
+the same grid/feature contract. Freeze an unsupported mode as nonadmitted rather
+than quietly changing the codec. Report complete stored bytes, success/refusal,
+source replay, numerical refinement, time, changed codes, margins and widths.
+Select a practical precision from development roots by a predeclared rule, then
+freeze it for separate confirmation roots and the related-model comparison.
+
+Ridge changes define different targets and need matched quality, so defer a ridge
+sweep until the first quality gate and fixed-ridge mechanism study are informative.
+A different architecture follows only after its evaluator and target are correctly
+implemented and admitted; it is not needed to diagnose current T-dependence.
+Never present related-depth transfer as cross-architecture generality.
+
+5. Timings and deployment decision
+
+After software and quality gates, run five independent-process blocks for each
+preselected comparison stratum, with a frozen randomized arm order per block.
+Use identical source storage and idle allocation conditions. Declare natural OS
+cache state unless a permitted, reproducible cache-reset method is actually used.
+Do not call fresh process starts cold filesystem caches. Record cache-relevant
+history and all failures. Report medians, IQR/range, paired block ratios and raw
+values; distinguish timing replicates from independent calibration roots.
+
+Calculate storage and cost for explicit state counts and installation sharing.
+For scenario variables m independent archives, storage price s and request rate f,
+use measured storage/time differences; show break-even values instead of inventing
+prices or a customer. Identify whether unavailable source access or a measured
+latency constraint makes cold reconstruction unsuitable. If no useful regime
+survives quality and minimal-cold comparisons, revise the contribution's scope.
+A lower-precision reference is a separate target, not a free baseline substitution.
+
+6. Reproduction, release and final writing gate
+
+From a clean directory and the declared external inputs, build the pinned Linux
+environment and run one complete admitted preparation/deletion/oracle/audit chain.
+Verify model, canonical state and trust bytes, resource accounting and failures.
+This is distinct from unpacking and hashing the 14 historical components. Record
+missing upstream resources or rights rather than claiming reproducibility by fiat.
+
+Specify the release inventory: implementation, pinned dependency/source IDs,
+protocols, selection/exclusion code, manifests, derived non-sensitive outputs,
+arithmetic tests and reproduction entry points. Keep model weights, corpus and
+runtime binaries under their actual upstream terms. Choosing an own-code license
+and author declarations is an author decision still outstanding.
+
+Rewrite the empirical sections only from closed, audited results. Preserve ten
+readable content pages, essential proofs and no appendices. Main claims must track
+quality-qualified settings and measured access conditions. Submission readiness
+requires a scientific decision on the resulting evidence plus author eligibility,
+consent, history and release terms. This plan does not authorize actual submission.

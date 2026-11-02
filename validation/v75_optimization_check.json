@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-22T10:22:39.847428+00:00",
+  "scope": "Generated software qualification on macOS only; no scientific or Linux result",
+  "reference_reporting_commit": "3d2dc021ccb3ca718f0afb2df475893100454b61",
+  "frozen_numerical_sources_verified": 581,
+  "frozen_administrative_commitments_verified": 5,
+  "manuscript_sha256": "bf3b7a73cda7b4c62fb7fe6fc7df08a36e949cb15f4c0d9e361fc25a732cc8eb",
+  "compiler": "Apple clang version 14.0.0 (clang-1400.0.29.202)",
+  "flags": [
+    "-std=c11",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-shared",
+    "-fPIC"
+  ],
+  "native_binary_sha256": "f7c03e1f3e4c019effe5f3e2a9b1105c5d3a7dfbd92d14115b319dd749a7d82a",
+  "sanitizer": {
+    "cases": 100000,
+    "address": true,
+    "undefined": true,
+    "exit_code": 0,
+    "output": "100000 seeded malformed cases completed under ASan and UBSan",
+    "source_sha256": "99eb645da7e4e38b856541da9b4101bb822e76682a6c81e5ebfde99a946f261d",
+    "flags": [
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-Wall",
+      "-Wextra",
+      "-Werror"
+    ],
+    "binary_sha256": "ed0fca029552c51737d90cecfee23c1bc3a7297a3fbd168a5cb6a7ad66ab1a80"
+  },
+  "source_and_evidence_hashes": {
+    "decode.c": "17f03da030a87a54d3dc5e242b0539a9faaa83183e318089387bc5eade5b130b",
+    "fast_decode.py": "491db99fd7f8b5a749b448df24842a1d8fdddaa8cdf53e5d266bdbac8b268b77",
+    "check.py": "130e5f163d589903ff5b55912e307e66b84f9f11077e7b591b6609c8dad963b0",
+    "sanitize.c": "99eb645da7e4e38b856541da9b4101bb822e76682a6c81e5ebfde99a946f261d",
+    "timings.py": "2dd479d093cfc625e18d4b55df57d072ffbb86b320e8fc1bb2b41cce7f205b14",
+    "README.txt": "f1504791572d7fdf9a8aa2bd8af7fe484b8325b7358320f75a255952efbe14b8",
+    "software-results.json": "c6ca277426532e4c817c3314e38534df6d42891decfa13116501b11d8d0de9ec",
+    "software-results-initial.json": "7ab934691b71612ea23f18e1d1c9eefe5922bb7ed75535b011b8667044f3808b",
+    "software-results-counter-fix.json": "aadaa4ddf202ed0d59da28819777f7994f7b2ea74bf013154d89dae5e196c2f8",
+    "timing-attribution.json": "8539fefe39dfb9487873bfcf620c994c35f65cfb7e65e8f1af53afe2683c34f4"
+  },
+  "model_experiment_run": false,
+  "linux_qualified": false,
+  "launch_registered": false,
+  "local_modern_control_timed": false,
+  "local_modern_control_limitation": "zstandard module absent; actual V67 receipts reanalysed",
+  "scheduler_status": "PAUSED at user request",
+  "slurm_status": "Unknown; no connection attempted",
+  "next_step": "Linux software qualification and symmetric control optimisation before new prospective registration"
+}

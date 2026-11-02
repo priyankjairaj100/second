@@ -1,0 +1,285 @@
+{
+  "audit_reader_review": {
+    "defects": [
+      "64MiB retained limit conflicts with 126-373MB state artifacts",
+      "Binary bytes decoded as UTF8"
+    ],
+    "document": "docs/AUDIT_READER_REVIEW_V112.txt",
+    "generated_regressions_passed": true,
+    "json_limit": 67108864,
+    "linux_full_pipeline_execution_pending": true,
+    "new_generated_regressions": 4,
+    "new_reader": "research_v112.audit_inputs.Inputs",
+    "old_reader": "research_v83.terminal.Inputs",
+    "original_artifact_limit": 1073741824,
+    "original_sources_changed": false
+  },
+  "branch": "codex/second-cluster-v42",
+  "bundle": {
+    "archive": {
+      "bytes": 10647866,
+      "sha256": "e8ffa396455ff37339e404a2b79fc0cea1d81d546c48c4ab118eba3e7fe9ef4d"
+    },
+    "components": 12,
+    "corruption_rejected": true,
+    "created_utc": "2026-10-27T02:46:34.925216+00:00",
+    "full_reproduction_verified": false,
+    "inconsistent_source_coverage_rejected": true,
+    "manifest": {
+      "README.txt": {
+        "bytes": 2286,
+        "sha256": "31a866412dff7492b4929bf019df8fe26198d9caceb58bb30edaca793912143a"
+      },
+      "RESPONSIBLE_NLP_CHECKLIST_DRAFT.txt": {
+        "bytes": 9496,
+        "sha256": "5fa8b5de2b5bd99f150a9ffd07977dbc63ec4d85feca9fb5f26eb62872772d12"
+      },
+      "development-audit-receipts-v69.zip": {
+        "bytes": 341604,
+        "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+      },
+      "development-dependency-notices-v71c.zip": {
+        "bytes": 460857,
+        "sha256": "944eb649e8f339e3b0a1b39126333d5d950c0909a394da3587b7de34e5771f41"
+      },
+      "development-diagnostic-evidence-v111.zip": {
+        "bytes": 3523,
+        "sha256": "19e26dfb22d13a2c0894338e31efbbb20a154cbbef11e55bbe9a0a0f0bdbbd7d"
+      },
+      "development-evidence-v69b.zip": {
+        "bytes": 87257,
+        "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+      },
+      "development-optimization-source-v105.zip": {
+        "bytes": 803078,
+        "sha256": "380feefc22942c6e554b3e3b9008706df5a02f41daf02055874e9f4f0ff016d8"
+      },
+      "development-optimization-v98.zip": {
+        "bytes": 5722,
+        "sha256": "014a1d296dd3102dc81f58e4e0a4840452e73d3bc3167884d4b8e0dcebc871f8"
+      },
+      "development-quality-evidence-v72.zip": {
+        "bytes": 251913,
+        "sha256": "c588ac060824b7870f085f8f3dae6e02cee6dcb93ded6aac6bd7d72a8d5f14dc"
+      },
+      "development-reproduction-guide-v72.zip": {
+        "bytes": 19535,
+        "sha256": "6abf11b4b237f263784f3bfb9ce3ddb87f70e3d11f3b3a751ae5e69984cddfd3"
+      },
+      "development-selection-metadata-v71.zip": {
+        "bytes": 6194056,
+        "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
+      },
+      "development-service-evidence-v70.zip": {
+        "bytes": 124857,
+        "sha256": "684ca47fd16985c32f5faf0dd7bab81f3bbe9dda297a87455dfb84c0a0ce2dc4"
+      },
+      "development-source-review-v72.zip": {
+        "bytes": 1930758,
+        "sha256": "e3505d7b353eed4109c7f22f127955513d928590552513263a13ee90811cbf49"
+      },
+      "development-transfer-source-v111.zip": {
+        "bytes": 792544,
+        "sha256": "db94cb1964bd0ad8f394e0d871603c9a1b81d8cc2b5602f318f2cfa76e46488b"
+      },
+      "second-research-draft.tex": {
+        "bytes": 59315,
+        "sha256": "cea87a82c5137306729871eb0030846c72bfe7c4039566509ab573621fc4fb48"
+      },
+      "verify_review_bundle.py": {
+        "bytes": 5686,
+        "sha256": "a7b5faea9a2bb0472bc296450994a737e464fc9e929b6a8dce6edc377f466ad3"
+      }
+    },
+    "members": 17,
+    "missing_rejected": true,
+    "native_compile_success": true,
+    "new_pdf_created": false,
+    "new_transfer_result": false,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v111.zip",
+    "rendered_layout_verified": false,
+    "roundtrip_bytes_verified": true,
+    "schema": "development-review-bundle-v111",
+    "source": {
+      "bytes": 59315,
+      "sha256": "cea87a82c5137306729871eb0030846c72bfe7c4039566509ab573621fc4fb48"
+    },
+    "source_originals_changed": false,
+    "submission_ready": false,
+    "unchanged_v106_components": 10,
+    "unexpected_rejected": true,
+    "unsupported_full_model_transfer_claim_rejected": true,
+    "verified": {
+      "adapted_code_execution_qualified": false,
+      "components": 12,
+      "empirical_pipeline_executed": false,
+      "external_inputs_acquired": false,
+      "full_anonymity_verified": false,
+      "full_model_transfer": false,
+      "independent_stage_oracle_executed": false,
+      "source_component_counts": {
+        "development-optimization-source-v105.zip": 347,
+        "development-source-review-v72.zip": 583,
+        "development-transfer-source-v111.zip": 296
+      },
+      "source_files": 1226,
+      "status": "verified_supplied_bytes_source_coverage_and_scoped_diagnostic_arithmetic"
+    }
+  },
+  "candidate_v111": {
+    "inventory": {
+      "bytes": 158522,
+      "sha256": "fadef4cf19a79b31e8a67bc83c1edc7d41305c50a61364abd03b74cc57cba10d"
+    },
+    "local_isolated_checks": 160,
+    "package": {
+      "bytes": 13885440,
+      "sha256": "336a4b6b7e18a1bef9d824d1b1264272f09b025e790f1ff84f38c9b4fd31ed25"
+    },
+    "remote_tests_executed": false,
+    "source_count": 1290,
+    "status": "preserved_unuploaded_package_superseded_by_v112_binary_audit_fix"
+  },
+  "candidate_v112": {
+    "audits": 2,
+    "carried_numerical": 6304,
+    "carried_numerical_controller": 79,
+    "checks_controller_allowance": 254,
+    "checks_controller_carry": 48,
+    "checks_controller_ceiling": 302,
+    "controller_reservation": 5436,
+    "directory": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/v112-prepared",
+    "expected_linux_tests": 318,
+    "inventory": {
+      "bytes": 164430,
+      "sha256": "633aa917d4ab03de4e7be45e53a3b0ed5af821266be6db38c3437dcfd0de7505"
+    },
+    "isolated_check": {
+      "errors": 0,
+      "failures": 0,
+      "imported": [
+        "config",
+        "records",
+        "storage_plan",
+        "protocol",
+        "mapping",
+        "host",
+        "entry",
+        "submit",
+        "prepare",
+        "closure",
+        "terminal",
+        "package",
+        "gate",
+        "software"
+      ],
+      "isolated": true,
+      "skipped": 0,
+      "tests": 164
+    },
+    "numerical_execution": false,
+    "numerical_reservation": 72036,
+    "numerical_workers": 18,
+    "oracles": 2,
+    "original_numerical_ceiling": 82840,
+    "original_numerical_controller_ceiling": 6040,
+    "package": {
+      "bytes": 14131200,
+      "sha256": "051c490a449120fabd7ddd839afb1287b5ea8ceef15a39fcd86a8823258ac2bd"
+    },
+    "policy": "all point solves use existing token route from start; box and Gram unchanged",
+    "preparations": "Reuse both hash-bound V104 preparations; no new preparation job",
+    "quality_evaluation": false,
+    "registered": false,
+    "requests": 16,
+    "required_actual_binary_comparisons": 16,
+    "root": "matched-complete-recovery-v112-20261026-a",
+    "software_allowance": 395,
+    "software_carry": 207,
+    "software_ceiling": 602,
+    "source_count": 1339,
+    "staging_script": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/second-speed-campaign/stage_v112.py",
+    "staging_script_executed": false,
+    "status": "prepared_not_uploaded_registered_or_qualified",
+    "uploaded": false
+  },
+  "conference_submission": false,
+  "connection": {
+    "attempt_utc": "2026-10-27T02:40:31Z",
+    "automatic_retry": false,
+    "current_remote_state": "unknown",
+    "last_successful_inspection": "2026-10-26T11:13:05Z",
+    "no_jobs_launched": true,
+    "no_registration": true,
+    "no_upload": true,
+    "restoration_question_pending": true,
+    "status": "timeout_before_login"
+  },
+  "credentials_stored": false,
+  "current_handoff": "docs/ACTIVE_SESSION_V112.md",
+  "current_science": {
+    "complete_comparisons": "V72/V89 verified scope unchanged",
+    "diagnostic": "V110 token selected-stage certificate only",
+    "diagnostic_codes": 2359296,
+    "failed_matched_screen": "V104 preserved; no completed request",
+    "full_model_transfer": false,
+    "independent_stage_oracle": false,
+    "new_quality_evidence": false,
+    "stable_speedup": false
+  },
+  "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "evidence_directory": "pilots/point-policy-preparation-v112-20261027",
+  "github_repository": "priyankjairaj100/second",
+  "manuscript": {
+    "bibliography_keys": [
+      "gptq",
+      "ginart",
+      "medu",
+      "qss",
+      "exactfun",
+      "qebverif",
+      "execcert",
+      "distilgpt2",
+      "c4",
+      "wikitext"
+    ],
+    "captured_utc": "2026-10-27T02:45:48.121639+00:00",
+    "full_model_transfer_claim": false,
+    "labels": 16,
+    "manuscript": {
+      "bytes": 59315,
+      "sha256": "cea87a82c5137306729871eb0030846c72bfe7c4039566509ab573621fc4fb48"
+    },
+    "native_compile": {
+      "kind": "success",
+      "source": {
+        "bytes": 59315,
+        "sha256": "cea87a82c5137306729871eb0030846c72bfe7c4039566509ab573621fc4fb48"
+      },
+      "tool": "compile_latex_document"
+    },
+    "native_compile_success": true,
+    "new_scientific_scope": "V104 failed screen and V110 selected-stage-only diagnostic",
+    "rendered_layout_verified": false,
+    "schema": "manuscript-checks-v111",
+    "unresolved_citations": [],
+    "unresolved_references": []
+  },
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "paid_compute": false,
+  "pending": [
+    "Restore SSH and inspect actual jobs/namespaces/receipts/storage before new V112 upload",
+    "Run and close all318 exact-source Linux checks before releasing any numerical dependency",
+    "Execute all16requests/two fresh oracles/both audits and actual terminal before model claims",
+    "Actual rendered layout and final venue/cycle/category"
+  ],
+  "preserved_sources_and_failures": true,
+  "prior_handoff": "docs/ACTIVE_SESSION_V110.md",
+  "prior_program": "handoff/program_v110.json",
+  "scheduler": "ACTIVE",
+  "schema": "second-handoff-v112",
+  "scientific_decision": "docs/RESEARCH_DECISION_V112.txt",
+  "source_repository": "/Users/priyankjairaj/Downloads/ACL/Second",
+  "subagents_used": false,
+  "updated_utc": "2026-10-27T02:54:30.613832+00:00"
+}

@@ -1,0 +1,103 @@
+{
+  "publisher_pdf_retrieved": false,
+  "raw_response_bytes": 7019,
+  "raw_response_sha256": "f7d47711e805a5accdabf53ebea8c5d68fccc5b086b4dc3eed7258338b3fbf90",
+  "record": {
+    "DOI": "10.1109/icdm58522.2023.00188",
+    "URL": "https://doi.org/10.1109/icdm58522.2023.00188",
+    "author": [
+      {
+        "affiliation": [
+          {
+            "name": "University of Nevada,Department of Computer Science,Las Vegas,NV"
+          }
+        ],
+        "family": "Xiong",
+        "given": "Zuobin",
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ],
+        "sequence": "first"
+      },
+      {
+        "affiliation": [
+          {
+            "name": "Georgia State University,Department of Computer Science,Atlanta,GA"
+          }
+        ],
+        "family": "Li",
+        "given": "Wei",
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ],
+        "sequence": "additional"
+      },
+      {
+        "affiliation": [
+          {
+            "name": "Georgia State University,Department of Computer Science,Atlanta,GA"
+          }
+        ],
+        "family": "Li",
+        "given": "Yingshu",
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ],
+        "sequence": "additional"
+      },
+      {
+        "affiliation": [
+          {
+            "name": "Georgia State University,Department of Computer Science,Atlanta,GA"
+          }
+        ],
+        "family": "Cai",
+        "given": "Zhipeng",
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ],
+        "sequence": "additional"
+      }
+    ],
+    "container-title": [
+      "2023 IEEE International Conference on Data Mining (ICDM)"
+    ],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/10415628/10415561/10415652.pdf?arnumber=10415652",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "page": "1439-1444",
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          12,
+          1
+        ]
+      ]
+    },
+    "publisher": "IEEE",
+    "title": [
+      "Exact-Fun: An Exact and Efficient Federated Unlearning Approach"
+    ]
+  },
+  "requested_at_utc": "2026-10-18T12:59:35.512798+00:00",
+  "status": "metadata_retrieved",
+  "url": "https://api.crossref.org/works/10.1109/ICDM58522.2023.00188"
+}

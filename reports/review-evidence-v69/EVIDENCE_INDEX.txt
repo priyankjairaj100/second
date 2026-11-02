@@ -1,0 +1,57 @@
+Evidence index: preparation for anonymous review
+
+This index groups the historical records cited by the current manuscript.
+It is a navigation draft, not an anonymous reproduction archive. The original
+records remain preserved outside this index. Their associated anonymous
+derivatives and reproduction checks are not yet complete. No empirical run
+or actual-binary audit was repeated to prepare this index.
+
+E01: Real-data stage-scale comparison
+Seventeen complete first-stage observations compare representations and exact codes. The registered low-precision refusal and replay remain included. This is a single-stage development comparison, not a complete service or independent timing replication.
+
+E02: Native Gram and streamed stage controls
+Twelve complete first-stage outputs agree, with native and Python source-archive comparisons. Strong Gram controls remain in the comparison. Payload and stage clocks exclude shared preparation and are not deployment costs.
+
+E03: Target and claim boundaries
+Defines the calibration-reconstruction target and separates conditional proof, implementation and empirical obligations. This is a scope record, not an experiment or a completed evidence gate.
+
+E04: Early complete fixed-anchor service
+Contains the prospective protocol, model/state audit, supplemental accounting and copied-artifact checks for the early service pilot. Its target, calibration workload and costs are specific to that pilot.
+
+E05: Early exposed-quality diagnostic
+Preserves the bounded, previously exposed article screen and its actual losses. This diagnostic does not establish untouched quality or a confirmatory result.
+
+E06: Parameter export and CPU/CUDA likelihood parity
+Binds parameter-array export and same-model likelihood parity. GPU evaluator agreement does not prove GPU calibration equivalence or GPU speedup.
+
+E07: Capped preparation failure
+The larger preparation failed at its CPU cap after eleven certified stages. The charged cost and seven cancelled dependents remain part of the record. No complete model resulted.
+
+E08: Wide-stage feasibility refusal
+The optimized and historical point solvers agree, but the compressed-input arm refused certification. The complete feasibility gate failed; the point-pair check does not erase that failure.
+
+E09: Adaptive higher-precision diagnostic
+A separately registered higher-precision follow-up certified the same known development stage. The root was reused; this is an adaptive diagnostic, not untouched quality or prospective confirmation.
+
+E10: Full-model integration and admission history
+Preserves the numerical/resource policy, the failed admission attempt, and the later separate full-model registration. Completed outcomes are indexed in E12; launch metadata alone is not a result.
+
+E11: Quality and GPU parity protocols
+Prospective CPU-quality and GPU-parity protocols and launch checks. The software checks qualify execution only. Actual adverse quality and parity outcomes are indexed in E12.
+
+E12: Nearest-anchor service and failed quality guard
+Records complete-model/state agreement, the failed pooled quality guard and passing GPU likelihood parity. The maximum-article guard passing does not override the pooled failure. Portable metadata checks do not independently repeat inference.
+
+E13: Adaptive original-checkpoint quality screen
+Records the full-precision feature-teacher candidate and both passing guards on eight exposed articles. This is an adaptive model-only screen, not an untouched test or a repair-service measurement.
+
+E14: Original-checkpoint service and separate audit recovery
+Records eight actual model/state comparisons and the quality-screen model linkage. Preserve the original audit timeout and separately charged recovery. Compression saves state but is slower than cached lossless; hybrid is the stronger first-endpoint control. Metadata checks do not rerun calibration.
+
+E15: Modern lossless artifact control
+Actual saved archives restore original feature/state bytes and preserve supplied codes. The small extra saving and added deployment dependency remain visible. This is an artifact experiment; it supplies no new calibration, likelihood or complete-service latency.
+
+Pending evidence
+The active complete-service comparison, untouched quality and any required
+timing replication receive new records only after their actual evidence is
+available and audited. This index makes no claim that those results exist.

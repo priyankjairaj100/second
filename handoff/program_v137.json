@@ -1,0 +1,18 @@
+{
+  "actual_allocation_cpu_seconds": 9084.405,
+  "article_losses": 4480,
+  "handoff": "docs/ACTIVE_SESSION_V137.md",
+  "manuscript": "reports/manuscript_v137.tex",
+  "pdf": "reports/second_tacl_v137.pdf",
+  "primary_quality_gate": {
+    "failed": "gpt2_retained3_observed_max_article",
+    "passed": 3,
+    "total": 4
+  },
+  "scheduler": "PAUSED",
+  "schema": "second-handoff-v137",
+  "scientific_revision_complete": false,
+  "status": "matched_quality_closed_minimal_cold_next",
+  "submission_ready": false,
+  "updated_utc": "2026-10-29T09:26:38.914256+00:00"
+}

@@ -1,0 +1,73 @@
+{
+  "archive": {
+    "bytes": 9129667,
+    "sha256": "c95ac9036822b55863734b09e8e9986c673bc3f269e134b468da61faf0430904"
+  },
+  "manifest": {
+    "README.txt": {
+      "bytes": 875,
+      "sha256": "c105bf639d6bf467f919f87f8c5c071d24d3684c29892f242f66ffb13b107813"
+    },
+    "RESPONSIBLE_NLP_CHECKLIST_DRAFT.txt": {
+      "bytes": 8706,
+      "sha256": "6f3051f973dbe83e91da078a22bc071138f66eb4a26ccd47674a132080596a51"
+    },
+    "development-audit-receipts-v69.zip": {
+      "bytes": 341604,
+      "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+    },
+    "development-dependency-notices-v71c.zip": {
+      "bytes": 460857,
+      "sha256": "944eb649e8f339e3b0a1b39126333d5d950c0909a394da3587b7de34e5771f41"
+    },
+    "development-evidence-v69b.zip": {
+      "bytes": 87257,
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "development-optimization-v98.zip": {
+      "bytes": 5722,
+      "sha256": "014a1d296dd3102dc81f58e4e0a4840452e73d3bc3167884d4b8e0dcebc871f8"
+    },
+    "development-quality-evidence-v72.zip": {
+      "bytes": 251913,
+      "sha256": "c588ac060824b7870f085f8f3dae6e02cee6dcb93ded6aac6bd7d72a8d5f14dc"
+    },
+    "development-reproduction-guide-v72.zip": {
+      "bytes": 19535,
+      "sha256": "6abf11b4b237f263784f3bfb9ce3ddb87f70e3d11f3b3a751ae5e69984cddfd3"
+    },
+    "development-selection-metadata-v71.zip": {
+      "bytes": 6194056,
+      "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
+    },
+    "development-service-evidence-v70.zip": {
+      "bytes": 124857,
+      "sha256": "684ca47fd16985c32f5faf0dd7bab81f3bbe9dda297a87455dfb84c0a0ce2dc4"
+    },
+    "development-source-review-v72.zip": {
+      "bytes": 1930758,
+      "sha256": "e3505d7b353eed4109c7f22f127955513d928590552513263a13ee90811cbf49"
+    },
+    "second-research-draft.tex": {
+      "bytes": 57699,
+      "sha256": "9d829b01c03f9431819fa0f9800e182d2cce46878686fb8892017fbfc3621ddf"
+    }
+  },
+  "members": 13,
+  "native_compile_success": true,
+  "new_component": {
+    "bytes": 5722,
+    "sha256": "014a1d296dd3102dc81f58e4e0a4840452e73d3bc3167884d4b8e0dcebc871f8"
+  },
+  "new_transfer_result": false,
+  "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v98.zip",
+  "rendered_layout_verified": false,
+  "roundtrip_bytes_verified": true,
+  "schema": "development-review-bundle-v98",
+  "source": {
+    "bytes": 57699,
+    "sha256": "9d829b01c03f9431819fa0f9800e182d2cce46878686fb8892017fbfc3621ddf"
+  },
+  "submission_ready": false,
+  "unchanged_components": 8
+}

@@ -1,0 +1,69 @@
+V63: audited modern lossless archive result
+16 October 2026. Completed scoped development evidence, not a repair-latency result.
+
+All three jobs completed0:0:15244 checks4seconds,15245 measurement13m40s,15246
+audit10m57s. The final audit ended13:53:41IST. It parsed the actual saved archives,
+compared744 source/stage binary64 word arrays, preserved supplied model codes,
+restored actual V61 state bytes at all three memberships and checked both retained-
+descriptor transitions. This audit shares the codec/parser implementation.
+No new calibration, inference, language quality or deletion latency was measured.
+
+Results
+Original13-source live state:396,900,746 ->396,330,658bytes (0.143635% reduction).
+First12-source live state:368,132,885 ->367,603,575bytes (0.143782% reduction).
+Final6-source live state:195,673,382 ->195,408,617bytes (0.135310% reduction).
+Live state includes the literal two-byte trust sidecar. The eighteen width768
+stages select shuffled-zlib6; the six width3072 stages select shuffled-Zstandard3.
+All five candidate encoding costs are retained; no favorable-only codec sweep.
+
+The existing uncertain-compression states remain9.278071% and8.738381% smaller
+than the new lossless artifacts at the two retained endpoints. This storage
+comparison uses audited states with the same numerical target and memberships;
+it does not supply missing modern-service timings. Hybrid retains its first-
+endpoint advantage from V61, and cached lossless remains the fastest measured
+V61 arm. Do not turn numerical nondominance into demonstrated practical value.
+
+Common checkpoint/config352,825,175bytes remains required. New checkpoint-inclusive
+sizes are749,155,833 /720,428,750 /548,233,792bytes. The full pinned installed
+codec package adds23,870,575bytes and all seven new control files add54,803bytes.
+Counting that added footprint makes totals773,081,211 /744,354,128 /572,159,170bytes,
+which are3.115177% /3.245136% /4.313706% above the old checkpoint-inclusive totals.
+Shared older runtime remains required. This is the selected installation, not
+minimal deployment packaging or a universal lossless-compression lower bound.
+
+Observed whole-endpoint artifact processing took321.720 /328.383 /164.961seconds,
+including old-format migration, all encodes, canonical validation, restoration,
+output checking and (where applicable) a transition with supplied endpoint codes.
+These are nested fixed-order development clocks, not service request clocks.
+Do not add codec times to historical V61 repair times or infer a speedup.
+
+Process CPU totals1466.282449351seconds. Slurm allocation CPU totals1469.321seconds
+including startup/shutdown; batch rows report the same CPU and are not additional
+usage. The separate registered allowance was5706seconds. No old ledger was reused,
+no attempt failed, and no numerical job was repeated. All432 old sources and7
+registered V63 files remain unchanged.
+
+Portable evidence
+Registration SHA256:
+479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6
+Measurement receipt SHA256:
+98d8dacdee11ebddb5955cab7faa9c5640b40558b00ba1a2d3da012aeefb464e
+Actual-byte audit receipt SHA256:
+f7a958f0d9a3ab7884a891db7cbea9b8a5f333d7f8f6e3d1d8e79c4912034ae7
+campaigns/csis_terminal_v63_lossless_metadata_20261016.tar.gz is163,318bytes,
+SHA256 ec9435ce4cfe2bfb67db2f3d2f8ab7e4b9ebdc06feaea3cf8b6daaa436757f23.
+It contains28 files including the collection manifest. Nine numerical input/output
+binaries and four prior metadata inputs are omitted with their commitments.
+Dependency binaries are pinned but not copied into this portable archive.
+validation/v63_terminal_metadata_check.json records the successful full portable
+integration. It does not revalidate omitted numerical or dependency binaries locally.
+
+Decision and next work
+The modern lossless artifact does not remove the modest uncertain-state storage
+difference. Implement the missing complete point-service control, preserve both
+cache and hybrid comparisons, and combine the next justified full-model development
+run with an outcome-blind disjoint root where possible. A useful application
+constraint and reliable quality/timing evidence remain necessary; no compression
+speed or broad unlearning claim follows. The V64 tiny software check is a separate
+admission gate, not another empirical result. Fresh data selection, full service,
+untouched quality and prospective timing remain separate registered obligations.

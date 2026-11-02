@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/nfs_home/users/poonam/second-20261010/research_v53/campaign.py", line 172, in <module>
+    if args.operation=='register':register(args.directory,args.data_directory,args.checks)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/research_v53/campaign.py", line 91, in register
+    selection,rows,ds=validate_data(data_directory);data_directory=Path(data_directory).resolve()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/research_v53/campaign.py", line 54, in validate_data
+    directory=Path(directory).resolve();dp=data_phase.verify(directory)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/research_v45/data_phase.py", line 31, in verify
+    require(p['runtime']==runtime() and p['history']==inventory(),'Data runtime/history changed')
+  File "/nfs_home/users/poonam/second-20261010/research_v43/campaign.py", line 32, in require
+    raise ValueError(message)
+ValueError: Data runtime/history changed

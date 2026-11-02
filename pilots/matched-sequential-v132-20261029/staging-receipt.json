@@ -1,0 +1,13 @@
+{
+  "preflight": "16704 second131-gptq__distilgpt2__2 RUNNING\n16705 second131-gptq__distilgpt2__3 RUNNING\n16706 second131-gptq__gpt2__2 RUNNING\n16707 second131-gptq__gpt2__3 RUNNING\n16645 f3_small PENDING\n16646 f3_mid PENDING\n",
+  "staging": "STAGED_SOURCE_VERIFIED 1428\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n",
+  "archive": {
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/matched-sequential-v132/source-v132.tar.gz",
+    "bytes": 3084126,
+    "sha256": "ccb356b64553b6bede560d189263c3714a2a4f1a1abea4597fcb1d746adbf71f"
+  },
+  "registration_sha256": "f2552a03dd5ea0d9d46b438397eda48a5686f7ccc0927a6a73a8bc24644d9172",
+  "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v132-20261029-a",
+  "sources": 1428
+}

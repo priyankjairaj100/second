@@ -1,0 +1,64 @@
+V66 complete-service operation qualification, 16 October 2026
+
+Scope
+This is a software-only one-attempt Linux qualification. It does not open the
+DistilGPT2 checkpoint, admitted C4 tokens, factor archives or quality articles.
+The V65 data root stays fixed for future separately registered numerical work.
+Passing this gate is not evidence of full-model calibration, speed or quality.
+
+Implementation
+AllRepresentationsService routes explicitly to frozen V61 legacy and V64 modern
+methods with one common immutable teacher context. No historical method or global
+numerical function is patched in execution. Fixture tests alone use solver stubs;
+the Linux integration test executes actual tiny numerical certification.
+
+Rebuild extracts original-teacher source features, computes new canonical codes,
+and emits lossless, compressed48, hybrid and modern-lossless state and trust.
+It accepts no predecessor descriptor input and is reusable for a fresh oracle.
+Request implements cold extraction, cached retained-descriptor reuse, compressed
+certificate/fallback routing, hybrid exact Gram subtraction and modern lossless
+retained descriptors. All compute new codes with the existing matched solver.
+They check proper unmodified retained subsets and predecessor target/membership,
+and reject wrong representation, malformed archives or noncanonical trust.
+No supplied endpoint codes enter the repair path. All writes return checked
+commitments; the future concrete writer must use exclusive actual-file writes.
+
+Operation clocks include admission, predecessor reads, canonical parsing, feature
+access, solving, complete state/model/trust writes and in-process disposal. Common
+rebuild extraction/model work and per-representation preparation are separately
+recorded. Caller context startup, registration/binding checks, final receipt and
+controller costs are not measured here; full workers must account for them.
+The callback test writer holds bytes in memory and is not a disk benchmark.
+
+Qualification and caps
+Exactly44 tests, zero skips: frozen V63's21, V64's13, nine new synthetic operation
+checks and one new actual five-arm tiny-model integration case. The latter uses
+a generated decoder and four artificial tokens, compares each request's actual
+model/state/trust bytes with separately reconstructed outputs, and restores the
+modern state to the exact legacy state. It checks cold cannot read predecessor
+state, cached/modern use no source replay, and hybrid replays deleted sources.
+This shares project mathematical routines and is not an independent implementation.
+
+Existing pinned Python3.12.14 CPU container, one CPU/thread and selected affinity;
+16GiB address space/memory,8MiB per file, no core dumps. Process CPU soft300/hard301,
+wall600seconds, fresh allowance602CPU seconds including waited compiler children.
+Bind all432 historical+7V63+6V64+5V65 source files, these six new files, base runtime,
+isolated eleven-file V63 codec installation and preceding completion receipts.
+Verify before and after tests. Count scheduler allocation and batch CPU separately,
+without adding duplicate records. Preserve failure/partial receipts and costs.
+
+One-use path: local_runs/complete-service-checks-v66-20261016-a. Register source,
+runtime, caps and exact test count before one no-requeue Slurm submission. Existing
+Second jobs must be reconciled first. No automatic retry, cap increase, empirical
+execution, GPU calibration, paid compute or silent source change is admitted.
+Any software correction after this freeze uses additive new registered source.
+
+Remaining numerical prerequisites
+Separate V67 controller/worker/oracle/terminal-audit implementation and registration;
+exact V65 token/provenance and historical exclusions bindings; complete per-arm
+state/target invariants; full simultaneous memory and work admission; adequate
+audit budgets based on prior timeouts and V62 recovery; sealed CPU reservations;
+balanced prospective arm order and startup/cache policy; exclusive output paths.
+No old V59 final-model equality requirement transfers to the disjoint root.
+The actual new fresh oracle determines expected output. Keep every failed/refused
+attempt and negative result. Untouched quality and repeated timing are later gates.

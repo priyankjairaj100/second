@@ -1,0 +1,57 @@
+{
+  "schema": "second-review-response-checks-v122",
+  "feature_boxes": 486,
+  "enumerated_feature_realizations": 39366,
+  "coefficient_perturbation_checks": 39366,
+  "certified_uniform_code_cases": 13770,
+  "reference_primitive_exact_containment_checks": 316,
+  "nonfinite_cases_requiring_refusal": 26,
+  "storage_installation_sensitivity": [
+    {
+      "retained_records": 12,
+      "gross_saved_bytes": 33959262,
+      "codec_bytes": 23870575,
+      "net_single_state_bytes": 10088687,
+      "net_two_separate_states_shared_codec_bytes": 44047949,
+      "minimum_states_for_positive_net_saving": 1
+    },
+    {
+      "retained_records": 6,
+      "gross_saved_bytes": 16997113,
+      "codec_bytes": 23870575,
+      "net_single_state_bytes": -6873462,
+      "net_two_separate_states_shared_codec_bytes": 10123651,
+      "minimum_states_for_positive_net_saving": 2
+    }
+  ],
+  "scope": "Generated exact-rational and Python elementary-helper checks only; not Linux native-C qualification, model results, production transaction tests or a clean empirical reproduction.",
+  "new_empirical_execution": false,
+  "execution_environment": {
+    "python": "3.9.6 (default, Oct 18 2022, 12:41:40) \n[Clang 14.0.0 (clang-1400.0.29.202)]",
+    "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "numpy": "1.26.3",
+    "platform": "macOS-13.0-arm64-arm-64bit",
+    "scope": "Local algebra and primitive checks; no Linux native qualification inferred"
+  },
+  "prior_attempt": {
+    "runtime": "bundled Python runtime",
+    "outcome": "NumPy import failed before numerical checks",
+    "error": "Accelerate missing _cblas_caxpy$NEWLAPACK$ILP64",
+    "resolution": "Used existing system Python and NumPy 1.26.3. No dependency installation or production runtime change."
+  },
+  "input_identities": {
+    "validation/check_mathematics_v121.py": {
+      "bytes": 4212,
+      "sha256": "271ee2c4480cf9726a07343c54a2611eeb97588496e22c3517418cc3ca761c3b"
+    },
+    "src/low_rank_certified.py": {
+      "bytes": 14646,
+      "sha256": "aca8914616f15f7f3f8d31a31a05fb3e3e19c35b40445466ba4c97a3f156f301"
+    },
+    "reports/review-service-v70/E16_comparison_and_costs.json": {
+      "bytes": 15792,
+      "sha256": "f8ab6761fe1ff19851508e0a0ed0d4919bd74822eaa071804b6ddebf84dfdea4"
+    }
+  },
+  "enumeration_scope": "81 centers, two radii, three ridges; 81 vertex/interior realizations each; kappa is conservatively bounded by the entrywise L1 norm. Uniform-code cases count point-level implications, not independent trials."
+}

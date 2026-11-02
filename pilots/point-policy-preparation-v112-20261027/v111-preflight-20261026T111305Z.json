@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-26T11:13:05.993507+00:00",
+  "returncode": 0,
+  "stdout": "Mon Oct 26 11:13:05 UTC 2026\n16366|COMPLETED|0:0|71|00:00:00\n16367|COMPLETED|0:0|124|00:00:00\nf900999fcb200509dfad4fc081ce9c87fd172a16\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n"
+}

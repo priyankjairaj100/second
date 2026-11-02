@@ -1,0 +1,60 @@
+test_codec_binding_and_reference_target_cannot_be_relabelled (research_v63.test_control.ArchiveTests.test_codec_binding_and_reference_target_cannot_be_relabelled) ... ok
+test_duplicate_or_reordered_records_refuse (research_v63.test_control.ArchiveTests.test_duplicate_or_reordered_records_refuse) ... ok
+test_non_subset_and_missing_extra_sources_refuse (research_v63.test_control.ArchiveTests.test_non_subset_and_missing_extra_sources_refuse) ... ok
+test_roundtrip_restores_actual_old_state (research_v63.test_control.ArchiveTests.test_roundtrip_restores_actual_old_state) ... ok
+test_source_binding_and_stage_grids_refuse (research_v63.test_control.ArchiveTests.test_source_binding_and_stage_grids_refuse) ... ok
+test_trailing_changed_payload_and_header_bound_refuse (research_v63.test_control.ArchiveTests.test_trailing_changed_payload_and_header_bound_refuse) ... ok
+test_transition_equals_fresh_and_retains_descriptor_bytes (research_v63.test_control.ArchiveTests.test_transition_equals_fresh_and_retains_descriptor_bytes) ... ok
+test_actual_largest_registered_shape_zstd_roundtrip (research_v63.test_control.CodecTests.test_actual_largest_registered_shape_zstd_roundtrip) ... ok
+test_all_five_modes_decode_exactly (research_v63.test_control.CodecTests.test_all_five_modes_decode_exactly) ... ok
+test_canonical_choice_records_every_mode_and_is_deterministic (research_v63.test_control.CodecTests.test_canonical_choice_records_every_mode_and_is_deterministic) ... ok
+test_changed_hash_runtime_shape_and_noncanonical_mode_refuse (research_v63.test_control.CodecTests.test_changed_hash_runtime_shape_and_noncanonical_mode_refuse) ... ok
+test_content_size_checksum_and_skippable_requirements (research_v63.test_control.CodecTests.test_content_size_checksum_and_skippable_requirements) ... ok
+test_exact_signed_zero_subnormal_and_extreme_words (research_v63.test_control.CodecTests.test_exact_signed_zero_subnormal_and_extreme_words) ... ok
+test_extent_nonfinite_unknown_mode_and_limits_refuse (research_v63.test_control.CodecTests.test_extent_nonfinite_unknown_mode_and_limits_refuse) ... ok
+test_old_and_new_magic_are_distinct (research_v63.test_control.CodecTests.test_old_and_new_magic_are_distinct) ... ok
+test_trailing_extra_frame_truncation_and_checksum_refuse (research_v63.test_control.CodecTests.test_trailing_extra_frame_truncation_and_checksum_refuse) ... ok
+test_window_and_dictionary_rejected_before_decompression (research_v63.test_control.CodecTests.test_window_and_dictionary_rejected_before_decompression) ... ok
+test_bound_read_refuses_tamper_wrong_extent_and_symlink (research_v63.test_runner.RunnerTests.test_bound_read_refuses_tamper_wrong_extent_and_symlink) ... ok
+test_exclusive_outputs (research_v63.test_runner.RunnerTests.test_exclusive_outputs) ... ok
+test_json_duplicates_and_nonfinite_refuse (research_v63.test_runner.RunnerTests.test_json_duplicates_and_nonfinite_refuse) ... ok
+test_registration_caps_scope_and_paths_refuse (research_v63.test_runner.RunnerTests.test_registration_caps_scope_and_paths_refuse) ... ok
+test_corrupt_predecessor_cannot_return_successor (research_v64.test_service.ModernServiceTests.test_corrupt_predecessor_cannot_return_successor) ... ok
+test_direct_values_and_archive_route_match (research_v64.test_service.ModernServiceTests.test_direct_values_and_archive_route_match) ... ok
+test_failed_encoding_time_is_retained (research_v64.test_service.ModernServiceTests.test_failed_encoding_time_is_retained) ... ok
+test_identical_point_words_solver_options_and_output_codes (research_v64.test_service.ModernServiceTests.test_identical_point_words_solver_options_and_output_codes) ... ok
+test_invalid_direct_shape_dtype_and_nonfinite_values_refuse (research_v64.test_service.ModernServiceTests.test_invalid_direct_shape_dtype_and_nonfinite_values_refuse) ... ok
+test_missing_and_extra_sources_refuse (research_v64.test_service.ModernServiceTests.test_missing_and_extra_sources_refuse) ... ok
+test_predecessor_membership_and_non_subset_refuse (research_v64.test_service.ModernServiceTests.test_predecessor_membership_and_non_subset_refuse) ... ok
+test_repair_recomputes_codes_and_matches_fresh_state (research_v64.test_service.ModernServiceTests.test_repair_recomputes_codes_and_matches_fresh_state) ... ok
+test_stage_weight_or_order_mutation_refuses_before_any_solver (research_v64.test_service.ModernServiceTests.test_stage_weight_or_order_mutation_refuses_before_any_solver) ... ok
+test_structural_refusal_before_source_parse_or_solver (research_v64.test_service.ModernServiceTests.test_structural_refusal_before_source_parse_or_solver) ... ok
+test_wrong_representation_or_external_gram_trust_refuses (research_v64.test_service.ModernServiceTests.test_wrong_representation_or_external_gram_trust_refuses) ... ok
+test_wrong_source_identity_and_trailing_bytes_refuse (research_v64.test_service.ModernServiceTests.test_wrong_source_identity_and_trailing_bytes_refuse) ... ok
+test_actual_solver_and_fresh_teacher_reconstruction_equal (research_v64.test_linux.LinuxNumericalTests.test_actual_solver_and_fresh_teacher_reconstruction_equal) ... ok
+test_cold_never_reads_predecessor (research_v66.test_operations.OperationTests.test_cold_never_reads_predecessor) ... ok
+test_corrupt_modern_state_refuses_without_solver (research_v66.test_operations.OperationTests.test_corrupt_modern_state_refuses_without_solver) ... ok
+test_four_point_arms_recompute_and_write_equal_models (research_v66.test_operations.OperationTests.test_four_point_arms_recompute_and_write_equal_models) ... ok
+test_modified_tokens_refuse_before_predecessor_access (research_v66.test_operations.OperationTests.test_modified_tokens_refuse_before_predecessor_access) ... ok
+test_noncanonical_trust_refuses (research_v66.test_operations.OperationTests.test_noncanonical_trust_refuses) ... ok
+test_output_commitment_mismatch_refuses (research_v66.test_operations.OperationTests.test_output_commitment_mismatch_refuses) ... ok
+test_unknown_representation_refuses_before_solver (research_v66.test_operations.OperationTests.test_unknown_representation_refuses_before_solver) ... ok
+test_unsorted_root_refuses_before_predecessor_access (research_v66.test_operations.OperationTests.test_unsorted_root_refuses_before_predecessor_access) ... ok
+test_wrong_representation_refuses_before_solver (research_v66.test_operations.OperationTests.test_wrong_representation_refuses_before_solver) ... ok
+test_five_requests_equal_fresh_model_state_and_trust (research_v66.test_linux.LinuxOperationTests.test_five_requests_equal_fresh_model_state_and_trust) ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 2.707s
+
+OK
+test_actual_four_cells_equal_fresh_model_state_and_trust (research_v79.test_integration.Checks.test_actual_four_cells_equal_fresh_model_state_and_trust) ... ok
+test_corrupt_state_refuses_before_solver_in_optimized_cells (research_v79.test_integration.Checks.test_corrupt_state_refuses_before_solver_in_optimized_cells) ... ok
+test_failure_restores_every_dispatch_and_clears_cache (research_v79.test_integration.Checks.test_failure_restores_every_dispatch_and_clears_cache) ... ok
+test_resident_refusal_precedes_predecessor_access (research_v79.test_integration.Checks.test_resident_refusal_precedes_predecessor_access) ... ok
+test_single_use_outer_transaction_closes_and_matches_fresh (research_v79.test_integration.Checks.test_single_use_outer_transaction_closes_and_matches_fresh) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.582s
+
+OK
+{"scope": "Generated tiny service software qualification only; no empirical checkpoint or corpus", "empirical_execution": false, "suites": {"legacy": {"tests": 44, "failures": 0, "errors": 0, "skipped": 0}, "four_cell_integration": {"tests": 5, "failures": 0, "errors": 0, "skipped": 0}}, "elapsed_ns": 4946016364}

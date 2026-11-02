@@ -1,0 +1,40 @@
+Independent production-arithmetic qualification V140, 2 November 2026.
+Freeze all inputs and rules before first Linux execution. One attempt, no retry.
+This addresses the reviewer request to test actual native acceptance routines.
+It is software evidence, not another language-model experiment or a proof of all
+possible floating-point executions. Frozen V138 production sources are unchanged.
+
+Use Python random.Random seed14020261102; fixture order is fixed in campaign.py.
+406 generated cases:202 actual C add/multiply probes (five fixed intervals and96
+seeded pairs, each two operations);36 point-coefficient enclosures;12 uncertain
+2x2 feature-box coefficient enclosures;96 point and48 box production-dispatch
+calls across token/streamed routes;10 edge calls;2 overflow-refusal calls.
+Point cases have width2--5, tokens0/1/2/4, two weight rows and ridge.01/1/10 at
+fixed normalization512. Box calls have width2, tokens2 and tiny or.5 widths.
+All16 corners plus3 fixed interiors are checked for each of24boxes, independently
+for both production routes. The coefficient-box audit also uses19 realizations.
+The primitive exponent set spans subnormal2^-1074 through2^1000; include exact
+cancellation, signed zero, overflow, clipping and lower-code midpoint ties.
+
+Independent reference computes exact Gram matrices from binary64 rational words,
+solves a suffix conditional minimizer by Gauss-Jordan with exact row pivoting at
+each decision, then rounds to the supplied immutable grid with lower-code ties.
+It imports neither exact_core nor any production coefficient/quantization routine.
+Three hand-solvable local checks qualify this new reference. Production row grids
+are shared contract inputs, not independently re-derived scales. Coefficients are
+checked against separate exact token-space linear systems and squared errors.
+
+A finite accepted code must equal every tested exact realization; a sampled box
+with disagreeing outputs must refuse. A native interval must enclose all exact
+corner arithmetic or return its documented overflow-refusal status. Overflow
+full-dispatch cases must refuse. Every point/box route must accept at least one
+nonvacuous case. Record all accepted/refused case counts; no success-rate tuning,
+fixture removal, changed seeds, or raising numerical caps after results.
+
+One CPU,16GiB process,300 CPU seconds,600 wall seconds,60 launcherCPU reserve;
+360 CPU ceiling,64MiB source/output reservation excluding the preexisting shared
+pinned container. Existing8GiB arrays,64Bstage/1Trequest and16refinement caps stay.
+Exact-rational arithmetic is the small independent TEST oracle, never a repair
+fallback. No checkpoint, corpus, GPU or source traversal. Record build hashes,
+compiler flags, actual scheduler accounting including failures, full case receipts.
+Do not retry consumed jobs, modify old sources, restart scheduler or submit paper.

@@ -1,0 +1,936 @@
+{
+  "archived_v72_checks_passed": 114,
+  "check_count": 119,
+  "checked_at_utc": "2026-10-18T14:45:13.674084+00:00",
+  "checks": [
+    {
+      "name": "all_scoped_sections_found",
+      "passed": true,
+      "sources": [
+        "manuscript"
+      ]
+    },
+    {
+      "name": "nearest_anchor_guard_direction",
+      "passed": true,
+      "sources": [
+        "v58:cpu_quality"
+      ]
+    },
+    {
+      "expected_text": "The nearest-anchor model's PPL is 55.14666, versus 52.06342 for sequential calibration: ratio 1.059221 exceeds the unchanged 1.05 guard.",
+      "name": "nearest_anchor_ppl_and_failed_guard",
+      "occurrences": 1,
+      "passed": true,
+      "sources": [
+        "v58:cpu_quality"
+      ]
+    },
+    {
+      "expected_text": "The maximum article ratio, 1.174280, passes the separate 1.20 guard, but the overall gate fails.",
+      "name": "nearest_anchor_tail_guard",
+      "occurrences": 1,
+      "passed": true,
+      "sources": [
+        "v58:cpu_quality"
+      ]
+    },
+    {
+      "expected_text": "Loss is higher on all eight articles.",
+      "name": "nearest_anchor_all_eight_adverse",
+      "occurrences": 1,
+      "passed": true,
+      "sources": [
+        "v58:cpu_quality.fixed_feature_comparisons.sequential"
+      ]
+    },
+    {
+      "name": "nearest_anchor_eight_and_predictions",
+      "passed": true,
+      "sources": [
+        "v58:cpu_quality"
+      ]
+    },
+    {
+      "expected_text": "Eight previously exposed articles supply 1,016 predictions per model",
+      "name": "eight_article_prediction_count",
+      "occurrences": 1,
+      "passed": true,
+      "sources": [
+        "v58:cpu_quality.totals"
+      ]
+    },
+    {
+      "name": "gpu_threshold_and_pass",
+      "passed": true,
+      "sources": [
+        "v58:gpu_parity"
+      ]
+    },
+    {
+      "name": "quality_ratios_recomputed_from_means",
+      "passed": true,
+      "sources": [
+        "v58:cpu_quality",
+        "v59:result.quality"
+      ]
+    },
+    {
+      "expected_text": "Its pooled PPL is 51.85008 (mean NLL 3.948356), giving candidate/sequential ratio 0.995902 and maximum article ratio 1.065598.",
+      "name": "adaptive_candidate_ppl_nll_ratios",
+      "occurrences": 1,
+      "passed": true,
+      "sources": [
+        "v59:result.quality"
+      ]
+    },
+    {
+      "name": "adaptive_guard_direction",
+      "passed": true,
+      "sources": [
+        "v59:result.quality"
+      ]
+    },
+    {
+      "expected_text": "Both unchanged guards, 1.05 pooled and 1.20 per article, pass.",
+      "name": "adaptive_guard_values",
+      "occurrences": 1,
+      "passed": true,
+      "sources": [
+        "v59:result.quality"
+      ]
+    },
+    {
+      "name": "adaptive_article_directions",
+      "passed": true,
+      "sources": [
+        "v59:result.quality.candidate_comparisons"
+      ]
+    },
+    {
+      "expected_text": "Candidate PPL remains 13.71\\% above the unquantized checkpoint.",
+      "name": "adaptive_full_precision_regression",
+      "occurrences": 1,
+      "passed": true,
+      "sources": [
+        "v59:result.quality.totals"
+      ]
+    },
+    {
+      "name": "adaptive_historical_parity",
+      "passed": true,
+      "sources": [
+        "v59:result.historical_control_parity"
+      ]
+    },
+    {
+      "expected_text": "Compression saves 9.41\\% and 8.86\\% of live state against cached lossless, but requests take 38.62\\% and 41.74\\% longer.",
+      "name": "service_live_saving_and_slowdown",
+      "occurrences": 1,
+      "passed": true,
+      "sources": [
+        "v62:timings"
+      ]
+    },
+    {
+      "name": "service_hybrid_first_endpoint_dominance",
+      "passed": true,
+      "sources": [
+        "v62:timings"
+      ]
+    },
+    {
+      "name": "service_cached_fastest_both_endpoints",
+      "passed": true,
+      "sources": [
+        "v62:timings"
+      ]
+    },
+    {
+      "name": "lifetime_sum_cached",
+      "passed": true,
+      "sources": [
+        "v62:timings.cached"
+      ]
+    },
+    {
+      "name": "lifetime_sum_cold",
+      "passed": true,
+      "sources": [
+        "v62:timings.cold"
+      ]
+    },
+    {
+      "name": "lifetime_sum_hybrid",
+      "passed": true,
+      "sources": [
+        "v62:timings.hybrid"
+      ]
+    },
+    {
+      "name": "lifetime_sum_compressed",
+      "passed": true,
+      "sources": [
+        "v62:timings.compressed"
+      ]
+    },
+    {
+      "name": "scheduler_support_cpu_sums",
+      "passed": true,
+      "sources": [
+        "h62:scheduler_accounting"
+      ]
+    },
+    {
+      "expected_text": "The failed original audit consumed another 1,811.125 CPU seconds.",
+      "name": "failed_original_cpu_cost",
+      "occurrences": 1,
+      "passed": true,
+      "sources": [
+        "h62:scheduler_accounting.original.13569"
+      ]
+    },
+    {
+      "name": "extra_dependency_reverses_small_saving",
+      "passed": true,
+      "sources": [
+        "v63:summary"
+      ]
+    },
+    {
+      "expected_text": "a 5.92\\% perplexity regression beyond a 5\\% tolerance.",
+      "name": "abstract_nearest_anchor_adverse_percent",
+      "occurrences": 1,
+      "passed": true,
+      "sources": [
+        "v58:cpu_quality"
+      ]
+    },
+    {
+      "expected_text": "compression saves 9.24\\% and 8.70\\% of live state against a Zstandard-augmented lossless cache",
+      "name": "abstract_modern_storage",
+      "passed": true,
+      "sources": [
+        "v67_terminal_reconciliation_20261018_a.json"
+      ]
+    },
+    {
+      "expected_text": "requests take 13.69\\% and 50.48\\% longer",
+      "name": "abstract_modern_latency",
+      "passed": true,
+      "sources": [
+        "v67_terminal_reconciliation_20261018_a.json"
+      ]
+    },
+    {
+      "expected_text": "compression saves 9.38\\% and 8.83\\% of live state but requests take 17.82\\% and 46.46\\% longer",
+      "name": "disjoint_cached_tradeoff",
+      "passed": true,
+      "sources": [
+        "v67_terminal_reconciliation_20261018_a.json"
+      ]
+    },
+    {
+      "expected_text": "savings are 9.24\\% and 8.70\\%, with requests 13.69\\% and 50.48\\% longer",
+      "name": "disjoint_modern_tradeoff",
+      "passed": true,
+      "sources": [
+        "v67_terminal_reconciliation_20261018_a.json"
+      ]
+    },
+    {
+      "expected_text": "savings fall to 4.71\\% and 3.10\\%",
+      "name": "disjoint_deployment_savings",
+      "passed": true,
+      "sources": [
+        "v67_terminal_reconciliation_20261018_a.json"
+      ]
+    },
+    {
+      "expected_text": "installation occupies 23,870,575 bytes",
+      "name": "disjoint_installation",
+      "passed": true,
+      "sources": [
+        "v67_terminal_reconciliation_20261018_a.json"
+      ]
+    },
+    {
+      "expected_text": "workers charge 47,767 CPU seconds",
+      "name": "disjoint_worker_cpu",
+      "passed": true,
+      "sources": [
+        "v67_terminal_reconciliation_20261018_a.json"
+      ]
+    },
+    {
+      "expected_text": "consume 51,356.452 CPU seconds",
+      "name": "disjoint_scheduler_cpu",
+      "passed": true,
+      "sources": [
+        "v67_terminal_reconciliation_20261018_a.json"
+      ]
+    },
+    {
+      "expected_text": "fallbacks on 68 and 2 rows",
+      "name": "disjoint_fallback_rows",
+      "passed": true,
+      "sources": [
+        "v67_terminal_reconciliation_20261018_a.json"
+      ]
+    },
+    {
+      "name": "hybrid_access_and_tradeoff_direction",
+      "passed": true,
+      "sources": [
+        "v67_terminal_reconciliation_20261018_a.json"
+      ]
+    },
+    {
+      "expected_text": "12 & 1.005421 & 1.010342 & 1.129140",
+      "name": "quality_table_12",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "[1.000455, 1.010342]",
+      "name": "quality_interval_12",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "6 & 1.007149 & 1.011431 & 1.126961",
+      "name": "quality_table_6",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "[1.002870, 1.011431]",
+      "name": "quality_interval_6",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "60.1053",
+      "name": "quality_ppl_candidate_12",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "60.3088",
+      "name": "quality_ppl_candidate_6",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "74.6245",
+      "name": "quality_ppl_nearest",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "54.9643",
+      "name": "quality_ppl_original",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "59.7812",
+      "name": "quality_ppl_sequential_12",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "59.8807",
+      "name": "quality_ppl_sequential_6",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "on 320 articles",
+      "name": "quality_articles",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "frame of 3,801 complete records",
+      "name": "quality_frame",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "from 2,778 eligible records",
+      "name": "quality_eligible",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "127 predictions from a 128-token sequence",
+      "name": "quality_predictions",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "20,000 draws shared",
+      "name": "quality_bootstrap",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "one-sided 97.5\\%",
+      "name": "quality_upper",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "upper bounds must be at most 1.05",
+      "name": "quality_pooled_guard",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "at most 1.20",
+      "name": "quality_max_guard",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "nominal familywise level of 95\\%",
+      "name": "quality_familywise",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "all 1,920 GPU and 24 CPU losses",
+      "name": "quality_gpu_count",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "$1.155\\times10^{-14}$",
+      "name": "quality_parity",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "workers charge 7,526 CPU seconds",
+      "name": "quality_worker_cpu",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "7,588.049 scheduler CPU seconds",
+      "name": "quality_scheduler_cpu",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "a small quality cost, not an improvement",
+      "name": "quality_adverse_interpretation",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "A final accounting job failed",
+      "name": "quality_failed_accounting",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "without repeating inference",
+      "name": "quality_recovery_no_inference",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "\\evidence{E17}",
+      "name": "quality_evidence",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "expected_text": "0.54\\% and 0.71\\%",
+      "name": "abstract_quality_cost",
+      "passed": true,
+      "sources": [
+        "E17_statistics.json",
+        "E17_summary.json"
+      ]
+    },
+    {
+      "count": 2,
+      "name": "unchanged_theorem_environments",
+      "passed": true,
+      "sources": [
+        "manuscript_v70.tex"
+      ]
+    },
+    {
+      "count": 3,
+      "name": "unchanged_proof_environments",
+      "passed": true,
+      "sources": [
+        "manuscript_v70.tex"
+      ]
+    },
+    {
+      "count": 5,
+      "name": "unchanged_equation_environments",
+      "passed": true,
+      "sources": [
+        "manuscript_v70.tex"
+      ]
+    },
+    {
+      "count": 1,
+      "name": "unchanged_align_environments",
+      "passed": true,
+      "sources": [
+        "manuscript_v70.tex"
+      ]
+    },
+    {
+      "count": 1,
+      "name": "unchanged_lemma_environments",
+      "passed": true,
+      "sources": [
+        "manuscript_v70.tex"
+      ]
+    },
+    {
+      "count": 0,
+      "name": "unchanged_proposition_environments",
+      "passed": true,
+      "sources": [
+        "manuscript_v70.tex"
+      ]
+    },
+    {
+      "name": "v67_ten_rows_order_labels_and_all_values",
+      "passed": true,
+      "source": "validation/v67_terminal_reconciliation_20261018_a.json"
+    },
+    {
+      "expected": "4,419.007",
+      "name": "v67_row_1_column_3",
+      "observed": "4,419.007",
+      "passed": true
+    },
+    {
+      "expected": "368.003",
+      "name": "v67_row_1_column_4",
+      "observed": "368.003",
+      "passed": true
+    },
+    {
+      "expected": "720.828",
+      "name": "v67_row_1_column_5",
+      "observed": "720.828",
+      "passed": true
+    },
+    {
+      "expected": "0",
+      "name": "v67_row_1_column_6",
+      "observed": "0",
+      "passed": true
+    },
+    {
+      "expected": "4,579.496",
+      "name": "v67_row_2_column_3",
+      "observed": "4,579.496",
+      "passed": true
+    },
+    {
+      "expected": "367.456",
+      "name": "v67_row_2_column_4",
+      "observed": "367.456",
+      "passed": true
+    },
+    {
+      "expected": "720.282",
+      "name": "v67_row_2_column_5",
+      "observed": "720.282",
+      "passed": true
+    },
+    {
+      "expected": "0",
+      "name": "v67_row_2_column_6",
+      "observed": "0",
+      "passed": true
+    },
+    {
+      "expected": "5,973.008",
+      "name": "v67_row_3_column_3",
+      "observed": "5,973.008",
+      "passed": true
+    },
+    {
+      "expected": "368.003",
+      "name": "v67_row_3_column_4",
+      "observed": "368.003",
+      "passed": true
+    },
+    {
+      "expected": "720.828",
+      "name": "v67_row_3_column_5",
+      "observed": "720.828",
+      "passed": true
+    },
+    {
+      "expected": "288",
+      "name": "v67_row_3_column_6",
+      "observed": "288",
+      "passed": true
+    },
+    {
+      "expected": "4,921.935",
+      "name": "v67_row_4_column_3",
+      "observed": "4,921.935",
+      "passed": true
+    },
+    {
+      "expected": "318.918",
+      "name": "v67_row_4_column_4",
+      "observed": "318.918",
+      "passed": true
+    },
+    {
+      "expected": "671.743",
+      "name": "v67_row_4_column_5",
+      "observed": "671.743",
+      "passed": true
+    },
+    {
+      "expected": "24",
+      "name": "v67_row_4_column_6",
+      "observed": "24",
+      "passed": true
+    },
+    {
+      "expected": "5,206.569",
+      "name": "v67_row_5_column_3",
+      "observed": "5,206.569",
+      "passed": true
+    },
+    {
+      "expected": "333.497",
+      "name": "v67_row_5_column_4",
+      "observed": "333.497",
+      "passed": true
+    },
+    {
+      "expected": "686.322",
+      "name": "v67_row_5_column_5",
+      "observed": "686.322",
+      "passed": true
+    },
+    {
+      "expected": "0",
+      "name": "v67_row_5_column_6",
+      "observed": "0",
+      "passed": true
+    },
+    {
+      "expected": "922.484",
+      "name": "v67_row_6_column_3",
+      "observed": "922.484",
+      "passed": true
+    },
+    {
+      "expected": "195.615",
+      "name": "v67_row_6_column_4",
+      "observed": "195.615",
+      "passed": true
+    },
+    {
+      "expected": "548.441",
+      "name": "v67_row_6_column_5",
+      "observed": "548.441",
+      "passed": true
+    },
+    {
+      "expected": "0",
+      "name": "v67_row_6_column_6",
+      "observed": "0",
+      "passed": true
+    },
+    {
+      "expected": "897.841",
+      "name": "v67_row_7_column_3",
+      "observed": "897.841",
+      "passed": true
+    },
+    {
+      "expected": "195.330",
+      "name": "v67_row_7_column_4",
+      "observed": "195.330",
+      "passed": true
+    },
+    {
+      "expected": "548.155",
+      "name": "v67_row_7_column_5",
+      "observed": "548.155",
+      "passed": true
+    },
+    {
+      "expected": "0",
+      "name": "v67_row_7_column_6",
+      "observed": "0",
+      "passed": true
+    },
+    {
+      "expected": "1,619.473",
+      "name": "v67_row_8_column_3",
+      "observed": "1,619.473",
+      "passed": true
+    },
+    {
+      "expected": "195.615",
+      "name": "v67_row_8_column_4",
+      "observed": "195.615",
+      "passed": true
+    },
+    {
+      "expected": "548.441",
+      "name": "v67_row_8_column_5",
+      "observed": "548.441",
+      "passed": true
+    },
+    {
+      "expected": "144",
+      "name": "v67_row_8_column_6",
+      "observed": "144",
+      "passed": true
+    },
+    {
+      "expected": "1,694.311",
+      "name": "v67_row_9_column_3",
+      "observed": "1,694.311",
+      "passed": true
+    },
+    {
+      "expected": "220.247",
+      "name": "v67_row_9_column_4",
+      "observed": "220.247",
+      "passed": true
+    },
+    {
+      "expected": "573.072",
+      "name": "v67_row_9_column_5",
+      "observed": "573.072",
+      "passed": true
+    },
+    {
+      "expected": "144",
+      "name": "v67_row_9_column_6",
+      "observed": "144",
+      "passed": true
+    },
+    {
+      "expected": "1,351.098",
+      "name": "v67_row_10_column_3",
+      "observed": "1,351.098",
+      "passed": true
+    },
+    {
+      "expected": "178.333",
+      "name": "v67_row_10_column_4",
+      "observed": "178.333",
+      "passed": true
+    },
+    {
+      "expected": "531.158",
+      "name": "v67_row_10_column_5",
+      "observed": "531.158",
+      "passed": true
+    },
+    {
+      "expected": "0",
+      "name": "v67_row_10_column_6",
+      "observed": "0",
+      "passed": true
+    },
+    {
+      "name": "unchanged_abstract",
+      "passed": true
+    },
+    {
+      "name": "unchanged_target_method_proofs_cost",
+      "passed": true
+    },
+    {
+      "name": "unchanged_history_relatedwork",
+      "passed": true
+    },
+    {
+      "name": "unchanged_untouched_quality_and_limits",
+      "passed": true
+    },
+    {
+      "name": "unchanged_limitations_and_bibliography",
+      "passed": true
+    },
+    {
+      "name": "unchanged_preamble",
+      "passed": true
+    },
+    {
+      "name": "no_appendix",
+      "passed": true
+    },
+    {
+      "name": "old_table_not_mislabeled_current",
+      "passed": true
+    }
+  ],
+  "checks_retired_from_current_text_only": [
+    "adaptive_article_directions_text",
+    "adaptive_constructor_and_transaction",
+    "adaptive_historical_parity_text",
+    "adaptive_over_nearest_anchor_ratio",
+    "attributed_two_request_costs",
+    "codec_plus_source_footprint",
+    "compression_vs_modern",
+    "eight_table_rows_exact_order_labels_units_and_rounding",
+    "full_precision_and_nearest_ppl",
+    "gpu_cpu_charge",
+    "gpu_maximum_deviation",
+    "gpu_pair_count",
+    "modern_exact_live_bytes",
+    "nearest_anchor_storage_and_latency",
+    "nearest_anchor_worker_and_failed_costs",
+    "numerical_worker_debits",
+    "quality_cpu_charge",
+    "recovery_cpu_cost",
+    "recovery_walls",
+    "service_checkpoint_inclusive_savings",
+    "table_row_1_column_3",
+    "table_row_1_column_4",
+    "table_row_1_column_5",
+    "table_row_2_column_3",
+    "table_row_2_column_4",
+    "table_row_2_column_5",
+    "table_row_3_column_3",
+    "table_row_3_column_4",
+    "table_row_3_column_5",
+    "table_row_4_column_3",
+    "table_row_4_column_4",
+    "table_row_4_column_5",
+    "table_row_5_column_3",
+    "table_row_5_column_4",
+    "table_row_5_column_5",
+    "table_row_6_column_3",
+    "table_row_6_column_4",
+    "table_row_6_column_5",
+    "table_row_7_column_3",
+    "table_row_7_column_4",
+    "table_row_7_column_5",
+    "table_row_8_column_3",
+    "table_row_8_column_4",
+    "table_row_8_column_5"
+  ],
+  "current_service_numeric_cells": 40,
+  "current_service_rows": 10,
+  "empirical_execution": false,
+  "failed_checks": [],
+  "historical_snapshot": {
+    "bytes": 56202,
+    "sha256": "32af6235cb6ab812dd91f08b2d0bf9b23e0ea6a6e71be85686e5a390c13acafd"
+  },
+  "manuscript": {
+    "bytes": 52067,
+    "sha256": "2fb9e3fe2b682fe2400a34b88fa3a276473112c25869f8545bace54f2022e63b"
+  },
+  "retirement_reason": "Detailed historical passages/table condensed; full E12-E15 evidence and immutable V72 snapshot remain. Current V67 table replaces V61 table.",
+  "schema": "manuscript-number-check-v73",
+  "scope": "Selected transcriptions, table arithmetic and unchanged formal/quality text; not every numerical claim, a proof review or independent empirical replication.",
+  "status": "passed",
+  "tamper_probes": {
+    "1.005421": true,
+    "4,419.007 & 368.003": true,
+    "4,921.935 & 318.918 & 671.743 & 24": true,
+    "7,588.049": true,
+    "9.24\\%": true,
+    "but the overall gate fails.": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "registration_sha256": "5dc0c7e4dff99153fb9fe258a79aed3ef4d23897e4ff3f3ee3b8442804e7ab24",
+  "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/matched-quality-v124-20261029-a",
+  "source_count": 1079,
+  "archive": {
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/matched-quality-v124/source-v124.tar.gz",
+    "bytes": 1974495,
+    "sha256": "f615b8b74e2c6083d070f9340f1d67342abeec2e9dac280ef66fc192417dd18f"
+  },
+  "phase_cpu_total": 24600,
+  "source_bytes": 8161460
+}

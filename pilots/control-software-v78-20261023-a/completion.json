@@ -1,0 +1,46 @@
+{
+  "aggregate_cpu_ns": 12055177602,
+  "elapsed_ns": 12178369936,
+  "empirical_execution": false,
+  "error": null,
+  "finished_utc": "2026-10-23T06:30:47.196916+00:00",
+  "hostname": "csis.mn1",
+  "job_id": "15898",
+  "maximum_rss_kib": 66312,
+  "outputs": {
+    "outputs/control-results.json": {
+      "bytes": 8161,
+      "sha256": "85738dccdb56fec1484d10a9af786567e8fe54d712ad7bb533c169c262e3edc9"
+    },
+    "outputs/control.log": {
+      "bytes": 8063,
+      "sha256": "43c5c4640fc7fea93a1088163ba50033370e3cf295b5e75f8666091aa11350df"
+    }
+  },
+  "process_cpu_ns": 435103602,
+  "program_sha256": "6ff9101990dec06b5467f482074848d9643d9d5dc04612b383cf3dfa8dcda5fd",
+  "runtime": {
+    "compiler": "cc (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "gmpy2": "2.3.2",
+    "machine": "x86_64",
+    "numpy": "2.3.5",
+    "python": "3.12.14 (main, Sep 19 2026, 03:36:28) [GCC 12.2.0]",
+    "zstandard": "0.25.0",
+    "zstd_backend": "cext",
+    "zstd_version": [
+      1,
+      5,
+      7
+    ]
+  },
+  "status": "complete",
+  "steps": [
+    {
+      "elapsed_ns": 11715659366,
+      "exit": 0,
+      "name": "actual-control"
+    }
+  ],
+  "waited_child_cpu_ns": 11620074000,
+  "waited_child_maximum_rss_kib": 93420
+}

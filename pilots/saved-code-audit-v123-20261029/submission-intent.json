@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-10-29T05:37:53.478158+00:00",
+  "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/saved-code-audit-v123-20261029-a",
+  "manifest_sha256": "8bd9dc397319161becc5a4c1d113f18c0e6e420463efe7d1d214974200d71d70",
+  "source_sha256": "be6b64c21777e427d27149c46b46f3e307a294f1a4de70b91cd449bbc51378d1",
+  "attempt_once": true,
+  "action": "Upload bound audit source, create exclusive namespace/intent, submit one CPU-short saved-output audit"
+}

@@ -1,0 +1,14 @@
+{
+  "README.txt": {
+    "bytes": 545,
+    "sha256": "84c0128dac002888c78187213b0cff865d1eeef5ae795db27f93c551779d6ab0"
+  },
+  "v104-observation-20261026T090616Z.json": {
+    "bytes": 43647,
+    "sha256": "1549f4d271b751e31db58352f9d6734c4118e339b35bb1bd25c8d42d45028f4f"
+  },
+  "v104-observation-stderr-20261026T090616Z.txt": {
+    "bytes": 74,
+    "sha256": "fcd529a157428e1f03b5c0bdc5d50294fa160f793af4dd1e1aca6f2042ecb149"
+  }
+}

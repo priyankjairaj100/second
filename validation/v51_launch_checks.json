@@ -1,0 +1,22 @@
+{
+  "schema": "wide-stage-launch-verification-v51",
+  "status": "verified_launch_not_result",
+  "program_sha256": "af83f983447e022a5e5b386ddf60eb62db804db57dbd652212eab51fe9b7d10b",
+  "source_commit": "2c1a2bc699e4633bdab7243bb9e042be2f884c83",
+  "frozen_source_hashes_verified": 346,
+  "linux_software_tests": 10,
+  "linux_software_skips": 0,
+  "scheduler_job": "13276",
+  "scheduler_state_at_snapshot": "RUNNING",
+  "numerical_outcome": "not_yet_verified",
+  "offline_auditor_refused_pending_gate": true,
+  "phase_cpu_caps": {
+    "candidate": 1202,
+    "compressed": 1202,
+    "prepare": 902,
+    "reference": 1802
+  },
+  "complete_model": false,
+  "quality_evaluation": false,
+  "acl_ready": false
+}

@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/source-package-v69-q1/source-review/research_v69/entry.py", line 30, in main
+    x=c.verify(p,phase);c.predecessors(p,phase);gate.imported_sources(x['registered_sources'])
+      ^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+ValueError: generated immutable input mismatch
+Traceback (most recent call last):
+  File "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/source-package-v69-q1/source-review/qualify_review_source.py", line 80, in <module>
+    p=argparse.ArgumentParser();p.add_argument('root',type=Path);p.add_argument('--report',type=Path,required=True);p.add_argument('--log',type=Path,required=True);p.add_argument('--temporary',type=Path,required=True);a=p.parse_args();raise SystemExit(run(a.root,a.report,a.log,a.temporary))
+                                                                                                                                                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/source-package-v69-q1/source-review/qualify_review_source.py", line 67, in run
+    assert origin and within(origin,root),(name,origin)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('research_v37', None)

@@ -1,0 +1,76 @@
+{
+  "all_23_jobs_terminal": true,
+  "cancelled_unstarted_jobs": [
+    "16340",
+    "16341",
+    "16342",
+    "16343",
+    "16344",
+    "16345",
+    "16346",
+    "16347",
+    "16348",
+    "16349",
+    "16350",
+    "16351",
+    "16352",
+    "16353",
+    "16354",
+    "16355",
+    "16356",
+    "16357",
+    "16358"
+  ],
+  "carried_numerical_controller_seconds": 1,
+  "complete_controller_upper_cpu_ns": 22160490000,
+  "complete_model_comparisons": 0,
+  "contained_worker_cpu_ns": 1878664510000,
+  "created_utc": "2026-10-26T10:30:05.343180+00:00",
+  "cumulative_numerical_charged_seconds": 6196,
+  "failed_job": "16339",
+  "failed_operation": "gpt2/reference_compressed-1",
+  "failed_saved_entry_sealed_cpu_is_zero": true,
+  "failed_saved_host_accounting_is_null": true,
+  "failed_scheduler_cpu_lower_ns": 1900824000000,
+  "failed_scheduler_cpu_upper_ns": 1900825000000,
+  "failed_stage_from_prefix_and_bound_target": "block.0011.mlp_up",
+  "full_matched_scientific_closure": false,
+  "inputs": {
+    "v104-actual-program.json": {
+      "bytes": 167951,
+      "sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+    },
+    "v104-failure-capture-20261026T102231Z.json": {
+      "bytes": 47026,
+      "sha256": "148c11146d146a047ffcad1c8c9db0825998bbd1e31bc0fdb00eec3d5b1a4323"
+    },
+    "v104-request-review-20261026T102125Z.json": {
+      "bytes": 2647,
+      "sha256": "3e49748c6b1d36a868ad35d15d4468e4ab3e47c30417b2e03be51ad9d57be60a"
+    }
+  },
+  "native_failed_coordinate": 359,
+  "native_failed_row_in_selected_subset": 0,
+  "native_status": 3,
+  "numerical_complete_controller_upper_ns": 61648485000,
+  "original_output_row_identity_not_saved": true,
+  "original_receipts_modified": false,
+  "overlapping_clocks_not_summed": true,
+  "partial_stages": 46,
+  "reconstructed_partition": {
+    "contained_kind": "matched_numerical",
+    "contained_work_cpu_ns": 1878664510000,
+    "envelope_cpu_ns": 1900807257315,
+    "final_host_write_requires_scheduler_accounting": true,
+    "nonnumerical_cap_seconds": 302,
+    "nonnumerical_cpu_ns": 22142747315,
+    "overlapping_clocks_not_summed": true
+  },
+  "refusal_not_proof_of_transfer_impossibility": true,
+  "refusal_not_proof_of_wrong_model": true,
+  "reporting_partition_uses_actual_worker_seal": true,
+  "schema": "actual-failed-matched-accounting-v108",
+  "source_records_replayed": 3,
+  "status": "verified_failed_request_and_cancelled_dependents",
+  "unconsumed_numerical_ceiling_seconds": 76644
+}

@@ -1,0 +1,47 @@
+{
+  "archive": {
+    "bytes": 251913,
+    "sha256": "c588ac060824b7870f085f8f3dae6e02cee6dcb93ded6aac6bd7d72a8d5f14dc"
+  },
+  "bootstrap_reexecuted": false,
+  "cpu_reference_losses": 24,
+  "full_anonymity_verified": false,
+  "known_identity_scan_passed": true,
+  "members": 10,
+  "missing_field_probes_rejected": [
+    "E17_statistics.json",
+    "E17_recovery_receipt.json",
+    "E17_failed_closure_receipt.json"
+  ],
+  "model_or_inference_reexecuted": false,
+  "model_roles": 6,
+  "original_failure_preserved": true,
+  "paired_articles": 320,
+  "portable_arithmetic_check": {
+    "bootstrap_reexecuted": false,
+    "endpoints": {
+      "12": {
+        "gate_pass": true,
+        "log_maximum_article_ratio": 0.12145638622993156,
+        "log_pooled_ratio": 0.005406349588089282,
+        "observed_maximum_guard_pass": true,
+        "observed_pooled_guard_pass": true,
+        "reported_bootstrap_upper_guard_pass": true
+      },
+      "6": {
+        "gate_pass": true,
+        "log_maximum_article_ratio": 0.11952433906045071,
+        "log_pooled_ratio": 0.007124031657275523,
+        "observed_maximum_guard_pass": true,
+        "observed_pooled_guard_pass": true,
+        "reported_bootstrap_upper_guard_pass": true
+      }
+    },
+    "neural_inference_reexecuted": false,
+    "status": "saved_scalar_arithmetic_verified"
+  },
+  "schema": "v72-review-quality-component",
+  "status": "typed_derivatives_and_saved_scalar_check_verified",
+  "submission_ready": false,
+  "typed_roundtrips": 7
+}

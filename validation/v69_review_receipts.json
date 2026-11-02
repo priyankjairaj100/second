@@ -1,0 +1,90 @@
+{
+  "archive": {
+    "bytes": 341604,
+    "path": "reports/development-audit-receipts-v69.zip",
+    "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+  },
+  "captured_at_utc": "2026-10-16T14:36:51.176869+00:00",
+  "clean_extraction_files": 11,
+  "complete_reproduction_package": false,
+  "empirical_work_executed": false,
+  "exact_typed_json_roundtrips": 9,
+  "execution_sources_or_registrations_changed": false,
+  "full_anonymity_verified": false,
+  "known_identity_scan_passed": true,
+  "numerical_audits_repeated": false,
+  "original_archives_unchanged": true,
+  "output_files": {
+    "E10_additive.json": {
+      "bytes": 50920,
+      "sha256": "f55002ac9ce955419b7c767518025fa1c4d98a7f537ed210dd88e693c198eaba"
+    },
+    "E10_primary.json": {
+      "bytes": 221060,
+      "sha256": "36b89cc783a646956e5fb10547c1689b63421af8a070bb057a09f31f396eb165"
+    },
+    "E11_cpu_cuda_parity.json": {
+      "bytes": 72793,
+      "sha256": "f0e5f71e1a3965b7eb123d4288890ae093248ec601e4b3ac2489d9588353eee6"
+    },
+    "E12_exposed_quality.json": {
+      "bytes": 74368,
+      "sha256": "d47d4edf2e7622b8d0c87f420ffd4b59dfb117f92e44617ad16e8cacd7d56f4c"
+    },
+    "E13_adaptive_quality.json": {
+      "bytes": 159018,
+      "sha256": "1760a277031609e527ff737a02d64ee00db81347520535f9f085cefd99e23b66"
+    },
+    "E14_additive_recovery.json": {
+      "bytes": 117311,
+      "sha256": "4e651da58c05105c77f73ba28e96060175263271f5a687615b90f92cc19fff30"
+    },
+    "E14_primary_recovery.json": {
+      "bytes": 361416,
+      "sha256": "09d74d3d9d28e619adb88ad8c95afaa81247af68aaf816eceec68d84fce6b826"
+    },
+    "E15_lossless_audit.json": {
+      "bytes": 1930,
+      "sha256": "2b7e8a7b2e5aa996493636256c059a87c88b96edfee99524f1ffc6519291ff97"
+    },
+    "E15_lossless_measurement.json": {
+      "bytes": 924923,
+      "sha256": "8a4be0d79f6ba4f8834e7c79edc6d2fe91af23971ac376eb34a654cb722063b1"
+    },
+    "MANIFEST.sha256": {
+      "bytes": 889,
+      "sha256": "2b35eb980319b7aac7e6982448195893e7bb1f9c755cb4ae8207862979388f34"
+    },
+    "README.txt": {
+      "bytes": 2083,
+      "sha256": "225c27e0cd4bad08117ba2efc02aa522cc5331acbe115f7426a3ed8a6107b6f1"
+    }
+  },
+  "private_mapping": "docs/REVIEW_RECEIPT_DERIVATION_V69.json",
+  "receipt_count": 9,
+  "redacted_string_counts": {
+    "known_exposed_articles": 8,
+    "other_article_identifiers": 13,
+    "paths": 885
+  },
+  "schema": "review-receipt-derivative-check-v69",
+  "shared_exposed_article_count": 8,
+  "status": "typed_derivatives_and_clean_extraction_verified",
+  "submission_ready": false,
+  "tamper_probes_rejected": [
+    "adverse_guard_flip",
+    "failed_cost_change",
+    "drop_budget",
+    "mapping_collision"
+  ],
+  "typed_census": {
+    "arrays": 1049,
+    "booleans": 1884,
+    "nulls": 64,
+    "numbers": 23872,
+    "object_keys": 38066,
+    "objects": 7539,
+    "strings": 9256
+  },
+  "unchanged_numeric_and_boolean_values": true
+}

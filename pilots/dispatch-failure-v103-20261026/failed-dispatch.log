@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v103-20261026-a/research_v103/host.py", line 221, in <module>
+    main(*sys.argv[1:])
+    ~~~~^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v103-20261026-a/research_v103/host.py", line 179, in main
+    requested, snapshot, admission = admit(p, name)
+                                     ~~~~~^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v103-20261026-a/research_v103/host.py", line 36, in admit
+    requested = requests(program['storage_plan'], program['sources'],
+                         program['source_archive']['bytes'], name)
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v103-20261026-a/research_v103/storage_plan.py", line 28, in requests
+    require(operation is None or operation in OPERATIONS,'Known matched operation required')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v103-20261026-a/research_v80/io.py", line 7, in require
+    if not x:raise ValueError(m)
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: Known matched operation required

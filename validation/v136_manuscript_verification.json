@@ -1,0 +1,122 @@
+{
+  "appendices": 0,
+  "bibliography_byte_identical_to_v123": true,
+  "column_bounds": [
+    {
+      "column_bottom_points": [
+        765.3331320960003,
+        765.3332220960003
+      ],
+      "page": 1
+    },
+    {
+      "column_bottom_points": [
+        765.3331220960002,
+        765.3331420960002
+      ],
+      "page": 2
+    },
+    {
+      "column_bottom_points": [
+        765.3331120959999,
+        768.7746412959999
+      ],
+      "page": 3
+    },
+    {
+      "column_bottom_points": [
+        766.148381728,
+        765.3330720960005
+      ],
+      "page": 4
+    },
+    {
+      "column_bottom_points": [
+        765.3331320960002,
+        765.333112096
+      ],
+      "page": 5
+    },
+    {
+      "column_bottom_points": [
+        765.3331720960003,
+        765.3331320960002
+      ],
+      "page": 6
+    },
+    {
+      "column_bottom_points": [
+        765.3331320960003,
+        765.333112096
+      ],
+      "page": 7
+    },
+    {
+      "column_bottom_points": [
+        765.3331220960002,
+        765.333112096
+      ],
+      "page": 8
+    },
+    {
+      "column_bottom_points": [
+        765.333112096,
+        765.3331520960004
+      ],
+      "page": 9
+    },
+    {
+      "column_bottom_points": [
+        765.3331420960004,
+        709.788052096
+      ],
+      "page": 10
+    },
+    {
+      "column_bottom_points": [
+        765.333102096,
+        396.53325209599996
+      ],
+      "page": 11
+    }
+  ],
+  "content_pages": 10,
+  "core_proofs": 3,
+  "fonts": [
+    "/AKHCZK+CMMI10",
+    "/BZIVMZ+NimbusSanL-Bold",
+    "/CAFSZL+CMR8",
+    "/DDIEWW+CMMI8",
+    "/FKPJSN+MSBM10",
+    "/IHAIZV+NimbusRomNo9L-Regu",
+    "/IXFAWU+NimbusRomNo9L-Medi",
+    "/JAGKKY+CMSY8",
+    "/KPXLOM+NimbusMonL-Regu",
+    "/NOMARO+CMEX10",
+    "/PVTTLK+CMMI6",
+    "/TQTHRL+NimbusRomNo9L-ReguItal",
+    "/VDVGTR+CMSY10",
+    "/YEUUOC+CMR10"
+  ],
+  "manuscript": {
+    "bytes": 71376,
+    "sha256": "54c2cdd5b43d897bf06da2da68d0928f92b79544fad4c9a83dd191f2f481d14e"
+  },
+  "native_compile": "success confirmed by desktop compiler on this source",
+  "numeric_checks": "all new quality rows; four primary guards; historical quality and all matched timing rows",
+  "official_style_unmodified": true,
+  "overfull_boxes": 0,
+  "pdf": {
+    "bytes": 120547,
+    "sha256": "29be93839b2cbfdb55ec7ce6002f70f1c769d0bc45667fa18495f719549f2f93"
+  },
+  "primary_guards_passed": 3,
+  "primary_guards_total": 4,
+  "reference_pages": 1,
+  "references": 15,
+  "schema": "second-quality-manuscript-v136",
+  "scientific_revision_complete": false,
+  "submission_ready": false,
+  "visual_review": "all eleven final rendered pages inspected; no clipping, overlap or missing content",
+  "visual_review_date": "2026-10-29"
+}

@@ -1,0 +1,56 @@
+{
+  "scope": "Synthetic component software profile, not full-model feasibility",
+  "admission": {
+    "192": {
+      "rows": 4,
+      "width": 192,
+      "tokens": 128,
+      "work_units": 12349568,
+      "explicit_array_bytes": 17152896,
+      "coefficient_workspace_bytes": 11833344,
+      "admitted": true,
+      "refusal_reason": "",
+      "work_scope": "shared direct coefficients, radius conversion, ball rows, and worst-case interval fallback",
+      "virtual_rank": 192,
+      "admitted_full_row_passes": 2,
+      "block_tokens": 128,
+      "max_blocks": 1,
+      "scope": "Explicit workspace excludes caller-owned source storage and whole-process overhead"
+    },
+    "768": {
+      "rows": 4,
+      "width": 768,
+      "tokens": 128,
+      "work_units": 537329792,
+      "explicit_array_bytes": 263238528,
+      "coefficient_workspace_bytes": 188891136,
+      "admitted": true,
+      "refusal_reason": "",
+      "work_scope": "shared direct coefficients, radius conversion, ball rows, and worst-case interval fallback",
+      "virtual_rank": 768,
+      "admitted_full_row_passes": 2,
+      "block_tokens": 128,
+      "max_blocks": 1,
+      "scope": "Explicit workspace excludes caller-owned source storage and whole-process overhead"
+    },
+    "1536": {
+      "rows": 4,
+      "width": 1536,
+      "tokens": 128,
+      "work_units": 3961258112,
+      "explicit_array_bytes": 1045517184,
+      "coefficient_workspace_bytes": 755269632,
+      "admitted": true,
+      "refusal_reason": "",
+      "work_scope": "shared direct coefficients, radius conversion, ball rows, and worst-case interval fallback",
+      "virtual_rank": 1536,
+      "admitted_full_row_passes": 2,
+      "block_tokens": 128,
+      "max_blocks": 1,
+      "scope": "Explicit workspace excludes caller-owned source storage and whole-process overhead"
+    }
+  },
+  "local_fixture_tests_passed": 2,
+  "worker_cpu_cap": 600,
+  "phase_cpu_cap": 602
+}

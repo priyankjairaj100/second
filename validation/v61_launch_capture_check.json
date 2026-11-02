@@ -1,0 +1,20 @@
+{
+  "schema": "second-v61-launch-capture-check",
+  "status": "passed_launch_metadata_only",
+  "captured_status_at_utc": "2026-10-14T05:12:52.660698+00:00",
+  "program_sha256": "6632712f7b79b49734790fa6fc173ec7e5ee70f542fe8f8a0c3ef3ff2171ea2d",
+  "software_sha256": "71c1f573e977a66f244e85bf2229744d3077bd1d3ccf860c266cc9d94d629ae7",
+  "source_commit": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "software_tests": 205,
+  "software_skips": 0,
+  "source_files_verified": 432,
+  "registration_verified": true,
+  "copied_files": 13,
+  "archive": {
+    "path": "campaigns/csis_v61_launch_metadata_20261014.tar.gz",
+    "bytes": 93023,
+    "sha256": "c44a472aa596034b69697df994f67775614f4efbf1047e800352f5805c859012"
+  },
+  "actual_models_or_successor_states_revalidated": false,
+  "complete_service_result": false
+}

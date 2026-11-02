@@ -1,0 +1,97 @@
+V45 full-model independent C4 development sequence. Freeze before registration.
+
+Question: does complete compressed fixed-anchor calibration repair retain a useful
+storage/latency tradeoff at the 1,536/768 token regimes where historical first-stage
+controls differed? A previous tiny complete-model run is not a scaling result.
+
+Prerequisites: V43 both actual-payload audits verified; V44 exposed-quality guards
+passed; V45 data phase completed and settled, with its fixed input/exclusion files.
+Data phase A program4bd64a67eb44151d09d3552231630ab41a937e17e2709b662e93fc542fa994f0
+selected records1b3dd813dc5deacb35974e28f1fbd47d14364b85202a7ad12c8c1e7fc6a53259
+selectiond3c31bb483b6b77587c372b7611ee21d7ac706fcfbb363dbbb0b6b812754bdb9
+new C4 shard-one prefixb78ebe2755f45c195aab1ee625667be2aa1153d29b727e48ba122d553678ed9c.
+Pin these source commitments in model registration. No replacement root on loss.
+The data worker charged15CPU seconds from its separate602-second phase.
+
+Inputs: thirteen distinct C4 training documents, first128tokens each, total1664.
+The fixed outcome-blind selection is disjoint by archived IDs, document/body/URL
+hashes and first16/32/64/128 token hashes, including entire historical C4 prefix
+and all verified WikiText prepared pools. This is exact overlap screening, not
+semantic decontamination or a probability sample. No new quality data is consumed.
+
+Target: the pinned DistilGPT2 checkpoint, six transformer blocks,24 affine stages,
+42,467,328 four-bit codes. Fixed nearest-grid anchor features, finite ordered CPU
+execution, exact dyadic interpretation of binary64 words, ridge1/100, original
+normalization1664 retained after deletion, dyadic24 per-row scales, fixed stage/
+coordinate order, lower midpoint ties. No ordinary sequential GPTQ equivalence,
+pretraining-data removal, physical erasure, or guaranteed language quality.
+
+Sequence: canonical lexical source-ID order is also the frozen deletion order.
+Delete the first source:1536tokens/twelve records. From that actual successor,
+delete its first six sources:768tokens/six records. Every arm uses actual previous
+serialized state, exact retained membership, and identical requests/target.
+
+Arms: cached lossless factors; compressed40 block256 enclosures with exact replay
+on unresolved universal certificates; hybrid native exact Grams for eighteen
+width768 stages plus lossless factors for six width3072 stages; cold full-state
+retained-token reconstruction. Fresh oracle reexecutes retained tokens without
+reading predecessor descriptors and constructs all representations independently
+of prior state, but shares reviewed numerical/codec code. No independent math
+implementation claim. All arms receive the unchanged V43 stage-aware dispatcher.
+Shape rule: token route when4*tokens<=width and admitted, streamed primal otherwise;
+Gram uses direct-Gram certificate. No timed route selection or point/box retuning.
+
+One observation per arm and step. Hash-fixed arm order is hybrid,cached,cold,
+compressed (SHA256 of second-v45-arm-order:ARM); preparation first, oracle last.
+This is outcome-blind order, not randomized repeated measurement or a confidence
+interval. OS cache/shared-machine effects remain uncontrolled and disclosed.
+
+Complete preflight checks every24stage request at1664,1536,768, including all
+compressed fallback schedules, before any calibration feature extraction.
+16GiB process/Slurm memory,8GiB explicit-array ceiling,4GiB caller-residency allowance,
+64billion structural units per stage,1trillion per request. Maximum solver/dispatcher
+array envelope4,519,108,608bytes plus caller allowance. All original exact source
+features occupy429,391,872bytes. Native Gram max_sources increases to13 in V45,
+width remains768,token cap1664,product terms768*769/2*1664,integer cap256bits,
+serialized cap128MiB/stage and native Gram memory envelope2GiB. Complete canonical
+state cap2GiB. Proxies are conservative implementation bounds, not process-memory
+proofs or latency predictions; OS refusal remains a terminal outcome.
+
+Fresh model phase26,412CPU seconds (7.34 CPU-hours maximum admitted allowances):
+prepare4800CPU/6000wall; cached3600/4800; compressed4800/6000;
+hybrid4800/6000; cold3600/4800; oracle4800/6000. One thread/CPU affinity and2GiB
+file limit. The ceiling sums all six complete CPU+2 reservations; it is not an
+expected duration and does not recycle older allowances. Slurm time limits cover
+registration/controller overhead; worker limits govern actual bounded work.
+All jobs serial, --no-requeue, depend afterok. Numerical or exactness failure
+blocks downstream work; a slower/larger scientific result is preserved and does
+not stop already registered comparator/oracle work. No automatic retries,
+precision changes, redraws, cap increases, force push, or paid compute.
+
+Clock/cost scope: context and all admissions in worker/controller transaction;
+requests include predecessor reads/validation, deleted/retained source access,
+solving, fallback, complete canonical state/trust/model writes and object disposal.
+Report startup/admission and controller tails separately. Initial preparation
+constructs all representations in one run; attributed common+own preparation is
+an allocation, not a separately measured standalone pipeline. Count live state,
+external trust and common checkpoint separately; audit history and installation
+outside declared deployment subtotal. All actual successors and model changes
+must be audited; retaining audit copies is not physical deletion.
+
+Primary audit rehashes every declared artifact and compares actual successor and
+model bytes to fresh reconstruction. Supplemental audit binds exported code bytes
+to parsed state, original/retained records and provenance, exact targets, actual
+storage totals, sealed controller/worker receipts and settled ledger. Final file
+content rehashing protects against stale NFS metadata. Both run under bounded
+Slurm allocations and are ancillary, outside empirical worker charges. Controlled
+execution/filesystem trust remains an assumption, not hostile-host attestation.
+
+Report all arm results, certificate refusal/replay and failure costs, complete
+storage including checkpoint, successive timings and attributed lifetime. No
+pooled speed interval, useful-quality inference from V44(norm96), or ACL-ready
+claim. Larger original normalization changes the target; new exposed quality
+checks are required for the actual resulting model before untouched evaluation.
+Historical sixty quality exclusions and every previous source/ledger remain intact.
+Actual large derived artifacts stay on the institutional cluster; copy only a
+bounded representative subset locally if the complete archive exceeds free disk.
+Text receipts/hashes alone are not fresh numerical reproduction or binary backup.

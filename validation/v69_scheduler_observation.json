@@ -1,0 +1,73 @@
+{
+  "captured_at_utc": "2026-10-16T12:40:33.237096+00:00",
+  "container_manifest": {
+    "bytes": 167,
+    "content": "10ffb205f553197e110472e208522d0c73bcaf62e1a0571b860bf7bae49933b1  /nfs_home/users/poonam/second-20261010/local_runs/cluster-setup-20261010/python-3.12.14-bookworm.sif\n",
+    "path": "/nfs_home/users/poonam/second-20261010/local_runs/cluster-setup-20261010/container-13155.sha256",
+    "sha256": "5a58e1fef1950aabf16cea4f44043b95a1f18d572a67d42dccac4b4b6d96d0b3"
+  },
+  "example_pending_job": {
+    "arguments": [
+      "scontrol",
+      "show",
+      "job",
+      "15264",
+      "-o"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobId=15264 JobName=second67-compressed-1 UserId=poonam(1007) GroupId=poonam(1008) MCS_label=N/A Priority=1137 Nice=0 Account=faculty QOS=cpu-short JobState=PENDING Reason=Dependency Dependency=afterok:15263(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=04:40:00 TimeMin=N/A SubmitTime=2026-10-16T15:17:52 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-16T15:17:52 Scheduler=Main Partition=cpu-short AllocNode:Sid=csis:411036 ReqNodeList=csis.mn1 ExcNodeList=(null) NodeList= NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=1,mem=16G,node=1,billing=1 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=1 MinMemoryNode=16G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/nfs_home/users/poonam/second-20261010/cluster_setup/run_cpu.sbatch WorkDir=/nfs_home/users/poonam/second-20261010 StdErr=/nfs_home/users/poonam/second-20261010/local_runs/disjoint-service-v67-20261016-a/compressed-1-15264.log StdIn=/dev/null StdOut=/nfs_home/users/poonam/second-20261010/local_runs/disjoint-service-v67-20261016-a/compressed-1-15264.log Power= KillOInInvalidDependent=Yes TresPerTask=cpu:1 \n"
+  },
+  "host_python": "3.13.7 | packaged by conda-forge | (main, Sep  3 2025, 14:30:35) [GCC 14.3.0]",
+  "partition_hosts": {
+    "arguments": [
+      "scontrol",
+      "show",
+      "hostnames",
+      "csis.cn[1-4],csis.mn1"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "csis.cn1\ncsis.cn2\ncsis.cn3\ncsis.cn4\ncsis.mn1\n"
+  },
+  "partitions": {
+    "cpu-short": {
+      "arguments": [
+        "scontrol",
+        "show",
+        "partition",
+        "cpu-short",
+        "-o"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PartitionName=cpu-short AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=YES QoS=cpu-short DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=12:00:00 MinNodes=0 LLN=NO MaxCPUsPerNode=64 MaxCPUsPerSocket=UNLIMITED Nodes=csis.cn[1-4],csis.mn1 PriorityJobFactor=600 PriorityTier=600 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=640 TotalNodes=5 SelectTypeParameters=NONE JobDefaults=(null) DefMemPerCPU=2000 MaxMemPerNode=128000 TRES=cpu=640,mem=1200000M,node=5,billing=640,gres/gpu=10\n"
+    },
+    "gpu-short": {
+      "arguments": [
+        "scontrol",
+        "show",
+        "partition",
+        "gpu-short",
+        "-o"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PartitionName=gpu-short AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=NO QoS=gpu-short DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=08:00:00 MinNodes=0 LLN=NO MaxCPUsPerNode=48 MaxCPUsPerSocket=UNLIMITED Nodes=csis.cn[1-4],csis.mn1 PriorityJobFactor=500 PriorityTier=500 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=640 TotalNodes=5 SelectTypeParameters=NONE JobDefaults=(null) DefMemPerCPU=2000 MaxMemPerNode=96000 TRES=cpu=640,mem=1200000M,node=5,billing=640,gres/gpu=10\n"
+    }
+  },
+  "qos": {
+    "arguments": [
+      "sacctmgr",
+      "-n",
+      "-P",
+      "show",
+      "qos",
+      "cpu-short",
+      "format=Name,MaxWall"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "cpu-short|12:00:00\n"
+  }
+}

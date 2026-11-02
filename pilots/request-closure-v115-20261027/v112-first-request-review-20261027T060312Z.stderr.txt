@@ -1,0 +1,15 @@
+/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable
+fatal: unable to create threaded lstat: Resource temporarily unavailable
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+    assert not subprocess.check_output(['git','-C',str(root),'status','--porcelain'],text=True).strip()
+               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/software/miniconda/lib/python3.13/subprocess.py", line 472, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "/nfs_home/software/miniconda/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['git', '-C', '/nfs_home/users/poonam/second-20261010', 'status', '--porcelain']' returned non-zero exit status 128.

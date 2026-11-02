@@ -1,0 +1,82 @@
+{
+  "scope": "Generated software fixtures; no model, dataset, service or Linux campaign result",
+  "platform": "Linux-4.18.0-553.el8_10.x86_64-x86_64-with-glibc2.36",
+  "differential_cases": {
+    "valid": 40,
+    "mutated": 6810,
+    "boundary": 1600,
+    "accepted_mutations": 2710,
+    "rejected_mutations": 4100
+  },
+  "benchmarks": [
+    {
+      "shape": [
+        128,
+        768
+      ],
+      "bits": 48,
+      "block_size": 256,
+      "operation": "legacy parse(blob).box(), two full decodes plus checks/copies",
+      "payload_sha256": "1a0cb40bcc973f201b9b3b7193643538ee0645bc178ebc2f8f3b955aa61783cf",
+      "bytes": 615969,
+      "samples_ns": {
+        "reference": [
+          494478934,
+          487492995,
+          486611327,
+          488941824,
+          487817789,
+          490789047
+        ],
+        "prototype": [
+          14365842,
+          14058351,
+          13784743,
+          13576810,
+          13769224,
+          13592220
+        ]
+      },
+      "median_seconds": {
+        "reference": 0.4883798065,
+        "prototype": 0.0137769835
+      },
+      "ratio_reference_over_prototype": 35.44896504376303
+    },
+    {
+      "shape": [
+        128,
+        3072
+      ],
+      "bits": 48,
+      "block_size": 256,
+      "operation": "legacy parse(blob).box(), two full decodes plus checks/copies",
+      "payload_sha256": "c6e975c89df14a2f8a0a87a6e292d3ce3e52dc2534cbc66fcbf7677e01c9a990",
+      "bytes": 2461475,
+      "samples_ns": {
+        "reference": [
+          1964246930,
+          1958090439,
+          1960279829,
+          1985474706,
+          1982648272,
+          1989322090
+        ],
+        "prototype": [
+          56092978,
+          54056988,
+          54366042,
+          53950456,
+          53685896,
+          53954874
+        ]
+      },
+      "median_seconds": {
+        "reference": 1.973447601,
+        "prototype": 0.054005931
+      },
+      "ratio_reference_over_prototype": 36.54131249028926
+    }
+  ],
+  "elapsed_seconds": 29.394941948354244
+}

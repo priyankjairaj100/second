@@ -1,0 +1,478 @@
+{
+  "scope": "Generated software qualification; not model or service performance",
+  "primitive": {
+    "words_per_library": 1016385,
+    "directions": 2,
+    "libraries": 2,
+    "manifests": {
+      "src.native_token_coefficients_v30": {
+        "source_sha256": "514cb501b6420e755a6814c49e41ccc1f2be4d6233193a04f86305d9d665395a",
+        "binary_sha256": "e5bb8bdf6270248f79255cb1d1c65060b06797e4a2085263df8d586fb3c16ebf",
+        "wrapper_sha256": "807cb9007c1948a2243499996400f22720d12c8ca87c45460e6ab23ebf8669bc",
+        "compiler": "/usr/bin/cc",
+        "compiler_version": "cc (Debian 12.2.0-14+deb12u1) 12.2.0",
+        "flags": [
+          "-std=c11",
+          "-O3",
+          "-shared",
+          "-fPIC",
+          "-fno-fast-math",
+          "-ffp-contract=off",
+          "-frounding-math",
+          "-fexcess-precision=standard"
+        ],
+        "compile_elapsed_ns": 241156475,
+        "adapter_sha256": "3daeabcb9b6bf84a1bd3b62aa751b20a022b4ccd02412cc49f72755d510794f5",
+        "original_c_source_sha256": "7c77774fff2766246946fe88cf5beb84f3d1268f218326298ddd2d4832556916",
+        "backend": "normal_neighbor_token_v76"
+      },
+      "src.native_box_coefficients_v31": {
+        "source_sha256": "f6e28ffc780dbe4cf7840deb7f71c0e2059063808ac7b6b54e19a3535cd81718",
+        "binary_sha256": "31ea69b20937eafdd9bd55d5e9b9111e75c530364aea0becbd84343cb410df53",
+        "wrapper_sha256": "c25b42dd2808e6a39017d81e036725e7a66f17337dcedb4ea5eaca0a0848909f",
+        "compiler": "/usr/bin/cc",
+        "compiler_version": "cc (Debian 12.2.0-14+deb12u1) 12.2.0",
+        "flags": [
+          "-std=c11",
+          "-O3",
+          "-shared",
+          "-fPIC",
+          "-fno-fast-math",
+          "-ffp-contract=off",
+          "-frounding-math",
+          "-fexcess-precision=standard"
+        ],
+        "compile_elapsed_ns": 240021439,
+        "adapter_sha256": "3daeabcb9b6bf84a1bd3b62aa751b20a022b4ccd02412cc49f72755d510794f5",
+        "original_c_source_sha256": "83cc2668faaadb550ab57a2dc5a7cdf9ae4ba1b8aa435c849256f88261b4aa16",
+        "backend": "normal_neighbor_token_v76"
+      }
+    }
+  },
+  "coefficient_parity_cases": 16,
+  "legacy_tests": {
+    "reference": {
+      "count": 21,
+      "errors": 0,
+      "failures": 0,
+      "skips": 0
+    },
+    "optimized": {
+      "count": 21,
+      "errors": 0,
+      "failures": 0,
+      "skips": 0
+    }
+  },
+  "benchmarks": [
+    {
+      "kind": "point",
+      "width": 192,
+      "tokens": 32,
+      "samples": {
+        "reference": [
+          {
+            "total_ns": 21098141,
+            "native_ns": 14942136,
+            "nominal_ns": 5832789
+          },
+          {
+            "total_ns": 20942297,
+            "native_ns": 14787608,
+            "nominal_ns": 5828000
+          },
+          {
+            "total_ns": 20883445,
+            "native_ns": 14752575,
+            "nominal_ns": 5799651
+          },
+          {
+            "total_ns": 20941916,
+            "native_ns": 14882081,
+            "nominal_ns": 5734860
+          },
+          {
+            "total_ns": 20723032,
+            "native_ns": 14685047,
+            "nominal_ns": 5713302
+          }
+        ],
+        "optimized": [
+          {
+            "total_ns": 17376324,
+            "native_ns": 11252387,
+            "nominal_ns": 5810539
+          },
+          {
+            "total_ns": 17314728,
+            "native_ns": 11194393,
+            "nominal_ns": 5797242
+          },
+          {
+            "total_ns": 17395250,
+            "native_ns": 11372953,
+            "nominal_ns": 5701609
+          },
+          {
+            "total_ns": 17294449,
+            "native_ns": 11227077,
+            "nominal_ns": 5744795
+          },
+          {
+            "total_ns": 17369020,
+            "native_ns": 11324217,
+            "nominal_ns": 5719185
+          }
+        ]
+      },
+      "median_s": {
+        "reference": 0.020941916,
+        "optimized": 0.01736902
+      },
+      "speedup": 1.2057051002301802,
+      "compile_excluded": true,
+      "output_sha256": "87ef087005a3400e16a0e97320f0b6c09a14cacbe7bc034659ef939db5666ada"
+    },
+    {
+      "kind": "box",
+      "width": 192,
+      "tokens": 32,
+      "samples": {
+        "reference": [
+          {
+            "total_ns": 29899903,
+            "native_ns": 22070614,
+            "nominal_ns": 7367277
+          },
+          {
+            "total_ns": 30008920,
+            "native_ns": 22143725,
+            "nominal_ns": 7402911
+          },
+          {
+            "total_ns": 30069704,
+            "native_ns": 22175941,
+            "nominal_ns": 7435227
+          },
+          {
+            "total_ns": 29957823,
+            "native_ns": 22078591,
+            "nominal_ns": 7416367
+          },
+          {
+            "total_ns": 30049476,
+            "native_ns": 22195008,
+            "nominal_ns": 7395104
+          }
+        ],
+        "optimized": [
+          {
+            "total_ns": 34715859,
+            "native_ns": 26807695,
+            "nominal_ns": 7397168
+          },
+          {
+            "total_ns": 25392350,
+            "native_ns": 17530073,
+            "nominal_ns": 7361498
+          },
+          {
+            "total_ns": 25369006,
+            "native_ns": 17353767,
+            "nominal_ns": 7554356
+          },
+          {
+            "total_ns": 25398963,
+            "native_ns": 17358538,
+            "nominal_ns": 7571605
+          },
+          {
+            "total_ns": 25320865,
+            "native_ns": 17386746,
+            "nominal_ns": 7469434
+          }
+        ]
+      },
+      "median_s": {
+        "reference": 0.03000892,
+        "optimized": 0.02539235
+      },
+      "speedup": 1.1818094819896543,
+      "compile_excluded": true,
+      "output_sha256": "7890c78f681c552cf2fbe0720ec38e2cf3f69eb38ac5e8f3b68061e9b9106d4c"
+    },
+    {
+      "kind": "point",
+      "width": 768,
+      "tokens": 128,
+      "samples": {
+        "reference": [
+          {
+            "total_ns": 716676182,
+            "native_ns": 667285618,
+            "nominal_ns": 47690198
+          },
+          {
+            "total_ns": 712378005,
+            "native_ns": 665164253,
+            "nominal_ns": 45749385
+          },
+          {
+            "total_ns": 721072554,
+            "native_ns": 672199699,
+            "nominal_ns": 47142996
+          },
+          {
+            "total_ns": 713391077,
+            "native_ns": 665534202,
+            "nominal_ns": 46635197
+          },
+          {
+            "total_ns": 711683701,
+            "native_ns": 664229716,
+            "nominal_ns": 46271941
+          }
+        ],
+        "optimized": [
+          {
+            "total_ns": 486721245,
+            "native_ns": 440526247,
+            "nominal_ns": 45013901
+          },
+          {
+            "total_ns": 486873414,
+            "native_ns": 440850793,
+            "nominal_ns": 44967037
+          },
+          {
+            "total_ns": 489127368,
+            "native_ns": 441922750,
+            "nominal_ns": 45819540
+          },
+          {
+            "total_ns": 487775292,
+            "native_ns": 441241529,
+            "nominal_ns": 45355641
+          },
+          {
+            "total_ns": 488717339,
+            "native_ns": 441314031,
+            "nominal_ns": 46346257
+          }
+        ]
+      },
+      "median_s": {
+        "reference": 0.713391077,
+        "optimized": 0.487775292
+      },
+      "speedup": 1.4625404129736035,
+      "compile_excluded": true,
+      "output_sha256": "2f27bc06cc5cddc53a40a031196cb8ca4cebf88ccbaa3728cce2d78a07f6f1c8"
+    },
+    {
+      "kind": "box",
+      "width": 768,
+      "tokens": 128,
+      "samples": {
+        "reference": [
+          {
+            "total_ns": 913139429,
+            "native_ns": 854368049,
+            "nominal_ns": 56136168
+          },
+          {
+            "total_ns": 908250389,
+            "native_ns": 850026699,
+            "nominal_ns": 56395144
+          },
+          {
+            "total_ns": 905865919,
+            "native_ns": 848105703,
+            "nominal_ns": 55931064
+          },
+          {
+            "total_ns": 912157133,
+            "native_ns": 855377689,
+            "nominal_ns": 54998091
+          },
+          {
+            "total_ns": 906342297,
+            "native_ns": 849393125,
+            "nominal_ns": 55156820
+          }
+        ],
+        "optimized": [
+          {
+            "total_ns": 646362077,
+            "native_ns": 588421938,
+            "nominal_ns": 55763008
+          },
+          {
+            "total_ns": 644842772,
+            "native_ns": 587561920,
+            "nominal_ns": 55443435
+          },
+          {
+            "total_ns": 644614661,
+            "native_ns": 587078670,
+            "nominal_ns": 55685425
+          },
+          {
+            "total_ns": 644379488,
+            "native_ns": 587280727,
+            "nominal_ns": 55281816
+          },
+          {
+            "total_ns": 645530096,
+            "native_ns": 588112235,
+            "nominal_ns": 55573403
+          }
+        ]
+      },
+      "median_s": {
+        "reference": 0.908250389,
+        "optimized": 0.644842772
+      },
+      "speedup": 1.4084834760309604,
+      "compile_excluded": true,
+      "output_sha256": "0b1cd6994a899e02ca58c8a666fe0b6212d2f2f43ea60dcb0f8c810da7eff4bd"
+    },
+    {
+      "kind": "point",
+      "width": 1536,
+      "tokens": 128,
+      "samples": {
+        "reference": [
+          {
+            "total_ns": 1432163715,
+            "native_ns": 1336877244,
+            "nominal_ns": 93248022
+          },
+          {
+            "total_ns": 1429725658,
+            "native_ns": 1334302635,
+            "nominal_ns": 93524622
+          },
+          {
+            "total_ns": 1433760834,
+            "native_ns": 1337135234,
+            "nominal_ns": 93871608
+          },
+          {
+            "total_ns": 1429127880,
+            "native_ns": 1333608918,
+            "nominal_ns": 93622272
+          },
+          {
+            "total_ns": 1423652955,
+            "native_ns": 1330290637,
+            "nominal_ns": 91422707
+          }
+        ],
+        "optimized": [
+          {
+            "total_ns": 974880724,
+            "native_ns": 881969478,
+            "nominal_ns": 91068665
+          },
+          {
+            "total_ns": 976577731,
+            "native_ns": 882368889,
+            "nominal_ns": 92263276
+          },
+          {
+            "total_ns": 976179074,
+            "native_ns": 881678968,
+            "nominal_ns": 92153237
+          },
+          {
+            "total_ns": 975903551,
+            "native_ns": 882042557,
+            "nominal_ns": 91952736
+          },
+          {
+            "total_ns": 973137327,
+            "native_ns": 881023736,
+            "nominal_ns": 90333122
+          }
+        ]
+      },
+      "median_s": {
+        "reference": 1.429725658,
+        "optimized": 0.975903551
+      },
+      "speedup": 1.4650276213617341,
+      "compile_excluded": true,
+      "output_sha256": "52b755e7dd1f3096c8adebb64a0a9f9c6cb505dc7f5b214694a4dc6b6a8723b6"
+    },
+    {
+      "kind": "box",
+      "width": 1536,
+      "tokens": 128,
+      "samples": {
+        "reference": [
+          {
+            "total_ns": 1817385043,
+            "native_ns": 1700460749,
+            "nominal_ns": 112911453
+          },
+          {
+            "total_ns": 1819658887,
+            "native_ns": 1703588639,
+            "nominal_ns": 112256869
+          },
+          {
+            "total_ns": 1824553076,
+            "native_ns": 1708868474,
+            "nominal_ns": 111974278
+          },
+          {
+            "total_ns": 1826479316,
+            "native_ns": 1710818806,
+            "nominal_ns": 112163415
+          },
+          {
+            "total_ns": 1820099182,
+            "native_ns": 1703373184,
+            "nominal_ns": 113091876
+          }
+        ],
+        "optimized": [
+          {
+            "total_ns": 1301472993,
+            "native_ns": 1184304581,
+            "nominal_ns": 112391536
+          },
+          {
+            "total_ns": 1291982751,
+            "native_ns": 1177314060,
+            "nominal_ns": 110873734
+          },
+          {
+            "total_ns": 1290511401,
+            "native_ns": 1175910681,
+            "nominal_ns": 111163440
+          },
+          {
+            "total_ns": 1290069490,
+            "native_ns": 1175105414,
+            "nominal_ns": 111539027
+          },
+          {
+            "total_ns": 1289719791,
+            "native_ns": 1175061876,
+            "nominal_ns": 111183181
+          }
+        ]
+      },
+      "median_s": {
+        "reference": 1.820099182,
+        "optimized": 1.290511401
+      },
+      "speedup": 1.4103704783930073,
+      "compile_excluded": true,
+      "output_sha256": "2be8fe46131b836a05a05fe85892bf40b79d53a7c4dea008669669692ee36e69"
+    }
+  ],
+  "elapsed_ns": 49028773753
+}

@@ -1,0 +1,10 @@
+{
+  "archive": {
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/minimal-cold-v138/source-v138.tar.gz",
+    "bytes": 3100982,
+    "sha256": "7bfbd636b92a6b99e8e0f1b116fe27c4a5e51ffc8fec71d8eca389ba3741df63"
+  },
+  "registration_sha256": "ed6af45c6908479b0bed6436abe5d2e677787060890dedfe8145df0641af6bb8",
+  "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/minimal-source-only-v138-20261030-a",
+  "sources": 1441
+}

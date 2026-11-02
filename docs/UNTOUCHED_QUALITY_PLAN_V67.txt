@@ -1,0 +1,102 @@
+Untouched quality: prospective preparation while V67 runs
+16 October 2026. DESIGN ONLY. This document is not an execution registration.
+No new evaluation article, loss or model has been acquired by this plan.
+
+Question and activation gate
+Does the frozen original-checkpoint teacher preserve useful language-model
+quality relative to matched sequential calibration at BOTH12- and6-record
+endpoints? V67's complete model/state audits must pass before its candidate codes
+can enter likelihood evaluation. A failure is retained; no new root or teacher
+is substituted to obtain a passing quality result. Correctness is not quality.
+
+Only two candidate models need evaluation: each audited endpoint has equal codes
+across all five service arms. Do not run five identical likelihood evaluations.
+Construct a separately registered matched sequential model for each endpoint,
+using exactly that endpoint's retained tokens, original normalization1664,
+ridge1/100, frozen grids/checkpoint and declared sequential feature update rule.
+Original-checkpoint and nearest-rounding controls are each evaluated once on the
+same articles. Total six distinct models, all with fixed actual code/target and
+parameter commitments. Old-root V59 losses do not transfer to this new root.
+
+Untouched sampling frame, to admit separately
+Use one fixed bounded prefix of allenai/c4 validation at the pinned data revision,
+with a distinct validation shard. Resolve and freeze its exact filename, revision,
+compressed transfer cap and decompressed8MiB prefix boundary before acquisition.
+No shard search after an insufficient frame. Only complete JSON records within
+that prefix are eligible; tokenize with the frozen tokenizer and require at least
+128tokens. Each selected article contributes its first128tokens and127 next-token
+predictions, positions reset per article. No loss-dependent filtering or truncation.
+
+Exclude the full protected union from V65, all historical quality identifiers,
+all calibration sources and both earlier candidate frames. Compare normalized
+text/body/URL identities and16/32/64/128-token prefix commitments, including
+within-frame duplicates. Preserve complete candidate/exclusion receipts.
+These checks detect declared exact overlap, not semantic near-duplicates or all
+possible shared passages. Keep this limitation in the eventual paper.
+
+Target sample320 distinct eligible articles. Select without replacement by a
+prospectively committed independent pseudorandom ordering. Freeze algorithm,
+seed and byte encoding before the frame is opened; publish every eligible
+candidate commitment and ordered selection. If fewer than320 pass, stop and
+record an underfilled admission. Do not silently extend the prefix or lower n.
+Data admission is an outcome-blind separate phase; its exclusions become permanent
+whether or not subsequent model evaluation happens. No raw corpus redistribution.
+
+Primary quantities and unchanged practical guards
+For endpoint e and article i, save all three of prediction count, sum NLL and
+mean NLL for both candidate and matched sequential model. Compute the pooled
+ratio exp(sum_i(candidate_sum_i-sequential_sum_i)/sum_i(predictions_i)).
+Also report every paired article difference, median/quantiles, empirical maximum
+PPL ratio, and original/nearest control results. Keep pooled guard1.05 and
+maximum observed article ratio1.20; do not replace the maximum with a percentile.
+The larger sample makes the empirical maximum more demanding; no relaxation
+follows from an inconvenient tail result.
+
+Report paired article bootstrap intervals with20000 draws, resampling whole
+articles jointly across all six models. Precommit the RNG, seed and exact quantile
+rule in executable registration. Use a97.5% one-sided upper bound for each of
+the two primary endpoint ratios (Bonferroni familywise nominal95%). Report the
+ordinary two-sided95% descriptive intervals as well, explicitly separated from
+the decision bounds. Both endpoint upper bounds must be<=1.05 and both observed
+article maxima<=1.20 for the proposed two-endpoint quality gate to pass.
+If an interval crosses1.05, label the evidence inconclusive or failing the
+registered gate; do not call the observed mean a noninferiority success.
+No article or endpoint can be dropped because it raises the bound.
+
+Planning justification, not an empirical variance estimate
+There are no untouched losses available to estimate variance. Assume paired
+article mean-NLL standard deviation0.30 and true mean difference0 for planning.
+A normal-approximation calculation for80% power at one-sidedalpha0.025 gives
+ceil(((z_0.975+z_0.80)*0.30/log(1.05))^2)=297articles. Choosing320 allows modest
+rounding margin. This is an assumption-based planning calculation, not a power
+guarantee for the actual paired bootstrap or the maximum-article guard.
+At standard deviation0.20 the analogous requirement is132; at0.40 it is528.
+Thus320 does not guarantee high power under heavier variability. Retain this
+limitation and report actual uncertainty; never enlarge n after inspecting losses.
+The maximum guard has no population-tail guarantee from320 observations.
+
+Inference scope
+Sampling is restricted to a single bounded validation frame, and each article
+uses a short prefix. Bootstrap intervals are approximate under article-level
+exchangeability. They do not establish corpus-wide or deployment-wide quality,
+account for unknown semantic dependence, or undo adaptive development on earlier
+articles. Call this a prospectively registered untouched evaluation of a fixed
+method on this admitted frame, not proof of broad model generalization.
+
+Evaluator and resource prerequisites
+Keep the ordinary likelihood metric distinct from exact calibration arithmetic.
+The existing binary64 GPU likelihood route can be reused only after its frozen
+source/runtime/parameter transfer and CPU parity gates pass for the six actual
+models. Keep TF32/mixed precision disabled and the unchanged1e-8 mean-NLL parity
+tolerance. A bounded parity subset and all its costs must be registered before
+any losses; retain its articles in the final evaluation without tuning on them.
+If GPU admission fails, preserve that failure; a CPU fallback needs its own
+prospective resource and cost registration, not an automatic hidden rerun.
+
+Six models x320articles x127predictions =243840predictions. This operation census
+is not a duration estimate. Admit complete model export, sequential construction,
+GPU/CPU memory, batch size, resource ceilings, ledger reservations and terminal
+actual-byte/loss audits before launch. Use historical evaluator costs only to
+justify fresh ceilings, not as transferred measurements. Preserve refused or
+incomplete evaluations and scheduler costs. All empirical registration/code,
+actual artifact bindings, sampler admission and tests remain to be completed.

@@ -1,0 +1,27 @@
+{
+  "auditor_functions_changed": false,
+  "frozen_sources_unchanged": 432,
+  "full_recovery_execution_verified": false,
+  "linux_gate": "must run in primary allocation before frozen audit",
+  "local_test_output": "test_attempt_and_output_are_exclusive (test_audit_recovery.RecoveryGuards) ... ok\ntest_bound_read_rejects_changed_bytes_wrong_extent_and_symlink (test_audit_recovery.RecoveryGuards) ... ok\ntest_duplicate_json_and_nonfinite_values_refuse (test_audit_recovery.RecoveryGuards) ... ok\ntest_exact_registration_accepts_but_tampered_digest_and_path_refuse (test_audit_recovery.RecoveryGuards) ... ok\ntest_fresh_caps_fixed_and_not_old_budget (test_audit_recovery.RecoveryGuards) ... ok\ntest_input_census_and_path_escape_refuse (test_audit_recovery.RecoveryGuards) ... ok\ntest_old_failure_and_new_scope_cannot_be_promoted (test_audit_recovery.RecoveryGuards) ... ok\ntest_primary_link_checks_actual_output_registration_and_job (test_audit_recovery.RecoveryGuards) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.100s\n\nOK\n",
+  "numerical_sources_changed": false,
+  "registration_sha256": "531d530feb42feca040dab0f5f288136152f80463611a391d8404dfd82b8192b",
+  "schema": "v62-recovery-source-check",
+  "skipped": 0,
+  "source_review": "Root review: fresh paths, preserved old failure, fixed caps, duplicate refusal, actual-byte audit delegation, exact input commitments; no independent reviewer used",
+  "tests": 8,
+  "wrapper_sources": {
+    "PROTOCOL.txt": {
+      "bytes": 3920,
+      "sha256": "e33bf78b4379f8d54b72f0672a12f899458a5964c2b0dda2dd39b8d9d0fb870d"
+    },
+    "audit_recovery.py": {
+      "bytes": 9141,
+      "sha256": "c9bc13d51c8d25cc6b4c68911c560179497b618531b8a86e86ed5788b8aa4423"
+    },
+    "test_audit_recovery.py": {
+      "bytes": 4736,
+      "sha256": "6bfd0ef70976bf6061ecc3332ceff46265b42e66b90ef1d95e96c2b40bf03c77"
+    }
+  }
+}

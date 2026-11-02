@@ -1,0 +1,85 @@
+{
+  "schema": "second-v61-static-source-review",
+  "captured_at_utc": "2026-10-14T05:08:31.421617+00:00",
+  "status": "passed_static_only",
+  "frozen_v59_sources": 412,
+  "frozen_v59_sources_unchanged": true,
+  "parsed_python_files": 18,
+  "shell_syntax": "passed",
+  "software_method_census": {
+    "research_v53.test_state": 15,
+    "research_v53.test_service": 8,
+    "research_v53.test_worker": 2,
+    "research_v53.test_postrun": 20,
+    "research_v53.test_precision": 6,
+    "research_v43.test_state": 15,
+    "research_v50.test_neighbors": 4,
+    "research_v54.test_archive": 6,
+    "research_v55.test_diagnostic": 8,
+    "research_v55.test_sequential": 6,
+    "research_v55.test_audit": 4,
+    "research_v59.test_anchor": 10,
+    "research_v59.test_diagnostic": 9,
+    "research_v59.test_audit": 7,
+    "research_v59.test_campaign": 5,
+    "research_v61.test_target": 8,
+    "research_v61.test_state": 19,
+    "research_v61.test_features": 8,
+    "research_v61.test_service": 10,
+    "research_v61.test_campaign": 8,
+    "research_v61.test_worker": 4,
+    "research_v61.test_postrun": 23
+  },
+  "expected_pinned_linux_tests": 205,
+  "pinned_linux_tests_executed": false,
+  "real_model_inference": false,
+  "registration_submitted": false,
+  "source_hashes": {
+    "research_v61/__init__.py": "d4ca58adddab12cee6422c0367d85388cdb9ae89beff1b297a8b733525c748e8",
+    "research_v61/audit.py": "2c789c0564fc3cc76e7a4d6b8f5dd849b274ac205d58faeafdcb79449504306b",
+    "research_v61/campaign.py": "f7548c9850b3249d5a267b16fb19ced7d2f53600c490d439c0bfd48c7436a073",
+    "research_v61/checks.py": "6eb3686e83876433273e49a52e581ed39e766463bb358368c5c7119c1a45acaa",
+    "research_v61/features.py": "d523a954011c60e6373fc1e86c7b0ee917dc86114fb7e53ae530446abd841374",
+    "research_v61/postrun.py": "1439e080c233b17561490be2b40977b0fa6f7f79e056c697956ba74e23b10f0d",
+    "research_v61/resource_review.py": "5b9de2645494ad157dfc200637cdb51d22a3bef8738947207cea8988b549dc6f",
+    "research_v61/service.py": "c89c021ba683f9651ac74ef1d427a496c4eb7e6ded12ea2f21fce7f234e38638",
+    "research_v61/state.py": "66595bd8c5ca4f4f297155deffc7298ab791d4e36cbe8be963c403a03dba8f49",
+    "research_v61/target.py": "56a13a21ad1684531167f4816676bc9090a80962338efa5624b2199c716b1dc7",
+    "research_v61/test_campaign.py": "601fb07b7f1f5a55b844864dfcf44e8a4b497965b9576fca666d5e45bbc7375e",
+    "research_v61/test_features.py": "50fcad4e74489119f334ddbbdfa306122106b49d8f0f2b52b397e0b218c71cd4",
+    "research_v61/test_postrun.py": "7feec8685f648b1d2cea7617be437cce1461f174fa2587b44c3ecafa2e90a988",
+    "research_v61/test_service.py": "957e6571afd463847b029bb6761b84c597126f6936c5dfa5de1df70ebb3184ee",
+    "research_v61/test_state.py": "8f09af82b4f395c405234f91c4d3f387c8b5b629d06d0802e79c043ad6e007d5",
+    "research_v61/test_target.py": "8d031c59006f03c79e37d4a49fa97fc30bbb3e06cdc00c8e3d6db3ab5acf9fc4",
+    "research_v61/test_worker.py": "f98b387e41a214ebbf496d03ffa2fe83594b343af2ddf8a14f1cfcaa52ebf046",
+    "research_v61/worker.py": "64410843c2933bd8b253eee37ae188da30d6ce506431d0d38a3370413c39ddd2",
+    "research_v61/PROTOCOL.txt": "6b21c851caf34079521b88a47f9c5c11986fa962bd3f4ce37e240a80d115eebe",
+    "cluster_setup/v61_pipeline.sh": "6da831a0075bd38e01c051768de66848e36163f1f990411fd2d1aa12f28be859"
+  },
+  "independent_reviews": [
+    {
+      "scope": "target and canonical state",
+      "outcome": "no material blocker"
+    },
+    {
+      "scope": "original-teacher provider and complete service",
+      "outcome": "no material blocker"
+    },
+    {
+      "scope": "campaign worker actual-artifact audits structural admission limits and launcher",
+      "outcome": "no material blocker"
+    }
+  ],
+  "local_preliminary_fixtures": {
+    "tests_per_run": 30,
+    "runs": 2,
+    "qualification": false,
+    "scope": "Synthetic campaign/postrun checks only; not pinned Linux admission"
+  },
+  "limitations": [
+    "Static and synthetic checks do not establish full-model state equality or service performance.",
+    "Shape admission is not evidence of measured resource fit.",
+    "Fresh oracle shares numerical implementation.",
+    "All 60 quality exclusions and exposed-data interpretation remain."
+  ]
+}

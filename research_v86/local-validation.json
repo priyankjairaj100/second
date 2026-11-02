@@ -1,0 +1,14 @@
+{
+  "captured_utc": "2026-10-23T09:56:38.788698+00:00",
+  "pure_failure_admission_checks": 6,
+  "pure_saved_review_checks": 3,
+  "v84_pure_checks_passed": 14,
+  "v84_expected_linux_checks": 88,
+  "undefined_name_static_check": "passed F821 F822 F823",
+  "saved_actual_failure_review": "failure_snapshot_reconciled",
+  "live_cluster_quota": "unchanged at 2026-10-23T09:43:18.784724+00:00",
+  "linux_gate_executed": false,
+  "registered": false,
+  "launched": false,
+  "numerical_execution": false
+}

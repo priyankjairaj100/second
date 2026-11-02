@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-10-24T02:50:56.595833+00:00",
+  "reporting_base_head": "d24e58c7a632001f2a3cc7bcc32e343d3034cb3a",
+  "github_open_draft_head_matched": true,
+  "last_verified_cluster_observation_utc": "2026-10-23T11:44:49.726958+00:00",
+  "last_verified_receipt_sha256": "dd1f6f250b520141e5b5f3c01b6af61c8799416737a4031f12d124ef4f561029",
+  "last_verified_storage_decision": {
+    "status": "REFUSED",
+    "error": "StorageAdmissionError: Insufficient account or filesystem byte headroom"
+  },
+  "last_verified_queue_empty": true,
+  "last_verified_new_namespace_absent": true,
+  "last_verified_ledger": {
+    "bytes": 15987,
+    "sha256": "10f95f5eea81d1bb07a92412ef4b4fe2e802060eb4251524f9559837ceabcb27"
+  },
+  "connection_failures": [
+    {
+      "source_filename": "resume-inspection-20261023T170741Z-connection-failure.json",
+      "sha256": "e57da82420a6b76cead4dd1944dc16dc7ab5bdb531a5cbea9fb5d4c8cc53f19d",
+      "record": {
+        "returncode": 255,
+        "stderr": "ssh: connect to host 172.24.16.132 port 22: Operation timed out\n"
+      }
+    },
+    {
+      "source_filename": "resume-inspection-20261023T205131Z-connection-failure.json",
+      "sha256": "e57da82420a6b76cead4dd1944dc16dc7ab5bdb531a5cbea9fb5d4c8cc53f19d",
+      "record": {
+        "returncode": 255,
+        "stderr": "ssh: connect to host 172.24.16.132 port 22: Operation timed out\n"
+      }
+    }
+  ],
+  "current_cluster_state_verified": false,
+  "connection_retried_after_failure_in_same_wake": false,
+  "preview_attempt": {
+    "status": "startup_failed_before_state_read",
+    "error": "trusted Node process exited unexpectedly; kernel reset, rerun your request",
+    "retried_after_failure": false,
+    "layout_verified": false
+  },
+  "new_job_or_registration": false,
+  "scientific_results_changed": false,
+  "tests_rerun": false,
+  "prepared_archive": {
+    "bytes": 9052160,
+    "sha256": "0560ae13f34a60830824011f1c8571b79c7e90f545cb1e78e8a273686732802b"
+  },
+  "source_inventory": {
+    "bytes": 115609,
+    "sha256": "9c2df88733a29bedf0591e35157c50af8aabe453f6999e05ec3fc8adb2b484d4"
+  },
+  "manuscript": {
+    "bytes": 54149,
+    "sha256": "bf3b7a73cda7b4c62fb7fe6fc7df08a36e949cb15f4c0d9e361fc25a732cc8eb"
+  }
+}

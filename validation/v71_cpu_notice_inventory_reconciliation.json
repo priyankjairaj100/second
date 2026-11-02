@@ -1,0 +1,75 @@
+{
+  "actual_metadata_files_matching_registered_pins": 4,
+  "actual_notice_files": 7,
+  "additional_notice_files": [
+    "numpy/notices/numpy/_core/include/numpy/random/LICENSE.txt",
+    "numpy/notices/numpy/ma/LICENSE",
+    "numpy/notices/numpy/random/LICENSE.md"
+  ],
+  "additional_notices_integrated": false,
+  "archive": {
+    "bytes": 107167,
+    "path": "validation/v71_cpu_notice_inventory_20261018_b.tar.gz",
+    "sha256": "adc4365959fd1c2f2ab47cd584a6db0b929f13e8ac2da93615647fe3014e65fe"
+  },
+  "binary_bodies_rechecked": false,
+  "checked_at_utc": "2026-10-18T13:01:14.357265+00:00",
+  "complete_transitive_notices": false,
+  "earlier_notice_files_byte_identical": 4,
+  "member_count": 20,
+  "model_or_corpus_read": false,
+  "native_source_versions_determined": false,
+  "new_job": false,
+  "observed_at_utc": "2026-10-18T12:59:14.058772+00:00",
+  "original_wheel_build_correspondence": false,
+  "packages": {
+    "gmpy2": {
+      "actual_text_pins_matched": 0,
+      "installed_notice_files": 2,
+      "record_matches_registered_files": 5,
+      "record_native_entries": 4,
+      "unhashed_record_self_entries": 0,
+      "version": "2.3.2"
+    },
+    "numpy": {
+      "actual_text_pins_matched": 0,
+      "installed_notice_files": 4,
+      "record_matches_registered_files": 23,
+      "record_native_entries": 22,
+      "unhashed_record_self_entries": 0,
+      "version": "2.3.5"
+    },
+    "tokenizers": {
+      "actual_text_pins_matched": 1,
+      "installed_notice_files": 0,
+      "record_matches_registered_files": 18,
+      "record_native_entries": 1,
+      "unhashed_record_self_entries": 0,
+      "version": "0.23.2"
+    },
+    "zstandard": {
+      "actual_text_pins_matched": 3,
+      "installed_notice_files": 1,
+      "record_matches_registered_files": 10,
+      "record_native_entries": 2,
+      "unhashed_record_self_entries": 1,
+      "version": "0.25.0"
+    }
+  },
+  "record_entries_matching_registered_pins": 56,
+  "record_native_entries": 29,
+  "redistribution_clearance": false,
+  "refusal_probes": {
+    "numpy/notices/numpy/_core/include/numpy/random/LICENSE.txt": "rejected",
+    "tokenizers/RECORD": "rejected"
+  },
+  "schema": "cpu-notice-inventory-reconciliation-v71",
+  "scientific_result": false,
+  "status": "metadata_and_record_commitments_reconciled",
+  "unresolved": [
+    "GMP/MPFR/MPC exact source versions and attribution; SONAMEs are not release-version evidence",
+    "tokenizers installed notice absent; pinned publisher notice remains a source-level declaration",
+    "Rust/transitive-native, Python base/container/compiler/libc and GPU driver/system scope",
+    "author-controlled project release terms"
+  ]
+}

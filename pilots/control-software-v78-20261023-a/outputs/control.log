@@ -1,0 +1,72 @@
+test_codec_binding_and_reference_target_cannot_be_relabelled (research_v63.test_control.ArchiveTests.test_codec_binding_and_reference_target_cannot_be_relabelled) ... ok
+test_duplicate_or_reordered_records_refuse (research_v63.test_control.ArchiveTests.test_duplicate_or_reordered_records_refuse) ... ok
+test_non_subset_and_missing_extra_sources_refuse (research_v63.test_control.ArchiveTests.test_non_subset_and_missing_extra_sources_refuse) ... ok
+test_roundtrip_restores_actual_old_state (research_v63.test_control.ArchiveTests.test_roundtrip_restores_actual_old_state) ... ok
+test_source_binding_and_stage_grids_refuse (research_v63.test_control.ArchiveTests.test_source_binding_and_stage_grids_refuse) ... ok
+test_trailing_changed_payload_and_header_bound_refuse (research_v63.test_control.ArchiveTests.test_trailing_changed_payload_and_header_bound_refuse) ... ok
+test_transition_equals_fresh_and_retains_descriptor_bytes (research_v63.test_control.ArchiveTests.test_transition_equals_fresh_and_retains_descriptor_bytes) ... ok
+test_actual_largest_registered_shape_zstd_roundtrip (research_v63.test_control.CodecTests.test_actual_largest_registered_shape_zstd_roundtrip) ... ok
+test_all_five_modes_decode_exactly (research_v63.test_control.CodecTests.test_all_five_modes_decode_exactly) ... ok
+test_canonical_choice_records_every_mode_and_is_deterministic (research_v63.test_control.CodecTests.test_canonical_choice_records_every_mode_and_is_deterministic) ... ok
+test_changed_hash_runtime_shape_and_noncanonical_mode_refuse (research_v63.test_control.CodecTests.test_changed_hash_runtime_shape_and_noncanonical_mode_refuse) ... ok
+test_content_size_checksum_and_skippable_requirements (research_v63.test_control.CodecTests.test_content_size_checksum_and_skippable_requirements) ... ok
+test_exact_signed_zero_subnormal_and_extreme_words (research_v63.test_control.CodecTests.test_exact_signed_zero_subnormal_and_extreme_words) ... ok
+test_extent_nonfinite_unknown_mode_and_limits_refuse (research_v63.test_control.CodecTests.test_extent_nonfinite_unknown_mode_and_limits_refuse) ... ok
+test_old_and_new_magic_are_distinct (research_v63.test_control.CodecTests.test_old_and_new_magic_are_distinct) ... ok
+test_trailing_extra_frame_truncation_and_checksum_refuse (research_v63.test_control.CodecTests.test_trailing_extra_frame_truncation_and_checksum_refuse) ... ok
+test_window_and_dictionary_rejected_before_decompression (research_v63.test_control.CodecTests.test_window_and_dictionary_rejected_before_decompression) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.214s
+
+OK
+test_codec_binding_and_reference_target_cannot_be_relabelled (research_v63.test_control.ArchiveTests.test_codec_binding_and_reference_target_cannot_be_relabelled) ... ok
+test_duplicate_or_reordered_records_refuse (research_v63.test_control.ArchiveTests.test_duplicate_or_reordered_records_refuse) ... ok
+test_non_subset_and_missing_extra_sources_refuse (research_v63.test_control.ArchiveTests.test_non_subset_and_missing_extra_sources_refuse) ... ok
+test_roundtrip_restores_actual_old_state (research_v63.test_control.ArchiveTests.test_roundtrip_restores_actual_old_state) ... ok
+test_source_binding_and_stage_grids_refuse (research_v63.test_control.ArchiveTests.test_source_binding_and_stage_grids_refuse) ... ok
+test_trailing_changed_payload_and_header_bound_refuse (research_v63.test_control.ArchiveTests.test_trailing_changed_payload_and_header_bound_refuse) ... ok
+test_transition_equals_fresh_and_retains_descriptor_bytes (research_v63.test_control.ArchiveTests.test_transition_equals_fresh_and_retains_descriptor_bytes) ... ok
+test_actual_largest_registered_shape_zstd_roundtrip (research_v63.test_control.CodecTests.test_actual_largest_registered_shape_zstd_roundtrip) ... ok
+test_all_five_modes_decode_exactly (research_v63.test_control.CodecTests.test_all_five_modes_decode_exactly) ... ok
+test_canonical_choice_records_every_mode_and_is_deterministic (research_v63.test_control.CodecTests.test_canonical_choice_records_every_mode_and_is_deterministic) ... ok
+test_changed_hash_runtime_shape_and_noncanonical_mode_refuse (research_v63.test_control.CodecTests.test_changed_hash_runtime_shape_and_noncanonical_mode_refuse) ... ok
+test_content_size_checksum_and_skippable_requirements (research_v63.test_control.CodecTests.test_content_size_checksum_and_skippable_requirements) ... ok
+test_exact_signed_zero_subnormal_and_extreme_words (research_v63.test_control.CodecTests.test_exact_signed_zero_subnormal_and_extreme_words) ... ok
+test_extent_nonfinite_unknown_mode_and_limits_refuse (research_v63.test_control.CodecTests.test_extent_nonfinite_unknown_mode_and_limits_refuse) ... ok
+test_old_and_new_magic_are_distinct (research_v63.test_control.CodecTests.test_old_and_new_magic_are_distinct) ... ok
+test_trailing_extra_frame_truncation_and_checksum_refuse (research_v63.test_control.CodecTests.test_trailing_extra_frame_truncation_and_checksum_refuse) ... ok
+test_window_and_dictionary_rejected_before_decompression (research_v63.test_control.CodecTests.test_window_and_dictionary_rejected_before_decompression) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.189s
+
+OK
+test_actual_byte_bound_and_oversize_bypass (research_v77.check_mechanics.Checks.test_actual_byte_bound_and_oversize_bypass) ... ok
+test_byte_identity_signed_zero_and_equal_distinct_objects (research_v77.check_mechanics.Checks.test_byte_identity_signed_zero_and_equal_distinct_objects) ... ok
+test_failure_never_populates (research_v77.check_mechanics.Checks.test_failure_never_populates) ... ok
+test_lru_eviction_and_entry_bound (research_v77.check_mechanics.Checks.test_lru_eviction_and_entry_bound) ... ok
+test_mapping_capacity_and_repeated_hits_respect_budget (research_v77.check_mechanics.Checks.test_mapping_capacity_and_repeated_hits_respect_budget) ... ok
+test_measurements_always_execute (research_v77.check_mechanics.Checks.test_measurements_always_execute) ... ok
+test_nonbytes_preserve_original_behavior (research_v77.check_mechanics.Checks.test_nonbytes_preserve_original_behavior) ... ok
+test_scope_restores_and_clears_on_exception (research_v77.check_mechanics.Checks.test_scope_restores_and_clears_on_exception) ... ok
+test_zero_cap_has_no_reuse (research_v77.check_mechanics.Checks.test_zero_cap_has_no_reuse) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.026s
+
+OK
+test_archive_record_binding_after_cached_choice (__main__.Checks.test_archive_record_binding_after_cached_choice) ... ok
+test_eviction_and_oversize_keep_actual_parser_bytes (__main__.Checks.test_eviction_and_oversize_keep_actual_parser_bytes) ... ok
+test_measurement_calls_run_all_five_encoders (__main__.Checks.test_measurement_calls_run_all_five_encoders) ... ok
+test_mutation_and_truncation_parity_after_warm_parse (__main__.Checks.test_mutation_and_truncation_parity_after_warm_parse) ... ok
+test_signed_zero_exact_words_and_new_request_isolation (__main__.Checks.test_signed_zero_exact_words_and_new_request_isolation) ... ok
+test_warm_cache_cannot_relabel_metadata_or_runtime (__main__.Checks.test_warm_cache_cannot_relabel_metadata_or_runtime) ... ok
+test_warm_cache_does_not_bypass_per_call_limits_or_expected_hash (__main__.Checks.test_warm_cache_does_not_bypass_per_call_limits_or_expected_hash) ... ok
+test_warm_cache_retains_canonical_mode_and_payload_checks (__main__.Checks.test_warm_cache_retains_canonical_mode_and_payload_checks) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.186s
+
+OK
+{"suites": {"reference": {"tests": 17, "failures": 0, "errors": 0, "skipped": 0}, "optimized": {"tests": 17, "failures": 0, "errors": 0, "skipped": 0}, "cache_mechanics": {"tests": 9, "failures": 0, "errors": 0, "skipped": 0}, "cache_parser": {"tests": 8, "failures": 0, "errors": 0, "skipped": 0}}, "profiles": [{"shape": [128, 768], "speedup": 2.310514659819229}, {"shape": [128, 3072], "speedup": 2.3078605726101094}]}

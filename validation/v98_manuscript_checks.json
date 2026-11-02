@@ -1,0 +1,33 @@
+{
+  "actual_eight_host_times_match": true,
+  "bibliography_keys": [
+    "gptq",
+    "ginart",
+    "medu",
+    "qss",
+    "exactfun",
+    "qebverif",
+    "execcert",
+    "distilgpt2",
+    "c4",
+    "wikitext"
+  ],
+  "labels": 16,
+  "manuscript": {
+    "bytes": 57699,
+    "sha256": "9d829b01c03f9431819fa0f9800e182d2cce46878686fb8892017fbfc3621ddf"
+  },
+  "native_compile": {
+    "kind": "success",
+    "source": {
+      "bytes": 57699,
+      "sha256": "9d829b01c03f9431819fa0f9800e182d2cce46878686fb8892017fbfc3621ddf"
+    },
+    "tool": "compile_latex_document"
+  },
+  "phase_partitions_close": true,
+  "preview_attempts_this_turn": 1,
+  "preview_error": "Sky Computer Use service startup request failed",
+  "rendered_layout_verified": false,
+  "unresolved_references": []
+}

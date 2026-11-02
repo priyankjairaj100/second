@@ -1,0 +1,240 @@
+{
+  "schema": "second-reference-audit-v121",
+  "checked_date": "2026-10-28",
+  "references": [
+    {
+      "key": "quip",
+      "canonical_metadata": "Chee, Cai, Kuleshov, De Sa. 2023. QuIP: 2-Bit Quantization of Large Language Models With Guarantees. NeurIPS 36:4396-4429. DOI 10.52202/075280-0196.",
+      "primary_sources": [
+        "https://proceedings.neurips.cc/paper_files/paper/2023/hash/0df38cd13520747e1e64e5b123a78ef8-Abstract-Conference.html",
+        "https://proceedings.neurips.cc/paper_files/paper/21491-/bibtex",
+        "https://papers.nips.cc/paper_files/paper/2023/file/0df38cd13520747e1e64e5b123a78ef8-Paper-Conference.pdf"
+      ],
+      "claim_checked": "Quadratic proxy objective, LDL adaptive rounding and error analysis precede this paper. Added attribution in the target definition and related work.",
+      "notes": "Publisher BibTeX independently confirms pages and author spelling. Landing page includes an optional middle initial for De Sa; BibTeX and PDF do not.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://proceedings.neurips.cc/paper_files/paper/2023/hash/0df38cd13520747e1e64e5b123a78ef8-Abstract-Conference.html"
+      ]
+    },
+    {
+      "key": "babai",
+      "canonical_metadata": "Chen, Shabanzadeh, Crncevic, Hoefler, Alistarh. 2026. The Geometry of LLM Quantization: GPTQ as Babai's Nearest Plane Algorithm. ICLR. Author version arXiv:2507.18553v4.",
+      "primary_sources": [
+        "https://arxiv.org/abs/2507.18553",
+        "https://arxiv.org/html/2507.18553v4",
+        "https://arxiv.org/pdf/2507.18553v4"
+      ],
+      "claim_checked": "Reverse-order GPTQ is connected to Babai nearest plane. Its stated distortion theorem has a no-clipping condition; the paper does not transfer that bound to our finite clipped grid.",
+      "notes": "OpenReview endpoint was inaccessible; ICLR 2026 is stated in the primary PDF. Final PDF renders Crncevic with both original diacritics correctly.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://arxiv.org/abs/2507.18553v4"
+      ]
+    },
+    {
+      "key": "gptq",
+      "canonical_metadata": "Frantar, Ashkboos, Hoefler, Alistarh. 2023. GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers. ICLR. arXiv:2210.17323v2.",
+      "primary_sources": [
+        "https://arxiv.org/abs/2210.17323",
+        "https://arxiv.org/pdf/2210.17323v2",
+        "https://github.com/ist-daslab/gptq"
+      ],
+      "claim_checked": "Calibration second moments support adaptive quantization. The published setup uses asymmetric per-row min-max grids and forwards quantized block outputs. Our fixed teacher and base-only dyadic grids define a different target.",
+      "notes": "OpenReview inaccessible. Primary PDF header and authors repository confirm ICLR 2023. No claim that the custom sequential comparator is off-the-shelf GPTQ.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://arxiv.org/abs/2210.17323v2"
+      ]
+    },
+    {
+      "key": "ginart",
+      "canonical_metadata": "Ginart, Guan, Valiant, Zou. 2019. Making AI Forget You: Data Deletion in Machine Learning. NeurIPS 32.",
+      "primary_sources": [
+        "https://papers.nips.cc/paper/2019/hash/cb79f8fa58b91d3af6c9c991f63962d3-Abstract.html",
+        "https://papers.nips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf"
+      ],
+      "claim_checked": "Quantized k-means uses retained metadata and quantization stability for deletion updates, with retraining when the relevant stability conditions fail.",
+      "notes": "Full author names follow the primary PDF; abbreviated metadata variants are not grounds for changing them.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://papers.nips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf"
+      ]
+    },
+    {
+      "key": "distilgpt2",
+      "canonical_metadata": "Hugging Face. n.d.-a. DistilGPT2 model card. Revision 2290a62682d06624634c1f46a6ad5be0f47f38aa; accessed 28 October 2026.",
+      "primary_sources": [
+        "https://huggingface.co/distilbert/distilgpt2/blob/2290a62682d06624634c1f46a6ad5be0f47f38aa/README.md"
+      ],
+      "claim_checked": "Checkpoint identity, approximately 82 million parameters and Apache 2.0 model-card declaration.",
+      "notes": "Corporate authorship describes the model card; it is not presented as an original research paper. Immutable card bytes retrieved and retained locally.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://huggingface.co/distilbert/distilgpt2/blob/2290a62682d06624634c1f46a6ad5be0f47f38aa/README.md"
+      ]
+    },
+    {
+      "key": "gpt2card",
+      "canonical_metadata": "Hugging Face. n.d.-b. GPT-2 model card. Revision 607a30d783dfa663caf39e06633721c8d4cfcd7e; accessed 28 October 2026.",
+      "primary_sources": [
+        "https://huggingface.co/openai-community/gpt2/raw/607a30d783dfa663caf39e06633721c8d4cfcd7e/README.md"
+      ],
+      "claim_checked": "Checkpoint identity, approximately 124 million parameters and MIT model-card declaration.",
+      "notes": "Pinned card expressly credits Hugging Face for writing the card. Raw endpoint verified when blob rendering was unavailable; manuscript points to the same pinned file.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://huggingface.co/openai-community/gpt2/blob/607a30d783dfa663caf39e06633721c8d4cfcd7e/README.md"
+      ]
+    },
+    {
+      "key": "medu",
+      "canonical_metadata": "Lang, Helvits, Shlezinger. 2026. Memory-Efficient Distributed Unlearning. IEEE Access 14:24361-24378. DOI 10.1109/ACCESS.2026.3663428.",
+      "primary_sources": [
+        "https://arxiv.org/pdf/2505.03388v1",
+        "https://api.crossref.org/works/10.1109/ACCESS.2026.3663428",
+        "https://cris.bgu.ac.il/en/publications/memory-efficient-distributed-unlearning/"
+      ],
+      "claim_checked": "Lossy compression of distributed training updates, with deviation bounds relative to retraining; not the exact discrete output contract of this manuscript.",
+      "notes": "CORRECTED Helvitz to Helvits. ArXiv abstract metadata disagrees with the primary PDF, publisher-deposited Crossref metadata and author institution record. Publisher PDF was blocked.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://doi.org/10.1109/ACCESS.2026.3663428"
+      ]
+    },
+    {
+      "key": "wikitext",
+      "canonical_metadata": "Merity, Xiong, Bradbury, Socher. 2017. Pointer Sentinel Mixture Models. ICLR.",
+      "primary_sources": [
+        "https://arxiv.org/abs/1609.07843",
+        "https://arxiv.org/pdf/1609.07843v1",
+        "https://smerity.com/abme.html"
+      ],
+      "claim_checked": "The paper introduces WikiText. Citation in our manuscript identifies earlier development data only.",
+      "notes": "OpenReview blocked. Author site confirms ICLR 2017; arXiv first-posted 2016 is not the publication year.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://openreview.net/pdf?id=Byj72udxe"
+      ]
+    },
+    {
+      "key": "c4",
+      "canonical_metadata": "Raffel, Shazeer, Roberts, Lee, Narang, Matena, Zhou, Li, Liu. 2020. Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer. JMLR 21(140):1-67.",
+      "primary_sources": [
+        "https://jmlr.org/papers/v21/20-074.html",
+        "https://jmlr.org/papers/v21/20-074.bib",
+        "https://jmlr.org/papers/volume21/20-074/20-074.pdf"
+      ],
+      "claim_checked": "C4 dataset source and background. Our bounded frame and selection policy are stated separately; no claim of uniform sampling across C4.",
+      "notes": "Journal metadata and BibTeX confirm all nine authors, title, year, volume, article number and page interval.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://jmlr.org/papers/v21/20-074.html"
+      ]
+    },
+    {
+      "key": "qss",
+      "canonical_metadata": "Tavory, Gade, Sarig, Touitou, Guy. 2026. Exact Unlearning via Quantized Sufficient Statistics. arXiv:2610.07197v1.",
+      "primary_sources": [
+        "https://arxiv.org/abs/2610.07197",
+        "https://arxiv.org/html/2610.07197v1",
+        "https://arxiv.org/pdf/2610.07197v1"
+      ],
+      "claim_checked": "Fixed-schema additive corrections support deletion; removing schema-training data requires rebuilding the affected instance. Distinct from adaptive weight-code certification from uncertain features.",
+      "notes": "Paper existence and all five authors verified in primary versions. Citation remains the explicitly read arXiv version; no invented proceedings details or empirical performance comparison.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://arxiv.org/html/2610.07197v1"
+      ]
+    },
+    {
+      "key": "exactfun",
+      "canonical_metadata": "Xiong, Wei Li, Yingshu Li, Cai. 2023. Exact-Fun: An Exact and Efficient Federated Unlearning Approach. IEEE ICDM:1439-1444. DOI 10.1109/ICDM58522.2023.00188.",
+      "primary_sources": [
+        "https://api.crossref.org/works/10.1109/ICDM58522.2023.00188",
+        "https://doi.org/10.1109/ICDM58522.2023.00188",
+        "https://raw.githubusercontent.com/zuobinxiong/zuobinxiong.github.io/300a0672be8d265ddebf20d6e69f790456a1bd81/assets/pdf/ExactFedUnlearning.pdf"
+      ],
+      "claim_checked": "Deleted-gradient correction in a quantized federated process; training resumes from an affected round when stability does not hold.",
+      "notes": "Claim checked in the 11-page primary author version. Bibliographic pages 1439-1444 refer to the six-page published conference record, confirmed by Crossref. Publisher PDF not independently inspected. Its uniform-noise assumptions are not imported into our theorem.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://doi.org/10.1109/ICDM58522.2023.00188"
+      ]
+    },
+    {
+      "key": "qebverif",
+      "canonical_metadata": "Zhang, Song, Sun. 2023. QEBVerif: Quantization Error Bound Verification of Neural Networks. CAV, LNCS 13965:413-437. DOI 10.1007/978-3-031-37703-7_20.",
+      "primary_sources": [
+        "https://arxiv.org/abs/2212.02781",
+        "https://link.springer.com/chapter/10.1007/978-3-031-37703-7_20",
+        "https://api.crossref.org/works/10.1007/978-3-031-37703-7_20"
+      ],
+      "claim_checked": "Differential reachability and mixed-integer linear programming bound inference-output differences between a network and its quantized counterpart.",
+      "notes": "Metadata checked against publisher chapter and Crossref; preprint year 2022 differs from published chapter year 2023.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://doi.org/10.1007/978-3-031-37703-7_20"
+      ]
+    },
+    {
+      "key": "execcert",
+      "canonical_metadata": "Zhao, Wang, Xiao-Wen Chang, He. 2026. From Mathematical to Executable Certificates for Machine Unlearning. arXiv:2610.02268v1.",
+      "primary_sources": [
+        "https://arxiv.org/abs/2610.02268",
+        "https://arxiv.org/html/2610.02268v1",
+        "https://arxiv.org/pdf/2610.02268v1"
+      ],
+      "claim_checked": "Executable residual-to-error certificates already yield discrete sign/top-1 agreement under margins. Our claim concerns the adaptive chain of weight decisions and reusable canonical repair state.",
+      "notes": "Xiao-Wen follows the primary PDF/HTML, despite Xiaowen in abstract metadata. No generic novelty claim for residual bounds, margins or proposal/verification separation remains.",
+      "identity_check": "pass",
+      "claim_scope_check": "pass",
+      "rendered_entry_and_link_check": "pass",
+      "manuscript_links": [
+        "https://arxiv.org/html/2610.02268v1"
+      ]
+    }
+  ],
+  "reference_count": 13,
+  "original_references": 11,
+  "added_references": [
+    "quip",
+    "babai"
+  ],
+  "fabricated_references_found": 0,
+  "passes": [
+    "Primary identity and bibliographic metadata",
+    "Primary content and exact scope of in-text attribution",
+    "Final rendered bibliography, citation resolution and embedded destination links"
+  ],
+  "limitations": [
+    "Not an exhaustive proof that no related work exists.",
+    "Blocked publisher/OpenReview routes are disclosed per entry; author versions and independent deposited metadata were used.",
+    "A verified bibliography does not establish the experimental results or publication eligibility."
+  ],
+  "copyrighted_primary_full_text_in_deliverables": false
+}

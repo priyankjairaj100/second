@@ -1,0 +1,121 @@
+{
+  "actual_matched_comparisons": 16,
+  "archive": {
+    "bytes": 10894544,
+    "sha256": "0d095e27895e9ecd7ad709920892ed084c05630cfc9abede2e188132bc89e841"
+  },
+  "components": 14,
+  "created_utc": "2026-10-27T10:48:10.566617+00:00",
+  "full_reproduction_verified": false,
+  "manifest": {
+    "README.txt": {
+      "bytes": 2401,
+      "sha256": "b838e22f523a803dbf76eb303d8baf08c2e8c83c55342fe8f9f697559523303b"
+    },
+    "RESPONSIBLE_NLP_CHECKLIST_DRAFT.txt": {
+      "bytes": 11622,
+      "sha256": "1f44d1550918280143275b3e8f7499003a20c5fbf8c62ddedba158c3705a3e00"
+    },
+    "development-audit-receipts-v69.zip": {
+      "bytes": 341604,
+      "sha256": "a0ec05075ec9c1fc65010d670cdd2368df5860e31801fd0a8d7d34659bb36ed1"
+    },
+    "development-dependency-notices-v71c.zip": {
+      "bytes": 460857,
+      "sha256": "944eb649e8f339e3b0a1b39126333d5d950c0909a394da3587b7de34e5771f41"
+    },
+    "development-diagnostic-evidence-v111.zip": {
+      "bytes": 3523,
+      "sha256": "19e26dfb22d13a2c0894338e31efbbb20a154cbbef11e55bbe9a0a0f0bdbbd7d"
+    },
+    "development-evidence-v69b.zip": {
+      "bytes": 87257,
+      "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+    },
+    "development-matched-evidence-v119.zip": {
+      "bytes": 15220,
+      "sha256": "b5e2600a5fe8e6d329980366cdd0440e12eefa038a4138c3901a18440734cb25"
+    },
+    "development-optimization-source-v105.zip": {
+      "bytes": 803078,
+      "sha256": "380feefc22942c6e554b3e3b9008706df5a02f41daf02055874e9f4f0ff016d8"
+    },
+    "development-optimization-v98.zip": {
+      "bytes": 5722,
+      "sha256": "014a1d296dd3102dc81f58e4e0a4840452e73d3bc3167884d4b8e0dcebc871f8"
+    },
+    "development-point-policy-source-v114.zip": {
+      "bytes": 236880,
+      "sha256": "6ccc2ad011d2d2eb49e4ed3177f4f61600e51e307d24d4f9a2e956a5ce36dc38"
+    },
+    "development-quality-evidence-v72.zip": {
+      "bytes": 251913,
+      "sha256": "c588ac060824b7870f085f8f3dae6e02cee6dcb93ded6aac6bd7d72a8d5f14dc"
+    },
+    "development-reproduction-guide-v72.zip": {
+      "bytes": 19535,
+      "sha256": "6abf11b4b237f263784f3bfb9ce3ddb87f70e3d11f3b3a751ae5e69984cddfd3"
+    },
+    "development-selection-metadata-v71.zip": {
+      "bytes": 6194056,
+      "sha256": "9da957a59d4f733b73cc4e1dd70c0dfc2f4142a78fd929647e80f65b0683d189"
+    },
+    "development-service-evidence-v70.zip": {
+      "bytes": 124857,
+      "sha256": "684ca47fd16985c32f5faf0dd7bab81f3bbe9dda297a87455dfb84c0a0ce2dc4"
+    },
+    "development-source-review-v72.zip": {
+      "bytes": 1930758,
+      "sha256": "e3505d7b353eed4109c7f22f127955513d928590552513263a13ee90811cbf49"
+    },
+    "development-transfer-source-v111.zip": {
+      "bytes": 792544,
+      "sha256": "db94cb1964bd0ad8f394e0d871603c9a1b81d8cc2b5602f318f2cfa76e46488b"
+    },
+    "second-research-draft.tex": {
+      "bytes": 70084,
+      "sha256": "89366264fb9cad6b35616f26321cf3dbb4f3c7215945729548ef86aeda5119ed"
+    },
+    "verify_review_bundle.py": {
+      "bytes": 13088,
+      "sha256": "262a04e981cd2ec2906122c08b9eeb4d19abd3c92c43749bcdaf8e0ec4887595"
+    }
+  },
+  "manuscript": {
+    "bytes": 70084,
+    "sha256": "89366264fb9cad6b35616f26321cf3dbb4f3c7215945729548ef86aeda5119ed"
+  },
+  "members": 19,
+  "native_compile_success": true,
+  "new_empirical_result": true,
+  "original_research_sources_changed": false,
+  "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v119.zip",
+  "rendered_layout_verified": false,
+  "roundtrip_bytes_verified": true,
+  "schema": "development-review-bundle-v119",
+  "submission_ready": false,
+  "unchanged_portable_verifier": false,
+  "unchanged_v117_components": 13,
+  "verified": {
+    "adapted_code_execution_qualified": false,
+    "binary_reaudit_by_this_verifier": false,
+    "components": 14,
+    "cross_architecture_generality": false,
+    "empirical_pipeline_executed_by_this_verifier": false,
+    "external_inputs_acquired": false,
+    "full_anonymity_verified": false,
+    "matched_reported_model_state_trust_pairs": 16,
+    "matched_reported_requests": 16,
+    "new_quality_evaluation": false,
+    "related_checkpoint_evidence_included": true,
+    "source_component_counts": {
+      "development-optimization-source-v105.zip": 347,
+      "development-point-policy-source-v114.zip": 96,
+      "development-source-review-v72.zip": 583,
+      "development-transfer-source-v111.zip": 296
+    },
+    "source_files": 1322,
+    "stable_speedup_established": false,
+    "status": "verified_supplied_bytes_source_coverage_and_scoped_arithmetic"
+  }
+}

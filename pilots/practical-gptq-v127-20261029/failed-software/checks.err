@@ -1,0 +1,45 @@
+test_diagonal_metric_matches_independent_nearest_grid (research_v127.test_practical.NumericalTests) ... ERROR
+test_hessian_uses_all_calibration_tokens (research_v127.test_practical.NumericalTests) ... ERROR
+test_cpu_changes_only_guard_two_cuda_calls (research_v127.test_practical.SourceTests) ... ok
+test_pinned_upstream_file_hashes (research_v127.test_practical.SourceTests) ... ok
+
+======================================================================
+ERROR: test_diagonal_metric_matches_independent_nearest_grid (research_v127.test_practical.NumericalTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/practical-gptq-v127-20261029-a/research_v127/test_practical.py", line 23, in test_diagonal_metric_matches_independent_nearest_grid
+    _,Q=reference();w=torch.tensor([[.2,-.3,.1],[.7,-.8,.5]],dtype=torch.float32);g=Q();g.configure(4,perchannel=True,sym=True,mse=False);g.find_params(w,weight=True)
+  File "/nfs_home/users/poonam/second-20261010/local_runs/practical-gptq-v127-20261029-a/research_v127/practical.py", line 9, in reference
+    import gptq,quant
+  File "/nfs_home/users/poonam/second-20261010/local_runs/practical-gptq-v127-20261029-a/research_v127/cpu_reference/gptq.py", line 6, in <module>
+    import transformers
+ModuleNotFoundError: No module named 'transformers'
+
+======================================================================
+ERROR: test_hessian_uses_all_calibration_tokens (research_v127.test_practical.NumericalTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/practical-gptq-v127-20261029-a/research_v127/test_practical.py", line 17, in test_hessian_uses_all_calibration_tokens
+    GPTQ,_=reference();g=GPTQ(torch.nn.Linear(3,2,bias=False));a=torch.tensor([[1.,2.,3.],[4.,-1.,2.]]);b=-a*.5
+  File "/nfs_home/users/poonam/second-20261010/local_runs/practical-gptq-v127-20261029-a/research_v127/practical.py", line 9, in reference
+    import gptq,quant
+  File "/nfs_home/users/poonam/second-20261010/local_runs/practical-gptq-v127-20261029-a/research_v127/cpu_reference/gptq.py", line 6, in <module>
+    import transformers
+ModuleNotFoundError: No module named 'transformers'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.003s
+
+FAILED (errors=2)
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/practical-gptq-v127-20261029-a/research_v127/worker.py", line 20, in main
+    r['result']=tests(p,out) if phase=='checks' else construct(p,*phase.split('__'),out,h)
+  File "/nfs_home/users/poonam/second-20261010/local_runs/practical-gptq-v127-20261029-a/research_v127/worker.py", line 43, in tests
+    r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromModule(test_practical));assert r.wasSuccessful() and r.testsRun==4 and not r.skipped
+AssertionError
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/practical-gptq-v127-20261029-a/research_v127/worker.py", line 90, in <module>
+    if __name__=='__main__':main(*sys.argv[1:])
+  File "/nfs_home/users/poonam/second-20261010/local_runs/practical-gptq-v127-20261029-a/research_v127/worker.py", line 28, in main
+    assert r['status']=='complete',r['error']
+AssertionError: {'type': 'AssertionError', 'message': '', 'diagnostics': None}

@@ -1,0 +1,114 @@
+{
+  "schema": "local-transfer-engineering-validation-v90",
+  "observed_utc": "2026-10-24T07:47:25.684976+00:00",
+  "runtime": "3.12.7",
+  "platform": "Darwin",
+  "pure_tests": 48,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "modules": [
+    "research_v90.test_metadata",
+    "research_v90.test_outputs",
+    "research_v90.test_admission",
+    "research_v90.test_storage_plan",
+    "research_v90.test_recovery_gate"
+  ],
+  "static_undefined_name_check": "ruff F821 F822 F823 passed",
+  "syntax_files": 15,
+  "prepared_linux_tests": 3,
+  "linux_tests_executed": false,
+  "registered": false,
+  "empirical_execution": false,
+  "files": {
+    "research_v90/PARENT_BINDINGS.json": {
+      "bytes": 400,
+      "sha256": "e6cb378311270cdda21ec9e69cd7064ce11d59815c4ed317a2fa8b85cf8ce8c5"
+    },
+    "research_v90/PROGRESS_SOURCE_BINDINGS.json": {
+      "bytes": 1375,
+      "sha256": "160d2b57890aa5c5a3b31d3dd20aa65ddebdf59b774f428883a378bdbb6b910b"
+    },
+    "research_v90/PROTOCOL.txt": {
+      "bytes": 8668,
+      "sha256": "ba25d0bde1b0a7c613f125b4b828e41d5d75e358aef0c34538da9f4f11e0024a"
+    },
+    "research_v90/__init__.py": {
+      "bytes": 87,
+      "sha256": "94f3f83487d7ad892048a50af4968b8fe2cb05e014f8be1470cf8c730765de53"
+    },
+    "research_v90/admission.py": {
+      "bytes": 4429,
+      "sha256": "967bb2e0a1129b44d430f1d9c336d53656e03c13fd2519a92385d0e55edb39d0"
+    },
+    "research_v90/outputs.py": {
+      "bytes": 4738,
+      "sha256": "543859d3adf8f05faf1f08054779d28ebdc52e2e1305e14830e78ec271cccbeb"
+    },
+    "research_v90/phase_budget.py": {
+      "bytes": 11616,
+      "sha256": "35c6bec5b5e6ecdfdfd5c0102aaf6f0199a7225d48b86a1e9dcbb898f78aa8ea"
+    },
+    "research_v90/records.py": {
+      "bytes": 2213,
+      "sha256": "4355601306fb4a1c4b818598200dda1a53b5c233e32270b6f8fbff45567562fa"
+    },
+    "research_v90/recovery_gate.py": {
+      "bytes": 6981,
+      "sha256": "3f73fd864788b5f76129ae3d54d200e3c465bf0db0b4a601fed468543585ae85"
+    },
+    "research_v90/run_store.py": {
+      "bytes": 10535,
+      "sha256": "ed53c26c8d42cbe4e1275e4b82d2b6be35c3ad745a9e524be7200bf15e91529c"
+    },
+    "research_v90/storage_plan.py": {
+      "bytes": 5640,
+      "sha256": "6f463c44ac969c83506eb68e3525f1a5a56ce164a4c91e7e6a478cc97c3a97d1"
+    },
+    "research_v90/test_admission.py": {
+      "bytes": 6146,
+      "sha256": "c8f17263a81a5241ff7ba7aa8c291f6652c1e3d90d9e03202453997e957c61ae"
+    },
+    "research_v90/test_linux.py": {
+      "bytes": 4119,
+      "sha256": "7212f1059324d25937b052f91084941834f7854c5316c9d74a79808da40c5d74"
+    },
+    "research_v90/test_metadata.py": {
+      "bytes": 10929,
+      "sha256": "9f789f0290fa609e8bfd993b101efc04a0b99b9fbb8a5c81c5068520b16e5011"
+    },
+    "research_v90/test_outputs.py": {
+      "bytes": 5541,
+      "sha256": "a6ee9a1f306d6ae3087a7426ec318f61dfd28db14fbe87c5c907fd92793bb16b"
+    },
+    "research_v90/test_recovery_gate.py": {
+      "bytes": 4886,
+      "sha256": "a68ebbff8d3bec5a7044d012922c7a17f5530c75622e80d03dd572576715c83d"
+    },
+    "research_v90/test_storage_plan.py": {
+      "bytes": 2557,
+      "sha256": "6d91884dcf94a0de7afff5bea36d498a121df2a565abe9a02fcd19d971e86953"
+    },
+    "research_v90/worker_control.py": {
+      "bytes": 17326,
+      "sha256": "f3b0289d48293441f78a4ef6a08ceb070d2df14ecd3f6aab019ac27826522b41"
+    }
+  },
+  "earlier_local_invocation": {
+    "runtime": "Python3.9.6",
+    "tests": 20,
+    "errors": 9,
+    "failures": 0,
+    "reason": "Path.stat follow_symlinks argument unsupported; supported Python3.12 pure run passed"
+  },
+  "fixture_dependencies": {
+    "pilots/recovery-v89-20261023/execution-20261024/program.json": {
+      "bytes": 1830432,
+      "sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    "pilots/transfer-engineering-v90-20261024/cluster-reconciliation.json": {
+      "bytes": 4087,
+      "sha256": "d96df5be26ffeac8e6ce404cd8f3797f5b49010823e7d167975c98040ff0e346"
+    }
+  }
+}

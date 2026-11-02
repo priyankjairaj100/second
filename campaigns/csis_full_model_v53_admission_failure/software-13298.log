@@ -1,0 +1,100 @@
+test_absent_duplicate_and_incomplete_deletions_rejected (research_v53.test_state.StateTests.test_absent_duplicate_and_incomplete_deletions_rejected) ... ok
+test_actual_code_bytes_and_artifacts_compared_not_hash_list_only (research_v53.test_state.StateTests.test_actual_code_bytes_and_artifacts_compared_not_hash_list_only) ... ok
+test_all_representations_roundtrip_and_source_order_canonical (research_v53.test_state.StateTests.test_all_representations_roundtrip_and_source_order_canonical) ... ok
+test_bound_grid_bits_target_and_original_normalization_checked (research_v53.test_state.StateTests.test_bound_grid_bits_target_and_original_normalization_checked) ... ok
+test_complete_24_stages_and_actual_4bit_bytes (research_v53.test_state.StateTests.test_complete_24_stages_and_actual_4bit_bytes) ... ok
+test_delete_order_reaches_same_canonical_state (research_v53.test_state.StateTests.test_delete_order_reaches_same_canonical_state) ... ok
+test_descriptor_token_target_stage_and_record_provenance_checked (research_v53.test_state.StateTests.test_descriptor_token_target_stage_and_record_provenance_checked) ... ok
+test_extra_or_missing_source_payloads_rejected (research_v53.test_state.StateTests.test_extra_or_missing_source_payloads_rejected) ... ok
+test_gram_external_trust_and_source_membership_required (research_v53.test_state.StateTests.test_gram_external_trust_and_source_membership_required) ... ok
+test_hybrid_policy_uses_only_narrow_grams_and_wide_lossless (research_v53.test_state.StateTests.test_hybrid_policy_uses_only_narrow_grams_and_wide_lossless) ... ok
+test_limits_reject_oversize_headers_records_tokens_and_state (research_v53.test_state.StateTests.test_limits_reject_oversize_headers_records_tokens_and_state) ... ok
+test_record_and_representation_contract (research_v53.test_state.StateTests.test_record_and_representation_contract) ... ok
+test_retained_record_provenance_cannot_change_in_successor (research_v53.test_state.StateTests.test_retained_record_provenance_cannot_change_in_successor) ... ok
+test_successive_deletions_and_fresh_empty_reconstruction (research_v53.test_state.StateTests.test_successive_deletions_and_fresh_empty_reconstruction) ... ok
+test_tamper_trailing_noncanonical_and_missing_stage_rejected (research_v53.test_state.StateTests.test_tamper_trailing_noncanonical_and_missing_stage_rejected) ... ok
+test_cold_rebuilds_complete_lossless_state_without_prior_artifacts (research_v53.test_service.ServiceIntegrationTests.test_cold_rebuilds_complete_lossless_state_without_prior_artifacts) ... {"component_elapsed_ns":123,"elapsed_ns":436336,"phase":"context_ready","target_sha256":"0000000000000000000000000000000000000000000000000000000000000000"}
+{"component_elapsed_ns":456,"elapsed_ns":4977862,"phase":"stage_certified","stage_id":"fixture-stage"}
+{"elapsed_ns":19548971,"phase":"request_complete","request_elapsed_ns":17760408,"step":1}
+{"component_elapsed_ns":456,"elapsed_ns":22348702,"phase":"stage_certified","stage_id":"fixture-stage"}
+{"elapsed_ns":33280190,"phase":"request_complete","request_elapsed_ns":12998660,"step":2}
+ok
+test_component_clocks_do_not_collide_with_worker_progress_clock (research_v53.test_service.ServiceIntegrationTests.test_component_clocks_do_not_collide_with_worker_progress_clock) ... {"component_elapsed_ns":123,"elapsed_ns":444260,"phase":"context_ready","target_sha256":"0000000000000000000000000000000000000000000000000000000000000000"}
+{"component_elapsed_ns":456,"elapsed_ns":5138953,"phase":"stage_certified","stage_id":"fixture-stage"}
+{"elapsed_ns":18418147,"phase":"request_complete","request_elapsed_ns":16513057,"step":1}
+{"component_elapsed_ns":456,"elapsed_ns":21282299,"phase":"stage_certified","stage_id":"fixture-stage"}
+{"elapsed_ns":32201193,"phase":"request_complete","request_elapsed_ns":13000534,"step":2}
+ok
+test_controller_ledger_binds_program_sources_and_literal_worker_command (research_v53.test_service.ServiceIntegrationTests.test_controller_ledger_binds_program_sources_and_literal_worker_command) ... ok
+test_extract_runs_once_per_source_and_keeps_every_ordered_stage (research_v53.test_service.ServiceIntegrationTests.test_extract_runs_once_per_source_and_keeps_every_ordered_stage) ... ok
+test_failed_second_request_preserves_failure_without_releasing_partial_model (research_v53.test_service.ServiceIntegrationTests.test_failed_second_request_preserves_failure_without_releasing_partial_model) ... {"component_elapsed_ns":123,"elapsed_ns":482802,"phase":"context_ready","target_sha256":"0000000000000000000000000000000000000000000000000000000000000000"}
+{"component_elapsed_ns":456,"elapsed_ns":2385748,"phase":"stage_certified","stage_id":"fixture-stage"}
+{"component_elapsed_ns":123,"elapsed_ns":479566,"phase":"context_ready","target_sha256":"0000000000000000000000000000000000000000000000000000000000000000"}
+{"component_elapsed_ns":456,"elapsed_ns":8227935,"phase":"stage_certified","stage_id":"fixture-stage"}
+{"elapsed_ns":22231473,"phase":"request_complete","request_elapsed_ns":20451958,"step":1}
+ok
+test_oracle_runs_without_preparation_artifacts_and_rebuilds_each_membership (research_v53.test_service.ServiceIntegrationTests.test_oracle_runs_without_preparation_artifacts_and_rebuilds_each_membership) ... {"component_elapsed_ns":123,"elapsed_ns":445111,"phase":"context_ready","target_sha256":"0000000000000000000000000000000000000000000000000000000000000000"}
+{"component_elapsed_ns":456,"elapsed_ns":2247930,"phase":"stage_certified","stage_id":"fixture-stage"}
+{"component_elapsed_ns":456,"elapsed_ns":48219265,"phase":"stage_certified","stage_id":"fixture-stage"}
+ok
+test_record_contract_uses_dataset_provenance (research_v53.test_service.ServiceIntegrationTests.test_record_contract_uses_dataset_provenance) ... ok
+test_worker_cached_requests_use_actual_successor_and_complete_admission (research_v53.test_service.ServiceIntegrationTests.test_worker_cached_requests_use_actual_successor_and_complete_admission) ... {"component_elapsed_ns":123,"elapsed_ns":530261,"phase":"context_ready","target_sha256":"0000000000000000000000000000000000000000000000000000000000000000"}
+{"component_elapsed_ns":456,"elapsed_ns":2436553,"phase":"stage_certified","stage_id":"fixture-stage"}
+{"component_elapsed_ns":123,"elapsed_ns":463446,"phase":"context_ready","target_sha256":"0000000000000000000000000000000000000000000000000000000000000000"}
+{"component_elapsed_ns":456,"elapsed_ns":8217867,"phase":"stage_certified","stage_id":"fixture-stage"}
+{"elapsed_ns":22202459,"phase":"request_complete","request_elapsed_ns":20422092,"step":1}
+{"component_elapsed_ns":456,"elapsed_ns":27725610,"phase":"stage_certified","stage_id":"fixture-stage"}
+{"elapsed_ns":41891842,"phase":"request_complete","request_elapsed_ns":18918873,"step":2}
+ok
+test_actual_successors_and_six_source_gram_subtraction_match_fresh_oracle (research_v53.test_worker.ScaleWorkerTests.test_actual_successors_and_six_source_gram_subtraction_match_fresh_oracle) ... ok
+test_shape_admission_covers_every_stage_and_fallback (research_v53.test_worker.ScaleWorkerTests.test_shape_admission_covers_every_stage_and_fallback) ... ok
+test_actual_output_tamper_rejected_despite_sealed_success (research_v53.test_postrun.SupplementalAuditTests.test_actual_output_tamper_rejected_despite_sealed_success) ... ok
+test_consistently_wrong_execution_target_binding_refused (research_v53.test_postrun.SupplementalAuditTests.test_consistently_wrong_execution_target_binding_refused) ... ok
+test_cross_worker_execution_provenance_change_refused (research_v53.test_postrun.SupplementalAuditTests.test_cross_worker_execution_provenance_change_refused) ... ok
+test_equal_wrong_exports_no_longer_pass_independent_state_and_model_checks (research_v53.test_postrun.SupplementalAuditTests.test_equal_wrong_exports_no_longer_pass_independent_state_and_model_checks) ... ok
+test_final_rehash_detects_same_size_changes_with_unchanged_nfs_metadata (research_v53.test_postrun.SupplementalAuditTests.test_final_rehash_detects_same_size_changes_with_unchanged_nfs_metadata) ... ok
+test_frozen_receipt_storage_ratios_and_comparison_hashes_rechecked (research_v53.test_postrun.SupplementalAuditTests.test_frozen_receipt_storage_ratios_and_comparison_hashes_rechecked) ... ok
+test_input_inventory_detects_changes_and_rejects_noncanonical_json (research_v53.test_postrun.SupplementalAuditTests.test_input_inventory_detects_changes_and_rejects_noncanonical_json) ... ok
+test_ledger_snapshot_cannot_drift_before_inventory_read (research_v53.test_postrun.SupplementalAuditTests.test_ledger_snapshot_cannot_drift_before_inventory_read) ... ok
+test_ledger_usage_must_equal_sealed_worker_receipt (research_v53.test_postrun.SupplementalAuditTests.test_ledger_usage_must_equal_sealed_worker_receipt) ... ok
+test_missing_or_duplicate_frozen_comparison_refused (research_v53.test_postrun.SupplementalAuditTests.test_missing_or_duplicate_frozen_comparison_refused) ... ok
+test_model_extent_and_execution_decoder_binding (research_v53.test_postrun.SupplementalAuditTests.test_model_extent_and_execution_decoder_binding) ... ok
+test_oracle_route_flags_do_not_replace_actual_byte_checks (research_v53.test_postrun.SupplementalAuditTests.test_oracle_route_flags_do_not_replace_actual_byte_checks) ... ok
+test_original_export_also_must_equal_every_representation (research_v53.test_postrun.SupplementalAuditTests.test_original_export_also_must_equal_every_representation) ... ok
+test_real_sealed_receipts_and_settled_snapshot_feed_full_state_audit_read_only (research_v53.test_postrun.SupplementalAuditTests.test_real_sealed_receipts_and_settled_snapshot_feed_full_state_audit_read_only) ... ok
+test_registered_token_and_provenance_mismatch_refused (research_v53.test_postrun.SupplementalAuditTests.test_registered_token_and_provenance_mismatch_refused) ... ok
+test_sealed_artifact_cannot_drift_after_run_store_validation (research_v53.test_postrun.SupplementalAuditTests.test_sealed_artifact_cannot_drift_after_run_store_validation) ... ok
+test_sealed_attempt_artifact_tamper_rejected (research_v53.test_postrun.SupplementalAuditTests.test_sealed_attempt_artifact_tamper_rejected) ... ok
+test_state_trust_and_deployment_accounting_recomputed (research_v53.test_postrun.SupplementalAuditTests.test_state_trust_and_deployment_accounting_recomputed) ... ok
+test_streaming_byte_bound_survives_stale_metadata (research_v53.test_postrun.SupplementalAuditTests.test_streaming_byte_bound_survives_stale_metadata) ... ok
+test_thirteen_source_three_representation_one_then_six_deletions (research_v53.test_postrun.SupplementalAuditTests.test_thirteen_source_three_representation_one_then_six_deletions) ... ok
+test_40bit_and_wrong_block_rejected_in_explicit_48bit_state (research_v53.test_precision.PrecisionIntegrationTests.test_40bit_and_wrong_block_rejected_in_explicit_48bit_state) ... ok
+test_compressed_refusal_replays_once_and_records_each_failed_stage (research_v53.test_precision.PrecisionIntegrationTests.test_compressed_refusal_replays_once_and_records_each_failed_stage) ... ok
+test_every_worker_enters_same_backend_and_restores_on_error (research_v53.test_precision.PrecisionIntegrationTests.test_every_worker_enters_same_backend_and_restores_on_error) ... ok
+test_historical_validator_still_rejects_actual_48bit_payload (research_v53.test_precision.PrecisionIntegrationTests.test_historical_validator_still_rejects_actual_48bit_payload) ... ok
+test_replayed_source_mismatch_refuses_before_point_output (research_v53.test_precision.PrecisionIntegrationTests.test_replayed_source_mismatch_refuses_before_point_output) ... ok
+test_representation_cannot_change_during_deletion (research_v53.test_precision.PrecisionIntegrationTests.test_representation_cannot_change_during_deletion) ... ok
+test_absent_duplicate_and_incomplete_deletions_rejected (research_v43.test_state.StateTests.test_absent_duplicate_and_incomplete_deletions_rejected) ... ok
+test_actual_code_bytes_and_artifacts_compared_not_hash_list_only (research_v43.test_state.StateTests.test_actual_code_bytes_and_artifacts_compared_not_hash_list_only) ... ok
+test_all_representations_roundtrip_and_source_order_canonical (research_v43.test_state.StateTests.test_all_representations_roundtrip_and_source_order_canonical) ... ok
+test_bound_grid_bits_target_and_original_normalization_checked (research_v43.test_state.StateTests.test_bound_grid_bits_target_and_original_normalization_checked) ... ok
+test_complete_24_stages_and_actual_4bit_bytes (research_v43.test_state.StateTests.test_complete_24_stages_and_actual_4bit_bytes) ... ok
+test_delete_order_reaches_same_canonical_state (research_v43.test_state.StateTests.test_delete_order_reaches_same_canonical_state) ... ok
+test_descriptor_token_target_stage_and_record_provenance_checked (research_v43.test_state.StateTests.test_descriptor_token_target_stage_and_record_provenance_checked) ... ok
+test_extra_or_missing_source_payloads_rejected (research_v43.test_state.StateTests.test_extra_or_missing_source_payloads_rejected) ... ok
+test_gram_external_trust_and_source_membership_required (research_v43.test_state.StateTests.test_gram_external_trust_and_source_membership_required) ... ok
+test_hybrid_policy_uses_only_narrow_grams_and_wide_lossless (research_v43.test_state.StateTests.test_hybrid_policy_uses_only_narrow_grams_and_wide_lossless) ... ok
+test_limits_reject_oversize_headers_records_tokens_and_state (research_v43.test_state.StateTests.test_limits_reject_oversize_headers_records_tokens_and_state) ... ok
+test_record_and_representation_contract (research_v43.test_state.StateTests.test_record_and_representation_contract) ... ok
+test_retained_record_provenance_cannot_change_in_successor (research_v43.test_state.StateTests.test_retained_record_provenance_cannot_change_in_successor) ... ok
+test_successive_deletions_and_fresh_empty_reconstruction (research_v43.test_state.StateTests.test_successive_deletions_and_fresh_empty_reconstruction) ... ok
+test_tamper_trailing_noncanonical_and_missing_stage_rejected (research_v43.test_state.StateTests.test_tamper_trailing_noncanonical_and_missing_stage_rejected) ... ok
+test_complete_codes_against_exact_rational_oracle (research_v50.test_neighbors.NeighborTests.test_complete_codes_against_exact_rational_oracle) ... ok
+test_point_and_box_gram_and_coefficient_words (research_v50.test_neighbors.NeighborTests.test_point_and_box_gram_and_coefficient_words) ... ok
+test_reference_values_and_exception_flags (research_v50.test_neighbors.NeighborTests.test_reference_values_and_exception_flags) ... ok
+test_restore_on_failure_and_refuse_nested_selection (research_v50.test_neighbors.NeighborTests.test_restore_on_failure_and_refuse_nested_selection) ... ok
+
+----------------------------------------------------------------------
+Ran 70 tests in 8.773s
+
+OK

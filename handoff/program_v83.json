@@ -1,0 +1,60 @@
+{
+  "version": 83,
+  "created_at": "2026-10-23T08:08:51.349197+00:00",
+  "handoff": "docs/ACTIVE_SESSION_V83.md",
+  "prior_handoff": "docs/ACTIVE_SESSION_V82.md",
+  "scheduler": "PAUSED",
+  "model_results_changed": false,
+  "manuscript_version": 74,
+  "scientific_decision_version": 72,
+  "frozen_sources": 871,
+  "auxiliary_commitments": 5,
+  "v80": {
+    "status": "RUNNING",
+    "prepare_job": "15905",
+    "observation_utc": "2026-10-23T07:57:54.788674+00:00",
+    "partial_progress": {
+      "context_ready": 1,
+      "source_replayed": 13,
+      "stage_certified": 11
+    },
+    "complete_model": false,
+    "terminal_accounting": "V83 reporter prepared, actual closure pending"
+  },
+  "v81": {
+    "job_id": "15917",
+    "status": "PENDING afterany:15916",
+    "software_tests_expected": 62,
+    "actual_transfer_launched": false
+  },
+  "v82": {
+    "status": "registered held-validated and released once; dependency-pending",
+    "program_sha256": "5bead3425eb9bb4bec645ac12e681b45e62d87762cef0f15179aecdb427ae27b",
+    "jobs": {
+      "checks": "15921",
+      "fetch": "15922",
+      "distilgpt2": "15923",
+      "gpt2": "15924",
+      "close": "15925"
+    },
+    "software_tests_expected": 26,
+    "pure_checks_passed": 21,
+    "linux_guard_checks_pending": 5,
+    "grid_cap": 1327104,
+    "target_cpu_reservation": 1204,
+    "controller_cpu_reservation": 1510,
+    "weights_downloaded": false,
+    "empirical_transfer": false
+  },
+  "v83": {
+    "status": "prepared host-only actual terminal accounting",
+    "generated_tests_passed": 13,
+    "actual_terminal_closure": false
+  },
+  "completion_blockers": [
+    "V80 complete numerical chain, both actual audits and terminal host accounting",
+    "V81 software and V82 actual target admissions",
+    "Separately registered complete matched transfer and justified timing/quality",
+    "Native rendered layout and final delivery choices"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "v123_author_archive": {
+    "bytes": 11051312,
+    "sha256": "d416395d2cf196f8599cdb55fcfcc5d6fa78294f0150d0317ca31a37c7d6b06a"
+  },
+  "unchanged_historical_components": 14,
+  "unchanged_archive_source_counterparts": 1322,
+  "archive_identity_verified": true,
+  "historical_source_files_edited_this_turn": false,
+  "scope": "Original author-archive counterparts preserved; different historical versions are not equated with current HEAD"
+}

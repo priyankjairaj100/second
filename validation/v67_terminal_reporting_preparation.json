@@ -1,0 +1,65 @@
+{
+  "actual_model_state_bytes_checked": false,
+  "actual_terminal_artifacts_still_required": true,
+  "actual_terminal_success_path_exercised": false,
+  "captured_at_utc": "2026-10-16T15:44:34.536097+00:00",
+  "checkpoint_or_raw_articles_read": false,
+  "complete_success_path_fixture_generated_only": true,
+  "coverage": [
+    "Pending/failed scheduler state cannot be overridden by terminal-looking receipts",
+    "Complete generated 12-worker/2-audit metadata path with ten comparisons",
+    "Original source/ledger/limit/debit and exact audit-input commitment inventories",
+    "Preparation attribution once; nested request/worker/transaction clocks retained",
+    "Separate allocation CPU; no batch-row double counting",
+    "Corruption, missing inputs/entries, failed audit entry, changed applied limits/model commitments, unsettled ledger, duplicate/missing scheduler rows and wall overshoot refusal"
+  ],
+  "empirical_result_verified": false,
+  "errors": 0,
+  "failures": 0,
+  "frozen_sources_modified": false,
+  "latest_real_snapshot": "campaigns/csis_v67_progress_metadata_20261016_p.tar.gz",
+  "latest_real_snapshot_status": "pending_terminal",
+  "real_snapshot_status": "pending_terminal",
+  "registered_jobs_changed": false,
+  "report_updated_at_utc": "2026-10-16T15:51:18.083228+00:00",
+  "root_review_not_independent": true,
+  "schema": "v67-terminal-reporting-preparation",
+  "scientific_claim_promoted": false,
+  "skips": 0,
+  "source_and_check_bindings": {
+    "validation/check_v67_snapshot.py": {
+      "bytes": 5129,
+      "sha256": "1bc91fefe89bf0746dda11495e00dea80b1ee568355f56a0d71be32526cf6c8a"
+    },
+    "validation/check_v67_terminal_metadata.py": {
+      "bytes": 25683,
+      "sha256": "4297e260dd75ba956c9727c9fa914066541fa923f6c9a76105b41c04e837d063"
+    },
+    "validation/test_v67_terminal_metadata.py": {
+      "bytes": 8809,
+      "sha256": "72ada40cfa809ca2ff7bb03b968f0825e968534f4af39446754e8bc4dee19f27"
+    },
+    "validation/v67_progress_metadata_check_p.json": {
+      "bytes": 7395,
+      "sha256": "7d1789bc08dd0b841555d7c03a198e67a481d30ea48d412ea900d567f14f47ac"
+    },
+    "validation/v67_terminal_fixture.py": {
+      "bytes": 11946,
+      "sha256": "3f4ccaf88a2625c9deb8b1dc8f38596a64d6b1bdfc9caaaf2225d9aa244cfadb"
+    },
+    "validation/v67_terminal_pending_check_o.json": {
+      "bytes": 1087,
+      "sha256": "fb7aedbf1d0cf0da2e447007e1426ea1e3622ca20682522c6ccb4e3ec60aadf8"
+    },
+    "validation/v67_terminal_pending_check_p.json": {
+      "bytes": 1087,
+      "sha256": "f38cae84ff95c02dd59de59ddbe6fe06f7bb69abfaddbda8ed4f0f9afae7d572"
+    },
+    "validation/v67_terminal_reporting_tests_final.txt": {
+      "bytes": 2865,
+      "sha256": "8b6bf902a9f7bbd42717a172bf2b7ca9c0a9863a2b5291dd61fbf3d76654f5e1"
+    }
+  },
+  "status": "reporting_code_qualified_on_generated_metadata_and_live_pending_snapshot",
+  "tests": 25
+}

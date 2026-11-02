@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 .venv/
+.venv-container/
 tmp/
 output/pdf/*.aux
 output/pdf/*.log
@@ -136,3 +137,14 @@ campaigns/compressed_service_v31/**/*.lock
 # V40 preserves all text evidence and excludes derived stage binaries.
 /campaigns/ci_native_scale_v40/**/*.bin
 /campaigns/ci_native_scale_v40/**/*.lock
+
+# V43/V44 publish text receipts; actual derived payloads remain in local archives.
+/campaigns/csis_full_model_v43/**/*.bin
+/campaigns/csis_full_model_v43/**/*.lock
+/campaigns/csis_exposed_quality_v44/**/*.bin
+/campaigns/csis_exposed_quality_v44/**/*.lock
+
+# V145/V146 staging archives include pinned third-party binary wheel payloads.
+# Preserve them locally and on CSIS; publish identities and source separately.
+pilots/clean-compressed-reproduction-v145-20261102/source-v145.tar.gz
+pilots/clean-compressed-reproduction-v146-20261102/source-v146.tar.gz

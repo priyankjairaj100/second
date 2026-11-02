@@ -1,0 +1,1459 @@
+\documentclass[11pt,a4paper]{article}
+\begin{filecontents*}[overwrite]{tacl2021v1.sty}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tacl2021v1}[2021/12/15 TACL formatting]
+%
+% tacl2021v1.sty: uses package options instead of a flag in the tex itself,
+% and allows for a double-spaced version for use by copy-editors.
+%
+% Possible options are {hyperref,nohyperref}, {submission,acceptedWithA}, and {copyedit}
+% Examples:
+%
+% \usepackage{tacl2021v1}   % equivalent to \usepackage[hyperref,submission]{tacl2021v1}
+% \usepackage[acceptedWithA]{tacl2021v1}
+% \usepackage[acceptedWithA,copyedit]{tacl2021v1}
+%
+% tacl2021v1.sty - (a) Updated the author/affiliation examples below to be
+% consistent with the MIT Press-mandated options given in the new
+% Appendix A of the template document. (b) updated the version number
+% of "2021v1"
+% -- Cindy Robinson <pvaql.genafnpy@tznvy.pbz> (<- ROT13)
+%
+% tacl2018.sty This is a modified version of ACL 2018 that replaces conference-specific
+% information with TACL-specific information; removes some outdated comments;
+% and corrects some minor spelling issues.
+% --Lillian Lee (llee@cs.cornell.edu)
+%
+% ACL 2018: modified line numbering to be in gainsboro gray color so one
+% can write comments on the margins.  -- Shay Cohen / Kevin Gimpel / Wei Lu
+
+% 2017: modified to support DOI links in bibliography.  Now uses
+% natbib package rather than defining citation commands in this file.
+% Use with acl_natbib.bst bib style.  -- Dan Gildea
+
+% This [was] the LaTeX style for ACL 2016. It contains Margaret Mitchell's
+% line number adaptations (ported by Hai Zhao and Yannick Versley).
+% It is nearly identical to the style files for ACL 2015,
+% ACL 2014, EACL 2006, ACL2005, ACL 2002, ACL 2001, ACL 2000,
+% EACL 95 and EACL 99.
+% This [was] the LaTeX style file for ACL 2000.  It is nearly identical to the
+% style files for EACL 95 and EACL 99.  Minor changes include editing the
+% instructions to reflect use of \documentclass rather than \documentstyle
+% and removing the white space before the title on the first page
+% -- John Chen, June 29, 2000
+% This [was] the LaTeX style file for EACL-95.  It is identical to the
+% style file for ANLP '94 except that the margins are adjusted for A4
+% paper.  -- abney 13 Dec 94
+% The ANLP '94 style file is a slightly modified
+% version of the style used for AAAI and IJCAI, using some changes
+% prepared by Fernando Pereira and others and some minor changes
+% by Paul Jacobs.
+% Prior version prepared by Peter F. Patel-Schneider,
+
+% Papers are to be prepared using the ``acl_natbib'' bibliography style,
+% as follows:
+%       \documentclass[11pt]{article}
+%       \usepackage{tacl2021v1}
+%       \title{Title}
+%       \author{Author 1 \and Author 2 \\ Address line \\ Address line \And
+%               Author 3 \\ Address line \\ Address line}
+%       \begin{document}
+%       ...
+%       \bibliography{bibliography-file}
+%       \bibliographystyle{acl_natbib}
+%       \end{document}
+
+% MIT Press mandates how the author block may be formatted.
+% Please see the author block and appendix of the template file for
+% instructions and examples.
+
+% If the title and author information does not fit in the area allocated,
+% place \setlength\titlebox{<new height>} right after
+% \usepackage{tacl2021v1}
+% where <new height> can be something larger than 5cm
+
+%%%% hyperref should be the *last* package used %%%%
+
+% Allow for double-spacing in copyedit version
+\RequirePackage{setspace}
+
+% include hyperref, unless user specifies nohyperref option like this:
+% \usepackage[nohyperref]{tacl2018}
+\newif\iftacl@hyperref
+\DeclareOption{hyperref}{\tacl@hyperreftrue}
+\DeclareOption{nohyperref}{\tacl@hyperreffalse}
+\ExecuteOptions{hyperref} % default is to use hyperref
+
+% non-anonymous and no ruler, vs anonymous with line-number ruler
+\newif\iftaclpubformat % no @ so can use in instructions document.
+\DeclareOption{acceptedWithA}{\taclpubformattrue}
+\DeclareOption{acceptedwithA}{\taclpubformattrue} % allow for typos
+\DeclareOption{acceptedwitha}{\taclpubformattrue} % allow for typos
+
+\ExecuteOptions{submission} % default is submission version
+
+
+% double spacing for copy-editor
+\newif\iftaclcopyedit
+\taclcopyeditfalse
+\DeclareOption{copyedit}{\taclpubformattrue\taclcopyedittrue}
+
+\ProcessOptions\relax
+
+
+\iftacl@hyperref
+  \RequirePackage{hyperref}
+  \RequirePackage{xcolor}   % make links dark blue
+  \definecolor{darkblue}{rgb}{0, 0, 0.5}
+  \hypersetup{colorlinks=true,citecolor=darkblue, linkcolor=darkblue, urlcolor=darkblue}
+\else
+  % This definition is used if the hyperref package is not loaded.
+  % It provides a backup, no-op definiton of \href.
+  % This is necessary because \href command is used in the acl_natbib.bst file.
+  \def\href#1#2{{#2}}
+  % We still need to load xcolor in this case because the lighter line numbers require it. (SC/KG/WL)
+  \RequirePackage{xcolor}
+\fi
+
+
+
+
+
+% Spacing idea communicated to L. Lee by Yoav Artzi
+\newcommand{\Thanks}[1]{\thanks{\hspace{5pt} #1}}
+
+% A4 modified by Eneko; again modified by Alexander for 5cm titlebox
+\setlength{\paperwidth}{21cm}   % A4
+\setlength{\paperheight}{29.7cm}% A4
+\setlength\topmargin{-0.5cm}
+\setlength\oddsidemargin{0cm}
+\setlength\textheight{24.7cm}
+\setlength\textwidth{16.0cm}
+\setlength\columnsep{0.6cm}
+\newlength\titlebox
+\setlength\titlebox{5cm}
+\setlength\headheight{5pt}
+\setlength\headsep{0pt}
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\flushbottom \twocolumn \sloppy
+
+
+
+% We're never going to need a table of contents, so just flush it to
+% save space --- suggested by drstrip@sandia-2
+\def\addcontentsline#1#2#3{}
+
+%% ----- Set up hooks to repeat content on every page of the output doc,
+%% necessary for the line numbers in the submitted version.  --MM
+%%
+%% Copied from CVPR 2015's cvpr_eso.sty, which appears to be largely copied from everyshi.sty.
+%%
+%% Original cvpr_eso.sty available at: http://www.pamitc.org/cvpr15/author_guidelines.php
+%% Original evershi.sty available at: https://www.ctan.org/pkg/everyshi
+%%
+%% Copyright (C) 2001 Martin Schr\"oder:
+%%
+%%                         Martin Schr"oder
+%%                         Cr"usemannallee 3
+%%                         D-28213 Bremen
+%%                         Martin.Schroeder@ACM.org
+%%
+%% This program may be redistributed and/or modified under the terms
+%% of the LaTeX Project Public License, either version 1.0 of this
+%% license, or (at your option) any later version.
+%% The latest version of this license is in
+%%    CTAN:macros/latex/base/lppl.txt.
+%%
+%% Happy users are requested to send [Martin] a postcard. :-)
+%%
+\newcommand{\@EveryShipoutTACL@Hook}{}
+\newcommand{\@EveryShipoutTACL@AtNextHook}{}
+\newcommand*{\EveryShipoutTACL}[1]
+   {\g@addto@macro\@EveryShipoutTACL@Hook{#1}}
+\newcommand*{\AtNextShipoutACL@}[1]
+   {\g@addto@macro\@EveryShipoutTACL@AtNextHook{#1}}
+\newcommand{\@EveryShipoutTACL@Shipout}{%
+   \afterassignment\@EveryShipoutTACL@Test
+   \global\setbox\@cclv= %
+   }
+\newcommand{\@EveryShipoutTACL@Test}{%
+   \ifvoid\@cclv\relax
+      \aftergroup\@EveryShipoutTACL@Output
+   \else
+      \@EveryShipoutTACL@Output
+   \fi%
+   }
+\newcommand{\@EveryShipoutTACL@Output}{%
+   \@EveryShipoutTACL@Hook%
+   \@EveryShipoutTACL@AtNextHook%
+      \gdef\@EveryShipoutTACL@AtNextHook{}%
+   \@EveryShipoutTACL@Org@Shipout\box\@cclv%
+   }
+\newcommand{\@EveryShipoutTACL@Org@Shipout}{}
+\newcommand*{\@EveryShipoutTACL@Init}{%
+   \message{ABD: EveryShipout initializing macros}%
+   \let\@EveryShipoutTACL@Org@Shipout\shipout
+   \let\shipout\@EveryShipoutTACL@Shipout
+   }
+\AtBeginDocument{\@EveryShipoutTACL@Init}
+
+%% ----- Set up for placing additional items into the submitted version --MM
+%%
+%% Based on eso-pic.sty
+%%
+%% Original available at: https://www.ctan.org/tex-archive/macros/latex/contrib/eso-pic
+%% Copyright (C) 1998-2002 by Rolf Niepraschk <niepraschk@ptb.de>
+%%
+%% Which may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.2 of this license
+%% or (at your option) any later version.  The latest version of this
+%% license is in:
+%%
+%%    http://www.latex-project.org/lppl.txt
+%%
+%% and version 1.2 or later is part of all distributions of LaTeX version
+%% 1999/12/01 or later.
+%%
+%% In contrast to the original, we do not include the definitions for/using:
+%% gridpicture, div[2], isMEMOIR[1], gridSetup[6][], subgridstyle{dotted}, labelfactor{}, gap{}, gridunitname{}, gridunit{}, gridlines{\thinlines}, subgridlines{\thinlines}, the {keyval} package, evenside margin, nor any definitions with 'color'.
+%%
+%% These are beyond  what is needed for the NAACL style.
+%%
+\newcommand\LenToUnit[1]{#1\@gobble}
+\newcommand\AtPageUpperLeft[1]{%
+  \begingroup
+    \@tempdima=0pt\relax\@tempdimb=\ESO@yoffsetI\relax
+    \put(\LenToUnit{\@tempdima},\LenToUnit{\@tempdimb}){#1}%
+  \endgroup
+}
+\newcommand\AtPageLowerLeft[1]{\AtPageUpperLeft{%
+  \put(0,\LenToUnit{-\paperheight}){#1}}}
+\newcommand\AtPageCenter[1]{\AtPageUpperLeft{%
+  \put(\LenToUnit{.5\paperwidth},\LenToUnit{-.5\paperheight}){#1}}}
+\newcommand\AtPageLowerCenter[1]{\AtPageUpperLeft{%
+  \put(\LenToUnit{.5\paperwidth},\LenToUnit{-\paperheight}){#1}}}%
+\newcommand\AtPageLowishCenter[1]{\AtPageUpperLeft{%
+  \put(\LenToUnit{.5\paperwidth},\LenToUnit{-.96\paperheight}){#1}}}
+\newcommand\AtTextUpperLeft[1]{%
+  \begingroup
+    \setlength\@tempdima{1in}%
+    \advance\@tempdima\oddsidemargin%
+    \@tempdimb=\ESO@yoffsetI\relax\advance\@tempdimb-1in\relax%
+    \advance\@tempdimb-\topmargin%
+    \advance\@tempdimb-\headheight\advance\@tempdimb-\headsep%
+    \put(\LenToUnit{\@tempdima},\LenToUnit{\@tempdimb}){#1}%
+  \endgroup
+}
+\newcommand\AtTextLowerLeft[1]{\AtTextUpperLeft{%
+  \put(0,\LenToUnit{-\textheight}){#1}}}
+\newcommand\AtTextCenter[1]{\AtTextUpperLeft{%
+  \put(\LenToUnit{.5\textwidth},\LenToUnit{-.5\textheight}){#1}}}
+\newcommand{\ESO@HookI}{} \newcommand{\ESO@HookII}{}
+\newcommand{\ESO@HookIII}{}
+\newcommand{\AddToShipoutPicture}{%
+  \@ifstar{\g@addto@macro\ESO@HookII}{\g@addto@macro\ESO@HookI}}
+\newcommand{\ClearShipoutPicture}{\global\let\ESO@HookI\@empty}
+\newcommand{\@ShipoutPicture}{%
+  \bgroup
+    \@tempswafalse%
+    \ifx\ESO@HookI\@empty\else\@tempswatrue\fi%
+    \ifx\ESO@HookII\@empty\else\@tempswatrue\fi%
+    \ifx\ESO@HookIII\@empty\else\@tempswatrue\fi%
+    \if@tempswa%
+      \@tempdima=1in\@tempdimb=-\@tempdima%
+      \advance\@tempdimb\ESO@yoffsetI%
+      \unitlength=1pt%
+      \global\setbox\@cclv\vbox{%
+        \vbox{\let\protect\relax
+          \pictur@(0,0)(\strip@pt\@tempdima,\strip@pt\@tempdimb)%
+            \ESO@HookIII\ESO@HookI\ESO@HookII%
+            \global\let\ESO@HookII\@empty%
+          \endpicture}%
+          \nointerlineskip%
+        \box\@cclv}%
+    \fi
+  \egroup
+}
+\EveryShipoutTACL{\@ShipoutPicture}
+\newif\ifESO@dvips\ESO@dvipsfalse
+\newif\ifESO@grid\ESO@gridfalse
+\newif\ifESO@texcoord\ESO@texcoordfalse
+\newcommand*\ESO@griddelta{}\newcommand*\ESO@griddeltaY{}
+\newcommand*\ESO@gridDelta{}\newcommand*\ESO@gridDeltaY{}
+\newcommand*\ESO@yoffsetI{}\newcommand*\ESO@yoffsetII{}
+\ifESO@texcoord
+  \def\ESO@yoffsetI{0pt}\def\ESO@yoffsetII{-\paperheight}
+  \edef\ESO@griddeltaY{-\ESO@griddelta}\edef\ESO@gridDeltaY{-\ESO@gridDelta}
+\else
+  \def\ESO@yoffsetI{\paperheight}\def\ESO@yoffsetII{0pt}
+  \edef\ESO@griddeltaY{\ESO@griddelta}\edef\ESO@gridDeltaY{\ESO@gridDelta}
+\fi
+
+
+%% ----- Submitted version markup: Page numbers, ruler, and confidentiality.  Using ideas/code from cvpr.sty 2015. --MM
+
+\font\naaclhv  = phvb at 8pt
+
+%% Define vruler %%
+
+%\makeatletter
+\newbox\aclrulerbox
+\newcount\aclrulercount
+\newdimen\aclruleroffset
+\newdimen\cv@lineheight
+\newdimen\cv@boxheight
+\newbox\cv@tmpbox
+\newcount\cv@refno
+\newcount\cv@tot
+% NUMBER with left flushed zeros  \fillzeros[<WIDTH>]<NUMBER>
+\newcount\cv@tmpc@ \newcount\cv@tmpc
+\def\fillzeros[#1]#2{\cv@tmpc@=#2\relax\ifnum\cv@tmpc@<0\cv@tmpc@=-\cv@tmpc@\fi
+\cv@tmpc=1 %
+\loop\ifnum\cv@tmpc@<10 \else \divide\cv@tmpc@ by 10 \advance\cv@tmpc by 1 \fi
+   \ifnum\cv@tmpc@=10\relax\cv@tmpc@=11\relax\fi \ifnum\cv@tmpc@>10 \repeat
+\ifnum#2<0\advance\cv@tmpc1\relax-\fi
+\loop\ifnum\cv@tmpc<#1\relax0\advance\cv@tmpc1\relax\fi \ifnum\cv@tmpc<#1 \repeat
+\cv@tmpc@=#2\relax\ifnum\cv@tmpc@<0\cv@tmpc@=-\cv@tmpc@\fi \relax\the\cv@tmpc@}%
+% \makevruler[<SCALE>][<INITIAL_COUNT>][<STEP>][<DIGITS>][<HEIGHT>]
+\def\makevruler[#1][#2][#3][#4][#5]{\begingroup\offinterlineskip
+\textheight=#5\vbadness=10000\vfuzz=120ex\overfullrule=0pt%
+\global\setbox\aclrulerbox=\vbox to \textheight{%
+{\parskip=0pt\hfuzz=150em\cv@boxheight=\textheight
+\cv@lineheight=#1\global\aclrulercount=#2%
+\cv@tot\cv@boxheight\divide\cv@tot\cv@lineheight\advance\cv@tot2%
+\cv@refno1\vskip-\cv@lineheight\vskip1ex%
+\loop\setbox\cv@tmpbox=\hbox to0cm{{\naaclhv\hfil\fillzeros[#4]\aclrulercount}}%
+\ht\cv@tmpbox\cv@lineheight\dp\cv@tmpbox0pt\box\cv@tmpbox\break
+\advance\cv@refno1\global\advance\aclrulercount#3\relax
+\ifnum\cv@refno<\cv@tot\repeat}}\endgroup}%
+%\makeatother
+
+\def\confidentialtext{Confidential TACL submission. DO NOT DISTRIBUTE.}
+\def\confidential{\confidentialtext}
+
+%% Page numbering, Vruler and Confidentiality %%
+% \makevruler[<SCALE>][<INITIAL_COUNT>][<STEP>][<DIGITS>][<HEIGHT>]
+
+% SC/KG/WL - changed line numbering to gainsboro
+\definecolor{gainsboro}{rgb}{0.8, 0.8, 0.8}
+%\def\aclruler#1{\makevruler[14.17pt][#1][1][3][\textheight]\usebox{\aclrulerbox}}  %% old line
+\def\aclruler#1{\textcolor{gainsboro}{\makevruler[14.17pt][#1][1][3][\textheight]\usebox{\aclrulerbox}}}
+
+\def\leftoffset{-2.1cm} %original: -45pt
+\def\rightoffset{17.5cm} %original: 500pt
+\iftaclpubformat\else\pagenumbering{arabic}\fi
+\AddToShipoutPicture{%
+\iftaclpubformat\else
+\AtPageLowishCenter{\thepage}
+\aclruleroffset=\textheight
+\advance\aclruleroffset4pt
+  \AtTextUpperLeft{%
+    \put(\LenToUnit{\leftoffset},\LenToUnit{-\aclruleroffset}){%left ruler
+      \aclruler{\aclrulercount}}
+    \put(\LenToUnit{\rightoffset},\LenToUnit{-\aclruleroffset}){%right ruler
+      \aclruler{\aclrulercount}}
+  }
+  \AtTextUpperLeft{%confidential
+    \put(0,\LenToUnit{1cm}){\parbox{\textwidth}{\centering\naaclhv\confidential}}
+  }
+\fi
+}
+
+%%%% ----- End settings for placing additional items into the submitted version --MM ----- %%%%
+
+%%%% ----- Begin settings for both submitted and camera-ready version ----- %%%%
+
+%% Title and Authors %%
+
+\newcommand{\anonsubtext}{Anonymous TACL submission}
+\newcommand\outauthor{
+    \begin{tabular}[t]{c}
+  \iftaclpubformat
+       \bf\@author
+  \else
+    % Avoiding common accidental de-anonymization issue. --MM
+     \bf \anonsubtext
+  \fi
+    \end{tabular}}
+
+
+% Changing the expanded titlebox for submissions to 2.5 in (rather than 6.5cm)
+% and moving it to the style sheet, rather than within the example tex file. --MM
+\iftaclpubformat
+\else
+  \addtolength\titlebox{.25in}
+\fi
+% Mostly taken from deproc.
+\def\maketitle{\par
+ \begingroup
+   \def\thefootnote{\fnsymbol{footnote}}
+   \def\@makefnmark{\hbox to 0pt{$^{\@thefnmark}$\hss}}
+   \twocolumn[\@maketitle] \@thanks
+ \endgroup
+ \setcounter{footnote}{0}
+ \let\maketitle\relax \let\@maketitle\relax
+ \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax
+ \iftaclcopyedit
+  \doublespacing % after title and author, start doublespacing
+ \fi
+ }
+\def\@maketitle{\vbox to \titlebox{\hsize\textwidth
+ \linewidth\hsize \vskip 0.125in minus 0.125in \centering
+ {\Large\bf \@title \par} \vskip 0.2in plus 1fil minus 0.1in
+ {\def\and{\unskip\enspace{\rm and}\enspace}%
+  \def\And{\end{tabular}\hss \egroup \hskip 1in plus 2fil
+           \hbox to 0pt\bgroup\hss \begin{tabular}[t]{c}\bf}%
+  \def\AND{\end{tabular}\hss\egroup \hfil\hfil\egroup
+          \vskip 0.25in plus 1fil minus 0.125in
+           \hbox to \linewidth\bgroup\large \hfil\hfil
+             \hbox to 0pt\bgroup\hss \begin{tabular}[t]{c}\bf}
+  \hbox to \linewidth\bgroup\large \hfil\hfil
+    \hbox to 0pt\bgroup\hss
+  \outauthor
+   \hss\egroup
+    \hfil\hfil\egroup}
+  \vskip 0.3in plus 2fil minus 0.1in
+}}
+
+% margins for abstract
+\renewenvironment{abstract}{\centerline{\large\bf
+ Abstract}\vspace{0.5ex}\begin{quote} \small}{\par\end{quote}\vskip 1ex}
+
+\RequirePackage{natbib}
+% for citation commands in the .tex, authors can use:
+% \citep, \citet, and \citeyearpar for compatibility with natbib, or
+% \cite, \newcite, and \shortcite for compatibility with older ACL .sty files
+\renewcommand\cite{\citep}  % to get "(Author Year)" with natbib
+\newcommand\shortcite{\citeyearpar}% to get "(Year)" with natbib
+\newcommand\newcite{\citet} % to get "Author (Year)" with natbib
+
+
+% bibliography
+
+\def\@up#1{\raise.2ex\hbox{#1}}
+
+% Don't put a label in the bibliography at all.  Just use the unlabeled format
+% instead.
+\def\thebibliography#1{\vskip\parskip%
+\vskip\baselineskip%
+\def\baselinestretch{1}%
+\ifx\@currsize\normalsize\@normalsize\else\@currsize\fi%
+\vskip-\parskip%
+\vskip-\baselineskip%
+\section*{References\@mkboth
+ {References}{References}}\list
+ {}{\setlength{\labelwidth}{0pt}\setlength{\leftmargin}{\parindent}
+ \setlength{\itemindent}{-\parindent}}
+ \def\newblock{\hskip .11em plus .33em minus -.07em}
+ \sloppy\clubpenalty4000\widowpenalty4000
+ \sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+
+
+% Allow for a bibliography of sources of attested examples
+\def\thesourcebibliography#1{\vskip\parskip%
+\vskip\baselineskip%
+\def\baselinestretch{1}%
+\ifx\@currsize\normalsize\@normalsize\else\@currsize\fi%
+\vskip-\parskip%
+\vskip-\baselineskip%
+\section*{Sources of Attested Examples\@mkboth
+ {Sources of Attested Examples}{Sources of Attested Examples}}\list
+ {}{\setlength{\labelwidth}{0pt}\setlength{\leftmargin}{\parindent}
+ \setlength{\itemindent}{-\parindent}}
+ \def\newblock{\hskip .11em plus .33em minus -.07em}
+ \sloppy\clubpenalty4000\widowpenalty4000
+ \sfcode`\.=1000\relax}
+\let\endthesourcebibliography=\endlist
+
+% sections with less space
+\def\section{\@startsection {section}{1}{\z@}{-2.0ex plus
+    -0.5ex minus -.2ex}{1.5ex plus 0.3ex minus .2ex}{\large\bf\raggedright}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{-1.8ex plus
+    -0.5ex minus -.2ex}{0.8ex plus .2ex}{\normalsize\bf\raggedright}}
+%% changed by KO to - values to get teh initial parindent right
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{-1.5ex plus
+   -0.5ex minus -.2ex}{0.5ex plus .2ex}{\normalsize\bf\raggedright}}
+\def\paragraph{\@startsection{paragraph}{4}{\z@}{1.5ex plus
+   0.5ex minus .2ex}{-1em}{\normalsize\bf}}
+\def\subparagraph{\@startsection{subparagraph}{5}{\parindent}{1.5ex plus
+   0.5ex minus .2ex}{-1em}{\normalsize\bf}}
+
+% Footnotes
+\footnotesep 6.65pt %
+\skip\footins 9pt plus 4pt minus 2pt
+\def\footnoterule{\kern-3pt \hrule width 5pc \kern 2.6pt }
+\setcounter{footnote}{0}
+
+% Lists and paragraphs
+\parindent 1em
+\topsep 4pt plus 1pt minus 2pt
+\partopsep 1pt plus 0.5pt minus 0.5pt
+\itemsep 2pt plus 1pt minus 0.5pt
+\parsep 2pt plus 1pt minus 0.5pt
+
+\leftmargin 2em \leftmargini\leftmargin \leftmarginii 2em
+\leftmarginiii 1.5em \leftmarginiv 1.0em \leftmarginv .5em \leftmarginvi .5em
+\labelwidth\leftmargini\advance\labelwidth-\labelsep \labelsep 5pt
+
+\def\@listi{\leftmargin\leftmargini}
+\def\@listii{\leftmargin\leftmarginii
+   \labelwidth\leftmarginii\advance\labelwidth-\labelsep
+   \topsep 2pt plus 1pt minus 0.5pt
+   \parsep 1pt plus 0.5pt minus 0.5pt
+   \itemsep \parsep}
+\def\@listiii{\leftmargin\leftmarginiii
+    \labelwidth\leftmarginiii\advance\labelwidth-\labelsep
+    \topsep 1pt plus 0.5pt minus 0.5pt
+    \parsep \z@ \partopsep 0.5pt plus 0pt minus 0.5pt
+    \itemsep \topsep}
+\def\@listiv{\leftmargin\leftmarginiv
+     \labelwidth\leftmarginiv\advance\labelwidth-\labelsep}
+\def\@listv{\leftmargin\leftmarginv
+     \labelwidth\leftmarginv\advance\labelwidth-\labelsep}
+\def\@listvi{\leftmargin\leftmarginvi
+     \labelwidth\leftmarginvi\advance\labelwidth-\labelsep}
+
+\abovedisplayskip 7pt plus2pt minus5pt%
+\belowdisplayskip \abovedisplayskip
+\abovedisplayshortskip  0pt plus3pt%
+\belowdisplayshortskip  4pt plus3pt minus3pt%
+
+% Less leading in most fonts (due to the narrow columns)
+% The choices were between 1-pt and 1.5-pt leading
+% \def\@normalsize{\@setsize\normalsize{11pt}\xpt\@xpt}
+% \def\small{\@setsize\small{10pt}\ixpt\@ixpt}
+% \def\footnotesize{\@setsize\footnotesize{10pt}\ixpt\@ixpt}
+% \def\scriptsize{\@setsize\scriptsize{8pt}\viipt\@viipt}
+% \def\tiny{\@setsize\tiny{7pt}\vipt\@vipt}
+% \def\large{\@setsize\large{14pt}\xiipt\@xiipt}
+\def\Large{\@setsize\Large{16pt}\xivpt\@xivpt}
+% \def\LARGE{\@setsize\LARGE{20pt}\xviipt\@xviipt}
+% \def\huge{\@setsize\huge{23pt}\xxpt\@xxpt}
+% \def\Huge{\@setsize\Huge{28pt}\xxvpt\@xxvpt}
+
+
+\let\@@makecaption\@makecaption
+\renewcommand{\@makecaption}[1]{\@@makecaption{\small #1}}
+
+\end{filecontents*}
+\usepackage{times,latexsym}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage{microtype}
+\microtypesetup{expansion=false}
+\usepackage[]{tacl2021v1}
+\hypersetup{pdfauthor={},pdftitle={Lossy Calibration Archives for Exact Model Repair},pdfsubject={Anonymous TACL submission}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\Qfix}{Q_{\mathrm{fix}}}
+\title{Lossy Calibration Archives for Exact Model Repair}
+\author{Anonymous submission}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Low-bit language models use calibration text to choose a small set of allowed
+weight values. Removing calibration records can change those choices. Recovering
+the revised model usually requires the original text or a large archive of its
+internal features. We show how a lossy feature archive can still recover the exact
+weight choices. The archive stores intervals, and a verifier accepts a choice
+only when every feature value in those intervals leads to it. Unresolved choices
+trigger source replay. For a calibration procedure whose feature extractor stays
+fixed, we prove exact model recovery and equality of the state needed for later
+deletions. For this target, DistilGPT2 and GPT2 repairs match fresh reconstruction across
+42.47 and 84.93 million calibrated weight codes. In a matched study,
+compression saves 7.01--7.86\% of live state, or 1.30--2.24\% including the
+checkpoint, while taking 1.44--2.66 times the optimized lossless request time. The result is a checked storage and source-access
+tradeoff: exact discrete model decisions can survive the loss of exact feature
+values.
+\end{abstract}
+
+\section{Introduction}
+A language model can be made smaller by replacing each weight with one of a few
+allowed values. Calibration text helps choose these values by showing which
+weight errors matter for the model's internal computations. That text is often
+treated as a one-time input. Yet a calibration collection can later change. A
+record may be duplicated, corrupted, or removed from a deployment's approved
+collection. The resulting maintenance task is concrete: rebuild the low-bit
+weights for the retained records and keep enough state to process the next
+removal.
+
+A service can retain the text and extract features again, cache exact features,
+or aggregate their contributions into calibration matrices. Each choice trades
+storage against later source access. An aggregate alone may not identify the
+contribution that must be removed.
+
+We study a fourth option: retaining compressed intervals around the feature
+values. At first this seems incompatible with exact reconstruction. If compression
+loses a feature value, how can a later computation be exact? The key is that the
+required output is discrete. Many possible feature values lead to the same
+rounded weight. The archive need only preserve enough information to distinguish
+the relevant rounding choices. It need not reconstruct every original feature
+bit.
+
+Our verifier recomputes retained-set decisions, including changed codes. A
+numerical solver proposes the calculation; directed bounds check it for every
+feature matrix described by the archive. When this check cannot resolve a choice,
+the service can regenerate exact retained-source features.
+
+We study maintenance of a specified calibration procedure. A feature extractor
+from the original checkpoint is fixed before choosing calibration membership.
+Each record then has the same features regardless of which other records remain.
+This \emph{fixed-teacher calibration} supports source-local archives and exact
+subtraction of source contributions. Ordinary sequential calibration instead
+allows earlier quantized layers to alter later features. Our target also fixes the ridge, normalization, and checkpoint-only grids.
+We measure its predictive cost against a matched sequential constructor. The task changes calibration
+membership; it does not remove information from the checkpoint's pretraining.
+
+We contribute a repair service using lossy feature enclosures, executable
+certificates for its adaptive decisions, and proofs of exact model and successor
+state recovery. Complete transactions compare cold reconstruction, two lossless
+caches, and an exact-Gram hybrid, separating storage, source access, time, and
+prediction quality.
+
+Adaptive rounding already uses calibration geometry~\citep{gptq,quip}; verified
+numerics and adaptive predicates already certify discrete decisions~\citep{rump,shewchuk}.
+Our focus is their use when the calibration evidence itself is lossy and the
+result must support another deletion.
+
+\section{What must the archive remember?}
+\label{sec:intuition}
+Consider a service maintaining a four-bit model. Four-bit weights use sixteen
+allowed values, called \emph{codes}. Calibration adjusts one weight at a time.
+An earlier rounding error influences the next choice through coefficients
+computed from the calibration features. Deletion changes those coefficients,
+which can change later codes. Exact repair therefore requires agreement along
+this entire adaptive sequence.
+
+\paragraph{A changed code from uncertain features.}
+A two-weight example illustrates the information requirement. Let the original
+weights be $(0.4,0.4)$, with allowed values $\{-1,0,1\}$. Suppose two records have
+feature vectors $(1,1)$ and $(-1,1)$. Their cross-products cancel. The first weight
+rounds to zero, and the second receives no correction, so the output is $(0,0)$.
+Now delete the second record. With a ridge term of one, the coefficient carrying
+the first rounding error into the second coordinate is
+\[
+ c=\frac{x_1x_2}{1+x_2^2}=\frac12.
+\]
+The second adjusted value becomes $0.4+c(0.4-0)=0.6$, and its code becomes one.
+
+Suppose the archive retains only $x_1,x_2\in[0.99,1.01]$. Direct interval bounds give
+\[
+ \frac{0.9801}{2.0201}\leq c\leq\frac{1.0201}{1.9801}.
+\]
+Every resulting adjusted value lies inside $[0.59,0.61]$, entirely above the
+rounding boundary $0.5$. Thus the revised output $(0,1)$ is exact even though the
+archive cannot identify either original feature value. This is an algebraic
+illustration, not an experimental result. If the interval crossed $0.5$, the same
+check would request more information rather than guess a code.
+
+\paragraph{Three separate objects.}
+The model contains deployed codes. The repair state identifies retained records
+and stores evidence for later deletion. The execution history records work,
+including replay and failure. Identical codes need not imply identical repair
+states, and identical states need not imply identical costs. We evaluate these
+objects separately.
+
+\section{The reconstruction target}
+\label{sec:target}
+We now define the model that repair must recover. The specification fixes a
+pretrained checkpoint $W$, a set of identified token records $\mathcal D_0$, a
+teacher $T(W)$, and the tokenizer and record boundaries. It also fixes stage and
+coordinate order, rounding grids, positive ridge parameters, and the positive
+original normalization $N_0$. Deleting records changes membership, not these choices.
+The experiments use the original checkpoint as teacher, $T(W)=W$.
+
+\subsection{Source-local features}
+A stage is one calibrated affine transformation. For stage $\ell$ and record $j$,
+let
+\[
+ X_{\ell j}=F_\ell(T(W),j)\in\mathbb Q^{d_\ell\times t_j},
+\]
+where $d_\ell$ is the feature width and $t_j$ is the record's token count.
+$F_\ell$ is a declared finite CPU evaluation. Each successful binary64 output is
+interpreted exactly as a dyadic rational, an integer times a power of two. This
+specifies the arithmetic object being reconstructed without replacing the
+feature extractor by an ideal real-arithmetic network. Unsupported finite
+operations cause refusal.
+
+The evaluator processes each record independently. For retained membership
+$R\subseteq\mathcal D_0$, concatenate its features in canonical source order to
+form $X_\ell(R)$. Its regularized second-moment matrix is
+\begin{equation}
+ H_\ell(R)=\lambda_\ell I+
+ \frac{X_\ell(R)X_\ell(R)^\top}{N_0},\qquad\lambda_\ell>0.
+ \label{eq:metric}
+\end{equation}
+Here $I$ is the identity matrix. The positive ridge makes the matrix positive
+definite. Fixing $N_0$ keeps the unnormalized ridge $\beta=\lambda_\ell N_0$
+constant across deletions. If $T$ tokens remain, multiplying $H$ by $N_0/T$
+gives their average Gram plus ridge $\lambda_\ell N_0/T$. Thus the declared
+policy strengthens regularization relative to the retained-data average as
+records disappear; changing that policy defines a different target.
+
+\subsection{Adaptive weight decisions}
+Suppress stage and output-row indices. Factor the rational matrix as
+$H=L^\top\operatorname{diag}(\tau)L$, where $L$ is unit lower triangular and the
+pivots $\tau_i$ are positive. This reverse LDL factorization determines the
+coefficient $c_{ih}=L_{ih}$ carrying an earlier rounding error into coordinate
+$i$. For a base-weight row $w$, define
+\begin{align}
+ v_i&=w_i+\sum_{h<i}c_{ih}(w_h-q_h),\label{eq:recurrence}\\
+ q_i&=\operatorname{nearest}_{G_i}(v_i).\label{eq:rounding}
+\end{align}
+This recurrence uses the established quadratic rounding viewpoint~\citep{quip}.
+For a proposed real weight row
+$y$, the distortion is $(w-y)H(w-y)^\top$. With $y_h=q_h$ for $h<i$, minimize
+over the remaining real coordinates. The minimizing coordinate $i$ is $v_i$;
+then round it to $G_i$. The suffix equations in Section~\ref{sec:coefficient}
+give this identity. An exact midpoint selects the lower code, and endpoint
+codes saturate. Collecting all stage outputs defines $\Qfix(R)$; this greedy
+procedure need not minimize distortion jointly over all discrete codes.
+The ridge term penalizes weight movement.
+
+For each experimental output row, the grid is
+$s_{\ell,r}\{-8,\ldots,7\}$. Its scale is the smallest positive checkpoint-only dyadic
+scale with at most 24 significant binary digits that covers the base weights
+and gives finite exactly representable codes and midpoints. The scale is shared
+across that row's coordinates. Archive precision and weight precision are
+separate: the archive stores feature evidence, while these sixteen values define
+the deployed four-bit weights.
+
+Earlier decisions enter later values through~\eqref{eq:recurrence}. A certificate
+must therefore establish the accepted prefix before using it to certify the next
+code. The fixed teacher keeps later defining inputs independent of repaired weights.
+Changing any fixed target component creates a different reconstruction problem.
+
+\section{Certifying decisions from lossy evidence}
+\label{sec:method}
+Preparation evaluates each source through the frozen teacher and encodes a
+canonical descriptor $D_{\ell j}$. Decoding returns entrywise bounds satisfying
+\begin{equation}
+ \underline X_{\ell j}\leq X_{\ell j}\leq\overline X_{\ell j}.
+ \label{eq:containment}
+\end{equation}
+Preparation checks every actual feature value against its bounds. Metadata binds
+the source and token identities, stage, target, codec, and a commitment to the
+original feature words.
+
+The codec groups 256 token-major values into blocks. Each block stores a shared
+power-of-two step and signed 48-bit cell indices. Two-bit tags distinguish closed
+cells, exact grid values, and exact binary64 escapes near overflow. Endpoints are
+exactly representable dyadics. Escapes and metadata count toward storage, so
+48-bit indices do not imply a uniform 25\% archive saving.
+
+\subsection{From coefficient intervals to codes}
+A request first validates its predecessor, deletion IDs, retained membership,
+and target bindings. It keeps each surviving descriptor unchanged and processes
+stages in order. A numerical solver proposes coefficients. A separate directed
+verifier bounds their errors over every feature realization in the decoded box.
+Using the accepted prefix in~\eqref{eq:recurrence}, it obtains an enclosure
+$[\underline v_i,\overline v_i]$ for the next adjusted value.
+
+For a grid $g_0<\cdots<g_{k-1}$, let $m_a=(g_a+g_{a+1})/2$. The decision cell
+for an interior code $g_a$ is $(m_{a-1},m_a]$. Endpoint cells extend to infinity.
+Acceptance requires the entire value enclosure to lie in one cell. The strict
+lower boundary and inclusive upper boundary implement the lower-code tie rule.
+A proposal close to a grid value is insufficient if its verified enclosure
+crosses a cell boundary.
+
+If a box cannot certify the stage within its admitted work, the service may
+regenerate exact retained features and use a point certificate. It verifies that
+replayed words and containment match preparation. Access accounting includes
+every traversed ancestor stage. Temporary exact features do not replace the
+compressed successor descriptors. Exhausting a CPU, memory, refinement, or replay
+allowance ends the attempt without committing a complete replacement.
+
+\subsection{An executable coefficient bound}
+\label{sec:coefficient}
+We give the link between a numerical solve and the adaptive coefficients.
+For one realized feature matrix $X$, set $K=XX^\top$, $\beta=\lambda N_0>0$, and
+$A=\beta I+K=N_0H$. Let $S_i=\{i,\ldots,d\}$ be the suffix beginning at
+coordinate $i$, and let $e_1$ be its first coordinate vector. Then
+\begin{equation}
+ c_{ih}=K_{h,S_i}A_{S_i,S_i}^{-1}e_1,\qquad h<i.
+ \label{eq:suffix}
+\end{equation}
+To prove the identity, factor $A=L^\top D L$. Scaling $H$ changes the diagonal
+factor, not $L$. With $S=S_i$, the suffix and cross blocks are
+\begin{align*}
+ A_{S,S}&=L_{S,S}^\top D_{S,S}L_{S,S},\\
+ A_{h,S}&=L_{S,h}^\top D_{S,S}L_{S,S}.
+\end{align*}
+Their product with $A_{S,S}^{-1}e_1$ is
+$L_{S,h}^\top L_{S,S}^{-\top}e_1=L_{ih}$: the first column of the unit upper
+triangular inverse is $e_1$. Since $h<i$, $A_{h,S}=K_{h,S}$, proving~\eqref{eq:suffix}.
+
+Let $\widehat z_i$ be a numerical proposal, held fixed throughout its check.
+Suppose the verifier establishes
+$\|e_1-A_{S,S}\widehat z_i\|_2\leq\eta_i$, where $\|\cdot\|_2$ is the Euclidean
+norm. The coefficient error obeys
+\begin{equation}
+ \left|c_{ih}-K_{h,S}\widehat z_i\right|
+ \leq\eta_i\min\left\{
+ \frac{\|K_{h,S}\|_2}{\beta},
+ \frac{\sqrt{K_{hh}}}{2\sqrt\beta}\right\}.
+ \label{eq:radius}
+\end{equation}
+For the first bound, write the error as
+$K_{h,S}A_{S,S}^{-1}(e_1-A_{S,S}\widehat z_i)$ and use
+$A_{S,S}\succeq\beta I$. For the second, use $K_{h,S}=X_hX_S^\top$.
+Each singular value $s$ of $X_S$ contributes $s/(\beta+s^2)$ to the norm of
+$X_S^\top(\beta I+X_SX_S^\top)^{-1}$. This is at most $1/(2\sqrt\beta)$, while
+$\|X_h\|_2=\sqrt{K_{hh}}$. Multiplication by the residual bound proves the claim.
+
+For uncertain features, directed arithmetic encloses the dot product
+$K_{h,S}\widehat z_i$, the residual norm, the Gram-row norm, and its diagonal
+uniformly over the feature box. Combining this dot-product enclosure with
+\eqref{eq:radius} bounds the coefficient. The argument applies to each realized
+feature Gram, which is positive semidefinite. It does not assign that property
+to arbitrary matrices inside an entrywise Gram enclosure. The coefficient
+intervals then feed the decision-cell check above.
+
+\subsection{How much uncertainty is tolerable?}
+\label{sec:margin}
+The decision check gives a useful criterion for archive precision. Suppose the
+coefficient intervals for the accepted prefix have centers $\bar c_{ih}$ and
+radii $\delta_{ih}\geq0$. Define the adjusted center and propagated radius as
+\begin{align}
+ u_i&=w_i+\sum_{h<i}\bar c_{ih}(w_h-q_h),\\
+ \rho_i&=\sum_{h<i}\delta_{ih}|w_h-q_h|.
+ \label{eq:propagation}
+\end{align}
+For every admitted coefficient realization,
+$|v_i-u_i|\leq\rho_i$ by the triangle inequality. If a proposed code has cell
+$(a_i,b_i]$, the sufficient acceptance conditions are
+\begin{equation}
+ u_i-\rho_i>a_i,\qquad u_i+\rho_i\leq b_i.
+ \label{eq:margin}
+\end{equation}
+At endpoint codes the corresponding infinite boundary imposes no restriction.
+These expressions are exact arithmetic identities; an executable evaluation
+must enclose the centers, products, sums, and comparisons outwardly as well.
+
+\paragraph{From archive width to coefficient error.}
+Let $\bar X$ be the box center and $E$ its entrywise radius. Set
+$\epsilon=\|E\|_F$ and $\kappa=\|\bar X\|_F$, where $\|\cdot\|_F$ is the
+square root of the sum of squared entries. Let $\bar K=\bar X\bar X^\top$ and $\bar A=\beta I+\bar K$. Define
+\[
+ \gamma=2\kappa\epsilon+\epsilon^2,\qquad
+ D_{ih}=\frac{\gamma}{\beta}
+       +\frac{\|\bar K_{h,S_i}\|_2\gamma}{\beta^2}.
+\]
+Every feature matrix in the box satisfies $|c_{ih}-\bar c_{ih}|\leq D_{ih}$,
+where $\bar c_{ih}$ is the exact coefficient at $\bar X$. To see this, write
+$X=\bar X+\Delta$ with $\|\Delta\|_2\leq\epsilon$, giving
+$\|K-\bar K\|_2\leq\gamma$. Both regularized suffix inverses have norm at most
+$1/\beta$. The resolvent identity bounds their difference by $\gamma/\beta^2$;
+expanding $K_{h,S}A_{S,S}^{-1}-\bar K_{h,S}\bar A_{S,S}^{-1}$ proves the bound.
+
+Along the center's accepted prefix, inserting $D_{ih}$ for $\delta_{ih}$
+in~\eqref{eq:propagation} gives a sufficient archive-width condition via
+\eqref{eq:margin}. For block cell widths $\Delta_b$, $\epsilon^2$ is the sum of
+$(\Delta_b/2)^2$ over non-exact entries; exact escapes contribute zero.
+Smaller cells reduce this bound, but small ridge and large earlier residuals
+amplify it. This conservative analytical bound is not a prediction of the
+bounded implementation's success. If two realizations give different codes,
+no uniform certificate exists. Even when all agree, interval dependence can
+cause refusal. An exact midpoint has zero two-sided margin; refinement alone
+need not resolve it.
+
+\subsection{Choosing the numerical representation}
+The same coefficient has the token-space form
+\begin{equation}
+ c_{ih}=X_h(\beta I+X_S^\top X_S)^{-1}X_i^\top.
+ \label{eq:dual}
+\end{equation}
+This follows by multiplying
+$X_S^\top(\beta I+X_SX_S^\top)=(\beta I+X_S^\top X_S)X_S^\top$ by the respective
+inverses. The identities allow a solver to work in either space. For
+$B_i=\beta I+X_S^\top X_S$ and a fixed proposal $\widehat t_i$, a verified bound
+$\|X_i^\top-B_i\widehat t_i\|_2\leq\xi_i$ gives
+\[
+ |c_{ih}-X_h\widehat t_i|\leq\|X_h\|_2\xi_i/\beta.
+\]
+Indeed, $B_i\succeq\beta I$, so the inverse has norm at most $1/\beta$.
+Outward enclosures make this bound uniform over a feature box. The token route
+can propagate it through accumulated weighted features instead of materializing
+every scalar coefficient.
+
+For width $d$, retained tokens $T$, and output rows $r$, admission uses
+structural work terms $dT^2$ for token-space coefficients and $d^2T+d^3$ for
+feature-space coefficients, with $rd^2$ row work for the latter. These are
+budget proxies, not bounds on the full verification cost. The service admits its arrays and bounded schedule
+before feature access. Its original dispatcher prefers token space when
+$4T\leq d$, and streamed feature space otherwise. The final matched study fixes
+the token route for all point-valued solves. These are declared engineering
+policies. Actual runtime also depends on interval width, decoding, repeated
+verification, and replay. Compatible controls receive the same kernels and
+route choices.
+
+\section{Correct models and reusable successor states}
+\label{sec:correctness}
+\begin{center}
+\fbox{\parbox{0.92\columnwidth}{\small
+\textbf{Repair procedure.} Prepare each source by evaluating its features,
+encoding a descriptor, and checking containment. On deletion:\\
+1. Validate the target, predecessor, IDs, and work allowance.\\
+2. Keep surviving descriptors; propose and verify each stage's codes.\\
+3. If unresolved and permitted, replay retained sources, check their words,
+and certify the point input. Otherwise stop without a completed successor.\\
+4. Verify all stage extents, serialize state and trust records, and seal completion.
+Publish a successor only after these checks.}}
+\end{center}
+The first guarantee concerns the model produced by a successful request.
+\begin{theorem}[Exact code recovery]
+\label{thm:codes}
+Assume that features come from the frozen source-local evaluator and that trusted
+descriptors satisfy~\eqref{eq:containment}. Each accepted certificate must be
+valid for every feature realization in its supplied box, conditional on its
+accepted prefix. Any fallback must reproduce the same finite features and
+certify~\eqref{eq:recurrence}--\eqref{eq:rounding}. If the service commits every
+required stage, the resulting model is $\Qfix(R)$.
+\end{theorem}
+\begin{proof}
+Source locality makes each surviving feature matrix equal to its retained-only
+reconstruction. It lies inside the prepared box. A valid first-coordinate
+certificate therefore selects the target code. Suppose the earlier accepted
+codes equal the target prefix. The next certificate's premise is then satisfied,
+so its selected code also equals the target. Induction establishes each row.
+A successful fallback uses the same features and target, giving the same
+conclusion. The fixed teacher makes this argument apply to every stage without
+changing later defining inputs. The complete extent check covers the entire
+committed model.
+\end{proof}
+
+The state must also support the next request. Fix the codec, preparer,
+representation rule, source ordering, provenance policy, and serialization.
+Let $E(R)$ contain the retained canonical descriptors or the canonical exact
+pooled Grams required by that representation. Define
+\begin{equation}
+ \begin{aligned}
+ \mathcal S(R)=\operatorname{encode}\bigl(&\text{target},\Qfix(R),R,\\
+                         &E(R),\text{provenance}\bigr).
+ \end{aligned}
+ \label{eq:state}
+\end{equation}
+Provenance here means retained-record identity and target/codec bindings.
+Execution logs are external. \emph{Trust sidecars} are separate verification
+records binding exact Gram payloads to source commitments. The canonical state
+contains the fields in~\eqref{eq:state}; required sidecars are checked separately
+and included in live bytes. Retrieval tokens or indexes and any source-access
+obligations are also counted.
+
+\begin{lemma}[Exact source subtraction]
+\label{lem:subtract}
+For fixed source-local features, $K(R)=\sum_{j\in R}X_jX_j^\top$.
+Exact subtraction of trusted deleted-source contributions, with original
+normalization unchanged, equals fresh retained-source accumulation.
+\end{lemma}
+\begin{proof}
+Each source contribution is unchanged by other records' deletion. Finite sums
+over disjoint source sets are additive in rational arithmetic. Subtracting the
+removed summands leaves the retained sum. Canonical integer scaling and
+serialization remove dependence on the order of additions and deletions.
+\end{proof}
+
+\begin{theorem}[Canonical successor equality]
+\label{thm:state}
+Under Theorem~\ref{thm:codes}, suppose descriptors are deterministic and retained
+unchanged, Gram updates satisfy Lemma~\ref{lem:subtract}, and compared executions
+use the same policies in~\eqref{eq:state}. A successful repair returns
+$\mathcal S(R)$. Its bytes equal those of any successful certified fresh
+reconstruction in that representation. The equality holds after every step of
+a sequence of successful valid deletions.
+\end{theorem}
+\begin{proof}
+The model agrees by Theorem~\ref{thm:codes}. Retained descriptors agree because
+their source-local inputs and encoder agree. Pooled Grams agree by exact
+subtraction and canonicalization. Membership, target, provenance, and encoding
+policies are identical, so each serialized component agrees. Apply the same
+argument at each successor.
+\end{proof}
+
+Equality is representation-specific and excludes execution histories.
+The trusted base includes the finite evaluator, outward arithmetic, runtime and
+immutable input provenance. Hash commitments detect changed bytes, not semantic
+containment or a hostile host. Positive ridge ensures invertibility, not completion.
+
+\section{Evaluation design}
+\label{sec:design}
+We evaluate three questions separately: whether a complete repair is exact,
+what resources it consumes, and how the fixed-teacher target affects predictions.
+The service studies use DistilGPT2, with approximately 82 million parameters, and
+GPT2, with 124 million (\citealp{distilgpt2}; \citealp{gpt2card}). They calibrate 24 and 48 affine
+stages, respectively. The packed outputs contain 42,467,328 and 84,934,656 codes;
+unchanged checkpoint components remain necessary for inference. Calibration
+records are English C4 web text~\citep{c4}, each with 128 tokens.
+
+\subsection{Comparators and complete accounting}
+The \emph{cached lossless} arm stores exact feature values. The \emph{modern
+lossless} arm selects the smallest complete descriptor among raw, zlib6,
+byte-shuffled zlib6, Zstandard3, and byte-shuffled Zstandard3 encodings, with
+fixed-order ties. Every candidate encoder is charged. \emph{Cold reconstruction}
+extracts retained features from source records. The \emph{hybrid exact-Gram} arm
+stores exact Grams at eighteen width-768 stages and lossless features at six
+width-3072 stages in DistilGPT2. Our \emph{compressed} arm stores the 48-bit interval
+descriptors. All arms target the same codes and are compared with a fresh
+retained-input reconstruction in their respective state representation.
+The cold arm deliberately writes the lossless successor cache, explaining its
+identical stored size. It is not a minimal-storage source-only service; such a
+baseline, retaining only codes, tokens or references, and bindings, is unmeasured.
+It would require retained sources on every repair. Lossless caches need neither
+retained nor deleted sources; compression may need retained sources on refusal;
+the pooled-Gram hybrid may need deleted sources for subtraction.
+
+An oracle traverses retained tokens without reading the candidate predecessor.
+The audits compare actual model and state payloads; the later studies also compare
+required trust artifacts. The oracle shares the numerical solver. This checks
+complete reconstruction and source independence, while leaving implementation
+errors shared by that solver outside the comparison.
+
+The baseline request clock includes predecessor reads and validation, attempted
+certificates, accumulation, extraction, fallback, output writes, and cleanup.
+It excludes the caller's context loading and controller overhead. Optimization
+and matched tables instead use complete host time, including startup and
+admission. Comparisons are within each table; absolute times across studies
+are not paired speed measurements. Nested source extraction is included in its
+stage clock and is never added a second time.
+
+Preparation must be included when comparing deployment lifetimes. If $P_a$ is
+preparation for representation $a$ and $C_{a,k}$ is its complete cost on actual
+successor transition $k$, then
+\begin{equation}
+ L_a(m)=P_a+\sum_{k=1}^{m}C_{a,k}.
+ \label{eq:lifetime}
+\end{equation}
+Alternative deletions from an unchanged root do not form such a trajectory.
+Shared preparation has an explicit attribution convention rather than an
+implicit zero cost.
+
+Live storage includes codes, descriptors or Grams, targets, tokens or retrieval
+indexes, provenance, and required trust sidecars. We also report a total that
+adds the common checkpoint. A model embedded in the state is counted once.
+Runtime and codec installations, and physical audit archives, are separate.
+Source access counts source--stage record traversals, including ancestors.
+One record replayed through twenty-four stages costs twenty-four accesses.
+This counts feature traversal, not distinct disk reads or network requests.
+
+For a service with $n$ independently stored repair states and one shared extra
+codec installation of $I$ bytes, compression saves total space only if
+$\sum_{j=1}^n(B_{L,j}-B_{C,j})>I$, where $B_L,B_C$ count each complete state.
+In Table~\ref{tab:service}, the modern-lossless differences are 33.959 and
+16.997\,MB. Charging the entire 23.871\,MB codec installation as additional gives
+10.089\,MB saved at twelve records and 6.873\,MB extra at six. Two separate
+six-record states sharing that installation would save 10.124\,MB. This is a
+sharing calculation, not a measured deployment. Repair frequency and retention
+duration determine whether saved byte-time justifies extra compute; no service
+cost model or deletion frequency was measured.
+
+\subsection{Four studies and their selection history}
+\label{sec:studies}
+The first complete service study uses thirteen previously unexposed training
+records. It deletes one and then six more, giving $13\to12\to6$ records while
+keeping normalization 1664 and ridge $1/100$. Records are sorted by ID; the
+first is deleted, followed by the next six. It compares all five arms. The second study holds
+that root and target fixed and evaluates reference and optimized versions of the
+compressed and modern lossless arms. Both optimized arms receive the compatible
+token-neighbor kernel. Compression adds a native decoder; modern lossless adds
+bounded reuse of decoded descriptors. Each package is evaluated as a whole.
+
+The third study matches both checkpoints on four exposed records, deletion
+$4\to3\to2$, normalization 512, and ridge $1/100$. Every point-valued solve uses the existing
+token-space coefficient route, fixed before execution for all four cells and both fresh oracles.
+Box and Gram policies remain unchanged. Each request runs in a fresh process on
+the same host with one CPU and 16\,GiB memory. The grid-storage guard permits
+1,327,104 scalar entries. Sealed preparation artifacts are reused and their costs retained.
+All timing cells in these studies are single observations. Execution order is
+fixed, with endpoint reversal in the optimization screen; OS cache is uncontrolled.
+
+The fourth study evaluates the earlier 1664-normalized DistilGPT2 target on
+untouched articles. It is distinct from the smaller matched targets. Teacher
+and precision choices preceded it: a nearest-rounded teacher had failed a pooled
+quality guard with a 5.92\% perplexity increase; the original-checkpoint teacher
+was initially selected using eight exposed articles. A 40-bit archive refused
+certification, followed by a separately registered 48-bit study. The initial
+matched GPT2 request also refused after both preparations completed. A separate
+stage diagnostic motivated the prospective point-token policy above. These
+choices make the later studies scoped tests of fixed configurations.
+
+\section{Complete repair results}
+\label{sec:results}
+\subsection{Storage and source access at a fixed target}
+All ten arm--endpoint comparisons in the disjoint-root service study match fresh
+reconstruction for the complete model and successor state. Table~\ref{tab:service}
+shows their resource choices. Compression reduces live storage relative to both
+lossless caches and needs no source traversal on this trajectory. Relative to
+modern lossless, live savings are 9.24\% and 8.70\%; adding the checkpoint reduces
+these to 4.71\% and 3.10\%. The codec installation adds 23,870,575 bytes separately.
+
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{rlrrrr}
+\toprule
+Records & Service arm & Request (s) & Live (MB) & With checkpoint (MB) & Accesses \\
+\midrule
+12 & Cached lossless & 4,419.007 & 368.003 & 720.828 & 0 \\
+ & Modern lossless & 4,579.496 & 367.456 & 720.282 & 0 \\
+ & Cold reconstruction & 5,973.008 & 368.003 & 720.828 & 288 \\
+ & Hybrid exact Gram & 4,921.935 & 318.918 & 671.743 & 24 \\
+ & Compressed & 5,206.569 & 333.497 & 686.322 & 0 \\
+\midrule
+6 & Cached lossless & 922.484 & 195.615 & 548.441 & 0 \\
+ & Modern lossless & 897.841 & 195.330 & 548.155 & 0 \\
+ & Cold reconstruction & 1,619.473 & 195.615 & 548.441 & 144 \\
+ & Hybrid exact Gram & 1,694.311 & 220.247 & 573.072 & 144 \\
+ & Compressed & 1,351.098 & 178.333 & 531.158 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{Complete DistilGPT2 service on $13\to12\to6$ records. MB are decimal;
+live storage includes trust sidecars. Request time excludes caller context loading
+and controller overhead. Accesses count source--stage traversals. The checkpoint
+column excludes runtime and codec installation. Each row is one observation;
+every model/state comparison passes.}
+\label{tab:service}
+\end{table*}
+
+The hybrid demonstrates why the access contract matters. At twelve records, it
+is both smaller and faster than compression, while reading source records. At
+six, compression is smaller and faster than the hybrid and avoids its 144
+accesses. Both lossless caches are faster than compression at both endpoints.
+The compressed requests use bounded numerical fallback on 68 and 2 rows,
+respectively, but no source replay. Numerical refinement and source access are
+therefore distinct costs.
+
+\subsection{Optimizing both sides of the comparison}
+All eight requests in Table~\ref{tab:optimization} match fresh model, state, and
+trust artifacts, with no source replay. The compressed package reduces observed
+request times by 11.53\% and 36.17\%; the modern package reduces them by 0.69\%
+and 19.93\%. The first optimized endpoint is nearly tied. The second favors
+modern lossless. Their stored-state sizes are unchanged from
+Table~\ref{tab:service}.
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{@{}rlrr@{}}
+\toprule
+Records & Archive & Ref. (s) & Opt. (s) \\
+\midrule
+12 & Compressed & 4,444.116 & 3,931.646 \\
+ & Modern & 3,995.241 & 3,967.523 \\
+6 & Compressed & 1,328.624 & 848.119 \\
+ & Modern & 939.553 & 752.336 \\
+\bottomrule
+\end{tabular}
+\caption{Complete host times for both optimization packages on the same
+DistilGPT2 trajectory. Modern denotes the modern lossless cache. Each timing cell is one request.}
+\label{tab:optimization}
+\end{table}
+
+Including attributed shared preparation and both requests, the totals are
+10,995.918 seconds for compression and 10,287.226 for modern lossless, a 6.89\%
+observed lifetime penalty. The bundled changes do not isolate a decoder-only effect.
+
+\subsection{Matched repair across two checkpoint depths}
+All sixteen complete model, state, and trust comparisons pass for the matched
+DistilGPT2/GPT2 study. Both audits cover every calibrated stage and code, including
+the second successor. Table~\ref{tab:matched} reports all request times. The
+optimization improves each representation relative to its reference, but
+optimized compression takes longer than optimized modern lossless at all four
+checkpoint/endpoint settings.
+
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrr}
+\toprule
+Checkpoint & Records & Ref. comp. & Opt. comp. & Ref. lossless & Opt. lossless & Opt. C/L \\
+\midrule
+DistilGPT2 & 3 & 589.239 & 411.279 & 369.644 & 286.419 & 1.4359 \\
+ & 2 & 436.691 & 325.131 & 219.802 & 179.706 & 1.8092 \\
+GPT2 & 3 & 2,027.290 & 1,544.049 & 733.046 & 580.147 & 2.6615 \\
+ & 2 & 838.153 & 615.039 & 406.506 & 326.341 & 1.8847 \\
+\bottomrule
+\end{tabular}
+\caption{Complete host times (seconds) for the matched $4\to3\to2$ point-token
+study. Lossless denotes the modern cache. C/L divides optimized compressed time
+by optimized lossless time. Each cell is one observation, with complete equality
+against its same-checkpoint fresh reconstruction.}
+\label{tab:matched}
+\end{table*}
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{Live (\%)} & \multicolumn{2}{c}{Total (\%)} \\
+Records & 3 & 2 & 3 & 2 \\
+\midrule
+DistilGPT2 & 7.78 & 7.01 & 1.84 & 1.30 \\
+GPT2 & 7.86 & 7.09 & 2.24 & 1.61 \\
+\bottomrule
+\end{tabular}
+\caption{Matched compressed storage savings relative to modern lossless. Total
+adds the shared checkpoint to each live-state size; it excludes runtime installs.}
+\label{tab:storage}
+\end{table}
+
+Storage savings persist across both depths (Table~\ref{tab:storage}). Source
+avoidance is less uniform. At three GPT2 records, both compressed cells replay
+144 source--stage record pairs after refusal at the final-block MLP
+up-projection. Optimized compressed stage work takes 1,458.767 seconds, including
+695.104 seconds of source extraction, versus 476.578 seconds for modern lossless.
+Six of eight compressed requests use no source replay; all eight lossless requests use none.
+
+At two DistilGPT2 records, compression remains slower without replay: stage
+work takes 267.560 seconds versus 114.651 for modern lossless. Thus cheaper
+validation does not remove the certification cost. Both checkpoints share the
+GPT family; complete code counts measure output coverage, not independent trials.
+
+\subsection{Predictive cost of the fixed teacher}
+\label{sec:quality}
+Quality is evaluated for the earlier DistilGPT2 target with normalization 1664.
+We select 320 articles without observing losses from 2,778 eligible records in
+a saved frame of 3,801 complete records. The entire inspected frame, sixty
+historical exclusions, and the separate calibration frame are protected against
+reuse. Each article supplies 127 predictions from 128 tokens. Six model roles
+share these articles: the fixed-teacher and sequential models at each retained
+endpoint, the original checkpoint, and a nearest-grid control.
+
+The matched sequential constructor uses the same retained records, normalization,
+ridge, and grids, but obtains later features from its quantized prefix. It
+isolates the teacher choice within our target family; it is not a comparison
+with an off-the-shelf GPTQ implementation. A fixed-seed paired article bootstrap
+uses 20,000 draws shared across endpoints. For article mean negative log losses
+$\ell_{f,j}$ and $\ell_{s,j}$, the pooled ratio is
+$\exp(\frac{1}{320}\sum_j(\ell_{f,j}-\ell_{s,j}))$, since articles have equal
+prediction counts. The maximum is $\max_j\exp(\ell_{f,j}-\ell_{s,j})$.
+Resampling preserves whole-article pairs; upper bounds use the empirical
+97.5th percentile with the next higher order statistic.
+The frozen guards require each pooled perplexity ratio and its
+one-sided 97.5\% upper bound to be at most 1.05, and each observed maximum article
+ratio to be at most 1.20. The two upper bounds have nominal familywise level
+95\%. This is an approximate bootstrap over the admitted frame; the observed
+maximum describes those articles.
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+Records & Pooled ratio & Upper bound & Maximum \\
+\midrule
+12 & 1.005421 & 1.010342 & 1.129140 \\
+6 & 1.007149 & 1.011431 & 1.126961 \\
+\bottomrule
+\end{tabular}
+\caption{Untouched quality: fixed-teacher perplexity divided by matched
+sequential perplexity on 320 articles. The upper bound is one-sided 97.5\%.
+All prespecified guards pass.}
+\label{tab:quality}
+\end{table}
+
+The ratios in Table~\ref{tab:quality} show a small predictive cost. Candidate
+perplexities are 60.1053 and 60.3088, compared with sequential values 59.7812 and
+59.8807. The paired 95\% percentile intervals for the ratios are
+[1.000455, 1.010342] and [1.002870, 1.011431], both above one. Original-checkpoint
+and nearest-grid control perplexities are 54.9643 and 74.6245. These measurements
+support the specified tolerance for this target and article frame. The
+512-normalized targets in the matched study have no quality evaluation.
+
+All twenty-four CPU/CUDA reference comparisons pass the fixed $10^{-8}$ mean
+negative-log-likelihood barrier, with maximum difference $1.155\times10^{-14}$.
+The terminal audit checks 1,920 GPU and twenty-four CPU losses, saved sequential
+codes, original parameters, and recomputed statistics. This evaluates identical
+saved models across likelihood implementations; calibration itself uses the
+finite CPU evaluator defined in Section~\ref{sec:target}.
+
+\section{Relation to prior work}
+\label{sec:related}
+\paragraph{Calibration and retained information.}
+GPTQ~\citep{gptq} uses asymmetric min--max grids and propagates quantized
+block outputs. Our fixed teacher and base-only grids define a different target.
+QSS~\citep{qss} uses a frozen schema and additive prediction corrections;
+removing schema-training data requires rebuilding the affected instance.
+Our uncertain Grams instead determine adaptive weight codes.
+
+QuIP~\citep{quip} develops LDL-based adaptive rounding and analyzes its
+quadratic error. \citet{babai} relate reverse-order GPTQ to Babai's nearest-plane
+algorithm, with a distortion bound under no clipping. Those results concern
+rounding with known calibration geometry. We certify a fixed rounding target
+when deletion changes that geometry and only feature enclosures remain.
+
+\paragraph{Quantization and exact deletion.}
+\citet{ginart} use quantized $k$-means and stability tests, with retraining
+when deletion changes relevant centroids. Exact-Fun~\citep{exactfun} corrects
+deleted gradients and resumes affected quantized federated training.
+Our certificate covers changed retained-set codes over feature enclosures;
+these different learning tasks are not runtime baselines.
+
+\paragraph{Compression and verification.}
+MEDU~\citep{medu} stores compressed distributed-training updates and bounds
+deviation from retraining. Our output contract is equality of discrete codes.
+QEBVerif~\citep{qebverif} bounds inference-output differences between a network
+and its quantized counterpart using reachability analysis and MILP.
+ExecCert~\citep{execcert} uses residual certificates and margins for discrete
+prediction agreement. Our chain verifies adaptive weight codes and canonical
+repair states. Interval bounds and proposal--verification separation are
+established tools, rather than separate novelty claims.
+
+\section{Reproducibility and practical use}
+\label{sec:repro}
+\paragraph{Implementation and data.}
+The CPU runtime uses CPython 3.12.14, NumPy 2.3.5, OpenBLAS 0.3.30,
+gmpy2 2.3.2, tokenizers 0.23.2, GCC 12.2, and Zstandard 1.5.7 through python-zstandard 0.25.0
+on x86-64 Linux. Quality inference uses an NVIDIA A100 80GB; bootstrap statistics
+use NumPy 2.2.6. Model citations pin checkpoint revisions.
+The C4 revision is \texttt{1588ec454efa}. The thirteen-record root comes from
+complete records in the first 2\,MiB compressed prefix of English training
+shard 2. Quality uses validation shard 1 with separate 8\,MiB transfer and
+decoded-frame bounds.
+Records use the first 128 tokens without beginning/end markers, with positions
+reset per source. Selection excludes exact IDs, text/normalized-text/URL hashes,
+and token prefixes of lengths 16, 32, 64, and 128. Sampling is within these bounded
+frames, not uniform across C4. Earlier development included WikiText-2~\citep{wikitext}.
+
+Independent rational checks cover suffix/dual identities, conditional quadratic
+minimization and cell boundaries, plus 39,366 realizations of 486 two-by-two
+feature boxes for the archive-width bound. These are generated algebra checks,
+separate from model experiments.
+
+\paragraph{Executable arithmetic.}
+Interval products enclose all endpoint products; sums accumulate outward at each
+step using adjacent binary64 numbers. Exact zero shortcuts are checked explicitly.
+Squared norm bounds accumulate upper magnitudes. A square-root proposal is
+accepted only after its squared lower bound covers the normalized argument;
+otherwise it is advanced upward, at most eight times. Overflow, nonfinite
+bounds, and failed runtime checks cause refusal. Gradual underflow is required.
+The native compiler disables fast math and fused contraction. Approximate
+inverses and BLAS solves propose values; directed checks authorize codes.
+Point refinement is capped at sixteen coordinates, with exact fallback only
+within its separate rank and coordinate bounds. A midpoint uses the lower code
+only when its exact value or full enclosure establishes that decision cell.
+
+Feature evaluation retains coordinate-order binary64 products and sums, without
+BLAS reduction or fused multiply-add. Nonlinear primitives use directed MPFR
+bounds whose endpoints must round to the same binary64 word; an unresolved
+primitive refines from 96 to at most 3072 interval bits before refusal. An ordered
+104-bit batch path precedes that fallback. Execution binds evaluator sources,
+Python and loaded math libraries, CPU dispatch fields, primitive backend, and
+implementation manifests. Proposal libraries are single-threaded; OpenBLAS, OMP,
+MKL and NumExpr thread counts are one. Changed bindings require requalification,
+and replay must match the original feature-word commitments, not just versions.
+
+The service, optimization, matched continuation and quality workers consumed
+47,767, 35,258, 20,526 and 7,526 numerical CPU seconds, respectively. The matched
+figure includes its failed-screen and diagnostic debit. Preparation costs and
+all failures remain in the evidence record; worker and scheduler clocks overlap.
+An unresolved historical 12,602-second reservation remains separate. These
+figures are not a complete all-history compute total.
+
+\paragraph{Inputs and responsibility.}
+The author-side archive preserves outputs, losses, selections, failures and
+1,322 source/protocol copies. Source release terms are unassigned; no external
+review supplement is provided. Fresh reproduction from external inputs remains
+unexecuted. Model cards declare Apache 2.0 for DistilGPT2 and MIT for GPT2; C4's
+ODC-BY and Common Crawl conditions do not establish rights to every page.
+Logical calibration deletion leaves external corpora and audit archives intact.
+No content-level privacy or demographic audit was performed. Generative AI
+assisted planning, code, analysis, literature checks and writing; the authors
+remain responsible for all content.
+
+\paragraph{Choosing an archive.}
+The matched results favor optimized lossless storage when latency dominates.
+Compression needs a storage budget that justifies longer repair time and a policy
+for unavailable replay sources. These archives preserve a binary64 feature target;
+a lower-precision target needs its own correctness and quality comparison.
+Repair-state savings imply neither inference-memory nor serving-throughput gains.
+
+\section{Conclusion}
+Lossy calibration evidence can determine exact adaptive weight codes. Uniform
+certificates, source replay, and canonical state construction make successful
+repairs reusable for subsequent deletions. The measured operating point trades
+modest storage savings for additional certification work and workload-dependent
+source access.
+\label{page:main-end}
+\clearpage
+\begin{thebibliography}{15}
+
+\bibitem[Chee et~al.(2023)Chee, Cai, Kuleshov, and De~Sa]{quip}
+Jerry Chee, Yaohui Cai, Volodymyr Kuleshov, and Christopher De~Sa. 2023.
+\href{https://proceedings.neurips.cc/paper_files/paper/2023/hash/0df38cd13520747e1e64e5b123a78ef8-Abstract-Conference.html}{QuIP: 2-bit quantization of large language models with guarantees}.
+In \emph{Advances in Neural Information Processing Systems}, volume 36, pages 4396--4429.
+
+\bibitem[Chen et~al.(2026)Chen, Shabanzadeh, Crn\v{c}evi\'{c}, Hoefler, and Alistarh]{babai}
+Jiale Chen, Yalda Shabanzadeh, Elvir Crn\v{c}evi\'{c}, Torsten Hoefler, and Dan Alistarh. 2026.
+\href{https://arxiv.org/abs/2507.18553v4}{The geometry of LLM quantization: GPTQ as Babai's nearest plane algorithm}.
+In \emph{International Conference on Learning Representations}. Author version: arXiv:2507.18553v4.
+
+\bibitem[Frantar et~al.(2023)Frantar, Ashkboos, Hoefler, and Alistarh]{gptq}
+Elias Frantar, Saleh Ashkboos, Torsten Hoefler, and Dan Alistarh.
+2023. \emph{GPTQ: Accurate Post-Training Quantization for Generative Pre-trained
+Transformers}. ICLR. Primary preprint:
+\href{https://arxiv.org/abs/2210.17323v2}{arXiv:2210.17323, version 2}.
+
+\bibitem[Ginart et~al.(2019)Ginart, Guan, Valiant, and Zou]{ginart}
+Antonio A. Ginart, Melody Y. Guan, Gregory Valiant, and James Zou.
+2019. \emph{Making AI Forget You: Data Deletion in Machine Learning}.
+Advances in Neural Information Processing Systems 32.
+\href{https://papers.nips.cc/paper_files/paper/2019/file/cb79f8fa58b91d3af6c9c991f63962d3-Paper.pdf}{Primary proceedings paper}.
+
+\bibitem[Hugging Face(n.d.-a)]{distilgpt2}
+Hugging Face. n.d.-a.
+\href{https://huggingface.co/distilbert/distilgpt2/blob/2290a62682d06624634c1f46a6ad5be0f47f38aa/README.md}{DistilGPT2 model card}.
+Model repository, pinned revision \nolinkurl{2290a62682d0}; accessed 28 October 2026.
+
+\bibitem[Hugging Face(n.d.-b)]{gpt2card}
+Hugging Face. n.d.-b.
+\href{https://huggingface.co/openai-community/gpt2/blob/607a30d783dfa663caf39e06633721c8d4cfcd7e/README.md}{GPT-2 model card}.
+Model repository, pinned revision \nolinkurl{607a30d783df}; accessed 28 October 2026.
+
+\bibitem[Lang et~al.(2026)Lang, Helvits, and Shlezinger]{medu}
+Natalie Lang, Alon Helvits, and Nir Shlezinger. 2026.
+\href{https://doi.org/10.1109/ACCESS.2026.3663428}{Memory-efficient distributed unlearning}.
+\emph{IEEE Access}, 14:24361--24378.
+
+\bibitem[Merity et~al.(2017)Merity, Xiong, Bradbury, and Socher]{wikitext}
+Stephen Merity, Caiming Xiong, James Bradbury, and Richard Socher. 2017.
+\href{https://openreview.net/pdf?id=Byj72udxe}{Pointer sentinel mixture models}.
+In \emph{International Conference on Learning Representations}.
+
+\bibitem[Raffel et~al.(2020)Raffel, Shazeer, Roberts, Lee, Narang, Matena, Zhou, Li, and Liu]{c4}
+Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang,
+Michael Matena, Yanqi Zhou, Wei Li, and Peter J. Liu.
+2020. \emph{Exploring the Limits of Transfer Learning with a Unified Text-to-Text
+Transformer}. Journal of Machine Learning Research, 21(140):1--67.
+\href{https://jmlr.org/papers/v21/20-074.html}{Primary journal article}.
+
+\bibitem[Rump(2010)]{rump}
+Siegfried M. Rump. 2010.
+\href{https://www.tuhh.de/ti3/rump/intlab/ActaNumerica2010.pdf}{Verification methods: Rigorous results using floating-point arithmetic}.
+\emph{Acta Numerica}, 19:287--449.
+
+\bibitem[Shewchuk(1997)]{shewchuk}
+Jonathan Richard Shewchuk. 1997.
+\href{https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf}{Adaptive precision floating-point arithmetic and fast robust geometric predicates}.
+\emph{Discrete \& Computational Geometry}, 18(3):305--363.
+
+\bibitem[Tavory et~al.(2026)Tavory, Gade, Sarig, Touitou, and Guy]{qss}
+Ami Tavory, Shripad Gade, Tal Sarig, Noam Touitou, and Ido Guy.
+2026. \emph{Exact Unlearning via Quantized Sufficient Statistics}.
+\href{https://arxiv.org/html/2610.07197v1}{arXiv:2610.07197, version 1}.
+
+\bibitem[Xiong et~al.(2023)Xiong, Li, Li, and Cai]{exactfun}
+Zuobin Xiong, Wei Li, Yingshu Li, and Zhipeng Cai. 2023.
+\href{https://doi.org/10.1109/ICDM58522.2023.00188}{Exact-Fun: An exact and efficient federated unlearning approach}.
+In \emph{IEEE International Conference on Data Mining}, pages 1439--1444.
+
+\bibitem[Zhang et~al.(2023)Zhang, Song, and Sun]{qebverif}
+Yedi Zhang, Fu Song, and Jun Sun. 2023.
+\href{https://doi.org/10.1007/978-3-031-37703-7_20}{QEBVerif: Quantization error bound verification of neural networks}.
+In \emph{Computer Aided Verification}, volume 13965 of LNCS, pages 413--437. Springer.
+
+\bibitem[Zhao et~al.(2026)Zhao, Wang, Chang, and He]{execcert}
+Ziyu Zhao, Xinyu Wang, Xiao-Wen Chang, and Yixuan He.
+2026. \emph{From Mathematical to Executable Certificates for Machine Unlearning}.
+\href{https://arxiv.org/html/2610.02268v1}{arXiv:2610.02268, version 1}.
+\end{thebibliography}
+\end{document}

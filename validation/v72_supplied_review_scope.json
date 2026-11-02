@@ -1,0 +1,28 @@
+{
+  "applied_as_second_specific_reviews": false,
+  "empirical_work": false,
+  "independent_peer_review": false,
+  "manuscript_changed": false,
+  "observed_at_utc": "2026-10-18T14:21:21.163884+00:00",
+  "root_claim_readthrough": "docs/CLAIM_AND_REVIEW_SCOPE_V72.txt",
+  "supplied_reviews": [
+    {
+      "bytes": 11125,
+      "path": "/Users/priyankjairaj/.codex/attachments/7a4a56b0-3fd6-48e3-89ef-8f52b6c2449b/Pasted text.txt",
+      "scope": "semantic-negative-weighting manuscript, not Second calibration repair",
+      "sha256": "7e85580d3d7d510a8610fcd7b6a672b9f226a9b52080861404df182eff028430"
+    },
+    {
+      "bytes": 11397,
+      "path": "/Users/priyankjairaj/.codex/attachments/561f2fdd-9c04-44c9-81fd-a0128019c6a3/Pasted text.txt",
+      "scope": "semantic-negative-weighting manuscript, not Second calibration repair",
+      "sha256": "66df7a4f8903068096ae599e822e967378566269d609b86e6060e66902c93f55"
+    },
+    {
+      "bytes": 11212,
+      "path": "/Users/priyankjairaj/.codex/attachments/02dddd83-6476-4c1a-8271-b72b9144daa7/Pasted text.txt",
+      "scope": "semantic-negative-weighting manuscript, not Second calibration repair",
+      "sha256": "fe31397f7794fb99bbd902da4b74c55d7a9ac023f5d915886203b06a0613e673"
+    }
+  ]
+}

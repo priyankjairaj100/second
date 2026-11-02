@@ -1,0 +1,98 @@
+V68: bounded untouched-quality data admission, UNREGISTERED preparation
+16 October 2026. No acquisition, Slurm job or immutable registration exists.
+This file proposes a data-only phase. It does not authorize model evaluation.
+
+Activation and immutability
+Wait for all V67 numerical jobs and both terminal audits to complete successfully.
+Require the primary audit's ten actual complete model/state comparisons, membership
+and fresh-traversal checks, matching supplemental model/cost evidence, and successful
+entry receipts15274/15275. Bind actual receipt bytes before registration. Reconcile
+Slurm, the clean numerical checkout f900999 and all469 frozen execution sources.
+Do not run a quality job concurrently with the active V67 timing experiment.
+
+The planned directory is local_runs/quality-data-v68-20261016-a. A registration
+must bind nine research_v68 files, all historical sources/ledgers, exact tokenizer
+files and tokenizers0.23.2, base runtime, thirteen prerequisite inputs, and the full
+historical metadata inventory. All nine files remain editable until that freeze.
+No pending-experiment bypass exists, including for the registered Linux checks.
+Any post-freeze correction requires a new version, path and preserved attempt.
+
+Fixed untouched frame
+Use allenai/c4 revision1588ec454efa1a09f29cd18ddd04fe05fc8653a2,
+en/c4-validation.00001-of-00008.json.gz. HEAD-only inspection read zero body bytes;
+it reported40675053 compressed bytes and linked SHA256
+db4c23d7a336032de37dfe2f3ed39653c8afd94004d4e8d9c73c03222299292c.
+That digest is source metadata, not a verified digest of the whole acquired file.
+
+Transfer exactly the first8MiB compressed bytes using one GET range0..8388607.
+Require HTTP206, exact Content-Range and total extent40675053. Read at most one
+additional byte to detect an overlong response. Preserve any partial/overlong file
+and failed receipt. Never retry, change shards, use a whole-file fallback or expand
+the transfer. Signed redirect URLs and response cookies are not stored.
+
+Decompress exactly the first8MiB of content. Require the compressed range to supply
+that fixed extent; otherwise stop. Include only complete newline-terminated JSON
+records entirely within it. This bounded gzip fragment does not verify the final
+whole-file gzip trailer. Reject duplicate JSON keys, empty complete lines, more
+than20000 records, text above4MiB characters or URL above65536 characters.
+
+Tokenize using the frozen GPT-2 tokenizer, no BOS/EOS, and retain the first128 tokens.
+Require at least128 tokens for eligibility. Use split-qualified record IDs such as
+c4:en:validation:shard1:line0; old training-shard IDs remain separate.
+
+Historical exclusions and selection
+Union every historical source/exclusion under the existing bounded metadata-name
+policy: at most5000 files,2MiB each,64MiB total. Omit only worker/source copies and
+this new run directory. Bind the full inventory prospectively and recheck it.
+Preserve all sixty old quality exclusions and the existing V65 exclusion union.
+Additionally retokenize and reserve ALL2349 complete records in V65's saved shard2
+frame. Its saved successor reserves only thirteen selected records; that alone is
+insufficient. Earlier shard0/shard1 frames and prepared WikiText pools are already
+in the protected union. Do not reinterpret old exposures as untouched.
+
+Reject exact IDs, body/whitespace-normalized-text/URL hashes, and16/32/64/128-token
+prefix matches. Deduplicate the entire new frame in original line order before
+ranking, including content from records already excluded by historical identity.
+These checks do not detect semantic overlap or arbitrary shared substrings.
+
+Rank eligible records by SHA256 of UTF-8 encoding of
+'second-v68-untouched-quality-frame-before-loss:'+recordID, breaking ties by ID.
+Select the first320 without replacement. Save actual tokens sorted by record ID,
+ordered selection, complete candidate inventory, exclusion reasons and before/after
+sets. Permanently reserve the ENTIRE inspected validation frame, not only selected
+records. Preserve an underfilled frame and refuse completion; no smaller sample,
+alternate seed, transfer expansion or replacement frame is admitted.
+This is a pseudorandom ordering within one bounded frame, not corpus-uniform sampling.
+
+One-use jobs and limits, subject to actual resource admission
+Three jobs: checks, data, saved-data audit. Submit each once with afterok, no requeue
+and kill-on-invalid-dependency. Do not create a launcher before prerequisite/runtime
+reconciliation. Exact local fixture census is22; pinned Linux qualification has not
+run. All22 must pass with zero failures/errors/skips before actual acquisition.
+Soft/hard CPU seconds are300/301,600/601,600/601. Slurm wall caps600,1200,900seconds.
+One CPU affinity and one library thread;4GiB AS and Slurm memory;128MiB file;core0.
+New allowance1506CPU seconds is separate from every prior phase. Account the whole
+Python process, imports and waited children. Each reservation allows at most its
+soft CPU cap plus2 observed seconds. The final receipt write and container startup
+need separate scheduler accounting. Aggregate process and scheduler audits remain
+mandatory; never count duplicate Slurm allocation/batch rows twice. SIGXCPU refuses
+the attempt. A missing terminal receipt remains an unknown/failed reservation.
+
+The fixed8MiB decoded frame bounds total article content; prior-prefix decoding
+retains its existing64MiB bound. Four GiB allows bounded inventories and tokenizer
+buffers but is not a proof of Python heap fit. Actual limits/refusals are binding.
+The runner uses exclusive start/output receipts and never overwrites an attempt.
+
+Saved-data audit and downstream boundary
+Read saved prefix bytes, repeat tokenization and the complete exclusion/selection
+rules, compare actual token words/order, full candidate inventory, all exclusion
+sets and canonical metadata. No network access is used by the audit. It shares
+implementation with preparation; it is not independent-implementation replication.
+Preserve all private prefix/token artifacts, without redistributing raw corpus.
+Metadata-only reporting must state this scope and cannot claim model quality.
+
+quality_statistics.py is included as tested preparation for the separate later
+likelihood phase. It does not run on actual losses here. The six-model construction,
+parameter export, CPU/GPU parity, resource registration and actual-loss terminal
+audits still require a separate prospective phase. Both endpoints must eventually
+pass unchanged1.05 pooled and uncertainty guards and1.20 observed-maximum guards.

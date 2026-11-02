@@ -1,0 +1,10 @@
+{
+  "archive": {
+    "path": "/Users/priyankjairaj/Downloads/ACL/Second/pilots/source-only-corrected-v143-20261102/source-v143.tar.gz",
+    "bytes": 3122841,
+    "sha256": "dc069099d635a939e7164a630483084e5af2add07081b5b68156e9fed8c03bdc"
+  },
+  "registration_sha256": "b1923472f9778b40152a7464c1595788f00621118befcba32bc7e12a2cd31ccb",
+  "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/source-only-corrected-v143-20261102-a",
+  "sources": 1477
+}

@@ -1,0 +1,11 @@
+{
+  "captured_utc": "2026-10-23T09:38:11.612068+00:00",
+  "v84_pure_checks_passed": 13,
+  "v85_quota_fixture_checks_passed": 6,
+  "v84_expected_linux_gate": 87,
+  "v84_linux_gate_executed": false,
+  "storage_guard_host_integration_qualified": false,
+  "registered": false,
+  "submitted": false,
+  "empirical_execution": false
+}

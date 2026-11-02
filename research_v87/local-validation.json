@@ -1,0 +1,15 @@
+{
+  "captured_utc": "2026-10-23T10:25:31.775688+00:00",
+  "pure_output_tests": 13,
+  "v84_pure_protocol_submission_tests": 14,
+  "combined_pure_checks": 27,
+  "expected_pinned_linux_checks": 101,
+  "linux_gate_executed": false,
+  "linux_worker_fixture_execution": false,
+  "numerical_execution": false,
+  "registered": false,
+  "launched": false,
+  "static_undefined_names": "passed F821 F822 F823",
+  "host_negative_probe": "refused one byte at 2026-10-23T10:19:58.123200+00:00",
+  "full_host_admission_qualified": false
+}

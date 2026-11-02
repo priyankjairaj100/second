@@ -1,0 +1,17 @@
+# V45 resource and sequence review
+
+The proposed run covers 1,664 original calibration tokens and actual 1,536- then 768-token successors. It uses thirteen C4 documents with 128-token contexts. All 24 DistilGPT2 affine stages are included. This is the next development gate; no result is assumed.
+
+The unchanged dispatcher admits all nine representation/retention combinations. Point structural work is 428,146,311,168 / 419,270,639,616 / 321,015,398,400 units. Compressed work including complete point fallback is 856,292,622,336 / 838,541,279,232 / 609,840,488,448. These proxies remain below the existing per-request ceiling. They are not measured FLOPs or execution-time estimates.
+
+The largest solver plus dispatcher array envelope is 4,519,108,608 bytes. The caller separately reserves 4 GiB for checkpoint, contexts, source factors, states and copies. Complete original exact factors occupy 429,391,872 bytes. The original factor array, source descriptors, current/previous states, Gram payloads and packed codes must coexist within this allowance. Interpreter/compiler/BLAS overhead is not formally bounded by the proxy; a 16 GiB process and matching Slurm allocation enforce the outer ceiling. The 8 GiB array policy is unchanged.
+
+Only the eighteen width-768 stages use native exact Grams. The six width-3,072 stages use factors. V45 changes the service's Gram admission to thirteen sources and 1,664 tokens, retaining the width-768, 256-bit, 128 MiB serialized and 2 GiB explicit-memory limits. No numerical kernel, compressed precision, fallback rule, state codec, historical target, or old ledger changes.
+
+A fresh maximum allowance of 26,412 CPU seconds covers six one-use workers, including each controller's full CPU+2 reservation. This is a conservative stop budget, not a runtime prediction or a claim that the method is practical. All run serially on one CPU in the pinned Bookworm runtime. Slurm reports a twelve-hour cpu-short limit; each requested job is shorter than two hours. Live account limits remain 64 CPUs, 128 GiB and two GPUs, with five concurrent jobs. No GPU arithmetic is used for this exact target.
+
+Tests exercise actual canonical states across thirteen sources, a one-source deletion followed by six-source Gram subtraction, and fresh reconstruction for every representation. The adapted supplemental audit checks eight comparisons and retains tampering, stale-metadata, ledger and sealed-receipt drift tests. Data selection has a separate 602-second phase and six software fixtures. The actual data preparation completed in Slurm 13224 and charged 15 CPU seconds; its selection never loaded a model.
+
+The new root comes from C4 English training shard one. Exact overlap checks protect all 2,278 records in the old shard-zero prefix and all reconstructed historical WikiText pools (500 development, 110 confirmation, 60 evaluation articles), plus archived designated IDs and content/token commitments. All historical prepared-pool hashes reproduce. Selection is deterministic within a bounded compressed prefix; exact hash disjointness does not establish semantic independence or corpus-uniform sampling.
+
+V43's source, canonical state format and numerical dispatch remain unchanged. V45 imports those components and adds a source-count admission, new sequence membership, a separate controller and adapted audits. Source code is frozen before empirical registration. Failed outcomes remain terminal; no automatic redraw, retry or budget reset is allowed.

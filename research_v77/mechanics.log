@@ -1,0 +1,15 @@
+test_actual_byte_bound_and_oversize_bypass (__main__.Checks) ... ok
+test_byte_identity_signed_zero_and_equal_distinct_objects (__main__.Checks) ... ok
+test_failure_never_populates (__main__.Checks) ... ok
+test_lru_eviction_and_entry_bound (__main__.Checks) ... ok
+test_mapping_capacity_and_repeated_hits_respect_budget (__main__.Checks) ... ok
+test_measurements_always_execute (__main__.Checks) ... ok
+test_nonbytes_preserve_original_behavior (__main__.Checks) ... ok
+test_scope_restores_and_clears_on_exception (__main__.Checks) ... ok
+test_zero_cap_has_no_reuse (__main__.Checks) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.016s
+
+OK
+{"scope": "stdlib cache mechanics only; V63 parser and zstandard not exercised", "tests": 9, "failures": 0, "errors": 0}

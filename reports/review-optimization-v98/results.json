@@ -1,0 +1,399 @@
+{
+  "actual_terminal": {
+    "bytes": 368343,
+    "sha256": "367104b1247cbc2b85fdc74ef45e5a30474a69df60483655b5fc4cf4f533e1a2"
+  },
+  "attributed_lifetime": {
+    "optimized_compressed": {
+      "attributed_preparation_ns": 6216153072103,
+      "attributed_two_request_total_ns": 10995918027628,
+      "lifetime_scope": "Attributed shared preparation plus two complete host envelopes including storage admission; scheduler accounts final receipt writes"
+    },
+    "optimized_modern": {
+      "attributed_preparation_ns": 5567366167095,
+      "attributed_two_request_total_ns": 10287225725405,
+      "lifetime_scope": "Attributed shared preparation plus two complete host envelopes including storage admission; scheduler accounts final receipt writes"
+    },
+    "reference_compressed": {
+      "attributed_preparation_ns": 6216153072103,
+      "attributed_two_request_total_ns": 11988892722816,
+      "lifetime_scope": "Attributed shared preparation plus two complete host envelopes including storage admission; scheduler accounts final receipt writes"
+    },
+    "reference_modern": {
+      "attributed_preparation_ns": 5567366167095,
+      "attributed_two_request_total_ns": 10502160356321,
+      "lifetime_scope": "Attributed shared preparation plus two complete host envelopes including storage admission; scheduler accounts final receipt writes"
+    }
+  },
+  "comparisons": [
+    {
+      "combined_optimization_speedup": {
+        "compressed": {
+          "denominator": 982911440466,
+          "numerator": 1111029026381
+        },
+        "modern": {
+          "denominator": 1322507698467,
+          "numerator": 1331747041498
+        }
+      },
+      "optimized_compressed_to_modern": {
+        "checkpoint_inclusive_bytes": {
+          "denominator": 720281581,
+          "numerator": 686322319
+        },
+        "host_elapsed_ns": {
+          "denominator": 440835899489,
+          "numerator": 436849529096
+        },
+        "live_state_bytes": {
+          "denominator": 183728203,
+          "numerator": 166748572
+        }
+      },
+      "step": 1
+    },
+    {
+      "combined_optimization_speedup": {
+        "compressed": {
+          "denominator": 282706397887,
+          "numerator": 442874515063
+        },
+        "modern": {
+          "denominator": 752336462909,
+          "numerator": 939553064732
+        }
+      },
+      "optimized_compressed_to_modern": {
+        "checkpoint_inclusive_bytes": {
+          "denominator": 548155397,
+          "numerator": 531158284
+        },
+        "host_elapsed_ns": {
+          "denominator": 752336462909,
+          "numerator": 848119193661
+        },
+        "live_state_bytes": {
+          "denominator": 195330222,
+          "numerator": 178333109
+        }
+      },
+      "step": 2
+    }
+  ],
+  "decoder_only_time_available": false,
+  "individual_optimization_effect_identified": false,
+  "inputs": {
+    "optimized_compressed-1-host.json": {
+      "bytes": 999,
+      "sha256": "a0ffdf1b47d94a97bf7889f254cd51cd989432504e60c674124d1b56426513f3"
+    },
+    "optimized_compressed-1/outputs/completion.json": {
+      "bytes": 174828,
+      "sha256": "676c89f75a72b7666f036c25e3f829bb755505571cbe71a62638a520d7e1672b"
+    },
+    "optimized_compressed-2-host.json": {
+      "bytes": 994,
+      "sha256": "8240f54048fd0ae43621ea9ac2d687e4e37a5d02cf75c78652961c15fc3b2e1b"
+    },
+    "optimized_compressed-2/outputs/completion.json": {
+      "bytes": 178779,
+      "sha256": "0d72dea656914bb70c15fc41ef6faf4e1f17a33d30e6aa1f9226cf2d9c42660f"
+    },
+    "optimized_modern-1-host.json": {
+      "bytes": 995,
+      "sha256": "71e27dc5f80a30816f506dcc9a6eefc6c10019c018f8c9b6c519b8a10419cfe6"
+    },
+    "optimized_modern-1/outputs/completion.json": {
+      "bytes": 173642,
+      "sha256": "9f52ae5e3c1c66392fa70709881d80d705fa01e34003d15f7496415348242e26"
+    },
+    "optimized_modern-2-host.json": {
+      "bytes": 989,
+      "sha256": "97e9534f36d90f706308e65db803452ff79949d31d7f854aaaf16427bceac4d3"
+    },
+    "optimized_modern-2/outputs/completion.json": {
+      "bytes": 168126,
+      "sha256": "5401f8bec419f839794cee9323b23f756b053f33632666333ec542be8800ab1b"
+    },
+    "primary-audit.json": {
+      "bytes": 572498,
+      "sha256": "0b44f331e990c7fc77657c0ae7b749943e9fdb2b2e869ea41ae53013e0e08c69"
+    },
+    "program.json": {
+      "bytes": 1830432,
+      "sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+    },
+    "reference_compressed-1-host.json": {
+      "bytes": 999,
+      "sha256": "22e99eafd02a57027ae87e89f4faa341598e0d7fdbb4fe5c9fce863ec89a8be4"
+    },
+    "reference_compressed-1/outputs/completion.json": {
+      "bytes": 172951,
+      "sha256": "b9b1143231fb809ce3b5a6c1f7566fe87d40abbefd31ae48deb376a944bd68e4"
+    },
+    "reference_compressed-2-host.json": {
+      "bytes": 998,
+      "sha256": "b38c1f7f27964687fa7ffd983d3b6f4f4593096b13e4c8d73834a29926222c40"
+    },
+    "reference_compressed-2/outputs/completion.json": {
+      "bytes": 175639,
+      "sha256": "2be05920e4de2915876bcbbf906613bdfb4e6b920d6f6349c8363af709054403"
+    },
+    "reference_modern-1-host.json": {
+      "bytes": 995,
+      "sha256": "db90269ff7abff41cbbd3d34e1dceda4146ee50f2a96ed95174487f7ef6c5201"
+    },
+    "reference_modern-1/outputs/completion.json": {
+      "bytes": 171583,
+      "sha256": "6dda686c44e422bb4326618534e03634bcf545710b51a1eca5e88721ba30437f"
+    },
+    "reference_modern-2-host.json": {
+      "bytes": 990,
+      "sha256": "d76ea37b4609e3608562068e0af302bd775e3f636dfff85e8871e0866d0de7c6"
+    },
+    "reference_modern-2/outputs/completion.json": {
+      "bytes": 166085,
+      "sha256": "dbc861e865e19779a991c6bc4065c054cbd3ceeb07db110d5d3bba946ee574e8"
+    },
+    "supplemental-audit.json": {
+      "bytes": 566751,
+      "sha256": "59657690e4877b244943d1386a294c005180e3617357b37a08683934cbe7f633"
+    }
+  },
+  "new_quality_evaluation": false,
+  "no_numerical_execution": true,
+  "numerical_charged_cpu_seconds": {
+    "feasibility": 35258
+  },
+  "numerical_controller_upper_ns": 124746048999,
+  "old_unknown_cpu_seconds": 12602,
+  "os_cache_uncontrolled": true,
+  "recovered_gate": {
+    "actual_allocations": 13,
+    "actual_comparisons": 8,
+    "establishes_general_speedup": false,
+    "establishes_transfer": false,
+    "old_unknown_debit_preserved": 12602,
+    "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9",
+    "schema": "reopened-recovery-gate-v90",
+    "status": "verified"
+  },
+  "rows": [
+    {
+      "cell": "reference_compressed",
+      "checkpoint_inclusive_bytes": 686322319,
+      "decoder_only_duration_available": false,
+      "disjoint_host_partition_ns": {
+        "disposal": 13090942,
+        "outside_request": 35977125044,
+        "predecessor_validation": 138931314514,
+        "serialization": 126198966109,
+        "stage_work_including_any_fallback": 4139673148011,
+        "unattributed_request_time": 3322460904
+      },
+      "fallback_stages": [],
+      "host_elapsed_ns": 4444116105524,
+      "job_id": "16006",
+      "live_state_bytes": 333497144,
+      "max_rss_kib": 1840256,
+      "nested_source_extraction_ns": 0,
+      "remainder_is_not_a_named_operation": true,
+      "request_elapsed_ns": 4408138980480,
+      "retained_records": 12,
+      "source_stage_record_pairs": 0,
+      "state_bytes": 333497142,
+      "step": 1,
+      "trust_bytes": 2
+    },
+    {
+      "cell": "reference_compressed",
+      "checkpoint_inclusive_bytes": 531158284,
+      "decoder_only_duration_available": false,
+      "disjoint_host_partition_ns": {
+        "disposal": 42202604,
+        "outside_request": 33155217984,
+        "predecessor_validation": 128343652737,
+        "serialization": 64149241062,
+        "stage_work_including_any_fallback": 1100171749049,
+        "unattributed_request_time": 2761481753
+      },
+      "fallback_stages": [],
+      "host_elapsed_ns": 1328623545189,
+      "job_id": "16013",
+      "live_state_bytes": 178333109,
+      "max_rss_kib": 1460944,
+      "nested_source_extraction_ns": 0,
+      "remainder_is_not_a_named_operation": true,
+      "request_elapsed_ns": 1295468327205,
+      "retained_records": 6,
+      "source_stage_record_pairs": 0,
+      "state_bytes": 178333107,
+      "step": 2,
+      "trust_bytes": 2
+    },
+    {
+      "cell": "reference_modern",
+      "checkpoint_inclusive_bytes": 720281581,
+      "decoder_only_duration_available": false,
+      "disjoint_host_partition_ns": {
+        "disposal": 15540889,
+        "outside_request": 33045036702,
+        "predecessor_validation": 35341508229,
+        "serialization": 31779103098,
+        "stage_work_including_any_fallback": 3891075261335,
+        "unattributed_request_time": 3984674241
+      },
+      "fallback_stages": [],
+      "host_elapsed_ns": 3995241124494,
+      "job_id": "16008",
+      "live_state_bytes": 367456406,
+      "max_rss_kib": 1918168,
+      "nested_source_extraction_ns": 0,
+      "remainder_is_not_a_named_operation": true,
+      "request_elapsed_ns": 3962196087792,
+      "retained_records": 12,
+      "source_stage_record_pairs": 0,
+      "state_bytes": 367456404,
+      "step": 1,
+      "trust_bytes": 2
+    },
+    {
+      "cell": "reference_modern",
+      "checkpoint_inclusive_bytes": 548155397,
+      "decoder_only_duration_available": false,
+      "disjoint_host_partition_ns": {
+        "disposal": 30855525,
+        "outside_request": 33212876815,
+        "predecessor_validation": 32725085990,
+        "serialization": 16110587903,
+        "stage_work_including_any_fallback": 853728035752,
+        "unattributed_request_time": 3745622747
+      },
+      "fallback_stages": [],
+      "host_elapsed_ns": 939553064732,
+      "job_id": "16011",
+      "live_state_bytes": 195330222,
+      "max_rss_kib": 1511444,
+      "nested_source_extraction_ns": 0,
+      "remainder_is_not_a_named_operation": true,
+      "request_elapsed_ns": 906340187917,
+      "retained_records": 6,
+      "source_stage_record_pairs": 0,
+      "state_bytes": 195330220,
+      "step": 2,
+      "trust_bytes": 2
+    },
+    {
+      "cell": "optimized_compressed",
+      "checkpoint_inclusive_bytes": 686322319,
+      "decoder_only_duration_available": false,
+      "disjoint_host_partition_ns": {
+        "disposal": 12941772,
+        "outside_request": 33753474180,
+        "predecessor_validation": 5706244330,
+        "serialization": 4591760987,
+        "stage_work_including_any_fallback": 3884539411715,
+        "unattributed_request_time": 3041928880
+      },
+      "fallback_stages": [],
+      "host_elapsed_ns": 3931645761864,
+      "job_id": "16007",
+      "live_state_bytes": 333497144,
+      "max_rss_kib": 1847124,
+      "nested_source_extraction_ns": 0,
+      "remainder_is_not_a_named_operation": true,
+      "request_elapsed_ns": 3897892287684,
+      "retained_records": 12,
+      "source_stage_record_pairs": 0,
+      "state_bytes": 333497142,
+      "step": 1,
+      "trust_bytes": 2
+    },
+    {
+      "cell": "optimized_compressed",
+      "checkpoint_inclusive_bytes": 531158284,
+      "decoder_only_duration_available": false,
+      "disjoint_host_partition_ns": {
+        "disposal": 15343330,
+        "outside_request": 33809780026,
+        "predecessor_validation": 5318724114,
+        "serialization": 2570762934,
+        "stage_work_including_any_fallback": 803753673441,
+        "unattributed_request_time": 2650909816
+      },
+      "fallback_stages": [],
+      "host_elapsed_ns": 848119193661,
+      "job_id": "16012",
+      "live_state_bytes": 178333109,
+      "max_rss_kib": 1459956,
+      "nested_source_extraction_ns": 0,
+      "remainder_is_not_a_named_operation": true,
+      "request_elapsed_ns": 814309413635,
+      "retained_records": 6,
+      "source_stage_record_pairs": 0,
+      "state_bytes": 178333107,
+      "step": 2,
+      "trust_bytes": 2
+    },
+    {
+      "cell": "optimized_modern",
+      "checkpoint_inclusive_bytes": 720281581,
+      "decoder_only_duration_available": false,
+      "disjoint_host_partition_ns": {
+        "disposal": 13579244,
+        "outside_request": 33505115883,
+        "predecessor_validation": 35735502767,
+        "serialization": 2707203326,
+        "stage_work_including_any_fallback": 3891548359065,
+        "unattributed_request_time": 4013335116
+      },
+      "fallback_stages": [],
+      "host_elapsed_ns": 3967523095401,
+      "job_id": "16009",
+      "live_state_bytes": 367456406,
+      "max_rss_kib": 2725572,
+      "nested_source_extraction_ns": 0,
+      "remainder_is_not_a_named_operation": true,
+      "request_elapsed_ns": 3934017979518,
+      "retained_records": 12,
+      "source_stage_record_pairs": 0,
+      "state_bytes": 367456404,
+      "step": 1,
+      "trust_bytes": 2
+    },
+    {
+      "cell": "optimized_modern",
+      "checkpoint_inclusive_bytes": 548155397,
+      "decoder_only_duration_available": false,
+      "disjoint_host_partition_ns": {
+        "disposal": 13135906,
+        "outside_request": 33822932855,
+        "predecessor_validation": 33141635622,
+        "serialization": 1547593279,
+        "stage_work_including_any_fallback": 680250772734,
+        "unattributed_request_time": 3560392513
+      },
+      "fallback_stages": [],
+      "host_elapsed_ns": 752336462909,
+      "job_id": "16010",
+      "live_state_bytes": 195330222,
+      "max_rss_kib": 2263484,
+      "nested_source_extraction_ns": 0,
+      "remainder_is_not_a_named_operation": true,
+      "request_elapsed_ns": 718513530054,
+      "retained_records": 6,
+      "source_stage_record_pairs": 0,
+      "state_bytes": 195330220,
+      "step": 2,
+      "trust_bytes": 2
+    }
+  ],
+  "scheduler_cpu_lower_ns": 39389110000000,
+  "scheduler_cpu_upper_ns": 39396116000000,
+  "schema": "v89-complete-screen-reduction-v98",
+  "single_observation_per_cell": true,
+  "stable_latency_established": false,
+  "status": "verified_saved_scalar_reduction",
+  "transfer": false
+}

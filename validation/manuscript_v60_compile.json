@@ -1,0 +1,10 @@
+{
+  "schema": "second-manuscript-native-compile-v60",
+  "status": "success",
+  "source": "reports/manuscript_v60.tex",
+  "source_sha256": "cc200183d75b40cca4a3ea5c1624ff1fcc4f9b9ce66ad1ef3ef7b294d7fae923",
+  "compiler": "Codex desktop built-in compiler",
+  "visual_review": false,
+  "pdf_exported": false,
+  "acl_ready": false
+}

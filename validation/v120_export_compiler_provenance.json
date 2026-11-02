@@ -1,0 +1,9 @@
+{
+  "official_release": "https://github.com/tectonic-typesetting/tectonic/releases/tag/tectonic%400.17.0",
+  "asset_url": "https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.17.0/tectonic-0.17.0-aarch64-apple-darwin.tar.gz",
+  "archive_sha256": "a3f1cac7c5678f01661a92212f58480ae3b0634115d880dbc59e2953ded45667",
+  "digest_matches_official_metadata": true,
+  "workspace_local_export_helper": true,
+  "system_installation": false,
+  "native_editor_compiler_still_used": true
+}

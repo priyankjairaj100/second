@@ -1,0 +1,50 @@
+{
+  "abstract_source_whitespace_tokens": 197,
+  "after_sha256": "24d739d1bc839cd04e4d6065a7be9d46aefed029977e9361cabc17c9f4158602",
+  "all_proof_blocks_unchanged": true,
+  "before_sha256": "7e15f8438f1a0f64b9e63cfb484ff665e204f0cec60d2f093923482c7a577fda",
+  "bibliography_entries": 22,
+  "bibliography_entry_text_unchanged_except_year_suffixes": true,
+  "captured_at_utc": "2026-10-16T13:53:39.642145+00:00",
+  "commit": "d5adc823ff0f80f98c80405ca0ab66c68e684409",
+  "commit_time": "2026-06-29T15:47:20Z",
+  "files": {
+    "README.md": {
+      "bytes": 2417,
+      "sha256": "f5e4fe5096e8bc045b586a2351409f29ce6d55e0268a434602a06011f571d882",
+      "url": "https://raw.githubusercontent.com/acl-org/acl-style-files/d5adc823ff0f80f98c80405ca0ab66c68e684409/README.md"
+    },
+    "acl.sty": {
+      "bytes": 11615,
+      "sha256": "19dfeddc2c0e448f3926a0bef048a9db3f3611b46265b760caabd7ada4f361de",
+      "url": "https://raw.githubusercontent.com/acl-org/acl-style-files/d5adc823ff0f80f98c80405ca0ab66c68e684409/acl.sty"
+    },
+    "acl_latex.tex": {
+      "bytes": 14533,
+      "sha256": "339c9ee9705c1767d44ef24b85365c0bb8619ecc3fcf66172bf1356292389614",
+      "url": "https://raw.githubusercontent.com/acl-org/acl-style-files/d5adc823ff0f80f98c80405ca0ab66c68e684409/acl_latex.tex"
+    },
+    "acl_natbib.bst": {
+      "bytes": 45442,
+      "sha256": "6fbb306202290f4b68e74ac1460a8b27398500cb6dfeb4492e74c457eae7cd1e",
+      "url": "https://raw.githubusercontent.com/acl-org/acl-style-files/d5adc823ff0f80f98c80405ca0ab66c68e684409/acl_natbib.bst"
+    }
+  },
+  "full_anonymity_verified": false,
+  "native_compile_pending": false,
+  "native_compile_record": "validation/native_manuscript_v69_acl_compile.json",
+  "native_compile_status": "success",
+  "official_review_layout_attempted": true,
+  "original_custom_layout_removed": true,
+  "page_count_verified": false,
+  "preview_inspection_failure": "Computer Use service startup request failed; native compile tool reports success but supplies no page count or rendered view.",
+  "reference_destinations_unchanged": true,
+  "rendered_layout_verified": false,
+  "repository": "acl-org/acl-style-files",
+  "schema": "acl-format-preparation-v69",
+  "scientific_body_unchanged": true,
+  "selected_number_checks": 71,
+  "source_whitespace_tokens_excluding_embedded_style": 5420,
+  "style_embedded_byte_exact": true,
+  "submission_ready": false
+}

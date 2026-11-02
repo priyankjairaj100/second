@@ -1,0 +1,256 @@
+{
+  "schema": "prospective-storage-host-review-v88",
+  "probes": [
+    {
+      "observed_utc": "2026-10-23T10:48:07.418958+00:00",
+      "read_only": true,
+      "remote_file_write": false,
+      "launches_job": false,
+      "requested": {
+        "project": {
+          "path": "/nfs_home/users/poonam/second-20261010",
+          "required_bytes": 1,
+          "required_files": 1
+        },
+        "temporary": {
+          "path": "/tmp",
+          "required_bytes": 1,
+          "required_files": 1
+        }
+      },
+      "observations": {
+        "project": {
+          "path": "/nfs_home/users/poonam/second-20261010",
+          "device": 2065,
+          "source": "/dev/sdb1",
+          "mount": "/nfs_home",
+          "filesystem": "ext4",
+          "options": "rw,relatime,seclabel,quota,usrquota,grpquota",
+          "available_bytes": 16371223715840,
+          "available_files": 788601827,
+          "fragment_bytes": 4096
+        },
+        "temporary": {
+          "path": "/tmp",
+          "device": 2052,
+          "source": "/dev/sda4",
+          "mount": "/",
+          "filesystem": "xfs",
+          "options": "rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=256k,sunit=512,swidth=512,noquota",
+          "available_bytes": 142160179200,
+          "available_files": 104512439,
+          "fragment_bytes": 4096
+        }
+      },
+      "user_quota": {
+        "source": "/dev/sdb1",
+        "block_unit_bytes": 1024,
+        "used_bytes": 1073741828096,
+        "soft_limit_bytes": 1072668082176,
+        "hard_limit_bytes": 1073741824000,
+        "headroom_bytes": 0,
+        "used_files": 3306263,
+        "file_headroom": null,
+        "refuses_soft_limit_grace": true
+      },
+      "new_file_group_quotas": [],
+      "decision": {
+        "admitted": false,
+        "error_type": "StorageAdmissionError",
+        "message": "Insufficient account or filesystem byte headroom"
+      },
+      "raw_local_receipt": {
+        "bytes": 2099,
+        "sha256": "7c14bc84e2572d747f4e6e368fd1976deecf7323821ddc0ec749c5a42ea822ea"
+      },
+      "source_bindings": {
+        "research_v85/storage.py": {
+          "bytes": 4696,
+          "sha256": "7507bdbf33b79043ff9a488266122ac6693c550055bf10756c39c083e395f7ba"
+        },
+        "research_v88/storage.py": {
+          "bytes": 10922,
+          "sha256": "308b6ba13a8d541c4ca36f011c37482508236771f90bdc44a340544f872a7e26"
+        }
+      },
+      "executed_helper_preserved_at": "pilots/recovery-storage-v88-20261023/initial-host-probe-sources/storage.py.txt",
+      "account_and_group_identifiers_omitted": true,
+      "full_positive_admission_qualified": false
+    },
+    {
+      "observed_utc": "2026-10-23T10:52:57.200823+00:00",
+      "read_only": true,
+      "remote_file_write": false,
+      "launches_job": false,
+      "requested": {
+        "project": {
+          "path": "/nfs_home/users/poonam/second-20261010/local_runs",
+          "required_bytes": 1,
+          "required_files": 1
+        },
+        "temporary": {
+          "path": "/tmp",
+          "required_bytes": 1,
+          "required_files": 1
+        }
+      },
+      "observations": {
+        "project": {
+          "path": "/nfs_home/users/poonam/second-20261010/local_runs",
+          "device": 2065,
+          "source": "/dev/sdb1",
+          "mount": "/nfs_home",
+          "filesystem": "ext4",
+          "options": "rw,relatime,seclabel,quota,usrquota,grpquota",
+          "available_bytes": 16371223412736,
+          "available_files": 788601818,
+          "fragment_bytes": 4096
+        },
+        "temporary": {
+          "path": "/tmp",
+          "device": 2052,
+          "source": "/dev/sda4",
+          "mount": "/",
+          "filesystem": "xfs",
+          "options": "rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=256k,sunit=512,swidth=512,noquota",
+          "available_bytes": 142154403840,
+          "available_files": 104512439,
+          "fragment_bytes": 4096
+        }
+      },
+      "user_quota": {
+        "source": "/dev/sdb1",
+        "block_unit_bytes": 1024,
+        "used_bytes": 1073741828096,
+        "soft_limit_bytes": 1072668082176,
+        "hard_limit_bytes": 1073741824000,
+        "headroom_bytes": 0,
+        "used_files": 3306263,
+        "file_headroom": null,
+        "refuses_soft_limit_grace": true
+      },
+      "new_file_group_quotas": [
+        {
+          "source": "/dev/sdb1",
+          "used_bytes": 1073741828096,
+          "soft_limit_bytes": 0,
+          "hard_limit_bytes": 0,
+          "used_files": 3306263,
+          "file_soft_limit": 0,
+          "file_hard_limit": 0,
+          "block_limits_explicitly_unlimited": true,
+          "file_limits_explicitly_unlimited": true,
+          "headroom_bytes": 16371223412736,
+          "file_headroom": null,
+          "unlimited_bytes_limited_by_filesystem": true,
+          "refuses_soft_limit_grace": true
+        }
+      ],
+      "decision": {
+        "admitted": false,
+        "error_type": "StorageAdmissionError",
+        "message": "Insufficient account or filesystem byte headroom"
+      },
+      "raw_local_receipt": {
+        "bytes": 2517,
+        "sha256": "5a7ff3b563c21b4664f513f6c8a757c2faf429c624b74fa1e35bf3e3c7ccde08"
+      },
+      "source_bindings": {
+        "research_v85/storage.py": {
+          "bytes": 4696,
+          "sha256": "7507bdbf33b79043ff9a488266122ac6693c550055bf10756c39c083e395f7ba"
+        },
+        "research_v88/storage.py": {
+          "bytes": 14974,
+          "sha256": "1132f8f60e409d36d04fbce91eea63a63a95f98d5c31fde6898acca34cb928e0"
+        }
+      },
+      "executed_helper_preserved_at": "research_v88/storage.py",
+      "account_and_group_identifiers_omitted": true,
+      "full_positive_admission_qualified": false
+    }
+  ],
+  "terminal_reconciliation": {
+    "observed_utc": "2026-10-23T10:38:03.953871+00:00",
+    "account_queue_empty": true,
+    "original_allocations": 19,
+    "outcomes_changed": false,
+    "failed_ledger": {
+      "bytes": 15987,
+      "sha256": "10f95f5eea81d1bb07a92412ef4b4fe2e802060eb4251524f9559837ceabcb27"
+    },
+    "empty_completion_bytes": 0,
+    "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+    "numerical_checkout_clean": true,
+    "raw_local_receipt": {
+      "bytes": 2019,
+      "sha256": "9f0f10996d6e1fd92986b3f5df226721c5d4882e71d5a3d63cffa7f42f113d63"
+    }
+  },
+  "registered": false,
+  "launched": false,
+  "scientific_result": false,
+  "whole_chain_storage_bound_complete": false,
+  "launcher_integrated": false,
+  "test_result": {
+    "new_pure_tests": 18,
+    "existing_quota_tests": 6,
+    "total": 24,
+    "numerical_tests_executed": false
+  },
+  "preservation": {
+    "new_sources": 871,
+    "protected_auxiliary_sources": 5
+  },
+  "manuscript": {
+    "bytes": 54149,
+    "sha256": "bf3b7a73cda7b4c62fb7fe6fc7df08a36e949cb15f4c0d9e361fc25a732cc8eb"
+  },
+  "source_bindings": {
+    "research_v88/__init__.py": {
+      "bytes": 73,
+      "sha256": "28c7d6f39a423cdfeee314b79fcc8333bd500182596d36bbd9223929a75d6b5c"
+    },
+    "research_v88/storage.py": {
+      "bytes": 14974,
+      "sha256": "1132f8f60e409d36d04fbce91eea63a63a95f98d5c31fde6898acca34cb928e0"
+    },
+    "research_v88/test_storage.py": {
+      "bytes": 12453,
+      "sha256": "55507654aff73c6c9756d641bab526d9aec26268e680a6b858b7518725cf560c"
+    },
+    "research_v85/storage.py": {
+      "bytes": 4696,
+      "sha256": "7507bdbf33b79043ff9a488266122ac6693c550055bf10756c39c083e395f7ba"
+    },
+    "src/worker_control.py": {
+      "bytes": 17712,
+      "sha256": "baa5b9d862d7f5f25655fb1e9850f875349b9539c30faf0a55b0b123e1261a7c"
+    },
+    "src/run_store.py": {
+      "bytes": 9030,
+      "sha256": "369345e6342763262f7e894c18d82b544c81f9c6da1b5f76c979107c144d7e10"
+    },
+    "src/phase_budget.py": {
+      "bytes": 11035,
+      "sha256": "08624650545e53f7be84724959f6b3d294984618b05e3c7c7eba45cf4f2f9fbc"
+    },
+    "research_v84/entry.py": {
+      "bytes": 5119,
+      "sha256": "680a22130780f3f7829d9908bd3959023385d9c885532dfd6440a0ff1685dbdf"
+    },
+    "research_v84/submit.py": {
+      "bytes": 5931,
+      "sha256": "47e66d40560586aec42b3fb6b89f0e30ab67b40df1ca00cba3039581c6d4b486"
+    },
+    "research_v84/audit.py": {
+      "bytes": 6064,
+      "sha256": "c24fd66e66e43bbe025d6135d4da9b977c832e9b5d9c1bd75ed0ed4ab8e80b1a"
+    },
+    "research_v79/implementation.py": {
+      "bytes": 6403,
+      "sha256": "4acb838fa818d635e3e480c62527573c75105fe2e8962bf226be5ecc3c16ff8a"
+    }
+  },
+  "primary_reference": "https://www.kernel.org/doc/html/latest/admin-guide/xfs.html#mount-options"
+}

@@ -1,0 +1,14 @@
+{
+  "preflight": "16683 second125-distilgpt2__candidate_2 RUNNING\n16684 second125-distilgpt2__candidate_3 RUNNING\n16685 second125-distilgpt2__original RUNNING\n16686 second125-gpt2__candidate_2 RUNNING\n16687 second125-gpt2__candidate_3 RUNNING\n16688 second125-gpt2__original RUNNING\n16645 f3_small PENDING\n16646 f3_mid PENDING\n16644 f3_tiny RUNNING\n16643 f0_mid RUNNING\n",
+  "staging": "STAGED_SOURCE_VERIFIED 1408\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n",
+  "archive": {
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/matched-sequential-v126/source-v126.tar.gz",
+    "bytes": 2856040,
+    "sha256": "6bb5bc5bb6b1682e9344f0c05ce67fc80050c83a8cee56e2077f2d3f4d3305c9"
+  },
+  "registration_sha256": "5edbd86ad110e5a58db688d544c19a6ec7dd15c18cf1187588890c5bcc4011be",
+  "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a",
+  "sources": 1408,
+  "uncompressed_source_bytes": 12751480
+}

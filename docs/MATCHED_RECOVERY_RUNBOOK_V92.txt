@@ -1,0 +1,70 @@
+V92 prospective runbook. Do not execute while V89/V91 are incomplete.
+
+1. Read the ordered queue, latest handoff and research_v92/PROTOCOL.txt. Reconcile
+GitHub, local changes, Slurm and actual receipts. Numerical f900999 remains clean;
+reporting commits must never be pulled there. Inspect existing jobs before launch.
+
+2. Close V89 using its frozen read-only terminal reporter only after every actual
+job and both audits succeed. Preserve original failures and12602 unknown debit.
+Apply V82 decision rules using all four cells and both endpoints. If the result
+justifies the already authorized matched study, follow V91's protocol and perform
+its one-use software/fetch/actual-target chain. Source/tests are not either result.
+
+3. Obtain actual V91 source tar, program and successful terminal output. Keep their
+exact original bytes. The V92 local package interface is:
+  research_v92/package.py ACTUAL_V91_TAR ACTUAL_V91_PROGRAM ACTUAL_V91_TERMINAL NEW_LOCAL_DIRECTORY
+It checks the actual archive/program/report identities, every source member and
+existing local counterpart. No guessed future hash or hand-written success input.
+The package remains source/receipts only, no model weights or corpus. Its output
+provides exact bytes/hash/inventory and pre-upload storage requests. Do not invoke
+main with fabricated gates to test staging. Small software fixtures remain separate.
+
+4. Before staging, use the same bounded SSH procedure and fresh empty job check.
+Run source-bound admission for project plus existing /tmp using the package's
+before_upload_requests. Preserve all prior evidence and output roots. If a quota
+or connection gate refuses, stop; do useful local work. No automatic retry,
+redirected root, larger resource limit, old deletion or old ledger modification.
+
+5. Stage the exact archive exclusively as
+  local_runs/matched-complete-recovery-v92-source-only.tar
+and every regular inventory member under
+  local_runs/matched-complete-recovery-v92-20261024-a
+Verify exact whole archive, member types, member set, safe relative paths and all
+bytes/hashes before preparing. Neither tar nor extraction may exceed64MiB; fewer
+than4096 files. Preserve incomplete staging after a failure. The exact live target
+root remains the V91 namespace; no checkpoint is duplicated for V92.
+
+6. On the host, run the new prepare.py once with the actual inventory and archive
+SHA. It reopens all actual gates and checks fresh capacity before writing its
+exclusive candidate program. Record actual resulting program SHA. Then submit.py
+checks mode, once. It independently rechecks source, all old/new upstream terminal
+jobs, empty account queue and current capacity before registration and held launch.
+Inspect actual job state, full host/log/entry records and all221 tests. Do not
+interpret test success as transfer or override an uncertain/failed outcome.
+
+7. Only after successful actual software/scheduler closure, invoke submit.py chain
+with that exact program SHA once. The22 dependents are held, verified then released
+in the fixed order. Save actual job IDs and every intent/response/release record.
+Never rerun a mode or retry a registered worker. Inspect unclear scheduler state
+read-only. Every allocation repeats the full source-bound capacity check.
+
+8. Numerical execution uses the pinned Python3.12.14 container, original dependency
+path and exact model/source admission. Keep one CPU/thread,16GiB and all registered
+work/output limits. Complete host time is primary; inner clocks overlap. Report
+all16 requests across two checkpoints, including losses/failures. Source accesses,
+fallbacks, memory and both live/checkpoint-inclusive storage are required.
+
+9. Wait for all23 actual jobs, primary actual-state/model/trust audit and separate
+model reread. Run the frozen V92 terminal.py with the actual registered program
+SHA read-only on the host and preserve stdout exclusively. Reopen actual artifacts
+and compare full host/scheduler accounting,20 settled debits and source inventory.
+An incomplete or failed terminal result remains incomplete; never infer it from
+progress or repair its ledger. This terminal is prepared, not yet qualified.
+
+10. Apply the fixed V82 decision policy. Two GPT-family checkpoints support only
+that matched scope. A single screen never establishes stable speed. A subsequent
+replicated timing/quality study needs its own justified question and separate
+prospective registration with preserved caps/exclusions. Update the same open
+manuscript and native compile only from actually audited evidence. Publish one
+coherent checkpoint to the existing branch/draft PR. Do not submit a conference,
+create another monitor, use paid compute or delegate.

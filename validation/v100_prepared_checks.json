@@ -1,0 +1,33 @@
+{
+  "bytes": 10931351,
+  "controller_cpu_cap": 6040,
+  "files": 1066,
+  "isolated_host_imports": {
+    "imported": [
+      "config",
+      "records",
+      "storage_plan",
+      "protocol",
+      "mapping",
+      "host",
+      "entry",
+      "submit",
+      "prepare",
+      "closure",
+      "terminal",
+      "package",
+      "gate",
+      "software"
+    ],
+    "isolated": true
+  },
+  "linux_tests_required": 221,
+  "local_new_tests_passed": 38,
+  "missing_actual_upstream_v99_terminal": true,
+  "numerical_cpu_cap": 82840,
+  "prior_local_tests_passed": 104,
+  "reachable_project_modules": 213,
+  "registered": false,
+  "source_archive_created": false,
+  "status": "partial_actual_source_assembly_checked"
+}

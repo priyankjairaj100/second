@@ -1,0 +1,177 @@
+............................................
+----------------------------------------------------------------------
+Ran 44 tests in 3.438s
+
+OK
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 2.005s
+
+OK
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.005s
+
+OK
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 42.113s
+
+OK
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.008s
+
+OK
+.........................................EEEEEEE
+======================================================================
+ERROR: test_changed_primary_or_nonidentical_successor_refuses (research_v90.test_recovery_gate.RecoveryGateTests.test_changed_primary_or_nonidentical_successor_refuses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 51, in test_changed_primary_or_nonidentical_successor_refuses
+    args = deepcopy(fixture()); args[1]['evidence']['comparisons'][0][field] = False
+                    ^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 13, in fixture
+    program = json.loads((root/'pilots/recovery-v89-20261023/execution-20261024/program.json').read_bytes())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/pilots/recovery-v89-20261023/execution-20261024/program.json'
+
+======================================================================
+ERROR: test_exact_synthetic_structure_does_not_expand_scientific_scope (research_v90.test_recovery_gate.RecoveryGateTests.test_exact_synthetic_structure_does_not_expand_scientific_scope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 36, in test_exact_synthetic_structure_does_not_expand_scientific_scope
+    result = gate.validate(*fixture())
+                            ^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 13, in fixture
+    program = json.loads((root/'pilots/recovery-v89-20261023/execution-20261024/program.json').read_bytes())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/pilots/recovery-v89-20261023/execution-20261024/program.json'
+
+======================================================================
+ERROR: test_missing_or_duplicate_cell_is_not_eight_comparisons (research_v90.test_recovery_gate.RecoveryGateTests.test_missing_or_duplicate_cell_is_not_eight_comparisons)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 46, in test_missing_or_duplicate_cell_is_not_eight_comparisons
+    args = deepcopy(fixture()); args[1]['evidence']['comparisons'][0] = args[1]['evidence']['comparisons'][1]
+                    ^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 13, in fixture
+    program = json.loads((root/'pilots/recovery-v89-20261023/execution-20261024/program.json').read_bytes())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/pilots/recovery-v89-20261023/execution-20261024/program.json'
+
+======================================================================
+ERROR: test_omitted_audit_input_refuses_even_with_verified_label (research_v90.test_recovery_gate.RecoveryGateTests.test_omitted_audit_input_refuses_even_with_verified_label)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 69, in test_omitted_audit_input_refuses_even_with_verified_label
+    args = deepcopy(fixture()); args[1]['inputs']['/missing/input'] = dict(bytes=3,sha256='a'*64)
+                    ^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 13, in fixture
+    program = json.loads((root/'pilots/recovery-v89-20261023/execution-20261024/program.json').read_bytes())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/pilots/recovery-v89-20261023/execution-20261024/program.json'
+
+======================================================================
+ERROR: test_pending_or_missing_allocation_refuses (research_v90.test_recovery_gate.RecoveryGateTests.test_pending_or_missing_allocation_refuses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 57, in test_pending_or_missing_allocation_refuses
+    args = deepcopy(fixture()); args[0]['scheduler_raw'] = args[0]['scheduler_raw'].replace('COMPLETED','RUNNING',1)
+                    ^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 13, in fixture
+    program = json.loads((root/'pilots/recovery-v89-20261023/execution-20261024/program.json').read_bytes())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/pilots/recovery-v89-20261023/execution-20261024/program.json'
+
+======================================================================
+ERROR: test_refunded_unknown_old_work_and_unsettled_new_work_refuse (research_v90.test_recovery_gate.RecoveryGateTests.test_refunded_unknown_old_work_and_unsettled_new_work_refuse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 63, in test_refunded_unknown_old_work_and_unsettled_new_work_refuse
+    args = deepcopy(fixture()); args[0]['carried_reservations'] = dict(args[0]['carried_reservations'], unsettled_old_worker_reservation=0)
+                    ^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 13, in fixture
+    program = json.loads((root/'pilots/recovery-v89-20261023/execution-20261024/program.json').read_bytes())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/pilots/recovery-v89-20261023/execution-20261024/program.json'
+
+======================================================================
+ERROR: test_software_or_failed_or_old_report_cannot_replace_terminal (research_v90.test_recovery_gate.RecoveryGateTests.test_software_or_failed_or_old_report_cannot_replace_terminal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 42, in test_software_or_failed_or_old_report_cannot_replace_terminal
+    args = deepcopy(fixture()); args[0][field] = value
+                    ^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v90/test_recovery_gate.py", line 13, in fixture
+    program = json.loads((root/'pilots/recovery-v89-20261023/execution-20261024/program.json').read_bytes())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/pilots/recovery-v89-20261023/execution-20261024/program.json'
+
+----------------------------------------------------------------------
+Ran 48 tests in 0.156s
+
+FAILED (errors=7)
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v126/worker.py", line 79, in main
+    r['result']=tests(p,out) if phase=='checks' else construct(p,*phase.split('__'),out,h)
+                ^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v126/worker.py", line 24, in tests
+    save(out/(name+'.json'),result[name]);assert r.wasSuccessful() and not r.skipped and r.testsRun==count,name
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: bounded_components
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v126/worker.py", line 88, in <module>
+    if __name__=='__main__':main(*sys.argv[1:])
+                            ^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-sequential-v126-20261029-a/research_v126/worker.py", line 87, in main
+    assert r['status']=='complete',r['error']
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'type': 'AssertionError', 'message': 'bounded_components', 'diagnostics': None}

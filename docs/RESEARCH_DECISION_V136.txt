@@ -1,0 +1,46 @@
+V136 scientific decision: matched predictive quality measured, mixed guard.
+
+All fourteen saved model roles were actually evaluated on the frozen V124frame:
+320articles/40640predictions each. Six original/fixed roles, four practicalGPTQ
+roles and four matched sequential roles give4480audited article losses.
+
+Primary guard unchanged, three of four pass. DistilGPT2 retained3/2 fixed/sequential
+ratios1.0040976184/1.0062971035; GPT2 retained3/2 ratios1.0063273506/0.9894088638.
+All four one-sided98.75% bounds are below1.014. GPT2retained3 alone fails the
+observed-article bound:1.4027071169>1.20 for C4validation shard2line816. Exactly
+one of320article ratios exceeds1.20 in that stratum; none in the other three.
+The failure is retained, not removed as an outlier or excused by average quality.
+These aggregate losses describe the tail; they do not explain its token-level cause.
+
+Secondary fixed/GPTQ ratios are0.9082925963/0.9233213752 (Distil3/2) and
+0.9056793173/0.8853806341 (GPT2 3/2). All95% paired intervals are below1.
+This demonstrates7.7--11.5%lower PPL under the frozen practical4bitCPUsettings;
+not a same-target oracle, tuned best-GPTQ comparison or architecture generality.
+Fixed/original PPL increases11.8--15.4% remain in the report.
+
+Implications. The missing matched-quality experiment is now closed. Both measured
+DistilGPT2 settings and GPT2retained2 meet the declared quality tolerance. Do not
+claim that the complete two-model trajectory passes: GPT2retained3 is a failure
+boundary. Continue the minimal source-only cold comparison on all four saved
+settings for an explicit method boundary, while separating the three quality-
+qualified settings. Do not expand timing repetitions or promote a deployment
+regime until the minimal-source comparison is complete. No new quality tuning,
+threshold changes, reselected articles or additional seed search are justified.
+The core contribution remains exact adaptive recovery from lossy evidence and a
+storage/source-access/latency tradeoff. General speedup is still unsupported.
+
+Failure and audit scope. V132 saved complete models/stage reports but failed its
+final JSON runtime-sidecar serialization. V133read-only audit verified all saved
+outputs and stage/model chains, with no recalibration; original FAILED states
+remain. Missing original runtime sidecars/worker totals are not synthesized.
+V134's malformed binding list failed before any loss; V136schema-qualified fresh
+registration used the same models/sample. All old attempts stay consumed.
+Actual distinct-allocation Slurm CPU9084.405 includes failed jobs; no step double
+count. The earlier-X zeroCPU snapshot is explicitly invalidated. Ceilings are
+not usage. Launcher/controller CPU is not included in this measured subtotal.
+
+Still required for full TACL empirical revision: minimal source-only cold state
+and measured access costs; admitted operating range and precision behavior;
+production arithmetic and transaction fault validation; repeated timings where
+justified; clean external-input reproduction; author release/declaration decisions.
+No submission and no scheduler restart. Native manuscript update is in progress.

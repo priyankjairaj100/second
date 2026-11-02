@@ -1,0 +1,76 @@
+Prospective matched-depth transfer, V81; NOT REGISTERED OR LINUX-QUALIFIED
+
+V80 complete-request screen is running. These sources prepare the independent
+next question; they neither change V80 nor launch an empirical experiment.
+
+Choose DistilGPT2 and GPT2 with identical4x128-token source rows,4->3->2
+retention and normalization512. The reduced common workload follows the fixed
+whole-request fallback work bound. It is a different target/workload from V80.
+Only depth/checkpoint varies; widths, precision, ridge, grids and optimizations
+stay fixed. Select four V65 root IDs by a prospectively fixed SHA256 key before
+any new model result; this exposed development root is not newly untouched.
+
+GPT2 public metadata was retrieved23October2026 from the official model repo.
+Immutable revision607a30d783dfa663caf39e06633721c8d4cfcd7e.
+Pinned config and Hub-advertised safetensors SHA/extent are in checkpoint-planning.
+The548105171-byte weights were NOT downloaded or verified. A registered fetch
+must compare actual bytes to that advertised commitment before model admission.
+Do not report Hub counts as measured parameter counts; the adapter distinguishes
+stored causal-buffer elements from actual parameters on load.
+Source: https://huggingface.co/openai-community/gpt2/tree/607a30d783dfa663caf39e06633721c8d4cfcd7e
+
+profile.py accepts only the exact six/twelve-block stage sequence, standard
+768/3072 shapes,4bit/dyadic24,ridge1/100 and normalization512. MatchedService
+checks exact checkpoint file hashes and complete bound geometry, uses the old
+unchanged fixed-teacher provider/target contracts, and retains9GiB residency.
+New archive magic/schema explicitly accepts24/48stages and at most4sources,
+128tokens each. It retains all canonical/runtime/hash/source checks. Old V63
+archive and old13-source service guards remain untouched. Operations use only
+the new archive for modern states. No global guard monkeypatch is used.
+
+Four local pure-metadata profile tests pass. Full-geometry generated archive
+checks are PREPARED, not run: both depths,84,934,656 packed GPT2-shaped zero
+codes, actual canonical restoration, retained transition, corruption/missing
+sources/stages and old/new format separation. These are artificial archives,
+not numerical models or transfer evidence. AST parsing passes. Actual Linux
+archive/service integration, all source/runtime bindings, model fetch admission,
+new complete worker/controller/audits/budget and untouched/exposed quality plan
+remain required. No one-use registration or Slurm attempt exists for V81.
+
+Before launch, freeze all rows/selection/exclusions and both checkpoint identities.
+Build both original targets and fresh retained-teacher oracles; compare actual
+model/state/trust bytes separately within each checkpoint. Model equality across
+different checkpoints is neither expected nor required. Fair optimized compressed
+and modern controls use the same source rows, caps and timing scope. Record every
+failure and outcome. Depth transfer on two related models is limited external
+validity, not cross-architecture transfer or a universal speedup.
+
+A useful screen should be followed by a separately registered balanced timing
+study, with predeclared repeats, caps and failures. Do not use the unused V80
+budget for unregistered repeats. Quality for a new target is a separate claim:
+old V72 quality does not transfer automatically to normalization512 or GPT2.
+
+NEW GUARD FINDING (source review, not a failed empirical attempt)
+The generic target constructor separately caps grid entries at1,000,000.
+GPT2 requires1,032,192 column entries in the base constructor and1,327,104
+row entries in the dyadic target. DistilGPT2 needs516096/663552 respectively.
+Thus the smaller source root fixes the work cap but cannot fix this grid guard.
+No source count or faster decoder removes this architecture-dependent bound.
+
+A concrete proposed allowance is exactly1,327,104 entries, applied equally to
+both new matched targets; the historical defaults/sources stay untouched.
+It changes an admission bound and target metadata, not row-grid values, solver
+precision or CPU/OS/work ceilings. Actual target/process fit still needs review.
+MatchedService refuses GPT2 by default; the proposal requires an explicit flag,
+new registration and user approval because existing resource limits must be
+preserved. Generated archive fixtures explicitly use this proposed bound and
+do not authorize model execution. The user explicitly approved this transfer-only allowance23October2026. No empirical transfer run exists.
+
+SOFTWARE GATE PLAN
+62 exact-count generated checks:44legacy,5V79integration,4profile,5full-geometry
+archive,4constructor/dispatch guards. Separate one-use job with1CPU,16GiB,
+600seconds wall,300/301processCPU and602aggregateCPU; no timing-win gate.
+Queue afterany V80 supplemental15916 so qualification cannot contend with
+V80 timings. Failure/cancellation of V80 does not authorize new empirical work;
+these independent software fixtures can still run. No model weights are inputs.
+Actual Linux results and source/output/accounting receipts remain required.

@@ -1,0 +1,122 @@
+[
+  {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--no-requeue",
+      "--kill-on-invalid-dep=yes",
+      "--nodelist=csis.mn1",
+      "--job-name=second_v43_cached",
+      "--mem=16G",
+      "--time=00:55:00",
+      "--dependency=afterok:13200",
+      "--output=local_runs/cluster-setup-20261010/v43-cached-%j.log",
+      "cluster_setup/run_cpu.sbatch",
+      "local_runs/cluster-setup-20261010/container-13155.sha256",
+      "-m",
+      "research_v43.campaign",
+      "run",
+      "local_runs/full-model-v43-20261010-b",
+      "cached"
+    ],
+    "dependency": "afterok:13200",
+    "job": "13201",
+    "trial": "cached"
+  },
+  {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--no-requeue",
+      "--kill-on-invalid-dep=yes",
+      "--nodelist=csis.mn1",
+      "--job-name=second_v43_compressed",
+      "--mem=16G",
+      "--time=00:55:00",
+      "--dependency=afterany:13201",
+      "--output=local_runs/cluster-setup-20261010/v43-compressed-%j.log",
+      "cluster_setup/run_cpu.sbatch",
+      "local_runs/cluster-setup-20261010/container-13155.sha256",
+      "-m",
+      "research_v43.campaign",
+      "run",
+      "local_runs/full-model-v43-20261010-b",
+      "compressed"
+    ],
+    "dependency": "afterany:13201",
+    "job": "13202",
+    "trial": "compressed"
+  },
+  {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--no-requeue",
+      "--kill-on-invalid-dep=yes",
+      "--nodelist=csis.mn1",
+      "--job-name=second_v43_hybrid",
+      "--mem=16G",
+      "--time=00:55:00",
+      "--dependency=afterany:13202",
+      "--output=local_runs/cluster-setup-20261010/v43-hybrid-%j.log",
+      "cluster_setup/run_cpu.sbatch",
+      "local_runs/cluster-setup-20261010/container-13155.sha256",
+      "-m",
+      "research_v43.campaign",
+      "run",
+      "local_runs/full-model-v43-20261010-b",
+      "hybrid"
+    ],
+    "dependency": "afterany:13202",
+    "job": "13203",
+    "trial": "hybrid"
+  },
+  {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--no-requeue",
+      "--kill-on-invalid-dep=yes",
+      "--nodelist=csis.mn1",
+      "--job-name=second_v43_cold",
+      "--mem=16G",
+      "--time=00:55:00",
+      "--dependency=afterany:13203",
+      "--output=local_runs/cluster-setup-20261010/v43-cold-%j.log",
+      "cluster_setup/run_cpu.sbatch",
+      "local_runs/cluster-setup-20261010/container-13155.sha256",
+      "-m",
+      "research_v43.campaign",
+      "run",
+      "local_runs/full-model-v43-20261010-b",
+      "cold"
+    ],
+    "dependency": "afterany:13203",
+    "job": "13204",
+    "trial": "cold"
+  },
+  {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--no-requeue",
+      "--kill-on-invalid-dep=yes",
+      "--nodelist=csis.mn1",
+      "--job-name=second_v43_oracle",
+      "--mem=16G",
+      "--time=00:55:00",
+      "--dependency=afterany:13204",
+      "--output=local_runs/cluster-setup-20261010/v43-oracle-%j.log",
+      "cluster_setup/run_cpu.sbatch",
+      "local_runs/cluster-setup-20261010/container-13155.sha256",
+      "-m",
+      "research_v43.campaign",
+      "run",
+      "local_runs/full-model-v43-20261010-b",
+      "oracle"
+    ],
+    "dependency": "afterany:13204",
+    "job": "13205",
+    "trial": "oracle"
+  }
+]

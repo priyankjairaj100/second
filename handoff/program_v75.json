@@ -1,0 +1,21 @@
+{
+  "version": 75,
+  "created_at": "2026-10-22T10:22:39.847428+00:00",
+  "kind": "unregistered_optimisation_feasibility",
+  "handoff": "docs/ACTIVE_SESSION_V75.md",
+  "details": "research_v75/README.txt",
+  "evidence": "validation/v75_optimization_check.json",
+  "manuscript_version": 74,
+  "scientific_decision_version": 72,
+  "scheduler": "PAUSED",
+  "model_results_changed": false,
+  "experiments_launched": false,
+  "linux_qualified": false,
+  "frozen_sources_preserved": true,
+  "next_steps": [
+    "Linux software qualification",
+    "Symmetric validation/kernel optimisation",
+    "Separately registered full-request comparison",
+    "Justified checkpoint/architecture transfer"
+  ]
+}

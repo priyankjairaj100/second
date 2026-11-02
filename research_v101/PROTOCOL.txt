@@ -1,0 +1,17 @@
+V101 separate recovery of the matched-target admission software package.
+V91 pre-registration import failure and V99 software job16301 FAILED1:0 are
+immutable. No old prepare, job or chain is retried. The exact V99 source archive
+is inherited; missing import and hash-manifest source dependencies are added.
+Before archive creation, execute the 104 pure checks from an isolated extraction
+without the research checkout. This supplements the mandatory 172 pinned Linux
+checks and cannot establish empirical transfer.
+The actual V99 complete scheduler CPU interval is [55.799,55.800) seconds.
+Carry56 aggregate software seconds and10 conservative controller seconds.
+The new checks aggregate ceiling is546 seconds and controller ceiling292;
+other four controllers remain302, new controller total1500. Thus old+new stay
+within the original602 software and1510 controller ceilings. Target numerical
+allowance1204, per-target600+2, one CPU,16GiB,600-second software wall and every
+other work/memory/output bound remain unchanged. Actual old receipts and scheduler
+state are reopened before registration, submission and final closure.
+V89 actual terminal remains required. This is five-step admission only, followed
+by a separately registered complete matched screen if all actual gates pass.

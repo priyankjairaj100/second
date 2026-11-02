@@ -1,0 +1,39 @@
+TACL preparation checklist, 28 October 2026
+
+PREPARED
+Title: Lossy Calibration Archives for Exact Model Repair.
+Original-submission format: 10 content pages and 1 reference page, no appendices.
+Official tacl2021v1 style is embedded unchanged. A4, two columns, prescribed type,
+anonymous title/header, page numbers, and review rulers are retained. No first-page
+float or identifying acknowledgments. The native compiler succeeds; the exported
+PDF is independently compiled from the same source. Font embedding, references,
+layout and displayed results are checked in validation/v120_manuscript_checks.json.
+
+APPENDIX DECISION
+The user explicitly requested no appendices and also discussed possible appendix
+content. The rewrite follows the former, with all core proofs in the main paper.
+The March 2024 policy permits up to 5 pages of replication details and up to 3
+pages of complementary tables/figures. Appendices are unreviewed, follow the
+references in the same review PDF, and use the same style/anonymity rules. Free
+narrative is restricted to replication detail. Nothing essential depends on them.
+Source: https://transacl.org/index.php/tacl/announcement/view/105
+
+UPLOAD AND AUTHOR CHECKS
+TACL disallows external review supplements and links to them. The larger evidence
+archive and editable-source ZIP are author-side materials, not review uploads.
+Before a separately authorized submission, authors must confirm author order,
+affiliations/country/contact details, consent, prior publication/review history,
+no concurrent review, the 9-month ACL/AACL/EACL/NAACL/EMNLP/ARR restriction, and the
+12-month TACL rejection restriction where applicable. Record any non-archival
+prior version in the editor-facing fields. These personal/history facts are
+unverified. Rename the upload using the assigned TACL number and 1-3 title words.
+The source-release license remains an author decision. No submission was made.
+Suggested section: Empirical and Data-Driven Methods.
+Suggested keywords: post-training quantization; calibration; exact reconstruction;
+interval certification; data deletion; model maintenance; storage tradeoffs.
+Source: https://transacl.org/index.php/tacl/about/submissions
+
+FORMAT SOURCE
+https://transacl.org/tacl-submission-templates/tacl2021v1-submission-formatting-instructions.pdf
+https://transacl.org/tacl-submission-templates/tacl2021v1.sty
+The 2024 appendix announcement supersedes the older formatting PDF's appendix rule.

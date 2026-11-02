@@ -1,0 +1,10 @@
+{
+  "automation_id": "continue-second-research",
+  "cluster_jobs_cancelled": false,
+  "new_monitor_created": false,
+  "status": "PAUSED",
+  "updated_at": 1793080741075,
+  "user_requested_stop": true,
+  "verified_from_configuration": true,
+  "verified_utc": "2026-10-27T06:52:10.224619+00:00"
+}

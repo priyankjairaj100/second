@@ -1,0 +1,233 @@
+{
+  "elapsed_ns": 5570289707,
+  "error": null,
+  "final_write_shutdown_and_wrapper_cpu_require_external_scheduler_observation": true,
+  "job_id": "15421",
+  "max_rss_kib": 146776,
+  "model_or_likelihood_execution": false,
+  "original_campaign_successful": false,
+  "original_closure_retried": false,
+  "process_cpu_ns": 5745019124,
+  "registration_sha256": "ec6b5a295667cf9b305f7dc2a0a8a7ee14546c5395f5733c9b9ea8a36c4e9df6",
+  "result": {
+    "accounting": {
+      "actual_quality_and_model_audits_required_separately": true,
+      "controller_charged_cpu_seconds": 56,
+      "execution_successful": true,
+      "includes_terminal_entry_after_exit": true,
+      "observed_process_tree_cpu_ns": 7572920178081,
+      "phases": {
+        "cpu_checks": {
+          "accounting_status": "verified",
+          "controller_charged_cpu_seconds": 5,
+          "controller_own_cpu_ns": 4333396012,
+          "debit_id": "6b28c53cdabeaeadb3b372da07809a2efec8dfe8a1ee010ba86ed1e476ba8775",
+          "execution_successful": true,
+          "job_id": "15405",
+          "nonworker_waited_child_cpu_ns": 20490000,
+          "observed_process_tree_cpu_ns": 34152282012,
+          "phase": "cpu_checks",
+          "quality_gate_outcome_not_used_for_accounting": true,
+          "scheduler_cpu_ns": 34719000000,
+          "scheduler_minus_observed_cpu_ns": 566717988,
+          "scheduler_reporting_quantum_ns": 1000000,
+          "waited_worker_cpu_counted_once": true,
+          "worker_charged_cpu_seconds": 30,
+          "worker_cpu_ns": 29798396000
+        },
+        "cpu_parity": {
+          "accounting_status": "verified",
+          "controller_charged_cpu_seconds": 5,
+          "controller_own_cpu_ns": 4641587029,
+          "debit_id": "218e28683bce3f924af0ce21ff9e8982965ffd9700ee30a683a135eef2d3c166",
+          "execution_successful": true,
+          "job_id": "15410",
+          "nonworker_waited_child_cpu_ns": 21571000,
+          "observed_process_tree_cpu_ns": 67823386029,
+          "phase": "cpu_parity",
+          "quality_gate_outcome_not_used_for_accounting": true,
+          "scheduler_cpu_ns": 68363000000,
+          "scheduler_minus_observed_cpu_ns": 539613971,
+          "scheduler_reporting_quantum_ns": 1000000,
+          "waited_worker_cpu_counted_once": true,
+          "worker_charged_cpu_seconds": 64,
+          "worker_cpu_ns": 63160228000
+        },
+        "cuda_checks": {
+          "accounting_status": "verified",
+          "controller_charged_cpu_seconds": 7,
+          "controller_own_cpu_ns": 6650460619,
+          "debit_id": "f58724273077a0d333af8971da8b66bac99e3259e52d7b8f207e0d3f00a1a52f",
+          "execution_successful": true,
+          "job_id": "15406",
+          "nonworker_waited_child_cpu_ns": 95897000,
+          "observed_process_tree_cpu_ns": 18152746619,
+          "phase": "cuda_checks",
+          "quality_gate_outcome_not_used_for_accounting": true,
+          "scheduler_cpu_ns": 18508000000,
+          "scheduler_minus_observed_cpu_ns": 355253381,
+          "scheduler_reporting_quantum_ns": 1000000,
+          "waited_worker_cpu_counted_once": true,
+          "worker_charged_cpu_seconds": 12,
+          "worker_cpu_ns": 11406389000
+        },
+        "gpu_quality": {
+          "accounting_status": "verified",
+          "controller_charged_cpu_seconds": 8,
+          "controller_own_cpu_ns": 7126107775,
+          "debit_id": "311aab155b7b723d9c389c0f053efd1e5777833d270e93d746aa187d1ccddd23",
+          "execution_successful": true,
+          "job_id": "15411",
+          "nonworker_waited_child_cpu_ns": 99105000,
+          "observed_process_tree_cpu_ns": 88484089775,
+          "phase": "gpu_quality",
+          "quality_gate_outcome_not_used_for_accounting": true,
+          "scheduler_cpu_ns": 88836000000,
+          "scheduler_minus_observed_cpu_ns": 351910225,
+          "scheduler_reporting_quantum_ns": 1000000,
+          "waited_worker_cpu_counted_once": true,
+          "worker_charged_cpu_seconds": 82,
+          "worker_cpu_ns": 81258877000
+        },
+        "parameters": {
+          "accounting_status": "verified",
+          "controller_charged_cpu_seconds": 5,
+          "controller_own_cpu_ns": 4397151898,
+          "debit_id": "3b9a162b5c4cc37a9c05c0666bdc758f3d463484496b6d009616f2e73d9c6d55",
+          "execution_successful": true,
+          "job_id": "15407",
+          "nonworker_waited_child_cpu_ns": 20056000,
+          "observed_process_tree_cpu_ns": 40530004898,
+          "phase": "parameters",
+          "quality_gate_outcome_not_used_for_accounting": true,
+          "scheduler_cpu_ns": 41078000000,
+          "scheduler_minus_observed_cpu_ns": 547995102,
+          "scheduler_reporting_quantum_ns": 1000000,
+          "waited_worker_cpu_counted_once": true,
+          "worker_charged_cpu_seconds": 37,
+          "worker_cpu_ns": 36112797000
+        },
+        "sequential_12": {
+          "accounting_status": "verified",
+          "controller_charged_cpu_seconds": 12,
+          "controller_own_cpu_ns": 11254597718,
+          "debit_id": "8def57274c8e11b5ac89c9a8a40834462e495acc61c337719862f7cfe50c33c9",
+          "execution_successful": true,
+          "job_id": "15408",
+          "nonworker_waited_child_cpu_ns": 20394000,
+          "observed_process_tree_cpu_ns": 5402458093718,
+          "phase": "sequential_12",
+          "quality_gate_outcome_not_used_for_accounting": true,
+          "scheduler_cpu_ns": 5403000000000,
+          "scheduler_minus_observed_cpu_ns": 541906282,
+          "scheduler_reporting_quantum_ns": 1000000000,
+          "waited_worker_cpu_counted_once": true,
+          "worker_charged_cpu_seconds": 5392,
+          "worker_cpu_ns": 5391183102000
+        },
+        "sequential_6": {
+          "accounting_status": "verified",
+          "controller_charged_cpu_seconds": 8,
+          "controller_own_cpu_ns": 7486850180,
+          "debit_id": "ad40f5ad27530eb558f86fe301fdbfbc6949d9f0819a12a271c38bc76656791c",
+          "execution_successful": true,
+          "job_id": "15409",
+          "nonworker_waited_child_cpu_ns": 20206000,
+          "observed_process_tree_cpu_ns": 1857038719180,
+          "phase": "sequential_6",
+          "quality_gate_outcome_not_used_for_accounting": true,
+          "scheduler_cpu_ns": 1857594000000,
+          "scheduler_minus_observed_cpu_ns": 555280820,
+          "scheduler_reporting_quantum_ns": 1000000,
+          "waited_worker_cpu_counted_once": true,
+          "worker_charged_cpu_seconds": 1850,
+          "worker_cpu_ns": 1849531663000
+        },
+        "terminal": {
+          "accounting_status": "verified",
+          "controller_charged_cpu_seconds": 6,
+          "controller_own_cpu_ns": 5605147850,
+          "debit_id": "2c41111902e1fab3ece3e5470456fa324521def006b55050ffad846cd74ee1a7",
+          "execution_successful": true,
+          "job_id": "15412",
+          "nonworker_waited_child_cpu_ns": 19470000,
+          "observed_process_tree_cpu_ns": 64280855850,
+          "phase": "terminal",
+          "quality_gate_outcome_not_used_for_accounting": true,
+          "scheduler_cpu_ns": 64822000000,
+          "scheduler_minus_observed_cpu_ns": 541144150,
+          "scheduler_reporting_quantum_ns": 1000000,
+          "waited_worker_cpu_counted_once": true,
+          "worker_charged_cpu_seconds": 59,
+          "worker_cpu_ns": 58656238000
+        }
+      },
+      "scheduler_cpu_ns": 7576920000000,
+      "status": "verified_complete_cost_accounting",
+      "worker_charged_cpu_seconds": 7526
+    },
+    "actual_artifacts_verified": true,
+    "actual_original_outputs_rehashed": true,
+    "ledger": {
+      "bytes": 17303,
+      "sha256": "10e5068e06cb2f2bf1d19cbb266d5737c12b002ac2be2bba91a0d7b00254f9f4"
+    },
+    "new_recovery_cost_requires_external_terminal_observation": true,
+    "original_closure_successful": false,
+    "original_failure": {
+      "charged_cpu_seconds": 5,
+      "observed_process_and_children_cpu_ns": 4276832585,
+      "original_closure_successful": false,
+      "scheduler": {
+        "allocated_cpus": 1,
+        "elapsed_seconds": 6,
+        "exit_code": "1:0",
+        "job_id": "15413",
+        "reporting_quantum_ns": 1000000,
+        "state": "FAILED",
+        "total_cpu_ns": 4817000000
+      },
+      "status": "original_failed_closure_preserved_and_costed"
+    },
+    "original_nine_allocation_scheduler_cpu_ns": 7581737000000,
+    "original_numerical_audits_not_reexecuted": true,
+    "phases": {
+      "cpu_checks": {
+        "bytes": 33838,
+        "sha256": "21cbaa477c08cb021a9796481acc3789bc9931b9bed2f0beedd153d266b142aa"
+      },
+      "cpu_parity": {
+        "bytes": 47074,
+        "sha256": "a657ec8542821e1a69b3463ad74ae06c79bea5443b9c6fb3e9eeabe99f9c3fba"
+      },
+      "cuda_checks": {
+        "bytes": 26587,
+        "sha256": "88ae5ac7cf657b735920816f70bc3e95a5432a89c5f1ac5f73b294fa3007c804"
+      },
+      "gpu_quality": {
+        "bytes": 318713,
+        "sha256": "b3250ea9551623ab6bcb0b8bd475023fb74044bd0125401ea734385d37dbe818"
+      },
+      "parameters": {
+        "bytes": 134245,
+        "sha256": "5ed20d55cc20baab97a1b11fbfa4f73ad9e266beefcbf35d6e7d5a91574d195f"
+      },
+      "sequential_12": {
+        "bytes": 152865,
+        "sha256": "39e49db9643706788e3d3a69d80f17750ea86a63b7819a2deee073e4fa1a56fb"
+      },
+      "sequential_6": {
+        "bytes": 148585,
+        "sha256": "0e3dfb0a2f7c752b4c446b4bb34cd6c49f28e41e9341d7d74b0a7544d1af2a63"
+      },
+      "terminal": {
+        "bytes": 604801,
+        "sha256": "18d2d139c9ef8dd24463ee89d49862a49d481859da8aa150fd44012eac478b29"
+      }
+    },
+    "quality_guard_pass": true
+  },
+  "schema": "separate-accounting-recovery-v72",
+  "status": "complete",
+  "waited_child_cpu_ns": 20774000
+}

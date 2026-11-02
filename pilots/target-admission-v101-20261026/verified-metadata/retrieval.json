@@ -1,0 +1,190 @@
+{
+  "bindings": {
+    "budget/ledger.json": {
+      "bytes": 723,
+      "sha256": "253fdca906127f731bb5dc5a22f39ce43966b18e89412164e379d9f22bf8ba65"
+    },
+    "checks-entry.json": {
+      "bytes": 1808,
+      "sha256": "8147647f7166b8874095cfae26d4237b524fa552c64c5fa32be0610ce3e007c8"
+    },
+    "checks-host-start.json": {
+      "bytes": 5035,
+      "sha256": "0e68f523e5148e91ce8bff83e9148d5a87fa0e28cbae786b6830407412c9eafb"
+    },
+    "checks-host.json": {
+      "bytes": 1009,
+      "sha256": "2104228f28315437d1e38e99bb4392a91567cc6f0e05feaf53e3be29579fbf4f"
+    },
+    "checks-release.json": {
+      "bytes": 118,
+      "sha256": "c6166e167675e1995c3e35b4f107692680ca3f814217991e3e19d72ad0e87166"
+    },
+    "checks-submission.json": {
+      "bytes": 1682,
+      "sha256": "34b5d7761330ea3e266328f6e6d49a2bec5571c0eaf49782bd807fed276964c5"
+    },
+    "close-entry.json": {
+      "bytes": 8815,
+      "sha256": "dee4644600edab12016749f901090cad1c56530b4d0d5f059099731b96189cb1"
+    },
+    "close-host-start.json": {
+      "bytes": 5034,
+      "sha256": "0902214bb1e1d8d0625c067298eca4a4305a491152e40c251a05b398114ac4c3"
+    },
+    "close-host.json": {
+      "bytes": 977,
+      "sha256": "d2b0e724cfa0ba5988dcf899d473c8ab677cd02809b6d7e3383edce1d90624ac"
+    },
+    "close-release.json": {
+      "bytes": 118,
+      "sha256": "1c0caf77e08a067dedaaf541be3d4c9b8103c191985ad240f0c68f7f908b96da"
+    },
+    "close-report.json": {
+      "bytes": 8091,
+      "sha256": "cf00a24468a554e413eb238be5c123c1759b7fb38be0893fe21687ffc0048771"
+    },
+    "close-submission.json": {
+      "bytes": 1700,
+      "sha256": "d01adb11d2c11035e65952d109e958f6acc5137b83414ea69be1885c2a106da0"
+    },
+    "distilgpt2-entry.json": {
+      "bytes": 3881,
+      "sha256": "7778c15d4847c52ace688e6484d0572c5d672e1c728dc4abdb6bc1fdab88201d"
+    },
+    "distilgpt2-host-start.json": {
+      "bytes": 5039,
+      "sha256": "58359e75885d6a0ad9f9d0f69c6e93524c8672c1c645b25cd6f4e6b6ca425b13"
+    },
+    "distilgpt2-host.json": {
+      "bytes": 1003,
+      "sha256": "2cf9c312b6585c5f1a955eaf2f04decd29d53a961a8b4001207aa2e84d6e5da0"
+    },
+    "distilgpt2-release.json": {
+      "bytes": 118,
+      "sha256": "266912f93f7f4a1d67db5058f2c571388694ffbf4d040730e580a196982739e6"
+    },
+    "distilgpt2-submission.json": {
+      "bytes": 1725,
+      "sha256": "88cb9716bd757d72ff97ecd97eb0435849cf9fc10d66da35befe11fad6ac4b01"
+    },
+    "distilgpt2/outputs/actual-admission.json": {
+      "bytes": 547693,
+      "sha256": "8e11e7c18bbca9d862cb2fe68ef0d0a96173f14e8942ed6b0c74ef37d361581a"
+    },
+    "distilgpt2/outputs/anchor-target.json": {
+      "bytes": 968720,
+      "sha256": "01ee42bff076fed9dec594a3f74cd1e8844c3592c196e0381d3f28141b718772"
+    },
+    "distilgpt2/outputs/calibration-target.json": {
+      "bytes": 4564,
+      "sha256": "78bf6dfd0d9d3f4569b76dc6275d45df27edac974ae39c625589f8f09e471780"
+    },
+    "distilgpt2/outputs/completion.json": {
+      "bytes": 3101,
+      "sha256": "48689291267e1186857640fd0524e1f6bd0109736769e2871e4b55aa589e7d76"
+    },
+    "distilgpt2/outputs/execution-provenance.json": {
+      "bytes": 12727,
+      "sha256": "cbb6f2cc7c5002b7346706af87c953faffbdef88385c8b9cefc523ca09656429"
+    },
+    "distilgpt2/outputs/selection.json": {
+      "bytes": 1418,
+      "sha256": "de61efa62458b1791199272173abc88e8b44b6c4d77c839d9fbdea10413be48b"
+    },
+    "distilgpt2/outputs/service-target.json": {
+      "bytes": 6169,
+      "sha256": "227c86734464eb559333e98ef2e99bbe2402fa6114ed4f211c6ab8e8371e3a71"
+    },
+    "distilgpt2/outputs/structural-admission.json": {
+      "bytes": 434762,
+      "sha256": "be46b7850e3841e636d3f175acee2815c95ed27878a56ac1cd403b083b458e2f"
+    },
+    "fetch-entry.json": {
+      "bytes": 1130,
+      "sha256": "33ded2385623798a5e8dd1c13ffe618b535da6218537db44b0d702c66910320d"
+    },
+    "fetch-host-start.json": {
+      "bytes": 5034,
+      "sha256": "e8e7dd9547986be7f8408af837812d73ad9c47217e6bb75df98ee67de0ee92c9"
+    },
+    "fetch-host.json": {
+      "bytes": 977,
+      "sha256": "b67e728717fea16ae10c6f647b1ba7fefdcd1fd2746a774ee8e91e3e59e9d03d"
+    },
+    "fetch-release.json": {
+      "bytes": 118,
+      "sha256": "35afc628a12dce2fde4971a4da016522daabb56cc37dd926810a5653bcf7efe3"
+    },
+    "fetch-submission.json": {
+      "bytes": 1700,
+      "sha256": "9969580e41882c04d73c597fa46de67314ae8ca1e395e2f196458b82528eff31"
+    },
+    "gpt2-entry.json": {
+      "bytes": 3866,
+      "sha256": "c1e07ff80aeb8fb1bd4972812dd83a97f7d18f21ffc567aeaa5ee6952690a651"
+    },
+    "gpt2-host-start.json": {
+      "bytes": 5033,
+      "sha256": "98fc5d7dfee3b5190eb10be2f62826ae19efe40303557518cde9b6ca4c2a741d"
+    },
+    "gpt2-host.json": {
+      "bytes": 997,
+      "sha256": "d161b10c0762bdf6ed2c9713402351a5d47b2e67ddf3b9fd51cd7d3081840b54"
+    },
+    "gpt2-release.json": {
+      "bytes": 118,
+      "sha256": "08f68ea656956e243b2047a30cffdda6991261366e099ac9bed8ff0eb6fa5763"
+    },
+    "gpt2-submission.json": {
+      "bytes": 1695,
+      "sha256": "4e25fdcef03af2c6c61ba3be19faa72e3ac2dbb90659f119678f22ea5028c5d0"
+    },
+    "gpt2/outputs/actual-admission.json": {
+      "bytes": 1092300,
+      "sha256": "44faa7b0eb6958116aca197334e9aaadf946d1edc4043d759d36ae5395ac0860"
+    },
+    "gpt2/outputs/anchor-target.json": {
+      "bytes": 1945982,
+      "sha256": "ef1c7c55c098b43aae4f93bd00e191f843d792c9fe5a125fc4655256f2286711"
+    },
+    "gpt2/outputs/calibration-target.json": {
+      "bytes": 7828,
+      "sha256": "cf6841efbcb390bf3fa66751032d8a38695e4cd53f02199e9b1433222af4ef60"
+    },
+    "gpt2/outputs/completion.json": {
+      "bytes": 3098,
+      "sha256": "742d14e5f5b8d3a0b2c5c567afcadff98d9792b2607d8be4093e5f6a33f3d39c"
+    },
+    "gpt2/outputs/execution-provenance.json": {
+      "bytes": 17702,
+      "sha256": "c23566594edb99ce9a3610997426a8db343524f2306fd5b5e39032ae7b574384"
+    },
+    "gpt2/outputs/selection.json": {
+      "bytes": 1418,
+      "sha256": "de61efa62458b1791199272173abc88e8b44b6c4d77c839d9fbdea10413be48b"
+    },
+    "gpt2/outputs/service-target.json": {
+      "bytes": 9433,
+      "sha256": "f133a7af9c2576d826a64d128b46e089b1d41a94cd84c76ef7b026397603a405"
+    },
+    "gpt2/outputs/structural-admission.json": {
+      "bytes": 868791,
+      "sha256": "7fbe69aa54073770ac4d32e395daf97727af5c26eca4b3f6f84f6ac4703bcd81"
+    },
+    "program.json": {
+      "bytes": 138421,
+      "sha256": "aa423ad468a7efabc9ded1d16d0c83672fb2d6e0c6546941dde2c4a3f224d231"
+    },
+    "registration.json": {
+      "bytes": 85,
+      "sha256": "e699c61a398bd9e3842fc51404fbf66ebb748231e6716e8930b21c9a4ed77c4d"
+    },
+    "software-results.json": {
+      "bytes": 1070,
+      "sha256": "bbbcb41c89f861a6e32d9b89afff8ae85e67eb67311881111c4168fcc7c97b01"
+    }
+  },
+  "captured_utc": "2026-10-26T07:46:33.361180+00:00",
+  "root": "/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v101-20261026-a"
+}

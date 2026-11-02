@@ -1,0 +1,10 @@
+{
+  "returncode": 0,
+  "stdout": "{'file': 'program.json', 'bytes': 1830432, 'sha256': '6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9'}\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n",
+  "program_binding": {
+    "file": "program.json",
+    "bytes": 1830432,
+    "sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9"
+  }
+}

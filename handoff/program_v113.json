@@ -1,0 +1,267 @@
+{
+  "branch": "codex/second-cluster-v42",
+  "conference_submission": false,
+  "connection": {
+    "observed_utc": "2026-10-27T05:21:06Z",
+    "prior_timeout_preserved": true,
+    "restoration_question_resolved": true,
+    "status": "restored_and_verified"
+  },
+  "credentials_stored": false,
+  "current_handoff": "docs/ACTIVE_SESSION_V113.md",
+  "current_science": {
+    "complete_comparisons": "V72/V89 scope unchanged",
+    "new_full_model_transfer": false,
+    "new_quality_evidence": false,
+    "new_speed_comparison": false,
+    "selected_stage_diagnostic": "V110 only"
+  },
+  "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "evidence_directory": "pilots/matched-point-policy-v113-20261027",
+  "experiment": {
+    "carried_numerical_seconds": 6304,
+    "chain_released_once": true,
+    "complete_requests_at_observation": 0,
+    "current_observation": {
+      "captured_utc": "2026-10-27T05:33:22.790241+00:00",
+      "first_request_completion": null,
+      "first_request_progress_counts": {
+        "context_ready": 1,
+        "stage_certified": 10
+      },
+      "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+      "numerical_status": "",
+      "queue": "16427|second112-supplemental|PENDING|0:00|(Dependency)\n16426|second112-primary|PENDING|0:00|(Dependency)\n16425|second112-distilgpt2--oracle|PENDING|0:00|(Dependency)\n16424|second112-gpt2--oracle|PENDING|0:00|(Dependency)\n16423|second112-gpt2--reference_compressed-2|PENDING|0:00|(Dependency)\n16422|second112-distilgpt2--reference_compressed-2|PENDING|0:00|(Dependency)\n16421|second112-distilgpt2--optimized_modern-2|PENDING|0:00|(Dependency)\n16420|second112-gpt2--optimized_modern-2|PENDING|0:00|(Dependency)\n16419|second112-gpt2--reference_modern-2|PENDING|0:00|(Dependency)\n16418|second112-distilgpt2--reference_modern-2|PENDING|0:00|(Dependency)\n16417|second112-distilgpt2--optimized_compressed-2|PENDING|0:00|(Dependency)\n16416|second112-gpt2--optimized_compressed-2|PENDING|0:00|(Dependency)\n16415|second112-gpt2--optimized_compressed-1|PENDING|0:00|(Dependency)\n16414|second112-distilgpt2--optimized_compressed-1|PENDING|0:00|(Dependency)\n16413|second112-distilgpt2--reference_modern-1|PENDING|0:00|(Dependency)\n16412|second112-gpt2--reference_modern-1|PENDING|0:00|(Dependency)\n16411|second112-gpt2--optimized_modern-1|PENDING|0:00|(Dependency)\n16410|second112-distilgpt2--optimized_modern-1|PENDING|0:00|(Dependency)\n16409|second112-distilgpt2--reference_compressed-1|PENDING|0:00|(Dependency)\n16408|second112-gpt2--reference_compressed-1|RUNNING|6:18|csis.mn1\n",
+      "scheduler_raw": "16407|second112-checks|COMPLETED|0:0|80|01:13.989|1|16G|csis.mn1\n16407.batch|batch|COMPLETED|0:0|80|01:13.989|1||csis.mn1\n16408|second112-gpt2--reference_compressed-1|RUNNING|0:0|378|00:00:00|1|16G|csis.mn1\n16408.batch|batch|RUNNING|0:0|378|00:00:00|1||csis.mn1\n16409|second112-distilgpt2--reference_compressed-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16410|second112-distilgpt2--optimized_modern-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16411|second112-gpt2--optimized_modern-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16412|second112-gpt2--reference_modern-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16413|second112-distilgpt2--reference_modern-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16414|second112-distilgpt2--optimized_compressed-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16415|second112-gpt2--optimized_compressed-1|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16416|second112-gpt2--optimized_compressed-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16417|second112-distilgpt2--optimized_compressed-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16418|second112-distilgpt2--reference_modern-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16419|second112-gpt2--reference_modern-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16420|second112-gpt2--optimized_modern-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16421|second112-distilgpt2--optimized_modern-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16422|second112-distilgpt2--reference_compressed-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16423|second112-gpt2--reference_compressed-2|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16424|second112-gpt2--oracle|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16425|second112-distilgpt2--oracle|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16426|second112-primary|PENDING|0:0|0|00:00:00|0|16G|None assigned\n16427|second112-supplemental|PENDING|0:0|0|00:00:00|0|16G|None assigned\n"
+    },
+    "jobs": [
+      {
+        "dependency": null,
+        "job_id": "16407",
+        "operation": "checks"
+      },
+      {
+        "dependency": "16407",
+        "job_id": "16408",
+        "operation": "gpt2/reference_compressed-1"
+      },
+      {
+        "dependency": "16408",
+        "job_id": "16409",
+        "operation": "distilgpt2/reference_compressed-1"
+      },
+      {
+        "dependency": "16409",
+        "job_id": "16410",
+        "operation": "distilgpt2/optimized_modern-1"
+      },
+      {
+        "dependency": "16410",
+        "job_id": "16411",
+        "operation": "gpt2/optimized_modern-1"
+      },
+      {
+        "dependency": "16411",
+        "job_id": "16412",
+        "operation": "gpt2/reference_modern-1"
+      },
+      {
+        "dependency": "16412",
+        "job_id": "16413",
+        "operation": "distilgpt2/reference_modern-1"
+      },
+      {
+        "dependency": "16413",
+        "job_id": "16414",
+        "operation": "distilgpt2/optimized_compressed-1"
+      },
+      {
+        "dependency": "16414",
+        "job_id": "16415",
+        "operation": "gpt2/optimized_compressed-1"
+      },
+      {
+        "dependency": "16415",
+        "job_id": "16416",
+        "operation": "gpt2/optimized_compressed-2"
+      },
+      {
+        "dependency": "16416",
+        "job_id": "16417",
+        "operation": "distilgpt2/optimized_compressed-2"
+      },
+      {
+        "dependency": "16417",
+        "job_id": "16418",
+        "operation": "distilgpt2/reference_modern-2"
+      },
+      {
+        "dependency": "16418",
+        "job_id": "16419",
+        "operation": "gpt2/reference_modern-2"
+      },
+      {
+        "dependency": "16419",
+        "job_id": "16420",
+        "operation": "gpt2/optimized_modern-2"
+      },
+      {
+        "dependency": "16420",
+        "job_id": "16421",
+        "operation": "distilgpt2/optimized_modern-2"
+      },
+      {
+        "dependency": "16421",
+        "job_id": "16422",
+        "operation": "distilgpt2/reference_compressed-2"
+      },
+      {
+        "dependency": "16422",
+        "job_id": "16423",
+        "operation": "gpt2/reference_compressed-2"
+      },
+      {
+        "dependency": "16423",
+        "job_id": "16424",
+        "operation": "gpt2/oracle"
+      },
+      {
+        "dependency": "16424",
+        "job_id": "16425",
+        "operation": "distilgpt2/oracle"
+      },
+      {
+        "dependency": "16425",
+        "job_id": "16426",
+        "operation": "primary"
+      },
+      {
+        "dependency": "16426",
+        "job_id": "16427",
+        "operation": "supplemental"
+      }
+    ],
+    "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v112-20261026-a",
+    "numerical_reservation": 72036,
+    "one_use_operations_consumed": [
+      "stage_v112",
+      "prepare_v112",
+      "submit_checks",
+      "submit_chain"
+    ],
+    "original_numerical_ceiling": 82840,
+    "primary_audit_complete": false,
+    "program_bytes": 186414,
+    "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+    "registered": true,
+    "required_actual_model_state_trust_comparisons": 16,
+    "reused_preparations": {
+      "distilgpt2": {
+        "bytes": 168488,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/distilgpt2/prepare/outputs/completion.json",
+        "sha256": "3c8f26b12960183222e6a7053ba64515132f2b1cb7cd49f43e92d42550b35ab5"
+      },
+      "gpt2": {
+        "bytes": 329684,
+        "path": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/prepare/outputs/completion.json",
+        "sha256": "4f95f2c6bee94d68dbe338409aaf84d493cc0876e126c24c6389f22815c01474"
+      }
+    },
+    "software": {
+      "actual_closure": "verified_actual_software_closure",
+      "captured_utc": "2026-10-27T05:26:21.803962+00:00",
+      "cost": {
+        "complete_controller_upper_cpu_ns": 13292755000,
+        "contained_kind": "generated_software",
+        "contained_work_cpu_ns": 60697245000,
+        "job_id": "16407",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 73989000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "errors": 0,
+      "exit_code": "0:0",
+      "failures": 0,
+      "job_id": "16407",
+      "skipped": 0,
+      "status": "COMPLETED",
+      "tests": 318
+    },
+    "software_qualified": true,
+    "source_archive": {
+      "bytes": 14131200,
+      "sha256": "051c490a449120fabd7ddd839afb1287b5ea8ceef15a39fcd86a8823258ac2bd"
+    },
+    "source_count": 1339,
+    "source_inventory": {
+      "bytes": 164430,
+      "sha256": "633aa917d4ab03de4e7be45e53a3b0ed5af821266be6db38c3437dcfd0de7505"
+    },
+    "supplemental_audit_complete": false,
+    "terminal_complete": false,
+    "uploaded": true,
+    "version": 112
+  },
+  "frozen_local_source_counterparts_verified": 1322,
+  "github_repository": "priyankjairaj100/second",
+  "manuscript": {
+    "changed_this_checkpoint": false,
+    "identity": {
+      "bytes": 59315,
+      "sha256": "cea87a82c5137306729871eb0030846c72bfe7c4039566509ab573621fc4fb48"
+    },
+    "native_compile_previously_verified": true,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex",
+    "rendered_layout_verified": false,
+    "version": 111
+  },
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "paid_compute": false,
+  "pending": [
+    "Observe only existing16408-16427; preserve failures and never repeat consumed operations",
+    "Require all16requests/two fresh oracles/both audits and actual terminal closure before reduction or scientific claims",
+    "Run prepared read-only reporting_v113 collector only after every registered allocation completes successfully",
+    "Actual rendered layout and final venue/cycle/category"
+  ],
+  "prior_handoff": "docs/ACTIVE_SESSION_V112.md",
+  "publication_baseline": "b5ac8f0b5d8061d27ccacb2ef441651fb87e31a3",
+  "reporting_preparation": {
+    "actual_released_job_binding_verified": true,
+    "collector_executed": false,
+    "empirical_reduction_executed": false,
+    "errors": 0,
+    "failures": 0,
+    "historical_preparation_cost_bound": true,
+    "job_count": 21,
+    "original_sources_changed": false,
+    "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+    "required_actual_model_comparisons": 16,
+    "schema": "v113-reporting-preparation",
+    "skipped": 0,
+    "source_hashes": {
+      "reporting_v113/__init__.py": "5ea23225fd9ddde3592a46adfa3a520c04681ad0de322759a1df37c3372a22e4",
+      "reporting_v113/collect.py": "fc04e80f176124b6f730b818c312b1ea1c9b374622c71df88694490649213008",
+      "reporting_v113/reduce.py": "fa679977f914baae1ad684f34b34c0f6b6392150cb7cd57d1fcf20a6fe392f5f",
+      "reporting_v113/test_collect.py": "c0e19528d0f34589a610cc35d81d3870f74b13e50de054d184a8aef855e00754",
+      "reporting_v113/test_reduce.py": "4d2113a17944e1a5d519d5378ef8c0338001e8e57c3b0368082d595bc88ccca8",
+      "reporting_v113/test_reuse.py": "f39a9b0ef0265224eb748b68b16acac2f0624db7bccbddae650961ba7c508f7f"
+    },
+    "status": "prepared_not_empirical",
+    "test_output": "......................\n----------------------------------------------------------------------\nRan 22 tests in 0.031s\n\nOK\n",
+    "tests": 22
+  },
+  "review_bundle": {
+    "changed_this_checkpoint": false,
+    "identity": {
+      "bytes": 10647866,
+      "sha256": "e8ffa396455ff37339e404a2b79fc0cea1d81d546c48c4ab118eba3e7fe9ef4d"
+    },
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v111.zip",
+    "submission_ready": false,
+    "version": 111
+  },
+  "scheduler": "ACTIVE",
+  "schema": "second-handoff-v113",
+  "subagents_used": false,
+  "updated_utc": "2026-10-27T05:32:18.613272+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "archive": {
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/work/practical-gptq-v129/source-v129.tar.gz",
+    "bytes": 18811045,
+    "sha256": "c0c5e08d9085c9829f67891a857ee8015905ecd8be06353ba41409b6c50a5e72"
+  },
+  "registration_sha256": "622c7cc776176ddbb7cd9c181d9c77936efba8f6985b718bc52954857394d2e5",
+  "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/practical-gptq-v129-20261029-a",
+  "sources": 1450
+}

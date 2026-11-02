@@ -1,0 +1,117 @@
+{
+  "scope": "Descriptive loss distribution after fixed primary decision; no new model evaluation or causal explanation",
+  "strata": {
+    "distilgpt2__3": {
+      "articles_above_1_20": 0,
+      "articles_above_1_05": 56,
+      "median": 1.0064028590212981,
+      "percentiles_90_95_99": [
+        1.065079642032825,
+        1.082434309709221,
+        1.1222724096067083
+      ],
+      "maximum": 1.142266680433212,
+      "worst_article_id": "c4:en:validation:shard2:line995",
+      "worst_article_all_models_mean_nll": {
+        "distilgpt2__candidate_2": 3.8819837990014787,
+        "distilgpt2__candidate_3": 3.906668758971638,
+        "distilgpt2__original": 3.6377838431632354,
+        "gpt2__candidate_2": 3.4318849974526087,
+        "gpt2__candidate_3": 3.435942511422638,
+        "gpt2__original": 3.236583352908429,
+        "sequential__distilgpt2__2": 3.798821898341606,
+        "sequential__distilgpt2__3": 3.7736541544800417,
+        "sequential__gpt2__2": 3.4226832566349437,
+        "sequential__gpt2__3": 3.427067503526362,
+        "gptq__distilgpt2__2": 3.862669306411786,
+        "gptq__distilgpt2__3": 3.897759448335375,
+        "gptq__gpt2__2": 3.5313534022216113,
+        "gptq__gpt2__3": 3.5245496709195585
+      }
+    },
+    "distilgpt2__2": {
+      "articles_above_1_20": 0,
+      "articles_above_1_05": 48,
+      "median": 1.005414959816941,
+      "percentiles_90_95_99": [
+        1.0614102644671455,
+        1.0756863368962863,
+        1.1078818246299398
+      ],
+      "maximum": 1.1852400015156799,
+      "worst_article_id": "c4:en:validation:shard2:line2982",
+      "worst_article_all_models_mean_nll": {
+        "distilgpt2__candidate_2": 5.104697028031069,
+        "distilgpt2__candidate_3": 4.9076030366928745,
+        "distilgpt2__original": 4.953489063740604,
+        "gpt2__candidate_2": 4.753966047505584,
+        "gpt2__candidate_3": 4.824425295344409,
+        "gpt2__original": 4.728336850647215,
+        "sequential__distilgpt2__2": 4.934751741026374,
+        "sequential__distilgpt2__3": 5.072384382448237,
+        "sequential__gpt2__2": 4.787524949298001,
+        "sequential__gpt2__3": 4.75010812137881,
+        "gptq__distilgpt2__2": 5.03616944004921,
+        "gptq__distilgpt2__3": 5.180323565217587,
+        "gptq__gpt2__2": 5.005232138786008,
+        "gptq__gpt2__3": 4.848878126766404
+      }
+    },
+    "gpt2__3": {
+      "articles_above_1_20": 1,
+      "articles_above_1_05": 58,
+      "median": 1.005725440425751,
+      "percentiles_90_95_99": [
+        1.0690057067390917,
+        1.0796820701232492,
+        1.1275401339360516
+      ],
+      "maximum": 1.4027071168604737,
+      "worst_article_id": "c4:en:validation:shard2:line816",
+      "worst_article_all_models_mean_nll": {
+        "distilgpt2__candidate_2": 5.667737205024514,
+        "distilgpt2__candidate_3": 5.630573167360617,
+        "distilgpt2__original": 5.394014356715706,
+        "gpt2__candidate_2": 5.57820982686374,
+        "gpt2__candidate_3": 5.763665959311767,
+        "gpt2__original": 5.080927786362135,
+        "sequential__distilgpt2__2": 5.742306493880832,
+        "sequential__distilgpt2__3": 5.747401174818923,
+        "sequential__gpt2__2": 5.518335617214038,
+        "sequential__gpt2__3": 5.42526193489435,
+        "gptq__distilgpt2__2": 5.776220992035073,
+        "gptq__distilgpt2__3": 5.848397943794207,
+        "gptq__gpt2__2": 5.641476805408616,
+        "gptq__gpt2__3": 5.798634013300232
+      }
+    },
+    "gpt2__2": {
+      "articles_above_1_20": 0,
+      "articles_above_1_05": 32,
+      "median": 0.9869483908953636,
+      "percentiles_90_95_99": [
+        1.0502612095476795,
+        1.0717917447963392,
+        1.1110659773416303
+      ],
+      "maximum": 1.1837766545553936,
+      "worst_article_id": "c4:en:validation:shard2:line912",
+      "worst_article_all_models_mean_nll": {
+        "distilgpt2__candidate_2": 4.143360958469734,
+        "distilgpt2__candidate_3": 4.128228672176889,
+        "distilgpt2__original": 4.050304172181533,
+        "gpt2__candidate_2": 3.858704724043114,
+        "gpt2__candidate_3": 3.7443032027560754,
+        "gpt2__original": 3.6221095694657004,
+        "sequential__distilgpt2__2": 4.168270939139891,
+        "sequential__distilgpt2__3": 4.18696509306183,
+        "sequential__gpt2__2": 3.6899948417306168,
+        "sequential__gpt2__3": 3.8573711437616156,
+        "gptq__distilgpt2__2": 4.501642096522524,
+        "gptq__distilgpt2__3": 4.426576683103685,
+        "gptq__gpt2__2": 4.0146953401762495,
+        "gptq__gpt2__3": 3.9416995108151722
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "full-model-and-quality-live-progress-v56",
+  "captured_at_utc": "2026-10-11T11:07:39.877673+00:00",
+  "status": "running_with_conditional_quality_and_gpu_jobs",
+  "published_cluster_commit": "5dcd24c29fa46fd012eaf49394b39693ff831e7a",
+  "remote_worktree_clean": true,
+  "v54_program_sha256": "03a6181b0d32ad023706145fbde28f202ed5d137e95a4b16ecbd19686858465b",
+  "preparation_phases_observed": {
+    "context_ready": 1,
+    "source_replayed": 13,
+    "stage_certified": 3
+  },
+  "latest_prepare_progress": {
+    "certificate_refusal": null,
+    "code_sha256": "ad0a392e8c39fcb99f7d2d56c4faecaf5924b2eb6e79b50d59722c65b97a30bb",
+    "component_elapsed_ns": 20590602587,
+    "elapsed_ns": 1568328769317,
+    "fallback": false,
+    "phase": "stage_certified",
+    "route": "streamed",
+    "stage_id": "block.0000.mlp_up"
+  },
+  "incomplete_progress_files": [],
+  "v54_budget_attempts_at_capture": {
+    "aac3f10d437f8b3f20aa817a1e58784ff4e8c0c8c27f25a9a6e5a906955b1125": {
+      "charged_cpu_seconds": 10802,
+      "observed_cpu_ns": null,
+      "phase": "feasibility",
+      "reserved_cpu_seconds": 10802,
+      "state": "reserved"
+    }
+  },
+  "terminal_audits_present": {
+    "artifact-audit.json": false,
+    "postrun-audit.json": false
+  },
+  "conditional_v55_registration_exists": false,
+  "conditional_v56_registration_exists": false,
+  "software_checks": {
+    "v55": {
+      "status": "passed",
+      "tests": 18,
+      "skipped": 0,
+      "slurm_job_id": "13324"
+    },
+    "v56": {
+      "status": "passed",
+      "tests": 12,
+      "skipped": 0,
+      "slurm_job_id": "13328"
+    }
+  },
+  "frozen_source_bindings": {
+    "v54": {
+      "files": 386,
+      "changed": []
+    },
+    "v55": {
+      "files": 399,
+      "changed": []
+    },
+    "v56": {
+      "files": 409,
+      "changed": []
+    }
+  },
+  "accounting": "JobID|State|ExitCode|Elapsed|TotalCPU|MaxRSS\n13309|COMPLETED|0:0|00:00:03|00:02.714|\n13309.batch|COMPLETED|0:0|00:00:03|00:02.714|3328K\n13310|RUNNING|0:0|00:28:39|00:00:00|\n13310.batch|RUNNING|0:0|00:28:39|00:00:00|\n13311|PENDING|0:0|00:00:00|00:00:00|\n13312|PENDING|0:0|00:00:00|00:00:00|\n13313|PENDING|0:0|00:00:00|00:00:00|\n13314|PENDING|0:0|00:00:00|00:00:00|\n13315|PENDING|0:0|00:00:00|00:00:00|\n13316|PENDING|0:0|00:00:00|00:00:00|\n13317|PENDING|0:0|00:00:00|00:00:00|\n13324|COMPLETED|0:0|00:00:09|00:07.790|\n13324.batch|COMPLETED|0:0|00:00:09|00:07.790|3340K\n13325|PENDING|0:0|00:00:00|00:00:00|\n13326|PENDING|0:0|00:00:00|00:00:00|\n13327|PENDING|0:0|00:00:00|00:00:00|\n13328|COMPLETED|0:0|00:00:09|00:07.668|\n13328.batch|COMPLETED|0:0|00:00:09|00:07.668|1092K\n13329|PENDING|0:0|00:00:00|00:00:00|\n",
+  "complete_model_verified": false,
+  "quality_for_new_model_verified": false,
+  "gpu_parity_for_new_model_verified": false,
+  "confirmation": false,
+  "acl_ready": false
+}

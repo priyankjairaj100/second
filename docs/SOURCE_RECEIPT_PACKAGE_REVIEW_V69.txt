@@ -1,0 +1,89 @@
+Source and receipt package review, 16 October 2026
+This is static packaging preparation, not runtime qualification or a final bundle.
+
+Source closure
+The prepared execution inventory remains532 files:469 V67,14 historical GPU/export,
+9 V68 and40 V69. No source bytes, registration, job, cap or attempt changed.
+The initial static scan found four legacy imports of research_v36.archive_stage_capsule
+outside that inventory. The broader package candidate now includes its existing
+helper and package initializer, both checked against the reporting commit/manifest.
+These two files are not reachable in the inspected V67/V68/V69 entrypoint graphs.
+
+The extended534-file candidate parses503 Python modules under Python3.10 grammar.
+It records3,174 local edges and no unresolved static project imports. Package
+initializers, conditional/test imports and three reviewed bare-import alternatives
+are included. Reachability is not a sufficient package allowlist: registration
+inventories, native sources, dynamic file paths and runtime processes still matter.
+Neither project imports nor native compilation were executed by this check.
+
+Two nonliteral dynamic import calls use bounded source-declared tuples. The first
+pins numpy/scipy/gmpy2; scipy absence is explicitly allowed for pinned gelu_new.
+The second iterates eleven named standard-library modules. Their source commitments
+and exact tuple values are in the selection map. This is source review, not actual
+module-origin/runtime admission. Twelve third-party import roots appear across the
+legacy/test union; they are not all required in one current execution environment.
+
+Historical archive contents
+A bounded read inspected five already-preserved archives:2,269 regular UTF-8 members,
+33,307,525 uncompressed bytes and1,803 JSON files. Every original archive commitment
+was rechecked. The reader extracted no files and executed no code or numerical audit.
+Known identity strings occur in390 members. Ten contain raw historical calibration
+or exposed-quality token arrays. Their exact archive/member/hash exclusions are in
+SOURCE_RECEIPT_SELECTION_V69.json. Do not include these members or copy the original
+archives into an anonymous ZIP. Do not remove them from immutable historical evidence.
+
+One additional numeric-array flag is not token content: the compressed V61 completion
+receipt has18 fallback-row indices and18 failed-coordinate indices. Preserve these
+adverse diagnostics. No token, article-text or array values are copied to the scan
+report. Selected-field heuristics do not establish absence of every sensitive field.
+
+Concrete receipt candidates
+Nine actual JSON receipts were individually rebound and their top-level schemas
+reviewed: V54 primary/additive, V55 exposed-quality, V56 parity, V59 adaptive-quality,
+V62 recovered primary/additive, and V63 measure/audit. Each has an explicit purpose
+and evidence-record mapping. No selected member triggered the raw-payload heuristic.
+Most originals contain identifying paths. The completed labelled derivatives have
+private original/derivative hashes, consistent mappings and checks preserving every
+number, Boolean, failure, cap and cost. Do not claim redacted paths satisfy original bindings.
+The completed V62 recovery cannot replace or erase the failed V61 audit history.
+
+Preserved outputs and next work
+The initial missing-source report remains intact. The extended scan, two-source
+supplement, archive content report and explicit selection map are new reporting
+artifacts. The map and scans contain private provenance and stay outside anonymous
+packaging. All originals remain unchanged. The existing five-file summary ZIP remains
+unchanged:15 historical groups,1,054 checked field groups and eight shared exposed
+articles. It is not the full source/protocol/receipt/runtime reproduction package.
+
+The nine receipt derivatives are prepared and verified. Source component C now
+contains534 reversible source/protocol/wrapper copies and passes114 local fixtures
+from clean extraction. Complete external input/runtime instructions and empirical
+qualification separately. Complete runtime/
+license notices and clean extraction/reproduction before final inclusion. V67 still
+needs both terminal model/state/cost audits; V68/V69 remain unregistered. The existing
+manuscript was not edited in this checkpoint; its prior native compilation and71
+number checks remain valid for the unchanged source. No final submission was made.
+
+Reports
+validation/v69_static_source_closure.json (preserved initial missing-source report)
+validation/v69_static_source_closure_extended.json (534-file candidate)
+validation/v69_source_package_supplement.json (two unchanged legacy files)
+validation/v69_archive_content_review.json (bounded payload/identity scan)
+docs/SOURCE_RECEIPT_SELECTION_V69.json (private receipt candidates/exclusions)
+
+Receipt derivative completion update
+The nine candidates now have typed-preserving review derivatives and an eleven-file
+ZIP with clean extraction. See REVIEW_RECEIPT_COMPANION_V69.txt. The historical
+selection map remains unchanged; runtime/source reproduction and whole-package
+anonymity review are not complete. No frozen source or original receipt changed.
+
+Source component completion update
+The actual development-source-review-v69c.zip contains534 source/protocol/wrapper
+copies plus README/checker/manifest. All originals remain unchanged;34 identifier
+adaptations reverse exactly, and503 Python ASTs differ only by those strings.
+Clean extraction passes114 local fixtures with156 project modules and three
+namespace packages loaded only from the extraction. Nine wrappers passed syntax
+checks. This qualifies the local fixture subset, not Linux/CUDA or full empirical
+reproduction. Two preparation failures and earlier components remain preserved.
+See docs/REVIEW_SOURCE_COMPONENT_V69.txt. External input/runtime instructions,
+notices, whole-package review and claim-required evidence remain.

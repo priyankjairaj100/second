@@ -1,0 +1,14 @@
+{
+  "preflight": "17200 second143-gpt2__references2 PENDING\n17198 second143-gpt2__tokens2 PENDING\n17196 second143-distilgpt2__references2 RUNNING\n17194 second143-distilgpt2__tokens2 RUNNING\n17197 second143-gpt2__tokens3 RUNNING\n17199 second143-gpt2__references3 RUNNING\n",
+  "staging": "STAGED_SOURCE_VERIFIED 1484\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n",
+  "archive": {
+    "path": "/Users/priyankjairaj/Downloads/ACL/Second/pilots/clean-compressed-reproduction-v145-20261102/source-v145.tar.gz",
+    "bytes": 26723584,
+    "sha256": "3902a560ee810f334fbed1e5595aec5c90a637acc6d19fdd77f13c05e10f265b"
+  },
+  "registration_sha256": "3f297f0da6a1ad1ca92f7e3fa2484a708524011b96f55d57865c0207db381659",
+  "namespace": "/nfs_home/users/poonam/second-20261010/local_runs/clean-compressed-reproduction-v145-20261102-a",
+  "sources": 1484,
+  "wheel_count": 3
+}

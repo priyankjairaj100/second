@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": "{\"registration_sha256\": \"6e7c83abadb92a7958389854d4d076c59fc562bfca60f2331c21ab871ba03ed3\", \"jobs\": {\"distilgpt2__candidate_2\": 16700, \"distilgpt2__candidate_3\": 16701, \"gpt2__candidate_2\": 16702, \"gpt2__candidate_3\": 16703}, \"status\": \"released\"}\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n"
+}

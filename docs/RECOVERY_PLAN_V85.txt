@@ -1,0 +1,83 @@
+Second V85: quota failure and separately registered recovery plan
+23 October 2026. This is preparation, not a registration or launch.
+
+Observed failure
+The 09:25 UTC host snapshot has no active account job. V80 preparation15905
+ended FAILED120:0 after1:47:19; all eleven descendants15906--15916 were cancelled
+without starting. V81 software15917 then failed120:0 after two seconds. Its five
+V82 descendants15921--15925 were cancelled without starting. V80 software15904
+had previously passed73 checks. No actual V81/V82 gate passed this chain.
+
+The account quota reported1001G used against a1000G hard limit. The filesystem
+had15T free, so df alone cannot admit another job. A zero-byte V80 completion,
+zero-byte V81 start record and empty Slurm logs accompany these failures. Quota
+write failure is the leading explanation, not a verified exception traceback.
+Do not invent missing logs or promote the running worker record to a final seal.
+The24 stage certificates and partial model/state files are not a complete result.
+This is no evidence that exact repair is incorrect or that speedup cannot transfer.
+
+Preservation and accounting
+Retain all original paths, registrations, artifacts, empty files, cancellations,
+software results and failures. Do not remove old locks or repair old ledgers.
+The failed V80 numerical reservation remains12602CPU seconds, state reserved,
+observed CPU null. Scheduler TotalCPU1:46:42 covers the allocation and overlaps
+worker/controller activity; it cannot substitute for the absent sealed debit.
+Do not refund that reservation using the smaller scheduler observation.
+
+A complete fresh four-cell recovery would reserve108020 numerical CPU seconds.
+Carrying the entire old12602 reservation gives120622<=120624, leaving only two
+seconds of reservation margin. Its ten new controller allowances reserve6020;
+carrying the failed old controller's602 allowance gives6622<=7224. These are
+prospective admission calculations, not settled charges or permission to increase
+caps. Software and audits keep their separate limits and observed costs. Record
+V81's consumed software attempt as well. A later failure cannot be hidden by
+resetting these aggregate budgets in another namespace.
+
+Recovery prerequisites
+1. Restore account storage headroom without deleting registered Second evidence.
+   The user has been asked to free unrelated files or arrange quota restoration.
+   Inspect account quota, filesystem availability and existing jobs before any
+   launch. Unknown quota must fail admission. Do not route around it to another
+   filesystem or change registered paths. Establish a documented output-space
+   allowance for the entire prospective chain, including retained predecessors,
+   independent oracles, logs, source package and write/sealing overhead. A tiny
+   writable probe or global df free space cannot establish this allowance.
+   research_v85/storage.py now has six passing pure quota fixtures, including
+   the actual over-limit row and soft-grace refusal. It is unregistered and has
+   not been qualified in the host launcher. Its observation is not a capacity
+   reservation against other writers or an attestation about group quotas.
+2. Prepare a separately versioned source package and registration. Preserve the
+   same numerical target, source rows, four cells, operation order, clock scopes,
+   implementations, oneCPU/16GiB caps and old failures. No old attempt is resumed.
+   Bind the failure snapshot and the conservative old reservations. Keep every
+   original byte; no partial V80 output may be used as a successful predecessor.
+3. Add a quota-aware storage preflight before registration and before each new
+   controller. Qualify the revised control code once on the pinned Linux runtime.
+   Numerical tests remain prohibited on the Mac. No automatic retries.
+4. Only after successful software qualification and reviewed budget/source
+   admission, submit the new finite numerical chain held, inspect exact job fields
+   and release once. Its full fresh oracle and both audits remain necessary.
+5. Separately register replacement transfer software and target admission. The
+   cancelled V82 registration and failed V81 job cannot be relaunched or treated
+   as qualified. Preserve the already approved1,327,104 grid cap for both new
+   targets. Update prospective matched-experiment prerequisite bindings only
+   after actual recovery receipts and terminal accounting exist.
+6. Re-review the unregistered V84 implementation. Its original upstream gates can
+   no longer pass; it cannot launch unchanged. V85 fixed an undefined local in
+   its artifact census before registration. Thirteen pure checks now pass;
+   the87-check Linux qualification remains unexecuted. No transfer result exists.
+
+Writing boundary
+V72/V74 remains the verified paper. Do not insert partial progress or software
+fixtures as new performance results. Preserve the observed storage/latency loss,
+small quality cost, earlier quality failure and earlier accounting recovery.
+Once new evidence closes, use the existing prospective V82 decision rules.
+Native rendered layout and final delivery choices remain separate open gates.
+
+Continuation
+The user explicitly resumed the existing15-minute scheduler on23October2026.
+Advance independent local source/protocol work while storage is blocked. Do not
+repeat notifications or questions when the quota state is unchanged. Do not
+create another monitor, delegate, use paid compute, send third-party messages or
+submit the manuscript. A recovery wake is not permission to duplicate a job.
+The previous12--24hour comparison ETA is superseded by this infrastructure block.

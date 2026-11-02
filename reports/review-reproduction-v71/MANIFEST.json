@@ -1,0 +1,22 @@
+{
+  "DEPENDENCIES.txt": {
+    "bytes": 2759,
+    "sha256": "c05d1cef0933eb323e4c56e36a6ab42eb7e0da6c8c67a54369f6cd7a41c698cd"
+  },
+  "INPUTS.json": {
+    "bytes": 11980,
+    "sha256": "57f5b2275d87edb06001bd6d0e517fbca648164cb5f5128d2fae7a4c511ee99f"
+  },
+  "README.txt": {
+    "bytes": 5100,
+    "sha256": "62d8c6b147b3e54fe866b2d24c0cf28bcc39a1252f74c199a22b60b13b25fbf4"
+  },
+  "RUNTIME.json": {
+    "bytes": 27327,
+    "sha256": "d930525f8f39008eec1ed3770258cf266e7c875a93aef659bc1f70e1e0f72d05"
+  },
+  "verify_inputs.py": {
+    "bytes": 2505,
+    "sha256": "ffd03acd388a130ed6033e0c17b4ff25f0f0de283ac5dafbf6172b4dc9bb1dd8"
+  }
+}

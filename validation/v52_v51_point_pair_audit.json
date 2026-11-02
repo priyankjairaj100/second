@@ -1,0 +1,47 @@
+{
+  "schema": "wide-stage-separated-evidence-v52",
+  "status": "verified_point_pair_and_box_refusal",
+  "prior_audit_status": "verified_terminal_stage_failure",
+  "program_sha256": "af83f983447e022a5e5b386ddf60eb62db804db57dbd652212eab51fe9b7d10b",
+  "all_point_code_bytes_equal": true,
+  "code_sha256": "91b450c2c1547e40b6533005e8245fbdb6d1c4c34af889efab5fbf1e214eea5a",
+  "code_count": 2359296,
+  "point_measurements": {
+    "candidate": {
+      "solve_seconds": 609.961067633,
+      "max_coefficient_radius": 5.017982424765192e-09
+    },
+    "reference": {
+      "solve_seconds": 1162.054073763,
+      "max_coefficient_radius": 5.017982424765192e-09
+    }
+  },
+  "candidate_over_reference_solve_time": 0.5248990399025106,
+  "feature_descriptor_bytes": {
+    "lossless": 35177196,
+    "compressed40": 26887374
+  },
+  "compressed40_feature_saving": 0.23565897634365174,
+  "failure": {
+    "error": "certified stage refused: primal native row verification failed: status=3, row=41, coordinate=1591",
+    "native_certified_rows": 79,
+    "interval_fallback_rows": 689,
+    "failed_subset_row": 41,
+    "failed_stage_row": 43,
+    "failed_coordinate": 1591,
+    "max_coefficient_radius": 1.3443024315536796e-06
+  },
+  "charged_cpu_seconds": {
+    "prepare": 430,
+    "candidate": 609,
+    "reference": 1158,
+    "compressed": 637
+  },
+  "total_charged_cpu_seconds": 2834,
+  "gate_passed": false,
+  "complete_model": false,
+  "quality_evaluation": false,
+  "confirmation": false,
+  "acl_ready": false,
+  "scope": "Single fixed-order adaptive development stage. Actual new point bytes match; historical V45 comparison remains hash-only. Certificate refusal does not prove incorrect codes or a mathematical impossibility."
+}

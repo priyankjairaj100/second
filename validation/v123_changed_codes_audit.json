@@ -1,0 +1,65 @@
+{
+  "schema": "saved-code-audit-closure-v123",
+  "captured_utc": "2026-10-29T05:40:35.060589+00:00",
+  "job_id": 16651,
+  "completed_0_0": true,
+  "single_job_submitted": true,
+  "worker_cpu_seconds": 3.610096228,
+  "scheduler_total_cpu_seconds": 3.658,
+  "slurm_elapsed_seconds": 4,
+  "worker_peak_rss_kib": 160480,
+  "scheduler_peak_rss_kib": 3296,
+  "accounting_note": "Four-second job: scheduler sampled RSS is smaller than worker high-water RSS. Preserve both; clocks overlap and are not added.",
+  "manifest_sha256": "8bd9dc397319161becc5a4c1d113f18c0e6e420463efe7d1d214974200d71d70",
+  "result_sha256": "f8b60d8c43e987e6c061a6b0a7ded44191c626a89d67b8bd0a9c51ad455a5702",
+  "profiles": [
+    {
+      "profile": "distilgpt2",
+      "step": 1,
+      "retained_records": 3,
+      "code_count": 42467328,
+      "changed_from_predecessor": 4150626,
+      "changed_from_root": 4150626,
+      "changed_fraction": 0.09773692378291378,
+      "changed_in_nonreplayed_stages": 4150626,
+      "changed_in_replayed_stages": 0
+    },
+    {
+      "profile": "distilgpt2",
+      "step": 2,
+      "retained_records": 2,
+      "code_count": 42467328,
+      "changed_from_predecessor": 3746142,
+      "changed_from_root": 4423075,
+      "changed_fraction": 0.0882123311360677,
+      "changed_in_nonreplayed_stages": 3746142,
+      "changed_in_replayed_stages": 0
+    },
+    {
+      "profile": "gpt2",
+      "step": 1,
+      "retained_records": 3,
+      "code_count": 84934656,
+      "changed_from_predecessor": 8993197,
+      "changed_from_root": 8993197,
+      "changed_fraction": 0.10588371606520665,
+      "changed_in_nonreplayed_stages": 8747505,
+      "changed_in_replayed_stages": 245692
+    },
+    {
+      "profile": "gpt2",
+      "step": 2,
+      "retained_records": 2,
+      "code_count": 84934656,
+      "changed_from_predecessor": 8080117,
+      "changed_from_root": 9535791,
+      "changed_fraction": 0.09513333403033974,
+      "changed_in_nonreplayed_stages": 8080117,
+      "changed_in_replayed_stages": 0
+    }
+  ],
+  "posthoc_artifact_measurement": true,
+  "new_calibration_or_inference": false,
+  "quality_results": false,
+  "native_kernel_qualification": false
+}

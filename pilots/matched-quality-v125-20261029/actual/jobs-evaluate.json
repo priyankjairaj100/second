@@ -1,0 +1,12 @@
+{
+  "registration_sha256": "417422cd31292f51859ca9a4927f062679eba3b731660471d58214ff3099d885",
+  "jobs": {
+    "distilgpt2__candidate_2": 16683,
+    "distilgpt2__candidate_3": 16684,
+    "distilgpt2__original": 16685,
+    "gpt2__candidate_2": 16686,
+    "gpt2__candidate_3": 16687,
+    "gpt2__original": 16688
+  },
+  "status": "bound_held"
+}

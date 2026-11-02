@@ -1,0 +1,51 @@
+{
+  "registration_sha256": "576591b9ba423781f9c27719b7182c68eff54c31fc222352a218ef537f870e52",
+  "job_id": "17186",
+  "status": "COMPLETED 0:0",
+  "actual_allocation_cpu_seconds": 3.504,
+  "generated_cases": 406,
+  "primitive_status_counts": {
+    "0": 179,
+    "3": 23
+  },
+  "point_refusals": [
+    {
+      "family": "point_dispatch",
+      "index": 7,
+      "route": "token",
+      "status": "refused",
+      "width": 5,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 7,
+      "route": "streamed",
+      "status": "refused",
+      "width": 5,
+      "tokens": 1
+    },
+    {
+      "family": "point_dispatch",
+      "index": 11,
+      "route": "token",
+      "status": "refused",
+      "width": 5,
+      "tokens": 2
+    },
+    {
+      "family": "point_dispatch",
+      "index": 27,
+      "route": "token",
+      "status": "refused",
+      "width": 5,
+      "tokens": 2
+    }
+  ],
+  "box_oracle_realizations": 912,
+  "coefficient_box_realizations": 228,
+  "assertion_failures": 0,
+  "model_experiment": false,
+  "sources_unchanged": true,
+  "all_possible_inputs_proved": false
+}

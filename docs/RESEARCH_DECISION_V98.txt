@@ -1,0 +1,66 @@
+Second V98: completed optimization screen and matched-transfer decision
+26 October 2026. Based on the actual V89 terminal report captured at06:49UTC.
+
+Evidence closure
+All13 allocations16004--16016 completed0:0. Both audits and the frozen read-only
+terminal reporter passed. Eight complete successor states, trust sidecars and
+42,467,328-code models match fresh retained reconstruction across all24 stages.
+All10 new numerical debits settled. The original19 dispositions, two failures,
+16 cancellations and full12602-second unknown reservation remain unchanged.
+The former connection interruption is resolved; it did not alter job outcomes.
+
+All eight observations, full host seconds (reference then optimized):
+12 retained records: compressed4444.116106 ->3931.645762;
+                    modern lossless3995.241124 ->3967.523095.
+ 6 retained records: compressed1328.623545 ->848.119194;
+                    modern lossless939.553065 ->752.336463.
+These are the complete registered host clocks, including source checks, storage
+admission, container startup and cleanup. Nested clocks are not added.
+
+The combined compressed optimization package reduces observed host time by
+11.53% and36.17%. The modern package reduces it by0.69% and19.93%.
+Optimized compression is0.90% faster than optimized modern at12 records, but
+12.73% slower at6. The latter loss must remain visible. Live-state savings are
+9.24%/8.70%; checkpoint-inclusive savings4.71%/3.10%. Every request uses zero
+neural source-stage/record traversals and no fallback. Correctness and storage
+are supported for this screen. One observation per cell, uncontrolled OS caches
+and bundled changes preclude stable latency or isolated decoder-effect claims.
+This result does not establish general speedup, transfer or new quality evidence.
+
+Cost interpretation
+reporting_v98/reduce.py binds all selected raw metadata to the actual terminal
+inventory and checks both audits, all cells and both endpoints. It applies the
+previously prepared V93 disjoint clock partition without adding nested source
+extraction or inventing a decoder-only measurement. All per-cell partitions,
+unattributed remainders, peak worker RSS and exact ratio fractions are retained.
+The complete new scheduler CPU lies in[39389.110,39396.116)seconds because of
+display precision. This includes software, workers, controllers and both audits;
+it is not added to contained numerical CPU. New rounded numerical debit35258
+seconds and the old unknown12602seconds are separately retained. The terminal
+read-only review costs18.370163227CPU seconds outside that experiment.
+
+Scientific decision before new registration
+Keep the bounded storage/source-access/latency story. The optimization screen
+shows useful implementation improvements and an opposing endpoint direction.
+It rules out claiming an observed speed win at every tested endpoint; it does
+not prove that all future algorithms or workloads must lose. Generality would
+strengthen practical relevance but is not needed for conditional exactness.
+
+Proceed with the already prepared, separately registered V91 admission and V92
+matched complete screen, subject to their actual source/storage/software gates.
+The question is whether exact compressed repair and its storage advantage survive
+the larger GPT2 depth under matched4x128-token calibration, and how the complete
+latency tradeoff changes. Include both endpoints, both representations and both
+implementation versions without tuning after this result. The4-record workload,
+512 normalization and approved1,327,104-entry grid differ from the current root;
+both checkpoints must receive the same new configuration. V72 quality cannot be
+carried over. These two related GPT-family checkpoints cannot establish general
+cross-architecture transfer. Admission success alone is not transfer evidence.
+
+Do not launch the proposed64-request timing replication now. Reassess its value
+and exact admissible budget only after the matched screen closes. Preserve its
+balanced prospective design; never repeat only favorable endpoints or promote
+single observations to statistical evidence. No resource limit is enlarged.
+The existing manuscript should include this complete screen and retain the
+historical slower-service and quality findings. Final framing awaits actual
+matched evidence, rendered layout and delivery decisions, not a manufactured win.

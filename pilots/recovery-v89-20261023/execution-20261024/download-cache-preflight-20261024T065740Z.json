@@ -1,0 +1,48 @@
+[
+  {
+    "path": "/nfs_home/users/poonam/.cache/pip",
+    "exists": true,
+    "realpath": "/nfs_home/users/poonam/.cache/pip",
+    "symlink": false,
+    "device": 2065,
+    "inode": 78971771,
+    "uid": 1007,
+    "children": [
+      "wheels",
+      "selfcheck",
+      "http-v2",
+      "http"
+    ],
+    "usage": {
+      "code": 0,
+      "stdout": "21168128\t/nfs_home/users/poonam/.cache/pip/wheels\n126976\t/nfs_home/users/poonam/.cache/pip/selfcheck\n13632884736\t/nfs_home/users/poonam/.cache/pip/http-v2\n4435968\t/nfs_home/users/poonam/.cache/pip/http\n13658619904\t/nfs_home/users/poonam/.cache/pip\n",
+      "stderr": ""
+    }
+  },
+  {
+    "path": "/nfs_home/users/poonam/.cache/uv",
+    "exists": true,
+    "realpath": "/nfs_home/users/poonam/.cache/uv",
+    "symlink": false,
+    "device": 2065,
+    "inode": 375652353,
+    "uid": 1007,
+    "children": [
+      "simple-v25",
+      ".tmpQsnNEe",
+      "sdists-v9",
+      "interpreter-v4",
+      "CACHEDIR.TAG",
+      ".tmpORqhUC",
+      "archive-v0",
+      "wheels-v6",
+      ".gitignore",
+      ".lock"
+    ],
+    "usage": {
+      "code": 0,
+      "stdout": "14544896\t/nfs_home/users/poonam/.cache/uv/simple-v25\n54804480\t/nfs_home/users/poonam/.cache/uv/.tmpQsnNEe\n4096\t/nfs_home/users/poonam/.cache/uv/sdists-v9\n40960\t/nfs_home/users/poonam/.cache/uv/interpreter-v4\n90112\t/nfs_home/users/poonam/.cache/uv/.tmpORqhUC\n9294086144\t/nfs_home/users/poonam/.cache/uv/archive-v0\n1064960\t/nfs_home/users/poonam/.cache/uv/wheels-v6\n9364647936\t/nfs_home/users/poonam/.cache/uv\n",
+      "stderr": ""
+    }
+  }
+]

@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrr}
+\toprule
+Checkpoint & Records & Ref. comp. & Opt. comp. & Ref. modern & Opt. modern & Opt. C/M \\
+\midrule
+DistilGPT2 & 3 & 589.239 & 411.279 & 369.644 & 286.419 & 1.4359 \\
+DistilGPT2 & 2 & 436.691 & 325.131 & 219.802 & 179.706 & 1.8092 \\
+GPT2 & 3 & 2027.290 & 1544.049 & 733.046 & 580.147 & 2.6615 \\
+GPT2 & 2 & 838.153 & 615.039 & 406.506 & 326.341 & 1.8847 \\
+\bottomrule
+\end{tabular}
+\caption{Complete host time in seconds for the matched point-token screen. Each cell is one observation. C/M is optimized compressed time divided by optimized modern time; values above one mean compressed is slower. All sixteen outputs match their same-checkpoint fresh reconstruction under both completed audits. The related checkpoints, exposed four-record root, fixed normalization512, and $4\to3\to2$ trajectory do not establish stable speed, cross-architecture generality, or predictive quality.}
+\label{tab:matched-token}
+\end{table*}

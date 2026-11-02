@@ -1,0 +1,103 @@
+V63: bounded source-local lossless artifact control
+16 October 2026. Prospective development experiment on already exposed artifacts.
+
+Scope and prerequisite
+V61's six numerical workers completed; both unchanged actual-byte auditors passed
+in separate V62 recovery. The original audit timeout/cancellation remain failures.
+Use the audited V61 original, first and second cached-lossless states and their
+actual packed models. No neural extraction, solver, calibration, likelihood,
+quality sampling, checkpoint change, threshold change or historical rerun.
+
+Fixed control
+Use python-zstandard 0.25.0, bundled Zstandard 1.5.7, C extension backend, level3,
+threads0, content size/checksum enabled, dictionary ID disabled, no dictionary.
+The CPython312 manylinux x86_64 wheel and every extracted file are pinned in the
+registration. Install by extracting to a fresh ignored run-local dependency path;
+never alter the old virtual environment/container or numerical checkout.
+Extend V29's raw/zlib6/shuffled-zlib6 rule with plain/shuffled Zstandard3. Choose
+minimum complete descriptor size; ties use fixed mode order0..4. Charge all five
+encoders, including unsuccessful candidates, and preserve canonical re-encoding.
+No codec/level/dictionary sweep or favorable-only reporting. All settings and
+software are frozen before reading empirical factors for this phase.
+
+Contract and allocation
+Each source/stage is independent; no retained descriptor changes after deletion.
+Decode exact binary64 words, including signed zero, reject nonfinite values.
+One ordinary frame, declared size equals checked shape, dictionary0, checksum
+present, window at most4MiB, no extra/trailing frames; allow_extra_data=False.
+Header checks precede decoder creation. Direct frame window checks supplement
+max_window_size=4096KiB; max_output_size alone is not an allocation proof.
+Largest actual factor:128x3072x8=3,145,728 bytes; original312, first288, second144
+factors,744 measured descriptors total. Maximum decoded extent4MiB, descriptor
+parse bound8MiB, archive extent1GiB/header4MiB. All original geometry/identities
+are rechecked from actual parsed states. No empirical geometry expansion.
+
+Distinct V63 archive format embeds original target/record provenance, supplied
+packed model codes and the new descriptors, with explicit framing and codec
+binding. It does NOT masquerade as a V61 repair representation. Decode and
+canonically reconstruct actual original V61 state bytes, then require equality.
+Keep actual supplied model bytes equal. For both endpoints, retained-descriptor
+transitions using supplied audited endpoint codes must equal independently
+repacked existing endpoint artifacts. These are artifact consistency checks,
+not new neural reconstruction, a code-update algorithm or service latency.
+
+Design and accounting
+At each endpoint: read/hash/parse original state and model; decode old factors;
+encode and validate all new descriptors; compare actual decoded words; construct,
+write, reread and validate the new archive; restore actual old state bytes; check
+retained transitions. Record every factor's five candidate encoding clocks,
+chosen mode, old/new descriptor bytes, old migration parsing, new encode/serialize,
+canonical validation and decode-only times. Record whole endpoint and job clocks.
+Nested clocks are not additive. Original extraction is not free deployment work.
+Migration from the old archive is separate from clean codec preparation. One
+fixed-order development observation, with no speed interval or repair-speed claim.
+
+Report complete archive+actual empty trust-sidecar bytes; checkpoint-inclusive
+sizes use the unchanged shared352,825,175 bytes. Also report installed dependency
+bytes (all11 wheel files), new control source bytes and checkpoint plus added
+dependencies separately. Wheel download and experiment history are archival costs,
+not live successor state. Shared old runtime dependencies are unchanged and remain
+required. This does not claim minimal deployment packaging or all-codec dominance.
+Keep cached-zlib, hybrid and uncertain-compression evidence, including adverse
+comparisons. A useful archive result still needs a separately registered complete
+service comparison; never add these component timings to old V61 request timings.
+
+Execution and finite resource policy
+Fresh directory:local_runs/lossless-control-v63-20261016-a. Three one-attempt Slurm
+jobs, afterok dependencies, --no-requeue and --kill-on-invalid-dep. Checks must
+pass exactly21 fixtures with zero skips before any empirical file is read.
+Checks:300 CPU seconds (hard301),600 wall. Measure:3600 CPU (hard3601),3900 wall.
+Read-only output audit:1800 CPU (hard1801),2100 wall. Fresh allowance5706 CPU
+seconds includes two seconds per job for accounting margin; separate from every
+historical ledger. One affinity CPU, four thread environment limits1,16GiB address
+space and Slurm memory,1GiB per output file, no core dumps. Scheduler CPU is also
+reported; unused allowance is not a license for additional trials.
+
+Input state extents are below397MB. The design processes one endpoint and one
+factor at a time, releases superseded allocations, and writes three archives.
+Budget eight whole-state buffers plus4GiB interpreter/metadata/temporary reserve
+and64MiB factor/codec reserve:below8GiB using the largest bound actual input,
+within16GiB. This is a conservative engineering estimate, not a measured RSS or
+whole-process fit guarantee. OS limits and finite failure remain authoritative.
+Output reservation:3GiB archives plus64MiB metadata/logs; verify free storage before
+submission. No numerical children or background encoders. Base runtime and all432
+historical source files must match before/after; inputs are rehashed after work.
+
+Failure and audit
+Exclusive start/output markers prohibit duplicate invocation. Any test failure,
+changed input/runtime, refusal, timeout, OOM or missing comparison ends this phase;
+no automatic retry, cap increase or original-file modification. Preserve partial
+outputs and settled scheduler costs. A new registration is required for any fix.
+The separate audit parses saved archives, compares actual decoded words/models,
+restores actual original state bytes, checks both retained transitions, and
+recomputes complete byte accounting. It shares codec/parser implementation and
+is not independent numerical implementation evidence. Root source review and
+21 synthetic fixtures are not an independent human/reviewer endorsement.
+No paper claim is promoted until all three jobs and the artifact audit pass.
+
+Primary API references
+https://python-zstandard.readthedocs.io/en/0.25.0/compressor.html
+https://python-zstandard.readthedocs.io/en/0.25.0/decompressor.html
+https://pypi.org/pypi/zstandard/0.25.0/json
+These specify software behavior; the empirical measurements remain unexecuted
+at registration. No comparative performance is inferred from documentation.

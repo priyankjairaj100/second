@@ -1,0 +1,849 @@
+{
+  "active": null,
+  "branch": "codex/second-cluster-v42",
+  "budget_remaining_planning": {
+    "checks_controller_ceiling": 302,
+    "numerical_ceiling": 82840,
+    "numerical_controller_ceiling": 6040,
+    "numerical_remainder": 76644,
+    "numerical_spent": 6196,
+    "rounded_checks_controller_carry": 33,
+    "rounded_numerical_controller_carry": 63,
+    "rounded_software_carry": 139,
+    "software_ceiling": 602
+  },
+  "bundle": {
+    "bytes": 9894041,
+    "components": 10,
+    "derivation_maps_public": true,
+    "export_revision": "V106",
+    "full_anonymity_verified": false,
+    "full_reproduction_verified": false,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-development-review-v106.zip",
+    "repository_public": true,
+    "sha256": "65021751a217b9e90dc91737397b00614d083d00afb7b7be9421f7be5fcd5559",
+    "source_files": 930,
+    "submission_ready": false,
+    "validation": "validation/v106_development_bundle.json"
+  },
+  "closed_v104": {
+    "all_jobs_terminal": true,
+    "archive": {
+      "bytes": 13332480,
+      "sha256": "bc77582ce38b051e0839a773e3f1780ae856949a9c77098f555686ad4feafb09"
+    },
+    "cancelled_unstarted_jobs": [
+      "16340",
+      "16341",
+      "16342",
+      "16343",
+      "16344",
+      "16345",
+      "16346",
+      "16347",
+      "16348",
+      "16349",
+      "16350",
+      "16351",
+      "16352",
+      "16353",
+      "16354",
+      "16355",
+      "16356",
+      "16357",
+      "16358"
+    ],
+    "carried_checks_controller_seconds": 19,
+    "carried_numerical_controller_seconds": 1,
+    "carried_software_seconds": 72,
+    "checks_controller_cap_seconds": 283,
+    "checks_cost": {
+      "complete_controller_upper_cpu_ns": 13593630000,
+      "contained_kind": "generated_software",
+      "contained_work_cpu_ns": 53173370000,
+      "job_id": "16336",
+      "overlapping_clocks_not_summed": true,
+      "scheduler_cpu_ns": 66766000000,
+      "scheduler_quantum_ns": 1000000
+    },
+    "checks_job": "16336",
+    "checks_status": "COMPLETED0:0",
+    "checks_tests_passed": 227,
+    "checks_tests_required": 227,
+    "completed_model_comparisons": 0,
+    "completed_numerical_workers": 2,
+    "failed_job": "16339",
+    "failed_operation": "gpt2/reference_compressed-1",
+    "failure_accounting": {
+      "all_23_jobs_terminal": true,
+      "cancelled_unstarted_jobs": [
+        "16340",
+        "16341",
+        "16342",
+        "16343",
+        "16344",
+        "16345",
+        "16346",
+        "16347",
+        "16348",
+        "16349",
+        "16350",
+        "16351",
+        "16352",
+        "16353",
+        "16354",
+        "16355",
+        "16356",
+        "16357",
+        "16358"
+      ],
+      "carried_numerical_controller_seconds": 1,
+      "complete_controller_upper_cpu_ns": 22160490000,
+      "complete_model_comparisons": 0,
+      "contained_worker_cpu_ns": 1878664510000,
+      "created_utc": "2026-10-26T10:30:05.343180+00:00",
+      "cumulative_numerical_charged_seconds": 6196,
+      "failed_job": "16339",
+      "failed_operation": "gpt2/reference_compressed-1",
+      "failed_saved_entry_sealed_cpu_is_zero": true,
+      "failed_saved_host_accounting_is_null": true,
+      "failed_scheduler_cpu_lower_ns": 1900824000000,
+      "failed_scheduler_cpu_upper_ns": 1900825000000,
+      "failed_stage_from_prefix_and_bound_target": "block.0011.mlp_up",
+      "full_matched_scientific_closure": false,
+      "inputs": {
+        "v104-actual-program.json": {
+          "bytes": 167951,
+          "sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+        },
+        "v104-failure-capture-20261026T102231Z.json": {
+          "bytes": 47026,
+          "sha256": "148c11146d146a047ffcad1c8c9db0825998bbd1e31bc0fdb00eec3d5b1a4323"
+        },
+        "v104-request-review-20261026T102125Z.json": {
+          "bytes": 2647,
+          "sha256": "3e49748c6b1d36a868ad35d15d4468e4ab3e47c30417b2e03be51ad9d57be60a"
+        }
+      },
+      "native_failed_coordinate": 359,
+      "native_failed_row_in_selected_subset": 0,
+      "native_status": 3,
+      "numerical_complete_controller_upper_ns": 61648485000,
+      "original_output_row_identity_not_saved": true,
+      "original_receipts_modified": false,
+      "overlapping_clocks_not_summed": true,
+      "partial_stages": 46,
+      "reconstructed_partition": {
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 1878664510000,
+        "envelope_cpu_ns": 1900807257315,
+        "final_host_write_requires_scheduler_accounting": true,
+        "nonnumerical_cap_seconds": 302,
+        "nonnumerical_cpu_ns": 22142747315,
+        "overlapping_clocks_not_summed": true
+      },
+      "refusal_not_proof_of_transfer_impossibility": true,
+      "refusal_not_proof_of_wrong_model": true,
+      "reporting_partition_uses_actual_worker_seal": true,
+      "schema": "actual-failed-matched-accounting-v108",
+      "source_records_replayed": 3,
+      "status": "verified_failed_request_and_cancelled_dependents",
+      "unconsumed_numerical_ceiling_seconds": 76644
+    },
+    "first_worker_budget_debit": {
+      "charged_cpu_seconds": 1366,
+      "observed_cpu_ns": 1365217559000,
+      "phase": "feasibility",
+      "reserved_cpu_seconds": 3602,
+      "state": "settled"
+    },
+    "first_worker_cost": {
+      "complete_controller_upper_cpu_ns": 16045441000,
+      "contained_kind": "matched_numerical",
+      "contained_work_cpu_ns": 1365217559000,
+      "job_id": "16337",
+      "overlapping_clocks_not_summed": true,
+      "scheduler_cpu_ns": 1381262000000,
+      "scheduler_quantum_ns": 1000000
+    },
+    "first_worker_progress": {
+      "context_ready": 1,
+      "payload_stage": 96,
+      "source_replayed": 4,
+      "stage_certified": 24
+    },
+    "first_worker_review": "pilots/preparation-and-review-v105-20261026/v104-distilgpt2-preparation-review-20261026T085504Z.json",
+    "first_worker_status": "COMPLETED0:0",
+    "full_matched_scientific_closure": false,
+    "inventory": {
+      "bytes": 146731,
+      "sha256": "b7e995e705a1ca284e8ac0e0adc37a86bfec69d9b9062f0a3c89872c019dd9d3"
+    },
+    "jobs": [
+      {
+        "arguments": [],
+        "dependency": "16336",
+        "job_id": "16337",
+        "name": "distilgpt2--prepare",
+        "operation": "distilgpt2/prepare",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16337",
+        "job_id": "16338",
+        "name": "gpt2--prepare",
+        "operation": "gpt2/prepare",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16338",
+        "job_id": "16339",
+        "name": "gpt2--reference_compressed-1",
+        "operation": "gpt2/reference_compressed-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16339",
+        "job_id": "16340",
+        "name": "distilgpt2--reference_compressed-1",
+        "operation": "distilgpt2/reference_compressed-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16340",
+        "job_id": "16341",
+        "name": "distilgpt2--optimized_modern-1",
+        "operation": "distilgpt2/optimized_modern-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16341",
+        "job_id": "16342",
+        "name": "gpt2--optimized_modern-1",
+        "operation": "gpt2/optimized_modern-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16342",
+        "job_id": "16343",
+        "name": "gpt2--reference_modern-1",
+        "operation": "gpt2/reference_modern-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16343",
+        "job_id": "16344",
+        "name": "distilgpt2--reference_modern-1",
+        "operation": "distilgpt2/reference_modern-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16344",
+        "job_id": "16345",
+        "name": "distilgpt2--optimized_compressed-1",
+        "operation": "distilgpt2/optimized_compressed-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16345",
+        "job_id": "16346",
+        "name": "gpt2--optimized_compressed-1",
+        "operation": "gpt2/optimized_compressed-1",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16346",
+        "job_id": "16347",
+        "name": "gpt2--optimized_compressed-2",
+        "operation": "gpt2/optimized_compressed-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16347",
+        "job_id": "16348",
+        "name": "distilgpt2--optimized_compressed-2",
+        "operation": "distilgpt2/optimized_compressed-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16348",
+        "job_id": "16349",
+        "name": "distilgpt2--reference_modern-2",
+        "operation": "distilgpt2/reference_modern-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16349",
+        "job_id": "16350",
+        "name": "gpt2--reference_modern-2",
+        "operation": "gpt2/reference_modern-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16350",
+        "job_id": "16351",
+        "name": "gpt2--optimized_modern-2",
+        "operation": "gpt2/optimized_modern-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16351",
+        "job_id": "16352",
+        "name": "distilgpt2--optimized_modern-2",
+        "operation": "distilgpt2/optimized_modern-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16352",
+        "job_id": "16353",
+        "name": "distilgpt2--reference_compressed-2",
+        "operation": "distilgpt2/reference_compressed-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16353",
+        "job_id": "16354",
+        "name": "gpt2--reference_compressed-2",
+        "operation": "gpt2/reference_compressed-2",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16354",
+        "job_id": "16355",
+        "name": "gpt2--oracle",
+        "operation": "gpt2/oracle",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16355",
+        "job_id": "16356",
+        "name": "distilgpt2--oracle",
+        "operation": "distilgpt2/oracle",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16356",
+        "job_id": "16357",
+        "name": "primary",
+        "operation": "primary",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      },
+      {
+        "arguments": [],
+        "dependency": "16357",
+        "job_id": "16358",
+        "name": "supplemental",
+        "operation": "supplemental",
+        "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f"
+      }
+    ],
+    "numerical_chain_launched": true,
+    "numerical_controller_cap_seconds": 6039,
+    "numerical_cpu_cap_seconds": 82840,
+    "numerical_work_started": true,
+    "observation_utc": "2026-10-26T10:21:29+00:00",
+    "program_sha256": "2c0ae1a89184ec51d9d759a6ed6d65f15b8a4fc136e8475b89b82cff4b5a812f",
+    "registered": true,
+    "retry_allowed": false,
+    "second_worker_budget_debit": {
+      "charged_cpu_seconds": 2951,
+      "observed_cpu_ns": 2950562446000,
+      "phase": "feasibility",
+      "reserved_cpu_seconds": 7202,
+      "state": "settled"
+    },
+    "second_worker_cost": {
+      "complete_controller_upper_cpu_ns": 23442554000,
+      "contained_kind": "matched_numerical",
+      "contained_work_cpu_ns": 2950562446000,
+      "job_id": "16338",
+      "overlapping_clocks_not_summed": true,
+      "scheduler_cpu_ns": 2974004000000,
+      "scheduler_quantum_ns": 1000000
+    },
+    "second_worker_progress": {
+      "context_ready": 1,
+      "payload_stage": 192,
+      "source_replayed": 4,
+      "stage_certified": 48
+    },
+    "second_worker_review": "pilots/gpt2-preparation-v107-20261026/v104-gpt2-preparation-review-20261026T095457Z.json",
+    "second_worker_status": "COMPLETED0:0",
+    "software_aggregate_cap_seconds": 530,
+    "source_count": 1192,
+    "status": "failed_certification_refusal",
+    "version": 104
+  },
+  "closed_v110": {
+    "V109_unregistered_setup_failure_preserved": true,
+    "all_sources_unchanged": true,
+    "certified_codes": 2359296,
+    "certified_stage": "block.0011.mlp_up",
+    "complete_model_comparisons": 0,
+    "costs": {
+      "checks": {
+        "complete_controller_upper_cpu_ns": 14116019000,
+        "contained_kind": "generated_software",
+        "contained_work_cpu_ns": 53140981000,
+        "job_id": "16366",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 67256000000,
+        "scheduler_quantum_ns": 1000000
+      },
+      "diagnostic": {
+        "complete_controller_upper_cpu_ns": 15639043000,
+        "contained_kind": "matched_numerical",
+        "contained_work_cpu_ns": 107086957000,
+        "job_id": "16367",
+        "overlapping_clocks_not_summed": true,
+        "scheduler_cpu_ns": 122725000000,
+        "scheduler_quantum_ns": 1000000
+      }
+    },
+    "full_model_oracle_executed": false,
+    "implication": "Existing token route resolves the selected stage refusal within unchanged bounds; no full-model transfer or speed claim",
+    "independent_stage_oracle_executed": false,
+    "jobs": {
+      "checks": "16366",
+      "diagnostic": "16367"
+    },
+    "next_conservative_carries": {
+      "checks_controller": 48,
+      "numerical_controller": 79,
+      "software": 207
+    },
+    "next_numerical_ceiling": 76536,
+    "numerical_debit_with_prior": 6304,
+    "package": {
+      "archive": {
+        "bytes": 13568000,
+        "sha256": "c158220d0af6d505e3ba611fa58cb6278efc22ce00255a592448d663677959e7"
+      },
+      "before_upload_requests": {
+        "project": {
+          "path": "/nfs_home/users/poonam/second-20261010/local_runs",
+          "required_bytes": 1416752537,
+          "required_files": 6683
+        },
+        "temporary": {
+          "path": "/tmp",
+          "required_bytes": 17263765504,
+          "required_files": 20482
+        }
+      },
+      "expected_linux_tests": 246,
+      "inventory": {
+        "bytes": 152731,
+        "sha256": "f69d8dd92da0c9c46e3494002cca43e16f80df2d9b4b6966cc1da863c0f29e7a"
+      },
+      "isolated_check": {
+        "isolated": true,
+        "source_only": true,
+        "tests": 19
+      },
+      "numerical_execution": false,
+      "parent_source_count": 1216,
+      "registered": false,
+      "schema": "diagnostic-package-v110",
+      "source_count": 1242,
+      "status": "prepared_not_registered",
+      "storage_plan": {
+        "capacity_reserved": false,
+        "controller_ledger_bytes": 33554432,
+        "controller_ledger_files": 64,
+        "diagnostic_output_bytes": 4194304,
+        "diagnostic_output_files": 3,
+        "external_slurm_writer_limit_enforced": false,
+        "formal_disk_bound": false,
+        "metadata_bytes": 31457280,
+        "metadata_files": 30,
+        "old_outputs_credited_as_free": false,
+        "operation_log_bytes": 71303168,
+        "schema": "token-stage-write-plan-v110",
+        "staging_bytes": 51999866,
+        "staging_files": 2486,
+        "temporary_bytes": 12884901888,
+        "temporary_files": 16386
+      },
+      "uploaded": false
+    },
+    "program_sha256": "29e114bb8cae47f5dc8fa70a346d62cd575e6b0dfc959b286903bed0071e2602",
+    "schema": "token-stage-checkpoint-v110",
+    "solve_elapsed_ns": 34948553404,
+    "source_count": 1242,
+    "status": "verified_selected_stage_certificate_and_complete_accounting",
+    "updated_utc": "2026-10-26T11:04:11.442553+00:00",
+    "worker": {
+      "charged_cpu_seconds": 108,
+      "observed_cpu_ns": 107086957000,
+      "phase": "diagnostic",
+      "reserved_cpu_seconds": 602,
+      "state": "settled"
+    }
+  },
+  "completed_v101": {
+    "actual_target_admission": true,
+    "charged_target_cpu_seconds": 109,
+    "empirical_transfer": false,
+    "jobs": [
+      16302,
+      16303,
+      16304,
+      16305,
+      16306
+    ],
+    "terminal_sha256": "3446a9e2b8cbba5196330e936d028e17c897e02183ede6244df3641de03d538d"
+  },
+  "completed_v89": {
+    "all_jobs_completed": true,
+    "comparisons": 8,
+    "jobs": [
+      16004,
+      16005,
+      16006,
+      16007,
+      16008,
+      16009,
+      16010,
+      16011,
+      16012,
+      16013,
+      16014,
+      16015,
+      16016
+    ],
+    "old_unknown_cpu_seconds": 12602,
+    "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9",
+    "science": "correct outputs and bounded tradeoff, mixed single-observation latency",
+    "terminal": {
+      "bytes": 368343,
+      "sha256": "367104b1247cbc2b85fdc74ef45e5a30474a69df60483655b5fc4cf4f533e1a2"
+    }
+  },
+  "connectivity": {
+    "status": "restored",
+    "user_action_pending": false
+  },
+  "decision": "docs/RESEARCH_DECISION_V98.txt",
+  "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "evidence_directory": "pilots/matched-complete-v104-20261026",
+  "failed_v100": {
+    "cause": "sacct called inside container",
+    "job": "16307",
+    "numerical_work": false,
+    "retry_allowed": false,
+    "status": "FAILED1:0"
+  },
+  "failed_v103": {
+    "archive": {
+      "bytes": 12953600,
+      "sha256": "990ad1b231343adf144c9d1bf1c704cadeba726e1e0fcae9e70699cf52bf8fd4"
+    },
+    "cancelled_unstarted_jobs": [
+      "16311",
+      "16312",
+      "16313",
+      "16314",
+      "16315",
+      "16316",
+      "16317",
+      "16318",
+      "16319",
+      "16320",
+      "16321",
+      "16322",
+      "16323",
+      "16324",
+      "16325",
+      "16326",
+      "16327",
+      "16328",
+      "16329",
+      "16330",
+      "16331"
+    ],
+    "carried_v100_software_controller_seconds": 4,
+    "checks_controller_cap_seconds": 298,
+    "checks_job": "16309",
+    "checks_tests_passed": 225,
+    "checks_tests_required": 225,
+    "failed_job": "16310",
+    "jobs": [
+      {
+        "arguments": [],
+        "dependency": "16309",
+        "job_id": "16310",
+        "name": "distilgpt2--prepare",
+        "operation": "distilgpt2/prepare",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16310",
+        "job_id": "16311",
+        "name": "gpt2--prepare",
+        "operation": "gpt2/prepare",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16311",
+        "job_id": "16312",
+        "name": "gpt2--reference_compressed-1",
+        "operation": "gpt2/reference_compressed-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16312",
+        "job_id": "16313",
+        "name": "distilgpt2--reference_compressed-1",
+        "operation": "distilgpt2/reference_compressed-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16313",
+        "job_id": "16314",
+        "name": "distilgpt2--optimized_modern-1",
+        "operation": "distilgpt2/optimized_modern-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16314",
+        "job_id": "16315",
+        "name": "gpt2--optimized_modern-1",
+        "operation": "gpt2/optimized_modern-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16315",
+        "job_id": "16316",
+        "name": "gpt2--reference_modern-1",
+        "operation": "gpt2/reference_modern-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16316",
+        "job_id": "16317",
+        "name": "distilgpt2--reference_modern-1",
+        "operation": "distilgpt2/reference_modern-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16317",
+        "job_id": "16318",
+        "name": "distilgpt2--optimized_compressed-1",
+        "operation": "distilgpt2/optimized_compressed-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16318",
+        "job_id": "16319",
+        "name": "gpt2--optimized_compressed-1",
+        "operation": "gpt2/optimized_compressed-1",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16319",
+        "job_id": "16320",
+        "name": "gpt2--optimized_compressed-2",
+        "operation": "gpt2/optimized_compressed-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16320",
+        "job_id": "16321",
+        "name": "distilgpt2--optimized_compressed-2",
+        "operation": "distilgpt2/optimized_compressed-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16321",
+        "job_id": "16322",
+        "name": "distilgpt2--reference_modern-2",
+        "operation": "distilgpt2/reference_modern-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16322",
+        "job_id": "16323",
+        "name": "gpt2--reference_modern-2",
+        "operation": "gpt2/reference_modern-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16323",
+        "job_id": "16324",
+        "name": "gpt2--optimized_modern-2",
+        "operation": "gpt2/optimized_modern-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16324",
+        "job_id": "16325",
+        "name": "distilgpt2--optimized_modern-2",
+        "operation": "distilgpt2/optimized_modern-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16325",
+        "job_id": "16326",
+        "name": "distilgpt2--reference_compressed-2",
+        "operation": "distilgpt2/reference_compressed-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16326",
+        "job_id": "16327",
+        "name": "gpt2--reference_compressed-2",
+        "operation": "gpt2/reference_compressed-2",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16327",
+        "job_id": "16328",
+        "name": "gpt2--oracle",
+        "operation": "gpt2/oracle",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16328",
+        "job_id": "16329",
+        "name": "distilgpt2--oracle",
+        "operation": "distilgpt2/oracle",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16329",
+        "job_id": "16330",
+        "name": "primary",
+        "operation": "primary",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      },
+      {
+        "arguments": [],
+        "dependency": "16330",
+        "job_id": "16331",
+        "name": "supplemental",
+        "operation": "supplemental",
+        "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733"
+      }
+    ],
+    "numerical_chain_launched": true,
+    "numerical_controller_cap_seconds": 6040,
+    "numerical_cpu_cap_seconds": 82840,
+    "numerical_work_started": false,
+    "program_sha256": "ac31d8ea5a15de858d4e55c527c9a267106c0fa95ffb54298dc112ed96300733",
+    "registered": true,
+    "retry_allowed": false,
+    "software_aggregate_cap_seconds": 598,
+    "source_count": 1148,
+    "status": "failed_pre_container_dispatch",
+    "version": 103
+  },
+  "manuscript": {
+    "bytes": 57861,
+    "compiled_in_v107": false,
+    "compiled_in_v108": false,
+    "edited_in_v107": false,
+    "edited_in_v108": false,
+    "native_compile_success": true,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex",
+    "rendered_layout_verified": false,
+    "scientific_content_unchanged_from_v105": true,
+    "scientific_text_and_numbers_unchanged_from_v98": true,
+    "sha256": "387c80e2d297da8571e5729e441b33062fd9456be0b09ec75cbcf984c2dbd571",
+    "submission_ready": false,
+    "validation": "validation/v106_manuscript_checks.json"
+  },
+  "next": [
+    "Prepare and qualify a separate full matched screen using the newly justified token fallback for every cell and fresh oracle",
+    "Reuse hash-bound complete V104 preparations without rerunning them; retain all V104 failures and V109 setup failure",
+    "Preserve numerical carry6304 and remaining76536; new full screen reservations and controller/software totals must fit original caps",
+    "Inspect jobs/storage and bind actual V110 closure before any new registration/launch",
+    "Update same manuscript and bundle with adverse matched screen plus scoped successful diagnostic; native compile and final layout/venue checks remain"
+  ],
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "packaging": {
+    "all_originals_unchanged": true,
+    "base_source_files": 583,
+    "change": "Manuscript source-map wording only; ten evidence/source components unchanged",
+    "derivation_maps_public": true,
+    "export_revision": "V106",
+    "new_source_files": 347,
+    "outer_disclosure_clarified": true,
+    "repository_public": true,
+    "scope": "Inspection copies; no execution qualification or new empirical result",
+    "source_supplement": {
+      "bytes": 803078,
+      "sha256": "380feefc22942c6e554b3e3b9008706df5a02f41daf02055874e9f4f0ff016d8"
+    },
+    "source_supplement_unchanged": true,
+    "version": 106
+  },
+  "prepared_diagnostic": null,
+  "prepared_v92_gate_not_satisfied": false,
+  "reporting": {
+    "collector": "reporting_v102/collect.py",
+    "collector_executed": false,
+    "collector_gate": "Permanently unsatisfied for failed V104; frozen successful collector unchanged",
+    "empirical_reduction_executed": false,
+    "frozen_source_verification_v107": {
+      "all_local_sources_unchanged": true,
+      "archive": {
+        "bytes": 13332480,
+        "sha256": "bc77582ce38b051e0839a773e3f1780ae856949a9c77098f555686ad4feafb09"
+      },
+      "archive_members": 1193,
+      "archive_only_receipts": 14,
+      "local_sources_verified": 1178,
+      "registered_remote_sources_verified_by_review": true,
+      "source_members": 1192
+    },
+    "schema_review_v107": "Frozen terminal, audit and completion field names match prepared collector/reducer; actual completed terminal and all-cell reduction remain unexecuted",
+    "source": "reporting_v102/reduce.py",
+    "target": "V104",
+    "tests": 17
+  },
+  "reporting_checkpoint_evidence_directory": "pilots/token-stage-v110-20261026",
+  "scheduler": "ACTIVE",
+  "schema": "second-handoff-v110",
+  "updated_utc": "2026-10-26T11:04:11.442553+00:00"
+}

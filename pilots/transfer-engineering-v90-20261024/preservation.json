@@ -1,0 +1,15 @@
+{
+  "schema": "v90-preservation-check",
+  "observed_utc": "2026-10-24T07:41:04.068608+00:00",
+  "archive_sha256": "0560ae13f34a60830824011f1c8571b79c7e90f545cb1e78e8a273686732802b",
+  "archive_bound_files": 934,
+  "local_bound_files_verified": 930,
+  "manuscript_sha256": "bf3b7a73cda7b4c62fb7fe6fc7df08a36e949cb15f4c0d9e361fc25a732cc8eb",
+  "manuscript_edited": false,
+  "preview_startup": "Sky Computer Use service startup request failed",
+  "preview_retried": false,
+  "rendered_layout_verified": false,
+  "registered_v89_files_changed": false,
+  "new_job": false,
+  "new_registration": false
+}

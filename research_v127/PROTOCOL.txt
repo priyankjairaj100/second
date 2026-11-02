@@ -1,0 +1,40 @@
+V127 published GPTQ practical controls, prospective construction only
+
+Use IST-DASLab/gptq commit2d65066eeb06a5c9ff5184d8cebdf33662c67faf,
+Apache2.0. Preserve original gptq.py/quant.py/LICENSE and hashes. Adapt only the
+two CUDA utility calls: synchronize and empty_cache execute only on a CUDA
+device. No quantization arithmetic is edited. Execution is CPU only.
+
+Four controls: DistilGPT2 and GPT2, retained3/2 records. Exact original checkpoint,
+token records and tokenizer match V124/V125. Build from original float32 weights
+and activations. Each quantized stage is installed before subsequent features.
+Quantize all24/48 attention/MLP matrices, leave embeddings/norms/biases/head intact.
+Settings frozen before losses:4bits,symmetric,per-output-row scale,groupsize-1,
+blocksize128,percdamp0.01,actorderFalse,static_groupsFalse,mseFalse.
+The practical grids, float32 activations and Hessian damping differ from the
+certified target; this is a practical quality reference, never an equality oracle.
+No hyperparameter/quality tuning, no failed-stratum substitution.
+
+Qualification before constructors: verify exact upstream/cpu patch bytes; run
+independent analytical Hessian and diagonal-metric grid tests; compare every
+float32 logit from the sequential feature generator against the full decoder on
+synthetic4/128-token sequences for both actual checkpoints. Audit all imported
+checkpoint parameter words. No held-out article is evaluated in qualification.
+
+Four constructors<=3600CPU/4500wall each; software<=600CPU/900wall.
+1CPU/16GiB per job, noGPU; hardCPU=soft+1. Total15000workerCPU+5x60launch=15300.
+This is a new finite reserve, not a reuse of an old consumed campaign.
+The largest3072x3072 float32H is36MiB, largest weight9MiB; projectsource+outputs
+<=2GiB and each file<=128MiB. Record actualCPU/RSS/Slurm terminal evidence.
+
+Every submission is held until registration/job IDs are bound, released once.
+Gate construction on actual qualified completion and SlurmCOMPLETED0:0.
+Each attempt is one use; preserve failures; no automatic retry or duplicate.
+
+Store every quantized stage as explicit little-endianfloat32 words with shape
+andSHA256, its quantizer scales/zeros and full input/stage inventory. Read back
+every stored matrix and require exact equality and grid membership. No4bit packed
+storage claim is made for these convenient evaluation artifacts.
+Evaluate completed controls in a later registration on exactly the existing
+V124320-article file under the qualified NumPy binary64 evaluator. V124paired
+statistics remain frozen. Do not infer quality from these generated tests.

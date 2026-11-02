@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "{\"captured_utc\": \"2026-10-26T06:56:52.706737+00:00\", \"files\": 992, \"missing_dependency\": true, \"queue\": \"\", \"source_count\": 991, \"status\": \"staged_sources_unchanged_no_preparation_or_registration\"}\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n"
+}

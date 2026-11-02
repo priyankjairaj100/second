@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v100-20261026-a/research_v100/entry.py", line 39, in main
+    protocol.earlier(operation,expected);campaign.prerequisites(p)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v100-20261026-a/research_v100/campaign.py", line 31, in prerequisites
+    gate,admission,close=verify_gate(b['path'],{k:b[k] for k in ('bytes','sha256')})
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v100-20261026-a/research_v100/gate.py", line 61, in verify
+    require(verify_prior_setup()==p['prior_setup_failure'],'Preserved V91 setup failure differs')
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v100-20261026-a/research_v101/prior_setup.py", line 39, in verify
+    actual=subprocess.check_output(['sacct','-nP','-j','16301',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'sacct'
+Traceback (most recent call last):
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v100-20261026-a/research_v100/entry.py", line 77, in <module>
+    if __name__=='__main__':main(*sys.argv[1:])
+                            ^^^^^^^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v100-20261026-a/research_v100/entry.py", line 74, in main
+    require(error is None,'One-use admission entry failed; no retry')
+  File "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v100-20261026-a/research_v80/io.py", line 7, in require
+    if not x:raise ValueError(m)
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: One-use admission entry failed; no retry

@@ -1,0 +1,44 @@
+V46 prospective GPU likelihood engineering validation. Not an empirical winner screen.
+
+Use only the actual V44 pilot models and its eight already exposed 128-token articles.
+Compare all32 per-article mean NLL values against the completed CPU V44 values.
+Every absolute deviation must be <=1e-8. Preserve failure without automatic retry,
+threshold changes, different precision, model changes, or new quality inputs.
+This does not certify calibration features, exact arithmetic, or unseen-data quality.
+
+Translate the unchanged NumPy gelu_new evaluator to eager PyTorch float64 on CUDA.
+Disable TF32, AMP and gradients. Deterministic algorithms and CUBLAS workspace4096:8.
+Use its explicit causal attention, layer normalization and nonlinear arithmetic.
+Verify every parameter/prefix host-device-host copy by binary64 bytes.
+Validate one synthetic complete decoder batch on the intended device before
+the empirical submission. In empirical execution, the first real full-precision
+batch must agree with CPU before continuing. No unmeasured warmup is hidden.
+Run one article at a time. Synchronize CUDA before/after timed likelihood calls.
+Report timings as engineering observations only, not a controlled CPU/GPU speedup.
+
+Source, input files, checkpoint, actual fixed state/export, sequential export and
+metadata, V44 completion, exposed records and exclusion registry are SHA-bound.
+Parse the fixed complete state and recover codes, checking model export equality.
+Parse sequential codes with stage hashes and exact dyadic row grids; match grids.
+Pin actual Python, Torch, NumPy binaries, CUDA build, driver and GPU model at
+registration on Slurm. Do not reuse the CPU runtime fingerprint.
+
+Fresh one-use phase1202CPU seconds: worker1200CPU/1500wall, one CPU thread and
+one institutional A10080GB.16GiB host physical memory is enforced by Slurm.
+PyTorch GPU allocator limited to8GiB; report peak allocated and reserved bytes.
+RLIMIT_AS128TiB permits CUDA virtual mappings and is NOT a physical RAM limit.
+2GiB file cap.1800second Slurm wall bounds controller+worker allocation.
+Use shared exact-command PhaseBudget and bounded worker receipts. No paid compute.
+All prior ledgers remain unchanged. This independent phase cannot rewrite V45.
+
+Passing validates only these32 observed likelihoods on this source/runtime/device.
+No distribution-wide equivalence, exact calibration, new heldout evidence,
+certified inference, population interval, or ACL readiness claim follows.
+
+Pre-inference compatibility correction: registration13240 stopped because the
+GPU Python3.10 lacks hashlib.file_digest used by a frozen CPU helper. Its dependent
+13241 was cancelled; no campaign directory, budget reservation or likelihood was
+created. The V46-only validator now uses its existing streamed SHA256 routine and
+the unchanged pure audit checks. Add an actual archive-read software check, then
+use a new B directory. Preserve both terminal records. No numeric kernel, threshold
+or model changes; no empirical attempt is retried.

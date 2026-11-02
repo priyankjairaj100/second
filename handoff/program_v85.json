@@ -1,0 +1,96 @@
+{
+  "version": 85,
+  "created_at": "2026-10-23T09:39:29.121400+00:00",
+  "handoff": "docs/ACTIVE_SESSION_V85.md",
+  "prior_handoff": "docs/ACTIVE_SESSION_V84.md",
+  "scheduler": "ACTIVE",
+  "model_results_changed": false,
+  "manuscript_version": 74,
+  "scientific_decision_version": 72,
+  "frozen_sources": 871,
+  "auxiliary_commitments": 5,
+  "v80": {
+    "status": "FAILED; descendants CANCELLED unstarted",
+    "prepare_job": "15905",
+    "observation_utc": "2026-10-23T09:25:24.638848+00:00",
+    "partial_progress": {
+      "source_replayed": 13,
+      "stage_certified": 24
+    },
+    "complete_model": false,
+    "terminal_accounting": "Failure snapshot preserved; success closure unavailable",
+    "observed_elapsed": "01:47:19",
+    "exit_code": "120:0",
+    "unsettled_reserved_cpu_seconds": 12602
+  },
+  "v81": {
+    "job_id": "15917",
+    "status": "FAILED120:0",
+    "software_tests_expected": 62,
+    "actual_transfer_launched": false,
+    "observed_elapsed": "00:00:02",
+    "actual_software_pass": false
+  },
+  "v82": {
+    "status": "all five jobs CANCELLED without starting; registration consumed",
+    "program_sha256": "5bead3425eb9bb4bec645ac12e681b45e62d87762cef0f15179aecdb427ae27b",
+    "jobs": {
+      "checks": "15921",
+      "fetch": "15922",
+      "distilgpt2": "15923",
+      "gpt2": "15924",
+      "close": "15925"
+    },
+    "software_tests_expected": 26,
+    "pure_checks_passed": 21,
+    "linux_guard_checks_pending": 5,
+    "grid_cap": 1327104,
+    "target_cpu_reservation": 1204,
+    "controller_cpu_reservation": 1510,
+    "weights_downloaded": false,
+    "empirical_transfer": false,
+    "actual_admission_pass": false
+  },
+  "v83": {
+    "status": "prepared host-only actual terminal accounting",
+    "generated_tests_passed": 13,
+    "actual_terminal_closure": false
+  },
+  "completion_blockers": [
+    "Restore account storage quota headroom without deleting registered evidence",
+    "Separately registered recovery with old failure reservations retained and storage admission",
+    "Actual complete comparison/transfer audits plus justified target quality/timing",
+    "Native rendered layout and final delivery choices"
+  ],
+  "v84": {
+    "status": "UNREGISTERED; old upstream success gates impossible; prospective recovery rebinding required",
+    "planned_trials": 20,
+    "complete_successor_comparisons": 16,
+    "pure_tests_passed": 13,
+    "linux_integration_and_receipt_tests_prepared": 8,
+    "expected_linux_software_gate": 87,
+    "numerical_cpu_reservation": 82840,
+    "preserved_numerical_ceiling": 120624,
+    "controller_reservation": 6040,
+    "preserved_controller_ceiling": 7224,
+    "registered": false,
+    "launched": false,
+    "quality_evaluation": false
+  },
+  "scheduler_interval_minutes": 15,
+  "scheduler_resume_explicitly_user_authorised": true,
+  "v85": {
+    "failure_report": "pilots/continuation-v85-20261023/terminal-failure.json",
+    "artifact_bindings": "pilots/continuation-v85-20261023/partial-artifact-bindings.json",
+    "recovery_plan": "docs/RECOVERY_PLAN_V85.txt",
+    "quota_fixture_checks_passed": 6,
+    "storage_guard_host_qualified": false,
+    "registered": false,
+    "launched": false,
+    "scientific_result": false,
+    "recovery_numerical_reservation_including_old": 120622,
+    "preserved_numerical_ceiling": 120624,
+    "recovery_controller_reservation_including_old": 6622,
+    "preserved_controller_ceiling": 7224
+  }
+}

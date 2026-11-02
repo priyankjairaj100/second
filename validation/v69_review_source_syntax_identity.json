@@ -1,0 +1,66 @@
+{
+  "actual_shell_wrappers_executed": false,
+  "archive": "reports/development-source-review-v69b.zip",
+  "captured_at_utc": "2026-10-16T14:58:00.087908+00:00",
+  "full_anonymity_verified": false,
+  "known_string_findings": {
+    "email_like": [
+      "source-review/research_v46/evaluator.py"
+    ],
+    "known_host": [
+      "source-review/research_v48/test_report.py",
+      "source-review/research_v52/campaign.py",
+      "source-review/research_v52/evidence.py",
+      "source-review/research_v69/PROTOCOL.txt",
+      "source-review/research_v69/submission.py"
+    ]
+  },
+  "schema": "review-source-syntax-identity-check-v69",
+  "scripts": [
+    {
+      "path": "cluster_setup/run_cpu.sbatch",
+      "returncode": 0,
+      "sha256": "73b60c64417804514064878679853b15f2d9c65aa1cb21d96d34ea35db02dc5d"
+    },
+    {
+      "path": "cluster_setup/v53_pipeline.sh",
+      "returncode": 0,
+      "sha256": "9b305ec8d99c9745f88b1eb807729021f661c1e8bbefe207ae1c78237a4f728b"
+    },
+    {
+      "path": "cluster_setup/v54_pipeline.sh",
+      "returncode": 0,
+      "sha256": "4c17c11e6a8f52beab7ebba7f813437229a1f74624f59eeb4d98d18ecce253a7"
+    },
+    {
+      "path": "cluster_setup/v55_pipeline.sh",
+      "returncode": 0,
+      "sha256": "ed0db7041c631ce52c3ed41276c87bad8b37798d52520b9a683e1852767d28ee"
+    },
+    {
+      "path": "cluster_setup/v59_pipeline.sh",
+      "returncode": 0,
+      "sha256": "a30cdd273f03457d482c9c8ffa69215fd1c652d8969d43cf9595e0b299c514d4"
+    },
+    {
+      "path": "cluster_setup/v61_pipeline.sh",
+      "returncode": 0,
+      "sha256": "4d36eef9b54cbbfc0e8d85d8539c5d0a9c5c3660db1faa812d7d073040e62df4"
+    },
+    {
+      "path": "research_v47/run_gpu.sbatch",
+      "returncode": 0,
+      "sha256": "959ce6715f08328abc88dae9651cde2c5b978f47be53b73887e79b26e8b2bf4b"
+    },
+    {
+      "path": "research_v69/run_cpu.sbatch",
+      "returncode": 0,
+      "sha256": "afe53e163b313098e1b9e4cf7918246c3aff9a56c3ae784ec927c2a24c45f71c"
+    },
+    {
+      "path": "research_v69/run_gpu.sbatch",
+      "returncode": 0,
+      "sha256": "be483cd4ad390e1124133cc0af6725a30ba48e34e5091c72fefe75aa32d9d084"
+    }
+  ]
+}

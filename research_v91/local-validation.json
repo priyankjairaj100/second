@@ -1,0 +1,191 @@
+{
+  "runtime": "3.12.7",
+  "platform": "Darwin",
+  "modules": [
+    "research_v91.test_accounting",
+    "research_v91.test_closure",
+    "research_v91.test_contracts",
+    "research_v91.test_fetch",
+    "research_v91.test_host",
+    "research_v91.test_package",
+    "research_v91.test_protocol",
+    "research_v91.test_storage",
+    "research_v91.test_submit",
+    "research_v90.test_metadata",
+    "research_v90.test_outputs",
+    "research_v90.test_admission",
+    "research_v90.test_storage_plan",
+    "research_v90.test_recovery_gate",
+    "research_v82.test_inputs",
+    "research_v82.test_admission_reports"
+  ],
+  "tests": 104,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "empirical_execution": false,
+  "pinned_linux_execution": false,
+  "log": "............................................{\"program_sha256\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"jobs\": [{\"name\": \"checks\", \"operation\": \"checks\", \"arguments\": [], \"job_id\": \"76543\", \"dependency\": null, \"program_sha256\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"snapshot\": \"JobState=PENDING JobName=second91-checks NumCPUs=1 Requeue=0 MinMemoryNode=16G ReqNodeList=csis.mn1 TimeLimit=00:10:00 Partition=cpu-short QOS=cpu-short Reason=JobHeldUser Priority=0 Dependency=(null)\"}]}\n............................................................\n----------------------------------------------------------------------\nRan 104 tests in 1.657s\n\nOK\n",
+  "schema": "local-target-admission-validation-v91",
+  "observed_utc": "2026-10-24T08:13:50.867566+00:00",
+  "new_tests": 45,
+  "prior_component_tests": 48,
+  "unchanged_input_report_tests": 11,
+  "prepared_linux_tests": 172,
+  "linux_tests_executed": false,
+  "registered": false,
+  "uploaded": false,
+  "source_archive_created": false,
+  "static_undefined_name_check": "ruff F821 F822 F823 passed",
+  "shell_syntax_check": "bash -n passed",
+  "earlier_local_observations": [
+    {
+      "tests": 21,
+      "failures": 1,
+      "errors": 0,
+      "reason": "Missing ledger returns unavailable snapshot; new contract initially did not reject it",
+      "resolution": "New wrapper requires verified snapshot"
+    },
+    {
+      "operation": "target module import probe",
+      "error_type": "ModuleNotFoundError",
+      "message": "No module named numpy",
+      "target_constructed": false,
+      "dependencies_installed": false
+    }
+  ],
+  "files": {
+    "research_v91/PARENT_BINDINGS.json": {
+      "bytes": 1099,
+      "sha256": "57faa7a55bf082c9b20f8cbe29673699923394cb751e3433b4f752e94aa69a77"
+    },
+    "research_v91/PROTOCOL.txt": {
+      "bytes": 9679,
+      "sha256": "a5cdbe97b58cde790779f5ab58e2b6944f39f2d6e22fc09eb03b704d92815a1a"
+    },
+    "research_v91/__init__.py": {
+      "bytes": 76,
+      "sha256": "7d30aea2fc968cb90c115485473ab845773b2dd700aa7d16dd6587398c077aa0"
+    },
+    "research_v91/closure.py": {
+      "bytes": 4520,
+      "sha256": "8db1dde50c74e0f5cd6606753be717b8fb0bfb4eb330651f52c9370393d03cad"
+    },
+    "research_v91/config.py": {
+      "bytes": 2100,
+      "sha256": "d34d80b1397b70c811c8da9dbebbc57cd8740e26dce492120348c659e51e8097"
+    },
+    "research_v91/container.sh": {
+      "bytes": 1042,
+      "sha256": "67bdeaba6adc7c41946f2a408743b6babfaaebd9b3976c74ec296c87b3a48c9c"
+    },
+    "research_v91/contracts.py": {
+      "bytes": 2291,
+      "sha256": "d7f581b5e71d0a5f9ab1525bd4ea4f0b9e8c2260e66d260c17b5edd7be64e0b6"
+    },
+    "research_v91/controller.py": {
+      "bytes": 2124,
+      "sha256": "9dce61f31f22ddde9a01802d57b0549a08945e3e3fd159f137a7da2146e72e68"
+    },
+    "research_v91/entry.py": {
+      "bytes": 4830,
+      "sha256": "2ee0309c65fa326ecd3307625b65c84e29af8a5f6ff2c7902a6a0f6ce8fb63f6"
+    },
+    "research_v91/fetch.py": {
+      "bytes": 4735,
+      "sha256": "39136fa49eb00affbca5c5afb0c6dc3d0e93257aa58a1059478e4b78d9ddd575"
+    },
+    "research_v91/host.py": {
+      "bytes": 11526,
+      "sha256": "4be0fe19ff12765c26831c12b79c5375255f6133b4c7512898f66c3d59e93496"
+    },
+    "research_v91/mapping.py": {
+      "bytes": 1627,
+      "sha256": "68923ca53b1d79a19a5b088a34dd6230ca0699bc4a3b4dc4875170e74da1eed7"
+    },
+    "research_v91/package.py": {
+      "bytes": 5630,
+      "sha256": "113d63914c3893ee3a59ec21a8482c273c3e2f527dbc71c869f67a1313d8ff29"
+    },
+    "research_v91/prepare.py": {
+      "bytes": 2125,
+      "sha256": "6f220aad2c0d9cb8f1d6871c7dc3d5dc45008b945caf4b5d01035b51299543a2"
+    },
+    "research_v91/protocol.py": {
+      "bytes": 4284,
+      "sha256": "0de60d78249e4ff4fe1bf636261a3e2af14b6cba23945ecba56941d4efc22ff1"
+    },
+    "research_v91/records.py": {
+      "bytes": 866,
+      "sha256": "f9c56c0cbe462cf68b62dea36395fbce38def7fdbc0369234f3a2951ff7e6eb3"
+    },
+    "research_v91/run_cpu.sbatch": {
+      "bytes": 235,
+      "sha256": "e7de191a51665e197588ff5327073fa675feb65412ab648ff13a34338aa2937e"
+    },
+    "research_v91/seals.py": {
+      "bytes": 7469,
+      "sha256": "efdea4fbd57db7fde195c4a7940124701b0ae52b9052ec65649a7ea8749206f4"
+    },
+    "research_v91/software.py": {
+      "bytes": 3292,
+      "sha256": "a11545a9189c7067c562a7bfcdfe5344098424afc6c0427468b86cdbd6be7584"
+    },
+    "research_v91/storage_plan.py": {
+      "bytes": 2947,
+      "sha256": "2869710bf66c4e518640e041cea4ee51a5357aa79a61296a0b8a4bdd1305a2a7"
+    },
+    "research_v91/submit.py": {
+      "bytes": 5835,
+      "sha256": "6073e8dacecf57bea7c1611a16a882ac7832d3d76351b6d384f738e7594a92d9"
+    },
+    "research_v91/target_worker.py": {
+      "bytes": 5994,
+      "sha256": "fe2e6925cc5068a641e8f9db6d9b4da7fe7d6c4297ed05d11684a341b61b2ad3"
+    },
+    "research_v91/terminal.py": {
+      "bytes": 5839,
+      "sha256": "746be96cbab339beaad750f2153c3509ec2e331a8f9239e9016eb1798d9d17da"
+    },
+    "research_v91/test_accounting.py": {
+      "bytes": 1637,
+      "sha256": "dba0595c7c417094ce09be812d0390d13a7e1a71373d5d4845ab83be82355a7d"
+    },
+    "research_v91/test_closure.py": {
+      "bytes": 5160,
+      "sha256": "f2dc650bce191a221a51cac1905fa71a18a18e6ef5e1ab9b253bebc29616c12a"
+    },
+    "research_v91/test_contracts.py": {
+      "bytes": 3461,
+      "sha256": "5595f081c49cb88af4706770933af5959f1a71e562546b7a37b7694df8eadbc5"
+    },
+    "research_v91/test_fetch.py": {
+      "bytes": 2575,
+      "sha256": "93825b275a21484289d616630cfa2c551f9ed54e37a7127f85e326e7c692d659"
+    },
+    "research_v91/test_host.py": {
+      "bytes": 6023,
+      "sha256": "1ac9dd28eba75d28e39319d88891a680029186b7852ea0b4f493497dad47c317"
+    },
+    "research_v91/test_linux.py": {
+      "bytes": 3508,
+      "sha256": "25bff8ec944a61b26039968efca1732a6fc14dea6a18929f639a515cb23fc1af"
+    },
+    "research_v91/test_package.py": {
+      "bytes": 982,
+      "sha256": "22e609890d19dcfab9eefb46660d012b5bdf6918ebe9ee1931062ff714168d9b"
+    },
+    "research_v91/test_protocol.py": {
+      "bytes": 3609,
+      "sha256": "a38c9b3220f659c105163b59f9a9d31f9118c8a129243652a905d0b530ae192d"
+    },
+    "research_v91/test_storage.py": {
+      "bytes": 1859,
+      "sha256": "2bd066aae7ca554eba3dd3ebeac4c7c422666aad4bf509591d84f94008a6e9c3"
+    },
+    "research_v91/test_submit.py": {
+      "bytes": 3706,
+      "sha256": "3a74b57837956335e9f15afa6c785ff0ecdd422dfe23a553a84172ccd7f605e4"
+    }
+  }
+}

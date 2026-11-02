@@ -1,0 +1,60 @@
+Final integration checklist, prepared before V112 evidence closure
+
+This is a writing checklist, not a new protocol or a statement of results.
+Use the existing research_v82/DECISION_RULES.txt after actual terminal closure.
+Do not change the registered study or run the proposed64-request replication
+before its scientific value and complete admissible budget have been assessed.
+
+1. Require all21actual jobs, both fresh oracles, both audits and frozen terminal
+closure. Run the existing collector once; preserve its exact files and failure
+if it refuses. Then use render.py for all sixteen rows, both endpoints and all
+costs. Never report a successful subset as the complete matched experiment.
+
+2. Inspect all complete host ratios, all disjoint phases, source accesses,
+fallbacks, live state, checkpoint-inclusive state and worker memory. Explain
+observed latency with measured phases only. Source extraction is nested in a
+fallback stage and decoder-only time is unavailable. Report bundled optimization
+effects without assigning separate causal decoder/cache/kernel effects.
+
+3. Assess the proposed balanced replication across all four model/endpoint strata.
+A localized win or loss leads to the bounded tradeoff framing. Do not launch
+repetitions only on favorable endpoints. A new registration must retain original
+caps and complete prior costs. No finite screen establishes universal speedup.
+Failure/refusal is not a proof that every future implementation is impossible.
+
+4. Integrate the completed screen into the same open second-research-draft.tex.
+Explain the exposed4x128-token root, fixed512 normalization,4->3->2 trajectory,
+same-checkpoint fresh reconstruction, two related model depths and unchanged
+approved grid allowance. Describe the prospectively fixed point-token policy
+separately from the original dispatcher. The box/Gram policies remain unchanged.
+Generalize the descriptive24-stage artifact sentence only if the actual48-stage
+model audit passes. Keep the failed V104 and V110 single-stage history explicit.
+
+5. Update abstract, introduction, complete-model evidence, conclusion, limitations
+and reproducibility together. Conditional exactness, observed latency, stability,
+cross-architecture transfer and predictive quality are different claims. Preserve
+the V72 quality frame and tolerances; those values do not transfer to the new
+512-normalized targets. Successful full GPT2 reconstruction can support only the
+tested related-checkpoint scope. Retain all older adverse quality/speed results.
+
+6. Preserve original preparation host clocks separately. V104 preparation built
+multiple representations and was shared across cells. Do not assign its full host
+cost solely to one arm or count it again as newly executed work. Keep the old
+unresolved12602-second debit, failed attempts and overlapping clocks explicit.
+
+7. When editing the appendix, replace the two obsolete directional references
+introduced by moving the earlier screens: 'quality below' and 'disjoint root
+below'. Their referenced results now precede the appendix. Preserve all scientific
+values and failed-attempt details. No change is needed to the historical V116 copy.
+
+8. Native-compile the same edited manuscript, verify references/citations and
+all table values against the closed reduction. Add the actual matched evidence
+derivative to the final review bundle while keeping all thirteen previous
+components byte-identical. Update the checklist's checkpoint, compute and source
+coverage descriptions. Do not treat package checks as empirical reproduction.
+
+9. Rendered layout/PDF export, final venue/cycle/category and author-controlled
+declarations remain separate. Existing preview startup failure and unanswered
+delivery question must remain visible; do not repeat attempts/questions without
+a changed condition. No anonymity, licensing, author review or submission claim
+is implied. Keep the scheduler PAUSED and do not submit to a conference.

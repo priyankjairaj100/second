@@ -1,0 +1,11 @@
+{
+  "status": "reviewed_with_preserved_frozen_whitespace",
+  "local_new_fixture_tests": 18,
+  "pinned_linux_tests": 64,
+  "skips": 0,
+  "source_bindings_verified": 469,
+  "git_diff_check": "One added blank line at EOF in research_v67/receipts.py; source already registered/executed, intentionally preserved byte-for-byte",
+  "numerical_source_modified_after_registration": false,
+  "manuscript_native_compile": "success",
+  "portable_launch_metadata_check": "passed"
+}

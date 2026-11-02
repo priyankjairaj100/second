@@ -1,0 +1,17 @@
+{
+  "archive": {
+    "bytes": 19535,
+    "path": "reports/development-reproduction-guide-v72.zip",
+    "sha256": "6abf11b4b237f263784f3bfb9ce3ddb87f70e3d11f3b3a751ae5e69984cddfd3"
+  },
+  "complete_historical_input_closure": false,
+  "complete_transitive_notices": false,
+  "component_count": 7,
+  "empirical_execution": false,
+  "full_anonymity_verified": false,
+  "original_failure_preserved": true,
+  "quality_evidence_included": true,
+  "quality_input_groups": 10,
+  "schema": "review-reproduction-guide-v72",
+  "submission_ready": false
+}

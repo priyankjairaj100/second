@@ -1,0 +1,35 @@
+{
+  "schema": "second-handoff-v139",
+  "updated_utc": "2026-11-02T01:10:32.596397+00:00",
+  "status": "cluster_access_required_for_registered_v138",
+  "handoff": "docs/ACTIVE_SESSION_V139.md",
+  "scheduler": "PAUSED",
+  "scientific_revision_complete": false,
+  "manuscript": "reports/manuscript_v137.tex",
+  "pdf": "reports/second_tacl_v137.pdf",
+  "primary_quality_guards_passed": 3,
+  "primary_quality_guards_total": 4,
+  "source_only_registration_sha256": "ed6af45c6908479b0bed6436abe5d2e677787060890dedfe8145df0641af6bb8",
+  "qualification": {
+    "job": 16881,
+    "tests": 335,
+    "status": "COMPLETED 0:0"
+  },
+  "preparation_jobs": [
+    16882,
+    16883
+  ],
+  "preparation_current_state": "unknown after 2November SSHtimeout",
+  "consumed": [
+    "stage_v138",
+    "submit_initial_v138",
+    "submit_prepare_v138"
+  ],
+  "not_executed": [
+    "submit_measure_v138",
+    "submit_audit_v138",
+    "reporting_v138.collect"
+  ],
+  "new_larger_root_or_precision_model_experiments": false,
+  "submission_ready": false
+}

@@ -1,0 +1,48 @@
+{
+  "archive": {
+    "bytes": 504527,
+    "sha256": "2324b54f8453a8e6bc3ef10a40e1512b752e541feec01a664c0b9e777956eec0"
+  },
+  "endpoints": {
+    "12": {
+      "gate_pass": true,
+      "log_maximum_article_ratio": 0.12145638622993156,
+      "log_pooled_ratio": 0.005406349588089282,
+      "observed_maximum_guard_pass": true,
+      "observed_pooled_guard_pass": true,
+      "reported_bootstrap_upper_guard_pass": true
+    },
+    "6": {
+      "gate_pass": true,
+      "log_maximum_article_ratio": 0.11952433906045071,
+      "log_pooled_ratio": 0.007124031657275523,
+      "observed_maximum_guard_pass": true,
+      "observed_pooled_guard_pass": true,
+      "reported_bootstrap_upper_guard_pass": true
+    }
+  },
+  "independent_arithmetic_implementation": true,
+  "independent_bootstrap_recomputation": false,
+  "independent_neural_evaluation": false,
+  "max_parity_mean_nll_difference": 1.1546319456101628e-14,
+  "model_bytes_read": false,
+  "original_archive": {
+    "bytes": 688960,
+    "sha256": "f736ab88a079d25a21eeeef5ee451ff2a601a4d0b6616bd91b5d2e85ba568646"
+  },
+  "original_closure_failed": true,
+  "paired_articles": 320,
+  "parity_comparisons": 24,
+  "quality_guard_pass": true,
+  "recovery_archive": {
+    "bytes": 43319,
+    "sha256": "15dfbd3568a9496a8e7fefcb63a9ac3d702c7719da1fc3aebce744f9163f9f4e"
+  },
+  "recovery_registration_sha256": "ec6b5a295667cf9b305f7dc2a0a8a7ee14546c5395f5733c9b9ea8a36c4e9df6",
+  "registered_terminal_gate_changed": false,
+  "scalar_losses_checked": 1944,
+  "schema": "v72-recovered-saved-loss-arithmetic",
+  "scope": "Supplementary root reporting check; shared original losses and terminal commitments, not independent experimental replication.",
+  "separate_recovery_verified": true,
+  "status": "verified_saved_scalar_arithmetic"
+}

@@ -1,0 +1,211 @@
+{
+  "created_utc": "2026-10-24T05:29:34.594772+00:00",
+  "source_receipt": "continuation-reconciliation-20261024T052816Z.json",
+  "source_receipt_sha256": "108693ae6e2b9949f469e396a6b07cf818aca4928e6354b1ce5c0472c2d3c1ab",
+  "observation": {
+    "utc": "2026-10-24T05:28:20.542104+00:00",
+    "queue": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "quota": {
+      "code": 1,
+      "stdout": "Disk quotas for user poonam (uid 1007): \n     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace\n      /dev/sdb1 1048576004* 1047527424 1048576000   3days 3306263       0       0        \n      /dev/sda5 171720660  182452224 183500800          508244       0       0        \n",
+      "stderr": ""
+    },
+    "accounting": {
+      "code": 0,
+      "stdout": "15904|COMPLETED|0:0|13|00:11.560|1|16G|csis.mn1\n15904.batch|COMPLETED|0:0|13|00:11.560|1||csis.mn1\n15905|FAILED|120:0|6439|01:46:42|1|16G|csis.mn1\n15905.batch|FAILED|120:0|6439|01:46:42|1||csis.mn1\n15906|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15907|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15908|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15909|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15910|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15911|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15912|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15913|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15914|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15915|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15916|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15917|FAILED|120:0|2|00:00.850|1|16G|csis.mn1\n15917.batch|FAILED|120:0|2|00:00.850|1||csis.mn1\n15921|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15922|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15923|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15924|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n15925|CANCELLED|0:0|0|00:00:00|0|16G|None assigned\n",
+      "stderr": ""
+    },
+    "head": {
+      "code": 0,
+      "stdout": "f900999fcb200509dfad4fc081ce9c87fd172a16\n",
+      "stderr": ""
+    },
+    "git": {
+      "code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "ledger": {
+      "bytes": 15987,
+      "sha256": "10f95f5eea81d1bb07a92412ef4b4fe2e802060eb4251524f9559837ceabcb27"
+    },
+    "completion_bytes": 0,
+    "new_paths": {
+      "four-cell-recovery-v89-20261023-a": false,
+      "four-cell-recovery-v89-source-only.tar": false
+    }
+  },
+  "old_disposition_review": {
+    "allocations": {
+      "15904": {
+        "job_id": "15904",
+        "state": "COMPLETED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 13,
+        "scheduler_cpu_ns": 11560000000,
+        "reporting_quantum_ns": 1000000
+      },
+      "15905": {
+        "job_id": "15905",
+        "state": "FAILED",
+        "exit_code": "120:0",
+        "elapsed_seconds": 6439,
+        "scheduler_cpu_ns": 6402000000000,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15906": {
+        "job_id": "15906",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15907": {
+        "job_id": "15907",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15908": {
+        "job_id": "15908",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15909": {
+        "job_id": "15909",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15910": {
+        "job_id": "15910",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15911": {
+        "job_id": "15911",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15912": {
+        "job_id": "15912",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15913": {
+        "job_id": "15913",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15914": {
+        "job_id": "15914",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15915": {
+        "job_id": "15915",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15916": {
+        "job_id": "15916",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15917": {
+        "job_id": "15917",
+        "state": "FAILED",
+        "exit_code": "120:0",
+        "elapsed_seconds": 2,
+        "scheduler_cpu_ns": 850000000,
+        "reporting_quantum_ns": 1000000
+      },
+      "15921": {
+        "job_id": "15921",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15922": {
+        "job_id": "15922",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15923": {
+        "job_id": "15923",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15924": {
+        "job_id": "15924",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      },
+      "15925": {
+        "job_id": "15925",
+        "state": "CANCELLED",
+        "exit_code": "0:0",
+        "elapsed_seconds": 0,
+        "scheduler_cpu_ns": 0,
+        "reporting_quantum_ns": 1000000000
+      }
+    },
+    "scientific_success": false,
+    "scheduler_cpu_ns": 6414410000000,
+    "scheduler_cpu_does_not_settle_worker": true
+  },
+  "access_restored_after_user_confirmation": true,
+  "quota_used_kib": 1048576004,
+  "quota_soft_kib": 1047527424,
+  "quota_hard_kib": 1048576000,
+  "project_headroom_sufficient": false,
+  "full_multi_filesystem_guard_rerun": false,
+  "full_guard_not_needed_to_refuse_exhausted_user_quota": true,
+  "new_upload_registration_or_job": false,
+  "historical_ledger_modified": false,
+  "scientific_results_changed": false
+}

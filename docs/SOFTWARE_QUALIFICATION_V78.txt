@@ -1,0 +1,75 @@
+V76/V78 Linux software qualification results, 23 October2026
+
+V76 job15897 and V78 job15898 both completed0:0 on csis.mn1. The new
+source-only uploads were explicitly approved by the user after automatic
+review scoped approval to each payload. V78's initial rejected upload made
+no remote change; the later approved upload and one submission succeeded.
+Neither job was retried. Scheduler remains PAUSED. The frozen numerical
+checkout f900999 was clean and the account queue empty at each staging gate.
+
+V76:311 registered source files rechecked unchanged, eight output hashes
+verified remotely. Six text outputs are retained locally; decoder/sanitizer
+binaries remain remote with their hashes. Eight legacy codec tests pass in
+each mode;40 valid configurations,6810 mutation/truncation cases (2710 accept,
+4100 reject),1600 boundaries and100000 Linux UBSan malformed cases pass.
+Linux ASan was not run because its shadow mapping conflicts with16GiB AS.
+The historical Mac sanitizer evidence remains separately scoped.
+
+Generated parse(blob).box fixtures, six alternating pairs each, include two
+full payload decodes plus existing parser checks/copies. At128x768, reference
+median0.4883798065s versus native0.0137769835s gives35.448965x. At128x3072,
+1.973447601s versus0.054005931s gives36.541312x. Native compilation is outside
+these component clocks and inside the complete qualification job accounting.
+These arrays are generated, not real model features or complete requests.
+
+The point and box token libraries each pass1016385 raw-word/boundary inputs
+in both directions against libm, checking exact output bits AND floating
+exception flags. All16 coefficient/error-byte fixtures agree. Each mode passes
+21 legacy native coefficient tests, zero skips/failures/errors. Five alternating
+pairs at each of (width,tokens)=(192,32),(768,128),(1536,128) give point speedups
+1.205705x/1.462540x/1.465028x and box1.181809x/1.408484x/1.410371x. Raw samples
+and compiler/source/binary identities are in the unmodified output JSON.
+
+V78:620 source files and all11 installed pinned Zstandard files rechecked
+unchanged; both output hashes verified remotely and locally. All51 checks
+pass:17 actual V63 parser/archive tests reference,17 optimized,9 cache-mechanics
+and8 added actual parser/cache tests. Warm-cache hits still reject malformed
+frames, noncanonical encodings, changed runtime/metadata, wrong expected hashes
+and tighter per-call limits. Signed-zero/extreme words and actual restored
+archive bytes agree; eviction, measurement bypass and request clearing pass.
+
+Three complete parse/decode calls per generated sample, including fresh32MiB
+cache create/clear, use six alternating pairs. At128x768,0.230976417s reference
+versus0.0999675185s optimized gives2.310515x. At128x3072,0.936209352s versus
+0.4056611405s gives2.307861x. No neural extraction, empirical checkpoint,
+quality article or complete service request was evaluated by either job.
+
+Observed costs, with overlapping measures kept separate:
+V76 parent0.349156210s + waited children79.102597s =79.451753210CPU seconds;
+entry elapsed80.510080993s; parent/child maxRSS43976/87852KiB. Scheduler
+allocation TotalCPU80.481s, elapsed83s, batch MaxRSS157960K.
+V78 parent0.435103602s + waited child11.620074s =12.055177602CPU seconds;
+entry elapsed12.178369936s; parent/child maxRSS66312/93420KiB. Scheduler
+TotalCPU12.891s, elapsed14s, batch sampled MaxRSS3340K. The short-job scheduler
+RSS sample is below process high-water readings and is not a peak-memory proof.
+Do not sum parent allocation and nested batch CPU, or add scheduler CPU to
+entry CPU. Both stay within1CPU/16GiB/600wall/300-301process/602aggregate limits.
+
+Decision: both implementation candidates pass their COMPONENT gates and
+justify a separate actual tiny-service integration gate. They do not establish
+end-to-end speed, stable latency or model transfer. The optimized lossless
+control must accompany the optimized compressed path; improving the old
+compressed code alone is insufficient for a method-level speed claim.
+
+V74 manuscript and V72 scientific conclusion remain unchanged: exactness and
+a bounded storage/source-access/latency tradeoff, with existing adverse
+comparisons and small quality cost within tolerance. All581 historical sources
+and five administrative commitments remain unchanged. The union with new
+qualified source commitments is808 files, all rechecked. Review here is by the
+root agent, not independent review. Native manuscript compilation was already
+successful; no edit or new compile is warranted by these component results.
+
+Evidence: pilots/speed-software-v76-20261022-a and
+pilots/control-software-v78-20261023-a. Verification:
+validation/v79_checkpoint_check.json. Program registrations:
+research_v76/program.json and research_v78/program.json. No model speed claim.

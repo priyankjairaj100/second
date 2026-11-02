@@ -1,0 +1,72 @@
+{
+  "actual_terminal_request_reviews": 0,
+  "all_remaining_scientific_work_depends_on_actual_completions": true,
+  "bundle": {
+    "bytes": 9894041,
+    "sha256": "65021751a217b9e90dc91737397b00614d083d00afb7b7be9421f7be5fcd5559"
+  },
+  "collector_executed": false,
+  "manuscript": {
+    "bytes": 57861,
+    "sha256": "387c80e2d297da8571e5729e441b33062fd9456be0b09ec75cbcf984c2dbd571"
+  },
+  "native_compile_repeated": false,
+  "new_launch": false,
+  "new_manuscript_edit": false,
+  "new_registered_source_change": false,
+  "observation": "v104-request-review-20261026T101027Z.json",
+  "preview_retried": false,
+  "progress": {
+    "completion_exists": false,
+    "counts": {
+      "context_ready": 1,
+      "source_replayed": 3,
+      "stage_certified": 46
+    },
+    "directory": "/nfs_home/users/poonam/second-20261010/local_runs/matched-complete-recovery-v104-20261026-a/gpt2/reference_compressed-1/outputs",
+    "last_records": [
+      {
+        "certificate_refusal": null,
+        "code_sha256": "63515d9ec08fc97c6e85d2e925c9d2c671929d1c0a974a798a53a74cdb9e599a",
+        "elapsed_ns": 1019104239318,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "streamed",
+        "stage_id": "block.0011.qkv"
+      },
+      {
+        "certificate_refusal": null,
+        "code_sha256": "209ba994a99a2157766916dcca307b051c9f0ec5d06c69f09f5101bef6e80cce",
+        "elapsed_ns": 1030748602943,
+        "fallback": false,
+        "phase": "stage_certified",
+        "route": "streamed",
+        "stage_id": "block.0011.attn_out"
+      },
+      {
+        "elapsed_ns": 1279105491025,
+        "phase": "source_replayed",
+        "record_id": "c4:en:shard2:line1662"
+      },
+      {
+        "elapsed_ns": 1511719573195,
+        "phase": "source_replayed",
+        "record_id": "c4:en:shard2:line508"
+      },
+      {
+        "elapsed_ns": 1744204733983,
+        "phase": "source_replayed",
+        "record_id": "c4:en:shard2:line651"
+      }
+    ]
+  },
+  "publication_deferred_until_coherent_completed_request_checkpoint": true,
+  "published_handoff": "V107",
+  "running_job": "16339",
+  "running_operation": "gpt2/reference_compressed-1",
+  "schema": "second-local-continuation-v107",
+  "scientific_claims_unchanged": true,
+  "snapshot_utc": "2026-10-26T10:10:31.226495+00:00",
+  "source_scope_note": "pending-request-source-scope-review-20261026T1009.json",
+  "updated_utc": "2026-10-26T10:11:27.381139+00:00"
+}

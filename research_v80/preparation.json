@@ -1,0 +1,9 @@
+{
+  "program_sha256": "89f6a71e5b4f74b667bac64149c77005862d36b2b2e3dedc2a7260fb05c0ad60",
+  "source_count": 834,
+  "source_bytes": 7788240,
+  "archive_bytes": 9994240,
+  "archive_sha256": "af518a951242be0178de4ccfaef4e7fdd39a2199283897fb056a39d544f98616",
+  "expected_tests": 73,
+  "protected_frozen_source_union_count": 817
+}

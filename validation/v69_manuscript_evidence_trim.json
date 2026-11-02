@@ -1,0 +1,162 @@
+{
+  "after_sha256": "4c7093f8e8bbd405633a567b6c32f45d5df71d9947510cae355522d47e126d60",
+  "all_fifteen_companion_records_referenced": true,
+  "before_sha256": "24d739d1bc839cd04e4d6065a7be9d46aefed029977e9361cabc17c9f4158602",
+  "captured_at_utc": "2026-10-16T14:08:12.591843+00:00",
+  "citation_replacements": [
+    {
+      "citation_keys": [
+        "boundaries",
+        "v58terminal",
+        "v59terminal",
+        "v62terminal"
+      ],
+      "evidence_records": [
+        "E03",
+        "E12",
+        "E13",
+        "E14"
+      ]
+    },
+    {
+      "citation_keys": [
+        "v39",
+        "v40",
+        "v43",
+        "v44",
+        "v47"
+      ],
+      "evidence_records": [
+        "E01",
+        "E02",
+        "E04",
+        "E05",
+        "E06"
+      ]
+    },
+    {
+      "citation_keys": [
+        "v49failure"
+      ],
+      "evidence_records": [
+        "E07"
+      ]
+    },
+    {
+      "citation_keys": [
+        "v51",
+        "v52"
+      ],
+      "evidence_records": [
+        "E08",
+        "E09"
+      ]
+    },
+    {
+      "citation_keys": [
+        "v54",
+        "v58terminal"
+      ],
+      "evidence_records": [
+        "E10",
+        "E12"
+      ]
+    },
+    {
+      "citation_keys": [
+        "v58terminal"
+      ],
+      "evidence_records": [
+        "E12"
+      ]
+    },
+    {
+      "citation_keys": [
+        "v56plan",
+        "v58terminal"
+      ],
+      "evidence_records": [
+        "E11",
+        "E12"
+      ]
+    },
+    {
+      "citation_keys": [
+        "v59terminal"
+      ],
+      "evidence_records": [
+        "E13"
+      ]
+    },
+    {
+      "citation_keys": [
+        "v62terminal"
+      ],
+      "evidence_records": [
+        "E14"
+      ]
+    },
+    {
+      "citation_keys": [
+        "v63terminal"
+      ],
+      "evidence_records": [
+        "E15"
+      ]
+    },
+    {
+      "citation_keys": [
+        "v43",
+        "v47"
+      ],
+      "evidence_records": [
+        "E04",
+        "E06"
+      ]
+    },
+    {
+      "citation_keys": [
+        "v58terminal",
+        "v59terminal"
+      ],
+      "evidence_records": [
+        "E12",
+        "E13"
+      ]
+    },
+    {
+      "citation_keys": [
+        "v62terminal",
+        "v63terminal"
+      ],
+      "evidence_records": [
+        "E14",
+        "E15"
+      ]
+    }
+  ],
+  "companion": {
+    "bytes": 87257,
+    "path": "reports/development-evidence-v69b.zip",
+    "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+  },
+  "external_citations_resolve": true,
+  "full_anonymity_verified": false,
+  "full_reproduction_verified": false,
+  "identifying_project_links_removed": 17,
+  "missing_citations": [],
+  "native_compile_pending": false,
+  "native_compile_status": "success",
+  "old_original_citations_preserved": "docs/EVIDENCE_INDEX_MAP_V69.json",
+  "original_project_bibliography_entries": 15,
+  "page_count_verified": false,
+  "prior_static_scan_failure": "Initial regex included the official style macro definition as a citation; restrict reference scan to the document body. No source or numerical failure.",
+  "proofs_equations_abstract_unchanged": true,
+  "remaining_external_bibliography_entries": 7,
+  "rendered_layout_verified": false,
+  "schema": "manuscript-evidence-reference-trim-v69",
+  "selected_number_checks": 71,
+  "source_tokens_after_excluding_embedded_style": 4950,
+  "source_tokens_before_excluding_embedded_style": 5420,
+  "submission_ready": false
+}

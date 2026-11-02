@@ -1,0 +1,50 @@
+{
+  "actual_partial_progress": {
+    "context_ready": 1,
+    "source_replayed": 2,
+    "stage_certified": 46
+  },
+  "created_utc": "2026-10-26T10:08:58.437455+00:00",
+  "full_equality_audits_pending": true,
+  "job": "16339",
+  "manuscript_sha256": "387c80e2d297da8571e5729e441b33062fd9456be0b09ec75cbcf984c2dbd571",
+  "no_changes_to_frozen_sources": true,
+  "no_manuscript_change_needed_before_actual_closure": true,
+  "observation": "v104-request-review-20261026T100616Z.json",
+  "schema": "pending-request-source-scope-review-v108",
+  "scientific_conclusion": false,
+  "source_findings": [
+    "Compressed stored-state requests use retained-token extraction only inside the certificate-refusal fallback path in Service.solve.",
+    "A single replay is reused if later stages also refuse; source words must match every stored source digest and lie inside archived enclosures.",
+    "Source extraction is nested inside the first fallback stage clock; the prepared reducer preserves that diagnostic but does not add it twice.",
+    "All completed request rows and both endpoints remain in the prepared reduction.",
+    "Existing manuscript source-access assertions are restricted to the verified V67/V89 trajectories; limitations already state that fallback requires source access."
+  ],
+  "source_inputs": {
+    "reporting_v102/reduce.py": {
+      "bytes": 8369,
+      "sha256": "2de82c1904045681379550b34fdd4d1ae60d53a9df233e50c0d02a7b227dd371"
+    },
+    "reporting_v93/cost_scope.py": {
+      "bytes": 5330,
+      "sha256": "ad0e91593bbac458d544af252c2567685d9689b225d8f361990800a9203f2508"
+    },
+    "research_v104/worker.py": {
+      "bytes": 8246,
+      "sha256": "41dc08c1a419e7e0d147da2dbeed6ff9f0b765d700bddc205a67a9acec0cae4f"
+    },
+    "research_v61/service.py": {
+      "bytes": 15598,
+      "sha256": "c89c021ba683f9651ac74ef1d427a496c4eb7e6ded12ea2f21fce7f234e38638"
+    },
+    "research_v81/operations.py": {
+      "bytes": 7753,
+      "sha256": "c5c1414860fb021adff870c37f51aa4bb7f57681902a01af8b7e6c44279857f9"
+    },
+    "research_v81/service.py": {
+      "bytes": 3727,
+      "sha256": "17b148b3b4485570d1444dc7816734913f160653db6bb2a2e1a98101a320c027"
+    }
+  },
+  "status": "running_no_completion"
+}

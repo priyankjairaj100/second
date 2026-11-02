@@ -1,0 +1,87 @@
+V87 prospective output limits, 23 October 2026
+
+Purpose
+The failed V80 preparation has no complete receipt. Its original reservation,
+partial files and registration remain unchanged. V87 neither retries that run
+nor launches a replacement. It prepares bounded output writing for a separately
+registered recovery and integrates that writer into the still-unregistered V84
+matched implementation. No new numerical execution or scientific result exists.
+
+Worker output contract
+Each output directory is fresh and one-use. Artifact names must match the full
+declared set, including all four preparation/oracle representations. Model files
+must have the exact packed-code extent before a file is created. States retain
+the existing1GiB ceiling. Artifact metadata and the completion each have a64MiB
+ceiling, matching the existing JSON reader boundary. Progress has at most512
+records, each at most1MiB, with contiguous names. All limits are checked before
+writing. No truncation or silent omission makes an oversized output successful.
+These are additional administrative limits; CPU, memory, work, state, thread,
+target and numerical policies are unchanged.
+
+The largest planned matched oracle has two48-stage rebuilds. The source-reviewed
+callback structure has one context callback, five source callbacks,96 solve
+callbacks and384 encoding callbacks, at most486 total. The512 ceiling leaves
+room without relying on an unbounded progress count. This is a protocol bound,
+not an observed GPT2 execution. Unexpected callback growth fails the new attempt.
+
+The writer consumes a path before I/O, writes exclusively, and preserves partial
+files on write/sync failure. After an artifact/progress error it can only record
+a failed completion. A missing artifact, wrong model length or poisoned writer
+cannot emit a successful completion. A failed completion write remains consumed;
+there is no repair or automatic retry. As before, an external quota change can
+prevent even a failure receipt. Controller evidence and old reservations must
+then remain unresolved rather than being guessed or refunded.
+
+The read-only extent inspection checks every saved output path, file type, size,
+model extent and progress sequence. The prospective primary/supplemental audits
+bind newly observed progress bytes and rehash all consumed inputs at closure.
+They keep their separate full-state/model semantic checks. Extent checks alone
+do not prove model correctness. An empty completion is still failure evidence.
+
+Clock and evidence boundary
+V84 starts its worker timer before claiming the fresh output directory. All four
+cells use the same writer. The primary controller transaction still encloses
+output admission, writing, cleanup, final completion and sealed CPU accounting.
+No timing or quality claim follows from these changes. The frozen V80 writer and
+every earlier registered source remain unchanged. A fresh recovery still needs
+its own implementation, registration, software qualification and terminal audits.
+
+Storage arithmetic
+The new writer bounds the ten-worker V80-equivalent output set at30,432,559,104
+logical bytes over at most5201files. V84's twenty workers are bounded at
+61,098,688,512 logical bytes over at most10402files. These are conservative
+allowances, not expected use or measured disk occupation. All predecessors and
+fresh-oracle outputs remain included. They are separate prospective campaigns,
+not one simultaneously reserved total. See output-allowances.json for each trial.
+
+Neither bound covers source-package/staging copies, controller/budget/entry
+records, audits/host accounting, Slurm logs, worker streams, compiler temporaries,
+filesystem allocation overhead or concurrent account writers. Those scopes still
+need a reviewed allowance and host preflight before full-chain launch admission.
+The guard is not a quota reservation and cannot guarantee capacity against other
+writers. No concrete whole-chain headroom requirement is approved here.
+
+Validation and live state
+Thirteen pure filesystem/refusal tests pass, including partial writes, symlink
+redirection, oversized data, missing/extra outputs, progress gaps and consumed
+completions. Fourteen V84 pure protocol/submission checks also pass. These local
+tests import no numerical modules. V84's full101-check pinned-Linux suite remains
+unexecuted. Its existing six numerical worker fixtures now cover the extent
+inspection and prewrite model-size refusal, but have not been run on the Mac.
+The original V80/V81/V82 success prerequisites still cannot pass; do not weaken
+them. Any replacement must bind actual separately recovered terminal evidence.
+
+At10:09UTC the account queue was empty, all19 original job dispositions matched,
+the failed ledger and zero-byte completion were unchanged, and numerical f900999
+was clean. Raw quota was still1048576004KiB used versus1048576000KiB hard.
+At10:19UTC the exact V85 helper ran in memory in a bounded read-only host probe.
+It refused even a one-byte/one-file request for insufficient byte headroom. No
+file was written on the cluster. This validates the observed negative path only,
+not a passing host admission, container qualification or capacity reservation.
+
+Next
+Finish the recovery's administrative/log/temporary-space plan and host/controller
+integration. Keep the full old12602-second reservation and unchanged aggregate
+ceilings. Restore account headroom without deleting registered evidence. Recheck
+jobs, sources, quota and actual gates before any new separately registered launch.
+No new question repeats the pending storage request while the state is unchanged.

@@ -1,0 +1,69 @@
+{
+  "actual_layout_verified": false,
+  "author_attestation": false,
+  "c4_card_fresh_fetch_succeeded": false,
+  "c4_terms_source": "validation/v69_pinned_publisher_metadata.json",
+  "checklist_sha256": "245704f83292e1ab07d75354098a7a73ac069f2e0eeb48be66b7071b3557b825",
+  "empirical_execution": false,
+  "form_submitted": false,
+  "manuscript_sha256": "bf3b7a73cda7b4c62fb7fe6fc7df08a36e949cb15f4c0d9e361fc25a732cc8eb",
+  "no_answers": [
+    "B2",
+    "B3",
+    "B4",
+    "C1",
+    "D"
+  ],
+  "not_applicable": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5"
+  ],
+  "numbered_sections": {
+    "1": "Introduction",
+    "2": "An explicit reconstruction target",
+    "3": "Repair from compressed evidence",
+    "4": "Conditional correctness and state",
+    "5": "Complete cost and access accounting",
+    "6": "Development history",
+    "7": "Related work and contribution boundary",
+    "8": "Complete-model evidence",
+    "9": "Reproducibility and evidence status"
+  },
+  "policy_urls": [
+    "https://aclrollingreview.org/responsibleNLPresearch/",
+    "https://aclrollingreview.org/authorchecklist"
+  ],
+  "question_ids": [
+    "A1",
+    "A2",
+    "B",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "C",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "D",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "E",
+    "E1"
+  ],
+  "recorded_at_utc": "2026-10-18T15:45:40.599167+00:00",
+  "schema": "checklist-draft-scope-v74",
+  "section_count": 9,
+  "section_parse_scope": "Document body after begin{document}; embedded style definitions excluded",
+  "section_references_verified": true,
+  "source_whitespace_tokens": 5278
+}

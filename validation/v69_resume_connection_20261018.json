@@ -1,0 +1,16 @@
+{
+  "connection": "ssh",
+  "current_slurm_state_verified": false,
+  "error": "ssh: connect to host 172.24.16.132 port 22: Operation timed out",
+  "exit_code": 255,
+  "jobs_submitted_or_retried": false,
+  "last_verified_snapshot": "campaigns/csis_v67_progress_metadata_20261016_s.tar.gz",
+  "last_verified_snapshot_utc": "2026-10-16T17:39:21.931391+00:00",
+  "network_restoration_requested": true,
+  "observed_at_utc": "2026-10-18T03:17:38.153462+00:00",
+  "remote_commands_executed": false,
+  "repeated_attempts": false,
+  "schema": "v67-resume-connection-check",
+  "status": "timeout_before_login",
+  "terminal_result_inferred": false
+}

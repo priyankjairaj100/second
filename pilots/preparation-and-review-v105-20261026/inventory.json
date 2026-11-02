@@ -1,0 +1,26 @@
+{
+  "README.txt": {
+    "bytes": 712,
+    "sha256": "99cb2dc31a2430a23adb038d5ad76c63874fc0c26e6ac64a5e4d512118daa372"
+  },
+  "checkpoint.json": {
+    "bytes": 1660,
+    "sha256": "cf4cb68f5cf66791bcf134659ebee811083326be052a3a03f80d2c0054421fd3"
+  },
+  "v104-distilgpt2-preparation-review-20261026T085504Z.json": {
+    "bytes": 191874,
+    "sha256": "dd15bb737af8630576f4174145e0ffa37b9954857469aa6a0aa921a97ae502ec"
+  },
+  "v104-distilgpt2-preparation-review-stderr-20261026T085504Z.txt": {
+    "bytes": 74,
+    "sha256": "fcd529a157428e1f03b5c0bdc5d50294fa160f793af4dd1e1aca6f2042ecb149"
+  },
+  "v104-progress-20261026T085304Z.json": {
+    "bytes": 10587,
+    "sha256": "1de2c9bce42ca4a13da709ce9b7338b315a550f0b60d3f3ea7715aa7a85c6095"
+  },
+  "v104-progress-stderr-20261026T085304Z.txt": {
+    "bytes": 74,
+    "sha256": "fcd529a157428e1f03b5c0bdc5d50294fa160f793af4dd1e1aca6f2042ecb149"
+  }
+}

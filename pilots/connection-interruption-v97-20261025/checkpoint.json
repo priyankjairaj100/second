@@ -1,0 +1,22 @@
+{
+  "schema": "second-connection-interruption-v97",
+  "observed_utc": "2026-10-25T08:39:28.617965+00:00",
+  "latest_connection_attempt_utc": "2026-10-25T08:22:06Z",
+  "last_successful_reconciliation_utc": "2026-10-24T11:19:32.983028+00:00",
+  "cluster_state_known": false,
+  "job_failure_inferred": false,
+  "connection_attempts_this_turn": 1,
+  "connection_retried_after_failure": false,
+  "new_jobs": false,
+  "source_changes": false,
+  "native_preview": {
+    "attempts_this_turn": 1,
+    "status": "unavailable",
+    "error": "Sky Computer Use service startup request failed"
+  },
+  "user_action": "Restore CSIS network/VPN and a working terminal SSH session; text question pending",
+  "scheduler": "ACTIVE",
+  "manuscript_changed": false,
+  "compiled_this_turn": false,
+  "complete": false
+}

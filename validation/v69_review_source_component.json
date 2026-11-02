@@ -1,0 +1,64 @@
+{
+  "actual_cuda_executed": false,
+  "actual_linux_qualification": false,
+  "archive": {
+    "bytes": 1814288,
+    "path": "reports/development-source-review-v69c.zip",
+    "sha256": "ceea2e249896e7bddf151d9956683c9b7b7cee988df25f092fb7f02440b35037"
+  },
+  "captured_at_utc": "2026-10-16T15:02:46.508163+00:00",
+  "checkpoint_or_untouched_data_read": false,
+  "earlier_builds_and_failure_logs_preserved": true,
+  "email_pattern_false_positives_reviewed": [
+    {
+      "file": "research_v46/evaluator.py",
+      "line": 60,
+      "review": "Python matrix multiplication syntax, not an email address"
+    },
+    {
+      "file": "research_v46/evaluator.py",
+      "line": 63,
+      "review": "Python matrix multiplication syntax, not an email address"
+    }
+  ],
+  "empirical_likelihood": false,
+  "errors": 0,
+  "exact_original_copies": 500,
+  "exact_reversible_byte_checks": 534,
+  "failures": 0,
+  "fixture_numpy": "2.3.5",
+  "fixture_platform": "darwin",
+  "fixture_python": "3.12.7",
+  "fixture_report": "validation/v69_review_source_c_fixtures.json",
+  "full_anonymity_verified": false,
+  "full_empirical_reproduction_verified": false,
+  "identifier_adapted_copies": 34,
+  "known_identity_findings": [],
+  "manifest_entries": 536,
+  "namespace_packages_from_extraction": 3,
+  "only_declared_string_ast_changes": true,
+  "package_files": 537,
+  "project_imports_from_working_checkout": 0,
+  "project_modules_from_extraction": 156,
+  "python_asts_checked": 503,
+  "registered_experiment_changed": false,
+  "revision": "C",
+  "schema": "review-source-component-verification-v69",
+  "shell_syntax_checked": [
+    "cluster_setup/run_cpu.sbatch",
+    "cluster_setup/v53_pipeline.sh",
+    "cluster_setup/v54_pipeline.sh",
+    "cluster_setup/v55_pipeline.sh",
+    "cluster_setup/v59_pipeline.sh",
+    "cluster_setup/v61_pipeline.sh",
+    "research_v47/run_gpu.sbatch",
+    "research_v69/run_cpu.sbatch",
+    "research_v69/run_gpu.sbatch"
+  ],
+  "skipped": 0,
+  "source_protocol_wrapper_files": 534,
+  "status": "source_derivation_clean_extraction_and_local_fixtures_verified",
+  "submission_ready": false,
+  "tests": 114,
+  "unchanged_originals": 534
+}

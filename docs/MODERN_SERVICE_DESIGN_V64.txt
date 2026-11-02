@@ -1,0 +1,105 @@
+Current status, 16 October 2026: V63 terminal evidence and V64 adapter software
+qualification have passed. V65 admitted the disjoint data root. The historical
+design below is not an empirical registration. Its complete-worker, clock and
+resource requirements remain pending for V66; see docs/ACTIVE_SESSION_V65.md.
+
+Second: next modern-lossless service design
+16 October 2026. Preparation only: NOT a registration or launch authorization.
+The V63 actual-byte audit and terminal decision remain prerequisites.
+
+Purpose and minimum useful question
+V63 compares stored representations while copying already computed model codes.
+The missing service question is whether a codec offering a stronger ordinary
+lossless alternative changes the complete request time/storage tradeoff. Its
+pack/transition clocks cannot answer that question because they omit calibration.
+The practical hypothesis remains narrower than universal efficiency: uncertain
+compression may reduce state at additional request cost, while hybrid Grams can
+dominate some requests. Preserve cached lossless and hybrid controls in any final
+claim. Modern codecs do not remove the need for quality and independent-root work.
+
+Implementation route grounded in current source
+research_v61/service.py:Service.solve feeds ordered canonical binary64 factors
+through research_v43.dispatcher.solve_blocks for the point representation.
+Its lossless parse branch is specifically the V29 codec. It must not be monkey-
+patched or silently taught a new codec after registration. New research_v64 code
+can implement a point-only service adapter with the same StageSpec, FiniteWeights,
+row order, block sizes, policy, clocks and StageCodes constructor, replacing only
+source descriptor parsing with the frozen research_v63 codec. Keep the shared
+solver untouched. Decode lazily per stage/source inside the same block iterator;
+do not preload every decoded factor only for one arm. Matching solver inputs by
+actual binary64 words must be tested, including signed zero and extreme values.
+
+The V63 archive binds a reference V61 numerical target but has a distinct format.
+It is not a V61 representation. New service metadata must explicitly distinguish
+the numerical/calibration target, storage schema and service implementation.
+Predecessor parsing must check the expected complete target, exact source/token
+provenance and memberships. Successor formation must retain descriptors exactly,
+compute NEW stage codes by the point solver, serialize the complete new state,
+write the canonical model and dispose obsolete in-process objects. Never invoke
+V63.transition with copied expected endpoint codes as the alleged repair method.
+Canonical validation includes all registered candidate encodes, not a cheaper
+trusted-manifest path granted only to this control.
+
+For each stage, validate that the parsed source shape/identity agrees with the
+registered service target; keep readout and solver precision unchanged. No new
+teacher, numerical tolerance, quality threshold or routing policy is introduced by
+the codec comparison. Tests must fail on changed memberships, wrong source words,
+noncanonical descriptors, mismatched target/code geometry, malformed frames and
+trailing data. Complete successor equality must compare actual words/model bytes
+against a separately produced reference; a matching digest alone is insufficient.
+
+Scope choice before implementation freeze
+Prefer combining the necessary modern-control implementation with the planned
+disjoint-root development test when that avoids another full adaptive rerun on the
+same root. This requires new root registration and all compatible arms admitted
+under one shared protocol. Do not select the root after observing quality or speed.
+The V61 Service currently hardcodes thirteen sources, normalization 1664 and this
+checkpoint; reusing that geometry still requires new source provenance and all
+actual target/runtime bindings. No geometry assumption transfers to another model.
+
+If a small integration pilot on existing audited factors is required before that
+larger phase, label it request-only adaptive development. It may compare newly
+computed model bytes with the existing audited oracle and report that reuse. It
+cannot claim a fresh independent neural oracle, independent-root confirmation or
+measured clean preparation. Do not hide migration cost or add old extraction times
+to new component clocks and call the sum a measured lifetime transaction. Freeze
+its separate protocol and budget before any empirical execution.
+
+Complete clocks and costs for the prospective phase
+Measure fresh preparation from the actual registered original tokens when claiming
+clean preparation. Account checkpoint load, extraction, every candidate encoder,
+canonical validation, initial solve, state/model writes, disposal and controller
+overhead. Request clocks include predecessor read/parse/validation, source access,
+point/Gram/box solving (and every compressed fallback), complete successor and
+model writes and disposal. Report context/admission and controller time separately
+and within observed transaction totals. Attribute shared work explicitly; do not
+present attributed sums as independently measured wall times. Record process CPU,
+scheduler allocation and batch CPU, peak memory and archive/dependency sizes.
+
+Balanced randomized request-arm order, startup/cache co-residence policy and repeat
+count must be fixed before measurements. A first disjoint-root falsification may
+be smaller than the final replication study, but cannot replace its uncertainty.
+Retain exact and hybrid controls, all failed/refused attempts and negative results.
+The new codec needs no repeated likelihood evaluation when model AND articles are
+identical; untouched articles and new-root models still need the quality protocol.
+
+Resource admission and scheduling
+The largest existing factor is 3,145,728 bytes; that is not a whole-process memory
+bound. Admit simultaneous state blobs, decoded blocks, checkpoint/teacher arrays,
+solver buffers, canonical re-encodes and fallback residency. Keep a bounded single
+CPU phase before considering any separately tested GPU path. V63's 5706 CPU-second
+allowance is not a reusable budget. New service caps must be justified from V61
+observations and worst-case structural admission, not from successful microbenchmarks.
+Freeze exact files and hashes, isolated dependency wheel, paths, runtime, source
+exclusions, one-use intents and dependency chain. Allow enough audit time based on
+the V61 audit timeout and V62 measured recovery; never repair a timeout by silently
+raising a registered cap. Reconcile existing jobs before one submission per trial.
+
+Review completion criteria
+Before launch, demonstrate matched target/solver/source-word semantics in fixtures,
+complete malformed-input refusal, clean source inventory, accurate clock/size
+scope and prospective source/root selection. These are software admission gates,
+not empirical success. Root review is not independent review. This design does not
+reserve a phase number, modify V63, promise an efficiency win or make the paper
+submission-ready. The terminal V63 decision should select and justify its next
+concrete scope, then replace this design with a separately frozen registration.

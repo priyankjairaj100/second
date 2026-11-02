@@ -1,0 +1,17 @@
+{
+  "elapsed_ns": 3786198358,
+  "error": {
+    "message": "[Errno 2] No such file or directory: 'sacct'",
+    "type": "FileNotFoundError"
+  },
+  "job_id": "15413",
+  "maximum_rss_kib": 145640,
+  "own_final_write_shutdown_and_terminal_scheduler_row_still_require_external_observation": true,
+  "process_cpu_ns": 4255102585,
+  "registration_sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c",
+  "result": null,
+  "schema": "quality-post-exit-closure-v71",
+  "status": "failed",
+  "waited_child_cpu_ns": 21730000,
+  "whole_process_and_all_waited_children_included": true
+}

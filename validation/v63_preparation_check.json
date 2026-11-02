@@ -1,0 +1,124 @@
+{
+  "frozen_sources_unchanged": 432,
+  "full_portable_integration": "pending terminal outputs",
+  "linux_gate": {
+    "bytes": 1651,
+    "contents": {
+      "caps": {
+        "cpu": 300,
+        "wall": 600
+      },
+      "elapsed_ns": 2053303431,
+      "error": null,
+      "max_rss_kib": 68676,
+      "original_inputs_mutated": false,
+      "process_cpu_ns": 1457176171,
+      "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6",
+      "result": {
+        "codec_binding": "d96991708db4a13f04d51e82d7a2165703687c33ac30756a945e6f918565ff78",
+        "codec_manifest": {
+          "canonical_scope": "this bound encoder and compressor runtime",
+          "max_decoded_bytes": 4194304,
+          "max_window_bytes": 4194304,
+          "modes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "native_sha256": "7eb41c8b36cd99ed6c67e39f8574e42472687a14c6038c512bb3a90b7082616d",
+          "old_codec_manifest": {
+            "canonical_scope": "this bound encoder and compressor runtime",
+            "parameters": {
+              "level": 6,
+              "mem_level": 8,
+              "strategy": 0,
+              "wbits": 15
+            },
+            "source_sha256": {
+              "compact_state.py": "af4bb17f90f497b22da1fdaf6bc5fe0656ba86c27def9f4dd80d9e785c88e829",
+              "fixed_lossless_codec_v29.py": "6d0c5c3d13506091bd88310b93b5b0931f1c09b1f6e902fe0e2c40b35c441c0c",
+              "run_store.py": "369345e6342763262f7e894c18d82b544c81f9c6da1b5f76c979107c144d7e10"
+            },
+            "zlib_compile_version": "1.2.13",
+            "zlib_module_kind": "extension",
+            "zlib_runtime_binary_sha256": "db27b566d290d390647a8152bb60f96af080c66016d1631d473c1758b8e3b6cb",
+            "zlib_runtime_version": "1.2.13"
+          },
+          "package_sha256": "5dd909e0b60a946a0b08deaf57545d17dc044f5df4040beec55f7ef6c6fecd11",
+          "parameters": {
+            "dictionary": null,
+            "level": 3,
+            "threads": 0,
+            "write_checksum": true,
+            "write_content_size": true,
+            "write_dict_id": false
+          },
+          "source_sha256": "89c6c2b839427ab81dd5215eae17ed491edf77c2c1ccee69f762fa1c9e9277da",
+          "zstandard_version": "0.25.0",
+          "zstd_version": [
+            1,
+            5,
+            7
+          ]
+        },
+        "empirical_inputs_opened": false,
+        "skipped": 0,
+        "tests": 21
+      },
+      "slurm_job_id": "15244",
+      "status": "complete",
+      "trial": "checks"
+    },
+    "sha256": "40f065a9f3f9d6d992102d28c0b09fb35ae3aee604eac7736c461761c53b6807"
+  },
+  "linux_skips": 0,
+  "linux_tests": 21,
+  "local_initial_environment_refusals": [
+    "System zstandard 0.23.0/1.5.6 rejected by version pin",
+    "System Python 3.9 could not load existing slots dataclasses",
+    "Bundled NumPy required newer macOS symbols; isolated compatible local test dependencies used"
+  ],
+  "local_skips": 0,
+  "local_test_numpy": "1.26.4",
+  "local_test_output": "test_codec_binding_and_reference_target_cannot_be_relabelled (research_v63.test_control.ArchiveTests.test_codec_binding_and_reference_target_cannot_be_relabelled) ... ok\ntest_duplicate_or_reordered_records_refuse (research_v63.test_control.ArchiveTests.test_duplicate_or_reordered_records_refuse) ... ok\ntest_non_subset_and_missing_extra_sources_refuse (research_v63.test_control.ArchiveTests.test_non_subset_and_missing_extra_sources_refuse) ... ok\ntest_roundtrip_restores_actual_old_state (research_v63.test_control.ArchiveTests.test_roundtrip_restores_actual_old_state) ... ok\ntest_source_binding_and_stage_grids_refuse (research_v63.test_control.ArchiveTests.test_source_binding_and_stage_grids_refuse) ... ok\ntest_trailing_changed_payload_and_header_bound_refuse (research_v63.test_control.ArchiveTests.test_trailing_changed_payload_and_header_bound_refuse) ... ok\ntest_transition_equals_fresh_and_retains_descriptor_bytes (research_v63.test_control.ArchiveTests.test_transition_equals_fresh_and_retains_descriptor_bytes) ... ok\ntest_actual_largest_registered_shape_zstd_roundtrip (research_v63.test_control.CodecTests.test_actual_largest_registered_shape_zstd_roundtrip) ... ok\ntest_all_five_modes_decode_exactly (research_v63.test_control.CodecTests.test_all_five_modes_decode_exactly) ... ok\ntest_canonical_choice_records_every_mode_and_is_deterministic (research_v63.test_control.CodecTests.test_canonical_choice_records_every_mode_and_is_deterministic) ... ok\ntest_changed_hash_runtime_shape_and_noncanonical_mode_refuse (research_v63.test_control.CodecTests.test_changed_hash_runtime_shape_and_noncanonical_mode_refuse) ... ok\ntest_content_size_checksum_and_skippable_requirements (research_v63.test_control.CodecTests.test_content_size_checksum_and_skippable_requirements) ... ok\ntest_exact_signed_zero_subnormal_and_extreme_words (research_v63.test_control.CodecTests.test_exact_signed_zero_subnormal_and_extreme_words) ... ok\ntest_extent_nonfinite_unknown_mode_and_limits_refuse (research_v63.test_control.CodecTests.test_extent_nonfinite_unknown_mode_and_limits_refuse) ... ok\ntest_old_and_new_magic_are_distinct (research_v63.test_control.CodecTests.test_old_and_new_magic_are_distinct) ... ok\ntest_trailing_extra_frame_truncation_and_checksum_refuse (research_v63.test_control.CodecTests.test_trailing_extra_frame_truncation_and_checksum_refuse) ... ok\ntest_window_and_dictionary_rejected_before_decompression (research_v63.test_control.CodecTests.test_window_and_dictionary_rejected_before_decompression) ... ok\ntest_bound_read_refuses_tamper_wrong_extent_and_symlink (research_v63.test_runner.RunnerTests.test_bound_read_refuses_tamper_wrong_extent_and_symlink) ... ok\ntest_exclusive_outputs (research_v63.test_runner.RunnerTests.test_exclusive_outputs) ... ok\ntest_json_duplicates_and_nonfinite_refuse (research_v63.test_runner.RunnerTests.test_json_duplicates_and_nonfinite_refuse) ... ok\ntest_registration_caps_scope_and_paths_refuse (research_v63.test_runner.RunnerTests.test_registration_caps_scope_and_paths_refuse) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.121s\n\nOK\n",
+  "local_test_python": "3.12.7",
+  "local_test_zstandard": "0.25.0",
+  "local_tests": 21,
+  "metadata_boundary_tests": 2,
+  "new_sources": {
+    "research_v63/PROTOCOL.txt": {
+      "bytes": 6906,
+      "sha256": "bacb6d4b5756755187535e97b1bafae31764f722da58bfd107885223ca9fc387"
+    },
+    "research_v63/__init__.py": {
+      "bytes": 83,
+      "sha256": "0f3b59fcd08475d0e9eb7cd49693052a1eec3b6fa8fb270df5a71e08ba092216"
+    },
+    "research_v63/archive.py": {
+      "bytes": 7120,
+      "sha256": "54efcee17fbab92f71a82c0e991166a8b7f689fba9b3b72a77f28e54f392b9d2"
+    },
+    "research_v63/codec.py": {
+      "bytes": 13717,
+      "sha256": "89c6c2b839427ab81dd5215eae17ed491edf77c2c1ccee69f762fa1c9e9277da"
+    },
+    "research_v63/runner.py": {
+      "bytes": 16036,
+      "sha256": "70072a66f670ef53e3e0429759de52d6e1b2aa451dc3bed09f7e1a89dfad105a"
+    },
+    "research_v63/test_control.py": {
+      "bytes": 9024,
+      "sha256": "da71cee7c80f12589c4863e6b3c39c96471cd614bc2fc1959cb243f225590704"
+    },
+    "research_v63/test_runner.py": {
+      "bytes": 1917,
+      "sha256": "a2e434efd3ae70a1ba675d06c47cf08d2efc2e84c0b0ab04bd28492deb1d8bae"
+    }
+  },
+  "no_neural_calibration_or_quality_execution": true,
+  "registration_sha256": "479f7861b06933994916f1d3a22d94caed104dffdcc807c58a73dbacee5ce9d6",
+  "review": "Root code, resource and scope review; no independent reviewer",
+  "schema": "v63-source-and-linux-gate-check"
+}

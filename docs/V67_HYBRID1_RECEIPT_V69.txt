@@ -1,0 +1,52 @@
+First hybrid comparison: completed receipt/debit metadata, 16 October 2026
+This is a partial reporting check. It does not replace either terminal binary audit.
+
+Actual observation
+At13:10:27UTC/18:40:27IST, job15263 had completed0:0 after1h22m46s on csis.mn1.
+It ended18:35:47IST. The registered dependency chain started compressed-1 job15264,
+which was RUNNING4m39s. Jobs15265--15275 remained pending on dependencies. No new
+submission, retry, cancellation or budget mutation was performed.
+
+Snapshot H contains262 files,247320 bytes, SHA256
+75073d8641d0378d6fe5404511cf3a1e7da1a819054e5b4defdd5d24f14b8479.
+All469 frozen sources,11 dependency files and102 old ledgers were rehashed remotely.
+The portable snapshot check passed. Numerical model/state binaries were not copied.
+
+Partial validation
+The new read-only reporting helper checks canonical completion/controller/transaction
+objects, sealed worker artifact commitments, identity, successful status, actual
+program/job/target bindings, resource limits and settled worker debit. It compares
+24 progress-stage records with the final timing records and checks declared model
+extent, retained count, artifact commitment consistency and the terminal Slurm row.
+It preserves the compression worker's currently reserved debit. It does not rebuild
+retained membership, parse model/state binaries or compare them with fresh output.
+
+Worker CPU4921.704328001 seconds; settled debit4922 seconds.
+Controller own CPU8.195606645 seconds; all waited children4921.707197 seconds.
+Worker peak RSS1936672KiB. Slurm TotalCPU1h22m10s is recorded separately.
+Complete terminal cost reconciliation remains required; no speed comparison is made.
+
+Fallback scope
+All24 stages certified and no stage refused. Their stage-level replay fallback
+flags are false. Within the bounded numerical solver,7 rows required fallback,
+covering21504 attempted and21504 certified decisions. Those are distinct layers
+of fallback. Do not turn the progress flag into a claim that no fallback occurred.
+All actual detailed diagnostics remain in the archive and final receipt.
+
+Reporting failures preserved
+The first local direct-script invocation failed because the validation package
+was absent from that invocation's import path. Use module invocation from the
+repository root. The second run exposed a wrong reporting-schema assumption:
+service_target is not a V67 input leaf. The helper now reads its literal identity
+from the hash-verified frozen config instead. No frozen source, worker receipt,
+cap or numerical code was changed. Both errors and their empty-output parsing
+consequences are preserved separately; they are not empirical failed attempts.
+
+Reproduce the metadata check from the repository root:
+.venv/bin/python -B -m validation.check_v67_trial_metadata campaigns/csis_v67_progress_metadata_20261016_h.tar.gz hybrid-1
+
+Records: validation/v67_hybrid1_metadata.json,
+validation/v67_hybrid1_metadata_invocation_failure.json,
+validation/v67_hybrid1_metadata_schema_failure.json.
+The fresh oracle, all remaining matched comparisons and both terminal model/state/
+cost audits are still mandatory before a scientific comparison or V68 admission.

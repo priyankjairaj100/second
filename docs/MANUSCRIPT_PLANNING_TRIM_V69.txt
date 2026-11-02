@@ -1,0 +1,36 @@
+Manuscript planning-text trim,16 October2026
+
+The existing open second-research-draft.tex was edited in place. Repeated Quality
+and Confirmation/mechanism planning paragraphs were removed from the main text;
+their prospective requirements remain in the research queue and untouched-quality
+plan. A repeated working-draft disclaimer was removed while retaining the visible
+draft label and all limitations. The reproduction paragraph now identifies the
+five actual companion components and the distinction between generated fixture
+checks and empirical reproduction. No experiment outcome was added.
+
+Source whitespace tokens excluding the embedded style contents fell from4950 to
+4844, a reduction of106. This convention retains filecontents delimiters and does
+not count prose words or rendered pages. The current source is50539 bytes, SHA256
+dc1008aaef0d70a8adbb25b598238036b898e3ed99de23844e67fdff400b3de0.
+
+Byte comparisons preserve six theorem/lemma/proof blocks, eight display-math
+blocks,53 inline-math spans, the abstract, service table, bibliography and official
+style. All71 selected number checks pass, including24 table cells and three
+in-memory corruption probes. The native editor compiler reports success; the
+same editor remains open and no separate PDF or replacement document was created.
+The five unchanged ZIPs and updated source pass all manifest/navigation and
+known-direct-identity checks across567 members and569 text files.
+
+One attempt to inspect the existing preview failed with:
+Sky Computer Use service startup request failed
+No repeated preview attempt followed. Pagination and visual layout remain
+unverified; successful compilation does not establish either. The final paper
+format preference remains pending. Scientific gates and authorship/release
+decisions are unchanged. Actual V67 terminal audits and later untouched quality
+remain necessary before the final paper can claim those results.
+
+Artifacts
+validation/v69_manuscript_planning_trim.json
+validation/v69_manuscript_planning_trim_numbers.json
+validation/native_manuscript_v69_planning_trim_compile.json
+validation/v69_cross_component_review_after_planning_trim.json

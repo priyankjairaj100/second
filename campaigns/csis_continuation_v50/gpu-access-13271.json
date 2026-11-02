@@ -1,0 +1,22 @@
+{
+  "batch_shape": [
+    4,
+    16
+  ],
+  "cuda_available": true,
+  "cuda_build": "12.8",
+  "device": "NVIDIA A100 80GB PCIe",
+  "device_count": 1,
+  "device_memory_bytes": 85095874560,
+  "empirical_evidence": false,
+  "passed": true,
+  "research_target_equivalence_established": false,
+  "result_shape": [
+    4,
+    8
+  ],
+  "schema": "second-cuda-engineering-smoke-v1",
+  "slurm_job_id": "13271",
+  "synthetic_fixture": true,
+  "torch": "2.10.0+cu128"
+}

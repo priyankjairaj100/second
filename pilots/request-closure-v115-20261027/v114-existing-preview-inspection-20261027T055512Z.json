@@ -1,0 +1,14 @@
+{
+  "schema": "second-v114-existing-preview-inspection",
+  "captured_utc": "2026-10-27T05:55:12.755454+00:00",
+  "operation": "Read existing Codex app state to inspect existing manuscript preview",
+  "tool": "mcp__cua_repl.js",
+  "result": "Sky Computer Use service startup request failed",
+  "ui_state_read": false,
+  "preview_render_requested": false,
+  "source_edited": false,
+  "compile_requested": false,
+  "rendered_layout_verified": false,
+  "repeat_attempt": false,
+  "action": "Preserve existing source and bundle; no repeated UI attempt or user question"
+}

@@ -1,0 +1,10 @@
+{
+  "checked_at_utc": "2026-10-18T14:46:40.213090+00:00",
+  "tool": "cua.getState",
+  "native_apps": [],
+  "error": "Native apps: Error: Sky Computer Use service startup request failed",
+  "rendered_layout_verified": false,
+  "new_tab_opened": false,
+  "separate_pdf_created": false,
+  "repeat_attempt": false
+}

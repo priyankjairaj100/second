@@ -1,0 +1,12 @@
+{"program_sha256":"af83f983447e022a5e5b386ddf60eb62db804db57dbd652212eab51fe9b7d10b","status":"registered"}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/nfs_home/users/poonam/second-20261010/research_v51/campaign.py", line 181, in <module>
+    for trial in ORDER: run(d, trial)
+                        ^^^^^^^^^^^^^
+  File "/nfs_home/users/poonam/second-20261010/research_v51/campaign.py", line 171, in run
+    require(result['outcome']['status'] == 'complete', 'Bounded worker failed: '+trial)
+  File "/nfs_home/users/poonam/second-20261010/research_v43/campaign.py", line 32, in require
+    raise ValueError(message)
+ValueError: Bounded worker failed: compressed

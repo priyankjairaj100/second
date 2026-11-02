@@ -1,0 +1,9 @@
+{
+  "status": "local_synthetic_checks_passed",
+  "tests": 9,
+  "skipped": 0,
+  "numerical_execution": false,
+  "earlier_failure": "Mac synthetic history fixture used a symlinked temporary parent; fixture root resolved, guard retained",
+  "linux_execution_pending": true,
+  "source_review": "Root review only"
+}

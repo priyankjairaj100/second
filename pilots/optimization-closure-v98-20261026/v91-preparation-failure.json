@@ -1,0 +1,6 @@
+{
+  "captured_utc": "2026-10-26T06:54:06.180337+00:00",
+  "exit": 1,
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\nTraceback (most recent call last):\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v91-20261024-a/research_v91/prepare.py\", line 8, in <module>\n    from research_v91.storage_plan import build,requests\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v91-20261024-a/research_v91/storage_plan.py\", line 9, in <module>\n    from research_v91.records import LAYOUT\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v91-20261024-a/research_v91/records.py\", line 3, in <module>\n    from research_v90.storage_plan import metadata_layout\n  File \"/nfs_home/users/poonam/second-20261010/local_runs/matched-transfer-admission-v91-20261024-a/research_v90/storage_plan.py\", line 8, in <module>\n    from research_v84.config import ORDER\nModuleNotFoundError: No module named 'research_v84'\n",
+  "stdout": ""
+}

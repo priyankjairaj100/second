@@ -1,0 +1,50 @@
+{
+  "after_counts": {
+    "chunks": 44538,
+    "content": 32331,
+    "ids": 11416
+  },
+  "all_eligibility_reasons_recomputed": true,
+  "archive": {
+    "bytes": 6202754,
+    "path": "campaigns/csis_v71_selection_metadata_20261018_a.tar.gz",
+    "sha256": "0b538dc3d3ea3e161c63354593fbc379264ce06bc2d9c3bfd42c0f6349fbb863"
+  },
+  "before_counts": {
+    "chunks": 29736,
+    "content": 21371,
+    "ids": 7615
+  },
+  "corpus_to_hash_correspondence_recomputed": false,
+  "eligible_records": 2778,
+  "empirical_likelihoods_read": false,
+  "exact_inspected_frame_union": true,
+  "fixed_sampling_order_recomputed": true,
+  "frame_records": 3801,
+  "full_historical_input_closure": false,
+  "historical_quality_ids_preserved": 60,
+  "members": 13,
+  "metadata_bytes": 12752428,
+  "model_inference": false,
+  "new_job": false,
+  "observed_at_utc": "2026-10-18T12:35:12.124664+00:00",
+  "refusal_probes": {
+    "changed_eligibility": "rejected",
+    "changed_short_token_hash": "rejected",
+    "removed_frame_id": "rejected",
+    "reordered_selected_ids": "rejected"
+  },
+  "registration_sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c",
+  "retokenization_repeated": false,
+  "review_component_prepared": false,
+  "schema": "v71-selection-metadata-reconciliation",
+  "scientific_quality_result": false,
+  "scope": "Actual registered hash/selection metadata and deterministic metadata decisions only. Actual V68/V70 saved-prefix/token audits remain the source for correspondence; this is not an independent tokenization or quality validation.",
+  "selected_metadata_matches": true,
+  "selected_records": 320,
+  "selected_token_bytes_read": false,
+  "short_records": 1021,
+  "source_prefix_read": false,
+  "status": "registered_metadata_and_selection_equations_verified",
+  "verified_at_utc": "2026-10-18T12:37:46.717546+00:00"
+}

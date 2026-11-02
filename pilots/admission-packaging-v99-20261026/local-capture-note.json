@@ -1,0 +1,1 @@
+{"remote_preparation_succeeded": true, "local_wrapper_error": "Expected only bytes/sha256, but bounded writer also returns file", "remote_prepare_repeated": false, "actual_program_read_and_hash_verified": true}

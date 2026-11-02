@@ -1,0 +1,33 @@
+Checked review companion, 16 October 2026
+
+reports/review-evidence-v69 is a real draft artifact directory with results.json,
+README.txt, EVIDENCE_INDEX.txt, CHECKS.json and MANIFEST.sha256. No final archive
+or source-and-receipt reproduction bundle is claimed.
+
+validation/build_review_summary_v69.py reads eight manifest-bound original reports
+and copies306 field groups into five result groups: capped preparation failure,
+nearest-anchor service/quality, adaptive original-checkpoint quality, original-
+checkpoint service with failed/recovered audit costs, and lossless artifact storage.
+Every copied value is checked using canonical JSON equality; eight exposed article
+IDs are renamed consistently across both quality screens. Original receipts,
+source bytes, decisions, numeric values and booleans are unchanged. Article text,
+tokens, private account/host paths and original article IDs are excluded.
+
+Three in-memory mutation probes detect altered service clocks, erased failed guards
+and changed article ratios. The independent read-back checks file hashes, adverse
+guards, eight paired IDs,1016 predictions per model, service lifetime arithmetic
+and artifact-only scope. These are summary-integrity checks, not inference,
+calibration, source execution or binary-state audits.
+
+Run the generator only with fresh exclusive output paths. The identifying source
+map docs/REVIEW_EVIDENCE_DERIVATION_V69.json must stay outside anonymous packaging.
+validation/v69_review_evidence.json retains output hashes and exact check scope.
+Known-string scanning covers these four payload files, not the entire project.
+
+All15 evidence-index groups still require their selected underlying protocol,
+source and receipt dependencies. The five-file companion covers result groups
+E07,E12,E13,E14,E15; it does not supply full material for the other ten groups.
+Do not replace the manuscript's evidence links with a claim that a complete
+anonymous archive already exists. Pending: V67 terminal evidence, actual untouched
+quality, claim-required timing, full provenance/anonymity review, project licensing
+and clean source-package reproduction. No numerical jobs were launched or retried.

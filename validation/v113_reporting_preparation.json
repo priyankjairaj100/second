@@ -1,0 +1,25 @@
+{
+  "actual_released_job_binding_verified": true,
+  "collector_executed": false,
+  "empirical_reduction_executed": false,
+  "errors": 0,
+  "failures": 0,
+  "historical_preparation_cost_bound": true,
+  "job_count": 21,
+  "original_sources_changed": false,
+  "program_sha256": "a73ca66d08b50feeccf9601d6d214b00ad21917ae900671cc35d373aef4f4381",
+  "required_actual_model_comparisons": 16,
+  "schema": "v113-reporting-preparation",
+  "skipped": 0,
+  "source_hashes": {
+    "reporting_v113/__init__.py": "5ea23225fd9ddde3592a46adfa3a520c04681ad0de322759a1df37c3372a22e4",
+    "reporting_v113/collect.py": "fc04e80f176124b6f730b818c312b1ea1c9b374622c71df88694490649213008",
+    "reporting_v113/reduce.py": "fa679977f914baae1ad684f34b34c0f6b6392150cb7cd57d1fcf20a6fe392f5f",
+    "reporting_v113/test_collect.py": "c0e19528d0f34589a610cc35d81d3870f74b13e50de054d184a8aef855e00754",
+    "reporting_v113/test_reduce.py": "4d2113a17944e1a5d519d5378ef8c0338001e8e57c3b0368082d595bc88ccca8",
+    "reporting_v113/test_reuse.py": "f39a9b0ef0265224eb748b68b16acac2f0624db7bccbddae650961ba7c508f7f"
+  },
+  "status": "prepared_not_empirical",
+  "test_output": "......................\n----------------------------------------------------------------------\nRan 22 tests in 0.031s\n\nOK\n",
+  "tests": 22
+}

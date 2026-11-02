@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "{\"jobs\": {\"checks\": \"15921\", \"fetch\": \"15922\", \"distilgpt2\": \"15923\", \"gpt2\": \"15924\", \"close\": \"15925\"}, \"program_sha256\": \"5bead3425eb9bb4bec645ac12e681b45e62d87762cef0f15179aecdb427ae27b\", \"released\": true}\n",
+  "stderr": "/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable\n"
+}

@@ -1,0 +1,23 @@
+{
+  "files": {
+    "/Users/priyankjairaj/Downloads/Second-TACL-v123-Full-Evidence.zip": {
+      "bytes": 11051312,
+      "sha256": "d416395d2cf196f8599cdb55fcfcc5d6fa78294f0150d0317ca31a37c7d6b06a"
+    },
+    "/Users/priyankjairaj/Downloads/Second-TACL-v123-PDF.zip": {
+      "bytes": 117824,
+      "sha256": "e6c3f0824a5da6fd9dfb019194ce6e7a03beace725b6c4e527742dfad5c96d73"
+    },
+    "/Users/priyankjairaj/Downloads/Second-TACL-v123-Source.zip": {
+      "bytes": 50987,
+      "sha256": "605600ff035e7e47457cc1aabd846bc5f65e1faa60363994b8faed7e812d6586"
+    },
+    "/Users/priyankjairaj/Downloads/Second-TACL-v123.pdf": {
+      "bytes": 120809,
+      "sha256": "cdc0e9d60a199eb20f73ad15b69075c86e140df7f95c6eee905465204fc39d6e"
+    }
+  },
+  "full_evidence_zip_is_separate": true,
+  "old_downloads_preserved": true,
+  "pdf_zip_contains_only_pdf": true
+}

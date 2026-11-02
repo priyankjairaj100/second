@@ -1,0 +1,70 @@
+V61 terminal evidence collection and local verification
+Prepared 14 October 2026 while the registered comparison is active.
+
+The collection/checking helpers are reporting tools outside the 432 registered
+numerical sources. Nineteen standard-library boundary fixtures passed. Their
+complete integration with real terminal V61 evidence has not yet executed.
+They never submit/cancel jobs, modify campaign files, or run model inference.
+
+1. Refresh the existing chain before doing anything else.
+Jobs: checks13561, register13562, prepare13563, cached13564, cold13565,
+hybrid13566, compressed13567, oracle13568, audit13569, postrun13570.
+Use existing jobs and receipts; never repeat cluster_setup/v61_pipeline.sh.
+Do not pull reporting commits into the active numerical checkout.
+
+2. Collect only once the campaign is quiescent.
+Copy validation/collect_terminal_v61.py to a new path outside the cluster
+checkout, verify its hash against validation/v61_evidence_tools_review.json,
+and use a fresh archive destination outside that checkout. Example:
+
+  python3 -B /tmp/collect_terminal_v61.py /tmp/second-v61-terminal.tar.gz
+
+The collector requires numerical HEAD f900999fcb200509dfad4fc081ce9c87fd172a16,
+the registered program6632712f7b79b49734790fa6fc173ec7e5ee70f542fe8f8a0c3ef3ff2171ea2d,
+all432 unchanged sources, and two matching scheduler/file censuses. It refuses
+ordinary pending/running work, unsafe paths, changed bytes, or an existing
+destination. Metadata is bounded and rehashed before packaging. The collector
+does not open model/state/checkpoint binaries; it records their declared hashes,
+observed sizes and explicit NOT revalidated status.
+
+Success requires all ten jobs COMPLETED0:0, all six complete sealed workers,
+both verified audits and no collection issue. The collector's reported_success
+only describes collected receipts; the independent metadata check still follows.
+
+For a failed chain only, --failure-capture additionally permits stable pending
+successors whose exact queue reason is DependencyNeverSatisfied and whose known
+serial ancestor failed. It cannot accept ordinary Dependency, running or unknown
+states. Such an archive is explicitly nonterminal/unsuccessful and cannot pass
+the success checker. No cancellation or retry is performed. Other terminal
+failures and incomplete receipts remain preserved as unsuccessful captures.
+
+3. Verify the copied metadata locally without numerical execution.
+Transfer the archive, verify its reported SHA256, and extract safely into a new
+directory. Use the matching reporting checkout and an output path that does
+not already exist:
+
+  python3 -B validation/check_v61_terminal_metadata.py EXTRACTED_DIRECTORY \
+    --repo /absolute/path/to/Second --output NEW_CHECK_RECEIPT.json
+
+The checker validates pinned program/software/source identities; all six worker
+seals, exact settled CPU debits and complete audit input inventories; the eight
+comparison claims; final-six V59 links; progress, storage and timing arithmetic.
+It rejects partial/failure captures and missing metadata. It does not parse or
+reconstruct the omitted binary states, repeat inference, or verify remote runtime
+binaries. A successful result is verified_metadata_only. Actual-byte equality
+remains the recorded result of the two bounded cluster audits under their trusted
+execution assumptions. Unsigned hashes do not authenticate a hostile host.
+
+4. Make the scientific decision from complete evidence.
+Inspect actual primary/postrun audit outcomes, seals, numerical charges, and
+separate software/registration/audit scheduler charges. Preserve all failed
+work. Compare compressed repair with cached features and hybrid Grams, including
+preparation and deployment bytes; do not add nested clocks or extrapolate lifetime
+break-even. Actual final-six V59 model equality reuses its exposed quality screen
+without reevaluating those articles. It supplies no untouched quality or quality
+at the twelve-record endpoint. Follow docs/NEXT_SCIENTIFIC_GATE_V61.txt before
+preparing any new empirical registration.
+
+Archive source/program/receipts and the local check with their hashes; keep large
+binary availability explicit. Only then revise empirical manuscript statements.
+The current source trim is editorial and adds no V61 result or submission claim.

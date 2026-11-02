@@ -1,0 +1,57 @@
+{
+  "author_evidence_is_review_supplement": false,
+  "author_evidence_package": {
+    "archive": {
+      "bytes": 10998448,
+      "sha256": "3fac0525bc482defe9de04c257fa48a213662d7c318c5d0a20ad74e898e308af"
+    },
+    "members": 20,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-author-review-v120.zip",
+    "unchanged_components": 14,
+    "verified": {
+      "adapted_code_execution_qualified": false,
+      "binary_reaudit_by_this_verifier": false,
+      "components": 14,
+      "cross_architecture_generality": false,
+      "empirical_pipeline_executed_by_this_verifier": false,
+      "external_inputs_acquired": false,
+      "full_anonymity_verified": false,
+      "matched_reported_model_state_trust_pairs": 16,
+      "matched_reported_requests": 16,
+      "new_quality_evaluation": false,
+      "related_checkpoint_evidence_included": true,
+      "source_component_counts": {
+        "development-optimization-source-v105.zip": 347,
+        "development-point-policy-source-v114.zip": 96,
+        "development-source-review-v72.zip": 583,
+        "development-transfer-source-v111.zip": 296
+      },
+      "source_files": 1322,
+      "stable_speedup_established": false,
+      "status": "verified_supplied_bytes_source_coverage_and_scoped_arithmetic"
+    }
+  },
+  "created_utc": "2026-10-28T08:09:22.262031+00:00",
+  "manuscript": {
+    "bytes": 69568,
+    "sha256": "003aff0e4ec392bb71ad6ac1235f01561825327110a892274e298c85cd41e282"
+  },
+  "no_new_empirical_result": true,
+  "original_sources_changed": false,
+  "pdf": {
+    "bytes": 110438,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-tacl-submission.pdf",
+    "sha256": "f6dd8d12b7f1cdc9fc57593749afcd3339d5df1120cff454517fec04b0c9ecee"
+  },
+  "schema": "second-tacl-packages-v120",
+  "source_package": {
+    "archive": {
+      "bytes": 35338,
+      "sha256": "8032c9e9a28ba43204a9484ae6c1f2f139e00cc29c8d3dd2141899c01d95d0d6"
+    },
+    "members": 5,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-tacl-source-v120.zip"
+  },
+  "source_package_is_review_supplement": false,
+  "submission_performed": false
+}

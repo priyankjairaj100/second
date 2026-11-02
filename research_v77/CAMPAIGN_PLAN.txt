@@ -1,0 +1,158 @@
+Deep speed and transfer campaign, prospective checkpoint V77
+22 October2026. Manual work only; recurring continuation remains PAUSED.
+
+STATUS AND ORDER
+V76 is fully specified for generated Linux software qualification. Its source
+archive has311 files,3,466,873 source bytes, archive4,075,520 bytes. Program SHA
+482782afc8925528a47a2b97abfc0167968b6bdfbcaf3314922d0777784a9d4b;
+archive SHA ab4319e032f06b012b8cd896cbb2444680641165bc85ce365b5e792a8e22c01a.
+Automatic approval review rejected its upload to the existing CSIS project,
+requiring explicit permission to export these sources. No staging or submission
+command executed. An approval question is pending. Do not bypass that rejection
+or interpret elapsed time as approval. The cluster was reachable, its account
+queue empty and frozen checkout f900999 clean at the last read-only inspection.
+No new registration has been consumed and no new Slurm job exists from this work.
+
+The source snapshot has no model, corpus, credentials, binaries or old run data.
+Its exact contents can be reviewed in program_v76.json. Do not rebuild/change it
+between approval and staging. A later source fix must be recorded explicitly.
+Never rerun a submitted/uncertain V76 attempt. Preserve any failure and register
+a distinct justified follow-up, rather than replacing the evidence.
+
+1. Execute and close V76, including actual outputs, all exact-count checks,
+   compiler/library/source identities, source recheck, CPU/peak-memory receipts
+   and Slurm COMPLETED0:0. Speed ratios are generated-operation measurements.
+2. Qualify V77 canonical-choice reuse against the ACTUAL V63 parser/runtime:
+   full malformed-frame corpus, canonical-mode alternatives and malicious
+   payloads, wrong expected hashes, tighter limits AFTER a successful cached
+   parse, changed metadata, signed zeros, byte-identical separate objects,
+   compressor identity drift, eviction, oversize entries, measurement bypass,
+   exceptions, and no cross-request reuse. Local stdlib tests are not this gate.
+3. After both software gates, register a complete-request development comparison.
+   Preserve frozen target and existing V65 root, widths, precision, ridge,
+   normalization, point fallback and all source-access/storage accounting.
+   Record all4 implementation/representation cells: historical compressed,
+   historical modern, new compressed, new modern. New compressed uses only the
+   qualified decoder/token changes; new modern gets token changes AND qualified
+   canonical reuse. Give every enabled component a separate identity and record
+   which functions were selected. Historical results are context, not substitutes
+   for contemporaneous old-control measurements. Source/load/compile/disposal and
+   cache cleanup belong in outer whole-transaction clocks. Never cache across
+   independent request repetitions or feed old model codes to the solver.
+4. If a candidate survives, separately register balanced-order latency replication
+   for new compressed versus new modern on both endpoints. Aim for at least5
+   paired repetitions per declared condition, with a fixed seed and fresh process
+   and context each time. Report every sample, paired ratios, uncertainty and
+   fallback/refusal counts. A repeat within one root measures timing stability,
+   not generalization to new roots or models. Retain the one-use phase ceiling:
+   the naive4cell x2endpoint x5rep design, using old worker allowances, reserves
+  396080CPU seconds before oracle/audits and therefore does not fit120624.
+   Do not silently increase caps or shrink the number of repeats after results.
+   Choose a smaller prospectively justified stage/design, or separately approve
+   any actual new resource decision; registration must resolve this before launch.
+5. A fresh source traversal under the declared target must reconstruct complete
+   model and canonical successor-state bytes for BOTH endpoints. Compare actual
+   bytes, complete stage/codes, records/provenance and unchanged source descriptors.
+   Audit peak memory, full state/checkpoint/dependency storage and complete CPU
+   charges. Do not add nested clocks. No win is promoted without this evidence.
+6. Freeze a smaller matched DistilGPT2/GPT-2 transfer design after software
+   qualification and target/adapter review. See the static admission findings
+   below. No checkpoint/model or quality evaluation is authorized by a source
+   admission table alone; all model/input/runtime/limits need a new registration.
+
+NEW LOCAL SOFTWARE
+canonical_reuse.py memoizes only the pure canonical encoder choice _select(raw).
+The original V63 parser still checks frame, dimensions, per-call load limits,
+expected hash, decompression, source hash, finite words, runtime binding and
+comparison to the selected canonical mode/payload. Exact immutable bytes are
+keys; this is not a hash-only validation shortcut. Measurement requests execute
+all encoders; no timing is invented. Exceptions never populate the cache.
+Bound entries <=4096 and configured accounted storage <=1GiB. Account raw bytes,
+selected payload and associated object/mapping storage conservatively, including
+raw/payload aliasing twice. A tiny fixed cache-object overhead and the allocator
+are covered by a separate resident reservation, not a claimed formal heap bound.
+Report measured process peak RSS and enforce the unchanged16GiB OS limit.
+Clear and close the cache at request end, including failure. Retaining revoked
+source bytes in a process-global cross-request cache is forbidden.
+
+Nine local stdlib tests pass. They check byte identity/signed zero, LRU, actual
+accounted-cap/oversize behavior, mapping growth and repeated hits, measurement
+bypass, zero-cap behavior, failure, restoration/clear, and nonbytes delegation.
+These exercise real zlib choices for mechanics. Local python-zstandard is absent;
+the real five-mode codec/parser has NOT been qualified. Two pre-registration
+memory-accounting issues (omitted mapping growth and retained empty-map capacity)
+were caught in review and fixed before integration; no empirical run used them.
+
+STRUCTURAL ADMISSION AND TRANSFER
+admission-grid.json is a deterministic shape-only screen of the frozen dispatcher,
+not a measurement, model result or complete target admission. It examines6/12
+blocks at128,256,384,512,768,1024,1536,1664 tokens, point and box evidence, with8GiB
+or9GiB resident reservations. Both box work and full point fallback are charged.
+Placeholders for weights/scales make this ONLY a structural screen. The bound
+normalization1664 is retained for these calculations; prospective smaller-root
+normalization, actual weights, source commitments and quality remain unfrozen.
+
+Adding a1GiB reservation to the prior8GiB still structurally admits existing
+DistilGPT2 endpoint geometry. That is not proof of measured fit. Its work at
+768/1536 tokens including fallback is609840488448/838541279232, below1e12.
+GPT-2's12-block,48-stage geometry at those same tokens instead requires
+1219680976896/1677082558464, above1e12. At1664 it requires1712585244672. Every
+stage individually fits; the complete fallback reservation is the binding cap.
+At512 tokens the12-block proxy is706754297856, with point fallback included.
+A prospective4x128-token root and4->3->2 record deletion chain is therefore a
+reasonable next design to admit for BOTH checkpoints, before seeing outcomes.
+This downscope follows a fixed resource calculation, not favorable empirical
+results. It is different from the old13->12->6 workload and must be labeled so.
+
+Published GPT-2 configuration confirms12 layers,768 hidden units,12 heads:
+https://huggingface.co/openai-community/gpt2/blob/main/config.json (read22Oct2026).
+This mutable public config is planning context, not an immutable experiment pin.
+No GPT-2 weights were downloaded. Choose an immutable revision and file hashes
+before registration. Current Service pins the old checkpoint,13records and24
+stages; V63 archive also limits24stages. A new checked target/adapter and archive
+schema are required for48stages. Do not merely remove those guards. Preserve
+old sources, stage completeness, byte limits, all canonical checks and target
+identity. Smaller-root normalization must be explicitly registered and shared
+by the two compared checkpoints; it is not the original target.
+
+OTHER AUDITED CANDIDATES
+- Native decoder review: bounded counts/blocks prevent offset overflow; signed
+  integers are <=48bits, midpoint arithmetic <=49bits; negative magnitude never
+  reaches INT64_MIN. Dyadic shifts are guarded by exponent and bit-length bounds.
+  Endianness is explicitly little-only in the wrapper. Fuzz/UBSan still needed
+  on Linux; reasoning is not a memory-safety proof or runtime qualification.
+- Token neighbour helper changes only interior normal-value adjacent words.
+  Signed zero, subnormal, boundary normal, infinities and NaNs still call libm.
+  V76 compares raw words AND floating exception flags, then complete coefficients
+  and error bounds for both point and box paths. No fast-math or reassociation.
+- Streamed path copies every block in both dispatcher and streamed wrapper;
+  this is an additional potential memory-traffic cost. No removal is implemented:
+  each public API promises its own private snapshot. Any reuse interface must
+  bind ownership/immutability and retain malformed/mutation rejection semantics.
+  It is likely secondary to measured Gram/coefficient time; profiling is needed.
+- Shared untrusted nominal inverse proposals may use faster algebra without
+  changing the certified target, but different proposals can change certificate
+  success/cost. This is a new numerical method variant, not a byte-parity fix.
+  Do not mix it into the first implementation-equivalence experiment.
+
+DECISION RULES AND WRITING
+Seek repeatable benefits across specified regimes and checkpoint transfer, not
+an untestable universal speed claim. Distinguish old-vs-new engineering speedup
+from compressed-vs-optimized-lossless method advantage. A speed gain only at
+small token counts must be stated as such. A failed resource gate at larger
+geometry is evidence about the declared budget, not proof that transfer is
+mathematically impossible. Speed and quality can fail independently.
+
+Freeze the candidate before any new quality pass. Keep all previous failures,
+exposed quality outcomes, exclusions and thresholds. Do not tune precision,
+normalization, root selection or model choice against held-out outcomes. If a
+new checkpoint passes correctness but fails quality, report both. A previously
+used article panel is a fixed transfer evaluation panel, not newly untouched.
+
+No publication claim or manuscript edit is warranted yet. Conditional exact
+repair remains the theoretical contribution. Broader useful operating regions
+would strengthen the practical contribution; a broad speed win is optional,
+while fair controls and honest deployment costs are essential. If every fair
+qualified comparison remains slower, report the bounded storage/source-access
+tradeoff and explain measured costs. Current evidence cannot rule out useful
+optimized regimes or transfer. Keep the V74 manuscript and its compile receipt.

@@ -1,0 +1,4 @@
+13290|COMPLETED|0:0|00:00:03|00:01.823||billing=1,cpu=1,mem=16G,node=1
+13290.batch|COMPLETED|0:0|00:00:03|00:01.823|3324K|cpu=1,mem=16G,node=1
+13291|COMPLETED|0:0|00:11:36|11:33.120||billing=1,cpu=1,mem=16G,node=1
+13291.batch|COMPLETED|0:0|00:11:36|11:33.120|749724K|cpu=1,mem=16G,node=1

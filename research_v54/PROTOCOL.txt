@@ -1,0 +1,24 @@
+V54: fresh admission of the unchanged V53 compressed48 full-model integration
+
+V53 launch registration13299 failed before registering a program or running a
+numerical worker. Eight dependent jobs13300--13307 were cancelled without work.
+Its exact historical-data verifier rejected later metadata added to campaigns.
+All264 original inventory entries remain unchanged;25 newer metadata files were
+present at initial inspection. This admission correction does not rewrite V53,
+rerun V45 selection, reclassify adaptive records as untouched, or change numerical
+code, quality exclusions, resource caps, stopping rules or arm order.
+
+The new archive validator checks the exact V45 program/registration commitment,
+original policy, numerical source/runtime and every original history byte binding.
+Later inventory entries are separately frozen and disclosed. It then applies all
+V53 completion/actual selected data/exclusion/source-prefix/sealed-debit checks.
+V53's unchanged canonical state/service/representation/48-bit policy, V50 kernel,
+normalization1664,13x128 records and12/6 retained sequence are imported intact.
+See research_v53/PROTOCOL.txt for the full numeric and cost plan.
+
+New literal V54 worker commands, source/runtime bindings, one-use campaign and
+launch directories are required. All76 Linux checks must pass with no skips.
+The same six-worker CPU cap81012 seconds and per-worker bounds apply, with the
+same hash-fixed prepare,cached,cold,hybrid,compressed,oracle order. No old worker
+budget is pooled or reset. Registration/validation-only scheduler CPU is archived
+separately from numerical worker charges. No automatic retries or paper claim.

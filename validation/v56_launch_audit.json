@@ -1,0 +1,128 @@
+{
+  "schema": "conditional-quality-gpu-launch-audit-v56",
+  "status": "verified_software_and_conditional_submission_only",
+  "captured_at_utc": "2026-10-11T11:07:39.877673+00:00",
+  "numerical_results_verified": false,
+  "checks": {
+    "v55": {
+      "tests_passed": 18,
+      "skipped": 0,
+      "slurm_job_id": "13324",
+      "frozen_source_commit": "792400b5518442baf57c1890f9ec01fd443b9382",
+      "source_files": 399
+    },
+    "v56": {
+      "tests_passed": 12,
+      "skipped": 0,
+      "slurm_job_id": "13328",
+      "frozen_source_commit": "5dcd24c29fa46fd012eaf49394b39693ff831e7a",
+      "source_files": 409
+    }
+  },
+  "jobs": {
+    "v55": {
+      "register": "13325",
+      "quality": "13326",
+      "audit": "13327"
+    },
+    "v56": {
+      "register_parity_audit": "13329"
+    }
+  },
+  "expected_predecessors": {
+    "13325": "13317",
+    "13326": "13325",
+    "13327": "13326",
+    "13329": "13327"
+  },
+  "v54_sources_unchanged": {
+    "files": 386,
+    "changed": []
+  },
+  "confirmation": false,
+  "acl_ready": false,
+  "files": {
+    "campaigns/csis_quality_v55_launch/snapshot-at-launch.json": {
+      "sha256": "3f5aed1507ecfdd228db52fe1303025a31822ea8e205024405d204aa458ac66d",
+      "bytes": 2842
+    },
+    "campaigns/csis_quality_v55_launch/source-commit.txt": {
+      "sha256": "3ef902b932cf6aee47e3bca9affd391f199b072b8342fdd2264aca4b3bb20db5",
+      "bytes": 41
+    },
+    "campaigns/csis_quality_v55_launch/accounting-at-launch.txt": {
+      "sha256": "eaa398414343995b3bf93dde3c79ec0d07be2246587c6bdd64573e6f76736470",
+      "bytes": 805
+    },
+    "campaigns/csis_quality_v55_launch/checks.log": {
+      "sha256": "44853e03900b192fd70560e9d42a37a5dc23550dfc161c3300b7e3e3ca12b552",
+      "bytes": 3216
+    },
+    "campaigns/csis_quality_v55_launch/checks.json": {
+      "sha256": "3c84c2c3954a9e8d7e8d78e7bc674856ac84570800038d85b86a36fc6306aadb",
+      "bytes": 50686
+    },
+    "campaigns/csis_quality_v55_launch/jobs.tsv": {
+      "sha256": "5779ba0b85448738d3332a9bc89b76f00211bfade0356c7c88b67a901e46c4a0",
+      "bytes": 41
+    },
+    "campaigns/csis_gpu_v56_launch/snapshot-at-launch.json": {
+      "sha256": "3f5aed1507ecfdd228db52fe1303025a31822ea8e205024405d204aa458ac66d",
+      "bytes": 2842
+    },
+    "campaigns/csis_gpu_v56_launch/source-commit.txt": {
+      "sha256": "7da72c86aed0a67a35ba02084cda3cd2fa146a692545ec3822c53381785ffdc6",
+      "bytes": 41
+    },
+    "campaigns/csis_gpu_v56_launch/accounting-at-launch.txt": {
+      "sha256": "eaa398414343995b3bf93dde3c79ec0d07be2246587c6bdd64573e6f76736470",
+      "bytes": 805
+    },
+    "campaigns/csis_gpu_v56_launch/checks.log": {
+      "sha256": "2534ab6fcea14b7ac5092c3d0cbdfda63586e42f27bd137ae98508f08abab626",
+      "bytes": 1554
+    },
+    "campaigns/csis_gpu_v56_launch/checks.json": {
+      "sha256": "025bc73fae535532e340a4c91352d7ce897abb1f9e55dd3c48404ab13e41b5d7",
+      "bytes": 47986
+    },
+    "campaigns/csis_gpu_v56_launch/jobs.tsv": {
+      "sha256": "dc70d83c42fbc1ed663eb46e27b5ebb96b4c150ccf873142f7b8d0f648932dfd",
+      "bytes": 28
+    }
+  },
+  "live_scheduler_dependencies_verified": {
+    "13325": {
+      "JobState": "PENDING",
+      "Dependency": "afterok:13317(unfulfilled)",
+      "Requeue": "0",
+      "Partition": "cpu-short",
+      "TimeLimit": "00:15:00",
+      "ReqTRES": "cpu=1,mem=16G,node=1,billing=1"
+    },
+    "13326": {
+      "JobState": "PENDING",
+      "Dependency": "afterok:13325(unfulfilled)",
+      "Requeue": "0",
+      "Partition": "cpu-short",
+      "TimeLimit": "05:10:00",
+      "ReqTRES": "cpu=1,mem=16G,node=1,billing=1"
+    },
+    "13327": {
+      "JobState": "PENDING",
+      "Dependency": "afterok:13326(unfulfilled)",
+      "Requeue": "0",
+      "Partition": "cpu-short",
+      "TimeLimit": "00:30:00",
+      "ReqTRES": "cpu=1,mem=16G,node=1,billing=1"
+    },
+    "13329": {
+      "JobState": "PENDING",
+      "Dependency": "afterok:13327(unfulfilled)",
+      "Requeue": "0",
+      "Partition": "gpu-short",
+      "TimeLimit": "00:30:00",
+      "ReqTRES": "cpu=1,mem=16G,node=1,billing=1,gres/gpu=1"
+    }
+  }
+}

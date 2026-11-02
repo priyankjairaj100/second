@@ -1,0 +1,2 @@
+/etc/profile.d/bash_history.sh: line 4: HISTTIMEFORMAT: readonly variable
+{"job_id": "15404", "status": "released_once", "registration_sha256": "1120b96623394d9a4bf4314b6167b824b350a5665f4a446f781edbc67ef7bf84"}

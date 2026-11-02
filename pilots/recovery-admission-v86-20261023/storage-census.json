@@ -1,0 +1,227 @@
+{
+  "additional_unbounded_or_unbudgeted_roles": [
+    "progress snapshots and their count",
+    "worker completions and controller receipts",
+    "audit outputs and read-binding inventories",
+    "submission and host accounting records",
+    "Slurm logs",
+    "temporary worker stdout and stderr",
+    "compiler temporary files and native libraries",
+    "new source package, staged copies, and archive",
+    "filesystem allocation rounding and metadata"
+  ],
+  "bound_uses_writer_limits_for_failed_and_complete_attempts": true,
+  "complete_artifact_extent_allowance_bytes": 76235669504,
+  "counts": {
+    "artifact_metadata": 40,
+    "model": 11,
+    "state": 20
+  },
+  "created_utc": "2026-10-23T10:04:47.413534+00:00",
+  "declared_complete_artifacts": {
+    "optimized_compressed-1": [
+      "admission.json",
+      "execution-provenance.json",
+      "model.bin",
+      "state.bin",
+      "trust.json"
+    ],
+    "optimized_compressed-2": [
+      "admission.json",
+      "execution-provenance.json",
+      "model.bin",
+      "state.bin",
+      "trust.json"
+    ],
+    "optimized_modern-1": [
+      "admission.json",
+      "execution-provenance.json",
+      "model.bin",
+      "state.bin",
+      "trust.json"
+    ],
+    "optimized_modern-2": [
+      "admission.json",
+      "execution-provenance.json",
+      "model.bin",
+      "state.bin",
+      "trust.json"
+    ],
+    "oracle": [
+      "admission.json",
+      "execution-provenance.json",
+      "step-1/compressed48-state.bin",
+      "step-1/compressed48-trust.json",
+      "step-1/hybrid_gram-state.bin",
+      "step-1/hybrid_gram-trust.json",
+      "step-1/lossless-state.bin",
+      "step-1/lossless-trust.json",
+      "step-1/model.bin",
+      "step-1/modern_lossless-state.bin",
+      "step-1/modern_lossless-trust.json",
+      "step-2/compressed48-state.bin",
+      "step-2/compressed48-trust.json",
+      "step-2/hybrid_gram-state.bin",
+      "step-2/hybrid_gram-trust.json",
+      "step-2/lossless-state.bin",
+      "step-2/lossless-trust.json",
+      "step-2/model.bin",
+      "step-2/modern_lossless-state.bin",
+      "step-2/modern_lossless-trust.json"
+    ],
+    "prepare": [
+      "admission.json",
+      "compressed48-state.bin",
+      "compressed48-trust.json",
+      "execution-provenance.json",
+      "hybrid_gram-state.bin",
+      "hybrid_gram-trust.json",
+      "lossless-state.bin",
+      "lossless-trust.json",
+      "model.bin",
+      "modern_lossless-state.bin",
+      "modern_lossless-trust.json"
+    ],
+    "reference_compressed-1": [
+      "admission.json",
+      "execution-provenance.json",
+      "model.bin",
+      "state.bin",
+      "trust.json"
+    ],
+    "reference_compressed-2": [
+      "admission.json",
+      "execution-provenance.json",
+      "model.bin",
+      "state.bin",
+      "trust.json"
+    ],
+    "reference_modern-1": [
+      "admission.json",
+      "execution-provenance.json",
+      "model.bin",
+      "state.bin",
+      "trust.json"
+    ],
+    "reference_modern-2": [
+      "admission.json",
+      "execution-provenance.json",
+      "model.bin",
+      "state.bin",
+      "trust.json"
+    ]
+  },
+  "existing_files_need_no_copy": true,
+  "expected_successful_model_bytes_each": 21233664,
+  "launch_authorized": false,
+  "notes": [
+    "The artifact extent sum is not an estimate of expected use or a quota requirement for the whole chain.",
+    "No old artifact is deleted, reused as a successful predecessor, or deducted from account usage.",
+    "A future recovery must enforce and test any tighter metadata, count, log, or temporary-space allowances before deriving whole-chain admission.",
+    "All 71 artifacts retain the writer limit of 1 GiB here; a later audit of the model shape cannot constrain bytes already written by a failed worker."
+  ],
+  "numerical_execution": false,
+  "oracle_outputs_included": true,
+  "per_artifact_extent_allowance": {
+    "optimized_compressed-1/admission.json": 1073741824,
+    "optimized_compressed-1/execution-provenance.json": 1073741824,
+    "optimized_compressed-1/model.bin": 1073741824,
+    "optimized_compressed-1/state.bin": 1073741824,
+    "optimized_compressed-1/trust.json": 1073741824,
+    "optimized_compressed-2/admission.json": 1073741824,
+    "optimized_compressed-2/execution-provenance.json": 1073741824,
+    "optimized_compressed-2/model.bin": 1073741824,
+    "optimized_compressed-2/state.bin": 1073741824,
+    "optimized_compressed-2/trust.json": 1073741824,
+    "optimized_modern-1/admission.json": 1073741824,
+    "optimized_modern-1/execution-provenance.json": 1073741824,
+    "optimized_modern-1/model.bin": 1073741824,
+    "optimized_modern-1/state.bin": 1073741824,
+    "optimized_modern-1/trust.json": 1073741824,
+    "optimized_modern-2/admission.json": 1073741824,
+    "optimized_modern-2/execution-provenance.json": 1073741824,
+    "optimized_modern-2/model.bin": 1073741824,
+    "optimized_modern-2/state.bin": 1073741824,
+    "optimized_modern-2/trust.json": 1073741824,
+    "oracle/admission.json": 1073741824,
+    "oracle/execution-provenance.json": 1073741824,
+    "oracle/step-1/compressed48-state.bin": 1073741824,
+    "oracle/step-1/compressed48-trust.json": 1073741824,
+    "oracle/step-1/hybrid_gram-state.bin": 1073741824,
+    "oracle/step-1/hybrid_gram-trust.json": 1073741824,
+    "oracle/step-1/lossless-state.bin": 1073741824,
+    "oracle/step-1/lossless-trust.json": 1073741824,
+    "oracle/step-1/model.bin": 1073741824,
+    "oracle/step-1/modern_lossless-state.bin": 1073741824,
+    "oracle/step-1/modern_lossless-trust.json": 1073741824,
+    "oracle/step-2/compressed48-state.bin": 1073741824,
+    "oracle/step-2/compressed48-trust.json": 1073741824,
+    "oracle/step-2/hybrid_gram-state.bin": 1073741824,
+    "oracle/step-2/hybrid_gram-trust.json": 1073741824,
+    "oracle/step-2/lossless-state.bin": 1073741824,
+    "oracle/step-2/lossless-trust.json": 1073741824,
+    "oracle/step-2/model.bin": 1073741824,
+    "oracle/step-2/modern_lossless-state.bin": 1073741824,
+    "oracle/step-2/modern_lossless-trust.json": 1073741824,
+    "prepare/admission.json": 1073741824,
+    "prepare/compressed48-state.bin": 1073741824,
+    "prepare/compressed48-trust.json": 1073741824,
+    "prepare/execution-provenance.json": 1073741824,
+    "prepare/hybrid_gram-state.bin": 1073741824,
+    "prepare/hybrid_gram-trust.json": 1073741824,
+    "prepare/lossless-state.bin": 1073741824,
+    "prepare/lossless-trust.json": 1073741824,
+    "prepare/model.bin": 1073741824,
+    "prepare/modern_lossless-state.bin": 1073741824,
+    "prepare/modern_lossless-trust.json": 1073741824,
+    "reference_compressed-1/admission.json": 1073741824,
+    "reference_compressed-1/execution-provenance.json": 1073741824,
+    "reference_compressed-1/model.bin": 1073741824,
+    "reference_compressed-1/state.bin": 1073741824,
+    "reference_compressed-1/trust.json": 1073741824,
+    "reference_compressed-2/admission.json": 1073741824,
+    "reference_compressed-2/execution-provenance.json": 1073741824,
+    "reference_compressed-2/model.bin": 1073741824,
+    "reference_compressed-2/state.bin": 1073741824,
+    "reference_compressed-2/trust.json": 1073741824,
+    "reference_modern-1/admission.json": 1073741824,
+    "reference_modern-1/execution-provenance.json": 1073741824,
+    "reference_modern-1/model.bin": 1073741824,
+    "reference_modern-1/state.bin": 1073741824,
+    "reference_modern-1/trust.json": 1073741824,
+    "reference_modern-2/admission.json": 1073741824,
+    "reference_modern-2/execution-provenance.json": 1073741824,
+    "reference_modern-2/model.bin": 1073741824,
+    "reference_modern-2/state.bin": 1073741824,
+    "reference_modern-2/trust.json": 1073741824
+  },
+  "quota_capacity_reserved": false,
+  "registered": false,
+  "representations": [
+    "lossless",
+    "compressed48",
+    "hybrid_gram",
+    "modern_lossless"
+  ],
+  "retained_predecessors_included": true,
+  "schema": "prospective-recovery-output-census-v86",
+  "source_bindings": {
+    "pilots/four-cell-service-v80-20261023-a/program_v80.json": {
+      "bytes": 1547559,
+      "sha256": "89f6a71e5b4f74b667bac64149c77005862d36b2b2e3dedc2a7260fb05c0ad60"
+    },
+    "research_v64/service.py": {
+      "bytes": 8221,
+      "sha256": "567ce9ffa1b955748761b100f9682a1e31b2432b9a2ce7a03ba8833af60664f7"
+    },
+    "research_v66/operations.py": {
+      "bytes": 9072,
+      "sha256": "0e6539cb781710b8a525dd56a5412e16e3c8d2f0379a5a12a6f0c482282acacd"
+    },
+    "research_v80/worker.py": {
+      "bytes": 7879,
+      "sha256": "bbca29b2efe813a5676562efe658a16e4c549363c7e7e3f5ba730d2c93142c37"
+    }
+  },
+  "whole_chain_storage_bound_complete": false
+}

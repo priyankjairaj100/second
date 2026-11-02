@@ -1,0 +1,46 @@
+V56: separate GPU observed-likelihood parity for the full V54/V55 model pair
+
+Prospectively freeze before either full-model or V55 quality outcomes. Queue
+only after all12 CUDA software checks pass with zero skips. Registration,
+one-use worker and audit run in one conditional A100 allocation after V55
+artifact-audit job13327 completes. Validate that actual complete CPU result,
+its losses, model/state bytes, packed sequential grids, source bindings,
+settled ledger and full audit. A valid negative CPU quality guard is admitted
+exactly like a positive result. No selection for favorable quality. A failed
+CPU execution or audit cancels dependencies; never automatically retry.
+
+Reuse only the pinned, previously verified V47 CPU parameter-word snapshot:
+program1803adfd4b9548a605dc468a7c982d077abaaa43f36df6bfce8c4098a7170915,
+arraysc5cc19cde2e526bb3098efaec5c7709ac3714bd781f8753c1c5b77f6c4a67f2b,
+manifest8e4c3e790b7c1747f6fe114899240c6f14c10b8111f9d7df9f2a41d64e6f5d9d.
+Recheck all78 binary64 array words from non-pickle NPZ; preserve the complete
+base checkpoint, biases, norms and head. No CPU decoder construction, finite
+feature evaluation, calibration or parameter conversion in the GPU runtime.
+The explicit SOURCE_BASE.json pins all399 unchanged V55 dependencies. Streaming
+hashing supports GPU Python3.10 without changing frozen Python3.12 CPU sources.
+
+Use the unchanged V46 TorchQualityDecoder in float64, deterministic mode,
+CUBLAS_WORKSPACE_CONFIG=:4096:8, TF32 off, no AMP, one GPU/CPU thread. Verify
+bitwise parameter and all three24-stage prefix transfers. Evaluate FP, nearest,
+actual fixed and matched sequential on the same eight exposed128-token articles,
+127 predictions/article. All32 absolute mean-NLL differences must be<=1e-8 for
+observed evaluator parity. Stop on the first actual FP batch parity failure;
+preserve its partial losses and failed costs. Later deviations remain complete
+adverse parity outcomes, never retries. No speedup or certified inference claim.
+All60 quality exclusions and the CPU quality outcome remain unchanged.
+
+One separate worker CPU phase cap1202 seconds: soft CPU1200, hard1201, wall1500,
+file2GiB, single affinity/thread. Slurm allocation1xA10080GB,16GiB physical host
+memory,30minutes; CUDA allocator cap8GiB. RLIMIT_AS128TiB allows CUDA's large
+virtual reservations and is not a physical-memory grant. Bind the exact actual
+GPU software/runtime, driver/GPU identity, source inventory, input bytes,
+software receipt, command and plan. Registration/audit/software costs are
+outside the worker ledger and reported separately. No reused historical budget.
+
+The final read-only auditor recomputes all32 parity comparisons, binds complete
+CPU results and GPU scope/precision flags, transferred array count, actual
+memory report, sealed literal command, limits and settled CPU debit. It records
+both valid passing and valid failing parity. It does not independently rerun
+GPU inference. Trusted execution/storage remain assumptions. GPU equivalence
+of exact features, canonical calibration state or the research theorem is not
+claimed; neither statistical confirmation nor ACL readiness follows.

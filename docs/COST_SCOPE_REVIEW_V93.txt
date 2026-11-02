@@ -1,0 +1,89 @@
+Second V93: interpretation safeguards before complete comparison results
+24 October 2026. Reporting preparation only. No numerical source or gate changes.
+
+The active V89 experiment has no completed model/audits at this observation.
+This review fixes how to reduce its eventual saved data, without choosing a
+claim or deciding whether to launch transfer in advance of those data.
+The prospective decision rules in research_v82/DECISION_RULES.txt still apply.
+
+Source finding: fallback extraction is nested, not an additive phase
+
+research_v61/service.py starts the per-stage timer at line193. If a compressed
+certificate is refused, the retained-source traversal at line233 occurs before
+that stage's elapsed time is recorded at line248. The traversal also increments
+source_extraction_ns. Adding source_extraction_ns to the sum of stage elapsed
+values would count that interval twice. This is a reporting pitfall identified
+from source; it is not evidence that any running request has fallen back or that
+an already published result contains this error. Historical sources stay intact.
+
+For the compressed/modern stored-state requests used by V89/V92, report the
+following disjoint accounting in integer nanoseconds, after actual closure:
+  outside request = complete host elapsed - request elapsed
+  predecessor validation = timing.predecessor_validation_ns
+  stage work including fallback = sum(timing.stages[*].elapsed_ns)
+  serialization = timing.serialization_ns
+  disposal = timing.disposal_ns
+  unattributed request time = request elapsed - the four internal entries above
+These entries sum to complete host elapsed. Reject a negative remainder, an
+incomplete/duplicate stage census or a request larger than its host envelope.
+Stored-state requests do not prepare new payloads: encoding_and_gram_ns is zero.
+Source extraction and source-stage/record pairs are separate diagnostics. Without
+fallback both must be zero. With fallback, extraction is inside a fallback stage.
+The outside-request interval contains multiple operations and is not exclusively
+startup. The remainder includes unseparated admission, reads/writes, book-keeping
+and other gaps; it must not be renamed I/O, decoding, validation or solver cost.
+
+Decoder time is not separately timed in these records. The stage timer combines
+weight preparation, descriptor/array work, solving and code construction; archive
+validation and serialization may also decode. Do not infer a decoder-only time,
+a precise decoder share, or an Amdahl speedup limit from the stage total. Nested
+solver diagnostics remain separate unless their non-overlap is demonstrated.
+
+Source finding: the optimized cells bundle multiple changes
+
+research_v79/implementation.py lines100-108 enables token-neighbor optimization
+in both optimized cells, plus native compressed decoding in one and canonical
+modern-lossless reuse in the other. Therefore reference-to-optimized complete
+request ratios measure the combined package within each representation. They do
+not isolate the causal contribution of the decoder or cache alone. Earlier
+component experiments have their own scopes and do not replace full requests.
+
+Comparison reduction
+
+Preserve all four cells at both retained endpoints. For each endpoint report:
+  reference compressed / optimized compressed host time;
+  reference modern / optimized modern host time;
+  optimized compressed / optimized modern host time;
+  optimized compressed / optimized modern live-state size;
+  optimized compressed / optimized modern checkpoint-inclusive size.
+Use exact integer numerator/denominator pairs before final display rounding.
+Speedup ratios above1 mean improvement; compressed/modern time ratios below1
+mean faster compressed requests. Show each endpoint, including a loss. Never
+select a favorable endpoint, pool away a loss, or use an inner clock for one arm.
+The current V89 audit already supplies host_transaction_elapsed_ns; the V92
+prepared audit supplies complete_host_elapsed_ns. Keep the actual registered
+clock names and timing scopes. A future replication must explicitly register its
+primary clock and accounting; this review does not amend a frozen registration.
+
+The six generated tests in reporting_v93/test_cost_scope.py check nested replay,
+clock containment, complete stage/cell census, exact ratios and opposite outcome
+directions. They contain no empirical observations. cost_scope.py only reduces
+already verified scalar data; it cannot establish execution, correctness or a
+successful gate. It has no CLI, cluster calls, job submission or file mutations.
+Before using it for results: require the actual successful V89 terminal reporter,
+reopen terminal-bound primary/supplemental receipts and all selected completion/
+host inputs, then bind the reduced output to those actual input bytes. V92 needs
+its own actual closure. A failed or missing row stops complete-screen reporting.
+These six reporting tests do not change the frozen V89 162-test gate or the
+prepared V91 172/V92 221-test gates. No model ran and no archive was created.
+
+Writing and next experiments
+
+No inference of general speedup, impossibility, transfer or quality follows from
+this review. Use V82's outcome rules after actual evidence: a useful correct
+single-observation screen may justify matched transfer; stable latency needs a
+separate justified replication with all pairs declared and resources admitted.
+The existing conditional exactness/storage/access contribution remains supported
+without general speedup. Its practical strength depends on the measured savings,
+latency costs and deployment assumptions; two related GPT-family checkpoints
+would improve evidence for depth transfer but still limit external validity.

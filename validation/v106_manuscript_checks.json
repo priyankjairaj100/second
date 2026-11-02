@@ -1,0 +1,35 @@
+{
+  "bibliography_keys": [
+    "gptq",
+    "ginart",
+    "medu",
+    "qss",
+    "exactfun",
+    "qebverif",
+    "execcert",
+    "distilgpt2",
+    "c4",
+    "wikitext"
+  ],
+  "captured_utc": "2026-10-26T09:09:11.686770+00:00",
+  "exact_change": "Private source mappings -> Source derivation maps",
+  "labels": 16,
+  "manuscript": {
+    "bytes": 57861,
+    "sha256": "387c80e2d297da8571e5729e441b33062fd9456be0b09ec75cbcf984c2dbd571"
+  },
+  "native_compile": {
+    "kind": "success",
+    "source": {
+      "bytes": 57861,
+      "sha256": "387c80e2d297da8571e5729e441b33062fd9456be0b09ec75cbcf984c2dbd571"
+    },
+    "tool": "compile_latex_document"
+  },
+  "native_compile_success": true,
+  "rendered_layout_verified": false,
+  "schema": "manuscript-checks-v106",
+  "scientific_content_unchanged_from_v105": true,
+  "unresolved_citations": [],
+  "unresolved_references": []
+}

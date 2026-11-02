@@ -1,0 +1,23 @@
+{
+  "command": [
+    "sbatch",
+    "--hold",
+    "--parsable",
+    "--no-requeue",
+    "--job-name=second78-control",
+    "--partition=cpu-short",
+    "--qos=cpu-short",
+    "--nodelist=csis.mn1",
+    "--ntasks=1",
+    "--cpus-per-task=1",
+    "--mem=16G",
+    "--time=00:10:00",
+    "--chdir=/nfs_home/users/poonam/second-20261010/local_runs/control-software-v78-20261023-a",
+    "--output=/nfs_home/users/poonam/second-20261010/local_runs/control-software-v78-20261023-a/slurm-%j.log",
+    "/nfs_home/users/poonam/second-20261010/local_runs/control-software-v78-20261023-a/research_v78/run_cpu.sbatch",
+    "6ff9101990dec06b5467f482074848d9643d9d5dc04612b383cf3dfa8dcda5fd"
+  ],
+  "created_utc": "2026-10-23T06:30:33.786985+00:00",
+  "program_sha256": "6ff9101990dec06b5467f482074848d9643d9d5dc04612b383cf3dfa8dcda5fd",
+  "queue_before": ""
+}

@@ -1,0 +1,57 @@
+V76 prospective software qualification, 22 October 2026
+
+Question: do the isolated V75 payload decoder and an exact extension of the
+V50 neighbour primitive to BOTH token coefficient libraries preserve their
+existing finite outputs/rejections on the pinned Linux CPU runtime?
+
+This allocation uses GENERATED SOFTWARE FIXTURES ONLY. No model, corpus,
+quality article, historical worker/launcher, empirical stage or one-use output
+is evaluated. No change to the old scientific target, sources or results.
+The user's deep-campaign request authorises this new qualification. The
+recurring scheduler remains paused; this is a finite Slurm job, not a monitor.
+
+One new namespace local_runs/speed-software-v76-20261022-a. Preserve the old
+numerical checkout at f900999. Copy source-only committed dependencies from
+d639424 plus these prospective V76 files into an isolated tree, with every
+byte bound in program.json. Verify before/after qualification. Reuse only the
+unchanged container-13155 image commitment and pinned .venv-container runtime.
+
+Fixed order: V75 codec compatibility/differential tests and six alternating
+timing pairs on generated128x768/128x3072 factors; a 100000-case Linux
+UBSan harness; V76 token primitive/coefficients/tests/profile. Linux ASan is
+not requested because its shadow-memory reservation conflicts with the fixed
+16GiB address-space ceiling; the V75 Mac ASan result remains separately scoped.
+Codec checks run on
+fresh copies in outputs/codec so historical source-result files are untouched.
+
+V76 checks 1000000 seeded raw words plus exponent boundaries, both directions
+and both libraries, with value-bit and floating-exception parity against libm.
+Compare16 point/box coefficient fixtures, including empty token axes and
+uncertain boxes, then21 legacy native coefficient tests in each mode with zero
+skips/failures/errors. Test context restoration and nested-use refusal.
+Profile both point and box at (width,tokens)=(192,32),(768,128),(1536,128), five
+alternating reference/optimised pairs each, fixed seeds20261022--20261024.
+Every coefficient and error word must match. Store all samples and source/
+binary/compiler identities. Compilation is outside the timed hot calls and
+inside the job cost. No model or end-to-end speedup follows from these profiles.
+
+One CPU/thread, host csis.mn1,16GiB address space and scheduler memory,2GiB
+per-file limit,10-minute scheduler wall. Each process inherits300/301 soft/hard
+CPU seconds; combined parent+waited-child CPU may not exceed602 seconds.
+Pin affinity to one allocated CPU; single-thread numerical environment.
+These are no larger than the existing software-qualification caps. The
+generated coefficient cases retain their native structural budgets unchanged.
+
+Registration binds exact sources, protocol, entry, launcher and caps before
+submission. Create one exclusive intent, submit one held no-requeue job, record
+its ID before release. Never retry an uncertain submission or failed job.
+Any mismatch, skip, error, source drift, refusal, timeout or exceeded cap is a
+failed attempt; retain logs, partial output, receipts and accounting. No
+automatic cap increase or repair-and-rerun under this registration.
+
+Success requires all exact-count checks, source recheck, complete output hashes,
+bounded actual CPU, completion receipt and terminal Slurm COMPLETED0:0.
+This root review is not independent review. Source tests alone do not establish
+the full service or transfer claim. A subsequent request comparison must have
+a new registration, optimised lossless controls, whole-transaction clocks,
+fresh reference model/state comparisons and preserved negative outcomes.

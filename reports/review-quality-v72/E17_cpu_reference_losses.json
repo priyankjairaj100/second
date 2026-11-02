@@ -1,0 +1,158 @@
+{
+  "candidate_12": [
+    {
+      "id": "REVIEW_ARTICLE_0003",
+      "mean_nll": 5.605232023413935,
+      "nll_sum": 711.8644669735697,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0004",
+      "mean_nll": 4.323835550549772,
+      "nll_sum": 549.127114919821,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0005",
+      "mean_nll": 4.108262753195862,
+      "nll_sum": 521.7493696558745,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0006",
+      "mean_nll": 3.495933610456251,
+      "nll_sum": 443.9835685279439,
+      "predictions": 127
+    }
+  ],
+  "candidate_6": [
+    {
+      "id": "REVIEW_ARTICLE_0003",
+      "mean_nll": 5.6042664806111135,
+      "nll_sum": 711.7418430376114,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0004",
+      "mean_nll": 4.289673240336509,
+      "nll_sum": 544.7885015227367,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0005",
+      "mean_nll": 4.130063715881856,
+      "nll_sum": 524.5180919169957,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0006",
+      "mean_nll": 3.581926261995748,
+      "nll_sum": 454.90463527346,
+      "predictions": 127
+    }
+  ],
+  "nearest": [
+    {
+      "id": "REVIEW_ARTICLE_0003",
+      "mean_nll": 5.644607706994184,
+      "nll_sum": 716.8651787882613,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0004",
+      "mean_nll": 4.501513524184276,
+      "nll_sum": 571.692217571403,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0005",
+      "mean_nll": 4.397773296844591,
+      "nll_sum": 558.517208699263,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0006",
+      "mean_nll": 3.7424271559517415,
+      "nll_sum": 475.28824880587115,
+      "predictions": 127
+    }
+  ],
+  "original": [
+    {
+      "id": "REVIEW_ARTICLE_0003",
+      "mean_nll": 5.60063417145456,
+      "nll_sum": 711.2805397747292,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0004",
+      "mean_nll": 4.253421757958566,
+      "nll_sum": 540.1845632607378,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0005",
+      "mean_nll": 3.984532081792413,
+      "nll_sum": 506.0355743876365,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0006",
+      "mean_nll": 3.407915348419187,
+      "nll_sum": 432.80524924923674,
+      "predictions": 127
+    }
+  ],
+  "sequential_12": [
+    {
+      "id": "REVIEW_ARTICLE_0003",
+      "mean_nll": 5.60878452509969,
+      "nll_sum": 712.3156346876606,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0004",
+      "mean_nll": 4.291834704750974,
+      "nll_sum": 545.0630075033737,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0005",
+      "mean_nll": 4.14450599672243,
+      "nll_sum": 526.3522615837486,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0006",
+      "mean_nll": 3.5457881206688087,
+      "nll_sum": 450.3150913249387,
+      "predictions": 127
+    }
+  ],
+  "sequential_6": [
+    {
+      "id": "REVIEW_ARTICLE_0003",
+      "mean_nll": 5.564168277589262,
+      "nll_sum": 706.6493712538363,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0004",
+      "mean_nll": 4.306720137363221,
+      "nll_sum": 546.9534574451291,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0005",
+      "mean_nll": 4.088705452519209,
+      "nll_sum": 519.2655924699395,
+      "predictions": 127
+    },
+    {
+      "id": "REVIEW_ARTICLE_0006",
+      "mean_nll": 3.5738353212710274,
+      "nll_sum": 453.8770858014205,
+      "predictions": 127
+    }
+  ]
+}

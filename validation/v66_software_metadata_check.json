@@ -1,0 +1,33 @@
+{
+  "all_five_arms_fresh_state_fixture": true,
+  "archive": {
+    "bytes": 38820,
+    "sha256": "8ce038d191632771f56ed32b0d2bbec06375dc1cf67697c29b5785c7d881ba5f"
+  },
+  "combined_observed_cpu_seconds": 3.565405949,
+  "completion": {
+    "bytes": 598,
+    "sha256": "883f2a890d3a8393dd281981c9cdcceba059631045fd46917112b1b88ce0481c"
+  },
+  "empirical_execution": false,
+  "independent_numerical_implementation": false,
+  "local_environment_refusals": [
+    "System Python3.9 cannot import frozen slots dataclasses",
+    "Repository venv lacks zstandard; reused already isolated Python3.12-compatible test dependencies"
+  ],
+  "local_test_count": 9,
+  "local_test_skipped": 0,
+  "next_gate": "V67 full-model controller, worker, resource, oracle and audit implementation; separate empirical registration required",
+  "process_cpu_seconds": 2.538460949,
+  "registration_sha256": "5727138fa7739700e5d14b10a015e33b42765da19dad80b6723a3bdf29e5ada3",
+  "root_review_only": true,
+  "scheduler": "15259|COMPLETED|0:0|5|00:04.515||2026-10-16T14:41:43|2026-10-16T14:41:48\n15259.batch|COMPLETED|0:0|5|00:04.515|3324K|2026-10-16T14:41:43|2026-10-16T14:41:48\n",
+  "scheduler_allocation_cpu_seconds": 4.515,
+  "scheduler_batch_cpu_is_duplicate": true,
+  "schema": "v66-software-terminal-check",
+  "skipped": 0,
+  "source_files_verified": 456,
+  "status": "passed",
+  "tests": 44,
+  "waited_child_cpu_seconds": 1.026945
+}

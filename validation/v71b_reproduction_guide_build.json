@@ -1,0 +1,60 @@
+{
+  "actual_runtime_installed": false,
+  "archive": {
+    "bytes": 19454,
+    "path": "reports/development-reproduction-guide-v71b.zip",
+    "sha256": "de6a0675ebf10537a9450901810ac3e12d8047a027aafd39387bbb6be32bb493"
+  },
+  "complete_historical_input_closure": false,
+  "complete_transitive_notices": false,
+  "component_count": 6,
+  "full_anonymity_verified": false,
+  "model_or_data_acquired": false,
+  "payload": {
+    "DEPENDENCIES.txt": {
+      "bytes": 3223,
+      "sha256": "7107f0a0e2060e0ee2507117a04e84c1dc51869dfb9ec48dbbc8b1268c994ba7"
+    },
+    "INPUTS.json": {
+      "bytes": 12466,
+      "sha256": "5a2ef12c0a1d2b6f4408cd239a46d30a421bb9d4a08fbe1b377c7453d562a0c5"
+    },
+    "MANIFEST.json": {
+      "bytes": 635,
+      "sha256": "64585dcd859afbefab1a68a925142bc7fca17a07450c0782d73e06439e2fc81b"
+    },
+    "README.txt": {
+      "bytes": 5698,
+      "sha256": "b6694f5f817d5dc32705ace6dd72a7aca3514d0d036d0f07abec403f4b7d780e"
+    },
+    "RUNTIME.json": {
+      "bytes": 27327,
+      "sha256": "d930525f8f39008eec1ed3770258cf266e7c875a93aef659bc1f70e1e0f72d05"
+    },
+    "verify_inputs.py": {
+      "bytes": 2505,
+      "sha256": "ffd03acd388a130ed6033e0c17b4ff25f0f0de283ac5dafbf6172b4dc9bb1dd8"
+    }
+  },
+  "quality_input_groups": 10,
+  "quality_result_inferred": false,
+  "schema": "review-reproduction-guide-v71",
+  "source_bindings": {
+    "handoff/registration_v68.json": {
+      "bytes": 183993,
+      "sha256": "ddcf2b686ff0ed4c4401a4defa361bcd956a32d3697dbe1b71485744c513b3cb"
+    },
+    "handoff/registration_v71_quality.json": {
+      "bytes": 62099,
+      "sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c"
+    },
+    "reports/review-reproduction-v69/INPUTS.json": {
+      "bytes": 5319,
+      "sha256": "da91da8c05a531e4979ad373c11c6ef9068fd914307f4a4c6060473d21ec1c35"
+    },
+    "reports/review-reproduction-v69/RUNTIME.json": {
+      "bytes": 16356,
+      "sha256": "efae70683a9cc5255ba216270a66e745d3f70d1ceaabb04f963613ca837be1a2"
+    }
+  }
+}

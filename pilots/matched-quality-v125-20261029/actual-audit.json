@@ -1,0 +1,206 @@
+{
+  "schema": "v125-actual-loss-audit",
+  "status": "verified",
+  "all_six_models_complete": true,
+  "primary_fixed_vs_sequential_guard": "pending sequential controls",
+  "gptq_control": "pending",
+  "registration_sha256": "417422cd31292f51859ca9a4927f062679eba3b731660471d58214ff3099d885",
+  "articles": 320,
+  "predictions_per_model": 40640,
+  "audits": {
+    "checks_distilgpt2": {
+      "job": 16681,
+      "completion_sha256": "2ae7a9e37109fd2aaee80a91725ba71bfbbbfda750aeee25239f9b46520ff5ad",
+      "worker_cpu_seconds": 58.118769874,
+      "peak_rss_kib": 3783836,
+      "scheduler": [
+        "16681",
+        "COMPLETED",
+        "0:0",
+        "00:59.199",
+        "61",
+        ""
+      ]
+    },
+    "checks_gpt2": {
+      "job": 16682,
+      "completion_sha256": "00aee7e41f027c5d6fa4047e270faee04cc14eb78eda9638ff95c4b1ba40de8e",
+      "worker_cpu_seconds": 75.075880898,
+      "peak_rss_kib": 5283740,
+      "scheduler": [
+        "16682",
+        "COMPLETED",
+        "0:0",
+        "01:15.738",
+        "77",
+        ""
+      ]
+    },
+    "distilgpt2__candidate_2": {
+      "job": 16683,
+      "completion_sha256": "5c59b0db24c6849bc9e2d0f7faead77ea01f5299103a4614851642a7e87a5584",
+      "worker_cpu_seconds": 338.873555598,
+      "peak_rss_kib": 2691236,
+      "scheduler": [
+        "16683",
+        "COMPLETED",
+        "0:0",
+        "05:38.925",
+        "343",
+        ""
+      ],
+      "cross_platform_derived_perplexity_difference_ulps": 0.0
+    },
+    "distilgpt2__candidate_3": {
+      "job": 16684,
+      "completion_sha256": "f6fd5d72bf29d1c98daebb499665e7eb755939ef4d964e1fcd937cdbdcdab925",
+      "worker_cpu_seconds": 339.478270608,
+      "peak_rss_kib": 2690996,
+      "scheduler": [
+        "16684",
+        "COMPLETED",
+        "0:0",
+        "05:39.523",
+        "343",
+        ""
+      ],
+      "cross_platform_derived_perplexity_difference_ulps": 0.0
+    },
+    "distilgpt2__original": {
+      "job": 16685,
+      "completion_sha256": "bc917f93cc6bf511e4defb0e98f52cb7ecd8df1d3e7479c5c9df0c06da893fe0",
+      "worker_cpu_seconds": 332.03469534,
+      "peak_rss_kib": 2691368,
+      "scheduler": [
+        "16685",
+        "COMPLETED",
+        "0:0",
+        "05:32.099",
+        "335",
+        ""
+      ],
+      "cross_platform_derived_perplexity_difference_ulps": 0.0
+    },
+    "gpt2__candidate_2": {
+      "job": 16686,
+      "completion_sha256": "0bc14450f60b5fef250a8afe326e4d591524ae59ee635c9c5ac576827b9b2a77",
+      "worker_cpu_seconds": 468.641863806,
+      "peak_rss_kib": 3193980,
+      "scheduler": [
+        "16686",
+        "COMPLETED",
+        "0:0",
+        "07:48.699",
+        "473",
+        ""
+      ],
+      "cross_platform_derived_perplexity_difference_ulps": 0.0
+    },
+    "gpt2__candidate_3": {
+      "job": 16687,
+      "completion_sha256": "98a4595376028cc61f6968cd0872e5b522916f728f789f915860dbe2ac6f6e33",
+      "worker_cpu_seconds": 459.839124098,
+      "peak_rss_kib": 3194180,
+      "scheduler": [
+        "16687",
+        "COMPLETED",
+        "0:0",
+        "07:39.925",
+        "463",
+        ""
+      ],
+      "cross_platform_derived_perplexity_difference_ulps": 0.0
+    },
+    "gpt2__original": {
+      "job": 16688,
+      "completion_sha256": "3794c66e22cd1455b410ecbc07d9747620aa16db0bee26ba5f505b67cb856163",
+      "worker_cpu_seconds": 422.870971336,
+      "peak_rss_kib": 3194188,
+      "scheduler": [
+        "16688",
+        "COMPLETED",
+        "0:0",
+        "07:02.938",
+        "427",
+        ""
+      ],
+      "cross_platform_derived_perplexity_difference_ulps": 0.0
+    }
+  },
+  "models": {
+    "distilgpt2__original": {
+      "perplexity": 49.267084103237124,
+      "mean_nll": 3.897256192812202
+    },
+    "distilgpt2__candidate_3": {
+      "perplexity": 55.07733828849722,
+      "mean_nll": 4.0087383482283245
+    },
+    "distilgpt2__candidate_2": {
+      "perplexity": 55.21390919588742,
+      "mean_nll": 4.011214899728245
+    },
+    "gpt2__original": {
+      "perplexity": 41.62410747032673,
+      "mean_nll": 3.728679505916408
+    },
+    "gpt2__candidate_3": {
+      "perplexity": 48.04145434349334,
+      "mean_nll": 3.8720642703483277
+    },
+    "gpt2__candidate_2": {
+      "perplexity": 47.296427255359625,
+      "mean_nll": 3.856434758931745
+    }
+  },
+  "secondary_original_checkpoint_comparisons": {
+    "distilgpt2__candidate_3": {
+      "perplexity_ratio": 1.1179337947641683,
+      "paired_article_bootstrap_95_percentile_ratio": [
+        1.1106742023928382,
+        1.1253052335819391
+      ],
+      "worst_article_ratio": 1.3434170633303986,
+      "worst_article_id": "c4:en:validation:shard2:line1105",
+      "bootstrap_repetitions": 20000,
+      "seed": 124,
+      "primary_quality_guard_evaluated": false
+    },
+    "distilgpt2__candidate_2": {
+      "perplexity_ratio": 1.1207058465280593,
+      "paired_article_bootstrap_95_percentile_ratio": [
+        1.1137739549116965,
+        1.1276323993954558
+      ],
+      "worst_article_ratio": 1.314850338740173,
+      "worst_article_id": "c4:en:validation:shard2:line816",
+      "bootstrap_repetitions": 20000,
+      "seed": 124,
+      "primary_quality_guard_evaluated": false
+    },
+    "gpt2__candidate_3": {
+      "perplexity_ratio": 1.1541738012698877,
+      "paired_article_bootstrap_95_percentile_ratio": [
+        1.1454858221802822,
+        1.1633478361947813
+      ],
+      "worst_article_ratio": 1.979289957265262,
+      "worst_article_id": "c4:en:validation:shard2:line816",
+      "bootstrap_repetitions": 20000,
+      "seed": 124,
+      "primary_quality_guard_evaluated": false
+    },
+    "gpt2__candidate_2": {
+      "perplexity_ratio": 1.136274868814344,
+      "paired_article_bootstrap_95_percentile_ratio": [
+        1.1275748757427138,
+        1.1451109235473682
+      ],
+      "worst_article_ratio": 1.6442461973511737,
+      "worst_article_id": "c4:en:validation:shard2:line816",
+      "bootstrap_repetitions": 20000,
+      "seed": 124,
+      "primary_quality_guard_evaluated": false
+    }
+  }
+}

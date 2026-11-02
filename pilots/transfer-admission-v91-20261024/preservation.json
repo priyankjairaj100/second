@@ -1,0 +1,10 @@
+{
+  "frozen_tar_members_verified": 934,
+  "local_frozen_counterparts_verified": 930,
+  "v90_bindings_verified": 18,
+  "partial_source_census": 987,
+  "actual_terminal_gate_missing": true,
+  "archive_created": false,
+  "prepared_linux_tests": 172,
+  "linux_tests_executed": false
+}

@@ -1,0 +1,61 @@
+{
+  "actual_runtime_installed": false,
+  "additional_cpu_notice_texts": 3,
+  "archive": {
+    "bytes": 19558,
+    "path": "reports/development-reproduction-guide-v71c.zip",
+    "sha256": "6a3ed00cd047a4f63fdcfebd1d2ed6ef4d36e6eeddf286c7d5507d799393671b"
+  },
+  "complete_historical_input_closure": false,
+  "complete_transitive_notices": false,
+  "component_count": 6,
+  "full_anonymity_verified": false,
+  "model_or_data_acquired": false,
+  "payload": {
+    "DEPENDENCIES.txt": {
+      "bytes": 3224,
+      "sha256": "d80f5c7c4cdb67c9b5258e0e6f47a067678c0b701ce99480e6d31a4e48e3bcb3"
+    },
+    "INPUTS.json": {
+      "bytes": 12467,
+      "sha256": "127a84fb6d0dec2732d083b64574eb6cc81213580c248bfe44d3440c1462e031"
+    },
+    "MANIFEST.json": {
+      "bytes": 635,
+      "sha256": "8c1df736e2981936d253d738b1a0aaab9aa240f65a03aa3bdb4e571dd5a8f869"
+    },
+    "README.txt": {
+      "bytes": 5983,
+      "sha256": "f83f22308f8c7e97f6a6837b781adfe27e768f0f93bb4b9349927114372d6c17"
+    },
+    "RUNTIME.json": {
+      "bytes": 27327,
+      "sha256": "d930525f8f39008eec1ed3770258cf266e7c875a93aef659bc1f70e1e0f72d05"
+    },
+    "verify_inputs.py": {
+      "bytes": 2505,
+      "sha256": "ffd03acd388a130ed6033e0c17b4ff25f0f0de283ac5dafbf6172b4dc9bb1dd8"
+    }
+  },
+  "quality_input_groups": 10,
+  "quality_result_inferred": false,
+  "schema": "review-reproduction-guide-v71",
+  "source_bindings": {
+    "handoff/registration_v68.json": {
+      "bytes": 183993,
+      "sha256": "ddcf2b686ff0ed4c4401a4defa361bcd956a32d3697dbe1b71485744c513b3cb"
+    },
+    "handoff/registration_v71_quality.json": {
+      "bytes": 62099,
+      "sha256": "3ec767a20be59ed81330d68a067166bc14a369e967d9d3cbf274166baa32c56c"
+    },
+    "reports/review-reproduction-v69/INPUTS.json": {
+      "bytes": 5319,
+      "sha256": "da91da8c05a531e4979ad373c11c6ef9068fd914307f4a4c6060473d21ec1c35"
+    },
+    "reports/review-reproduction-v69/RUNTIME.json": {
+      "bytes": 16356,
+      "sha256": "efae70683a9cc5255ba216270a66e745d3f70d1ceaabb04f963613ca837be1a2"
+    }
+  }
+}

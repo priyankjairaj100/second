@@ -1,0 +1,60 @@
+{
+  "archive": {
+    "bytes": 87257,
+    "path": "reports/development-evidence-v69b.zip",
+    "sha256": "c07c4763b778a2df20b099c3ab572f6a3fcd2e152debf5c897b58721fbe66407"
+  },
+  "archive_byte_readback": true,
+  "archive_members_verified": 5,
+  "copied_field_groups": 1054,
+  "earlier_exposed_articles": 8,
+  "filesystem_extraction_verified": false,
+  "full_anonymity_verified": false,
+  "full_reproduction_verified": false,
+  "input_source_count": 21,
+  "later_exposed_articles": 8,
+  "manuscript_changed": false,
+  "mutation_probes_detected": {
+    "alter_service_clock": true,
+    "erase_adaptive_scope": true,
+    "erase_feasibility_failure": true,
+    "hide_stage_refusal": true
+  },
+  "numerical_execution": false,
+  "original_receipts_modified": false,
+  "output_directory": "reports/review-evidence-v69b",
+  "output_files": {
+    "CHECKS.json": {
+      "bytes": 681,
+      "sha256": "191ecde30061cf6cb426fbc2690491ccf399d66d4ddf915537b574292a853d8d"
+    },
+    "EVIDENCE_INDEX.txt": {
+      "bytes": 4439,
+      "sha256": "c8114e39c90c0d34f52638c8a08b9dabf8c405b3dbfde91d6082f664bf0556ab"
+    },
+    "MANIFEST.sha256": {
+      "bytes": 319,
+      "sha256": "635e2a4057c8a9320b2f6f8d27d678de8ddb8bcbf6b280ff4128e33b450ffad3"
+    },
+    "README.txt": {
+      "bytes": 2206,
+      "sha256": "4ec3bdd863b578d38373a252f2dd934e7f0dc74b1340ae36e6c3d856b1a4f6cb"
+    },
+    "results.json": {
+      "bytes": 78868,
+      "sha256": "5260e9bfd65f5562103d16e1edbb3e1fd2cc22cc1f5bf0e7d298dd2d57799fe5"
+    }
+  },
+  "private_mapping": {
+    "bytes": 335261,
+    "path": "docs/REVIEW_HISTORY_DERIVATION_V69.json",
+    "sha256": "76bb2d7f1544a57c33ae1efa2e852185c852b4f687f8074896d8387e7055b315"
+  },
+  "record_count": 15,
+  "schema": "historical-review-companion-check-v69b",
+  "shared_article_identity_verified": true,
+  "source_reproduction": false,
+  "stage_arm_observations": 29,
+  "status": "passed_projection_and_census_checks",
+  "unique_exposed_articles": 8
+}

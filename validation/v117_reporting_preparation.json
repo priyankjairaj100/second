@@ -1,0 +1,27 @@
+{
+  "actual_reduction_executed": false,
+  "actual_report_rendered": false,
+  "collector_executed": false,
+  "created_utc": "2026-10-27T07:04:08.370384+00:00",
+  "expected_actual_jobs": 21,
+  "expected_actual_requests": 16,
+  "final_changed_module_checks": 9,
+  "final_changed_module_test_output": "Ran 9 tests in 0.247s\nOK\n",
+  "new_experiment_registered": false,
+  "original_sources_changed": false,
+  "preparation_correction": "After adding single-read reduction-byte binding, one generated missing-reduction fixture failed before reaching its intended terminal guard. Terminal validation was moved before the reduction read; the complete24-check set passes. No empirical receipt, frozen source, job or manuscript changed.",
+  "scheduler": "PAUSED",
+  "schema": "closed-reporting-preparation-v117",
+  "source_hashes": {
+    "reporting_v117/INTEGRATION.txt": "1500c30e6f593cf6b9c71e1b5dd7c797ea61281903c893c091fe777e872488be",
+    "reporting_v117/README.txt": "8c6d4aa952edfbfda8490cdb1a8765e8abfd4a08976971ae255e8c1a24dbe445",
+    "reporting_v117/__init__.py": "ffb6094a17eb46d3e63e4e0b93c3e2ae59a2da73f6dc8e40cb2b28a7ffffc4fb",
+    "reporting_v117/render.py": "456816fd9a61ca06389853e5471f28142742abbf1828cd2fed14897fc66aed74",
+    "reporting_v117/test_render.py": "77f578c8cc6faaf48f91f64c79e6466b680c0f87359eeaa2e57a6a0deb014b97"
+  },
+  "status": "prepared_generated_checks_only",
+  "test_coverage_note": "24 generated checks passed before the last added file-plumbing test; all9 changed-module checks then passed, for25 distinct checks including16 unchanged V113 checks. No actual collection was performed.",
+  "test_output": "........................\n----------------------------------------------------------------------\nRan 24 tests in 0.236s\n\nOK\n",
+  "tests": 25,
+  "updated_utc": "2026-10-27T07:05:50.053955+00:00"
+}

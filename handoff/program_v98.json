@@ -1,0 +1,67 @@
+{
+  "active": {
+    "archive": {
+      "bytes": 11550720,
+      "sha256": "4aee02bcf7c18e4c649b2a74b8bd9e926f00ea6f4c3e352a9039a7e77a437426"
+    },
+    "jobs": [],
+    "registered": false,
+    "retry_allowed": false,
+    "source_count": 991,
+    "status": "preparation_import_failed_before_registration",
+    "version": 91
+  },
+  "branch": "codex/second-cluster-v42",
+  "completed_v89": {
+    "all_jobs_completed": true,
+    "comparisons": 8,
+    "jobs": [
+      16004,
+      16005,
+      16006,
+      16007,
+      16008,
+      16009,
+      16010,
+      16011,
+      16012,
+      16013,
+      16014,
+      16015,
+      16016
+    ],
+    "old_unknown_cpu_seconds": 12602,
+    "program_sha256": "6f9b59c73e33d407dadc6504b666ca67b5c5efb28e1a0fe8e418b470af8ab0e9",
+    "science": "correct outputs and bounded tradeoff, mixed single-observation latency",
+    "terminal": {
+      "bytes": 368343,
+      "sha256": "367104b1247cbc2b85fdc74ef45e5a30474a69df60483655b5fc4cf4f533e1a2"
+    }
+  },
+  "connectivity": {
+    "status": "restored",
+    "user_action_pending": false
+  },
+  "decision": "docs/RESEARCH_DECISION_V98.txt",
+  "draft_pr": "https://github.com/priyankjairaj100/second/pull/1",
+  "evidence_directory": "pilots/optimization-closure-v98-20261026",
+  "manuscript": {
+    "bytes": 57699,
+    "native_compile_success": true,
+    "path": "/Users/priyankjairaj/Documents/Codex/2026-10-10/see-i-am-working-on-a-2/outputs/second-research-draft.tex",
+    "rendered_layout_verified": false,
+    "sha256": "9d829b01c03f9431819fa0f9800e182d2cce46878686fb8892017fbfc3621ddf",
+    "submission_ready": false
+  },
+  "next": [
+    "Separate corrected package and extracted-only import/dependency verification",
+    "Fresh source/storage/job checks, one-use software gate and target admission",
+    "Separately bind successor complete matched screen to actual admission",
+    "Update manuscript and finish layout/delivery verification"
+  ],
+  "numerical_checkout": "f900999fcb200509dfad4fc081ce9c87fd172a16",
+  "prepared_v92_gate_not_satisfied": true,
+  "scheduler": "ACTIVE",
+  "schema": "second-handoff-v98",
+  "updated_utc": "2026-10-26T06:59:36.953841+00:00"
+}

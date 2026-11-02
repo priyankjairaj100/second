@@ -1,0 +1,38 @@
+V112 review: binary state reader defect found before a new matched launch
+27 October2026
+
+The V104/V111 matched audit imports Inputs from research_v83.terminal. This
+host-report reader permits retained reads only up to64MiB and stores retained
+bytes after decoding them as UTF8. It is appropriate for metadata, not model
+indices or full state. Actual complete V104 preparation states range from
+126,611,883 to373,405,520bytes. Both the primary state reads and supplemental
+model reads would encounter this defect. The original failed V104 request never
+reached either audit, so this is not the cause of its scientific refusal.
+
+Generated actual-file regressions reproduce both defects: a nonUTF8 model raises
+UnicodeDecodeError in the old reader, and a64MiB+1 state is rejected by its extent
+guard. The new V112 reader retains arbitrary binary bytes under the original
+1GiB artifact ceiling and decodes only JSON under64MiB. It delegates stable
+hash/stat/final-reread checks to the previously used V61 binary reader, checks all
+parent paths for symlinks and restricts input paths to the numerical project.
+Expected commitments, changed content, paths outside the project and increased
+artifact bounds are rejected. These four local tests passed. The tiny full-file
+worker/oracle fixture now uses this same reader; its Linux execution remains part
+of the318-check source qualification and has NOT run for V112.
+
+No bound is increased. This corrects a metadata-reader mismatch against the
+existing declared1GiB artifact contract, not the experiment's original limits.
+No existing scientific state, registered source or completed receipt changes.
+V111's source-only archive is preserved unchanged and inherited by V112. SSH
+timed out before login during the single V111 staging attempt at02:40UTC27October;
+that attempt did not upload, register or submit anything. Its local intent,
+empty stdout and exact stderr are retained. Do not rerun that consumed staging
+script. Inspect remote jobs/namespaces/storage after restored access, then use
+the separately prepared V112 staging path. No further connection attempt was made.
+
+V112 package:1339 source entries plus inventory,164 isolated host/local tests
+passed,318 exact Linux checks still required. All V111 and earlier archive bytes
+are inherited unchanged. Point-token policy, reused V104 preparations,18new
+numerical workers,16model comparisons, both audits and original resource ceilings
+are unchanged from the prospective V111 design. This bug fix and its tests are
+engineering preparation, not full-model evidence or a new speed result.

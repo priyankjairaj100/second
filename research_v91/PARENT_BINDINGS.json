@@ -1,0 +1,34 @@
+{
+  "research_v82/target_worker.py": {
+    "bytes": 7021,
+    "sha256": "5898a84ecb2910334c65e3ec925c6d3cc3ab7f861f312bcfa09dc52a4b7738bb"
+  },
+  "research_v82/seals.py": {
+    "bytes": 6765,
+    "sha256": "80b16514a1a357862e97368026f7eb511ff2ad48e8b4b801a0003683e06caeee"
+  },
+  "research_v82/fetch.py": {
+    "bytes": 3802,
+    "sha256": "b8fd56ebf8fb1e041d41244d51d2056353b63849fbdefa9b96eba4a1e2b6fcde"
+  },
+  "research_v89/host.py": {
+    "bytes": 12142,
+    "sha256": "989caea78ea03c80160673631effc016e6bf8be09c1e1366e2b8ede5175c9ca7"
+  },
+  "research_v89/mapping.py": {
+    "bytes": 1627,
+    "sha256": "1f55a6bad6cc7af7defc4136900f0fab76a6f0de13d0a1943291f6e50394e03f"
+  },
+  "research_v89/container.sh": {
+    "bytes": 1034,
+    "sha256": "55d78810505dfd0e44ef1dcaa4517808d59f992189ebe0d56a70d6c1fd40fb60"
+  },
+  "research_v89/run_cpu.sbatch": {
+    "bytes": 227,
+    "sha256": "d124cbaa5ddf0ecd52b5b43959d3892a8cce7831d86c6838186c7f93a0cd8c1a"
+  },
+  "research_v89/test_host.py": {
+    "bytes": 10157,
+    "sha256": "4192cd01cae4482732e9038e74838daba4a5cf6e4a142f6853fb687e24052827"
+  }
+}

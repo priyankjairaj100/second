@@ -1,0 +1,111 @@
+V59: one exposed quality screen for a fixed full-precision checkpoint anchor
+
+STATUS AT PREPARATION (14 October 2026): source prepared, not registered or
+executed. Passing pinned Linux software checks and fresh Slurm registration
+are mandatory. The V54/V55/V56 historical chain remains closed and unchanged.
+
+Question and target
+V55's fixed-nearest-anchor model failed the pooled quality guard (1.0592208 >
+1.05) against matched sequential calibration. All four V54 service arms return
+the same model; this is not compression error. One new candidate tests whether
+using original checkpoint feature weights gives an acceptable fixed target on
+that exact failed root. Full-precision anchors were proposed in V23/V29 but no
+completed four-bit calibrated full-precision-anchor screen was located. The
+unquantized full_precision quality control is not this candidate. This choice
+is a development hypothesis, not a novelty or promised quality improvement.
+
+The new target has its own schema/digest. Every source feature stream installs
+only the pinned original checkpoint's binary64 stage matrices, including all
+predecessors. Calibrated outputs never enter any candidate feature traversal.
+Embeddings, biases, norms, positions, activation and output head remain pinned
+through the checkpoint/decoder identity. Calibrated dependencies are empty.
+Original weights center the same metric projection with the unchanged base-only
+dyadic24 output-row grids, four-bit codes, ridge 1/100 and lower midpoint ties.
+Never relabel this target as the historical nearest anchor or sequential target.
+The old nearest-specific BoundTarget/state validators stay frozen. This screen
+constructs a complete packed model, not a new repair state or compressed service.
+
+Frozen data and controls
+Use only V55 program 4de04c4a0bd5db485c7ccd7511a4d5094195afdce15c115a909346879b84125f,
+its audited final V54 model/state and actual matched sequential model. Preserve
+all byte bindings, both V54 audits, V55 audit, settled ledgers and every old loss.
+Same checkpoint, exact six retained C4 records of 128 tokens, 768 retained tokens,
+and original normalization 1664; do not move to an easier earlier 96-token root.
+The candidate has all 24 stages and 42,467,328 codes (21,233,664 packed bytes).
+First-QKV packed bytes must equal both frozen fixed and sequential controls;
+their shared stage SHA is
+f397e6c54c44b3143921c67d49bc16bb39d7587ff66dcd740a4edcd5363863a0.
+
+Use the same eight already exposed WikiText articles, 128 tokens each, 1016
+predictions per model. Preserve the complete 60-article exclusion registry.
+Evaluate all eight articles in each control label order: full_precision,
+nearest_rounding, fixed_feature, sequential. Reproduce all 32 V55 mean losses
+within absolute 1e-8 before constructing the candidate. Then evaluate its eight
+losses with the unchanged ordinary NumPy binary64 evaluator. All 40 raw NLL sums
+and counts remain available; no new data, confidence interval or untouched
+confirmation is claimed. Prior control parity and first-stage invariance are
+execution checks, not useful-quality evidence.
+
+The candidate/sequential pooled perplexity ratio must be <= 1.05 and every
+article ratio <= 1.20. Compute pooled ratio from summed paired NLL differences
+over 1016 predictions, never from averaging per-article perplexities. Also report
+candidate versus fixed-nearest, nearest rounding and full precision. A failed
+guard is a completed adverse diagnostic, not an execution failure or retry
+trigger. Preserve finite log ratios if exp overflows. No anchor sweep, mixed
+stage anchors, grid/ridge/tolerance changes, alternative root or extra feature
+drift traversals are authorized by this screen.
+
+Resources and lifecycle
+One complete CPU point constructor uses the unchanged V43 dispatcher with V50
+normal-neighbor kernel and ordered finite feature primitives. Admission for all
+24 stages and the complete request precedes every feature traversal. Recompute
+admissions under the new target digest: 8 GiB arrays, 16 GiB process, 64 billion stage
+and 1 trillion request work units; declared other residency 4 GiB. For this geometry,
+historical admission metadata predicts 18 streamed / 6 token routes,
+321,015,398,400 solver work units total and 43,488,927,744 maximum per stage.
+The corresponding maximum explicit solver/dispatcher arrays were 767,565,824 B.
+These are structural admission proxies, not a new measured runtime or a proof
+of process fit. Teacher values can change numerical success and fallback.
+
+The solver work proxy excludes feature traversal and likelihood work. Bound
+those by one constructor, 144 teacher stage-record advances and 40 serial article
+evaluations. No repeated construction or extra feature comparison passes.
+Reconstruct old model/state bytes, retain packed codes and release parser/state
+blobs. Expand at most one quality prefix; release it before the next model and
+before calibration. Calibration retains one stage's blocks and packed outputs,
+with immutable original teacher matrices. Close all streams and release solver
+scratch before candidate evaluation. Do not retain logits across evaluations.
+The approximately 964 MB evaluator and 339.74 MB single expanded prefix fit within
+the conservative 4 GiB other-residency proxy; actual OS limits are authoritative.
+
+New separate one-use abort ceilings: soft CPU 14400, hard CPU 14401, phase cap
+14402 CPU seconds, wall 18000 seconds, 16 GiB address space and Slurm memory,
+2 GiB file size, one CPU affinity/thread. This is new admission, not recycled
+historical allowance or an ETA. All refusals/partial work/failures stay charged.
+Software checks, registration and read-only audit use separate bounded scheduler
+allocations and their costs must remain separately reported. CPU calibration
+does not use or establish GPU equivalence.
+
+Execution and audit
+Commit clean source before software checks. Freeze every numerical source,
+actual input bytes, inherited runtime, new target constructor source, literal
+worker command, limits, ledger and fresh one-use paths. The software gate covers
+the 18 V55 regression fixtures and all V59 anchor, diagnostic, audit and campaign
+fixtures: 49 tests in total with no skips. Target fixtures
+compare every feature word with direct original-checkpoint evaluation, isolate
+features from deliberately changed calibrated outputs, verify membership/order
+locality and first-stage equality, and require admission/refusal cleanup.
+
+The terminal read-only auditor verifies actual candidate/control model bytes,
+all 24 grids/stage metadata, teacher-parent hashes, 144 advances and regenerated
+resource reports, all 40 losses, parity, first-stage equality, target/source
+identity, complete declared artifacts and sealed settled CPU accounting.
+It assumes trusted execution/storage and does not independently repeat neural
+inference or calibration. Passing it does not imply passing the quality guards.
+
+If quality passes, a separately declared complete repair-state/service comparison
+against cached, cold and hybrid controls is still needed; old V54 time/storage
+numbers do not transfer to this new target. If it fails, preserve the negative
+result and reconsider the paper's scope; no automatic next candidate. Either
+outcome remains exposed development evidence. Independent roots/checkpoints,
+untouched quality, repeated matched costs and a useful contribution remain open.

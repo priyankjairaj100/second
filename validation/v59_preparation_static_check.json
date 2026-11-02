@@ -1,0 +1,52 @@
+{
+  "schema": "v59-preparation-static-check-v1",
+  "captured_at_utc": "2026-10-14T03:52:15.979047+00:00",
+  "status": "passed_static_only",
+  "python_ast_files": 11,
+  "bash_syntax": "passed",
+  "declared_fixture_counts": {
+    "research_v55.test_diagnostic": 8,
+    "research_v55.test_sequential": 6,
+    "research_v55.test_audit": 4,
+    "research_v59.test_anchor": 10,
+    "research_v59.test_diagnostic": 9,
+    "research_v59.test_audit": 7,
+    "research_v59.test_campaign": 5
+  },
+  "declared_fixture_total": 49,
+  "linux_fixture_execution": false,
+  "numerical_execution": false,
+  "registration": false,
+  "launch": false,
+  "new_source_sha256": {
+    "research_v59/__init__.py": "407eccb337f6acd459503a92584e6d5dbc27dd9eec255f3890ac60b78b6ac987",
+    "research_v59/anchor.py": "ce671bcda298f26d6293c46b7bc8bcc916d5c343ee87051129cd311cd3812521",
+    "research_v59/audit.py": "245dbc3e95badd40b56ca568006d367609540973f1e71726683fe96425dbf2aa",
+    "research_v59/campaign.py": "c19159da8e492dc6108eb8695ff78b9df90b1cce539c355bba3adff8c8ed9bb4",
+    "research_v59/checks.py": "7276c5ad6fca9630b265750a96d290cfa95344c38d8dd28390937d22b5c2658a",
+    "research_v59/diagnostic.py": "6c0192a85be8a4f0f894c615c526846caa512e9d65b978751394a826664a0ccc",
+    "research_v59/test_anchor.py": "dcf1bd505c81e898ef811a70332d05184afe28b8510cdb965fd1da4b93676a64",
+    "research_v59/test_audit.py": "ab959e853f8cd19434cdb398b576d90249d5c7ca49808303aa6bf0d9eb973790",
+    "research_v59/test_campaign.py": "0cd6a4a77c073b807e1679a4125d938b04e99d325c670434884c9165de070271",
+    "research_v59/test_diagnostic.py": "4b01e1eb67d5598c5a8d742e06bbb9c2451362677b62c6cf0b8343a817e962b6",
+    "research_v59/worker.py": "b006ae8cca4679900085710e4f42dcb32ce10a7ac9e5c9d37054d531673d865e",
+    "research_v59/PROTOCOL.txt": "ef907669b3770b5baba97d3a13921a7891e038b2ce2db3bcd3f386691fbd044d",
+    "cluster_setup/v59_pipeline.sh": "39d8d26381388010894cbe26230ec0d4b3752b70dd931e707431eab394ae6e6a"
+  },
+  "frozen_v55_source_count": 399,
+  "frozen_v55_sources_unchanged": true,
+  "prior_metadata_check": {
+    "file": "validation/check_v58_terminal_metadata.py",
+    "source_sha256": "2a32dcde70f0b0e9d5f7d3f3056c5cfe0af36bc0bc3ed11f4c7ba35db72beb7a",
+    "report_sha256": "6fb9d5bb224822e21c94a2c4b996caede545317e290edb7f2021fff322eb4415",
+    "status": "passed_metadata_only",
+    "actual_large_binaries_revalidated_locally": false
+  },
+  "historical_pooled_quality_ratio": 1.0592207956671105,
+  "historical_guard_passed": false,
+  "independent_static_review": "completed; canonical dependency-order bug fixed before freeze; no remaining static blocker reported",
+  "runtime_validation": "pending pinned Linux; AST and metadata checks do not establish executable correctness",
+  "cluster_access": "one connection refused before password prompt; no retry or remote command",
+  "confirmation": false,
+  "acl_ready": false
+}

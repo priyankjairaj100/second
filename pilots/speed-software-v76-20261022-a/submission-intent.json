@@ -1,0 +1,23 @@
+{
+  "command": [
+    "sbatch",
+    "--hold",
+    "--parsable",
+    "--no-requeue",
+    "--job-name=second76-software",
+    "--partition=cpu-short",
+    "--qos=cpu-short",
+    "--nodelist=csis.mn1",
+    "--ntasks=1",
+    "--cpus-per-task=1",
+    "--mem=16G",
+    "--time=00:10:00",
+    "--chdir=/nfs_home/users/poonam/second-20261010/local_runs/speed-software-v76-20261022-a",
+    "--output=/nfs_home/users/poonam/second-20261010/local_runs/speed-software-v76-20261022-a/slurm-%j.log",
+    "/nfs_home/users/poonam/second-20261010/local_runs/speed-software-v76-20261022-a/research_v76/run_cpu.sbatch",
+    "482782afc8925528a47a2b97abfc0167968b6bdfbcaf3314922d0777784a9d4b"
+  ],
+  "created_utc": "2026-10-23T06:19:05.682427+00:00",
+  "program_sha256": "482782afc8925528a47a2b97abfc0167968b6bdfbcaf3314922d0777784a9d4b",
+  "queue_before": ""
+}

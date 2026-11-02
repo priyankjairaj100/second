@@ -1,0 +1,78 @@
+V51 prospective real width3072 stage feasibility gate, 11 October 2026
+
+Purpose and immutable prerequisites
+The V45 full-model preparation failed at its fixed4800CPU limit; eleven stages
+were certified but no complete model or state was released. Preserve that
+failure, all ledgers, all60 historical quality exclusions, and all numerical
+sources. V49/V50 synthetic profiles are engineering diagnostics only. V51 is
+a fresh one-use development gate and does not retry or enlarge V45.
+
+Target and data
+Use precisely V45's registered13 C4 records of128 tokens, normalization1664,
+DistilGPT2 checkpoint, dyadic24 four-bit row grids, ridge1/100, lower midpoint
+ties and fixed nearest-anchor numerical target. Select block.0000.mlp_down
+prospectively: 768output rows, width3072, 2359296codes. This is the first wide
+stage in canonical order, with a preserved complete-code SHA commitment in
+V45 progress-0017.json. No new corpus/quality data or root selection occurs.
+
+Features and controls
+Prepare each source by advancing the unchanged ordered_sequential_features
+generator through its first4 yields, sending the same frozen context anchor
+matrices as prepare_ordered_leaf. Stop at the target yield and close the
+generator. Use FactorBlock's unchanged binary64 serialization. The first
+registered record also receives the complete24-stage traversal; its target
+block must match actual bytes. Software fixtures compare all8 prefixes of a
+two-block decoder, foreign-context refusal and exact stopping behavior.
+This new prefix wrapper has its own source binding. It does not relabel a
+historical full leaf or assert unobserved historical feature byte identity.
+
+Save bound lossless and compressed40/block256 descriptors, complete weights,
+both target manifests and execution provenance. Trusted preparation checks
+every compressed enclosure against actual features and every lossless source
+word. Solver workers use those same prepared sources. Run fixed order:
+prepare, optimized point, historical point, optimized compressed box.
+The optimized point and box use the same V50 neighbor kernel. Every other
+operation, dispatcher policy and numerical target is unchanged. Historical
+point isolates the kernel change; no randomized speed inference follows.
+All3 full packed code tensors must agree by actual bytes and match the V45
+SHA commitment. Historical V45 code bytes were not retained, so historical
+comparison is explicitly commitment-only. No whole-model claim follows.
+
+V45's hybrid control uses lossless factors at width3072; it is represented by
+the optimized point arm, not a newly admitted wide Gram. The unchanged native
+Gram budget remains maxwidth768. Both point and box routes must be structurally
+admitted before feature extraction. RequestLedger reserves all3 solver plans.
+Box certificate refusal stops this gate; no hidden source replay or point
+retry converts refusal into success. Future complete-model experiments must
+separately account for their usual explicit fallback policy and all controls.
+
+Resources and stopping
+Pinned Python3.12.14/NumPy2.3.5/gmpy2 Linux container, one SlurmCPU/thread,
+csis.mn1,16GiB allocation and RLIMIT_AS,1GiB per-file ceiling. Separate workers:
+prepare900CPU/1200wall; candidate1200CPU/1800wall; reference1800CPU/2400wall;
+compressed1200CPU/1800wall. Independent phase caps902/1202/1802/1202 reserve
+the controller's2CPU rounding allowance: total5108CPU. No pooling, retries,
+automatic cap increases or requeue. Full Slurm allocation limit125minutes
+allows container setup, registration, hashing, controller checks and shutdown;
+these overheads stay visible in accounting and are outside worker phase caps.
+These are bounded feasibility probes, not predicted completion times. The
+historical1218s wide-stage observation motivates the reference1800 ceiling;
+the optimized1200 ceiling is a prospective gate, not presumed achievement.
+Preparation includes13 prefix traversals plus1 full-traversal equivalence
+check, encoding/containment and all context setup, under a fresh900CPU limit.
+
+Record setup/build, feature, encoding, solver and whole-worker timings, peak
+RSS and complete controller CPU including failures. The4GiB caller-residency
+and explicit solver-array admission are proxies; the16GiB OS cap is decisive.
+Software checks are a separate bounded Slurm job, not empirical phase charges.
+Admission requires all10 tests to pass with zero skips, source/runtime-bound.
+Any software failure, worker limit, exception, mismatched code, changed input,
+unsettled debit or certificate refusal stops progression. No automatic retry.
+
+Decision boundary
+Passing shows this single wide development stage is feasible under the new
+kernel and limits. It does not establish full-model feasibility, deletion
+service latency, code-state equivalence across deletions, quality, GPU feature
+equivalence, statistical speedup, untouched confirmation, novelty or ACL
+readiness. Do not multiply this stage's time to claim full-model runtime.
+Any subsequent full-model campaign needs its own prospective registration.

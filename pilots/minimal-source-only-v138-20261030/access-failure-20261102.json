@@ -1,0 +1,9 @@
+{
+  "utc": "2026-11-02T01:10:32.596397+00:00",
+  "operation": "read-only squeue,sacct,quota and existing receipts",
+  "exit_code": 255,
+  "error": "ssh: connect to host 172.24.16.132 port 22: Operation timed out",
+  "login_reached": false,
+  "remote_command_executed": false,
+  "repeated_attempt": false
+}
